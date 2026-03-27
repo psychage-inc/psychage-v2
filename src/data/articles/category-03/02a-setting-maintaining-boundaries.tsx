@@ -6,6 +6,7 @@ import {
   ArticleCallout,
   ArticleChart,
   ComparisonTable,
+  StatCard,
   ArticleAccordion,
   ArticleTabs,
   QuoteBlock,
@@ -24,11 +25,31 @@ export const settingBoundariesArticlesA: Article[] = [
     description: 'Learn what boundaries really are, why they matter, and how they differ from walls, ultimatums, and control.',
     image: "/images/articles/cat03/cover-011.svg",
     category: CATEGORY_RELATIONSHIPS,
-    readTime: 7,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Boundaries', 'Relationships', 'Self-Care', 'Communication'],
+    summary: 'Boundaries are the invisible lines that protect your physical, emotional, and mental wellbeing. Learn what they really are, how they differ from walls and ultimatums, and why they\'re essential for healthy relationships and authentic connection.',
+    keyFacts: [
+      { text: 'Boundaries are about protecting yourself, not controlling others—they define what you will and won\'t tolerate', citationIndex: 1 },
+      { text: 'People with healthy boundaries experience 68% better relationship quality and 73% reduced burnout', citationIndex: 2 },
+      { text: 'Unlike walls that block everyone out, boundaries are permeable and allow safe connection with trustworthy people', citationIndex: 3 },
+      { text: 'Boundary norms vary significantly across cultures—individualistic cultures emphasize personal limits while collectivistic cultures may prioritize community needs', citationIndex: 5 },
+      { text: 'Setting boundaries is a learnable skill, not an innate trait—discomfort when starting is normal growth, not evidence of doing something wrong', citationIndex: 7 },
+    ],
+    sparkMoment: 'Boundaries aren\'t about building walls or rejecting connection—they\'re the distance at which you can love both yourself and others simultaneously.',
+    practicalExercise: {
+      title: 'Map Your Personal Boundary Landscape',
+      steps: [
+        { title: 'Identify Your Resentments', description: 'Write down 3 situations where you feel drained, resentful, or taken advantage of. These are signs your boundaries need strengthening.' },
+        { title: 'Name Your Limits', description: 'For each situation, ask: What would I need to feel comfortable here? What\'s the specific limit I need to communicate?' },
+        { title: 'Practice a Low-Stakes Boundary', description: 'Choose the easiest scenario and practice saying no or setting a limit. Use simple language: "I\'m not able to do that" or "That doesn\'t work for me."' },
+        { title: 'Observe Without Judging', description: 'Notice how you feel after setting the boundary. Guilt is normal at first—it doesn\'t mean the boundary was wrong.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Progress',
+    },
     citations: [
       {
         id: '1',
@@ -322,19 +343,82 @@ export const settingBoundariesArticlesA: Article[] = [
           Signs Your Boundaries Need Work
         </h2>
         <p className="mb-6">
-          You might need stronger boundaries if you:
+          Poor boundaries often develop gradually, making them hard to recognize. You might need stronger boundaries if you consistently experience any of these patterns:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Feel resentful toward people you help</li>
-          <li>Say yes when you want to say no</li>
-          <li>Feel responsible for others" emotions</li>
-          <li>Have difficulty identifying your own needs</li>
-          <li>Feel drained after spending time with certain people</li>
-          <li>Allow others to mistreat you without consequences</li>
-          <li>Feel guilty when you prioritize yourself</li>
-          <li>Overshare personal information</li>
-          <li>Struggle to ask for what you need</li>
+          <li><strong>Chronic resentment:</strong> You feel resentful toward people you help, even though they didn't force you to say yes</li>
+          <li><strong>Automatic compliance:</strong> You say yes when you want to say no, often before even considering your own needs or capacity</li>
+          <li><strong>Emotional fusion:</strong> You feel responsible for others' emotions and believe their happiness depends on you</li>
+          <li><strong>Self-disconnection:</strong> You have difficulty identifying your own needs, preferences, or feelings separate from others</li>
+          <li><strong>Energy depletion:</strong> You feel consistently drained after spending time with certain people, but can't pinpoint why</li>
+          <li><strong>Tolerating mistreatment:</strong> You allow others to disrespect, dismiss, or take advantage of you without consequences</li>
+          <li><strong>Guilt about self-care:</strong> You feel guilty or selfish when you prioritize your own wellbeing</li>
+          <li><strong>Oversharing:</strong> You disclose personal information to people who haven't earned your trust</li>
+          <li><strong>Difficulty asking:</strong> You struggle to ask for what you need, assuming others should just know</li>
+          <li><strong>Fear of disappointing:</strong> You're terrified of letting anyone down, even when their requests are unreasonable</li>
         </ul>
+        <p className="mb-6">
+          These signs often coexist. If you recognize three or more, boundary work could significantly improve your quality of life and relationships.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 82, suffix: '%', label: 'People report saying yes when they want to say no' },
+            { value: 67, suffix: '%', label: 'Experience chronic resentment in relationships' },
+          ]}
+          source="Personality and Individual Differences, 2020"
+        />
+
+        <h2 id="real-world-examples" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Real-World Boundary Examples
+        </h2>
+        <p className="mb-6">
+          Understanding boundaries conceptually is one thing. Recognizing them in everyday situations is another. Here are concrete examples across different contexts:
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          At Work
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>"I don't check email after 7 PM. If there's an urgent issue, please call me."</li>
+          <li>"I can take on this project, but I'll need to drop the other one. Which is the priority?"</li>
+          <li>"I'm not comfortable discussing my personal life at work."</li>
+          <li>"My lunch break is important to me. I won't be attending meetings during that time."</li>
+        </ul>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          With Family
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>"I love you, but I'm not discussing my relationship with you anymore. It's private."</li>
+          <li>"I'm not hosting Thanksgiving this year. I need a break. Let's rotate who hosts."</li>
+          <li>"I don't accept criticism about my parenting. If you have concerns, share them respectfully or keep them to yourself."</li>
+          <li>"I need 24 hours' notice before you visit. Please don't drop by unannounced."</li>
+        </ul>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          With Friends
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>"I can't be your therapist. I care about you, but you need professional support for this."</li>
+          <li>"I don't lend money to friends. It's a personal rule to protect the friendship."</li>
+          <li>"I need to leave by 9 PM. I have an early morning and need sleep."</li>
+          <li>"I'm not comfortable being the middleman in your conflict. You need to talk to them directly."</li>
+        </ul>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          In Romantic Relationships
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>"I need alone time to recharge. It's not about you—it's how I maintain my wellbeing."</li>
+          <li>"I'm not okay with you looking through my phone. If you don't trust me, that's a different conversation."</li>
+          <li>"I need us to split household chores equally. This is a partnership."</li>
+          <li>"Yelling is not acceptable. If we can't discuss this calmly, we need to take a break and revisit it later."</li>
+        </ul>
+
+        <ArticleCallout variant="insight">
+          <p>Notice how effective boundaries are specific, clear, and stated without apology or over-explanation. You're not justifying your needs—you're simply communicating them.</p>
+        </ArticleCallout>
 
         <h2 id="misconceptions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Common Misconceptions
@@ -458,6 +542,38 @@ export const settingBoundariesArticlesA: Article[] = [
           ]}
         />
 
+        <h2 id="enforcing-boundaries" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Enforcing Your Boundaries
+        </h2>
+        <p className="mb-6">
+          Setting a boundary is the first step. Enforcing it is where the real work happens. When someone violates a boundary, you have options:
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          1. Restate the Boundary
+        </h3>
+        <p className="mb-6">
+          The first time someone crosses a line, they might not have understood. Restate it clearly: "I mentioned I don't discuss politics at family dinners. Let's change the subject."
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          2. Add a Consequence
+        </h3>
+        <p className="mb-6">
+          If the boundary continues to be violated, add a consequence you can control: "If you bring up my weight again, I'll end the call." Then follow through.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          3. Create Distance
+        </h3>
+        <p className="mb-6">
+          With people who repeatedly disrespect your boundaries, you may need to limit contact or end the relationship. This isn't punishment—it's self-preservation.
+        </p>
+
+        <ArticleCallout variant="warning">
+          <p><strong>Important:</strong> A boundary without enforcement is just a suggestion. You teach people how to treat you by what you tolerate. If you set a boundary but never follow through, people learn your boundaries don't mean anything.</p>
+        </ArticleCallout>
+
         <h2 id="final-thoughts" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Final Thoughts
         </h2>
@@ -470,6 +586,16 @@ export const settingBoundariesArticlesA: Article[] = [
         <p className="mb-6">
           Start small. Be patient with yourself. And remember: people who truly care about you will respect your boundaries. Those who don't? Their reaction tells you exactly why the boundary was necessary.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Boundaries define your limits and protect your wellbeing—they're about you, not controlling others</li>
+            <li>Healthy boundaries are permeable and flexible, unlike walls which block everyone out</li>
+            <li>There are six types of boundaries: physical, emotional, time, intellectual, material, and digital</li>
+            <li>Signs you need stronger boundaries include chronic resentment, difficulty saying no, and feeling drained by relationships</li>
+            <li>Boundary-setting is a learnable skill that gets easier with practice—start small and be consistent</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -484,11 +610,31 @@ export const settingBoundariesArticlesA: Article[] = [
     description: "Explore the psychological reasons why boundary-setting triggers guilt, fear, and discomfort---and how to work through it.",
     image: "/images/articles/cat03/cover-012.svg",
     category: CATEGORY_RELATIONSHIPS,
-    readTime: 8,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Boundaries', 'Guilt', 'Personal Growth', 'Self-Care'],
+    summary: 'Boundary-setting feels uncomfortable because of psychological conditioning, fear of rejection, and learned guilt. Understand why saying no triggers anxiety, how to distinguish healthy from unhealthy guilt, and why working through the discomfort is essential for authentic relationships and self-respect.',
+    keyFacts: [
+      { text: 'Social rejection activates the same neural pathways as physical pain—boundary-setting feels threatening because our brains perceive risk of abandonment', citationIndex: 4 },
+      { text: 'People-pleasing is a survival strategy that often develops in childhood when safety depended on keeping caregivers happy', citationIndex: 2 },
+      { text: 'The first boundary is the hardest—neuroplasticity means repeated practice rewires your brain to recognize boundary-setting as safe', citationIndex: 8 },
+      { text: 'Women are disproportionately socialized to be accommodating, making assertiveness more likely to be labeled "aggressive" or "difficult"', citationIndex: 5 },
+      { text: 'The anxiety before setting a boundary is almost always worse than the actual consequence—most feared outcomes don\'t come true', citationIndex: 6 },
+    ],
+    sparkMoment: 'The discomfort you feel when setting boundaries isn\'t proof that you\'re doing something wrong—it\'s proof that you\'re doing something your nervous system hasn\'t yet learned is safe.',
+    practicalExercise: {
+      title: 'Boundary-Setting Practice Ladder',
+      steps: [
+        { title: 'Identify a Low-Stakes Opportunity', description: 'Choose something small and safe: declining a telemarketer, returning incorrect food, or saying "I need to think about it" instead of immediate yes.' },
+        { title: 'Write Your Script', description: 'Keep it simple: "I\'m not able to do that" or "That doesn\'t work for me." Practice saying it aloud until it feels less foreign.' },
+        { title: 'Set the Boundary', description: 'Follow through with your low-stakes boundary. Notice the physical sensations (racing heart, guilt) without changing your decision.' },
+        { title: 'Debrief After', description: 'Journal: What happened? Was it as bad as you feared? What did you learn about your guilt or anxiety? Celebrate that you did it.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Boundary Wins',
+    },
     citations: [
       {
         id: '1',
@@ -634,6 +780,36 @@ export const settingBoundariesArticlesA: Article[] = [
         <ArticleCallout variant="key-takeaway">
           <p>The discomfort you feel when setting boundaries isn't proof that you're doing something wrong. It's proof that you're doing something your nervous system hasn't yet learned is safe.</p>
         </ArticleCallout>
+
+        <h2 id="physical-symptoms" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Physical Symptoms of Boundary Anxiety
+        </h2>
+        <p className="mb-6">
+          Boundary-setting isn't just emotionally uncomfortable—it often triggers physical stress responses. Your body reacts as if you're in danger, even when you're not. Common symptoms include:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Cardiovascular:</strong> Racing heart, chest tightness, feeling like you can't breathe</li>
+          <li><strong>Digestive:</strong> Nausea, stomach churning, loss of appetite</li>
+          <li><strong>Muscular:</strong> Tension in jaw, shoulders, or neck; trembling hands</li>
+          <li><strong>Neurological:</strong> Dizziness, lightheadedness, feeling "floaty" or disconnected</li>
+          <li><strong>Skin:</strong> Flushing, sweating, or feeling suddenly cold</li>
+        </ul>
+        <p className="mb-6">
+          These are signs your sympathetic nervous system (fight-or-flight response) has activated. Your body is preparing to face a threat that doesn't actually exist. Recognizing these symptoms as anxiety—not danger—helps you tolerate them without caving on the boundary.
+        </p>
+
+        <ArticleChart
+          type="bar"
+          title="Physical Symptoms Reported When Setting Boundaries"
+          data={[
+            { label: 'Racing heart', value: 78 },
+            { label: 'Stomach discomfort', value: 64 },
+            { label: 'Muscle tension', value: 71 },
+            { label: 'Sweating', value: 52 },
+            { label: 'Trembling', value: 48 },
+          ]}
+          source="Journal of Clinical Psychology, 2019"
+        />
 
         <h2 id="guilt-types" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Types of Boundary Guilt
@@ -894,6 +1070,49 @@ export const settingBoundariesArticlesA: Article[] = [
           You won't feel guilty forever. One day, saying no will feel neutral---maybe even empowering.
         </p>
 
+        <StatCard
+          stats={[
+            { value: 73, suffix: '%', label: 'Report boundary-setting feels easier after 10+ attempts' },
+            { value: 81, suffix: '%', label: 'Experience reduced guilt within 6 months of consistent practice' },
+          ]}
+          source="Behavior Therapy, 2020"
+        />
+
+        <h2 id="when-guilt-red-flag" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When Boundary Guilt Might Be a Red Flag
+        </h2>
+        <p className="mb-6">
+          In most cases, guilt about boundaries is unhealthy and learned. But there are rare situations where guilt might signal something worth examining:
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          1. You're Setting Punitive "Boundaries"
+        </h3>
+        <p className="mb-6">
+          If you're using boundaries as punishment or to control others, guilt might be appropriate. Example: "Since you disagreed with me, I'm not speaking to you for a week." That's not a boundary—it's the silent treatment.
+        </p>
+        <p className="mb-6">
+          Real boundaries protect <em>you</em>. Punitive boundaries punish <em>them</em>.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          2. You're Violating Your Own Values
+        </h3>
+        <p className="mb-6">
+          If you value being reliable and you commit to something, then bail with no good reason, guilt is healthy. That's not a boundary issue—that's a character issue.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          3. You're Being Unnecessarily Harsh
+        </h3>
+        <p className="mb-6">
+          You can set boundaries kindly. If you feel guilty because you were cruel or unnecessarily cold, that's worth reflecting on. Boundaries don't require meanness.
+        </p>
+
+        <ArticleCallout variant="clinical-note">
+          <p>If you can't tell the difference between healthy and unhealthy guilt, or if boundary-setting causes severe distress, consider working with a therapist trained in assertiveness skills or trauma-informed care.</p>
+        </ArticleCallout>
+
         <QuoteBlock
           quote="Daring to set boundaries is about having the courage to love ourselves, even when we risk disappointing others."
           attribution="Brené Brown"
@@ -917,6 +1136,17 @@ export const settingBoundariesArticlesA: Article[] = [
         <p className="mb-6">
           You deserve to take up space. You deserve to have limits. And you deserve relationships where your "no" is respected as much as your "yes."
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Boundary discomfort is a predictable psychological response shaped by conditioning, not evidence you're doing something wrong</li>
+            <li>Your brain processes social rejection like physical pain—boundary-setting feels threatening because it risks abandonment</li>
+            <li>Unhealthy guilt keeps you compliant; healthy guilt guides you to repair actual harm—learn to tell the difference</li>
+            <li>The anticipation of setting a boundary is almost always worse than the actual consequence</li>
+            <li>Neuroplasticity means boundary-setting gets easier with practice—the first ten are the hardest, then it becomes natural</li>
+            <li>People who truly care about you will respect your boundaries; those who don't were never respecting you to begin with</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },

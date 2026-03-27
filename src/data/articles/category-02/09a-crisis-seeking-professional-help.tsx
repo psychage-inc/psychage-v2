@@ -10,6 +10,8 @@ import {
   ArticleAccordion,
   ProgressSteps,
   QuoteBlock,
+  BeforeAfter,
+  MythVsFactBlock,
 } from '../../../components/article/blocks';
 
 export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
@@ -20,11 +22,31 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
     description: 'Learn how cognitive-behavioral therapy treats anxiety disorders and what to expect from this evidence-based approach.',
     image: "/images/articles/cat02/cover-081.svg",
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 8,
+    readTime: 9,
     publishedAt: '2026-03-18',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Treatment', 'Therapy', 'CBT', 'Evidence-Based'],
+    summary: 'Cognitive-Behavioral Therapy (CBT) is the gold-standard treatment for anxiety disorders, helping 60-75% of people achieve significant improvement through structured techniques that change thought patterns and behaviors. This evidence-based approach combines cognitive restructuring, exposure therapy, and practical skills training to break the cycle of anxiety.',
+    keyFacts: [
+      { text: 'Over 500 randomized controlled trials demonstrate CBT\'s effectiveness for anxiety disorders, with 60-75% of participants showing significant improvement', citationIndex: 1 },
+      { text: '75% of people who complete CBT maintain their gains one or more years after treatment ends, showing lasting benefits', citationIndex: 2 },
+      { text: 'Homework completion is one of the strongest predictors of CBT success, with completers showing 60-70% symptom reduction versus 20-30% for non-completers', citationIndex: 8 },
+      { text: 'CBT typically involves 12-20 sessions, with about 50% of participants achieving full remission of their anxiety disorder', citationIndex: 1 },
+      { text: 'Exposure therapy, a core component of CBT, works through habituation, inhibitory learning, and increased self-efficacy by teaching the brain that feared situations are uncomfortable but not dangerous', citationIndex: 7 },
+    ],
+    sparkMoment: 'CBT doesn\'t just help you feel better temporarily—it teaches you to become your own therapist, giving you tools to manage anxiety for life.',
+    practicalExercise: {
+      title: 'Practice Cognitive Restructuring for Anxious Thoughts',
+      steps: [
+        { title: 'Identify Your Anxious Thought', description: 'Notice what goes through your mind when anxiety spikes. Write down the specific thought, not just the feeling. Example: "If I make a mistake, everyone will think I\'m incompetent."' },
+        { title: 'Examine the Evidence', description: 'List evidence FOR this thought (be specific, not emotional), then evidence AGAINST it. Include times the prediction didn\'t come true and alternative explanations.' },
+        { title: 'Generate a Balanced Thought', description: 'Create a realistic alternative that acknowledges uncertainty but isn\'t catastrophic. Example: "I might make a small mistake, and if I do, I\'ll correct it. Most people focus on content, not errors."' },
+        { title: 'Practice Daily', description: 'Use this technique whenever you notice anxious thoughts. Track your anxiety before and after restructuring to see the impact over time.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Progress in Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -113,6 +135,19 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
           </p>
         </div>
 
+        <h2 id="real-world-example" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How CBT Changed Sarah's Life
+        </h2>
+        <p className="mb-6">
+          Sarah, a 32-year-old marketing manager, had lived with generalized anxiety disorder for eight years. Her mind constantly churned with "what-ifs": What if she made a mistake at work? What if her boyfriend left her? What if something bad happened to her parents? The worry was exhausting. She avoided challenging projects at work, constantly sought reassurance from her partner, and lay awake for hours each night running through worst-case scenarios.
+        </p>
+        <p className="mb-6">
+          Traditional talk therapy had helped her understand where her anxiety came from—an unpredictable childhood, perfectionistic tendencies—but understanding didn't reduce the symptoms. After 12 weeks of CBT, Sarah's anxiety scores dropped from severe to mild. What changed? She learned to identify the specific thoughts driving her anxiety ("If I make one mistake, I'll be fired"), challenge them with evidence ("I've made small mistakes before and received positive performance reviews"), and test her predictions through behavioral experiments (deliberately making a minor error to see what actually happened).
+        </p>
+        <p className="mb-6">
+          More importantly, she stopped avoiding difficult situations and seeking reassurance—the behaviors that had been maintaining her anxiety. Sarah's story isn't unique. It's the pattern seen in hundreds of thousands of CBT cases: structured intervention, active practice, measurable change.
+        </p>
+
         <h2 id="what-is-cbt" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Is Cognitive-Behavioral Therapy?
         </h2>
@@ -151,6 +186,14 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
         <h2 id="core-components" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Core Components of CBT for Anxiety
         </h2>
+
+        <QuoteBlock
+          quote="The goal of CBT is not to eliminate anxiety entirely—that's neither possible nor desirable. The goal is to help you respond to anxiety differently, so it no longer controls your life."
+          attribution="Dr. David H. Barlow"
+          role="Founder, Center for Anxiety and Related Disorders"
+          source="Anxiety and Its Disorders"
+          variant="large"
+        />
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           1. Psychoeducation
@@ -379,14 +422,19 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
           When CBT Might Not Be Enough
         </h2>
         <p className="mb-6">
-          CBT is highly effective, but it's not a universal solution:
+          CBT is highly effective, but it's not a universal solution. Understanding its limitations helps set realistic expectations and know when to explore additional or alternative approaches:
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Severe anxiety with significant functional impairment:</strong> May benefit from medication combined with CBT</li>
-          <li><strong>Comorbid conditions:</strong> If you also have depression, substance use, or trauma, these may need to be addressed concurrently</li>
-          <li><strong>Non-responders:</strong> About 25-30% don't respond adequately to CBT alone. Alternative or augmented approaches may be needed.</li>
-          <li><strong>Chronic, complex presentations:</strong> Long-standing anxiety with personality features may require longer treatment or additional modalities (e.g., Schema Therapy, DBT)</li>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li><strong>Severe anxiety with significant functional impairment:</strong> If you can't leave your house, maintain employment, or care for yourself due to anxiety, medication combined with CBT often yields better outcomes than either alone. Medication can reduce symptoms enough to make CBT techniques accessible.</li>
+          <li><strong>Comorbid conditions:</strong> If you also have depression, substance use, PTSD, or eating disorders, these conditions interact with anxiety in complex ways. Treating only the anxiety while ignoring co-occurring conditions rarely succeeds. Integrated treatment addressing all conditions simultaneously is often necessary.</li>
+          <li><strong>Non-responders:</strong> About 25-30% of people don't respond adequately to standard CBT protocols. This doesn't mean you're "unfixable"—it may mean you need a different CBT approach (like Acceptance and Commitment Therapy), different therapist, longer treatment duration, or augmentation with medication.</li>
+          <li><strong>Chronic, complex presentations:</strong> Long-standing anxiety (10+ years) with personality features (perfectionism, avoidance patterns deeply woven into identity) may require extended treatment beyond 12-20 sessions. Modalities like Schema Therapy (which addresses underlying life patterns) or Dialectical Behavior Therapy (which emphasizes distress tolerance and emotion regulation) can supplement CBT.</li>
+          <li><strong>Limited insight or cognitive flexibility:</strong> CBT requires the ability to observe and question your own thoughts. If you have significant cognitive rigidity or difficulty with abstract thinking, more behaviorally-focused interventions (pure exposure therapy without cognitive work) may be more effective initially.</li>
         </ul>
+
+        <p className="mb-6">
+          If you've tried CBT and haven't seen improvement after 8-12 sessions, discuss this openly with your therapist. Lack of progress isn't a personal failure—it's information that guides next steps. Options include adjusting the approach, adding medication, addressing other issues first, or trying a different therapeutic modality.
+        </p>
 
         <h2 id="maximizing-success" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How to Maximize Your Success in CBT
@@ -417,11 +465,31 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
     description: 'Learn how ERP works to treat OCD, phobias, and anxiety disorders by facing fears without performing compulsions or safety behaviors.',
     image: "/images/articles/cat02/cover-082.svg",
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 7,
+    readTime: 8,
     publishedAt: '2026-03-18',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Treatment', 'OCD', 'Phobias', 'Exposure Therapy'],
+    summary: 'Exposure and Response Prevention (ERP) is the gold-standard treatment for OCD and phobias, achieving 60-80% success rates by systematically confronting fears while resisting compulsions. This counterintuitive approach breaks the anxiety-relief cycle that maintains these conditions.',
+    keyFacts: [
+      { text: 'ERP achieves 60-80% success rates for OCD and specific phobias when delivered by trained therapists, making it the most effective psychological treatment', citationIndex: 1 },
+      { text: 'The treatment works through habituation, inhibitory learning, and distress tolerance—teaching the brain that feared outcomes don\'t occur and anxiety naturally decreases without escape', citationIndex: 2 },
+      { text: 'Response prevention (resisting compulsions and safety behaviors) is just as critical as exposure—performing the compulsion after exposure undermines the entire intervention', citationIndex: 7 },
+      { text: 'Specific phobias typically require 12-16 sessions of ERP, while OCD may need 15-25 sessions depending on severity and complexity', citationIndex: 1 },
+      { text: 'Combining ERP with SSRIs for moderate to severe OCD produces better outcomes than either treatment alone, with medication reducing baseline anxiety enough to make exposures more tolerable', citationIndex: 3 },
+    ],
+    sparkMoment: 'The thing you\'ve been avoiding to escape anxiety is exactly what keeps the anxiety alive—ERP teaches you that walking through the fear is the only way out.',
+    practicalExercise: {
+      title: 'Create Your Personal Exposure Hierarchy',
+      steps: [
+        { title: 'List Your Fears', description: 'Write down all situations, objects, or thoughts that trigger your OCD or phobia. Be specific—"touching doorknobs in public restrooms" not just "contamination."' },
+        { title: 'Rate Each Fear', description: 'Use a 0-10 scale where 0 = no anxiety and 10 = maximum panic. Be honest about current distress levels, not what you think they "should" be.' },
+        { title: 'Order from Easiest to Hardest', description: 'Arrange your fears from lowest to highest anxiety rating. This becomes your exposure hierarchy—you\'ll work through it from bottom to top.' },
+        { title: 'Start with a 3-4 Rating', description: 'Begin exposures with an item rated 3-4/10. Practice it repeatedly until your anxiety drops by at least 50% before moving up the hierarchy.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Anxiety Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -498,6 +566,16 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
             ERP is the gold-standard treatment for obsessive-compulsive disorder (OCD) and specific phobias, with success rates of 60-80% when delivered by trained therapists <Citation id="1" index={1} source="Clinical Psychology Review" year="2020" tier={1} />. It's recommended as first-line treatment by the American Psychiatric Association <Citation id="3" index={3} source="APA" year="2020" tier={2} />. But it works in a way that feels counterintuitive: You deliberately face what you fear most, and you resist the urge to escape or neutralize the anxiety.
           </p>
         </div>
+
+        <h2 id="real-world-example" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Marcus's Journey Through Contamination OCD
+        </h2>
+        <p className="mb-6">
+          Marcus, a 28-year-old software engineer, spent 3-4 hours daily performing washing rituals. Touching anything "contaminated"—doorknobs, money, his own shoes—triggered overwhelming anxiety that only washing could relieve. He showered six times a day, washed his hands until they bled, and avoided public places entirely. His relationships suffered. His career stalled. He knew the fear was "irrational," but knowledge didn't stop the compulsions.
+        </p>
+        <p className="mb-6">
+          ERP felt impossible at first. Touch a doorknob and <em>not</em> wash? The therapist started small: touching a "clean" object (his laptop) and delaying washing for 10 minutes. Then touching his shoe and resisting for 30 minutes. Eventually, Marcus was touching public bathroom doorknobs and waiting hours before washing—while his anxiety climbed, peaked, and then, surprisingly, began to drop on its own. After 18 weeks of ERP, Marcus's Yale-Brown Obsessive Compulsive Scale score dropped from severe (28) to subclinical (8). He now washes normally—2-3 times daily—and the rituals that once controlled his life have lost their power.
+        </p>
 
         <h2 id="what-is-erp" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Is Exposure and Response Prevention?
@@ -683,6 +761,36 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
           source="Clinical Psychology Review, 2020; Journal of Consulting and Clinical Psychology, 2021"
         />
 
+        <div className="my-12">
+          <h2 className="text-3xl font-display font-bold text-gray-900 dark:text-white mb-6">
+            Life Before and After ERP
+          </h2>
+          <BeforeAfter
+            before={{
+              title: 'Before ERP',
+              points: [
+                'Spending hours daily on compulsions or avoiding feared situations',
+                'Social isolation—canceling plans due to anxiety',
+                'Career limitations from inability to function in certain environments',
+                'Relationship strain from reassurance-seeking and rituals',
+                'Loss of autonomy—OCD or phobia dictates daily choices',
+                'Exhaustion from the mental battle against intrusive thoughts',
+              ],
+            }}
+            after={{
+              title: 'After ERP',
+              points: [
+                'Compulsions reduced to minutes daily or eliminated entirely',
+                'Resuming social activities without overwhelming anxiety',
+                'Career advancement—no longer limited by avoidance',
+                'Healthier relationships built on connection, not compulsions',
+                'Regained autonomy—making choices based on values, not fear',
+                'Mental energy redirected to meaningful pursuits',
+              ],
+            }}
+          />
+        </div>
+
         <h2 id="common-challenges" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Common Challenges in ERP
         </h2>
@@ -759,7 +867,10 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
           For moderate to severe OCD, combining ERP with SSRIs (selective serotonin reuptake inhibitors) often produces better outcomes than either alone. Medication can reduce baseline anxiety enough to make ERP more tolerable, while ERP provides lasting skills that continue working after medication is discontinued.
         </p>
         <p className="mb-6">
-          For specific phobias, medication is typically not first-line treatment---ERP alone is highly effective.
+          SSRIs work by increasing serotonin levels in the brain, which helps regulate mood and reduce obsessive thoughts. Common medications include fluoxetine (Prozac), sertraline (Zoloft), and fluvoxamine (Luvox). These typically take 8-12 weeks to reach full effectiveness at therapeutic doses, which are often higher for OCD than for depression. The combination approach allows medication to "take the edge off" severe symptoms while ERP builds the behavioral and cognitive skills that create lasting change.
+        </p>
+        <p className="mb-6">
+          For specific phobias, medication is typically not first-line treatment---ERP alone is highly effective. However, for flying phobias or situations where exposures are infrequent, some clinicians use beta-blockers (like propranolol) to reduce physical anxiety symptoms during exposure sessions. This is controversial, as some research suggests that reducing physiological arousal during exposure may interfere with fear learning.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -780,11 +891,31 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
     description: 'Learn how ACT treats anxiety by changing your relationship with anxious thoughts rather than trying to eliminate them.',
     image: "/images/articles/cat02/cover-083.svg",
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 7,
+    readTime: 8,
     publishedAt: '2026-03-18',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Treatment', 'ACT', 'Mindfulness', 'Values'],
+    summary: 'Acceptance and Commitment Therapy (ACT) treats anxiety by teaching psychological flexibility—the ability to stay present with uncomfortable thoughts and feelings while taking action guided by personal values. Unlike CBT\'s focus on changing thoughts, ACT emphasizes changing your relationship with anxiety itself.',
+    keyFacts: [
+      { text: 'ACT achieves effect sizes comparable to CBT for generalized anxiety disorder, with 60-70% of participants showing clinically significant improvement', citationIndex: 3 },
+      { text: 'Psychological flexibility—the core target of ACT—predicts better mental health outcomes across anxiety, depression, and stress-related conditions', citationIndex: 2 },
+      { text: 'ACT uses six core processes: acceptance, cognitive defusion, present moment awareness, self-as-context, values clarification, and committed action', citationIndex: 1 },
+      { text: 'Cognitive defusion techniques help you observe anxious thoughts as mental events rather than truths, reducing their power by 40-50% in controlled studies', citationIndex: 4 },
+      { text: 'ACT is particularly effective when anxiety is driven by experiential avoidance—attempts to escape or suppress uncomfortable internal experiences that paradoxically increase suffering', citationIndex: 5 },
+    ],
+    sparkMoment: 'You can\'t control your anxious thoughts, but you can change how much power you give them—ACT teaches you to carry anxiety lightly while living richly.',
+    practicalExercise: {
+      title: 'Practice Cognitive Defusion with "Thank You, Mind"',
+      steps: [
+        { title: 'Notice an Anxious Thought', description: 'When anxiety arises, pause and identify the specific thought. Example: "I\'m going to fail this presentation."' },
+        { title: 'Add "I\'m Having the Thought That..."', description: 'Reframe it: "I\'m having the thought that I\'m going to fail." This creates distance between you and the thought—you\'re not your thoughts.' },
+        { title: 'Say "Thank You, Mind"', description: 'Acknowledge the thought without arguing: "Thank you, mind, for trying to protect me." This reduces struggle and reminds you that thoughts are just mental chatter.' },
+        { title: 'Return to Values-Based Action', description: 'Ask: "What action aligns with my values right now?" Then take that action while carrying the thought lightly, like a passenger in your car.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Thought Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -860,6 +991,37 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
           <p className="mb-6">
             This is the core premise of Acceptance and Commitment Therapy (ACT, pronounced as one word, not initials). Unlike traditional cognitive-behavioral therapy, which focuses on changing or reducing anxious thoughts, ACT teaches you to change your <em>relationship</em> with those thoughts <Citation id="1" index={1} source="Journal of Contextual Behavioral Science" year="2021" tier={1} />. The goal isn't to feel less anxious---it's to live a rich, meaningful life even when anxiety is present.
           </p>
+        </div>
+
+        <h2 id="real-world-example" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How ACT Helped Jen Stop Fighting Her Anxiety
+        </h2>
+        <p className="mb-6">
+          Jen, a 35-year-old teacher, had generalized anxiety disorder. Her mind constantly generated worries: "What if I lose my job? What if my partner leaves? What if I develop a serious illness?" She'd spent years in traditional CBT, challenging these thoughts with evidence and logic. It helped moderately, but the thoughts always returned, and she was exhausted from the constant mental battle.
+        </p>
+        <p className="mb-6">
+          ACT changed her approach entirely. Instead of fighting the thoughts, Jen learned cognitive defusion—observing them as mental noise rather than truths. When "What if I lose my job?" appeared, she'd respond: "Thanks, mind. That's a thought." She stopped treating anxiety as an enemy to defeat and started viewing it as an uncomfortable passenger she could carry while still driving her life toward what mattered: meaningful teaching, nurturing relationships, creative hobbies.
+        </p>
+        <p className="mb-6">
+          After 16 weeks of ACT, Jen still experienced anxious thoughts, but her distress scores dropped by 55%. More importantly, her valued-living scores increased dramatically. She was no longer avoiding social situations, putting off creative projects, or seeking constant reassurance from her partner. The anxiety didn't disappear—but it stopped running her life.
+        </p>
+
+        <div className="space-y-4 my-8">
+          <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mb-4">
+            Common Myths About ACT
+          </h3>
+          <MythVsFactBlock
+            myth="ACT means giving up on feeling better and just accepting your suffering."
+            fact="ACT isn't about resignation—it's about psychological flexibility. You stop struggling against anxiety (which maintains it) and redirect that energy toward values-based living. Research shows ACT reduces anxiety symptoms by 60-70%, comparable to traditional CBT."
+          />
+          <MythVsFactBlock
+            myth="If I accept my anxious thoughts, they'll control me."
+            fact="The opposite is true. Trying to suppress or fight thoughts gives them more power (the 'white bear' effect). Acceptance and defusion reduce the thoughts' impact by treating them as mental events, not commands you must obey."
+          />
+          <MythVsFactBlock
+            myth="ACT is just positive thinking or ignoring problems."
+            fact="ACT acknowledges suffering directly and uses specific, evidence-based techniques (defusion, mindfulness, values work) to build psychological flexibility. It's rigorous behavioral science, not wishful thinking."
+          />
         </div>
 
         <h2 id="how-act-differs" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1116,6 +1278,26 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Treatment', 'Medication', 'Pharmacology', 'Side Effects'],
+    summary: 'Anxiety medications fall into three main categories: SSRIs and SNRIs (first-line, long-term solutions), benzodiazepines (short-term relief with dependence risks), and alternatives like buspirone and hydroxyzine. Understanding how each works, their effectiveness, and side effect profiles helps you make informed treatment decisions with your doctor.',
+    keyFacts: [
+      { text: 'SSRIs and SNRIs are first-line medications for anxiety disorders, with 50-60% of people experiencing clinically significant improvement and low addiction risk', citationIndex: 1 },
+      { text: 'Benzodiazepines provide immediate anxiety relief but carry significant risks of dependence, tolerance, and withdrawal—making them appropriate only for short-term use (2-4 weeks maximum)', citationIndex: 3 },
+      { text: 'Anxiety medications typically take 4-8 weeks to reach full effectiveness, requiring patience and consistent dosing during the adjustment period', citationIndex: 2 },
+      { text: 'Combining medication with psychotherapy (especially CBT) produces better long-term outcomes than medication alone, with relapse rates 40% lower when therapy is included', citationIndex: 5 },
+      { text: 'Common side effects of SSRIs/SNRIs include nausea, sleep changes, and sexual dysfunction, but these often diminish after 2-4 weeks as your body adjusts', citationIndex: 6 },
+    ],
+    sparkMoment: 'Medication isn\'t a cure for anxiety—it\'s a tool that can create enough space for you to do the work of therapy and build lasting skills.',
+    practicalExercise: {
+      title: 'Prepare for Your Medication Consultation',
+      steps: [
+        { title: 'Document Your Symptoms', description: 'Write down specific anxiety symptoms, frequency, severity, and how they impact daily functioning. Include any patterns (time of day, triggers).' },
+        { title: 'List Previous Treatments', description: 'Note any medications or therapies you\'ve tried, including doses, duration, what worked, what didn\'t, and side effects experienced.' },
+        { title: 'Clarify Your Goals', description: 'What specific improvements are you hoping for? Better sleep? Reduced panic? Ability to work without overwhelming worry? Be concrete.' },
+        { title: 'Prepare Questions', description: 'Ask about timeline to effectiveness, common side effects, how to handle side effects, withdrawal process, and monitoring plan.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Anxiety Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -1458,11 +1640,31 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
     description: "Clear indicators that it's time to see a therapist or doctor for anxiety, plus how to overcome barriers to seeking help.",
     image: '/images/articles/cat02/cover-085.svg',
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 6,
+    readTime: 7,
     publishedAt: '2026-03-18',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Help-Seeking', 'Treatment', 'Mental Health', 'Barriers'],
+    summary: 'You should seek professional help for anxiety when it persistently interferes with work, relationships, or daily functioning, when self-help strategies aren\'t enough, or when anxiety symptoms last more than six months. Early intervention leads to better outcomes—the average delay between symptom onset and treatment is 11 years, and that delay worsens prognosis.',
+    keyFacts: [
+      { text: 'People wait an average of 11 years between anxiety symptom onset and seeking professional treatment, significantly worsening outcomes and quality of life', citationIndex: 2 },
+      { text: 'The most common barriers to seeking help are stigma (believing you should handle it alone), cost concerns, and not knowing where to start—all of which have practical solutions', citationIndex: 1 },
+      { text: 'Anxiety becomes "clinically significant" when it causes distress AND impairs functioning in major life areas (work, relationships, self-care) for at least six months', citationIndex: 3 },
+      { text: 'Self-stigma (shame about needing help) predicts longer delays in treatment-seeking and worse outcomes when treatment finally begins', citationIndex: 4 },
+      { text: 'Early intervention for anxiety leads to faster recovery, lower treatment costs, and reduced risk of developing secondary conditions like depression or substance use', citationIndex: 2 },
+    ],
+    sparkMoment: 'Seeking help isn\'t admitting defeat—it\'s making the informed decision that your quality of life matters more than struggling alone.',
+    practicalExercise: {
+      title: 'Assess Whether You Need Professional Help',
+      steps: [
+        { title: 'Rate Your Functional Impairment', description: 'On a 0-10 scale, rate how much anxiety interferes with work, relationships, and self-care. Scores of 5+ in any area suggest professional help could be beneficial.' },
+        { title: 'Track Duration', description: 'How long have you been experiencing anxiety at this level? If it\'s been 6+ months without improvement, that\'s a clear indicator to seek help.' },
+        { title: 'Evaluate Self-Help Attempts', description: 'Have you tried self-help strategies (exercise, mindfulness, sleep hygiene, social support) for at least 8 weeks? If yes and symptoms persist, professional treatment offers evidence-based approaches.' },
+        { title: 'Take the Next Step', description: 'If indicators point to seeking help, schedule a screening with your primary care doctor or use a therapist directory (Psychology Today, ADAA, ABCT) to find a local provider.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Anxiety Severity',
+    },
     citations: [
       {
         id: '1',
@@ -1534,6 +1736,28 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
             This article provides clear indicators that it's time to seek professional help, addresses common barriers, and guides you through the first steps.
           </p>
         </div>
+
+        <h2 id="real-world-example" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Cost of Waiting: Daniel's Story
+        </h2>
+        <p className="mb-6">
+          Daniel first noticed anxiety at age 22 during college. Panic attacks before exams, constant worry about grades and the future, difficulty sleeping. He told himself it was normal—everyone stressed about college. He graduated, started working, and the anxiety came with him. Job performance suffered. He turned down a promotion because presenting to senior leadership felt impossible. Relationships were strained because he constantly needed reassurance.
+        </p>
+        <p className="mb-6">
+          He tried self-help: meditation apps, exercise, cutting caffeine. These helped marginally but never addressed the root problem. By age 31—nine years after symptoms started—he finally saw a therapist. Within four months of CBT, his anxiety scores dropped by 60%. He looked back on that nine-year delay with regret: "I lost nearly a decade to anxiety because I thought needing help meant I was weak."
+        </p>
+        <p className="mb-6">
+          Daniel's story is common. Research shows that longer duration of untreated anxiety predicts worse treatment outcomes, higher healthcare costs, and greater risk of developing secondary conditions like depression or substance use <Citation id="2" index={2} source="Journal of Anxiety Disorders" year="2021" tier={1} />. The message is clear: earlier is better.
+        </p>
+
+        <ArticleCallout variant="clinical-note">
+          <p className="mb-3">
+            <strong>The "Good Enough" Threshold:</strong> You don't need to be "sick enough" to deserve help. If anxiety is reducing your quality of life—even if you're still functioning—that's reason enough to seek treatment.
+          </p>
+          <p>
+            Think of it like a physical injury: You wouldn't wait until a sprained ankle becomes a complete tear before seeing a doctor. Mental health works the same way—early intervention prevents worse outcomes.
+          </p>
+        </ArticleCallout>
 
         <h2 id="clear-indicators" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Clear Signs It's Time to Seek Professional Help

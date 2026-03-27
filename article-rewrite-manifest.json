@@ -3,7 +3,7 @@
   "generatedAt": "2026-03-26T22:20:03.374Z",
   "wordThreshold": 1500,
   "totalSessions": 260,
-  "completedSessions": 210,
+  "completedSessions": 213,
   "totalArticles": 1246,
   "sessions": {
     "1": {
@@ -1517,7 +1517,7 @@
       "completedAt": "2026-03-27T20:15:00Z"
     },
     "32": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "09a-crisis-seeking-professional-help",
       "file": "src/data/articles/category-02/09a-crisis-seeking-professional-help.tsx",
@@ -1529,7 +1529,7 @@
           "slug": "cbt-for-anxiety-how-the-gold-standard-treatment-works",
           "title": "CBT for Anxiety: How the Gold-Standard Treatment Works",
           "currentWords": 1086,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1537,7 +1537,7 @@
           "slug": "exposure-and-response-prevention-the-treatment-for-ocd-and-phobias",
           "title": "Exposure and Response Prevention: The Treatment for OCD and Phobias",
           "currentWords": 1058,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1545,7 +1545,7 @@
           "slug": "act-for-anxiety-acceptance-and-commitment-therapy-explained",
           "title": "ACT for Anxiety: Acceptance and Commitment Therapy Explained",
           "currentWords": 1157,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -1553,7 +1553,7 @@
           "slug": "medication-for-anxiety-ssris-snris-and-benzodiazepines-compared",
           "title": "Medication for Anxiety: SSRIs, SNRIs, and Benzodiazepines Compared",
           "currentWords": 1095,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -1561,10 +1561,10 @@
           "slug": "when-should-you-seek-professional-help-for-anxiety",
           "title": "When Should You Seek Professional Help for Anxiety?",
           "currentWords": 804,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T15:02:00Z"
     },
     "33": {
       "status": "complete",
@@ -1717,7 +1717,7 @@
       "completedAt": "2026-03-27T13:45:00.000Z"
     },
     "36": {
-      "status": "pending",
+      "status": "complete",
       "category": 3,
       "subcategoryFile": "02a-setting-maintaining-boundaries",
       "file": "src/data/articles/category-03/02a-setting-maintaining-boundaries.tsx",
@@ -1729,7 +1729,7 @@
           "slug": "what-are-boundaries-clear-practical-guide",
           "title": "What Are Boundaries? A Clear, Practical Guide",
           "currentWords": 887,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1737,10 +1737,10 @@
           "slug": "why-setting-boundaries-feels-uncomfortable-worth-it",
           "title": "The Request or Violation",
           "currentWords": 907,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T10:48:30.000Z"
     },
     "37": {
       "status": "pending",
@@ -10967,7 +10967,7 @@
       "completedAt": "2026-03-27T13:15:42Z"
     },
     "221": {
-      "status": "pending",
+      "status": "complete",
       "category": 18,
       "subcategoryFile": "02a-perinatal-postpartum",
       "file": "src/data/articles/category-18/02a-perinatal-postpartum.tsx",
@@ -10979,7 +10979,7 @@
           "slug": "perinatal-depression-understanding-depression-during-pregnancy",
           "title": "Article 11",
           "currentWords": 468,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -10987,7 +10987,7 @@
           "slug": "postpartum-depression-beyond-the-baby-blues",
           "title": "Article 12",
           "currentWords": 442,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -10995,7 +10995,7 @@
           "slug": "perinatal-anxiety-when-worry-becomes-overwhelming",
           "title": "Article 13",
           "currentWords": 461,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -11003,7 +11003,7 @@
           "slug": "birth-trauma-and-ptsd-healing-after-difficult-births",
           "title": "Article 14",
           "currentWords": 490,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -11011,10 +11011,10 @@
           "slug": "postpartum-psychosis-recognizing-and-responding-to-psychiatric-emergency",
           "title": "Article 15",
           "currentWords": 460,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T10:45:31Z"
     },
     "222": {
       "status": "complete",

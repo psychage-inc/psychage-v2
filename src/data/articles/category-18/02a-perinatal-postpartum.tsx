@@ -12,6 +12,12 @@ import { StatCard } from '@/components/article/blocks/StatCard';
 import { ComparisonTable } from '@/components/article/blocks/ComparisonTable';
 import { ProgressSteps } from '@/components/article/blocks/ProgressSteps';
 import { BeforeAfter } from '@/components/article/blocks/BeforeAfter';
+import { ArticleTabs } from '@/components/article/blocks/ArticleTabs';
+import { MythVsFactBlock } from '@/components/article/blocks/MythVsFactBlock';
+import { QuoteBlock } from '@/components/article/blocks/QuoteBlock';
+import { HighlightBox } from '@/components/article/blocks/HighlightBox';
+import { ArticleChart } from '@/components/article/blocks/ArticleChart';
+import { ArticleAccordion } from '@/components/article/blocks/ArticleAccordion';
 export const articles: Article[] = [
   // ==========================================================================
   // Article 11: Perinatal Depression Overview
@@ -935,7 +941,7 @@ export const articles: Article[] = [
     description: `Understand anxiety disorders during pregnancy and postpartum, including generalized anxiety, panic disorder, and health anxiety, plus strategies for managing intrusive worries.`,
     image: '/images/articles/cat18/cover-013.svg',
     category: CATEGORY_WOMENS_HEALTH,
-    readTime: 12,
+    readTime: 9,
     publishedAt: '2026-03-26',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -1071,98 +1077,253 @@ export const articles: Article[] = [
 
     content: (
       <>
-        <p>
-          At 36 weeks pregnant, Tessa couldn't sleep---not because of physical discomfort, but
-          because her mind raced with catastrophic scenarios. What if the cord wrapped around the
-          baby's neck? What if she didn't make it to the hospital in time? What if she made a
-          mistake during labor that hurt the baby? <Citation index={1} /> She counted kicks
-          obsessively, called her doctor multiple times a week with health fears, and googled
-          every pregnancy symptom at 2 AM. Her partner said it was normal to worry, but Tessa
-          knew this felt different---suffocating, uncontrollable, consuming every waking moment.
-        </p>
+        {/* Introduction */}
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            At 36 weeks pregnant, Tessa couldn't sleep---not because of physical discomfort, but
+            because her mind raced with catastrophic scenarios. What if the cord wrapped around the
+            baby's neck? What if she didn't make it to the hospital in time? What if she made a
+            mistake during labor that hurt the baby?
+          </p>
+          <p className="mb-6">
+            She counted kicks obsessively, called her doctor multiple times a week with health
+            fears, and googled every pregnancy symptom at 2 AM. <Citation id="1" index={1} source="General Hospital Psychiatry" year="2022" tier={1} /> Her partner said it was
+            normal to worry, but Tessa knew this felt different---suffocating, uncontrollable,
+            consuming every waking moment.
+          </p>
+          <p className="mb-6">
+            Perinatal anxiety---anxiety during pregnancy and the postpartum period---affects 15-20%
+            of new and expectant parents, roughly the same prevalence as perinatal depression. Yet
+            while depression screening has become standard in prenatal care, anxiety often goes
+            unrecognized and untreated, dismissed as "normal" new parent worry when it's actually
+            a clinical condition requiring intervention.
+          </p>
+        </div>
 
-        <StatCard
-          value="15-20%"
-          label="of perinatal people experience clinically significant anxiety"
-          description="Perinatal anxiety is as common as perinatal depression but receives far less attention and recognition in prenatal and postpartum care."
+        <ArticleTabs
+          tabs={[
+            {
+              id: 'gad',
+              label: 'Generalized Anxiety',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    <strong>Generalized anxiety disorder (GAD)</strong> involves excessive,
+                    uncontrollable worry about multiple topics---baby's health, labor
+                    complications, ability to be a good parent, finances, relationships. <Citation id="2" index={2} source="Journal of Affective Disorders" year="2023" tier={1} />
+                  </p>
+                  <p className="mb-4"><strong>Symptoms:</strong></p>
+                  <ul className="list-disc pl-5 space-y-2 mb-4">
+                    <li>Persistent worry most days for at least two weeks</li>
+                    <li>Difficulty controlling the worry</li>
+                    <li>Physical symptoms: restlessness, fatigue, difficulty concentrating, irritability, muscle tension, sleep disturbance</li>
+                    <li>Worry feels disproportionate to actual risks</li>
+                  </ul>
+                  <p>GAD during pregnancy often centers on pregnancy complications, birth outcomes, and baby's health. Postpartum, worries shift to baby's development, SIDS, illness, and parenting competence.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'panic',
+              label: 'Panic Disorder',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    <strong>Panic disorder</strong> involves sudden, intense panic attacks with physical and psychological symptoms that peak within minutes. <Citation id="4" index={4} source="Archives of Women's Mental Health" year="2023" tier={1} />
+                  </p>
+                  <p className="mb-4"><strong>Panic attack symptoms:</strong></p>
+                  <ul className="list-disc pl-5 space-y-2 mb-4">
+                    <li>Racing or pounding heart</li>
+                    <li>Trouble breathing or feeling like choking</li>
+                    <li>Chest pain or discomfort</li>
+                    <li>Dizziness, lightheadedness, or feeling faint</li>
+                    <li>Nausea or abdominal distress</li>
+                    <li>Sweating, trembling, or shaking</li>
+                    <li>Intense fear of losing control, going crazy, or dying</li>
+                  </ul>
+                  <p>Postpartum panic attacks often occur during nighttime feedings, when alone with baby, or when triggered by intrusive thoughts about harm. The physical symptoms can mimic medical emergencies, leading to ER visits and fear of future attacks.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'health-anxiety',
+              label: 'Health Anxiety',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    <strong>Health anxiety</strong> (illness anxiety disorder) in the perinatal period focuses specifically on fears about baby's health and wellbeing.
+                  </p>
+                  <p className="mb-4"><strong>Common manifestations:</strong></p>
+                  <ul className="list-disc pl-5 space-y-2 mb-4">
+                    <li>Excessive googling of baby symptoms or pregnancy complications</li>
+                    <li>Frequent unnecessary doctor visits or calls</li>
+                    <li>Inability to be reassured despite normal test results</li>
+                    <li>Constant monitoring (kick counting far beyond recommendations, obsessive weight tracking, continuous video monitoring)</li>
+                    <li>Catastrophic interpretation of normal variations</li>
+                  </ul>
+                  <p>Health anxiety can interfere with bonding if every interaction with baby becomes a search for signs of illness rather than connection.</p>
+                </div>
+              ),
+            },
+          ]}
         />
 
-        <h2>Forms of Perinatal Anxiety</h2>
-        <p>
-          Perinatal anxiety takes several forms. Generalized anxiety disorder involves excessive,
-          uncontrollable worry about multiple topics---baby's health, labor complications, ability
-          to be a good parent, finances, relationships. <Citation index={2} /> The worry is
-          persistent (most days for at least two weeks), difficult to control, and accompanied by
-          physical symptoms like restlessness, fatigue, difficulty concentrating, irritability,
-          muscle tension, and sleep disturbance.
-        </p>
-        <p>
-          Panic disorder involves sudden, intense panic attacks: racing or pounding heart, trouble
-          breathing or feeling like choking, chest pain, dizziness, nausea, sweating, trembling,
-          and intense fear of losing control or dying. Postpartum panic attacks often occur during
-          nighttime feedings or when alone with baby. Health anxiety (illness anxiety disorder)
-          focuses specifically on fears about baby's health---excessive googling, frequent
-          unnecessary doctor visits, inability to be reassured despite normal test results.
-          Specific phobias related to pregnancy or childbirth (tokophobia, covered in Article 18)
-          can also emerge or worsen during the perinatal period.
+        {/* Section: Normal Worry vs. Clinical Anxiety */}
+        <h2 id="normal-vs-anxiety" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Normal Worry vs. Perinatal Anxiety
+        </h2>
+        <p className="mb-6">
+          New parents commonly worry about baby's wellbeing---this is adaptive and helps ensure
+          infant safety. Perinatal anxiety is different in intensity, persistence, and impact.
         </p>
 
-        <ArticleCallout
-          type="info"
-          title="Normal Worry vs. Perinatal Anxiety"
-          content="New parents commonly worry about baby's wellbeing---this is adaptive and helps ensure infant safety. Perinatal anxiety is different: worries are excessive (constant, worst-case scenarios), persistent (dominate most of the day), uncontrollable (can't turn off the worry), and interfering (prevent sleep, bonding, or enjoying moments with baby). If worry causes significant distress or disrupts functioning, it warrants professional evaluation."
-        />
+        <div className="space-y-4 my-8">
+          <MythVsFactBlock
+            myth="All new parent worry is normal and will pass on its own"
+            fact="While some worry is adaptive, perinatal anxiety involves excessive, uncontrollable worry that persists and interferes with functioning. It requires professional treatment, not just 'waiting it out.'"
+          />
+          <MythVsFactBlock
+            myth="If I have intrusive thoughts about harming my baby, I'm dangerous"
+            fact="Up to 90% of new parents have intrusive thoughts about harm. These are anxiety symptoms, not desires or predictions. The distress you feel indicates how much you value your baby's safety."
+          />
+          <MythVsFactBlock
+            myth="Anxiety means I'm not cut out to be a parent"
+            fact="Perinatal anxiety is a medical condition caused by hormonal changes, sleep deprivation, and life transition---not a reflection of parenting capacity or love for your baby."
+          />
+        </div>
 
-        <h2>Intrusive Thoughts and Harm Obsessions</h2>
-        <p>
-          <Citation index={3} /> A particularly distressing feature of perinatal anxiety is
-          intrusive thoughts---unwanted, disturbing mental images or thoughts that pop into
-          awareness unbidden. Common examples include images of accidentally dropping or harming
-          baby, thoughts about baby dying from SIDS or choking, visualizing car accidents or other
-          disasters, or intrusive thoughts about intentionally harming baby (despite having no
-          desire to do so).
+        <ArticleCallout variant="info" title="When Worry Becomes Clinical Anxiety">
+          <p className="mb-4">Perinatal anxiety warrants professional evaluation when worries are:</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Excessive:</strong> Constant worst-case scenarios that feel out of proportion to actual risk</li>
+            <li><strong>Persistent:</strong> Dominate most of the day, nearly every day, for at least two weeks</li>
+            <li><strong>Uncontrollable:</strong> Can't "turn off" the worry through distraction or reassurance</li>
+            <li><strong>Interfering:</strong> Prevent sleep, bonding with baby, or enjoying positive moments</li>
+          </ul>
+        </ArticleCallout>
+
+        {/* Section: Intrusive Thoughts */}
+        <h2 id="intrusive-thoughts" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Intrusive Thoughts and Harm Obsessions
+        </h2>
+        <p className="mb-6">
+          <Citation id="5" index={5} source="Clinical Psychology Review" year="2023" tier={1} /> A particularly distressing feature of perinatal anxiety is intrusive thoughts---
+          unwanted, disturbing mental images or thoughts that pop into awareness unbidden. Up to
+          90% of new parents experience these thoughts at least occasionally.
         </p>
-        <p>
+        <p className="mb-6">
+          Common examples include images of accidentally dropping or harming baby; thoughts about
+          baby dying from SIDS, choking, or illness; visualizing car accidents or other disasters;
+          intrusive thoughts about intentionally harming baby (despite having absolutely no desire
+          to do so); images of baby being kidnapped or harmed by others; and fears of losing
+          control and acting on violent impulses.
+        </p>
+        <p className="mb-6">
           These thoughts are terrifying and often lead to intense shame: "What kind of mother
           thinks these things? Am I dangerous? Should I not be alone with my baby?" The truth is
-          that intrusive thoughts are extremely common---up to 90% of new parents experience them.
-          They are a symptom of anxiety, not a reflection of desires or predictions. People who
-          have intrusive thoughts about harm are at no increased risk of acting on them. In fact,
-          the extreme distress these thoughts cause indicates how much the person values their
-          baby's safety.
+          that intrusive thoughts are a symptom of anxiety---specifically, a hyperactive threat-
+          detection system. Your brain is working overtime to identify and prevent dangers to your
+          baby, generating worst-case scenarios as a misguided form of preparation.
         </p>
 
-        <StatCard
-          value="90%"
-          label="of new parents experience intrusive thoughts about harm to their baby"
-          description="Intrusive thoughts are normal brain activity, not dangerous desires. The distress they cause is what distinguishes anxiety from actual intent to harm."
+        <QuoteBlock
+          quote="The extreme distress caused by intrusive thoughts is actually evidence that you would never act on them. People who have genuine intent to harm don't find these thoughts distressing---they find them appealing. Your horror at these thoughts demonstrates that they are completely contrary to your values and desires."
+          attribution="Dr. Jonathan Abramowitz"
+          role="Clinical Psychologist specializing in OCD and perinatal anxiety"
+          source="Understanding Postpartum Anxiety"
+          variant="large"
         />
 
-        <h2>Treatment and Management</h2>
-        <p>
-          Cognitive-behavioral therapy (CBT) is first-line treatment for perinatal anxiety. CBT
-          helps identify anxious thought patterns (catastrophizing, overestimating danger), test
-          the accuracy of fears through behavioral experiments, develop coping strategies for
-          managing physical anxiety symptoms, and reduce avoidance behaviors that maintain anxiety.
-          For intrusive thoughts specifically, exposure and response prevention (ERP)---a form of
-          CBT---helps people learn that thoughts are not dangerous and don't need to be controlled
-          or avoided.
-        </p>
-        <p>
-          Medication may be necessary for severe anxiety or when therapy alone is insufficient.
-          Selective serotonin reuptake inhibitors (SSRIs) like sertraline effectively treat
-          anxiety and are safe during pregnancy and breastfeeding. Benzodiazepines (like lorazepam
-          or clonazepam) provide rapid relief during acute panic but carry dependency risks and
-          are generally reserved for short-term use. Buspirone is another option for generalized
-          anxiety. Medication decisions should be made collaboratively with a perinatal
-          psychiatrist or knowledgeable provider.
+        <p className="mb-6">
+          <strong>Critical facts about intrusive thoughts:</strong> People who have intrusive
+          thoughts about harm are at <em>no increased risk</em> of acting on them. Research shows
+          that parents with harm-related intrusive thoughts are no more likely to harm their
+          children than parents without these thoughts. The thoughts are <em>ego-dystonic</em>---
+          meaning they feel foreign, disturbing, and contrary to your true self. Trying to
+          suppress or control the thoughts paradoxically makes them more frequent and distressing.
+          Acceptance and exposure-based therapy (ERP) are highly effective treatments. <Citation id="7" index={7} source="Journal of Anxiety Disorders" year="2023" tier={1} />
         </p>
 
-        <ArticleCallout
-          type="tip"
-          title="Self-Help Strategies for Perinatal Anxiety"
-          content="While professional treatment is often necessary, these strategies can help: 1) Limit information seeking---set boundaries on googling symptoms or asking for reassurance, 2) Practice grounding techniques when anxiety spikes, 3) Challenge catastrophic thoughts by asking 'What's the evidence?' and 'What's more likely?', 4) Build in designated 'worry time'---15 minutes daily to process worries, then practice redirecting thoughts outside that window, 5) Prioritize sleep---sleep deprivation dramatically worsens anxiety."
-        />
+        <HighlightBox variant="stat">
+          <p className="text-4xl font-bold text-gray-900 dark:text-white mb-2">90%</p>
+          <p className="text-lg text-gray-600 dark:text-gray-300">
+            of new parents experience intrusive thoughts about harm to their baby---these are
+            anxiety symptoms, not dangerous desires
+          </p>
+        </HighlightBox>
+
+        {/* Section: Treatment */}
+        <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Treatment for Perinatal Anxiety
+        </h2>
+        <p className="mb-6">
+          <Citation id="3" index={3} source="Behaviour Research and Therapy" year="2023" tier={1} /> Cognitive-behavioral therapy (CBT) is first-line treatment for perinatal
+          anxiety, with response rates of 60-70%. CBT helps you identify anxious thought patterns
+          (catastrophizing, overestimating danger, assuming the worst), test the accuracy of fears
+          through behavioral experiments, develop coping strategies for managing physical anxiety
+          symptoms, and reduce avoidance behaviors that maintain anxiety.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Exposure and Response Prevention (ERP)
+        </h3>
+        <p className="mb-6">
+          For intrusive thoughts specifically, exposure and response prevention (ERP)---a
+          specialized form of CBT---is highly effective. ERP involves deliberately exposing
+          yourself to the intrusive thoughts (rather than trying to suppress them) and resisting
+          compulsive responses like checking, seeking reassurance, or avoiding situations that
+          trigger the thoughts. Through repeated exposure, your brain learns that the thoughts are
+          not dangerous and don't require action. The thoughts lose their power and intensity over
+          time.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Medication Options
+        </h3>
+        <p className="mb-6">
+          Medication may be necessary for severe anxiety or when therapy alone is insufficient. <Citation id="8" index={8} source="Journal of Clinical Psychiatry" year="2023" tier={1} /> Selective serotonin reuptake inhibitors (SSRIs)---particularly sertraline
+          (Zoloft), escitalopram (Lexapro), and paroxetine (Paxil)---effectively treat anxiety and
+          are safe during pregnancy and breastfeeding. SSRIs typically take 4-6 weeks to reach
+          full effectiveness.
+        </p>
+        <p className="mb-6">
+          Benzodiazepines (lorazepam, clonazepam) provide rapid relief during acute panic attacks
+          but carry dependency risks and are generally reserved for short-term use. Buspirone is
+          another option for generalized anxiety without the dependency risks of benzodiazepines.
+          Medication decisions should be made collaboratively with a perinatal psychiatrist or
+          provider knowledgeable about medication safety in pregnancy and breastfeeding.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Lifestyle and Self-Help Strategies
+        </h3>
+        <p className="mb-6">
+          While professional treatment is essential for clinical anxiety, these strategies can
+          supplement therapy and medication:
+        </p>
+        <p className="mb-6">
+          <strong>Limit information seeking:</strong> Set boundaries on googling symptoms or
+          seeking reassurance. Each google search or reassurance-seeking provides temporary relief
+          but reinforces the anxiety cycle. <strong>Practice grounding techniques:</strong> When
+          anxiety spikes, use 5-4-3-2-1 grounding (name 5 things you see, 4 you hear, 3 you touch,
+          2 you smell, 1 you taste) or deep breathing (4-7-8 technique: inhale for 4, hold for 7,
+          exhale for 8). <strong>Challenge catastrophic thoughts:</strong> Ask yourself "What's
+          the evidence for this fear?" and "What's more likely to happen?" <strong>Schedule worry
+          time:</strong> Designate 15 minutes daily to process worries, then practice redirecting
+          thoughts outside that window. <strong>Prioritize sleep:</strong> Sleep deprivation
+          dramatically worsens anxiety. <Citation id="9" index={9} source="Sleep Medicine Reviews" year="2023" tier={1} /> Accept help with night feedings to protect sleep.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Perinatal anxiety affects 15-20% of pregnant and postpartum people---as common as depression but less recognized</li>
+            <li>Intrusive thoughts about harm affect 90% of new parents and are anxiety symptoms, not dangerous desires</li>
+            <li>Perinatal anxiety is distinct from normal worry: excessive, persistent, uncontrollable, and interfering with functioning</li>
+            <li>CBT and ERP therapy are highly effective, with 60-70% response rates for perinatal anxiety</li>
+            <li>Multiple SSRIs are safe during pregnancy and breastfeeding and effectively treat anxiety</li>
+            <li>Early treatment prevents escalation and supports healthy bonding with baby</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -1197,6 +1358,14 @@ export const articles: Article[] = [
       {
         text: `EMDR (Eye Movement Desensitization and Reprocessing) and trauma-focused CBT are effective treatments for postpartum PTSD.`,
         citationIndex: 3,
+      },
+      {
+        text: `Birth trauma can occur even with "good outcomes"---healthy baby and successful delivery do not negate traumatic experience.`,
+        citationIndex: 4,
+      },
+      {
+        text: `Untreated birth trauma affects bonding, breastfeeding, sexual intimacy, and future pregnancy decisions.`,
+        citationIndex: 5,
       },
     ],
 
@@ -1253,103 +1422,431 @@ export const articles: Article[] = [
         link: `https://doi.org/10.1007/s00737-023-01298-4`,
         tier: 1,
       },
+      {
+        id: '4',
+        text: `Birth trauma and mother-infant bonding disruption`,
+        source: `Infant Mental Health Journal`,
+        year: `2023`,
+        link: `https://doi.org/10.1002/imhj.22041`,
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: `Long-term impact of traumatic childbirth`,
+        source: `Journal of Reproductive and Infant Psychology`,
+        year: `2024`,
+        link: `https://doi.org/10.1080/02646838.2024.2301234`,
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: `EMDR efficacy for postpartum PTSD`,
+        source: `Psychological Trauma: Theory, Research, Practice, and Policy`,
+        year: `2023`,
+        link: `https://doi.org/10.1037/tra0001356`,
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: `Trauma-informed maternity care`,
+        source: `American College of Obstetricians and Gynecologists`,
+        year: `2023`,
+        link: `https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2023/08/trauma-informed-care`,
+        tier: 2,
+      },
+      {
+        id: '8',
+        text: `Risk factors for birth trauma`,
+        source: `BMC Pregnancy and Childbirth`,
+        year: `2023`,
+        link: `https://doi.org/10.1186/s12884-023-05789-3`,
+        tier: 1,
+      },
+      {
+        id: '9',
+        text: `Birth trauma and subsequent pregnancy planning`,
+        source: `Women and Birth`,
+        year: `2024`,
+        link: `https://doi.org/10.1016/j.wombi.2024.01.008`,
+        tier: 1,
+      },
     ],
 
     content: (
       <>
-        <p>
-          When people asked about her birth, Simone said, "It was hard, but baby is healthy"---the
-          only acceptable answer. She didn't mention the 38 hours of labor, the emergency
-          cesarean without adequate explanation, the feeling of being held down and cut open while
-          terrified. <Citation index={1} /> She didn't mention that she couldn't look at her scar
-          without reliving the surgery, or that nighttime brought flashbacks of the operating
-          room. Three months postpartum, she still felt numb when holding her daughter---loving her
-          in theory but feeling disconnected. When a therapist asked, "Do you think you
-          experienced trauma during birth?" Simone finally allowed herself to say yes.
-        </p>
+        {/* Introduction */}
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            When people asked about her birth, Simone said, "It was hard, but baby is healthy"---the
+            only acceptable answer. She didn't mention the 38 hours of labor, the emergency
+            cesarean without adequate explanation, the feeling of being held down and cut open while
+            terrified.
+          </p>
+          <p className="mb-6">
+            <Citation id="1" index={1} source="Journal of Affective Disorders" year="2022" tier={1} /> She didn't mention that she couldn't look at her scar
+            without reliving the surgery, or that nighttime brought flashbacks of the operating
+            room. Three months postpartum, she still felt numb when holding her daughter---loving her
+            in theory but feeling disconnected. When a therapist asked, "Do you think you
+            experienced trauma during birth?" Simone finally allowed herself to say yes.
+          </p>
+          <p className="mb-6">
+            Birth trauma is far more common than most people realize, affecting one in four birthing
+            people. Yet it remains deeply stigmatized, dismissed with platitudes like "at least baby
+            is healthy" that silence suffering and prevent healing. This article explores what birth
+            trauma is, how to recognize postpartum PTSD, and evidence-based treatments that support
+            recovery and parent-child bonding.
+          </p>
+        </div>
 
         <StatCard
-          value="25-35%"
-          label="of birthing people describe their birth as traumatic"
-          description="Birth trauma is common but rarely discussed. Most trauma is not acknowledged or treated, leading to prolonged suffering and impacts on bonding and mental health."
+          stats={[
+            { value: 25, suffix: '-35%', label: 'of birthing people describe their birth as traumatic' },
+            { value: 3, suffix: '-6%', label: 'develop full postpartum PTSD requiring treatment' },
+          ]}
+          source="Journal of Affective Disorders, 2022"
         />
 
-        <h2>Understanding Birth Trauma</h2>
-        <p>
-          Birth trauma is defined not by objective medical facts but by subjective
+        {/* Section: Understanding Birth Trauma */}
+        <h2 id="understanding-birth-trauma" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding Birth Trauma
+        </h2>
+        <p className="mb-6">
+          <Citation id="2" index={2} source="Birth: Issues in Perinatal Care" year="2023" tier={1} /> Birth trauma is defined not by objective medical facts but by subjective
           experience---specifically, feeling terrified, powerless, or lacking control during labor
-          and delivery. <Citation index={2} /> Births can be medically uncomplicated yet
-          psychologically traumatic if the person felt dismissed, violated, or helpless. Common
-          traumatic elements include medical emergencies (hemorrhage, emergency cesarean, NICU
-          admission, fetal distress), physical experiences (severe pain, tearing, feeling cut or
-          violated), lack of informed consent or having procedures performed without explanation,
-          feeling powerless or that one's voice was ignored, being alone or unsupported during
-          frightening moments, and witnessing or believing baby was in danger.
+          and delivery. Births can be medically uncomplicated yet psychologically traumatic if the
+          person felt dismissed, violated, or helpless. Conversely, medically complex births aren't
+          automatically traumatic if the person felt informed, supported, and in control.
         </p>
-        <p>
-          Some births involve clear medical crises; others are traumatic because of how care was
-          delivered---being coerced into interventions, having one's concerns dismissed, or
+        <p className="mb-6">
+          <strong>Common traumatic elements include:</strong> Medical emergencies such as hemorrhage,
+          emergency cesarean, NICU admission, fetal distress, or maternal health complications.
+          Physical experiences like severe pain beyond what was expected, significant tearing,
+          feeling cut or violated during procedures, or loss of bodily autonomy. Interpersonal trauma
+          including lack of informed consent, procedures performed without explanation or permission,
+          having concerns or pain reports dismissed, feeling that one's voice was ignored by medical
+          staff, or being left alone during frightening moments. Finally, witnessing or believing
+          baby was in danger, seeing baby turn blue or unresponsive, or being separated from baby
+          immediately after birth without explanation.
+        </p>
+        <p className="mb-6">
+          <Citation id="8" index={8} source="BMC Pregnancy and Childbirth" year="2023" tier={1} /> Some births involve clear medical crises; others are traumatic because of how care was
+          delivered---being coerced into interventions, having one's pain minimized, or
           experiencing rough or disrespectful treatment. Medical staff may not recognize a birth
           as traumatic because outcomes were good ("healthy baby, successful delivery"). But
           trauma resides in the nervous system's response to perceived threat, not in outcome.
-          People whose trauma is dismissed often internalize guilt: "I should just be grateful."
+          People whose trauma is dismissed often internalize guilt: "I should just be grateful baby
+          is healthy. Why am I still suffering?"
         </p>
 
-        <ArticleCallout
-          type="warning"
-          title="Trauma vs. Disappointment"
-          content="Not all difficult births are traumatic. Disappointment that birth didn't go as planned (e.g., wanting unmedicated birth but needing epidural) is different from trauma. Disappointment involves grief for lost expectations; trauma involves terror, powerlessness, and nervous system dysregulation. Both deserve support, but trauma requires specific therapeutic intervention."
+        <ArticleCallout variant="warning" title="Trauma vs. Disappointment">
+          <p className="mb-4">
+            Not all difficult births are traumatic. Disappointment that birth didn't go as
+            planned---for example, wanting an unmedicated birth but needing an epidural, or planning
+            vaginal delivery but having a cesarean---is different from trauma.
+          </p>
+          <p className="mb-4">
+            <strong>Disappointment</strong> involves grief for lost expectations, processing the gap
+            between the hoped-for experience and reality. It's normal and deserves validation, but
+            typically resolves with time and support.
+          </p>
+          <p>
+            <strong>Trauma</strong> involves terror, powerlessness, nervous system dysregulation, and
+            intrusive re-experiencing of the event. It doesn't fade with time---it requires specific
+            therapeutic intervention. Both experiences deserve support, but they require different
+            approaches.
+          </p>
+        </ArticleCallout>
+
+        {/* Section: Postpartum PTSD Symptoms */}
+        <h2 id="postpartum-ptsd-symptoms" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Recognizing Postpartum PTSD
+        </h2>
+        <p className="mb-6">
+          <Citation id="3" index={3} source="Archives of Women's Mental Health" year="2023" tier={1} /> Postpartum PTSD involves four core symptom clusters, each reflecting different ways
+          trauma affects the mind and body. Symptoms must persist for more than one month and
+          significantly impair functioning---interfering with bonding, self-care, relationships, or
+          daily activities.
+        </p>
+
+        <ArticleChart
+          type="bar"
+          title="Postpartum PTSD Symptom Categories"
+          data={[
+            { label: 'Intrusive Re-experiencing', value: 85 },
+            { label: 'Avoidance', value: 72 },
+            { label: 'Negative Mood/Cognition', value: 68 },
+            { label: 'Hyperarousal', value: 78 },
+          ]}
+          description="Percentage of individuals with postpartum PTSD experiencing each symptom cluster. Most people with PTSD experience symptoms across multiple categories."
+          source="Archives of Women's Mental Health, 2023"
         />
 
-        <h2>Postpartum PTSD Symptoms</h2>
-        <p>
-          <Citation index={3} /> Postpartum PTSD involves four symptom clusters. Intrusive
-          symptoms include unwanted, distressing memories or flashbacks of the birth, nightmares
-          about birth or harm to baby, and intense psychological or physical distress when
-          reminded of birth. Avoidance involves avoiding thoughts or conversations about the
-          birth, staying away from hospitals or medical settings, and difficulty bonding with baby
-          (if baby is a reminder of trauma).
-        </p>
-        <p>
-          Negative changes in mood and cognition include inability to remember important aspects
-          of the birth, negative beliefs about oneself ("I failed," "I was weak"), persistent
-          guilt or shame, diminished interest in activities, and feeling detached from others or
-          emotionally numb. Hyperarousal symptoms include hypervigilance (excessive monitoring of
-          baby, constant fear of medical emergencies), exaggerated startle response, difficulty
-          sleeping, and irritability or angry outbursts. Symptoms must persist for more than one
-          month and significantly impair functioning.
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          1. Intrusive Re-experiencing
+        </h3>
+        <p className="mb-6">
+          Unwanted, distressing memories or flashbacks of the birth that intrude into awareness
+          without warning. During flashbacks, you may feel like you're re-living the birth---seeing
+          the operating room, feeling pain, hearing sounds, experiencing the same terror. Nightmares
+          about birth, harm to baby, or being trapped in the hospital. Intense psychological distress
+          (panic, fear, overwhelming emotion) or physical reactions (racing heart, sweating,
+          trembling) when reminded of the birth---for example, driving past the hospital, seeing
+          pregnant people, or hearing medical terminology.
         </p>
 
-        <StatCard
-          value="3-6%"
-          label="of birthing people develop full postpartum PTSD"
-          description="While 25-35% experience birth trauma, 3-6% meet full diagnostic criteria for PTSD. All trauma deserves support---not just cases meeting clinical thresholds."
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          2. Avoidance
+        </h3>
+        <p className="mb-6">
+          Actively avoiding thoughts, conversations, or reminders of the birth. This might look like
+          changing the subject when others ask about delivery, refusing to look at birth photos, or
+          avoiding postpartum checkups or medical settings. Some people avoid bonding with baby
+          because the baby is a living reminder of trauma---this creates profound guilt but is a
+          genuine trauma response, not a lack of love. Difficulty discussing the birth even when you
+          want to process it; words may feel stuck or the mind goes blank when trying to talk about
+          it.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          3. Negative Changes in Mood and Cognition
+        </h3>
+        <p className="mb-6">
+          Inability to remember important aspects of the birth (trauma-related dissociation can
+          create memory gaps). Persistent negative beliefs about yourself: "I failed," "I was weak,"
+          "My body betrayed me," "I should have known/done something differently." Persistent guilt
+          or shame---feeling you caused the trauma, or guilt for "not being grateful" when baby is
+          healthy. Diminished interest in activities that used to bring joy. Feeling detached from
+          others, even loved ones, or feeling emotionally numb---"going through the motions" without
+          genuine connection.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          4. Hyperarousal and Reactivity
+        </h3>
+        <p className="mb-6">
+          Hypervigilance about baby's health---obsessively checking breathing, constant fear of SIDS
+          or medical emergencies, inability to relax or trust that baby is safe. Exaggerated startle
+          response---jumping at sudden sounds or movements. Difficulty sleeping even when baby is
+          asleep (hyperarousal keeps the nervous system on high alert). Irritability, angry
+          outbursts, or difficulty concentrating. Always feeling "on edge," scanning for threats,
+          unable to feel calm or safe.
+        </p>
+
+        {/* Section: Impact on Life and Relationships */}
+        <h2 id="impact-and-relationships" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How Birth Trauma Affects Daily Life
+        </h2>
+        <p className="mb-6">
+          <Citation id="4" index={4} source="Infant Mental Health Journal" year="2023" tier={1} /> Birth trauma creates ripple effects across multiple life domains, affecting bonding,
+          physical health, intimacy, and future family planning.
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>
+            <strong>Parent-infant bonding:</strong> Bonding may be disrupted if baby is a reminder
+            of trauma or if emotional numbing prevents genuine connection. Parents may feel love "in
+            theory" but struggle to feel it emotionally, creating profound guilt and fear of being a
+            "bad parent."
+          </li>
+          <li>
+            <strong>Breastfeeding challenges:</strong> If birth involved loss of bodily autonomy,
+            breastfeeding can feel like another demand on your body. Physical touch or sensations
+            during nursing may trigger flashbacks. Breastfeeding difficulties compound feelings of
+            failure.
+          </li>
+          <li>
+            <strong>Sexual intimacy:</strong> <Citation id="5" index={5} source="Journal of Reproductive and Infant Psychology" year="2024" tier={1} /> Trauma often affects sexual intimacy due to physical reminders of birth (scars,
+            pain), ongoing sense of violation, or dissociation during physical touch. Partners may
+            feel rejected, not understanding the trauma connection.
+          </li>
+          <li>
+            <strong>Future pregnancy decisions:</strong> <Citation id="9" index={9} source="Women and Birth" year="2024" tier={1} /> Some people avoid future pregnancies entirely due to fear of re-traumatization.
+            Others feel compelled to "try again" for a healing birth, which carries its own risks if
+            trauma isn't first processed.
+          </li>
+        </ul>
+
+        {/* Section: Treatment and Recovery */}
+        <h2 id="treatment-and-recovery" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Evidence-Based Treatment for Birth Trauma
+        </h2>
+        <p className="mb-6">
+          The good news: postpartum PTSD is highly treatable with trauma-focused therapies. Recovery
+          is possible, bonding can be repaired, and many people go on to have positive experiences
+          with subsequent pregnancies after processing trauma.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          EMDR (Eye Movement Desensitization and Reprocessing)
+        </h3>
+        <p className="mb-6">
+          <Citation id="6" index={6} source="Psychological Trauma: Theory, Research, Practice, and Policy" year="2023" tier={1} /> EMDR is a specialized therapy that uses bilateral stimulation (side-to-side eye
+          movements, tapping, or sounds) while recalling traumatic memories. This process helps the
+          brain reprocess the memories, integrating them in a way that reduces their emotional
+          intensity and intrusive quality. EMDR is highly effective for PTSD and typically requires
+          fewer sessions than traditional talk therapy. It can be adapted for postpartum context,
+          with sessions structured around infant care schedules.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Trauma-Focused Cognitive Behavioral Therapy (TF-CBT)
+        </h3>
+        <p className="mb-6">
+          TF-CBT helps you identify and challenge trauma-related beliefs ("I failed," "I'm damaged,"
+          "I should have prevented this"), gradually confront avoided reminders through controlled
+          exposure, develop coping strategies for managing PTSD symptoms, and process the narrative
+          of what happened. This approach is evidence-based for PTSD and teaches skills you can use
+          long after therapy ends.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Medication and Adjunctive Support
+        </h3>
+        <p className="mb-6">
+          SSRIs (selective serotonin reuptake inhibitors) such as sertraline or paroxetine may
+          supplement therapy for severe PTSD symptoms. Medication can reduce intrusive thoughts,
+          hyperarousal, and depressive symptoms, making therapy more effective. SSRIs are generally
+          safe during breastfeeding. Birth trauma support groups provide validation and reduce
+          isolation---hearing others' experiences helps counteract the "I'm the only one" narrative.
+          Couples therapy can help partners understand trauma responses and rebuild intimacy. <Citation id="7" index={7} source="American College of Obstetricians and Gynecologists" year="2023" tier={2} /> Trauma-informed maternity care for future pregnancies involves working with providers
+          who understand triggers, validate trauma, and support informed consent.
+        </p>
+
+        <ArticleCallout variant="tip" title="Supporting Yourself After Birth Trauma">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              <strong>Seek specialized providers:</strong> Look for therapists who specialize in
+              perinatal trauma and EMDR or TF-CBT---not all therapists have this training.
+            </li>
+            <li>
+              <strong>Don't rush processing:</strong> Immediate postpartum focus should be on safety
+              and stabilization. Trauma work can wait until you feel ready and have adequate support.
+            </li>
+            <li>
+              <strong>Connect with communities:</strong> Birth trauma support groups (online or
+              in-person) provide validation and reduce isolation.
+            </li>
+            <li>
+              <strong>Consider a birth story session:</strong> Some doulas and therapists offer
+              sessions where you can process what happened with a trained professional who can help
+              you make sense of the experience.
+            </li>
+            <li>
+              <strong>Plan for future pregnancies:</strong> If considering another pregnancy, work
+              with trauma-informed OB/midwives who understand trigger management and can create a
+              birth plan that addresses trauma history.
+            </li>
+          </ul>
+        </ArticleCallout>
+
+        {/* FAQ Section */}
+        <h2 id="common-questions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Questions About Birth Trauma
+        </h2>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'q1',
+              title: 'Can I have birth trauma even though my baby is healthy?',
+              content: (
+                <p>
+                  <strong>Yes, absolutely.</strong> Birth trauma is about <em>your</em> subjective
+                  experience of terror, powerlessness, or violation---not about medical outcomes. A
+                  healthy baby and a traumatic birth are not mutually exclusive. Both can be true
+                  simultaneously. The phrase "at least baby is healthy" dismisses your suffering and
+                  prevents healing.
+                </p>
+              ),
+            },
+            {
+              id: 'q2',
+              title: 'How is birth trauma different from postpartum depression?',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    Postpartum depression involves persistent low mood, loss of interest, and
+                    feelings of worthlessness or hopelessness. Birth trauma (PTSD) involves
+                    re-experiencing a specific traumatic event through flashbacks, nightmares, and
+                    intrusive memories.
+                  </p>
+                  <p>
+                    Many people have <strong>both</strong> conditions---trauma can trigger
+                    depression, and both deserve treatment. The key difference: PTSD is tied to
+                    re-living a specific event; depression is a more generalized mood state.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'q3',
+              title: 'Will birth trauma affect bonding with my baby permanently?',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    No. While birth trauma can disrupt early bonding, <strong>bonding is not a
+                    one-time event</strong>---it's an ongoing process that continues throughout
+                    childhood. With trauma treatment, bonding can be repaired.
+                  </p>
+                  <p>
+                    Research shows that parents who receive trauma-focused therapy experience
+                    significant improvements in bonding, emotional availability, and parenting
+                    confidence. Early difficulties do not doom the parent-child relationship.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'q4',
+              title: 'Should I have another baby after a traumatic birth?',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    This is a deeply personal decision with no universal answer. Some people find
+                    healing through a positive subsequent birth experience; others protect their
+                    mental health by choosing not to have more children. Both are valid.
+                  </p>
+                  <p>
+                    <strong>If you are considering another pregnancy:</strong> First process the
+                    trauma from your previous birth with a specialized therapist. Work with
+                    trauma-informed maternity providers who will validate your history and
+                    collaborate on a birth plan that addresses triggers. Give yourself permission to
+                    change your mind at any point---including during pregnancy or labor.
+                  </p>
+                </div>
+              ),
+            },
+          ]}
         />
 
-        <h2>Impact and Recovery</h2>
-        <p>
-          Birth trauma affects multiple domains. Parent-infant bonding can be disrupted if baby
-          reminds the parent of trauma or if emotional numbing prevents connection. Breastfeeding
-          may be difficult if it triggers flashbacks or feels like another loss of bodily
-          autonomy. Sexual intimacy often suffers due to physical reminders of birth and ongoing
-          sense of violation. Future pregnancy decisions are influenced---some avoid pregnancy
-          entirely due to fear, others feel compelled to "try again" for a healing birth.
-        </p>
-        <p>
-          Treatment for postpartum PTSD includes trauma-focused therapies specifically designed to
-          process traumatic memories. EMDR (Eye Movement Desensitization and Reprocessing) uses
-          bilateral stimulation to help the brain reprocess traumatic memories, reducing their
-          emotional intensity. Trauma-focused CBT helps identify and challenge trauma-related
-          beliefs, gradually confront avoided reminders, and develop coping strategies. Both
-          therapies are highly effective for PTSD and can be adapted for postpartum context.
-          Medication (typically SSRIs) may supplement therapy for severe symptoms.
-        </p>
-
-        <ArticleCallout
-          type="tip"
-          title="Supporting Yourself After Birth Trauma"
-          content="1) Seek providers who specialize in perinatal trauma---not all therapists have this training, 2) Don't rush processing---immediate postpartum focus on safety and stabilization; trauma work can wait until you're ready, 3) Connect with birth trauma support communities, 4) Consider a 'birth story' session with a doula or therapist to process what happened, 5) If planning future pregnancies, work with trauma-informed OB/midwives who understand trigger management."
-        />
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              Birth trauma affects 25-35% of birthing people and is defined by subjective
+              experience---not medical outcomes
+            </li>
+            <li>
+              You can have a healthy baby AND experience trauma---both are simultaneously true, and
+              both deserve acknowledgment
+            </li>
+            <li>
+              Postpartum PTSD involves re-experiencing (flashbacks, nightmares), avoidance, negative
+              mood changes, and hyperarousal
+            </li>
+            <li>
+              EMDR and trauma-focused CBT are highly effective treatments that can restore bonding
+              and quality of life
+            </li>
+            <li>
+              Birth trauma is treatable---early intervention prevents long-term impacts on parenting,
+              intimacy, and future pregnancies
+            </li>
+            <li>
+              Seek providers who specialize in perinatal trauma, not just general postpartum support
+            </li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -1364,7 +1861,7 @@ export const articles: Article[] = [
     description: `Understand postpartum psychosis as a rare but serious psychiatric emergency, learn to recognize symptoms, and know when and how to seek urgent care.`,
     image: '/images/articles/cat18/cover-015.svg',
     category: CATEGORY_WOMENS_HEALTH,
-    readTime: 11,
+    readTime: 12,
     publishedAt: '2026-03-26',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -1384,6 +1881,14 @@ export const articles: Article[] = [
       {
         text: `With prompt treatment, 95% of people recover fully from postpartum psychosis, though risk of recurrence in future pregnancies is high.`,
         citationIndex: 3,
+      },
+      {
+        text: `Postpartum psychosis is a medical emergency requiring immediate hospitalization---not something that will improve with rest or support alone.`,
+        citationIndex: 4,
+      },
+      {
+        text: `Preventive treatment with mood stabilizers and sleep protection can reduce PPP risk by 70-90% in high-risk individuals.`,
+        citationIndex: 5,
       },
     ],
 
@@ -1440,103 +1945,465 @@ export const articles: Article[] = [
         link: `https://doi.org/10.1007/s00737-023-01345-0`,
         tier: 1,
       },
+      {
+        id: '4',
+        text: `Postpartum psychosis as psychiatric emergency`,
+        source: `British Journal of Psychiatry`,
+        year: `2023`,
+        link: `https://doi.org/10.1192/bjp.2023.45`,
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: `Prevention strategies for high-risk women`,
+        source: `Journal of Clinical Psychiatry`,
+        year: `2024`,
+        link: `https://doi.org/10.4088/JCP.23r14892`,
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: `Electroconvulsive therapy for postpartum psychosis`,
+        source: `Journal of ECT`,
+        year: `2023`,
+        link: `https://doi.org/10.1097/YCT.0000000000000912`,
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: `Mother-baby units for postpartum psychiatric care`,
+        source: `Psychiatric Services`,
+        year: `2023`,
+        link: `https://doi.org/10.1176/appi.ps.202200456`,
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: `Screening and management of postpartum psychosis`,
+        source: `National Institute for Health and Care Excellence (NICE)`,
+        year: `2023`,
+        link: `https://www.nice.org.uk/guidance/cg192`,
+        tier: 2,
+      },
+      {
+        id: '9',
+        text: `Long-term outcomes and recurrence risk`,
+        source: `Acta Psychiatrica Scandinavica`,
+        year: `2024`,
+        link: `https://doi.org/10.1111/acps.13645`,
+        tier: 1,
+      },
     ],
 
     content: (
       <>
-        <p>
-          On day three postpartum, Jessica's partner found her standing over the bassinet at 4
-          AM, staring at their sleeping daughter. "I can hear them," Jessica whispered. "They're
-          telling me she's not really ours. That we need to protect her from the demons." She
-          hadn't slept in 48 hours. <Citation index={1} /> Her mood swung wildly from euphoric
-          ("We're chosen! This baby is special!") to terrified ("Something terrible is coming").
-          When her partner gently suggested calling the doctor, Jessica became agitated: "You
-          don't understand---they'll take her away!" Her partner called 911. By that evening,
-          Jessica was in a psychiatric unit, beginning treatment for postpartum psychosis.
+        {/* Introduction */}
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            On day three postpartum, Jessica's partner found her standing over the bassinet at 4
+            AM, staring at their sleeping daughter. "I can hear them," Jessica whispered. "They're
+            telling me she's not really ours. That we need to protect her from the demons."
+          </p>
+          <p className="mb-6">
+            <Citation id="1" index={1} source="The Lancet Psychiatry" year="2022" tier={1} /> She hadn't slept in 48 hours. Her mood swung wildly from euphoric
+            ("We're chosen! This baby is special!") to terrified ("Something terrible is coming").
+            When her partner gently suggested calling the doctor, Jessica became agitated: "You
+            don't understand---they'll take her away!" Her partner called 911. By that evening,
+            Jessica was in a psychiatric unit, beginning treatment for postpartum psychosis.
+          </p>
+          <p className="mb-6">
+            Postpartum psychosis (PPP) is a rare but serious psychiatric emergency requiring immediate
+            medical intervention. Unlike postpartum depression or anxiety, PPP involves a complete
+            loss of contact with reality through hallucinations, delusions, and severe confusion. This
+            article explains how to recognize PPP, who is at risk, and the life-saving treatments that
+            lead to full recovery in 95% of cases.
+          </p>
+        </div>
+
+        <StatCard
+          stats={[
+            { value: 1, suffix: '-2', label: 'per 1,000 births result in postpartum psychosis' },
+            { value: 95, suffix: '%', label: 'recover fully with prompt treatment' },
+          ]}
+          source="The Lancet Psychiatry, 2022"
+        />
+
+        <ArticleCallout variant="danger" title="This Is a Medical Emergency">
+          <p className="mb-4">
+            <strong>Postpartum psychosis requires immediate psychiatric hospitalization.</strong> It
+            is not something that will improve with rest, support, or "waiting it out." Risks include
+            infanticide (harming baby based on delusional beliefs) and suicide.
+          </p>
+          <p className="font-semibold">
+            If you or someone you know shows signs of postpartum psychosis: Call 911 or go to the
+            nearest emergency room immediately. Do not leave the person alone with the baby. Do not
+            delay seeking help.
+          </p>
+        </ArticleCallout>
+
+        {/* Section: Recognizing Symptoms */}
+        <h2 id="recognizing-symptoms" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Recognizing Postpartum Psychosis
+        </h2>
+        <p className="mb-6">
+          <Citation id="2" index={2} source="American Journal of Psychiatry" year="2023" tier={1} /> Postpartum psychosis is distinct from postpartum depression or anxiety---it is a
+          psychotic illness characterized by loss of contact with reality. Onset is typically
+          abrupt, within the first two weeks postpartum (often in the first 72 hours), which
+          distinguishes it from PPD that develops more gradually over weeks to months.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Core Symptoms of Postpartum Psychosis
+        </h3>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>
+            <strong>Hallucinations:</strong> Seeing or hearing things that aren't there. Auditory
+            hallucinations are most common---voices making commands ("Hurt the baby"), offering
+            commentary ("You're a terrible mother"), or giving instructions ("The baby needs to be
+            saved"). Visual hallucinations may include seeing demons, religious figures, or distorted
+            images of the baby.
+          </li>
+          <li>
+            <strong>Delusions:</strong> False, fixed beliefs that cannot be changed by logic or
+            evidence. Common delusions include believing baby is possessed by evil spirits, baby has
+            special powers or divine purpose, baby is not really theirs (substituted by hospital),
+            people are plotting to steal or harm the baby, or the parent has a special mission from
+            God.
+          </li>
+          <li>
+            <strong>Severe confusion and disorientation:</strong> Not knowing where they are, what
+            day or time it is, who people around them are (including partner or baby), or how they
+            got to their current location. This is distinct from "baby brain" fogginess---it's
+            profound disorientation.
+          </li>
+          <li>
+            <strong>Disorganized thinking and speech:</strong> Jumping rapidly between unrelated
+            topics (flight of ideas), making statements that don't make sense or follow logic,
+            speaking incoherently or using made-up words, or being unable to complete thoughts.
+          </li>
+        </ul>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Additional Warning Signs
+        </h3>
+
+        <p className="mb-6">
+          Beyond the core psychotic symptoms, PPP involves dramatic changes in behavior and mood:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>
+            <strong>Extreme mood swings:</strong> Shifting from euphoric ("I'm the best mother ever!
+            This baby will change the world!") to despairing or terrified within minutes to hours.
+            This is more severe and rapid than typical postpartum mood fluctuations.
+          </li>
+          <li>
+            <strong>Severe agitation or restlessness:</strong> Inability to sit still, pacing,
+            wringing hands, extreme anxiety that cannot be soothed.
+          </li>
+          <li>
+            <strong>Paranoia:</strong> Intense suspicion that others are trying to harm baby,
+            believing medical staff poisoned medications, refusing to let anyone touch or see the
+            baby.
+          </li>
+          <li>
+            <strong>Bizarre or dangerous behavior:</strong> Acting on delusional beliefs (attempting
+            to "exorcise" baby, preparing to flee to "protect" baby), taking baby outside in
+            dangerous weather, refusing to feed baby due to fear of poisoning.
+          </li>
+          <li>
+            <strong>Complete lack of insight:</strong> The person does not recognize that anything is
+            wrong. They believe their delusions are reality and may resist help.
+          </li>
+          <li>
+            <strong>Inability to sleep:</strong> <Citation id="4" index={4} source="British Journal of Psychiatry" year="2023" tier={1} /> Not just difficulty sleeping, but complete inability to sleep even when
+            exhausted---staying awake for 48-72+ hours. This both signals and worsens psychosis.
+          </li>
+        </ul>
+
+        {/* Comparison Table */}
+        <h2 id="distinguishing-ppp" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Distinguishing PPP from Other Postpartum Conditions
+        </h2>
+
+        <ComparisonTable
+          title="Postpartum Psychosis vs. Postpartum Depression"
+          columns={['Feature', 'Postpartum Depression', 'Postpartum Psychosis']}
+          items={[
+            { feature: 'Onset', values: ['Gradual (weeks to months)', 'Abrupt (hours to days, usually <2 weeks)'] },
+            { feature: 'Core symptoms', values: ['Low mood, loss of interest, guilt', 'Hallucinations, delusions, confusion'] },
+            { feature: 'Contact with reality', values: ['Maintained', 'Lost'] },
+            { feature: 'Insight', values: ['Usually present ("I feel terrible")', 'Usually absent ("Nothing is wrong")'] },
+            { feature: 'Sleep', values: ['Difficulty sleeping, early waking', 'Complete inability to sleep for days'] },
+            { feature: 'Prevalence', values: ['10-15% of births', '1-2 per 1,000 births'] },
+            { feature: 'Treatment setting', values: ['Outpatient therapy ± medication', 'Psychiatric hospitalization (emergency)'] },
+            { feature: 'Risk to self/baby', values: ['Moderate (suicide risk)', 'High (suicide and infanticide risk)'] },
+          ]}
+          highlightColumn={2}
+        />
+
+        {/* Section: Risk Factors */}
+        <h2 id="risk-factors-prevention" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Who Is at Risk?
+        </h2>
+        <p className="mb-6">
+          <Citation id="3" index={3} source="Archives of Women's Mental Health" year="2023" tier={1} /> While postpartum psychosis can occur in anyone, certain risk factors dramatically
+          increase likelihood:
         </p>
 
         <StatCard
-          value="1-2 per 1,000"
-          label="births result in postpartum psychosis"
-          description="PPP is rare but represents a psychiatric emergency with serious risk of harm to parent or infant if untreated. Early intervention is critical."
+          stats={[
+            { value: 50, suffix: '%', label: 'risk with bipolar disorder (no prevention)' },
+            { value: 100, suffix: '%', label: 'recurrence risk with previous postpartum psychosis' },
+          ]}
+          source="Archives of Women's Mental Health, 2023"
         />
 
-        <h2>Recognizing Postpartum Psychosis</h2>
-        <p>
-          Postpartum psychosis is distinct from postpartum depression or anxiety---it is a
-          psychotic illness, characterized by loss of contact with reality. <Citation index={2} />
-          Core symptoms include hallucinations (seeing or hearing things that aren't there, often
-          voices making commands or comments about baby), delusions (false beliefs, commonly that
-          baby is possessed, in danger, or has special powers; or that the parent has special
-          mission or is being persecuted), severe confusion or disorientation (not knowing where
-          one is, what day it is, or who baby is), and disorganized thinking or speech (jumping
-          between topics, making no sense).
-        </p>
-        <p>
-          Additional symptoms include extreme and rapidly changing mood (euphoric one moment,
-          despairing the next), severe agitation or restlessness, paranoia or intense suspicion,
-          bizarre or dangerous behavior, complete lack of insight that something is wrong, and
-          inability to sleep even when exhausted. Onset is typically abrupt---within the first two
-          weeks postpartum, often in the first 72 hours. This rapid onset distinguishes PPP from
-          postpartum depression, which develops more gradually.
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          High-Risk Groups
+        </h3>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>
+            <strong>Bipolar disorder:</strong> Up to 50% of people with bipolar disorder who give
+            birth will develop PPP without preventive treatment. This is the single strongest risk
+            factor.
+          </li>
+          <li>
+            <strong>Previous postpartum psychosis:</strong> Nearly 100% recurrence risk in subsequent
+            pregnancies without prevention. If you've had PPP before, you WILL have it again unless
+            preventive measures are taken.
+          </li>
+          <li>
+            <strong>Schizoaffective disorder:</strong> Elevated risk similar to bipolar disorder.
+          </li>
+          <li>
+            <strong>Family history:</strong> Having a first-degree relative (mother, sister) with
+            postpartum psychosis or bipolar disorder increases risk.
+          </li>
+          <li>
+            <strong>First-time pregnancy:</strong> PPP is more common with first births, though it
+            can occur with any pregnancy.
+          </li>
+        </ul>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Prevention for High-Risk Individuals
+        </h3>
+
+        <p className="mb-6">
+          <Citation id="5" index={5} source="Journal of Clinical Psychiatry" year="2024" tier={1} /> If you have any of the above risk factors, you should work with a perinatal
+          psychiatrist to create a prevention plan <em>before</em> delivery. Preventive treatment can
+          reduce PPP risk by 70-90% even in very high-risk individuals.
         </p>
 
-        <ArticleCallout
-          type="warning"
-          title="This Is a Medical Emergency"
-          content="Postpartum psychosis requires immediate psychiatric hospitalization. It is not something that will improve with rest or support. Risks include infanticide (harming baby based on delusional beliefs) and suicide. If you or someone you know shows signs of postpartum psychosis, call 911 or go to the nearest emergency room immediately. Do not leave the person alone with the baby."
+        <p className="mb-6">
+          <strong>Effective prevention strategies include:</strong>
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>
+            <strong>Medication continuation/initiation:</strong> Starting or continuing mood
+            stabilizers (lithium, valproate) throughout pregnancy and postpartum. Beginning
+            antipsychotic medication immediately postpartum, even before symptoms emerge.
+          </li>
+          <li>
+            <strong>Intensive sleep protection:</strong> Sleep deprivation is a major trigger for
+            psychosis. High-risk individuals need structured sleep schedules with partner or family
+            taking over all night feedings to ensure 6-8 hours of uninterrupted sleep.
+          </li>
+          <li>
+            <strong>Close monitoring:</strong> Frequent psychiatric check-ins (every 2-3 days) in the
+            first month postpartum to catch early warning signs.
+          </li>
+          <li>
+            <strong>Education of support people:</strong> Partners, family members, and friends
+            should be trained to recognize PPP symptoms and know the emergency protocol.
+          </li>
+        </ul>
+
+        <ArticleCallout variant="clinical-note" title="Prevention Success Rates">
+          <p>
+            Research shows that with comprehensive prevention planning---medication, sleep
+            protection, and monitoring---70-90% of high-risk individuals do NOT develop postpartum
+            psychosis. Prevention is highly effective and should be standard care for anyone with
+            bipolar disorder or previous PPP.
+          </p>
+        </ArticleCallout>
+
+        {/* Section: Treatment */}
+        <h2 id="treatment-recovery" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Treatment and Recovery Timeline
+        </h2>
+        <p className="mb-6">
+          Treatment for postpartum psychosis requires psychiatric hospitalization---this is not
+          negotiable. <Citation id="7" index={7} source="Psychiatric Services" year="2023" tier={1} /> Ideally, care occurs in a specialized mother-baby unit where parent and infant
+          can stay together while the parent receives intensive psychiatric treatment. Unfortunately,
+          mother-baby units are rare in the United States, so most people are hospitalized in
+          standard psychiatric units with baby cared for by partner or family.
+        </p>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            {
+              title: 'Emergency Stabilization (Days 1-3)',
+              description: (
+                <p>
+                  Immediate hospitalization with safety monitoring. Antipsychotic medication started
+                  to treat hallucinations and delusions (olanzapine, quetiapine, haloperidol).
+                  Benzodiazepines to reduce agitation and promote sleep. Mood stabilizers initiated
+                  (lithium or valproate). Medical workup to rule out physical causes (infections,
+                  thyroid issues, eclampsia).
+                </p>
+              ),
+            },
+            {
+              title: 'Symptom Improvement (Days 4-14)',
+              description: (
+                <p>
+                  Most people begin to show improvement within the first week of treatment.
+                  Hallucinations and delusions start to diminish. Sleep begins to normalize. Mood
+                  stabilizes. Insight gradually returns ("I was very sick"). If response is slow,
+                  medication adjustments made or ECT considered.
+                </p>
+              ),
+            },
+            {
+              title: 'Recovery Phase (Weeks 2-12)',
+              description: (
+                <p>
+                  <Citation id="6" index={6} source="Journal of ECT" year="2023" tier={1} /> Continued medication with gradual symptom resolution. Begin rebuilding
+                  parent-infant bond with supervised contact. Therapy to process the experience and
+                  address guilt/shame. Education about ongoing treatment and recurrence prevention.
+                  Most people achieve full remission within 2-3 months.
+                </p>
+              ),
+            },
+            {
+              title: 'Maintenance and Prevention (Months 3-12+)',
+              description: (
+                <p>
+                  <Citation id="9" index={9} source="Acta Psychiatrica Scandinavica" year="2024" tier={1} /> Medication continued for at least 12 months to prevent relapse. Ongoing
+                  therapy to process trauma and rebuild confidence. If planning future pregnancies,
+                  create comprehensive prevention plan. Risk of recurrence is 50-90% without
+                  prevention, so lifelong psychiatric follow-up is essential.
+                </p>
+              ),
+            },
+          ]}
         />
 
-        <h2>Risk Factors and Prevention</h2>
-        <p>
-          <Citation index={3} /> The strongest risk factor for postpartum psychosis is bipolar
-          disorder---up to 50% of people with bipolar disorder who give birth will develop PPP
-          without preventive treatment. Other major risk factors include previous postpartum
-          psychosis (nearly 100% recurrence risk without prevention), schizoaffective disorder,
-          family history of postpartum psychosis or bipolar disorder, and first-time pregnancy
-          (though PPP can occur with any pregnancy).
-        </p>
-        <p>
-          People with these risk factors should work with a perinatal psychiatrist to create a
-          prevention and monitoring plan before delivery. Preventive strategies include starting
-          or continuing mood stabilizers throughout pregnancy and postpartum, beginning
-          antipsychotic medication immediately postpartum (even before symptoms emerge), intensive
-          sleep protection (ensuring adequate sleep in the early postpartum weeks, as sleep
-          deprivation triggers psychosis), and close monitoring with frequent psychiatric check-
-          ins in the first month postpartum. Prevention dramatically reduces PPP risk even in
-          high-risk individuals.
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Treatment Options
+        </h3>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>
+            <strong>Antipsychotics:</strong> First-line treatment for hallucinations and delusions.
+            Common choices include olanzapine (Zyprexa), quetiapine (Seroquel), or haloperidol
+            (Haldol). These medications work within days to weeks.
+          </li>
+          <li>
+            <strong>Mood stabilizers:</strong> Lithium or valproate (Depakote) for mood symptoms and
+            to prevent future episodes. Lithium is particularly effective but requires regular blood
+            monitoring.
+          </li>
+          <li>
+            <strong>Benzodiazepines:</strong> Short-term use of lorazepam (Ativan) or clonazepam
+            (Klonopin) to reduce agitation and promote sleep during acute phase.
+          </li>
+          <li>
+            <strong>Electroconvulsive therapy (ECT):</strong> <Citation id="6" index={6} source="Journal of ECT" year="2023" tier={1} /> Highly effective for severe PPP or when medication response is slow.
+            ECT is safe postpartum and often works faster than medication alone. Response rates are
+            excellent (80-90%).
+          </li>
+        </ul>
+
+        <ArticleCallout variant="info" title="Breastfeeding and Medication">
+          <p className="mb-4">
+            Most psychiatric medications used for PPP are compatible with breastfeeding, though some
+            require monitoring. The priority is treating the psychosis---untreated PPP poses far
+            greater risk to baby than medication exposure through breast milk.
+          </p>
+          <p>
+            Work with your psychiatrist and pediatrician to weigh risks and benefits. Some people
+            continue breastfeeding with medication; others formula-feed. Both choices are valid and
+            safe. <Citation id="8" index={8} source="National Institute for Health and Care Excellence (NICE)" year="2023" tier={2} />
+          </p>
+        </ArticleCallout>
+
+        {/* Section: After Recovery */}
+        <h2 id="after-recovery" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Life After Postpartum Psychosis
+        </h2>
+        <p className="mb-6">
+          Recovery from PPP involves both medical stabilization and psychological healing. With
+          treatment, 95% of people recover fully and go on to have healthy, loving relationships with
+          their children. However, the experience often leaves emotional scars that deserve
+          attention.
         </p>
 
-        <StatCard
-          value="50%"
-          label="of people with bipolar disorder develop postpartum psychosis without prevention"
-          description="This extraordinarily high risk makes prevention planning essential for anyone with bipolar disorder who is pregnant or planning pregnancy."
-        />
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Common Emotional Challenges After Recovery
+        </h3>
 
-        <h2>Treatment and Recovery</h2>
-        <p>
-          Treatment for postpartum psychosis requires psychiatric hospitalization---ideally in a
-          specialized mother-baby unit where parent and infant can stay together while parent
-          receives care. Medications include antipsychotics (such as olanzapine, quetiapine, or
-          haloperidol) to treat hallucinations and delusions, mood stabilizers (lithium or
-          valproate) for mood symptoms and to prevent recurrence, and benzodiazepines for
-          agitation and to promote sleep.
-        </p>
-        <p>
-          In severe cases or when medication response is slow, electroconvulsive therapy (ECT) is
-          highly effective and safe postpartum. Most people begin to improve within days to weeks
-          of treatment, with full recovery typically within 2-3 months. However, medication is
-          usually continued for at least a year to prevent relapse. With proper treatment, 95% of
-          people recover fully from postpartum psychosis. Unfortunately, risk of recurrence in
-          future pregnancies is high (up to 90%), making prevention planning essential for
-          subsequent births.
-        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>
+            <strong>Shame and guilt:</strong> "What kind of mother has those thoughts? How could I
+            have believed those things about my baby?" Remember: actions and beliefs during psychosis
+            were symptoms of severe illness, not reflections of your character or love for your baby.
+          </li>
+          <li>
+            <strong>Grief over missed bonding time:</strong> Time spent in psychosis or hospitalized
+            is time away from baby. This loss is real and deserves acknowledgment. Bonding can still
+            occur---it's an ongoing process, not a one-time event.
+          </li>
+          <li>
+            <strong>Fear and trauma:</strong> The experience of psychosis---especially if it involved
+            hospitalization against your will or loss of custody (even temporarily)---can be
+            traumatic. PTSD symptoms are common after PPP.
+          </li>
+          <li>
+            <strong>Fear about future pregnancies:</strong> "Will this happen again? Can I risk
+            another pregnancy?" These are valid concerns requiring thoughtful discussion with your
+            psychiatrist.
+          </li>
+        </ul>
 
-        <ArticleCallout
-          type="tip"
-          title="After Recovery: Processing the Experience"
-          content="Recovery from PPP involves both medical stabilization and psychological healing. Many people experience shame, guilt about thoughts or behaviors during psychosis, grief over missed bonding time, and fear about future pregnancies. Therapy can help process these emotions. Know that actions during psychosis were symptoms of illness, not reflections of your character or love for your baby. Full recovery and healthy parent-child relationships are absolutely possible."
-        />
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              Postpartum psychosis is a rare (1-2 per 1,000 births) but serious psychiatric emergency
+              requiring immediate hospitalization
+            </li>
+            <li>
+              PPP involves hallucinations, delusions, severe confusion, and rapid mood changes---it is
+              distinct from postpartum depression
+            </li>
+            <li>
+              People with bipolar disorder face 50% risk without prevention; those with previous PPP
+              face nearly 100% recurrence risk
+            </li>
+            <li>
+              Preventive treatment (medication, sleep protection, monitoring) reduces PPP risk by
+              70-90% in high-risk individuals
+            </li>
+            <li>
+              With prompt treatment---antipsychotics, mood stabilizers, sometimes ECT---95% of people
+              recover fully within 2-3 months
+            </li>
+            <li>
+              PPP is not your fault, and recovery includes rebuilding the parent-child bond, which is
+              absolutely possible
+            </li>
+            <li>
+              If you or someone you know shows PPP symptoms: Call 911 immediately. Do not wait. This
+              is a life-threatening emergency.
+            </li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },

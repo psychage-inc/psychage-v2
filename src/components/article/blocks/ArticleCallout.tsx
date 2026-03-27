@@ -285,27 +285,33 @@ const ArticleCallout: React.FC<ArticleCalloutProps> = ({
         >
             <div className="p-5">
                 <div
-                    className={`flex items-center gap-3 ${collapsible ? 'cursor-pointer select-none' : ''}`}
+                    className={`flex items-start gap-3 ${collapsible ? 'cursor-pointer select-none' : ''}`}
                     onClick={collapsible ? () => setIsOpen(!isOpen) : undefined}
                     role={collapsible ? 'button' : undefined}
                     aria-expanded={collapsible ? isOpen : undefined}
                 >
-                    <Icon size={20} className={`${config.iconColor} shrink-0`} />
-                    <h4 className={`font-bold text-sm ${config.titleColor} leading-tight`}>
-                        {displayTitle}
-                    </h4>
-                    {collapsible && (
-                        <ChevronDown
-                            size={16}
-                            className={`text-white/60 transition-transform duration-200 ml-auto shrink-0 ${isOpen ? 'rotate-180' : ''}`}
-                        />
-                    )}
-                </div>
-                {(!collapsible || isOpen) && body && (
-                    <div className="mt-3 pl-8 text-sm text-white leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0 [&_a]:text-white [&_a]:underline [&_li]:marker:text-white">
-                        {body}
+                    <div className="shrink-0 mt-0.5">
+                        <Icon size={20} className={config.iconColor} />
                     </div>
-                )}
+                    <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2">
+                            <h4 className={`font-bold text-sm ${config.titleColor} leading-tight`}>
+                                {displayTitle}
+                            </h4>
+                            {collapsible && (
+                                <ChevronDown
+                                    size={16}
+                                    className={`text-white/60 transition-transform duration-200 ml-auto shrink-0 ${isOpen ? 'rotate-180' : ''}`}
+                                />
+                            )}
+                        </div>
+                        {(!collapsible || isOpen) && body && (
+                            <div className="mt-3 text-sm text-white leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0 [&_a]:text-white [&_a]:underline [&_li]:marker:text-white">
+                                {body}
+                            </div>
+                        )}
+                    </div>
+                </div>
             </div>
         </motion.div>
     );

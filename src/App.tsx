@@ -8,10 +8,7 @@ import HeroSection from './components/home/HeroSection';
 import ProductShowcase from './components/home/ProductShowcase';
 import HowItWorksSection from './components/home/HowItWorksSection';
 import FeatureSpotlight from './components/home/FeatureSpotlight';
-import ContentPreview from './components/home/ContentPreview';
-import LifestylePreview from './components/home/LifestylePreview';
-import RelationshipsPreview from './components/home/RelationshipsPreview';
-import TherapyIdentityPreview from './components/home/TherapyIdentityPreview';
+import ArticleCategorySection from './components/home/ArticleCategorySection';
 import NewsletterSection from './components/home/NewsletterSection';
 import MindMate from './components/ai/MindMate';
 import CookieConsent from './components/ui/CookieConsent';
@@ -162,10 +159,14 @@ const App: React.FC = () => {
                                                     <ProductShowcase />
                                                     {/* UserTestimonials removed per task cd1326b1 */}
                                                     <FeatureSpotlight />
-                                                    <ContentPreview />
-                                                    <LifestylePreview />
-                                                    <RelationshipsPreview />
-                                                    <TherapyIdentityPreview />
+                                                    <ArticleCategorySection categorySlug="emotional-regulation" heading="Understand Your Emotions" subtitle="Learn to recognize, process, and manage your emotions with evidence-based strategies." bg="white" hoverClass="group-hover:text-rose-600 dark:group-hover:text-rose-400" />
+                                                    <ArticleCategorySection categorySlug="anxiety-stress" heading="Manage Anxiety & Stress" subtitle="Practical tools and insights for understanding and reducing anxiety in everyday life." bg="light" hoverClass="group-hover:text-teal-600 dark:group-hover:text-teal-400" />
+                                                    <ArticleCategorySection categorySlug="self-worth-identity" heading="Build Your Self-Worth" subtitle="Strengthen your sense of identity and cultivate lasting confidence from the inside out." bg="white" hoverClass="group-hover:text-orange-600 dark:group-hover:text-orange-400" />
+                                                    <ArticleCategorySection categorySlug="relationships-communication" heading="Navigate Relationships" subtitle="Build healthier connections, set boundaries, and communicate with clarity." bg="light" hoverClass="group-hover:text-pink-600 dark:group-hover:text-pink-400" />
+                                                    <ArticleCategorySection categorySlug="work-productivity" heading="Thrive at Work" subtitle="Protect your mental health at work and build sustainable productivity habits." bg="white" hoverClass="group-hover:text-blue-600 dark:group-hover:text-blue-400" />
+                                                    <ArticleCategorySection categorySlug="mens-mental-health" heading="Men's Mental Health" subtitle="Breaking the stigma — evidence-based resources for men's psychological wellbeing." bg="light" hoverClass="group-hover:text-slate-600 dark:group-hover:text-slate-400" />
+                                                    <ArticleCategorySection categorySlug="chronic-illness-pain" heading="Chronic Illness & Pain" subtitle="Navigate the psychological impact of chronic conditions with compassion and science." bg="white" hoverClass="group-hover:text-lime-600 dark:group-hover:text-lime-400" />
+                                                    <ArticleCategorySection categorySlug="technology-digital-life" heading="Digital Life & Technology" subtitle="Understand how technology shapes your mental health and build healthier digital habits." bg="light" hoverClass="group-hover:text-stone-600 dark:group-hover:text-stone-400" />
                                                     <NewsletterSection />
                                                 </PageTransition>
                                             } />

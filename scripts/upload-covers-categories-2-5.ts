@@ -1,7 +1,7 @@
 #!/usr/bin/env tsx
 
 /**
- * Upload cover images for Categories 2-5 to Supabase Storage
+ * Upload cover images for article categories to Supabase Storage
  * and match article titles to image poster titles.
  *
  * Usage:
@@ -56,6 +56,12 @@ const CATEGORIES: CategoryConfig[] = [
     prefix: 'WRK',
     catId: 'CAT05',
     imageDir: '/Users/raiyanabdullah/Downloads/Psychage category 5',
+  },
+  {
+    categoryNumber: 19,
+    prefix: 'GEN',
+    catId: 'CAT19',
+    imageDir: '/Users/raiyanabdullah/Downloads/Psychage poster category 19',
   },
 ];
 

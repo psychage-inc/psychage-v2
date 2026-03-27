@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, BookOpen } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -6,12 +6,11 @@ import Button from '@/components/ui/Button';
 import { useArticleService } from '@/services/articleService';
 import { Article } from '@/types/models';
 import { getArticleUrl } from '@/lib/articleUrl';
+import { getCategoryTheme } from '@/config/categoryThemes';
 
 const categories = [
-    { slug: 'relationships', label: 'Relationships' },
-    { slug: 'grief', label: 'Grief & Loss' },
-    { slug: 'anger', label: 'Anger Management' },
-    { slug: 'parenting', label: 'Parenting' },
+    { slug: 'work-productivity', label: 'Work & Productivity' },
+    { slug: 'mens-mental-health', label: "Men's Health" },
 ];
 
 const RelationshipsPreview: React.FC = () => {
@@ -20,6 +19,11 @@ const RelationshipsPreview: React.FC = () => {
     const [activeCategory, setActiveCategory] = useState(categories[0].slug);
     const [articles, setArticles] = useState<Article[]>([]);
     const [loading, setLoading] = useState(true);
+    const [brokenImages, setBrokenImages] = useState<Set<string>>(new Set());
+
+    const handleImageError = useCallback((id: string) => {
+        setBrokenImages(prev => new Set(prev).add(id));
+    }, []);
 
     useEffect(() => {
         let cancelled = false;
@@ -60,10 +64,10 @@ const RelationshipsPreview: React.FC = () => {
                 >
                     <div>
                         <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-3 tracking-tight">
-                            Strengthen Your Relationships
+                            Work & Wellbeing
                         </h2>
                         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-lg">
-                            Navigate connections, set boundaries, and heal through life's toughest moments with evidence-based guidance.
+                            Protect your mental health at work, prevent burnout, and explore evidence-based approaches to psychological wellbeing.
                         </p>
                     </div>
                     <Button
@@ -120,30 +124,43 @@ const RelationshipsPreview: React.FC = () => {
                             </div>
                         ) : articles.length > 0 ? (
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                                {articles.map((article) => (
-                                    <div
-                                        key={article.id}
-                                        onClick={() => navigate(getArticleUrl(article))}
-                                        className="group cursor-pointer"
-                                    >
-                                        <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-4 bg-slate-100 dark:bg-slate-800">
-                                            <img
-                                                src={article.image}
-                                                alt={article.title}
-                                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                            />
+                                {articles.map((article) => {
+                                    const theme = getCategoryTheme(article.category?.slug);
+                                    const FallbackIcon = theme.icon;
+                                    const imgBroken = brokenImages.has(String(article.id));
+                                    return (
+                                        <div
+                                            key={article.id}
+                                            onClick={() => navigate(getArticleUrl(article))}
+                                            className="group cursor-pointer"
+                                        >
+                                            <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-4 bg-slate-100 dark:bg-slate-800">
+                                                {article.image && !imgBroken ? (
+                                                    <img
+                                                        src={article.image}
+                                                        alt={article.title}
+                                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                                        loading="lazy"
+                                                        onError={() => handleImageError(String(article.id))}
+                                                    />
+                                                ) : (
+                                                    <div className={`w-full h-full flex items-center justify-center ${theme.classes.bgLight} ${theme.classes.bgLightDark}`}>
+                                                        <FallbackIcon size={40} className={`${theme.classes.text} ${theme.classes.textDark} opacity-30`} />
+                                                    </div>
+                                                )}
+                                            </div>
+                                            <div className="flex items-center gap-2 mb-2">
+                                                <BookOpen className="w-3 h-3 text-slate-400 dark:text-slate-500" />
+                                                <span className="text-xs text-slate-400 dark:text-slate-500">
+                                                    {article.readTime ? `${article.readTime} min read` : 'Article'}
+                                                </span>
+                                            </div>
+                                            <h3 className="font-display font-bold text-slate-900 dark:text-white leading-snug group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors line-clamp-2">
+                                                {article.title}
+                                            </h3>
                                         </div>
-                                        <div className="flex items-center gap-2 mb-2">
-                                            <BookOpen className="w-3 h-3 text-slate-400 dark:text-slate-500" />
-                                            <span className="text-xs text-slate-400 dark:text-slate-500">
-                                                {article.readTime ? `${article.readTime} min read` : 'Article'}
-                                            </span>
-                                        </div>
-                                        <h3 className="font-display font-bold text-slate-900 dark:text-white leading-snug group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors line-clamp-2">
-                                            {article.title}
-                                        </h3>
-                                    </div>
-                                ))}
+                                    );
+                                })}
                             </div>
                         ) : (
                             <div className="text-center py-12 text-slate-500 dark:text-slate-400">

@@ -31,6 +31,7 @@ const queryClient = new QueryClient({
 });
 
 const startApp = () => {
+  document.getElementById('admin-diag')?.remove();
   const rootElement = document.getElementById('root');
   if (!rootElement) {
     console.error('Could not find root element to mount to');

@@ -18,6 +18,34 @@ import { allArticles as mockArticles } from '../data/articles/all-articles';
 const publishedMockArticles = mockArticles.filter(a => !a.status || a.status === 'published');
 
 // ============================================================================
+// Image URL Resolver
+// ============================================================================
+
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || '';
+const STORAGE_BUCKET = 'article-images';
+
+/**
+ * Transform local placeholder image paths to Supabase Storage public URLs.
+ *
+ * Input:  /images/articles/cat01/cover-001.svg
+ * Output: https://<supabase>.co/storage/v1/object/public/article-images/covers/CAT01-001.jpeg
+ */
+function resolveImageUrl(image: string | undefined): string {
+    if (!image) return '';
+    // Already a full URL (Supabase or external) — pass through
+    if (image.startsWith('http')) return image;
+    // Match the placeholder pattern: /images/articles/catXX/cover-XXX.svg
+    const match = image.match(/\/images\/articles\/cat(\d+)\/cover-(\d+)\.\w+$/);
+    if (match && SUPABASE_URL) {
+        const catNum = match[1].padStart(2, '0');
+        const artNum = match[2].padStart(3, '0');
+        return `${SUPABASE_URL}/storage/v1/object/public/${STORAGE_BUCKET}/covers/CAT${catNum}-${artNum}.jpeg`;
+    }
+    // Not a placeholder path — return as-is
+    return image;
+}
+
+// ============================================================================
 // Types
 // ============================================================================
 
@@ -76,7 +104,7 @@ function mapSupabaseToArticle(data: DBArticle): ArticleWithContent {
         slug: data.slug,
         title: data.title,
         description: data.description || data.seo_description || '',
-        image: data.image || data.hero_image_url || '',
+        image: resolveImageUrl(data.image || data.hero_image_url),
         category: {
             id: data.category?.id || '',
             name: data.category?.name || 'Uncategorized',
@@ -157,8 +185,12 @@ export const articleService = {
             console.warn('[ArticleService] Supabase fetch failed, using mock data:', error);
         }
 
-        // Build mock article set (filtered by params)
-        let mockResult = publishedMockArticles.map(a => ({ ...a, _source: 'mock' as const }));
+        // Build mock article set (filtered by params), resolve image URLs
+        let mockResult = publishedMockArticles.map(a => ({
+            ...a,
+            image: resolveImageUrl(a.image),
+            _source: 'mock' as const,
+        }));
         if (params?.category) {
             mockResult = mockResult.filter(a => a.category.slug === params.category);
         }
@@ -202,7 +234,7 @@ export const articleService = {
         } catch (error) {
             console.warn('[ArticleService] Supabase getById failed, using mock data:', error);
             const mockArticle = publishedMockArticles.find(a => a.id.toString() === id.toString());
-            return mockArticle ? { ...mockArticle, _source: 'mock' } : undefined;
+            return mockArticle ? { ...mockArticle, image: resolveImageUrl(mockArticle.image), _source: 'mock' } : undefined;
         }
     },
 
@@ -243,7 +275,7 @@ export const articleService = {
                 // Supabase metadata fetch failed, use mock data entirely
             }
 
-            return { ...mockArticle, _source: 'mock' };
+            return { ...mockArticle, image: resolveImageUrl(mockArticle.image), _source: 'mock' };
         }
 
         // No rich mock content — try Supabase
@@ -272,7 +304,7 @@ export const articleService = {
         // Final fallback to mock data
         if (mockArticle) {
             console.log(`[ArticleService] Fetched article "${slug}" from mock data`);
-            return { ...mockArticle, _source: 'mock' };
+            return { ...mockArticle, image: resolveImageUrl(mockArticle.image), _source: 'mock' };
         }
 
         return undefined;
@@ -398,7 +430,7 @@ export const articleService = {
         }
 
         // Fallback to mock data
-        const allMock = publishedMockArticles.map(a => ({ ...a, _source: 'mock' as const }));
+        const allMock = publishedMockArticles.map(a => ({ ...a, image: resolveImageUrl(a.image), _source: 'mock' as const }));
         const sameCat = allMock.filter(a => a.category.slug === categorySlug && a.id.toString() !== currentIdStr);
         if (sameCat.length >= limit) return sameCat.slice(0, limit);
 

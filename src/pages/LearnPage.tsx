@@ -12,18 +12,31 @@ import Badge from '../components/ui/Badge';
 import { getCategoryTheme, getCategoryBadgeClasses } from '../config/categoryThemes';
 import { getArticleUrl, getCategoryUrl } from '../lib/articleUrl';
 
+// ─── Priority ordering: categories with cover images first ──────────
+const PRIORITY_CATEGORY_SLUGS = [
+    // Categories 1-5
+    'emotional-regulation',
+    'anxiety-stress',
+    'relationships-communication',
+    'self-worth-identity',
+    'work-productivity',
+    // Category 19
+    'mens-mental-health',
+];
+
 // ─── Compact Horizontal Article Card ─────────────────────────────────
 const CompactArticleCard: React.FC<{ article: Article; onClick: () => void }> = ({ article, onClick }) => {
     const theme = getCategoryTheme(article.category.slug);
     const FallbackIcon = theme.icon;
+    const [imgError, setImgError] = React.useState(false);
     return (
     <button
         onClick={onClick}
         className="group flex items-center gap-4 w-full p-3 rounded-2xl bg-surface/50 border border-border/50 hover:border-primary/30 hover:bg-surface transition-all duration-300 text-left"
     >
         <div className="w-20 h-20 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 shrink-0">
-            {article.image ? (
-                <img src={article.image} alt={article.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+            {article.image && !imgError ? (
+                <img src={article.image} alt={article.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onError={() => setImgError(true)} />
             ) : (
                 <div className={`w-full h-full flex items-center justify-center ${theme.classes.bgLight} ${theme.classes.bgLightDark}`}>
                     <FallbackIcon size={24} className={`${theme.classes.text} ${theme.classes.textDark} opacity-40`} />
@@ -100,7 +113,6 @@ const CategorySectionHeader: React.FC<{
 
     return (
         <div className="mb-8">
-            {/* Gradient accent bar */}
             <div className={`h-1 w-20 rounded-full bg-gradient-to-r ${theme.classes.gradient} mb-5`} />
 
             <div className="flex items-start justify-between gap-4">
@@ -141,15 +153,12 @@ const LayoutHeroFeature: React.FC<{
 
     return (
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-            {/* Hero Card — takes 3 of 5 columns */}
             <div className="lg:col-span-3">
                 <ArticleCard
                     article={hero}
                     onClick={() => navigate(getArticleUrl(hero))}
                 />
             </div>
-
-            {/* Compact Stack — takes 2 of 5 columns */}
             <div className="lg:col-span-2 flex flex-col gap-4 justify-center">
                 {compactArticles.map((article) => (
                     <CompactArticleCard
@@ -158,7 +167,6 @@ const LayoutHeroFeature: React.FC<{
                         onClick={() => navigate(getArticleUrl(article))}
                     />
                 ))}
-                {/* Teaser if more articles exist */}
                 {articles.length > 3 && (
                     <div className="text-center text-xs text-text-tertiary pt-1">
                         +{articles.length - 3} more articles in this topic
@@ -169,7 +177,7 @@ const LayoutHeroFeature: React.FC<{
     );
 };
 
-// ─── Layout B: Grid Showcase (3-col, third card accented) ────────────
+// ─── Layout B: Grid Showcase (3-col) ────────────────────────────────
 const LayoutGridShowcase: React.FC<{
     articles: Article[];
     navigate: (path: string) => void;
@@ -184,7 +192,6 @@ const LayoutGridShowcase: React.FC<{
                     key={article.id}
                     className={`h-full ${i === 2 ? 'md:col-span-2 lg:col-span-1' : ''}`}
                 >
-                    {/* Third card gets a subtle accent ring */}
                     <div className={`h-full ${i === 2 ? `rounded-3xl ring-1 ring-inset bg-gradient-to-br ${accentGradient} p-[1px]` : ''}`}>
                         <div className={i === 2 ? 'h-full rounded-[calc(1.5rem-1px)] overflow-hidden' : 'h-full'}>
                             <ArticleCard
@@ -227,8 +234,13 @@ const LearnPage: React.FC = () => {
         fetchData();
     }, [articleService]);
 
+    // Only articles that have a cover image
+    const articlesWithImages = useMemo(() => {
+        return articles.filter(a => !!a.image);
+    }, [articles]);
+
     const filteredArticles = useMemo(() => {
-        let result = articles;
+        let result = articlesWithImages;
         if (searchQuery) {
             const query = searchQuery.toLowerCase();
             result = result.filter(a =>
@@ -237,13 +249,9 @@ const LearnPage: React.FC = () => {
             );
         }
         return result;
-    }, [articles, searchQuery]);
+    }, [articlesWithImages, searchQuery]);
 
-    const featuredArticles = useMemo(() => {
-        const featured = filteredArticles.filter(a => a.tags.includes('featured'));
-        return featured.length > 0 ? featured.slice(0, 3) : filteredArticles.slice(0, 3);
-    }, [filteredArticles]);
-
+    // Group ALL articles (with images) by their category slug
     const articlesByCategory = useMemo(() => {
         const grouped: Record<string, Article[]> = {};
         for (const article of filteredArticles) {
@@ -254,23 +262,67 @@ const LearnPage: React.FC = () => {
         return grouped;
     }, [filteredArticles]);
 
-    const categoriesWithArticles = useMemo(() => {
-        return categories.filter(cat => (articlesByCategory[cat.slug]?.length ?? 0) > 0);
-    }, [categories, articlesByCategory]);
+    // Derive category objects from articles themselves (avoids Supabase slug mismatch)
+    const categoriesFromArticles = useMemo(() => {
+        const seen = new Map<string, Category>();
+        for (const article of articles) {
+            const slug = article.category.slug;
+            if (!seen.has(slug)) {
+                seen.set(slug, article.category);
+            }
+        }
+        return seen;
+    }, [articles]);
 
+    // All categories ordered: priority slugs first, then the rest
+    const orderedCategories = useMemo(() => {
+        const allSlugs = new Set([
+            ...categories.map(c => c.slug),
+            ...Array.from(categoriesFromArticles.keys()),
+        ]);
+
+        // Build a lookup: slug → Category (prefer article-derived for correct theme)
+        const catMap = new Map<string, Category>();
+        for (const slug of allSlugs) {
+            const cat = categoriesFromArticles.get(slug) || categories.find(c => c.slug === slug);
+            if (cat && (articlesByCategory[slug]?.length ?? 0) > 0) {
+                catMap.set(slug, cat);
+            }
+        }
+
+        // Priority categories first (in order), then remaining
+        const result: Category[] = [];
+        for (const slug of PRIORITY_CATEGORY_SLUGS) {
+            const cat = catMap.get(slug);
+            if (cat) {
+                result.push(cat);
+                catMap.delete(slug);
+            }
+        }
+        // Append remaining categories
+        for (const cat of catMap.values()) {
+            result.push(cat);
+        }
+        return result;
+    }, [categories, categoriesFromArticles, articlesByCategory]);
+
+    // Bento grid: pick best articles with images from priority categories
     const bentoArticles = useMemo(() => {
         const picks: Article[] = [];
         const usedCategories = new Set<string>();
-        // Featured articles first, one per category
-        for (const a of articles) {
+        const priorityWithImages = articlesWithImages.filter(
+            a => PRIORITY_CATEGORY_SLUGS.includes(a.category.slug)
+        );
+        // Featured-tagged articles first
+        for (const a of priorityWithImages) {
             if (picks.length >= 3) break;
             if (a.tags.includes('featured') && !usedCategories.has(a.category.slug)) {
                 picks.push(a);
                 usedCategories.add(a.category.slug);
             }
         }
-        // Fill remaining from distinct categories
-        for (const a of articles) {
+        // Fill from distinct priority categories
+        for (const a of priorityWithImages) {
             if (picks.length >= 3) break;
             if (!usedCategories.has(a.category.slug)) {
                 picks.push(a);
@@ -278,7 +330,7 @@ const LearnPage: React.FC = () => {
             }
         }
         return picks;
-    }, [articles]);
+    }, [articlesWithImages]);
 
     const hasNoResults = searchQuery.length > 0 && filteredArticles.length === 0;
     const isSearching = searchQuery.length > 0;
@@ -309,11 +361,10 @@ const LearnPage: React.FC = () => {
                 description="Explore our comprehensive library of mental health articles, guides, and resources."
             />
 
-            {/* Hero Section */}
+            {/* ── Hero Section ─────────────────────────────────────── */}
             <section className="relative pt-28 pb-16 px-6 overflow-hidden">
                 <div className="container mx-auto max-w-7xl relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        {/* Left Column: Hero Content */}
                         <div>
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface border border-border text-text-primary text-sm font-bold uppercase tracking-wider mb-8 shadow-sm">
                                 <BookOpen size={16} className="text-primary" />
@@ -345,7 +396,7 @@ const LearnPage: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Right Column: Bento Grid */}
+                        {/* Right Column: Bento Grid with cover images */}
                         {bentoArticles.length >= 3 && (
                         <div className="hidden lg:grid grid-cols-2 grid-rows-3 gap-3 h-[420px]">
                             <BentoCard
@@ -370,7 +421,7 @@ const LearnPage: React.FC = () => {
                 </div>
             </section>
 
-            {/* No Results State */}
+            {/* ── No Results State ────────────────────────────────── */}
             {hasNoResults && (
                 <section className="px-6 mb-24">
                     <div className="container mx-auto max-w-7xl">
@@ -388,82 +439,11 @@ const LearnPage: React.FC = () => {
                 </section>
             )}
 
-            {/* Featured Articles (only when not searching) */}
-            {!isSearching && featuredArticles.length > 0 && (
-            <section className="px-6 mb-16">
-                <div className="container mx-auto max-w-7xl">
-                    <div className="flex items-center gap-3 mb-8">
-                        <Sparkles className="text-amber-500" size={24} />
-                        <h2 className="text-3xl font-display font-bold text-text-primary">Featured Insights</h2>
-                    </div>
-
-                    <motion.div
-                        variants={containerVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        className="grid grid-cols-1 md:grid-cols-3 gap-8"
-                    >
-                        {featuredArticles.map((article) => (
-                            <motion.div key={article.id} variants={itemVariants} className="h-full">
-                                <ArticleCard
-                                    article={article}
-                                    onClick={() => navigate(getArticleUrl(article))}
-                                />
-                            </motion.div>
-                        ))}
-                    </motion.div>
-                </div>
-            </section>
-            )}
-
-            {/* Quick Nav — Category Pills */}
-            {!hasNoResults && categoriesWithArticles.length > 0 && (
-            <section className="px-6 mb-16 border-t border-border pt-12">
-                <div className="container mx-auto max-w-7xl">
-                    <div className="flex items-center gap-3 mb-6">
-                        <BookOpen className="text-primary" size={24} />
-                        <h2 className="text-3xl font-display font-bold text-text-primary">Browse by Topic</h2>
-                        <span className="text-sm text-text-tertiary font-medium ml-2">{categoriesWithArticles.length} categories</span>
-                    </div>
-
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                        {categoriesWithArticles.map((cat) => {
-                            const theme = getCategoryTheme(cat.slug);
-                            const Icon = theme.icon;
-                            const count = articlesByCategory[cat.slug]?.length ?? 0;
-                            return (
-                                <button
-                                    key={cat.id}
-                                    onClick={() => navigate(getCategoryUrl(cat.slug))}
-                                    className={`relative overflow-hidden rounded-2xl ${theme.classes.bg} p-5 min-h-[140px] flex flex-col justify-between text-left transition-all hover:scale-[1.02] hover:shadow-lg group`}
-                                >
-                                    <div className="relative z-10">
-                                        <span className="text-white font-display font-bold text-base leading-tight line-clamp-2 block">
-                                            {cat.name}
-                                        </span>
-                                        <span className="block text-white/70 text-xs mt-1.5 font-medium">
-                                            {count} {count === 1 ? 'article' : 'articles'}
-                                        </span>
-                                    </div>
-                                    <div className="absolute bottom-3 right-3">
-                                        <Icon size={36} className="text-white/20 group-hover:text-white/30 transition-colors" />
-                                    </div>
-                                </button>
-                            );
-                        })}
-                    </div>
-                </div>
-            </section>
-            )}
-
-            {/* Per-Category Showcases — Alternating Layouts */}
-            {!hasNoResults && categoriesWithArticles.map((category, index) => {
+            {/* ── All Categories — priority order ─────────────────── */}
+            {!hasNoResults && orderedCategories.map((category, index) => {
                 const catArticles = articlesByCategory[category.slug] || [];
                 const theme = getCategoryTheme(category.slug);
                 const isLayoutA = index % 2 === 0;
-                // Every 3rd section gets extra top spacing
-                const extraSpacing = index > 0 && index % 3 === 0;
 
                 return (
                     <motion.section
@@ -472,7 +452,7 @@ const LearnPage: React.FC = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: '-50px' }}
                         transition={{ duration: 0.5, ease: 'easeOut' }}
-                        className={`px-6 ${extraSpacing ? 'mt-8 mb-16' : 'mb-12'} ${index > 0 ? 'border-t border-border/50 pt-12' : 'pt-4'}`}
+                        className={`px-6 ${index === 0 ? 'pt-4' : 'border-t border-border/50 pt-12'} mb-12`}
                     >
                         <div className="container mx-auto max-w-7xl">
                             <CategorySectionHeader
@@ -498,7 +478,47 @@ const LearnPage: React.FC = () => {
                 );
             })}
 
-            {/* CTA Banner */}
+            {/* ── Search Results (when searching, show all matching) ── */}
+            {isSearching && !hasNoResults && (
+                <section className="px-6 mb-16">
+                    <div className="container mx-auto max-w-7xl">
+                        <div className="flex items-center gap-3 mb-8">
+                            <Sparkles className="text-amber-500" size={24} />
+                            <h2 className="text-3xl font-display font-bold text-text-primary">
+                                Results for &ldquo;{searchQuery}&rdquo;
+                            </h2>
+                            <span className="text-sm text-text-tertiary font-medium ml-2">
+                                {filteredArticles.length} {filteredArticles.length === 1 ? 'article' : 'articles'}
+                            </span>
+                        </div>
+
+                        <motion.div
+                            variants={containerVariants}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                        >
+                            {filteredArticles.slice(0, 12).map((article) => (
+                                <motion.div key={article.id} variants={itemVariants} className="h-full">
+                                    <ArticleCard
+                                        article={article}
+                                        onClick={() => navigate(getArticleUrl(article))}
+                                    />
+                                </motion.div>
+                            ))}
+                        </motion.div>
+
+                        {filteredArticles.length > 12 && (
+                            <div className="text-center mt-8 text-text-tertiary text-sm">
+                                Showing 12 of {filteredArticles.length} results. Refine your search to find more specific articles.
+                            </div>
+                        )}
+                    </div>
+                </section>
+            )}
+
+            {/* ── CTA Banner ──────────────────────────────────────── */}
             <section className="px-6 mb-20 mt-8">
                 <div className="container mx-auto max-w-7xl">
                     <div className="rounded-2xl border border-border bg-surface p-8 md:p-12 shadow-sm">

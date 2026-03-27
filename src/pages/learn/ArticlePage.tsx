@@ -110,11 +110,12 @@ const ArticlePage: React.FC = () => {
         window.scrollTo(0, 0);
     }, [articleSlug]);
 
-    // Extract plain text for TTS from the rendered DOM
+    // Extract plain text for TTS from the rendered DOM.
+    // Must depend on `loading` because article.content is set before loading becomes false,
+    // and the <article> ref isn't mounted while the loading spinner is shown.
     const [articlePlainText, setArticlePlainText] = useState('');
     useEffect(() => {
-        if (!article?.content) {
-            setArticlePlainText('');
+        if (loading || !article?.content) {
             return;
         }
         const raf = requestAnimationFrame(() => {
@@ -124,7 +125,7 @@ const ArticlePage: React.FC = () => {
             }
         });
         return () => cancelAnimationFrame(raf);
-    }, [article?.content]);
+    }, [article?.content, loading]);
 
     // Show back-to-top after scrolling past hero
     const [showBackToTop, setShowBackToTop] = useState(false);

@@ -18,10 +18,29 @@ const AdminLayout: React.FC = () => {
     onCommandPalette: togglePalette,
   });
 
-  if (loading || !adminUser) {
+  if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-background">
         <div className="w-8 h-8 rounded-full border-2 border-border border-t-primary animate-spin" />
+      </div>
+    );
+  }
+
+  if (!adminUser) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen bg-background gap-4">
+        <div className="w-12 h-12 rounded-xl bg-red-100 dark:bg-red-900/30 text-red-500 flex items-center justify-center text-xl font-bold">!</div>
+        <h2 className="text-lg font-semibold text-text-primary">Access Denied</h2>
+        <p className="text-sm text-text-secondary max-w-sm text-center">
+          Your account does not have admin panel access. Contact a super admin
+          to add your user to the admin_roles table.
+        </p>
+        <button
+          onClick={() => { window.location.href = '/'; }}
+          className="mt-2 px-4 py-2 text-sm font-medium bg-primary text-white rounded-lg hover:bg-primary-hover transition-colors"
+        >
+          Return to Main Site
+        </button>
       </div>
     );
   }

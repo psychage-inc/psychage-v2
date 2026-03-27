@@ -13,11 +13,34 @@ interface ArticleAudioPlayerProps {
 
 const SPEEDS = [0.75, 1, 1.25, 1.5, 2] as const;
 
-/** Strip HTML tags to get plain text for TTS */
-function stripHtml(html: string): string {
-    const div = document.createElement('div');
-    div.innerHTML = html;
-    return div.textContent || div.innerText || '';
+/** Split text into chunks at sentence boundaries to avoid Chrome TTS silent-failure on long text */
+function chunkText(text: string, maxLen = 800): string[] {
+    const chunks: string[] = [];
+    let remaining = text.trim();
+    while (remaining.length > 0) {
+        if (remaining.length <= maxLen) {
+            chunks.push(remaining);
+            break;
+        }
+        let splitAt = -1;
+        // Prefer sentence boundaries
+        for (const sep of ['. ', '! ', '? ', '.\n', '!\n', '?\n']) {
+            const idx = remaining.lastIndexOf(sep, maxLen);
+            if (idx > splitAt) splitAt = idx + sep.length;
+        }
+        // Fall back to comma, then space
+        if (splitAt <= 0) {
+            const commaIdx = remaining.lastIndexOf(', ', maxLen);
+            if (commaIdx > 0) splitAt = commaIdx + 2;
+            else {
+                const spaceIdx = remaining.lastIndexOf(' ', maxLen);
+                splitAt = spaceIdx > 0 ? spaceIdx + 1 : maxLen;
+            }
+        }
+        chunks.push(remaining.slice(0, splitAt));
+        remaining = remaining.slice(splitAt);
+    }
+    return chunks;
 }
 
 const ArticleAudioPlayer: React.FC<ArticleAudioPlayerProps> = ({
@@ -34,8 +57,10 @@ const ArticleAudioPlayer: React.FC<ArticleAudioPlayerProps> = ({
     const [isTTS, _setIsTTS] = useState(!audioUrl);
 
     const audioRef = useRef<HTMLAudioElement>(null);
-    const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+    const ttsChunksRef = useRef<string[]>([]);
+    const ttsChunkIndexRef = useRef(0);
     const ttsStartTimeRef = useRef<number>(0);
+    const ttsActiveRef = useRef(false);
 
     // --- Pre-recorded audio handlers ---
     const togglePlayAudio = useCallback(() => {
@@ -86,40 +111,69 @@ const ArticleAudioPlayer: React.FC<ArticleAudioPlayerProps> = ({
         }
     }, [speed, isTTS]);
 
+    // --- TTS: speak a single chunk, then advance to the next ---
+    const speakChunk = useCallback((index: number, rate: number) => {
+        const chunks = ttsChunksRef.current;
+        if (index >= chunks.length || !ttsActiveRef.current) {
+            ttsActiveRef.current = false;
+            setIsPlaying(false);
+            setProgress(100);
+            return;
+        }
+        ttsChunkIndexRef.current = index;
+        const utterance = new SpeechSynthesisUtterance(chunks[index]);
+        utterance.rate = rate;
+        utterance.onend = () => speakChunk(index + 1, rate);
+        utterance.onerror = () => {
+            ttsActiveRef.current = false;
+            setIsPlaying(false);
+        };
+        speechSynthesis.speak(utterance);
+    }, []);
+
     // --- TTS handlers ---
     const togglePlayTTS = useCallback(() => {
         if (!('speechSynthesis' in window)) return;
 
         if (isPlaying) {
             speechSynthesis.cancel();
+            ttsActiveRef.current = false;
             setIsPlaying(false);
             return;
         }
 
-        const text = articleText ? stripHtml(articleText) : '';
+        const text = (articleText || '').trim();
         if (!text) return;
 
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.rate = speed;
-        utterance.onend = () => {
-            setIsPlaying(false);
-            setProgress(100);
-        };
-        utterance.onerror = () => {
-            setIsPlaying(false);
-        };
+        // Cancel any lingering speech (fixes Chrome stuck-state bug)
+        speechSynthesis.cancel();
 
-        utteranceRef.current = utterance;
+        const chunks = chunkText(text);
+        ttsChunksRef.current = chunks;
+        ttsChunkIndexRef.current = 0;
         ttsStartTimeRef.current = Date.now();
+        ttsActiveRef.current = true;
 
-        // Estimate duration based on average speaking rate (150 words/min at 1x)
+        // Estimate total duration based on average speaking rate (150 words/min at 1x)
         const wordCount = text.split(/\s+/).length;
         const estimatedSeconds = (wordCount / 150) * 60;
         setDuration(estimatedSeconds);
 
-        speechSynthesis.speak(utterance);
+        speakChunk(0, speed);
         setIsPlaying(true);
-    }, [isPlaying, articleText, speed]);
+    }, [isPlaying, articleText, speed, speakChunk]);
+
+    // Chrome workaround: speechSynthesis pauses after ~15s — periodically nudge it
+    useEffect(() => {
+        if (!isPlaying || !isTTS) return;
+        const interval = setInterval(() => {
+            if (speechSynthesis.speaking && !speechSynthesis.paused) {
+                speechSynthesis.pause();
+                speechSynthesis.resume();
+            }
+        }, 10_000);
+        return () => clearInterval(interval);
+    }, [isPlaying, isTTS]);
 
     // TTS progress tracking
     useEffect(() => {
@@ -138,6 +192,7 @@ const ArticleAudioPlayer: React.FC<ArticleAudioPlayerProps> = ({
     // Cleanup TTS on unmount
     useEffect(() => {
         return () => {
+            ttsActiveRef.current = false;
             if ('speechSynthesis' in window) {
                 speechSynthesis.cancel();
             }
@@ -157,10 +212,10 @@ const ArticleAudioPlayer: React.FC<ArticleAudioPlayerProps> = ({
         const next = SPEEDS[(idx + 1) % SPEEDS.length];
         setSpeed(next);
         if (isTTS && isPlaying) {
-            // Restart TTS with new speed
+            // Restart TTS from current chunk with new speed
             speechSynthesis.cancel();
-            setIsPlaying(false);
-            setTimeout(() => togglePlayTTS(), 100);
+            ttsActiveRef.current = true;
+            speakChunk(ttsChunkIndexRef.current, next);
         }
     };
 

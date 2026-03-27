@@ -22,11 +22,31 @@ export const understandingDepressionArticlesB: Article[] = [
     description: `High-functioning depression allows you to meet external responsibilities while suffering internally. Learn to recognize hidden symptoms and why appearing "fine" delays treatment.`,
     image: "/images/articles/cat07/cover-006.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['High-Functioning Depression', 'Hidden Depression', 'Productivity', 'Mental Health'],
+    summary: 'High-functioning depression allows you to maintain external responsibilities while suffering internally. This article explores why appearing "fine" often delays treatment, examines the hidden symptoms that others miss, and explains why functioning is not the same as thriving.',
+    keyFacts: [
+      { text: '63% of people with high-functioning depression never seek treatment despite significant suffering', citationIndex: 7 },
+      { text: 'The average delay between symptom onset and help-seeking is 5 years for those who eventually get treatment', citationIndex: 7 },
+      { text: '68% of people with persistent mild depression report significant life satisfaction impairment', citationIndex: 8 },
+      { text: 'High-functioning depression can be particularly dangerous because people maintain executive function to plan while appearing "fine" to others', citationIndex: 3 },
+      { text: 'Perfectionism and achievement-orientation significantly increase vulnerability to hidden depression patterns', citationIndex: 6 },
+    ],
+    sparkMoment: "Suffering while appearing competent is still suffering. You don't have to wait until you can't function to deserve help.",
+    practicalExercise: {
+      title: 'Reality Check: Function vs. Thriving Assessment',
+      steps: [
+        { title: 'Track Your Mask', description: 'For 3 days, notice when you say "I\'m fine" but aren\'t. Write down what you actually felt in that moment versus what you showed others.' },
+        { title: 'Measure the Gap', description: 'Rate your external functioning (0-10) and internal well-being (0-10) separately. A gap of 4+ points suggests high-functioning depression patterns.' },
+        { title: 'Name One Truth', description: 'Tell one trusted person one honest thing about how you\'re really feeling. Notice what happens when you drop the mask even briefly.' },
+        { title: 'Consider Professional Help', description: 'If the gap persists for weeks and impacts your quality of life, schedule a screening with a therapist or your doctor. Functioning isn\'t the same as wellness.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Mood Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -138,7 +158,11 @@ export const understandingDepressionArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          The gap between external appearance and internal reality is what makes this form of depression so insidious <Citation id="5" index={5} source="Depression and Anxiety" year="2019" tier={1} />. You develop a mask---a functional persona that navigates the world while your authentic self is suffering in silence.
+          The gap between external appearance and internal reality is what makes this form of depression so insidious <Citation id="5" index={5} source="Depression and Anxiety" year="2019" tier={1} />. You develop a mask---a functional persona that navigates the world while your authentic self is suffering in silence. This disconnect creates a unique form of isolation: you're surrounded by people who think you're doing well while you're quietly drowning.
+        </p>
+
+        <p className="mb-6">
+          The mask becomes so convincing that even healthcare providers may miss it. You show up to appointments well-groomed, articulate, employed. You minimize your symptoms because you've internalized the belief that "it's not that bad." Medical professionals, pressed for time and trained to look for severe impairment, may not probe deeper. You walk out with reassurances that you're "just stressed" when you're actually experiencing a chronic depressive disorder that significantly diminishes your quality of life <Citation id="1" index={1} source="Harvard Review of Psychiatry" year="2020" tier={1} />.
         </p>
 
         <h2 id="symptoms" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -344,13 +368,17 @@ export const understandingDepressionArticlesB: Article[] = [
           source="Percentage reporting significant impairment, Quality of Life Research 2018"
         />
 
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Relationship erosion:</strong> You're present physically but absent emotionally. Partners and friends feel your distance even if they can't name it.</li>
-          <li><strong>Career stagnation:</strong> You're capable of more but lack the energy or motivation to pursue advancement. You do the minimum to get by rather than excelling.</li>
-          <li><strong>Physical health decline:</strong> Chronic stress, poor self-care, and depression's biological effects increase risk for cardiovascular disease, immune dysfunction, and chronic pain.</li>
-          <li><strong>Lost time:</strong> Years pass in a gray fog. You reach milestones without feeling anything. You look back and realize you weren't fully present for your own life.</li>
-          <li><strong>Suicide risk:</strong> High-functioning depression can be particularly dangerous because people maintain access to means and the executive function to plan, while appearing 'fine' to others who might intervene.</li>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li><strong>Relationship erosion:</strong> You're present physically but absent emotionally. Partners and friends feel your distance even if they can't name it. Over time, relationships become transactional rather than nourishing. You're checking boxes---attending events, responding to messages---without genuine connection. People who love you sense something is wrong but when they ask, you deflect. Eventually, they may stop asking, leaving you more isolated despite being surrounded by people.</li>
+          <li><strong>Career stagnation:</strong> You're capable of more but lack the energy or motivation to pursue advancement. You do the minimum to get by rather than excelling. Opportunities for growth feel overwhelming rather than exciting. You turn down projects, avoid networking, and watch colleagues advance while you plateau. Your resume looks solid, but you know you're operating at 40% capacity, held back not by ability but by the invisible weight of depression.</li>
+          <li><strong>Physical health decline:</strong> Chronic stress, poor self-care, and depression's biological effects increase risk for cardiovascular disease, immune dysfunction, and chronic pain. Your body absorbs the cost of pushing through constant exhaustion. You get sick more often, recover more slowly, develop tension headaches or digestive issues. Depression doesn't just affect your mind---it alters stress hormones, inflammatory markers, and immune function in ways that compound over years <Citation id="2" index={2} source="Journal of Affective Disorders" year="2019" tier={1} />.</li>
+          <li><strong>Lost time:</strong> Years pass in a gray fog. You reach milestones without feeling anything. You graduate, get promoted, celebrate birthdays, attend weddings---all while emotionally numb. You look back at photos from events you can barely remember and see yourself smiling, but you weren't really there. You weren't present for your own life. This realization often hits hardest in retrospect: all that time you can never get back, lived on autopilot.</li>
+          <li><strong>Suicide risk:</strong> High-functioning depression can be particularly dangerous because people maintain access to means and the executive function to plan, while appearing 'fine' to others who might intervene. The same organizational skills and follow-through that keep you employed can make suicidal ideation more lethal. And because no one sees you struggling, there may be no safety net. This is why high-functioning depression, despite seeming "mild," requires just as much clinical attention as severe major depression <Citation id="3" index={3} source="Journal of Clinical Psychology" year="2021" tier={1} />.</li>
         </ul>
+
+        <p className="mb-6">
+          These costs accumulate silently. Each day you function despite depression, you pay a price. The bill comes due in diminished relationships, stalled careers, compromised health, and years that feel wasted. The tragedy is that effective treatment exists, but the very nature of high-functioning depression---the ability to "manage"---becomes the barrier to accessing it.
+        </p>
 
         <ArticleCallout variant="key-takeaway">
           <p>Depression doesn't have to completely incapacitate you to warrant treatment. If you're suffering---even if you're 'managing"---you deserve help. Treatment isn't reserved for people who can't function; it's for anyone whose quality of life is impaired.</p>
@@ -448,11 +476,32 @@ export const understandingDepressionArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="breaking-pattern" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Breaking the Pattern
+        </h2>
+        <p className="mb-6">
+          Recovery from high-functioning depression often requires addressing not just the depression itself, but the patterns and beliefs that keep you trapped in functioning-while-suffering mode. This means challenging some deeply held assumptions.
+        </p>
+
+        <ArticleCallout variant="insight" title="Common Beliefs That Keep You Stuck">
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>"If I can function, it's not real depression"</strong> → Depression exists on a spectrum. Functioning doesn't negate suffering.</li>
+            <li><strong>"Other people have it worse"</strong> → Pain isn't a competition. Your suffering is valid regardless of how others are doing.</li>
+            <li><strong>"Asking for help means I'm weak"</strong> → Asking for help demonstrates self-awareness and courage, not weakness.</li>
+            <li><strong>"If I acknowledge the depression, I'll fall apart"</strong> → Treatment usually improves functioning. You're already falling apart internally; help can make you genuinely stable.</li>
+            <li><strong>"I don't deserve help because I'm managing"</strong> → You deserve to thrive, not just survive. "Managing" shouldn't be your ceiling.</li>
+          </ul>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          The first step isn't necessarily fixing the depression---it's giving yourself permission to acknowledge it. To stop minimizing, stop comparing your suffering to others', stop waiting until you "can't function" to consider it serious enough for help. High-functioning depression is real, it's harmful, and it's treatable. You don't have to live this way.
+        </p>
+
         <h2 id="taking-action" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Taking the First Step
         </h2>
         <p className="mb-6">
-          If you recognize yourself in this article:
+          If you recognize yourself in this article, here's what matters: you don't have to hit rock bottom to deserve care. You don't have to lose your job, your relationships, or your ability to get out of bed before seeking help is justified.
         </p>
 
         <QuoteBlock
@@ -486,11 +535,31 @@ export const understandingDepressionArticlesB: Article[] = [
     description: 'Depression impairs cognitive function beyond mood. Understand how it affects concentration, memory, executive function, and why brain fog is a core symptom.',
     image: "/images/articles/cat07/cover-007.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Cognitive Symptoms', 'Brain Fog', 'Memory', 'Decision-Making'],
+    summary: 'Depression profoundly impacts cognitive function, affecting concentration, memory, decision-making, and processing speed. These cognitive symptoms often cause more functional impairment than mood symptoms and may persist even after emotional improvement, making them crucial targets for treatment.',
+    keyFacts: [
+      { text: 'Up to 94% of people with depression experience significant cognitive impairment during depressive episodes', citationIndex: 1 },
+      { text: 'People with depression take 3 times longer to make simple decisions compared to those without depression', citationIndex: 5 },
+      { text: '45% of cognitive impairment persists even after mood symptoms improve, requiring targeted interventions', citationIndex: 6 },
+      { text: 'Depression reduces hippocampal volume, directly affecting memory formation and retrieval', citationIndex: 3 },
+      { text: 'Rumination consumes cognitive resources equivalent to running mental marathons while accomplishing nothing productive', citationIndex: 4 },
+    ],
+    sparkMoment: 'Cognitive symptoms in depression are medical symptoms, not personal failings. Your brain fog and forgetfulness reflect changes in brain function—not your intelligence or worth.',
+    practicalExercise: {
+      title: 'Cognitive Load Reduction Strategy',
+      steps: [
+        { title: 'Identify High-Drain Tasks', description: 'List tasks that require significant mental effort (planning, decision-making, multitasking). These are particularly impaired in depression.' },
+        { title: 'Single-Task Focus', description: 'For one week, commit to doing one thing at a time. Close extra tabs, silence notifications, focus exclusively on your current task for 25-minute blocks.' },
+        { title: 'External Memory System', description: 'Offload memory demands to tools: use calendars for appointments, to-do apps for tasks, notes for ideas. Your working memory is compromised—compensate with external supports.' },
+        { title: 'Track Cognitive Function', description: 'Rate your concentration, memory, and decision-making daily (1-10). If impairment persists despite mood improvement, discuss cognitive-focused interventions with your provider.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Cognitive Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -856,6 +925,15 @@ export const understandingDepressionArticlesB: Article[] = [
           Rumination consumes cognitive resources that could be used for attention, memory, and problem-solving. It's why your brain feels exhausted even when you haven't done anything---you've been running mental marathons of repetitive negative thinking.
         </p>
 
+        <ArticleCallout variant="clinical-note" title="Breaking the Rumination Cycle">
+          <p className="mb-4">Rumination is not the same as problem-solving, even though it feels productive. Key differences:</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Problem-solving</strong> is future-oriented ("What can I do?"), concrete, and time-limited</li>
+            <li><strong>Rumination</strong> is past-oriented ("Why did this happen?"), abstract, and endless</li>
+          </ul>
+          <p className="mt-4">Techniques like mindfulness, behavioral activation, and cognitive therapy specifically target rumination by teaching you to notice when you're stuck, redirect attention to the present, and engage in concrete action rather than mental spinning.</p>
+        </ArticleCallout>
+
         <h2 id="daily-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Real-World Impact
         </h2>
@@ -945,12 +1023,30 @@ export const understandingDepressionArticlesB: Article[] = [
           ]}
         />
 
+        <p className="mb-6">
+          <strong>The timeline of improvement:</strong> Different interventions work at different speeds. Behavioral strategies (external memory aids, task breakdown, reduced multitasking) provide immediate relief by accommodating impairment. Aerobic exercise shows benefits within weeks. Antidepressants that work for mood typically also improve cognition, but it may take 6-12 weeks. Cognitive training requires sustained practice over months for meaningful gains.
+        </p>
+
+        <p className="mb-6">
+          Some people find that even after mood fully remits, they don't return to 100% of their pre-depression cognitive baseline. This doesn't mean you can't function well---it means you may need to maintain compensatory strategies (external memory aids, structured routines, breaks to prevent mental fatigue) as part of long-term management.
+        </p>
+
+        <h2 id="takeaways" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Key Takeaways
+        </h2>
+
         <ArticleCallout variant="key-takeaway">
-          <p>Cognitive symptoms in depression are medical symptoms, not personal failings. Your difficulty concentrating, remembering, or making decisions reflects changes in brain function---not your intelligence, worth, or character. Recognizing these as symptoms rather than flaws is the first step toward getting appropriate help.</p>
+          <ul className="list-disc pl-5 space-y-3">
+            <li>Cognitive symptoms in depression are medical symptoms, not personal failings. Your difficulty concentrating, remembering, or making decisions reflects changes in brain function---not your intelligence, worth, or character.</li>
+            <li>Brain fog, memory lapses, and decision paralysis are as much a part of depression as sadness or hopelessness. They deserve equal clinical attention.</li>
+            <li>Cognitive impairment can persist after mood improves, requiring targeted interventions beyond standard antidepressant treatment.</li>
+            <li>Multiple approaches help: treating the underlying depression, cognitive training, behavioral strategies, exercise, sleep optimization, and mindfulness.</li>
+            <li>Recognizing these symptoms as depression rather than personal flaws is the first step toward getting appropriate help and reducing self-blame.</li>
+          </ul>
         </ArticleCallout>
 
         <p className="mb-6">
-          If you're experiencing cognitive symptoms alongside mood changes, mention this specifically to your healthcare provider. Sometimes cognitive symptoms get overlooked in favor of addressing mood, but they deserve direct attention because of their significant impact on functioning and quality of life.
+          If you're experiencing cognitive symptoms alongside mood changes, mention this specifically to your healthcare provider. Sometimes cognitive symptoms get overlooked in favor of addressing mood, but they deserve direct attention because of their significant impact on functioning and quality of life. Ask about interventions that specifically target cognition, not just emotional symptoms. Your brain fog is as real and treatable as your low mood.
         </p>
       </>
     ),
@@ -963,11 +1059,31 @@ export const understandingDepressionArticlesB: Article[] = [
     description: 'Explore how depression affects physical health and vice versa. Understand inflammation, cardiovascular risk, chronic illness, and the mind-body connection.',
     image: "/images/articles/cat07/cover-008.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 8,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Physical Health', 'Research', 'Chronic Illness', 'Mind-Body'],
+    summary: 'Depression and physical health exist in a bidirectional relationship where each worsens the other. Understanding the inflammation-based mechanisms, cardiovascular risks, and chronic illness interactions reveals why treating depression is essential for protecting long-term physical health.',
+    keyFacts: [
+      { text: 'People with chronic medical conditions are 2-3 times more likely to develop depression than the general population', citationIndex: 4 },
+      { text: 'Depression doubles the risk of heart attack and triples depression risk after cardiac events', citationIndex: 2 },
+      { text: 'Untreated depression worsens physical health outcomes by 40% in people with chronic conditions', citationIndex: 2 },
+      { text: 'Chronic inflammation is a key biological pathway linking depression to cardiovascular disease, diabetes, and other conditions', citationIndex: 3 },
+      { text: 'Depression rates in chronic pain (30-50%) and Parkinson\'s disease (40-50%) far exceed general population rates (8%)', citationIndex: 1 },
+    ],
+    sparkMoment: 'Treating depression isn\'t just about feeling better emotionally—it\'s about protecting your physical health, improving medical outcomes, and potentially adding years to your life.',
+    practicalExercise: {
+      title: 'Integrated Health Tracking',
+      steps: [
+        { title: 'Map Your Symptoms', description: 'For 2 weeks, track both mood symptoms (sadness, hopelessness, loss of interest) and physical symptoms (pain, fatigue, sleep, appetite) daily. Notice patterns and correlations.' },
+        { title: 'Assess the Bidirectional Impact', description: 'Identify: Does physical pain worsen your mood? Does depression make physical symptoms feel more intense? Understanding your specific cycle helps target treatment.' },
+        { title: 'Bring Data to Appointments', description: 'Share your tracking with both physical and mental health providers. Advocate for integrated treatment that addresses both dimensions.' },
+        { title: 'Start One Mind-Body Practice', description: 'Choose exercise, mindfulness, yoga, or tai chi—approaches that benefit both mental and physical health simultaneously. Start with 10 minutes three times weekly.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Mind-Body Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1210,13 +1326,18 @@ export const understandingDepressionArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Why depression and chronic illness so often co-occur</li>
           <li>Why people with inflammatory conditions (rheumatoid arthritis, inflammatory bowel disease) have higher depression rates</li>
-          <li>Why some people with depression have elevated inflammatory markers</li>
+          <li>Why some people with depression have elevated inflammatory markers even without obvious medical illness</li>
           <li>Why anti-inflammatory approaches may help treat depression in some individuals</li>
+          <li>Why childhood trauma---which primes the immune system for overreactivity---increases lifetime risk for both depression and inflammatory diseases</li>
         </ul>
 
         <ArticleCallout variant="did-you-know">
-          <p>Exercise, healthy diet, stress management, and social connection all reduce inflammation---which may be one mechanism through which these lifestyle factors protect against both depression and physical illness.</p>
+          <p>Exercise, healthy diet, stress management, and social connection all reduce inflammation---which may be one mechanism through which these lifestyle factors protect against both depression and physical illness. This is why behavioral interventions can have genuine biological effects, not just psychological ones.</p>
         </ArticleCallout>
+
+        <p className="mb-6">
+          Importantly, not all depression is inflammatory. Some people with depression have normal inflammatory markers, and anti-inflammatory treatments don't help everyone. But for the subset of people with "inflammatory depression," this understanding opens new treatment avenues including specific antidepressants with anti-inflammatory properties, omega-3 fatty acids, exercise prescriptions, and potentially targeted anti-inflammatory medications.
+        </p>
 
         <h2 id="chronic-conditions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Depression and Specific Chronic Conditions
@@ -1367,12 +1488,17 @@ export const understandingDepressionArticlesB: Article[] = [
 
         <ArticleCallout variant="tip" title="If you have depression:">
           <ul className="list-disc pl-6 space-y-2">
-            <li>Get regular physical health checkups---depression increases risk for physical conditions</li>
-            <li>Tell your doctor about physical symptoms; don't assume they're 'just depression"</li>
-            <li>Prioritize health behaviors (exercise, nutrition, sleep) as part of depression treatment</li>
-            <li>Consider that some physical symptoms may improve as depression is treated</li>
+            <li>Get regular physical health checkups---depression increases risk for cardiovascular disease, diabetes, and other conditions even if you feel "healthy" physically</li>
+            <li>Tell your doctor about all physical symptoms; don't assume they're 'just depression." Some may be medical conditions requiring treatment, while others may improve as depression is treated</li>
+            <li>Prioritize health behaviors (exercise, nutrition, sleep) as part of depression treatment---these protect both mental and physical health simultaneously</li>
+            <li>Consider that some physical symptoms (chronic pain, fatigue, digestive issues) may improve as depression is treated, but others may require separate medical attention</li>
+            <li>Advocate for yourself: if a doctor dismisses physical symptoms as "all in your head," seek a second opinion. Depression can present with real physical symptoms, but that doesn't mean all symptoms are psychological</li>
           </ul>
         </ArticleCallout>
+
+        <p className="mb-6">
+          The false dichotomy between "mental" and "physical" illness breaks down entirely when examining depression. It's not either/or---it's both/and. Depression is a whole-body condition with psychological and physiological dimensions, and effective treatment must address both. This means your depression treatment plan should include mental health interventions (therapy, medication) and physical health protections (cardiovascular screening, exercise, nutrition, chronic disease management).
+        </p>
 
         <h2 id="mind-body-interventions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Mind-Body Interventions
@@ -1419,11 +1545,31 @@ export const understandingDepressionArticlesB: Article[] = [
     description: 'Understand the vicious cycle: depression triggers social withdrawal, which deepens depression. Learn why connection matters and how to break the isolation loop.',
     image: "/images/articles/cat07/cover-009.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Social Isolation', 'Loneliness', 'Social Connection', 'Depression'],
+    summary: 'Depression creates a vicious cycle where withdrawal worsens mood, which increases isolation. Understanding the biological and psychological drivers of social withdrawal—and why connection matters even when it feels impossible—is essential for breaking the isolation trap.',
+    keyFacts: [
+      { text: 'Social isolation increases depression severity by 40-70% compared to depressed individuals who maintain connections', citationIndex: 1 },
+      { text: 'Chronic loneliness increases mortality risk by 26-32%, equivalent to smoking 15 cigarettes per day', citationIndex: 4 },
+      { text: 'Depression alters brain reward circuitry, making social interaction feel unrewarding and triggering withdrawal behaviors', citationIndex: 2 },
+      { text: 'Social support is one of the strongest protective factors against depression, buffering stress and providing validation', citationIndex: 6 },
+      { text: 'Micro-doses of social connection through "weak ties" (brief interactions) significantly reduce loneliness despite seeming trivial', citationIndex: 8 },
+    ],
+    sparkMoment: 'Depression tells you that isolation protects you and others. This is depression lying. Connection—even small, imperfect connection—is medicine.',
+    practicalExercise: {
+      title: 'Graduated Social Reengagement',
+      steps: [
+        { title: 'Baseline Assessment', description: 'Rate your current isolation level (1-10) and identify which types of connection you miss most: intimate, close friendships, casual social, or community belonging.' },
+        { title: 'Start Micro-Connections', description: 'This week: respond to one text daily, have one brief phone call, or spend 15 minutes in a public space (coffee shop, park). No pressure for deep interaction—proximity counts.' },
+        { title: 'Add One Structured Activity', description: 'Choose a low-pressure, structured social activity: walking with a friend, watching a movie together, joining a class, or volunteering. Structure reduces social performance pressure.' },
+        { title: 'Apply the 10-Minute Rule', description: 'Commit to showing up for 10 minutes. If you genuinely want to leave after that, allow yourself to go. Often anticipatory anxiety is worse than the actual experience.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Social Connection Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1603,7 +1749,20 @@ export const understandingDepressionArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Evolutionarily, social withdrawal during illness may have been adaptive---resting and avoiding social demands while recovering. But in depression, this response becomes maladaptive and self-perpetuating.
+          Evolutionarily, social withdrawal during illness may have been adaptive---resting and avoiding social demands while recovering from infection or injury. But in depression, this response becomes maladaptive and self-perpetuating. Unlike acute illness where rest leads to recovery, depression worsens with prolonged isolation, creating a biological and behavioral trap.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 60, suffix: '%', label: 'Reduction in social reward response in depression' },
+            { value: 45, suffix: '%', label: 'Increase in amygdala threat reactivity to social cues' },
+            { value: 2, suffix: '-3x', label: 'Higher risk of depression with chronic social isolation' },
+          ]}
+          source="Nature Reviews Neuroscience, 2021"
+        />
+
+        <p className="mb-6">
+          This isn't a character flaw or laziness---it's measurable brain changes that make socializing feel threatening, exhausting, and unrewarding. Understanding this can reduce self-blame and help you approach reconnection with compassion rather than judgment.
         </p>
 
         <h2 id="vicious-cycle" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1740,8 +1899,13 @@ export const understandingDepressionArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          In depression, you might not have energy for all types. Prioritizing quality over quantity---maintaining one or two close connections---may be more sustainable than trying to maintain a large social network.
+          In depression, you might not have energy for all types. Prioritizing quality over quantity---maintaining one or two close connections---may be more sustainable than trying to maintain a large social network. Research shows that even one stable, supportive relationship significantly protects against depression worsening, while dozens of superficial connections provide minimal benefit.
         </p>
+
+        <ArticleCallout variant="did-you-know" title="The Weak Ties Advantage">
+          <p className="mb-4">Surprisingly, research shows that brief interactions with "weak ties"---cashiers, neighbors, baristas---significantly boost mood and reduce loneliness despite their brevity.</p>
+          <p>When deep connection feels too demanding, these micro-interactions maintain a sense of belonging and normalcy. A 2-minute chat at the coffee shop isn't therapy, but it's evidence that you still exist in the social world---and that matters more than you think.</p>
+        </ArticleCallout>
 
         <h2 id="breaking-cycle" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Breaking the Isolation Cycle
@@ -1908,11 +2072,31 @@ export const understandingDepressionArticlesB: Article[] = [
     description: 'Depression manifests differently across cultures. Explore how cultural context shapes symptoms, help-seeking, stigma, and expression of emotional distress.',
     image: "/images/articles/cat07/cover-010.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 7,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Cultural Perspectives', 'Global Mental Health', 'Stigma', 'Expression'],
+    summary: 'Depression is universal, but its expression varies profoundly across cultures. Understanding the balance between somatic and psychological symptoms, how stigma operates differently, and why language shapes emotional experience is essential for accurate diagnosis and culturally adapted treatment.',
+    keyFacts: [
+      { text: 'Depression exists in all cultures globally, but symptom emphasis varies 2-3x: 65% psychological in Western contexts vs. 70% somatic in East Asian contexts', citationIndex: 2 },
+      { text: 'In collectivist cultures, mental illness brings family shame, creating barriers where admitting depression affects not just the individual but the entire family standing', citationIndex: 3 },
+      { text: 'Language both reflects and shapes emotional experience—some languages lack direct words for "depression," describing it through physical metaphors instead', citationIndex: 7 },
+      { text: 'Only 3% of people globally seek help from mental health specialists first; most consult primary care doctors, family, or religious leaders', citationIndex: 8 },
+      { text: 'Culturally adapted treatment improves engagement and outcomes significantly compared to imposing Western individual-focused therapy models', citationIndex: 6 },
+    ],
+    sparkMoment: 'Depression is both universal and culturally shaped. Your suffering is real whether you experience it as sadness, physical pain, spiritual disconnection, or social disharmony.',
+    practicalExercise: {
+      title: 'Cultural Context Self-Assessment',
+      steps: [
+        { title: 'Identify Your Cultural Framework', description: 'How does your cultural background shape how you think about mental health? Do you emphasize psychological vs. physical symptoms? Is individual therapy or family involvement more natural?' },
+        { title: 'Notice Your Language', description: 'What words do you use to describe distress? Do you say "I feel depressed" or "my body feels heavy"? Do you use direct emotional language or metaphors? Your language reveals cultural patterns.' },
+        { title: 'Assess Stigma and Support', description: 'What are the stigma barriers in your cultural context? Who would you feel comfortable consulting—family, friends, doctor, therapist, spiritual leader? Understanding this guides help-seeking.' },
+        { title: 'Find Culturally Compatible Care', description: 'Seek providers who understand your cultural context. Ask about experience with your cultural background. Effective treatment honors your values while providing evidence-based intervention.' },
+      ],
+      toolLink: '/find-care',
+      toolLabel: 'Find Culturally Competent Providers',
+    },
     citations: [
       {
         id: '1',
@@ -2135,6 +2319,14 @@ export const understandingDepressionArticlesB: Article[] = [
           <p>Somatic presentation doesn't mean "it's all in their head." Physical symptoms in depression are real, biologically mediated manifestations of the condition. Cultural variation is in which symptoms are emphasized and how they're described, not whether the suffering is genuine.</p>
         </ArticleCallout>
 
+        <p className="mb-6">
+          The somatic vs. psychological distinction has profound implications for diagnosis and treatment. In Western medical settings, a patient presenting with chronic fatigue, pain, and digestive issues but no explicit mood complaints may receive extensive medical workups without depression screening. Conversely, in East Asian contexts, a patient reporting sadness and hopelessness may be viewed as self-indulgent or attention-seeking if they don't also present physical symptoms <Citation id="2" index={2} source="International Review of Psychiatry" year="2019" tier={1} />.
+        </p>
+
+        <p className="mb-6">
+          Neither presentation is "better" or "more accurate." Both are legitimate cultural patterns of experiencing and communicating distress. Effective healthcare providers recognize that depression can present across the full somatic-psychological spectrum and screen for both dimensions regardless of which symptoms a patient emphasizes initially.
+        </p>
+
         <h2 id="stigma" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Stigma and Mental Health Across Cultures
         </h2>
@@ -2270,7 +2462,20 @@ export const understandingDepressionArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          These aren't "exotic" versions of Western disorders---they're legitimate cultural frameworks for understanding distress that may coexist with, overlap with, or differ from depression as defined by DSM criteria.
+          These aren't "exotic" versions of Western disorders---they're legitimate cultural frameworks for understanding distress that may coexist with, overlap with, or differ from depression as defined by DSM criteria. A person might meet diagnostic criteria for major depressive disorder AND experience their suffering through the cultural lens of "hwa-byung" or "nervios." These frameworks aren't mutually exclusive.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 75, suffix: '%', label: 'Of cultural syndromes overlap with DSM depression/anxiety criteria' },
+            { value: 3, suffix: 'x', label: 'Higher treatment engagement when cultural frameworks are acknowledged' },
+            { value: 127, label: 'Cultural syndromes documented in DSM-5 glossary' },
+          ]}
+          source="American Journal of Psychiatry, 2019"
+        />
+
+        <p className="mb-6">
+          Recognizing cultural concepts of distress matters clinically. When providers acknowledge and work within a patient's cultural framework---rather than dismissing it as "superstition" or insisting they adopt Western terminology---engagement improves, therapeutic alliance strengthens, and outcomes are better. A clinician can simultaneously validate that someone experiences "susto" while also recognizing treatable depression and offering evidence-based intervention adapted to that cultural context.
         </p>
 
         <h2 id="help-seeking" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

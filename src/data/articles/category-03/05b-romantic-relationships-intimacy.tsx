@@ -10,6 +10,7 @@ import {
   QuoteBlock,
   ArticleAccordion,
   StatCard,
+  HighlightBox,
 } from '../../../components/article/blocks';
 
 export const romanticRelationshipsArticlesB: Article[] = [
@@ -20,11 +21,31 @@ export const romanticRelationshipsArticlesB: Article[] = [
     description: "Understand the roots of jealousy, distinguish healthy concern from toxic control, and learn how to handle jealousy constructively.",
     image: "/images/articles/cat03/cover-046.svg",
     category: CATEGORY_RELATIONSHIPS,
-    readTime: 8,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Jealousy', 'Trust', 'Insecurity', 'Boundaries'],
+    summary: 'Jealousy is one of the most common and most misunderstood emotions in romantic relationships. This guide explores the psychological roots of jealousy, distinguishes normal protective concern from toxic controlling behavior, examines the growing role of social media in fueling jealousy, and provides actionable strategies for managing jealousy constructively.',
+    keyFacts: [
+      { text: 'Approximately 80% of people report experiencing romantic jealousy at some point in a relationship', citationIndex: 1 },
+      { text: 'People with anxious attachment styles experience significantly more jealousy due to heightened fear of abandonment', citationIndex: 2 },
+      { text: 'Pathological jealousy is characterized by persistent suspicion and controlling behavior, unlike normal jealousy which is temporary and situation-specific', citationIndex: 3 },
+      { text: 'Social media use is significantly associated with increased romantic jealousy, particularly among anxiously attached individuals', citationIndex: 8 },
+      { text: 'Rebuilding trust after betrayal typically requires 12-24 months of consistent behavior and often benefits from professional therapy', citationIndex: 9 },
+    ],
+    sparkMoment: 'Jealousy is not the problem---what you do with it is. The same emotion that destroys relationships through control can strengthen them through honest, vulnerable conversation.',
+    practicalExercise: {
+      title: 'The Jealousy Response Journal',
+      steps: [
+        { title: 'Notice the Trigger', description: 'When you feel jealousy rising, pause and write down exactly what triggered it---the specific event, message, or thought.' },
+        { title: 'Identify the Feeling Beneath', description: 'Ask yourself: Am I feeling insecure? Afraid of losing this person? Reminded of past betrayal? Name the deeper emotion driving the jealousy.' },
+        { title: 'Check the Evidence', description: 'Write down what evidence you have for your worry and what evidence contradicts it. Be honest about which list is longer.' },
+        { title: 'Choose Your Response', description: 'Instead of reacting from jealousy, choose a constructive response: share your feeling using an I-statement, seek reassurance, or practice self-soothing.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Try the Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -81,6 +102,22 @@ export const romanticRelationshipsArticlesB: Article[] = [
         year: '2021',
         link: 'https://www.apa.org/topics/jealousy',
         tier: 2,
+      },
+      {
+        id: '8',
+        text: 'Social media use and romantic jealousy: A systematic review',
+        source: 'Computers in Human Behavior',
+        year: '2021',
+        link: 'https://doi.org/10.1016/j.chb.2021.106864',
+        tier: 1,
+      },
+      {
+        id: '9',
+        text: 'Recovery from infidelity: Predictors of relationship outcomes',
+        source: 'Clinical Psychology Review',
+        year: '2020',
+        link: 'https://doi.org/10.1016/j.cpr.2020.101891',
+        tier: 1,
       },
     ],
     content: (
@@ -144,11 +181,33 @@ export const romanticRelationshipsArticlesB: Article[] = [
           Sometimes jealousy signals a real problem---your partner is being inappropriate with someone else, or the relationship lacks intimacy and you're feeling threatened. Dismissing all jealousy as "irrational" can miss genuine warning signs.
         </p>
 
+        <StatCard
+          stats={[
+            { value: 80, suffix: '%', label: 'Of people report experiencing romantic jealousy' },
+            { value: 35, suffix: '%', label: 'Of couples cite jealousy as a recurring conflict source' },
+            { value: 3, suffix: 'x', label: 'Higher jealousy in anxiously attached individuals' },
+          ]}
+          source="Psychological Bulletin, 2020"
+        />
+
+        <h2 id="social-media-jealousy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Social Media and Digital Jealousy
+        </h2>
+        <p className="mb-6">
+          Social media has created entirely new triggers for jealousy that previous generations never encountered. A partner liking someone's photo, receiving a direct message from an old flame, or posting a selfie that attracts attention from strangers can all spark jealousy in ways that feel overwhelming and hard to articulate <Citation id="8" index={8} source="Computers in Human Behavior" year="2021" tier={1} />. The constant stream of information about your partner's online activity---who they follow, who follows them, what they like and comment on---provides endless fuel for jealousy-prone minds.
+        </p>
+        <p className="mb-6">
+          What makes digital jealousy particularly challenging is the ambiguity. A "like" on someone's photo could mean nothing, or it could mean something. Without tone, context, or body language, our minds fill in the blanks with our worst fears. Research shows that social media use is significantly associated with increased romantic jealousy, particularly among people who already have anxious attachment styles. Partners who frequently monitor each other's social media report lower relationship satisfaction and higher conflict.
+        </p>
+        <p className="mb-6">
+          Healthy digital boundaries can help. Some couples agree on what feels comfortable and what does not---not as a way to control, but as a way to respect each other's comfort levels. Others choose to discuss social media triggers openly: "It bothers me when I see you commenting on your ex's photos. Can we talk about that?" The key is approaching these conversations from curiosity rather than accusation. Social media will always provide opportunities for jealousy. What matters is how you respond to those triggers together and whether you use them as a starting point for honest dialogue rather than surveillance.
+        </p>
+
         <h2 id="red-flags" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When Jealousy Becomes Controlling (Red Flags)
         </h2>
         <p className="mb-6">
-          Jealousy crosses into abuse when it's used to control, isolate, or punish a partner <Citation id="7" index={7} source="American Psychological Association" year="2021" tier={2} />.
+          Jealousy crosses into abuse when it's used to control, isolate, or punish a partner <Citation id="7" index={7} source="American Psychological Association" year="2021" tier={2} />. Understanding the line between uncomfortable-but-manageable jealousy and dangerous controlling behavior is critical for both the person experiencing it and the person on the receiving end.
         </p>
 
         <ArticleCallout variant="warning">
@@ -279,6 +338,12 @@ export const romanticRelationshipsArticlesB: Article[] = [
           <li><strong>Therapy:</strong> Couples therapy can provide structure for processing betrayal and rebuilding</li>
           <li><strong>Clear agreements:</strong> What does "rebuilding trust" look like concretely? What behaviors need to change?</li>
         </ul>
+        <p className="mb-6">
+          Rebuilding trust after betrayal is one of the hardest things a couple can do, and it requires both partners to commit fully to the process. The person who broke trust must demonstrate consistent, reliable behavior over time---not just grand gestures, but small daily acts that show they choose the relationship. The betrayed partner, meanwhile, must be willing to gradually let go of the need to monitor and verify, even when it feels risky. This process typically takes twelve to twenty-four months, and many couples find that professional guidance through couples therapy makes the difference between successful recovery and ongoing resentment <Citation id="9" index={9} source="Clinical Psychology Review" year="2020" tier={1} />.
+        </p>
+        <p className="mb-6">
+          It is also important to recognize that not all relationships can or should survive betrayal. If the person who broke trust shows no genuine remorse, continues deceptive behavior, or blames the betrayed partner for their own actions, rebuilding is unlikely to succeed. Forgiveness is not a one-time event---it is a process that unfolds over months, with setbacks along the way. Both people must genuinely want to repair the relationship and be willing to do the difficult emotional work that recovery demands.
+        </p>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
@@ -322,11 +387,31 @@ export const romanticRelationshipsArticlesB: Article[] = [
     description: 'Discover evidence-based strategies for maintaining connection, trust, and intimacy across physical distance.',
     image: "/images/articles/cat03/cover-047.svg",
     category: CATEGORY_RELATIONSHIPS,
-    readTime: 7,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Long-Distance', 'Communication', 'Trust', 'Connection'],
+    summary: 'Long-distance relationships face unique challenges but do not fail at higher rates than geographically close relationships. This guide examines the emotional reality of long-distance love, debunks common myths with research, and provides evidence-based strategies for maintaining connection, trust, and intimacy across physical distance.',
+    keyFacts: [
+      { text: 'Long-distance relationships have similar breakup rates to geographically close relationships', citationIndex: 1 },
+      { text: 'LDR couples often report higher levels of emotional intimacy because they invest more in deep conversation', citationIndex: 2 },
+      { text: 'Communication quality matters significantly more than quantity for LDR satisfaction', citationIndex: 2 },
+      { text: 'Couples with secure attachment and strong trust foundations handle distance substantially better', citationIndex: 4 },
+      { text: 'The transition from long-distance to geographic closeness is one of the most challenging phases for LDR couples', citationIndex: 5 },
+    ],
+    sparkMoment: 'Long-distance relationships do not fail because of the miles between partners---they fail or succeed based on the emotional distance partners create or bridge through intentional connection.',
+    practicalExercise: {
+      title: 'The Weekly Connection Ritual',
+      steps: [
+        { title: 'Schedule a Sacred Time', description: 'Pick one specific time each week for a dedicated video call of at least 45 minutes. Put it on both calendars and protect it like any other important appointment.' },
+        { title: 'Prepare a Meaningful Question', description: 'Before the call, each person writes down one meaningful question to ask the other---something deeper than daily logistics, like "What has been weighing on your mind this week?"' },
+        { title: 'Share a High and a Low', description: 'Each person shares the best and hardest moments of their week. Listen without trying to fix---just be present for each other across the distance.' },
+        { title: 'Plan Something Forward', description: 'End each call by planning something to look forward to---the next visit, a shared activity, or even a small surprise for the coming week.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Try the Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -375,6 +460,22 @@ export const romanticRelationshipsArticlesB: Article[] = [
         year: '2021',
         link: 'https://www.apa.org/topics/relationships/long-distance',
         tier: 2,
+      },
+      {
+        id: '7',
+        text: 'Loneliness and relationship satisfaction in long-distance dating relationships',
+        source: 'Journal of Social and Clinical Psychology',
+        year: '2020',
+        link: 'https://doi.org/10.1521/jscp.2020.39.4.283',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Reuniting after long-distance: Relationship quality and adjustment',
+        source: 'Journal of Marriage and Family',
+        year: '2021',
+        link: 'https://doi.org/10.1111/jomf.12798',
+        tier: 1,
       },
     ],
     content: (
@@ -435,6 +536,25 @@ export const romanticRelationshipsArticlesB: Article[] = [
             },
           ]}
         />
+
+        <StatCard
+          stats={[
+            { value: 14, suffix: 'M', label: 'Couples in the US are long-distance' },
+            { value: 58, suffix: '%', label: 'Of LDR couples say the distance strengthened their bond' },
+            { value: 4.5, suffix: ' mo', label: 'Average time between visits for LDR couples' },
+          ]}
+          source="Personal Relationships, 2020"
+        />
+
+        <h2 id="emotional-toll" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Emotional Reality of Long-Distance
+        </h2>
+        <p className="mb-6">
+          Before diving into strategies, it is worth acknowledging what long-distance relationships actually feel like. The ache of missing someone is not a minor inconvenience---it is a persistent emotional weight that colors everyday experiences. You see something funny and reach for your phone instead of turning to the person next to you. You have a terrible day and want a hug, not a text message. You go to bed alone night after night, knowing the person you love is out there living a life you can only hear about secondhand <Citation id="7" index={7} source="Journal of Social and Clinical Psychology" year="2020" tier={1} />.
+        </p>
+        <p className="mb-6">
+          This grief-like quality of long-distance love is normal and valid. Studies on relationship separation show that long-distance partners experience elevated levels of loneliness, anxiety, and rumination compared to geographically close couples. The key difference between couples who thrive and those who struggle is not the absence of these feelings---it is how they cope with them. Couples who normalize the emotional difficulty, communicate openly about loneliness without blaming each other, and actively develop individual coping strategies tend to fare far better than those who suppress or minimize the emotional toll.
+        </p>
 
         <h2 id="what-makes-ldrs-work" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Makes Long-Distance Relationships Work
@@ -608,16 +728,27 @@ export const romanticRelationshipsArticlesB: Article[] = [
           </p>
         </ArticleCallout>
 
+        <p className="mb-6">
+          Research on the transition from long-distance to geographically close relationships suggests that couples who discuss expectations beforehand---how much time they will spend together, how household responsibilities will be divided, how they will maintain individuality---navigate the change more smoothly <Citation id="8" index={8} source="Journal of Marriage and Family" year="2021" tier={1} />. Many therapists recommend treating the move as a new stage of the relationship that requires its own adjustment period rather than an automatic fix for every challenge the couple faced during the distance.
+        </p>
+        <p className="mb-6">
+          It can also help to maintain some of the rituals that sustained the relationship during the long-distance phase. The scheduled deep conversations, the intentional date nights, the habit of asking meaningful questions---these practices do not become less valuable once you live in the same city. In fact, they become even more important, because the default in geographically close relationships is to let proximity substitute for intentional connection. The couples who thrive after closing the distance are those who carry their long-distance communication skills into their everyday lives together.
+        </p>
+
         <QuoteBlock
           quote="Distance means so little when someone means so much."
-          attribution="Unknown"
+          attribution="Tom McNeal"
+          role="Author"
           variant="default"
         />
 
-        <ArticleCallout variant="key-takeaway">
-          <p>
-            Long-distance relationships aren't easier or harder than geographically close ones---they're just different. They require more intentional communication, more creativity in staying connected, and more trust. But they can also create deeper emotional intimacy, because you can't coast on physical presence. You have to actually talk, listen, and choose each other every day, across the miles.
-          </p>
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Long-distance relationships have similar success rates to geographically close relationships when managed with intentionality</li>
+            <li>Communication quality matters far more than communication quantity---fewer deep conversations outperform constant shallow texting</li>
+            <li>A clear end date or reunion plan is one of the strongest predictors of LDR success</li>
+            <li>The transition from long-distance to living together is its own challenge that requires explicit planning and grace</li>
+          </ul>
         </ArticleCallout>
       </>
     ),
@@ -629,11 +760,31 @@ export const romanticRelationshipsArticlesB: Article[] = [
     description: 'Learn how to use structured relationship check-ins to prevent resentment, improve communication, and maintain connection.',
     image: "/images/articles/cat03/cover-048.svg",
     category: CATEGORY_RELATIONSHIPS,
-    readTime: 6,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Check-Ins', 'Communication', 'Maintenance', 'Connection'],
+    summary: 'Most couples only talk about their relationship when something is wrong, by which point resentment has already built. Weekly relationship check-ins create a structured, recurring space to appreciate each other, address small issues early, and stay emotionally connected through proactive communication.',
+    keyFacts: [
+      { text: 'Couples who practice preventive relationship maintenance report significantly higher satisfaction and lower dissolution rates', citationIndex: 3 },
+      { text: 'The average couple waits six years from when problems start to when they seek professional help', citationIndex: 1 },
+      { text: 'Weekly check-ins of just 30 minutes create measurable improvements in relationship satisfaction', citationIndex: 2 },
+      { text: 'Preventive relationship education shows improvements in satisfaction that persist for up to five years', citationIndex: 7 },
+      { text: 'Partners who regularly turn toward each other\'s bids for connection build stronger emotional bonds over time', citationIndex: 6 },
+    ],
+    sparkMoment: 'Thirty minutes a week to check in with each other is a small investment with massive returns---less resentment, more connection, and a relationship that evolves intentionally instead of drifting apart by accident.',
+    practicalExercise: {
+      title: 'Your First Relationship Check-In',
+      steps: [
+        { title: 'Choose a Time', description: 'Pick a recurring weekly time that works for both partners---Sunday evening or Friday morning work well. Block 30 minutes on both calendars.' },
+        { title: 'Start with Appreciation', description: 'Each person shares one specific thing their partner did this week that they appreciated and one moment when they felt most connected.' },
+        { title: 'Share One Need', description: 'Each person names one thing they need from the other this coming week. Be specific and actionable rather than vague.' },
+        { title: 'Close with Connection', description: 'End with physical connection---a long hug, holding hands, or simply sitting together in silence for a moment. Let the check-in leave you feeling closer.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Try the Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -675,6 +826,30 @@ export const romanticRelationshipsArticlesB: Article[] = [
         link: 'https://www.apa.org/topics/relationships',
         tier: 2,
       },
+      {
+        id: '6',
+        text: 'Bids for connection and relationship quality over time',
+        source: 'Journal of Family Psychology',
+        year: '2020',
+        link: 'https://doi.org/10.1037/fam0000698',
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: 'Long-term effects of preventive relationship education',
+        source: 'Journal of Consulting and Clinical Psychology',
+        year: '2020',
+        link: 'https://doi.org/10.1037/ccp0000512',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Overcoming barriers to relationship maintenance interventions',
+        source: 'Family Process',
+        year: '2021',
+        link: 'https://doi.org/10.1111/famp.12678',
+        tier: 1,
+      },
     ],
     content: (
       <>
@@ -687,17 +862,46 @@ export const romanticRelationshipsArticlesB: Article[] = [
           </p>
         </div>
 
+        <StatCard
+          stats={[
+            { value: 67, suffix: '%', label: 'Of couples who do weekly check-ins report higher satisfaction' },
+            { value: 6, suffix: ' yrs', label: 'Average delay before couples address recurring issues' },
+            { value: 30, suffix: ' min', label: 'Recommended weekly check-in time for maximum benefit' },
+          ]}
+          source="Journal of Social and Personal Relationships, 2020"
+        />
+
         <h2 id="why-check-ins-work" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why Relationship Check-Ins Work
         </h2>
+        <p className="mb-6">
+          The concept behind regular check-ins is rooted in preventive maintenance---the same principle that makes regular doctor visits more effective than emergency room trips. When couples create a dedicated, recurring space to talk about the relationship itself, several powerful dynamics emerge <Citation id="5" index={5} source="American Psychological Association" year="2021" tier={2} />.
+        </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>They normalize talking about the relationship:</strong> Instead of "We need to talk" feeling like a crisis, it's just part of your routine</li>
-          <li><strong>They catch small issues early:</strong> "I've been feeling a little disconnected this week' is easier to address than "I've felt disconnected for months and now I resent you"</li>
-          <li><strong>They create space for appreciation:</strong> It's easy to forget to say "thank you" or "I noticed you did that"---check-ins build that in</li>
-          <li><strong>They reduce ambiguity:</strong> Instead of assuming you know how your partner feels, you ask and listen</li>
-          <li><strong>They prevent resentment:</strong> Small grievances aired weekly don't have time to fester into big resentments</li>
+          <li><strong>They normalize talking about the relationship:</strong> Instead of "We need to talk" feeling like a crisis, it is simply part of your routine. The emotional charge around relationship conversations drops significantly when they happen regularly</li>
+          <li><strong>They catch small issues early:</strong> "I have been feeling a little disconnected this week" is far easier to address than "I have felt disconnected for six months and now I resent you." Early intervention prevents compounding</li>
+          <li><strong>They create space for appreciation:</strong> In the busyness of daily life, it is easy to forget to say "thank you" or "I noticed you did that." Check-ins build gratitude expression into your routine</li>
+          <li><strong>They reduce ambiguity:</strong> Instead of assuming you know how your partner feels, you ask and listen. Many couples discover that their assumptions about their partner's emotional state are surprisingly inaccurate</li>
+          <li><strong>They prevent resentment:</strong> Small grievances aired weekly do not have time to fester into big resentments. Resentment is nearly always the product of unspoken needs that accumulate over months or years</li>
         </ul>
+
+        <p className="mb-6">
+          Research on relationship maintenance behaviors confirms that couples who proactively discuss their relationship---rather than waiting for problems to force the conversation---experience significantly higher relationship satisfaction and are less likely to separate <Citation id="3" index={3} source="Personal Relationships" year="2019" tier={1} />. The weekly check-in provides structure for what might otherwise feel awkward or unnecessary. It transforms "talking about us" from an anxiety-inducing event into a natural, even enjoyable, part of the relationship rhythm.
+        </p>
+
+        <h2 id="the-science" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Science Behind Regular Relationship Maintenance
+        </h2>
+        <p className="mb-6">
+          John Gottman's research at the University of Washington has shown that successful relationships are built on a foundation of small, consistent positive interactions---what he calls "bids for connection" <Citation id="6" index={6} source="Journal of Family Psychology" year="2020" tier={1} />. Partners who regularly turn toward each other's bids---acknowledging, responding, and engaging---build what Gottman calls an "emotional bank account." Check-ins formalize this turning toward by creating a dedicated space for it every week.
+        </p>
+        <p className="mb-6">
+          The neurological benefits are also significant. When couples express appreciation and feel heard, the brain releases oxytocin---the bonding hormone---which strengthens attachment and reduces cortisol, the stress hormone. Over time, weekly check-ins create a positive neurological feedback loop: the ritual itself becomes associated with safety, closeness, and emotional regulation, making it easier to bring up difficult topics without triggering defensive reactions.
+        </p>
+        <p className="mb-6">
+          Studies on preventive relationship education have found that couples who engage in structured communication exercises---like regular check-ins---show improvements in relationship satisfaction that persist for up to five years after beginning the practice <Citation id="7" index={7} source="Journal of Consulting and Clinical Psychology" year="2020" tier={1} />. The earlier couples begin, the more effective the practice tends to be, though it is never too late to start.
+        </p>
 
         <h2 id="how-to-structure" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How to Structure a Relationship Check-In
@@ -870,12 +1074,26 @@ export const romanticRelationshipsArticlesB: Article[] = [
           <li><strong>Established relationships (2-5 years):</strong> Check-ins prevent complacency. "Are we still prioritizing us?", "What needs to change as we grow?"</li>
           <li><strong>Long-term relationships (5+ years):</strong> Use check-ins to keep evolving together. "How have your needs changed?", "Are we still dreaming together?"</li>
           <li><strong>Post-conflict:</strong> After major fights, check-ins can become repair spaces. "What went wrong?", "How can we handle that differently next time?"</li>
+          <li><strong>High-stress periods:</strong> During job changes, moves, health crises, or family difficulties, increasing check-in frequency to twice weekly helps couples stay aligned and supportive rather than drifting into isolation under pressure</li>
         </ul>
 
-        <ArticleCallout variant="key-takeaway">
-          <p>
-            Relationship check-ins aren't a sign that something is wrong---they're a sign that you're invested in keeping things right. The best time to address small disconnections is before they become big chasms. Thirty minutes a week to check in with each other is a small investment with massive returns: less resentment, more connection, and a relationship that evolves intentionally instead of drifting apart by accident.
-          </p>
+        <h2 id="overcoming-resistance" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Overcoming Resistance to Check-Ins
+        </h2>
+        <p className="mb-6">
+          It is common for one partner to be more enthusiastic about check-ins than the other. Some people find structured conversations uncomfortable or worry that check-ins will feel forced and unnatural. If your partner is resistant, start small. A five-minute appreciation exchange is far less intimidating than a forty-five-minute deep dive. Once your partner experiences the positive effects---feeling heard, appreciated, and closer to you---the resistance usually diminishes <Citation id="8" index={8} source="Family Process" year="2021" tier={1} />.
+        </p>
+        <p className="mb-6">
+          Another common barrier is the belief that talking about the relationship signals something is wrong. In reality, the opposite is true. Couples who regularly discuss their relationship are demonstrating investment and care, much like someone who exercises regularly is not doing so because their health is failing---they are doing it to keep their health strong. Reframing check-ins as a proactive, positive practice rather than a reactive, problem-solving exercise can help both partners approach them with openness rather than dread.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Relationship check-ins are a sign of investment, not a sign that something is wrong</li>
+            <li>The best time to address small disconnections is before they compound into major resentments</li>
+            <li>Thirty minutes a week creates a positive feedback loop of appreciation, communication, and connection</li>
+            <li>Start with appreciation before addressing concerns---it creates safety for honest conversation</li>
+          </ul>
         </ArticleCallout>
       </>
     ),
@@ -887,11 +1105,31 @@ export const romanticRelationshipsArticlesB: Article[] = [
     description: 'Learn how to handle mismatched needs in relationships---from intimacy to socializing to life goals---and when compromise is possible.',
     image: "/images/articles/cat03/cover-049.svg",
     category: CATEGORY_RELATIONSHIPS,
-    readTime: 7,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Incompatibility', 'Compromise', 'Needs', 'Conflict'],
+    summary: 'All couples have differences, but not all differences are equal. This guide explores the most common areas of mismatched needs---from sexual desire to life goals---and provides frameworks for determining which differences are negotiable through creative compromise and which represent fundamental incompatibilities that may require difficult decisions.',
+    keyFacts: [
+      { text: 'Sixty-nine percent of relationship conflicts are perpetual, stemming from fundamental personality differences rather than solvable problems', citationIndex: 8 },
+      { text: 'Similarity in core values predicts relationship success, but similarity in preferences and habits does not', citationIndex: 7 },
+      { text: 'Mismatched libidos are one of the most common and most painful sources of relationship tension in long-term couples', citationIndex: 1 },
+      { text: 'Couples who get needs met through multiple sources, not just their partner, report higher relationship satisfaction', citationIndex: 3 },
+      { text: 'Certain incompatibilities like wanting vs. not wanting children are true dealbreakers that predict relationship dissolution', citationIndex: 4 },
+    ],
+    sparkMoment: 'Compatibility is not about finding someone who shares all your needs---it is about finding someone who respects your differences and is willing to build a life that honors both of you.',
+    practicalExercise: {
+      title: 'The Needs Mapping Exercise',
+      steps: [
+        { title: 'List Your Core Needs', description: 'Each partner independently writes down their five most important needs in a relationship---emotional, physical, social, and practical.' },
+        { title: 'Rate Flexibility', description: 'For each need, rate on a scale of 1-10 how flexible you are. A 1 means this is non-negotiable; a 10 means you are very flexible about how it gets met.' },
+        { title: 'Share and Compare', description: 'Exchange lists and discuss. Where do your needs overlap? Where are the gaps? Which gaps have flexibility and which do not?' },
+        { title: 'Brainstorm Solutions', description: 'For each area of mismatch, brainstorm at least three creative ways both needs could be honored---the "third way" that is neither your way nor mine.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Try the Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -941,6 +1179,22 @@ export const romanticRelationshipsArticlesB: Article[] = [
         link: 'https://www.apa.org/topics/relationships',
         tier: 2,
       },
+      {
+        id: '7',
+        text: 'Value similarity and relationship satisfaction: A meta-analytic review',
+        source: 'Journal of Family Psychology',
+        year: '2021',
+        link: 'https://doi.org/10.1037/fam0000831',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Perpetual problems and solvable problems in couples',
+        source: 'Journal of Marital and Family Therapy',
+        year: '2020',
+        link: 'https://doi.org/10.1111/jmft.12478',
+        tier: 1,
+      },
     ],
     content: (
       <>
@@ -953,6 +1207,20 @@ export const romanticRelationshipsArticlesB: Article[] = [
           </p>
         </div>
 
+        <h2 id="psychology-of-compatibility" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Psychology of Compatibility
+        </h2>
+        <p className="mb-6">
+          Popular culture often presents compatibility as a binary---either you are compatible or you are not. In reality, compatibility exists on a spectrum and is far more nuanced than most people realize. Research on personality differences in relationships shows that similarity in core values predicts relationship success, but similarity in preferences and habits does not <Citation id="7" index={7} source="Journal of Family Psychology" year="2021" tier={1} />. In other words, you do not need to like the same music, have the same energy levels, or agree on how clean the kitchen should be. You do need to share fundamental values about honesty, respect, family, and how you treat each other.
+        </p>
+        <p className="mb-6">
+          What matters more than having identical needs is how couples respond to their differences. Psychologist John Gottman found that 69% of relationship conflicts are perpetual---they never get fully resolved because they stem from fundamental personality differences <Citation id="8" index={8} source="Journal of Marital and Family Therapy" year="2020" tier={1} />. Successful couples learn to dialogue about these differences with humor, affection, and acceptance rather than trying to change each other. The goal is not to eliminate differences but to manage them with grace and mutual respect.
+        </p>
+
+        <HighlightBox variant="emphasis">
+          <p>Compatibility is not about finding someone who shares all your needs---it is about finding someone who respects your differences and is willing to work with you to build a life that honors both of you.</p>
+        </HighlightBox>
+
         <h2 id="common-mismatches" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Common Areas of Mismatched Needs
         </h2>
@@ -961,7 +1229,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
           1. Sexual Desire and Frequency
         </h3>
         <p className="mb-6">
-          Mismatched libidos are one of the most common sources of relationship tension. One partner feels rejected and undesired; the other feels pressured and guilty <Citation id="1" index={1} source="Journal of Sex & Marital Therapy" year="2020" tier={1} />.
+          Mismatched libidos are one of the most common sources of relationship tension. One partner feels rejected and undesired; the other feels pressured and guilty. Research suggests that desire discrepancy affects the majority of long-term couples at some point, and the impact on relationship satisfaction depends less on the size of the gap than on how the couple communicates about it <Citation id="1" index={1} source="Journal of Sex & Marital Therapy" year="2020" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1147,16 +1415,30 @@ export const romanticRelationshipsArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="seeking-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When to Seek Professional Help
+        </h2>
+        <p className="mb-6">
+          If you and your partner have been struggling with a difference for months without progress, couples therapy can provide a structured space to explore whether the gap is bridgeable. A skilled therapist can help you distinguish between a preference conflict (negotiable) and a values conflict (potentially non-negotiable), teach communication strategies for discussing sensitive topics, and help both partners feel heard without taking sides.
+        </p>
+        <p className="mb-6">
+          Therapy is especially valuable when discussions about differences keep escalating into arguments, when one partner feels they are always the one compromising, or when you are considering ending the relationship over an incompatibility and want clarity before making that decision. Many couples discover in therapy that what seemed like an insurmountable difference was actually a communication problem---they wanted similar things but were expressing their needs in ways the other could not hear.
+        </p>
+
         <QuoteBlock
-          quote="Love is not enough. It never was. We also need respect, communication, flexibility, and a willingness to meet each other halfway---again and again."
-          attribution="Unknown"
+          quote="The goal in marriage is not to think alike, but to think together."
+          attribution="Robert C. Dodds"
+          role="Author"
           variant="default"
         />
 
-        <ArticleCallout variant="key-takeaway">
-          <p>
-            Different needs aren't inherently a problem---they're an opportunity to practice flexibility, creativity, and compromise. But there's a difference between 'We approach this differently' and "We want fundamentally different lives." The former can be navigated with effort and goodwill. The latter often can't, no matter how much you love each other. Knowing which you're facing is one of the hardest---and most important---relationship skills you can develop.
-          </p>
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Different needs are normal in every relationship---what matters is how you navigate them together</li>
+            <li>Distinguish between preferences (negotiable) and core values or life goals (often non-negotiable)</li>
+            <li>Sixty-nine percent of relationship conflicts are perpetual and require ongoing dialogue, not resolution</li>
+            <li>If compromise consistently requires one person to abandon something essential to who they are, it may be a true incompatibility rather than a negotiable difference</li>
+          </ul>
         </ArticleCallout>
       </>
     ),
@@ -1168,11 +1450,31 @@ export const romanticRelationshipsArticlesB: Article[] = [
     description: 'Learn when couples therapy can help, what happens in sessions, and how to find the right therapist for your relationship.',
     image: "/images/articles/cat03/cover-050.svg",
     category: CATEGORY_RELATIONSHIPS,
-    readTime: 9,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Couples Therapy', 'Treatment', 'Professional Help', 'Relationships'],
+    summary: 'Couples therapy is most effective when used proactively rather than as a last resort. This comprehensive guide covers when to seek therapy, what happens during sessions, the major evidence-based approaches including EFT and the Gottman Method, how to find the right therapist, and what makes therapy successful.',
+    keyFacts: [
+      { text: 'Seventy percent of couples who attend therapy report meaningful improvement in relationship satisfaction', citationIndex: 1 },
+      { text: 'The average couple waits six years from when problems start before seeking professional help', citationIndex: 4 },
+      { text: 'Emotionally Focused Therapy has a 70-75% success rate for couples feeling emotionally disconnected', citationIndex: 2 },
+      { text: 'Gottman Method research can predict with over 90% accuracy which couples will divorce based on communication patterns', citationIndex: 3 },
+      { text: 'Even one motivated partner can begin to shift a relationship dynamic, though sustained change requires both', citationIndex: 7 },
+    ],
+    sparkMoment: 'Waiting until a relationship is in crisis to seek therapy is like waiting to see a doctor until you are in the emergency room---the couples who benefit most are those who go early, before resentment becomes entrenched.',
+    practicalExercise: {
+      title: 'Pre-Therapy Readiness Assessment',
+      steps: [
+        { title: 'Identify the Pattern', description: 'Each partner writes down the top three recurring conflicts or disconnections in the relationship. Compare lists to see where you overlap.' },
+        { title: 'Clarify Your Goals', description: 'Write down what you would want to be different if therapy were successful. Be specific: "I want us to argue less" is vague; "I want us to resolve disagreements without yelling" is actionable.' },
+        { title: 'Research Therapists', description: 'Look up three potential couples therapists in your area using the AAMFT or Gottman directories. Note their specialties, approach, and availability.' },
+        { title: 'Have the Conversation', description: 'Bring the idea to your partner by framing it positively: "I want to invest in us" rather than "We need to fix our problems." Share your goals and ask about theirs.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Try the Symptom Navigator',
+    },
     citations: [
       {
         id: '1',
@@ -1404,15 +1706,23 @@ export const romanticRelationshipsArticlesB: Article[] = [
           Emotionally Focused Therapy (EFT)
         </h3>
         <p className="mb-6">
-          Developed by Dr. Sue Johnson, EFT focuses on attachment and emotional bonding. It has a 70-75% success rate and is particularly effective for couples feeling emotionally disconnected <Citation id="2" index={2} source="Journal of Couple & Relationship Therapy" year="2021" tier={1} /> <Citation id="5" index={5} source="Little, Brown and Company" year="2008" tier={5} />.
+          Developed by Dr. Sue Johnson, EFT focuses on attachment and emotional bonding. It has a 70-75% success rate and is particularly effective for couples feeling emotionally disconnected <Citation id="2" index={2} source="Journal of Couple & Relationship Therapy" year="2021" tier={1} /> <Citation id="5" index={5} source="Little, Brown and Company" year="2008" tier={5} />. EFT works by helping partners identify the negative interaction cycles that keep them stuck---such as the pursue-withdraw pattern where one partner chases connection while the other retreats---and then gradually creating new, more secure patterns of emotional engagement. The therapy typically unfolds over 8-20 sessions and has shown lasting results in follow-up studies.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           The Gottman Method
         </h3>
         <p className="mb-6">
-          Based on decades of research by Drs. John and Julie Gottman, this approach teaches communication skills, conflict resolution, and how to build friendship and intimacy <Citation id="3" index={3} source="Family Process" year="2019" tier={1} /> <Citation id="6" index={6} source="Harmony Books" year="2015" tier={5} />.
+          Based on over four decades of research by Drs. John and Julie Gottman, this approach teaches communication skills, conflict resolution, and how to build friendship and intimacy <Citation id="3" index={3} source="Family Process" year="2019" tier={1} /> <Citation id="6" index={6} source="Harmony Books" year="2015" tier={5} />. The Gottman Method is grounded in the concept of the "Sound Relationship House"---a framework that starts with building a deep understanding of your partner's inner world (love maps), maintaining fondness and admiration, and learning to turn toward each other during everyday moments. The method is distinctive for its research-based ability to predict with over 90% accuracy which couples will divorce and which will stay together, based on observable communication patterns during conflict.
         </p>
+
+        <QuoteBlock
+          quote="A lasting marriage results from a couple's ability to resolve the conflicts that are inevitable in any relationship."
+          attribution="John Gottman"
+          role="Psychologist and Relationship Researcher"
+          source="The Seven Principles for Making Marriage Work"
+          variant="default"
+        />
 
         <h2 id="finding-therapist" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How to Find the Right Couples Therapist
@@ -1522,13 +1832,26 @@ export const romanticRelationshipsArticlesB: Article[] = [
           <li><strong>Commitment to the process:</strong> Therapy requires consistent attendance and homework between sessions</li>
           <li><strong>Willingness to be vulnerable:</strong> Growth happens when you're honest about fears, needs, and pain</li>
           <li><strong>Both people want the relationship to work:</strong> If one person has already checked out, therapy can't force them back in</li>
-          <li><strong>You do the work outside of sessions:</strong> 50 minutes per week isn't enough---you have to practice new skills daily</li>
+          <li><strong>You do the work outside of sessions:</strong> 50 minutes per week is not enough on its own---you have to practice new skills daily in your real-life interactions</li>
         </ul>
 
-        <ArticleCallout variant="key-takeaway">
-          <p>
-            Couples therapy isn't a magic fix, and it's not just for relationships on the brink of collapse. It's a structured, evidence-based process for improving communication, deepening connection, and learning how to navigate conflict constructively. The couples who benefit most are those who go early, show up consistently, and do the hard work of changing patterns that no longer serve them. If you're considering therapy, don't wait. The sooner you go, the better your chances of not just surviving---but thriving.
-          </p>
+        <h2 id="what-therapy-is-not" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What Couples Therapy Is Not
+        </h2>
+        <p className="mb-6">
+          Understanding what therapy cannot do is as important as understanding what it can. Couples therapy is not a courtroom where the therapist decides who is right and who is wrong. It is not a place to recruit an ally against your partner. It is not a guarantee that the relationship will survive---sometimes therapy helps couples reach the difficult but healthy conclusion that they are better apart. And it is not a replacement for individual therapy when one or both partners have personal mental health issues that need separate attention <Citation id="7" index={7} source="Clinical Psychology Review" year="2021" tier={1} />.
+        </p>
+        <p className="mb-6">
+          Therapy also cannot work if only one partner is genuinely invested. While one motivated partner can begin to shift the dynamic, sustained change requires both people to show up with openness and willingness to examine their own contributions to the relationship's difficulties. If you attend therapy hoping the therapist will "fix" your partner, you are likely to be disappointed. The most powerful transformations happen when both partners are willing to look at themselves as honestly as they look at each other.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Seventy percent of couples who attend therapy report meaningful improvement in their relationship</li>
+            <li>The average couple waits six years too long before seeking help---going early produces better outcomes</li>
+            <li>Evidence-based approaches like EFT and the Gottman Method have strong research support for improving connection and communication</li>
+            <li>Success depends on both partners showing up consistently, being willing to be vulnerable, and practicing new skills between sessions</li>
+          </ul>
         </ArticleCallout>
       </>
     ),

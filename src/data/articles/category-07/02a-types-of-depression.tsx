@@ -22,11 +22,31 @@ export const typesOfDepressionArticlesA: Article[] = [
     description: 'Comprehensive guide to major depressive disorder---diagnostic criteria, symptoms, course, treatment, and what makes clinical depression different from sadness.',
     image: "/images/articles/cat07/cover-011.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 12,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Major Depression', 'MDD', 'Diagnosis', 'Clinical Depression'],
+    summary: 'Major Depressive Disorder is the most common and well-studied form of clinical depression, affecting 20% of people at some point in their lives. Understanding MDD\'s diagnostic criteria, severity levels, course, and treatment options is essential because while highly treatable, it often goes unrecognized---with profound consequences for health, relationships, and quality of life.',
+    keyFacts: [
+      { text: 'MDD requires 5+ specific symptoms for at least 2 weeks, including depressed mood or anhedonia (loss of pleasure)', citationIndex: 1 },
+      { text: '60-70% of people respond to first-line treatment, and 80% achieve remission within a year with adequate care', citationIndex: 3 },
+      { text: 'After one episode, 50% will experience recurrence; after three episodes, recurrence risk rises to 90%', citationIndex: 5 },
+      { text: 'MDD is a leading cause of disability worldwide, impairing work, relationships, and physical health across all life domains', citationIndex: 7 },
+      { text: '60% of suicide deaths are linked to mood disorders, with lifetime suicide risk of 15% for those with severe MDD', citationIndex: 8 },
+    ],
+    sparkMoment: 'Depression lies when it tells you nothing will help---that\'s a symptom, not reality. Treatment works, recovery is possible, and most people return to full functioning.',
+    practicalExercise: {
+      title: 'Recognizing Your Depression Patterns',
+      steps: [
+        { title: 'Track Your Symptoms', description: 'For one week, note which of the nine MDD symptoms you experience each day and their intensity (1-10). Look for patterns in timing, triggers, and severity.' },
+        { title: 'Identify Functional Impact', description: 'Write down specific examples of how symptoms affect your work, relationships, self-care, and daily activities. This helps you and your provider understand the real-world consequences.' },
+        { title: 'Document Your History', description: 'Create a timeline of past depressive episodes: when they started, how long they lasted, what helped, and what didn\'t. Recognizing your pattern informs treatment.' },
+        { title: 'Prepare for Your Appointment', description: 'Bring your symptom tracking, impact notes, and timeline to your healthcare provider. This information makes diagnosis more accurate and treatment planning more effective.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Use the Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -151,6 +171,85 @@ export const typesOfDepressionArticlesA: Article[] = [
 
         <p className="mb-6">
           Note that you don't need all nine symptoms---five is the threshold, and those five must include either depressed mood or anhedonia. The specific combination varies between individuals.
+        </p>
+
+        <h2 id="distinguishing-from-sadness" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How MDD Differs from Normal Sadness
+        </h2>
+        <p className="mb-6">
+          One of the most common questions: "Am I just sad, or is this depression?" The distinction matters because MDD requires different intervention than normal emotional responses to life stressors.
+        </p>
+
+        <ComparisonTable
+          title="Normal Sadness vs. Major Depressive Disorder"
+          columns={['Characteristic', 'Normal Sadness', 'Major Depressive Disorder']}
+          items={[
+            {
+              feature: 'Trigger',
+              values: [
+                'Usually connected to specific event or loss',
+                'May occur without clear cause or be disproportionate to trigger',
+              ],
+            },
+            {
+              feature: 'Duration',
+              values: [
+                'Days to weeks; improves as you process the situation',
+                'Persists for weeks to months; doesn\'t improve on its own',
+              ],
+            },
+            {
+              feature: 'Intensity',
+              values: [
+                'Painful but bearable; comes in waves',
+                'Pervasive and unrelenting; colors everything',
+              ],
+            },
+            {
+              feature: 'Functioning',
+              values: [
+                'Can still work, socialize, handle responsibilities (though harder)',
+                'Significant impairment; struggling to meet basic obligations',
+              ],
+            },
+            {
+              feature: 'Pleasure capacity',
+              values: [
+                'Still capable of enjoyment, laughter, connection',
+                'Anhedonia---unable to feel pleasure even in normally enjoyable activities',
+              ],
+            },
+            {
+              feature: 'Self-perception',
+              values: [
+                'Self-esteem intact; may feel sad but not worthless',
+                'Feelings of worthlessness, guilt, or being a burden',
+              ],
+            },
+            {
+              feature: 'Physical symptoms',
+              values: [
+                'May have some sleep or appetite changes but not severe',
+                'Marked changes: insomnia/hypersomnia, significant weight change, profound fatigue',
+              ],
+            },
+            {
+              feature: 'Response to support',
+              values: [
+                'Talking to friends, self-care, time help you feel better',
+                'Support appreciated but doesn\'t relieve the depression; needs professional treatment',
+              ],
+            },
+          ]}
+          highlightColumn={2}
+        />
+
+        <p className="mb-6">
+          The key distinctions are <strong>duration</strong> (two weeks minimum), <strong>number of symptoms</strong> (five or more from the DSM list), and <strong>functional impairment</strong> (significant difficulty in life domains). Normal sadness doesn't meet these thresholds. It's also important to note that you can experience both---a person with MDD might have additional sadness about a specific loss layered on top of their depression.
+        </p>
+
+        <p className="mb-6">
+          <strong>When in doubt, err on the side of seeking evaluation.</strong> Healthcare providers are trained to distinguish between normal emotional responses and clinical depression. Early assessment prevents unnecessary suffering and complications.
         </p>
 
         <h2 id="severity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -564,6 +663,66 @@ export const typesOfDepressionArticlesA: Article[] = [
           <li>Building coping skills and support systems reduces recurrence risk</li>
         </ul>
 
+        <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When to Seek Help
+        </h2>
+        <p className="mb-6">
+          Recognizing when to reach out for professional support is crucial. Don't wait until symptoms become unbearable---early intervention leads to better outcomes and faster recovery.
+        </p>
+
+        <ArticleCallout variant="action-plan" title="Seek Help Immediately If:">
+          <ul className="list-disc pl-6 space-y-2">
+            <li>You have thoughts of suicide or self-harm</li>
+            <li>You're unable to care for yourself (hygiene, eating, basic functioning)</li>
+            <li>You experience psychotic symptoms (delusions, hallucinations)</li>
+            <li>Depression is putting you or others at risk</li>
+            <li>You're having a severe panic attack or mental health crisis</li>
+          </ul>
+          <p className="mt-4 font-semibold">Call 988 (Suicide & Crisis Lifeline), go to the emergency room, or call 911.</p>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          <strong>Schedule an appointment with a healthcare provider soon if:</strong>
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>You've had five or more symptoms from the DSM-5-TR list for two weeks or longer</li>
+          <li>Symptoms are interfering with work, relationships, or daily functioning</li>
+          <li>You're withdrawing from people and activities you used to enjoy</li>
+          <li>You're using alcohol or drugs to cope with emotional pain</li>
+          <li>Physical symptoms (sleep problems, appetite changes, fatigue) persist without medical cause</li>
+          <li>Loved ones have expressed concern about changes in your mood or behavior</li>
+          <li>You have a history of depression and recognize early warning signs returning</li>
+        </ul>
+
+        <p className="mb-6">
+          <strong>Who can help:</strong>
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Primary care physician:</strong> Start here for initial assessment, medical workup to rule out other causes, and first-line treatment</li>
+          <li><strong>Psychiatrist:</strong> Medical doctor specializing in mental health; can prescribe medication and provide psychotherapy</li>
+          <li><strong>Psychologist or therapist:</strong> Provides evidence-based psychotherapy (CBT, IPT, etc.); cannot prescribe medication but works collaboratively with medical providers</li>
+          <li><strong>Psychiatric nurse practitioner:</strong> Can diagnose, prescribe medication, and provide therapy</li>
+          <li><strong>Licensed clinical social worker or counselor:</strong> Provides therapy and connects you with community resources</li>
+        </ul>
+
+        <ArticleCallout variant="tip" title="Preparing for Your First Appointment">
+          <p className="mb-4">Maximize your first visit by bringing:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>A list of your symptoms, when they started, and how they affect your life</li>
+            <li>Your personal and family mental health history</li>
+            <li>Current medications and supplements</li>
+            <li>Questions about diagnosis and treatment options</li>
+            <li>Someone to support you, if helpful (they can provide perspective and remember information)</li>
+          </ul>
+          <p className="mt-4">Be honest about all symptoms, including thoughts of self-harm. Your provider needs complete information to help you effectively.</p>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          <strong>What to expect in treatment:</strong> Your first appointment will involve a comprehensive evaluation of your symptoms, medical history, and functional impairment. Your provider will discuss treatment options tailored to your needs---this might be therapy, medication, or both. Treatment is collaborative; you're an active participant in choosing your approach. If the first treatment doesn't work, there are many alternatives. Finding the right fit sometimes takes trial and adjustment, but persistence pays off.
+        </p>
+
         <QuoteBlock
           quote="Major Depressive Disorder is not a life sentence. It's a treatable medical condition. Most people recover, many fully. The key is recognizing it, seeking help, and finding the right treatment approach for you."
           attribution="Raima"
@@ -585,11 +744,31 @@ export const typesOfDepressionArticlesA: Article[] = [
     description: 'Dysthymia or persistent depressive disorder is chronic, low-grade depression lasting years. Understand symptoms, how it differs from MDD, and treatment approaches.',
     image: "/images/articles/cat07/cover-012.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 10,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Dysthymia', 'PDD', 'Chronic Depression', 'Persistent Depression'],
+    summary: 'Persistent Depressive Disorder (PDD), formerly dysthymia, is chronic low-grade depression lasting at least two years. While less severe than major depression at any moment, its relentless duration creates profound cumulative suffering. Many normalize it as personality rather than recognizing a treatable medical condition.',
+    keyFacts: [
+      { text: 'PDD requires depressed mood for most days over 2+ years, with only 2 additional symptoms (vs. 5 for major depression)', citationIndex: 2 },
+      { text: '75% of people with PDD experience major depressive episodes too---a pattern called "double depression" where acute episodes layer on chronic baseline depression', citationIndex: 3 },
+      { text: 'Early-onset PDD (before age 21) is strongly linked to childhood trauma and shows greater treatment resistance than late-onset', citationIndex: 7 },
+      { text: '70% report significant quality of life impairment, and 50% have never experienced full remission without treatment', citationIndex: 4 },
+      { text: 'Combination therapy (psychotherapy + medication) proves more effective than either alone, with CBASP specifically designed for chronic depression', citationIndex: 5 },
+    ],
+    sparkMoment: 'What you\'ve normalized as "just who you are" may be a treatable illness. PDD convinces you this is your personality, but depression talking isn\'t reality---recovery is possible even after decades.',
+    practicalExercise: {
+      title: 'Mapping Your Baseline',
+      steps: [
+        { title: 'Identify Your Timeline', description: 'Think back: when was the last time you felt genuinely well? Write down a timeline of your mood over the past 5-10 years. Can you identify a clear "before"?' },
+        { title: 'Distinguish Personality from Symptoms', description: 'List traits you consider "just me" (pessimistic, low-energy, joyless). Now, list DSM symptoms of PDD. Notice overlaps---what you call personality might be illness.' },
+        { title: 'Track "Good Days"', description: 'For two weeks, note any days you feel slightly better. Do symptoms lift even temporarily? If yes, this suggests depression (which fluctuates) rather than fixed personality.' },
+        { title: 'Imagine Wellness', description: 'If your low mood lifted tomorrow, what would change? How would you spend your time? What would you pursue? This exercise reveals what depression has taken from you.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Mood Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -937,6 +1116,45 @@ export const typesOfDepressionArticlesA: Article[] = [
           ]}
         />
 
+        <h2 id="getting-diagnosed" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Getting the Right Diagnosis
+        </h2>
+        <p className="mb-6">
+          Because PDD is so often mistaken for personality, getting an accurate diagnosis requires deliberate effort. Here's how to approach evaluation:
+        </p>
+
+        <ArticleCallout variant="action-plan" title="Steps to Accurate Diagnosis">
+          <ol className="list-decimal pl-6 space-y-3">
+            <li><strong>Prepare a symptom history:</strong> Document your mood, energy, sleep, appetite, self-esteem, concentration, and hopelessness over the past several years. Note any pattern or chronicity.</li>
+            <li><strong>Identify a timeline:</strong> When did these symptoms begin? Was there ever a period of wellness? If symptoms started in childhood/adolescence, note that---it indicates early-onset PDD.</li>
+            <li><strong>Distinguish baseline from episodes:</strong> Have you experienced periods of significantly worse depression (possible major episodes)? Or has your mood been consistently low without much variation?</li>
+            <li><strong>Assess functional impact:</strong> How has this affected school, work, relationships, and quality of life over years? Chronic underachievement or relationship difficulties are clues.</li>
+            <li><strong>Rule out other causes:</strong> Medical conditions (hypothyroidism, anemia, sleep apnea) and substance use can mimic depression. Your provider will need to assess these.</li>
+            <li><strong>Screen for bipolar disorder:</strong> Have you ever experienced periods of elevated mood, decreased need for sleep, increased energy/activity, or impulsivity? If so, mention this---it changes diagnosis and treatment.</li>
+          </ol>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          <strong>Questions your provider will ask:</strong>
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>"How long have you felt this way?"---This distinguishes PDD (years) from major depression (weeks/months)</li>
+          <li>"Can you remember a time when you felt consistently well?"---Lack of wellness memory suggests chronicity</li>
+          <li>"Do others describe you as pessimistic, low-energy, or moody?"---External observations validate chronicity</li>
+          <li>"Have symptoms been continuous or episodic?"---PDD is persistent; major depression is episodic</li>
+          <li>"How has this affected your life over time?"---Cumulative impact assessment</li>
+        </ul>
+
+        <ArticleCallout variant="warning">
+          <p className="mb-4"><strong>Common diagnostic challenges:</strong></p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Misdiagnosis as personality disorder:</strong> Early-onset PDD can look like avoidant, dependent, or borderline personality traits. Key difference: PDD has clear mood symptoms and responds to depression treatment.</li>
+            <li><strong>Missed bipolar disorder:</strong> If PDD is actually bipolar depression misdiagnosed, antidepressant monotherapy can trigger mania. Always screen for manic/hypomanic history.</li>
+            <li><strong>Overlooking comorbidities:</strong> PDD frequently co-occurs with anxiety, substance use, or personality disorders. All need treatment for best outcomes.</li>
+          </ul>
+        </ArticleCallout>
+
         <h2 id="double-depression" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Double Depression
         </h2>
@@ -1082,11 +1300,31 @@ export const typesOfDepressionArticlesA: Article[] = [
     description: 'Bipolar depression looks similar to unipolar depression but requires different treatment. Learn key differences, why diagnosis matters, and treatment approaches.',
     image: "/images/articles/cat07/cover-013.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 11,
+    readTime: 7,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Bipolar Disorder', 'Bipolar Depression', 'Unipolar Depression', 'Differential Diagnosis'],
+    summary: 'Bipolar and unipolar depression may feel identical, but they require completely different treatments. Treating bipolar depression with antidepressants alone can trigger mania, worsen rapid cycling, or destabilize mood. Accurate diagnosis is critical---40-50% of people with bipolar disorder are initially misdiagnosed, leading to years of ineffective or harmful treatment.',
+    keyFacts: [
+      { text: '40-50% of people with bipolar disorder are initially misdiagnosed as having unipolar depression, with average diagnostic delay of 5-10 years', citationIndex: 6 },
+      { text: 'People with bipolar disorder spend 32-50% of their time in depressive episodes vs. only 9% manic/hypomanic---depression is the main source of disability', citationIndex: 5 },
+      { text: 'Antidepressant monotherapy in bipolar depression can trigger mania, induce rapid cycling, or cause mixed states---mood stabilizers are first-line', citationIndex: 4 },
+      { text: 'Clinical clues to bipolar depression include earlier age of onset, atypical features (hypersomnia, hyperphagia), psychomotor retardation, and family history', citationIndex: 2 },
+      { text: 'Treatment for bipolar depression requires ongoing mood stabilization even after depression resolves, unlike unipolar where medication may be discontinued', citationIndex: 7 },
+    ],
+    sparkMoment: 'Getting the diagnosis right isn\'t academic---it determines whether treatment helps or harms. Bipolar depression requires a fundamentally different approach, and accurate diagnosis can be the difference between years of struggle and effective recovery.',
+    practicalExercise: {
+      title: 'Screening for Bipolar History',
+      steps: [
+        { title: 'Map All Mood Episodes', description: 'Create a timeline of ALL your mood episodes---not just depressive ones. Mark periods when you felt unusually high, energized, irritable, or needed less sleep. Include episodes you didn\'t think were significant at the time.' },
+        { title: 'Screen for Hypomania', description: 'Review: Have you had a distinct period (4+ days) of elevated/irritable mood + 3+ symptoms: decreased sleep need, talkativeness, racing thoughts, distractibility, increased activity, or risky behavior? Hypomania may have felt good---still counts.' },
+        { title: 'Review Treatment Response', description: 'List all antidepressant trials. Did any cause activation, agitation, restlessness, reduced sleep, or mood swings? This suggests bipolar, not unipolar depression.' },
+        { title: 'Gather Family History', description: 'Ask first-degree relatives about diagnoses of bipolar disorder, severe depression, substance abuse, or psychiatric hospitalization. Bipolar disorder is highly heritable.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Mood Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1194,6 +1432,73 @@ export const typesOfDepressionArticlesA: Article[] = [
             <li><strong>Years of inadequate treatment:</strong> Average delay from first symptoms to correct bipolar diagnosis is 5-10 years</li>
             <li><strong>Increased morbidity:</strong> Untreated or inadequately treated bipolar disorder has higher suicide risk, substance abuse, and functional impairment</li>
           </ul>
+        </ArticleCallout>
+
+        <h2 id="misdiagnosis-scenarios" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Misdiagnosis Scenarios
+        </h2>
+        <p className="mb-6">
+          Understanding how bipolar disorder gets missed helps you recognize it in your own or others' experiences:
+        </p>
+
+        <ArticleTabs
+          tabs={[
+            {
+              id: 'scenario1',
+              label: 'The "Good Periods" Aren\'t Reported',
+              content: (
+                <div>
+                  <p className="mb-4">A person experiences severe depression and seeks help. Their provider asks about symptoms, and they report depression accurately. But when asked "Have you ever felt the opposite---very high or energized?"---they say no.</p>
+                  <p className="mb-4"><strong>Why the miss:</strong> Past hypomanic periods felt productive, creative, or like "finally feeling normal." They weren't distressing, so they're not mentioned. The person doesn't recognize them as symptoms. Clinician diagnoses unipolar depression, prescribes antidepressant monotherapy.</p>
+                  <p><strong>Outcome:</strong> Antidepressant triggers mania or causes mood instability. Person cycles more frequently. Years pass before correct diagnosis.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'scenario2',
+              label: 'Bipolar II Looks Like Depression',
+              content: (
+                <div>
+                  <p className="mb-4">Someone has recurrent severe depressions and brief periods of hypomania. The hypomanic episodes are mild---increased energy, less sleep, more social, taking on projects---and last only 4-5 days.</p>
+                  <p className="mb-4"><strong>Why the miss:</strong> Hypomania in Bipolar II is subtle and short. It causes less impairment than mania, so it's easily overlooked. The person spends 90% of symptomatic time depressed, only 10% hypomanic. They identify as "someone with depression."</p>
+                  <p><strong>Outcome:</strong> Diagnosed with recurrent unipolar depression. Multiple antidepressant trials fail or cause activation. Diagnosis isn't corrected until someone specifically asks about elevated mood periods.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'scenario3',
+              label: 'First Episode is Depression',
+              content: (
+                <div>
+                  <p className="mb-4">A 19-year-old develops first episode of severe depression. No prior manic/hypomanic episodes. Family history includes a parent with bipolar disorder. Diagnosed with major depression, started on antidepressant.</p>
+                  <p className="mb-4"><strong>Why the miss:</strong> At first presentation, there's no bipolar history yet. Diagnosis seems straightforward. But the first episode of bipolar disorder is often depression, with mania emerging later (sometimes triggered by antidepressants).</p>
+                  <p><strong>Outcome:</strong> Antidepressant induces first manic episode. Diagnosis revised to Bipolar I. Could have been prevented with mood stabilizer from the start, given family history and young age of onset.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'scenario4',
+              label: 'Mixed States Misinterpreted',
+              content: (
+                <div>
+                  <p className="mb-4">Someone describes feeling depressed but also agitated, restless, with racing thoughts and irritability. They're diagnosed with "agitated depression" or "anxious depression."</p>
+                  <p className="mb-4"><strong>Why the miss:</strong> Mixed states (simultaneous depressive and manic/hypomanic symptoms) are challenging to recognize. They may be labeled as anxiety comorbid with depression, rather than a mixed episode indicating bipolar disorder.</p>
+                  <p><strong>Outcome:</strong> Antidepressants worsen agitation and mood instability. Person feels worse on treatment. Correct diagnosis requires recognizing the mixed presentation as bipolar.</p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <ArticleCallout variant="tip">
+          <p><strong>If you're being treated for depression and it's not working, consider these questions:</strong></p>
+          <ul className="list-disc pl-6 mt-4 space-y-2">
+            <li>Have I ever had periods of feeling unusually good, energized, or productive that others commented on?</li>
+            <li>Do I have a family history of bipolar disorder or severe mood problems?</li>
+            <li>Have antidepressants ever made me feel wired, agitated, or caused mood swings?</li>
+            <li>Did my depression start young (teens/early 20s) and recur frequently?</li>
+          </ul>
+          <p className="mt-4">If you answer yes to any of these, request a comprehensive evaluation specifically screening for bipolar disorder.</p>
         </ArticleCallout>
 
         <h2 id="key-differences" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1471,11 +1776,31 @@ export const typesOfDepressionArticlesA: Article[] = [
     description: 'Seasonal Affective Disorder is recurrent depression triggered by seasonal changes, usually winter. Learn symptoms, light therapy, and evidence-based treatment.',
     image: "/images/articles/cat07/cover-014.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 10,
+    readTime: 7,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['SAD', 'Seasonal Depression', 'Winter Depression', 'Light Therapy'],
+    summary: 'Seasonal Affective Disorder (SAD) is major depression with a seasonal pattern---typically recurring every fall/winter and lifting in spring/summer. It affects 5% of U.S. adults, with higher rates in northern latitudes. The biological mechanism involves disrupted circadian rhythms from reduced light exposure, affecting melatonin, serotonin, and the brain\'s master clock.',
+    keyFacts: [
+      { text: '60-80% of people with SAD respond to light therapy (10,000 lux for 20-30 minutes each morning), often within 1-2 weeks', citationIndex: 2 },
+      { text: 'SAD has clearer biological mechanisms than most depression: reduced light disrupts circadian rhythms, extends melatonin secretion, and decreases serotonin', citationIndex: 5 },
+      { text: 'Atypical features distinguish SAD from other depression: hypersomnia (sleeping 2-4+ hours more), carb cravings, weight gain, and leaden paralysis', citationIndex: 1 },
+      { text: 'SAD is 4× more common in women than men and has higher prevalence in northern latitudes where winter days are shorter', citationIndex: 1 },
+      { text: 'Preventive treatment (starting light therapy or medication in early fall before symptoms emerge) can minimize or prevent winter depression entirely', citationIndex: 2 },
+    ],
+    sparkMoment: 'SAD feels inevitable every winter, but it doesn\'t have to be. Treatment works---light therapy, CBT, and preventive medication can break the cycle. You don\'t have to suffer through every winter.',
+    practicalExercise: {
+      title: 'Recognizing and Tracking Your Seasonal Pattern',
+      steps: [
+        { title: 'Map Your Mood Across Seasons', description: 'Look back over the past 2-3 years. For each season, rate your mood, energy, sleep, and motivation (1-10). Do you see a consistent pattern of worsening in fall/winter and improvement in spring/summer?' },
+        { title: 'Identify Your Symptom Onset', description: 'Note the month when symptoms typically begin (usually October-November) and when they lift (typically April-May). This timing helps plan preventive treatment.' },
+        { title: 'Document Atypical Features', description: 'Track: How much more are you sleeping? What are you craving? Have you gained weight? Recognizing atypical features confirms SAD vs. other depression.' },
+        { title: 'Plan Proactive Treatment', description: 'If you have a 2-year pattern, schedule treatment to start 1 month BEFORE typical onset. Purchase a 10,000-lux light box, schedule a provider appointment, and prepare behavioral strategies.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Seasonal Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1680,6 +2005,78 @@ export const typesOfDepressionArticlesA: Article[] = [
           ]}
         />
 
+        <h2 id="summer-sad" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Summer SAD (Less Common)
+        </h2>
+        <p className="mb-6">
+          While most people with seasonal depression experience winter onset, about 10% have the reverse pattern---depression beginning in late spring/summer and remitting in fall/winter. Summer SAD is less understood but has distinct features:
+        </p>
+
+        <ComparisonTable
+          title="Winter SAD vs. Summer SAD"
+          columns={['Feature', 'Winter SAD (Most Common)', 'Summer SAD (Rare)']}
+          items={[
+            { feature: 'Symptom onset', values: ['October-November', 'May-June'] },
+            { feature: 'Remission', values: ['April-May', 'October-November'] },
+            { feature: 'Appetite/weight', values: ['Increased appetite, weight gain', 'Decreased appetite, weight loss'] },
+            { feature: 'Sleep', values: ['Hypersomnia (oversleeping)', 'Insomnia (difficulty sleeping)'] },
+            { feature: 'Energy', values: ['Fatigue, lethargy', 'Agitation, restlessness'] },
+            { feature: 'Mood quality', values: ['Low, empty, heavy', 'Anxious, irritable, angry'] },
+            { feature: 'Proposed mechanism', values: ['Too little light', 'Too much light/heat, humidity discomfort'] },
+            { feature: 'Treatment', values: ['Light therapy', 'Cool environments, darkness, standard antidepressants'] },
+          ]}
+          highlightColumn={1}
+        />
+
+        <ArticleCallout variant="did-you-know">
+          <p>Summer SAD's mechanism is less clear than winter SAD. Hypotheses include discomfort from heat/humidity, disruption from longer daylight (causing sleep deprivation), or allergies. Some people with summer SAD benefit from spending time in cool, dark environments---the opposite of winter SAD treatment.</p>
+        </ArticleCallout>
+
+        <h2 id="distinguishing" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Distinguishing SAD from Other Patterns
+        </h2>
+        <p className="mb-6">
+          Not everyone who feels worse in winter has SAD. Here's how to distinguish:
+        </p>
+
+        <BeforeAfter
+          before={{
+            title: 'Winter Blues (Subsyndromal SAD)',
+            content: (
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Mild mood dip in winter, but not full depression</li>
+                <li>Doesn't meet criteria for major depressive episode</li>
+                <li>Still functional, just less energetic/motivated</li>
+                <li>May benefit from lifestyle strategies and light exposure</li>
+                <li>Affects ~10% of people</li>
+              </ul>
+            ),
+          }}
+          after={{
+            title: 'True Seasonal Affective Disorder',
+            content: (
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Meets full criteria for major depressive episode</li>
+                <li>Significant functional impairment</li>
+                <li>Recurrent pattern (at least 2 years)</li>
+                <li>Complete remission in opposite season</li>
+                <li>Requires professional treatment (light therapy, medication, or therapy)</li>
+              </ul>
+            ),
+          }}
+        />
+
+        <p className="mb-6">
+          <strong>Also consider:</strong>
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Bipolar disorder with seasonal pattern:</strong> If you have history of mania/hypomania, your seasonal depression may be part of bipolar disorder (requires different treatment)</li>
+          <li><strong>Non-seasonal depression worsened by winter:</strong> Depression that occurs year-round but gets worse in winter isn't true SAD---it's depression with seasonal worsening</li>
+          <li><strong>Holiday-related stress:</strong> If symptoms correlate specifically with holidays (Thanksgiving-New Year) rather than daylight changes, this may be stress-related rather than biological SAD</li>
+          <li><strong>Anniversary reactions:</strong> Depression triggered by specific dates tied to losses or trauma, not seasonal light changes</li>
+        </ul>
+
         <h2 id="risk-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Who Gets SAD?
         </h2>
@@ -1867,11 +2264,31 @@ export const typesOfDepressionArticlesA: Article[] = [
     description: 'Postpartum depression affects 1 in 7 new mothers. Learn symptoms, risk factors, treatment, and why seeking help is essential for mother and baby.',
     image: "/images/articles/cat07/cover-015.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 12,
+    readTime: 7,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Postpartum Depression', 'PPD', 'Maternal Mental Health', 'Perinatal Depression'],
+    summary: 'Postpartum depression (PPD) affects 1 in 7 new mothers, causing persistent sadness, anxiety, bonding difficulties, and interference with functioning during pregnancy or the first year after birth. Despite being one of the most common complications of childbirth, it often goes unrecognized due to stigma and the mistaken belief that struggling postpartum is "normal." PPD is highly treatable with therapy, medication, and support.',
+    keyFacts: [
+      { text: '1 in 7 women (15%) experience postpartum depression, with higher rates in adolescents, those living in poverty, and women with prior depression', citationIndex: 10 },
+      { text: 'PPD differs from "baby blues" (50-80% of mothers): PPD is severe, persists beyond 2 weeks, requires treatment, and interferes with functioning', citationIndex: 2 },
+      { text: 'Major risk factors include prior depression/anxiety, history of PPD, hormonal fluctuations, sleep deprivation, lack of support, and life stressors', citationIndex: 1 },
+      { text: 'Treatment includes psychotherapy (especially CBT and IPT), antidepressants (many safe for breastfeeding), and practical support---combination approaches most effective', citationIndex: 3 },
+      { text: 'Postpartum psychosis (1-2 per 1,000 births) is a psychiatric emergency with hallucinations, delusions, and confusion---requires immediate hospitalization', citationIndex: 8 },
+    ],
+    sparkMoment: 'Postpartum depression is not your fault, doesn\'t mean you don\'t love your baby, and doesn\'t make you a failure. It\'s a medical condition with biological causes, it\'s treatable, and you don\'t have to suffer in silence.',
+    practicalExercise: {
+      title: 'Postpartum Depression Self-Check',
+      steps: [
+        { title: 'Screen Yourself with EPDS', description: 'Complete the Edinburgh Postnatal Depression Scale (free online). Score ≥10 suggests possible depression. Score ≥13 indicates likely depression requiring evaluation. Question 10 (self-harm thoughts) needs immediate attention if endorsed.' },
+        { title: 'Distinguish Baby Blues from PPD', description: 'Baby blues resolve within 2 weeks and don\'t interfere with functioning. If symptoms persist beyond 2 weeks, worsen, or you can\'t care for yourself/baby, it\'s not baby blues---get evaluated.' },
+        { title: 'Identify Your Risk Factors', description: 'Review: history of depression/anxiety, prior PPD, pregnancy/birth complications, lack of support, relationship stress, financial strain. Multiple risk factors increase PPD likelihood.' },
+        { title: 'Reach Out for Help', description: 'Tell your OB-GYN, midwife, pediatrician, or primary care doctor. Call Postpartum Support International (1-800-944-4773). Don\'t wait for your next scheduled visit---make an appointment now.' },
+      ],
+      toolLink: '/crisis',
+      toolLabel: 'Find Crisis Resources',
+    },
     citations: [
       {
         id: '1',
@@ -2186,6 +2603,50 @@ export const typesOfDepressionArticlesA: Article[] = [
         <ArticleCallout variant="key-takeaway">
           <p>Getting treatment for PPD isn't selfish---it's essential for both you and your baby. Maternal mental health is foundational to infant health and development. Taking care of yourself is taking care of your baby.</p>
         </ArticleCallout>
+
+        <h2 id="myths" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Myths About PPD
+        </h2>
+        <p className="mb-6">
+          Stigma and misinformation prevent many women from seeking help. Let's dispel the most harmful myths:
+        </p>
+
+        <div className="space-y-4 my-8">
+          <ArticleCallout variant="info">
+            <p className="mb-2"><strong>Myth:</strong> "PPD means you're a bad mother or you don't love your baby."</p>
+            <p><strong>Reality:</strong> PPD is a medical condition caused by biological changes, not a reflection of your love or capability. Many women with severe PPD deeply love their babies but can't feel that love through the depression. Treatment restores your ability to connect.</p>
+          </ArticleCallout>
+
+          <ArticleCallout variant="info">
+            <p className="mb-2"><strong>Myth:</strong> "If you really wanted this baby, you wouldn't be depressed."</p>
+            <p><strong>Reality:</strong> PPD affects women with wanted, planned, celebrated pregnancies just as much as unplanned ones. Depression doesn't discriminate based on whether the baby was "wanted enough."</p>
+          </ArticleCallout>
+
+          <ArticleCallout variant="info">
+            <p className="mb-2"><strong>Myth:</strong> "PPD only happens to women with prior mental health problems."</p>
+            <p><strong>Reality:</strong> While prior depression increases risk, 50% of women with PPD have no psychiatric history. The dramatic biological changes postpartum can trigger depression in anyone.</p>
+          </ArticleCallout>
+
+          <ArticleCallout variant="info">
+            <p className="mb-2"><strong>Myth:</strong> "It's just hormones---it will pass on its own."</p>
+            <p><strong>Reality:</strong> While hormones play a role, untreated PPD can persist for months or years. It doesn't reliably resolve without treatment. The "just wait it out" approach causes unnecessary suffering.</p>
+          </ArticleCallout>
+
+          <ArticleCallout variant="info">
+            <p className="mb-2"><strong>Myth:</strong> "You can't take medication if you're breastfeeding."</p>
+            <p><strong>Reality:</strong> Many antidepressants are safe during breastfeeding, with minimal transfer to breast milk. The risks of untreated PPD (to both mother and baby) often outweigh minimal medication risks. Discuss options with your provider.</p>
+          </ArticleCallout>
+
+          <ArticleCallout variant="info">
+            <p className="mb-2"><strong>Myth:</strong> "Asking for help means you're weak or failing."</p>
+            <p><strong>Reality:</strong> Seeking treatment is an act of strength and responsibility. Recognizing you need help and taking action to get it demonstrates courage, not weakness.</p>
+          </ArticleCallout>
+
+          <ArticleCallout variant="info">
+            <p className="mb-2"><strong>Myth:</strong> "PPD only affects women."</p>
+            <p><strong>Reality:</strong> 8-10% of non-birthing partners experience postpartum depression. Fathers and co-mothers also face adjustment challenges, sleep deprivation, and relationship stress that can trigger depression.</p>
+          </ArticleCallout>
+        </div>
 
         <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Treatment

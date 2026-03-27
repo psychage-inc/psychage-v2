@@ -8,6 +8,10 @@ import {
   ArticleAccordion,
   ProgressSteps,
   ComparisonTable,
+  BeforeAfter,
+  QuoteBlock,
+  ArticleTabs,
+  MythVsFactBlock,
 } from '../../../components/article/blocks';
 
 export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
@@ -18,11 +22,31 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
     description: 'Navigate the unique challenges of caring for both young children and aging parents at the same time.',
     image: "/images/articles/cat06/cover-061.svg",
     category: CATEGORY_FAMILY_PARENTING,
-    readTime: 6,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Sandwich Generation', 'Caregiving', 'Aging Parents', 'Work-Life Balance'],
+    summary: 'Adults caring for both children and aging parents face unprecedented stress from competing demands. Learn how to manage the "triple squeeze" of raising kids, supporting elderly parents, and maintaining your career without burning out.',
+    keyFacts: [
+      { text: '47% of adults in their 40s-50s are caring for both generations simultaneously', citationIndex: 1 },
+      { text: '65% of sandwich generation caregivers report moderate to high stress levels', citationIndex: 1 },
+      { text: '34% have left the workforce or reduced hours due to caregiving demands', citationIndex: 1 },
+      { text: 'Dual caregivers experience higher rates of depression, anxiety, and stress-related illness', citationIndex: 4 },
+      { text: 'Financial strain from supporting both generations often delays retirement savings significantly', citationIndex: 5 },
+    ],
+    sparkMoment: 'Being in the sandwich generation isn\'t about doing everything perfectly --- it\'s about accepting you\'re human, setting boundaries that protect everyone (including yourself), and recognizing that "good enough" is genuinely good enough.',
+    practicalExercise: {
+      title: 'Create Your Boundary Map',
+      steps: [
+        { title: 'List All Current Demands', description: 'Write down everything you\'re currently responsible for across children, parents, work, and household.' },
+        { title: 'Identify What Only You Can Do', description: 'Mark which tasks genuinely require your specific involvement versus tasks others could handle.' },
+        { title: 'Find Three Things to Delegate', description: 'Choose three responsibilities from the "others could handle" list to reassign this month.' },
+        { title: 'Set One Firm Boundary', description: 'Establish a single non-negotiable boundary (e.g., "I don\'t answer non-emergency calls during work hours") and communicate it clearly.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Stress with Mood Journal',
+    },
     citations: [
       { id: '1', text: 'Sandwich generation stress and health', source: 'The Gerontologist', year: '2020', link: 'https://doi.org/10.1093/geront/gnz163', tier: 1 },
       { id: '2', text: 'Dual caregiving responsibilities', source: 'Journal of Family Issues', year: '2021', link: 'https://doi.org/10.1177/0192513X20951146', tier: 1 },
@@ -170,6 +194,9 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
         <h2 id="hard-conversations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Having the Hard Conversations
         </h2>
+        <p className="mb-6">
+          Clear communication prevents resentment from festering. Have these difficult conversations early and often:
+        </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>With parents:</strong> "I want to help, but I have limits. Let's figure out what I can sustainably do."</li>
           <li><strong>With siblings:</strong> "This isn't working for me. We need to redistribute responsibilities."</li>
@@ -177,6 +204,130 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
           <li><strong>With employer:</strong> "I need flexibility right now. Here's my plan to maintain productivity."</li>
           <li><strong>With partner:</strong> Regular check-ins about who's doing what, renegotiating as needed.</li>
         </ul>
+
+        <h2 id="time-management" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Time Management Realities
+        </h2>
+        <p className="mb-6">
+          You cannot create more hours in the day. Instead, protect the hours you have:
+        </p>
+
+        <ComparisonTable
+          title="Effective vs. Ineffective Time Strategies"
+          columns={['Ineffective Approach', 'Effective Approach']}
+          items={[
+            { feature: 'Availability', values: ['Being on-call 24/7 for everyone', 'Designated "parent time" and "child time" blocks'] },
+            { feature: 'Tasks', values: ['Doing everything yourself to ensure it\'s done right', 'Delegating imperfectly done tasks over burnout'] },
+            { feature: 'Planning', values: ['Reacting to crises as they arise', 'Weekly family meetings to coordinate schedules'] },
+            { feature: 'Work', values: ['Working late every night to make up lost time', 'Negotiating flexible hours or remote work options'] },
+          ]}
+        />
+
+        <h2 id="emotional-toll" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Emotional Complexity
+        </h2>
+        <p className="mb-6">
+          Beyond logistics, the sandwich generation faces emotional contradictions:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Role reversal grief:</strong> Parenting your parent feels unnatural and sad</li>
+          <li><strong>Witnessing decline:</strong> Watching a strong parent become frail triggers anticipatory grief</li>
+          <li><strong>Competing loyalties:</strong> Your child's recital and parent's medical appointment scheduled simultaneously</li>
+          <li><strong>Lost life stage:</strong> Your 40s-50s should be peak earning and independence --- instead, it's peak obligation</li>
+          <li><strong>Sibling conflict:</strong> Unequal caregiving distribution breeds resentment</li>
+          <li><strong>Marital strain:</strong> Partners may disagree about how much to sacrifice for parents <Citation id="2" index={2} source="Journal of Family Issues" year="2021" tier={1} /></li>
+        </ul>
+
+        <ArticleCallout variant="did-you-know" title="The Gender Dimension">
+          <p>
+            Women comprise approximately 60% of sandwich generation caregivers and typically provide more hours of care than men. This creates additional challenges with career advancement and wage equity, as caregiving responsibilities often fall disproportionately on daughters rather than sons.
+          </p>
+        </ArticleCallout>
+
+        <h2 id="building-support-system" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Building Your Support Infrastructure
+        </h2>
+        <p className="mb-6">
+          You cannot do this alone. Deliberately construct support <Citation id="6" index={6} source="Family Relations" year="2021" tier={1} />:
+        </p>
+
+        <ProgressSteps
+          variant="horizontal"
+          steps={[
+            {
+              title: 'Family Care Team',
+              description: (
+                <div>
+                  <p className="mb-2">Distribute responsibilities among siblings, partner, adult children. Create a shared calendar and task list. Hold monthly family meetings to reassess.</p>
+                </div>
+              ),
+            },
+            {
+              title: 'Professional Services',
+              description: (
+                <div>
+                  <p className="mb-2">Home health aides for parent care, housekeeping services, meal delivery, geriatric care manager to coordinate parent services, after-school programs for children.</p>
+                </div>
+              ),
+            },
+            {
+              title: 'Community Resources',
+              description: (
+                <div>
+                  <p className="mb-2">Senior centers, adult day programs, volunteer drivers, support groups (for both you and aging parent), religious community assistance.</p>
+                </div>
+              ),
+            },
+            {
+              title: 'Emotional Support',
+              description: (
+                <div>
+                  <p className="mb-2">Therapist who understands caregiver stress, online or in-person support groups, friends who truly listen, stress management tools <Citation id="8" index={8} source="Journal of Aging and Health" year="2021" tier={1} />.</p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="financial-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Financial Survival Planning
+        </h2>
+        <p className="mb-6">
+          The sandwich squeeze hits finances hard <Citation id="5" index={5} source="Journal of Family and Economic Issues" year="2020" tier={1} />. Strategic planning helps:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Explore parent funding sources:</strong> Medicare, Medicaid, veteran benefits, long-term care insurance, reverse mortgage</li>
+          <li><strong>Understand tax benefits:</strong> Dependent deductions, medical expense deductions, flexible spending accounts for dependent care</li>
+          <li><strong>Protect your retirement:</strong> Continue contributing to retirement accounts even if reducing other expenses. Your future matters too.</li>
+          <li><strong>Siblings share costs:</strong> Parent care shouldn't fall entirely on one child financially</li>
+          <li><strong>Get professional advice:</strong> Elder law attorney for parent planning, financial planner for your stretched budget</li>
+        </ul>
+
+        <ArticleCallout variant="warning" title="Caregiver Poverty Risk">
+          <p>
+            Sandwich generation caregivers who reduce work hours or leave the workforce face long-term financial consequences: lower lifetime earnings, reduced Social Security benefits, and depleted retirement savings. Protect your financial future while caring for others --- it's not selfish, it's necessary.
+          </p>
+        </ArticleCallout>
+
+        <h2 id="knowing-limits" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Recognizing Your Breaking Point
+        </h2>
+        <p className="mb-6">
+          Watch for signs you've exceeded sustainable limits <Citation id="4" index={4} source="Aging & Mental Health" year="2021" tier={1} />:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Chronic health problems (frequent illness, high blood pressure, insomnia)</li>
+          <li>Severe depression or anxiety interfering with daily function</li>
+          <li>Substance use to cope</li>
+          <li>Suicidal thoughts</li>
+          <li>Neglecting children's basic needs due to parent care</li>
+          <li>Job performance deteriorating significantly</li>
+          <li>Relationship with partner in crisis</li>
+          <li>Feeling constant rage or resentment</li>
+        </ul>
+        <p className="mb-6">
+          These are signals to dramatically restructure care arrangements. Assisted living for parent, hiring full-time help, taking FMLA leave, or other major interventions may be necessary. Pushing through will harm everyone.
+        </p>
 
         <ArticleCallout variant="key-takeaway">
           <p>
@@ -193,11 +344,31 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
     description: 'Recognize the signs of caregiver burnout and learn strategies to protect your mental and physical health while caring for an aging parent.',
     image: "/images/articles/cat06/cover-062.svg",
     category: CATEGORY_FAMILY_PARENTING,
-    readTime: 6,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Caregiver Burnout', 'Mental Health', 'Aging Parents', 'Self-Care'],
+    summary: 'Caregiver burnout is a state of physical, emotional, and mental exhaustion that affects millions caring for aging parents. Recognize the warning signs and learn evidence-based strategies to protect your health while providing sustainable care.',
+    keyFacts: [
+      { text: '40% of family caregivers meet diagnostic criteria for depression', citationIndex: 1 },
+      { text: '60% of dementia caregivers rate their stress as high or very high', citationIndex: 1 },
+      { text: 'Stressed caregivers have a 23% higher mortality risk than non-caregivers', citationIndex: 2 },
+      { text: 'Regular respite care significantly reduces caregiver depression and anxiety', citationIndex: 3 },
+      { text: 'Caregiver support groups improve both mental health outcomes and care quality', citationIndex: 4 },
+    ],
+    sparkMoment: 'Taking care of yourself isn\'t abandoning your parent --- it\'s the only way to sustainably care for them. You can\'t pour from an empty cup.',
+    practicalExercise: {
+      title: 'Schedule Your First Respite Break',
+      steps: [
+        { title: 'Identify One Regular Break', description: 'Choose one recurring time slot (e.g., Saturday mornings, Wednesday afternoons) that you will protect for yourself.' },
+        { title: 'Arrange Coverage', description: 'Line up a sibling, hired aide, adult day program, or friend to cover that time slot.' },
+        { title: 'Plan Something Restorative', description: 'Schedule an activity that genuinely replenishes you --- not errands or obligations.' },
+        { title: 'Start Small and Build', description: 'Begin with 2-3 hours weekly. As you see it\'s sustainable, gradually increase respite time.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Burnout Symptoms',
+    },
     citations: [
       { id: '1', text: 'Caregiver burnout prevalence', source: 'Journal of the American Geriatrics Society', year: '2020', link: 'https://doi.org/10.1111/jgs.16396', tier: 1 },
       { id: '2', text: 'Health consequences of caregiving', source: 'JAMA Internal Medicine', year: '2021', link: 'https://doi.org/10.1001/jamainternmed.2020.7840', tier: 1 },
@@ -351,17 +522,113 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
           ]}
         />
 
+        <h2 id="self-care-non-negotiables" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Self-Care as Survival Strategy
+        </h2>
+        <p className="mb-6">
+          Self-care isn't luxury --- it's mandatory for sustainable caregiving. Non-negotiable minimum practices:
+        </p>
+
+        <ComparisonTable
+          title="Burnout Behaviors vs. Sustainable Caregiving"
+          columns={['Path to Burnout', 'Sustainable Approach']}
+          items={[
+            { feature: 'Sleep', values: ['Staying up late to catch up on tasks, then waking for night checks', 'Hiring overnight help or using monitoring tech for uninterrupted sleep'] },
+            { feature: 'Medical Care', values: ['Canceling your own appointments due to caregiving demands', 'Treating your health appointments as non-negotiable, like theirs'] },
+            { feature: 'Social Connection', values: ['Isolating completely because "no one understands"', 'Attending caregiver support groups or maintaining one close friendship'] },
+            { feature: 'Exercise', values: ['Abandoned completely due to no time', '15-minute walks while parent is at day program or with aide'] },
+          ]}
+        />
+
+        <h2 id="guilt-complex" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding Caregiver Guilt
+        </h2>
+        <p className="mb-6">
+          Guilt is perhaps the most pervasive emotion in caregiving <Citation id="5" index={5} source="Clinical Gerontologist" year="2020" tier={1} />. Common manifestations:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Guilt for feeling resentful:</strong> "I shouldn't be angry at them for being sick"</li>
+          <li><strong>Guilt for not doing enough:</strong> "I should visit more, help more, be more patient"</li>
+          <li><strong>Guilt for wanting it to end:</strong> "What kind of person wishes their parent would die?"</li>
+          <li><strong>Guilt for having a life:</strong> "How can I enjoy myself when they're suffering?"</li>
+          <li><strong>Guilt for considering placement:</strong> "I promised I'd never put them in a home"</li>
+        </ul>
+        <p className="mb-6">
+          Reality check: These feelings are normal, not moral failures. Guilt often signals unsustainable expectations, not inadequate caregiving. Working with a therapist can help separate realistic responsibility from guilt-driven over-functioning.
+        </p>
+
+        <ArticleCallout variant="clinical-note" title="The Compassion Fatigue Cycle">
+          <p className="mb-4">
+            Compassion fatigue occurs when empathy becomes depleted through constant exposure to another's suffering. Signs include emotional numbness, detachment from the care recipient, and cynicism. This isn't callousness --- it's a protective response to chronic stress.
+          </p>
+          <p>
+            Recovery requires acknowledging the toll, seeking professional support, and implementing strict boundaries around caregiving hours. You cannot sustain infinite compassion without replenishment.
+          </p>
+        </ArticleCallout>
+
+        <h2 id="practical-burnout-recovery" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Recovering from Active Burnout
+        </h2>
+        <p className="mb-6">
+          If you're already burned out, recovery requires immediate intervention:
+        </p>
+
+        <ProgressSteps
+          variant="horizontal"
+          steps={[
+            {
+              title: 'Emergency Respite',
+              description: (
+                <div>
+                  <p className="mb-2">Arrange immediate coverage --- even if expensive or inconvenient. One week of full respite to sleep, rest, and breathe. This isn't optional; it's crisis management.</p>
+                </div>
+              ),
+            },
+            {
+              title: 'Medical Evaluation',
+              description: (
+                <div>
+                  <p className="mb-2">See your doctor for physical health assessment. Burnout manifests physically: high blood pressure, weakened immunity, chronic pain. Address health impacts directly.</p>
+                </div>
+              ),
+            },
+            {
+              title: 'Restructure Care',
+              description: (
+                <div>
+                  <p className="mb-2">Current arrangements are unsustainable. Hire more help, redistribute family responsibilities, consider different living situations. What you're doing isn't working.</p>
+                </div>
+              ),
+            },
+            {
+              title: 'Therapeutic Support',
+              description: (
+                <div>
+                  <p className="mb-2">Find a therapist specializing in caregiver stress. Process grief, resentment, guilt. Learn boundary-setting skills. You can't therapy your way out of unsustainable demands, but you can develop coping tools <Citation id="8" index={8} source="Psychology and Aging" year="2021" tier={1} />.</p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
         <h2 id="when-to-get-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
+        <p className="mb-6">
+          Seek immediate professional help if experiencing:
+        </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Suicidal thoughts or self-harm urges</li>
-          <li>Severe depression lasting weeks</li>
-          <li>Substance abuse to cope</li>
-          <li>Neglecting care recipient due to burnout</li>
-          <li>Physical health declining</li>
-          <li>Feeling you can't continue</li>
+          <li>Severe depression lasting weeks (inability to function, persistent hopelessness)</li>
+          <li>Substance abuse to cope (alcohol, pills, other drugs)</li>
+          <li>Neglecting care recipient due to burnout (safety compromised)</li>
+          <li>Physical health declining rapidly</li>
+          <li>Feeling you can't continue another day</li>
+          <li>Violent thoughts toward care recipient</li>
         </ul>
+        <p className="mb-6">
+          These aren't signs of weakness --- they're signals that your situation has exceeded human capacity. Crisis intervention can help restructure care before catastrophic breakdown.
+        </p>
 
         <ArticleCallout variant="tip" title="Resources">
           <p>
@@ -384,11 +651,31 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
     description: 'Navigate difficult but necessary conversations with aging parents about safety, finances, and end-of-life planning.',
     image: "/images/articles/cat06/cover-063.svg",
     category: CATEGORY_FAMILY_PARENTING,
-    readTime: 6,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Aging Parents', 'Communication', 'End-of-Life Planning', 'Family Conversations'],
+    summary: 'The most difficult conversations with aging parents --- about driving safety, financial planning, and end-of-life wishes --- are also the most important. Learn how to approach these topics with compassion while ensuring safety and honoring autonomy.',
+    keyFacts: [
+      { text: 'Starting difficult conversations early, before crisis, leads to better outcomes and less family conflict', citationIndex: 6 },
+      { text: 'Most older adults want to discuss end-of-life wishes but wait for family to initiate the conversation', citationIndex: 3 },
+      { text: 'Driving cessation handled gradually with alternative transportation solutions reduces resistance', citationIndex: 2 },
+      { text: 'Financial elder abuse affects 1 in 10 older adults, making financial oversight conversations critical', citationIndex: 4 },
+      { text: 'Cultural values significantly shape appropriate approaches to aging, death, and family decision-making', citationIndex: 7 },
+    ],
+    sparkMoment: 'These conversations aren\'t about taking control --- they\'re about understanding your parent\'s wishes while they can still voice them, so you can honor their autonomy even when they no longer can.',
+    practicalExercise: {
+      title: 'Prepare Your Conversation Opening',
+      steps: [
+        { title: 'Choose One Topic', description: 'Start with whichever conversation feels most urgent: driving safety, finances, or end-of-life planning. Don\'t tackle all three at once.' },
+        { title: 'Write Your Opening Line', description: 'Script exactly how you\'ll start. Frame it as concern and planning, not criticism: "Mom, I want to make sure I can support your wishes if something happens..."' },
+        { title: 'Pick the Right Time', description: 'Choose a calm moment when you have privacy and no time pressure. Avoid holidays, stressful events, or crisis moments.' },
+        { title: 'Prepare for Resistance', description: 'Have a backup plan if they shut down: "I understand this is hard. Can we at least talk about [smaller first step]?"' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Mental Health Tools',
+    },
     citations: [
       { id: '1', text: 'Communication with aging parents', source: 'The Gerontologist', year: '2020', link: 'https://doi.org/10.1093/geront/gnz181', tier: 1 },
       { id: '2', text: 'Driving cessation conversations', source: 'Journal of the American Geriatrics Society', year: '2021', link: 'https://doi.org/10.1111/jgs.17032', tier: 1 },
@@ -546,11 +833,172 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
           <li><strong>Accept what you can't control:</strong> Competent adults have right to make unwise choices. You can't force compliance.</li>
         </ul>
 
+        <h2 id="timing-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Timing: When to Have These Conversations
+        </h2>
+        <p className="mb-6">
+          The best time is before you need the information <Citation id="6" index={6} source="Family Relations" year="2021" tier={1} />. Optimal timing:
+        </p>
+
+        <BeforeAfter
+          before={{ title: 'Crisis-Driven Conversations', points: [
+            'Dad had a stroke --- now deciding about life support with no prior discussion',
+            'Mom fell and broke hip --- scrambling to find financial documents',
+            'Unsafe driving led to accident --- forcing immediate license suspension',
+            'Scammer emptied bank account --- discovering no protections in place'
+          ]}}
+          after={{ title: 'Proactive Conversations', points: [
+            'Discussing wishes while everyone is healthy and calm',
+            'Organizing documents together as "planning" not "crisis management"',
+            'Gradual driving reduction with alternative transportation arranged',
+            'Financial safeguards established before cognitive decline'
+          ]}}
+        />
+
+        <p className="mb-6 mt-6">
+          <strong>Good conversation triggers (non-crisis):</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>A friend's parent experienced similar issue</li>
+          <li>You're doing your own estate planning and it prompts discussion</li>
+          <li>A milestone birthday or health scare (but after recovery, not during)</li>
+          <li>Parent mentions concern about aging</li>
+          <li>Regular "family check-in" time you establish specifically for these topics</li>
+        </ul>
+
+        <h2 id="sibling-dynamics" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Navigating Sibling Disagreements
+        </h2>
+        <p className="mb-6">
+          Siblings often disagree about when intervention is needed. Common conflicts:
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'denial',
+              title: 'One Sibling in Denial',
+              content: (
+                <div>
+                  <p className="mb-2"><strong>Scenario:</strong> You see Dad's unsafe driving; sibling says "he's fine."</p>
+                  <p className="mb-2"><strong>Strategy:</strong> Document specific incidents with dates. Suggest third-party evaluation (doctor, driving assessment). Frame as "let's get objective opinion" not "I'm right, you're wrong."</p>
+                </div>
+              ),
+            },
+            {
+              id: 'geography',
+              title: 'Distance Denial',
+              content: (
+                <div>
+                  <p className="mb-2"><strong>Scenario:</strong> Distant sibling doesn't see daily decline you witness.</p>
+                  <p className="mb-2"><strong>Strategy:</strong> Video calls showing current state. Invite them for week-long visit. Share caregiver notes documenting changes. "I need you to see what I'm seeing daily."</p>
+                </div>
+              ),
+            },
+            {
+              id: 'control',
+              title: 'Power Struggles Over Decisions',
+              content: (
+                <div>
+                  <p className="mb-2"><strong>Scenario:</strong> Multiple siblings want different outcomes.</p>
+                  <p className="mb-2"><strong>Strategy:</strong> Return focus to parent's stated wishes. Use legal documents (if they exist) as tie-breaker. Consider family mediation. Separate "what parent wants" from "what we want for them."</p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="legal-framework" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Legal Tools That Enable These Conversations
+        </h2>
+        <p className="mb-6">
+          Having legal documents in place makes future decisions clearer <Citation id="8" index={8} source="Elder Law Journal" year="2020" tier={4} />:
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 67, suffix: '%', label: 'Of adults have no will or estate plan' },
+            { value: 80, suffix: '%', label: 'Have not discussed end-of-life wishes with family' },
+            { value: 90, suffix: '%', label: 'Don\'t have advance directives completed' },
+          ]}
+          source="Elder Law Journal, 2020"
+        />
+
+        <ul className="list-disc pl-6 mb-6 space-y-2 mt-6">
+          <li><strong>Will:</strong> How assets distributed after death</li>
+          <li><strong>Living Will/Advance Directive:</strong> Medical treatment preferences if incapacitated</li>
+          <li><strong>Healthcare Power of Attorney:</strong> Who makes medical decisions if parent can't</li>
+          <li><strong>Financial Power of Attorney:</strong> Who manages finances if parent incapacitated</li>
+          <li><strong>POLST (Physician Orders for Life-Sustaining Treatment):</strong> Medical orders for current serious illness</li>
+          <li><strong>DNR (Do Not Resuscitate):</strong> Specific instruction about CPR</li>
+          <li><strong>Trust:</strong> Asset management during life and after death (avoids probate)</li>
+        </ul>
+        <p className="mb-6">
+          Elder law attorney can guide creation of these documents tailored to your state's laws and family situation.
+        </p>
+
+        <h2 id="conversation-scripts" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Specific Conversation Openers That Work
+        </h2>
+        <p className="mb-6">
+          Exact language can make or break these discussions:
+        </p>
+
+        <QuoteBlock
+          quote="Mom, I was thinking about how I'd want to be cared for if something happened to me, and it made me wonder --- have you thought about what you'd want? I want to make sure I can honor your wishes."
+          attribution="Opening for end-of-life discussion"
+          variant="sidebar"
+        />
+
+        <QuoteBlock
+          quote="Dad, I noticed you've had some close calls with driving lately. I'm worried, not because I think you're a bad driver, but because I want you to stay safe. Can we talk about some options that keep you mobile but reduce risk?"
+          attribution="Opening for driving conversation"
+          variant="sidebar"
+        />
+
+        <QuoteBlock
+          quote="I'm organizing my own financial paperwork and realized I should know where your important documents are --- just in case of emergency. Can we spend an afternoon going through everything together?"
+          attribution="Opening for financial discussion"
+          variant="sidebar"
+        />
+
+        <h2 id="when-they-refuse" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What to Do When They Absolutely Refuse
+        </h2>
+        <p className="mb-6">
+          Some parents will not engage, no matter your approach. If they're competent adults, you have limited options:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Document your attempts:</strong> Keep records that you tried to discuss safety/planning</li>
+          <li><strong>Inform other family:</strong> Make sure siblings know about refusal to plan</li>
+          <li><strong>Establish your own boundaries:</strong> "I can't manage a crisis without information. If you won't discuss plans, I can only help within my limits."</li>
+          <li><strong>Wait for opening:</strong> Health scare or friend's experience may create willingness later</li>
+          <li><strong>Accept limits of control:</strong> Competent adults can make unwise choices. Your responsibility is to try, not to force compliance.</li>
+        </ul>
+
+        <ArticleCallout variant="warning" title="When Intervention Becomes Necessary">
+          <p className="mb-4">
+            If parent lacks capacity to make safe decisions (dementia, severe mental illness), involuntary intervention may be needed:
+          </p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Report unsafe driving to DMV for re-testing</li>
+            <li>Adult Protective Services for self-neglect or financial exploitation</li>
+            <li>Guardianship/conservatorship through court (last resort, strips autonomy)</li>
+          </ul>
+          <p className="mt-4">
+            These are serious steps with legal and ethical implications. Consult elder law attorney before proceeding.
+          </p>
+        </ArticleCallout>
+
         <h2 id="cultural-considerations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Cultural Considerations
         </h2>
         <p className="mb-6">
-          Approaches to aging, death, and family roles vary widely across cultures <Citation id="7" index={7} source="Cultural Diversity and Ethnic Minority Psychology" year="2020" tier={1} />. Some cultures emphasize family decision-making over individual wishes; others view direct death discussions as inappropriate. Adapt these strategies to align with your family's cultural values.
+          Approaches to aging, death, and family roles vary widely across cultures <Citation id="7" index={7} source="Cultural Diversity and Ethnic Minority Psychology" year="2020" tier={1} />. Some cultures emphasize family decision-making over individual wishes; others view direct death discussions as inappropriate or disrespectful. In many non-Western cultures, adult children assuming authority over parents inverts expected hierarchies.
+        </p>
+        <p className="mb-6">
+          Adapt these strategies to align with your family's cultural values. Work with cultural brokers (community leaders, bilingual social workers) who understand both your family's culture and American legal/medical systems. Honor cultural communication norms while still ensuring safety.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -568,11 +1016,31 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
     description: `Understand anticipatory grief and how to cope with watching a parent's cognitive or physical decline.`,
     image: '/images/articles/cat06/cover-064.svg',
     category: CATEGORY_FAMILY_PARENTING,
-    readTime: 6,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Anticipatory Grief', 'Aging Parents', 'Dementia', 'Loss'],
+    summary: 'Anticipatory grief --- mourning someone who is still alive but declining --- creates a unique pain. Learn to navigate this ambiguous loss while honoring both the person they were and the person they are now.',
+    keyFacts: [
+      { text: 'Anticipatory grief is mourning that begins before death, common when watching parents decline through dementia or terminal illness', citationIndex: 1 },
+      { text: 'Grieving before death does not lessen grief after death --- both are distinct, valid forms of mourning', citationIndex: 3 },
+      { text: '"Ambiguous loss" describes when someone is physically present but psychologically absent, creating confusing grief', citationIndex: 6 },
+      { text: 'Dementia caregivers experience prolonged anticipatory grief as they watch personality and memory fade incrementally', citationIndex: 1 },
+      { text: 'Finding meaning through providing comfort and honoring who the person was helps caregivers cope with anticipatory grief', citationIndex: 7 },
+    ],
+    sparkMoment: 'Watching a parent decline is one of life\'s cruelest experiences. Your grief --- happening right now, while they\'re still here --- is real, valid, and deserving of recognition and support.',
+    practicalExercise: {
+      title: 'Create a Memory Anchor',
+      steps: [
+        { title: 'Gather Photos of "Before"', description: 'Collect images showing your parent as you remember them at their best --- vibrant, engaged, themselves.' },
+        { title: 'Write What You Want to Remember', description: 'Describe specific memories: their laugh, favorite sayings, how they showed love, what made them unique.' },
+        { title: 'Create a Small Ritual', description: 'Light a candle, play their favorite music, or visit a meaningful place. Give yourself permission to grieve privately.' },
+        { title: 'Share with Someone Who Understands', description: 'Find one person (support group, therapist, friend who\'s been through it) and share your memories and grief.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Grief Through Mood Journal',
+    },
     citations: [
       { id: '1', text: 'Anticipatory grief in dementia caregivers', source: 'The Gerontologist', year: '2020', link: 'https://doi.org/10.1093/geront/gnz189', tier: 1 },
       { id: '2', text: 'Ambiguous loss in chronic illness', source: 'Family Process', year: '2021', link: 'https://doi.org/10.1111/famp.12671', tier: 1 },
@@ -721,18 +1189,157 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
           </p>
         </ArticleCallout>
 
+        <h2 id="disenfranchised-grief" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When Your Grief Isn't Recognized
+        </h2>
+        <p className="mb-6">
+          Anticipatory grief is often "disenfranchised" --- not socially recognized or validated. Common dismissive responses:
+        </p>
+
+        <div className="space-y-4 my-8">
+          <MythVsFactBlock
+            myth="At least they're still alive. You should be grateful for the time you have."
+            fact="Grief for who they were is valid even while they're still physically present. Both gratitude and grief can coexist."
+          />
+          <MythVsFactBlock
+            myth="When they die, you'll be relieved since you've already been grieving."
+            fact="Anticipatory grief doesn't replace or diminish grief after death. They're separate experiences, both painful."
+          />
+          <MythVsFactBlock
+            myth="You shouldn't talk about them in past tense when they're still here."
+            fact="The person they were has changed or disappeared. Using past tense to describe lost qualities honors reality."
+          />
+        </div>
+
+        <p className="mb-6 mt-6">
+          This lack of recognition intensifies isolation. Find spaces (support groups, therapy, online communities) where your grief is understood and validated.
+        </p>
+
+        <h2 id="complicated-relationship-grief" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When the Relationship Was Complicated
+        </h2>
+        <p className="mb-6">
+          Anticipatory grief is harder when your relationship was difficult. You might feel:
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'regret',
+              title: 'Regret for Lost Opportunity',
+              content: <p>"Now we'll never have the relationship I hoped for. The window for reconciliation is closing or already closed."</p>,
+            },
+            {
+              id: 'conflicted',
+              title: 'Conflicted Feelings',
+              content: <p>"I'm sad they're declining, but also relieved I won't have to deal with their difficult behavior much longer. Then I feel guilty for feeling relieved."</p>,
+            },
+            {
+              id: 'obligation',
+              title: 'Caregiving Out of Obligation',
+              content: <p>"I'm providing care because it's 'the right thing to do,' not because we're close. That feels hollow and exhausting."</p>,
+            },
+            {
+              id: 'unresolved',
+              title: 'Unresolved Anger',
+              content: <p>"They hurt me for years. Now I'm supposed to forget that and be a devoted caregiver? I'm angry at the expectation."</p>,
+            },
+          ]}
+        />
+
+        <p className="mb-6 mt-6">
+          These feelings are normal and common. Therapy can help process complicated grief when the relationship itself was complicated. You're allowed to mourn both the parent you had and the parent you wish you'd had.
+        </p>
+
+        <h2 id="stages-of-decline" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Grieving Through Stages of Decline
+        </h2>
+        <p className="mb-6">
+          Decline isn't one loss --- it's many incremental losses <Citation id="4" index={4} source="Aging & Mental Health" year="2021" tier={1} />. Each stage brings new grief:
+        </p>
+
+        <ProgressSteps
+          variant="horizontal"
+          steps={[
+            {
+              title: 'Early Stage',
+              description: (
+                <div>
+                  <p className="mb-2"><strong>Losses:</strong> Forgetting recent events, mild personality changes, needing help with complex tasks</p>
+                  <p><strong>Grief:</strong> Mourning their independence, worrying about future, adjusting expectations</p>
+                </div>
+              ),
+            },
+            {
+              title: 'Middle Stage',
+              description: (
+                <div>
+                  <p className="mb-2"><strong>Losses:</strong> Not recognizing family, significant personality change, needing help with daily living</p>
+                  <p><strong>Grief:</strong> Mourning the relationship, ambiguous loss, identity as "caregiver" replacing "child"</p>
+                </div>
+              ),
+            },
+            {
+              title: 'Late Stage',
+              description: (
+                <div>
+                  <p className="mb-2"><strong>Losses:</strong> Loss of speech, mobility, all recognition, total dependence</p>
+                  <p><strong>Grief:</strong> Mourning who they once were, anticipatory grief for death approaching, exhaustion from prolonged caregiving</p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="self-care-during-grief" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Caring for Yourself While Grieving
+        </h2>
+        <p className="mb-6">
+          You cannot grieve well while depleted <Citation id="8" index={8} source="Clinical Gerontologist" year="2021" tier={1} />. Essential self-care:
+        </p>
+
+        <ComparisonTable
+          title="Grief-Aware Self-Care"
+          columns={['Unhelpful Approach', 'Supportive Approach']}
+          items={[
+            { feature: 'Processing Grief', values: ['Suppressing feelings to "stay strong" for parent', 'Allowing time to cry, feel, and process grief actively'] },
+            { feature: 'Support', values: ['Isolating because "no one understands"', 'Connecting with caregiver/grief support groups regularly'] },
+            { feature: 'Identity', values: ['Defining yourself solely as caregiver', 'Maintaining one non-caregiving activity that\'s just yours'] },
+            { feature: 'Expectations', values: ['Believing you should treasure every moment', 'Accepting that some days you just endure, not cherish'] },
+          ]}
+        />
+
+        <ArticleCallout variant="clinical-note" title="The Permission You Need">
+          <p className="mb-4">
+            <strong>You are allowed to:</strong>
+          </p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Grieve someone who is still alive</li>
+            <li>Feel relieved when visits end, then guilty for the relief</li>
+            <li>Not enjoy caregiving even if you love your parent</li>
+            <li>Consider memory care placement without being a "bad child"</li>
+            <li>Take breaks, even when time is limited</li>
+            <li>Feel multiple contradictory emotions simultaneously</li>
+          </ul>
+        </ArticleCallout>
+
         <h2 id="finding-meaning" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Finding Meaning
         </h2>
         <p className="mb-6">
-          Some find meaning in <Citation id="7" index={7} source="Journal of Loss and Trauma" year="2020" tier={1} />:
+          Some caregivers find meaning through anticipatory grief <Citation id="7" index={7} source="Journal of Loss and Trauma" year="2020" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Providing comfort and dignity in their final chapter</li>
-          <li>Honoring who they were by caring for who they are</li>
-          <li>Appreciating present moments, however small</li>
-          <li>Learning about love, mortality, and resilience</li>
+          <li>Honoring who they were by caring for who they are now</li>
+          <li>Appreciating fleeting present moments, however small</li>
+          <li>Learning profound lessons about love, mortality, and human resilience</li>
+          <li>Giving them a "good death" by surrounding them with care, not abandonment</li>
         </ul>
+        <p className="mb-6">
+          Meaning doesn't erase pain, but it can make the pain bearable. You're walking one of humanity's hardest paths with courage and love.
+        </p>
 
         <ArticleCallout variant="key-takeaway">
           <p>
@@ -749,11 +1356,31 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
     description: "Navigate the unique emotional challenges of caring for a family member with dementia and protect your own mental health in the process.",
     image: "/images/articles/cat06/cover-065.svg",
     category: CATEGORY_FAMILY_PARENTING,
-    readTime: 6,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Dementia', 'Caregiving', 'Mental Health', 'Family'],
+    summary: 'Dementia caregiving creates unique mental health challenges --- from being forgotten by someone you love to managing difficult behaviors. Learn communication strategies, behavioral management techniques, and self-protection practices for this demanding role.',
+    keyFacts: [
+      { text: '16 million Americans provide unpaid dementia care, with 60% rating their stress as high or very high', citationIndex: 1 },
+      { text: '40% of dementia caregivers experience depression, significantly higher than non-caregiving populations', citationIndex: 1 },
+      { text: 'Effective communication means entering the person\'s reality rather than correcting or arguing with them', citationIndex: 2 },
+      { text: 'Regular respite care and support groups significantly reduce caregiver depression and improve care quality', citationIndex: 4 },
+      { text: 'Memory care placement becomes appropriate when safety cannot be maintained at home or caregiver health is severely compromised', citationIndex: 5 },
+    ],
+    sparkMoment: 'When they forget who you are, remember this: their emotions remain even when memory fades. Your loving presence provides comfort they can feel, even if they can\'t remember your name.',
+    practicalExercise: {
+      title: 'Build Your Dementia Care Support System',
+      steps: [
+        { title: 'Find Local Support Group', description: 'Contact Alzheimer\'s Association for caregiver support groups in your area (online or in-person options available).' },
+        { title: 'Arrange First Respite', description: 'Research adult day programs or in-home aide services. Schedule one respite session this month, even just 3 hours.' },
+        { title: 'Learn Communication Techniques', description: 'Take free online training from Alzheimer\'s Association on validation techniques and de-escalation strategies.' },
+        { title: 'Establish Care Team', description: 'Identify 2-3 people (family, friends, hired help) who can provide backup when you need emergency coverage.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Monitor Caregiver Stress',
+    },
     citations: [
       { id: '1', text: 'Dementia caregiver mental health', source: 'JAMA Neurology', year: '2020', link: 'https://doi.org/10.1001/jamaneurol.2020.2101', tier: 1 },
       { id: '2', text: 'Communication strategies in dementia care', source: 'The Gerontologist', year: '2021', link: 'https://doi.org/10.1093/geront/gnaa197', tier: 1 },
@@ -921,6 +1548,161 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
           </p>
         </ArticleCallout>
 
+        <h2 id="family-dynamics" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Managing Family Dynamics in Dementia Care
+        </h2>
+        <p className="mb-6">
+          Dementia care creates or exacerbates family conflicts <Citation id="8" index={8} source="Family Process" year="2021" tier={1} />:
+        </p>
+
+        <ArticleTabs
+          tabs={[
+            {
+              id: 'unequal-burden',
+              label: 'Unequal Burden',
+              content: (
+                <div>
+                  <p className="mb-4"><strong>Scenario:</strong> One sibling provides 90% of care while others do little.</p>
+                  <p className="mb-2"><strong>Strategies:</strong></p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Family meeting to create care schedule with specific assignments</li>
+                    <li>Financial contribution option for siblings who can't provide hands-on care</li>
+                    <li>Hired help funded collectively by family</li>
+                    <li>Accept some siblings won't help and plan around that reality</li>
+                  </ul>
+                </div>
+              ),
+            },
+            {
+              id: 'different-beliefs',
+              label: 'Different Beliefs',
+              content: (
+                <div>
+                  <p className="mb-4"><strong>Scenario:</strong> Disagreement about care approach (placement vs. home care, medication, safety measures).</p>
+                  <p className="mb-2"><strong>Strategies:</strong></p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Involve geriatric care manager or social worker as neutral third party</li>
+                    <li>Defer to legal documents (power of attorney) for final decision</li>
+                    <li>Siblings with most hands-on involvement get more weight in decisions</li>
+                    <li>Invite resistant siblings to experience care for one week before judging</li>
+                  </ul>
+                </div>
+              ),
+            },
+            {
+              id: 'past-hurts',
+              label: 'Past Resentments',
+              content: (
+                <div>
+                  <p className="mb-4"><strong>Scenario:</strong> Old sibling rivalries or parent favoritism resurface.</p>
+                  <p className="mb-2"><strong>Strategies:</strong></p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Family therapy to address underlying dynamics</li>
+                    <li>Focus discussions strictly on parent's needs, not past grievances</li>
+                    <li>Designate one person as primary decision-maker to avoid constant conflict</li>
+                    <li>Accept you may not resolve decades of family dysfunction during this crisis</li>
+                  </ul>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="stages-of-care" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What to Expect Through Dementia Stages
+        </h2>
+        <p className="mb-6">
+          Understanding typical progression helps you prepare (though every case is unique):
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 7, suffix: 'yrs', label: 'Average lifespan after Alzheimer\'s diagnosis' },
+            { value: 20, suffix: '%', label: 'People survive 15+ years with dementia' },
+            { value: 40, suffix: '%', label: 'Die within 3-5 years of diagnosis' },
+          ]}
+          source="JAMA Neurology, 2020"
+        />
+
+        <div className="space-y-4 my-8 mt-6">
+          <MythVsFactBlock
+            myth="Dementia always progresses rapidly to severe stage within a year or two."
+            fact="Progression varies widely. Some decline rapidly (2-3 years), others plateau for years. Average is 7-10 years from diagnosis to death."
+          />
+          <MythVsFactBlock
+            myth="Person with dementia has no quality of life and would be better off dead."
+            fact="Even with severe dementia, people experience moments of joy, comfort, and connection. Quality of life exists, though different than before."
+          />
+          <MythVsFactBlock
+            myth="Once they forget you, there's no point in visiting anymore."
+            fact="Emotional comfort from familiar presence remains. They may not remember your name but feel safer and calmer with you there."
+          />
+        </div>
+
+        <h2 id="advanced-care-planning" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Preparing for End-Stage Dementia
+        </h2>
+        <p className="mb-6">
+          Late-stage dementia brings end-of-life decisions. Prepare in advance:
+        </p>
+
+        <ProgressSteps
+          variant="horizontal"
+          steps={[
+            {
+              title: 'Legal Documents',
+              description: (
+                <div>
+                  <p className="mb-2">Ensure in place: healthcare power of attorney, living will, POLST (Physician Orders for Life-Sustaining Treatment), DNR if desired. These guide decisions when they can't communicate.</p>
+                </div>
+              ),
+            },
+            {
+              title: 'Feeding Decisions',
+              description: (
+                <div>
+                  <p className="mb-2">Late-stage dementia causes swallowing difficulty. Understand options: hand-feeding, thickened liquids, comfort-focused care vs. feeding tubes. Discuss with hospice/palliative care team.</p>
+                </div>
+              ),
+            },
+            {
+              title: 'Hospice Eligibility',
+              description: (
+                <div>
+                  <p className="mb-2">Dementia qualifies for hospice in late stages. Hospice provides medical support, pain management, family counseling, and respite --- all covered by Medicare. Referral doesn't mean giving up.</p>
+                </div>
+              ),
+            },
+            {
+              title: 'Death Preparation',
+              description: (
+                <div>
+                  <p className="mb-2">Understand what dying from dementia looks like: decreased eating, sleeping more, less responsiveness, eventual organ shutdown. Knowing what's normal helps you cope when it happens.</p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="resilience-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What Helps Caregivers Survive and Even Thrive
+        </h2>
+        <p className="mb-6">
+          Research identifies protective factors for dementia caregivers <Citation id="7" index={7} source="Clinical Gerontologist" year="2020" tier={1} />:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Strong social support:</strong> Friends, family, support groups who provide emotional and practical help</li>
+          <li><strong>Respite regularity:</strong> Scheduled, recurring breaks (not just emergency relief)</li>
+          <li><strong>Meaning-making:</strong> Finding purpose in providing comfort, honoring who they were</li>
+          <li><strong>Realistic expectations:</strong> Accepting "good enough" care, not perfect care</li>
+          <li><strong>Professional support:</strong> Therapy, care managers, medical team involvement</li>
+          <li><strong>Financial resources:</strong> Ability to hire help reduces caregiver burden significantly</li>
+          <li><strong>Good relationship history:</strong> Caregivers who had close bonds pre-dementia cope better</li>
+        </ul>
+        <p className="mb-6">
+          If you lack some of these protective factors, deliberately build what you can. Join a support group even if reluctant. Hire minimal help even if tight financially. See therapist even if "not your thing." These investments protect your mental health.
+        </p>
+
         <h2 id="finding-meaning" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Preserving Identity and Connection
         </h2>
@@ -928,11 +1710,18 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
           Even with severe dementia <Citation id="6" index={6} source="International Psychogeriatrics" year="2021" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Emotions remain even when memory fades</li>
-          <li>Music from their era often reaches them</li>
-          <li>Touch and presence provide comfort</li>
-          <li>Treat them with dignity regardless of cognition</li>
+          <li>Emotions remain even when memory fades --- they still feel love, fear, comfort, joy</li>
+          <li>Music from their era often reaches them when words can't</li>
+          <li>Touch and familiar presence provide comfort even without recognition</li>
+          <li>Treat them with dignity regardless of cognition level</li>
+          <li>Small moments of connection --- a smile, a squeeze of hand --- still happen and matter</li>
         </ul>
+
+        <ArticleCallout variant="did-you-know" title="The Music Effect">
+          <p>
+            Music memory is among the last cognitive functions to deteriorate in dementia. People with advanced Alzheimer's who can't speak often sing along to songs from their youth. Music therapy can reduce agitation, improve mood, and create moments of lucidity.
+          </p>
+        </ArticleCallout>
 
         <ArticleCallout variant="key-takeaway">
           <p>

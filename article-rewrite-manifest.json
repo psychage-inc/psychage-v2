@@ -3,7 +3,7 @@
   "generatedAt": "2026-03-26T22:20:03.374Z",
   "wordThreshold": 1500,
   "totalSessions": 260,
-  "completedSessions": 73,
+  "completedSessions": 95,
   "totalArticles": 1246,
   "sessions": {
     "1": {
@@ -97,7 +97,7 @@
       "completedAt": "2026-03-26T22:39:33.167Z"
     },
     "2": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "02a-everyday-emotional-regulation",
       "file": "src/data/articles/category-01/02a-everyday-emotional-regulation.tsx",
@@ -109,7 +109,7 @@
           "slug": "10-evidence-based-techniques-to-regulate-emotions",
           "title": "10 Evidence-Based Techniques to Regulate Your Emotions in the Moment",
           "currentWords": 418,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -117,7 +117,7 @@
           "slug": "stop-technique-60-second-reset",
           "title": "The STOP Technique: A 60-Second Reset When Emotions Overwhelm You",
           "currentWords": 525,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -125,7 +125,7 @@
           "slug": "breathing-exercises-for-emotional-regulation",
           "title": "Breathing Exercises That Actually Work for Emotional Regulation",
           "currentWords": 374,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -133,7 +133,7 @@
           "slug": "grounding-techniques-come-back-to-present",
           "title": "Grounding Techniques: How to Come Back to the Present When Feelings Take Over",
           "currentWords": 482,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -141,10 +141,10 @@
           "slug": "cognitive-reappraisal-change-feelings-by-changing-thoughts",
           "title": "Cognitive Reappraisal: How to Change What You Feel by Changing How You Think",
           "currentWords": 455,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T12:45:00.000Z"
     },
     "3": {
       "status": "complete",
@@ -397,7 +397,7 @@
       "completedAt": "2026-03-27T10:15:00.000Z"
     },
     "8": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "05a-emotional-patterns-habits",
       "file": "src/data/articles/category-01/05a-emotional-patterns-habits.tsx",
@@ -409,7 +409,7 @@
           "slug": "emotional-habits-how-repetitive-feeling-patterns-form-and-stick",
           "title": "Emotional Habits: How Repetitive Feeling Patterns Form and Stick",
           "currentWords": 672,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -417,7 +417,7 @@
           "slug": "why-you-always-react-the-same-way-understanding-emotional-triggers",
           "title": "Why You Always React the Same Way: Understanding Emotional Triggers",
           "currentWords": 631,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -425,7 +425,7 @@
           "slug": "the-cycle-of-emotional-avoidance-why-running-from-feelings-makes-them-louder",
           "title": "The Cycle of Emotional Avoidance: Why Running from Feelings Makes Them Louder",
           "currentWords": 330,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -433,7 +433,7 @@
           "slug": "emotional-eating-shopping-scrolling-understanding-coping-mechanisms",
           "title": "Emotional Eating, Shopping, and Scrolling: Understanding Coping Mechanisms",
           "currentWords": 342,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -441,10 +441,10 @@
           "slug": "how-childhood-experiences-shape-your-adult-emotional-patterns",
           "title": "How Childhood Experiences Shape Your Adult Emotional Patterns",
           "currentWords": 365,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T13:02:15.000Z"
     },
     "9": {
       "status": "complete",
@@ -639,7 +639,7 @@
       "completedAt": "2026-03-27T09:16:12Z"
     },
     "13": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "07b-emotions-across-life-stages",
       "file": "src/data/articles/category-01/07b-emotions-across-life-stages.tsx",
@@ -651,7 +651,7 @@
           "slug": "how-major-life-transitions-reshape-emotional-landscape",
           "title": "How Major Life Transitions Reshape Your Emotional Landscape",
           "currentWords": 732,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -659,7 +659,7 @@
           "slug": "emotional-regulation-during-pregnancy-and-postpartum",
           "title": "Emotional Regulation During Pregnancy and Postpartum",
           "currentWords": 949,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -667,7 +667,7 @@
           "slug": "emotions-and-menopause-understanding-hormonal-emotional-changes",
           "title": "Emotions and Menopause: Understanding Hormonal Emotional Changes",
           "currentWords": 829,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -675,13 +675,13 @@
           "slug": "retirement-and-emotional-identity-who-are-you-without-your-role",
           "title": "Retirement and Emotional Identity: Who Are You Without Your Role?",
           "currentWords": 962,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T20:15:00.000Z"
     },
     "14": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "08a-emotional-complexity-growth",
       "file": "src/data/articles/category-01/08a-emotional-complexity-growth.tsx",
@@ -693,7 +693,7 @@
           "slug": "emotional-agility-moving-flexibly-through-complex-feelings",
           "title": "Emotional Agility: Moving Flexibly Through Complex Feelings",
           "currentWords": 1224,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -701,10 +701,10 @@
           "slug": "holding-two-feelings-at-once-skill-of-emotional-dialectics",
           "title": "Holding Two Feelings at Once: The Skill of Emotional Dialectics",
           "currentWords": 1273,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T12:12:00.000Z"
     },
     "15": {
       "status": "complete",
@@ -2067,7 +2067,7 @@
       "completedAt": null
     },
     "43": {
-      "status": "pending",
+      "status": "complete",
       "category": 3,
       "subcategoryFile": "05b-romantic-relationships-intimacy",
       "file": "src/data/articles/category-03/05b-romantic-relationships-intimacy.tsx",
@@ -2079,7 +2079,7 @@
           "slug": "managing-jealousy-relationships",
           "title": "Name the feeling",
           "currentWords": 563,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -2087,7 +2087,7 @@
           "slug": "long-distance-relationships-strategies",
           "title": "Long-Distance Relationships: Strategies That Help Couples Survive the Gap",
           "currentWords": 545,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -2095,7 +2095,7 @@
           "slug": "relationship-check-ins-weekly-practice",
           "title": "Relationship Check-Ins: A Weekly Practice for Staying Connected",
           "currentWords": 404,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -2103,7 +2103,7 @@
           "slug": "partners-different-needs-navigating-incompatibility",
           "title": "When Partners Have Different Needs: Navigating Incompatibility",
           "currentWords": 579,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -2111,10 +2111,10 @@
           "slug": "couples-therapy-when-to-go-what-to-expect",
           "title": "Couples Therapy: When to Go, What to Expect, and How It Helps",
           "currentWords": 515,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T12:20:15Z"
     },
     "44": {
       "status": "complete",
@@ -3927,7 +3927,7 @@
       "completedAt": null
     },
     "81": {
-      "status": "pending",
+      "status": "complete",
       "category": 6,
       "subcategoryFile": "01b-understanding-family-systems",
       "file": "src/data/articles/category-06/01b-understanding-family-systems.tsx",
@@ -3939,7 +3939,7 @@
           "slug": "triangulation-when-two-people-use-a-third-to-manage-conflict",
           "title": "Triangulation: When Two People Use a Third to Manage Conflict",
           "currentWords": 594,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -3947,7 +3947,7 @@
           "slug": "how-your-birth-order-affects-your-psychological-development",
           "title": "How Your Birth Order Affects Your Psychological Development",
           "currentWords": 672,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -3955,7 +3955,7 @@
           "slug": "family-rules-written-and-unwritten-how-they-shape-your-beliefs",
           "title": "Family Rules --- Written and Unwritten: How They Shape Your Beliefs",
           "currentWords": 541,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -3963,7 +3963,7 @@
           "slug": "the-identified-patient-when-one-person-carries-the-familys-pain",
           "title": "The Identified Patient: When One Person Carries the Family's Pain",
           "currentWords": 575,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -3971,13 +3971,13 @@
           "slug": "can-a-family-system-change-how-therapy-works-with-the-whole-unit",
           "title": "Can a Family System Change? How Therapy Works with the Whole Unit",
           "currentWords": 630,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T12:52:00.000Z"
     },
     "82": {
-      "status": "pending",
+      "status": "complete",
       "category": 6,
       "subcategoryFile": "02a-childhood-experiences-adult-patterns",
       "file": "src/data/articles/category-06/02a-childhood-experiences-adult-patterns.tsx",
@@ -3989,7 +3989,7 @@
           "slug": "how-childhood-experiences-shape-your-adult-personality-and-relationships",
           "title": "How Childhood Experiences Shape Your Adult Personality and Relationships",
           "currentWords": 82,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -3997,7 +3997,7 @@
           "slug": "adverse-childhood-experiences-aces-what-they-are-and-why-they-matter",
           "title": "Adverse Childhood Experiences (ACEs): What They Are and Why They Matter",
           "currentWords": 97,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4005,7 +4005,7 @@
           "slug": "the-long-shadow-of-emotional-neglect-what-happens-when-feelings-arent-validated",
           "title": "The Long Shadow of Emotional Neglect: What Happens When Feelings Aren't Validated",
           "currentWords": 134,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4013,7 +4013,7 @@
           "slug": "parentification-when-children-become-caregivers-too-soon",
           "title": "Parentification: When Children Become Caregivers Too Soon",
           "currentWords": 140,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4021,13 +4021,13 @@
           "slug": "how-growing-up-with-an-addicted-parent-affects-adult-mental-health",
           "title": "How Growing Up with an Addicted Parent Affects Adult Mental Health",
           "currentWords": 116,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T12:45:00.000Z"
     },
     "83": {
-      "status": "pending",
+      "status": "complete",
       "category": 6,
       "subcategoryFile": "02b-childhood-experiences-adult-patterns",
       "file": "src/data/articles/category-06/02b-childhood-experiences-adult-patterns.tsx",
@@ -4039,7 +4039,7 @@
           "slug": "children-of-divorce-long-term-psychological-effects-and-resilience",
           "title": "Children of Divorce: Long-Term Psychological Effects and Resilience",
           "currentWords": 173,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4047,7 +4047,7 @@
           "slug": "overprotective-parenting-when-keeping-kids-safe-prevents-them-from-growing",
           "title": "Overprotective Parenting: When Keeping Kids Safe Prevents Them from Growing",
           "currentWords": 172,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4055,7 +4055,7 @@
           "slug": "how-bullying-in-childhood-creates-lasting-psychological-patterns",
           "title": "How Bullying in Childhood Creates Lasting Psychological Patterns",
           "currentWords": 124,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4063,7 +4063,7 @@
           "slug": "the-inner-child-understanding-the-past-versions-of-yourself",
           "title": "The Inner Child: Understanding the Past Versions of Yourself",
           "currentWords": 188,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4071,13 +4071,13 @@
           "slug": "reparenting-yourself-how-to-give-yourself-what-you-didnt-receive",
           "title": "Reparenting Yourself: How to Give Yourself What You Didn't Receive",
           "currentWords": 184,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:30:00.000Z"
     },
     "84": {
-      "status": "pending",
+      "status": "complete",
       "category": 6,
       "subcategoryFile": "03a-parenting-stress-mental-health",
       "file": "src/data/articles/category-06/03a-parenting-stress-mental-health.tsx",
@@ -4089,7 +4089,7 @@
           "slug": "parental-burnout-when-the-job-that-matters-most-depletes-you",
           "title": "Parental Burnout: When the Job That Matters Most Depletes You",
           "currentWords": 84,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4097,7 +4097,7 @@
           "slug": "postpartum-depression-and-anxiety-beyond-the-baby-blues",
           "title": "Postpartum Depression and Anxiety: Beyond the 'Baby Blues'",
           "currentWords": 81,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4105,7 +4105,7 @@
           "slug": "parenting-guilt-why-no-parent-feels-like-theyre-doing-enough",
           "title": "Parenting Guilt: Why No Parent Feels Like They're Doing Enough",
           "currentWords": 154,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4113,7 +4113,7 @@
           "slug": "single-parenting-and-mental-health-managing-alone-without-breaking-down",
           "title": "Single Parenting and Mental Health: Managing Alone Without Breaking Down",
           "currentWords": 123,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4121,13 +4121,13 @@
           "slug": "when-your-childs-mental-health-affects-your-own",
           "title": "When Your Child's Mental Health Affects Your Own",
           "currentWords": 106,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T20:15:42Z"
     },
     "85": {
-      "status": "pending",
+      "status": "complete",
       "category": 6,
       "subcategoryFile": "03b-parenting-stress-mental-health",
       "file": "src/data/articles/category-06/03b-parenting-stress-mental-health.tsx",
@@ -4139,7 +4139,7 @@
           "slug": "parenting-with-a-mental-health-condition-honesty-support-and-self-care",
           "title": "Parenting with a Mental Health Condition: Honesty, Support, and Self-Care",
           "currentWords": 1237,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4147,7 +4147,7 @@
           "slug": "the-pressure-of-intensive-parenting-why-modern-parenting-is-exhausting",
           "title": "The Pressure of Intensive Parenting: Why Modern Parenting Is Exhausting",
           "currentWords": 84,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4155,7 +4155,7 @@
           "slug": "parental-anger-understanding-why-you-lose-your-temper-and-how-to-stop",
           "title": "Parental Anger: Understanding Why You Lose Your Temper and How to Stop",
           "currentWords": 118,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4163,7 +4163,7 @@
           "slug": "stay-at-home-parent-identity-purpose-isolation-and-invisible-labor",
           "title": "Stay-at-Home Parent Identity: Purpose, Isolation, and Invisible Labor",
           "currentWords": 83,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4171,10 +4171,10 @@
           "slug": "managing-screen-time-battles-without-losing-your-mind",
           "title": "Managing Screen Time Battles Without Losing Your Mind",
           "currentWords": 102,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T20:02:11Z"
     },
     "86": {
       "status": "pending",
@@ -4227,7 +4227,7 @@
       "completedAt": null
     },
     "87": {
-      "status": "pending",
+      "status": "complete",
       "category": 6,
       "subcategoryFile": "04b-intergenerational-trauma-healing",
       "file": "src/data/articles/category-06/04b-intergenerational-trauma-healing.tsx",
@@ -4239,7 +4239,7 @@
           "slug": "unprocessed-grief-anxiety-next-generation",
           "title": "How Unprocessed Grief in One Generation Becomes Anxiety in the Next",
           "currentWords": 260,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4247,7 +4247,7 @@
           "slug": "genogram-mapping-family-emotional-history",
           "title": "The Genogram: Mapping Your Family's Emotional History",
           "currentWords": 317,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4255,7 +4255,7 @@
           "slug": "healing-family-legacy-where-to-start",
           "title": "Healing Your Family Legacy: Where to Start",
           "currentWords": 398,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4263,7 +4263,7 @@
           "slug": "forgiveness-family-trauma-necessary-for-healing",
           "title": "Forgiveness and Family Trauma: Is It Necessary for Healing?",
           "currentWords": 377,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4271,13 +4271,13 @@
           "slug": "when-healing-means-separating-estrangement-last-resort",
           "title": "When Healing Means Separating: Estrangement as a Last Resort",
           "currentWords": 466,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T12:25:18Z"
     },
     "88": {
-      "status": "pending",
+      "status": "complete",
       "category": 6,
       "subcategoryFile": "05a-co-parenting-divorce-blended-families",
       "file": "src/data/articles/category-06/05a-co-parenting-divorce-blended-families.tsx",
@@ -4289,7 +4289,7 @@
           "slug": "co-parenting-after-divorce-childrens-mental-health-first",
           "title": "Co-Parenting After Divorce: Putting Children's Mental Health First",
           "currentWords": 358,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4297,7 +4297,7 @@
           "slug": "parallel-parenting-when-co-parenting-isnt-possible",
           "title": "Parallel Parenting: When Co-Parenting with a Difficult Ex Isn't Possible",
           "currentWords": 310,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4305,7 +4305,7 @@
           "slug": "how-children-process-divorce-different-ages",
           "title": "How Children Process Divorce at Different Ages",
           "currentWords": 434,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4313,7 +4313,7 @@
           "slug": "blended-families-psychological-challenges-stepparenting",
           "title": "Blended Families: The Psychological Challenges of Stepparenting",
           "currentWords": 231,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4321,13 +4321,13 @@
           "slug": "loyalty-conflicts-children-caught-between-parents",
           "title": "Loyalty Conflicts: When Children Feel Caught Between Two Parents",
           "currentWords": 331,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T06:53:04.000Z"
     },
     "89": {
-      "status": "pending",
+      "status": "complete",
       "category": 6,
       "subcategoryFile": "05b-co-parenting-divorce-blended-families",
       "file": "src/data/articles/category-06/05b-co-parenting-divorce-blended-families.tsx",
@@ -4339,7 +4339,7 @@
           "slug": "co-parenting-communication-tools-reducing-conflict",
           "title": "Co-Parenting Communication: Tools and Strategies for Reducing Conflict",
           "currentWords": 391,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4347,7 +4347,7 @@
           "slug": "parent-speaks-negatively-other-impact-children",
           "title": "When a Parent Speaks Negatively About the Other: The Impact on Children",
           "currentWords": 332,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4355,7 +4355,7 @@
           "slug": "shared-custody-attachment-transitions-young-children",
           "title": "Shared Custody and Attachment: How Transitions Affect Young Children",
           "currentWords": 389,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4363,7 +4363,7 @@
           "slug": "dating-again-single-parent-managing-emotions",
           "title": "Dating Again as a Single Parent: Managing Your Own and Your Children's Emotions",
           "currentWords": 414,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4371,13 +4371,13 @@
           "slug": "long-term-mental-health-outcomes-children-divorce",
           "title": "The Long-Term Mental Health Outcomes of Children of Divorce",
           "currentWords": 339,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T06:48:36Z"
     },
     "90": {
-      "status": "pending",
+      "status": "complete",
       "category": 6,
       "subcategoryFile": "06a-supporting-childrens-mental-health",
       "file": "src/data/articles/category-06/06a-supporting-childrens-mental-health.tsx",
@@ -4389,7 +4389,7 @@
           "slug": "signs-child-struggling-parents-guide-mental-health",
           "title": "Signs Your Child May Be Struggling: A Parent's Guide to Recognizing Mental Health Issues",
           "currentWords": 291,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4397,7 +4397,7 @@
           "slug": "talk-child-mental-health-age-appropriate-conversations",
           "title": "How to Talk to Your Child About Mental Health: Age-Appropriate Conversations",
           "currentWords": 419,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4405,7 +4405,7 @@
           "slug": "childhood-anxiety-what-it-looks-like-how-parents-help",
           "title": "Childhood Anxiety: What It Looks Like and How Parents Can Help",
           "currentWords": 335,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4413,7 +4413,7 @@
           "slug": "child-wont-go-school-understanding-school-avoidance",
           "title": "When Your Child Won't Go to School: Understanding School Avoidance",
           "currentWords": 292,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4421,13 +4421,13 @@
           "slug": "helping-children-manage-big-emotions-emotion-coaching",
           "title": "Helping Children Manage Big Emotions: Emotion Coaching for Parents",
           "currentWords": 311,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:30:00.000Z"
     },
     "91": {
-      "status": "pending",
+      "status": "complete",
       "category": 6,
       "subcategoryFile": "06b-supporting-childrens-mental-health",
       "file": "src/data/articles/category-06/06b-supporting-childrens-mental-health.tsx",
@@ -4439,7 +4439,7 @@
           "slug": "children-grief-how-kids-process-loss-differently",
           "title": "Children and Grief: How Kids Process Loss Differently Than Adults",
           "currentWords": 391,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4447,7 +4447,7 @@
           "slug": "teen-self-harming-parents-guide-responding-care",
           "title": "When Your Teen Is Self-Harming: A Parent's Guide to Responding with Care",
           "currentWords": 444,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4455,7 +4455,7 @@
           "slug": "bullying-mental-health-supporting-child-social-cruelty",
           "title": "Bullying and Mental Health: How to Support Your Child Through Social Cruelty",
           "currentWords": 394,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4463,7 +4463,7 @@
           "slug": "should-child-see-therapist-when-seek-professional-help",
           "title": "Should My Child See a Therapist? When and How to Seek Professional Help",
           "currentWords": 332,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4471,13 +4471,13 @@
           "slug": "building-resilience-children-research-what-works",
           "title": "Building Resilience in Children: What the Research Says Actually Works",
           "currentWords": 337,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T01:00:00.000Z"
     },
     "92": {
-      "status": "pending",
+      "status": "complete",
       "category": 6,
       "subcategoryFile": "07a-eldercare-caregiving-aging-parents",
       "file": "src/data/articles/category-06/07a-eldercare-caregiving-aging-parents.tsx",
@@ -4489,7 +4489,7 @@
           "slug": "sandwich-generation-caring-children-aging-parents",
           "title": "The Sandwich Generation: Caring for Children and Aging Parents Simultaneously",
           "currentWords": 279,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4497,7 +4497,7 @@
           "slug": "caregiver-burnout-aging-parent-mental-health",
           "title": "Caregiver Burnout: When Looking After an Aging Parent Depletes Your Own Health",
           "currentWords": 238,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4505,7 +4505,7 @@
           "slug": "hard-conversations-driving-finances-end-of-life-parents",
           "title": "How to Have the Hard Conversations: Driving, Finances, and End-of-Life Wishes",
           "currentWords": 323,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4513,7 +4513,7 @@
           "slug": "watching-parent-decline-grief-before-loss",
           "title": "Watching a Parent Decline: The Grief That Starts Before Loss",
           "currentWords": 311,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4521,10 +4521,10 @@
           "slug": "dementia-family-mental-health-caring-someone-forgetting",
           "title": "Aggression/Combativeness",
           "currentWords": 301,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T19:45:12Z"
     },
     "93": {
       "status": "pending",
@@ -4627,7 +4627,7 @@
       "completedAt": null
     },
     "95": {
-      "status": "pending",
+      "status": "complete",
       "category": 7,
       "subcategoryFile": "01a-understanding-depression",
       "file": "src/data/articles/category-07/01a-understanding-depression.tsx",
@@ -4639,7 +4639,7 @@
           "slug": "what-is-depression-comprehensive-guide",
           "title": "What Is Depression? A Comprehensive Guide Beyond 'Feeling Sad'",
           "currentWords": 643,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4647,7 +4647,7 @@
           "slug": "neuroscience-of-depression-brain-changes",
           "title": "The Neuroscience of Depression: What's Actually Happening in Your Brain",
           "currentWords": 870,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4655,7 +4655,7 @@
           "slug": "depression-vs-sadness-when-its-more",
           "title": "Depression vs. Sadness: How to Know When It's More Than a Bad Day",
           "currentWords": 880,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4663,7 +4663,7 @@
           "slug": "biopsychosocial-model-depression-causes",
           "title": "The Biopsychosocial Model: Why Depression Has No Single Cause",
           "currentWords": 793,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4671,13 +4671,13 @@
           "slug": "risk-factors-depression-vulnerability",
           "title": "Risk Factors for Depression: What Makes Some People More Vulnerable",
           "currentWords": 631,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T20:12:15Z"
     },
     "96": {
-      "status": "pending",
+      "status": "complete",
       "category": 7,
       "subcategoryFile": "01b-understanding-depression",
       "file": "src/data/articles/category-07/01b-understanding-depression.tsx",
@@ -4689,7 +4689,7 @@
           "slug": "functional-depression-productive-falling-apart",
           "title": "Functional Depression: When You're Productive but Falling Apart Inside",
           "currentWords": 740,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4697,7 +4697,7 @@
           "slug": "depression-affects-thinking-memory-decisions",
           "title": "How Depression Affects Your Thinking, Memory, and Decision-Making",
           "currentWords": 849,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4705,7 +4705,7 @@
           "slug": "depression-physical-health-bidirectional",
           "title": "Depression and Physical Health: The Bidirectional Relationship",
           "currentWords": 908,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4713,7 +4713,7 @@
           "slug": "depression-isolation-cycle",
           "title": "Why Depression Makes You Want to Isolate (And Why Isolation Makes Depression Worse)",
           "currentWords": 722,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4721,13 +4721,13 @@
           "slug": "depression-across-cultures-expression",
           "title": "Depression Across Cultures: How Different Societies Experience and Express It",
           "currentWords": 774,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:30:00.000Z"
     },
     "97": {
-      "status": "pending",
+      "status": "complete",
       "category": 7,
       "subcategoryFile": "02a-types-of-depression",
       "file": "src/data/articles/category-07/02a-types-of-depression.tsx",
@@ -4739,7 +4739,7 @@
           "slug": "major-depressive-disorder-clinical-depression",
           "title": "Major Depressive Disorder: The Condition Behind Clinical Depression",
           "currentWords": 930,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4747,7 +4747,7 @@
           "slug": "persistent-depressive-disorder-dysthymia",
           "title": "Persistent Depressive Disorder: When Low Mood Becomes Your Baseline",
           "currentWords": 877,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4755,7 +4755,7 @@
           "slug": "bipolar-depression-vs-unipolar",
           "title": "Bipolar Depression: How It Differs from Unipolar Depression",
           "currentWords": 656,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4763,7 +4763,7 @@
           "slug": "seasonal-affective-disorder-winter-depression",
           "title": "Seasonal Affective Disorder: Why Winter Darkens More Than the Sky",
           "currentWords": 555,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4771,13 +4771,13 @@
           "slug": "postpartum-depression-after-birth",
           "title": "Postpartum Depression: Understanding the Darkness After Birth",
           "currentWords": 763,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T01:30:00.000Z"
     },
     "98": {
-      "status": "pending",
+      "status": "complete",
       "category": 7,
       "subcategoryFile": "02b-types-of-depression",
       "file": "src/data/articles/category-07/02b-types-of-depression.tsx",
@@ -4789,7 +4789,7 @@
           "slug": "atypical-depression-subtype",
           "title": "Atypical Depression: The Subtype That Doesn't Look Like Depression",
           "currentWords": 567,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4797,7 +4797,7 @@
           "slug": "treatment-resistant-depression",
           "title": "Treatment-Resistant Depression: When Standard Approaches Aren't Enough",
           "currentWords": 555,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4805,7 +4805,7 @@
           "slug": "depression-with-psychotic-features",
           "title": "Depression with Psychotic Features: When Depression Distorts Reality",
           "currentWords": 592,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4813,7 +4813,7 @@
           "slug": "premenstrual-dysphoric-disorder-pmdd",
           "title": "Premenstrual Dysphoric Disorder: Beyond PMS",
           "currentWords": 659,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4821,10 +4821,10 @@
           "slug": "situational-vs-clinical-depression",
           "title": "Situational Depression vs. Clinical Depression: Understanding Adjustment Disorders",
           "currentWords": 651,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T08:47:00.000Z"
     },
     "99": {
       "status": "pending",
@@ -4977,7 +4977,7 @@
       "completedAt": null
     },
     "102": {
-      "status": "pending",
+      "status": "complete",
       "category": 7,
       "subcategoryFile": "04b-coping-with-depression",
       "file": "src/data/articles/category-07/04b-coping-with-depression.tsx",
@@ -4989,7 +4989,7 @@
           "slug": "nutrition-depression-evidence-food-mood",
           "title": "Nutrition and Depression: What the Evidence Says About Food and Mood",
           "currentWords": 756,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4997,7 +4997,7 @@
           "slug": "social-connection-when-you-want-to-withdraw-starting-small",
           "title": "Social Connection When You Want to Withdraw: Starting Small",
           "currentWords": 830,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5005,7 +5005,7 @@
           "slug": "how-to-support-yourself-between-therapy-sessions",
           "title": "How to Support Yourself Between Therapy Sessions",
           "currentWords": 759,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5013,7 +5013,7 @@
           "slug": "creating-safety-plan-depressive-episodes",
           "title": "Creating a Safety Plan for Depressive Episodes",
           "currentWords": 581,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5021,10 +5021,10 @@
           "slug": "mindfulness-based-cognitive-therapy-preventing-depression-relapse",
           "title": "Mindfulness-Based Cognitive Therapy: Preventing Depression Relapse",
           "currentWords": 796,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:20:00.000Z"
     },
     "103": {
       "status": "pending",
@@ -5077,7 +5077,7 @@
       "completedAt": null
     },
     "104": {
-      "status": "pending",
+      "status": "complete",
       "category": 7,
       "subcategoryFile": "05b-seasonal-patterns-mood-cycles",
       "file": "src/data/articles/category-07/05b-seasonal-patterns-mood-cycles.tsx",
@@ -5089,7 +5089,7 @@
           "slug": "holiday-depression-most-wonderful-time-doesnt-feel-wonderful",
           "title": "1. Lower your expectations",
           "currentWords": 486,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5097,7 +5097,7 @@
           "slug": "anniversary-reactions-dates-trigger-emotional-waves",
           "title": "Anniversary Reactions: Why Certain Dates Trigger Emotional Waves",
           "currentWords": 637,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5105,7 +5105,7 @@
           "slug": "cyclothymia-chronic-mood-swings-without-bipolar",
           "title": "Cyclothymia: Living with Chronic Mood Swings That Don't Meet Bipolar Criteria",
           "currentWords": 697,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5113,7 +5113,7 @@
           "slug": "tracking-your-mood-tools-techniques-pattern-recognition",
           "title": "Tracking Your Mood: Tools and Techniques for Pattern Recognition",
           "currentWords": 727,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5121,10 +5121,10 @@
           "slug": "light-vitamin-d-mental-health-science-hype",
           "title": "Light, Vitamin D, and Mental Health: Separating Science from Hype",
           "currentWords": 459,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T06:53:26Z"
     },
     "105": {
       "status": "pending",

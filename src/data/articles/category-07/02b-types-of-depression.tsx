@@ -22,11 +22,31 @@ export const typesOfDepressionArticlesB: Article[] = [
     description: "Atypical depression involves mood reactivity, increased appetite, hypersomnia, and rejection sensitivity. Learn symptoms, why it's called atypical, and treatment.",
     image: "/images/articles/cat07/cover-016.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 9,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Atypical Depression', 'Mood Reactivity', 'Rejection Sensitivity', 'Depression Subtypes'],
+    summary: 'Atypical depression challenges our understanding of what depression "should" look like—featuring mood reactivity, increased sleep and appetite, leaden paralysis, and extreme rejection sensitivity. Despite affecting up to 40% of people with depression, it often goes unrecognized because it doesn\'t match the classic presentation.',
+    keyFacts: [
+      { text: '15-40% of people with depression have atypical features, making it far from rare despite the misleading name', citationIndex: 8 },
+      { text: 'Mood reactivity—the ability to temporarily feel better in response to positive events—is the defining feature that distinguishes it from melancholic depression', citationIndex: 2 },
+      { text: 'People with atypical depression are twice as likely to have bipolar disorder, with 50% of bipolar depression showing atypical features', citationIndex: 5 },
+      { text: 'MAOIs show superior response rates for atypical depression compared to SSRIs in research studies, though they require dietary restrictions', citationIndex: 7 },
+      { text: 'Rejection sensitivity in atypical depression is a long-standing trait that predates depression and causes significant relationship impairment', citationIndex: 3 },
+    ],
+    sparkMoment: 'Your depression is valid even when you can laugh at a joke or enjoy a meal—those brief windows of light don\'t erase the darkness you\'re navigating.',
+    practicalExercise: {
+      title: 'Rejection Sensitivity Reality Check',
+      steps: [
+        { title: 'Notice the trigger', description: 'When you feel rejected, pause and identify the specific behavior that triggered the feeling (unanswered text, cancelled plans, brief response).' },
+        { title: 'Generate alternatives', description: 'List 3 non-rejection explanations for the behavior (they\'re busy, phone died, distracted, bad day at work).' },
+        { title: 'Check the evidence', description: 'What facts support rejection vs. alternative explanations? Has this person shown care for you before?' },
+        { title: 'Delay reaction', description: 'Wait 24 hours before acting on the rejection feeling. Often the intensity decreases with time and additional information emerges.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Mood Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -213,8 +233,10 @@ export const typesOfDepressionArticlesB: Article[] = [
           highlightColumn={1}
         />
 
-        <ArticleCallout variant="did-you-know">
-          <p>Despite being called "atypical," this presentation is extremely common, especially in outpatient settings, among women, and in people with earlier-onset depression. Some experts argue the term "atypical" is a misnomer since it's so prevalent <Citation id="1" index={1} source="Depression and Anxiety" year="2020" tier={1} />.</p>
+        <ArticleCallout variant="did-you-know" title="Why 'Atypical' When It's So Common?">
+          <p className="mb-4">Despite being called "atypical," this presentation is extremely common, especially in outpatient settings, among women, and in people with earlier-onset depression. Some experts argue the term "atypical" is a misnomer since it's so prevalent <Citation id="1" index={1} source="Depression and Anxiety" year="2020" tier={1} />.</p>
+          <p className="mb-4">The term originated in the 1950s-60s when psychiatrists noticed some depressed patients didn't fit the melancholic pattern described in textbooks. At the time, melancholic depression (with insomnia, loss of appetite, and unrelenting sadness) was considered the "typical" presentation.</p>
+          <p>Today we understand depression is heterogeneous—there's no single "typical" form. The name stuck even though the features are common, leading to confusion. Some researchers advocate for renaming it "depression with increased neurovegetative symptoms" or simply describing it by its features rather than calling it "atypical."</p>
         </ArticleCallout>
 
         <h2 id="bipolar-link" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -237,19 +259,40 @@ export const typesOfDepressionArticlesB: Article[] = [
           If you have atypical depression, especially with history of mood swings, family history of bipolar disorder, or early age of onset, screening for bipolar disorder is important. Treatment differs (mood stabilizers preferred, antidepressants used cautiously).
         </p>
 
-        <h2 id="impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Living with Atypical Depression
+        <h2 id="who-gets-it" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Who Gets Atypical Depression?
         </h2>
         <p className="mb-6">
-          The specific symptom pattern creates unique challenges:
+          Atypical features show specific demographic and clinical patterns that differ from melancholic depression <Citation id="8" index={8} source="American Journal of Psychiatry" year="2020" tier={1} />:
         </p>
 
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Invalidation:</strong> Because you can feel better temporarily, others (and you) may dismiss the depression---"You seemed fine yesterday!" But brief mood lifting doesn't negate persistent depression.</li>
-          <li><strong>Weight gain:</strong> Adds body image issues and shame to depression burden</li>
-          <li><strong>Oversleeping:</strong> Creates guilt ("I'm lazy") and functional impairment (missing work, neglecting responsibilities)</li>
-          <li><strong>Rejection sensitivity:</strong> Strains relationships, creates isolation, triggers depressive spirals</li>
-          <li><strong>Chronic course:</strong> Atypical depression tends to be more chronic and start earlier than melancholic depression</li>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li><strong>Gender:</strong> More common in women than men (approximately 2:1 ratio), particularly in younger women</li>
+          <li><strong>Age of onset:</strong> Typically begins earlier (teens to early 20s) compared to melancholic depression which can onset at any age</li>
+          <li><strong>Course:</strong> Tends to be more chronic and persistent rather than episodic. People with atypical features often have longer duration of illness and more time spent depressed</li>
+          <li><strong>Comorbidity:</strong> High rates of co-occurring anxiety disorders (panic disorder, social anxiety, generalized anxiety), PTSD, and substance use disorders</li>
+          <li><strong>Personality factors:</strong> Associated with anxious and avoidant personality traits, emotional lability, and interpersonal dependency</li>
+          <li><strong>Family history:</strong> Higher rates of family history of mood disorders and anxiety disorders compared to other depression subtypes</li>
+        </ul>
+
+        <p className="mb-6">
+          The chronic nature and early onset mean many people with atypical depression have lived with these symptoms for years, often since adolescence. They may not realize their experience differs from others' depression or that specific treatments may be more helpful for their symptom pattern.
+        </p>
+
+        <h2 id="impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Unique Challenges of Living With This Pattern
+        </h2>
+        <p className="mb-6">
+          The specific symptom constellation creates challenges that differ from other forms of depression:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li><strong>Invalidation and self-doubt:</strong> Because you can feel better temporarily, others (and you) may dismiss the depression---"You seemed fine yesterday!" But brief mood lifting doesn't negate persistent depression. You may question your own experience: "If I can laugh at a joke, maybe I'm not really depressed, maybe I'm just lazy." This self-doubt delays treatment and adds shame.</li>
+          <li><strong>Weight gain and body image:</strong> Depression already damages self-esteem; weight gain adds another layer of shame and self-criticism. The weight gain is often rapid (10-30 pounds in months), creating body image distress and social withdrawal. Others may comment on the weight change, adding to shame.</li>
+          <li><strong>Oversleeping stigma:</strong> Creates intense guilt ("I'm just lazy," "I'm wasting my life") and functional impairment (missing work or school, neglecting responsibilities, losing structure). Unlike insomnia which others recognize as suffering, excessive sleep is often seen as character weakness.</li>
+          <li><strong>Rejection sensitivity vicious cycle:</strong> Sensitivity strains relationships (you may overreact to minor slights, need constant reassurance, or withdraw to avoid rejection). This creates actual relationship problems and isolation, which then triggers more depression and confirms fears of rejection. It becomes a self-fulfilling prophecy.</li>
+          <li><strong>Chronic course without clear episodes:</strong> Because it tends to be chronic rather than episodic, there's no clear "I'm having a depressive episode now" recognition. It's more like a persistent baseline of depression with worse periods, making it harder to identify as a treatable condition rather than "just how I am."</li>
+          <li><strong>Misdiagnosis:</strong> The mood reactivity and sensitivity sometimes get misdiagnosed as borderline personality disorder, especially in women. The anxiety comorbidity may lead to treatment focused only on anxiety, missing the underlying depression.</li>
         </ul>
 
         <QuoteBlock
@@ -329,9 +372,39 @@ export const typesOfDepressionArticlesB: Article[] = [
           </ul>
         </ArticleCallout>
 
+        <h2 id="getting-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When and How to Seek Help
+        </h2>
         <p className="mb-6">
-          Atypical depression is real depression, despite the temporary mood reactivity. If you recognize this pattern in yourself, it's worth discussing with a mental health provider. Getting the right diagnosis can inform treatment choices and help you understand why your depression might look different from others'---but is no less valid or deserving of care.
+          If you recognize this symptom pattern in yourself, it's worth discussing with a mental health provider. Getting the right diagnosis can inform treatment choices and help you understand why your depression might look different from others'—but is no less valid or deserving of care.
         </p>
+
+        <p className="mb-6">
+          <strong>Seek evaluation if you experience:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Persistent low mood that temporarily lifts with positive events but returns</li>
+          <li>Sleeping 10+ hours regularly but still feeling exhausted</li>
+          <li>Significant weight gain and increased appetite, especially for carbs</li>
+          <li>Heavy, weighted feeling in your limbs</li>
+          <li>Extreme sensitivity to rejection that impairs relationships or work</li>
+          <li>These symptoms causing significant distress or functional impairment for 2+ weeks</li>
+        </ul>
+
+        <p className="mb-6">
+          When discussing symptoms with a provider, be specific about the atypical features: "My mood does get better when good things happen, but it doesn't last," "I'm sleeping 12 hours and still exhausted," "I've gained 20 pounds in 3 months." This helps distinguish atypical from melancholic depression and guides treatment.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Atypical depression is characterized by mood reactivity (mood temporarily brightens with positive events) plus at least two features: increased appetite/weight, excessive sleep, leaden paralysis, or rejection sensitivity</li>
+            <li>Despite the name, atypical features affect 15-40% of people with depression and are especially common in women, younger people, and those with chronic depression</li>
+            <li>The ability to feel better temporarily does NOT mean you're not "really" depressed—it's a specific symptom pattern, not evidence your depression is invalid</li>
+            <li>Atypical features are much more common in bipolar depression than unipolar depression, so screening for bipolar is important if you have this pattern</li>
+            <li>Treatment includes MAOIs (most effective but dietary restrictions), SSRIs/SNRIs, bupropion, and therapy focused on rejection sensitivity and relationship patterns</li>
+            <li>Recognizing the specific pattern helps you understand your experience and seek appropriate treatment rather than blaming yourself for symptoms like oversleeping or weight gain</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -348,6 +421,26 @@ export const typesOfDepressionArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['TRD', 'Treatment-Resistant Depression', 'ECT', 'TMS', 'Ketamine'],
+    summary: 'Treatment-resistant depression (TRD) affects 30% of people with major depression when standard treatments fail. But "resistant" doesn\'t mean hopeless—advanced interventions like TMS, ketamine, and ECT achieve 50-90% response rates even when multiple medications haven\'t worked.',
+    keyFacts: [
+      { text: 'Approximately 30% of people with major depression have treatment-resistant depression after failing at least two antidepressant trials', citationIndex: 2 },
+      { text: 'Before pursuing advanced treatments, ruling out pseudoresistance (wrong diagnosis, inadequate dose/duration, non-adherence) is essential', citationIndex: 8 },
+      { text: 'ECT remains the most effective treatment for severe TRD with 70-90% response rates, significantly higher than medication alone', citationIndex: 5 },
+      { text: 'Esketamine nasal spray is FDA-approved specifically for TRD and works through the glutamate system rather than serotonin', citationIndex: 4 },
+      { text: 'TMS achieves 50-60% response rates in TRD and is non-invasive with minimal side effects, making it accessible for outpatient treatment', citationIndex: 3 },
+    ],
+    sparkMoment: 'Treatment-resistant doesn\'t mean untreatable—it means the first approaches didn\'t work, and now it\'s time for the interventions that often succeed where medications alone have failed.',
+    practicalExercise: {
+      title: 'Preparing for a TRD Evaluation',
+      steps: [
+        { title: 'Document your treatment history', description: 'List every antidepressant tried, dose, duration, and response. Include side effects and reasons for stopping. This helps identify true resistance vs. inadequate trials.' },
+        { title: 'Track comorbid conditions', description: 'Note anxiety, sleep problems, chronic pain, substance use, or other conditions that may contribute to treatment resistance.' },
+        { title: 'Prepare questions about advanced options', description: 'Research TMS, ketamine, ECT, and augmentation strategies. Come with specific questions about availability, timeline, side effects, and insurance coverage.' },
+        { title: 'Advocate for specialized care', description: 'If your provider dismisses TRD options, request referral to a psychiatrist specializing in treatment-resistant depression or a mood disorders clinic.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Treatment Response',
+    },
     citations: [
       {
         id: '1',
@@ -717,6 +810,26 @@ export const typesOfDepressionArticlesB: Article[] = [
           </ul>
         </ArticleCallout>
 
+        <h2 id="emotional-toll" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Emotional Toll of Treatment-Resistant Depression
+        </h2>
+        <p className="mb-6">
+          Beyond the depression itself, TRD creates unique psychological challenges that compound the suffering:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li><strong>Demoralization:</strong> After each failed treatment, hope erodes. "I've tried everything. Nothing works. I'll never get better." This learned helplessness becomes its own obstacle to recovery.</li>
+          <li><strong>Self-blame:</strong> "Maybe I'm not trying hard enough. Maybe I'm just weak. Maybe I'm the problem." TRD can feel like personal failure rather than biological reality requiring different treatment.</li>
+          <li><strong>Financial burden:</strong> Years of treatment, multiple medications, therapy sessions, and potentially expensive interventions create significant financial stress that adds to depression.</li>
+          <li><strong>Relationship strain:</strong> Chronic depression wears on relationships. Loved ones may lose patience or understanding after years of illness. Isolation deepens.</li>
+          <li><strong>Lost time:</strong> Years spent depressed---missing life events, career opportunities, relationships, experiences. The grief of lost time is real.</li>
+          <li><strong>Treatment fatigue:</strong> Starting another medication, enduring more side effects, hoping this one works---it's exhausting. The effort required to keep trying becomes overwhelming.</li>
+        </ul>
+
+        <p className="mb-6">
+          These are normal responses to prolonged suffering and repeated disappointment. If you feel this way, you're not broken or weak---you're responding reasonably to an unreasonable situation. The demoralization is part of the illness, not evidence that you're beyond help.
+        </p>
+
         <QuoteBlock
           quote="I'd been depressed for eight years, tried seven medications, been in therapy for years. Nothing worked. I thought this was just my life. Then I did TMS. Within three weeks, I felt better than I had in nearly a decade. I wish I'd known about it years earlier."
           attribution="Anonymous patient"
@@ -724,8 +837,34 @@ export const typesOfDepressionArticlesB: Article[] = [
           variant="large"
         />
 
+        <h2 id="hope-and-outcomes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Hope, Recovery, and Long-Term Outcomes
+        </h2>
         <p className="mb-6">
-          Treatment-resistant depression is frustrating, exhausting, and demoralizing. But "resistant" doesn't mean "hopeless." It means standard treatments haven't worked---not that nothing will work. Advanced options like TMS, ketamine, and ECT have high success rates even when multiple medications have failed. If you're stuck in persistent depression despite treatment, don't give up. Specialized care and advanced interventions exist, and they work. You deserve aggressive, expert treatment until you find what brings you relief.
+          Despite the frustration of TRD, important facts about outcomes:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Most people with TRD eventually respond to treatment</strong> when appropriate interventions are used. The STAR*D trial found that with sequential treatment steps, over 60% eventually achieve remission.</li>
+          <li><strong>Novel treatments are emerging:</strong> Ketamine, esketamine, and psychedelic-assisted therapies represent fundamentally different mechanisms. More options are in development.</li>
+          <li><strong>Recovery is possible at any stage:</strong> Even after years of illness and many failed treatments, people respond to interventions like ECT or ketamine. Duration of illness doesn't predict impossibility of recovery.</li>
+          <li><strong>Partial response still matters:</strong> Even if full remission isn't achieved, going from severe to moderate depression significantly improves quality of life and functioning.</li>
+          <li><strong>The right treatment may not have been tried yet:</strong> If you've failed medications but haven't tried TMS, ketamine, or ECT, you haven't exhausted options. Many people's "breakthrough" treatment was one they didn't know existed.</li>
+        </ul>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Treatment-resistant depression (TRD) is defined as depression that hasn't responded to at least two adequate antidepressant trials of sufficient dose and duration</li>
+            <li>Before pursuing advanced treatments, rule out pseudoresistance: wrong diagnosis, inadequate dose/duration, poor adherence, comorbid conditions, or ongoing stressors</li>
+            <li>TRD reflects neurobiological differences (inflammation, genetic factors, structural brain changes) that may require different treatment approaches beyond standard antidepressants</li>
+            <li>Multiple evidence-based advanced options exist: medication augmentation (lithium, antipsychotics), TMS (50-60% response), ketamine/esketamine (60-70% response), and ECT (70-90% response)</li>
+            <li>Don't wait years between failed treatments—after two failures, pursue comprehensive reassessment and consider brain stimulation or ketamine rather than trying endless medication trials</li>
+            <li>TRD is frustrating and demoralizing, but "resistant" doesn't mean "hopeless"—it means standard approaches haven't worked, and now it's time for specialized interventions that often succeed where first-line treatments failed</li>
+          </ul>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          Treatment-resistant depression is frustrating, exhausting, and demoralizing. But the name itself is misleading---"resistant" doesn't mean "hopeless." It means standard treatments haven't worked, not that nothing will work. Advanced options like TMS, ketamine, and ECT have high success rates even when multiple medications have failed. If you're stuck in persistent depression despite treatment, don't give up. Specialized care and advanced interventions exist, and they work. You deserve aggressive, expert treatment until you find what brings you relief.
         </p>
       </>
     ),
@@ -743,6 +882,26 @@ export const typesOfDepressionArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Psychotic Depression', 'Delusions', 'Hallucinations', 'Severe Depression'],
+    summary: 'Psychotic depression is major depressive disorder with delusions or hallucinations—affecting 15-20% of hospitalized depression cases. It\'s a psychiatric emergency with high suicide risk that requires specialized combination treatment, not antidepressants alone.',
+    keyFacts: [
+      { text: 'Psychotic depression affects 15-20% of people hospitalized for major depression and carries significantly higher suicide risk than non-psychotic depression', citationIndex: 1 },
+      { text: 'The most common delusions are mood-congruent: guilt (believing you\'ve committed unforgivable sins), nihilistic (believing you\'re dead or don\'t exist), and somatic (believing your body is rotting)', citationIndex: 5 },
+      { text: 'Antidepressants alone achieve only 20-40% response rates, while combination antidepressant plus antipsychotic achieves 60-80% response', citationIndex: 3 },
+      { text: 'ECT is the most effective treatment with 80-90% response rates and is often first-line rather than last resort due to severity and suicide risk', citationIndex: 4 },
+      { text: '50% of people with psychotic depression eventually develop bipolar disorder, a rate 3× higher than non-psychotic depression', citationIndex: 6 },
+    ],
+    sparkMoment: 'When depression distorts reality itself—when you believe you\'re rotting from the inside or hear voices condemning you—this isn\'t "just" depression anymore. This is a psychiatric emergency, and combination treatment or ECT can bring you back to reality.',
+    practicalExercise: {
+      title: 'Recognizing Warning Signs (For Loved Ones)',
+      steps: [
+        { title: 'Know the red flags', description: 'Statements like "I\'m dead inside," "I can smell myself rotting," "I\'ve destroyed everyone," or "voices are telling me to die" indicate psychotic features, not typical depression.' },
+        { title: 'Assess safety immediately', description: 'Psychotic depression has extremely high suicide risk. If someone expresses delusions of guilt, hears command hallucinations, or seems disconnected from reality, this is an emergency.' },
+        { title: 'Seek emergency care', description: 'Go to the nearest emergency room or call 911. Do not wait for an appointment or try to talk them out of delusions—they need immediate psychiatric evaluation.' },
+        { title: 'Advocate for combination treatment', description: 'Ensure providers know about psychotic features. Antidepressants alone will not work. Ask about combination medication or ECT.' },
+      ],
+      toolLink: '/crisis',
+      toolLabel: 'Crisis Resources',
+    },
     citations: [
       {
         id: '1',
@@ -1108,13 +1267,31 @@ export const typesOfDepressionArticlesB: Article[] = [
           variant="large"
         />
 
-        <p className="mb-6">
-          Psychotic depression is one of the most severe forms of mental illness, but it's also one of the most treatable when correctly identified and aggressively managed. If you or a loved one is experiencing depression with psychotic symptoms---delusions, hallucinations, complete loss of functioning---seek emergency psychiatric care immediately. This is not something to wait out or try to manage on your own. With combination medication or ECT, recovery is not just possible---it's expected.
-        </p>
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Psychotic depression is major depression with delusions (false, fixed beliefs) or hallucinations (sensory experiences without external stimuli) occurring during severe depressive episodes</li>
+            <li>Common psychotic symptoms include delusions of guilt/sin, nihilistic delusions (believing you're dead), somatic delusions (body rotting), and auditory hallucinations (critical or command voices)</li>
+            <li>This is a psychiatric emergency with significantly elevated suicide risk—hospitalization is often necessary to ensure safety and begin intensive treatment</li>
+            <li>Antidepressants alone are inadequate and ineffective—combination antidepressant plus antipsychotic is the gold standard medication approach (60-80% response vs. 20-40% with antidepressant alone)</li>
+            <li>ECT achieves 80-90% response rates and works faster than medication, making it often first-line treatment rather than last resort given the severity and urgency</li>
+            <li>50% of people with psychotic depression eventually develop bipolar disorder, so careful monitoring for mania/hypomania and possible use of mood stabilizers is important</li>
+            <li>With appropriate aggressive treatment, full recovery is expected, though recurrence risk is high (50-70%), requiring long-term maintenance treatment</li>
+          </ul>
+        </ArticleCallout>
 
         <p className="mb-6">
-          <strong>If you or someone you know is experiencing psychotic depression symptoms, go to the nearest emergency room or call 911. This is a psychiatric emergency requiring immediate professional intervention.</strong>
+          Psychotic depression is one of the most severe forms of mental illness, but it's also one of the most treatable when correctly identified and aggressively managed. If you or a loved one is experiencing depression with psychotic symptoms—delusions, hallucinations, complete loss of functioning—seek emergency psychiatric care immediately. This is not something to wait out or try to manage on your own. With combination medication or ECT, recovery is not just possible—it's expected.
         </p>
+
+        <ArticleCallout variant="crisis" title="This is an Emergency">
+          <p className="mb-4"><strong>If you or someone you know is experiencing psychotic depression symptoms, go to the nearest emergency room or call 911. This is a psychiatric emergency requiring immediate professional intervention.</strong></p>
+          <p>Crisis resources:</p>
+          <ul className="list-disc pl-6 mt-2 space-y-1">
+            <li><strong>988 Suicide & Crisis Lifeline:</strong> Call or text 988</li>
+            <li><strong>Crisis Text Line:</strong> Text HOME to 741741</li>
+            <li><strong>Emergency services:</strong> Call 911 or go to nearest ER</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -1126,11 +1303,31 @@ export const typesOfDepressionArticlesB: Article[] = [
     description: 'PMDD is severe cyclical mood disturbance tied to menstrual cycle, affecting 5% of menstruating people. Learn symptoms, diagnosis, and evidence-based treatment.',
     image: "/images/articles/cat07/cover-019.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 9,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['PMDD', 'Premenstrual Dysphoric Disorder', 'Hormonal Depression', 'Menstrual Cycle'],
+    summary: 'PMDD is a severe, cyclical mood disorder affecting 3-8% of menstruating people—not "just PMS" but a disabling condition with marked depression, rage, and anxiety in the week before menstruation that resolves rapidly when the period starts.',
+    keyFacts: [
+      { text: 'PMDD affects approximately 5% of menstruating individuals and causes significant functional impairment in work, relationships, and daily life—far beyond typical PMS', citationIndex: 1 },
+      { text: 'The defining feature is predictable timing: symptoms are minimal in the follicular phase, peak in the week before menstruation, and resolve within 1-2 days of menstrual flow starting', citationIndex: 2 },
+      { text: 'PMDD is not caused by abnormal hormone levels but by the brain\'s abnormal sensitivity to normal hormonal fluctuations, specifically altered GABA receptor response to progesterone metabolites', citationIndex: 5 },
+      { text: 'SSRIs achieve 60-70% response rates for PMDD and work within days (unlike the weeks required for depression), with both continuous and luteal-phase-only dosing being effective', citationIndex: 3 },
+      { text: '30% of people with PMDD experience suicidal ideation during severe luteal-phase episodes, making this a potentially life-threatening condition requiring treatment', citationIndex: 6 },
+    ],
+    sparkMoment: 'If you feel like Dr. Jekyll and Mr. Hyde depending on where you are in your cycle—fine for three weeks, then darkness descends like clockwork—this isn\'t weakness or "just PMS." It\'s PMDD, and effective treatment exists.',
+    practicalExercise: {
+      title: 'Two-Cycle Symptom Tracking for Diagnosis',
+      steps: [
+        { title: 'Download DRSP or symptom tracker', description: 'Use the Daily Record of Severity of Problems (DRSP) form or a menstrual cycle tracking app that includes mood symptoms.' },
+        { title: 'Rate symptoms daily for 2 months', description: 'Each day, rate mood (depression, anxiety, irritability), physical symptoms (bloating, breast pain, fatigue), and functional impairment (work, relationships, self-care). Be honest about severity.' },
+        { title: 'Track menstrual cycle dates', description: 'Mark the first day of your period each cycle. Note cycle day for each symptom rating.' },
+        { title: 'Look for the pattern', description: 'After 2 cycles, review: Are symptoms minimal days 1-14 (follicular phase)? Do they peak days 22-28 (late luteal)? Do they resolve within 1-2 days of period starting? This pattern confirms PMDD.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Daily Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -1458,8 +1655,55 @@ export const typesOfDepressionArticlesB: Article[] = [
           <strong>Most people start with SSRIs,</strong> either daily or luteal-phase-only. If SSRIs are ineffective or not tolerated, hormonal contraceptives are next line. Combination of SSRI + hormonal treatment is also an option.
         </p>
 
+        <h2 id="getting-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When and How to Seek Help
+        </h2>
         <p className="mb-6">
-          If you experience severe, cyclical mood disturbances that disrupt your life every month, track your symptoms for two cycles and seek evaluation. PMDD is real, it's not "in your head, ' and it's highly treatable. You don't have to suffer through two weeks of hell every month for the rest of your reproductive years. Effective treatment exists, and you deserve relief.
+          <strong>Seek evaluation if you experience:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Marked mood swings, irritability, depression, or anxiety that predictably occur in the week(s) before your period</li>
+          <li>Symptoms that resolve within days of menstruation starting</li>
+          <li>Significant interference with work, relationships, or daily functioning during the luteal phase</li>
+          <li>Feeling like a different person depending on cycle phase</li>
+          <li>Suicidal thoughts during the premenstrual phase (seek immediate help if present)</li>
+        </ul>
+
+        <p className="mb-6">
+          <strong>How to prepare for your appointment:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Complete 2 cycles of daily symptom tracking before appointment (bring the tracker)</li>
+          <li>Be specific about timing: "I'm fine from day 1 to 14, then symptoms start around ovulation and peak right before my period"</li>
+          <li>Describe functional impairment: "I've called in sick to work," "I've had major arguments with my partner," "I can't concentrate at work"</li>
+          <li>Mention if you've tried lifestyle changes (exercise, diet, stress reduction) and whether they helped</li>
+          <li>Ask specifically about PMDD—some providers may dismiss symptoms as "normal PMS" without recognizing the severity</li>
+        </ul>
+
+        <ArticleCallout variant="warning" title="PMDD Can Be Life-Threatening">
+          <p className="mb-4">Approximately 30% of people with PMDD experience suicidal ideation during severe luteal-phase episodes. Some experience complete despair and hopelessness that feels unbearable.</p>
+          <p className="mb-4"><strong>If you're experiencing suicidal thoughts:</strong></p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Call 988 Suicide & Crisis Lifeline or text HOME to 741741</li>
+            <li>Go to nearest emergency room if you're in immediate danger</li>
+            <li>Recognize that these feelings are symptoms of PMDD, not reality—they will pass when your period starts, and treatment can prevent them from returning</li>
+          </ul>
+        </ArticleCallout>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>PMDD is a severe form of premenstrual syndrome affecting 3-8% of menstruating people, characterized by marked mood disturbance (depression, anxiety, rage) and functional impairment during the luteal phase</li>
+            <li>Unlike PMS (uncomfortable but manageable), PMDD is disabling and can be life-threatening, with 30% experiencing suicidal ideation during severe episodes</li>
+            <li>The hallmark of PMDD is predictable timing: symptoms are minimal in the follicular phase (days 1-14), peak in the late luteal phase (days 22-28), and resolve rapidly within 1-2 days of menstruation starting</li>
+            <li>PMDD is not caused by abnormal hormone levels but by the brain's abnormal sensitivity to normal hormonal fluctuations—specifically altered GABA receptor response to progesterone metabolites</li>
+            <li>Diagnosis requires prospective daily symptom tracking for at least 2 cycles (retrospective recall is unreliable)—use the DRSP tool or menstrual tracking app</li>
+            <li>First-line treatment is SSRIs (60-70% response rate), which work within days for PMDD unlike the weeks required for depression. Both continuous and luteal-phase-only dosing are effective</li>
+            <li>Hormonal contraceptives that suppress ovulation (like Yaz) are second-line, and severe treatment-resistant cases may require GnRH agonists or even surgical menopause as last resort</li>
+          </ul>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          If you experience severe, cyclical mood disturbances that disrupt your life every month, track your symptoms for two cycles and seek evaluation. PMDD is real, it's not "in your head," and it's highly treatable. You don't have to suffer through two weeks of hell every month for the rest of your reproductive years. Effective treatment exists, and you deserve relief.
         </p>
       </>
     ),
@@ -1472,11 +1716,31 @@ export const typesOfDepressionArticlesB: Article[] = [
     description: 'How to distinguish between normal sadness after life stress and clinical depression. Learn about adjustment disorders, when grief becomes depression, and treatment.',
     image: "/images/articles/cat07/cover-020.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 8,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Adjustment Disorder', 'Situational Depression', 'Grief', 'Reactive Depression'],
+    summary: 'The line between normal stress response, adjustment disorder, and major depression is often blurry. Having a clear trigger doesn\'t mean symptoms will resolve on their own—many MDD episodes are stress-triggered and require treatment regardless of what started them.',
+    keyFacts: [
+      { text: 'Adjustment disorder involves distress or impairment out of proportion to a stressor, occurring within 3 months of the stressor and resolving within 6 months of the stressor ending', citationIndex: 2 },
+      { text: '70% of people with major depressive disorder report an identifiable stressor before onset, but having a trigger doesn\'t make it "just situational" or mean treatment isn\'t needed', citationIndex: 7 },
+      { text: 'The key distinction: if you meet full MDD criteria (5+ symptoms for 2+ weeks including depressed mood/anhedonia), you have MDD regardless of whether a stressor triggered it', citationIndex: 3 },
+      { text: 'Normal grief involves waves of sadness with intact self-esteem; grief WITH depression includes pervasive anhedonia, worthlessness, and suicidal thoughts about ending one\'s own suffering', citationIndex: 5 },
+      { text: 'Brief psychotherapy is first-line for adjustment disorders and achieves good outcomes, while major depression typically requires medication and/or longer-term therapy', citationIndex: 4 },
+    ],
+    sparkMoment: 'Don\'t dismiss your suffering because it makes sense in context—depression is depression, and it\'s treatable whether it started with a clear trigger or seemed to appear from nowhere.',
+    practicalExercise: {
+      title: 'Self-Assessment: Normal Stress or Clinical Depression?',
+      steps: [
+        { title: 'Count your symptoms', description: 'Over the past 2 weeks, count how many DSM depression symptoms you have (depressed mood, anhedonia, sleep change, appetite change, fatigue, worthlessness/guilt, concentration problems, psychomotor changes, suicidal thoughts). 5+ = meets MDD threshold.' },
+        { title: 'Assess functioning', description: 'Rate impairment in work, relationships, and self-care on a scale of 0-10. Significant impairment (7+) suggests need for help regardless of whether symptoms meet MDD criteria.' },
+        { title: 'Track duration and trajectory', description: 'How long have symptoms persisted? Are they improving, stable, or worsening? Symptoms worsening or persisting beyond 3-4 weeks despite support suggest more than normal stress response.' },
+        { title: 'Consider your history', description: 'Do you have prior depression episodes? Family history? If yes, stressor may have triggered MDD recurrence rather than adjustment disorder.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -1864,15 +2128,42 @@ export const typesOfDepressionArticlesB: Article[] = [
           <p>Don't wait to see if it's 'just situational' or if you "really need help." If you're struggling, that's enough. Early intervention prevents progression to chronic depression and reduces suffering. You don't have to meet some threshold of misery before you deserve support.</p>
         </ArticleCallout>
 
+        <h2 id="common-pitfalls" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Pitfalls and Misconceptions
+        </h2>
+        <p className="mb-6">
+          Several dangerous myths prevent people from seeking help when they need it:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li><strong>"It's just situational, so I don't need treatment."</strong> Having a trigger doesn't mean symptoms will resolve on their own. If you meet MDD criteria, you need treatment—regardless of what started it. The stressor may have been the match, but now there's a fire that requires intervention.</li>
+          <li><strong>"I'm just weak for not handling this better."</strong> Vulnerability to depression after stress isn't weakness—it reflects biology (genetics, brain chemistry, prior experiences). Two people facing identical stressors respond differently because of factors beyond willpower.</li>
+          <li><strong>"Time will heal this."</strong> Time alone doesn't treat depression. Untreated MDD often persists for months or years and increases risk for chronic depression, substance use, and suicide. Early treatment changes trajectory.</li>
+          <li><strong>"My problems are real, so it can't be clinical depression."</strong> Real problems can trigger real depression. The two aren't mutually exclusive. You can acknowledge your stressors while also recognizing that your brain's response has become disordered and requires treatment.</li>
+          <li><strong>"I need to hit rock bottom before I deserve help."</strong> You don't have to be non-functional or suicidal to warrant treatment. If you're struggling, that's enough. Early intervention is easier and more effective than waiting until crisis.</li>
+        </ul>
+
         <QuoteBlock
-          quote="I kept telling myself it was just stress from the divorce---it would pass. But six months later, I was worse, not better. Getting treatment felt like admitting failure. Now I realize waiting was the failure. I could have been feeling better months earlier."
+          quote="I kept telling myself it was just stress from the divorce—it would pass. But six months later, I was worse, not better. Getting treatment felt like admitting failure. Now I realize waiting was the failure. I could have been feeling better months earlier."
           attribution="Anonymous patient"
           role="Reflecting on delayed treatment"
           variant="large"
         />
 
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>"Situational depression" is not a clinical diagnosis—it typically refers to adjustment disorder (symptoms in response to stressor, more severe than expected, resolving within 6 months) or stress-triggered major depressive disorder</li>
+            <li>If you meet full MDD criteria (5+ symptoms for 2+ weeks), you have major depression regardless of whether a life event triggered it. Having a clear stressor doesn't rule out MDD</li>
+            <li>The key question is not "did something cause this?" but "do I meet diagnostic criteria, and is functioning impaired?" If yes to both, you need professional treatment</li>
+            <li>Approximately 70% of MDD episodes are preceded by identifiable stressors—stress-triggered depression is still depression and requires the same evidence-based treatment as "endogenous" depression</li>
+            <li>Normal grief involves waves of intense sadness with intact self-esteem; depression includes pervasive anhedonia (inability to feel pleasure), worthlessness beyond the loss, and suicidal thoughts about ending suffering</li>
+            <li>Adjustment disorders respond well to brief psychotherapy (problem-solving therapy, supportive counseling, CBT), while major depression typically requires medication and/or longer-term therapy</li>
+            <li>Don't wait to see if symptoms are "just situational"—if you're struggling beyond 2-3 weeks, experiencing functional impairment, or meeting MDD criteria, seek evaluation. Early intervention prevents chronicity</li>
+          </ul>
+        </ArticleCallout>
+
         <p className="mb-6">
-          Whether your depression started with a clear trigger or seemed to appear out of nowhere, if it's causing significant distress or impairment, you deserve help. The distinction between "situational" and "clinical" matters less than the fact that you're suffering and treatment can help. Don't dismiss your symptoms because they make sense in context. Depression is depression---and it's treatable.
+          Whether your depression started with a clear trigger or seemed to appear out of nowhere, if it's causing significant distress or impairment, you deserve help. The distinction between "situational" and "clinical" matters less than the fact that you're suffering and treatment can help. Don't dismiss your symptoms because they make sense in context. Depression is depression—and it's treatable.
         </p>
       </>
     ),

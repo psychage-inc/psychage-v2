@@ -24,6 +24,26 @@ export const copingWithDepressionArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Depression', 'Nutrition', 'Research', 'Diet'],
+    summary: 'The connection between diet and depression is real, but it\'s not about "superfoods" or restrictive elimination diets. Research shows that whole-food dietary patterns—especially Mediterranean-style eating—can reduce depression risk and symptoms by lowering inflammation, supporting gut health, and stabilizing blood sugar. This evidence-based guide separates nutritional science from supplement hype.',
+    keyFacts: [
+      { text: 'The SMILES trial showed that participants who followed a Mediterranean-style diet for 12 weeks had significantly greater reductions in depressive symptoms compared to a control group, with one-third achieving remission.', citationIndex: 3 },
+      { text: 'People who eat diets high in whole foods (vegetables, fruits, whole grains, fish, nuts) have lower rates of depression than those who eat diets high in processed foods, refined carbs, and sugar.', citationIndex: 2 },
+      { text: 'Ultra-processed foods promote systemic inflammation, which is increasingly recognized as a driver of depression by affecting neurotransmitter production and brain structure.', citationIndex: 6 },
+      { text: 'Your gut microbiome communicates with your brain and produces neurotransmitters like serotonin—an unhealthy microbiome caused by poor diet is linked to depression.', citationIndex: 5 },
+      { text: 'Omega-3 fatty acids (EPA and DHA) from fatty fish show modest antidepressant effects in meta-analyses, particularly for EPA-rich supplements at 1-2g daily.', citationIndex: 4 },
+    ],
+    sparkMoment: 'Nutrition won\'t cure depression—but the food you eat shapes the biological environment in which depression either thrives or struggles to take hold.',
+    practicalExercise: {
+      title: 'Your One-Week Mediterranean Diet Starter',
+      steps: [
+        { title: 'Track your baseline', description: 'For 3 days, note what you eat and how you feel. No judgment—just awareness of the current pattern.' },
+        { title: 'Add one Mediterranean swap daily', description: 'Replace one processed food with a whole-food alternative: swap white bread for whole grain, soda for water with lemon, chips for nuts, or add a vegetable to one meal.' },
+        { title: 'Include omega-3s three times this week', description: 'Aim for 2-3 servings of fatty fish (salmon, sardines, mackerel) or consider an omega-3 supplement if you don\'t eat fish.' },
+        { title: 'Reflect on changes', description: 'At the end of the week, note any shifts in energy, mood, or digestion. Small changes compound—this is just the beginning.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Mood Changes',
+    },
     citations: [
       {
         id: '1',
@@ -350,6 +370,27 @@ export const copingWithDepressionArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Depression', 'Social Connection', 'Isolation', 'Self-Help'],
+    summary: 'When you\'re depressed, isolation feels protective—but it actually deepens the cycle. This guide offers a tiered approach to rebuilding social connection that starts with the smallest possible step: just being around people, no interaction required. You don\'t need to force yourself into draining social events; you need strategies that respect your limited capacity while still breaking the isolation loop.',
+    keyFacts: [
+      { text: 'Depression causes social withdrawal, and social withdrawal worsens depression—a bidirectional relationship confirmed by longitudinal research.', citationIndex: 1 },
+      { text: 'Even "weak ties"—brief interactions with acquaintances, neighbors, or baristas—improve mood and reduce feelings of isolation, according to social psychology research.', citationIndex: 5 },
+      { text: 'Social isolation activates the same brain regions as physical pain, and loneliness increases inflammation, disrupts sleep, and impairs immune function.', citationIndex: 2 },
+      { text: 'People with strong social ties recover from depression faster and are less likely to relapse.', citationIndex: 4 },
+      { text: 'Behavioral activation strategies—starting with low-intensity, time-limited social exposure—effectively reduce avoidance behaviors in depression treatment.', citationIndex: 6 },
+    ],
+    sparkMoment: 'Connection isn\'t an all-or-nothing choice between "full social mode" and "total isolation"—there are dozens of small, manageable steps between those extremes.',
+    practicalExercise: {
+      title: 'Your 5-Day Low-Barrier Connection Challenge',
+      steps: [
+        { title: 'Day 1: Passive presence', description: 'Spend 20 minutes in a public space where others are present. Bring a book or your phone—no interaction required. Just be around people.' },
+        { title: 'Day 2: Brief transaction', description: 'Make eye contact and thank a cashier, barista, or delivery person. One sentence counts.' },
+        { title: 'Day 3: Asynchronous reach-out', description: 'Send a text to one person—doesn\'t have to be deep. "Thinking of you" or "Hope you\'re doing okay" is enough.' },
+        { title: 'Day 4: Low-key shared activity', description: 'Invite someone to watch a show together virtually, or go for a walk where conversation is optional.' },
+        { title: 'Day 5: Reflect and choose', description: 'Which tier felt manageable? Which was too much? Build from what worked, not what drained you.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Connection & Mood',
+    },
     citations: [
       {
         id: '1',
@@ -618,6 +659,26 @@ export const copingWithDepressionArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Depression', 'Therapy', 'Self-Help', 'Between Sessions'],
+    summary: 'Therapy lasts 50 minutes—but you have 10,030 minutes in the rest of your week. What you do between sessions determines whether insights become lasting change or just interesting conversations. This guide covers homework completion, skill practice, mood tracking, crisis management, and how to make the most of the time when your therapist isn\'t available.',
+    keyFacts: [
+      { text: 'Clients who actively engage in between-session work have significantly better therapy outcomes than those who don\'t, according to meta-analytic research.', citationIndex: 1 },
+      { text: 'Homework completion is one of the strongest predictors of therapy success in cognitive-behavioral therapy for depression.', citationIndex: 2 },
+      { text: 'Self-monitoring of mood, sleep, and behaviors helps clients and therapists identify patterns and measure progress more accurately.', citationIndex: 3 },
+      { text: 'Reviewing your crisis plan regularly when you\'re stable makes it easier to use when you\'re not—it becomes automatic rather than effortful.', citationIndex: 4 },
+      { text: 'Research shows that setbacks and periods of feeling stuck are often precursors to breakthroughs in therapy—not signs of failure.', citationIndex: 6 },
+    ],
+    sparkMoment: 'Therapy doesn\'t save you once a week—it gives you tools to save yourself 10,000 minutes at a time.',
+    practicalExercise: {
+      title: 'Your Between-Session Anchor Ritual',
+      steps: [
+        { title: 'Post-session debrief (15 min)', description: 'Right after each session, write down: What stuck with me? What skill am I supposed to practice? What do I want to bring up next time?' },
+        { title: 'Daily mood log (2 min)', description: 'Rate your mood 0-10, note one significant event, track one behavior (sleep, exercise, social contact). Use your phone\'s notes app or a journal.' },
+        { title: 'Weekly skill practice', description: 'Pick ONE skill from therapy and use it at least 3 times this week—even imperfectly. Using it badly is better than not using it.' },
+        { title: 'Pre-session prep (10 min)', description: 'Before your next session, review your mood log and notes. Write down: What was hard? What worked? What questions do I have?' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Start Mood Tracking',
+    },
     citations: [
       {
         id: '1',
@@ -907,6 +968,29 @@ export const copingWithDepressionArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Depression', 'Crisis Safety', 'Safety Planning', 'Suicide Prevention'],
+    summary: 'A safety plan is a written, step-by-step guide you create when you\'re stable so that when depression clouds your judgment, you have a roadmap to follow. This evidence-based tool reduces suicide attempts and saves lives. This guide walks you through the six-step Safety Planning Intervention protocol, from recognizing warning signs to means restriction.',
+    keyFacts: [
+      { text: 'Safety planning reduces suicide attempts and improves outcomes when combined with standard depression treatment, according to systematic review evidence.', citationIndex: 2 },
+      { text: 'The Safety Planning Intervention is a brief, practical protocol—not a "no-harm contract"—that guides you through escalating levels of support.', citationIndex: 1 },
+      { text: 'Means restriction (limiting access to lethal methods) is one of the most critical components—research shows it saves lives by creating time and distance during impulses.', citationIndex: 3 },
+      { text: 'The six-step plan starts with the least intensive intervention (internal coping) and escalates only if needed—maximizing autonomy while ensuring safety.', citationIndex: 4 },
+      { text: 'Since July 2022, the 988 Suicide & Crisis Lifeline provides 24/7 phone and text crisis support nationwide in the U.S.', citationIndex: 5 },
+    ],
+    sparkMoment: 'A safety plan isn\'t about promising you\'ll never feel suicidal—it\'s about having a map when you can\'t see the way out.',
+    practicalExercise: {
+      title: 'Build Your 6-Step Safety Plan',
+      steps: [
+        { title: 'List 3-5 warning signs', description: 'What thoughts, feelings, or behaviors signal you\'re entering a crisis? Write them down specifically—these are your early detection system.' },
+        { title: 'Identify 5 internal coping strategies', description: 'What can you do alone to distract or ground yourself? (Walk, cold shower, music, grounding exercise, journal.) Keep them simple and accessible.' },
+        { title: 'List 3 distraction contacts', description: 'People you can reach out to for low-key support—not to talk about crisis, just to be around. Include names and phone numbers.' },
+        { title: 'List 3 crisis contacts', description: 'People you trust to talk about suicidal thoughts. Include therapist, trusted friend/family, and 988 Lifeline.' },
+        { title: 'Write down professional resources', description: '988 Lifeline, Crisis Text Line (text HOME to 741741), therapist emergency number, local crisis center, nearest ER address.' },
+        { title: 'Plan means restriction', description: 'How will you limit access to lethal methods? (Give meds to someone, lock firearms with someone else holding key, remove sharp objects.)' },
+        { title: 'Share and save copies', description: 'Give a copy to one trusted person. Keep copies in your phone, wallet, and bedside table.' },
+      ],
+      toolLink: '/crisis',
+      toolLabel: 'View Crisis Resources',
+    },
     citations: [
       {
         id: '1',
@@ -1199,6 +1283,27 @@ export const copingWithDepressionArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Depression', 'MBCT', 'Mindfulness', 'Treatment', 'Relapse Prevention'],
+    summary: 'After recovering from depression, there\'s a 50% chance of relapse—and after three episodes, the risk climbs to 90%. Mindfulness-Based Cognitive Therapy (MBCT) was designed to break this cycle by teaching you to recognize and disengage from the thought patterns that trigger relapse. This 8-week group program reduces relapse risk by 43% and is as effective as maintenance medication.',
+    keyFacts: [
+      { text: 'MBCT reduces depression relapse risk by 43% according to meta-analytic evidence, with benefits sustained for at least 5 years.', citationIndex: 2 },
+      { text: 'A 2015 Lancet study found MBCT was as effective as maintenance antidepressant medication for preventing relapse—offering a viable alternative for medication tapering.', citationIndex: 5 },
+      { text: 'MBCT is particularly effective for people with 3+ previous depressive episodes—the population at highest risk for relapse.', citationIndex: 8 },
+      { text: 'The core mechanism: learning to observe thoughts as mental events (not facts), which interrupts the automatic link between negative thoughts and depressive mood spirals.', citationIndex: 4 },
+      { text: 'MBCT requires commitment to 30-45 minutes of daily home practice—it\'s not effective as a passive intervention.', citationIndex: 3 },
+    ],
+    sparkMoment: 'You can\'t always control what thoughts arise—but you can change whether you believe them, engage with them, or let them pass like clouds.',
+    practicalExercise: {
+      title: 'Thought Observation Practice (5 minutes)',
+      steps: [
+        { title: 'Sit comfortably and close your eyes', description: 'Find a quiet space. Set a 5-minute timer. No pressure to clear your mind—this is about observing, not stopping thoughts.' },
+        { title: 'Notice when a thought arises', description: 'When a thought appears, mentally label it: "That\'s a thought about work" or "That\'s a judgment" or "That\'s a worry." Don\'t engage—just name it.' },
+        { title: 'Let it pass without judgment', description: 'Imagine the thought as a cloud drifting by. You see it, but you don\'t grab it or push it away. Just watch it move through.' },
+        { title: 'Return to your breath', description: 'Gently bring attention back to the sensation of breathing. When the next thought comes, repeat: notice, label, let pass.' },
+        { title: 'Reflect afterward', description: 'What did you notice? Did some thoughts feel stickier than others? This is the core skill of MBCT—practiced 1,000 times over 8 weeks.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Practice & Mood',
+    },
     citations: [
       {
         id: '1',

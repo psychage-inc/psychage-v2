@@ -27,6 +27,26 @@ export const understandingDepressionArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Depression', 'Mental Health Basics', 'Symptoms', 'Understanding'],
+    summary: 'Depression is a complex medical condition affecting over 280 million people worldwide, characterized by persistent low mood, loss of interest, and biological changes in brain structure and function. Unlike normal sadness, clinical depression involves multiple symptoms lasting at least two weeks that significantly impair daily functioning and often require professional treatment.',
+    keyFacts: [
+      { text: 'Depression affects over 280 million people worldwide and is one of the leading causes of disability globally', citationIndex: 1 },
+      { text: 'Clinical depression requires at least five specific symptoms lasting at least two weeks, including either depressed mood or loss of interest', citationIndex: 2 },
+      { text: 'Brain imaging shows observable changes in depression including altered neurotransmitter systems, reduced hippocampal volume, and disrupted stress response', citationIndex: 5 },
+      { text: 'Women are twice as likely as men to experience depression, with a median age of onset in the mid-20s', citationIndex: 6 },
+      { text: 'Depression involves complex interactions between genetics, brain chemistry, life experiences, and circumstances—not simply a "chemical imbalance"', citationIndex: 5 },
+    ],
+    sparkMoment: 'Depression is not a personal failing or weakness—it\'s a real medical condition with observable brain changes that responds to evidence-based treatment, and understanding this distinction is the first step toward recovery.',
+    practicalExercise: {
+      title: 'Depression Symptom Self-Check',
+      steps: [
+        { title: 'Track Your Symptoms', description: 'For the next week, note when you experience symptoms like low mood, loss of interest, sleep changes, or difficulty concentrating. Use the Mood Journal tool to track patterns.' },
+        { title: 'Assess Duration and Impact', description: 'Review your notes after one week. Have symptoms lasted most of the day, nearly every day? Are they affecting work, relationships, or self-care?' },
+        { title: 'Compare to Clinical Criteria', description: 'Use this article\'s clinical criteria list to see if you meet five or more symptoms. Remember: only a professional can diagnose, but this helps you communicate concerns clearly.' },
+        { title: 'Take Action', description: 'If symptoms have persisted for two weeks and impair functioning, schedule an appointment with a mental health provider. Bring your symptom notes to help guide the conversation.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Try the Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -368,6 +388,26 @@ export const understandingDepressionArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Neuroscience', 'Brain Chemistry', 'Research', 'Depression'],
+    summary: 'Depression involves complex neurobiological changes across multiple brain systems including neurotransmitter dysregulation, structural alterations in the hippocampus and prefrontal cortex, HPA axis dysfunction, increased inflammation, and disrupted reward circuitry. These observable brain changes are reversible with treatment, explaining why recovery typically requires time and why different interventions target different aspects of the underlying biology.',
+    keyFacts: [
+      { text: 'Depression involves dysregulation across multiple neurotransmitter systems—serotonin, norepinephrine, dopamine, glutamate, and GABA—not just a simple "chemical imbalance"', citationIndex: 2 },
+      { text: 'Brain imaging shows reduced volume in the hippocampus, prefrontal cortex, and other regions, but these changes are reversible with effective treatment', citationIndex: 3 },
+      { text: 'The HPA axis stress response system often becomes hyperactive in depression, creating a cycle of elevated cortisol and hippocampal damage', citationIndex: 4 },
+      { text: 'About 30% of people with depression have elevated inflammatory markers, and chronic inflammation can affect neurotransmitter production and neuroplasticity', citationIndex: 5 },
+      { text: 'Anhedonia results from blunted dopamine response and reduced activity in reward circuitry, explaining why activities that "should" be pleasurable feel flat', citationIndex: 6 },
+    ],
+    sparkMoment: 'The brain changes in depression are real and measurable—but they\'re not permanent, and with treatment, the brain retains its remarkable capacity to heal, rebalance, and restore function.',
+    practicalExercise: {
+      title: 'Understanding Your Brain in Depression',
+      steps: [
+        { title: 'Identify Your Symptom Clusters', description: 'Note which symptoms you experience most: mood/emotional (low mood, anhedonia), cognitive (brain fog, rumination), physical (fatigue, sleep changes), or motivational (lack of drive). This helps identify which brain systems are most affected.' },
+        { title: 'Recognize Biological Patterns', description: 'Track when symptoms worsen (time of day, stress levels, sleep quality). Patterns reveal how your HPA axis, circadian rhythms, and stress response interact with depression.' },
+        { title: 'Appreciate Treatment Rationale', description: 'When considering treatments, understand how each targets different neurobiological mechanisms: SSRIs affect serotonin, exercise increases BDNF, therapy rewires neural pathways, sleep hygiene regulates HPA axis.' },
+        { title: 'Practice Self-Compassion', description: 'Remind yourself that depression symptoms reflect brain dysfunction, not personal failure. Your prefrontal cortex—the decision-making center—is literally operating with reduced capacity right now.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Patterns with Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -769,6 +809,26 @@ export const understandingDepressionArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Depression Diagnosis', 'Sadness', 'Mental Health Awareness', 'Self-Assessment'],
+    summary: 'Normal sadness is proportional, temporary, and allows continued functioning with moments of joy still accessible. Clinical depression persists for weeks or longer, impairs daily functioning significantly, eliminates the ability to experience pleasure (anhedonia), and involves feelings of worthlessness or hopelessness that feel like absolute truths rather than passing thoughts.',
+    keyFacts: [
+      { text: 'Clinical depression requires symptoms lasting at least two weeks, but episodes often persist for months or years without treatment', citationIndex: 2 },
+      { text: 'Depression can appear disproportionate to life circumstances or occur without any clear triggering event', citationIndex: 8 },
+      { text: 'Functional impairment is a key diagnostic criterion—depression significantly interferes with work, relationships, or self-care, not just mood', citationIndex: 4 },
+      { text: 'Anhedonia (inability to feel pleasure) differentiates depression from sadness—even activities that "should" feel good produce no positive emotion', citationIndex: 1 },
+      { text: 'Depression distorts self-perception into feelings of worthlessness, excessive guilt, or self-hatred that don\'t match reality', citationIndex: 5 },
+    ],
+    sparkMoment: 'The question isn\'t whether you have a "good enough reason" to feel bad—it\'s whether your current state prevents you from functioning and doesn\'t naturally improve, which signals depression rather than normal sadness.',
+    practicalExercise: {
+      title: 'Self-Assessment: Sadness or Depression?',
+      steps: [
+        { title: 'Track Duration', description: 'For the next week, note whether low mood or loss of interest is present most of the day, nearly every day. If symptoms persist beyond two weeks, this suggests depression rather than temporary sadness.' },
+        { title: 'Assess Functioning', description: 'Honestly evaluate: Can you work? Maintain self-care? Keep up with responsibilities? If basic functioning is significantly impaired, professional evaluation is warranted.' },
+        { title: 'Check for Anhedonia', description: 'Try an activity you normally enjoy. Can you feel any pleasure, or does everything feel flat and pointless? Persistent anhedonia is a hallmark of depression.' },
+        { title: 'Complete PHQ-9 Screening', description: 'Use the Patient Health Questionnaire-9 (available online) to assess symptom severity. A score of 10 or higher suggests moderate depression and warrants professional consultation.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Use Symptom Navigator',
+    },
     citations: [
       {
         id: '1',
@@ -1195,6 +1255,26 @@ export const understandingDepressionArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Research', 'Causes of Depression', 'Biopsychosocial Model', 'Risk Factors'],
+    summary: 'Depression emerges from complex interactions between biological factors (genetics, brain chemistry, medical conditions), psychological factors (thinking patterns, personality traits, coping styles), and social factors (relationships, life events, socioeconomic conditions). No single cause explains depression—instead, multiple risk factors combine and interact over time to increase vulnerability.',
+    keyFacts: [
+      { text: 'The biopsychosocial model explains why identical experiences affect different people differently—individual biological and psychological factors determine vulnerability', citationIndex: 1 },
+      { text: 'Having a parent with depression increases risk by 2-3 times, but genetics account for only about 40% of depression risk—environment matters enormously', citationIndex: 2 },
+      { text: 'Childhood adversity (abuse, neglect, trauma) increases adult depression risk by 2-3 times through lasting changes in stress response systems and brain development', citationIndex: 3 },
+      { text: 'Social determinants like poverty, discrimination, and social isolation are powerful risk factors that interact with biological and psychological vulnerabilities', citationIndex: 4 },
+      { text: 'Epigenetic mechanisms show how life experiences can change gene expression without altering DNA sequence, explaining how environment "gets under the skin"', citationIndex: 7 },
+    ],
+    sparkMoment: 'Depression doesn\'t result from a single defect you\'re stuck with—it emerges from multiple interacting factors, which means there are multiple pathways to recovery and healing.',
+    practicalExercise: {
+      title: 'Map Your Personal Risk and Resilience Factors',
+      steps: [
+        { title: 'Identify Biological Factors', description: 'List any relevant biological contributors: family history of depression, chronic medical conditions, hormonal changes, medication side effects, sleep disorders, or chronic pain.' },
+        { title: 'Assess Psychological Factors', description: 'Reflect on thinking patterns (perfectionism, rumination, negative self-talk), personality traits (high neuroticism, low self-esteem), and coping styles (avoidance vs. problem-solving).' },
+        { title: 'Evaluate Social Factors', description: 'Consider current stressors (relationship problems, work stress, financial pressure), social support quality, major life changes, and environmental conditions (housing, safety, community).' },
+        { title: 'Recognize Interactions', description: 'Notice how factors interact: Does stress worsen sleep (biological)? Does low mood lead to social withdrawal (psychological affects social)? Understanding these connections reveals intervention points across multiple levels.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -1694,6 +1774,26 @@ export const understandingDepressionArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Risk Factors', 'Prevention', 'Vulnerability', 'Depression'],
+    summary: 'Depression risk results from an accumulation of biological factors (genetics, sex, chronic illness), psychological factors (negative thinking patterns, low self-esteem, trauma history), and social factors (poverty, isolation, chronic stress). While individual risk factors increase vulnerability, protective factors like strong relationships, coping skills, and social support can buffer against depression even in high-risk individuals.',
+    keyFacts: [
+      { text: 'Having a first-degree relative with depression increases risk by 2-3 times, but most people with family history never develop depression', citationIndex: 1 },
+      { text: 'Childhood adversity—including abuse, neglect, and household dysfunction—increases adult depression risk by 2-3 times through lasting neurobiological changes', citationIndex: 2 },
+      { text: 'Women experience depression at twice the rate of men due to hormonal factors, socialization differences, and higher exposure to certain stressors like sexual violence', citationIndex: 3 },
+      { text: 'Social determinants including poverty, discrimination, unemployment, and housing instability are among the strongest predictors of depression', citationIndex: 4 },
+      { text: 'Chronic medical conditions like diabetes, heart disease, and chronic pain double the risk of depression through both biological and psychological pathways', citationIndex: 5 },
+    ],
+    sparkMoment: 'Risk factors don\'t determine destiny—they represent points of vulnerability where targeted intervention and protective factors can make all the difference between resilience and depression.',
+    practicalExercise: {
+      title: 'Assess Your Risk and Build Resilience',
+      steps: [
+        { title: 'Inventory Risk Factors', description: 'Identify which risk factors apply to you across biological (family history, medical conditions), psychological (trauma, thinking patterns), and social domains (isolation, chronic stress). Understanding your vulnerabilities helps you take proactive steps.' },
+        { title: 'Identify Protective Factors', description: 'List your strengths: supportive relationships, effective coping skills, stable housing, meaningful activities, problem-solving abilities, access to healthcare. These buffer against risk factors.' },
+        { title: 'Address Modifiable Risks', description: 'Focus on what you can change. You can\'t alter genetics, but you can treat medical conditions, challenge negative thoughts, build social connections, reduce substance use, and improve sleep.' },
+        { title: 'Strengthen Protective Factors', description: 'Intentionally build resilience: deepen one relationship, develop one coping skill, establish one healthy routine. Small changes in protective factors can significantly reduce depression risk.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Check Symptoms',
+    },
     citations: [
       {
         id: '1',

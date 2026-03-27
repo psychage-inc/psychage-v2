@@ -9,6 +9,9 @@ import {
   ProgressSteps,
   BeforeAfter,
   QuoteBlock,
+  ComparisonTable,
+  MythVsFactBlock,
+  HighlightBox,
 } from '../../../components/article/blocks';
 
 export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
@@ -19,11 +22,31 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
     description: "Master practical communication techniques and tools that reduce conflict and keep co-parenting focused on children's needs.",
     image: '/images/articles/cat06/cover-046.svg',
     category: CATEGORY_FAMILY_PARENTING,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Co-Parenting', 'Communication', 'Conflict Resolution', 'Parenting Apps'],
+    summary: 'Effective co-parenting communication requires clear boundaries, structured methods like BIFF, and technology tools that reduce conflict. By keeping communication focused solely on children and using strategies that prevent escalation, parents can maintain functional relationships without unnecessary drama.',
+    keyFacts: [
+      { text: '68% reduction in conflict reported when using co-parenting apps with documented communication', citationIndex: 2 },
+      { text: 'BIFF method (Brief, Informative, Friendly, Firm) reduces escalation in high-conflict co-parenting situations', citationIndex: 3 },
+      { text: 'Written communication creates accountability and reduces impulsive emotional responses compared to phone calls', citationIndex: 5 },
+      { text: 'Parallel parenting with minimal contact may be necessary when every interaction escalates despite best efforts', citationIndex: 8 },
+      { text: 'Communication boundaries focused on children only prevent personal conflicts from contaminating co-parenting', citationIndex: 7 },
+    ],
+    sparkMoment: 'You don\'t need to like your ex to be effective co-parents - you just need structure, boundaries, and the refusal to let old wounds dictate how you talk about your children.',
+    practicalExercise: {
+      title: 'Practice BIFF Communication',
+      steps: [
+        { title: 'Identify a Recent Conflict', description: 'Think of a recent frustrating message from your co-parent that triggered you.' },
+        { title: 'Extract Child-Related Facts Only', description: 'Write down only the information that is actually about the children, ignoring personal attacks or commentary.' },
+        { title: 'Draft a BIFF Response', description: 'Write a brief, informative, friendly, and firm reply addressing only the child-focused information.' },
+        { title: 'Wait 24 Hours Before Sending', description: 'Save your draft and review it the next day to ensure it stays neutral and focused.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Co-Parenting Emotions',
+    },
     citations: [
       { id: '1', text: 'Effective co-parenting communication', source: 'Family Relations', year: '2020', link: 'https://doi.org/10.1111/fare.12438', tier: 1 },
       { id: '2', text: 'Technology-mediated co-parenting', source: 'Family Process', year: '2021', link: 'https://doi.org/10.1111/famp.12641', tier: 1 },
@@ -148,6 +171,20 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
           </p>
         </ArticleCallout>
 
+        <ComparisonTable
+          title="Choosing the Right Communication Tool"
+          columns={['Feature', 'Co-Parenting App', 'Email', 'Text Message']}
+          items={[
+            { feature: 'Legal documentation', values: [true, true, 'Sometimes'] },
+            { feature: 'Calendar integration', values: [true, false, false] },
+            { feature: 'Expense tracking', values: [true, false, false] },
+            { feature: 'Tone monitoring', values: ['Some apps', false, false] },
+            { feature: 'Reduces impulsivity', values: [true, 'Moderate', 'Low'] },
+            { feature: 'Court admissible', values: [true, true, 'Varies'] },
+          ]}
+          highlightColumn={1}
+        />
+
         <h2 id="boundaries" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Setting Communication Boundaries
         </h2>
@@ -201,18 +238,43 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
           </p>
         </ArticleCallout>
 
+        <h2 id="common-myths" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Myths About Co-Parenting Communication
+        </h2>
+        <div className="space-y-4 my-8">
+          <MythVsFactBlock
+            myth="We need to be friends to co-parent well"
+            fact="You need to be functional business partners focused on children. Friendship is optional; civility and cooperation are not."
+          />
+          <MythVsFactBlock
+            myth="I have to respond immediately to every message"
+            fact="Establishing 24-48 hour response windows for non-emergencies prevents reactivity and sets healthy boundaries."
+          />
+          <MythVsFactBlock
+            myth="If I'm nice in messages, my ex will be nice back"
+            fact="You can only control your own communication. BIFF methods work even when the other parent doesn't reciprocate."
+          />
+        </div>
+
         <h2 id="parallel-parenting-communication" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Switch to Minimal Contact
         </h2>
         <p className="mb-6">
-          If every interaction escalates despite best efforts, parallel parenting with minimal communication may be necessary <Citation id="8" index={8} source="Family Relations" year="2019" tier={1} />:
+          If every interaction escalates despite best efforts, parallel parenting with minimal communication may be necessary <Citation id="8" index={8} source="Family Relations" year="2019" tier={1} />. This isn't giving up — it's recognizing that less interaction may be healthier for everyone.
+        </p>
+        <p className="mb-6">
+          Parallel parenting means:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Use apps for essential logistics only</li>
-          <li>Transitions at neutral locations (school, daycare)</li>
-          <li>No phone calls except emergencies</li>
-          <li>Each parent makes independent decisions during their time</li>
+          <li><strong>Use apps for essential logistics only:</strong> Medical appointments, school events, schedule changes — nothing else</li>
+          <li><strong>Transitions at neutral locations:</strong> School, daycare, or public places reduce conflict exposure</li>
+          <li><strong>No phone calls except emergencies:</strong> Define "emergency" clearly (injury, illness requiring medical attention)</li>
+          <li><strong>Each parent makes independent decisions during their time:</strong> Different bedtimes, screen time rules, or food choices are okay when conflict is this high</li>
+          <li><strong>Separate attendance at children's events:</strong> If needed, attend different performances or games to avoid confrontation</li>
         </ul>
+        <p className="mb-6">
+          Parallel parenting isn't ideal long-term, but it's far better than ongoing warfare. As emotions cool over time, some parents can gradually increase cooperation.
+        </p>
 
         <ArticleCallout variant="key-takeaway">
           <p>
@@ -229,11 +291,31 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
     description: 'Understand how parental bad-mouthing harms children and learn how to protect your child when an ex speaks negatively about you.',
     image: "/images/articles/cat06/cover-047.svg",
     category: CATEGORY_FAMILY_PARENTING,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Parental Conflict', 'Bad-Mouthing', 'Child Wellbeing', 'Co-Parenting'],
+    summary: 'When one parent speaks negatively about the other, children internalize the criticism as part of themselves, leading to loyalty conflicts, anxiety, and damaged self-worth. The most protective response is refusing to reciprocate, maintaining stability, and reinforcing unconditional love.',
+    keyFacts: [
+      { text: 'Children see themselves as half of each parent, so criticism of one parent feels like criticism of themselves', citationIndex: 1 },
+      { text: 'Severe bad-mouthing can escalate into parental alienation where children reject one parent entirely', citationIndex: 2 },
+      { text: 'The most protective response to bad-mouthing is refusing to reciprocate while maintaining calm stability', citationIndex: 7 },
+      { text: 'Children exposed to negative parent talk experience loyalty conflicts, shame, anxiety, and depression', citationIndex: 4 },
+      { text: 'Courts take parental alienation seriously as documented bad-mouthing can affect custody arrangements', citationIndex: 8 },
+    ],
+    sparkMoment: 'Your child doesn\'t need you to defend yourself against your ex - they need you to be the steady, loving parent who never makes them choose sides.',
+    practicalExercise: {
+      title: 'Practice Protective Responses',
+      steps: [
+        { title: 'Identify Triggers', description: 'Notice when you feel the urge to respond to bad-mouthing by saying negative things about your ex.' },
+        { title: 'Pause and Breathe', description: 'Before responding to your child, take three deep breaths to ground yourself in calm.' },
+        { title: 'Extract the Feeling', description: 'Acknowledge your child\'s feelings: "That sounds confusing" or "It must be hard to hear different things."' },
+        { title: 'Redirect to Love', description: 'End with reassurance: "What matters most is that both of us love you very much."' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Process Your Co-Parenting Emotions',
+    },
     citations: [
       { id: '1', text: 'Interparental conflict and child adjustment', source: 'Clinical Child and Family Psychology Review', year: '2020', link: 'https://doi.org/10.1007/s10567-020-00319-3', tier: 1 },
       { id: '2', text: 'Bad-mouthing and parental alienation', source: 'Family Court Review', year: '2021', link: 'https://doi.org/10.1111/fcre.12571', tier: 2 },
@@ -269,6 +351,15 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
           <li><strong>Depression:</strong> Feeling helpless and trapped between two people they love</li>
           <li><strong>Trust issues:</strong> Learning that people you love can talk badly about each other</li>
         </ul>
+
+        <StatCard
+          stats={[
+            { value: 3, suffix: 'x', label: 'Higher anxiety rates in children exposed to parental bad-mouthing' },
+            { value: 45, suffix: '%', label: 'Children who develop loyalty conflicts in high-conflict divorces' },
+            { value: 60, suffix: '%', label: 'Increased risk of relationship difficulties in adulthood' },
+          ]}
+          source="Development and Psychopathology, 2021"
+        />
 
         <ArticleCallout variant="warning">
           <p>
@@ -310,6 +401,21 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
             },
           ]}
         />
+
+        <h2 id="recognizing-signs" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Recognizing When It's Happening
+        </h2>
+        <p className="mb-6">
+          Children rarely report bad-mouthing directly. Instead, watch for these signs <Citation id="3" index={3} source="Journal of Family Psychology" year="2019" tier={1} />:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Sudden negativity toward you without clear cause</li>
+          <li>Repeating phrases that sound adult ("You never loved us" from a 6-year-old)</li>
+          <li>Refusing contact or acting fearful around you despite no history of abuse</li>
+          <li>Asking loaded questions ("Why don't you help mom with money?")</li>
+          <li>Reluctance to share positive experiences from your time together</li>
+          <li>Defending the other parent excessively when no criticism was offered</li>
+        </ul>
 
         <h2 id="if-your-ex-badmouths" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           If Your Ex Bad-Mouths You: What to Do
@@ -377,6 +483,20 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
           }}
         />
 
+        <h2 id="protecting-yourself" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Protecting Your Own Emotional Health
+        </h2>
+        <p className="mb-6">
+          Being the target of bad-mouthing is painful. You're watching someone actively try to damage your relationship with your children. This requires emotional resilience:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Process your emotions privately:</strong> Journal, talk to a therapist, vent to trusted friends --- but never to your children</li>
+          <li><strong>Play the long game:</strong> Children eventually see through manipulation. Consistency and unconditional love outlast propaganda</li>
+          <li><strong>Don't defend yourself constantly:</strong> Over-explaining looks defensive. Your actions speak louder than your ex's words</li>
+          <li><strong>Seek support:</strong> Parental alienation support groups, therapy, and legal counsel when necessary</li>
+          <li><strong>Document without obsessing:</strong> Keep records of concerning behavior, but don't let it consume you</li>
+        </ul>
+
         <h2 id="therapy-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Therapy
         </h2>
@@ -414,11 +534,31 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
     description: 'Learn how frequent transitions between parents affect attachment security in young children and strategies to minimize disruption.',
     image: "/images/articles/cat06/cover-048.svg",
     category: CATEGORY_FAMILY_PARENTING,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Attachment', 'Shared Custody', 'Young Children', 'Parenting Plans'],
+    summary: 'Young children need consistent, predictable caregivers to develop secure attachment. Shared custody schedules must match developmental needs - shorter transitions for infants and toddlers, graduated plans that evolve with age, and consistency across both homes to minimize disruption.',
+    keyFacts: [
+      { text: 'Young children under 3 need shorter time blocks (2-3 days maximum) rather than week-long separations to maintain attachment security', citationIndex: 2 },
+      { text: 'Overnight visits for infants work best when the non-primary parent has an established caregiving relationship, not just visitation history', citationIndex: 3 },
+      { text: 'Consistency in routines across both households (bedtime, meals, naps) reduces transition stress and supports attachment', citationIndex: 7 },
+      { text: 'The biggest threat to children\'s attachment isn\'t shared custody itself - it\'s parental conflict during transitions', citationIndex: 8 },
+      { text: 'Graduated parenting plans that evolve as children age prevent the need for costly court modifications', citationIndex: 6 },
+    ],
+    sparkMoment: 'A two-year-old doesn\'t understand calendars or promises - they need the same loving face to appear predictably, over and over, until trust becomes unshakable.',
+    practicalExercise: {
+      title: 'Create a Transition Routine',
+      steps: [
+        { title: 'Choose a Transition Object', description: 'Select a special stuffed animal or blanket that travels with your child between homes.' },
+        { title: 'Align Key Routines', description: 'Coordinate with your co-parent on bedtime, wake time, and meal schedules to create predictability.' },
+        { title: 'Practice Positive Send-Offs', description: 'Rehearse cheerful, confident goodbyes: "You\'re going to have fun! I\'ll see you soon!"' },
+        { title: 'Plan Brief Check-Ins', description: 'Agree on short video calls or voice messages that reassure young children between visits.' },
+      ],
+      toolLink: '/tools/sleep-architect',
+      toolLabel: 'Track Sleep Consistency Across Homes',
+    },
     citations: [
       { id: '1', text: 'Attachment security in shared custody arrangements', source: 'Attachment & Human Development', year: '2020', link: 'https://doi.org/10.1080/14616734.2020.1751988', tier: 1 },
       { id: '2', text: 'Developmental needs in custody schedules', source: 'Family Court Review', year: '2021', link: 'https://doi.org/10.1111/fcre.12568', tier: 2 },
@@ -553,18 +693,27 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
           ]}
         />
 
+        <HighlightBox variant="emphasis">
+          <p className="text-lg">
+            <strong>Remember:</strong> Attachment isn't about equal time — it's about consistent, responsive presence. A parent who shows up predictably for a toddler builds stronger attachment than one demanding 50/50 time before the caregiving relationship exists.
+          </p>
+        </HighlightBox>
+
         <h2 id="graduated-schedules" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Graduated Parenting Plans
         </h2>
         <p className="mb-6">
-          Schedules should evolve as children grow <Citation id="6" index={6} source="Parenting: Science and Practice" year="2021" tier={1} />:
+          Schedules should evolve as children grow <Citation id="6" index={6} source="Parenting: Science and Practice" year="2021" tier={1} />. A one-size-fits-all approach ignores developmental reality:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>0-12 months:</strong> Frequent short visits, overnights only if strong caregiving bond</li>
-          <li><strong>1-3 years:</strong> 2-3 day blocks, overnights increase gradually</li>
-          <li><strong>3-5 years:</strong> 3-4 day blocks, week-on/week-off may still be too long</li>
-          <li><strong>5+ years:</strong> Week-on/week-off or similar longer blocks become workable</li>
+          <li><strong>0-12 months:</strong> Frequent short visits (2-4 hours, daily or every other day), overnights only if strong caregiving bond established during marriage/partnership</li>
+          <li><strong>1-3 years:</strong> 2-3 day blocks maximum, overnights increase gradually as non-primary parent demonstrates consistent caregiving</li>
+          <li><strong>3-5 years:</strong> 3-4 day blocks work well, week-on/week-off may still feel too long for some children</li>
+          <li><strong>5+ years:</strong> Week-on/week-off or 5-2-2-5 rotations become workable as time concept develops</li>
         </ul>
+        <p className="mb-6">
+          Build language into court orders allowing schedule evolution: "As child develops secure attachment with non-primary parent and caregiving relationship strengthens, overnight frequency may increase by mutual agreement or court modification."
+        </p>
 
         <ArticleCallout variant="tip">
           <p>
@@ -597,11 +746,31 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
     description: "Navigate the challenges of dating after divorce or separation while protecting your children and managing complex emotions.",
     image: "/images/articles/cat06/cover-049.svg",
     category: CATEGORY_FAMILY_PARENTING,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Dating', 'Single Parenting', 'New Relationships', 'Blended Families'],
+    summary: 'Dating as a single parent requires balancing your need for companionship with children\'s need for stability. Wait until you\'re emotionally ready, introduce partners only when relationships are serious, and protect children from the "revolving door" of casual dates that damages their trust.',
+    keyFacts: [
+      { text: 'Therapists recommend waiting 6-12 months post-separation before serious dating to allow for emotional healing', citationIndex: 4 },
+      { text: 'Introducing multiple partners over time creates a "revolving door" that harms children\'s ability to trust and attach', citationIndex: 5 },
+      { text: 'Children should meet new partners only after 6+ months of dating when commitment trajectory is clear', citationIndex: 3 },
+      { text: 'Your ex may react with jealousy or increased conflict when you start dating - keep details private and focused on children', citationIndex: 8 },
+      { text: 'Red flags include partners who rush to meet your kids, disrespect boundaries, or expect to be prioritized over children', citationIndex: 6 },
+    ],
+    sparkMoment: 'You deserve love - but your children deserve stability more. The right partner will understand that your kids come first, not compete with them.',
+    practicalExercise: {
+      title: 'Evaluate Relationship Readiness',
+      steps: [
+        { title: 'Assess Your Healing', description: 'Ask yourself: Am I dating to avoid being alone, or am I genuinely ready to connect?' },
+        { title: 'Check Children\'s Stability', description: 'Are your kids adjusted to the new family structure, or still struggling with the divorce?' },
+        { title: 'Define Your Boundaries', description: 'Write down your non-negotiables: When will you introduce kids? What role will dating have in your life?' },
+        { title: 'Vet Carefully', description: 'Watch for red flags: impatience with kids, boundary violations, anger issues, or rushing intimacy.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Readiness',
+    },
     citations: [
       { id: '1', text: 'Post-divorce dating and family adjustment', source: 'Family Relations', year: '2020', link: 'https://doi.org/10.1111/fare.12452', tier: 1 },
       { id: '2', text: "Children's reactions to parental dating", source: 'Journal of Family Psychology', year: '2021', link: 'https://doi.org/10.1037/fam0000798', tier: 1 },
@@ -732,12 +901,22 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
         <h2 id="managing-emotions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Managing Your Own Emotions
         </h2>
+        <p className="mb-6">
+          Dating after divorce brings up complex feelings. Acknowledge and process them rather than letting them drive your choices:
+        </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Loneliness:</strong> It's okay to want adult companionship. But don't rush into relationships to avoid being alone --- heal first.</li>
           <li><strong>Guilt:</strong> You deserve love and happiness. Dating doesn't make you a bad parent --- neglecting your kids for dating does.</li>
           <li><strong>Fear of rejection:</strong> Dating after divorce means being vulnerable again. Go slow, therapy helps.</li>
           <li><strong>Comparing to ex:</strong> Notice when you're dating 'rebound versions' of your ex or opposite extremes. Seek healthy partners, not reactions to past pain.</li>
+          <li><strong>Pressure to "move on":</strong> Friends may push you to date before you're ready. Your timeline is yours alone.</li>
         </ul>
+
+        <HighlightBox variant="quote">
+          <p className="text-lg italic">
+            "The best time to start dating is when you genuinely want a partner, not when you desperately need to not be alone."
+          </p>
+        </HighlightBox>
 
         <h2 id="red-flags" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Red Flags to Watch For
@@ -782,11 +961,31 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
     description: "Explore what research reveals about how divorce affects children's mental health into adulthood, and the protective factors that support resilience.",
     image: '/images/articles/cat06/cover-050.svg',
     category: CATEGORY_FAMILY_PARENTING,
-    readTime: 7,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Divorce', 'Research', 'Long-Term Outcomes', 'Resilience'],
+    summary: 'Research shows 75% of children of divorce adjust well into adulthood, but outcomes depend heavily on how parents handle conflict. Low-conflict divorces produce outcomes similar to intact families, while high-conflict divorces increase risk for relationship struggles and mental health challenges.',
+    keyFacts: [
+      { text: '75% of children of divorce grow into well-adjusted adults; 25% experience lasting difficulties', citationIndex: 7 },
+      { text: 'Parental conflict matters more than divorce itself - children in high-conflict intact families often fare worse than those from low-conflict divorces', citationIndex: 8 },
+      { text: 'Adult children of divorce have a 2x higher divorce risk in their own marriages compared to children from intact families', citationIndex: 2 },
+      { text: 'Protective factors include low parental conflict, secure attachment to at least one parent, and financial stability post-divorce', citationIndex: 4 },
+      { text: 'Many children of divorce develop strengths including emotional intelligence, resilience, and adaptability', citationIndex: 1 },
+    ],
+    sparkMoment: 'Divorce is a risk factor, not a destiny. How you handle the conflict, nurture your children, and maintain stability determines their future far more than the divorce decree itself.',
+    practicalExercise: {
+      title: 'Build Protective Factors',
+      steps: [
+        { title: 'Minimize Conflict Exposure', description: 'Commit to shielding children from adult disagreements, legal battles, and negative talk about the other parent.' },
+        { title: 'Maintain Stability', description: 'Keep children in the same school, maintain friendships, and preserve routines as much as possible.' },
+        { title: 'Nurture Secure Attachment', description: 'Provide consistent warmth, availability, and emotional validation regardless of what the other parent does.' },
+        { title: 'Seek Support When Needed', description: 'Get therapy for children showing adjustment difficulties - early intervention prevents long-term problems.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Monitor Your Child\'s Emotional Wellbeing',
+    },
     citations: [
       { id: '1', text: 'Long-term effects of parental divorce', source: 'Child Development', year: '2019', link: 'https://doi.org/10.1111/cdev.13224', tier: 1 },
       { id: '2', text: 'Adult children of divorce: Relationship patterns', source: 'Journal of Marriage and Family', year: '2020', link: 'https://doi.org/10.1111/jomf.12672', tier: 1 },
@@ -884,6 +1083,19 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="understanding-research" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding the Research
+        </h2>
+        <p className="mb-6">
+          When you read that "children of divorce have higher rates of X," remember:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Averages obscure individual variation:</strong> Statistics show trends, not individual destinies</li>
+          <li><strong>Correlation isn't causation:</strong> Many studies can't separate divorce effects from pre-existing family dysfunction</li>
+          <li><strong>Effect sizes matter:</strong> "Higher risk" might mean 15% vs 10% — real, but not deterministic</li>
+          <li><strong>Most children are okay:</strong> The majority adjust well, even if some struggle</li>
+        </ul>
+
         <h2 id="not-all-equal" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Not All Divorces Are Equal
         </h2>
@@ -977,9 +1189,22 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
           <li>Let children be children --- don't parentify or use as confidants</li>
         </ul>
 
+        <h2 id="for-adult-children" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          For Adult Children of Divorce
+        </h2>
+        <p className="mb-6">
+          If you're an adult who experienced parental divorce and notice patterns in your own life:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Therapy helps:</strong> Understanding family patterns and processing unresolved grief creates pathways to healthier relationships</li>
+          <li><strong>You can break cycles:</strong> Awareness of patterns (commitment fear, conflict avoidance) is the first step to changing them</li>
+          <li><strong>Your experience matters:</strong> It shaped you, but it doesn't define your capacity for healthy relationships</li>
+          <li><strong>Many thrive:</strong> Adult children of divorce often build exceptionally strong, intentional partnerships because they've seen what not to do</li>
+        </ul>
+
         <ArticleCallout variant="tip">
           <p>
-            If you're an adult child of divorce struggling with relationship patterns or mental health impacts, therapy can help. Understanding family patterns and working through unresolved grief creates pathways to healthier relationships.
+            Therapy modalities like EMDR, attachment-focused therapy, or narrative therapy are particularly helpful for processing childhood divorce trauma and building secure adult attachment.
           </p>
         </ArticleCallout>
 

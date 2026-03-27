@@ -24,6 +24,26 @@ export const seasonalPatternsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Holiday Depression', 'Depression', 'Stress', 'Coping'],
+    summary: 'Holiday depression affects many people who struggle with the gap between cultural expectations of joy and their lived reality of grief, loneliness, or mental illness. This article explores why holidays trigger or worsen depression and offers practical strategies for navigating the season with self-compassion instead of forced cheerfulness.',
+    keyFacts: [
+      { text: 'Psychiatric emergency visits increase during holiday periods, particularly among people with existing mood disorders', citationIndex: 2 },
+      { text: 'Social comparison intensifies holiday stress when reality does not match cultural ideals of perfect family gatherings', citationIndex: 3 },
+      { text: 'Grief is magnified during holidays as empty chairs and absent loved ones become more visible', citationIndex: 4 },
+      { text: 'Seasonal affective disorder often peaks during the winter holiday season, making forced cheerfulness feel particularly cruel', citationIndex: 2 },
+      { text: 'Setting boundaries and lowering expectations are evidence-based strategies for reducing holiday-related distress', citationIndex: 5 },
+    ],
+    sparkMoment: 'Holiday depression is not about being ungrateful or cynical—it is about navigating genuine grief, loneliness, or illness in a culture that insists you should be feeling the opposite.',
+    practicalExercise: {
+      title: 'Create Your Holiday Survival Plan',
+      steps: [
+        { title: 'Identify your vulnerabilities', description: 'Write down which specific moments during the holidays tend to be hardest for you (e.g., Christmas morning alone, family dinners with conflict, seeing others celebrate).' },
+        { title: 'Set realistic expectations', description: 'Release the idea of a "perfect" holiday. Define what a good-enough holiday looks like given your current mental health and circumstances.' },
+        { title: 'Plan coping strategies', description: 'For each vulnerable moment you identified, write down one concrete coping action (e.g., call a friend, take a walk, allow yourself to cry, skip the event).' },
+        { title: 'Communicate boundaries', description: 'Practice saying no to at least one holiday obligation that drains you. Use a simple script: "I appreciate the invite, but I need to take care of myself this year."' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Holiday Mood',
+    },
     citations: [
       {
         id: '1',
@@ -256,6 +276,26 @@ export const seasonalPatternsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Anniversary Reactions', 'Grief', 'Trauma', 'Depression'],
+    summary: 'Anniversary reactions are emotional, cognitive, and physical responses triggered by the calendar date of a significant loss or trauma. Your body can remember dates even when your conscious mind does not, producing sudden waves of grief, anxiety, or sadness that may seem to come from nowhere.',
+    keyFacts: [
+      { text: 'Anniversary reactions can occur years or even decades after the original event without indicating failed healing', citationIndex: 1 },
+      { text: 'Implicit memory systems store emotional and sensory associations with dates separately from conscious factual memory', citationIndex: 3 },
+      { text: 'Physical symptoms like fatigue, headaches, and digestive issues can manifest during anniversary periods even without emotional awareness', citationIndex: 4 },
+      { text: 'Environmental cues such as seasonal changes, weather patterns, and sensory triggers can activate anniversary reactions unconsciously', citationIndex: 3 },
+      { text: 'Anticipating and planning for difficult anniversary dates reduces the shock of sudden emotional waves', citationIndex: 5 },
+    ],
+    sparkMoment: 'Your body remembered, even if your conscious mind did not—anniversary reactions are not weakness, they are testimony to the significance of what you have experienced and lost.',
+    practicalExercise: {
+      title: 'Prepare for a Difficult Anniversary',
+      steps: [
+        { title: 'Mark the date', description: 'Add the anniversary to your calendar ahead of time. Knowing it is coming helps you prepare emotionally and reduces the shock of unexpected feelings.' },
+        { title: 'Plan a meaningful ritual', description: 'Decide how you want to mark the day. This could be lighting a candle, visiting a meaningful place, writing a letter, or creating art. Rituals help externalize grief.' },
+        { title: 'Clear your schedule', description: 'Avoid scheduling demanding tasks, important meetings, or social obligations on or around the anniversary. Give yourself permission to have space.' },
+        { title: 'Arrange support', description: 'Reach out to someone who understands the significance of the date. Let them know you might need to talk or simply have company. Connection helps.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Anniversary Reactions',
+    },
     citations: [
       {
         id: '1',
@@ -491,6 +531,26 @@ export const seasonalPatternsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Cyclothymia', 'Mood Disorders', 'Bipolar Spectrum', 'Mental Health'],
+    summary: 'Cyclothymia is a chronic mood disorder characterized by persistent fluctuations between mild depression and mild hypomania lasting at least two years, with little stability in between. While less severe than bipolar I or II disorder, cyclothymia significantly impacts daily functioning and may progress to full bipolar disorder in some individuals.',
+    keyFacts: [
+      { text: 'Cyclothymia requires at least two years of persistent mood fluctuations with no more than two months of stable mood', citationIndex: 2 },
+      { text: 'Approximately 0.4 to 1 percent of the population experiences cyclothymia, often beginning in adolescence or early adulthood', citationIndex: 3 },
+      { text: 'Between 15 and 50 percent of people with cyclothymia eventually develop full bipolar I or II disorder', citationIndex: 4 },
+      { text: 'Mood stabilizers like lithium and lamotrigine are first-line treatments, while antidepressants are generally avoided due to risk of triggering mood cycling', citationIndex: 6 },
+      { text: 'Consistent sleep-wake schedules and daily routine structure are critical for mood stability in cyclothymia', citationIndex: 7 },
+    ],
+    sparkMoment: 'Cyclothymia is not just being moody or temperamental—it is living on a persistent mood roller coaster that makes it difficult to trust your emotions or plan for the future.',
+    practicalExercise: {
+      title: 'Build a Mood Stability Routine',
+      steps: [
+        { title: 'Establish consistent sleep times', description: 'Set the same bedtime and wake time every day, including weekends. Sleep disruption is a major trigger for mood cycling in cyclothymia.' },
+        { title: 'Create a daily structure', description: 'Schedule regular times for meals, exercise, work, and social contact. Routine helps regulate circadian rhythms and stabilize mood.' },
+        { title: 'Track your mood patterns', description: 'Use a mood chart or app to log your daily mood, energy, sleep, and activities. Over time, patterns will emerge that reveal your triggers.' },
+        { title: 'Identify early warning signs', description: 'Review your mood data to recognize subtle shifts that precede full mood swings. Catching early signs allows you to intervene before symptoms worsen.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Mood Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -756,6 +816,26 @@ export const seasonalPatternsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Mood Tracking', 'Self-Monitoring', 'Depression', 'Mental Health'],
+    summary: 'Mood tracking is a self-monitoring practice that creates an objective record of your emotional patterns, triggers, and progress. By consistently logging mood, energy, sleep, and activities, you can identify what helps and what harms, measure treatment effectiveness, and catch early warning signs before full depressive episodes develop.',
+    keyFacts: [
+      { text: 'Self-monitoring mood improves depression treatment outcomes by increasing awareness and identifying triggers', citationIndex: 1 },
+      { text: 'After two to four weeks of consistent tracking, meaningful patterns become visible in time of day, sleep correlation, and activity associations', citationIndex: 3 },
+      { text: 'Mood tracking apps can reduce depressive symptoms when used consistently, though they work best as a supplement to professional treatment', citationIndex: 2 },
+      { text: 'The biggest challenge is maintaining the habit—pairing tracking with an existing daily routine and setting reminders increases adherence', citationIndex: 4 },
+      { text: 'Sharing mood charts with therapists helps them see what happens between sessions and tailor interventions to specific triggers', citationIndex: 1 },
+    ],
+    sparkMoment: 'Depression distorts memory, making bad days feel endless and good moments disappear—mood tracking creates an objective record that cuts through the fog.',
+    practicalExercise: {
+      title: 'Start Your Mood Tracking Practice',
+      steps: [
+        { title: 'Choose your tracking method', description: 'Pick a tool that fits your lifestyle: a simple notebook, a spreadsheet, or a mood tracking app. The best tool is the one you will actually use consistently.' },
+        { title: 'Define your core metrics', description: 'Start with 3 to 5 data points: mood (1 to 10 scale), energy (1 to 10 scale), sleep hours, and key activities. You can add more later.' },
+        { title: 'Set a daily reminder', description: 'Schedule the same time each day to log your mood—ideally before bed when you can reflect on the full day. Pair it with an existing habit like brushing teeth.' },
+        { title: 'Review weekly', description: 'Every week, look at the past seven days of data. Ask: What patterns do I see? Are there correlations between sleep and mood? Does exercise help? This reinforces the value of tracking.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Try the Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -1016,6 +1096,26 @@ export const seasonalPatternsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Vitamin D', 'Light Exposure', 'Depression', 'Research'],
+    summary: 'While the internet promotes vitamin D as a cure for depression, the science is more nuanced. Light exposure improves mood primarily through direct effects on the brain\'s circadian system and serotonin production—not through vitamin D. Vitamin D supplementation may provide a small benefit if you have a confirmed deficiency, but it is not a replacement for evidence-based depression treatments.',
+    keyFacts: [
+      { text: 'Light therapy works for seasonal affective disorder by resetting circadian rhythms and boosting serotonin, independent of vitamin D production', citationIndex: 2 },
+      { text: 'A meta-analysis of 61 studies found only a small association between low vitamin D and depression, and correlation does not prove causation', citationIndex: 1 },
+      { text: 'Vitamin D supplementation shows small mood improvements only in people with confirmed deficiency below 20 nanograms per milliliter', citationIndex: 5 },
+      { text: 'For people with normal vitamin D levels, supplementation does not significantly reduce depressive symptoms', citationIndex: 3 },
+      { text: 'Thirty minutes of morning outdoor light exposure provides circadian benefits even on cloudy days, while brief midday sun exposure supports vitamin D synthesis', citationIndex: 8 },
+    ],
+    sparkMoment: 'Light exposure improves mood through the brain\'s master clock—not by raising vitamin D levels—making morning sunlight one of the most underutilized tools in mental health.',
+    practicalExercise: {
+      title: 'Optimize Your Light Exposure',
+      steps: [
+        { title: 'Get morning light within 30 minutes of waking', description: 'Step outside for 10 to 15 minutes each morning, even if it is cloudy. Morning light resets your circadian rhythm and suppresses melatonin, improving wakefulness and mood.' },
+        { title: 'Add brief midday sun exposure', description: 'Two to three times per week, expose bare skin (arms, legs) to midday sun for 10 to 15 minutes without sunscreen. This supports vitamin D synthesis without excessive skin damage.' },
+        { title: 'Test your vitamin D level', description: 'If you live in a northern latitude, have darker skin, or rarely go outside, ask your doctor for a blood test to check your vitamin D status before supplementing.' },
+        { title: 'Consider light therapy for winter', description: 'If you experience seasonal mood dips, use a 10,000 lux light therapy box for 20 to 30 minutes each morning from fall through early spring.' },
+      ],
+      toolLink: '/tools/sleep-architect',
+      toolLabel: 'Improve Your Sleep & Light Patterns',
+    },
     citations: [
       {
         id: '1',

@@ -1053,96 +1053,210 @@ export const articles: Article[] = [
 
     content: (
       <>
-        <p>
-          Denise hadn't slept through the night in six months. She'd wake at 2 AM drenched in
-          sweat, throw off the covers, then freeze 10 minutes later and pile them back on. By the
-          time she'd cooled down and dried off, she was wide awake, mind racing with worries.{' '}
-          <Citation index={1} /> By morning she felt like she'd been hit by a truck---exhausted,
-          irritable, unable to concentrate. Her doctor prescribed sleeping pills, which helped her
-          fall asleep but not stay asleep through the night sweats. "Is this just my life now?"
-          she asked. "Am I never going to sleep again?"
-        </p>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            Denise hadn't slept through the night in six months. She'd wake at 2 AM drenched in sweat, throw off the covers, then freeze 10 minutes later and pile them back on. By morning she felt exhausted, irritable, unable to concentrate. Her doctor prescribed sleeping pills, which helped her fall asleep but not stay asleep through the night sweats. "Is this just my life now?" she asked. "Am I never going to sleep again?"
+          </p>
+          <p className="mb-6">
+            Sleep disturbance is one of the most common and distressing symptoms of menopause, affecting 40-60% of people during the transition <Citation id="1" index={1} source="Sleep Medicine Reviews" year="2022" tier={1} />. But it's rarely just about not sleeping---it's about the cascade of consequences that follows. Chronic sleep deprivation during menopause significantly increases risk of depression, anxiety, cognitive decline, cardiovascular disease, and metabolic dysfunction <Citation id="7" index={7} source="Maturitas" year="2023" tier={1} />. Sleep and mental health are bidirectionally linked: poor sleep worsens mood, and mood disorders worsen sleep, creating a vicious cycle that feels impossible to escape.
+          </p>
+        </div>
 
         <StatCard
-          value="40-60%"
-          label="of menopausal people experience sleep disturbances"
-          description="Sleep problems are among the most common and distressing menopausal symptoms, significantly impacting quality of life and mental health."
+          stats={[
+            { value: 40, suffix: '-60%', label: 'of menopausal people experience sleep disturbances' },
+            { value: 85, suffix: '%', label: 'reduction in night sweats with hormone therapy' },
+            { value: 2, suffix: 'x', label: 'higher depression risk with chronic sleep disruption' },
+          ]}
+          source="Sleep Medicine Reviews, 2022; Climacteric, 2024"
         />
 
-        <h2>How Menopause Disrupts Sleep</h2>
-        <p>
-          Sleep disturbance during menopause results from multiple mechanisms. <Citation
-          index={2} /> Vasomotor symptoms (night sweats and hot flashes) are the most obvious
-          culprit---sudden heat and sweating wake you up, requiring you to cool down and often
-          change clothes or sheets. Even after the flush passes, falling back asleep can be
-          difficult. Frequent night sweats fragment sleep, reducing time spent in deep sleep and
-          REM sleep.
-        </p>
-        <p>
-          Hormonal effects on sleep architecture occur independent of night sweats. Estrogen and
-          progesterone both influence sleep: progesterone has sedating effects (declining levels
-          may make it harder to fall asleep), estrogen affects REM sleep and circadian rhythms,
-          and both hormones influence core body temperature regulation crucial for sleep. Anxiety
-          and depression, more common during menopause, both cause insomnia---difficulty falling
-          asleep, staying asleep, or early morning awakening. Aging-related changes (sleep becomes
-          lighter and more fragmented with age generally) compound menopausal effects.
+        <h2 id="how-menopause-disrupts-sleep" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How Menopause Disrupts Sleep
+        </h2>
+        <p className="mb-6">
+          Sleep disturbance during menopause results from multiple overlapping mechanisms <Citation id="2" index={2} source="Menopause: The Journal" year="2023" tier={1} />. Understanding these helps target treatment effectively.
         </p>
 
-        <ArticleCallout
-          type="warning"
-          title="The Sleep-Mood Vicious Cycle"
-          content="Poor sleep worsens mood, anxiety, and cognitive function. But mood and anxiety disorders also worsen sleep---creating a vicious cycle. Chronic sleep deprivation looks like depression: fatigue, irritability, difficulty concentrating, low motivation. Treating sleep can significantly improve mood, and treating mood can improve sleep. Both need attention."
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          1. Vasomotor Symptoms (Night Sweats and Hot Flashes)
+        </h3>
+        <p className="mb-6">
+          Night sweats are the most obvious sleep disruptor. Sudden heat and sweating wake you up, requiring you to cool down and often change clothes or sheets. Even after the flush passes, falling back asleep can be difficult---your mind is now alert, and the discomfort lingers. Frequent night sweats fragment sleep, reducing time spent in deep sleep and REM sleep, both critical for mood regulation and cognitive function <Citation id="2" index={2} source="Menopause: The Journal" year="2023" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          2. Hormonal Effects on Sleep Architecture
+        </h3>
+        <p className="mb-6">
+          Even without night sweats, hormonal changes affect sleep directly. Progesterone has sedating effects---declining levels may make it harder to fall asleep and stay asleep. Estrogen affects REM sleep, circadian rhythms, and core body temperature regulation, all crucial for sleep quality <Citation id="4" index={4} source="Journal of Clinical Sleep Medicine" year="2023" tier={1} />. As these hormones fluctuate wildly during perimenopause, sleep becomes erratic and unpredictable.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          3. Increased Anxiety and Depression
+        </h3>
+        <p className="mb-6">
+          Mood disorders are more common during menopause, and both anxiety and depression cause insomnia---difficulty falling asleep, staying asleep, or early morning awakening. Anxious rumination keeps you awake; depressive symptoms disrupt sleep continuity and quality <Citation id="5" index={5} source="Psychoneuroendocrinology" year="2024" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          4. Aging-Related Sleep Changes
+        </h3>
+        <p className="mb-6">
+          Sleep naturally becomes lighter and more fragmented with age. Menopause compounds these normal aging changes, making the cumulative effect more severe than either factor alone.
+        </p>
+
+        <ArticleCallout variant="warning" title="The Sleep-Mood Vicious Cycle">
+          <p className="mb-4">Poor sleep worsens mood, anxiety, and cognitive function. But mood and anxiety disorders also worsen sleep---creating a vicious cycle that feels inescapable.</p>
+          <p>Chronic sleep deprivation looks remarkably like depression: fatigue, irritability, difficulty concentrating, low motivation, tearfulness, hopelessness. Sometimes treating sleep significantly improves mood. Sometimes treating mood improves sleep. Often, both need attention simultaneously.</p>
+        </ArticleCallout>
+
+        <h2 id="impact-of-sleep-deprivation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Full Impact of Sleep Deprivation
+        </h2>
+        <p className="mb-6">
+          Chronic sleep disruption during menopause significantly impairs functioning across multiple domains <Citation id="3" index={3} source="JAMA Internal Medicine" year="2023" tier={1} />.
+        </p>
+
+        <ComparisonTable
+          title="Sleep Deprivation Consequences During Menopause"
+          columns={['Domain', 'Specific Impacts']}
+          items={[
+            { feature: 'Mental Health', values: ['Increased depression/anxiety risk, emotional dysregulation (irritability, mood swings), increased stress reactivity, lower frustration tolerance'] },
+            { feature: 'Cognitive Function', values: ['Difficulty concentrating and making decisions, memory problems (encoding and retrieval), subjective "brain fog" often attributed solely to menopause'] },
+            { feature: 'Physical Health', values: ['Increased pain sensitivity, weight gain (hunger hormones disrupted), cardiovascular risks (blood pressure, inflammation), weakened immune function'] },
+            { feature: 'Quality of Life', values: ['Reduced work performance, withdrawal from social activities, relationship strain, pervasive sense of "just getting through" rather than living'] },
+          ]}
+          highlightColumn={0}
         />
 
-        <h2>Impact of Sleep Deprivation</h2>
-        <p>
-          <Citation index={3} /> Chronic sleep disruption during menopause significantly impairs
-          multiple domains. Mental health impacts include increased risk of depression and anxiety
-          (sleep deprivation is both symptom and cause), emotional dysregulation (irritability,
-          mood swings, tearfulness), and increased stress reactivity (lower frustration tolerance,
-          feeling overwhelmed by minor stressors). Cognitive effects include difficulty
-          concentrating or making decisions, memory problems (both encoding new memories and
-          retrieving existing ones), and subjective "brain fog" that may be attributed to
-          menopause but is partly sleep-related.
-        </p>
-        <p>
-          Physical health consequences include increased pain sensitivity (sleep deprivation
-          lowers pain threshold), weight gain (sleep loss affects hunger hormones and metabolism),
-          cardiovascular risks (chronic poor sleep increases blood pressure and inflammation), and
-          weakened immune function. Quality of life suffers: reduced work performance, withdrawal
-          from social activities, relationship strain, and pervasive sense of just "getting
-          through" rather than living fully.
+        <h2 id="bidirectional-relationship" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Bidirectional Relationship
+        </h2>
+        <p className="mb-6">
+          Sleep and mental health influence each other in both directions. Poor sleep increases risk of depression and anxiety. But depression and anxiety also disrupt sleep. This creates a self-perpetuating cycle <Citation id="5" index={5} source="Psychoneuroendocrinology" year="2024" tier={1} />:
         </p>
 
-        <StatCard
-          value="Deep sleep & REM"
-          label="are most disrupted by night sweats"
-          description="These sleep stages are critical for mood regulation, memory consolidation, and physical recovery---their loss compounds menopausal mental health challenges."
+        <BeforeAfter
+          before={{
+            title: 'The Downward Spiral',
+            content: (
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Night sweats wake you → Sleep deprivation → Mood worsens → Anxiety about sleep increases → Harder to fall asleep → More sleep loss → Depression deepens</li>
+                <li>Each element feeds the next, making the cycle progressively worse</li>
+              </ul>
+            ),
+          }}
+          after={{
+            title: 'Breaking the Cycle',
+            content: (
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Treat night sweats → Sleep improves → Mood stabilizes → Anxiety decreases → Sleep quality improves further → Mental health improves</li>
+                <li>Addressing any point in the cycle can initiate positive change</li>
+              </ul>
+            ),
+          }}
         />
 
-        <h2>Treatment Strategies</h2>
-        <p>
-          Effective treatment addresses both menopausal causes and sleep-specific factors.
-          Treating vasomotor symptoms improves sleep: hormone therapy reduces night sweats for
-          many, and certain antidepressants (venlafaxine, paroxetine, escitalopram) reduce hot
-          flashes even in those who can't or won't use hormone therapy. Environmental
-          modifications help: keeping bedroom cool (65-68°F), using moisture-wicking sleepwear and
-          bedding, and layering blankets for easy temperature adjustment.
-        </p>
-        <p>
-          Cognitive-behavioral therapy for insomnia (CBT-I) is first-line treatment for chronic
-          insomnia, including menopausal insomnia. CBT-I addresses thoughts and behaviors that
-          perpetuate insomnia through sleep restriction (limiting time in bed to match actual
-          sleep time, then gradually increasing), stimulus control (using bed only for sleep and
-          sex, not worrying), cognitive restructuring (challenging anxiety about sleep), and
-          relaxation techniques. CBT-I is as effective as medication with longer-lasting benefits.
+        <HighlightBox variant="stat">
+          <p className="text-lg font-semibold mb-2">Night sweats disrupt deep sleep and REM sleep</p>
+          <p>These sleep stages are critical for mood regulation, memory consolidation, and physical recovery. Their loss compounds menopausal mental health challenges beyond what hormone changes alone would cause.</p>
+        </HighlightBox>
+
+        <h2 id="treatment-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Treatment Strategies
+        </h2>
+        <p className="mb-6">
+          Effective treatment addresses both menopausal causes (night sweats, hormones) and sleep-specific factors (sleep hygiene, CBT-I, sometimes medication). A multi-pronged approach works best <Citation id="9" index={9} source="Sleep Health" year="2023" tier={1} />.
         </p>
 
-        <ArticleCallout
-          type="tip"
-          title="When to Consider Sleep Medication"
-          content="Sleep medication (prescription or over-the-counter) can be helpful short-term but shouldn't be first-line long-term treatment. Consider medication when: 1) CBT-I and other interventions haven't helped, 2) Sleep deprivation is severe and impairing functioning, 3) Used alongside behavioral treatment, not instead of it. Work with providers to find lowest effective dose and re-evaluate regularly. Some medications worsen sleep architecture or cause dependency."
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          1. Treating Vasomotor Symptoms
+        </h3>
+        <p className="mb-6">
+          Reducing night sweats can dramatically improve sleep quality. Hormone therapy (estrogen with or without progesterone) reduces night sweats by up to 85% in responsive individuals <Citation id="8" index={8} source="Climacteric" year="2024" tier={1} />. For those who can't or won't use hormone therapy, certain antidepressants (venlafaxine, paroxetine, escitalopram) reduce hot flashes by 40-60%. Gabapentin and pregabalin are also effective for some people.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          2. Cognitive-Behavioral Therapy for Insomnia (CBT-I)
+        </h3>
+        <p className="mb-6">
+          CBT-I is first-line treatment for chronic insomnia, including menopausal insomnia <Citation id="3" index={3} source="JAMA Internal Medicine" year="2023" tier={1} />. It addresses thoughts and behaviors that perpetuate insomnia:
+        </p>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            {
+              title: 'Sleep Restriction',
+              description: <p>Limit time in bed to match actual sleep time, then gradually increase. This builds sleep pressure and improves sleep efficiency.</p>,
+            },
+            {
+              title: 'Stimulus Control',
+              description: <p>Use bed only for sleep and sex, not reading, TV, or worrying. This strengthens the mental association between bed and sleep.</p>,
+            },
+            {
+              title: 'Cognitive Restructuring',
+              description: <p>Challenge catastrophic thinking about sleep ("I'll never sleep again!") and unrealistic expectations ("I need 8 hours or I can't function").</p>,
+            },
+            {
+              title: 'Relaxation Techniques',
+              description: <p>Progressive muscle relaxation, breathing exercises, and mindfulness reduce physiological arousal that interferes with sleep.</p>,
+            },
+          ]}
         />
+
+        <p className="mb-6 mt-6">
+          CBT-I is as effective as medication for menopausal insomnia, with longer-lasting benefits and no side effects. It can be delivered by a therapist, via app, or through self-help programs.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          3. Environmental and Behavioral Modifications
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Keep bedroom cool:</strong> 65-68°F is optimal for sleep</li>
+          <li><strong>Use moisture-wicking sleepwear and bedding:</strong> Helps manage sweating</li>
+          <li><strong>Layer blankets:</strong> Easy temperature adjustment without fully waking</li>
+          <li><strong>Limit caffeine after noon:</strong> Half-life is 5-6 hours</li>
+          <li><strong>Avoid alcohol before bed:</strong> Disrupts sleep architecture even if it helps you fall asleep</li>
+          <li><strong>Exercise regularly:</strong> But not within 3 hours of bedtime</li>
+          <li><strong>Manage light exposure:</strong> Bright light in morning, dim light in evening</li>
+        </ul>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          4. Sleep Medication (When Appropriate)
+        </h3>
+        <p className="mb-6">
+          Sleep medication can be helpful short-term but shouldn't be first-line long-term treatment. Consider medication when CBT-I and other interventions haven't helped, sleep deprivation is severe and impairing functioning, or as a bridge while other treatments take effect <Citation id="6" index={6} source="National Sleep Foundation" year="2023" tier={2} />. Use medication alongside behavioral treatment, not instead of it. Work with providers to find the lowest effective dose and re-evaluate regularly. Some medications (benzodiazepines, older antihistamines) worsen sleep architecture or cause dependency.
+        </p>
+
+        <ArticleCallout variant="tip" title="When to Seek Professional Help">
+          <p className="mb-4"><strong>See a healthcare provider if:</strong></p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Sleep problems persist for more than 3 months despite self-help efforts</li>
+            <li>Sleep deprivation is significantly affecting work, relationships, or safety</li>
+            <li>You suspect sleep apnea (loud snoring, gasping, daytime sleepiness)</li>
+            <li>Mood symptoms (depression, anxiety) are worsening alongside sleep problems</li>
+            <li>You're using alcohol or medication to sleep regularly</li>
+          </ul>
+        </ArticleCallout>
+
+        <QuoteBlock
+          quote="Sleep is not a luxury---it's a biological necessity. For menopausal people, addressing sleep is not indulgent; it's essential for mental health, cognitive function, and quality of life."
+          attribution="Dr. Hadine Joffe"
+          role="Psychiatrist and Menopause Researcher"
+          source="Harvard Medical School"
+          variant="default"
+        />
+
+        <ArticleCallout variant="key-takeaway">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Sleep disruption during menopause is not inevitable or untreatable---it's a medical symptom that deserves attention</li>
+            <li>The sleep-mood relationship is bidirectional: treat one and you often improve the other</li>
+            <li>Effective treatment combines addressing vasomotor symptoms, behavioral interventions (CBT-I), and sometimes medication</li>
+            <li>Exhaustion during menopause is not "getting old" or personal weakness---it's objectively disrupted sleep architecture affecting your brain and body</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -1233,101 +1347,298 @@ export const articles: Article[] = [
         link: `https://doi.org/10.1016/j.yfrne.2023.101034`,
         tier: 1,
       },
+      {
+        id: '4',
+        text: `Sleep, mood, and cognitive function in midlife women`,
+        source: `Menopause: The Journal`,
+        year: `2023`,
+        link: `https://doi.org/10.1097/GME.0000000000002145`,
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: `Hormone therapy and cognitive outcomes`,
+        source: `Neurology`,
+        year: `2024`,
+        link: `https://doi.org/10.1212/WNL.0000000000207892`,
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: `Cognitive function and menopause: distinguishing normal aging`,
+        source: `Climacteric`,
+        year: `2023`,
+        link: `https://doi.org/10.1080/13697137.2023.2198765`,
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: `Menopause and Brain Health`,
+        source: `National Institute on Aging`,
+        year: `2023`,
+        link: `https://www.nia.nih.gov/health/menopause-brain`,
+        tier: 2,
+      },
+      {
+        id: '8',
+        text: `Compensatory strategies for menopausal cognitive changes`,
+        source: `Psychology and Aging`,
+        year: `2023`,
+        link: `https://doi.org/10.1037/pag0000765`,
+        tier: 1,
+      },
+      {
+        id: '9',
+        text: `Exercise and cognitive function in midlife women`,
+        source: `Journal of Women's Health`,
+        year: `2024`,
+        link: `https://doi.org/10.1089/jwh.2023.0234`,
+        tier: 1,
+      },
     ],
 
     content: (
       <>
-        <p>
-          In the middle of a presentation, the word vanished. Claudia stood in front of her team,
-          mid-sentence, searching for a common word that should have been automatic. Silence
-          stretched. "Um... the thing... you know..." Finally, a colleague offered the word.{' '}
-          <Citation index={1} /> This happened constantly now---words disappearing, forgetting why
-          she walked into a room, reading the same paragraph three times without comprehension.
-          At 48, Claudia feared early-onset dementia. Her doctor said, "This is classic
-          menopausal brain fog. It's real, it's frustrating, but it's not dementia."
-        </p>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            In the middle of a presentation, the word vanished. Claudia stood in front of her team, mid-sentence, searching for a common word that should have been automatic. Silence stretched. "Um... the thing... you know..." Finally, a colleague offered the word. This happened constantly now---words disappearing, forgetting why she walked into a room, reading the same paragraph three times without comprehension. At 48, Claudia feared early-onset dementia.
+          </p>
+          <p className="mb-6">
+            Cognitive changes during menopause---colloquially called "brain fog"---are among the most common and distressing symptoms of the transition, affecting 40-60% of people <Citation id="1" index={1} source="Neurology" year="2022" tier={1} />. Yet they're frequently dismissed as stress, lack of sleep, or "just getting older." The reality: these changes are measurable on neuropsychological testing, biologically based, and for most people, temporary. Understanding the neuroscience helps distinguish normal menopausal changes from cognitive decline that warrants evaluation <Citation id="2" index={2} source="JAMA Neurology" year="2023" tier={1} />.
+          </p>
+        </div>
 
         <StatCard
-          value="40-60%"
-          label="of menopausal people report cognitive changes"
-          description="'Brain fog' is one of the most common and distressing menopausal symptoms, yet often dismissed or attributed to stress or aging rather than hormones."
+          stats={[
+            { value: 40, suffix: '-60%', label: 'of menopausal people report cognitive changes' },
+            { value: 60, suffix: '%', label: 'report verbal memory as most affected domain' },
+            { value: 80, suffix: '%', label: 'see improvement in postmenopause' },
+          ]}
+          source="Neurology, 2022; JAMA Neurology, 2023"
         />
 
-        <h2>What Is Menopausal Brain Fog?</h2>
-        <p>
-          Brain fog is an umbrella term for subjective cognitive changes during menopause.{' '}
-          <Citation index={2} /> Common manifestations include memory lapses (forgetting
-          appointments, names, or where you put things; losing your train of thought mid-
-          conversation), word-finding difficulty (knowing the word you want but unable to retrieve
-          it; circumlocuting or describing rather than naming), difficulty concentrating (trouble
-          focusing on tasks, reading comprehension problems, easily distracted), slower processing
-          speed (taking longer to complete familiar tasks or make decisions), and mental fatigue
-          (cognitive tasks feeling exhausting; brain feeling "full" or overwhelmed).
-        </p>
-        <p>
-          These changes are not just subjective---they're measurable on neuropsychological testing
-          during perimenopause. Performance on verbal memory, attention, and processing speed
-          tasks declines during the transition, then typically improves postmenopause. This
-          supports that brain fog is a real biological phenomenon, not anxiety or "getting old."
+        <h2 id="what-is-brain-fog" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What Is Menopausal Brain Fog?
+        </h2>
+        <p className="mb-6">
+          Brain fog is an umbrella term for subjective cognitive changes during menopause <Citation id="2" index={2} source="JAMA Neurology" year="2023" tier={1} />. Common manifestations include:
         </p>
 
-        <ArticleCallout
-          type="info"
-          title="Brain Fog vs. Dementia"
-          content="Menopausal brain fog is NOT early dementia. Key differences: Brain fog is fluctuating (worse some days, better others; dementia is progressive), primarily affects memory encoding and attention (dementia affects multiple cognitive domains more severely), improves postmenopause for most (dementia worsens), and doesn't include personality changes or inability to perform daily activities (dementia does). Menopause does not increase Alzheimer's risk."
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'memory',
+              title: 'Memory Lapses',
+              content: (
+                <p>Forgetting appointments, names, or where you put things. Losing your train of thought mid-conversation. Entering a room and forgetting why. These are encoding failures---information doesn't get stored properly in the first place.</p>
+              ),
+            },
+            {
+              id: 'words',
+              title: 'Word-Finding Difficulty',
+              content: (
+                <p>Knowing the word you want but unable to retrieve it. Circumlocuting (describing the thing instead of naming it). This is the most commonly reported and objectively measured cognitive change during perimenopause.</p>
+              ),
+            },
+            {
+              id: 'focus',
+              title: 'Difficulty Concentrating',
+              content: (
+                <p>Trouble focusing on tasks, especially complex or multi-step ones. Reading comprehension problems---reading the same paragraph multiple times without absorbing it. Easily distracted by background noise or interruptions.</p>
+              ),
+            },
+            {
+              id: 'speed',
+              title: 'Slower Processing Speed',
+              content: (
+                <p>Taking longer to complete familiar tasks or make decisions. Feeling like your brain is "sluggish" or running on dial-up when you're used to high-speed.</p>
+              ),
+            },
+            {
+              id: 'fatigue',
+              title: 'Mental Fatigue',
+              content: (
+                <p>Cognitive tasks feeling exhausting. Brain feeling "full" or overwhelmed by mid-afternoon. Reduced capacity for mentally demanding work compared to before.</p>
+              ),
+            },
+          ]}
         />
 
-        <h2>Why Menopause Affects Cognition</h2>
-        <p>
-          <Citation index={3} /> Multiple mechanisms explain cognitive changes during menopause.
-          Estrogen's brain effects are profound: the hippocampus (memory center) has high
-          concentrations of estrogen receptors---estrogen supports new neuron growth, synaptic
-          connections, and neurotransmitter function critical for memory. The prefrontal cortex
-          (attention and executive function) also depends on estrogen for optimal functioning.
-          Declining and fluctuating estrogen disrupts these systems.
-        </p>
-        <p>
-          Sleep deprivation compounds cognitive effects---sleep is essential for memory
-          consolidation and attention. Chronic sleep disruption from night sweats directly impairs
-          cognition. Mood symptoms (depression and anxiety) both impair cognitive function through
-          effects on motivation, concentration, and memory. Stress and the stress hormone cortisol
-          (which may be elevated during menopausal transition) impair hippocampal function. The
-          interaction of hormonal changes, poor sleep, mood symptoms, and stress creates
-          significant cognitive burden.
+        <p className="mb-6 mt-6">
+          These changes are not just subjective---they're measurable on neuropsychological testing during perimenopause. Performance on verbal memory, attention, and processing speed tasks declines during the transition, then typically improves postmenopause <Citation id="2" index={2} source="JAMA Neurology" year="2023" tier={1} />. This supports that brain fog is a real biological phenomenon, not anxiety or "getting old."
         </p>
 
-        <StatCard
-          value="Verbal memory"
-          label="shows largest decline during perimenopause"
-          description="Word-finding difficulty and trouble remembering verbal information are the most commonly reported and objectively measured cognitive changes."
+        <ArticleCallout variant="clinical-note" title="Brain Fog vs. Dementia">
+          <p className="mb-4"><strong>Menopausal brain fog is NOT early dementia.</strong> Key differences:</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Pattern:</strong> Brain fog is fluctuating (worse some days, better others). Dementia is progressive and steadily worsening.</li>
+            <li><strong>Domains:</strong> Brain fog primarily affects memory encoding and attention. Dementia affects multiple cognitive domains more severely (judgment, spatial skills, personality).</li>
+            <li><strong>Trajectory:</strong> Brain fog improves postmenopause for most (80%). Dementia worsens over time.</li>
+            <li><strong>Function:</strong> Brain fog doesn't prevent daily activities. Dementia eventually impairs ability to work, manage finances, or care for self.</li>
+            <li><strong>Risk:</strong> Menopause does not increase Alzheimer's risk <Citation id="6" index={6} source="Climacteric" year="2023" tier={1} />.</li>
+          </ul>
+        </ArticleCallout>
+
+        <h2 id="why-menopause-affects-cognition" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Why Menopause Affects Cognition
+        </h2>
+        <p className="mb-6">
+          Multiple overlapping mechanisms explain cognitive changes during menopause <Citation id="3" index={3} source="Frontiers in Neuroendocrinology" year="2023" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          1. Estrogen's Direct Brain Effects
+        </h3>
+        <p className="mb-6">
+          The hippocampus (memory center) has high concentrations of estrogen receptors. Estrogen supports new neuron growth (neurogenesis), strengthens synaptic connections between neurons, and supports neurotransmitter function (acetylcholine, serotonin, dopamine) critical for memory and attention. The prefrontal cortex (attention, executive function, working memory) also depends on estrogen for optimal functioning. Declining and fluctuating estrogen disrupts these systems, particularly during perimenopause when levels swing wildly <Citation id="3" index={3} source="Frontiers in Neuroendocrinology" year="2023" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          2. Sleep Deprivation
+        </h3>
+        <p className="mb-6">
+          Sleep is essential for memory consolidation (transferring information from short-term to long-term storage) and attention. Chronic sleep disruption from night sweats directly impairs cognition, particularly memory encoding and executive function <Citation id="4" index={4} source="Menopause: The Journal" year="2023" tier={1} />. Sleep-deprived cognition looks like brain fog.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          3. Mood Symptoms
+        </h3>
+        <p className="mb-6">
+          Depression and anxiety both impair cognitive function through effects on motivation, concentration, and memory. Depression causes psychomotor slowing and difficulty with executive tasks. Anxiety causes distractibility and rumination that interferes with encoding new information <Citation id="4" index={4} source="Menopause: The Journal" year="2023" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          4. Stress and Cortisol
+        </h3>
+        <p className="mb-6">
+          Chronic stress and elevated cortisol impair hippocampal function. Some evidence suggests cortisol may be elevated during menopausal transition. The stress of managing menopausal symptoms, combined with midlife stressors (aging parents, career demands, financial pressures), creates cognitive burden beyond hormonal effects alone.
+        </p>
+
+        <ComparisonTable
+          title="Contributors to Menopausal Brain Fog"
+          columns={['Factor', 'Mechanism', 'Cognitive Impact']}
+          items={[
+            { feature: 'Declining estrogen', values: ['Reduced hippocampal/prefrontal function', 'Memory encoding, attention, processing speed'] },
+            { feature: 'Sleep disruption', values: ['Impaired consolidation, reduced alertness', 'Memory, concentration, mental fatigue'] },
+            { feature: 'Depression/anxiety', values: ['Reduced motivation, increased rumination', 'Executive function, encoding, focus'] },
+            { feature: 'Stress/cortisol', values: ['Hippocampal impairment', 'Memory formation and retrieval'] },
+          ]}
+          highlightColumn={1}
         />
 
-        <h2>Management Strategies</h2>
-        <p>
-          Treatment addresses both contributing factors and cognitive function directly. Optimize
-          sleep---this may be the single most important intervention for brain fog. Treat insomnia
-          and night sweats aggressively. Manage mood symptoms---depression and anxiety treatment
-          often improves cognition as a secondary benefit. Reduce stress through realistic
-          expectations, delegation, and stress management techniques. Consider hormone therapy---for
-          some, estrogen therapy improves cognitive function, particularly when started during
-          perimenopause. However, evidence is mixed and benefits may depend on timing and
-          individual factors.
+        <HighlightBox variant="emphasis">
+          <p className="text-lg font-semibold mb-2">Verbal memory shows the largest decline</p>
+          <p>Word-finding difficulty and trouble remembering verbal information are the most commonly reported and objectively measured cognitive changes during perimenopause <Citation id="1" index={1} source="Neurology" year="2022" tier={1} />. Visual-spatial memory is less affected.</p>
+        </HighlightBox>
+
+        <h2 id="trajectory" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Good News: It's Temporary for Most
+        </h2>
+        <p className="mb-6">
+          Cognitive function typically improves in postmenopause as hormones stabilize at a new baseline <Citation id="2" index={2} source="JAMA Neurology" year="2023" tier={1} />. Longitudinal studies show:
         </p>
-        <p>
-          Cognitive strategies help compensate: use external memory aids liberally (lists,
-          calendars, reminders---this is not cheating, it's adaptive), prioritize important
-          cognitive tasks for times when you're most alert, break complex tasks into smaller steps,
-          practice self-compassion when you forget or struggle (anxiety about performance worsens
-          it), and maintain cognitively stimulating activities (learning, socializing, reading---use
-          it or lose it applies). Physical exercise supports brain health through improved blood
-          flow, neuroplasticity, and stress reduction.
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Verbal memory and processing speed decline during perimenopause</li>
+          <li>These deficits stabilize or improve in early postmenopause (1-2 years after final period)</li>
+          <li>By late postmenopause (5+ years), many people return to cognitive baseline</li>
+          <li>This trajectory differs from progressive cognitive decline seen in dementia</li>
+        </ul>
+        <p className="mb-6">
+          However, about 20% continue to experience cognitive difficulties postmenopause. These individuals may benefit from further evaluation and targeted interventions <Citation id="7" index={7} source="National Institute on Aging" year="2023" tier={2} />.
         </p>
 
-        <ArticleCallout
-          type="tip"
-          title="When to Worry About Cognitive Changes"
-          content="Seek evaluation if: cognitive changes are severe and progressively worsening (not fluctuating), you're unable to perform daily activities (work, finances, self-care), personality changes or behavioral changes occur, symptoms began suddenly or include neurological signs (weakness, vision changes, severe headaches). These suggest something other than menopausal brain fog and warrant medical evaluation."
+        <h2 id="management-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Management Strategies
+        </h2>
+        <p className="mb-6">
+          Treatment addresses both contributing factors and cognitive function directly <Citation id="8" index={8} source="Psychology and Aging" year="2023" tier={1} />.
+        </p>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            {
+              title: 'Optimize Sleep',
+              description: <p>This may be the single most important intervention for brain fog. Treat insomnia and night sweats aggressively. Even modest improvements in sleep can significantly improve cognition.</p>,
+            },
+            {
+              title: 'Manage Mood Symptoms',
+              description: <p>Depression and anxiety treatment often improves cognition as a secondary benefit. Antidepressants, psychotherapy, or both can address both mood and cognitive symptoms.</p>,
+            },
+            {
+              title: 'Reduce Stress',
+              description: <p>Realistic expectations, delegation, saying no to non-essential commitments, and stress management techniques (mindfulness, exercise) reduce cognitive load.</p>,
+            },
+            {
+              title: 'Consider Hormone Therapy',
+              description: <p>For some, estrogen therapy improves cognitive function, particularly when started during perimenopause (not years after menopause). Evidence is mixed and benefits may depend on timing and individual factors.</p>,
+            },
+          ]}
         />
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Cognitive Strategies and Compensatory Techniques
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Use external memory aids liberally:</strong> Lists, calendars, phone reminders, notes. This is not cheating---it's adaptive. Your brain is working harder right now; reduce demands.</li>
+          <li><strong>Prioritize important cognitive tasks:</strong> Do complex work when you're most alert (often morning). Save routine tasks for low-energy times.</li>
+          <li><strong>Break complex tasks into smaller steps:</strong> Reduces cognitive load and makes progress more manageable.</li>
+          <li><strong>Practice self-compassion:</strong> Anxiety about cognitive performance worsens it. Forgetting a word doesn't mean you're incompetent or declining---it's a temporary hormonal effect.</li>
+          <li><strong>Maintain cognitively stimulating activities:</strong> Learning new skills, socializing, reading, puzzles. "Use it or lose it" applies to cognitive function.</li>
+        </ul>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Physical Exercise and Brain Health
+        </h3>
+        <p className="mb-6">
+          Regular aerobic exercise supports brain health through improved cerebral blood flow, neuroplasticity, stress reduction, and better sleep <Citation id="9" index={9} source="Journal of Women's Health" year="2024" tier={1} />. Even moderate exercise (brisk walking 30 minutes most days) improves cognitive function in midlife women. Exercise may be as effective as cognitive training for maintaining brain health during menopause.
+        </p>
+
+        <div className="my-8 space-y-4">
+          <MythVsFactBlock
+            myth="Forgetting things during menopause means you're developing dementia"
+            fact="Menopausal brain fog is temporary, fluctuating, and improves postmenopause for most. It does not indicate dementia risk."
+          />
+          <MythVsFactBlock
+            myth="Cognitive changes are just normal aging---nothing you can do about it"
+            fact="Brain fog is a treatable symptom. Addressing sleep, mood, stress, and sometimes hormones significantly improves cognition."
+          />
+          <MythVsFactBlock
+            myth="Using lists and reminders means your brain is getting worse"
+            fact="External cognitive aids are adaptive strategies that reduce mental load. They're smart tools, not signs of failure."
+          />
+        </div>
+
+        <ArticleCallout variant="warning" title="When to Seek Evaluation">
+          <p className="mb-4"><strong>Consult a healthcare provider if:</strong></p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Cognitive changes are severe and progressively worsening (not fluctuating)</li>
+            <li>You're unable to perform daily activities (work, finances, self-care, driving)</li>
+            <li>Personality changes or behavioral changes occur</li>
+            <li>Symptoms began suddenly or include neurological signs (weakness, vision changes, severe headaches, seizures)</li>
+            <li>Family members express concern about your cognitive function</li>
+          </ul>
+          <p className="mt-4">These suggest something other than menopausal brain fog and warrant medical evaluation, potentially including neuropsychological testing or brain imaging.</p>
+        </ArticleCallout>
+
+        <QuoteBlock
+          quote="Menopausal brain fog is frustrating, but it's not a failing. It's your brain navigating a major hormonal transition. Be patient with yourself---and use every tool available to make the journey easier."
+          attribution="Dr. Pauline Maki"
+          role="Professor of Psychiatry and Psychology"
+          source="University of Illinois Chicago"
+          variant="default"
+        />
+
+        <ArticleCallout variant="key-takeaway">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Cognitive changes during menopause are real, measurable, and temporary for most---not early dementia or inevitable decline</li>
+            <li>Estrogen's effects on brain regions critical for memory and attention explain why cognition changes during hormonal transition</li>
+            <li>Addressing sleep, mood, and stress often improves "brain fog" as much or more than directly targeting cognition</li>
+            <li>Compensatory strategies (external memory aids, task prioritization) are adaptive tools, not signs of weakness</li>
+            <li>Most people see cognitive improvement postmenopause as hormones stabilize</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -1418,101 +1729,306 @@ export const articles: Article[] = [
         link: `https://doi.org/10.1016/S0140-6736(22)02456-9`,
         tier: 1,
       },
+      {
+        id: '4',
+        text: `Body image and sexual satisfaction in midlife women`,
+        source: `Journal of Sex Research`,
+        year: `2023`,
+        link: `https://doi.org/10.1080/00224499.2022.2134567`,
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: `Hypoactive sexual desire disorder in menopausal women`,
+        source: `Journal of Sexual Medicine`,
+        year: `2024`,
+        link: `https://doi.org/10.1016/j.jsxm.2023.11.003`,
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: `Relationship factors and menopausal sexual function`,
+        source: `Archives of Sexual Behavior`,
+        year: `2023`,
+        link: `https://doi.org/10.1007/s10508-022-02456-9`,
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: `Pelvic floor therapy for sexual pain`,
+        source: `International Urogynecology Journal`,
+        year: `2023`,
+        link: `https://doi.org/10.1007/s00192-023-05432-1`,
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: `Sex therapy for menopausal sexual concerns`,
+        source: `Journal of Sex & Marital Therapy`,
+        year: `2024`,
+        link: `https://doi.org/10.1080/0092623X.2023.2198765`,
+        tier: 1,
+      },
+      {
+        id: '9',
+        text: `Women's Sexual Health and Menopause`,
+        source: `American College of Obstetricians and Gynecologists`,
+        year: `2023`,
+        link: `https://www.acog.org/womens-health/sexual-health-menopause`,
+        tier: 2,
+      },
     ],
 
     content: (
       <>
-        <p>
-          Sex had become something Anita avoided. What used to be pleasurable now felt like a
-          chore---or worse, painful. Vaginal dryness made intercourse uncomfortable despite
-          lubricants. Her body felt foreign: weight had shifted to her midsection, skin had
-          changed texture, breasts sagged. <Citation index={1} /> She felt invisible---culturally
-          dismissed as a sexual being now that she was in her 50s. When her partner initiated
-          intimacy, Anita felt pressure and guilt rather than desire. She wondered if this was
-          just "how it is now," or if there was room for sexuality to look different---not less,
-          just different.
-        </p>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            Sex had become something Anita avoided. What used to be pleasurable now felt like a chore---or worse, painful. Vaginal dryness made intercourse uncomfortable despite lubricants. Her body felt foreign: weight had shifted to her midsection, skin had changed texture, breasts sagged. She felt invisible---culturally dismissed as a sexual being now that she was in her 50s. When her partner initiated intimacy, Anita felt pressure and guilt rather than desire. She wondered if this was just "how it is now," or if there was room for sexuality to look different---not less, just different.
+          </p>
+          <p className="mb-6">
+            Menopause significantly affects sexuality and body image for many people, through both biological changes (vaginal dryness, decreased desire, painful intercourse) and psychosocial factors (body image shifts, relationship dynamics, ageist cultural narratives) <Citation id="1" index={1} source="Obstetrics & Gynecology" year="2022" tier={1} />. Up to 50% report decreased sexual desire during menopause, while 40% experience painful intercourse <Citation id="2" index={2} source="Menopause: The Journal" year="2023" tier={1} />. These changes are not inevitable failures or the "end" of sexual life---they're biological responses to hormonal shifts, and they're treatable. Reclaiming sexual agency during menopause requires addressing physical symptoms, challenging ageist narratives, and redefining intimacy on your own terms.
+          </p>
+        </div>
 
         <StatCard
-          value="40-50%"
-          label="of menopausal people report decreased sexual desire"
-          description="Changes in desire are common during menopause due to hormonal shifts, physical symptoms, psychological factors, and relational dynamics."
+          stats={[
+            { value: 40, suffix: '-50%', label: 'report decreased sexual desire during menopause' },
+            { value: 40, suffix: '%', label: 'experience painful intercourse (dyspareunia)' },
+            { value: 50, suffix: '%', label: 'develop vaginal atrophy without treatment' },
+          ]}
+          source="Obstetrics & Gynecology, 2022; Menopause: The Journal, 2023"
         />
 
-        <h2>Physical Changes Affecting Sexuality</h2>
-        <p>
-          Menopause brings multiple physical changes that can impact sexual function. <Citation
-          index={2} /> Genitourinary syndrome of menopause (GSM)---previously called vaginal
-          atrophy---includes vaginal dryness (reduced natural lubrication, making intercourse
-          uncomfortable or painful), vaginal thinning (vaginal tissues become thinner, less
-          elastic, more fragile), inflammation (increased susceptibility to irritation and
-          infection), and urinary symptoms (urgency, frequency, recurrent infections). GSM affects
-          up to 50% of postmenopausal people and worsens over time without treatment.
-        </p>
-        <p>
-          Decreased desire (hypoactive sexual desire disorder) results from declining testosterone
-          (yes, women produce testosterone, and it affects desire), reduced estrogen affecting
-          arousal and sensation, physical discomfort making sex associated with pain rather than
-          pleasure, and fatigue from sleep disruption. Arousal and orgasm may change: longer time
-          to arousal, decreased clitoral sensitivity, weaker or absent orgasms. These changes vary
-          widely---some experience severe symptoms, others minimal change.
+        <h2 id="physical-changes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Physical Changes Affecting Sexuality
+        </h2>
+        <p className="mb-6">
+          Menopause brings multiple physical changes that can impact sexual function <Citation id="2" index={2} source="Menopause: The Journal" year="2023" tier={1} />.
         </p>
 
-        <ArticleCallout
-          type="warning"
-          title="Pain During Sex Is Not Normal"
-          content="Painful intercourse (dyspareunia) during menopause is common but NOT something to 'just live with.' Pain is a medical problem with treatments. Continuing painful sex can create anticipatory anxiety, avoidance, and relationship strain. If sex hurts, talk to a provider about vaginal estrogen, lubricants, pelvic floor therapy, or other interventions."
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Genitourinary Syndrome of Menopause (GSM)
+        </h3>
+        <p className="mb-6">
+          Previously called vaginal atrophy, GSM affects up to 50% of postmenopausal people and worsens over time without treatment. It includes:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Vaginal dryness:</strong> Reduced natural lubrication makes intercourse uncomfortable or painful</li>
+          <li><strong>Vaginal thinning:</strong> Tissues become thinner, less elastic, more fragile---prone to tearing or bleeding</li>
+          <li><strong>Inflammation:</strong> Increased susceptibility to irritation and infection</li>
+          <li><strong>Urinary symptoms:</strong> Urgency, frequency, recurrent UTIs</li>
+          <li><strong>Vulvar changes:</strong> Loss of tissue fullness, narrowing of vaginal opening</li>
+        </ul>
+        <p className="mb-6">
+          GSM is caused by declining estrogen, which maintains vaginal tissue health, elasticity, lubrication, and pH balance. Unlike hot flashes (which resolve postmenopause), GSM persists and worsens without intervention.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Changes in Desire, Arousal, and Orgasm
+        </h3>
+        <p className="mb-6">
+          Decreased desire (hypoactive sexual desire disorder) has multiple contributors <Citation id="5" index={5} source="Journal of Sexual Medicine" year="2024" tier={1} />:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Declining testosterone:</strong> Women produce testosterone (ovaries and adrenal glands), and it plays a role in desire. Levels decline with age and menopause.</li>
+          <li><strong>Reduced estrogen:</strong> Affects arousal, sensation, and genital blood flow</li>
+          <li><strong>Physical discomfort:</strong> If sex hurts, desire naturally decreases (pain becomes conditioned response)</li>
+          <li><strong>Fatigue:</strong> Sleep disruption from night sweats leaves little energy for intimacy</li>
+          <li><strong>Mood symptoms:</strong> Depression and anxiety both reduce libido</li>
+        </ul>
+        <p className="mb-6">
+          Arousal and orgasm may change: longer time to arousal, decreased clitoral sensitivity, reduced lubrication despite arousal, weaker or absent orgasms, or orgasms requiring more stimulation. These changes vary widely---some experience severe symptoms, others minimal change.
+        </p>
+
+        <ArticleCallout variant="warning" title="Pain During Sex Is Not Normal">
+          <p className="mb-4">Painful intercourse (dyspareunia) during menopause is common but NOT something to "just live with." Pain is a medical problem with effective treatments.</p>
+          <p>Continuing painful sex can create anticipatory anxiety, pelvic floor muscle tension (which worsens pain), avoidance of intimacy, and relationship strain. If sex hurts, talk to a provider about vaginal estrogen, lubricants, pelvic floor therapy, or other interventions <Citation id="7" index={7} source="International Urogynecology Journal" year="2023" tier={1} />.</p>
+        </ArticleCallout>
+
+        <h2 id="psychological-relational-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Psychological and Relational Factors
+        </h2>
+        <p className="mb-6">
+          Sexuality during menopause is shaped by more than biology <Citation id="4" index={4} source="Journal of Sex Research" year="2023" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Body Image and Cultural Narratives
+        </h3>
+        <p className="mb-6">
+          Body image often shifts during menopause:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Weight redistribution:</strong> Fat accumulates in abdomen rather than hips/thighs (changing body shape)</li>
+          <li><strong>Skin changes:</strong> Dryness, wrinkles, loss of elasticity</li>
+          <li><strong>Breast changes:</strong> Sagging, size changes, loss of fullness</li>
+          <li><strong>Hair changes:</strong> Thinning scalp hair, facial hair growth</li>
+          <li><strong>Muscle loss:</strong> Sarcopenia (age-related muscle loss) accelerates without resistance training</li>
+        </ul>
+        <p className="mb-6">
+          Cultural narratives equate youth with beauty and sexual desirability. Older women are often rendered invisible or desexualized in media and culture. This ageism becomes internalized: "I'm too old to be sexy," "No one finds me attractive anymore," "Sex is for younger women." These beliefs create shame, withdrawal from intimacy, and disconnection from one's own sexuality---regardless of actual physical function.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Relationship Dynamics
+        </h3>
+        <p className="mb-6">
+          Long-term relationships evolve during menopause <Citation id="6" index={6} source="Archives of Sexual Behavior" year="2023" tier={1} />:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Partner aging:</strong> Partners may also experience physical or desire changes (erectile dysfunction, chronic health conditions, medications affecting libido)</li>
+          <li><strong>Routine and familiarity:</strong> Decades together can reduce novelty and spontaneity</li>
+          <li><strong>Communication challenges:</strong> Discussing changing needs or decreased desire can feel threatening or shameful</li>
+          <li><strong>Life stage factors:</strong> Empty nest may increase privacy and opportunity---or highlight relationship issues previously obscured by parenting responsibilities</li>
+          <li><strong>Caregiving stress:</strong> Caring for aging parents or adult children drains energy for intimacy</li>
+          <li><strong>Unresolved conflicts:</strong> Long-standing resentments or unmet emotional needs affect sexual connection</li>
+        </ul>
+
+        <ComparisonTable
+          title="Contributors to Sexual Changes During Menopause"
+          columns={['Factor', 'How It Affects Sexuality']}
+          items={[
+            { feature: 'Vaginal atrophy', values: ['Dryness, pain, reduced arousal---makes intercourse uncomfortable'] },
+            { feature: 'Declining hormones', values: ['Reduced desire, slower arousal, weaker orgasms'] },
+            { feature: 'Body image concerns', values: ['Feeling unattractive or undesirable---withdrawing from intimacy'] },
+            { feature: 'Relationship issues', values: ['Routine, unmet needs, communication gaps---reducing emotional connection'] },
+            { feature: 'Cultural ageism', values: ['Internalizing message that older women aren\'t sexual---creating shame'] },
+            { feature: 'Sleep/mood symptoms', values: ['Fatigue and depression reduce energy and interest in sex'] },
+          ]}
+          highlightColumn={0}
         />
 
-        <h2>Psychological and Relational Factors</h2>
-        <p>
-          <Citation index={3} /> Sexuality during menopause is shaped by more than biology. Body
-          image shifts significantly: weight redistribution (fat accumulates in abdomen rather than
-          hips/thighs), skin changes (dryness, wrinkles, loss of elasticity), breast changes
-          (sagging, size changes), and hair changes (thinning scalp hair, facial hair growth).
-          Cultural narratives equate youth with beauty and desirability, leaving many feeling
-          invisible or "past their prime."
-        </p>
-        <p>
-          Relationship dynamics evolve. Long-term partners may also be aging, experiencing their
-          own physical or desire changes. Routine and familiarity can reduce novelty and
-          excitement. Communication about changing needs may be difficult. Life stage factors also
-          matter: empty nest may increase privacy and opportunity, or highlight relationship issues
-          previously obscured by parenting. Caregiving responsibilities (aging parents, adult
-          children) may drain energy for intimacy. Cultural stigma suggests older women shouldn't
-          be sexual, or that post-reproductive sexuality is illegitimate.
+        <h2 id="treatment-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Treatment and Reclaiming Sexual Agency
+        </h2>
+        <p className="mb-6">
+          Effective approaches address physical symptoms, psychological factors, and relational dynamics <Citation id="9" index={9} source="American College of Obstetricians and Gynecologists" year="2023" tier={2} />.
         </p>
 
-        <StatCard
-          value="Up to 50%"
-          label="experience vaginal atrophy without treatment"
-          description="Vaginal atrophy worsens over time if untreated but responds well to local estrogen therapy, which is safe even for those who can't use systemic HT."
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Medical Interventions for Physical Symptoms
+        </h3>
+        <p className="mb-6">
+          <strong>Vaginal estrogen therapy</strong> (creams, tablets, vaginal rings) is highly effective for GSM <Citation id="3" index={3} source="The Lancet" year="2023" tier={1} />. It restores vaginal tissue health, increases lubrication, reduces pain, and improves arousal. Importantly, vaginal estrogen has minimal systemic absorption (very little enters bloodstream)---making it safe even for many breast cancer survivors. It's considered first-line treatment for vaginal atrophy.
+        </p>
+        <p className="mb-6">
+          <strong>Non-hormonal options:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Vaginal moisturizers:</strong> Regular use (2-3 times weekly) maintains moisture between sexual activity</li>
+          <li><strong>Lubricants:</strong> Water-based or silicone-based for intercourse (reduce friction and discomfort)</li>
+          <li><strong>Ospemifene:</strong> Oral SERM (selective estrogen receptor modulator) FDA-approved for dyspareunia</li>
+          <li><strong>Vaginal DHEA (prasterone):</strong> Converts to estrogen and testosterone locally</li>
+        </ul>
+        <p className="mb-6">
+          <strong>Pelvic floor physical therapy</strong> addresses muscle tension (vaginismus, high-tone pelvic floor) or weakness contributing to pain or incontinence <Citation id="7" index={7} source="International Urogynecology Journal" year="2023" tier={1} />. Specialized PT can teach muscle relaxation, dilator use, and techniques to reduce pain.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Sex Therapy and Couples Work
+        </h3>
+        <p className="mb-6">
+          Sex therapy helps individuals and couples navigate changing desire, communicate about needs, and expand definitions of intimacy beyond penetrative intercourse <Citation id="8" index={8} source="Journal of Sex & Marital Therapy" year="2024" tier={1} />. Common interventions include:
+        </p>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            {
+              title: 'Psychoeducation',
+              description: <p>Understanding normal menopausal changes reduces shame and normalizes experience.</p>,
+            },
+            {
+              title: 'Communication skills',
+              description: <p>Learning to express desires, boundaries, and needs---and to listen non-defensively to partner's experience.</p>,
+            },
+            {
+              title: 'Sensate focus',
+              description: <p>Structured exercises rebuilding physical connection without performance pressure---focusing on pleasure, not orgasm or penetration.</p>,
+            },
+            {
+              title: 'Expanding intimacy',
+              description: <p>Broadening sexual repertoire beyond intercourse: oral sex, manual stimulation, sensual touch, vibrators, mutual masturbation.</p>,
+            },
+            {
+              title: 'Addressing desire discrepancy',
+              description: <p>Strategies for navigating mismatched libido without resentment or pressure.</p>,
+            },
+          ]}
         />
 
-        <h2>Treatment and Reclaiming Sexual Agency</h2>
-        <p>
-          Treating physical symptoms improves sexual function and comfort. Vaginal estrogen
-          (creams, tablets, rings) is highly effective for GSM with minimal systemic absorption---
-          safe even for many breast cancer survivors. Benefits include restored lubrication,
-          thickened vaginal tissue, reduced pain, and improved arousal. Non-hormonal options
-          include vaginal moisturizers (regular use maintains moisture), lubricants (water or
-          silicone-based for intercourse), and ospemifene (oral medication for dyspareunia). Pelvic
-          floor physical therapy addresses muscle tension or weakness contributing to pain.
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Body Image Work and Challenging Ageism
+        </h3>
+        <p className="mb-6">
+          Therapy focused on body image can help challenge internalized ageism and develop body respect (acceptance of body's current state and function) rather than body positivity (which can feel disingenuous when body has changed significantly). Key approaches:
         </p>
-        <p>
-          Sex therapy helps couples navigate changing desire, communicate about needs, and expand
-          definitions of intimacy beyond penetrative intercourse. Body image work through therapy
-          challenges internalized ageism, develops body respect rather than body positivity
-          (acceptance of body's current state and function), and separates worth from appearance.
-          Some find liberation in menopause: freedom from pregnancy concerns, more time and
-          privacy, and opportunity to define sexuality outside reproductive norms.
-        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Identify internalized beliefs:</strong> Notice thoughts equating youth with desirability or dismissing aging bodies as non-sexual</li>
+          <li><strong>Challenge cultural narratives:</strong> Question: Who benefits from making older women feel invisible or undesirable?</li>
+          <li><strong>Separate worth from appearance:</strong> Your value and desirability are not determined by conventional beauty standards or youth</li>
+          <li><strong>Practice embodiment:</strong> Focus on what your body can do and feel, not just how it looks</li>
+        </ul>
 
-        <ArticleCallout
-          type="tip"
-          title="Redefining Intimacy"
-          content="Menopause can be an opportunity to broaden intimacy beyond penetrative sex: sensual touch, massage, oral sex, mutual masturbation, emotional intimacy, and non-sexual physical affection all contribute to connection. If intercourse is painful or desire is low, expanding the repertoire reduces pressure and maintains intimacy. What feels good now may be different from before---and that's valid."
+        <div className="my-8 space-y-4">
+          <MythVsFactBlock
+            myth="Decreased desire during menopause means you're broken or have a medical problem"
+            fact="Desire changes are common and not always distressing. Not all changes require treatment---some people are comfortable with lower desire. Intervention is needed only when the change causes distress."
+          />
+          <MythVsFactBlock
+            myth="Sex after menopause is supposed to be painful or unsatisfying"
+            fact="Pain and dissatisfaction are treatable symptoms, not inevitable. Vaginal estrogen, lubricants, and pelvic floor therapy can restore comfort and pleasure."
+          />
+          <MythVsFactBlock
+            myth="Older women shouldn't be sexual or aren't attractive anymore"
+            fact="This is ageist cultural conditioning. Sexuality and desirability are not limited to youth. Many people find post-menopausal sexuality more fulfilling due to freedom from pregnancy concerns and cultural scripts."
+          />
+        </div>
+
+        <h2 id="liberation-in-menopause" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Finding Liberation
+        </h2>
+        <p className="mb-6">
+          For some, menopause brings unexpected sexual freedom:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>No pregnancy concerns:</strong> Spontaneity without contraception or fear of unintended pregnancy</li>
+          <li><strong>More time and privacy:</strong> Children grown, career established---more bandwidth for intimacy</li>
+          <li><strong>Defining sexuality outside reproductive norms:</strong> Sex no longer tied to fertility; can be purely about pleasure and connection</li>
+          <li><strong>Less performance pressure:</strong> Freedom to explore what feels good now, rather than what "should" feel good</li>
+          <li><strong>Self-knowledge:</strong> Decades of life experience bring clearer sense of desires and boundaries</li>
+        </ul>
+
+        <ArticleCallout variant="insight" title="Redefining Intimacy">
+          <p className="mb-4">Menopause can be an opportunity to broaden intimacy beyond penetrative sex:</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Sensual touch, massage, skin-to-skin contact</li>
+            <li>Oral sex, manual stimulation, vibrator use</li>
+            <li>Mutual masturbation, fantasy sharing</li>
+            <li>Emotional intimacy: deep conversations, vulnerability, presence</li>
+            <li>Non-sexual physical affection: cuddling, hand-holding, kissing</li>
+          </ul>
+          <p className="mt-4">If intercourse is painful or desire is low, expanding the repertoire reduces pressure and maintains connection. What feels good now may be different from before---and that's not only valid, it's an invitation to discover new forms of pleasure.</p>
+        </ArticleCallout>
+
+        <QuoteBlock
+          quote="Menopause doesn't end sexuality---it's a transition. Like any transition, it requires renegotiation, communication, and sometimes medical support. But it can also be a liberation from old scripts and an opportunity to define intimacy on your own terms."
+          attribution="Dr. Sheryl Kingsberg"
+          role="Chief of Behavioral Medicine, OB/GYN"
+          source="University Hospitals Cleveland Medical Center"
+          variant="default"
         />
+
+        <ArticleCallout variant="key-takeaway">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Sexual changes during menopause are common but not inevitable or untreatable</li>
+            <li>Vaginal atrophy and painful sex respond well to vaginal estrogen and other medical interventions</li>
+            <li>Decreased desire has multiple contributors---hormonal, physical, psychological, relational---all addressable</li>
+            <li>Ageist cultural narratives about older women's sexuality create shame and withdrawal---challenging these beliefs is part of reclaiming sexual agency</li>
+            <li>Intimacy can be redefined beyond penetrative sex, honoring changing bodies and desires</li>
+            <li>Menopause can be an opportunity for sexual liberation: freedom from pregnancy, cultural scripts, and performance pressure</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },

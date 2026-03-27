@@ -7,6 +7,13 @@ import {
   ComparisonTable,
   StatCard,
   ArticleAccordion,
+  QuoteBlock,
+  BeforeAfter,
+  ArticleChart,
+  MythVsFactBlock,
+  ArticleTabs,
+  ProgressSteps,
+  HighlightBox,
 } from '../../../components/article/blocks';
 
 export const depressionSpecificPopulationsArticlesA: Article[] = [
@@ -17,11 +24,31 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
     description: "Men experience depression at high rates but are less likely to be diagnosed or seek help. Learn why depression in men often looks different and what to watch for.",
     image: "/images/articles/cat07/cover-051.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 8,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Depression', 'Men', 'Mental Health', 'Gender Differences'],
+    summary: 'Men experience depression at high rates but are significantly less likely to be diagnosed or seek treatment. Depression in men often manifests differently than in women—through anger, irritability, and risk-taking rather than sadness—leading to tragic underdiagnosis and contributing to men dying by suicide at 3-4 times the rate of women.',
+    keyFacts: [
+      { text: 'Men die by suicide at 3-4 times the rate of women despite lower diagnosed depression rates', citationIndex: 5 },
+      { text: 'Traditional masculinity norms discourage men from expressing vulnerability or seeking mental health help', citationIndex: 3 },
+      { text: 'Men are more likely to exhibit anger, irritability, and risk-taking as depression symptoms rather than sadness', citationIndex: 4 },
+      { text: 'Substance use is significantly more common in depressed men as a form of self-medication', citationIndex: 6 },
+      { text: 'Evidence-based treatments like CBT and behavioral activation are effective when men do engage in care', citationIndex: 7 },
+    ],
+    sparkMoment: 'Seeking help for depression isn\'t weakness—it\'s the most courageous thing a man can do, and it might save his life.',
+    practicalExercise: {
+      title: 'Depression Check-In for Men',
+      steps: [
+        { title: 'Notice Your Patterns', description: 'Over the next week, track when you feel more irritable, withdrawn, or numb. Note what triggers these feelings.' },
+        { title: 'Ask Someone You Trust', description: 'Reach out to a close friend, partner, or family member and ask: "Have you noticed me seeming different lately?" Listen without defending.' },
+        { title: 'Rate Your Energy', description: 'On a scale of 1-10, how\'s your energy been for the past two weeks? If it\'s consistently below 5, that\'s a red flag.' },
+        { title: 'Take One Small Action', description: 'If you recognize yourself in these patterns, take one step: talk to your doctor, call a therapist, or reach out to a crisis line.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Try the Symptom Navigator',
+    },
     citations: [
       {
         id: '1',
@@ -99,11 +126,20 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           </p>
         </div>
 
+        <StatCard
+          stats={[
+            { value: 6, suffix: 'M', label: 'American men living with depression annually' },
+            { value: 75, suffix: '%', label: 'Of those who never receive treatment' },
+            { value: 80, suffix: '%', label: 'Of suicides are men' },
+          ]}
+          source="JAMA Psychiatry, 2017"
+        />
+
         <h2 id="why-underdiagnosed" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why Depression in Men Is Underdiagnosed
         </h2>
         <p className="mb-6">
-          Several factors contribute to the significant underdiagnosis of depression in men <Citation id="2" index={2} source="American Psychological Association" year="2020" tier={3} />:
+          Several factors contribute to the significant underdiagnosis of depression in men <Citation id="2" index={2} source="American Psychological Association" year="2020" tier={3} />. This isn't a simple oversight—it's a systemic problem rooted in how we understand both masculinity and mental illness.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -182,6 +218,47 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           <li><strong>Fatigue and low energy:</strong> Feeling physically drained despite adequate rest</li>
         </ul>
 
+        <h2 id="the-hidden-toll" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Hidden Toll: Why This Matters
+        </h2>
+        <p className="mb-6">
+          The consequences of undiagnosed male depression extend far beyond individual suffering. When men don't recognize or address their depression, the ripple effects impact families, workplaces, and communities.
+        </p>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Relationship Breakdown
+        </h3>
+        <p className="mb-6">
+          Unaddressed depression often manifests as emotional withdrawal, irritability, or criticism toward partners and family members. Men may "check out" emotionally, leading to conflict and disconnection. Many divorces and family estrangements have untreated depression as a hidden driver.
+        </p>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Workplace Impact
+        </h3>
+        <p className="mb-6">
+          Depression reduces productivity, impairs decision-making, and increases absenteeism. Men may compensate by overworking (to avoid feeling), which leads to burnout. Others disengage entirely, risking job loss or career stagnation.
+        </p>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Physical Health Consequences
+        </h3>
+        <p className="mb-6">
+          Depression is linked to increased risk of heart disease, stroke, diabetes, and chronic pain. Men with depression are less likely to adhere to medical treatment for other conditions, worsening overall health outcomes. The mind-body connection means untreated mental health problems accelerate physical decline.
+        </p>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          The Suicide Crisis
+        </h3>
+        <p className="mb-6">
+          The most devastating consequence is suicide. Men account for roughly 80% of suicide deaths in the United States, with middle-aged and older white men at highest risk <Citation id="5" index={5} source="World Health Organization" year="2021" tier={2} />. Many of these deaths are preventable if depression were recognized and treated earlier.
+        </p>
+
+        <ArticleCallout variant="clinical-note">
+          <p className="mb-2">
+            <strong>A note on intersectionality:</strong> While men across all demographics face barriers to mental health care, the risks are compounded for men of color, LGBTQ+ men, and men in rural areas who face additional barriers including systemic racism, discrimination, and lack of access to culturally competent care.
+          </p>
+        </ArticleCallout>
+
         <h2 id="barriers-to-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Barriers to Help-Seeking
         </h2>
@@ -242,13 +319,52 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           Effective treatment for men with depression often involves <Citation id="8" index={8} source="National Alliance on Mental Illness" year="2021" tier={3} />:
         </p>
 
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Evidence-Based Therapy Approaches
+        </h3>
+        <p className="mb-6">
+          Many men respond well to structured, goal-oriented therapies that feel less like "talking about feelings" and more like skills training:
+        </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Therapy (CBT, behavioral activation):</strong> Practical, skills-based approaches that focus on problem-solving and action</li>
-          <li><strong>Medication (if needed):</strong> Antidepressants can be highly effective, especially for moderate to severe depression</li>
-          <li><strong>Lifestyle interventions:</strong> Exercise, sleep regulation, reducing substance use</li>
-          <li><strong>Group therapy or support groups:</strong> Connecting with other men who "get it" can reduce isolation</li>
-          <li><strong>Couples or family therapy:</strong> If depression is affecting relationships, involving partners can help</li>
+          <li><strong>Cognitive-Behavioral Therapy (CBT):</strong> Focuses on identifying and changing negative thought patterns. It's practical, time-limited (12-16 sessions), and has strong evidence for treating depression <Citation id="7" index={7} source="American Journal of Men Health" year="2020" tier={1} />.</li>
+          <li><strong>Behavioral Activation:</strong> Emphasizes getting back to activities that matter, even when motivation is low. It's action-focused rather than insight-focused.</li>
+          <li><strong>Problem-Solving Therapy:</strong> Teaches systematic approaches to tackling life stressors contributing to depression.</li>
+          <li><strong>Acceptance and Commitment Therapy (ACT):</strong> Helps men align actions with values rather than getting stuck in emotional avoidance.</li>
         </ul>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Medication
+        </h3>
+        <p className="mb-6">
+          Antidepressants (typically SSRIs like sertraline or escitalopram, or SNRIs like venlafaxine) can be highly effective for moderate to severe depression. They work best when combined with therapy. It typically takes 4-6 weeks to feel the full effect, and finding the right medication may take some trial and error.
+        </p>
+        <p className="mb-6">
+          Many men worry about side effects (particularly sexual side effects). Talk openly with your doctor—there are multiple medication options, and adjustments can often resolve these issues.
+        </p>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Lifestyle and Self-Care
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Exercise:</strong> Aerobic exercise has antidepressant effects comparable to medication for mild to moderate depression. Aim for 30 minutes most days.</li>
+          <li><strong>Sleep:</strong> Consistent sleep-wake times, limiting screen time before bed, and creating a sleep-friendly environment all help.</li>
+          <li><strong>Reduce substance use:</strong> Alcohol and drugs may provide temporary relief but worsen depression over time <Citation id="6" index={6} source="Addiction" year="2019" tier={1} />.</li>
+          <li><strong>Social connection:</strong> Even when it feels hard, maintaining contact with friends and family protects against depression worsening.</li>
+        </ul>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Group and Peer Support
+        </h3>
+        <p className="mb-6">
+          Men's therapy groups or support groups (like Man Therapy or Men's Sheds programs) create spaces where men can talk openly without judgment. Hearing other men share similar struggles reduces shame and isolation.
+        </p>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Involving Partners and Family
+        </h3>
+        <p className="mb-6">
+          If depression is straining relationships, couples or family therapy can help. Partners learn how to support without enabling, and communication patterns improve. This can be especially helpful when children are involved.
+        </p>
 
         <h2 id="supporting-a-man" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How to Support a Man with Depression
@@ -265,14 +381,45 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           <li><strong>Don't wait for a crisis:</strong> Early intervention is easier and more effective than waiting until things are severe</li>
         </ul>
 
+        <h2 id="first-steps" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Taking the First Step
+        </h2>
+        <p className="mb-6">
+          If you recognize yourself in this article, here's what to do next:
+        </p>
+
+        <ul className="list-decimal pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Start with your primary care doctor.</strong> Say: "I haven't been feeling like myself. I think I might be depressed." They can rule out medical causes (thyroid problems, sleep apnea, etc.) and refer you to a therapist or psychiatrist.
+          </li>
+          <li>
+            <strong>Find a therapist.</strong> Use directories like Psychology Today, Open Path Collective, or your insurance provider's list. Look for someone who specializes in working with men or uses CBT/behavioral approaches.
+          </li>
+          <li>
+            <strong>Give it time.</strong> The first therapist might not be the right fit—that's normal. Don't give up after one session.
+          </li>
+          <li>
+            <strong>Tell someone you trust.</strong> Let a partner, friend, or family member know you're struggling. Just saying it out loud reduces the weight of carrying it alone.
+          </li>
+          <li>
+            <strong>Make one small change.</strong> You don't have to overhaul your life overnight. Start with one thing: a 10-minute walk, reaching out to a friend, or setting a consistent bedtime.
+          </li>
+        </ul>
+
+        <ArticleCallout variant="action" title="Remember">
+          <p>
+            Depression lies. It tells you that you're weak, that nothing will help, that you don't deserve to feel better. Those thoughts are symptoms of the illness, not reality. Treatment works. Recovery is possible. You don't have to do this alone.
+          </p>
+        </ArticleCallout>
+
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If you (or a man you care about) are experiencing persistent low mood, irritability, withdrawal, or changes in functioning that last more than two weeks, it's time to talk to a healthcare provider.
+          If you (or a man you care about) are experiencing persistent low mood, irritability, withdrawal, or changes in functioning that last more than two weeks, it's time to talk to a healthcare provider. Earlier is better—depression is easier to treat when caught early.
         </p>
         <p className="mb-6">
-          <strong>If you or someone you know is having thoughts of suicide,</strong> call or text 988 (Suicide & Crisis Lifeline) or go to the nearest emergency room. Depression is treatable, and help is available.
+          <strong>If you or someone you know is having thoughts of suicide,</strong> call or text 988 (Suicide & Crisis Lifeline) or go to the nearest emergency room immediately. Depression is treatable, help is available, and lives can be saved.
         </p>
       </>
     ),
@@ -285,11 +432,31 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
     description: "Women experience depression at twice the rate of men due to a complex interplay of biological, psychological, and social factors. Here's what the research shows.",
     image: '/images/articles/cat07/cover-052.svg',
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 9,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Depression', 'Women', 'Mental Health', 'Hormones'],
+    summary: 'Women are twice as likely as men to experience depression, driven by a complex interplay of hormonal fluctuations, trauma exposure, caregiving burdens, and systemic inequalities. Understanding these unique risk factors is essential for effective prevention and treatment.',
+    keyFacts: [
+      { text: 'Women have a 21% lifetime risk of major depression compared to 13% in men, a gap that emerges at puberty', citationIndex: 1 },
+      { text: 'Hormonal transitions including PMDD, perinatal periods, and menopause create windows of heightened vulnerability', citationIndex: 2 },
+      { text: 'Gender-based violence and trauma exposure are major drivers of the depression gender gap', citationIndex: 6 },
+      { text: 'Women spend significantly more time in unpaid caregiving roles, contributing to chronic stress and isolation', citationIndex: 7 },
+      { text: 'Depression and anxiety frequently co-occur in women, requiring integrated treatment approaches', citationIndex: 8 },
+    ],
+    sparkMoment: 'Depression in women isn\'t a sign of weakness—it\'s a rational response to very real biological, social, and structural challenges.',
+    practicalExercise: {
+      title: 'Recognizing Your Depression Patterns',
+      steps: [
+        { title: 'Track Your Cycle', description: 'For one month, note your mood in relation to your menstrual cycle. Do you notice patterns of sadness, irritability, or fatigue at specific times?' },
+        { title: 'Identify Your Stressors', description: 'List the roles you\'re juggling (employee, caregiver, partner, etc.). Which ones feel most overwhelming? Where can you ask for help?' },
+        { title: 'Check Your Support Network', description: 'Who can you talk to honestly about how you\'re feeling? If the answer is "no one," that itself is a red flag worth addressing.' },
+        { title: 'Make One Change', description: 'Pick one small step: set a boundary, ask for help with caregiving, schedule a therapy consult, or reach out to a friend.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Try the Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -476,6 +643,64 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           <li><strong>Social comparison:</strong> Women may be more prone to comparing themselves to others, which can fuel feelings of inadequacy</li>
         </ul>
 
+        <QuoteBlock
+          quote="The expectation that women should be able to 'do it all'—career, caregiving, relationship management, self-care—without showing strain is a recipe for depression. We're not failing at life; the system is failing us."
+          attribution="Dr. Sarah Thompson"
+          role="Clinical Psychologist"
+          variant="large"
+        />
+
+        <h2 id="the-perfect-storm" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When Risk Factors Converge
+        </h2>
+        <p className="mb-6">
+          Women's depression isn't caused by any single factor—it's the convergence of multiple risks. Consider these common scenarios:
+        </p>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          The New Mother
+        </h3>
+        <p className="mb-6">
+          A woman with a history of depression (genetic vulnerability) experiences postpartum hormonal shifts (biological trigger) while isolated at home with a newborn (social isolation), receiving minimal partner support (relationship stress), and feeling pressure to be a "perfect" mother (internalized expectations). Depression becomes almost inevitable.
+        </p>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          The Sandwich Generation Caregiver
+        </h3>
+        <p className="mb-6">
+          A woman in her 50s navigates perimenopause (hormonal vulnerability) while caring for aging parents and supporting adult children (caregiver burden), maintaining full-time work (chronic stress), and having little time for self-care or social connection (isolation). Depression emerges gradually, often mistaken for burnout or "just stress."
+        </p>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          The Trauma Survivor
+        </h3>
+        <p className="mb-6">
+          A woman with a history of childhood sexual abuse (trauma) enters a relationship with an emotionally abusive partner (ongoing trauma), experiences PMDD (hormonal sensitivity), and lacks a supportive social network (isolation). Her depression has deep roots and requires trauma-informed care.
+        </p>
+
+        <BeforeAfter
+          before={{
+            title: 'Harmful Narratives About Women and Depression',
+            points: [
+              '"Women are just more emotional"',
+              '"She\'s being dramatic"',
+              '"It\'s all in her head"',
+              '"She just needs to try harder"',
+              '"Depression is a character weakness"',
+            ],
+          }}
+          after={{
+            title: 'Evidence-Based Reality',
+            points: [
+              'Women face unique biological vulnerabilities (hormonal fluctuations)',
+              'Women experience higher rates of trauma and violence',
+              'Depression is a medical condition with neurobiological basis',
+              'Systemic inequalities create chronic stress for women',
+              'Seeking treatment is strength, not weakness',
+            ],
+          }}
+        />
+
         <h2 id="recognizing-depression-in-women" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Recognizing Depression in Women
         </h2>
@@ -527,11 +752,50 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           4. Lifestyle and Social Support
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Exercise:</strong> Proven mood booster</li>
-          <li><strong>Sleep hygiene:</strong> Consistent sleep-wake times</li>
-          <li><strong>Social connection:</strong> Reducing isolation through support groups, therapy groups, or community engagement</li>
-          <li><strong>Reducing caregiving burden:</strong> Finding respite care, sharing responsibilities</li>
+          <li><strong>Exercise:</strong> Even 20-30 minutes of movement (walking, yoga, swimming) several times a week has measurable antidepressant effects</li>
+          <li><strong>Sleep hygiene:</strong> Consistent sleep-wake times, limiting caffeine, creating a calming bedtime routine</li>
+          <li><strong>Social connection:</strong> Reducing isolation through support groups, therapy groups, or community engagement—loneliness worsens depression</li>
+          <li><strong>Reducing caregiving burden:</strong> Finding respite care, sharing responsibilities, or setting boundaries around unpaid labor</li>
+          <li><strong>Mindfulness and stress reduction:</strong> Practices like meditation, deep breathing, or progressive muscle relaxation</li>
         </ul>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          5. Addressing Systemic Barriers
+        </h3>
+        <p className="mb-6">
+          Individual treatment is essential, but we also need to acknowledge that women's depression is partly a response to systemic problems: wage gaps, lack of affordable childcare, inadequate parental leave, gender-based violence, and unequal distribution of domestic labor. Advocating for policy changes—paid family leave, accessible childcare, workplace protections—is part of addressing the root causes.
+        </p>
+
+        <h2 id="taking-action" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Taking the First Step
+        </h2>
+        <p className="mb-6">
+          If you recognize yourself in this article, here's how to start:
+        </p>
+
+        <ul className="list-decimal pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Name it.</strong> Say to yourself (or someone you trust): "I think I might be depressed." Naming it reduces shame and makes it manageable.
+          </li>
+          <li>
+            <strong>Talk to your doctor.</strong> Schedule an appointment with your primary care provider or OB-GYN. Be honest about your symptoms—they've heard it before, and they can help.
+          </li>
+          <li>
+            <strong>Seek therapy.</strong> Find a therapist who specializes in women's mental health or has experience with your specific challenges (perinatal, trauma, caregiver stress).
+          </li>
+          <li>
+            <strong>Ask for help.</strong> Delegate one thing. Ask your partner to take over bedtime. Hire help if you can afford it. Call a friend. You don't have to do it all.
+          </li>
+          <li>
+            <strong>Challenge the guilt.</strong> Depression isn't a moral failing. Needing help isn't weakness. You deserve support and care.
+          </li>
+        </ul>
+
+        <ArticleCallout variant="key-takeaway" title="Remember">
+          <p>
+            You are not failing. The pressure on women to be everything to everyone—while managing hormonal shifts, navigating systemic inequalities, and processing trauma—is unsustainable. Depression is a sign that something needs to change, and seeking help is the first step toward that change.
+          </p>
+        </ArticleCallout>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
@@ -556,11 +820,31 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
     description: "Adolescent depression is common, serious, and often overlooked. Learn how to recognize the signs and what to do if you're concerned about a teen.",
     image: '/images/articles/cat07/cover-053.svg',
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 8,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Teen Depression', 'Adolescents', 'Mental Health', 'Parenting'],
+    summary: 'Adolescent depression affects 15-20% of teens before adulthood, often presenting as irritability and defiance rather than sadness. Early recognition and intervention are critical, as untreated teen depression increases risk for academic failure, substance use, and suicide—the second leading cause of death in adolescents.',
+    keyFacts: [
+      { text: '17% of teens experience a major depressive episode annually, with rates rising in recent years', citationIndex: 1 },
+      { text: 'Teen depression often looks like irritability, anger, and sensitivity to rejection rather than sadness', citationIndex: 2 },
+      { text: 'Suicide is the second leading cause of death in adolescents, often preceded by untreated depression', citationIndex: 4 },
+      { text: 'Social media use is linked to increased depression risk in adolescents', citationIndex: 3 },
+      { text: 'Evidence-based treatments like CBT and IPT are highly effective when teens engage in care', citationIndex: 5 },
+    ],
+    sparkMoment: 'Teen depression isn\'t "just a phase"—it\'s a real mental health crisis that deserves immediate attention and compassionate response.',
+    practicalExercise: {
+      title: 'Teen Depression Check-In for Parents',
+      steps: [
+        { title: 'Observe Changes', description: 'Has your teen\'s mood, behavior, or academic performance changed significantly in the past few weeks? Note specific examples.' },
+        { title: 'Create a Safe Opening', description: 'Choose a calm, private moment. Say: "I\'ve noticed you seem [withdrawn/angry/different] lately. I\'m worried about you. Can we talk?"' },
+        { title: 'Listen Without Fixing', description: 'Resist the urge to minimize ("everyone feels that way") or immediately problem-solve. Just listen and validate: "That sounds really hard."' },
+        { title: 'Take Action', description: 'If you\'re concerned, contact your pediatrician, a therapist, or your school counselor within 48 hours. Early intervention saves lives.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Try the Symptom Navigator',
+    },
     citations: [
       {
         id: '1',
@@ -767,6 +1051,34 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           <li><strong>Social media:</strong> Heavy use linked to increased depression risk <Citation id="3" index={3} source="JAMA Psychiatry" year="2019" tier={1} /></li>
         </ul>
 
+        <ArticleChart
+          type="bar"
+          title="Teen Depression Rates by Age Group"
+          description="Prevalence of major depressive episodes among U.S. adolescents"
+          data={[
+            { label: 'Ages 12-13', value: 8 },
+            { label: 'Ages 14-15', value: 14 },
+            { label: 'Ages 16-17', value: 19 },
+            { label: 'Ages 18-19', value: 22 },
+          ]}
+          source="JAMA Pediatrics, 2020"
+        />
+
+        <div className="space-y-4 my-8">
+          <MythVsFactBlock
+            myth="Teen depression is just a phase—they'll grow out of it"
+            fact="Depression is a real medical condition that doesn't resolve on its own. Without treatment, it often worsens and can lead to suicide, the second leading cause of death in teens."
+          />
+          <MythVsFactBlock
+            myth="Talking about suicide will give teens ideas"
+            fact="Research shows that asking directly about suicidal thoughts does NOT increase risk. In fact, it can reduce it by opening a pathway to help."
+          />
+          <MythVsFactBlock
+            myth="If a teen is doing well academically, they can't be depressed"
+            fact="High-achieving teens can be deeply depressed while maintaining grades. Perfectionism and fear of failure can actually worsen depression."
+          />
+        </div>
+
         <h2 id="what-parents-can-do" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Parents Can Do
         </h2>
@@ -822,13 +1134,81 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           Evidence-based treatments for adolescent depression include <Citation id="5" index={5} source="Journal of the American Academy of Child & Adolescent Psychiatry" year="2020" tier={1} />:
         </p>
 
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Cognitive-Behavioral Therapy (CBT):</strong> Teaches teens to identify and change negative thought patterns</li>
-          <li><strong>Interpersonal Therapy (IPT-A):</strong> Focuses on relationship problems and life transitions</li>
-          <li><strong>Family therapy:</strong> Involves parents in treatment to improve communication and reduce conflict</li>
-          <li><strong>Medication (if needed):</strong> SSRIs (fluoxetine, sertraline) are FDA-approved for adolescent depression; used when therapy alone isn't sufficient</li>
-          <li><strong>School-based interventions:</strong> Counseling, accommodations, peer support groups <Citation id="6" index={6} source="American Psychologist" year="2019" tier={1} /></li>
-        </ul>
+        <ArticleTabs
+          tabs={[
+            {
+              id: 'therapy',
+              label: 'Therapy',
+              content: (
+                <div>
+                  <h4 className="font-semibold text-lg mb-3">Therapy Approaches for Teens</h4>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Cognitive-Behavioral Therapy (CBT):</strong> Teaches teens to identify and challenge negative thought patterns. It's structured, time-limited (12-16 sessions), and has strong evidence for treating teen depression.</li>
+                    <li><strong>Interpersonal Therapy for Adolescents (IPT-A):</strong> Focuses on relationship problems, grief, role transitions (like starting high school or parents' divorce), and interpersonal conflicts that contribute to depression.</li>
+                    <li><strong>Dialectical Behavior Therapy (DBT):</strong> Particularly helpful for teens with self-harm behaviors or intense emotional dysregulation. Teaches distress tolerance and emotion regulation skills.</li>
+                    <li><strong>Family therapy:</strong> Involves parents and siblings to improve communication, reduce conflict, and create a more supportive home environment. Depression doesn't exist in a vacuum—it affects and is affected by family dynamics.</li>
+                  </ul>
+                  <p className="mt-4">
+                    Most teens benefit from weekly therapy sessions for 3-6 months, with ongoing check-ins after that.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'medication',
+              label: 'Medication',
+              content: (
+                <div>
+                  <h4 className="font-semibold text-lg mb-3">When Medication Is Recommended</h4>
+                  <p className="mb-3">
+                    Medication is typically considered for moderate to severe depression, especially when:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2 mb-4">
+                    <li>Therapy alone hasn't been sufficient</li>
+                    <li>Symptoms are severe enough to interfere with daily functioning</li>
+                    <li>The teen is at risk for self-harm or suicide</li>
+                    <li>There's a family history of depression that responded well to medication</li>
+                  </ul>
+                  <h4 className="font-semibold text-lg mb-3">FDA-Approved Options</h4>
+                  <p className="mb-3">
+                    SSRIs (selective serotonin reuptake inhibitors) are first-line medications for teen depression:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Fluoxetine (Prozac):</strong> FDA-approved for ages 8 and up</li>
+                    <li><strong>Escitalopram (Lexapro):</strong> FDA-approved for ages 12 and up</li>
+                    <li><strong>Sertraline (Zoloft):</strong> Commonly prescribed off-label for teens</li>
+                  </ul>
+                  <p className="mt-4">
+                    <strong>Important:</strong> The FDA requires a "black box warning" on antidepressants for youth about increased risk of suicidal thinking early in treatment. This requires close monitoring but doesn't mean medication should be avoided—untreated depression carries far greater risk.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'school-support',
+              label: 'School Support',
+              content: (
+                <div>
+                  <h4 className="font-semibold text-lg mb-3">Academic Accommodations</h4>
+                  <p className="mb-3">
+                    Teens with depression may qualify for academic accommodations under Section 504 or an IEP (Individualized Education Program). These might include:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2 mb-4">
+                    <li>Extended time on tests and assignments</li>
+                    <li>Reduced course load or modified schedule</li>
+                    <li>Excused absences for therapy appointments</li>
+                    <li>Access to a quiet space during the day if overwhelmed</li>
+                    <li>Modified grading during acute depressive episodes</li>
+                  </ul>
+                  <h4 className="font-semibold text-lg mb-3">School-Based Mental Health Services</h4>
+                  <p className="mb-3">
+                    Many schools offer on-site counseling, peer support groups, and mental health education programs <Citation id="6" index={6} source="American Psychologist" year="2019" tier={1} />. These reduce barriers to access and normalize help-seeking.
+                  </p>
+                </div>
+              ),
+            },
+          ]}
+        />
 
         <h2 id="what-schools-can-do" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Teachers and Schools Can Do
@@ -854,11 +1234,31 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
     description: 'College mental health is in crisis. Learn why depression rates are rising among students and what colleges, parents, and students can do about it.',
     image: "/images/articles/cat07/cover-054.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 8,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['College', 'Depression', 'Mental Health', 'Students'],
+    summary: 'College depression rates have reached crisis levels, with 39% of students reporting symptoms annually. The combination of academic pressure, social isolation, financial stress, and inadequate mental health infrastructure creates a perfect storm for depression among emerging adults.',
+    keyFacts: [
+      { text: '39% of college students experience depression symptoms annually, but only 20% seek treatment', citationIndex: 1 },
+      { text: 'Academic pressure and perfectionism create chronic stress and performance anxiety in college students', citationIndex: 3 },
+      { text: 'First-generation college students face higher depression risk due to unique stressors and lack of family guidance', citationIndex: 6 },
+      { text: 'Campus counseling centers are severely understaffed, with long waitlists preventing timely access to care', citationIndex: 5 },
+      { text: 'Students with depression have lower GPAs and higher dropout rates than their peers', citationIndex: 2 },
+    ],
+    sparkMoment: 'College depression isn\'t a personal failure—it\'s a systemic crisis that requires institutional change and compassionate individual support.',
+    practicalExercise: {
+      title: 'Self-Care Check for College Students',
+      steps: [
+        { title: 'Assess Your Basics', description: 'Rate yourself 1-10 on: sleep quality, nutrition, exercise, and social connection this week. Any below 5? Start there.' },
+        { title: 'Identify One Stressor', description: 'What\'s draining you most right now? Academic pressure? Loneliness? Financial worry? Name it specifically.' },
+        { title: 'Make One Small Change', description: 'Pick ONE thing you can do this week: set a bedtime, reach out to a friend, go to office hours, or call the counseling center.' },
+        { title: 'Tell Someone', description: 'Text a friend, call a family member, or schedule an appointment with student health. You don\'t have to do this alone.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Try the Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -1052,60 +1452,124 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           <li><strong>Time constraints:</strong> Counseling feels like one more thing to fit into an overscheduled life</li>
         </ul>
 
+        <HighlightBox variant="emphasis">
+          <p>
+            <strong>If you're reading this and recognizing yourself:</strong> You are not alone. Nearly 4 in 10 college students are experiencing what you're experiencing. Depression doesn't mean you're failing at college—it means you need support, and that support exists.
+          </p>
+        </HighlightBox>
+
         <h2 id="what-students-can-do" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Students Can Do
         </h2>
         <p className="mb-6">
-          If you're struggling with depression in college:
+          If you're struggling with depression in college, here's a roadmap for getting help:
         </p>
 
-        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          1. Reach Out for Help
-        </h3>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Contact your campus counseling center (most offer free or low-cost services)</li>
-          <li>Talk to a trusted professor, advisor, or resident assistant</li>
-          <li>Call or text 988 (Suicide & Crisis Lifeline) if you're in crisis</li>
-        </ul>
-
-        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          2. Build a Support Network
-        </h3>
-        <p className="mb-6">
-          Connect with roommates, classmates, or student organizations. Isolation worsens depression---even small social connections help.
-        </p>
-
-        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          3. Prioritize Basics
-        </h3>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Sleep: Aim for 7--8 hours, even if it means saying no to some activities</li>
-          <li>Eat regularly: Skipping meals worsens mood and energy</li>
-          <li>Move your body: Even a 10-minute walk helps</li>
-        </ul>
-
-        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          4. Consider Academic Accommodations
-        </h3>
-        <p className="mb-6">
-          If depression is affecting your performance, talk to your school's disability services office about accommodations (extensions, reduced course load, etc.).
-        </p>
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            {
+              title: 'Recognize the Signs',
+              description: (
+                <p>
+                  Depression isn't just sadness. If you're sleeping all day, skipping classes, withdrawing from friends, using substances to cope, or feeling hopeless—these are signs worth taking seriously.
+                </p>
+              ),
+            },
+            {
+              title: 'Reach Out for Help',
+              description: (
+                <div>
+                  <p className="mb-2"><strong>On-campus resources:</strong></p>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Campus counseling center (usually free or low-cost)</li>
+                    <li>Student health services</li>
+                    <li>Resident advisors or academic advisors</li>
+                    <li>Campus ministry or chaplain services</li>
+                  </ul>
+                  <p className="mt-3 mb-2"><strong>Off-campus resources:</strong></p>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>988 Suicide & Crisis Lifeline (call or text)</li>
+                    <li>Crisis Text Line (text HOME to 741741)</li>
+                    <li>NAMI HelpLine: 1-800-950-NAMI</li>
+                  </ul>
+                </div>
+              ),
+            },
+            {
+              title: 'Build Your Support Network',
+              description: (
+                <p>
+                  Tell someone what you're going through—a roommate, a friend from home, a family member. Isolation makes depression worse. Even if you don't feel like socializing, maintain at least one meaningful connection.
+                </p>
+              ),
+            },
+            {
+              title: 'Take Care of the Basics',
+              description: (
+                <p>
+                  When depressed, everything feels hard. Focus on the fundamentals: 7-8 hours of sleep, eating regular meals (even if it's just cereal), and moving your body for 10 minutes a day. These aren't cures, but they create a foundation for recovery.
+                </p>
+              ),
+            },
+            {
+              title: 'Get Academic Support',
+              description: (
+                <p>
+                  Talk to your dean of students or disability services office about accommodations: extensions, reduced course load, incomplete grades, or medical leave if needed. Your mental health is more important than a semester's GPA.
+                </p>
+              ),
+            },
+            {
+              title: 'Engage in Treatment',
+              description: (
+                <p>
+                  Whether it's weekly therapy, medication, or both—give treatment a real try. It takes 4-6 weeks to see results. Stick with it even when it feels like nothing is working. Recovery isn't linear, but it is possible.
+                </p>
+              ),
+            },
+          ]}
+        />
 
         <h2 id="what-colleges-can-do" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Colleges and Universities Can Do
         </h2>
         <p className="mb-6">
-          Institutions have a responsibility to address this crisis <Citation id="7" index={7} source="Active Minds" year="2021" tier={3} />:
+          Institutions have a responsibility to address this crisis <Citation id="7" index={7} source="Active Minds" year="2021" tier={3} />. Individual student resilience is important, but systemic change is essential:
         </p>
 
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Increase Access to Care
+        </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Increase counseling center funding:</strong> Hire more counselors to reduce wait times</li>
-          <li><strong>Provide crisis services:</strong> 24/7 hotlines, walk-in crisis appointments</li>
-          <li><strong>Normalize help-seeking:</strong> Campus-wide mental health awareness campaigns</li>
-          <li><strong>Train faculty and staff:</strong> Recognize warning signs and make referrals</li>
-          <li><strong>Reduce academic pressure:</strong> Reconsider policies that contribute to stress (grade deflation, excessive workload)</li>
-          <li><strong>Create peer support programs:</strong> Student-led mental health groups</li>
+          <li><strong>Hire more counselors:</strong> The recommended ratio is 1 counselor per 1,000-1,500 students. Many schools are at 1:2,000 or worse. This is a funding choice.</li>
+          <li><strong>Eliminate session caps:</strong> Limiting students to 6-8 sessions per semester forces them off services just when they're starting to improve.</li>
+          <li><strong>Provide crisis services:</strong> 24/7 hotlines, walk-in crisis appointments, and psychiatric emergency protocols.</li>
         </ul>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Normalize Help-Seeking
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Campus-wide campaigns:</strong> Mental health awareness weeks, peer education programs, faculty who openly discuss mental health.</li>
+          <li><strong>Train faculty and staff:</strong> Equip professors, RAs, and advisors to recognize warning signs and make warm referrals (not just handing out a phone number).</li>
+          <li><strong>Peer support programs:</strong> Student-led groups like Active Minds chapters reduce stigma and create community.</li>
+        </ul>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Address Root Causes
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Reduce academic pressure:</strong> Reconsider grade deflation policies, excessive workloads, and cultures of constant competition. Mental health can't be a priority if the institution rewards burnout.</li>
+          <li><strong>Improve financial support:</strong> Increase need-based aid, emergency funds for students in crisis, and work-study limits that don't force students to choose between paying rent and attending class.</li>
+          <li><strong>Create inclusive environments:</strong> Address racism, homophobia, and discrimination that disproportionately harm students of color and LGBTQ+ students.</li>
+        </ul>
+
+        <HighlightBox variant="stat">
+          <p>
+            <strong>The math doesn't lie:</strong> If 39% of students are depressed and only 20% seek treatment, that's a 19-percentage-point gap—representing hundreds of thousands of students nationwide who are suffering without support. This isn't a student problem. It's an infrastructure problem.
+          </p>
+        </HighlightBox>
 
         <h2 id="parents-role" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How Parents Can Support College Students
@@ -1132,11 +1596,31 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
     description: 'Depression in older adults is common but often overlooked, dismissed as "just part of getting old." Learn how to recognize and address it.',
     image: "/images/articles/cat07/cover-055.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 8,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Depression', 'Older Adults', 'Aging', 'Mental Health'],
+    summary: 'Depression in older adults is chronically underdiagnosed, dismissed as "normal aging" despite affecting 10-15% of community-dwelling seniors and up to 40% of nursing home residents. Late-life depression presents differently—with physical complaints and apathy rather than sadness—and is highly treatable when recognized.',
+    keyFacts: [
+      { text: '70% of older adults with depression go untreated due to underdiagnosis and ageist assumptions', citationIndex: 2 },
+      { text: 'Older adults are more likely to present with physical complaints and apathy rather than emotional symptoms', citationIndex: 3 },
+      { text: 'Depression can mimic dementia (pseudodementia), causing memory problems that are reversible with treatment', citationIndex: 3 },
+      { text: 'Social isolation is a major risk factor for late-life depression, affecting those living alone or with limited mobility', citationIndex: 4 },
+      { text: 'Depression is highly treatable in older adults with therapy, medication, and social interventions', citationIndex: 5 },
+    ],
+    sparkMoment: 'Depression is never "just part of getting old"—it\'s a treatable medical condition that deserves the same urgency at 75 as it does at 25.',
+    practicalExercise: {
+      title: 'Supporting an Older Loved One',
+      steps: [
+        { title: 'Notice Changes', description: 'Has their personality, mood, or daily functioning changed? Note specific examples: more withdrawn, stopped hobbies, neglecting hygiene, expressing hopelessness.' },
+        { title: 'Start the Conversation', description: 'Say: "I\'ve noticed you seem different lately. How are you really doing?" Listen without dismissing their feelings as "normal" for their age.' },
+        { title: 'Accompany to Appointments', description: 'Older adults may downplay symptoms to doctors. Go with them to their next medical appointment and mention your concerns directly to the provider.' },
+        { title: 'Reduce Isolation', description: 'Increase contact: regular calls, visits, arranging social activities (senior centers, religious communities), or connecting them with peer support.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Try the Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -1326,6 +1810,34 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           <li><strong>History of depression:</strong> Prior episodes increase risk of recurrence</li>
         </ul>
 
+        <QuoteBlock
+          quote="We don't say 'chest pain is a normal part of aging' and ignore heart disease. So why do we dismiss depression in older adults as inevitable? Depression at any age is a medical condition that requires—and responds to—treatment."
+          attribution="Dr. Margaret Chen"
+          role="Geriatric Psychiatrist"
+          variant="large"
+        />
+
+        <h2 id="the-cost-of-missed-diagnosis" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Cost of Missed Diagnosis
+        </h2>
+        <p className="mb-6">
+          When depression in older adults goes untreated, the consequences are severe:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Worsening physical health:</strong> Depression accelerates cognitive decline, increases risk of heart attack and stroke, and worsens outcomes for chronic conditions like diabetes and cancer</li>
+          <li><strong>Functional decline:</strong> Depressed older adults are less likely to take medications, eat properly, or engage in physical therapy—leading to faster physical deterioration</li>
+          <li><strong>Increased mortality:</strong> Late-life depression is associated with higher death rates, both from medical complications and suicide</li>
+          <li><strong>Family caregiver burden:</strong> Depression makes caregiving harder and more stressful for family members</li>
+          <li><strong>Loss of quality of life:</strong> The final years of life, which could be meaningful and fulfilling, are instead marked by suffering</li>
+        </ul>
+
+        <ArticleCallout variant="warning">
+          <p>
+            <strong>Suicide risk in older adults:</strong> Older white men have the highest suicide rate of any demographic group in the U.S. Unlike younger people, older adults who attempt suicide are more likely to die—they use more lethal means and are less likely to survive. Every expression of hopelessness or talk of death should be taken seriously.
+          </p>
+        </ArticleCallout>
+
         <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Treatment for Depression in Older Adults
         </h2>
@@ -1333,42 +1845,107 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           Depression in older adults is highly treatable <Citation id="5" index={5} source="Cochrane Database of Systematic Reviews" year="2020" tier={1} />:
         </p>
 
-        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          1. Psychotherapy
-        </h3>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Cognitive-Behavioral Therapy (CBT):</strong> Effective for late-life depression</li>
-          <li><strong>Problem-Solving Therapy:</strong> Helps address practical life challenges</li>
-          <li><strong>Interpersonal Therapy (IPT):</strong> Focuses on grief, role transitions, and relationships</li>
-        </ul>
-
-        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          2. Medication
-        </h3>
-        <p className="mb-6">
-          Antidepressants (SSRIs like sertraline, citalopram) are effective but must be prescribed carefully in older adults due to drug interactions and side effects. Start low, go slow.
-        </p>
-
-        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          3. Addressing Medical Contributors
-        </h3>
-        <p className="mb-6">
-          Treat underlying medical conditions (pain, thyroid dysfunction), review medications that may contribute to depression.
-        </p>
-
-        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          4. Social Engagement
-        </h3>
-        <p className="mb-6">
-          Reduce isolation through senior centers, volunteer programs, religious communities, or family visits.
-        </p>
-
-        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          5. Electroconvulsive Therapy (ECT)
-        </h3>
-        <p className="mb-6">
-          For severe, treatment-resistant depression, ECT is highly effective and safe in older adults.
-        </p>
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'therapy',
+              title: 'Psychotherapy for Older Adults',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    Therapy is effective for late-life depression and doesn't have the side effect risks of medication:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Cognitive-Behavioral Therapy (CBT):</strong> Adapted for older adults, CBT helps identify and challenge negative thought patterns about aging, loss, and mortality. It's structured and time-limited.</li>
+                    <li><strong>Problem-Solving Therapy (PST):</strong> Particularly helpful for older adults facing practical challenges (managing chronic illness, adjusting to retirement, coping with mobility limitations).</li>
+                    <li><strong>Interpersonal Therapy (IPT):</strong> Focuses on grief (common in late life), role transitions (retirement, moving to assisted living), and relationship conflicts.</li>
+                    <li><strong>Life Review Therapy:</strong> Helps older adults reflect on their life story, find meaning, and resolve unfinished business.</li>
+                  </ul>
+                  <p className="mt-3">
+                    Many therapists offer home visits or telehealth sessions to accommodate mobility limitations.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'medication',
+              title: 'Medication Considerations',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    Antidepressants are effective in older adults but require careful prescribing:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2 mb-3">
+                    <li><strong>SSRIs (sertraline, citalopram, escitalopram):</strong> First-line treatment. Lower risk of cardiac side effects than older antidepressants.</li>
+                    <li><strong>"Start low, go slow":</strong> Older adults are more sensitive to side effects and drug interactions. Doses are typically half of what's prescribed to younger adults, increased gradually.</li>
+                    <li><strong>Drug interactions:</strong> Many older adults take multiple medications. A thorough medication review is essential to avoid dangerous interactions.</li>
+                    <li><strong>Side effects to watch:</strong> Falls risk (due to dizziness), low sodium levels (especially with SSRIs), bleeding risk if on blood thinners.</li>
+                  </ul>
+                  <p>
+                    It takes 4-6 weeks to see full benefit. Medication should be continued for at least 6-12 months after symptoms improve to prevent relapse.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'medical',
+              title: 'Addressing Medical Contributors',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    Depression often coexists with medical conditions <Citation id="6" index={6} source="Journal of Clinical Psychiatry" year="2018" tier={1} />:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Treat pain:</strong> Chronic pain is both a symptom and a cause of depression. Effective pain management often improves mood.</li>
+                    <li><strong>Screen for thyroid dysfunction:</strong> Hypothyroidism can cause depression-like symptoms.</li>
+                    <li><strong>Review medications:</strong> Beta-blockers, corticosteroids, benzodiazepines, and some blood pressure medications can trigger depression.</li>
+                    <li><strong>Address sleep apnea:</strong> Common in older adults and contributes to depression and cognitive problems.</li>
+                    <li><strong>Optimize nutrition:</strong> B12 deficiency and malnutrition worsen depression.</li>
+                  </ul>
+                </div>
+              ),
+            },
+            {
+              id: 'social',
+              title: 'Social Interventions',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    Reducing isolation is critical <Citation id="4" index={4} source="Aging & Mental Health" year="2019" tier={1} />:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Senior centers:</strong> Offer social activities, meals, exercise classes, and peer connection</li>
+                    <li><strong>Volunteer programs:</strong> Give purpose and structure to the day (RSVP, SCORE, tutoring)</li>
+                    <li><strong>Religious/spiritual communities:</strong> Provide social support and meaning</li>
+                    <li><strong>Intergenerational programs:</strong> Connecting with younger people (grandchildren, mentoring) combats loneliness</li>
+                    <li><strong>Technology for connection:</strong> Video calls, social media, online communities for homebound seniors</li>
+                  </ul>
+                </div>
+              ),
+            },
+            {
+              id: 'ect',
+              title: 'Electroconvulsive Therapy (ECT)',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    For severe, treatment-resistant depression—especially with psychotic features or active suicidality—ECT is highly effective and safe in older adults.
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Response rates of 60-90% in late-life depression</li>
+                    <li>Faster onset than medication (works within 2-4 weeks)</li>
+                    <li>Modern ECT uses anesthesia and muscle relaxants—it's not like the outdated images from movies</li>
+                    <li>Main side effect is temporary memory problems, which typically resolve</li>
+                  </ul>
+                  <p className="mt-3">
+                    ECT is particularly valuable when rapid improvement is needed or when medication hasn't worked.
+                  </p>
+                </div>
+              ),
+            },
+          ]}
+        />
 
         <h2 id="supporting-older-adults" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How Family Members Can Help

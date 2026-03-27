@@ -2651,31 +2651,351 @@ export const substanceSleepSomaticArticles: Article[] = [
 
 // SUBTOPIC 8: Psychotic/Personality/Adjustment (71-80)
 export const psychoticPersonalityArticles: Article[] = [
-  { id: catId(71), slug: 'schizophrenia', title: 'Schizophrenia: Beyond the Stereotypes to Understanding Reality', description: 'Schizophrenia affects 1% of population. Learn about symptoms, treatment, and recovery.', image: "/images/articles/cat13/cover-071.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 13, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Schizophrenia', 'Psychosis'], citations: [
-    { id: '1', text: 'Schizophrenia', source: 'NIMH', year: '2023', link: 'https://www.nimh.nih.gov/health/topics/schizophrenia', tier: 2 },
-    { id: '2', text: 'Schizophrenia Treatment', source: 'Lancet', year: '2020', link: 'https://doi.org/10.1016/S0140-6736(20)30367-3', tier: 1 },
-    { id: '3', text: 'Recovery Outcomes', source: 'American Journal of Psychiatry', year: '2021', link: 'https://doi.org/10.1176/appi.ajp.2020.20091340', tier: 1 },
-  ], content: <>
+  { id: catId(71), slug: 'schizophrenia', title: 'Schizophrenia: Beyond the Stereotypes to Understanding Reality', description: 'Schizophrenia affects 1% of population. Learn about symptoms, treatment, and recovery.', image: "/images/articles/cat13/cover-071.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 10, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Schizophrenia', 'Psychosis'],
+    summary: 'Schizophrenia is a complex brain disorder affecting approximately 24 million people worldwide, characterized by psychosis (hallucinations and delusions), cognitive impairment, and functional decline. While heavily stigmatized in media and popular culture, the reality is that with modern treatment combining antipsychotic medication and psychosocial support, many people with schizophrenia achieve meaningful recovery and lead fulfilling lives.',
+    keyFacts: [
+      { text: 'Schizophrenia affects approximately 24 million people worldwide (about 1 in 300 people)', citationIndex: 1 },
+      { text: '70-80% of people with schizophrenia respond to antipsychotic medication for positive symptoms', citationIndex: 3 },
+      { text: 'First-episode psychosis programs can reduce symptom duration by up to 50% when treatment starts early', citationIndex: 5 },
+      { text: 'People with schizophrenia are more likely to be victims of violence than perpetrators, contrary to media portrayals', citationIndex: 7 },
+      { text: '20-30% of people with schizophrenia achieve full recovery with comprehensive treatment', citationIndex: 4 },
+    ],
+    sparkMoment: 'Schizophrenia is not a "split personality"—it\'s a disruption in how the brain processes reality, and recovery is not only possible but increasingly common with the right support.',
+    practicalExercise: {
+      title: 'Mental Health Crisis Preparedness Plan',
+      steps: [
+        { title: 'Identify Early Warning Signs', description: 'List personal early warning signs of symptom worsening (sleep changes, social withdrawal, increased suspiciousness) that you or loved ones can recognize.' },
+        { title: 'Create Support Contacts List', description: 'Write down phone numbers for your psychiatrist, therapist, crisis hotline (988), trusted family/friends, and local mobile crisis team.' },
+        { title: 'Document Medication Information', description: 'Keep a current list of all medications, doses, and prescribing doctors in an easily accessible location for emergency situations.' },
+        { title: 'Plan Coping Strategies', description: 'Identify specific calming techniques that work for you during distress: music, walking, calling a friend, grounding exercises, or using a crisis text line.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Check Your Symptoms',
+    },
+    citations: [
+      { id: '1', text: 'Schizophrenia Fact Sheet', source: 'World Health Organization', year: '2024', link: 'https://www.who.int/news-room/fact-sheets/detail/schizophrenia', tier: 2 },
+      { id: '2', text: 'Epidemiology of Schizophrenia', source: 'NIMH', year: '2023', link: 'https://www.nimh.nih.gov/health/topics/schizophrenia', tier: 2 },
+      { id: '3', text: 'Treatment of Schizophrenia: A Systematic Review', source: 'Lancet', year: '2020', link: 'https://doi.org/10.1016/S0140-6736(20)30367-3', tier: 1 },
+      { id: '4', text: 'Long-term Recovery Outcomes in Schizophrenia', source: 'American Journal of Psychiatry', year: '2021', link: 'https://doi.org/10.1176/appi.ajp.2020.20091340', tier: 1 },
+      { id: '5', text: 'Early Intervention Services for Psychosis', source: 'JAMA Psychiatry', year: '2022', link: 'https://doi.org/10.1001/jamapsychiatry.2021.4186', tier: 1 },
+      { id: '6', text: 'Neurobiology of Schizophrenia', source: 'Nature Reviews Neuroscience', year: '2020', link: 'https://doi.org/10.1038/s41583-020-0349-3', tier: 1 },
+      { id: '7', text: 'Violence and Mental Illness: Facts and Myths', source: 'Schizophrenia Bulletin', year: '2019', link: 'https://doi.org/10.1093/schbul/sbz068', tier: 1 },
+      { id: '8', text: 'Cognitive Deficits in Schizophrenia', source: 'Biological Psychiatry', year: '2021', link: 'https://doi.org/10.1016/j.biopsych.2021.02.964', tier: 1 },
+      { id: '9', text: 'Psychosocial Interventions for Schizophrenia', source: 'Cochrane Database of Systematic Reviews', year: '2020', link: 'https://doi.org/10.1002/14651858.CD013450', tier: 1 },
+      { id: '10', text: 'Supported Employment for Schizophrenia', source: 'Psychiatric Services', year: '2020', link: 'https://doi.org/10.1176/appi.ps.201900505', tier: 1 },
+    ],
+    content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Schizophrenia is a chronic brain disorder affecting approximately 1% of the population worldwide <Citation id="1" index={1} source="NIMH" year="2023" tier={2} />. It involves psychosis—loss of contact with reality through hallucinations (perceiving things that aren't there) and delusions (fixed false beliefs). Common misconception: schizophrenia does NOT mean "split personality" (that's dissociative identity disorder). Onset typically late teens to early 30s. Causes significant impairment but recovery is possible—many live fulfilling lives with treatment. Stigma remains major barrier: media portrayals emphasize violence (though most with schizophrenia aren't violent), and discrimination in employment/housing is common.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">When most people hear "schizophrenia," they picture a violent, unpredictable person with multiple personalities—a portrait painted by horror films and sensationalized news coverage. The reality is far different and far more hopeful. Schizophrenia is a chronic brain disorder affecting approximately 24 million people worldwide—about 1 in 300 people—that disrupts how a person thinks, feels, and perceives reality <Citation id="1" index={1} source="WHO" year="2024" tier={2} />. While it can be severe and disabling, modern treatment has transformed outcomes: with proper care, many people with schizophrenia lead productive, meaningful lives.</p>
+      <p className="mb-6">The condition typically emerges in late adolescence or early adulthood, with onset between ages 16 and 30 being most common <Citation id="2" index={2} source="NIMH" year="2023" tier={2} />. Men tend to develop symptoms slightly earlier than women. The hallmark feature is psychosis—a disconnection from reality manifesting through hallucinations (perceiving things that aren't there) and delusions (firmly held false beliefs resistant to contradictory evidence). But schizophrenia is more than psychosis. It profoundly affects cognition, emotion, and motivation, creating challenges that persist even when hallucinations and delusions are controlled.</p>
     </div>
-    <h2 id="symptoms" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Positive, Negative, and Cognitive Symptoms</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Positive symptoms (added experiences): hallucinations (usually auditory—hearing voices), delusions (persecution, grandiosity, control), disorganized speech, grossly disorganized/catatonic behavior. Negative symptoms (reduced experiences): flat affect, avolition (lack of motivation), alogia (poverty of speech), anhedonia (inability to feel pleasure), social withdrawal. Cognitive symptoms: impaired executive function, working memory deficits, difficulty concentrating, processing speed reduction. Negative/cognitive symptoms often more debilitating long-term than positive symptoms, impairing work and relationships.</p>
-    <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment and Recovery</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Antipsychotic medications reduce positive symptoms in 70-80% <Citation id="2" index={2} source="Lancet" year="2020" tier={1} />. Second-generation antipsychotics (risperidone, olanzapine, aripiprazole) preferred due to fewer motor side effects. Long-acting injectable formulations help medication adherence. Psychosocial interventions: cognitive-behavioral therapy for psychosis, supported employment, family psychoeducation, social skills training, case management. Early intervention crucial—first-episode psychosis programs significantly improve long-term outcomes <Citation id="3" index={3} source="AJP" year="2021" tier={1} />. Recovery rates: 20-30% achieve full recovery, 30-40% show significant improvement, 30-40% have persistent symptoms but improved functioning.</p>
+
+    <h2 id="what-it-is" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Understanding What Schizophrenia Actually Is</h2>
+    <p className="mb-6">Schizophrenia is not "split personality" or multiple personalities—that's dissociative identity disorder, a completely different condition. The "split" in schizophrenia refers to a fragmentation between different mental functions: thinking becomes disorganized, emotions may not match situations, perception becomes unreliable, and motivation diminishes.</p>
+    <p className="mb-6">Neurobiologically, schizophrenia involves dysregulation of dopamine pathways in the brain, particularly in regions responsible for processing rewards, emotions, and executive functions <Citation id="6" index={3} source="Nature Reviews Neuroscience" year="2020" tier={1} />. Brain imaging studies show subtle structural differences: slightly enlarged ventricles, reduced gray matter volume in certain areas, and altered connectivity between brain regions. These changes aren't visible on a casual brain scan but emerge through sophisticated research imaging.</p>
+
+    <ArticleTabs
+      tabs={[
+        {
+          label: 'Positive Symptoms',
+          content: <div className="p-4">
+            <p className="mb-4 text-gray-700 dark:text-gray-300"><strong>Positive symptoms</strong> are experiences added to normal functioning:</p>
+            <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-700 dark:text-gray-300">
+              <li><strong>Hallucinations:</strong> Perceiving things that aren't there. Auditory hallucinations (hearing voices) are most common—voices may comment on behavior, argue with each other, or command actions. Visual, tactile, olfactory hallucinations also occur but less frequently.</li>
+              <li><strong>Delusions:</strong> Fixed false beliefs maintained despite clear contradictory evidence. Common types include persecutory delusions (belief that others are plotting against you), grandiose delusions (inflated sense of importance or abilities), referential delusions (believing random events have special personal meaning), and control delusions (feeling thoughts or actions are controlled by external forces).</li>
+              <li><strong>Disorganized speech:</strong> Jumping between topics (derailment), making up words (neologisms), or speaking in ways that are difficult to follow.</li>
+              <li><strong>Disorganized or catatonic behavior:</strong> Unpredictable agitation, childlike silliness, bizarre postures, or complete immobility.</li>
+            </ul>
+          </div>
+        },
+        {
+          label: 'Negative Symptoms',
+          content: <div className="p-4">
+            <p className="mb-4 text-gray-700 dark:text-gray-300"><strong>Negative symptoms</strong> represent reductions in normal functioning:</p>
+            <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-700 dark:text-gray-300">
+              <li><strong>Flat affect:</strong> Reduced emotional expression—monotone voice, unchanging facial expression, diminished eye contact.</li>
+              <li><strong>Avolition:</strong> Decreased motivation to initiate and persist in goal-directed activities. Daily tasks like showering, cooking, or going to work become overwhelmingly difficult.</li>
+              <li><strong>Alogia:</strong> Poverty of speech—brief, empty replies with little spontaneous conversation.</li>
+              <li><strong>Anhedonia:</strong> Reduced ability to experience pleasure from activities once enjoyed.</li>
+              <li><strong>Social withdrawal:</strong> Decreased interest in social interaction and relationships.</li>
+            </ul>
+            <p className="text-gray-700 dark:text-gray-300">Negative symptoms are often more debilitating long-term than positive symptoms and are harder to treat.</p>
+          </div>
+        },
+        {
+          label: 'Cognitive Symptoms',
+          content: <div className="p-4">
+            <p className="mb-4 text-gray-700 dark:text-gray-300"><strong>Cognitive symptoms</strong> affect thinking abilities:</p>
+            <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-700 dark:text-gray-300">
+              <li><strong>Executive function deficits:</strong> Difficulty planning, organizing, and completing tasks.</li>
+              <li><strong>Working memory impairment:</strong> Trouble holding and manipulating information in mind (e.g., following multi-step instructions).</li>
+              <li><strong>Attention problems:</strong> Difficulty focusing and filtering out irrelevant information.</li>
+              <li><strong>Processing speed reduction:</strong> Slower mental processing and response times.</li>
+            </ul>
+            <p className="text-gray-700 dark:text-gray-300">These cognitive impairments significantly impact work performance, independent living, and social relationships <Citation id="8" index={4} source="Biological Psychiatry" year="2021" tier={1} />.</p>
+          </div>
+        },
+      ]}
+    />
+
+    <h2 id="causes-risk-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Causes and Risk Factors</h2>
+    <p className="mb-6">Schizophrenia doesn't have a single cause—it emerges from complex interactions between genetics, brain chemistry, and environmental factors. No one factor alone causes schizophrenia, but several increase risk:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Genetics:</strong> Having a first-degree relative with schizophrenia increases risk about 10-fold compared to the general population. If both parents have schizophrenia, risk approaches 40-50%. However, most people with schizophrenia have no family history, and most people with a family history never develop the condition.</li>
+      <li><strong>Prenatal/birth complications:</strong> Maternal infection during pregnancy, malnutrition, birth complications, and low birth weight increase risk.</li>
+      <li><strong>Substance use:</strong> Cannabis use during adolescence, particularly high-potency strains, increases risk, especially in genetically vulnerable individuals. Stimulants and hallucinogens can also trigger psychotic episodes.</li>
+      <li><strong>Childhood adversity:</strong> Trauma, abuse, neglect, and severe stress during developmental years elevate risk.</li>
+      <li><strong>Urban environment:</strong> Growing up in densely populated urban areas shows higher rates, possibly due to social stress, isolation, or environmental exposures.</li>
+    </ul>
+
+    <BeforeAfter
+      before={{
+        title: 'Misconception',
+        points: [
+          'Schizophrenia means someone is violent and dangerous',
+          'People with schizophrenia have "split personalities"',
+          'Schizophrenia is untreatable and people never recover',
+          'It\'s caused by bad parenting or weak character',
+        ]
+      }}
+      after={{
+        title: 'Reality',
+        points: [
+          'Most people with schizophrenia are not violent; they\'re more likely to be victims than perpetrators',
+          'Schizophrenia involves fragmented thinking, not multiple personalities (that\'s DID)',
+          '20-30% achieve full recovery; most show significant improvement with treatment',
+          'Schizophrenia is a brain disorder with genetic and neurobiological causes',
+        ]
+      }}
+    />
+
+    <h2 id="diagnosis" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How Schizophrenia Is Diagnosed</h2>
+    <p className="mb-6">There's no blood test or brain scan that definitively diagnoses schizophrenia. Diagnosis relies on clinical assessment by a psychiatrist, requiring:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Two or more core symptoms (delusions, hallucinations, disorganized speech, disorganized behavior, negative symptoms) present for significant time during a one-month period</li>
+      <li>Continuous signs of disturbance for at least six months</li>
+      <li>Significant impairment in work, relationships, or self-care</li>
+      <li>Ruling out other causes (substance use, medical conditions like brain tumors or autoimmune disorders, other mental health conditions)</li>
+    </ul>
+    <p className="mb-6">Early diagnosis and treatment dramatically improve outcomes. First-episode psychosis programs—specialized services for people experiencing their first psychotic episode—have been shown to reduce symptom duration by up to 50% and significantly improve long-term functioning <Citation id="5" index={5} source="JAMA Psychiatry" year="2022" tier={1} />.</p>
+
+    <ArticleChart
+      type="bar"
+      title="Schizophrenia Recovery Outcomes with Treatment"
+      data={[
+        { label: 'Full Recovery', value: 25 },
+        { label: 'Significant Improvement', value: 35 },
+        { label: 'Moderate Improvement', value: 25 },
+        { label: 'Minimal Improvement', value: 15 },
+      ]}
+      source="American Journal of Psychiatry, 2021"
+      description="Long-term outcome studies show that 60% of people with schizophrenia achieve full or significant recovery with comprehensive treatment."
+    />
+
+    <h2 id="treatment-options" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment Options That Work</h2>
+    <p className="mb-6">Effective treatment for schizophrenia combines medication with psychosocial interventions. The goal isn't just symptom reduction—it's helping people live the lives they want.</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Antipsychotic Medication</h3>
+    <p className="mb-6">Antipsychotic medications are the cornerstone of treatment, reducing positive symptoms (hallucinations and delusions) in 70-80% of people <Citation id="3" index={6} source="Lancet" year="2020" tier={1} />. Second-generation antipsychotics (also called atypical antipsychotics) are typically preferred because they have fewer movement-related side effects than older medications. Common options include risperidone, olanzapine, quetiapine, aripiprazole, and clozapine.</p>
+    <p className="mb-6">Side effects vary by medication but may include weight gain, metabolic changes, sedation, and movement problems. Finding the right medication often requires trial and adjustment. Long-acting injectable formulations, given every 2-4 weeks, help people who struggle with daily pill-taking.</p>
+    <p className="mb-6">Clozapine deserves special mention: it's the most effective antipsychotic for treatment-resistant schizophrenia but requires regular blood monitoring due to risk of a rare but serious blood disorder.</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Psychosocial Interventions</h3>
+    <p className="mb-6">Medication alone isn't enough. Evidence-based psychosocial interventions are crucial for recovery <Citation id="9" index={7} source="Cochrane Reviews" year="2020" tier={1} />:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Cognitive Behavioral Therapy for Psychosis (CBTp):</strong> Helps people develop coping strategies for persistent symptoms, challenge delusional beliefs, and reduce distress from hallucinations.</li>
+      <li><strong>Family Psychoeducation:</strong> Educates families about schizophrenia, improves communication, and reduces critical expressed emotion—a factor associated with higher relapse rates.</li>
+      <li><strong>Supported Employment:</strong> Individual Placement and Support (IPS) helps people find and maintain competitive employment, significantly improving both employment outcomes and quality of life <Citation id="10" index={8} source="Psychiatric Services" year="2020" tier={1} />.</li>
+      <li><strong>Social Skills Training:</strong> Teaches conversation skills, assertiveness, problem-solving, and emotion recognition.</li>
+      <li><strong>Cognitive Remediation:</strong> Computer-based exercises targeting attention, memory, and executive function deficits.</li>
+      <li><strong>Assertive Community Treatment (ACT):</strong> Intensive case management for people with severe symptoms, providing medication management, housing support, crisis intervention, and skills training.</li>
+    </ul>
+
+    <h2 id="living-with-schizophrenia" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Living Well with Schizophrenia</h2>
+    <p className="mb-6">Recovery from schizophrenia doesn't necessarily mean symptom-free—it means living a meaningful, satisfying life despite symptoms. Many people with schizophrenia work, maintain relationships, pursue education, and contribute to their communities.</p>
+    <p className="mb-6">Key strategies that support recovery:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Medication adherence:</strong> Staying on medication even when feeling better prevents relapse. Roughly 80% of people who stop medication relapse within one year.</li>
+      <li><strong>Routine and structure:</strong> Regular sleep schedules, daily activities, and predictable routines support brain function and reduce stress.</li>
+      <li><strong>Avoiding substances:</strong> Alcohol and recreational drugs interfere with medication effectiveness and can trigger psychotic episodes.</li>
+      <li><strong>Stress management:</strong> Chronic stress increases relapse risk. Mindfulness, relaxation techniques, and having a crisis plan help.</li>
+      <li><strong>Social connection:</strong> Isolation worsens symptoms. Maintaining relationships, joining peer support groups, or participating in clubhouse programs provides vital connection.</li>
+      <li><strong>Physical health:</strong> People with schizophrenia have higher rates of cardiovascular disease and diabetes, partly due to medication side effects. Regular exercise, healthy eating, and medical monitoring are essential.</li>
+    </ul>
+
+    <ArticleCallout variant="key-takeaway" title="Hope and Recovery">
+      <p className="mb-3">The narrative around schizophrenia has shifted dramatically in recent decades. Research consistently shows that many people with schizophrenia achieve meaningful recovery:</p>
+      <ul className="list-disc pl-5 space-y-2">
+        <li>Early intervention programs dramatically improve long-term outcomes</li>
+        <li>Modern medications are more effective with fewer side effects than older options</li>
+        <li>Psychosocial interventions help people build skills and achieve life goals</li>
+        <li>Peer support and recovery-oriented services emphasize hope and empowerment</li>
+        <li>Many people with schizophrenia work, have families, and lead fulfilling lives</li>
+      </ul>
+    </ArticleCallout>
+
+    <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When to Seek Help</h2>
+    <p className="mb-6">Early treatment improves outcomes significantly. Seek professional evaluation if you or someone you know experiences:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Seeing, hearing, or feeling things others don't perceive</li>
+      <li>Strongly held beliefs that others find bizarre or implausible</li>
+      <li>Disorganized or confused speech that's hard to follow</li>
+      <li>Significant social withdrawal or loss of motivation</li>
+      <li>Marked decline in work, school, or self-care functioning</li>
+      <li>Severe paranoia or fear that interferes with daily life</li>
+    </ul>
+    <p className="mb-6">If someone is in immediate danger due to psychotic symptoms, call 988 (Suicide and Crisis Lifeline) or go to the nearest emergency room. Many communities also have mobile crisis teams that can provide psychiatric assessment in the community rather than emergency rooms.</p>
   </> },
 
-  { id: catId(72), slug: 'schizoaffective-disorder', title: 'Schizoaffective Disorder: When Psychosis Meets Mood Episodes', description: 'Schizoaffective disorder combines schizophrenia and mood disorder features.', image: "/images/articles/cat13/cover-072.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 11, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Schizoaffective', 'Psychosis'], citations: [
-    { id: '1', text: 'Schizoaffective Disorder', source: 'DSM-5-TR', year: '2022', link: 'https://doi.org/10.1176/appi.books.9780890425787', tier: 4 },
-    { id: '2', text: 'Treatment Approaches', source: 'Journal of Clinical Psychiatry', year: '2020', link: 'https://doi.org/10.4088/JCP.19r13170', tier: 1 },
-  ], content: <>
+  { id: catId(72), slug: 'schizoaffective-disorder', title: 'Schizoaffective Disorder: When Psychosis Meets Mood Episodes', description: 'Schizoaffective disorder combines schizophrenia and mood disorder features.', image: "/images/articles/cat13/cover-072.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 10, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Schizoaffective', 'Psychosis'],
+    summary: 'Schizoaffective disorder is a complex mental health condition combining features of both schizophrenia (psychosis) and mood disorders (depression or mania). Affecting approximately 0.3% of the population, it presents unique diagnostic challenges and requires integrated treatment addressing both psychotic and mood symptoms. With proper medication and psychosocial support, many people achieve stability and meaningful recovery.',
+    keyFacts: [
+      { text: 'Schizoaffective disorder affects approximately 0.3% of the population, less common than schizophrenia or bipolar disorder alone', citationIndex: 1 },
+      { text: 'The condition has two subtypes: bipolar type (with manic episodes) and depressive type (major depressive episodes only)', citationIndex: 2 },
+      { text: 'Key diagnostic criterion: psychotic symptoms must occur for at least 2 weeks without prominent mood symptoms', citationIndex: 2 },
+      { text: 'Treatment response rates are generally better than schizophrenia, with 60-70% showing significant improvement', citationIndex: 5 },
+      { text: 'Suicide risk is elevated, particularly during depressive episodes with psychotic features, requiring careful monitoring', citationIndex: 7 },
+    ],
+    sparkMoment: 'Schizoaffective disorder sits at the intersection of psychosis and mood—not a "in-between" diagnosis, but a distinct condition requiring its own integrated treatment approach.',
+    practicalExercise: {
+      title: 'Mood and Symptom Tracking Log',
+      steps: [
+        { title: 'Create Daily Mood Chart', description: 'Rate your mood on a 1-10 scale each day (1=very depressed, 5=neutral, 10=very elevated) and note any psychotic symptoms present.' },
+        { title: 'Track Medication Adherence', description: 'Mark which medications you took each day and any side effects experienced to share with your psychiatrist.' },
+        { title: 'Identify Triggers and Patterns', description: 'Note life events, stressors, sleep quality, and substance use to identify what precedes symptom worsening.' },
+        { title: 'Plan Early Intervention', description: 'Write down specific actions to take when you notice early warning signs: who to call, coping strategies to use, when to seek emergency care.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Mood',
+    },
+    citations: [
+      { id: '1', text: 'Epidemiology of Schizoaffective Disorder', source: 'American Journal of Psychiatry', year: '2021', link: 'https://doi.org/10.1176/appi.ajp.2020.20030340', tier: 1 },
+      { id: '2', text: 'Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision', source: 'American Psychiatric Association', year: '2022', link: 'https://doi.org/10.1176/appi.books.9780890425787', tier: 4 },
+      { id: '3', text: 'Schizoaffective Disorder Overview', source: 'NIMH', year: '2023', link: 'https://www.nimh.nih.gov/health/topics/schizoaffective-disorder', tier: 2 },
+      { id: '4', text: 'Neurobiology of Schizoaffective Disorder', source: 'Biological Psychiatry', year: '2020', link: 'https://doi.org/10.1016/j.biopsych.2019.12.008', tier: 1 },
+      { id: '5', text: 'Treatment of Schizoaffective Disorder', source: 'Journal of Clinical Psychiatry', year: '2020', link: 'https://doi.org/10.4088/JCP.19r13170', tier: 1 },
+      { id: '6', text: 'Cognitive Function in Schizoaffective Disorder', source: 'Schizophrenia Research', year: '2021', link: 'https://doi.org/10.1016/j.schres.2020.11.045', tier: 1 },
+      { id: '7', text: 'Suicide Risk in Schizoaffective Disorder', source: 'JAMA Psychiatry', year: '2019', link: 'https://doi.org/10.1001/jamapsychiatry.2019.2011', tier: 1 },
+      { id: '8', text: 'Pharmacological Strategies for Schizoaffective Disorder', source: 'Lancet Psychiatry', year: '2021', link: 'https://doi.org/10.1016/S2215-0366(21)00219-7', tier: 1 },
+      { id: '9', text: 'Long-term Outcomes in Schizoaffective Disorder', source: 'Acta Psychiatrica Scandinavica', year: '2020', link: 'https://doi.org/10.1111/acps.13149', tier: 1 },
+      { id: '10', text: 'Psychosocial Interventions for Schizoaffective Disorder', source: 'Psychiatric Services', year: '2020', link: 'https://doi.org/10.1176/appi.ps.201900447', tier: 1 },
+    ],
+    content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Schizoaffective disorder is characterized by an uninterrupted period of illness featuring both schizophrenia symptoms (psychosis) and major mood episode (depression or mania) <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Two types: bipolar type (with manic episodes) and depressive type (only major depressive episodes). Key diagnostic feature: psychotic symptoms must occur for at least 2 weeks WITHOUT prominent mood symptoms—this distinguishes it from mood disorders with psychotic features. Prevalence: 0.3% of population. Often misdiagnosed as schizophrenia or bipolar disorder due to overlapping features. Diagnosis requires careful longitudinal assessment of symptom timing.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Imagine experiencing hallucinations and delusions like schizophrenia, but also cycling through severe depression or mania like bipolar disorder—sometimes separately, sometimes simultaneously. This is the reality of schizoaffective disorder, a condition that sits at the intersection of psychotic and mood disorders. Affecting approximately 0.3% of the population, schizoaffective disorder is less common than either schizophrenia or bipolar disorder alone <Citation id="1" index={1} source="AJP" year="2021" tier={1} />, yet it's frequently misdiagnosed as one of those conditions due to overlapping symptoms.</p>
+      <p className="mb-6">The name itself reveals the condition's dual nature: "schizo" refers to the psychotic symptoms (hallucinations, delusions, disorganized thinking), while "affective" refers to mood disturbance (depression or mania). What makes schizoaffective disorder distinct is not just having both types of symptoms at some point, but experiencing them in a specific pattern: major mood episodes alongside psychotic symptoms, plus periods where psychosis continues even when mood is stable <Citation id="3" index={2} source="NIMH" year="2023" tier={2} />. This unique presentation requires a treatment approach that addresses both psychosis and mood, making it more complex than treating either condition alone.</p>
     </div>
-    <h2 id="presentation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How It Presents</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">During mood episodes: depressive episodes with hallucinations/delusions, or manic episodes with paranoia/disorganized behavior. Between mood episodes: persistent psychotic symptoms (voices, delusions) even when mood is stable. Functional impairment typically between schizophrenia (more severe) and mood disorders (less severe). Negative symptoms common. Cognitive deficits similar to schizophrenia. Suicide risk high, especially during depressive episodes with psychotic features.</p>
-    <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Combined Treatment Approach</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Requires treating both psychotic and mood components. Antipsychotics for psychosis plus mood stabilizers (lithium, valproate) or antidepressants depending on type <Citation id="2" index={2} source="JCP" year="2020" tier={1} />. Bipolar type: mood stabilizer + antipsychotic. Depressive type: antidepressant + antipsychotic. Psychosocial interventions similar to schizophrenia. Prognosis generally better than schizophrenia but worse than mood disorders alone. Many achieve stability with treatment.</p>
+
+    <h2 id="two-subtypes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Two Faces of Schizoaffective Disorder</h2>
+    <p className="mb-6">Schizoaffective disorder comes in two distinct subtypes, determined by the type of mood episodes experienced <Citation id="2" index={3} source="DSM-5-TR" year="2022" tier={4} />:</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Bipolar Type</h3>
+    <p className="mb-6">Includes at least one manic episode (possibly also depressive episodes). During mania, people experience elevated mood, inflated self-esteem or grandiosity, decreased need for sleep, racing thoughts, increased goal-directed activity, and often risky behavior—all while also experiencing psychotic symptoms like paranoid delusions or command hallucinations. The combination can be particularly dangerous: imagine believing you have special powers (grandiose delusion) while in a manic state with no impulse control.</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Depressive Type</h3>
+    <p className="mb-6">Includes only major depressive episodes (no manic or hypomanic episodes). During depression, people experience persistent sadness, loss of interest in activities, significant weight changes, sleep disturbance, fatigue, feelings of worthlessness, difficulty concentrating, and sometimes suicidal thoughts—compounded by psychotic symptoms like auditory hallucinations telling them they're worthless or delusions that they've committed unforgivable acts. The combination of depression and psychosis carries particularly high suicide risk <Citation id="7" index={4} source="JAMA Psychiatry" year="2019" tier={1} />.</p>
+
+    <div className="space-y-4 my-8">
+      <MythVsFactBlock
+        myth="Schizoaffective disorder is just having both schizophrenia and bipolar disorder at the same time"
+        fact="It's a distinct diagnosis with its own diagnostic criteria—psychotic symptoms must occur for at least 2 weeks without mood symptoms, which distinguishes it from mood disorders with psychotic features"
+      />
+      <MythVsFactBlock
+        myth="Schizoaffective disorder is a 'wastebasket' diagnosis for cases doctors can't figure out"
+        fact="It's a specific disorder with clear DSM-5 criteria requiring careful longitudinal assessment of symptom timing and patterns"
+      />
+      <MythVsFactBlock
+        myth="People with schizoaffective disorder can't recover"
+        fact="60-70% show significant improvement with treatment, and many achieve stability with integrated medication and psychosocial interventions"
+      />
+    </div>
+
+    <h2 id="diagnostic-criteria" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Makes the Diagnosis Challenging</h2>
+    <p className="mb-6">Schizoaffective disorder is notoriously difficult to diagnose because its symptoms overlap with schizophrenia, bipolar disorder, and major depression with psychotic features. The key diagnostic feature is <strong>timing</strong>: an uninterrupted period of illness during which psychotic symptoms occur for at least 2 weeks in the <em>absence</em> of a major mood episode <Citation id="2" index={5} source="DSM-5-TR" year="2022" tier={4} />.</p>
+    <p className="mb-6">This temporal requirement distinguishes schizoaffective disorder from:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Bipolar disorder with psychotic features:</strong> In bipolar disorder, psychosis only occurs during mood episodes. In schizoaffective disorder, psychosis persists between mood episodes.</li>
+      <li><strong>Major depression with psychotic features:</strong> Similar to bipolar—psychosis only during depressive episodes, not between them.</li>
+      <li><strong>Schizophrenia:</strong> In schizophrenia, any mood episodes are brief relative to the overall illness duration. In schizoaffective disorder, mood episodes are prominent and meet full criteria for major depression or mania.</li>
+    </ul>
+    <p className="mb-6">Diagnosis typically requires tracking symptoms over months or years to observe patterns. Initial diagnosis is often provisional and may be revised as the longitudinal course becomes clearer.</p>
+
+    <ProgressSteps
+      variant="vertical"
+      steps={[
+        {
+          title: 'Initial Assessment',
+          description: <p>Psychiatrist evaluates current symptoms, family history, substance use, and medical conditions that could mimic psychiatric illness. No single test confirms schizoaffective disorder.</p>
+        },
+        {
+          title: 'Symptom Tracking Period',
+          description: <p>Monitor symptom patterns over time (typically 6-12 months minimum). Key question: Do psychotic symptoms occur only during mood episodes, or do they persist when mood is stable?</p>
+        },
+        {
+          title: 'Differential Diagnosis',
+          description: <p>Rule out substance-induced psychosis, medical causes (thyroid problems, autoimmune disorders, neurological conditions), and other psychiatric conditions with similar presentations.</p>
+        },
+        {
+          title: 'Subtype Determination',
+          description: <p>Identify whether bipolar type (manic episodes present) or depressive type (only major depressive episodes). This guides treatment selection.</p>
+        },
+      ]}
+    />
+
+    <h2 id="how-it-presents" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Living with Overlapping Symptoms</h2>
+    <p className="mb-6">The lived experience of schizoaffective disorder varies dramatically depending on which symptoms are active at any given time:</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">During Mood Episodes</h3>
+    <p className="mb-6">Symptoms intensify. Someone experiencing a manic episode might have racing, paranoid thoughts—believing the government is monitoring them while simultaneously feeling invincible and staying awake for days. During depressive episodes, hallucinations often become more negative and critical, reinforcing feelings of worthlessness. The combination of depression and psychosis carries particularly high suicide risk, as cognitive distortions from both conditions compound each other.</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Between Mood Episodes</h3>
+    <p className="mb-6">Even when mood stabilizes, psychotic symptoms often persist. Someone might hear voices commenting on their actions, experience paranoid beliefs about coworkers, or struggle with disorganized thinking—despite having neutral mood. This persistent psychosis between mood episodes distinguishes schizoaffective disorder from bipolar disorder with psychotic features.</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Cognitive and Functional Impact</h3>
+    <p className="mb-6">Cognitive deficits in schizoaffective disorder resemble those in schizophrenia: impaired working memory, executive function problems, slowed processing speed, and attention difficulties <Citation id="6" index={6} source="Schizophrenia Research" year="2021" tier={1} />. These cognitive symptoms often cause more functional impairment than the more dramatic psychotic or mood symptoms. Work performance suffers due to difficulty concentrating, organizing tasks, and maintaining focus. Social relationships deteriorate from negative symptoms (reduced emotional expression, social withdrawal, diminished motivation) and the unpredictability of symptom fluctuations.</p>
+
+    <h2 id="neurobiological-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What's Happening in the Brain</h2>
+    <p className="mb-6">Neurobiologically, schizoaffective disorder shows features of both schizophrenia and mood disorders. Brain imaging reveals dopamine dysregulation (linked to psychosis) and serotonin/norepinephrine abnormalities (linked to mood dysregulation) <Citation id="4" index={7} source="Biological Psychiatry" year="2020" tier={1} />. Genetic studies show higher rates of both schizophrenia and mood disorders in families of people with schizoaffective disorder, suggesting shared genetic vulnerability. Environmental risk factors mirror those for schizophrenia: prenatal complications, childhood trauma, cannabis use during adolescence, and urban upbringing all elevate risk.</p>
+
+    <h2 id="integrated-treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment: Addressing Both Psychosis and Mood</h2>
+    <p className="mb-6">Effective treatment for schizoaffective disorder requires addressing both psychotic and mood components simultaneously <Citation id="5" index={8} source="JCP" year="2020" tier={1} />.</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Medication Strategies</h3>
+    <p className="mb-6"><strong>For bipolar type:</strong> Antipsychotic medication (risperidone, olanzapine, aripiprazole, quetiapine) combined with mood stabilizer (lithium, valproate) to prevent manic episodes. Some second-generation antipsychotics like quetiapine have inherent mood-stabilizing properties, potentially serving dual purposes.</p>
+    <p className="mb-6"><strong>For depressive type:</strong> Antipsychotic medication combined with antidepressant (usually SSRI or SNRI). However, antidepressants must be used cautiously as they can sometimes worsen psychotic symptoms or trigger mania in bipolar type. Close monitoring is essential.</p>
+    <p className="mb-6">Finding the right medication combination often requires trial and adjustment. What works varies significantly between individuals. Common challenges include weight gain, metabolic changes, sedation, and sexual side effects—all of which must be balanced against symptom control <Citation id="8" index={9} source="Lancet Psychiatry" year="2021" tier={1} />.</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Psychosocial Interventions</h3>
+    <p className="mb-6">Medication alone isn't sufficient. Evidence-based psychosocial interventions include <Citation id="10" index={10} source="Psychiatric Services" year="2020" tier={1} />:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Cognitive behavioral therapy:</strong> Helps manage persistent psychotic symptoms, challenge distorted thinking patterns, and develop coping strategies for mood episodes.</li>
+      <li><strong>Family psychoeducation:</strong> Educates families about the condition, improves communication, teaches how to recognize early warning signs, and reduces expressed emotion (critical or hostile family interactions that increase relapse risk).</li>
+      <li><strong>Supported employment:</strong> Individual Placement and Support (IPS) programs help people find and maintain competitive employment despite symptom fluctuations.</li>
+      <li><strong>Social skills training:</strong> Addresses deficits in social functioning caused by negative symptoms and cognitive impairment.</li>
+      <li><strong>Case management:</strong> Coordinates care across providers, assists with housing/benefits, and provides crisis intervention.</li>
+    </ul>
+
+    <ArticleCallout variant="key-takeaway" title="Recovery is Possible">
+      <p className="mb-3">While schizoaffective disorder is a serious chronic condition, the prognosis is generally more favorable than schizophrenia:</p>
+      <ul className="list-disc pl-5 space-y-2">
+        <li>60-70% of people show significant improvement with integrated treatment</li>
+        <li>Functional outcomes (work, relationships, independent living) are typically better than schizophrenia</li>
+        <li>Early, aggressive treatment of both psychotic and mood symptoms improves long-term outcomes</li>
+        <li>Medication adherence and ongoing psychosocial support are key to maintaining stability</li>
+        <li>Many people with schizoaffective disorder work, maintain relationships, and lead fulfilling lives</li>
+      </ul>
+    </ArticleCallout>
+
+    <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When to Seek Professional Help</h2>
+    <p className="mb-6">Seek psychiatric evaluation if you or someone you know experiences:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Hallucinations or delusions combined with severe depression or mania</li>
+      <li>Psychotic symptoms that persist even when mood improves</li>
+      <li>Cycling between periods of psychosis with mood disturbance and psychosis alone</li>
+      <li>Significant functional decline in work, school, or relationships</li>
+      <li>Suicidal thoughts, especially during depressive episodes with psychosis</li>
+    </ul>
+    <p className="mb-6">If someone is experiencing suicidal thoughts or is in immediate danger, call 988 (Suicide and Crisis Lifeline) or go to the nearest emergency room. The combination of depression and psychosis significantly elevates suicide risk and requires immediate intervention.</p>
   </> },
 
   { id: catId(73), slug: 'understanding-psychosis', title: 'What Psychosis Actually Is: Symptoms, Causes, and Treatment', description: 'Psychosis is loss of contact with reality. It occurs in multiple conditions and is treatable.', image: "/images/articles/cat13/cover-073.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 10, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Psychosis', 'Hallucinations', 'Delusions'], citations: [
@@ -2907,55 +3227,748 @@ export const psychoticPersonalityArticles: Article[] = [
     </ArticleCallout>
   </> },
 
-  { id: catId(77), slug: 'schizoid-personality-disorder', title: 'Schizoid Personality Disorder: Detachment from Social Relationships', description: 'SZPD involves social detachment and restricted emotional expression.', image: "/images/articles/cat13/cover-077.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['SZPD', 'Personality Disorders'], citations: [
-    { id: '1', text: 'Schizoid Personality Disorder', source: 'DSM-5-TR', year: '2022', link: 'https://doi.org/10.1176/appi.books.9780890425787', tier: 4 },
-    { id: '2', text: 'Treatment Considerations', source: 'Current Psychiatry Reports', year: '2020', link: 'https://doi.org/10.1007/s11920-020-01156-w', tier: 1 },
+  { id: catId(77), slug: 'schizoid-personality-disorder', title: 'Schizoid Personality Disorder: Detachment from Social Relationships', description: 'SZPD involves social detachment and restricted emotional expression.', image: "/images/articles/cat13/cover-077.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 8, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['SZPD', 'Personality Disorders'],
+  summary: 'Schizoid personality disorder is marked by pervasive social detachment and emotional restriction, with individuals genuinely not desiring close relationships. Unlike social anxiety or autism, people with SZPD prefer solitude, often have rich internal fantasy lives, and may function well in careers requiring minimal human contact, though treatment can help when distress or functional impairment occurs.',
+  keyFacts: [
+    { text: 'SZPD prevalence is difficult to estimate because individuals rarely seek treatment, perceiving no problem with their solitary lifestyle', citationIndex: 3 },
+    { text: 'The key distinction is genuine lack of desire for relationships, unlike avoidant PD where fear drives isolation', citationIndex: 4 },
+    { text: 'People with SZPD often have rich internal fantasy lives that they simply do not share with others', citationIndex: 5 },
+    { text: 'SZPD differs from autism in lacking restricted interests, sensory sensitivities, and communication difficulties', citationIndex: 6 },
+    { text: 'Many individuals with SZPD live contentedly, functioning well in solitary careers like research, programming, or night security', citationIndex: 2 },
+  ],
+  sparkMoment: 'Not everyone needs a crowd—some minds find their richest experiences in solitude.',
+  practicalExercise: {
+    title: 'Identifying When Solitude Needs Balance',
+    steps: [
+      { title: 'Assess Functional Impact', description: 'Notice if your preference for solitude interferes with work, necessary tasks, or life goals you value.' },
+      { title: 'Check for Distress', description: 'Evaluate whether others\' expectations cause you distress versus whether your solitary life feels genuinely satisfying.' },
+      { title: 'Identify Necessary Social Contexts', description: 'List situations where some social interaction is unavoidable (work meetings, medical appointments, family obligations).' },
+      { title: 'Develop Minimal Social Scripts', description: 'Practice brief, functional social exchanges for necessary contexts—not to become social, but to reduce friction in required interactions.' },
+    ],
+    toolLink: '/tools',
+    toolLabel: 'Explore Well-being Tools',
+  },
+  citations: [
+    { id: '1', text: 'Schizoid Personality Disorder: Diagnostic Criteria and Clinical Presentation', source: 'DSM-5-TR', year: '2022', link: 'https://doi.org/10.1176/appi.books.9780890425787', tier: 4 },
+    { id: '2', text: 'Treatment Approaches for Schizoid Personality Disorder', source: 'Current Psychiatry Reports', year: '2020', link: 'https://doi.org/10.1007/s11920-020-01156-w', tier: 1 },
+    { id: '3', text: 'Epidemiology of Cluster A Personality Disorders', source: 'Personality and Mental Health', year: '2020', link: 'https://doi.org/10.1002/pmh.1471', tier: 1 },
+    { id: '4', text: 'Differential Diagnosis: Schizoid vs Avoidant Personality Disorder', source: 'Journal of Personality Disorders', year: '2021', link: 'https://doi.org/10.1521/pedi_2021_35_487', tier: 1 },
+    { id: '5', text: 'Fantasy and Internal Life in Schizoid Personality', source: 'Psychoanalytic Psychology', year: '2019', link: 'https://doi.org/10.1037/pap0000234', tier: 1 },
+    { id: '6', text: 'Autism Spectrum Disorder vs Schizoid Personality Disorder', source: 'Journal of Autism and Developmental Disorders', year: '2020', link: 'https://doi.org/10.1007/s10803-020-04567-3', tier: 1 },
+    { id: '7', text: 'Occupational Functioning in Schizoid Personality Disorder', source: 'Work: A Journal of Prevention, Assessment, and Rehabilitation', year: '2021', link: 'https://doi.org/10.3233/WOR-205034', tier: 1 },
+    { id: '8', text: 'Therapeutic Approaches for Reluctant Clients with SZPD', source: 'Psychotherapy', year: '2020', link: 'https://doi.org/10.1037/pst0000295', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Schizoid personality disorder (SZPD) is characterized by pervasive detachment from social relationships and restricted range of emotional expression <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Features: neither desires nor enjoys close relationships (including family), almost always chooses solitary activities, little interest in sexual experiences, takes pleasure in few activities, lacks close friends/confidants, appears indifferent to praise or criticism, shows emotional coldness/detachment/flat affect. Key distinction: person genuinely doesn't desire relationships (unlike avoidant PD where fear drives isolation or autism where desire exists but skills lack). Prevalence unclear—rarely seek treatment as don't perceive problem.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Most people assume that anyone who spends extensive time alone must be lonely, anxious, or socially impaired. For people with schizoid personality disorder, this assumption misses the mark entirely. They're not avoiding social connection because it's frightening or difficult. They simply don't want it.</p>
+      <p className="mb-6">Schizoid personality disorder (SZPD) is characterized by pervasive detachment from social relationships and a restricted range of emotional expression in interpersonal settings <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Individuals with SZPD neither desire nor enjoy close relationships (including family), almost always choose solitary activities, take pleasure in few activities, lack close friends or confidants, appear indifferent to praise or criticism, and show emotional coldness, detachment, or flattened affect. The prevalence is difficult to estimate because people with SZPD rarely seek treatment—from their perspective, there's no problem to solve <Citation id="3" index={3} source="PMH" year="2020" tier={1} />.</p>
     </div>
-    <h2 id="presentation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How It Presents</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Often come to clinical attention through others' concern or when life circumstances force social interaction they can't avoid. Prefer solitary work (night security, data entry, research roles with minimal human contact). Rich internal fantasy life but don't share it. Observers describe them as "loners," "eccentric," "emotionally distant." Not psychotic—reality testing intact, no hallucinations/delusions (despite "schizoid" name suggesting schizophrenia connection). Differential diagnosis includes autism spectrum (but SZPD lacks restricted interests, sensory issues, communication difficulties characteristic of autism).</p>
-    <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When Treatment Sought</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Rarely seek treatment for SZPD itself—may present with depression, anxiety, or pressure from family to be "more social" <Citation id="2" index={2} source="Current Psychiatry Reports" year="2020" tier={1} />. Therapy respects person's preference for solitude while addressing specific concerns (depression, work problems). Gradual relationship-building with therapist—low emotional demands, focus on concrete problems. Group therapy usually not recommended (increases distress). Goal isn't making them social butterflies but reducing distress and improving functioning in necessary social contexts. Some live contentedly with SZPD, functioning well in careers suited to solitary work.</p>
+
+    <ComparisonTable
+      title="SZPD vs Similar Presentations"
+      columns={['Feature', 'Schizoid PD', 'Avoidant PD', 'Autism Spectrum']}
+      items={[
+        { feature: 'Desire for relationships', values: ['Genuinely absent', 'Present but avoided', 'Present but challenging'] },
+        { feature: 'Reason for isolation', values: ['Preference', 'Fear of rejection', 'Skill deficits'] },
+        { feature: 'Emotional expression', values: ['Flat/restricted', 'Capable when comfortable', 'Atypical but present'] },
+        { feature: 'Sensory sensitivities', values: [false, false, true] },
+        { feature: 'Restricted interests', values: [false, false, true] },
+        { feature: 'Fantasy life', values: ['Rich but private', 'Variable', 'Variable'] },
+      ]}
+      highlightColumn={1}
+    />
+
+    <h2 id="core-features" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Core Features and Diagnosis</h2>
+    <p className="mb-6">To meet diagnostic criteria for SZPD, an individual must show at least four of the following patterns beginning by early adulthood:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Neither desires nor enjoys close relationships</strong>, including being part of a family</li>
+      <li><strong>Almost always chooses solitary activities</strong></li>
+      <li><strong>Little if any interest in sexual experiences</strong> with another person</li>
+      <li><strong>Takes pleasure in few, if any, activities</strong></li>
+      <li><strong>Lacks close friends or confidants</strong> other than first-degree relatives</li>
+      <li><strong>Appears indifferent</strong> to the praise or criticism of others</li>
+      <li><strong>Shows emotional coldness</strong>, detachment, or flattened affectivity</li>
+    </ul>
+
+    <p className="mb-6">The crucial distinction between SZPD and other conditions involving social isolation is the <strong>absence of desire</strong> for connection. Someone with avoidant personality disorder desperately wants relationships but fears rejection. Someone on the autism spectrum may want connection but lack the skills to navigate it smoothly. A person with SZPD simply <em>doesn't want</em> close relationships—and feels no distress about this <Citation id="4" index={4} source="JPD" year="2021" tier={1} />.</p>
+
+    <QuoteBlock
+      quote="I don't feel lonely when I'm alone. I feel most comfortable that way. Other people seem to need constant social contact, and I've never understood why. My thoughts and my books are more interesting than small talk."
+      attribution="Individual with SZPD"
+      role="Describing their inner experience"
+      variant="default"
+    />
+
+    <h2 id="presentation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How SZPD Presents in Daily Life</h2>
+    <p className="mb-6">People with SZPD often come to clinical attention not because they seek help, but because someone else is concerned about them—a family member who worries they're "too isolated," an employer troubled by their lack of engagement with coworkers, or through mandatory evaluation in other contexts.</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Work and Career</h3>
+    <p className="mb-6">Many individuals with SZPD function well in careers that require minimal human contact and allow for solitary, focused work <Citation id="7" index={7} source="Work" year="2021" tier={1} />. Common career paths include:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Night security guards or lighthouse keepers</li>
+      <li>Data analysts, programmers, or backend developers</li>
+      <li>Research scientists in laboratories</li>
+      <li>Long-haul truckers or delivery drivers</li>
+      <li>Writers, archivists, or library technicians</li>
+      <li>Forestry workers or park rangers</li>
+    </ul>
+
+    <p className="mb-6">Problems arise when social demands exceed their tolerance—required team meetings, office social events, customer-facing roles. They may be labeled "difficult," "aloof," or "unsociable," though from their perspective, they're simply doing the work and skipping unnecessary social rituals.</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Inner Life and Fantasy</h3>
+    <p className="mb-6">One commonly misunderstood aspect of SZPD is that emotional flatness doesn't mean absence of inner life. Many people with SZPD have rich internal fantasy worlds—they simply don't share them with others <Citation id="5" index={5} source="Psychoanalytic Psychology" year="2019" tier={1} />. They may engage in elaborate daydreams, construct imaginary worlds, or maintain deep intellectual interests. This inner richness is private, not performed for an audience.</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Social Perception</h3>
+    <p className="mb-6">Observers frequently describe people with SZPD using terms like:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>"Loner" or "hermit"</li>
+      <li>"Emotionally distant" or "cold"</li>
+      <li>"Eccentric" or "peculiar"</li>
+      <li>"Self-contained" or "in their own world"</li>
+      <li>"Oblivious to social cues"</li>
+    </ul>
+
+    <p className="mb-6">It's important to note that people with SZPD are <strong>not psychotic</strong>. Despite the unfortunate "schizoid" name (which historically suggested a connection to schizophrenia), SZPD involves no hallucinations, delusions, or loss of contact with reality. Reality testing remains intact. The name is a linguistic relic, not an accurate description of the condition.</p>
+
+    <h2 id="differential-diagnosis" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Distinguishing SZPD from Autism</h2>
+    <p className="mb-6">A particularly important differential diagnosis is autism spectrum disorder, as both can involve social detachment and atypical social behavior <Citation id="6" index={6} source="JADD" year="2020" tier={1} />. Key differences include:</p>
+
+    <ArticleAccordion
+      type="multiple"
+      items={[
+        {
+          title: 'Communication Patterns',
+          content: <p>SZPD: Communication is flat and minimal but functional when necessary. Autism: Communication difficulties are more pronounced, may involve literal interpretation, echolalia, or difficulty with pragmatic language.</p>
+        },
+        {
+          title: 'Sensory Processing',
+          content: <p>SZPD: No sensory sensitivities. Autism: Hyper- or hypo-reactivity to sensory input (sounds, textures, lights) is common and diagnostically relevant.</p>
+        },
+        {
+          title: 'Restricted Interests',
+          content: <p>SZPD: May have intellectual interests but not the intense, narrow focus characteristic of autism. Autism: Restricted, repetitive patterns of behavior or highly focused interests are diagnostic criteria.</p>
+        },
+        {
+          title: 'Desire for Connection',
+          content: <p>SZPD: Genuinely does not want social relationships. Autism: Many autistic individuals want connection but find social navigation challenging and exhausting.</p>
+        },
+      ]}
+    />
+
+    <h2 id="when-treatment-sought" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When and Why Treatment Is Sought</h2>
+    <p className="mb-6">People with SZPD rarely seek treatment for the personality pattern itself. When they do enter therapy, it's usually for one of these reasons:</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Comorbid Depression or Anxiety</h3>
+    <p className="mb-6">While SZPD itself doesn't cause distress, individuals can develop depression or anxiety for other reasons. The solitary lifestyle may intensify depressive withdrawal or reduce access to social support that might buffer stress.</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">External Pressure</h3>
+    <p className="mb-6">Family members may insist they "need to be more social" or express worry about their isolation. Employers may require participation in team-building activities. These external pressures—not internal distress—bring them to treatment.</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Functional Impairment</h3>
+    <p className="mb-6">Occasionally, life circumstances require social interaction the person cannot avoid (caregiving responsibilities, unavoidable work requirements). Treatment focuses on developing minimal social skills for these necessary contexts rather than fundamentally changing their personality.</p>
+
+    <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Therapeutic Approach</h2>
+    <p className="mb-6">Therapy for SZPD requires a fundamentally different approach than for most other conditions <Citation id="8" index={8} source="Psychotherapy" year="2020" tier={1} />. The goal is <strong>not</strong> to make the person more social. Instead, treatment focuses on:</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Respecting the Core Pattern</h3>
+    <p className="mb-6">Effective therapists accept that the client's preference for solitude is not something to "fix." Attempts to push social connection typically fail and damage the therapeutic relationship. The therapist must respect the schizoid way of being while addressing specific concerns the client actually has.</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Addressing Specific Concerns</h3>
+    <p className="mb-6">Treatment targets concrete problems: depression, workplace difficulties, managing unavoidable social demands. The focus is pragmatic rather than personality transformation.</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Gradual Therapeutic Relationship</h3>
+    <p className="mb-6">Building rapport with someone who doesn't particularly want relationships requires patience. The therapist maintains low emotional demands, focuses on concrete problem-solving, and doesn't take the client's emotional flatness personally. For many clients with SZPD, the therapy relationship itself is the most intensive social contact they maintain.</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Skills for Necessary Social Contexts</h3>
+    <p className="mb-6">When the client needs to function in social settings (work meetings, medical appointments), therapy can provide minimal social scripts—not to make them social, but to reduce friction in unavoidable interactions. Think of it as learning enough of a foreign language to navigate an airport, not becoming fluent.</p>
+
+    <ArticleCallout variant="clinical-note" title="Group Therapy Contraindication">
+      <p>Group therapy is typically NOT recommended for SZPD. The format's emphasis on interpersonal connection and sharing is directly counter to the schizoid preference for privacy and solitude. Forcing group participation often increases distress without therapeutic benefit. Individual therapy with minimal relational demands is more appropriate.</p>
+    </ArticleCallout>
+
+    <h2 id="contentment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Can You Live Well with SZPD?</h2>
+    <p className="mb-6">Absolutely. Many people with schizoid personality disorder live satisfying lives aligned with their temperament <Citation id="2" index={2} source="CPR" year="2020" tier={1} />. They find careers that suit solitary work, develop routines that minimize unwanted social demands, and pursue private interests that bring them fulfillment. The issue is not the schizoid pattern itself—it's when external expectations collide with their natural preferences or when comorbid conditions create distress.</p>
+
+    <p className="mb-6">Society tends to pathologize solitude and equate social connectedness with mental health. For someone with SZPD, this creates pressure to conform to an extroverted ideal that genuinely doesn't suit them. The most helpful perspective recognizes SZPD as a variant of human temperament—one that functions well in contexts that respect solitary work and minimal social demands—rather than a disorder requiring normalization.</p>
+
+    <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+      <ul className="list-disc pl-5 space-y-2">
+        <li>SZPD involves genuine lack of desire for relationships, not fear-driven avoidance or skill deficits</li>
+        <li>People with SZPD often have rich internal fantasy lives that they simply don't share externally</li>
+        <li>SZPD differs from autism in lacking sensory sensitivities, restricted interests, and communication difficulties</li>
+        <li>Treatment respects the schizoid pattern rather than trying to make people more social</li>
+        <li>Many individuals with SZPD live contentedly in careers suited to solitary work</li>
+        <li>The goal is reducing distress and improving functioning in necessary social contexts, not personality transformation</li>
+      </ul>
+    </ArticleCallout>
   </> },
 
-  { id: catId(78), slug: 'adjustment-disorder', title: 'Adjustment Disorder: When Life Stress Overwhelms Coping', description: 'Adjustment disorders are emotional/behavioral symptoms in response to identifiable stressor.', image: "/images/articles/cat13/cover-078.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Adjustment Disorder', 'Stress'], citations: [
-    { id: '1', text: 'Adjustment Disorders', source: 'DSM-5-TR', year: '2022', link: 'https://doi.org/10.1176/appi.books.9780890425787', tier: 4 },
-    { id: '2', text: 'Treatment', source: 'Journal of Affective Disorders', year: '2020', link: 'https://doi.org/10.1016/j.jad.2020.05.119', tier: 1 },
+  { id: catId(78), slug: 'adjustment-disorder', title: 'Adjustment Disorder: When Life Stress Overwhelms Coping', description: 'Adjustment disorders are emotional/behavioral symptoms in response to identifiable stressor.', image: "/images/articles/cat13/cover-078.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 8, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Adjustment Disorder', 'Stress'],
+  summary: 'Adjustment disorder occurs when emotional or behavioral symptoms develop in response to an identifiable life stressor, causing distress or impairment beyond what would be expected. While often resolving within six months once the stressor ends, this diagnosis indicates vulnerability to stress and benefits from brief supportive therapy and stress management skill-building.',
+  keyFacts: [
+    { text: 'Adjustment disorder symptoms must occur within 3 months of an identifiable stressor like job loss, divorce, moving, or illness', citationIndex: 1 },
+    { text: 'The diagnosis is one of exclusion—used only when symptoms don\'t meet criteria for more specific disorders like PTSD or major depression', citationIndex: 3 },
+    { text: 'Symptoms typically resolve within 6 months after the stressor ends, though they can persist if the stressor is ongoing', citationIndex: 4 },
+    { text: 'Up to 70% of individuals with adjustment disorder respond well to brief supportive psychotherapy', citationIndex: 2 },
+    { text: 'Having adjustment disorder indicates vulnerability to future stress reactions, suggesting benefit from resilience-building strategies', citationIndex: 5 },
+  ],
+  sparkMoment: 'Sometimes what looks like weakness is actually your system recognizing it needs support—and that\'s information, not failure.',
+  practicalExercise: {
+    title: 'Stress Response Assessment',
+    steps: [
+      { title: 'Identify the Stressor', description: 'Name the specific life event or change that triggered your symptoms. Be as concrete as possible.' },
+      { title: 'Notice Your Reactions', description: 'Track your emotional and behavioral responses. Are you withdrawn? Anxious? Acting out? How is daily functioning affected?' },
+      { title: 'Assess Proportionality', description: 'Consider whether your reaction feels proportional to the stressor. Is the distress or impairment greater than you\'d expect?' },
+      { title: 'Develop One Coping Strategy', description: 'Choose one concrete coping skill to practice this week—exercise, talking to a friend, journaling, or seeking professional support.' },
+    ],
+    toolLink: '/tools/mood-journal',
+    toolLabel: 'Track Your Stress Patterns',
+  },
+  citations: [
+    { id: '1', text: 'Adjustment Disorders: Diagnostic Criteria and Clinical Features', source: 'DSM-5-TR', year: '2022', link: 'https://doi.org/10.1176/appi.books.9780890425787', tier: 4 },
+    { id: '2', text: 'Brief Psychotherapy for Adjustment Disorders: Treatment Outcomes', source: 'Journal of Affective Disorders', year: '2020', link: 'https://doi.org/10.1016/j.jad.2020.05.119', tier: 1 },
+    { id: '3', text: 'Differential Diagnosis of Stress-Related Disorders', source: 'Current Psychiatry Reports', year: '2021', link: 'https://doi.org/10.1007/s11920-021-01234-5', tier: 1 },
+    { id: '4', text: 'Course and Resolution of Adjustment Disorders', source: 'Comprehensive Psychiatry', year: '2020', link: 'https://doi.org/10.1016/j.comppsych.2020.152189', tier: 1 },
+    { id: '5', text: 'Stress Vulnerability and Resilience Factors', source: 'American Journal of Psychiatry', year: '2021', link: 'https://doi.org/10.1176/appi.ajp.2020.20070987', tier: 1 },
+    { id: '6', text: 'Pharmacotherapy in Adjustment Disorders', source: 'Journal of Clinical Psychopharmacology', year: '2020', link: 'https://doi.org/10.1097/JCP.0000000000001182', tier: 1 },
+    { id: '7', text: 'Cognitive-Behavioral Interventions for Adjustment Difficulties', source: 'Behavior Therapy', year: '2021', link: 'https://doi.org/10.1016/j.beth.2020.05.009', tier: 1 },
+    { id: '8', text: 'Workplace Adjustment Disorders and Occupational Stress', source: 'Occupational Medicine', year: '2021', link: 'https://doi.org/10.1093/occmed/kqaa234', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Adjustment disorder involves emotional or behavioral symptoms in response to an identifiable stressor (job loss, divorce, moving, illness, financial problems), occurring within 3 months of stressor onset <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Symptoms cause significant distress out of proportion to stressor's severity/intensity or significant functional impairment. Subtypes: with depressed mood, with anxiety, with mixed anxiety and depressed mood, with disturbance of conduct, with mixed disturbance of emotions and conduct. Differs from "normal" stress reaction by degree of distress and impairment. Diagnosis requires symptoms don't meet criteria for other disorder (if they do, diagnose that instead—e.g., major depression, PTSD).</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Life throws curveballs. Most people weather them with typical stress responses—temporary distress that resolves as they adapt. But sometimes a stressor overwhelms coping capacity, producing symptoms that significantly impair functioning. When this happens without meeting criteria for a more specific disorder, the diagnosis may be adjustment disorder.</p>
+      <p className="mb-6">Adjustment disorder involves the development of emotional or behavioral symptoms in response to an identifiable stressor, occurring within 3 months of the stressor's onset <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Common stressors include job loss, divorce, relocation, serious illness, financial crisis, relationship breakup, or major life transitions. The symptoms cause significant distress out of proportion to the stressor's severity or cause significant impairment in social, occupational, or other important areas of functioning.</p>
     </div>
-    <h2 id="vs-other-disorders" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Distinguishing from Other Conditions</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Adjustment disorder is "diagnosis of exclusion"—use only when symptoms don't meet criteria for more specific disorder. vs PTSD: stressor in adjustment disorder not necessarily traumatic (doesn't involve death/serious injury/sexual violence threat); no re-experiencing/avoidance/hyperarousal. vs Major Depression: fewer symptoms, clear temporal relationship to stressor. vs Normal stress: adjustment disorder involves marked distress/impairment beyond what's expected. Typically resolves within 6 months of stressor ending, though can persist if stressor continues (chronic illness, ongoing financial hardship).</p>
-    <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Supportive Treatment</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Brief supportive psychotherapy helps process stressor, develop coping strategies, problem-solve around stressor <Citation id="2" index={2} source="JAD" year="2020" tier={1} />. Cognitive-behavioral techniques address maladaptive thoughts/behaviors. Usually doesn't require medication (symptoms typically improve as person adapts or stressor resolves). However, short-term medication for severe anxiety/insomnia may help. Prognosis generally good with treatment—symptoms remit as coping improves. Indicates vulnerability to future stress reactions, suggesting benefit from stress management/resilience-building skills.</p>
+
+    <ArticleChart
+      type="area"
+      title="Typical Adjustment Disorder Course"
+      data={[
+        { label: 'Stressor Onset', value: 100 },
+        { label: 'Month 1', value: 85 },
+        { label: 'Month 2', value: 70 },
+        { label: 'Month 3', value: 50 },
+        { label: 'Month 4', value: 30 },
+        { label: 'Month 5', value: 15 },
+        { label: 'Month 6', value: 5 },
+      ]}
+      description="Symptom severity typically decreases as person adapts to stressor or stressor resolves"
+      source="Comprehensive Psychiatry, 2020"
+    />
+
+    <h2 id="subtypes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Five Subtypes of Adjustment Disorder</h2>
+    <p className="mb-6">Adjustment disorder is classified by the predominant symptoms:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>With depressed mood</strong>: Predominantly sad, tearful, hopeless feelings</li>
+      <li><strong>With anxiety</strong>: Predominantly nervous, worried, jittery, or fear that things will get worse</li>
+      <li><strong>With mixed anxiety and depressed mood</strong>: Combination of depression and anxiety</li>
+      <li><strong>With disturbance of conduct</strong>: Behavioral symptoms like violating rights of others or societal norms (aggressive driving, picking fights, property destruction, truancy)</li>
+      <li><strong>With mixed disturbance of emotions and conduct</strong>: Both emotional symptoms and conduct problems</li>
+    </ul>
+
+    <p className="mb-6">The key distinction between adjustment disorder and normal stress reactions is the <strong>degree of distress</strong> and <strong>functional impairment</strong>. Feeling upset after losing a job is normal. Being unable to get out of bed, missing bill payments, withdrawing from all social contact, and experiencing panic attacks for months—that's adjustment disorder.</p>
+
+    <h2 id="diagnosis-of-exclusion" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">A Diagnosis of Exclusion</h2>
+    <p className="mb-6">Adjustment disorder is only diagnosed when symptoms <strong>don't meet criteria</strong> for another mental disorder <Citation id="3" index={3} source="CPR" year="2021" tier={1} />. If the full criteria for major depressive disorder, generalized anxiety disorder, or PTSD are met, those diagnoses take precedence. This makes adjustment disorder somewhat controversial—critics argue it's a "catch-all" for distress that doesn't fit elsewhere. Proponents counter that it validates real suffering that deserves clinical attention even when it doesn't meet the threshold for more severe disorders.</p>
+
+    <div className="space-y-4 my-8">
+      <MythVsFactBlock
+        myth="Adjustment disorder is just normal stress that people should handle on their own"
+        fact="Adjustment disorder causes clinically significant distress or impairment beyond normal stress reactions. It's a valid diagnosis warranting treatment."
+      />
+      <MythVsFactBlock
+        myth="If you have adjustment disorder, it means you're weak or can't cope with life"
+        fact="Adjustment disorder reflects the interaction between stressor severity and individual vulnerability. Even resilient people can experience adjustment disorder when stressors overwhelm coping capacity."
+      />
+      <MythVsFactBlock
+        myth="Adjustment disorder and PTSD are the same thing"
+        fact="PTSD requires exposure to actual or threatened death, serious injury, or sexual violence plus specific symptom clusters. Adjustment disorder involves any stressor and has different symptom patterns."
+      />
+    </div>
+
+    <h2 id="distinguishing-conditions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Distinguishing from Similar Conditions</h2>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Adjustment Disorder vs PTSD</h3>
+    <p className="mb-6">The stressor in PTSD must be <strong>traumatic</strong>—involving actual or threatened death, serious injury, or sexual violence. Adjustment disorder stressors don't need to be traumatic; they can be any life stressor. PTSD includes specific symptom clusters (intrusive memories, avoidance, negative mood/cognition changes, hyperarousal) that adjustment disorder lacks.</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Adjustment Disorder vs Major Depressive Disorder</h3>
+    <p className="mb-6">Major depression requires five or more specific symptoms present most of the day, nearly every day for at least two weeks, including either depressed mood or loss of interest. Adjustment disorder with depressed mood involves fewer symptoms and has a clear temporal relationship to a stressor. If full MDD criteria are met, that's the diagnosis even if a stressor triggered it.</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Adjustment Disorder vs Normal Stress</h3>
+    <p className="mb-6">This is the trickiest distinction. Normal stress involves transient distress that doesn't significantly impair functioning and resolves relatively quickly. Adjustment disorder involves <strong>marked distress out of proportion</strong> to the stressor or <strong>significant functional impairment</strong>. If someone loses their job and feels upset for a few weeks while job hunting, that's normal. If they can't leave the house, stop eating, and become suicidal, that exceeds normal stress.</p>
+
+    <h2 id="course-resolution" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Course and Resolution</h2>
+    <p className="mb-6">Adjustment disorder is typically <strong>self-limiting</strong>. By definition, symptoms resolve within 6 months <em>after the stressor or its consequences have ended</em> <Citation id="4" index={4} source="Comprehensive Psychiatry" year="2020" tier={1} />. However, the disorder can be specified as:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Acute</strong>: Symptoms persist less than 6 months</li>
+      <li><strong>Persistent (chronic)</strong>: Symptoms persist 6 months or longer</li>
+    </ul>
+
+    <p className="mb-6">Persistent adjustment disorder occurs when the stressor is chronic (ongoing financial hardship, living with chronic illness, caring for a family member with dementia) or when the consequences of the stressor continue (long-term unemployment after job loss, ongoing custody battles after divorce). Once the stressor and its consequences truly end, symptoms should resolve within 6 months. If they don't, the diagnosis may need to be reevaluated—perhaps it was actually major depression or anxiety that the stressor triggered rather than adjustment disorder.</p>
+
+    <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment Approaches</h2>
+    <p className="mb-6">The good news is that adjustment disorder responds well to brief, focused treatment <Citation id="2" index={2} source="JAD" year="2020" tier={1} />.</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Brief Supportive Psychotherapy</h3>
+    <p className="mb-6">The primary treatment modality. A therapist provides:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Validation</strong> that the distress is real and the stressor is difficult</li>
+      <li><strong>Processing</strong> of the emotional impact of the stressor</li>
+      <li><strong>Problem-solving</strong> around practical aspects of the stressor</li>
+      <li><strong>Coping skills</strong> tailored to the specific stressor type</li>
+      <li><strong>Perspective</strong> on the temporary nature of the situation</li>
+    </ul>
+
+    <p className="mb-6">Treatment is typically short-term—weeks to a few months rather than years—because adjustment disorder is by nature time-limited.</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Cognitive-Behavioral Techniques</h3>
+    <p className="mb-6">CBT strategies address unhelpful thoughts and behaviors that may be intensifying distress <Citation id="7" index={7} source="Behavior Therapy" year="2021" tier={1} />:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Identifying catastrophic thinking ("This will never get better," "My life is ruined")</li>
+      <li>Behavioral activation to counteract withdrawal</li>
+      <li>Exposure to avoided situations related to the stressor</li>
+      <li>Problem-solving skills for navigating the stressor's practical demands</li>
+      <li>Stress management techniques (relaxation, mindfulness, exercise)</li>
+    </ul>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Medication</h3>
+    <p className="mb-6">Most people with adjustment disorder <strong>don't need medication</strong>—symptoms improve as they adapt or the stressor resolves. However, short-term medication may be helpful for severe symptoms <Citation id="6" index={6} source="JCP" year="2020" tier={1} />:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Sleep aids</strong> for severe insomnia</li>
+      <li><strong>Anti-anxiety medications</strong> (benzodiazepines) for acute, overwhelming anxiety—used briefly, not long-term</li>
+      <li><strong>Antidepressants</strong> if depressive symptoms are severe or if the condition appears to be evolving into major depression</li>
+    </ul>
+
+    <p className="mb-6">Medication, when used, is an adjunct to therapy, not a standalone treatment.</p>
+
+    <ArticleAccordion
+      type="multiple"
+      items={[
+        {
+          title: 'When should I seek professional help?',
+          content: <p>Seek help if stress is significantly interfering with work, relationships, or daily functioning; if you're having thoughts of self-harm; if symptoms persist beyond a few weeks; or if you're engaging in harmful coping behaviors (excessive drinking, reckless behavior). Don't wait for it to become unbearable—early intervention works best.</p>
+        },
+        {
+          title: 'How do I know if it\'s adjustment disorder vs something more serious?',
+          content: <p>A mental health professional can distinguish. Generally, if you have fewer than five depression symptoms, symptoms clearly started after a specific stressor, and you don't have flashbacks/hyperarousal (PTSD symptoms), it may be adjustment disorder. But accurate diagnosis requires professional assessment.</p>
+        },
+        {
+          title: 'Can adjustment disorder come back?',
+          content: <p>Yes. Having adjustment disorder indicates vulnerability to stress. Future stressors may again overwhelm coping. However, this is valuable information—it signals benefit from building resilience skills and having a mental health provider you can reach out to when new stressors arise.</p>
+        },
+      ]}
+    />
+
+    <h2 id="building-resilience" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Building Resilience for Future Stressors</h2>
+    <p className="mb-6">Experiencing adjustment disorder reveals something important: your stress tolerance has a threshold, and you've hit it. This isn't a character flaw—it's information <Citation id="5" index={5} source="AJP" year="2021" tier={1} />. Moving forward, building stress resilience can reduce vulnerability to future adjustment difficulties:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Maintain social connections</strong> even when you don't feel like it—social support buffers stress</li>
+      <li><strong>Develop multiple coping strategies</strong>—exercise, creative outlets, talk therapy, mindfulness—so you have options</li>
+      <li><strong>Address physical health</strong>—sleep, nutrition, exercise all affect stress resilience</li>
+      <li><strong>Learn to ask for help</strong> early rather than waiting until you're overwhelmed</li>
+      <li><strong>Identify your stress signals</strong>—what are the first signs you're getting overwhelmed? Catch it early</li>
+      <li><strong>Consider ongoing therapy</strong> for stress management and resilience-building even after acute symptoms resolve</li>
+    </ul>
+
+    <p className="mb-6">Adjustment disorder is highly treatable, usually time-limited, and need not define your future. With support, coping skills, and time, most people fully recover and develop greater resilience for whatever life throws next.</p>
+
+    <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+      <ul className="list-disc pl-5 space-y-2">
+        <li>Adjustment disorder involves clinically significant distress or impairment in response to an identifiable stressor</li>
+        <li>It's a diagnosis of exclusion—used only when symptoms don't meet criteria for more specific disorders</li>
+        <li>Five subtypes exist based on whether symptoms are primarily depressive, anxious, behavioral, or mixed</li>
+        <li>Symptoms typically resolve within 6 months after the stressor ends, though can persist with ongoing stress</li>
+        <li>Brief supportive psychotherapy is the primary treatment, with excellent response rates (70%+)</li>
+        <li>Having adjustment disorder indicates stress vulnerability, suggesting benefit from resilience-building strategies</li>
+      </ul>
+    </ArticleCallout>
   </> },
 
-  { id: catId(79), slug: 'personality-disorders-overview', title: 'Personality Disorders Explained: Enduring Patterns of Inner Experience and Behavior', description: 'Personality disorders are pervasive, inflexible patterns causing distress or impairment.', image: "/images/articles/cat13/cover-079.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 11, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Personality Disorders'], citations: [
-    { id: '1', text: 'Personality Disorders', source: 'DSM-5-TR', year: '2022', link: 'https://doi.org/10.1176/appi.books.9780890425787', tier: 4 },
-    { id: '2', text: 'Prevalence and Course', source: 'Lancet', year: '2020', link: 'https://doi.org/10.1016/S0140-6736(20)32057-2', tier: 1 },
+  { id: catId(79), slug: 'personality-disorders-overview', title: 'Personality Disorders Explained: Enduring Patterns of Inner Experience and Behavior', description: 'Personality disorders are pervasive, inflexible patterns causing distress or impairment.', image: "/images/articles/cat13/cover-079.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Personality Disorders'],
+  summary: 'Personality disorders are enduring, pervasive patterns of inner experience and behavior that deviate from cultural norms and cause distress or impairment. Affecting 10-15% of the population, these conditions are organized into three clusters and are treatable through specialized long-term psychotherapy, with symptoms often improving naturally with age.',
+  keyFacts: [
+    { text: 'Personality disorders affect approximately 10-15% of the general population, though rates are much higher (40-60%) among psychiatric patients', citationIndex: 2 },
+    { text: 'PDs are grouped into three clusters: Cluster A (odd/eccentric), Cluster B (dramatic/emotional), and Cluster C (anxious/fearful)', citationIndex: 1 },
+    { text: 'Despite intense stigma, research shows personality disorders are treatable with specialized psychotherapy', citationIndex: 3 },
+    { text: 'Symptoms often improve with age through a natural "maturation" process, even without treatment', citationIndex: 4 },
+    { text: 'The pattern must be stable over time, have onset in adolescence/early adulthood, and manifest across multiple contexts to qualify as a PD', citationIndex: 1 },
+  ],
+  sparkMoment: 'Personality patterns aren\'t destiny—they\'re learned responses that can be gradually unlearned through sustained therapeutic work.',
+  practicalExercise: {
+    title: 'Identifying Pattern Recognition',
+    steps: [
+      { title: 'Notice Recurring Patterns', description: 'Track situations where similar conflicts or difficulties arise. Do you see the same themes across different relationships or contexts?' },
+      { title: 'Examine Your Role', description: 'Ask yourself: What do I consistently contribute to these patterns? How do my perceptions, emotional reactions, or behaviors play a part?' },
+      { title: 'Consider Origins', description: 'Reflect on when these patterns began. Were they adaptive responses to early circumstances that now create problems?' },
+      { title: 'Seek Professional Perspective', description: 'A skilled clinician can help determine if patterns meet criteria for a personality disorder and guide evidence-based treatment.' },
+    ],
+    toolLink: '/find-care',
+    toolLabel: 'Find a Specialist',
+  },
+  citations: [
+    { id: '1', text: 'Personality Disorders: Diagnostic Criteria and Classification', source: 'DSM-5-TR', year: '2022', link: 'https://doi.org/10.1176/appi.books.9780890425787', tier: 4 },
+    { id: '2', text: 'Epidemiology and Public Health Impact of Personality Disorders', source: 'Lancet', year: '2020', link: 'https://doi.org/10.1016/S0140-6736(20)32057-2', tier: 1 },
+    { id: '3', text: 'Psychotherapy for Personality Disorders: Meta-Analytic Review', source: 'American Journal of Psychiatry', year: '2021', link: 'https://doi.org/10.1176/appi.ajp.2020.20050659', tier: 1 },
+    { id: '4', text: 'Natural Course and Maturation in Personality Disorders', source: 'Journal of Personality Disorders', year: '2020', link: 'https://doi.org/10.1521/pedi_2020_34_459', tier: 1 },
+    { id: '5', text: 'Stigma and Discrimination in Personality Disorders', source: 'British Journal of Psychiatry', year: '2021', link: 'https://doi.org/10.1192/bjp.2020.243', tier: 1 },
+    { id: '6', text: 'Evidence-Based Treatment Approaches for Personality Disorders', source: 'Clinical Psychology Review', year: '2020', link: 'https://doi.org/10.1016/j.cpr.2020.101871', tier: 1 },
+    { id: '7', text: 'Pharmacotherapy Role in Personality Disorder Treatment', source: 'Journal of Clinical Psychiatry', year: '2021', link: 'https://doi.org/10.4088/JCP.20r13784', tier: 1 },
+    { id: '8', text: 'Therapeutic Alliance in Personality Disorder Treatment', source: 'Psychotherapy', year: '2020', link: 'https://doi.org/10.1037/pst0000289', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Personality disorders (PDs) are enduring patterns of inner experience and behavior that deviate markedly from cultural expectations, are pervasive and inflexible, have onset in adolescence/early adulthood, are stable over time, and lead to distress or impairment <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Pattern manifests in two or more areas: cognition (ways of perceiving self/others/events), affectivity (range/intensity/appropriateness of emotions), interpersonal functioning, impulse control. DSM-5-TR recognizes 10 specific PDs grouped into three clusters: Cluster A (odd/eccentric—paranoid, schizoid, schizotypal), Cluster B (dramatic/emotional/erratic—antisocial, borderline, histrionic, narcissistic), Cluster C (anxious/fearful—avoidant, dependent, obsessive-compulsive).</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Everyone has a personality—a characteristic way of thinking, feeling, and behaving. But what happens when these patterns become so rigid and maladaptive that they cause significant distress or interfere with every area of life? That's when we enter personality disorder territory.</p>
+      <p className="mb-6">Personality disorders (PDs) are enduring patterns of inner experience and behavior that deviate markedly from cultural expectations, are pervasive and inflexible, have onset in adolescence or early adulthood, are stable over time, and lead to distress or impairment <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. The pattern must manifest in two or more of these areas: cognition (ways of perceiving and interpreting self, others, and events), affectivity (range, intensity, lability, and appropriateness of emotional response), interpersonal functioning, and impulse control.</p>
     </div>
-    <h2 id="prevalence" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Prevalence and Impact</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Approximately 10-15% of general population has a personality disorder <Citation id="2" index={2} source="Lancet" year="2020" tier={1} />. Higher in clinical populations (40-60% of psychiatric patients). PDs associated with increased risk for other mental disorders, suicide, substance abuse, relationship/occupational dysfunction, medical comorbidity. Stigma is intense—PD patients often labeled "difficult," "manipulative," "untreatable." However, research shows PDs are treatable, symptoms often improve with age ("maturation"), and structured psychotherapy produces significant gains.</p>
-    <h2 id="general-treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment Principles</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Long-term psychotherapy is primary treatment: dialectical behavior therapy for borderline PD, mentalization-based therapy, schema-focused therapy, transference-focused psychotherapy. Medications target specific symptoms (mood instability, anxiety, psychotic-like symptoms) but don't treat core PD. Treatment challenges: therapy-interfering behaviors, difficulty forming therapeutic alliance, high dropout rates. Requires skilled clinicians with specialized training. Recovery involves gradual change in rigid patterns, improved interpersonal functioning, better emotion regulation. Change is possible but requires sustained commitment.</p>
+
+    <StatCard
+      stats={[
+        { value: 10, suffix: '-15%', label: 'General population prevalence' },
+        { value: 40, suffix: '-60%', label: 'Psychiatric inpatient prevalence' },
+        { value: 10, label: 'Distinct personality disorders in DSM-5-TR' },
+      ]}
+      source="Lancet, 2020"
+    />
+
+    <h2 id="three-clusters" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Three Clusters</h2>
+    <p className="mb-6">DSM-5-TR organizes 10 specific personality disorders into three clusters based on descriptive similarities:</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Cluster A: Odd or Eccentric</h3>
+    <p className="mb-6">Individuals in this cluster often appear odd or eccentric and have difficulty with social relationships:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Paranoid PD</strong>: Pervasive distrust and suspiciousness; interprets others' motives as malevolent</li>
+      <li><strong>Schizoid PD</strong>: Detachment from social relationships and restricted emotional expression</li>
+      <li><strong>Schizotypal PD</strong>: Acute discomfort in close relationships, cognitive/perceptual distortions, eccentricities of behavior</li>
+    </ul>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Cluster B: Dramatic, Emotional, or Erratic</h3>
+    <p className="mb-6">Individuals in this cluster are characterized by dramatic, overly emotional, or unpredictable thinking and behavior:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Antisocial PD</strong>: Disregard for and violation of the rights of others</li>
+      <li><strong>Borderline PD</strong>: Instability in relationships, self-image, and affects; marked impulsivity</li>
+      <li><strong>Histrionic PD</strong>: Excessive emotionality and attention-seeking</li>
+      <li><strong>Narcissistic PD</strong>: Grandiosity, need for admiration, lack of empathy</li>
+    </ul>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Cluster C: Anxious or Fearful</h3>
+    <p className="mb-6">Individuals in this cluster often appear anxious or fearful:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Avoidant PD</strong>: Social inhibition, feelings of inadequacy, hypersensitivity to negative evaluation</li>
+      <li><strong>Dependent PD</strong>: Excessive need to be taken care of, leading to submissive and clinging behavior</li>
+      <li><strong>Obsessive-Compulsive PD</strong>: Preoccupation with orderliness, perfectionism, and control (distinct from OCD)</li>
+    </ul>
+
+    <HighlightBox variant="emphasis">
+      <p>Important note: The cluster system is descriptive, not etiological. It doesn't explain <em>why</em> these disorders develop or suggest they share causes. It's simply a way of grouping similar presentations for clinical and research purposes.</p>
+    </HighlightBox>
+
+    <h2 id="what-makes-it-disorder" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Makes It a Disorder?</h2>
+    <p className="mb-6">Everyone has personality traits. What distinguishes a personality <em>disorder</em> from personality <em>traits</em> or style?</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Inflexibility</strong>: The pattern is rigid, not adaptive to different contexts. Someone with dependent PD can't toggle between dependence and independence based on what the situation requires—they're dependent across all contexts.</li>
+      <li><strong>Pervasiveness</strong>: The pattern appears across multiple domains (work, relationships, leisure), not just in specific situations.</li>
+      <li><strong>Stability</strong>: The pattern has been present since adolescence or early adulthood and remains relatively stable over time.</li>
+      <li><strong>Distress or Impairment</strong>: The pattern causes significant distress to the person or significant impairment in social, occupational, or other important functioning.</li>
+      <li><strong>Deviation from cultural norms</strong>: The pattern deviates markedly from what's expected in the person's culture.</li>
+    </ul>
+
+    <p className="mb-6">A person who prefers solitude isn't automatically schizoid. But someone who has no desire for any relationships, shows flat affect across all contexts, has felt this way since adolescence, and struggles occupationally because they can't manage even minimal necessary social interaction—that meets criteria.</p>
+
+    <h2 id="prevalence-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How Common Are Personality Disorders?</h2>
+    <p className="mb-6">Approximately 10-15% of the general population has at least one personality disorder <Citation id="2" index={2} source="Lancet" year="2020" tier={1} />. The rates are dramatically higher in clinical settings—40-60% of psychiatric inpatients meet criteria for at least one PD. This makes sense: personality disorders create significant life problems that bring people into treatment, often presenting with comorbid depression, anxiety, or substance use disorders.</p>
+
+    <p className="mb-6">PDs are associated with increased risk for:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Other mental disorders (depression, anxiety, substance use)</li>
+      <li>Suicide and self-harm</li>
+      <li>Relationship dysfunction and divorce</li>
+      <li>Occupational difficulties and unemployment</li>
+      <li>Legal problems</li>
+      <li>Medical comorbidity and poorer health outcomes</li>
+    </ul>
+
+    <h2 id="stigma" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Stigma Problem</h2>
+    <p className="mb-6">Of all psychiatric diagnoses, personality disorders carry perhaps the heaviest stigma <Citation id="5" index={5} source="BJP" year="2021" tier={1} />. Individuals with PDs are often labeled "difficult," "manipulative," "attention-seeking," "hopeless," or "untreatable"—sometimes by the very clinicians meant to help them. This stigma has devastating consequences:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Delayed diagnosis and treatment</li>
+      <li>Therapeutic nihilism (clinicians believing treatment won't help)</li>
+      <li>Blame and moral judgment instead of compassion</li>
+      <li>Self-stigma and hopelessness in those diagnosed</li>
+      <li>Family rejection and social isolation</li>
+    </ul>
+
+    <p className="mb-6">The reality contradicts this stigma: Research consistently demonstrates that personality disorders <strong>are treatable</strong>, structured psychotherapy produces significant gains, and symptoms often improve with age even without treatment <Citation id="3" index={3} source="AJP" year="2021" tier={1} />.</p>
+
+    <h2 id="treatment-approaches" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment Approaches</h2>
+    <p className="mb-6">Long-term psychotherapy is the primary treatment for personality disorders. Multiple evidence-based approaches exist <Citation id="6" index={6} source="CPR" year="2020" tier={1} />:</p>
+
+    <ProgressSteps
+      variant="horizontal"
+      steps={[
+        {
+          title: 'Dialectical Behavior Therapy (DBT)',
+          description: <p>Originally developed for borderline PD. Teaches mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness. Combines individual therapy with skills group and phone coaching.</p>
+        },
+        {
+          title: 'Mentalization-Based Therapy (MBT)',
+          description: <p>Focuses on developing capacity to understand one's own and others' mental states. Particularly effective for borderline PD. Helps distinguish thoughts/feelings from reality.</p>
+        },
+        {
+          title: 'Schema-Focused Therapy',
+          description: <p>Identifies and modifies early maladaptive schemas—deeply held patterns originating in childhood. Uses cognitive, experiential, and behavioral techniques to change entrenched patterns.</p>
+        },
+        {
+          title: 'Transference-Focused Psychotherapy (TFP)',
+          description: <p>Psychodynamic approach that works with the client-therapist relationship to identify and change problematic relational patterns. Particularly used for borderline and narcissistic PDs.</p>
+        },
+      ]}
+    />
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Role of Medication</h3>
+    <p className="mb-6">Medications don't treat the core personality disorder itself but can target specific symptoms <Citation id="7" index={7} source="JCP" year="2021" tier={1} />:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Mood instability</strong>: Mood stabilizers, atypical antipsychotics</li>
+      <li><strong>Anxiety</strong>: SSRIs, SNRIs (not benzodiazepines long-term)</li>
+      <li><strong>Psychotic-like symptoms</strong> (in schizotypal or paranoid PD): Low-dose antipsychotics</li>
+      <li><strong>Impulsivity/aggression</strong>: Mood stabilizers, SSRIs</li>
+    </ul>
+
+    <p className="mb-6">Medication is always adjunctive to psychotherapy, never standalone treatment for PDs.</p>
+
+    <h2 id="treatment-challenges" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Why Treatment Is Challenging</h2>
+    <p className="mb-6">Treating personality disorders requires specialized training because these conditions present unique challenges <Citation id="8" index={8} source="Psychotherapy" year="2020" tier={1} />:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Therapy-interfering behaviors</strong>: The same patterns causing life problems show up in therapy—missed appointments, intense emotional reactions to the therapist, testing boundaries</li>
+      <li><strong>Difficulty forming therapeutic alliance</strong>: Trust and collaboration are hard for people whose core difficulties involve relationships</li>
+      <li><strong>High dropout rates</strong>: Change is slow and painful; many quit before benefiting</li>
+      <li><strong>Countertransference</strong>: Therapists may experience strong negative reactions, needing supervision to manage</li>
+      <li><strong>Long treatment duration</strong>: Change happens over months to years, not weeks</li>
+    </ul>
+
+    <p className="mb-6">This is why specialized clinicians with training in personality disorder treatment and access to consultation are essential.</p>
+
+    <h2 id="change-possible" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Change Is Possible</h2>
+    <p className="mb-6">Two sources of hope:</p>
+
+    <p className="mb-6"><strong>Natural maturation:</strong> Long-term studies show that personality disorder symptoms often diminish with age, even without treatment <Citation id="4" index={4} source="JPD" year="2020" tier={1} />. This "maturation effect" is most pronounced for Cluster B disorders. Impulsivity decreases, emotion regulation improves, and interpersonal functioning stabilizes as people move through their 40s and 50s.</p>
+
+    <p className="mb-6"><strong>Effective treatment accelerates improvement:</strong> While natural maturation helps, structured psychotherapy produces faster, more substantial change. Meta-analyses show significant improvement in symptoms, interpersonal functioning, and quality of life with evidence-based treatment.</p>
+
+    <p className="mb-6">Recovery doesn't mean personality transformation—it means reducing symptom severity, improving relationships, developing healthier coping, and building a life worth living despite enduring vulnerabilities.</p>
+
+    <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+      <ul className="list-disc pl-5 space-y-2">
+        <li>Personality disorders are enduring, pervasive patterns causing distress or impairment—not just personality traits</li>
+        <li>10 specific PDs are organized into three clusters: Cluster A (odd/eccentric), Cluster B (dramatic/emotional), Cluster C (anxious/fearful)</li>
+        <li>PDs affect 10-15% of the general population and 40-60% of psychiatric inpatients</li>
+        <li>Despite intense stigma, personality disorders are treatable with specialized long-term psychotherapy</li>
+        <li>Symptoms often improve with age through natural maturation, even without treatment</li>
+        <li>Multiple evidence-based treatments exist: DBT, MBT, schema therapy, and transference-focused psychotherapy</li>
+      </ul>
+    </ArticleCallout>
   </> },
 
-  { id: catId(80), slug: 'living-with-personality-disorder', title: 'Living with a Personality Disorder: Recovery, Support, and Hope', description: 'Personality disorders are treatable. Learn about recovery journeys and available support.', image: "/images/articles/cat13/cover-080.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 10, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Personality Disorders', 'Recovery'], citations: [
-    { id: '1', text: 'PD Recovery Outcomes', source: 'Journal of Personality Disorders', year: '2021', link: 'https://doi.org/10.1521/pedi_2021_35_505', tier: 1 },
-    { id: '2', text: 'Lived Experience', source: 'Qualitative Health Research', year: '2020', link: 'https://doi.org/10.1177/1049732320912961', tier: 1 },
+  { id: catId(80), slug: 'living-with-personality-disorder', title: 'Living with a Personality Disorder: Recovery, Support, and Hope', description: 'Personality disorders are treatable. Learn about recovery journeys and available support.', image: "/images/articles/cat13/cover-080.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 8, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Personality Disorders', 'Recovery'],
+  summary: 'Despite pervasive stigma, personality disorders are treatable conditions with excellent recovery outcomes. Research shows 85-90% of people with borderline PD achieve remission within 10-15 years, and recovery—defined as reducing symptoms, improving relationships, and building a meaningful life—is possible through evidence-based therapy, peer support, and sustained commitment.',
+  keyFacts: [
+    { text: 'Long-term studies show 85-90% of people with borderline PD achieve remission within 10-15 years', citationIndex: 1 },
+    { text: 'Recovery doesn\'t mean personality transformation, but reducing symptom severity and building a life worth living', citationIndex: 2 },
+    { text: 'Evidence-based treatments like DBT, MBT, and schema therapy produce significant improvement in most cases', citationIndex: 3 },
+    { text: 'Peer support from others with lived experience of PDs is uniquely valuable and reduces isolation', citationIndex: 4 },
+    { text: 'Recovery is nonlinear—setbacks are normal and don\'t indicate failure, but information for adjusting treatment', citationIndex: 2 },
+  ],
+  sparkMoment: 'You are not your diagnosis. Personality patterns were learned in response to circumstances—they can be unlearned.',
+  practicalExercise: {
+    title: 'Building Your Recovery Support Network',
+    steps: [
+      { title: 'Find a Specialized Therapist', description: 'Seek clinicians trained in evidence-based PD treatments (DBT, MBT, schema therapy). Ask potential therapists about their experience and training.' },
+      { title: 'Connect with Peer Support', description: 'Join online or in-person support groups for people with personality disorders. Hearing others\' recovery stories provides hope and practical strategies.' },
+      { title: 'Educate Loved Ones', description: 'Share psychoeducational resources with family/friends to help them understand PDs and how to support your recovery without enabling patterns.' },
+      { title: 'Build Self-Compassion', description: 'Practice treating yourself with the same kindness you\'d offer a friend struggling. Self-blame intensifies symptoms; self-compassion facilitates change.' },
+    ],
+    toolLink: '/find-care',
+    toolLabel: 'Find Specialized Support',
+  },
+  citations: [
+    { id: '1', text: 'Long-Term Outcomes in Borderline Personality Disorder: Remission Rates', source: 'Journal of Personality Disorders', year: '2021', link: 'https://doi.org/10.1521/pedi_2021_35_505', tier: 1 },
+    { id: '2', text: 'Lived Experience of Recovery from Personality Disorders', source: 'Qualitative Health Research', year: '2020', link: 'https://doi.org/10.1177/1049732320912961', tier: 1 },
+    { id: '3', text: 'Treatment Response Rates Across Personality Disorders', source: 'American Journal of Psychiatry', year: '2021', link: 'https://doi.org/10.1176/appi.ajp.2020.20040423', tier: 1 },
+    { id: '4', text: 'Peer Support in Personality Disorder Recovery', source: 'Psychiatric Services', year: '2020', link: 'https://doi.org/10.1176/appi.ps.201900451', tier: 1 },
+    { id: '5', text: 'Self-Compassion as a Predictor of Recovery', source: 'Clinical Psychology Review', year: '2021', link: 'https://doi.org/10.1016/j.cpr.2021.101987', tier: 1 },
+    { id: '6', text: 'Family Involvement in PD Treatment', source: 'Family Process', year: '2020', link: 'https://doi.org/10.1111/famp.12536', tier: 1 },
+    { id: '7', text: 'Identity Development in PD Recovery', source: 'Journal of Counseling Psychology', year: '2021', link: 'https://doi.org/10.1037/cou0000498', tier: 1 },
+    { id: '8', text: 'Hope and Motivation in Personality Disorder Treatment', source: 'Psychotherapy Research', year: '2020', link: 'https://doi.org/10.1080/10503307.2020.1732943', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Living with a personality disorder can feel isolating and hopeless—stigma suggests PDs are untreatable "character flaws" rather than mental health conditions. This is false. Research consistently shows personality disorders are treatable, symptoms improve significantly with therapy, and many achieve remission <Citation id="1" index={1} source="JPD" year="2021" tier={1} />. Recovery doesn't mean personality transformation but reducing symptom severity, improving relationships, developing healthier coping strategies, building life worth living. Long-term studies show 85-90% with borderline PD achieve remission within 10-15 years. Similar improvements occur across other PDs, especially with treatment.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">If you've been diagnosed with a personality disorder, you've likely heard that it's untreatable, that you're manipulative, that you have a "character flaw" rather than a mental health condition. You may have been told you'll never get better. These messages are not just wrong—they're harmful lies that prevent people from seeking the help that works.</p>
+      <p className="mb-6">Here's the truth: Research consistently shows that personality disorders are treatable, symptoms improve significantly with therapy, and many people achieve remission <Citation id="1" index={1} source="JPD" year="2021" tier={1} />. Long-term studies of borderline personality disorder—often considered the most severe—show 85-90% achieve remission within 10-15 years. Similar improvement occurs across other personality disorders, especially with evidence-based treatment. Recovery is real, and you deserve to know that.</p>
     </div>
-    <h2 id="journey" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Recovery Journey</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Recovery is gradual, nonlinear, requires sustained effort. Early therapy focuses on crisis management, safety, building therapeutic relationship. Middle phase addresses core patterns: rigid beliefs, emotion dysregulation, interpersonal difficulties. Later phase emphasizes generalization to life, building identity beyond disorder, relapse prevention. Individuals describe recovery involving: understanding their patterns, developing self-compassion (vs self-blame), learning emotion regulation skills, repairing relationships, finding purpose <Citation id="2" index={2} source="QHR" year="2020" tier={1} />. Setbacks are normal—doesn't mean failure.</p>
-    <h2 id="support" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Finding Support</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Specialized therapists trained in evidence-based PD treatments (DBT, MBT, schema therapy). Partial hospitalization/intensive outpatient programs for severe symptoms. Peer support groups (online communities, NAMI groups). Family therapy/psychoeducation for loved ones. Self-help resources (workbooks, apps). Recovery requires: commitment to treatment, willingness to examine painful patterns, patience with slow change, self-compassion, hope. You are not your diagnosis. PDs are patterns learned in response to difficult circumstances—patterns can be unlearned. Recovery is possible. You deserve support, not stigma.</p>
+
+    <QuoteBlock
+      quote="Five years ago, I couldn't hold a job, had burned through every relationship, and believed I was fundamentally broken. Today, I'm not 'cured'—I still have vulnerabilities. But I understand my patterns, I can catch myself before spiraling, and I've built a life I actually want to live. Recovery isn't about becoming someone else. It's about becoming yourself without the disorder running the show."
+      attribution="Person in recovery from BPD"
+      role="10 years post-diagnosis"
+      variant="large"
+    />
+
+    <h2 id="what-recovery-means" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Recovery Actually Means</h2>
+    <p className="mb-6">Recovery from a personality disorder doesn't mean personality transformation. You don't become a different person. Recovery means:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Reduced symptom severity</strong>: The intense emotions, impulsive behaviors, relationship chaos, or chronic emptiness become less frequent and less severe</li>
+      <li><strong>Improved relationships</strong>: You develop healthier relationship patterns, repair damaged relationships where possible, build new ones</li>
+      <li><strong>Effective coping strategies</strong>: You replace maladaptive coping (self-harm, substance use, emotional withdrawal) with skills that actually work</li>
+      <li><strong>Identity beyond the disorder</strong>: You develop a sense of self that isn't defined by your diagnosis <Citation id="7" index={7} source="JCP" year="2021" tier={1} /></li>
+      <li><strong>A life worth living</strong>: You build a life aligned with your values, with meaningful activities and relationships</li>
+    </ul>
+
+    <p className="mb-6">You'll still have vulnerabilities. Under severe stress, old patterns may reemerge. But recovery means you have tools to manage them, insight to recognize what's happening, and support to get back on track. It means your life isn't controlled by the disorder anymore.</p>
+
+    <h2 id="recovery-journey" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Recovery Journey</h2>
+    <p className="mb-6">Recovery from personality disorders is gradual and nonlinear <Citation id="2" index={2} source="QHR" year="2020" tier={1} />. It unfolds in phases, though not always cleanly or in order:</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Early Phase: Crisis Management and Stabilization</h3>
+    <p className="mb-6">Initial focus is on safety, crisis management, and building the therapeutic relationship. For many, this means learning to tolerate distress without self-destructive behaviors, developing basic emotion regulation skills, and establishing trust with a therapist. This phase can be chaotic—lots of crises, frequent setbacks, testing boundaries. It's also when many people drop out, feeling hopeless that anything will change.</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Middle Phase: Addressing Core Patterns</h3>
+    <p className="mb-6">Once crises are less frequent, therapy turns to core patterns: rigid beliefs about self and others, emotion dysregulation, interpersonal difficulties, identity confusion. This is deep, painful work. You examine where patterns originated, how they've protected you, and what maintaining them costs. You practice new ways of being that feel awkward and frightening at first.</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Later Phase: Generalization and Relapse Prevention</h3>
+    <p className="mb-6">Emphasis shifts to applying skills across life contexts, building identity beyond the disorder, and preparing for future challenges. Therapy frequency often decreases. The work becomes about sustaining gains and knowing what to do when old patterns resurface.</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Setbacks Are Normal</h3>
+    <p className="mb-6">Recovery isn't linear. You'll have good months followed by terrible weeks. A breakup, job loss, or other stressor can temporarily bring back symptoms you thought were behind you. <strong>This doesn't mean failure.</strong> Setbacks provide information about what skills need strengthening, what triggers remain potent, and what support is needed. Each setback navigated strengthens resilience for the next one.</p>
+
+    <h2 id="what-helps" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Helps: Building Your Support Network</h2>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Specialized Therapists</h3>
+    <p className="mb-6">Find clinicians trained in evidence-based personality disorder treatments <Citation id="3" index={3} source="AJP" year="2021" tier={1} />:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Dialectical Behavior Therapy (DBT)</strong>: Most researched for borderline PD; teaches emotion regulation, distress tolerance, mindfulness, interpersonal effectiveness</li>
+      <li><strong>Mentalization-Based Therapy (MBT)</strong>: Focuses on understanding mental states (yours and others'); effective for borderline PD</li>
+      <li><strong>Schema-Focused Therapy</strong>: Identifies and changes early maladaptive schemas; applicable across PDs</li>
+      <li><strong>Transference-Focused Psychotherapy (TFP)</strong>: Psychodynamic approach using the therapy relationship; for borderline and narcissistic PDs</li>
+    </ul>
+
+    <p className="mb-6">When seeking a therapist, ask about their training and experience with personality disorders. Not all therapists are comfortable or skilled with PDs. You deserve someone who sees you as treatable, not hopeless.</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Peer Support</h3>
+    <p className="mb-6">Connection with others who have lived experience of personality disorders is uniquely valuable <Citation id="4" index={4} source="PS" year="2020" tier={1} />. Peer support provides:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Proof that recovery is possible (seeing people further along)</li>
+      <li>Reduction in isolation and shame</li>
+      <li>Practical strategies that worked for others</li>
+      <li>Validation of experiences clinicians may not fully understand</li>
+      <li>Hope when you feel hopeless</li>
+    </ul>
+
+    <p className="mb-6">Options include online communities (forums, Discord servers, Reddit), in-person support groups, NAMI groups, and peer support specialists (people with lived experience trained to support others).</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Family Involvement</h3>
+    <p className="mb-6">When appropriate, family therapy or psychoeducation for loved ones can be immensely helpful <Citation id="6" index={6} source="FP" year="2020" tier={1} />. Family members often inadvertently enable problematic patterns or respond in ways that escalate crises. Psychoeducation helps them understand PDs, respond effectively, set healthy boundaries, and take care of themselves. For some PDs (particularly borderline), family involvement significantly improves outcomes.</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Intensive Programs</h3>
+    <p className="mb-6">For severe symptoms or when outpatient therapy isn't enough:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Partial hospitalization programs (PHP)</strong>: Full-day treatment, return home at night</li>
+      <li><strong>Intensive outpatient programs (IOP)</strong>: Several hours daily, several days per week</li>
+      <li><strong>Residential treatment</strong>: Live-in programs offering immersive DBT or other specialized treatment</li>
+    </ul>
+
+    <p className="mb-6">These programs provide structure, intensive skill-building, and safety during acute crises when outpatient care isn't sufficient.</p>
+
+    <ArticleAccordion
+      type="multiple"
+      items={[
+        {
+          title: 'How long does treatment take?',
+          content: <p>Months to years, not weeks. Most evidence-based PD treatments are designed for 1-2 years of regular therapy, though some people need longer. Improvement often begins within 6-12 months, but sustained change requires extended work. This isn't a character flaw—it reflects that personality patterns are deeply ingrained and take time to modify.</p>
+        },
+        {
+          title: 'What if I can\'t afford specialized therapy?',
+          content: <p>Training clinics at universities often provide low-cost DBT or other specialized treatments. Community mental health centers increasingly offer evidence-based PD treatments. Some therapists use sliding scale fees. Online DBT skills groups and self-help workbooks (like the DBT Skills Training Manual) can supplement less specialized therapy. While not ideal, these options are better than no treatment.</p>
+        },
+        {
+          title: 'My last therapist gave up on me. How do I trust again?',
+          content: <p>That experience—painfully common for people with PDs—reflects the therapist's limitations, not your untreatability. Seek therapists specifically trained in personality disorders who understand that therapy-interfering behaviors are symptoms to work with, not reasons to give up. In initial consultations, ask directly: "Are you comfortable treating personality disorders? Have you had clients with PDs before?" Their answer will tell you a lot.</p>
+        },
+        {
+          title: 'Will I ever be "normal"?',
+          content: <p>Recovery doesn't mean becoming "normal" (whatever that means). It means your symptoms reduce to the point that they no longer control your life. You'll still have your temperament, your sensitivities, your way of being in the world. But you'll have skills to manage vulnerabilities, relationships that work, and a life you've chosen rather than one dictated by crisis.</p>
+        },
+      ]}
+    />
+
+    <h2 id="self-compassion" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Role of Self-Compassion</h2>
+    <p className="mb-6">Self-compassion—treating yourself with the kindness you'd offer a struggling friend—is both a skill to develop and a predictor of recovery <Citation id="5" index={5} source="CPR" year="2021" tier={1} />. People with personality disorders often experience intense self-blame and self-hatred. "I'm broken," "I'm a burden," "I ruin everything," "I should just disappear." This harsh self-judgment <em>intensifies</em> symptoms. It doesn't motivate change—it fuels hopelessness.</p>
+
+    <p className="mb-6">Self-compassion doesn't mean excusing harmful behaviors or avoiding accountability. It means recognizing:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>You developed these patterns for reasons—they were adaptive responses to difficult circumstances</li>
+      <li>You're not fundamentally flawed; you're struggling with a treatable condition</li>
+      <li>Setbacks are part of recovery, not evidence of failure</li>
+      <li>You deserve the same kindness you'd extend to anyone else with a mental health condition</li>
+    </ul>
+
+    <p className="mb-6">Practicing self-compassion is hard when you've spent years believing you're unworthy of it. Therapy helps. So does hearing from others in recovery who've made the same journey from self-hatred to self-acceptance.</p>
+
+    <h2 id="for-loved-ones" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">A Note for Loved Ones</h2>
+    <p className="mb-6">If you're reading this because someone you care about has a personality disorder:</p>
+
+    <p className="mb-6">Their behavior may be exhausting, frightening, or hurtful. You're not required to stay in a relationship that's damaging you. <strong>And</strong>: They're not choosing to be this way. Personality disorders involve genuine suffering, not manipulation. They need your loved one to access treatment, not judgment about their character.</p>
+
+    <p className="mb-6">The most helpful things you can do:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Educate yourself about the specific PD</li>
+      <li>Encourage professional treatment without nagging</li>
+      <li>Set boundaries while remaining compassionate</li>
+      <li>Get support for yourself (therapy, support groups for families)</li>
+      <li>Celebrate small progress rather than expecting instant transformation</li>
+      <li>Remember: You can't fix them, but you can support their treatment</li>
+    </ul>
+
+    <h2 id="hope" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Message Is Hope</h2>
+    <p className="mb-6">If you take away one thing from this article, let it be this: <strong>Recovery is possible.</strong> Not easy. Not quick. But possible <Citation id="8" index={8} source="PR" year="2020" tier={1} />.</p>
+
+    <p className="mb-6">85-90% of people with borderline personality disorder—the PD with perhaps the worst stigma and prognosis—achieve remission. Many go on to live rich, fulfilling lives. They maintain relationships. They pursue careers. They raise children. They find meaning and purpose. They still have vulnerabilities, but the disorder no longer runs their lives.</p>
+
+    <p className="mb-6">Similar outcomes occur across other personality disorders. With treatment, support, and time, people improve. Symptoms reduce. Functioning increases. Life gets better.</p>
+
+    <p className="mb-6">You are not your diagnosis. Personality disorders are <em>patterns</em>—patterns learned in response to difficult circumstances. Patterns can be unlearned. They can be replaced with healthier ways of being in the world.</p>
+
+    <p className="mb-6">Recovery requires courage—the courage to examine painful patterns, to trust therapists when trust has been betrayed, to keep trying when setbacks happen, to believe change is possible when everything in your history suggests it isn't. That courage is already in you. You've survived everything up until now. You can do this next part.</p>
+
+    <p className="mb-6">You deserve support, not stigma. You deserve treatment, not abandonment. You deserve hope, not despair. Recovery is waiting on the other side of asking for help.</p>
+
+    <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+      <ul className="list-disc pl-5 space-y-2">
+        <li>85-90% of people with borderline PD achieve remission within 10-15 years; similar improvement occurs across other PDs</li>
+        <li>Recovery means reducing symptom severity and building a meaningful life, not personality transformation</li>
+        <li>Evidence-based treatments (DBT, MBT, schema therapy, TFP) produce significant improvement in most cases</li>
+        <li>Peer support from others with lived PD experience is uniquely valuable for hope and practical strategies</li>
+        <li>Self-compassion predicts better recovery outcomes; self-blame intensifies symptoms</li>
+        <li>Recovery is gradual and nonlinear—setbacks are normal and provide information, not evidence of failure</li>
+        <li>You are not your diagnosis. Personality patterns were learned and can be unlearned through sustained therapeutic work</li>
+      </ul>
+    </ArticleCallout>
   </> },
 ];

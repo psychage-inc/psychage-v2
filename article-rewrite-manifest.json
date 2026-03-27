@@ -3,7 +3,7 @@
   "generatedAt": "2026-03-26T22:20:03.374Z",
   "wordThreshold": 1500,
   "totalSessions": 260,
-  "completedSessions": 203,
+  "completedSessions": 205,
   "totalArticles": 1246,
   "sessions": {
     "1": {
@@ -1291,7 +1291,7 @@
       "completedAt": "2026-03-27T09:54:00.000Z"
     },
     "27": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "06b-phobias-specific-fears",
       "file": "src/data/articles/category-02/06b-phobias-specific-fears.tsx",
@@ -1303,7 +1303,7 @@
           "slug": "claustrophobia-understanding-the-fear-of-enclosed-spaces",
           "title": "Claustrophobia: Understanding the Fear of Enclosed Spaces",
           "currentWords": 555,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1311,7 +1311,7 @@
           "slug": "animal-phobias-why-some-fears-feel-hardwired",
           "title": "Animal Phobias: Why Some Fears Feel Hardwired",
           "currentWords": 695,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1319,7 +1319,7 @@
           "slug": "emetophobia-the-little-known-fear-that-controls-daily-life",
           "title": "Emetophobia: The Little-Known Fear That Controls Daily Life",
           "currentWords": 547,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -1327,7 +1327,7 @@
           "slug": "blood-injection-injury-phobia-the-only-phobia-that-makes-you-faint",
           "title": "Blood-Injection-Injury Phobia: The Only Phobia That Makes You Faint",
           "currentWords": 676,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -1335,13 +1335,13 @@
           "slug": "when-your-child-has-a-phobia-a-parents-guide-to-helping",
           "title": "When Your Child Has a Phobia: A Parent's Guide to Helping",
           "currentWords": 652,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T06:21:30Z"
     },
     "28": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "07a-evidence-based-coping-strategies",
       "file": "src/data/articles/category-02/07a-evidence-based-coping-strategies.tsx",
@@ -1353,7 +1353,7 @@
           "slug": "12-coping-strategies-for-anxiety-that-research-actually-supports",
           "title": "12 Coping Strategies for Anxiety That Research Actually Supports",
           "currentWords": 814,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1361,7 +1361,7 @@
           "slug": "the-5-4-3-2-1-grounding-technique-how-sensory-focus-calms-anxiety",
           "title": "The 5-4-3-2-1 Grounding Technique: How Sensory Focus Calms Anxiety",
           "currentWords": 517,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1369,7 +1369,7 @@
           "slug": "progressive-muscle-relaxation-a-step-by-step-guide",
           "title": "Progressive Muscle Relaxation: A Step-by-Step Guide",
           "currentWords": 519,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -1377,7 +1377,7 @@
           "slug": "box-breathing-and-other-breathwork-techniques-for-anxiety-relief",
           "title": "Box Breathing and Other Breathwork Techniques for Anxiety Relief",
           "currentWords": 546,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -1385,10 +1385,10 @@
           "slug": "cognitive-restructuring-how-to-challenge-anxious-thoughts",
           "title": "Cognitive Restructuring: How to Challenge Anxious Thoughts",
           "currentWords": 489,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T20:02:20Z"
     },
     "29": {
       "status": "pending",

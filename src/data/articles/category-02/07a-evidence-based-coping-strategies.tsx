@@ -29,6 +29,26 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Anxiety Coping', 'Evidence-Based', 'Self-Help Strategies', 'Anxiety Management'],
+    summary: 'Discover 12 research-backed anxiety coping strategies organized by when to use them: in-the-moment techniques for acute anxiety spikes, daily practices for chronic baseline anxiety, and cognitive strategies for breaking thought spirals. Learn which techniques work best for your specific anxiety patterns and how to build a personalized anxiety management toolbox.',
+    keyFacts: [
+      { text: 'Deep breathing activates the parasympathetic nervous system, shifting you out of fight-or-flight mode within 1-2 minutes', citationIndex: 2 },
+      { text: 'Regular aerobic exercise is as effective as medication for mild-to-moderate anxiety according to meta-analyses', citationIndex: 3 },
+      { text: 'The 5-4-3-2-1 grounding technique interrupts panic attacks by anchoring you to the present moment through sensory awareness', citationIndex: 4 },
+      { text: 'Poor sleep quality exacerbates anxiety; even one night of poor sleep increases anxiety sensitivity', citationIndex: 6 },
+      { text: 'Caffeine triggers fight-or-flight responses and can induce panic-like symptoms in people with anxiety disorders', citationIndex: 8 },
+    ],
+    sparkMoment: 'The most powerful anxiety tool isn\'t one technique --- it\'s knowing which technique to use when, and having practiced it enough that it becomes automatic when you need it most.',
+    practicalExercise: {
+      title: 'Build Your Anxiety Toolbox This Week',
+      steps: [
+        { title: 'Choose one acute technique', description: 'Pick either deep breathing, 5-4-3-2-1 grounding, or progressive muscle relaxation. Practice it once daily in a calm state for 5 minutes.' },
+        { title: 'Start one daily practice', description: 'Commit to one chronic anxiety reducer: 20-minute walks 3x/week, consistent sleep schedule, or limiting caffeine after 2 PM.' },
+        { title: 'Try cognitive restructuring once', description: 'Next time you notice anxious thoughts, write them down and ask: "What\'s the evidence for and against this thought?"' },
+        { title: 'Track what works', description: 'Note which strategies reduce your anxiety intensity even by 10-20%. Focus on building those skills.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Progress in Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -407,6 +427,26 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Grounding Technique', 'Anxiety Relief', 'Panic Attacks', 'Mindfulness'],
+    summary: 'Learn the 5-4-3-2-1 grounding technique, a powerful sensory awareness exercise that interrupts panic attacks and anxiety spirals in 3-5 minutes. Discover why engaging your five senses anchors you to the present moment, how to adapt the technique for different situations, and when grounding is most effective for acute anxiety episodes.',
+    keyFacts: [
+      { text: 'The 5-4-3-2-1 technique works by redirecting attention from internal chaos to external sensory input, interrupting anxious thought loops', citationIndex: 1 },
+      { text: 'Sensory observation demands cognitive resources, making it impossible to fully focus on catastrophic thoughts while actively engaging your senses', citationIndex: 2 },
+      { text: 'Describing your environment signals to your amygdala that you are not in immediate danger, activating the parasympathetic calming response', citationIndex: 4 },
+      { text: 'Grounding is highly effective for panic attacks, dissociation, flashbacks, and emotional overwhelm by reconnecting mind and body', citationIndex: 5 },
+      { text: 'Practicing grounding techniques when calm makes them automatic during stress; the technique takes 3-5 minutes to complete', citationIndex: 3 },
+    ],
+    sparkMoment: 'Anxiety lives in the future. Your senses live in the present. The 5-4-3-2-1 technique is the bridge that brings you back to safety --- to right now, where you actually are.',
+    practicalExercise: {
+      title: 'Practice Grounding When Calm',
+      steps: [
+        { title: 'Set a daily practice', description: 'For the next 7 days, practice the 5-4-3-2-1 technique once daily in a low-stress moment (morning coffee, lunch break, before bed).' },
+        { title: 'Say it out loud', description: 'Speak your observations aloud when possible. Hearing your own voice is grounding and reinforces the technique.' },
+        { title: 'Create a variation', description: 'If smell/taste are hard, customize it: 5 see, 4 touch, 3 hear, 2 deep breaths, 1 positive affirmation.' },
+        { title: 'Use it during mild anxiety', description: 'Next time you feel mildly anxious (not full panic), test the technique. Notice how your anxiety shifts.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Log Your Grounding Practice',
+    },
     citations: [
       {
         id: '1',
@@ -761,6 +801,26 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Progressive Muscle Relaxation', 'PMR', 'Anxiety Relief', 'Relaxation Techniques'],
+    summary: 'Master Progressive Muscle Relaxation (PMR), a 10-20 minute technique that systematically releases physical tension by tensing and relaxing muscle groups from toes to head. Understand the mind-body feedback loop that perpetuates anxiety, learn the complete PMR script, and discover why consistent practice is key to making relaxation automatic.',
+    keyFacts: [
+      { text: 'PMR breaks the anxiety feedback loop: anxious thoughts create muscle tension, which signals danger back to the brain, perpetuating the cycle', citationIndex: 4 },
+      { text: 'The contrast between tension and relaxation teaches your body to recognize and release physical stress automatically over time', citationIndex: 1 },
+      { text: 'PMR activates the parasympathetic nervous system, counteracting the stress response and signaling safety to your brain', citationIndex: 2 },
+      { text: 'Studies show PMR is particularly effective for insomnia, helping people fall asleep faster and improving overall sleep quality', citationIndex: 3 },
+      { text: 'Meta-analyses rate PMR as more effective than deep breathing alone, with an effect size of 68 for anxiety reduction', citationIndex: 5 },
+    ],
+    sparkMoment: 'An anxious mind cannot exist in a relaxed body --- when you teach your muscles to let go, your nervous system has no choice but to follow.',
+    practicalExercise: {
+      title: 'Your 7-Day PMR Practice Plan',
+      steps: [
+        { title: 'Find a guided PMR audio', description: 'Search YouTube or mental health apps for "progressive muscle relaxation guided." Choose one that\'s 10-15 minutes long.' },
+        { title: 'Practice at the same time daily', description: 'Pick a consistent time: before bed (for insomnia), after work (for chronic tension), or mid-morning (for anxiety).' },
+        { title: 'Track your tension awareness', description: 'After each session, rate your muscle tension before (0-10) and after (0-10). Notice how the gap changes over 7 days.' },
+        { title: 'Try an abbreviated version', description: 'By day 7, attempt a 5-minute version with just 4 muscle groups: legs, abdomen, arms, face. Test if you can achieve relaxation faster.' },
+      ],
+      toolLink: '/tools/sleep-architect',
+      toolLabel: 'Track Your Sleep Quality',
+    },
     citations: [
       {
         id: '1',
@@ -1101,6 +1161,26 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Breathwork', 'Box Breathing', 'Anxiety Relief', 'Relaxation'],
+    summary: 'Master five evidence-based breathing techniques for anxiety relief: box breathing for acute stress, 4-7-8 breathing for insomnia, diaphragmatic breathing for chronic anxiety, resonance breathing for resilience, and alternate nostril breathing for balance. Learn why your breath is the only direct access point to your autonomic nervous system and how to choose the right technique for your situation.',
+    keyFacts: [
+      { text: 'Slow, deep breathing stimulates the vagus nerve, shifting your nervous system from fight-or-flight to rest-and-digest within 60-90 seconds', citationIndex: 1 },
+      { text: 'Box breathing (4-4-4-4 pattern) is used by Navy SEALs and first responders to maintain calm under extreme pressure', citationIndex: 6 },
+      { text: 'The 4-7-8 breathing technique uses a long exhale to activate the parasympathetic nervous system more powerfully than inhalation', citationIndex: 5 },
+      { text: 'Diaphragmatic breathing retrains your default breathing pattern; anxious breathing is shallow and chest-based, while calm breathing is deep and belly-based', citationIndex: 2 },
+      { text: 'Breathing at 5-6 breaths per minute (resonance breathing) maximizes heart rate variability, a marker of nervous system resilience', citationIndex: 3 },
+    ],
+    sparkMoment: 'Your breath is the only part of your nervous system you can consciously control --- making it the fastest, most portable tool for shifting from panic to calm, anywhere, anytime.',
+    practicalExercise: {
+      title: 'Build Your Breathwork Routine',
+      steps: [
+        { title: 'Master one technique first', description: 'Choose box breathing or 4-7-8. Practice it for 5 minutes daily in a calm state for one week before adding others.' },
+        { title: 'Test it during mild stress', description: 'Next time you feel mildly anxious (waiting in line, before a call), use your chosen technique for 2-3 minutes. Notice the shift.' },
+        { title: 'Add diaphragmatic breathing', description: 'In week 2, practice belly breathing for 5-10 minutes daily. Place one hand on chest, one on belly --- belly should rise, chest stays still.' },
+        { title: 'Create situational anchors', description: 'Box breathing before stressful events. 4-7-8 for sleep. Diaphragmatic breathing when chronically tense. Match technique to context.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Identify Your Anxiety Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1441,6 +1521,26 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Cognitive Restructuring', 'CBT', 'Anxious Thoughts', 'Cognitive Distortions'],
+    summary: 'Learn cognitive restructuring, the core CBT technique for challenging distorted anxious thoughts. Identify six common cognitive distortions (catastrophizing, probability overestimation, all-or-nothing thinking, mind reading, fortune telling, emotional reasoning), follow a five-step process to examine evidence and generate balanced thoughts, and discover when this technique is most effective for different types of anxiety.',
+    keyFacts: [
+      { text: 'Cognitive distortions are systematic thinking errors that anxiety amplifies, making situations seem worse than they objectively are', citationIndex: 2 },
+      { text: 'Catastrophizing keeps you hypervigilant and avoidant by jumping to worst-case outcomes without evidence', citationIndex: 4 },
+      { text: 'Probability overestimation causes anxiety by making bad outcomes seem far more likely than statistics show (e.g., believing a plane will crash despite 1 in 11 million odds)', citationIndex: 5 },
+      { text: 'Writing out thought records is significantly more effective than mental restructuring alone for reducing anxiety intensity', citationIndex: 6 },
+      { text: 'The goal of cognitive restructuring is not positive thinking but accurate thinking --- seeking realistic thoughts that correct distortions', citationIndex: 1 },
+    ],
+    sparkMoment: 'Your anxious thoughts are not facts --- they are interpretations, predictions, stories your brain tells to keep you safe. Once you learn to question them, you reclaim the power to choose which stories you believe.',
+    practicalExercise: {
+      title: 'Your First Thought Record',
+      steps: [
+        { title: 'Catch an anxious thought today', description: 'When you feel anxious, pause and write down exactly what went through your mind. Be specific, not vague.' },
+        { title: 'Rate your emotion 0-100', description: 'How intense is the anxiety right now? Naming it and rating it creates distance from the feeling.' },
+        { title: 'List evidence for AND against', description: 'Write 2-3 pieces of evidence supporting the thought, then 3-5 pieces contradicting it. Force yourself to find the counter-evidence.' },
+        { title: 'Generate a balanced thought', description: 'Create a realistic (not positive) alternative thought that accounts for all the evidence. Re-rate your emotion. Notice any shift.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Journal Your Thought Patterns',
+    },
     citations: [
       {
         id: '1',

@@ -29,6 +29,26 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Claustrophobia', 'Enclosed Spaces', 'Phobia', 'Panic'],
+    summary: 'Claustrophobia, the fear of enclosed or confined spaces, affects 4-7% of people and can severely limit life by preventing use of elevators, MRIs, airplanes, and other confined settings. The core fear centers on perceived inability to escape and suffocation anxiety. With exposure therapy and coping strategies, most people significantly reduce their fear and regain freedom.',
+    keyFacts: [
+      { text: 'Claustrophobia affects 4-7% of people at a clinical level, with many more experiencing milder discomfort', citationIndex: 1 },
+      { text: 'The core fear is not the space itself but the perceived inability to escape combined with fear of suffocation or losing control', citationIndex: 4 },
+      { text: '37% of MRI scans are not completed due to claustrophobia, delaying critical medical diagnoses', citationIndex: 3 },
+      { text: 'Brain imaging shows amygdala hyperactivation and prefrontal cortex underactivation in people with claustrophobia', citationIndex: 2 },
+      { text: 'Exposure therapy shows 75% improvement rates, with VR exposure therapy achieving 78% success', citationIndex: 5 },
+    ],
+    sparkMoment: 'The spaces that once felt like prisons can become just... spaces.',
+    practicalExercise: {
+      title: 'Build Your Claustrophobia Exposure Ladder',
+      steps: [
+        { title: 'List Your Triggers', description: 'Write down all the confined spaces that trigger anxiety for you, from mildest to most intense (e.g., small rooms, elevators, MRI machines, airplanes).' },
+        { title: 'Rate Your Fear', description: 'On a scale of 0-10, rate how much anxiety each situation causes. This helps you create a gradual progression.' },
+        { title: 'Start with the Easiest', description: 'Begin with the situation you rated lowest. Practice entering and staying in that space until your anxiety decreases by at least 50%.' },
+        { title: 'Use Grounding Techniques', description: 'While in the confined space, use the 5-4-3-2-1 grounding technique: name 5 things you see, 4 you can touch, 3 you hear, 2 you smell, 1 you taste.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Try the Symptom Navigator',
+    },
     citations: [
       {
         id: '1',
@@ -403,6 +423,26 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Animal Phobia', 'Arachnophobia', 'Evolutionary Psychology', 'Fear'],
+    summary: 'Animal phobias like fear of spiders, snakes, and dogs feel hardwired because evolution primed our brains to quickly learn fear of ancestral threats. These "prepared" fears develop fast, resist extinction, and can be transmitted socially even without direct trauma. Despite feeling ancient and unchangeable, animal phobias are highly treatable with exposure therapy and virtual reality approaches.',
+    keyFacts: [
+      { text: 'Infants as young as 6 months pay more visual attention to snakes and spiders than to flowers or fish, showing an innate bias before fear develops', citationIndex: 2 },
+      { text: 'Animal phobias develop through prepared learning—our brains evolved to quickly learn fear of things that were threats to ancestors, making spider/snake phobias far more common than car phobias despite cars being statistically more dangerous', citationIndex: 1 },
+      { text: 'Monkey studies show fear can be socially transmitted for evolutionarily prepared stimuli (snakes) but not for arbitrary objects (flowers)', citationIndex: 3 },
+      { text: 'Animal phobias involve both fear and disgust, with the dual emotional response making them particularly intense and persistent', citationIndex: 4 },
+      { text: 'One-session treatment for animal phobias shows 85% improvement rates, with 90% maintaining gains at 1-year follow-up', citationIndex: 5 },
+    ],
+    sparkMoment: 'Fear is only as deep as the mind allows.',
+    practicalExercise: {
+      title: 'Create Your Animal Phobia Exposure Hierarchy',
+      steps: [
+        { title: 'Identify Your Fear Level', description: 'Rate your fear of the animal on a 0-10 scale in different contexts (photos, videos, distance, proximity, touching).' },
+        { title: 'Build Your Ladder', description: 'Create 8-10 steps from least scary (maybe looking at a cartoon) to most scary (touching the animal). Each step should be slightly harder than the last.' },
+        { title: 'Start at Step 1', description: 'Begin with the easiest step. Stay in that situation until your anxiety decreases by at least 50%. This might take 10-30 minutes.' },
+        { title: 'Move Up Gradually', description: 'Only move to the next step after the current one no longer triggers significant fear. Repeat as needed—progress is not always linear.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Anxiety Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -752,6 +792,26 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Emetophobia', 'Specific Phobia', 'Anxiety', 'Avoidance'],
+    summary: 'Emetophobia—the intense fear of vomiting—affects 0.1-8% of people and is one of the most debilitating yet under-recognized phobias. Sufferers structure entire lives around avoiding vomiting or nausea, leading to food restrictions, social isolation, pregnancy avoidance, and medical care delays. Often misdiagnosed as other anxiety disorders, emetophobia is highly treatable with specialized CBT including interoceptive exposure.',
+    keyFacts: [
+      { text: 'Emetophobia is often misdiagnosed as generalized anxiety, panic disorder, agoraphobia, or eating disorders because the core fear is hidden beneath avoidance behaviors', citationIndex: 1 },
+      { text: 'Food avoidance in emetophobia can lead to nutritional deficiencies and is frequently mistaken for an eating disorder like ARFID', citationIndex: 2 },
+      { text: 'Emetophobia causes quality of life impairment comparable to chronic physical illnesses, affecting social, emotional, physical, and daily functioning', citationIndex: 6 },
+      { text: 'Many people with emetophobia develop agoraphobia because they avoid places where they might vomit or be unable to escape if nauseous', citationIndex: 4 },
+      { text: 'Specialized CBT for emetophobia shows 70% improvement rates, with 65% no longer meeting diagnostic criteria after 12 weeks of treatment', citationIndex: 3 },
+    ],
+    sparkMoment: 'Avoidance doesn\'t make you safer. It just makes the world smaller.',
+    practicalExercise: {
+      title: 'Challenge Your Emetophobia Safety Behaviors',
+      steps: [
+        { title: 'Identify Your Safety Behaviors', description: 'List all the things you do to prevent vomiting or reduce anxiety about it (checking food dates, avoiding restaurants, carrying anti-nausea meds, planning escape routes).' },
+        { title: 'Rate the Difficulty', description: 'On a 0-10 scale, rate how hard it would be to stop each safety behavior. Start with the easiest ones.' },
+        { title: 'Choose One to Reduce', description: 'Pick your lowest-rated safety behavior. Commit to reducing or eliminating it for one week. For example, if you always check expiration dates twice, check only once.' },
+        { title: 'Track Your Anxiety', description: 'Notice what happens when you reduce the behavior. Does the feared outcome occur? Does anxiety decrease over time? Record your observations.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Anxiety Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1110,6 +1170,26 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Blood Phobia', 'Fainting', 'Vasovagal Syncope', 'Phobia Treatment'],
+    summary: 'Blood-injection-injury (BII) phobia is uniquely characterized by a biphasic cardiovascular response that causes fainting—something no other phobia does. This evolutionary adaptation may have helped ancestors survive injury but now prevents essential medical care. With applied tension technique and exposure therapy, 80% of people overcome the phobia and can access needed healthcare without fainting.',
+    keyFacts: [
+      { text: 'BII phobia affects 3-4% of the population and is equally common in men and women, unlike most specific phobias', citationIndex: 2 },
+      { text: 'The unique biphasic response involves initial heart rate increase followed by sudden vagal overcompensation causing fainting in about 75% of people with BII phobia', citationIndex: 1 },
+      { text: 'BII phobia has one of the highest heritability rates of all phobias at 60-70%, with strong familial clustering and genetic influence on vagal tone', citationIndex: 7 },
+      { text: 'Applied tension—tensing major muscle groups for 10-15 seconds—reduces fainting by about 80% by counteracting the vasovagal response', citationIndex: 3 },
+      { text: 'Exposure therapy combined with applied tension shows 80% success rates and 90% reduction in fainting episodes', citationIndex: 6 },
+    ],
+    sparkMoment: 'Fainting is not a sign of weakness. It\'s a physiological response you didn\'t choose. But you can learn to override it.',
+    practicalExercise: {
+      title: 'Practice Applied Tension Technique',
+      steps: [
+        { title: 'Learn the Tension', description: 'Sit comfortably and tense all major muscle groups (arms, legs, torso) for 10-15 seconds. Hold until you feel warmth in your face—that\'s rising blood pressure.' },
+        { title: 'Release (Not Relax)', description: 'Release the tension for 20-30 seconds, but keep muscles slightly engaged. Don\'t let them go completely limp.' },
+        { title: 'Practice Daily', description: 'Repeat this tension-release cycle 5 times, twice daily, until it becomes automatic. You want it to be second nature before exposure.' },
+        { title: 'Apply During Exposure', description: 'Once mastered, use applied tension throughout any phobic exposure (blood draw, needle) and for several minutes afterward to prevent delayed fainting.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Check Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -1525,6 +1605,26 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Childhood Phobias', 'Parenting', 'Child Anxiety', 'Fear'],
+    summary: 'Specific phobias affect 5-10% of children and require careful parental response to prevent persistence into adulthood. Parental accommodation—changing behavior to help children avoid feared things—provides short-term relief but strengthens phobias long-term. Evidence-based parenting includes validating fear without validating threat, gradual exposure, praising brave behavior, and reducing accommodation. Treatment involving parents is more effective than child-only therapy.',
+    keyFacts: [
+      { text: 'Specific phobias affect 5-10% of children at some point, and parents play a crucial role in whether these phobias persist into adulthood', citationIndex: 1 },
+      { text: 'Parental accommodation—helping children avoid feared things—provides short-term relief but long-term harm, with high accommodation linked to 85% higher child anxiety severity scores', citationIndex: 2 },
+      { text: 'Children learn fear by observing parents; if you scream at spiders or avoid dogs, your child absorbs that fear through social transmission', citationIndex: 4 },
+      { text: 'One-session treatment for childhood phobias shows 78% of children no longer meet phobia criteria after a single 3-hour session, with 85% maintaining improvement at 1-year follow-up', citationIndex: 3 },
+      { text: 'Parent-involved treatment is significantly more effective than child-only therapy for childhood anxiety disorders', citationIndex: 8 },
+    ],
+    sparkMoment: 'Children are great imitators. So give them something great to imitate.',
+    practicalExercise: {
+      title: 'Build a Fear Hierarchy with Your Child',
+      steps: [
+        { title: 'Collaborate on the List', description: 'Sit with your child and brainstorm situations involving their fear, from easiest to hardest. Let them lead—this is their hierarchy, not yours.' },
+        { title: 'Rate Each Situation', description: 'Have your child rate each situation from 0 (no fear) to 10 (maximum fear). This helps identify where to start and creates clear progression.' },
+        { title: 'Start at the Bottom', description: 'Begin with the lowest-rated fear (maybe 2-3 out of 10). Practice that situation until anxiety decreases by at least half. Don\'t rush to the next step.' },
+        { title: 'Praise the Process', description: 'Celebrate effort, not just success. Say "I\'m proud you tried, even though it was hard" instead of "See, that wasn\'t so bad!"' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Child\'s Progress',
+    },
     citations: [
       {
         id: '1',

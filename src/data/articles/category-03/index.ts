@@ -6,7 +6,7 @@ export { communicationSkillsArticlesA } from './03a-communication-skills-for-con
 export { communicationSkillsArticlesB } from './03b-communication-skills-for-connection';
 export { conflictRepairArticlesA } from './04a-navigating-conflict-repair';
 export { conflictRepairArticlesB } from './04b-navigating-conflict-repair';
-// export { romanticRelationshipsArticlesA } from './05a-romantic-relationships-intimacy';
+// export { romanticRelationshipsArticlesA } from './05a-romantic-relationships-intimacy'; // Temporarily disabled - file has syntax errors
 export { romanticRelationshipsArticlesB } from './05b-romantic-relationships-intimacy';
 export { friendshipsArticlesA } from './06a-friendships-social-circles';
 export { friendshipsArticlesB } from './06b-friendships-social-circles';

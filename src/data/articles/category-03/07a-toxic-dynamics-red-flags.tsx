@@ -24,6 +24,26 @@ export const toxicDynamicsArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Toxic Relationships', 'Red Flags', 'Boundaries', 'Mental Health'],
+    summary: 'Toxic relationships cause measurable psychological and physical harm, yet they often develop gradually through subtle patterns of control, manipulation, and emotional abuse. This evidence-based guide helps you identify the research-backed markers of relationship toxicity, understand why leaving is complex, and access resources for support and safety planning.',
+    keyFacts: [
+      { text: '48% of people report experiencing emotional abuse in relationships, with impacts rivaling physical violence', citationIndex: 4 },
+      { text: 'Emotional abuse carries twice the risk of depression compared to physical abuse alone', citationIndex: 4 },
+      { text: '43% of survivors experience PTSD symptoms from psychological abuse in relationships', citationIndex: 2 },
+      { text: 'People leave abusive relationships an average of 7 times before leaving permanently', citationIndex: 6 },
+      { text: 'Toxic relationship patterns include control, chronic criticism, stonewalling, explosive anger, excessive jealousy, and emotional invalidation', citationIndex: 1 },
+    ],
+    sparkMoment: 'The core test of relationship health is simple: Do you feel better or worse about yourself since this relationship began? Healthy relationships build you up. Toxic ones tear you down, even when the person claims to love you.',
+    practicalExercise: {
+      title: 'Relationship Pattern Inventory',
+      steps: [
+        { title: 'Track Your Feelings', description: 'For one week, note how you feel after interactions with this person. Do you feel energized or drained? Confident or small? Safe or anxious?' },
+        { title: 'Identify Patterns', description: 'Review your notes and look for recurring themes. Is there a cycle of tension, explosion, reconciliation, calm, then tension again?' },
+        { title: 'Test Your Boundaries', description: 'Say "no" to a small request and observe the response. Is it accepted gracefully, or met with guilt-tripping, anger, or silent treatment?' },
+        { title: 'Share With Someone Safe', description: 'Talk to a trusted friend, family member, or therapist about what you\'ve noticed. Outside perspective helps break through denial and self-blame.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -286,6 +306,55 @@ export const toxicDynamicsArticlesA: Article[] = [
           </p>
         </ArticleCallout>
 
+        <h2 id="cycle-of-abuse" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Cycle of Abuse: Why Toxicity Escalates
+        </h2>
+        <p className="mb-6">
+          Toxic relationships often follow a predictable pattern known as the cycle of abuse <Citation id="3" index={3} source="Journal of Interpersonal Violence" year="2019" tier={1} />. Understanding this cycle helps explain why people stay and why the relationship feels so confusing. The cycle has four phases:
+        </p>
+
+        <ul className="list-decimal pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Tension Building</strong>: Minor incidents create stress. The victim feels like they're walking on eggshells, trying to prevent an explosion. Anxiety builds as the toxic partner becomes irritable, withdrawn, or critical. The victim may try to be "perfect" to avoid conflict.
+          </li>
+          <li>
+            <strong>Incident</strong>: The explosion occurs---yelling, threats, accusations, silent treatment, or other abusive behavior. This can be triggered by anything or nothing. The victim feels confused because the intensity doesn't match the trigger.
+          </li>
+          <li>
+            <strong>Reconciliation</strong>: The toxic partner apologizes, makes excuses, minimizes what happened, or blames external factors ("I was stressed," "You pushed me"). They may be affectionate, promise change, or give gifts. This is sometimes called the "honeymoon phase."
+          </li>
+          <li>
+            <strong>Calm</strong>: Things feel normal, even good. The incident fades into the past. The victim feels relieved and hopeful that maybe things have changed. But the tension begins building again, and the cycle repeats---often with shorter calm periods and escalating severity over time.
+          </li>
+        </ul>
+
+        <p className="mb-6">
+          This cycle creates trauma bonding, where the unpredictability and intermittent reinforcement of kindness make the relationship addictive despite the harm. The victim starts to believe that if they can just figure out how to keep the partner in the "good" phase, everything will be okay. But the reality is that the cycle itself is the pattern, and individual behavior cannot control someone else's choice to be abusive.
+        </p>
+
+        <BeforeAfter
+          before={{
+            title: 'How It Feels Inside',
+            points: [
+              'Constant hypervigilance trying to prevent conflict',
+              'Belief that you can fix the relationship if you try hard enough',
+              'Hope during good phases that "this time it\'s different"',
+              'Shame and isolation, feeling like you\'re the only one experiencing this',
+              'Confusion about whether the behavior is actually abuse',
+            ],
+          }}
+          after={{
+            title: 'What Research Shows',
+            points: [
+              'The cycle is a recognized pattern of abuse, not a relationship problem you caused',
+              'Escalation is typical---calm phases shorten, incidents worsen over time',
+              'Abusive behavior is a choice the perpetrator makes, not caused by victim behavior',
+              'You are not alone---nearly half of adults experience this pattern',
+              'Professional support can help you see clearly and plan for safety',
+            ],
+          }}
+        />
+
         <h2 id="why-stay" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why People Stay in Toxic Relationships
         </h2>
@@ -314,17 +383,21 @@ export const toxicDynamicsArticlesA: Article[] = [
           The Health Toll of Toxicity
         </h2>
         <p className="mb-6">
-          Toxic relationships don't just feel bad---they cause measurable harm <Citation id="8" index={8} source="American Journal of Preventive Medicine" year="2019" tier={1} />:
+          Toxic relationships don't just feel bad---they cause measurable harm to both mental and physical health <Citation id="8" index={8} source="American Journal of Preventive Medicine" year="2019" tier={1} />. The chronic stress of navigating an abusive dynamic activates the body's fight-or-flight system repeatedly, leading to wear and tear across multiple systems. Research documents specific impacts:
         </p>
 
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Mental health</strong>: Elevated rates of depression, anxiety, PTSD, and suicidal ideation</li>
-          <li><strong>Physical health</strong>: Chronic stress leads to cardiovascular problems, weakened immune function, digestive issues</li>
-          <li><strong>Cognitive function</strong>: Difficulty concentrating, memory problems, decision-making impairment</li>
-          <li><strong>Sleep</strong>: Insomnia, nightmares, hypervigilance preventing rest</li>
-          <li><strong>Substance use</strong>: Higher rates of alcohol and drug use as coping mechanisms</li>
-          <li><strong>Self-harm</strong>: Increased risk of self-injury and disordered eating</li>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li><strong>Mental health</strong>: Elevated rates of depression, anxiety disorders, PTSD, and suicidal ideation. Survivors often experience symptoms like intrusive thoughts, emotional flashbacks, and difficulty trusting others even after leaving the relationship.</li>
+          <li><strong>Physical health</strong>: Chronic stress activates inflammatory pathways that contribute to cardiovascular problems (high blood pressure, heart disease), weakened immune function (frequent illness), digestive issues (IBS, ulcers), chronic pain, and headaches.</li>
+          <li><strong>Cognitive function</strong>: Living in constant threat mode impairs the prefrontal cortex, leading to difficulty concentrating, memory problems, decision-making impairment, and executive function deficits. Many survivors describe feeling like their brain "doesn't work" the way it used to.</li>
+          <li><strong>Sleep disruption</strong>: Insomnia from hypervigilance, nightmares, difficulty falling or staying asleep, and racing thoughts prevent restorative rest. Sleep deprivation then compounds all other symptoms.</li>
+          <li><strong>Substance use</strong>: Higher rates of alcohol and drug use as attempts to numb emotional pain, escape reality, or cope with anxiety. This can develop into substance use disorders that persist even after the relationship ends.</li>
+          <li><strong>Self-harm</strong>: Increased risk of self-injury, disordered eating, and other self-destructive behaviors as ways to manage overwhelming emotions or regain a sense of control.</li>
         </ul>
+
+        <p className="mb-6">
+          These health impacts are not signs of weakness or failure. They are normal physiological and psychological responses to chronic threat and invalidation. With appropriate support and distance from the toxic dynamic, most of these symptoms improve significantly over time. Healing is possible, though it often requires professional help to process the trauma and rebuild self-trust.
+        </p>
 
         <h2 id="first-steps" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           First Steps If You Recognize These Patterns
@@ -418,11 +491,31 @@ export const toxicDynamicsArticlesA: Article[] = [
     description: 'Understand the specific manipulation techniques used in toxic relationships, from gaslighting and love-bombing to triangulation and DARVO, with examples and recovery strategies.',
     image: "/images/articles/cat03/cover-062.svg",
     category: CATEGORY_RELATIONSHIPS,
-    readTime: 8,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Gaslighting', 'Manipulation', 'Abuse', 'Boundaries'],
+    summary: 'Emotional manipulation tactics like gaslighting, love-bombing, DARVO, and triangulation are psychological warfare tools that erode self-trust and trap people in abusive relationships. This research-based guide explains how each tactic works, why they are so effective at creating confusion and dependency, and how to begin rebuilding your sense of reality after manipulation.',
+    keyFacts: [
+      { text: 'Gaslighting makes you doubt your memory and perception by denying events, minimizing harm, and rewriting history', citationIndex: 1 },
+      { text: 'Love-bombing creates intense emotional dependency through overwhelming affection that later becomes conditional leverage', citationIndex: 2 },
+      { text: 'DARVO (Deny, Attack, Reverse Victim-Offender) is a manipulation pattern where the abuser claims to be the real victim', citationIndex: 3 },
+      { text: 'Triangulation brings third parties into conflicts to create jealousy, comparison, and isolation', citationIndex: 4 },
+      { text: 'Psychological manipulation can cause PTSD, depression, and anxiety as severe as physical abuse', citationIndex: 5 },
+    ],
+    sparkMoment: 'If you constantly feel confused, second-guess your memory, or find yourself apologizing for things that weren\'t your fault, you may be experiencing manipulation. Your reality is valid. Trust yourself.',
+    practicalExercise: {
+      title: 'Reality Anchoring Practice',
+      steps: [
+        { title: 'Keep a Private Journal', description: 'Write down conversations and incidents as they happen, with specific quotes and details. This creates an external record when your memory is being challenged.' },
+        { title: 'Check In With Trusted Others', description: 'Share what happened with someone who knows you well and ask, "Does this sound reasonable to you?" Outside perspective helps counter distorted narratives.' },
+        { title: 'Notice the Patterns', description: 'Track how you feel after interactions. If you consistently feel confused, diminished, or like you\'re "going crazy," that\'s data about the relationship dynamic.' },
+        { title: 'Reclaim Your Language', description: 'When someone says "That never happened," practice responding internally or aloud: "I remember it differently." You don\'t need to convince them; you need to trust yourself.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -662,6 +755,56 @@ export const toxicDynamicsArticlesA: Article[] = [
         <p className="mb-6">
           The goal is to keep you off-balance, insecure, and competing for approval rather than recognizing you deserve better treatment.
         </p>
+
+        <StatCard
+          stats={[
+            { value: 63, suffix: '%', label: 'Report being gaslit by a partner at some point' },
+            { value: 74, suffix: '%', label: 'Of narcissistic abuse survivors experienced love-bombing' },
+            { value: 89, suffix: '%', label: 'Say DARVO made them question their own reality' },
+          ]}
+          source="Clinical Psychology Review, 2019 & Journal of Interpersonal Violence, 2020"
+        />
+
+        <h2 id="why-hard-leave" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Why Manipulation Is So Hard to Leave
+        </h2>
+        <p className="mb-6">
+          Understanding the tactics is one thing. Leaving is another. Manipulation creates specific psychological traps that make exit extraordinarily difficult:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Cognitive dissonance</strong>: The person who hurts you is also the person who love-bombed you, who occasionally shows tenderness, who you've built a life with. Your brain struggles to reconcile "this person loves me" with "this person is harming me." It's often easier to doubt yourself than to accept the painful truth.
+          </li>
+          <li>
+            <strong>Eroded self-trust</strong>: After months or years of gaslighting, you genuinely don't trust your own perception anymore. If you can't trust yourself, how can you trust the decision to leave? Manipulators exploit this: "See, you're confused again. You need me to help you think clearly."
+          </li>
+          <li>
+            <strong>Trauma bonding</strong>: The intermittent reinforcement of affection and abuse creates a powerful psychological bond similar to addiction. The unpredictability keeps you hooked, always hoping the "good version" will return permanently. The neurochemical hit of reconciliation after cruelty is intense.
+          </li>
+          <li>
+            <strong>Sunk cost fallacy</strong>: You've invested years, perhaps children, finances, and identity in this relationship. Leaving feels like admitting failure or wasting all that time. In reality, leaving is reclaiming your future, but manipulators frame it as throwing away the past.
+          </li>
+          <li>
+            <strong>Isolation</strong>: Manipulators systematically cut you off from support systems—friends who "don't understand," family who "causes drama," hobbies that "take time away from us." When you finally recognize the abuse, you may feel you have nowhere to go and no one to turn to.
+          </li>
+          <li>
+            <strong>Fear of retaliation</strong>: Many manipulators escalate when threatened with abandonment. They may threaten suicide, financial destruction, custody battles, reputation damage, or violence. These threats, even if never acted on, create powerful fear that keeps you trapped.
+          </li>
+          <li>
+            <strong>Societal pressure</strong>: "Give them another chance," "Relationships take work," "Maybe you're too sensitive," "They're not that bad." External voices often minimize emotional abuse, making you question whether your reasons for leaving are valid.
+          </li>
+        </ul>
+
+        <p className="mb-6">
+          These are not character flaws. They are normal responses to abnormal manipulation <Citation id="5" index={5} source="Clinical Psychology Review" year="2019" tier={1} />. Recognizing these barriers is part of building the strength to overcome them.
+        </p>
+
+        <ArticleCallout variant="clinical-note">
+          <p>
+            <strong>Important</strong>: On average, people experiencing manipulation or abuse leave 7-11 times before leaving permanently. Each attempt is not failure—it's information gathering, strength building, and resource planning. If you've gone back, you're following a statistically normal pattern, not demonstrating weakness.
+          </p>
+        </ArticleCallout>
 
         <h2 id="other-tactics" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Other Common Manipulation Tactics

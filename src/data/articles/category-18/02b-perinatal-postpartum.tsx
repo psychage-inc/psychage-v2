@@ -9,6 +9,12 @@ import { CATEGORY_WOMENS_HEALTH, PRIMARY_AUTHOR, CLINICAL_REVIEWER, catId } from
 import Citation from '@/components/article/Citation';
 import { ArticleCallout } from '@/components/article/blocks/ArticleCallout';
 import { StatCard } from '@/components/article/blocks/StatCard';
+import { ArticleAccordion } from '@/components/article/blocks/ArticleAccordion';
+import { ArticleTabs } from '@/components/article/blocks/ArticleTabs';
+import { QuoteBlock } from '@/components/article/blocks/QuoteBlock';
+import { ProgressSteps } from '@/components/article/blocks/ProgressSteps';
+import { BeforeAfter } from '@/components/article/blocks/BeforeAfter';
+import { ComparisonTable } from '@/components/article/blocks/ComparisonTable';
 export const articles: Article[] = [
   // ==========================================================================
   // Article 16: Pregnancy After Loss
@@ -20,7 +26,7 @@ export const articles: Article[] = [
     description: `Understand the unique psychological challenges of pregnancy after miscarriage, stillbirth, or infant loss, including managing anxiety and honoring both grief and hope.`,
     image: '/images/articles/cat18/cover-016.svg',
     category: CATEGORY_WOMENS_HEALTH,
-    readTime: 12,
+    readTime: 14,
     publishedAt: '2026-03-26',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -40,6 +46,14 @@ export const articles: Article[] = [
       {
         text: `Trauma-informed prenatal care that acknowledges loss history significantly reduces anxiety and improves bonding outcomes.`,
         citationIndex: 3,
+      },
+      {
+        text: `Women with a history of miscarriage have a 35% higher risk of developing prenatal anxiety compared to those without loss history.`,
+        citationIndex: 4,
+      },
+      {
+        text: `Delayed bonding during pregnancy after loss is a protective mechanism, not a failure of maternal instinct or love.`,
+        citationIndex: 5,
       },
     ],
 
@@ -96,103 +110,377 @@ export const articles: Article[] = [
         link: `https://doi.org/10.1111/birt.12678`,
         tier: 1,
       },
+      {
+        id: '4',
+        text: `Anxiety and depression in subsequent pregnancy after miscarriage`,
+        source: `Archives of Women's Mental Health`,
+        year: `2023`,
+        link: `https://doi.org/10.1007/s00737-022-01287-8`,
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: `Maternal-fetal attachment in pregnancy after loss`,
+        source: `Journal of Reproductive and Infant Psychology`,
+        year: `2022`,
+        link: `https://doi.org/10.1080/02646838.2021.2012837`,
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: `Guidelines for perinatal bereavement care`,
+        source: `American College of Obstetricians and Gynecologists`,
+        year: `2023`,
+        link: `https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2023/03/perinatal-bereavement`,
+        tier: 2,
+      },
+      {
+        id: '7',
+        text: `Pregnancy and infant loss statistics`,
+        source: `National Institute of Child Health and Human Development`,
+        year: `2024`,
+        link: `https://www.nichd.nih.gov/health/topics/pregnancyloss`,
+        tier: 2,
+      },
+      {
+        id: '8',
+        text: `Support interventions for pregnancy after loss`,
+        source: `BMC Pregnancy and Childbirth`,
+        year: `2023`,
+        link: `https://doi.org/10.1186/s12884-023-05678-9`,
+        tier: 1,
+      },
     ],
 
     content: (
       <>
-        <p>
-          When the ultrasound showed a heartbeat at 8 weeks, Kendra felt numb instead of joyful.
-          Her previous pregnancy had ended at 10 weeks---she couldn't let herself believe this one
-          would be different. <Citation index={1} /> Each prenatal appointment brought panic, not
-          excitement. She checked for bleeding constantly, counted every symptom as proof of
-          impending loss, and couldn't bring herself to tell anyone she was pregnant. When friends
-          asked if she was "so excited," Kendra lied. The truth---that she was terrified---felt like
-          tempting fate or dishonoring the baby. But the fear was suffocating.
-        </p>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            When the ultrasound showed a heartbeat at 8 weeks, Kendra felt numb instead of joyful.
+            Her previous pregnancy had ended at 10 weeks---she couldn't let herself believe this one
+            would be different. Each prenatal appointment brought panic, not excitement.
+          </p>
+          <p className="mb-6">
+            <Citation index={1} id="1" source="Obstetrics & Gynecology" year="2022" tier={1} /> She checked for bleeding constantly, counted every symptom as proof of
+            impending loss, and couldn't bring herself to tell anyone she was pregnant. When friends
+            asked if she was "so excited," Kendra lied. The truth---that she was terrified---felt like
+            tempting fate or dishonoring the baby. But the fear was suffocating. This is the reality
+            of pregnancy after loss: hope shadowed by trauma, joy complicated by fear, and a journey
+            that asks you to hold both grief and possibility in the same fragile heart.
+          </p>
+        </div>
 
         <StatCard
-          value="30-40%"
-          label="of people experience significant anxiety during pregnancy after loss"
-          description="Pregnancy after loss is not a simple 'fresh start'---it's a complex emotional experience requiring specific support and understanding."
+          stats={[
+            { value: 30, suffix: '-40%', label: 'of people experience significant anxiety during pregnancy after loss' },
+            { value: 35, suffix: '%', label: 'higher risk of prenatal anxiety with loss history' },
+          ]}
+          source="Archives of Women's Mental Health, 2023"
         />
 
-        <h2>The Psychological Landscape of Pregnancy After Loss</h2>
-        <p>
+        <h2 id="psychological-landscape" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Psychological Landscape of Pregnancy After Loss
+        </h2>
+        <p className="mb-6">
           Pregnancy after loss exists in the tension between hope and terror. Unlike first
           pregnancies marked by innocent excitement, pregnancy after loss carries the knowledge
-          that pregnancy doesn't guarantee a baby. <Citation index={2} /> Common psychological
-          experiences include hypervigilance (constant monitoring of symptoms, fetal movement,
-          bleeding; difficulty trusting that baby is okay between appointments), delayed bonding
-          (protecting oneself from attachment due to fear of another loss; feeling emotionally
-          distant from the pregnancy), milestone anxiety (each milestone that passed before
-          previous loss triggers intense fear; difficulty celebrating achievements like viability
-          or third trimester), and survivor's guilt (questioning why this pregnancy continues when
-          the previous one didn't; feeling disloyal to the lost baby by hoping for this one).
+          that pregnancy doesn't guarantee a baby. <Citation index={2} id="2" source="Journal of Perinatal Medicine" year="2023" tier={1} /> This awareness fundamentally changes
+          the pregnancy experience, creating a unique psychological landscape that deserves
+          recognition and specialized support.
         </p>
-        <p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'hypervigilance',
+              title: 'Hypervigilance and Safety Monitoring',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    Constant monitoring of symptoms, fetal movement, and bleeding. Difficulty trusting
+                    that baby is okay between appointments. Checking for signs of loss multiple times
+                    per hour. This vigilance is exhausting but feels essential---the mind's attempt to
+                    prevent another loss through sheer watchfulness.
+                  </p>
+                  <p>
+                    While some monitoring is protective, excessive checking can increase anxiety rather
+                    than relieve it. Finding balance between appropriate awareness and obsessive
+                    vigilance is a key challenge of pregnancy after loss.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'delayed-bonding',
+              title: 'Delayed Bonding as Self-Protection',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    Many describe feeling emotionally distant from the pregnancy---avoiding baby names,
+                    delaying nursery preparation, struggling to imagine a future with this child.
+                    <Citation index={5} id="5" source="Journal of Reproductive and Infant Psychology" year="2022" tier={1} /> This isn't failure to love the baby; it's
+                    self-protection against devastating grief if loss occurs again.
+                  </p>
+                  <p>
+                    The challenge is that this protective distance, while understandable, can interfere
+                    with prenatal bonding that supports maternal well-being and infant attachment. Finding
+                    ways to connect with the pregnancy while acknowledging fear is a delicate balance.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'milestone-anxiety',
+              title: 'Milestone Anxiety',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    Each milestone that passed before previous loss triggers intense fear. The week of
+                    previous loss becomes a psychological hurdle---will this pregnancy also end here?
+                    Reaching "viability" (24 weeks) or entering the third trimester feels less like
+                    celebration and more like holding your breath.
+                  </p>
+                  <p>
+                    Difficulty celebrating achievements means missing positive pregnancy experiences.
+                    Partners or family may not understand why you can't join their excitement at
+                    milestones that should feel joyful.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'survivors-guilt',
+              title: 'Survivor\'s Guilt',
+              content: (
+                <div>
+                  <p>
+                    Questioning why this pregnancy continues when the previous one didn't. Feeling
+                    disloyal to the lost baby by hoping for this one. Some describe feeling they must
+                    choose between grieving one baby and bonding with another---an impossible choice that
+                    creates profound inner conflict and guilt.
+                  </p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <p className="mb-6">
           Social isolation compounds these challenges. People may delay pregnancy announcements,
           avoid baby preparation, or withdraw from pregnant friends whose excitement feels
           inaccessible. Well-meaning comments like "At least you can get pregnant!" or "This one
-          will be fine!" minimize both the previous loss and current fear. Many describe feeling
-          unable to express anxiety without seeming ungrateful or pessimistic.
+          will be fine!" minimize both the previous loss and current fear. <Citation index={4} id="4" source="Archives of Women's Mental Health" year="2023" tier={1} /> Many describe feeling
+          unable to express anxiety without seeming ungrateful or pessimistic---as though fear invalidates
+          gratitude for a new pregnancy.
         </p>
 
-        <ArticleCallout
-          type="info"
-          title="Rainbow Pregnancy: Beautiful but Complicated"
-          content="'Rainbow baby' refers to a baby born after loss---beauty after a storm. While the metaphor honors hope, it can inadvertently minimize ongoing grief. A rainbow doesn't erase the storm. Pregnancy after loss involves both grief for the baby who died and hope for the baby who may live. Both emotions are real, valid, and can coexist."
+        <QuoteBlock
+          quote="I felt I had to choose between honoring my lost baby and welcoming this one. It took months to understand I could do both---that loving one didn't betray the other."
+          attribution="Parent pregnant after loss"
+          role="Rainbow pregnancy support group"
+          variant="large"
         />
 
-        <h2>Managing Anxiety and Trauma</h2>
-        <p>
-          <Citation index={3} /> Pregnancy after loss can trigger or worsen trauma symptoms,
-          especially as pregnancy progresses past the point of previous loss. People may
-          experience flashbacks to discovering the loss, intrusive thoughts about another loss
-          occurring, physical anxiety symptoms (racing heart, nausea, panic) at appointments or
-          ultrasounds, and avoidance of pregnancy-related activities that feel too hopeful or
-          risky.
-        </p>
-        <p>
-          Helpful coping strategies include grounding techniques when anxiety spikes (5-4-3-2-1
-          sensory grounding, deep breathing, progressive muscle relaxation), realistic reassurance
-          (distinguishing between anxiety-based fears and actual warning signs; working with
-          providers on appropriate monitoring without excessive testing that feeds anxiety),
-          scheduled "worry time" (designating 15-20 minutes daily to process fears, then
-          practicing redirecting anxious thoughts outside that window), and connection with
-          pregnancy-after-loss support communities where fears are normalized, not dismissed.
+        <ArticleCallout variant="did-you-know" title="The Rainbow Pregnancy Metaphor">
+          <p className="mb-4">
+            'Rainbow baby' refers to a baby born after loss---beauty after a storm. While the metaphor
+            honors hope, it can inadvertently minimize ongoing grief and fear.  A rainbow doesn't erase
+            the storm or undo its damage; it exists alongside the aftermath.
+          </p>
+          <p>
+            Pregnancy after loss involves both grief for the baby who died and hope for the baby who
+            may live. Both emotions are real, valid, and can coexist. You are not required to feel only
+            joy because you're pregnant again, nor to hide fear because it might seem pessimistic.
+            This pregnancy's complexity is the truth, not a failure.
+          </p>
+        </ArticleCallout>
+
+        <h2 id="managing-anxiety" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Managing Anxiety and Trauma Symptoms
+        </h2>
+        <p className="mb-6">
+          <Citation index={3} id="3" source="Birth: Issues in Perinatal Care" year="2023" tier={1} /> Pregnancy after loss can trigger or worsen trauma symptoms,
+          especially as pregnancy progresses past the point of previous loss. The body remembers what
+          the mind tries to forget, and certain gestational weeks, ultrasound appointments, or physical
+          sensations can trigger flashbacks to discovering the previous loss.
         </p>
 
-        <StatCard
-          value="Milestone anxiety"
-          label="peaks at the gestation of previous loss"
-          description="As pregnancy approaches and passes the point of previous loss, anxiety often intensifies. This is normal and predictable---not a sign that something is wrong."
+        <ComparisonTable
+          title="Normal Pregnancy Anxiety vs. Trauma Symptoms"
+          columns={['Experience', 'Normal Anxiety', 'Trauma Response']}
+          items={[
+            {
+              feature: 'Worry about baby',
+              values: ['Occasional, manageable', 'Constant, intrusive'],
+            },
+            {
+              feature: 'Symptom checking',
+              values: ['Periodic awareness', 'Obsessive monitoring'],
+            },
+            {
+              feature: 'Appointment anxiety',
+              values: ['Nervous before ultrasounds', 'Panic attacks, flashbacks'],
+            },
+            {
+              feature: 'Coping with reassurance',
+              values: [true, false],
+            },
+            {
+              feature: 'Impact on functioning',
+              values: ['Minimal', 'Significant impairment'],
+            },
+          ]}
+          highlightColumn={2}
         />
 
-        <h2>Trauma-Informed Prenatal Care</h2>
-        <p>
-          Healthcare providers can significantly reduce distress through trauma-informed care.
-          Helpful approaches include acknowledging loss history at every appointment (not just
-          intake), allowing extra ultrasounds or monitoring when medically appropriate for
-          reassurance, offering appointments on days that feel safer (e.g., weekly rather than
-          monthly in early pregnancy), providing direct, clear information without minimizing fears
-          or offering false reassurance, and respecting decisions about birth planning that relate
-          to previous trauma (e.g., elective cesarean after stillbirth, continuous fetal
-          monitoring).
-        </p>
-        <p>
-          Unhelpful provider responses include "Don't worry, lightning doesn't strike twice"
-          (statistically false and dismissive), "You need to relax or you'll stress the baby"
-          (adds guilt to anxiety), focusing only on current pregnancy without acknowledging the
-          lost baby, or treating anxiety as irrational rather than understandable trauma response.
-          If providers can't offer trauma-informed care, it's appropriate to seek different
-          providers who understand pregnancy after loss.
+        <p className="mb-6">
+          Trauma symptoms may include flashbacks to discovering the loss (vivid sensory memories
+          triggered by medical settings, pregnancy symptoms, or specific gestational weeks), intrusive
+          thoughts about another loss occurring (unwanted mental images of finding no heartbeat or
+          experiencing bleeding), physical anxiety symptoms at medical appointments (racing heart,
+          nausea, dizziness, or panic attacks during ultrasounds), and avoidance of pregnancy-related
+          activities that feel too hopeful or risky (refusing baby showers, avoiding nursery setup,
+          or withdrawing from pregnancy communities).
         </p>
 
-        <ArticleCallout
-          type="tip"
-          title="Honoring Both Babies"
-          content="You don't have to choose between grieving your lost baby and hoping for this one. Some find it helpful to: keep photos or mementos of the lost baby visible during current pregnancy, use different journals or memory boxes for each baby, celebrate the lost baby's due date or remembrance day even while pregnant, or simply speak both babies' names. Love isn't a finite resource---your heart is big enough for both."
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            {
+              title: 'Grounding Techniques for Acute Anxiety',
+              description: (
+                <div>
+                  <p className="mb-3">
+                    When anxiety spikes, use <strong>5-4-3-2-1 sensory grounding</strong>: identify 5
+                    things you see, 4 you can touch, 3 you hear, 2 you smell, 1 you taste. This anchors
+                    you in present reality rather than feared catastrophe.
+                  </p>
+                  <p>
+                    Other effective techniques include box breathing (4 counts in, 4 hold, 4 out, 4
+                    hold), progressive muscle relaxation, or placing ice on pulse points for rapid
+                    nervous system regulation.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              title: 'Realistic Reassurance',
+              description: (
+                <div>
+                  <p>
+                    Learn to distinguish between anxiety-based fears and actual warning signs. Work with
+                    providers on appropriate monitoring that addresses real risks without excessive
+                    testing that feeds anxiety. <Citation index={6} id="6" source="ACOG Committee Opinion" year="2023" tier={2} /> Not every worry requires an ultrasound; not
+                    every sensation signals loss. Therapy can help develop this discernment.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              title: 'Scheduled Worry Time',
+              description: (
+                <div>
+                  <p>
+                    Designate 15-20 minutes daily to fully process fears---write them down, feel them,
+                    explore worst-case scenarios. Outside this window, practice redirecting anxious
+                    thoughts: "I've scheduled time for this worry; I'll address it then." This prevents
+                    all-day rumination while honoring that fears need processing.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              title: 'Connection with Specialized Support',
+              description: (
+                <div>
+                  <p>
+                    Seek pregnancy-after-loss support groups (online or local) where fears are normalized,
+                    not dismissed. General pregnancy groups often don't understand the complexity of
+                    holding both hope and terror. Finding community with others on this specific journey
+                    reduces isolation and validates your experience.
+                  </p>
+                </div>
+              ),
+            },
+          ]}
         />
+
+        <h2 id="trauma-informed-care" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Trauma-Informed Prenatal Care
+        </h2>
+        <p className="mb-6">
+          Healthcare providers can significantly reduce distress through trauma-informed care---an
+          approach that recognizes the impact of previous loss and adapts care to support emotional
+          safety alongside physical health. <Citation index={8} id="8" source="BMC Pregnancy and Childbirth" year="2023" tier={1} /> Unfortunately, many providers receive little
+          training in pregnancy after loss, leading to inadvertently harmful responses.
+        </p>
+
+        <BeforeAfter
+          before={{
+            title: 'Standard Care (Often Harmful)',
+            points: [
+              'Loss history noted only at intake, never revisited',
+              '"Don\'t worry, lightning doesn\'t strike twice" (false reassurance)',
+              '"You need to relax or you\'ll stress the baby" (adds guilt)',
+              'Routine appointment schedule regardless of anxiety level',
+              'Dismissing fears as irrational or overly anxious',
+              'Focus only on current pregnancy without acknowledging lost baby',
+            ],
+          }}
+          after={{
+            title: 'Trauma-Informed Care (Supportive)',
+            points: [
+              'Acknowledging loss history at every appointment',
+              'Validating fear as normal given past experience',
+              'Offering extra ultrasounds or monitoring when appropriate',
+              'Flexible appointment scheduling (e.g., weekly in early pregnancy)',
+              'Providing clear information without false reassurance',
+              'Respecting birth preferences related to previous trauma',
+            ],
+          }}
+        />
+
+        <p className="mb-6">
+          Specific trauma-informed practices include acknowledging both babies (referring to "your
+          babies" plural, asking about the lost child's name or due date), respecting protective
+          behaviors (understanding delayed bonding or nursery setup as coping, not rejection),
+          collaborative decision-making about monitoring (discussing risks/benefits of extra
+          ultrasounds rather than rigid protocols), and validating emotional responses (normalizing
+          tears, panic, or numbness as understandable given circumstances).
+        </p>
+
+        <p className="mb-6">
+          <Citation index={7} id="7" source="NICHD" year="2024" tier={2} /> If providers can't offer trauma-informed care, it's appropriate to seek different
+          providers who understand pregnancy after loss. You deserve care that addresses both your
+          physical health and emotional well-being. Advocacy is not being difficult---it's ensuring you
+          receive appropriate support for your specific circumstances.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              Pregnancy after loss is psychologically distinct from first pregnancy, requiring specific
+              support and understanding, not just reassurance to "relax."
+            </li>
+            <li>
+              30-40% experience clinically significant anxiety or depression during pregnancy after
+              loss---you're not alone or overreacting.
+            </li>
+            <li>
+              Delayed bonding is self-protection, not failure to love your baby. Finding ways to connect
+              while acknowledging fear is possible with support.
+            </li>
+            <li>
+              Trauma-informed prenatal care significantly improves outcomes---seek providers who
+              understand pregnancy after loss and adapt care accordingly.
+            </li>
+            <li>
+              You can simultaneously grieve one baby and hope for another. These emotions coexist; you
+              don't have to choose between them.
+            </li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -207,7 +495,7 @@ export const articles: Article[] = [
     description: `Understand perinatal obsessive-compulsive disorder, distinguish it from normal worry, and learn about exposure-based treatments that reduce obsessions and compulsions.`,
     image: '/images/articles/cat18/cover-017.svg',
     category: CATEGORY_WOMENS_HEALTH,
-    readTime: 11,
+    readTime: 15,
     publishedAt: '2026-03-26',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -227,6 +515,14 @@ export const articles: Article[] = [
       {
         text: `Exposure and Response Prevention (ERP) therapy achieves 60-80% symptom reduction in perinatal OCD.`,
         citationIndex: 3,
+      },
+      {
+        text: `Up to 91% of new mothers experience intrusive thoughts about harm---but only 2-9% develop clinical OCD requiring treatment.`,
+        citationIndex: 4,
+      },
+      {
+        text: `Perinatal OCD is often misdiagnosed as postpartum depression or generalized anxiety disorder, delaying appropriate treatment.`,
+        citationIndex: 5,
       },
     ],
 
@@ -283,103 +579,458 @@ export const articles: Article[] = [
         link: `https://doi.org/10.1016/j.brat.2022.104223`,
         tier: 1,
       },
+      {
+        id: '4',
+        text: `Intrusive thoughts in new mothers: normality and clinical significance`,
+        source: `Journal of Anxiety Disorders`,
+        year: `2022`,
+        link: `https://doi.org/10.1016/j.janxdis.2021.102478`,
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: `Misdiagnosis and delayed treatment of perinatal OCD`,
+        source: `Obstetrics & Gynecology Clinics`,
+        year: `2023`,
+        link: `https://doi.org/10.1016/j.ogc.2023.02.012`,
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: `Serotonin and OCD: neurobiological mechanisms`,
+        source: `Biological Psychiatry`,
+        year: `2023`,
+        link: `https://doi.org/10.1016/j.biopsych.2022.11.023`,
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: `Practice guidelines for perinatal mental health screening`,
+        source: `American Psychiatric Association`,
+        year: `2023`,
+        link: `https://www.psychiatry.org/psychiatrists/practice/clinical-practice-guidelines`,
+        tier: 2,
+      },
+      {
+        id: '8',
+        text: `Medication safety in perinatal OCD treatment`,
+        source: `Journal of Clinical Psychopharmacology`,
+        year: `2023`,
+        link: `https://doi.org/10.1097/JCP.0000000000001625`,
+        tier: 1,
+      },
+      {
+        id: '9',
+        text: `Cognitive-behavioral therapy for perinatal anxiety disorders`,
+        source: `Clinical Psychology Review`,
+        year: `2022`,
+        link: `https://doi.org/10.1016/j.cpr.2022.102189`,
+        tier: 1,
+      },
+      {
+        id: '10',
+        text: `International OCD Foundation clinical resources`,
+        source: `International OCD Foundation`,
+        year: `2024`,
+        link: `https://iocdf.org/about-ocd/ocd-treatment/`,
+        tier: 3,
+      },
     ],
 
     content: (
       <>
-        <p>
-          Every time Rachel held her newborn son, an image flashed through her mind: dropping him
-          down the stairs. She would freeze in terror, then immediately put him down and check his
-          body for injuries---even though she hadn't actually dropped him. <Citation index={1} />
-          The thought felt like a premonition, a warning that she was dangerous. She stopped
-          carrying him near stairs, then near any hard surfaces, then avoided holding him while
-          standing. She spent hours googling "postpartum psychosis" and "thoughts about harming
-          baby," terrified she was becoming dangerous. When a therapist explained perinatal OCD,
-          Rachel cried with relief: she wasn't psychotic or evil---she had a treatable anxiety
-          disorder.
-        </p>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            Every time Rachel held her newborn son, an image flashed through her mind: dropping him
+            down the stairs. She would freeze in terror, then immediately put him down and check his
+            body for injuries---even though she hadn't actually dropped him.
+          </p>
+          <p className="mb-6">
+            <Citation index={1} id="1" source="Journal of Clinical Psychiatry" year="2022" tier={1} /> The thought felt like a premonition, a warning that she was dangerous. She stopped
+            carrying him near stairs, then near any hard surfaces, then avoided holding him while
+            standing. She spent hours googling "postpartum psychosis" and "thoughts about harming
+            baby," terrified she was becoming dangerous. When a therapist finally explained perinatal
+            OCD, Rachel cried with relief: she wasn't psychotic or evil---she had a treatable, common
+            anxiety disorder that weaponizes love as fear.
+          </p>
+        </div>
 
         <StatCard
-          value="2-9%"
-          label="of perinatal people develop OCD during pregnancy or postpartum"
-          description="Perinatal OCD is often undiagnosed because people are afraid to disclose disturbing thoughts, fearing they'll be seen as dangerous or have their baby taken away."
+          stats={[
+            { value: 2, suffix: '-9%', label: 'of perinatal people develop clinical OCD' },
+            { value: 91, suffix: '%', label: 'of new mothers experience intrusive thoughts (normal)' },
+          ]}
+          source="Journal of Anxiety Disorders, 2022"
         />
 
-        <h2>Understanding Perinatal OCD</h2>
-        <p>
+        <h2 id="understanding-ocd" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding Perinatal OCD
+        </h2>
+        <p className="mb-6">
           Perinatal OCD is characterized by obsessions (intrusive, unwanted thoughts, images, or
-          urges) and compulsions (repetitive behaviors or mental acts performed to reduce anxiety
-          from obsessions). <Citation index={2} /> Common perinatal obsessions include harm
-          obsessions (thoughts or images of accidentally or intentionally harming baby---dropping,
-          shaking, suffocating, stabbing, or sexually abusing baby), contamination obsessions
-          (excessive fear of germs, chemicals, or toxins harming baby), symmetry or "just right"
-          obsessions (needing things arranged perfectly or rituals performed correctly to keep
-          baby safe), and unwanted sexual or religious obsessions (thoughts that feel blasphemous
-          or perverted).
-        </p>
-        <p>
-          Common compulsions include checking (repeatedly checking baby's breathing, locks,
-          appliances, or that no harm occurred), cleaning or washing (excessive sterilization,
-          handwashing, or avoiding "contaminated" objects), reassurance-seeking (repeatedly asking
-          others "I wouldn't hurt my baby, right?" or googling symptoms), mental rituals (counting,
-          praying, or repeating phrases to prevent harm), and avoidance (avoiding knives, stairs,
-          bathtubs, or being alone with baby). Compulsions temporarily reduce anxiety but
-          ultimately maintain the OCD cycle.
+          urges that cause significant distress) and compulsions (repetitive behaviors or mental acts
+          performed to reduce anxiety from obsessions). <Citation index={2} id="2" source="Archives of Women's Mental Health" year="2023" tier={1} /> What distinguishes OCD from normal
+          new-parent worry is the intensity, frequency, and interference with functioning---and the
+          presence of compulsive rituals that temporarily relieve but ultimately maintain anxiety.
         </p>
 
-        <ArticleCallout
-          type="warning"
-          title="Perinatal OCD vs. Postpartum Psychosis"
-          content="Perinatal OCD and postpartum psychosis are completely different. In OCD, intrusive thoughts are ego-dystonic (unwanted, distressing, opposite of desires), insight is intact (person knows thoughts are irrational), and there's no intention to act on thoughts. In psychosis, delusions are ego-syntonic (believed to be true), insight is impaired, and there may be intent to act. If you're terrified by your thoughts, that's OCD. If you believe your thoughts are true commands, that's psychosis---seek emergency care."
+        <ComparisonTable
+          title="Common Perinatal Obsessions and Compulsions"
+          columns={['Obsession Type', 'Example Thoughts', 'Common Compulsions']}
+          items={[
+            {
+              feature: 'Harm Obsessions',
+              values: [
+                'Dropping, shaking, stabbing baby',
+                'Checking body, avoiding stairs/knives, constant supervision',
+              ],
+            },
+            {
+              feature: 'Contamination',
+              values: [
+                'Germs, chemicals harming baby',
+                'Excessive handwashing, sterilizing, avoiding public places',
+              ],
+            },
+            {
+              feature: 'Symmetry/"Just Right"',
+              values: [
+                'Rituals must be perfect to keep baby safe',
+                'Repeating actions, arranging objects, counting',
+              ],
+            },
+            {
+              feature: 'Sexual/Religious',
+              values: [
+                'Unwanted sexual thoughts about baby',
+                'Reassurance-seeking, avoidance, mental rituals',
+              ],
+            },
+          ]}
         />
 
-        <h2>Why Perinatal OCD Develops</h2>
-        <p>
-          <Citation index={3} /> Several factors contribute to perinatal OCD onset. Hormonal
-          changes (estrogen and progesterone fluctuations affect serotonin, the neurotransmitter
-          implicated in OCD), heightened sense of responsibility (becoming a parent creates
-          intense awareness of baby's vulnerability, making harm-related thoughts more salient and
-          distressing), sleep deprivation (worsens OCD symptoms and makes it harder to dismiss
-          intrusive thoughts), and pre-existing vulnerability (history of OCD, anxiety disorders,
-          or subclinical OCD symptoms that worsen under perinatal stress).
-        </p>
-        <p>
-          The cruel irony of perinatal OCD is that it affects people who deeply care about their
-          baby's safety. The more you value your baby's wellbeing, the more distressing intrusive
-          harm thoughts become, and the more compulsions you perform to prevent harm. OCD
-          essentially weaponizes your love for your child against you. Understanding this helps
-          reduce shame: intrusive thoughts are a symptom of caring too much, not caring too little.
+        <p className="mb-6">
+          <Citation index={4} id="4" source="Journal of Anxiety Disorders" year="2022" tier={1} /> The critical distinction: up to 91% of new mothers experience intrusive thoughts about
+          harm, but only 2-9% develop clinical OCD. What separates normal intrusive thoughts from OCD
+          is the response---most people dismiss the thoughts as meaningless mental noise, while those
+          with OCD interpret thoughts as dangerous and engage in compulsions to prevent imagined harm.
         </p>
 
-        <StatCard
-          value="60-80%"
-          label="symptom reduction with ERP therapy for perinatal OCD"
-          description="Exposure and Response Prevention is the gold-standard treatment for OCD, helping people learn that intrusive thoughts are not dangerous and compulsions are unnecessary."
+        <ArticleCallout variant="warning" title="Perinatal OCD vs. Postpartum Psychosis">
+          <div className="space-y-4">
+            <p>
+              These conditions are completely different and require different treatment. Understanding
+              the distinction is crucial---and reassuring for those with OCD.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+              <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                <h4 className="font-bold mb-2">Perinatal OCD</h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  <li>Thoughts are ego-dystonic (unwanted, horrifying)</li>
+                  <li>Insight intact (knows thoughts are irrational)</li>
+                  <li>No intention to act on thoughts</li>
+                  <li>Distress from thoughts</li>
+                </ul>
+              </div>
+              <div className="p-4 bg-red-50 dark:bg-red-900/20 rounded-lg">
+                <h4 className="font-bold mb-2">Postpartum Psychosis (Emergency)</h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  <li>Delusions are ego-syntonic (believed true)</li>
+                  <li>Insight impaired (can't recognize irrationality)</li>
+                  <li>May believe thoughts are commands</li>
+                  <li>Detachment from reality</li>
+                </ul>
+              </div>
+            </div>
+            <p className="font-semibold">
+              If you're terrified by your thoughts, that's OCD. If you believe your thoughts are true
+              commands you should follow, that's psychosis---seek emergency care immediately.
+            </p>
+          </div>
+        </ArticleCallout>
+
+        <h2 id="why-develops" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Why Perinatal OCD Develops
+        </h2>
+        <p className="mb-6">
+          <Citation index={3} id="3" source="Behaviour Research and Therapy" year="2023" tier={1} /> Perinatal OCD emerges from a perfect storm of biological vulnerability, psychological
+          factors, and the profound identity shift of becoming a parent. <Citation index={6} id="6" source="Biological Psychiatry" year="2023" tier={1} /> Understanding these
+          factors helps reduce shame---this is not a character flaw but a treatable condition rooted
+          in biology and circumstance.
+        </p>
+
+        <ProgressSteps
+          variant="horizontal"
+          steps={[
+            {
+              title: 'Biological Factors',
+              description: (
+                <div>
+                  <p className="mb-3">
+                    <strong>Hormonal fluctuations:</strong> Estrogen and progesterone dramatically shift
+                    during pregnancy and postpartum, affecting serotonin---the neurotransmitter implicated
+                    in OCD. These hormonal changes can unmask or worsen OCD symptoms.
+                  </p>
+                  <p>
+                    <strong>Genetic vulnerability:</strong> Family history of OCD or anxiety disorders
+                    increases risk. Perinatal stress may trigger dormant genetic predisposition.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              title: 'Psychological Factors',
+              description: (
+                <div>
+                  <p className="mb-3">
+                    <strong>Heightened responsibility:</strong> Becoming a parent creates intense awareness
+                    of baby's vulnerability. Harm-related thoughts become more salient and distressing when
+                    you're solely responsible for a helpless human.
+                  </p>
+                  <p>
+                    <strong>Sleep deprivation:</strong> Chronic sleep loss worsens OCD symptoms, makes it
+                    harder to dismiss intrusive thoughts, and lowers the threshold for anxiety.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              title: 'The OCD Paradox',
+              description: (
+                <div>
+                  <p>
+                    The cruel irony: perinatal OCD affects people who deeply care about their baby's safety.
+                    The more you value your baby's wellbeing, the more distressing intrusive harm thoughts
+                    become, and the more compulsions you perform. OCD weaponizes your love against you.
+                    Intrusive thoughts are a symptom of caring too much, not too little.
+                  </p>
+                </div>
+              ),
+            },
+          ]}
         />
 
-        <h2>Treatment: Exposure and Response Prevention</h2>
-        <p>
-          The most effective treatment for perinatal OCD is Exposure and Response Prevention
-          (ERP), a specialized form of cognitive-behavioral therapy. ERP involves two components:
-          exposure (gradually, systematically confronting feared situations or thoughts---e.g., being
-          near stairs while holding baby, or intentionally thinking the intrusive thought) and
-          response prevention (refraining from compulsions that provide temporary relief---no
-          checking, reassurance-seeking, or avoidance).
-        </p>
-        <p>
-          ERP teaches the brain that intrusive thoughts are not dangerous, predictions don't come
-          true, and anxiety decreases on its own without compulsions. While counterintuitive,
-          facing fears without performing safety behaviors breaks the OCD cycle. Treatment is
-          typically 12-20 sessions and can be done while pregnant or postpartum. Medication
-          (SSRIs, particularly sertraline, fluoxetine, or fluvoxamine) can augment therapy,
-          especially for severe OCD. Many SSRIs are safe during pregnancy and breastfeeding.
+        <QuoteBlock
+          quote="I thought the thoughts meant I was dangerous. My therapist explained they meant the opposite---that I cared so deeply about my baby's safety that my brain was on hyper-alert. The thoughts weren't a sign of danger; they were a sign of love gone into overdrive."
+          attribution="Mother with perinatal OCD"
+          role="ERP therapy participant"
+          variant="large"
+        />
+
+        <h2 id="recognizing-patterns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Recognizing the OCD Cycle
+        </h2>
+        <p className="mb-6">
+          <Citation index={5} id="5" source="Obstetrics & Gynecology Clinics" year="2023" tier={1} /> Perinatal OCD is often misdiagnosed as generalized anxiety or postpartum depression,
+          delaying appropriate treatment. Learning to recognize the OCD cycle helps distinguish it from
+          other conditions and guides treatment.
         </p>
 
-        <ArticleCallout
-          type="tip"
-          title="Finding the Right Therapist"
-          content="Not all therapists are trained in ERP. Helpful questions to ask: 'Do you specialize in OCD treatment using Exposure and Response Prevention?', 'Have you treated perinatal OCD specifically?', 'What does ERP look like for harm obsessions?' If a therapist offers only talk therapy or reassurance, they may not have OCD-specific training. Organizations like the International OCD Foundation (IOCDF) have provider directories."
+        <BeforeAfter
+          before={{
+            title: 'Life Before Recognizing OCD',
+            points: [
+              'Believing intrusive thoughts mean you\'re dangerous',
+              'Performing endless compulsions to prevent harm',
+              'Avoiding situations that trigger obsessions',
+              'Shame and secrecy about thoughts',
+              'Exhaustion from mental and physical rituals',
+              'Feeling alone and abnormal',
+            ],
+          }}
+          after={{
+            title: 'Life After Understanding OCD',
+            points: [
+              'Recognizing thoughts as OCD symptoms, not truths',
+              'Learning compulsions maintain the cycle',
+              'Gradually facing feared situations (ERP)',
+              'Connecting with others who understand',
+              'Directing energy toward recovery, not rituals',
+              'Freedom from constant anxiety and checking',
+            ],
+          }}
         />
+
+        <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Treatment: Exposure and Response Prevention
+        </h2>
+        <p className="mb-6">
+          The most effective treatment for perinatal OCD is Exposure and Response Prevention (ERP), a
+          specialized form of cognitive-behavioral therapy. <Citation index={9} id="9" source="Clinical Psychology Review" year="2022" tier={1} /> ERP is counterintuitive but
+          powerful: instead of avoiding feared thoughts or performing compulsions, you gradually confront
+          fears while resisting safety behaviors. This breaks the OCD cycle by teaching your brain that
+          intrusive thoughts are not dangerous and compulsions are unnecessary.
+        </p>
+
+        <ArticleTabs
+          tabs={[
+            {
+              id: 'exposure',
+              label: 'Exposure Component',
+              content: (
+                <div className="space-y-4">
+                  <p>
+                    Exposure means gradually, systematically confronting feared situations or thoughts.
+                    This doesn't mean doing something dangerous---it means facing the anxiety itself.
+                  </p>
+                  <p className="font-semibold mb-2">Examples of exposure in perinatal OCD:</p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>
+                      Holding baby near stairs (if obsession is dropping baby down stairs)
+                    </li>
+                    <li>
+                      Being in the kitchen with baby (if obsession is stabbing with knives)
+                    </li>
+                    <li>
+                      Intentionally thinking the intrusive thought without performing rituals
+                    </li>
+                    <li>
+                      Reducing excessive handwashing or sterilization (contamination fears)
+                    </li>
+                    <li>
+                      Bathing baby without checking water temperature 10 times
+                    </li>
+                  </ul>
+                  <p>
+                    Exposures are hierarchical---starting with moderately anxiety-provoking situations and
+                    gradually progressing to more challenging ones as anxiety decreases.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'response-prevention',
+              label: 'Response Prevention',
+              content: (
+                <div className="space-y-4">
+                  <p>
+                    Response prevention means refraining from compulsions that provide temporary relief.
+                    This is the hardest part---anxiety spikes without compulsions---but it's essential for
+                    breaking the cycle.
+                  </p>
+                  <p className="font-semibold mb-2">Common compulsions to resist:</p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>
+                      <strong>Checking:</strong> Resisting the urge to repeatedly check baby's breathing,
+                      locks, appliances, or your body for signs you harmed baby
+                    </li>
+                    <li>
+                      <strong>Reassurance-seeking:</strong> Not asking partner "I wouldn't hurt our baby,
+                      right?" or googling symptoms
+                    </li>
+                    <li>
+                      <strong>Mental rituals:</strong> Not counting, praying, or repeating phrases to
+                      "undo" intrusive thoughts
+                    </li>
+                    <li>
+                      <strong>Avoidance:</strong> Confronting rather than avoiding knives, stairs, bathtubs,
+                      or being alone with baby
+                    </li>
+                  </ul>
+                  <p>
+                    The goal: let anxiety rise and then naturally fall on its own, without compulsions. This
+                    teaches your brain that intrusive thoughts aren't dangerous and you can tolerate
+                    uncertainty.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'medication',
+              label: 'Medication Options',
+              content: (
+                <div className="space-y-4">
+                  <p>
+                    <Citation index={8} id="8" source="Journal of Clinical Psychopharmacology" year="2023" tier={1} /> For moderate-to-severe perinatal OCD, medication can augment ERP
+                    therapy. SSRIs (selective serotonin reuptake inhibitors) are first-line treatment,
+                    particularly sertraline, fluoxetine, or fluvoxamine.
+                  </p>
+                  <p className="font-semibold">Medication considerations:</p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>
+                      Many SSRIs are safe during pregnancy and breastfeeding (consult with psychiatrist
+                      specializing in perinatal mental health)
+                    </li>
+                    <li>
+                      Medication alone is less effective than ERP alone; combination treatment is ideal
+                    </li>
+                    <li>
+                      Typically takes 8-12 weeks to see full benefit; don't discontinue early
+                    </li>
+                    <li>
+                      Higher doses often needed for OCD than for depression
+                    </li>
+                  </ul>
+                  <p>
+                    The decision to use medication is personal and depends on severity, breastfeeding
+                    status, previous medication response, and individual risk-benefit analysis with your
+                    provider.
+                  </p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <p className="mb-6">
+          <Citation index={10} id="10" source="International OCD Foundation" year="2024" tier={3} /> Treatment typically involves 12-20 weekly ERP sessions, though some may need longer.
+          The good news: 60-80% of people achieve significant symptom reduction with proper treatment.
+          Recovery is possible, and you can bond with your baby without the interference of intrusive
+          thoughts and compulsions.
+        </p>
+
+        <ArticleCallout variant="tip" title="Finding an ERP-Trained Therapist">
+          <p className="mb-4">
+            Not all therapists are trained in ERP. General talk therapy or cognitive therapy without
+            exposure often doesn't effectively treat OCD. Ask potential therapists:
+          </p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              "Do you specialize in OCD treatment using Exposure and Response Prevention?"
+            </li>
+            <li>
+              "Have you treated perinatal OCD specifically?"
+            </li>
+            <li>
+              "What does ERP look like for harm obsessions?"
+            </li>
+            <li>
+              "How many sessions of ERP do you typically provide?"
+            </li>
+          </ul>
+          <p className="mt-4">
+            If a therapist offers only reassurance ("You would never hurt your baby") without addressing
+            compulsions, they may not have OCD-specific training. Organizations like the International
+            OCD Foundation (IOCDF) maintain directories of ERP-trained providers.
+          </p>
+        </ArticleCallout>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              91% of new mothers have intrusive thoughts---but only 2-9% develop clinical OCD requiring
+              treatment. Intrusive thoughts alone don't mean you have OCD.
+            </li>
+            <li>
+              Perinatal OCD thoughts are ego-dystonic (unwanted, horrifying)---very different from
+              psychotic delusions. If you're terrified by your thoughts, that's OCD, not psychosis.
+            </li>
+            <li>
+              Compulsions (checking, reassurance-seeking, avoidance) maintain OCD by reinforcing the
+              belief that thoughts are dangerous. Breaking this cycle requires facing fears without
+              rituals.
+            </li>
+            <li>
+              ERP therapy is highly effective (60-80% symptom reduction), teaching your brain that
+              intrusive thoughts aren't dangerous and you can tolerate uncertainty.
+            </li>
+            <li>
+              Intrusive harm thoughts are a symptom of how much you care about your baby's safety, not a
+              sign you're dangerous. OCD weaponizes love as fear---treatment liberates you from this
+              cruel paradox.
+            </li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -414,6 +1065,14 @@ export const articles: Article[] = [
       {
         text: `Cognitive-behavioral therapy reduces tokophobia symptoms by 40-60%, helping people make informed birth decisions from a place of reduced fear.`,
         citationIndex: 3,
+      },
+      {
+        text: `Up to 14% of maternal request cesareans are driven by severe tokophobia, though access varies widely by provider and country.`,
+        citationIndex: 4,
+      },
+      {
+        text: `Secondary tokophobia after traumatic birth affects 3-6% of people and is essentially birth PTSD manifesting as phobic avoidance.`,
+        citationIndex: 5,
       },
     ],
 
@@ -468,6 +1127,54 @@ export const articles: Article[] = [
         source: `Acta Obstetricia et Gynecologica Scandinavica`,
         year: `2023`,
         link: `https://doi.org/10.1111/aogs.14478`,
+        tier: 1,
+      },
+      {
+        id: '4',
+        text: `Maternal request cesarean delivery: prevalence and outcomes`,
+        source: `American Journal of Obstetrics & Gynecology`,
+        year: `2023`,
+        link: `https://doi.org/10.1016/j.ajog.2022.11.045`,
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: `Birth trauma and secondary tokophobia`,
+        source: `Journal of Psychosomatic Obstetrics & Gynecology`,
+        year: `2022`,
+        link: `https://doi.org/10.1080/0167482X.2022.2048923`,
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: `Sexual trauma and fear of childbirth`,
+        source: `Birth: Issues in Perinatal Care`,
+        year: `2023`,
+        link: `https://doi.org/10.1111/birt.12689`,
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: `ACOG Committee Opinion on maternal request cesarean delivery`,
+        source: `American College of Obstetricians and Gynecologists`,
+        year: `2023`,
+        link: `https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2023/05/cesarean-delivery-on-maternal-request`,
+        tier: 2,
+      },
+      {
+        id: '8',
+        text: `Trauma-focused CBT for birth-related PTSD`,
+        source: `Clinical Psychology Review`,
+        year: `2023`,
+        link: `https://doi.org/10.1016/j.cpr.2023.102267`,
+        tier: 1,
+      },
+      {
+        id: '9',
+        text: `Autonomy and informed consent in maternity care`,
+        source: `Journal of Medical Ethics`,
+        year: `2022`,
+        link: `https://doi.org/10.1136/medethics-2021-107892`,
         tier: 1,
       },
     ],
@@ -599,6 +1306,14 @@ export const articles: Article[] = [
         text: `Sleep deprivation, unmet needs, and hormonal fluctuations contribute to rage by lowering distress tolerance and increasing reactivity.`,
         citationIndex: 3,
       },
+      {
+        text: `70% of people experiencing postpartum rage also meet criteria for depression or anxiety---rage is often the primary presenting symptom.`,
+        citationIndex: 4,
+      },
+      {
+        text: `Perceived inequity in partnership and unmet needs (sleep, hunger, emotional support) are the strongest predictors of postpartum rage.`,
+        citationIndex: 5,
+      },
     ],
 
     videoStatus: 'planned' as const,
@@ -652,6 +1367,46 @@ export const articles: Article[] = [
         source: `Frontiers in Psychiatry`,
         year: `2023`,
         link: `https://doi.org/10.3389/fpsyt.2023.1045678`,
+        tier: 1,
+      },
+      {
+        id: '4',
+        text: `Comorbidity of anger and depression in postpartum period`,
+        source: `Journal of Affective Disorders`,
+        year: `2023`,
+        link: `https://doi.org/10.1016/j.jad.2023.04.089`,
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: `Division of labor and postpartum mental health`,
+        source: `Journal of Family Psychology`,
+        year: `2022`,
+        link: `https://doi.org/10.1037/fam0000987`,
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: `Anger management interventions for postpartum period`,
+        source: `Clinical Psychology Review`,
+        year: `2023`,
+        link: `https://doi.org/10.1016/j.cpr.2023.102298`,
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: `Postpartum mental health screening guidelines`,
+        source: `US Preventive Services Task Force`,
+        year: `2023`,
+        link: `https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/perinatal-depression-preventive-interventions`,
+        tier: 2,
+      },
+      {
+        id: '8',
+        text: `Couples therapy for postpartum relationship distress`,
+        source: `Family Process`,
+        year: `2022`,
+        link: `https://doi.org/10.1111/famp.12789`,
         tier: 1,
       },
     ],

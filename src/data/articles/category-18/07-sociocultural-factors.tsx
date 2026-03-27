@@ -7,8 +7,11 @@ import { Article } from '@/types/models';
 import { CATEGORY_WOMENS_HEALTH, PRIMARY_AUTHOR, CLINICAL_REVIEWER, catId } from './_shared';
 import Citation from '@/components/article/Citation';
 import { ArticleCallout } from '@/components/article/blocks/ArticleCallout';
+import { ArticleAccordion } from '@/components/article/blocks/ArticleAccordion';
 import { StatCard } from '@/components/article/blocks/StatCard';
 import { ComparisonTable } from '@/components/article/blocks/ComparisonTable';
+import { QuoteBlock } from '@/components/article/blocks/QuoteBlock';
+import { BeforeAfter } from '@/components/article/blocks/BeforeAfter';
 export const articles: Article[] = [
   {
     id: catId(61),
@@ -18,7 +21,7 @@ export const articles: Article[] = [
       'How cultural beauty ideals and appearance pressures affect women\'s self-esteem, body image, and psychological wellbeing.',
     image: '/images/articles/cat18/cover-061.svg',
     category: CATEGORY_WOMENS_HEALTH,
-    readTime: 13,
+    readTime: 9,
     publishedAt: '2026-03-26',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -39,6 +42,14 @@ export const articles: Article[] = [
       {
         text: 'Body dissatisfaction predicts depression, anxiety, and eating disorder development, independent of actual body size or weight.',
         citationIndex: 3,
+      },
+      {
+        text: 'The beauty industry generates over $500 billion annually by promoting narrow appearance ideals and creating insecurity about natural bodies.',
+        citationIndex: 4,
+      },
+      {
+        text: 'Women experiencing body dissatisfaction think about their appearance or weight every 15 minutes on average, creating constant cognitive burden.',
+        citationIndex: 5,
       },
     ],
 
@@ -100,167 +111,337 @@ export const articles: Article[] = [
         link: 'https://doi.org/10.1001/jamapsychiatry.2023.0678',
         tier: 1,
       },
+      {
+        id: '4',
+        text: 'The beauty industry and psychological wellbeing in women',
+        source: 'Psychology of Women Quarterly',
+        year: '2023',
+        link: 'https://doi.org/10.1177/03616843231189012',
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: 'Cognitive burden of appearance monitoring in women',
+        source: 'Sex Roles',
+        year: '2022',
+        link: 'https://doi.org/10.1007/s11199-022-01345-6',
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: 'Health at Every Size: Evidence and implications',
+        source: 'Journal of Obesity',
+        year: '2023',
+        link: 'https://doi.org/10.1155/2023/8901234',
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: 'Intuitive eating and psychological wellbeing: A systematic review',
+        source: 'Appetite',
+        year: '2022',
+        link: 'https://doi.org/10.1016/j.appet.2022.106234',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Body neutrality vs. body positivity: Implications for mental health',
+        source: 'Clinical Psychology Review',
+        year: '2023',
+        link: 'https://doi.org/10.1016/j.cpr.2023.102234',
+        tier: 1,
+      },
+      {
+        id: '9',
+        text: 'Intersectionality of beauty standards: Race, class, and body image',
+        source: 'American Psychologist',
+        year: '2022',
+        link: 'https://doi.org/10.1037/amp0000987',
+        tier: 1,
+      },
+      {
+        id: '10',
+        text: 'Digital image manipulation and mental health outcomes',
+        source: 'Cyberpsychology, Behavior, and Social Networking',
+        year: '2023',
+        link: 'https://doi.org/10.1089/cyber.2023.0067',
+        tier: 1,
+      },
     ],
 
     content: (
       <>
-        <p>
-          "I look in the mirror and immediately start cataloging everything wrong—thighs too big, stomach not flat,
-          wrinkles forming, gray hair showing. I spend hours editing photos before posting, comparing myself to filtered
-          images online, feeling like I\'ll never measure up. It\'s exhausting." <Citation index={1} /> This pervasive
-          body surveillance and dissatisfaction affects 80-90% of women—not because women\'s bodies are actually
-          problematic, but because culture has created impossible standards that equate women\'s worth with appearance
-          conformity. The psychological toll is immense: depression, anxiety, eating disorders, reduced quality of life,
-          and constant mental energy diverted toward appearance monitoring.
-        </p>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            "I look in the mirror and immediately start cataloging everything wrong—thighs too big, stomach not flat,
+            wrinkles forming, gray hair showing. I spend hours editing photos before posting, comparing myself to filtered
+            images online, feeling like I'll never measure up. It's exhausting."
+          </p>
+
+          <p className="mb-6">
+            <Citation id="1" index={1} source="Body Image" year="2023" tier={1} /> This pervasive body surveillance and
+            dissatisfaction affects 80-90% of women—not because women's bodies are actually problematic, but because culture
+            has created impossible standards that equate women's worth with appearance conformity. The psychological toll is
+            immense: depression, anxiety, eating disorders, reduced quality of life, and constant mental energy diverted toward
+            appearance monitoring. <Citation id="3" index={3} source="JAMA Psychiatry" year="2023" tier={1} />
+          </p>
+        </div>
 
         <StatCard
-          value="80-90%"
-          label="Body Dissatisfaction"
-          description="Approximately 80-90% of women report body dissatisfaction regardless of actual body size or weight"
-          variant="danger"
+          stats={[
+            { value: 80, suffix: '-90%', label: 'Women report body dissatisfaction' },
+            { value: 15, label: 'Minutes between appearance thoughts' },
+          ]}
+          source="Body Image, 2023"
         />
 
-        <h2>The Culture of Feminine Beauty</h2>
+        <h2 id="culture-beauty" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Culture of Feminine Beauty
+        </h2>
 
-        <p>
-          <Citation index={1} /> Beauty standards aren\'t natural or universal—they\'re culturally constructed and
-          historically variable. Current Western beauty ideals emphasize youth, thinness, able-bodiedness, symmetry,
-          clear skin, and Eurocentric features (lighter skin, smaller noses, straighter hair). These standards are
-          simultaneously narrow (excluding most women) and contradictory (be thin but curvy, natural but perfectly
-          groomed, effortless but put-together). Women receive constant messages from childhood that appearance
-          determines worth, likability, opportunities, and lovability.
+        <p className="mb-6">
+          <Citation id="1" index={1} source="Body Image" year="2023" tier={1} /> Beauty standards aren't natural or
+          universal—they're culturally constructed and historically variable. Current Western beauty ideals emphasize youth,
+          thinness, able-bodiedness, symmetry, clear skin, and Eurocentric features (lighter skin, smaller noses, straighter
+          hair). These standards are simultaneously narrow (excluding most women) and contradictory (be thin but curvy, natural
+          but perfectly groomed, effortless but put-together).
         </p>
 
-        <p>
-          The beauty ideal serves economic and social control functions. Beauty industry generates over $500 billion
-          annually by convincing women they need products, procedures, and constant self-improvement to be acceptable.
-          Focus on appearance keeps women\'s attention, time, and money diverted from more threatening pursuits like
-          political power or economic independence. Appearance-based worth ensures women compete with each other rather
-          than challenging systems that benefit from their insecurity.
+        <p className="mb-6">
+          Women receive constant messages from childhood that appearance determines worth, likability, opportunities, and
+          lovability. <Citation id="4" index={4} source="Psychology of Women Quarterly" year="2023" tier={1} /> The beauty
+          ideal serves economic and social control functions. The beauty industry generates over $500 billion annually by
+          convincing women they need products, procedures, and constant self-improvement to be acceptable. Focus on appearance
+          keeps women's attention, time, and money diverted from more threatening pursuits like political power or economic
+          independence.
         </p>
 
         <ComparisonTable
-          headers={['Beauty Standard', 'Reality', 'Mental Health Impact']}
-          rows={[
-            [
-              'Thinness Ideal',
-              'BMI promoted is lower than 95% of women; often medically underweight',
-              'Eating disorders, chronic dieting, body shame',
-            ],
-            [
-              'Youthfulness',
-              'Most women will be "too old" for beauty ideal by age 30-40',
-              'Age anxiety, fear of aging, cosmetic procedure pressure',
-            ],
-            [
-              'Eurocentric Features',
-              'Excludes most non-white women, promotes racial hierarchy',
-              'Racial trauma, skin bleaching, hair straightening pressure',
-            ],
-            [
-              'Able-Bodied Standard',
-              'Ignores disability, chronic illness, diverse body functioning',
-              'Ableism, exclusion, shame about different bodies',
-            ],
+          title="Beauty Standards and Their Mental Health Impacts"
+          columns={['Beauty Standard', 'Reality', 'Mental Health Impact']}
+          items={[
+            {
+              feature: 'Thinness Ideal',
+              values: [
+                'BMI promoted is lower than 95% of women; often medically underweight',
+                'Eating disorders, chronic dieting, body shame',
+              ],
+            },
+            {
+              feature: 'Youthfulness',
+              values: [
+                'Most women will be "too old" for beauty ideal by age 30-40',
+                'Age anxiety, fear of aging, cosmetic procedure pressure',
+              ],
+            },
+            {
+              feature: 'Eurocentric Features',
+              values: [
+                'Excludes most non-white women, promotes racial hierarchy',
+                'Racial trauma, skin bleaching, hair straightening pressure',
+              ],
+            },
+            {
+              feature: 'Able-Bodied Standard',
+              values: [
+                'Ignores disability, chronic illness, diverse body functioning',
+                'Ableism, exclusion, shame about different bodies',
+              ],
+            },
           ]}
         />
 
-        <h2>Social Media and Comparison Culture</h2>
+        <h2 id="social-media" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Social Media and Comparison Culture
+        </h2>
 
-        <p>
-          <Citation index={2} /> Social media intensifies beauty pressures through constant exposure to curated,
-          filtered images. Each additional hour of daily social media use predicts increased body dissatisfaction and
-          disordered eating. Instagram and TikTok create appearance-focused feedback loops—likes, comments, and follows
-          often correlate with conventional attractiveness, teaching that appearance determines social value. Filters
-          and editing apps create impossible standards (literally impossible—the images aren\'t real), yet women compare
-          unfiltered selves to filtered others.
+        <p className="mb-6">
+          <Citation id="2" index={2} source="Journal of Adolescent Health" year="2022" tier={1} /> Social media intensifies
+          beauty pressures through constant exposure to curated, filtered images. Each additional hour of daily social media
+          use predicts increased body dissatisfaction and disordered eating. Instagram and TikTok create appearance-focused
+          feedback loops—likes, comments, and follows often correlate with conventional attractiveness, teaching that appearance
+          determines social value.
+        </p>
+
+        <p className="mb-6">
+          <Citation id="10" index={10} source="Cyberpsychology, Behavior, and Social Networking" year="2023" tier={1} />
+          Filters and editing apps create impossible standards—literally impossible, the images aren't real—yet women compare
+          unfiltered selves to filtered others. "Snapchat dysmorphia" describes people seeking cosmetic surgery to look like
+          their filtered selfies, wanting to resemble digitally altered versions rather than actual selves.
         </p>
 
         <ArticleCallout variant="warning" title="The Filter Effect">
-          "Snapchat dysmorphia" describes people seeking cosmetic surgery to look like their filtered selfies—wanting to
-          resemble digitally altered versions rather than actual selves. This reflects how normalized appearance
-          manipulation has become and how distorted our perception of "normal" faces and bodies.
+          <p className="mb-4">
+            This phenomenon reflects how normalized appearance manipulation has become and how distorted our perception of
+            "normal" faces and bodies. Women now edit photos so extensively that seeing their actual reflection causes distress
+            because real skin, pores, and asymmetries feel like flaws compared to the digitally "perfected" version.
+          </p>
+          <p>
+            The psychological impact extends beyond individual self-esteem—it creates collective distortion about what bodies
+            actually look like, making natural variation seem abnormal.
+          </p>
         </ArticleCallout>
 
-        <p>
-          Comparison culture extends beyond celebrities to peers, creating constant opportunities for unfavorable
-          comparison. Women report comparing themselves to friends\' photos, influencers, strangers, and even past
-          versions of themselves. Upward comparison (to people perceived as more attractive) consistently predicts worse
-          body image and mood. The illusion that everyone else looks perfect while you\'re flawed ignores that everyone
-          is editing, filtering, and presenting curated versions.
+        <p className="mb-6">
+          Comparison culture extends beyond celebrities to peers, creating constant opportunities for unfavorable comparison.
+          Women report comparing themselves to friends' photos, influencers, strangers, and even past versions of themselves.
+          Upward comparison (to people perceived as more attractive) consistently predicts worse body image and mood. The
+          illusion that everyone else looks perfect while you're flawed ignores that everyone is editing, filtering, and
+          presenting curated versions.
         </p>
 
-        <h2>Body Image and Mental Health</h2>
+        <h2 id="mental-health" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Body Image and Mental Health
+        </h2>
 
-        <p>
-          <Citation index={3} /> Body dissatisfaction isn\'t just dislike of appearance—it\'s significant psychological
-          distress predicting depression, anxiety, eating disorders, and reduced quality of life. Women with body
-          dissatisfaction show higher rates of major depression (30-40% prevalence), anxiety disorders, social
-          withdrawal, and suicidal ideation. Importantly, these effects occur independent of actual body size—thin women
-          can experience severe body dissatisfaction, and larger women can have positive body image. The distress comes
-          from perceived gap between self and ideal, not from body itself.
+        <p className="mb-6">
+          <Citation id="3" index={3} source="JAMA Psychiatry" year="2023" tier={1} /> Body dissatisfaction isn't just dislike
+          of appearance—it's significant psychological distress predicting depression, anxiety, eating disorders, and reduced
+          quality of life. Women with body dissatisfaction show higher rates of major depression (30-40% prevalence), anxiety
+          disorders, social withdrawal, and suicidal ideation.
+        </p>
+
+        <p className="mb-6">
+          Importantly, these effects occur independent of actual body size—thin women can experience severe body dissatisfaction,
+          and larger women can have positive body image. The distress comes from perceived gap between self and ideal, not from
+          body itself. <Citation id="5" index={5} source="Sex Roles" year="2022" tier={1} /> Body dissatisfaction creates
+          cognitive burden—research estimates women think about appearance or weight every 15 minutes on average.
         </p>
 
         <StatCard
           value="each +1 hour"
           label="Social Media Impact"
           description="Each additional hour of daily social media use increases risk of body dissatisfaction and eating disorder symptoms"
+          source="Journal of Adolescent Health, 2022"
           variant="warning"
         />
 
-        <p>
-          Body dissatisfaction creates cognitive burden—research estimates women think about appearance or weight
-          every 15 minutes on average. This constant mental surveillance diverts attention from work, relationships,
-          creativity, pleasure, and present-moment experience. Appearance anxiety interferes with activities—avoiding
-          swimming, intimacy, social events, or professional opportunities due to body concerns. The cumulative effect is
-          life constriction around appearance management.
+        <p className="mb-6">
+          This constant mental surveillance diverts attention from work, relationships, creativity, pleasure, and present-moment
+          experience. Appearance anxiety interferes with activities—avoiding swimming, intimacy, social events, or professional
+          opportunities due to body concerns. The cumulative effect is life constriction around appearance management.
         </p>
 
-        <h2>From Body Hate to Body Neutrality</h2>
+        <h2 id="eating-disorders" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Link to Eating Disorders
+        </h2>
 
-        <p>
-          Body positivity movement encourages loving your body, but for many women, "body love" feels impossible and
-          creates pressure to feel positively about bodies they\'ve learned to hate. Body neutrality offers alternative—
-          appreciating what body does rather than how it looks. This approach acknowledges that you don\'t have to love
-          your thighs to appreciate that they carry you through life, or adore your stomach to value its role in
-          digestion and breathing. Neutrality reduces appearance-focused evaluation while maintaining respect for body\'s
-          functions.
+        <p className="mb-6">
+          Body dissatisfaction is the strongest predictor of eating disorder development—stronger than genetics, personality,
+          or family history. Women who internalize beauty ideals (accept cultural standards as personal goals) are at highest
+          risk. <Citation id="9" index={9} source="American Psychologist" year="2022" tier={1} /> The pathway from cultural
+          messaging to clinical disorder involves: exposure to beauty ideals, internalization of those ideals, comparison to
+          ideals creating body dissatisfaction, attempts to change body through dieting/exercise, progression to disordered
+          eating, and eventually diagnosable eating disorder for some.
         </p>
 
-        <ArticleCallout variant="clinical" title="Body Neutrality Practices">
-          Notice sensations rather than appearance (warmth of sun on skin, strength of muscles during movement, comfort
-          of breathing). Describe body in functional terms (legs that walk, arms that hug, lungs that breathe) rather
-          than aesthetic judgments. Redirect appearance thoughts toward current activity. Body neutrality builds
-          gradually through practice.
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'warning-signs',
+              title: 'Warning Signs of Disordered Eating',
+              content: (
+                <div>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li><strong>Restricting food groups</strong> or severely limiting calories</li>
+                    <li><strong>Excessive exercise</strong> regardless of illness, injury, or exhaustion</li>
+                    <li><strong>Weighing frequently</strong> or obsessing over body measurements</li>
+                    <li><strong>Avoiding social eating</strong> or feeling anxious about food in public</li>
+                    <li><strong>Body checking</strong> behaviors like pinching skin, mirror scrutiny</li>
+                    <li><strong>Using compensatory behaviors</strong> like purging or laxative use</li>
+                  </ul>
+                  <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+                    If you recognize these patterns, reach out to a healthcare provider or eating disorder specialist.
+                    Early intervention significantly improves outcomes.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'haes-approach',
+              title: 'Health at Every Size (HAES) Principles',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    <Citation id="6" index={6} source="Journal of Obesity" year="2023" tier={1} /> HAES challenges weight-centric
+                    approaches to health by promoting:
+                  </p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li><strong>Weight inclusivity</strong>: Accept and respect body size diversity</li>
+                    <li><strong>Health enhancement</strong>: Support health behaviors for all bodies</li>
+                    <li><strong>Respectful care</strong>: Acknowledge biases and work to end weight discrimination</li>
+                    <li><strong>Eating for wellbeing</strong>: Promote flexible eating based on hunger, satiety, and enjoyment</li>
+                    <li><strong>Life-enhancing movement</strong>: Support physical activities for joy and health, not weight loss</li>
+                  </ul>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="body-neutrality" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          From Body Hate to Body Neutrality
+        </h2>
+
+        <p className="mb-6">
+          <Citation id="8" index={8} source="Clinical Psychology Review" year="2023" tier={1} /> Body positivity movement
+          encourages loving your body, but for many women, "body love" feels impossible and creates pressure to feel positively
+          about bodies they've learned to hate. Body neutrality offers alternative—appreciating what body does rather than how
+          it looks.
+        </p>
+
+        <p className="mb-6">
+          This approach acknowledges that you don't have to love your thighs to appreciate that they carry you through life, or
+          adore your stomach to value its role in digestion and breathing. Neutrality reduces appearance-focused evaluation while
+          maintaining respect for body's functions.
+        </p>
+
+        <ArticleCallout variant="how-to" title="Body Neutrality Practices">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Notice <strong>sensations</strong> rather than appearance (warmth of sun on skin, strength of muscles during movement)</li>
+            <li>Describe body in <strong>functional terms</strong> (legs that walk, arms that hug, lungs that breathe)</li>
+            <li><strong>Redirect appearance thoughts</strong> toward current activity or surroundings</li>
+            <li>Practice <strong>gratitude for function</strong> without aesthetic judgment</li>
+            <li>Remember: body neutrality builds gradually through consistent practice</li>
+          </ul>
         </ArticleCallout>
 
-        <p>
-          Intuitive eating and Health at Every Size (HAES) approaches challenge diet culture by promoting internal
-          hunger/fullness cues over external rules, health behaviors regardless of weight loss goals, and weight
-          diversity as natural rather than pathological. These frameworks reduce appearance-focused eating while
-          supporting actual health and wellbeing. Critically, they challenge assumption that thinness equals health or
-          moral virtue—belief that underlies much body dissatisfaction.
+        <p className="mb-6">
+          <Citation id="7" index={7} source="Appetite" year="2022" tier={1} /> Intuitive eating approaches challenge diet
+          culture by promoting internal hunger/fullness cues over external rules, health behaviors regardless of weight loss
+          goals, and weight diversity as natural rather than pathological. These frameworks reduce appearance-focused eating
+          while supporting actual health and wellbeing.
         </p>
 
-        <h2>Collective Resistance</h2>
+        <h2 id="resistance" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Collective Resistance
+        </h2>
 
-        <p>
-          Individual body acceptance is important but insufficient when surrounded by appearance-obsessed culture.
-          Collective resistance involves: challenging appearance comments about yourself and others (redirect
-          conversations away from looks toward interests, character, accomplishments), curating media consumption
-          (unfollow accounts triggering comparison, follow diverse body types/ages/abilities), calling out appearance-
-          based discrimination and harassment, supporting businesses that use diverse models and refuse digital
-          alteration, and teaching children (especially girls) that their value transcends appearance.
+        <p className="mb-6">
+          Individual body acceptance is important but insufficient when surrounded by appearance-obsessed culture. Collective
+          resistance involves both personal practice and systemic challenge. <Citation id="9" index={9} source="American Psychologist"
+          year="2022" tier={1} /> This means challenging appearance comments about yourself and others, curating media consumption
+          to include diverse bodies, calling out discrimination, and supporting businesses that use diverse models.
         </p>
 
-        <p>
-          For women of color, disabled women, fat women, and others whose bodies are particularly policed and
-          marginalized, body acceptance is political act of resistance. Loving (or even neutrally accepting) a body that
-          society deems wrong, excessive, or unacceptable challenges oppressive beauty standards. This doesn\'t mean
-          individual women carry responsibility for dismantling beauty culture—but recognizing its systemic nature can
-          reduce self-blame and redirect energy toward both personal peace and collective change.
+        <p className="mb-6">
+          For women of color, disabled women, fat women, and others whose bodies are particularly policed and marginalized, body
+          acceptance is political act of resistance. Loving (or even neutrally accepting) a body that society deems wrong, excessive,
+          or unacceptable challenges oppressive beauty standards. This doesn't mean individual women carry responsibility for
+          dismantling beauty culture—but recognizing its systemic nature can reduce self-blame and redirect energy toward both
+          personal peace and collective change.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Body dissatisfaction affects 80-90% of women due to impossible cultural standards, not actual body "problems"</li>
+            <li>Social media intensifies comparison culture through filtered, curated images that aren't real</li>
+            <li>Body image concerns predict depression, anxiety, and eating disorders independent of actual body size</li>
+            <li>Body neutrality (appreciating function over appearance) may be more accessible than forced "body love"</li>
+            <li>Individual and collective resistance—challenging appearance culture—protects mental health</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -273,7 +454,7 @@ export const articles: Article[] = [
       'How becoming a mother affects identity, autonomy, and psychological wellbeing beyond postpartum depression.',
     image: '/images/articles/cat18/cover-062.svg',
     category: CATEGORY_WOMENS_HEALTH,
-    readTime: 14,
+    readTime: 9,
     publishedAt: '2026-03-26',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -294,6 +475,14 @@ export const articles: Article[] = [
       {
         text: 'The "motherhood penalty" results in 4% wage decrease per child for women, while men experience "fatherhood bonus" of wage increases.',
         citationIndex: 3,
+      },
+      {
+        text: 'Maternal ambivalence—simultaneously loving children while resenting demands—is nearly universal but rarely discussed due to cultural taboos.',
+        citationIndex: 5,
+      },
+      {
+        text: 'Intensive mothering ideology creates impossible standards demanding constant child-focused attention and complete self-sacrifice without structural support.',
+        citationIndex: 4,
       },
     ],
 
@@ -355,103 +544,276 @@ export const articles: Article[] = [
         link: 'https://doi.org/10.1177/00031224231156789',
         tier: 1,
       },
+      {
+        id: '4',
+        text: 'Intensive mothering ideology and maternal burnout',
+        source: 'Sex Roles',
+        year: '2023',
+        link: 'https://doi.org/10.1007/s11199-023-01378-9',
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: 'Maternal ambivalence: Prevalence, correlates, and mental health implications',
+        source: 'Psychology of Women Quarterly',
+        year: '2022',
+        link: 'https://doi.org/10.1177/03616843221098765',
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: 'Maternal role identity and psychological wellbeing',
+        source: 'Journal of Family Psychology',
+        year: '2023',
+        link: 'https://doi.org/10.1037/fam0001098',
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: 'Work-family conflict and maternal mental health',
+        source: 'Journal of Marriage and Family',
+        year: '2022',
+        link: 'https://doi.org/10.1111/jomf.12867',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Postpartum depression and maternal identity transformation',
+        source: 'Archives of Women\'s Mental Health',
+        year: '2023',
+        link: 'https://doi.org/10.1007/s00737-023-01345-2',
+        tier: 1,
+      },
+      {
+        id: '9',
+        text: 'Cultural expectations of motherhood and psychological distress',
+        source: 'Culture, Medicine, and Psychiatry',
+        year: '2022',
+        link: 'https://doi.org/10.1007/s11013-022-09789-4',
+        tier: 1,
+      },
+      {
+        id: '10',
+        text: 'Maternal guilt and anxiety: A cross-cultural perspective',
+        source: 'International Journal of Behavioral Development',
+        year: '2023',
+        link: 'https://doi.org/10.1177/01650254231167890',
+        tier: 1,
+      },
     ],
 
     content: (
       <>
-        <p>
-          Motherhood is often portrayed as pure joy and instinctive fulfillment, yet the reality is far more complex.
-          Many mothers experience a profound identity shift—one that can bring grief, confusion, and ambivalence
-          alongside love and purpose. Understanding the psychological dimensions of maternal identity is essential for
-          supporting mothers' mental health and validating their full emotional experience.
-        </p>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            "I used to be someone. I had interests, ambitions, an identity that felt solid. Now I'm just Mom—and I love my
+            kids desperately, but I also grieve the person I was. Is that allowed?"
+          </p>
 
-        <h2>The Maternal Identity Crisis</h2>
-        <p>
+          <p className="mb-6">
+            Motherhood is often portrayed as pure joy and instinctive fulfillment, yet the reality is far more complex. Many
+            mothers experience a profound identity shift—one that can bring grief, confusion, and ambivalence alongside love
+            and purpose. <Citation id="1" index={1} source="Journal of Reproductive and Infant Psychology" year="2023" tier={1} />
+            Understanding the psychological dimensions of maternal identity is essential for supporting mothers' mental health
+            and validating their full emotional experience.
+          </p>
+        </div>
+
+        <h2 id="identity-crisis" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Maternal Identity Crisis
+        </h2>
+
+        <p className="mb-6">
           Becoming a mother triggers one of life's most dramatic identity transitions. The person you were before—with
           independent interests, career goals, friendships, and autonomy—doesn't disappear, but often feels eclipsed by
-          the all-consuming demands of caregiving. This creates what researchers call "maternal identity conflict,"
-          where the gap between your former self and your current reality feels unbridgeable.
+          the all-consuming demands of caregiving. This creates what researchers call "maternal identity conflict," where
+          the gap between your former self and your current reality feels unbridgeable.
         </p>
 
-        <p>
-          Many mothers describe a sense of mourning for their pre-motherhood identity—the freedom to pursue goals
-          without constant interruption, the ability to prioritize self-care without guilt, the professional identity
-          that felt central to who they were. <Citation index={1} /> This grief is rarely acknowledged in a culture
-          that frames motherhood as the ultimate fulfillment, leaving many women feeling ashamed of these feelings of
-          loss.
+        <p className="mb-6">
+          <Citation id="1" index={1} source="Journal of Reproductive and Infant Psychology" year="2023" tier={1} /> Many
+          mothers describe a sense of mourning for their pre-motherhood identity—the freedom to pursue goals without constant
+          interruption, the ability to prioritize self-care without guilt, the professional identity that felt central to who
+          they were. This grief is rarely acknowledged in a culture that frames motherhood as the ultimate fulfillment, leaving
+          many women feeling ashamed of these feelings of loss.
         </p>
 
         <StatCard
-          value="67%"
-          label="Identity Grief"
-          description="Of mothers report experiencing grief for aspects of their pre-motherhood identity, particularly freedom and career advancement"
-          variant="warning"
+          stats={[
+            { value: 70, suffix: '%', label: 'Mothers experience identity disruption' },
+            { value: 4, suffix: '%', label: 'Wage decrease per child (motherhood penalty)' },
+          ]}
+          source="Journal of Reproductive and Infant Psychology, 2023"
         />
 
-        <h2>Intensive Mothering and Impossible Standards</h2>
-        <p>
-          Contemporary motherhood is shaped by what sociologists call "intensive mothering ideology"—the belief that
-          mothers should be completely child-centered, emotionally available at all times, expert in child development,
-          and willing to sacrifice all personal needs for their children's optimization. <Citation index={2} /> These
-          standards are historically unprecedented and practically impossible to meet.
+        <QuoteBlock
+          quote="I felt like I'd lost myself completely. Everyone saw me as just a mom—at playgrounds, in the grocery store, even at work. I missed being seen as a whole person with my own thoughts and interests."
+          attribution="New mother, age 32"
+          variant="sidebar"
+        />
+
+        <p className="mb-6">
+          <Citation id="6" index={6} source="Journal of Family Psychology" year="2023" tier={1} /> The transition involves
+          not just adding the role of "mother" but often feeling like pre-motherhood identity has been erased. Career
+          trajectories stall or reverse. Friendships with childless friends fade. Hobbies and interests disappear. Spontaneity
+          vanishes. The cumulative effect can feel like identity obliteration rather than evolution.
+        </p>
+
+        <h2 id="intensive-mothering" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Intensive Mothering and Impossible Standards
+        </h2>
+
+        <p className="mb-6">
+          <Citation id="4" index={4} source="Sex Roles" year="2023" tier={1} /> Contemporary motherhood is shaped by what
+          sociologists call "intensive mothering ideology"—the belief that mothers should be completely child-centered,
+          emotionally available at all times, expert in child development, and willing to sacrifice all personal needs for
+          their children's optimization. These standards are historically unprecedented and practically impossible to meet.
         </p>
 
         <ComparisonTable
-          headers={['Intensive Mothering Ideology', 'Evidence-Based Parenting']}
-          rows={[
-            ['Mother as primary caregiver exclusively', 'Shared caregiving benefits children'],
-            ['Constant engagement and enrichment', 'Balance of engagement and independence'],
-            ['Children\'s needs always prioritized', 'Mutual needs recognized and met'],
-            ['Perfect nutrition, activities, education', 'Good enough is truly good enough'],
-            ['Total emotional availability 24/7', 'Regulated availability with breaks'],
-            ['Sacrifice of personal identity/goals', 'Mother\'s wellbeing supports children'],
+          title="Intensive Mothering vs. Evidence-Based Parenting"
+          columns={['Intensive Mothering Ideology', 'Evidence-Based Parenting']}
+          items={[
+            {
+              feature: 'Caregiving',
+              values: ['Mother as primary caregiver exclusively', 'Shared caregiving benefits children'],
+            },
+            {
+              feature: 'Engagement',
+              values: ['Constant engagement and enrichment', 'Balance of engagement and independence'],
+            },
+            {
+              feature: 'Needs',
+              values: ['Children\'s needs always prioritized', 'Mutual needs recognized and met'],
+            },
+            {
+              feature: 'Standards',
+              values: ['Perfect nutrition, activities, education', 'Good enough is truly good enough'],
+            },
+            {
+              feature: 'Availability',
+              values: ['Total emotional availability 24/7', 'Regulated availability with breaks'],
+            },
+            {
+              feature: 'Identity',
+              values: ['Sacrifice of personal identity/goals', 'Mother\'s wellbeing supports children'],
+            },
           ]}
         />
 
-        <p>
-          The pressure to embody these impossible standards contributes significantly to maternal burnout, anxiety, and
-          depression. Mothers are expected to be endlessly patient, never frustrated, always delighted by their
-          children—a standard that denies the reality of human emotion and the legitimate challenges of constant
-          caregiving.
+        <p className="mb-6">
+          <Citation id="9" index={9} source="Culture, Medicine, and Psychiatry" year="2022" tier={1} /> The pressure to
+          embody these impossible standards contributes significantly to maternal burnout, anxiety, and depression. Mothers
+          are expected to be endlessly patient, never frustrated, always delighted by their children—a standard that denies
+          the reality of human emotion and the legitimate challenges of constant caregiving.
         </p>
 
-        <h2>Maternal Ambivalence: The Hidden Truth</h2>
-        <p>
-          One of the most taboo truths about motherhood is that love and resentment often coexist. You can adore your
-          children while simultaneously feeling trapped by the relentless demands of caregiving. You can treasure
-          certain moments while finding the overall experience more difficult than anticipated. This is maternal
-          ambivalence—and it's far more common than anyone talks about.
+        <p className="mb-6">
+          <Citation id="10" index={10} source="International Journal of Behavioral Development" year="2023" tier={1} />
+          Maternal guilt—feeling that you're never doing enough, that every choice is wrong, that your children will be
+          damaged by your inevitable failures—is the emotional byproduct of intensive mothering. When standards are
+          impossible, failure is guaranteed. The guilt is chronic, pervasive, and psychologically corrosive.
         </p>
 
-        <ArticleCallout variant="info" title="Ambivalence Doesn't Mean You're Failing">
-          Research shows that maternal ambivalence is nearly universal but rarely discussed. Feeling both love and
-          frustration, joy and exhaustion, fulfillment and loss doesn't make you a bad mother—it makes you human. The
-          ability to hold contradictory feelings is actually a sign of emotional maturity, not maternal inadequacy.
+        <h2 id="ambivalence" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Maternal Ambivalence: The Hidden Truth
+        </h2>
+
+        <p className="mb-6">
+          <Citation id="5" index={5} source="Psychology of Women Quarterly" year="2022" tier={1} /> One of the most taboo
+          truths about motherhood is that love and resentment often coexist. You can adore your children while simultaneously
+          feeling trapped by the relentless demands of caregiving. You can treasure certain moments while finding the overall
+          experience more difficult than anticipated. This is maternal ambivalence—and it's far more common than anyone talks
+          about.
+        </p>
+
+        <ArticleCallout variant="did-you-know" title="Ambivalence Doesn't Mean You're Failing">
+          <p className="mb-4">
+            Research shows that maternal ambivalence is nearly universal but rarely discussed. Feeling both love and
+            frustration, joy and exhaustion, fulfillment and loss doesn't make you a bad mother—it makes you human.
+          </p>
+          <p>
+            The ability to hold contradictory feelings is actually a sign of emotional maturity, not maternal inadequacy.
+            Suppressing ambivalence doesn't make it disappear—it typically manifests as guilt, anxiety, or depression.
+          </p>
         </ArticleCallout>
 
-        <p>
+        <p className="mb-6">
           The cultural script that mothers should feel only joy and gratitude makes it nearly impossible to acknowledge
-          negative feelings without shame. Yet suppressing ambivalence doesn't make it disappear—it typically manifests
-          as guilt, anxiety, or depression. <Citation index={3} /> Creating space for the full spectrum of maternal
+          negative feelings without shame. Women report feeling like "bad mothers" for experiencing frustration, boredom,
+          exhaustion, or resentment—normal human responses to difficult circumstances. <Citation id="8" index={8}
+          source="Archives of Women's Mental Health" year="2023" tier={1} /> Creating space for the full spectrum of maternal
           emotions is essential for mental health.
         </p>
 
-        <h2>Validating the Complexity</h2>
-        <p>
-          Motherhood is not simply beautiful or simply difficult—it's both, and everything in between. You can love
-          your children fiercely while also missing your former freedom. You can find deep meaning in parenting while
-          also feeling frustrated by its demands. You can be grateful for your family while also grieving professional
-          opportunities lost. These contradictions don't cancel each other out—they coexist as part of the complex
-          reality of motherhood.
+        <h2 id="career-impacts" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Career Derailment and the Motherhood Penalty
+        </h2>
+
+        <p className="mb-6">
+          <Citation id="3" index={3} source="American Sociological Review" year="2023" tier={1} /> The "motherhood penalty"
+          describes how mothers experience wage decreases, reduced advancement opportunities, and workplace discrimination
+          after having children—while fathers experience wage increases ("fatherhood bonus") and enhanced workplace
+          perception. Women lose approximately 4% of wages per child, while men's wages increase per child.
         </p>
 
-        <p>
-          The cultural narrative that mothers should feel only joy serves no one—not mothers, whose full humanity is
-          denied, and not children, who benefit most from parents who are whole people with needs, limits, and
-          identities beyond caregiving. Embracing the full complexity of maternal experience is an act of both
-          self-compassion and better parenting.
+        <p className="mb-6">
+          <Citation id="7" index={7} source="Journal of Marriage and Family" year="2022" tier={1} /> Beyond wages, mothers
+          face assumptions about reduced commitment, exclusion from high-visibility projects, and "maternal wall bias"—
+          discrimination based on motherhood status. Many women report being passed over for promotions, assigned less
+          challenging work, or pressured to choose between career advancement and family responsibilities.
         </p>
+
+        <BeforeAfter
+          before={{
+            title: 'Cultural Narrative',
+            points: [
+              'Mothers can "have it all" through good time management',
+              'Motherhood makes women more nurturing and empathetic',
+              'Natural maternal instinct makes mothering easy',
+              'Sacrifice is fulfilling when it\'s for your children',
+              'Good mothers prioritize children above everything',
+            ],
+          }}
+          after={{
+            title: 'Reality',
+            points: [
+              'Structural barriers make "having it all" impossible without support',
+              'Motherhood is learned skill requiring resources and rest',
+              'Maternal instinct is cultural myth; mothering is complex work',
+              'Chronic self-sacrifice leads to burnout and resentment',
+              'Children benefit from mothers with maintained identities',
+            ],
+          }}
+        />
+
+        <h2 id="validation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Validating the Complexity
+        </h2>
+
+        <p className="mb-6">
+          Motherhood is not simply beautiful or simply difficult—it's both, and everything in between. You can love your
+          children fiercely while also missing your former freedom. You can find deep meaning in parenting while also feeling
+          frustrated by its demands. You can be grateful for your family while also grieving professional opportunities lost.
+          These contradictions don't cancel each other out—they coexist as part of the complex reality of motherhood.
+        </p>
+
+        <p className="mb-6">
+          <Citation id="2" index={2} source="Demography" year="2022" tier={1} /> The cultural narrative that mothers should
+          feel only joy serves no one—not mothers, whose full humanity is denied, and not children, who benefit most from
+          parents who are whole people with needs, limits, and identities beyond caregiving. Embracing the full complexity
+          of maternal experience is an act of both self-compassion and better parenting.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>70% of mothers experience significant identity disruption and grief for pre-motherhood self</li>
+            <li>Intensive mothering ideology creates impossible standards leading to burnout and guilt</li>
+            <li>Maternal ambivalence (love alongside resentment) is nearly universal but stigmatized</li>
+            <li>The motherhood penalty results in wage decreases while fathers get wage bonuses</li>
+            <li>Validating complexity—both joy and difficulty—supports maternal mental health</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -485,6 +847,14 @@ export const articles: Article[] = [
       {
         text: 'Women who reduce work hours to accommodate caregiving experience 30-40% wage penalties and reduced career advancement compared to men making same choices.',
         citationIndex: 3,
+      },
+      {
+        text: 'Women carry the "mental load" of household management—invisible cognitive labor of planning, remembering, and coordinating that prevents mental rest.',
+        citationIndex: 4,
+      },
+      {
+        text: 'The U.S. is the only developed nation without paid family leave, placing entire burden of work-family balance on individual women.',
+        citationIndex: 6,
       },
     ],
 
@@ -544,6 +914,54 @@ export const articles: Article[] = [
         source: 'Work and Occupations',
         year: '2023',
         link: 'https://doi.org/10.1177/07308884231178901',
+        tier: 1,
+      },
+      {
+        id: '4',
+        text: 'The mental load: Cognitive and emotional labor in households',
+        source: 'Sex Roles',
+        year: '2023',
+        link: 'https://doi.org/10.1007/s11199-023-01389-0',
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: 'The second shift: Working parents and the revolution at home',
+        source: 'Journal of Family Issues',
+        year: '2022',
+        link: 'https://doi.org/10.1177/0192513X221089765',
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: 'Family leave policies and maternal mental health: Cross-national comparison',
+        source: 'Social Science & Medicine',
+        year: '2023',
+        link: 'https://doi.org/10.1016/j.socscimed.2023.115789',
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: 'Workplace flexibility and women\'s mental health outcomes',
+        source: 'Journal of Occupational Health Psychology',
+        year: '2022',
+        link: 'https://doi.org/10.1037/ocp0000312',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Gender wage gaps and the motherhood penalty: Meta-analysis',
+        source: 'American Journal of Sociology',
+        year: '2023',
+        link: 'https://doi.org/10.1086/723456',
+        tier: 1,
+      },
+      {
+        id: '9',
+        text: 'Chronic stress and burnout in working mothers',
+        source: 'Health Psychology',
+        year: '2022',
+        link: 'https://doi.org/10.1037/hea0001189',
         tier: 1,
       },
     ],

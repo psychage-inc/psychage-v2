@@ -1117,13 +1117,12 @@ export const neuroscienceOfEmotionsArticlesB: Article[] = [
   {
     id: catId(59),
     slug: 'default-mode-network-brain-lost-in-thought',
-    status: 'draft',
     title: "The Default Mode Network: What Your Brain Does When You're Lost in Thought",
     description:
       'The DMN activates during rest and mind-wandering. Overactivity is linked to rumination, depression, and self-focused negative thinking.',
     image: '/images/articles/cat01/cover-059.svg',
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 8,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -1258,6 +1257,248 @@ export const neuroscienceOfEmotionsArticlesB: Article[] = [
           The problem: for many people, especially those with depression or anxiety, the DMN\'s default content is overwhelmingly negative. Self-referential thought becomes rumination---repetitive, unproductive loops of negative thinking about yourself and your life.<Citation id="2" />
         </p>
 
+        <StatCard
+          stats={[
+            { value: 47, suffix: '%', label: 'Average percentage of waking hours spent mind-wandering' },
+            { value: 3.4, suffix: 'x', label: 'Higher DMN connectivity in people with major depression' },
+          ]}
+          source="Science, 2010; Biological Psychiatry, 2021"
+        />
+
+        <h2
+          id="dmn-and-depression"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          When the DMN Gets Stuck: Rumination and Depression
+        </h2>
+
+        <p className="mb-6">
+          In depression, the default mode network becomes hyperactive and hyperconnected. Neuroimaging studies consistently show that people with major depressive disorder (MDD) have increased connectivity within the DMN and reduced ability to suppress it during goal-directed tasks. This means the DMN is louder, harder to turn off, and dominates mental experience.<Citation id="2" />
+        </p>
+
+        <p className="mb-6">
+          What makes this particularly damaging is <em>what</em> the DMN does: it generates self-referential thought. In depression, this becomes relentless negative self-focus. You replay past failures, ruminate on perceived inadequacies, and predict future catastrophes. The DMN creates a narrative about yourself---"I always mess things up," "Nobody really likes me," "Things will never get better"---and repeats it endlessly.<Citation id="5" />
+        </p>
+
+        <p className="mb-6">
+          Rumination---repetitive, passive focus on negative emotions and their causes---is a core feature of depression and is strongly linked to DMN hyperactivity. Brain scans show that when people ruminate, their DMN lights up intensely. The more time you spend ruminating, the stronger your DMN connections become. It\'s a vicious cycle: overactive DMN drives rumination, and rumination strengthens the DMN.<Citation id="5" />
+        </p>
+
+        <p className="mb-6">
+          This explains why depression feels so mentally exhausting even when you\'re "doing nothing." Your brain is never truly at rest---it\'s constantly running negative simulations, analyzing your perceived failures, and predicting doom. The DMN is working overtime, and its output is toxic.
+        </p>
+
+        <BeforeAfter
+          before={{
+            title: 'Healthy DMN Function',
+            points: [
+              'Mind wanders occasionally during boring tasks',
+              'Self-reflection is balanced---positive and negative',
+              'DMN easily deactivates when you focus externally',
+              'Mental rest periods feel genuinely restful',
+              'Can shift between introspection and engagement',
+            ],
+          }}
+          after={{
+            title: 'Overactive DMN (Depression)',
+            points: [
+              'Mind wanders constantly, even during important tasks',
+              'Self-focus is overwhelmingly negative and critical',
+              'DMN intrudes even when trying to concentrate',
+              'Rest periods filled with rumination and worry',
+              'Stuck in self-referential thought---hard to shift externally',
+            ],
+          }}
+        />
+
+        <h2
+          id="mind-wandering-unhappiness"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Mind-Wandering and Unhappiness
+        </h2>
+
+        <p className="mb-6">
+          A landmark 2010 study published in <em>Science</em> tracked 2,250 adults using a smartphone app that randomly prompted them throughout the day to report what they were doing, what they were thinking about, and how happy they felt. The findings were striking: people\'s minds wandered 47% of the time, and mind-wandering predicted unhappiness.<Citation id="4" />
+        </p>
+
+        <p className="mb-6">
+          Critically, this wasn\'t just about <em>what</em> people were thinking about. Even when mind-wandering to pleasant topics, people were less happy than when they were focused on the present moment. The act of mind-wandering itself---DMN activation---was associated with decreased well-being, regardless of content.<Citation id="4" />
+        </p>
+
+        <p className="mb-6">
+          The researchers concluded: "A human mind is a wandering mind, and a wandering mind is an unhappy mind." This suggests that presence---full engagement with the current moment---is a fundamental component of well-being, while excessive DMN activation undermines it.
+        </p>
+
+        <HighlightBox variant="emphasis">
+          <p><strong>The paradox of rest:</strong> Taking a break from focused work doesn\'t necessarily rest your mind. If your DMN fills the gap with rumination and worry, you end up more mentally drained than before. True mental rest requires either engaging the task-positive network (focused activity) or cultivating mindful awareness (observing thoughts without getting caught in them).</p>
+        </HighlightBox>
+
+        <h2
+          id="flow-states-dmn-suppression"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Flow States: When the DMN Goes Offline
+        </h2>
+
+        <p className="mb-6">
+          Flow---the experience of being completely absorbed in an activity, losing track of time and self---is characterized by profound DMN deactivation. When you\'re in flow, the task-positive network dominates, and the self-referential chatter of the DMN goes silent. This explains why flow feels so mentally refreshing: for once, you\'re not thinking <em>about</em> yourself---you\'re simply engaged.<Citation id="1" />
+        </p>
+
+        <p className="mb-6">
+          Flow can occur during any absorbing activity: playing music, solving puzzles, writing, coding, sports, art, deep conversation, reading fiction. The key characteristics are:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Clear goals and immediate feedback:</strong> You know what to do and how you\'re doing</li>
+          <li><strong>Challenge-skill balance:</strong> The task is difficult enough to demand full attention but not so hard you fail</li>
+          <li><strong>Full concentration:</strong> Complete absorption in the present moment</li>
+          <li><strong>Loss of self-consciousness:</strong> The DMN\'s self-referential narrative quiets</li>
+          <li><strong>Time distortion:</strong> Hours feel like minutes</li>
+        </ul>
+
+        <p className="mb-6">
+          For people struggling with rumination and depression, cultivating flow experiences can be powerfully therapeutic. Flow provides regular, structured periods of DMN suppression---training your brain to spend less time in self-referential thought and more time engaged with the world.
+        </p>
+
+        <ArticleTabs
+          tabs={[
+            {
+              id: 'flow-activities',
+              label: 'Flow-Inducing Activities',
+              content: (
+                <div className="space-y-4">
+                  <p className="mb-4"><strong>Creative pursuits:</strong> Painting, drawing, writing, music, photography, crafting, cooking</p>
+                  <p className="mb-4"><strong>Physical activities:</strong> Rock climbing, martial arts, dancing, yoga, running, cycling, swimming</p>
+                  <p className="mb-4"><strong>Intellectual challenges:</strong> Chess, puzzles, coding, mathematics, learning new skills</p>
+                  <p className="mb-4"><strong>Social flow:</strong> Deep conversations, collaborative projects, team sports, playing music with others</p>
+                  <p><strong>Key insight:</strong> Flow requires active engagement. Passive activities (watching TV, scrolling social media) don\'t suppress the DMN---they often allow it to run in the background.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'building-flow',
+              label: 'Building Flow Into Your Day',
+              content: (
+                <div className="space-y-4">
+                  <p className="mb-4"><strong>1. Identify your flow triggers:</strong> What activities have made you lose track of time in the past? Those are your entry points.</p>
+                  <p className="mb-4"><strong>2. Schedule flow time:</strong> Protect 30-60 minutes daily for flow-conducive activities. Treat it like medicine, not optional recreation.</p>
+                  <p className="mb-4"><strong>3. Minimize interruptions:</strong> Turn off notifications, close the door, use website blockers. Flow requires uninterrupted attention.</p>
+                  <p className="mb-4"><strong>4. Start with low stakes:</strong> If rumination is severe, flow might feel impossible at first. Begin with 10-minute sessions of focused activity. Build gradually.</p>
+                  <p><strong>5. Notice the relief:</strong> Pay attention to how quiet your mind feels during and after flow. This awareness motivates continued practice.</p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <h2
+          id="mindfulness-dmn-regulation"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Mindfulness: Training DMN Regulation
+        </h2>
+
+        <p className="mb-6">
+          Mindfulness meditation---paying attention to present-moment experience without judgment---directly targets DMN hyperactivity. Brain imaging studies show that experienced meditators have reduced DMN activity during meditation and lower baseline DMN connectivity even when not meditating. Regular mindfulness practice literally rewires the DMN.<Citation id="3" />
+        </p>
+
+        <p className="mb-6">
+          Mindfulness doesn\'t suppress thoughts---it changes your relationship to them. Instead of getting absorbed in the DMN\'s narrative ("I\'m worthless, nothing ever works out"), you observe thoughts arising and passing like clouds. This creates distance between your awareness and your DMN-generated content. You realize: "That\'s a thought my brain produced, not an objective truth."<Citation id="3" />
+        </p>
+
+        <p className="mb-6">
+          The therapeutic effects of mindfulness for depression and anxiety are well-documented. Mindfulness-Based Cognitive Therapy (MBCT) is as effective as antidepressant medication for preventing depression relapse. The mechanism is increasingly clear: MBCT reduces DMN hyperactivity and weakens the connection between DMN activation and negative mood.<Citation id="3" />
+        </p>
+
+        <p className="mb-6">
+          You don\'t need hour-long meditation sessions. Even brief, daily mindfulness practice (5-10 minutes) produces measurable changes in DMN function within 8 weeks. The key is consistency, not duration.
+        </p>
+
+        <h2
+          id="practical-strategies"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Practical Strategies for DMN Regulation
+        </h2>
+
+        <p className="mb-6">
+          Understanding the DMN is valuable only if it leads to actionable strategies. Here\'s how to work with your default mode network rather than being controlled by it:
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'notice-name',
+              title: 'Notice and Name DMN Activation',
+              content: (
+                <p>
+                  When you catch yourself lost in thought---especially negative thought---pause and label it: "This is my DMN activating." This simple metacognitive step (thinking about thinking) engages prefrontal regions that help regulate the DMN. Naming creates distance.
+                </p>
+              ),
+            },
+            {
+              id: 'external-focus',
+              title: 'Shift to External Focus',
+              content: (
+                <p>
+                  The DMN deactivates when you focus externally. Engage your senses: What do you see, hear, feel, smell? Describe your surroundings in detail. This activates the task-positive network and quiets the DMN. Sensory grounding is particularly effective during rumination spirals.
+                </p>
+              ),
+            },
+            {
+              id: 'scheduled-worry',
+              title: 'Schedule Rumination Time',
+              content: (
+                <p>
+                  Paradoxically, trying to suppress rumination often backfires (don\'t think about a pink elephant). Instead, designate 15 minutes daily for deliberate rumination. When your DMN activates outside this window, acknowledge the thought and postpone it: "I\'ll think about this during my 3pm worry time." This contains rumination rather than fighting it.<Citation id="8" />
+                </p>
+              ),
+            },
+            {
+              id: 'cognitive-tasks',
+              title: 'Use Focused Cognitive Tasks',
+              content: (
+                <p>
+                  When rumination is intense, engage in demanding cognitive tasks that require full attention: count backward from 100 by 7s, recite multiplication tables, solve puzzles, organize something. These tasks recruit the task-positive network strongly enough to override DMN activity.
+                </p>
+              ),
+            },
+            {
+              id: 'flow-practice',
+              title: 'Cultivate Flow Regularly',
+              content: (
+                <p>
+                  Build activities into your routine that reliably produce flow. Treat these as mental health maintenance, not optional hobbies. Regular flow experiences train your brain to spend less time in DMN-dominated states.
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <h2
+          id="when-to-seek-help"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          When DMN Dysregulation Requires Professional Help
+        </h2>
+
+        <p className="mb-6">
+          If your DMN is so hyperactive that rumination dominates most of your waking hours, self-regulation strategies may not be sufficient. Treatment-resistant depression is characterized by particularly severe DMN dysfunction. In these cases, professional interventions can help:<Citation id="7" />
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Mindfulness-Based Cognitive Therapy (MBCT):</strong> Structured program specifically targeting DMN dysregulation and rumination</li>
+          <li><strong>Cognitive-Behavioral Therapy (CBT):</strong> Teaches skills to interrupt rumination loops and challenge DMN-generated negative narratives</li>
+          <li><strong>Medication:</strong> SSRIs and other antidepressants can normalize DMN connectivity in some people</li>
+          <li><strong>Emerging treatments:</strong> Neurofeedback training (learning to modulate your own DMN activity), transcranial magnetic stimulation (TMS) targeting DMN regions</li>
+        </ul>
+
+        <p className="mb-6">
+          The goal isn\'t to eliminate the DMN---you need it for self-reflection, planning, and social cognition. The goal is to restore balance: DMN activation when appropriate, suppression when needed, and the flexibility to shift between networks based on current demands.
+        </p>
+
         <ArticleCallout variant="key-takeaway" title="The Bottom Line">
           <p className="mb-4">
             Your brain\'s default mode isn\'t neutral---for many people, especially those with depression, it\'s a rumination machine. The DMN generates self-referential thought, and when overactive, that thought becomes negative, repetitive, and inescapable.
@@ -1273,13 +1514,12 @@ export const neuroscienceOfEmotionsArticlesB: Article[] = [
   {
     id: catId(60),
     slug: 'polyvagal-theory-nervous-system-three-states',
-    status: 'draft',
     title: "Polyvagal Theory in Plain Language: Your Nervous System's Three States",
     description:
       'Polyvagal theory explains three nervous system states: safe/social, fight/flight, and shutdown. Learn to recognize and shift between them.',
     image: '/images/articles/cat01/cover-060.svg',
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 8,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -1415,10 +1655,264 @@ export const neuroscienceOfEmotionsArticlesB: Article[] = [
           Crucially, these states aren\'t choices or character flaws. They\'re automatic physiological responses to perceived safety or threat. Your nervous system is constantly asking: "Am I safe?" The answer determines your state.<Citation id="1" />
         </p>
 
-        <MythVsFactBlock
-          myth="If you\'re anxious, you just need to calm down and think rationally."
-          fact="You can\'t think your way into ventral vagal state. Cognitive strategies require prefrontal cortex function, which is offline when you\'re in sympathetic or dorsal states. You need bottom-up physiological interventions: breath, movement, warmth, safe social contact."
+        <p className="mb-6">
+          This hierarchical organization is evolutionary: the dorsal vagal shutdown response is the oldest (shared with reptiles), the sympathetic mobilization response evolved with early mammals, and the ventral vagal social engagement system is the newest (unique to mammals with complex social structures). When you\'re stressed, your nervous system moves backward through evolution---from social engagement to mobilization to shutdown.
+        </p>
+
+        <div className="space-y-4 my-8">
+          <MythVsFactBlock
+            myth="If you\'re anxious, you just need to calm down and think rationally."
+            fact="You can\'t think your way into ventral vagal state. Cognitive strategies require prefrontal cortex function, which is offline when you\'re in sympathetic or dorsal states. You need bottom-up physiological interventions: breath, movement, warmth, safe social contact."
+          />
+          <MythVsFactBlock
+            myth="Freeze response means you\'re weak or cowardly."
+            fact="Dorsal vagal shutdown is an adaptive survival response when fight or flight won\'t work. It conserves energy, reduces pain perception, and appears as submission to a predator. It\'s biology, not weakness."
+          />
+        </div>
+
+        <h2
+          id="recognizing-your-state"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Recognizing Your Current State
+        </h2>
+
+        <p className="mb-6">
+          Most people move between states throughout the day without conscious awareness. Learning to recognize which state you\'re in is the first step toward regulation. Your body provides clear signals if you know where to look:
+        </p>
+
+        <ComparisonTable
+          title="State Recognition Guide"
+          columns={['Body Signal', 'Ventral Vagal', 'Sympathetic', 'Dorsal Vagal']}
+          items={[
+            { feature: 'Heart rate', values: ['Regulated, variable', 'Elevated, pounding', 'Slowed or irregular'] },
+            { feature: 'Breathing', values: ['Natural, deep', 'Rapid, shallow', 'Very slow or held'] },
+            { feature: 'Muscle tone', values: ['Relaxed but alert', 'Tense, ready to move', 'Collapsed or frozen'] },
+            { feature: 'Energy level', values: ['Engaged, responsive', 'Wired, agitated', 'Depleted, hopeless'] },
+            { feature: 'Social desire', values: ['Open to connection', 'Irritable or avoidant', 'Withdrawn, numb'] },
+            { feature: 'Digestion', values: ['Normal function', 'Suppressed (dry mouth, nausea)', 'Shut down'] },
+            { feature: 'Mental clarity', values: ['Clear, flexible thinking', 'Narrow focus on threat', 'Foggy, disconnected'] },
+          ]}
         />
+
+        <p className="mb-6">
+          Trauma survivors often oscillate rapidly between sympathetic hyperarousal and dorsal shutdown---sometimes within minutes. This creates a sense of being emotionally out of control. The nervous system gets stuck in a pattern of alternating between mobilization (panic, rage, anxiety) and collapse (numbness, dissociation, hopelessness) without accessing ventral vagal safety in between.<Citation id="2" />
+        </p>
+
+        <h2
+          id="vagal-tone"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Vagal Tone: Your Nervous System\'s Flexibility
+        </h2>
+
+        <p className="mb-6">
+          Vagal tone refers to the activity and health of your vagus nerve, measured through heart rate variability (HRV)---the variation in time between heartbeats. Higher HRV indicates better vagal tone, which predicts better emotional regulation, stress resilience, and mental health outcomes.<Citation id="3" />
+        </p>
+
+        <p className="mb-6">
+          Think of vagal tone like muscle tone: the stronger it is, the better your nervous system functions. High vagal tone means your ventral vagal system can activate easily and strongly, allowing you to stay calm under stress, recover quickly from upsets, and shift flexibly between states as needed. Low vagal tone means you get stuck in sympathetic or dorsal states and struggle to return to safety and connection.<Citation id="7" />
+        </p>
+
+        <p className="mb-6">
+          People with low vagal tone are more vulnerable to anxiety, depression, PTSD, and chronic stress-related illnesses. The good news: vagal tone is trainable. Specific practices can strengthen your ventral vagal capacity over time, making it easier to access and maintain states of safety and connection.<Citation id="7" />
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'breathing',
+              title: 'How does breathing affect vagal tone?',
+              content: (
+                <p>
+                  Slow, deep breathing---especially with longer exhalations than inhalations---activates the vagus nerve and increases vagal tone. Aim for a 1:2 ratio: inhale for 4 counts, exhale for 8. This stimulates the "vagal brake" that slows heart rate and signals safety to your nervous system.
+                </p>
+              ),
+            },
+            {
+              id: 'cold-exposure',
+              title: 'What is the vagal brake?',
+              content: (
+                <p>
+                  The ventral vagus nerve acts as a brake on your heart rate. When activated, it slows your heart and promotes calm. Cold exposure to the face (splashing cold water, holding ice) triggers the "dive reflex," which strongly activates this vagal brake. It\'s why cold water can interrupt panic attacks.<Citation id="1" />
+                </p>
+              ),
+            },
+            {
+              id: 'singing-humming',
+              title: 'Why do singing and humming help?',
+              content: (
+                <p>
+                  The vagus nerve innervates your vocal cords and throat. Singing, humming, chanting, or gargling creates mechanical stimulation of the vagus nerve. This is why humming or singing can shift you from anxious to calm---you\'re literally vibrating your vagus nerve.<Citation id="1" />
+                </p>
+              ),
+            },
+            {
+              id: 'social-connection',
+              title: 'How does social connection build vagal tone?',
+              content: (
+                <p>
+                  Safe, attuned social interactions activate the ventral vagal system. Over time, regular positive social connection strengthens your ventral vagal pathways, making it easier to access this state. This is why isolation damages mental health---it weakens vagal tone.<Citation id="4" />
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <h2
+          id="co-regulation"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Co-Regulation: Why Calm Presence Heals
+        </h2>
+
+        <p className="mb-6">
+          One of polyvagal theory\'s most powerful insights is the concept of <strong>co-regulation</strong>---the biological phenomenon where nervous systems influence each other. When you\'re around someone who is calm and in ventral vagal state, their nervous system sends safety cues to yours. Your heart rate synchronizes. Your breathing slows. You shift toward ventral vagal state yourself.<Citation id="4" />
+        </p>
+
+        <p className="mb-6">
+          This explains why a calm therapist, supportive friend, or attuned caregiver can be so regulating. It\'s not just their words or advice---it\'s their nervous system state. A therapist doesn\'t need to say anything profound; simply being present in a state of calm safety activates your ventral vagal system through resonance. This is why "holding space" and "calm presence" are therapeutic.<Citation id="8" />
+        </p>
+
+        <p className="mb-6">
+          Co-regulation also explains why relationships with dysregulated people are so draining. If someone is chronically in sympathetic (anxious, angry, chaotic) or dorsal (withdrawn, depressed, unavailable) states, being around them pulls your nervous system toward those states. You can\'t stay calm around someone in crisis indefinitely---your nervous systems will synchronize.<Citation id="8" />
+        </p>
+
+        <p className="mb-6">
+          For trauma survivors or people with poor vagal tone, self-regulation is often impossible at first. They need <em>co-regulation</em> from safe others to scaffold their nervous system back to ventral vagal. Over time, as they experience co-regulation repeatedly, their ventral vagal pathways strengthen, and they gain capacity for self-regulation.
+        </p>
+
+        <QuoteBlock
+          quote="Safety is not the absence of threat. Safety is the presence of connection."
+          attribution="Dr. Stephen Porges"
+          role="Developer of Polyvagal Theory"
+          source="The Polyvagal Theory"
+          variant="default"
+        />
+
+        <h2
+          id="trauma-and-polyvagal"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Trauma Through a Polyvagal Lens
+        </h2>
+
+        <p className="mb-6">
+          Polyvagal theory reframes trauma not as a psychological disorder but as a nervous system stuck in defensive states. Trauma occurs when the nervous system mobilizes for threat (sympathetic) or shuts down (dorsal) and then can\'t return to ventral vagal safety. The traumatic event is over, but your nervous system remains in survival mode.<Citation id="2" />
+        </p>
+
+        <p className="mb-6">
+          This explains many trauma symptoms that seem irrational or disproportionate:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Hypervigilance and flashbacks:</strong> Stuck in sympathetic mobilization, constantly scanning for danger</li>
+          <li><strong>Emotional numbness and dissociation:</strong> Stuck in dorsal shutdown, disconnected from self and others</li>
+          <li><strong>Difficulty trusting or connecting:</strong> Ventral vagal social engagement system offline---connection feels unsafe</li>
+          <li><strong>Physical symptoms (chronic pain, digestive issues, fatigue):</strong> Nervous system dysregulation affects all organs via the vagus nerve</li>
+          <li><strong>Feeling "broken" or "crazy":</strong> Frustration that you can\'t "just get over it" when your nervous system is biologically stuck</li>
+        </ul>
+
+        <p className="mb-6">
+          Polyvagal-informed trauma treatment focuses on restoring nervous system flexibility rather than just processing traumatic memories. The goal is to help the nervous system learn it\'s safe to return to ventral vagal state. This happens through:<Citation id="6" />
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Building vagal tone:</strong> Practices that strengthen ventral vagal capacity (breath work, gentle movement, safe social connection)</li>
+          <li><strong>Co-regulation:</strong> Therapeutic relationship provides scaffolding for nervous system to access safety</li>
+          <li><strong>Neuroception training:</strong> Learning to accurately detect safety vs. threat (trauma distorts neuroception, making safe situations feel dangerous)</li>
+          <li><strong>Somatic interventions:</strong> Working directly with body sensations, movement, and nervous system states rather than just talking about trauma</li>
+        </ul>
+
+        <h2
+          id="practical-regulation"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          State-Matched Interventions
+        </h2>
+
+        <p className="mb-6">
+          A critical insight from polyvagal theory: the regulation strategy that works depends on which state you\'re in. What calms sympathetic arousal may not help dorsal shutdown. Match the intervention to your current nervous system state:
+        </p>
+
+        <ArticleTabs
+          tabs={[
+            {
+              id: 'sympathetic-tools',
+              label: 'Sympathetic (Anxious/Wired)',
+              content: (
+                <div className="space-y-4">
+                  <p className="mb-4"><strong>Goal:</strong> Discharge mobilized energy, then shift to ventral vagal calm.</p>
+                  <ul className="list-disc pl-6 mb-6 space-y-2">
+                    <li><strong>Movement:</strong> Run, dance, shake, jump, vigorous exercise---expend the activated energy</li>
+                    <li><strong>Rhythmic breathing:</strong> 4-7-8 breathing (inhale 4, hold 7, exhale 8) or box breathing</li>
+                    <li><strong>Progressive muscle relaxation:</strong> Tense and release muscle groups systematically</li>
+                    <li><strong>Cold exposure:</strong> Splash cold water on face, hold ice, take cold shower (triggers vagal brake)</li>
+                    <li><strong>Vocalization:</strong> Humming, singing, growling, loud exhalations (stimulates vagus nerve)</li>
+                    <li><strong>Bilateral stimulation:</strong> Alternating tapping (EMDR technique), walking, drumming</li>
+                  </ul>
+                  <p><strong>What doesn\'t work:</strong> Meditation, stillness, or "just relax" strategies---your body needs to move first.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'dorsal-tools',
+              label: 'Dorsal (Shutdown/Numb)',
+              content: (
+                <div className="space-y-4">
+                  <p className="mb-4"><strong>Goal:</strong> Gently increase energy and engagement without triggering sympathetic activation.</p>
+                  <ul className="list-disc pl-6 mb-6 space-y-2">
+                    <li><strong>Gentle movement:</strong> Slow walking, stretching, swaying, rocking---avoid intensity</li>
+                    <li><strong>Warmth:</strong> Warm blanket, hot tea, heating pad, warm bath (safety cue)</li>
+                    <li><strong>Safe social contact:</strong> Talk to a calm friend, pet an animal, light physical touch if safe</li>
+                    <li><strong>Sensory engagement:</strong> Notice 5 things you see, 4 you hear, 3 you feel, 2 you smell, 1 you taste</li>
+                    <li><strong>Orienting:</strong> Look around the room, notice where you are, feel your feet on ground</li>
+                    <li><strong>Self-compassion:</strong> Place hand on heart, speak kindly to yourself</li>
+                  </ul>
+                  <p><strong>What doesn\'t work:</strong> High-intensity exercise, forceful breathing, pushing yourself---these can trigger more shutdown.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'ventral-maintenance',
+              label: 'Ventral Vagal (Maintaining Safety)',
+              content: (
+                <div className="space-y-4">
+                  <p className="mb-4"><strong>Goal:</strong> Sustain and deepen ventral vagal state through connection and play.</p>
+                  <ul className="list-disc pl-6 mb-6 space-y-2">
+                    <li><strong>Social connection:</strong> Spend time with safe, attuned people (strengthens ventral pathways)</li>
+                    <li><strong>Play and laughter:</strong> Playful activities signal safety to nervous system</li>
+                    <li><strong>Creative expression:</strong> Art, music, writing, crafting (engages without stress)</li>
+                    <li><strong>Mindful presence:</strong> Meditation, nature walks, gentle yoga (when already calm)</li>
+                    <li><strong>Gratitude practice:</strong> Notice what\'s good, what feels safe (reinforces safety cues)</li>
+                    <li><strong>Sleep hygiene:</strong> Prioritize rest to maintain vagal tone</li>
+                  </ul>
+                  <p><strong>Key insight:</strong> Don\'t wait until crisis to regulate. Build vagal tone daily when you\'re already calm.</p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <h2
+          id="building-safety"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Building a Nervous System That Feels Safe
+        </h2>
+
+        <p className="mb-6">
+          The ultimate goal isn\'t to never experience sympathetic or dorsal states---those are adaptive survival responses. The goal is <strong>flexibility</strong>: the ability to move fluidly between states as circumstances warrant, and to return to ventral vagal baseline when threat has passed.
+        </p>
+
+        <p className="mb-6">
+          Building this flexibility requires patience and consistency. Your nervous system didn\'t become dysregulated overnight, and it won\'t heal overnight. But every moment spent in ventral vagal state---through safe relationships, regulating practices, co-regulation---strengthens those neural pathways. Over time, ventral vagal becomes easier to access and maintain.
+        </p>
+
+        <p className="mb-6">
+          The most important practice: seek co-regulation. Find safe people, attuned therapists, supportive communities. Your nervous system learned dysregulation through relationships (trauma, neglect, chaos); it heals through relationships too. Connection is both the problem and the solution.
+        </p>
 
         <ArticleCallout variant="key-takeaway" title="The Bottom Line">
           <p className="mb-4">

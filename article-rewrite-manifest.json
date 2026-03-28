@@ -3,7 +3,7 @@
   "generatedAt": "2026-03-26T22:20:03.374Z",
   "wordThreshold": 1500,
   "totalSessions": 260,
-  "completedSessions": 123,
+  "completedSessions": 126,
   "totalArticles": 1246,
   "sessions": {
     "1": {
@@ -547,7 +547,7 @@
       "completedAt": "2026-03-28T13:45:00Z"
     },
     "11": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "06b-neuroscience-of-emotions",
       "file": "src/data/articles/category-01/06b-neuroscience-of-emotions.tsx",
@@ -583,7 +583,7 @@
           "slug": "default-mode-network-brain-lost-in-thought",
           "title": "The Default Mode Network: What Your Brain Does When You're Lost in Thought",
           "currentWords": 134,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -591,10 +591,10 @@
           "slug": "polyvagal-theory-nervous-system-three-states",
           "title": "Polyvagal Theory in Plain Language: Your Nervous System's Three States",
           "currentWords": 181,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-28T06:12:14Z"
     },
     "12": {
       "status": "complete",
@@ -907,7 +907,7 @@
       "completedAt": null
     },
     "19": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "02b-panic-physical-anxiety-somatic-symptoms",
       "file": "src/data/articles/category-02/02b-panic-physical-anxiety-somatic-symptoms.tsx",
@@ -954,10 +954,10 @@
           "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-28T06:15:00Z"
     },
     "20": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "03a-social-anxiety-fear-of-judgment",
       "file": "src/data/articles/category-02/03a-social-anxiety-fear-of-judgment.tsx",
@@ -1004,7 +1004,7 @@
           "status": "pending"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-28T06:20:00Z"
     },
     "21": {
       "status": "complete",

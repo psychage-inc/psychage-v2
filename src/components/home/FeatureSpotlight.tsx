@@ -16,9 +16,7 @@ const FeatureSpotlight: React.FC = () => {
     return (
         <section className="py-16 sm:py-20 lg:py-28 px-6 relative overflow-hidden">
             {/* Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-teal-950 via-teal-900 to-teal-800" />
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(20,184,166,0.2),_transparent_50%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(13,148,136,0.15),_transparent_50%)]" />
+            <div className="absolute inset-0 bg-teal-950" />
 
             <div className="container mx-auto max-w-6xl relative z-10">
                 {/* Stats Row */}
@@ -74,7 +72,7 @@ const FeatureSpotlight: React.FC = () => {
                         </div>
 
                         <Button
-                            className="h-12 px-7 rounded-full bg-teal-500 hover:bg-teal-400 text-teal-950 font-bold shadow-lg shadow-teal-500/20"
+                            className="h-12 px-7 rounded-full bg-teal-500 hover:bg-teal-400 text-teal-950 font-bold shadow-sm transition-transform hover:scale-[1.01]"
                             rightIcon={<ArrowRight className="w-4 h-4" />}
                             onClick={() => navigate('/tools/symptom-navigator')}
                         >
@@ -90,7 +88,7 @@ const FeatureSpotlight: React.FC = () => {
                         transition={{ duration: 0.5, delay: 0.15 }}
                         className="relative"
                     >
-                        <div className="bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl shadow-black/20 overflow-hidden">
+                        <div className="bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 shadow-sm overflow-hidden hover:scale-[1.01] transition-transform">
                             <div className="p-6 md:p-8">
                                 <div className="flex items-center gap-3 mb-6">
                                     <div className="w-10 h-10 rounded-xl bg-teal-500/15 flex items-center justify-center">
@@ -145,8 +143,8 @@ const FeatureSpotlight: React.FC = () => {
                         </div>
 
                         {/* Decorative */}
-                        <div className="absolute -z-10 -top-4 -right-4 w-32 h-32 bg-teal-400/10 rounded-full blur-2xl" />
-                        <div className="absolute -z-10 -bottom-4 -left-4 w-24 h-24 bg-emerald-400/10 rounded-full blur-2xl" />
+                        <div className="absolute -z-10 -top-4 -right-4 w-32 h-32 bg-teal-400/10 rounded-full blur-2xl hidden md:block" />
+                        <div className="absolute -z-10 -bottom-4 -left-4 w-24 h-24 bg-emerald-400/10 rounded-full blur-2xl hidden md:block" />
                     </motion.div>
                 </div>
             </div>

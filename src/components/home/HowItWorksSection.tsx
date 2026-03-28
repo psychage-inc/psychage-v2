@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Lock } from 'lucide-react';
 import InteractiveCard from '../ui/InteractiveCard';
-import { useNavigate } from 'react-router-dom';
 
 // ─── Animated SVG Icons ────────────────────────────────────────────
 
@@ -148,8 +146,6 @@ const steps = [
 // ─── Component ─────────────────────────────────────────────────────
 
 const HowItWorksSection: React.FC = () => {
-    const navigate = useNavigate();
-
     return (
         <section id="how-it-works" className="relative py-16 sm:py-20 lg:py-28 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50/80 to-white dark:from-slate-950 dark:via-slate-900/50 dark:to-slate-950" />
@@ -204,33 +200,6 @@ const HowItWorksSection: React.FC = () => {
                     })}
                 </div>
 
-                {/* Privacy callout + CTA */}
-                <motion.div
-                    initial={{ opacity: 0, y: 16 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.35 }}
-                    className="mt-14 flex flex-col items-center gap-5"
-                >
-                    <div className="max-w-lg w-full rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 text-center shadow-sm">
-                        <div className="flex items-center justify-center gap-2 mb-3">
-                            <Lock className="w-5 h-5 text-teal-600 dark:text-teal-400" />
-                            <span className="font-semibold text-slate-900 dark:text-white text-base">
-                                Your data never leaves your device
-                            </span>
-                        </div>
-                        <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                            Psychage is built with privacy at its foundation. Your wellness data is processed and stored entirely on your device — it never touches our servers. Our architecture is designed to meet the principles of HIPAA and GDPR, so you can explore your mental health with complete confidence that your information remains yours alone.
-                        </p>
-                    </div>
-                    <button
-                        onClick={() => navigate('/clarity-score')}
-                        className="inline-flex items-center gap-2 px-8 py-3.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-medium text-sm hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors shadow-lg"
-                    >
-                        Start Your Journey
-                        <ArrowRight className="w-4 h-4" />
-                    </button>
-                </motion.div>
             </div>
         </section>
     );

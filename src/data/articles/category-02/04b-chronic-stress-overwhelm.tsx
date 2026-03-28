@@ -29,6 +29,26 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Chronic Stress', 'Physical Health', 'Cardiovascular', 'Immune System', 'Disease Risk'],
+    summary: 'Chronic stress damages every major organ system in your body through inflammation, hormonal dysregulation, and immune suppression. This research digest explores the mechanisms by which sustained psychological stress increases risk for cardiovascular disease, weakens immunity, disrupts metabolism, and harms digestive health—plus what evidence reveals about prevention.',
+    keyFacts: [
+      { text: 'Chronic stress increases all-cause mortality risk by 43% and raises heart attack risk by 120% compared to low-stress individuals.', citationIndex: 1 },
+      { text: 'Psychological stress triggers systemic inflammation by activating the HPA axis and sympathetic nervous system, leading to elevated inflammatory markers (IL-6, CRP, TNF-α) that drive chronic disease.', citationIndex: 2 },
+      { text: 'Chronic stress doubles the risk of Type 2 diabetes through cortisol-driven insulin resistance and increased visceral fat accumulation.', citationIndex: 7 },
+      { text: 'Sustained stress suppresses immune function by reducing lymphocyte production and antibody response, making you more susceptible to infections and slower to heal.', citationIndex: 4 },
+      { text: 'Stress disrupts the gut-brain axis, increasing risk for IBS, ulcers, and inflammatory bowel disease through altered gut motility and microbiome composition.', citationIndex: 6 },
+    ],
+    sparkMoment: 'Stress doesn\'t just feel bad—it physically rewires your body for disease, but understanding these mechanisms transforms stress management from optional self-care into essential preventive medicine.',
+    practicalExercise: {
+      title: 'Map Your Stress-Body Connection',
+      steps: [
+        { title: 'Identify Physical Symptoms', description: 'List physical symptoms you experience during or after stressful periods: headaches, digestive issues, muscle tension, sleep problems, frequent colds, or heart palpitations.' },
+        { title: 'Track Patterns', description: 'For one week, note when these symptoms appear and what stressors preceded them. Use the mood journal to document stress levels and physical sensations together.' },
+        { title: 'Choose One System to Support', description: 'Based on your tracking, select the system most affected (cardiovascular, immune, digestive, or metabolic) and implement one protective behavior: exercise for heart health, sleep for immunity, fiber for gut health, or mindfulness for metabolism.' },
+        { title: 'Monitor Changes', description: 'After 4 weeks, reassess your physical symptoms. Notice which have improved and adjust your stress management strategy accordingly.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Stress & Physical Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -470,6 +490,26 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Financial Stress', 'Money Anxiety', 'Mental Health', 'Coping Strategies'],
+    summary: 'Financial stress carries unique psychological weight—threatening survival needs, consuming mental bandwidth, and tangling with shame in ways that make it especially hard to manage. This article explores why money worries feel so overwhelming, the mental health impacts of financial insecurity, and evidence-based strategies to break the worry cycle and regain control.',
+    keyFacts: [
+      { text: '73% of adults report money as a significant source of stress, with 46% saying financial worries keep them awake at night.', citationIndex: 5 },
+      { text: 'Financial stress doubles the risk of depression and increases anxiety disorder rates by 50% compared to financially secure individuals.', citationIndex: 1 },
+      { text: 'Money scarcity creates "tunneling"—narrowed focus on immediate financial concerns that reduces cognitive bandwidth for other decisions and long-term planning.', citationIndex: 7 },
+      { text: 'Financial stress triggers the same brain regions as physical pain, explaining why money worries feel viscerally uncomfortable and hard to ignore.', citationIndex: 2 },
+      { text: 'Breaking financial worries into concrete, actionable steps—rather than abstract "money problems"—reduces anxiety by 40% and improves financial behaviors.', citationIndex: 8 },
+    ],
+    sparkMoment: 'Financial stress feels uniquely consuming because money is survival—but recognizing when scarcity is narrowing your mental bandwidth is the first step toward widening your options.',
+    practicalExercise: {
+      title: 'Break the Financial Worry Cycle',
+      steps: [
+        { title: 'Name the Specific Worry', description: 'Instead of "I\'m stressed about money," identify the precise concern: "I\'m worried about making rent next month" or "I don\'t know how I\'ll pay this medical bill." Specificity reduces overwhelm.' },
+        { title: 'Separate What You Control', description: 'List what you CAN control (spending today, income sources, payment plans) versus what you CAN\'T (past decisions, economic conditions). Focus energy only on the first column.' },
+        { title: 'Take One Small Action', description: 'Choose the smallest possible step toward your specific worry: call to ask about a payment plan, review one subscription to cut, or set up automatic savings of $5/week. Action breaks rumination.' },
+        { title: 'Schedule Worry Time', description: 'Set aside 15 minutes daily for financial review. Outside that window, redirect money worries: "I\'ll think about this during my scheduled time." This prevents all-day rumination.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Financial Stress Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -855,6 +895,26 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Caregiver Stress', 'Burnout', 'Compassion Fatigue', 'Self-Care', 'Support'],
+    summary: 'Caregiver stress is a unique form of chronic strain marked by indefinite duration, relentless 24/7 demands, and the emotional complexity of caring for a loved one who may be declining. This article examines the physical and psychological toll of caregiving, explains why it accelerates biological aging, and provides evidence-based strategies to sustain your wellbeing while caring for others.',
+    keyFacts: [
+      { text: '53 million Americans provide unpaid family care, with 40% reporting high emotional stress and spending an average of 17 hours per week caregiving.', citationIndex: 3 },
+      { text: 'High-burden caregivers have a 63% increased risk of mortality compared to non-caregivers, making caregiver stress a significant health risk factor.', citationIndex: 2 },
+      { text: 'Caregivers of people with dementia show accelerated cellular aging—their telomeres (chromosome caps that shorten with age) are equivalent to 9-17 years of additional aging.', citationIndex: 4 },
+      { text: 'Compassion fatigue—reduced ability to empathize after prolonged exposure to others\' suffering—affects 40-85% of healthcare professionals and family caregivers, distinct from general burnout.', citationIndex: 6 },
+      { text: 'Structured caregiver support programs (respite care, skills training, counseling) reduce depression by 32% and improve physical health markers, proving interventions work.', citationIndex: 5 },
+    ],
+    sparkMoment: 'Caring for someone you love can literally age you faster—but recognizing caregiver stress as a legitimate health risk, not a moral failing, opens the door to life-sustaining support.',
+    practicalExercise: {
+      title: 'Build Your Caregiver Resilience Plan',
+      steps: [
+        { title: 'Identify Your Warning Signs', description: 'List 3-5 physical or emotional signals that your stress is escalating: sleep disruption, irritability, appetite changes, recurring illness, or feeling numb. These are your early warning system.' },
+        { title: 'Schedule Respite—Not When Desperate', description: 'Book recurring respite care (even 2 hours weekly) BEFORE you reach crisis. Waiting until you\'re depleted makes it harder to arrange. Respite is preventive care, not indulgence.' },
+        { title: 'Practice Micro-Self-Care', description: 'You may not have time for a spa day, but you have 5 minutes. Choose one daily micro-habit: morning stretch, midday breathing exercise, evening gratitude reflection. Small, consistent self-care compounds.' },
+        { title: 'Connect with Others Who Understand', description: 'Join a caregiver support group (in-person or online). Talking with others who truly get it reduces isolation and provides practical coping strategies. Use the mood journal to track how connection affects your stress.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Caregiver Stress Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1201,6 +1261,26 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Allostatic Load', 'Chronic Stress', 'Biomarkers', 'Health', 'Neuroscience'],
+    summary: 'Allostatic load represents the cumulative biological burden of chronic stress on your body. This article explains how stress accumulates through four distinct patterns, how researchers measure it using biomarkers across multiple systems, and evidence-based strategies to reduce your stress burden and restore resilience.',
+    keyFacts: [
+      { text: 'Allostatic load is measured using a composite index of biomarkers across cardiovascular, metabolic, neuroendocrine, and immune systems, with scores of 4+ out of 10 predicting significantly worse health outcomes.', citationIndex: 4 },
+      { text: 'Black adults in the U.S. show higher allostatic load at every income level, reflecting the cumulative physiological toll of chronic discrimination and systemic racism (termed "weathering").', citationIndex: 5 },
+      { text: 'High allostatic load accelerates biological aging through telomere shortening, epigenetic changes, and earlier onset of frailty and cognitive decline.', citationIndex: 6 },
+      { text: 'Chronic stress accumulates through four patterns: repeated hits, lack of adaptation, prolonged response, and inadequate response—each creating distinct physiological strain.', citationIndex: 3 },
+      { text: 'Eight weeks of mindfulness-based stress reduction (MBSR) can reduce cortisol, inflammation, and blood pressure, demonstrating that allostatic load is modifiable with sustained intervention.', citationIndex: 7 },
+    ],
+    sparkMoment: 'Chronic stress doesn\'t just make you feel older—it makes you biologically older, but with the right interventions, you can literally turn back your biological clock.',
+    practicalExercise: {
+      title: 'Track Your Stress Patterns to Reduce Allostatic Load',
+      steps: [
+        { title: 'Identify Your Pattern', description: 'Review the four types of allostatic load. Which pattern best describes your stress response: repeated hits, lack of adaptation, prolonged response, or inadequate response?' },
+        { title: 'Monitor Your Biomarkers', description: 'At your next physical, ask for cardiovascular (blood pressure, heart rate), metabolic (cholesterol, glucose), and inflammatory (CRP) markers. Track these over time.' },
+        { title: 'Choose One Intervention', description: 'Select one evidence-based strategy to reduce allostatic load: mindfulness meditation, aerobic exercise, sleep restoration, or therapy. Commit to 8 weeks.' },
+        { title: 'Measure Progress', description: 'After 8 weeks, reassess your biomarkers and subjective stress levels. Document changes in your mood journal to track your stress reduction journey.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Stress in Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -1562,6 +1642,26 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Stress Inoculation', 'Resilience', 'Coping Skills', 'Psychology', 'Growth'],
+    summary: 'Stress inoculation is the process by which controlled, manageable exposure to stress strengthens your ability to handle future challenges. Like a psychological vaccine, gradual challenge builds resilience. This article explores the science of beneficial stress, explains how moderate stress enhances learning and performance, and provides a framework for deliberately building stress tolerance.',
+    keyFacts: [
+      { text: 'Moderate, time-limited stress enhances learning and memory by improving cortisol-mediated memory consolidation, especially for emotionally significant information.', citationIndex: 4 },
+      { text: 'The Yerkes-Dodson Law demonstrates that optimal performance occurs at moderate stress levels—too little stress leads to boredom and poor performance, while too much causes overwhelm and dysfunction.', citationIndex: 2 },
+      { text: 'Hormesis—a biological phenomenon where low-dose stressors activate protective cellular mechanisms—explains why controlled stress exposure can improve physiological function and resilience.', citationIndex: 5 },
+      { text: 'Successfully navigating manageable challenges builds self-efficacy (belief in your ability to cope), which predicts better stress outcomes in future high-pressure situations.', citationIndex: 7 },
+      { text: 'Structured resilience training programs that incorporate stress inoculation techniques reduce anxiety by 30-40% and improve coping skills across diverse populations.', citationIndex: 6 },
+    ],
+    sparkMoment: 'The first time you face a challenge, your heart races—but by the fiftieth time, it feels routine, because your nervous system has learned that this stressor is survivable.',
+    practicalExercise: {
+      title: 'Design Your Personal Stress Inoculation Plan',
+      steps: [
+        { title: 'Identify a Growth-Edge Challenge', description: 'Choose one stressor you want to handle better: public speaking, difficult conversations, time pressure, or uncertainty. Pick something manageable but outside your comfort zone.' },
+        { title: 'Create Graduated Exposures', description: 'Break your challenge into 5-7 progressively harder steps. Example for public speaking: 1) Present to mirror, 2) Present to friend, 3) Present to 3 people, 4) Present to 10, 5) Present to 30. Start with step 1.' },
+        { title: 'Practice with Recovery', description: 'Complete one exposure per week. After each, allow recovery time and reflect: What went well? What did I learn about my capacity? Gradual exposure with rest prevents overwhelm.' },
+        { title: 'Track Your Progress', description: 'Use the mood journal to rate your anxiety before and after each exposure. You should see anxiety decrease over repeated exposures—evidence your stress inoculation is working.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Stress Tolerance Growth',
+    },
     citations: [
       {
         id: '1',

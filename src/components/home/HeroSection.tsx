@@ -17,11 +17,13 @@ const HeroSection: React.FC = () => {
     return (
         <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-background pt-24 pb-20">
             {/* Soft ambient background */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-20 -left-32 w-96 h-96 bg-teal-100/30 dark:bg-teal-900/10 rounded-full blur-3xl" />
-                <div className="absolute bottom-20 -right-32 w-80 h-80 bg-teal-50/40 dark:bg-teal-950/10 rounded-full blur-3xl" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(600px,90vw)] h-[min(600px,90vw)] bg-emerald-50/20 dark:bg-emerald-950/5 rounded-full blur-3xl" />
-            </div>
+            {!prefersReducedMotion && (
+                <div className="absolute inset-0 overflow-hidden pointer-events-none hidden md:block">
+                    <div className="absolute top-20 -left-32 w-96 h-96 bg-teal-100/30 dark:bg-teal-900/10 rounded-full blur-3xl" />
+                    <div className="absolute bottom-20 -right-32 w-80 h-80 bg-teal-50/40 dark:bg-teal-950/10 rounded-full blur-3xl" />
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(600px,90vw)] h-[min(600px,90vw)] bg-emerald-50/20 dark:bg-emerald-950/5 rounded-full blur-3xl" />
+                </div>
+            )}
 
             <div className="container mx-auto px-4 relative z-10 max-w-4xl text-center">
 
@@ -49,7 +51,7 @@ const HeroSection: React.FC = () => {
                 {/* CTA Buttons */}
                 <motion.div {...animate(0.15)} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
                     <Button
-                        className="h-14 px-8 rounded-full text-base bg-teal-600 hover:bg-teal-700 text-white font-bold shadow-lg shadow-teal-600/20 border-none"
+                        className="h-14 px-8 rounded-full text-base bg-teal-600 hover:bg-teal-700 text-white font-bold shadow-sm border-none transition-transform hover:scale-[1.01]"
                         rightIcon={<ArrowRight size={18} />}
                         onClick={() => navigate('/clarity-score')}
                     >
@@ -73,26 +75,23 @@ const HeroSection: React.FC = () => {
                             title: 'Clarity Score',
                             desc: 'A 3-minute check-in to understand your mental baseline',
                             color: 'text-teal-600 dark:text-teal-400',
-                            bg: 'bg-teal-50 dark:bg-teal-950/30',
                         },
                         {
                             icon: BookOpen,
                             title: 'Learn & Grow',
                             desc: 'Expert-written guides on anxiety, mood, resilience, and more',
                             color: 'text-emerald-600 dark:text-emerald-400',
-                            bg: 'bg-emerald-50 dark:bg-emerald-950/30',
                         },
                         {
                             icon: Shield,
                             title: 'Completely Private',
                             desc: 'No accounts needed. Nothing leaves your device — ever',
                             color: 'text-slate-600 dark:text-slate-400',
-                            bg: 'bg-slate-50 dark:bg-slate-900/50',
                         },
-                    ].map(({ icon: Icon, title, desc, color, bg }) => (
+                    ].map(({ icon: Icon, title, desc, color }) => (
                         <div
                             key={title}
-                            className={`${bg} rounded-2xl p-5 text-left border border-transparent hover:border-border transition-colors`}
+                            className={`bg-surface border border-border/50 shadow-sm hover:scale-[1.01] hover:border-border rounded-2xl p-5 text-left transition-all`}
                         >
                             <Icon className={`w-5 h-5 ${color} mb-3`} />
                             <h3 className="font-display font-semibold text-sm text-text-primary mb-1">{title}</h3>

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import {
   ShieldCheck, Search as SearchIcon,
-  ArrowRight, UserCheck, MessageCircle, Stethoscope,
+  ArrowRight, UserCheck, MessageCircle,
   FlaskConical, Sparkles, Check,
 } from 'lucide-react';
 import SEO from '@/components/SEO';
@@ -28,7 +28,6 @@ const ProvidersLandingPage: React.FC = () => {
   const navigate = useNavigate();
   const lookups = useProviderLookups();
 
-  const conditionSpecialties = lookups.conditionSpecialties.slice(0, 12);
   const providerTypes = lookups.providerTypes;
 
   const handleSearch = (query: string, _location: string) => {
@@ -46,17 +45,13 @@ const ProvidersLandingPage: React.FC = () => {
 
       {/* Hero */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-teal-50/50 to-transparent dark:from-teal-900/10 dark:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-teal-50 to-white dark:from-gray-900 dark:to-gray-950" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-50 dark:bg-teal-900/20 border border-teal-100 dark:border-teal-800 mb-6">
-              <Stethoscope size={14} className="text-teal-600 dark:text-teal-400" />
-              <span className="text-xs font-bold tracking-widest uppercase text-teal-700 dark:text-teal-300">Provider Directory</span>
-            </div>
             <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-gray-900 dark:text-white mb-4 tracking-tight">
               Find a Mental Health Provider{' '}
               <span className="text-gray-400 dark:text-gray-500">You Can Trust</span>
@@ -102,38 +97,7 @@ const ProvidersLandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Browse by Specialty */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-display font-bold text-3xl text-gray-900 dark:text-white mb-2">Browse by Specialty</h2>
-          <p className="text-gray-500 dark:text-gray-400 mb-10">Find providers who specialize in what you need.</p>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-            {conditionSpecialties.map((spec, i) => (
-              <motion.div
-                key={spec.id}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-              >
-                <Link
-                  to={`/providers/search?specialty=${spec.slug}`}
-                  className="block p-5 bg-gray-50 dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 hover:border-teal-200 dark:hover:border-teal-800 hover:shadow-sm transition-all group"
-                >
-                  <h3 className="font-display font-bold text-sm text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors mb-1">
-                    {spec.label}
-                  </h3>
-                  <div className="flex items-center text-xs text-gray-400 group-hover:text-teal-500 transition-colors">
-                    Find providers
-                    <ArrowRight size={12} className="ml-1 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Browse by Specialty — hidden per design review, code preserved */}
 
       {/* Browse by Provider Type */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -188,13 +152,13 @@ const ProvidersLandingPage: React.FC = () => {
 
       {/* For Providers CTA */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-800 dark:to-gray-900 rounded-3xl p-10 sm:p-12 text-white">
+        <div className="max-w-6xl mx-auto flex justify-end">
+          <div className="w-full max-w-xl bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-800 dark:to-gray-900 rounded-3xl p-10 sm:p-12 text-white">
             <h2 className="font-display font-bold text-2xl sm:text-3xl mb-3">Grow Your Practice, Reach More Patients</h2>
-            <p className="text-gray-300 mb-6 max-w-lg mx-auto">
+            <p className="text-gray-300 mb-6">
               Join the Psychage provider directory and connect directly with patients seeking care.
             </p>
-            <div className="flex flex-col items-start gap-3 max-w-md mx-auto mb-8 text-left">
+            <div className="flex flex-col items-start gap-3 mb-8">
               <div className="flex items-center gap-3">
                 <div className="w-5 h-5 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0">
                   <Check size={12} className="text-teal-400" />
@@ -214,7 +178,7 @@ const ProvidersLandingPage: React.FC = () => {
                 <span className="text-sm text-gray-300">400,000+ providers already listed and growing</span>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
               <Link to="/for-providers">
                 <Button className="bg-teal-500 hover:bg-teal-600 text-white font-bold px-8" rightIcon={<ArrowRight size={16} />}>
                   List Your Practice

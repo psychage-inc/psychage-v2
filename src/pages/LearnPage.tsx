@@ -1,208 +1,264 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { Search, BookOpen, Sparkles, ArrowRight, Clock } from 'lucide-react';
+import { Search, BookOpen, ArrowRight, Clock, Bookmark, User } from 'lucide-react';
 import SEO from '../components/SEO';
 import { useArticleService } from '../services/articleService';
 import { categoryService } from '../services/categoryService';
 import { Article, Category } from '../types/models';
-import ArticleCard from '../components/article/ArticleCard';
 import Button from '../components/ui/Button';
-import Badge from '../components/ui/Badge';
-import { getCategoryTheme, getCategoryBadgeClasses } from '../config/categoryThemes';
+import { getCategoryTheme } from '../config/categoryThemes';
 import { getArticleUrl, getCategoryUrl } from '../lib/articleUrl';
+import { useBookmarks } from '../context/BookmarkContext';
+import { useAuth } from '../context/AuthContext';
+import AuthModal from '../components/auth/AuthModal';
 
 // ─── Priority ordering: categories with cover images first ──────────
 const PRIORITY_CATEGORY_SLUGS = [
-    // Categories 1-5 (slugs match DB article_categories table)
     'emotional-regulation',
     'anxiety-stress',
     'relationships-social',
     'self-esteem-identity',
     'workplace-academic',
-    // Categories 19-20
     'mens-mental-health',
     'chronic-illness-pain',
 ];
 
-// ─── Compact Horizontal Article Card ─────────────────────────────────
-const CompactArticleCard: React.FC<{ article: Article; onClick: () => void }> = ({ article, onClick }) => {
+// ─── Featured Hero Card (Editor's Picks — left column) ──────────────
+const FeaturedHeroCard: React.FC<{
+    article: Article;
+    onClick: () => void;
+}> = ({ article, onClick }) => {
     const theme = getCategoryTheme(article.category.slug);
     const FallbackIcon = theme.icon;
     const [imgError, setImgError] = React.useState(false);
-    return (
-    <button
-        onClick={onClick}
-        className="group flex items-center gap-4 w-full p-3 rounded-2xl bg-surface/50 border border-border/50 hover:border-primary/30 hover:bg-surface transition-all duration-300 text-left"
-    >
-        <div className="w-20 h-20 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 shrink-0">
-            {article.image && !imgError ? (
-                <img src={article.image} alt={article.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onError={() => setImgError(true)} />
-            ) : (
-                <div className={`w-full h-full flex items-center justify-center ${theme.classes.bgLight} ${theme.classes.bgLightDark}`}>
-                    <FallbackIcon size={24} className={`${theme.classes.text} ${theme.classes.textDark} opacity-40`} />
-                </div>
-            )}
-        </div>
-        <div className="flex-1 min-w-0">
-            <h4 className="font-display font-bold text-sm text-text-primary leading-snug line-clamp-2 group-hover:text-primary transition-colors">
-                {article.title}
-            </h4>
-            <div className="flex items-center gap-2 mt-1.5 text-xs text-text-tertiary">
-                <Clock size={12} />
-                <span>{article.readTime ?? 5} min read</span>
-            </div>
-        </div>
-        <ArrowRight size={16} className="text-text-tertiary group-hover:text-primary group-hover:translate-x-1 transition-all shrink-0" />
-    </button>
-    );
-};
-
-// ─── Bento Card for Hero Grid ────────────────────────────────────────
-const BentoCard: React.FC<{
-    article: Article;
-    className?: string;
-    size: 'large' | 'small';
-    onClick: () => void;
-}> = ({ article, className = '', size, onClick }) => {
-    const theme = getCategoryTheme(article.category.slug);
-    const Icon = theme.icon;
-    const [imgError, setImgError] = React.useState(false);
 
     return (
-        <button
-            onClick={onClick}
-            className={`relative overflow-hidden rounded-2xl group text-left transition-all duration-300 hover:scale-[1.01] ${className}`}
-        >
-            {article.image && !imgError ? (
-                <img
-                    src={article.image}
-                    alt={article.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                    onError={() => setImgError(true)}
-                />
-            ) : (
-                <div className={`absolute inset-0 ${theme.classes.bg}`}>
-                    <Icon size={size === 'large' ? 80 : 48} className="absolute bottom-4 right-4 text-white/10" />
-                </div>
-            )}
-            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
-            <div className="relative z-10 h-full flex flex-col justify-end p-5">
-                <Badge variant="neutral" className={`mb-2 w-fit backdrop-blur-sm border-0 ${getCategoryBadgeClasses(article.category.slug)}`}>
-                    {article.category.name}
-                </Badge>
-                <h3 className={`font-display font-bold text-white leading-tight ${size === 'large' ? 'text-xl line-clamp-2' : 'text-sm line-clamp-2'}`}>
-                    {article.title}
-                </h3>
-                {size === 'large' && article.description && (
-                    <p className="text-white/70 text-sm mt-1 line-clamp-1">{article.description}</p>
+        <button onClick={onClick} className="group text-left w-full">
+            <div className="aspect-[16/10] w-full overflow-hidden rounded-xl border border-border">
+                {article.image && !imgError ? (
+                    <img
+                        src={article.image}
+                        alt={article.title}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                        onError={() => setImgError(true)}
+                    />
+                ) : (
+                    <div className={`w-full h-full flex items-center justify-center bg-surface`}>
+                        <FallbackIcon size={64} className="text-text-tertiary opacity-30" />
+                    </div>
                 )}
+            </div>
+
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary tracking-tight leading-tight mt-5 group-hover:text-primary transition-colors line-clamp-2">
+                {article.title}
+            </h2>
+
+            {article.description && (
+                <p className="text-lg text-text-secondary leading-relaxed mt-3 line-clamp-2">
+                    {article.description}
+                </p>
+            )}
+
+            <div className="flex items-center gap-4 mt-4">
+                {article.author && (
+                    <span className="flex items-center gap-1.5 text-xs text-text-tertiary font-semibold uppercase tracking-wider">
+                        <User size={14} />
+                        {typeof article.author === 'string' ? article.author : article.author.name}
+                    </span>
+                )}
+                <span className="flex items-center gap-1.5 text-xs text-text-tertiary font-semibold uppercase tracking-wider">
+                    <Clock size={14} />
+                    {article.readTime ?? 5} min read
+                </span>
+                <span className="text-xs text-text-tertiary font-semibold uppercase tracking-wider">
+                    {article.category.name}
+                </span>
             </div>
         </button>
     );
 };
 
-// ─── Themed Section Header ───────────────────────────────────────────
-const CategorySectionHeader: React.FC<{
-    category: Category;
-    articleCount: number;
-    onViewAll: () => void;
-}> = ({ category, articleCount, onViewAll }) => {
-    const theme = getCategoryTheme(category.slug);
-    const Icon = theme.icon;
-
+// ─── Trending List Item (Editor's Picks — right column, text-only) ──
+const TrendingListItem: React.FC<{
+    article: Article;
+    index: number;
+    onClick: () => void;
+}> = ({ article, index, onClick }) => {
     return (
-        <div className="mb-8">
-            <div className={`h-1 w-20 rounded-full bg-gradient-to-r ${theme.classes.gradient} mb-5`} />
-
-            <div className="flex items-start justify-between gap-4">
-                <div className="flex items-center gap-4">
-                    <div className={`w-12 h-12 rounded-2xl flex items-center justify-center ${theme.classes.bg} shadow-lg shadow-${theme.colorFamily}-500/20`}>
-                        <Icon size={22} className="text-white" />
-                    </div>
-                    <div>
-                        <h3 className="text-2xl font-display font-bold text-text-primary leading-tight">
-                            {category.name}
-                        </h3>
-                        <p className="text-sm text-text-tertiary mt-0.5">
-                            {articleCount} {articleCount === 1 ? 'article' : 'articles'}
-                        </p>
-                    </div>
+        <button
+            onClick={onClick}
+            className="group flex items-start gap-5 w-full py-5 text-left border-b border-border last:border-b-0"
+        >
+            <span className="text-3xl font-bold text-border font-display leading-none shrink-0 w-8">
+                {String(index + 1).padStart(2, '0')}
+            </span>
+            <div className="flex-1 min-w-0">
+                <h3 className="font-display font-bold text-base text-text-primary leading-snug group-hover:text-primary transition-colors line-clamp-2">
+                    {article.title}
+                </h3>
+                <div className="flex items-center gap-3 mt-2 text-xs text-text-tertiary">
+                    <span>{article.category.name}</span>
+                    <span className="w-1 h-1 rounded-full bg-text-tertiary inline-block" />
+                    <span>{article.readTime ?? 5} min read</span>
                 </div>
-                <button
-                    onClick={onViewAll}
-                    className={`inline-flex items-center gap-1.5 text-sm font-semibold transition-all hover:gap-2.5 ${theme.classes.text} ${theme.classes.textDark}`}
-                >
-                    View all
-                    <ArrowRight size={16} />
-                </button>
             </div>
-        </div>
+        </button>
     );
 };
 
-// ─── Layout A: Hero Feature (hero left + 2 compact right) ───────────
-const LayoutHeroFeature: React.FC<{
-    articles: Article[];
-    navigate: (path: string) => void;
-}> = ({ articles, navigate }) => {
-    const [hero, ...rest] = articles;
-    const compactArticles = rest.slice(0, 2);
-
-    if (!hero) return null;
+// ─── Flat Article Card (Topic Explorer + Search Results) ────────────
+const FlatArticleCard: React.FC<{
+    article: Article;
+    onNavigate: () => void;
+    isBookmarked: boolean;
+    onToggleBookmark: (e: React.MouseEvent) => void;
+}> = ({ article, onNavigate, isBookmarked: bookmarked, onToggleBookmark }) => {
+    const theme = getCategoryTheme(article.category.slug);
+    const FallbackIcon = theme.icon;
+    const [imgError, setImgError] = React.useState(false);
 
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-            <div className="lg:col-span-3">
-                <ArticleCard
-                    article={hero}
-                    onClick={() => navigate(getArticleUrl(hero))}
-                />
-            </div>
-            <div className="lg:col-span-2 flex flex-col gap-4 justify-center">
-                {compactArticles.map((article) => (
-                    <CompactArticleCard
-                        key={article.id}
-                        article={article}
-                        onClick={() => navigate(getArticleUrl(article))}
+        <article className="group cursor-pointer" onClick={onNavigate}>
+            <div className="aspect-[16/9] w-full overflow-hidden rounded-lg border border-border/50 bg-surface">
+                {article.image && !imgError ? (
+                    <img
+                        src={article.image}
+                        alt={article.title}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                        onError={() => setImgError(true)}
                     />
-                ))}
-                {articles.length > 3 && (
-                    <div className="text-center text-xs text-text-tertiary pt-1">
-                        +{articles.length - 3} more articles in this topic
+                ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                        <FallbackIcon size={40} className="text-text-tertiary opacity-25" />
                     </div>
                 )}
             </div>
-        </div>
+
+            <div className="pt-4">
+                <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs text-text-tertiary font-semibold uppercase tracking-wider">
+                        {article.category.name}
+                    </span>
+                    <button
+                        onClick={onToggleBookmark}
+                        className="p-1.5 rounded-full hover:bg-surface-hover transition-colors"
+                        aria-label={bookmarked ? 'Remove bookmark' : 'Save for later'}
+                    >
+                        <Bookmark
+                            size={16}
+                            className={bookmarked ? 'text-primary fill-primary' : 'text-text-tertiary'}
+                            fill={bookmarked ? 'currentColor' : 'none'}
+                        />
+                    </button>
+                </div>
+
+                <h3 className="font-display font-bold text-lg text-text-primary leading-snug group-hover:text-primary transition-colors line-clamp-2">
+                    {article.title}
+                </h3>
+
+                {article.description && (
+                    <p className="text-sm text-text-secondary leading-relaxed mt-1.5 line-clamp-2">
+                        {article.description}
+                    </p>
+                )}
+
+                <div className="flex items-center gap-3 mt-3 text-xs text-text-tertiary">
+                    <span className="flex items-center gap-1">
+                        <Clock size={12} />
+                        {article.readTime ?? 5} min read
+                    </span>
+                    {article.author && (
+                        <>
+                            <span className="w-1 h-1 rounded-full bg-text-tertiary inline-block" />
+                            <span>
+                                {typeof article.author === 'string' ? article.author : article.author.name}
+                            </span>
+                        </>
+                    )}
+                </div>
+            </div>
+        </article>
     );
 };
 
-// ─── Layout B: Grid Showcase (3-col) ────────────────────────────────
-const LayoutGridShowcase: React.FC<{
-    articles: Article[];
-    navigate: (path: string) => void;
-    accentGradient: string;
-}> = ({ articles, navigate, accentGradient }) => {
-    const topArticles = articles.slice(0, 3);
+// ─── Reading Plan Card (horizontal scroll) ──────────────────────────
+const ReadingPlanCard: React.FC<{
+    article: Article;
+    onClick: () => void;
+}> = ({ article, onClick }) => {
+    const theme = getCategoryTheme(article.category.slug);
+    const FallbackIcon = theme.icon;
+    const [imgError, setImgError] = React.useState(false);
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {topArticles.map((article, i) => (
-                <div
-                    key={article.id}
-                    className={`h-full ${i === 2 ? 'md:col-span-2 lg:col-span-1' : ''}`}
-                >
-                    <div className={`h-full ${i === 2 ? `rounded-3xl ring-1 ring-inset bg-gradient-to-br ${accentGradient} p-[1px]` : ''}`}>
-                        <div className={i === 2 ? 'h-full rounded-[calc(1.5rem-1px)] overflow-hidden' : 'h-full'}>
-                            <ArticleCard
-                                article={article}
-                                onClick={() => navigate(getArticleUrl(article))}
-                            />
-                        </div>
+        <button onClick={onClick} className="group flex-shrink-0 w-64 text-left">
+            <div className="aspect-[16/9] w-full overflow-hidden rounded-lg border border-border/50">
+                {article.image && !imgError ? (
+                    <img
+                        src={article.image}
+                        alt={article.title}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                        onError={() => setImgError(true)}
+                    />
+                ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-surface">
+                        <FallbackIcon size={28} className="text-text-tertiary opacity-25" />
                     </div>
-                </div>
-            ))}
+                )}
+            </div>
+            <div className="pt-3">
+                <span className="text-xs text-text-tertiary font-semibold uppercase tracking-wider">
+                    {article.category.name}
+                </span>
+                <h4 className="font-display font-bold text-sm text-text-primary leading-snug line-clamp-2 mt-1 group-hover:text-primary transition-colors">
+                    {article.title}
+                </h4>
+                <span className="text-xs text-text-tertiary mt-1.5 flex items-center gap-1.5">
+                    <Clock size={11} />
+                    {article.readTime ?? 5} min
+                </span>
+            </div>
+        </button>
+    );
+};
+
+// ─── Tab Menu (sticky horizontal category tabs) ─────────────────────
+const TabMenu: React.FC<{
+    tabs: { slug: string; label: string }[];
+    activeTab: string;
+    onTabChange: (slug: string) => void;
+}> = ({ tabs, activeTab, onTabChange }) => {
+    return (
+        <div className="sticky top-20 z-30 mt-20 bg-background/95 backdrop-blur-sm border-b border-border">
+            <div className="container mx-auto max-w-content px-6">
+                <nav
+                    className="flex gap-1 overflow-x-auto -mb-px"
+                    role="tablist"
+                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' } as React.CSSProperties}
+                >
+                    {tabs.map((tab) => {
+                        const isActive = tab.slug === activeTab;
+                        return (
+                            <button
+                                key={tab.slug}
+                                role="tab"
+                                aria-selected={isActive}
+                                onClick={() => onTabChange(tab.slug)}
+                                className={`whitespace-nowrap text-sm pb-3 pt-3 px-4 transition-colors ${
+                                    isActive
+                                        ? 'border-b-2 border-primary text-text-primary font-bold'
+                                        : 'border-b-2 border-transparent text-text-tertiary hover:text-text-secondary font-medium'
+                                }`}
+                            >
+                                {tab.label}
+                            </button>
+                        );
+                    })}
+                </nav>
+            </div>
         </div>
     );
 };
@@ -214,7 +270,11 @@ const LearnPage: React.FC = () => {
     const [categories, setCategories] = useState<Category[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [searchQuery, setSearchQuery] = useState('');
+    const [activeTab, setActiveTab] = useState<string>('');
+    const [showAuthModal, setShowAuthModal] = useState(false);
     const articleService = useArticleService();
+    const { isAuthenticated } = useAuth();
+    const { bookmarks, toggleBookmark, isBookmarked } = useBookmarks();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -235,24 +295,17 @@ const LearnPage: React.FC = () => {
         fetchData();
     }, [articleService]);
 
-    // Only articles that have a cover image
-    const articlesWithImages = useMemo(() => {
-        return articles.filter(a => !!a.image);
-    }, [articles]);
-
+    // Filter articles by search query (all articles, not just those with images)
     const filteredArticles = useMemo(() => {
-        let result = articlesWithImages;
-        if (searchQuery) {
-            const query = searchQuery.toLowerCase();
-            result = result.filter(a =>
-                a.title.toLowerCase().includes(query) ||
-                (a.description ?? '').toLowerCase().includes(query)
-            );
-        }
-        return result;
-    }, [articlesWithImages, searchQuery]);
+        if (!searchQuery) return articles;
+        const query = searchQuery.toLowerCase();
+        return articles.filter(a =>
+            a.title.toLowerCase().includes(query) ||
+            (a.description ?? '').toLowerCase().includes(query)
+        );
+    }, [articles, searchQuery]);
 
-    // Group ALL articles (with images) by their category slug
+    // Group articles by category slug
     const articlesByCategory = useMemo(() => {
         const grouped: Record<string, Article[]> = {};
         for (const article of filteredArticles) {
@@ -263,7 +316,7 @@ const LearnPage: React.FC = () => {
         return grouped;
     }, [filteredArticles]);
 
-    // Derive category objects from articles themselves (avoids Supabase slug mismatch)
+    // Derive category objects from articles (avoids Supabase slug mismatch)
     const categoriesFromArticles = useMemo(() => {
         const seen = new Map<string, Category>();
         for (const article of articles) {
@@ -282,7 +335,6 @@ const LearnPage: React.FC = () => {
             ...Array.from(categoriesFromArticles.keys()),
         ]);
 
-        // Build a lookup: slug → Category (prefer article-derived for correct theme)
         const catMap = new Map<string, Category>();
         for (const slug of allSlugs) {
             const cat = categoriesFromArticles.get(slug) || categories.find(c => c.slug === slug);
@@ -291,7 +343,6 @@ const LearnPage: React.FC = () => {
             }
         }
 
-        // Priority categories first (in order), then remaining
         const result: Category[] = [];
         for (const slug of PRIORITY_CATEGORY_SLUGS) {
             const cat = catMap.get(slug);
@@ -300,53 +351,109 @@ const LearnPage: React.FC = () => {
                 catMap.delete(slug);
             }
         }
-        // Append remaining categories
         for (const cat of catMap.values()) {
             result.push(cat);
         }
         return result;
     }, [categories, categoriesFromArticles, articlesByCategory]);
 
-    // Bento grid: pick best articles with images from priority categories
-    const bentoArticles = useMemo(() => {
+    // Featured articles: 5 picks (1 hero + 4 trending) from priority categories
+    const featuredArticles = useMemo(() => {
         const picks: Article[] = [];
         const usedCategories = new Set<string>();
-        const priorityWithImages = articlesWithImages.filter(
+        const priorityArticles = articles.filter(
             a => PRIORITY_CATEGORY_SLUGS.includes(a.category.slug)
         );
         // Featured-tagged articles first
-        for (const a of priorityWithImages) {
-            if (picks.length >= 3) break;
+        for (const a of priorityArticles) {
+            if (picks.length >= 5) break;
             if (a.tags.includes('featured') && !usedCategories.has(a.category.slug)) {
                 picks.push(a);
                 usedCategories.add(a.category.slug);
             }
         }
         // Fill from distinct priority categories
-        for (const a of priorityWithImages) {
-            if (picks.length >= 3) break;
+        for (const a of priorityArticles) {
+            if (picks.length >= 5) break;
             if (!usedCategories.has(a.category.slug)) {
                 picks.push(a);
                 usedCategories.add(a.category.slug);
             }
         }
+        // Fill remaining if needed
+        for (const a of priorityArticles) {
+            if (picks.length >= 5) break;
+            if (!picks.includes(a)) {
+                picks.push(a);
+            }
+        }
         return picks;
-    }, [articlesWithImages]);
+    }, [articles]);
+
+    // Tab list: all categories with articles (no "For You" tab)
+    const tabs = useMemo(() => {
+        return orderedCategories.map(c => ({ slug: c.slug, label: c.name }));
+    }, [orderedCategories]);
+
+    // Articles for the currently active tab (6 articles per category in 3×2 grid)
+    const tabArticles = useMemo(() => {
+        return (articlesByCategory[activeTab] || []).slice(0, 6);
+    }, [activeTab, articlesByCategory]);
+
+    // Active category object for category details
+    const activeCategoryObj = useMemo(() => {
+        return orderedCategories.find(c => c.slug === activeTab) || null;
+    }, [activeTab, orderedCategories]);
+
+    // Bookmarked articles resolved from the articles array
+    const readingPlanArticles = useMemo(() => {
+        if (bookmarks.length === 0) return [];
+        const bookmarkSet = new Set(bookmarks.map(String));
+        return articles.filter(a => bookmarkSet.has(String(a.id)));
+    }, [articles, bookmarks]);
+
+    // Recommended articles: 6 articles with cover images from diverse categories
+    const recommendedArticles = useMemo(() => {
+        const withImages = articles.filter(a => a.image);
+        const usedSlugs = new Set<string>();
+        const picks: Article[] = [];
+        // Pick one article per category (prefer those with images)
+        for (const a of withImages) {
+            if (picks.length >= 6) break;
+            if (!usedSlugs.has(a.category.slug)) {
+                picks.push(a);
+                usedSlugs.add(a.category.slug);
+            }
+        }
+        // Fill remaining with any articles that have images
+        for (const a of withImages) {
+            if (picks.length >= 6) break;
+            if (!picks.includes(a)) picks.push(a);
+        }
+        // Fall back to any articles if not enough with images
+        for (const a of articles) {
+            if (picks.length >= 6) break;
+            if (!picks.includes(a)) picks.push(a);
+        }
+        return picks;
+    }, [articles]);
+
+    // Set initial active tab to first category when categories are loaded
+    useEffect(() => {
+        if (orderedCategories.length > 0 && !activeTab) {
+            setActiveTab(orderedCategories[0].slug);
+        }
+    }, [orderedCategories, activeTab]);
 
     const hasNoResults = searchQuery.length > 0 && filteredArticles.length === 0;
     const isSearching = searchQuery.length > 0;
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.1 }
+    const handleToggleBookmark = (articleId: string | number) => (e: React.MouseEvent) => {
+        e.stopPropagation();
+        const toggled = toggleBookmark(articleId);
+        if (!toggled) {
+            setShowAuthModal(true);
         }
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 }
     };
 
     if (isLoading) return (
@@ -356,81 +463,166 @@ const LearnPage: React.FC = () => {
     );
 
     return (
-        <div className="min-h-screen bg-background pb-20 overflow-x-hidden">
+        <div className="min-h-screen bg-background pb-20">
             <SEO
                 title="Learn Hub | Psychage Mental Health Education"
                 description="Explore our comprehensive library of mental health articles, guides, and resources."
             />
 
-            {/* ── Hero Section ─────────────────────────────────────── */}
-            <section className="relative pt-28 pb-16 px-6 overflow-hidden">
-                <div className="container mx-auto max-w-7xl relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface border border-border text-text-primary text-sm font-bold uppercase tracking-wider mb-8 shadow-sm">
-                                <BookOpen size={16} className="text-primary" />
-                                <span>Knowledge Base</span>
+            {/* ── 1. Hero: Editor's Picks ──────────────────────────── */}
+            {featuredArticles.length > 0 && (
+                <section className="pt-20 pb-16 px-6">
+                    <div className="container mx-auto max-w-content">
+                        <p className="text-xs text-text-tertiary font-semibold uppercase tracking-wider mb-6">
+                            Editor's Picks
+                        </p>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+                            {/* Left: Featured hero article */}
+                            <div className="lg:col-span-3">
+                                <FeaturedHeroCard
+                                    article={featuredArticles[0]}
+                                    onClick={() => navigate(getArticleUrl(featuredArticles[0]))}
+                                />
                             </div>
 
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-6 text-text-primary leading-tight">
-                                Mental Health <br />
-                                <span className="text-primary">
-                                    Education & Guides
-                                </span>
-                            </h1>
-
-                            <p className="text-xl text-text-secondary mb-10 max-w-lg leading-relaxed">
-                                Explore expert-reviewed articles, practical guides, and the latest research on emotional well-being.
-                            </p>
-
-                            <div className="max-w-lg relative group">
-                                <div className="relative flex items-center bg-surface border border-border rounded-xl shadow-sm focus-within:ring-2 focus-within:ring-primary/50 transition-all overflow-hidden">
-                                    <Search className="absolute left-4 text-text-tertiary" size={24} />
-                                    <input
-                                        type="text"
-                                        value={searchQuery}
-                                        onChange={(e) => setSearchQuery(e.target.value)}
-                                        placeholder="Search topics (e.g., Anxiety, Sleep, CBT)..."
-                                        className="w-full pl-14 pr-4 py-4 bg-transparent text-text-primary placeholder-text-tertiary outline-none text-lg font-medium"
-                                    />
+                            {/* Right: Numbered text list */}
+                            {featuredArticles.length > 1 && (
+                                <div className="lg:col-span-2 flex flex-col">
+                                    <h3 className="text-xs text-text-tertiary font-semibold uppercase tracking-wider mb-4">
+                                        Trending
+                                    </h3>
+                                    {featuredArticles.slice(1, 5).map((article, i) => (
+                                        <TrendingListItem
+                                            key={article.id}
+                                            article={article}
+                                            index={i}
+                                            onClick={() => navigate(getArticleUrl(article))}
+                                        />
+                                    ))}
                                 </div>
-                            </div>
+                            )}
                         </div>
+                    </div>
+                </section>
+            )}
 
-                        {/* Right Column: Bento Grid with cover images */}
-                        {bentoArticles.length >= 3 && (
-                        <div className="hidden lg:grid grid-cols-2 grid-rows-3 gap-3 h-[420px]">
-                            <BentoCard
-                                article={bentoArticles[0]}
-                                className="col-span-2 row-span-2"
-                                size="large"
-                                onClick={() => navigate(getArticleUrl(bentoArticles[0]))}
-                            />
-                            <BentoCard
-                                article={bentoArticles[1]}
-                                size="small"
-                                onClick={() => navigate(getArticleUrl(bentoArticles[1]))}
-                            />
-                            <BentoCard
-                                article={bentoArticles[2]}
-                                size="small"
-                                onClick={() => navigate(getArticleUrl(bentoArticles[2]))}
+            {/* ── 2. Search Bar + Filter Pills ─────────────────────── */}
+            <section className="border-t border-border">
+                <div className="container mx-auto max-w-content px-6 py-8">
+                    <div className="max-w-xl">
+                        <div className="relative flex items-center">
+                            <Search className="absolute left-0 text-text-tertiary" size={20} />
+                            <input
+                                type="text"
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                                placeholder="Search articles..."
+                                className="w-full pl-8 pr-4 py-3 bg-transparent border-b-2 border-border focus:border-primary text-text-primary placeholder-text-tertiary outline-none text-base font-medium transition-colors"
                             />
                         </div>
-                        )}
+                    </div>
+
+                    <div className="flex flex-wrap gap-2.5 mt-6">
+                        {orderedCategories.map(cat => (
+                            <button
+                                key={cat.slug}
+                                onClick={() => {
+                                    setSearchQuery('');
+                                    setActiveTab(cat.slug);
+                                }}
+                                className={`rounded-full px-4 py-1.5 border text-sm transition-colors ${
+                                    activeTab === cat.slug
+                                        ? 'border-primary bg-primary/5 text-primary font-semibold'
+                                        : 'border-border text-text-secondary hover:bg-surface-hover hover:text-text-primary'
+                                }`}
+                            >
+                                {cat.name}
+                            </button>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* ── No Results State ────────────────────────────────── */}
+            {/* ── 3. My Reading Plan (authenticated only) ──────────── */}
+            {isAuthenticated && (
+                <section className="border-t border-border pt-12">
+                    <div className="container mx-auto max-w-content px-6">
+                        <div className="flex items-center justify-between mb-6">
+                            <div>
+                                <h2 className="text-2xl md:text-3xl font-display font-bold text-text-primary tracking-tight">
+                                    My Reading Plan
+                                </h2>
+                                <p className="text-sm text-text-secondary mt-1">
+                                    {readingPlanArticles.length > 0
+                                        ? `${readingPlanArticles.length} article${readingPlanArticles.length === 1 ? '' : 's'} saved`
+                                        : 'Bookmark articles to build your reading plan'}
+                                </p>
+                            </div>
+                        </div>
+
+                        {readingPlanArticles.length > 0 ? (
+                            <div
+                                className="flex gap-5 overflow-x-auto pb-4 -mx-6 px-6"
+                                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' } as React.CSSProperties}
+                            >
+                                {readingPlanArticles.map(article => (
+                                    <ReadingPlanCard
+                                        key={article.id}
+                                        article={article}
+                                        onClick={() => navigate(getArticleUrl(article))}
+                                    />
+                                ))}
+                            </div>
+                        ) : (
+                            <div className="py-12 text-center border border-dashed border-border rounded-xl">
+                                <Bookmark size={32} className="mx-auto text-text-tertiary mb-3" />
+                                <p className="text-text-secondary text-sm">
+                                    Tap the bookmark icon on any article to save it here.
+                                </p>
+                            </div>
+                        )}
+                    </div>
+                </section>
+            )}
+
+            {/* ── 4. Recommended for You (standalone section) ───────── */}
+            {!isSearching && recommendedArticles.length > 0 && (
+                <section className="border-t border-border pt-12">
+                    <div className="container mx-auto max-w-content px-6">
+                        <div className="mb-8">
+                            <h2 className="text-2xl md:text-3xl font-display font-bold text-text-primary tracking-tight">
+                                Recommended for You
+                            </h2>
+                            <p className="text-base text-text-secondary mt-2 max-w-2xl leading-relaxed">
+                                Curated articles to help you understand yourself and navigate mental health.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {recommendedArticles.map(article => (
+                                <FlatArticleCard
+                                    key={article.id}
+                                    article={article}
+                                    onNavigate={() => navigate(getArticleUrl(article))}
+                                    isBookmarked={isBookmarked(article.id)}
+                                    onToggleBookmark={handleToggleBookmark(article.id)}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/* ── 5. No Results State ──────────────────────────────── */}
             {hasNoResults && (
-                <section className="px-6 mb-24">
-                    <div className="container mx-auto max-w-7xl">
-                        <div className="text-center py-20 bg-surface rounded-3xl border border-dashed border-border">
-                            <Search size={48} className="mx-auto text-text-tertiary mb-4" />
+                <section className="px-6 py-16">
+                    <div className="container mx-auto max-w-content">
+                        <div className="text-center py-20 border border-dashed border-border rounded-xl">
+                            <Search size={40} className="mx-auto text-text-tertiary mb-4" />
                             <h2 className="text-2xl font-display font-bold text-text-primary mb-2">No articles found</h2>
                             <p className="text-text-secondary mb-6">
-                                No articles match &ldquo;{searchQuery}&rdquo;. Try different keywords or browse by category below.
+                                No articles match &ldquo;{searchQuery}&rdquo;. Try different keywords.
                             </p>
                             <Button variant="outline" onClick={() => setSearchQuery('')}>
                                 Clear search
@@ -440,92 +632,157 @@ const LearnPage: React.FC = () => {
                 </section>
             )}
 
-            {/* ── All Categories — priority order ─────────────────── */}
-            {!hasNoResults && orderedCategories.map((category, index) => {
-                const catArticles = articlesByCategory[category.slug] || [];
-                const theme = getCategoryTheme(category.slug);
-                const isLayoutA = index % 2 === 0;
-
-                return (
-                    <motion.section
-                        key={category.id}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: '-50px' }}
-                        transition={{ duration: 0.5, ease: 'easeOut' }}
-                        className={`px-6 ${index === 0 ? 'pt-4' : 'border-t border-border/50 pt-12'} mb-12`}
-                    >
-                        <div className="container mx-auto max-w-7xl">
-                            <CategorySectionHeader
-                                category={category}
-                                articleCount={catArticles.length}
-                                onViewAll={() => navigate(getCategoryUrl(category.slug))}
-                            />
-
-                            {isLayoutA ? (
-                                <LayoutHeroFeature
-                                    articles={catArticles}
-                                    navigate={navigate}
-                                />
-                            ) : (
-                                <LayoutGridShowcase
-                                    articles={catArticles}
-                                    navigate={navigate}
-                                    accentGradient={theme.classes.gradient}
-                                />
-                            )}
-                        </div>
-                    </motion.section>
-                );
-            })}
-
-            {/* ── Search Results (when searching, show all matching) ── */}
+            {/* ── 4b. Search Results ───────────────────────────────── */}
             {isSearching && !hasNoResults && (
-                <section className="px-6 mb-16">
-                    <div className="container mx-auto max-w-7xl">
-                        <div className="flex items-center gap-3 mb-8">
-                            <Sparkles className="text-amber-500" size={24} />
-                            <h2 className="text-3xl font-display font-bold text-text-primary">
+                <section className="px-6 py-12">
+                    <div className="container mx-auto max-w-content">
+                        <div className="flex items-baseline gap-3 mb-8">
+                            <h2 className="text-2xl md:text-3xl font-display font-bold text-text-primary tracking-tight">
                                 Results for &ldquo;{searchQuery}&rdquo;
                             </h2>
-                            <span className="text-sm text-text-tertiary font-medium ml-2">
+                            <span className="text-sm text-text-tertiary font-medium">
                                 {filteredArticles.length} {filteredArticles.length === 1 ? 'article' : 'articles'}
                             </span>
                         </div>
 
-                        <motion.div
-                            variants={containerVariants}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                        >
-                            {filteredArticles.slice(0, 12).map((article) => (
-                                <motion.div key={article.id} variants={itemVariants} className="h-full">
-                                    <ArticleCard
-                                        article={article}
-                                        onClick={() => navigate(getArticleUrl(article))}
-                                    />
-                                </motion.div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {filteredArticles.slice(0, 12).map(article => (
+                                <FlatArticleCard
+                                    key={article.id}
+                                    article={article}
+                                    onNavigate={() => navigate(getArticleUrl(article))}
+                                    isBookmarked={isBookmarked(article.id)}
+                                    onToggleBookmark={handleToggleBookmark(article.id)}
+                                />
                             ))}
-                        </motion.div>
+                        </div>
 
                         {filteredArticles.length > 12 && (
-                            <div className="text-center mt-8 text-text-tertiary text-sm">
-                                Showing 12 of {filteredArticles.length} results. Refine your search to find more specific articles.
-                            </div>
+                            <p className="text-center mt-8 text-text-tertiary text-sm">
+                                Showing 12 of {filteredArticles.length} results. Refine your search for more specific articles.
+                            </p>
                         )}
                     </div>
                 </section>
             )}
 
-            {/* ── CTA Banner ──────────────────────────────────────── */}
+            {/* ── 6. Category Tabs (when NOT searching) ────────────── */}
+            {!isSearching && tabs.length > 0 && (
+                <>
+                    <TabMenu
+                        tabs={tabs}
+                        activeTab={activeTab}
+                        onTabChange={setActiveTab}
+                    />
+
+                    <section className="px-6 py-12">
+                        <div className="container mx-auto max-w-content">
+                            <div className="mb-8">
+                                <h2 className="text-2xl md:text-3xl font-display font-bold text-text-primary tracking-tight">
+                                    {activeCategoryObj?.name ?? 'Articles'}
+                                </h2>
+                                {activeCategoryObj?.description && (
+                                    <p className="text-base text-text-secondary mt-2 max-w-2xl leading-relaxed">
+                                        {activeCategoryObj.description}
+                                    </p>
+                                )}
+                            </div>
+
+                            {tabArticles.length > 0 ? (
+                                <>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                        {tabArticles.map(article => (
+                                            <FlatArticleCard
+                                                key={article.id}
+                                                article={article}
+                                                onNavigate={() => navigate(getArticleUrl(article))}
+                                                isBookmarked={isBookmarked(article.id)}
+                                                onToggleBookmark={handleToggleBookmark(article.id)}
+                                            />
+                                        ))}
+                                    </div>
+
+                                    {activeCategoryObj && tabArticles.length > 6 && (
+                                        <div className="mt-10 text-center">
+                                            <button
+                                                onClick={() => navigate(getCategoryUrl(activeTab))}
+                                                className="inline-flex items-center gap-2 text-sm font-semibold text-text-secondary hover:text-primary transition-colors"
+                                            >
+                                                See all articles in {activeCategoryObj.name}
+                                                <ArrowRight size={16} />
+                                            </button>
+                                        </div>
+                                    )}
+                                </>
+                            ) : (
+                                <div className="text-center py-16">
+                                    <BookOpen size={40} className="mx-auto text-text-tertiary mb-4" />
+                                    <p className="text-text-secondary">No articles in this category yet.</p>
+                                </div>
+                            )}
+                        </div>
+                    </section>
+                </>
+            )}
+
+            {/* ── 7. Full Category Sections (when NOT searching) ────── */}
+            {!isSearching && orderedCategories.length > 0 && (
+                <div className="space-y-24 px-6 pb-12">
+                    <div className="container mx-auto max-w-content">
+                        {orderedCategories.map((category) => {
+                            const categoryArticles = (articlesByCategory[category.slug] || []).slice(0, 12);
+
+                            if (categoryArticles.length === 0) return null;
+
+                            return (
+                                <section key={category.slug} className="space-y-8">
+                                    <div className="flex items-start justify-between gap-4 mt-12 mb-8">
+                                        <div className="flex-1">
+                                            <h2 className="text-2xl md:text-3xl font-display font-bold text-black dark:text-white tracking-tight">
+                                                {category.name}
+                                            </h2>
+                                            {category.description && (
+                                                <p className="text-sm text-text-secondary mt-2 max-w-3xl leading-relaxed">
+                                                    {category.description}
+                                                </p>
+                                            )}
+                                        </div>
+                                        <button
+                                            onClick={() => navigate(getCategoryUrl(category.slug))}
+                                            className="shrink-0 inline-flex items-center gap-2 text-sm font-medium text-text-secondary hover:text-primary transition-colors"
+                                        >
+                                            See all
+                                            <ArrowRight size={16} />
+                                        </button>
+                                    </div>
+
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                        {categoryArticles.map(article => (
+                                            <FlatArticleCard
+                                                key={article.id}
+                                                article={article}
+                                                onNavigate={() => navigate(getArticleUrl(article))}
+                                                isBookmarked={isBookmarked(article.id)}
+                                                onToggleBookmark={handleToggleBookmark(article.id)}
+                                            />
+                                        ))}
+                                    </div>
+                                </section>
+                            );
+                        })}
+                    </div>
+                </div>
+            )}
+
+            {/* ── 8. CTA Banner ────────────────────────────────────── */}
             <section className="px-6 mb-20 mt-8">
-                <div className="container mx-auto max-w-7xl">
-                    <div className="rounded-2xl border border-border bg-surface p-8 md:p-12 shadow-sm">
+                <div className="container mx-auto max-w-content">
+                    <div className="rounded-xl border border-border bg-surface p-8 md:p-12">
                         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                             <div className="max-w-2xl text-center md:text-left">
-                                <h2 className="text-2xl md:text-3xl font-display font-bold mb-3 text-text-primary">Unsure where to start?</h2>
+                                <h2 className="text-2xl md:text-3xl font-display font-bold mb-3 text-text-primary tracking-tight">
+                                    Unsure where to start?
+                                </h2>
                                 <p className="text-text-secondary leading-relaxed">
                                     Take our scientifically-backed Clarity Score assessment to get a personalized mental health baseline and tailored recommendations.
                                 </p>
@@ -542,6 +799,9 @@ const LearnPage: React.FC = () => {
                     </div>
                 </div>
             </section>
+
+            {/* ── 9. Auth Modal (shared for bookmark attempts) ──────── */}
+            <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
         </div>
     );
 };

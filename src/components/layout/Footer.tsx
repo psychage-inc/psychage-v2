@@ -41,9 +41,13 @@ const Footer: React.FC = () => {
 
   const footerLinks: Record<string, FooterLink[]> = {
     learn: [
-      { name: 'Anxiety & Panic', view: 'category', id: 'Anxiety' },
-      { name: 'Depression', view: 'category', id: 'Depression' },
-      { name: 'Wellness', view: 'category', id: 'Wellness' },
+      { name: 'Emotional Regulation', view: 'category', id: 'emotional-regulation' },
+      { name: 'Anxiety & Stress', view: 'category', id: 'anxiety-stress' },
+      { name: 'Relationships', view: 'category', id: 'relationships-social' },
+      { name: 'Self-Worth & Identity', view: 'category', id: 'self-esteem-identity' },
+      { name: 'Work & Burnout', view: 'category', id: 'workplace-academic' },
+      { name: 'Depression & Grief', view: 'category', id: 'depression-grief' },
+      { name: 'All Articles', view: 'learn' },
     ],
     popular: [
       { name: 'Clarity Score™', view: 'clarity-score' },

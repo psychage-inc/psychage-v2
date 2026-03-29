@@ -1,9 +1,10 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, BookOpen, ArrowRight, Clock, Bookmark, User } from 'lucide-react';
+import { Search, BookOpen, ArrowRight, Clock, Bookmark, User, Mail, Loader2, CheckCircle, X } from 'lucide-react';
 import SEO from '../components/SEO';
 import { useArticleService } from '../services/articleService';
 import { categoryService } from '../services/categoryService';
+import { searchService } from '../services/searchService';
 import { Article, Category } from '../types/models';
 import Button from '../components/ui/Button';
 import { getCategoryTheme } from '../config/categoryThemes';
@@ -11,8 +12,11 @@ import { getArticleUrl, getCategoryUrl } from '../lib/articleUrl';
 import { useBookmarks } from '../context/BookmarkContext';
 import { useAuth } from '../context/AuthContext';
 import AuthModal from '../components/auth/AuthModal';
+import { LiveRegion } from '../components/a11y/LiveRegion';
+import { useNewsletterService } from '../services/newsletterService';
+import { consentService } from '../services/consentService';
 
-// ─── Priority ordering: categories with cover images first ──────────
+// ─── Priority ordering ──────────────────────────────────────────────
 const PRIORITY_CATEGORY_SLUGS = [
     'emotional-regulation',
     'anxiety-stress',
@@ -22,6 +26,104 @@ const PRIORITY_CATEGORY_SLUGS = [
     'mens-mental-health',
     'chronic-illness-pain',
 ];
+
+// ─── Recently Read localStorage helpers ─────────────────────────────
+const RECENTLY_READ_KEY = 'psychage_recently_read';
+interface RecentlyReadEntry {
+    id: string | number;
+    timestamp: number;
+}
+
+function getRecentlyReadIds(): RecentlyReadEntry[] {
+    try {
+        const stored = localStorage.getItem(RECENTLY_READ_KEY);
+        return stored ? JSON.parse(stored) : [];
+    } catch {
+        return [];
+    }
+}
+
+function saveRecentlyRead(articleId: string | number): void {
+    try {
+        const entries = getRecentlyReadIds().filter(e => String(e.id) !== String(articleId));
+        entries.unshift({ id: articleId, timestamp: Date.now() });
+        localStorage.setItem(RECENTLY_READ_KEY, JSON.stringify(entries.slice(0, 10)));
+    } catch {
+        // Storage full or unavailable
+    }
+}
+
+// ─── Format date helper ─────────────────────────────────────────────
+function formatDate(dateStr: string | undefined): string | null {
+    if (!dateStr) return null;
+    try {
+        return new Date(dateStr).toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric',
+        });
+    } catch {
+        return null;
+    }
+}
+
+// ─── Skeleton Loading State ─────────────────────────────────────────
+const SkeletonPulse: React.FC<{ className?: string }> = ({ className = '' }) => (
+    <div className={`animate-pulse bg-border/50 rounded-md ${className}`} />
+);
+
+const LearnPageSkeleton: React.FC = () => (
+    <div className="min-h-screen bg-background pb-20" role="status" aria-label="Loading articles">
+        <div className="pt-20 pb-16 px-6">
+            <div className="container mx-auto max-w-content">
+                <SkeletonPulse className="h-3 w-24 mb-6" />
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+                    <div className="lg:col-span-3">
+                        <SkeletonPulse className="aspect-[16/10] w-full rounded-xl" />
+                        <SkeletonPulse className="h-10 w-3/4 mt-5" />
+                        <SkeletonPulse className="h-6 w-full mt-3" />
+                        <SkeletonPulse className="h-6 w-2/3 mt-2" />
+                        <div className="flex gap-4 mt-4">
+                            <SkeletonPulse className="h-4 w-20" />
+                            <SkeletonPulse className="h-4 w-24" />
+                        </div>
+                    </div>
+                    <div className="lg:col-span-2 flex flex-col">
+                        <SkeletonPulse className="h-3 w-16 mb-4" />
+                        {[0, 1, 2, 3].map(i => (
+                            <div key={i} className="flex items-start gap-5 py-5 border-b border-border last:border-b-0">
+                                <SkeletonPulse className="h-8 w-8 shrink-0" />
+                                <div className="flex-1">
+                                    <SkeletonPulse className="h-5 w-full" />
+                                    <SkeletonPulse className="h-5 w-2/3 mt-1" />
+                                    <SkeletonPulse className="h-3 w-1/3 mt-2" />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="border-t border-border px-6 py-8">
+            <div className="container mx-auto max-w-content">
+                <SkeletonPulse className="h-10 w-64 mb-6" />
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {[0, 1, 2, 3, 4, 5].map(i => (
+                        <div key={i}>
+                            <SkeletonPulse className="aspect-[16/9] w-full rounded-lg" />
+                            <SkeletonPulse className="h-3 w-20 mt-4" />
+                            <SkeletonPulse className="h-6 w-full mt-2" />
+                            <SkeletonPulse className="h-6 w-2/3 mt-1" />
+                            <SkeletonPulse className="h-4 w-full mt-2" />
+                            <SkeletonPulse className="h-3 w-1/3 mt-3" />
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+        <span className="sr-only">Loading articles, please wait...</span>
+    </div>
+);
 
 // ─── Featured Hero Card (Editor's Picks — left column) ──────────────
 const FeaturedHeroCard: React.FC<{
@@ -34,7 +136,7 @@ const FeaturedHeroCard: React.FC<{
 
     return (
         <button onClick={onClick} className="group text-left w-full">
-            <div className="aspect-[16/10] w-full overflow-hidden rounded-xl border border-border">
+            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-border">
                 {article.image && !imgError ? (
                     <img
                         src={article.image}
@@ -44,10 +146,14 @@ const FeaturedHeroCard: React.FC<{
                         onError={() => setImgError(true)}
                     />
                 ) : (
-                    <div className={`w-full h-full flex items-center justify-center bg-surface`}>
+                    <div className="w-full h-full flex items-center justify-center bg-surface">
                         <FallbackIcon size={64} className="text-text-tertiary opacity-30" />
                     </div>
                 )}
+                {/* Reading time badge */}
+                <span className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-semibold text-text-primary border border-border">
+                    {article.readTime ?? 5} min read
+                </span>
             </div>
 
             <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary tracking-tight leading-tight mt-5 group-hover:text-primary transition-colors line-clamp-2">
@@ -117,6 +223,7 @@ const FlatArticleCard: React.FC<{
     const theme = getCategoryTheme(article.category.slug);
     const FallbackIcon = theme.icon;
     const [imgError, setImgError] = React.useState(false);
+    const dateStr = formatDate(article.publishedAt || article.published_at);
 
     return (
         <article className="group cursor-pointer" onClick={onNavigate}>
@@ -164,11 +271,24 @@ const FlatArticleCard: React.FC<{
                     </p>
                 )}
 
+                {/* Tags */}
+                {article.tags && article.tags.length > 0 && (
+                    <p className="text-xs text-text-tertiary mt-2 line-clamp-1">
+                        {article.tags.slice(0, 2).join(' · ')}
+                    </p>
+                )}
+
                 <div className="flex items-center gap-3 mt-3 text-xs text-text-tertiary">
                     <span className="flex items-center gap-1">
                         <Clock size={12} />
                         {article.readTime ?? 5} min read
                     </span>
+                    {dateStr && (
+                        <>
+                            <span className="w-1 h-1 rounded-full bg-text-tertiary inline-block" />
+                            <span>{dateStr}</span>
+                        </>
+                    )}
                     {article.author && (
                         <>
                             <span className="w-1 h-1 rounded-full bg-text-tertiary inline-block" />
@@ -263,6 +383,83 @@ const TabMenu: React.FC<{
     );
 };
 
+// ─── Inline Newsletter CTA (minimalist, no gradients) ───────────────
+const InlineNewsletterCTA: React.FC = () => {
+    const [email, setEmail] = useState('');
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+    const newsletterService = useNewsletterService();
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!email || status === 'loading') return;
+        setStatus('loading');
+        try {
+            await newsletterService.subscribe(email);
+            consentService.logConsent('newsletter', true, 'v1.0', { email, source: 'learn-page' }).catch(console.error);
+            setStatus('success');
+            setEmail('');
+        } catch {
+            setStatus('error');
+            setTimeout(() => setStatus('idle'), 3000);
+        }
+    };
+
+    return (
+        <section className="border-t border-border pt-12 pb-4">
+            <div className="container mx-auto max-w-content px-6">
+                <div className="max-w-xl mx-auto text-center">
+                    <div className="flex items-center justify-center mb-3">
+                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                            <Mail className="w-5 h-5 text-primary" />
+                        </div>
+                    </div>
+                    <h3 className="text-2xl font-display font-bold text-text-primary tracking-tight mb-2">
+                        Stay in the loop
+                    </h3>
+                    <p className="text-sm text-text-secondary mb-6">
+                        Free weekly insights on mental health — no spam, unsubscribe anytime.
+                    </p>
+
+                    {status === 'success' ? (
+                        <div className="flex items-center justify-center gap-2.5 py-3 rounded-xl bg-primary/5 border border-primary/20">
+                            <CheckCircle size={18} className="text-primary" />
+                            <span className="text-sm font-medium text-primary">You're subscribed — check your inbox!</span>
+                        </div>
+                    ) : (
+                        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+                            <input
+                                type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                placeholder="Enter your email"
+                                required
+                                aria-label="Email address for newsletter"
+                                className="h-12 px-4 flex-1 rounded-xl bg-surface border border-border text-text-primary text-sm placeholder-text-tertiary focus:outline-none focus:border-primary transition-colors"
+                            />
+                            <button
+                                type="submit"
+                                disabled={status === 'loading'}
+                                className="h-12 px-6 bg-primary hover:bg-primary-hover text-white text-sm font-semibold rounded-xl transition-colors disabled:opacity-60 flex items-center justify-center gap-2 shrink-0"
+                            >
+                                {status === 'loading' ? (
+                                    <Loader2 size={16} className="animate-spin" />
+                                ) : status === 'error' ? (
+                                    'Try again'
+                                ) : (
+                                    <>Subscribe <ArrowRight size={15} /></>
+                                )}
+                            </button>
+                        </form>
+                    )}
+                    <p className="text-[11px] text-text-tertiary mt-3">
+                        By subscribing you consent to receiving emails from Psychage.
+                    </p>
+                </div>
+            </div>
+        </section>
+    );
+};
+
 // ─── Main Learn Page ─────────────────────────────────────────────────
 const LearnPage: React.FC = () => {
     const navigate = useNavigate();
@@ -271,7 +468,10 @@ const LearnPage: React.FC = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [searchQuery, setSearchQuery] = useState('');
     const [activeTab, setActiveTab] = useState<string>('');
+    const [sortOrder, setSortOrder] = useState<'recent' | 'shortest' | 'longest'>('recent');
     const [showAuthModal, setShowAuthModal] = useState(false);
+    const [recentSearches, setRecentSearches] = useState<string[]>([]);
+    const [isSearchFocused, setIsSearchFocused] = useState(false);
     const articleService = useArticleService();
     const { isAuthenticated } = useAuth();
     const { bookmarks, toggleBookmark, isBookmarked } = useBookmarks();
@@ -295,7 +495,17 @@ const LearnPage: React.FC = () => {
         fetchData();
     }, [articleService]);
 
-    // Filter articles by search query (all articles, not just those with images)
+    // Load recent searches on mount
+    useEffect(() => {
+        try {
+            const stored = localStorage.getItem('psychage_recent_searches');
+            if (stored) setRecentSearches(JSON.parse(stored).slice(0, 5));
+        } catch {
+            // ignore
+        }
+    }, []);
+
+    // Filter articles by search query
     const filteredArticles = useMemo(() => {
         if (!searchQuery) return articles;
         const query = searchQuery.toLowerCase();
@@ -316,7 +526,7 @@ const LearnPage: React.FC = () => {
         return grouped;
     }, [filteredArticles]);
 
-    // Derive category objects from articles (avoids Supabase slug mismatch)
+    // Derive category objects from articles
     const categoriesFromArticles = useMemo(() => {
         const seen = new Map<string, Category>();
         for (const article of articles) {
@@ -364,7 +574,6 @@ const LearnPage: React.FC = () => {
         const priorityArticles = articles.filter(
             a => PRIORITY_CATEGORY_SLUGS.includes(a.category.slug)
         );
-        // Featured-tagged articles first
         for (const a of priorityArticles) {
             if (picks.length >= 5) break;
             if (a.tags.includes('featured') && !usedCategories.has(a.category.slug)) {
@@ -372,7 +581,6 @@ const LearnPage: React.FC = () => {
                 usedCategories.add(a.category.slug);
             }
         }
-        // Fill from distinct priority categories
         for (const a of priorityArticles) {
             if (picks.length >= 5) break;
             if (!usedCategories.has(a.category.slug)) {
@@ -380,7 +588,6 @@ const LearnPage: React.FC = () => {
                 usedCategories.add(a.category.slug);
             }
         }
-        // Fill remaining if needed
         for (const a of priorityArticles) {
             if (picks.length >= 5) break;
             if (!picks.includes(a)) {
@@ -390,34 +597,51 @@ const LearnPage: React.FC = () => {
         return picks;
     }, [articles]);
 
-    // Tab list: all categories with articles (no "For You" tab)
+    // Tab list: all categories with articles
     const tabs = useMemo(() => {
         return orderedCategories.map(c => ({ slug: c.slug, label: c.name }));
     }, [orderedCategories]);
 
-    // Articles for the currently active tab (6 articles per category in 3×2 grid)
+    // Articles for the active tab with sorting
     const tabArticles = useMemo(() => {
-        return (articlesByCategory[activeTab] || []).slice(0, 6);
-    }, [activeTab, articlesByCategory]);
+        const raw = (articlesByCategory[activeTab] || []).slice(0, 6);
+        if (sortOrder === 'shortest') {
+            return [...raw].sort((a, b) => (a.readTime ?? 5) - (b.readTime ?? 5));
+        }
+        if (sortOrder === 'longest') {
+            return [...raw].sort((a, b) => (b.readTime ?? 5) - (a.readTime ?? 5));
+        }
+        return raw; // 'recent' — default order from service
+    }, [activeTab, articlesByCategory, sortOrder]);
 
-    // Active category object for category details
+    // Active category object
     const activeCategoryObj = useMemo(() => {
         return orderedCategories.find(c => c.slug === activeTab) || null;
     }, [activeTab, orderedCategories]);
 
-    // Bookmarked articles resolved from the articles array
+    // Bookmarked articles
     const readingPlanArticles = useMemo(() => {
         if (bookmarks.length === 0) return [];
         const bookmarkSet = new Set(bookmarks.map(String));
         return articles.filter(a => bookmarkSet.has(String(a.id)));
     }, [articles, bookmarks]);
 
-    // Recommended articles: 6 articles with cover images from diverse categories
+    // Recently read articles
+    const recentlyReadArticles = useMemo(() => {
+        const entries = getRecentlyReadIds();
+        if (entries.length === 0 || articles.length === 0) return [];
+        const idSet = new Set(entries.map(e => String(e.id)));
+        const resolved = articles.filter(a => idSet.has(String(a.id)));
+        // Maintain recency order
+        const orderMap = new Map(entries.map((e, i) => [String(e.id), i]));
+        return resolved.sort((a, b) => (orderMap.get(String(a.id)) ?? 99) - (orderMap.get(String(b.id)) ?? 99));
+    }, [articles]);
+
+    // Recommended articles: 6 from diverse categories with images
     const recommendedArticles = useMemo(() => {
         const withImages = articles.filter(a => a.image);
         const usedSlugs = new Set<string>();
         const picks: Article[] = [];
-        // Pick one article per category (prefer those with images)
         for (const a of withImages) {
             if (picks.length >= 6) break;
             if (!usedSlugs.has(a.category.slug)) {
@@ -425,12 +649,10 @@ const LearnPage: React.FC = () => {
                 usedSlugs.add(a.category.slug);
             }
         }
-        // Fill remaining with any articles that have images
         for (const a of withImages) {
             if (picks.length >= 6) break;
             if (!picks.includes(a)) picks.push(a);
         }
-        // Fall back to any articles if not enough with images
         for (const a of articles) {
             if (picks.length >= 6) break;
             if (!picks.includes(a)) picks.push(a);
@@ -438,7 +660,17 @@ const LearnPage: React.FC = () => {
         return picks;
     }, [articles]);
 
-    // Set initial active tab to first category when categories are loaded
+    // Reading stats
+    const readingStats = useMemo(() => {
+        if (articles.length === 0) return null;
+        const totalArticles = articles.length;
+        const totalCategories = new Set(articles.map(a => a.category.slug)).size;
+        const readTimes = articles.map(a => a.readTime ?? 5);
+        const avgReadTime = Math.round(readTimes.reduce((sum, t) => sum + t, 0) / readTimes.length);
+        return { totalArticles, totalCategories, avgReadTime };
+    }, [articles]);
+
+    // Set initial active tab
     useEffect(() => {
         if (orderedCategories.length > 0 && !activeTab) {
             setActiveTab(orderedCategories[0].slug);
@@ -448,6 +680,13 @@ const LearnPage: React.FC = () => {
     const hasNoResults = searchQuery.length > 0 && filteredArticles.length === 0;
     const isSearching = searchQuery.length > 0;
 
+    // aria-live announcement for search results
+    const searchAnnouncement = useMemo(() => {
+        if (!isSearching) return '';
+        if (hasNoResults) return `No articles found for ${searchQuery}`;
+        return `${filteredArticles.length} article${filteredArticles.length === 1 ? '' : 's'} found for ${searchQuery}`;
+    }, [isSearching, hasNoResults, filteredArticles.length, searchQuery]);
+
     const handleToggleBookmark = (articleId: string | number) => (e: React.MouseEvent) => {
         e.stopPropagation();
         const toggled = toggleBookmark(articleId);
@@ -456,11 +695,31 @@ const LearnPage: React.FC = () => {
         }
     };
 
-    if (isLoading) return (
-        <div className="min-h-screen bg-background flex items-center justify-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
-        </div>
-    );
+    const handleArticleClick = useCallback((article: Article) => {
+        saveRecentlyRead(article.id);
+        navigate(getArticleUrl(article));
+    }, [navigate]);
+
+    const handleSearchSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (searchQuery.trim()) {
+            searchService.saveLocalSearch(searchQuery.trim());
+            // Refresh recent searches
+            try {
+                const stored = localStorage.getItem('psychage_recent_searches');
+                if (stored) setRecentSearches(JSON.parse(stored).slice(0, 5));
+            } catch {
+                // ignore
+            }
+        }
+    };
+
+    const handleClearRecentSearches = () => {
+        searchService.clearSearchHistory();
+        setRecentSearches([]);
+    };
+
+    if (isLoading) return <LearnPageSkeleton />;
 
     return (
         <div className="min-h-screen bg-background pb-20">
@@ -469,24 +728,32 @@ const LearnPage: React.FC = () => {
                 description="Explore our comprehensive library of mental health articles, guides, and resources."
             />
 
+            {/* aria-live region for search announcements */}
+            <LiveRegion politeMessage={searchAnnouncement} assertiveMessage="" />
+
             {/* ── 1. Hero: Editor's Picks ──────────────────────────── */}
             {featuredArticles.length > 0 && (
                 <section className="pt-20 pb-16 px-6">
                     <div className="container mx-auto max-w-content">
-                        <p className="text-xs text-text-tertiary font-semibold uppercase tracking-wider mb-6">
+                        <p className="text-xs text-text-tertiary font-semibold uppercase tracking-wider mb-2">
                             Editor's Picks
                         </p>
 
+                        {/* Reading stats micro-banner */}
+                        {readingStats && (
+                            <p className="text-sm text-text-tertiary mb-6">
+                                {readingStats.totalArticles} articles · {readingStats.totalCategories} topics · ~{readingStats.avgReadTime} min avg read
+                            </p>
+                        )}
+
                         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
-                            {/* Left: Featured hero article */}
                             <div className="lg:col-span-3">
                                 <FeaturedHeroCard
                                     article={featuredArticles[0]}
-                                    onClick={() => navigate(getArticleUrl(featuredArticles[0]))}
+                                    onClick={() => handleArticleClick(featuredArticles[0])}
                                 />
                             </div>
 
-                            {/* Right: Numbered text list */}
                             {featuredArticles.length > 1 && (
                                 <div className="lg:col-span-2 flex flex-col">
                                     <h3 className="text-xs text-text-tertiary font-semibold uppercase tracking-wider mb-4">
@@ -497,7 +764,7 @@ const LearnPage: React.FC = () => {
                                             key={article.id}
                                             article={article}
                                             index={i}
-                                            onClick={() => navigate(getArticleUrl(article))}
+                                            onClick={() => handleArticleClick(article)}
                                         />
                                     ))}
                                 </div>
@@ -510,17 +777,45 @@ const LearnPage: React.FC = () => {
             {/* ── 2. Search Bar + Filter Pills ─────────────────────── */}
             <section className="border-t border-border">
                 <div className="container mx-auto max-w-content px-6 py-8">
-                    <div className="max-w-xl">
-                        <div className="relative flex items-center">
-                            <Search className="absolute left-0 text-text-tertiary" size={20} />
-                            <input
-                                type="text"
-                                value={searchQuery}
-                                onChange={(e) => setSearchQuery(e.target.value)}
-                                placeholder="Search articles..."
-                                className="w-full pl-8 pr-4 py-3 bg-transparent border-b-2 border-border focus:border-primary text-text-primary placeholder-text-tertiary outline-none text-base font-medium transition-colors"
-                            />
-                        </div>
+                    <div className="max-w-xl" role="search">
+                        <form onSubmit={handleSearchSubmit}>
+                            <div className="relative flex items-center">
+                                <Search className="absolute left-0 text-text-tertiary" size={20} />
+                                <input
+                                    type="text"
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                    onFocus={() => setIsSearchFocused(true)}
+                                    onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
+                                    placeholder="Search articles..."
+                                    aria-label="Search articles"
+                                    className="w-full pl-8 pr-4 py-3 bg-transparent border-b-2 border-border focus:border-primary text-text-primary placeholder-text-tertiary outline-none text-base font-medium transition-colors"
+                                />
+                            </div>
+                        </form>
+
+                        {/* Recent searches */}
+                        {isSearchFocused && !searchQuery && recentSearches.length > 0 && (
+                            <div className="mt-3 flex items-center gap-2 flex-wrap">
+                                <span className="text-xs text-text-tertiary font-medium">Recent:</span>
+                                {recentSearches.map((term) => (
+                                    <button
+                                        key={term}
+                                        onMouseDown={(e) => { e.preventDefault(); setSearchQuery(term); }}
+                                        className="rounded-full bg-surface border border-border px-3 py-1 text-sm text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-colors"
+                                    >
+                                        {term}
+                                    </button>
+                                ))}
+                                <button
+                                    onMouseDown={(e) => { e.preventDefault(); handleClearRecentSearches(); }}
+                                    className="p-1 rounded-full hover:bg-surface-hover transition-colors"
+                                    aria-label="Clear recent searches"
+                                >
+                                    <X size={14} className="text-text-tertiary" />
+                                </button>
+                            </div>
+                        )}
                     </div>
 
                     <div className="flex flex-wrap gap-2.5 mt-6">
@@ -531,6 +826,7 @@ const LearnPage: React.FC = () => {
                                     setSearchQuery('');
                                     setActiveTab(cat.slug);
                                 }}
+                                aria-pressed={activeTab === cat.slug}
                                 className={`rounded-full px-4 py-1.5 border text-sm transition-colors ${
                                     activeTab === cat.slug
                                         ? 'border-primary bg-primary/5 text-primary font-semibold'
@@ -570,7 +866,7 @@ const LearnPage: React.FC = () => {
                                     <ReadingPlanCard
                                         key={article.id}
                                         article={article}
-                                        onClick={() => navigate(getArticleUrl(article))}
+                                        onClick={() => handleArticleClick(article)}
                                     />
                                 ))}
                             </div>
@@ -586,7 +882,33 @@ const LearnPage: React.FC = () => {
                 </section>
             )}
 
-            {/* ── 4. Recommended for You (standalone section) ───────── */}
+            {/* ── 3b. Continue Reading (recently read, no auth required) ── */}
+            {recentlyReadArticles.length > 0 && (
+                <section className="border-t border-border pt-12">
+                    <div className="container mx-auto max-w-content px-6">
+                        <h2 className="text-2xl md:text-3xl font-display font-bold text-text-primary tracking-tight mb-2">
+                            Continue Reading
+                        </h2>
+                        <p className="text-sm text-text-secondary mb-6">
+                            Pick up where you left off.
+                        </p>
+                        <div
+                            className="flex gap-5 overflow-x-auto pb-4 -mx-6 px-6"
+                            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' } as React.CSSProperties}
+                        >
+                            {recentlyReadArticles.map(article => (
+                                <ReadingPlanCard
+                                    key={article.id}
+                                    article={article}
+                                    onClick={() => handleArticleClick(article)}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/* ── 4. Recommended for You ───────────────────────────── */}
             {!isSearching && recommendedArticles.length > 0 && (
                 <section className="border-t border-border pt-12">
                     <div className="container mx-auto max-w-content px-6">
@@ -604,7 +926,7 @@ const LearnPage: React.FC = () => {
                                 <FlatArticleCard
                                     key={article.id}
                                     article={article}
-                                    onNavigate={() => navigate(getArticleUrl(article))}
+                                    onNavigate={() => handleArticleClick(article)}
                                     isBookmarked={isBookmarked(article.id)}
                                     onToggleBookmark={handleToggleBookmark(article.id)}
                                 />
@@ -632,7 +954,7 @@ const LearnPage: React.FC = () => {
                 </section>
             )}
 
-            {/* ── 4b. Search Results ───────────────────────────────── */}
+            {/* ── 5b. Search Results ───────────────────────────────── */}
             {isSearching && !hasNoResults && (
                 <section className="px-6 py-12">
                     <div className="container mx-auto max-w-content">
@@ -650,7 +972,7 @@ const LearnPage: React.FC = () => {
                                 <FlatArticleCard
                                     key={article.id}
                                     article={article}
-                                    onNavigate={() => navigate(getArticleUrl(article))}
+                                    onNavigate={() => handleArticleClick(article)}
                                     isBookmarked={isBookmarked(article.id)}
                                     onToggleBookmark={handleToggleBookmark(article.id)}
                                 />
@@ -677,15 +999,38 @@ const LearnPage: React.FC = () => {
 
                     <section className="px-6 py-12">
                         <div className="container mx-auto max-w-content">
-                            <div className="mb-8">
-                                <h2 className="text-2xl md:text-3xl font-display font-bold text-text-primary tracking-tight">
-                                    {activeCategoryObj?.name ?? 'Articles'}
-                                </h2>
-                                {activeCategoryObj?.description && (
-                                    <p className="text-base text-text-secondary mt-2 max-w-2xl leading-relaxed">
-                                        {activeCategoryObj.description}
-                                    </p>
-                                )}
+                            <div className="flex items-start justify-between mb-8">
+                                <div>
+                                    <h2 className="text-2xl md:text-3xl font-display font-bold text-text-primary tracking-tight">
+                                        {activeCategoryObj?.name ?? 'Articles'}
+                                    </h2>
+                                    {activeCategoryObj?.description && (
+                                        <p className="text-base text-text-secondary mt-2 max-w-2xl leading-relaxed">
+                                            {activeCategoryObj.description}
+                                        </p>
+                                    )}
+                                </div>
+
+                                {/* Sort controls */}
+                                <div className="flex items-center gap-1 shrink-0">
+                                    {([
+                                        { key: 'recent' as const, label: 'Recent' },
+                                        { key: 'shortest' as const, label: 'Quick' },
+                                        { key: 'longest' as const, label: 'Deep' },
+                                    ]).map(({ key, label }) => (
+                                        <button
+                                            key={key}
+                                            onClick={() => setSortOrder(key)}
+                                            className={`px-3 py-1 text-sm rounded-full transition-colors ${
+                                                sortOrder === key
+                                                    ? 'text-text-primary font-semibold bg-surface-hover'
+                                                    : 'text-text-tertiary hover:text-text-secondary'
+                                            }`}
+                                        >
+                                            {label}
+                                        </button>
+                                    ))}
+                                </div>
                             </div>
 
                             {tabArticles.length > 0 ? (
@@ -695,20 +1040,20 @@ const LearnPage: React.FC = () => {
                                             <FlatArticleCard
                                                 key={article.id}
                                                 article={article}
-                                                onNavigate={() => navigate(getArticleUrl(article))}
+                                                onNavigate={() => handleArticleClick(article)}
                                                 isBookmarked={isBookmarked(article.id)}
                                                 onToggleBookmark={handleToggleBookmark(article.id)}
                                             />
                                         ))}
                                     </div>
 
-                                    {activeCategoryObj && tabArticles.length > 6 && (
+                                    {activeCategoryObj && (articlesByCategory[activeTab]?.length ?? 0) > 6 && (
                                         <div className="mt-10 text-center">
                                             <button
                                                 onClick={() => navigate(getCategoryUrl(activeTab))}
                                                 className="inline-flex items-center gap-2 text-sm font-semibold text-text-secondary hover:text-primary transition-colors"
                                             >
-                                                See all articles in {activeCategoryObj.name}
+                                                See all {articlesByCategory[activeTab]?.length} articles in {activeCategoryObj.name}
                                                 <ArrowRight size={16} />
                                             </button>
                                         </div>
@@ -738,7 +1083,7 @@ const LearnPage: React.FC = () => {
                                 <section key={category.slug} className="space-y-8">
                                     <div className="flex items-start justify-between gap-4 mt-12 mb-8">
                                         <div className="flex-1">
-                                            <h2 className="text-2xl md:text-3xl font-display font-bold text-black dark:text-white tracking-tight">
+                                            <h2 className="text-2xl md:text-3xl font-display font-bold text-text-primary tracking-tight">
                                                 {category.name}
                                             </h2>
                                             {category.description && (
@@ -761,7 +1106,7 @@ const LearnPage: React.FC = () => {
                                             <FlatArticleCard
                                                 key={article.id}
                                                 article={article}
-                                                onNavigate={() => navigate(getArticleUrl(article))}
+                                                onNavigate={() => handleArticleClick(article)}
                                                 isBookmarked={isBookmarked(article.id)}
                                                 onToggleBookmark={handleToggleBookmark(article.id)}
                                             />
@@ -774,7 +1119,10 @@ const LearnPage: React.FC = () => {
                 </div>
             )}
 
-            {/* ── 8. CTA Banner ────────────────────────────────────── */}
+            {/* ── 8. Newsletter CTA ────────────────────────────────── */}
+            <InlineNewsletterCTA />
+
+            {/* ── 9. CTA Banner ────────────────────────────────────── */}
             <section className="px-6 mb-20 mt-8">
                 <div className="container mx-auto max-w-content">
                     <div className="rounded-xl border border-border bg-surface p-8 md:p-12">
@@ -800,7 +1148,7 @@ const LearnPage: React.FC = () => {
                 </div>
             </section>
 
-            {/* ── 9. Auth Modal (shared for bookmark attempts) ──────── */}
+            {/* ── 10. Auth Modal ────────────────────────────────────── */}
             <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
         </div>
     );

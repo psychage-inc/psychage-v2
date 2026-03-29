@@ -9,8 +9,8 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { createClient } from '@supabase/supabase-js';
 import { classifyInputSafety, generateCrisisResponse } from '../../src/lib/ai/safety';
 import { retrieveRelevantContent } from '../../src/lib/ai/retrieval';
-import { AnthropicProvider, SYSTEM_PROMPT } from '../../src/lib/ai/llm';
-import { getRequiredEnv, getAIConfig } from '../../src/lib/ai/config';
+import { AnthropicProvider, OpenAIProvider, SYSTEM_PROMPT } from '../../src/lib/ai/llm';
+import { getRequiredEnv, getOptionalEnv, getAIConfig } from '../../src/lib/ai/config';
 import type { Message, SafetyLevel, Citation } from '../../src/lib/ai/types';
 
 // ============================================================================
@@ -171,15 +171,22 @@ export default async function handler(
     // RAG: Search for relevant Psychage content
     // ========================================================================
 
-    const searchResults = await retrieveRelevantContent(
-      userMessage.content,
-      {
-        topK: config.retrieval.defaultTopK,
-        similarityThreshold: config.retrieval.defaultSimilarityThreshold,
-      },
-      supabase,
-      llmProvider
-    );
+    // Embeddings require OpenAI — gracefully skip RAG if unavailable
+    const openaiKey = getOptionalEnv('OPENAI_API_KEY');
+    let searchResults: Awaited<ReturnType<typeof retrieveRelevantContent>> = [];
+
+    if (openaiKey) {
+      const embeddingProvider = new OpenAIProvider(openaiKey);
+      searchResults = await retrieveRelevantContent(
+        userMessage.content,
+        {
+          topK: config.retrieval.defaultTopK,
+          similarityThreshold: config.retrieval.defaultSimilarityThreshold,
+        },
+        supabase,
+        embeddingProvider
+      );
+    }
 
     // ========================================================================
     // Build augmented prompt with retrieved context

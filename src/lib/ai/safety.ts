@@ -172,7 +172,11 @@ export async function classifyInputSafety(
       temperature: 0,
     });
 
-    const parsed = JSON.parse(response.content.trim());
+    // Strip markdown code fences if present (Claude often wraps JSON in ```json ... ```)
+    let raw = response.content.trim();
+    const fenceMatch = raw.match(/```(?:json)?\s*([\s\S]*?)```/);
+    if (fenceMatch) raw = fenceMatch[1].trim();
+    const parsed = JSON.parse(raw);
     const level = parsed.level as SafetyLevel;
     const confidence = Math.min(1, Math.max(0, parsed.confidence ?? 0.8));
     const trigger = parsed.trigger ?? null;

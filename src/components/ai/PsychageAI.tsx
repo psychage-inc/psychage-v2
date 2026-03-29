@@ -150,7 +150,7 @@ const PsychageAI: React.FC = () => {
         role: 'assistant',
         content: data.message,
         citations: data.citations || [],
-        safetyLevel: data.safetyLevel as any,
+        safetyLevel: data.safetyLevel as Message['safetyLevel'],
         isCrisis: data.isCrisis,
         timestamp: Date.now(),
       };

@@ -8,11 +8,14 @@
  *   VITE_NAV_TIER1_ENABLED — SCZ, BPD, BN, PGD
  *   VITE_NAV_TIER2_ENABLED — ASD, BDD, DPDR, SPP, PMDD
  *   VITE_NAV_TIER3_ENABLED — SADD, HD, SSD, IAD, AVPD, SEPA
+ *   VITE_NAV_TIER4_ENABLED — NPD, ASPD, CPTSD, DID
+ *   VITE_NAV_TIER5_ENABLED — DPD, SZPD, OSDD, ASD_ACUTE, TTM, SPD_EXCOR
+ *   VITE_NAV_TIER6_ENABLED — IED, HYPER, ARFID, CYC
  */
 
 import type { ConditionWithMappings } from './types';
 
-type Tier = 1 | 2 | 3;
+type Tier = 1 | 2 | 3 | 4 | 5 | 6;
 
 const TIER_MAP: Record<string, Tier> = {
   // Tier 1
@@ -33,12 +36,32 @@ const TIER_MAP: Record<string, Tier> = {
   IAD: 3,
   AVPD: 3,
   SEPA: 3,
+  // Tier 4 (Phase 4 — personality & high clinical severity)
+  NPD: 4,
+  ASPD: 4,
+  CPTSD: 4,
+  DID: 4,
+  // Tier 5 (Phase 4 — moderate-high complexity)
+  DPD: 5,
+  SZPD: 5,
+  OSDD: 5,
+  ASD_ACUTE: 5,
+  TTM: 5,
+  SPD_EXCOR: 5,
+  // Tier 6 (Phase 4 — extensions)
+  IED: 6,
+  HYPER: 6,
+  ARFID: 6,
+  CYC: 6,
 };
 
 const ENV_KEYS: Record<Tier, string> = {
   1: 'VITE_NAV_TIER1_ENABLED',
   2: 'VITE_NAV_TIER2_ENABLED',
   3: 'VITE_NAV_TIER3_ENABLED',
+  4: 'VITE_NAV_TIER4_ENABLED',
+  5: 'VITE_NAV_TIER5_ENABLED',
+  6: 'VITE_NAV_TIER6_ENABLED',
 };
 
 function isTierEnabled(tier: Tier): boolean {
@@ -64,5 +87,5 @@ export function filterByFeatureFlags(
 
 /** Check which tiers are currently enabled (useful for UI/debug). */
 export function getEnabledTiers(): Tier[] {
-  return ([1, 2, 3] as Tier[]).filter(isTierEnabled);
+  return ([1, 2, 3, 4, 5, 6] as Tier[]).filter(isTierEnabled);
 }

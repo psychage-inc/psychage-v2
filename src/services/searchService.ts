@@ -8,6 +8,8 @@
 
 import { api, ApiError } from '../lib/api';
 import { Article, Provider } from '../types/models';
+
+const DEBUG = import.meta.env.VITE_DEBUG_MODE === 'true';
 import { useMemo, useCallback, useState } from 'react';
 import { articleService } from './articleService';
 import { providerService } from './providerService';
@@ -118,7 +120,7 @@ export const searchService = {
         }
 
         // Fallback to client-side search
-        console.log('[SearchService] Using client-side search');
+        if (DEBUG) console.log('[SearchService] Using client-side search');
 
         const results: SearchResult = {
             articles: [],

@@ -86,21 +86,17 @@ export class NavigatorAnalytics {
         });
     }
 
-    // Send event (stub - integrate with actual analytics backend)
-    private sendEvent(event: NavigatorAnalyticsEvent): void {
-        // TODO: Integrate with Supabase analytics table or external service
-        // For now, log to console in dev mode
+    // Send event to Supabase analytics table (fails silently — analytics must never block UX)
+    private async sendEvent(event: NavigatorAnalyticsEvent): Promise<void> {
         if (import.meta.env.DEV) {
             console.log('[Navigator Analytics]', event);
         }
 
-        // In production, send to analytics endpoint:
-        // fetch('/api/analytics/navigator', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify(event),
-        // }).catch(() => {
-        //     // Silent fail - analytics should not block UX
-        // });
+        try {
+            const { supabase } = await import('../../lib/supabaseClient');
+            await supabase.from('navigator_analytics').insert(event);
+        } catch {
+            // Silent fail — analytics should never block UX
+        }
     }
 }

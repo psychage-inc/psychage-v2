@@ -60,7 +60,7 @@ const VideoDetail: React.FC = () => {
             {/* Sticky Header */}
             <div className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-100 px-6 py-4">
                 <div className="container mx-auto max-w-content flex items-center gap-4">
-                    <button onClick={() => navigate('/')} className="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                    <button onClick={() => navigate('/')} aria-label="Go back" className="p-2 hover:bg-gray-100 rounded-full transition-colors">
                         <ArrowLeft size={20} className="text-gray-600" />
                     </button>
                     <h1 className="text-sm font-bold text-gray-900 truncate flex-grow">
@@ -85,6 +85,7 @@ const VideoDetail: React.FC = () => {
                                             whileHover={{ scale: 1.1 }}
                                             whileTap={{ scale: 0.95 }}
                                             onClick={() => setIsPlaying(true)}
+                                            aria-label={`Play video: ${video.title}`}
                                             className="w-20 h-20 bg-white/20 backdrop-blur-md border border-white/40 rounded-full flex items-center justify-center text-white shadow-xl hover:bg-white/30 transition-all"
                                         >
                                             <Play size={32} fill="currentColor" className="ml-1" />
@@ -118,13 +119,13 @@ const VideoDetail: React.FC = () => {
                             </div>
 
                             <div className="flex items-center gap-2">
-                                <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-sm font-bold text-gray-700 hover:bg-gray-200 transition-colors">
+                                <button aria-label="Like this video" className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-sm font-bold text-gray-700 hover:bg-gray-200 transition-colors">
                                     <ThumbsUp size={16} /> 12K
                                 </button>
-                                <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-sm font-bold text-gray-700 hover:bg-gray-200 transition-colors">
+                                <button aria-label="Share this video" className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-sm font-bold text-gray-700 hover:bg-gray-200 transition-colors">
                                     <Share2 size={16} /> Share
                                 </button>
-                                <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-sm font-bold text-gray-700 hover:bg-gray-200 transition-colors">
+                                <button aria-label="Save this video" className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-sm font-bold text-gray-700 hover:bg-gray-200 transition-colors">
                                     <Bookmark size={16} /> Save
                                 </button>
                             </div>

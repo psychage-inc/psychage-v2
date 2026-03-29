@@ -343,6 +343,6 @@ export const navigationConfig: NavigationConfig = {
  * This will be removed once all components are updated to use the new structure.
  */
 export const legacyNavigationConfig = {
-    learn: (navigationConfig.primary.find(item => item.id === 'learn') as any),
-    tools: (navigationConfig.primary.find(item => item.id === 'tools') as any)
+    learn: navigationConfig.primary.find(item => item.id === 'learn')!,
+    tools: navigationConfig.primary.find(item => item.id === 'tools')!,
 };

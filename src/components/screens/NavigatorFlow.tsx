@@ -128,7 +128,7 @@ export const NavigatorFlow: React.FC = () => {
     const handleStepClick = (targetStep: NavigatorStep) => {
         // Clear results if navigating away from results
         if (state.currentStep === 'results' && targetStep !== 'results') {
-            dispatch({ type: 'SET_RESULTS', payload: null as any });
+            dispatch({ type: 'SET_RESULTS', payload: null });
         }
 
         dispatch({ type: 'SET_STEP', payload: targetStep });

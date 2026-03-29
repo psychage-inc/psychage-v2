@@ -148,6 +148,11 @@ const ReportDetailPage: React.FC = () => {
 
     return (
         <AdminLayout title="Report Details" seoTitle={`Report: ${report.subject} | Admin`}>
+            {import.meta.env.DEV && (
+                <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-amber-800 text-sm font-medium mb-4">
+                    <strong>Dev Mode:</strong> This page uses mock data. Wire to <code className="bg-amber-100 px-1 rounded">api.admin.getReport(id)</code> before production.
+                </div>
+            )}
             <Button
                 variant="ghost"
                 size="sm"

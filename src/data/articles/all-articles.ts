@@ -71,5 +71,3 @@ export const allArticles: Article[] = [
   ...flattenCategoryModule(cat21),
   ...flattenCategoryModule(cat22),
 ];
-
-console.log(`📚 Loaded ${allArticles.length} articles from mock data`);

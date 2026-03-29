@@ -44,7 +44,7 @@ type NavigatorAction =
     | { type: 'UPDATE_SYMPTOM_DETAIL'; payload: { symptomId: string; updates: Partial<UserSymptomInput> } }
     | { type: 'TRIGGER_CRISIS'; payload: RedFlagLevel }
     | { type: 'ACKNOWLEDGE_CRISIS' }
-    | { type: 'SET_RESULTS'; payload: NavigatorResults }
+    | { type: 'SET_RESULTS'; payload: NavigatorResults | null }
     | { type: 'SET_REGION'; payload: string }
     | { type: 'ANNOUNCE'; payload: { message: string; mode: 'polite' | 'assertive' } }
     | { type: 'RESET_FLOW' }

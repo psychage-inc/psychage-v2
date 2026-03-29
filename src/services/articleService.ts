@@ -11,11 +11,18 @@ import { supabase } from '../lib/supabaseClient';
 import { useMemo } from 'react';
 import { getCategoryTheme } from '../config/categoryThemes';
 
-// Fallback to mock data if Supabase fails
-import { allArticles as mockArticles } from '../data/articles/all-articles';
+const DEBUG = import.meta.env.VITE_DEBUG_MODE === 'true';
 
-// Only serve published (or status-less) articles to the frontend
-const publishedMockArticles = mockArticles.filter(a => !a.status || a.status === 'published');
+// Lazy-loaded mock articles — only fetched when Supabase fails or JSX content is needed.
+// This avoids pulling ~30MB of article TSX into the main bundle at load time.
+let _cachedMockArticles: Article[] | null = null;
+
+async function getMockArticles(): Promise<Article[]> {
+    if (_cachedMockArticles) return _cachedMockArticles;
+    const { allArticles } = await import('../data/articles/all-articles');
+    _cachedMockArticles = allArticles.filter(a => !a.status || a.status === 'published');
+    return _cachedMockArticles;
+}
 
 // ============================================================================
 // Image URL Resolver
@@ -186,7 +193,8 @@ export const articleService = {
         }
 
         // Build mock article set (filtered by params), resolve image URLs
-        let mockResult = publishedMockArticles.map(a => ({
+        const publishedMock = await getMockArticles();
+        let mockResult = publishedMock.map(a => ({
             ...a,
             image: resolveImageUrl(a.image),
             _source: 'mock' as const,
@@ -200,7 +208,7 @@ export const articleService = {
 
         // No Supabase data — return mock only
         if (supabaseArticles.length === 0) {
-            console.log(`[ArticleService] Using ${mockResult.length} mock articles`);
+            if (DEBUG) console.log(`[ArticleService] Using ${mockResult.length} mock articles`);
             return mockResult;
         }
 
@@ -209,7 +217,7 @@ export const articleService = {
         const supplementalMock = mockResult.filter(a => !supabaseSlugs.has(a.slug));
         const merged = [...supabaseArticles, ...supplementalMock];
 
-        console.log(`[ArticleService] Merged ${supabaseArticles.length} Supabase + ${supplementalMock.length} mock articles (${merged.length} total)`);
+        if (DEBUG) console.log(`[ArticleService] Merged ${supabaseArticles.length} Supabase + ${supplementalMock.length} mock articles (${merged.length} total)`);
         return merged;
     },
 
@@ -233,7 +241,8 @@ export const articleService = {
             return mapSupabaseToArticle(data);
         } catch (error) {
             console.warn('[ArticleService] Supabase getById failed, using mock data:', error);
-            const mockArticle = publishedMockArticles.find(a => a.id.toString() === id.toString());
+            const publishedMock = await getMockArticles();
+            const mockArticle = publishedMock.find(a => a.id.toString() === id.toString());
             return mockArticle ? { ...mockArticle, image: resolveImageUrl(mockArticle.image), _source: 'mock' } : undefined;
         }
     },
@@ -244,13 +253,14 @@ export const articleService = {
      */
     getBySlug: async (slug: string): Promise<ArticleWithContent | undefined> => {
         // Check if mock data has rich JSX content for this slug
-        const mockArticle = publishedMockArticles.find(a => a.slug === slug);
+        const publishedMock = await getMockArticles();
+        const mockArticle = publishedMock.find(a => a.slug === slug);
         const hasRichMockContent = mockArticle && mockArticle.content && typeof mockArticle.content !== 'string';
 
         // If mock data has JSX content (charts, tables, accordions etc.), prefer it
         // because Supabase only stores string content which loses all interactive components
         if (hasRichMockContent) {
-            console.log(`[ArticleService] Using rich JSX content for "${slug}" from mock data`);
+            if (DEBUG) console.log(`[ArticleService] Using rich JSX content for "${slug}" from mock data`);
 
             // Still try to get Supabase metadata (title, description, image, etc.)
             try {
@@ -294,7 +304,7 @@ export const articleService = {
                 else throw error;
             }
             if (data) {
-                console.log(`[ArticleService] Fetched article "${slug}" from Supabase`);
+                if (DEBUG) console.log(`[ArticleService] Fetched article "${slug}" from Supabase`);
                 return mapSupabaseToArticle(data);
             }
         } catch (error) {
@@ -303,7 +313,7 @@ export const articleService = {
 
         // Final fallback to mock data
         if (mockArticle) {
-            console.log(`[ArticleService] Fetched article "${slug}" from mock data`);
+            if (DEBUG) console.log(`[ArticleService] Fetched article "${slug}" from mock data`);
             return { ...mockArticle, image: resolveImageUrl(mockArticle.image), _source: 'mock' };
         }
 
@@ -430,7 +440,8 @@ export const articleService = {
         }
 
         // Fallback to mock data
-        const allMock = publishedMockArticles.map(a => ({ ...a, image: resolveImageUrl(a.image), _source: 'mock' as const }));
+        const publishedMock = await getMockArticles();
+        const allMock = publishedMock.map(a => ({ ...a, image: resolveImageUrl(a.image), _source: 'mock' as const }));
         const sameCat = allMock.filter(a => a.category.slug === categorySlug && a.id.toString() !== currentIdStr);
         if (sameCat.length >= limit) return sameCat.slice(0, limit);
 

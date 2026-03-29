@@ -8,7 +8,8 @@ import HeroSection from './components/home/HeroSection';
 import ProductShowcase from './components/home/ProductShowcase';
 import HowItWorksSection from './components/home/HowItWorksSection';
 import FeatureSpotlight from './components/home/FeatureSpotlight';
-import ArticleCategorySection from './components/home/ArticleCategorySection';
+// Lazy-loaded to avoid pulling articleService (+ 30MB mock data) into main chunk
+const ArticleCategorySection = React.lazy(() => import('./components/home/ArticleCategorySection'));
 import NewsletterSection from './components/home/NewsletterSection';
 import MindMate from './components/ai/MindMate';
 import { LazySection } from './components/ui/LazySection';
@@ -31,7 +32,6 @@ const LearnPage = React.lazy(() => import('./pages/LearnPage'));
 const ArticleCategoryPage = React.lazy(() => import('./pages/ArticleCategoryPage'));
 const ArticlePage = React.lazy(() => import('./pages/learn/ArticlePage'));
 const ArticleRedirect = React.lazy(() => import('./components/article/ArticleRedirect'));
-const _ArticleDetail = React.lazy(() => import('./components/pages/ArticleDetail'));
 const VideoDetail = React.lazy(() => import('./components/pages/VideoDetail'));
 // Provider Directory V2
 const ProvidersLandingPage = React.lazy(() => import('./pages/providers/ProvidersLandingPage'));
@@ -69,6 +69,9 @@ const ClarityJournalReport = React.lazy(() => import('./components/tools/Clarity
 const CrisisResourcesScreen = React.lazy(() => import('./components/screens/CrisisResourcesScreen'));
 const MedicationTracker = React.lazy(() => import('./components/tools/MedicationTracker'));
 
+// Sitemap
+const SitemapPage = React.lazy(() => import('./pages/SitemapPage'));
+
 // Auth Pages
 const LoginPage = React.lazy(() => import('./pages/auth/LoginPage'));
 const SignUpPage = React.lazy(() => import('./pages/auth/SignUpPage'));
@@ -105,6 +108,34 @@ const AdminRedirect: React.FC = () => {
         window.location.href = adminUrl(subPath);
     }, [subPath]);
     return null;
+};
+
+// --- PER-ROUTE ERROR BOUNDARY ---
+
+/** Catches errors in individual lazy-loaded pages without killing the whole app.
+ *  Shows a localized fallback instead of the global error screen. */
+const RouteErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+    const navigate = useNavigate();
+    const location = useLocation();
+    return (
+        <ErrorBoundary
+            resetKeys={[location.pathname]}
+            fallback={(error, reset) => (
+                <div className="flex flex-col items-center justify-center py-24 px-6 text-center">
+                    <div className="w-16 h-16 bg-amber-100 dark:bg-amber-900/30 text-amber-500 rounded-2xl flex items-center justify-center mb-6 text-2xl">!</div>
+                    <h2 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-2">This page encountered an error</h2>
+                    <p className="text-gray-500 dark:text-gray-400 mb-1 max-w-md">Something went wrong loading this page.</p>
+                    {error && <p className="text-xs font-mono text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 px-3 py-1.5 rounded mt-2 mb-4">{error.message}</p>}
+                    <div className="flex gap-3 mt-4">
+                        <button onClick={reset} className="px-4 py-2 text-sm font-medium bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg hover:opacity-90 transition-opacity">Try Again</button>
+                        <button onClick={() => navigate('/', { replace: true })} className="px-4 py-2 text-sm font-medium border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Return Home</button>
+                    </div>
+                </div>
+            )}
+        >
+            {children}
+        </ErrorBoundary>
+    );
 };
 
 // --- MAIN APP COMPONENT ---
@@ -174,14 +205,14 @@ const App: React.FC = () => {
                                             } />
 
                                             {/* Public Routes */}
-                                            <Route path="/learn" element={<PageTransition><LearnPage /></PageTransition>} />
+                                            <Route path="/learn" element={<PageTransition><RouteErrorBoundary><LearnPage /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/learn/article/:id" element={<PageTransition><ArticleRedirect /></PageTransition>} />
                                             <Route path="/learn/:categorySlug/:articleSlug" element={<PageTransition><ArticlePage /></PageTransition>} />
                                             <Route path="/learn/:categorySlug" element={<PageTransition><ArticleCategoryPage /></PageTransition>} />
                                             <Route path="/watch/:id" element={<PageTransition><VideoDetail /></PageTransition>} />
                                             {/* Provider Directory V2 */}
                                             <Route path="/providers" element={<PageTransition><ProvidersLandingPage /></PageTransition>} />
-                                            <Route path="/providers/search" element={<PageTransition><ProviderSearchPage /></PageTransition>} />
+                                            <Route path="/providers/search" element={<PageTransition><RouteErrorBoundary><ProviderSearchPage /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/providers/:id" element={<PageTransition><ProviderProfilePage /></PageTransition>} />
                                             <Route path="/for-providers" element={<PageTransition><ForProvidersLandingPage /></PageTransition>} />
                                             <Route path="/for-providers/apply" element={<PageTransition><ProviderApplyPage /></PageTransition>} />
@@ -190,7 +221,7 @@ const App: React.FC = () => {
                                             {/* Legacy provider redirects */}
                                             <Route path="/find-care" element={<Navigate to="/providers" replace />} />
                                             <Route path="/find-care/provider/:id" element={<Navigate to="/providers" replace />} />
-                                            <Route path="/tools" element={<PageTransition><ToolsPage /></PageTransition>} />
+                                            <Route path="/tools" element={<PageTransition><RouteErrorBoundary><ToolsPage /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/tools/mood-journal" element={<PageTransition><MoodJournal /></PageTransition>} />
                                             <Route path="/tools/sleep-architect" element={<PageTransition><SleepArchitect /></PageTransition>} />
                                             <Route path="/tools/mindmate" element={
@@ -216,12 +247,13 @@ const App: React.FC = () => {
                                             <Route path="/tools/clarity-journal/report" element={<PageTransition><ClarityJournalReport /></PageTransition>} />
                                             <Route path="/category/:category" element={<PageTransition><CategoryPage /></PageTransition>} />
                                             <Route path="/search" element={<PageTransition><SearchResults /></PageTransition>} />
-                                            <Route path="/clarity-score" element={<PageTransition><ClarityScoreTool /></PageTransition>} />
+                                            <Route path="/clarity-score" element={<PageTransition><RouteErrorBoundary><ClarityScoreTool /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/about" element={<PageTransition><AboutPage /></PageTransition>} />
                                             <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
                                             <Route path="/legal/privacy" element={<PageTransition><LegalPage type="privacy" /></PageTransition>} />
                                             <Route path="/legal/terms" element={<PageTransition><LegalPage type="terms" /></PageTransition>} />
                                             <Route path="/crisis" element={<PageTransition><CrisisPage /></PageTransition>} />
+                                            <Route path="/sitemap" element={<PageTransition><SitemapPage /></PageTransition>} />
                                             {/* Redirect legacy /navigator routes to /tools/symptom-navigator */}
                                             <Route path="/navigator" element={<Navigate to="/tools/symptom-navigator" replace />} />
                                             <Route path="/navigator/crisis" element={<Navigate to="/tools/symptom-navigator/crisis" replace />} />
@@ -238,7 +270,7 @@ const App: React.FC = () => {
                                             <Route path="/dashboard" element={
                                                 <ProtectedRoute>
                                                     <RoleGuard allowedRoles={['patient', 'admin']}>
-                                                        <PageTransition><UserDashboard /></PageTransition>
+                                                        <PageTransition><RouteErrorBoundary><UserDashboard /></RouteErrorBoundary></PageTransition>
                                                     </RoleGuard>
                                                 </ProtectedRoute>
                                             } />
@@ -246,7 +278,7 @@ const App: React.FC = () => {
                                             <Route path="/dashboard/settings" element={
                                                 <ProtectedRoute>
                                                     <RoleGuard allowedRoles={['patient', 'admin']}>
-                                                        <PageTransition><AccountSettings /></PageTransition>
+                                                        <PageTransition><RouteErrorBoundary><AccountSettings /></RouteErrorBoundary></PageTransition>
                                                     </RoleGuard>
                                                 </ProtectedRoute>
                                             } />
@@ -280,7 +312,7 @@ const App: React.FC = () => {
                                             <Route path="/provider" element={
                                                 <ProtectedRoute>
                                                     <RoleGuard allowedRoles={['provider', 'admin']}>
-                                                        <PageTransition><ProviderDashboard /></PageTransition>
+                                                        <PageTransition><RouteErrorBoundary><ProviderDashboard /></RouteErrorBoundary></PageTransition>
                                                     </RoleGuard>
                                                 </ProtectedRoute>
                                             } />

@@ -137,6 +137,8 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "eslint-plugin-storybook": "^10.1.4",
+    "glob": "^13.0.6",
+    "gray-matter": "^4.0.3",
     "husky": "^9.1.7",
     "jest-axe": "^9.0.0",
     "jsdom": "^27.4.0",

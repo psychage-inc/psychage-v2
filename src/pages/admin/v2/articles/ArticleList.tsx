@@ -206,6 +206,21 @@ const AdminArticleList: React.FC = () => {
       },
     },
     {
+      accessorKey: 'word_count',
+      header: 'Words',
+      cell: ({ row }) => {
+        const wc = row.original.word_count || 0;
+        const color = wc >= 1500 ? 'text-emerald-600 dark:text-emerald-400'
+          : wc >= 800 ? 'text-text-secondary'
+          : 'text-amber-600 dark:text-amber-400';
+        return (
+          <span className={`text-xs font-mono ${color}`}>
+            {wc > 0 ? wc.toLocaleString() : '—'}
+          </span>
+        );
+      },
+    },
+    {
       accessorKey: 'rating_overall',
       header: 'Rating',
       cell: ({ row }) => <StarRating rating={row.original.rating_overall} />,

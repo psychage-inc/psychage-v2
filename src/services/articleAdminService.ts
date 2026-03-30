@@ -49,19 +49,40 @@ export function getArticlesDataSource() {
 }
 
 // ============================================================
+// Helpers — paginated fetch (Supabase default limit is 1000)
+// ============================================================
+
+const PAGE_SIZE = 1000;
+
+async function fetchAllRows<T>(
+  queryBuilder: () => ReturnType<ReturnType<typeof supabase.from>['select']>,
+): Promise<T[]> {
+  const all: T[] = [];
+  let from = 0;
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
+    const { data, error } = await queryBuilder().range(from, from + PAGE_SIZE - 1);
+    if (error) throw error;
+    if (!data || data.length === 0) break;
+    all.push(...(data as T[]));
+    if (data.length < PAGE_SIZE) break;
+    from += PAGE_SIZE;
+  }
+  return all;
+}
+
+// ============================================================
 // Articles — CRUD
 // ============================================================
 
 export async function getArticles(): Promise<ArticleRecord[]> {
   try {
-    const { data, error } = await supabase
-      .from('articles')
-      .select('*')
-      .order('updated_at', { ascending: false });
-    if (error) throw error;
+    const articles = await fetchAllRows<ArticleRecord>(
+      () => supabase.from('articles').select('*').order('updated_at', { ascending: false }),
+    );
     _articlesSource = 'supabase';
     _articlesError = null;
-    return (data || []) as ArticleRecord[];
+    return articles;
   } catch (err: unknown) {
     const e = err as { message?: string; details?: string; hint?: string; code?: string };
     const message = e?.message || (err instanceof Error ? err.message : String(err));
@@ -535,12 +556,9 @@ export async function createBreakdownArticles(
 
 export async function getArticleStats(): Promise<ArticleStats> {
   try {
-    const { data, error } = await supabase
-      .from('articles')
-      .select('status, rating_overall');
-    if (error) throw error;
-
-    const articles = data || [];
+    const articles = await fetchAllRows<{ status: string; rating_overall: number | null }>(
+      () => supabase.from('articles').select('status, rating_overall'),
+    );
     const ratings = articles.map((a) => a.rating_overall).filter(Boolean) as number[];
 
     return {
@@ -757,13 +775,13 @@ export async function getArticleCategories(): Promise<ArticleCategoryRecord[]> {
       .order('display_order', { ascending: true });
     if (catErr) throw catErr;
 
-    // Get article counts per category
-    const { data: articles } = await supabase
-      .from('articles')
-      .select('category_id, status');
+    // Get article counts per category (paginated — table has >1000 rows)
+    const articles = await fetchAllRows<{ category_id: string | null; status: string }>(
+      () => supabase.from('articles').select('category_id, status'),
+    );
 
     const countMap: Record<string, { total: number; published: number }> = {};
-    for (const a of articles || []) {
+    for (const a of articles) {
       if (!a.category_id) continue;
       if (!countMap[a.category_id]) countMap[a.category_id] = { total: 0, published: 0 };
       countMap[a.category_id].total++;

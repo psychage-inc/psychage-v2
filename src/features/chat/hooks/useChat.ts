@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef } from 'react';
-import type { ChatMessage, StreamingState } from '../types/chat.types';
+import type { ChatMessage, ChatResponseMeta, StreamingState } from '../types/chat.types';
 import * as chatService from '../services/chatService';
 
 interface UseChatReturn {
@@ -51,7 +51,22 @@ export function useChat(): UseChatReturn {
       abortRef.current = false;
 
       try {
-        const stream = chatService.sendMessage(content, activeConversationId ?? undefined);
+        // Build full conversation history for the API
+        const chatHistory = messages
+          .filter((m) => m.content.trim())
+          .map((m) => ({ role: m.role, content: m.content }));
+        chatHistory.push({ role: 'user' as const, content: content.trim() });
+
+        // Capture metadata from the API response
+        let responseMeta: ChatResponseMeta | null = null;
+
+        const stream = chatService.sendMessage(
+          chatHistory,
+          activeConversationId ?? undefined,
+          (meta) => {
+            responseMeta = meta;
+          },
+        );
 
         for await (const token of stream) {
           if (abortRef.current) break;
@@ -63,27 +78,15 @@ export function useChat(): UseChatReturn {
           );
         }
 
-        // Mark streaming complete, add follow-ups and sources for demo
+        // Mark streaming complete with real metadata from the API
         setMessages((prev) =>
           prev.map((m) =>
             m.id === assistantId
               ? {
                   ...m,
                   isStreaming: false,
-                  suggestedFollowUps: [
-                    'Tell me more about coping strategies',
-                    'How do I know when to seek professional help?',
-                    'What tools does Psychage offer for this?',
-                  ],
-                  sources: [
-                    {
-                      id: 's1',
-                      title: 'Understanding Mental Health',
-                      url: '/learn',
-                      snippet: 'Evidence-based mental health education resources...',
-                      type: 'article' as const,
-                    },
-                  ],
+                  sources: responseMeta?.citations ?? [],
+                  safetyLevel: responseMeta?.safetyLevel,
                 }
               : m,
           ),
@@ -108,7 +111,7 @@ export function useChat(): UseChatReturn {
         );
       }
     },
-    [isStreaming, activeConversationId],
+    [isStreaming, activeConversationId, messages],
   );
 
   const retryLastMessage = useCallback(async () => {

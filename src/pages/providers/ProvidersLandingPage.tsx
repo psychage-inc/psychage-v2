@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import {
   ShieldCheck, Search as SearchIcon,
   ArrowRight, UserCheck, MessageCircle,
-  FlaskConical, Sparkles, Check,
+  FlaskConical, Sparkles, Check, Users, ClipboardCheck, BadgeCheck,
 } from 'lucide-react';
 import SEO from '@/components/SEO';
 import Button from '@/components/ui/Button';
@@ -151,45 +151,105 @@ const ProvidersLandingPage: React.FC = () => {
       </section>
 
       {/* For Providers CTA */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto flex justify-end">
-          <div className="w-full max-w-xl bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-800 dark:to-gray-900 rounded-3xl p-10 sm:p-12 text-white">
-            <h2 className="font-display font-bold text-2xl sm:text-3xl mb-3">Grow Your Practice, Reach More Patients</h2>
-            <p className="text-gray-300 mb-6">
-              Join the Psychage provider directory and connect directly with patients seeking care.
-            </p>
-            <div className="flex flex-col items-start gap-3 mb-8">
-              <div className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0">
-                  <Check size={12} className="text-teal-400" />
-                </div>
-                <span className="text-sm text-gray-300">Free NPI-verified listing — no hidden fees</span>
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-gray-900 to-teal-950">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left — Headline & CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="inline-flex items-center gap-2 bg-teal-500/10 border border-teal-500/20 rounded-full px-4 py-1.5 mb-6">
+                <BadgeCheck size={14} className="text-teal-400" />
+                <span className="text-xs font-bold text-teal-400 uppercase tracking-wider">For Providers</span>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0">
-                  <Check size={12} className="text-teal-400" />
-                </div>
-                <span className="text-sm text-gray-300">No commissions, no middlemen — patients contact you directly</span>
+
+              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-4 tracking-tight leading-tight">
+                Grow Your Practice,{' '}
+                <span className="text-teal-400">Reach More Patients</span>
+              </h2>
+              <p className="text-lg text-gray-400 mb-8 max-w-lg leading-relaxed">
+                Join 400,000+ providers on the largest free mental health directory. No hidden fees, no commissions — patients find and contact you directly.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 mb-10">
+                <Link to="/for-providers">
+                  <Button className="bg-teal-500 hover:bg-teal-600 text-white font-bold px-8 py-3 text-base" rightIcon={<ArrowRight size={16} />}>
+                    List Your Practice
+                  </Button>
+                </Link>
+                <Link to="/for-providers/claim">
+                  <Button variant="outline" className="text-white border-gray-600 hover:bg-white/10 font-bold px-8 py-3 text-base">
+                    Claim Your Profile
+                  </Button>
+                </Link>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0">
-                  <Check size={12} className="text-teal-400" />
-                </div>
-                <span className="text-sm text-gray-300">400,000+ providers already listed and growing</span>
+
+              <div className="flex flex-wrap gap-6">
+                {[
+                  { value: '400K+', label: 'Providers listed' },
+                  { value: '50', label: 'States covered' },
+                  { value: '$0', label: 'Cost to join' },
+                ].map((stat) => (
+                  <div key={stat.label} className="text-center">
+                    <div className="text-2xl font-display font-bold text-white">{stat.value}</div>
+                    <div className="text-xs text-gray-500 font-medium">{stat.label}</div>
+                  </div>
+                ))}
               </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Link to="/for-providers">
-                <Button className="bg-teal-500 hover:bg-teal-600 text-white font-bold px-8" rightIcon={<ArrowRight size={16} />}>
-                  List Your Practice
-                </Button>
-              </Link>
-              <Link to="/for-providers/claim">
-                <Button variant="outline" className="text-white border-gray-600 hover:bg-gray-700 font-bold px-8">
-                  Claim Your Profile
-                </Button>
-              </Link>
-            </div>
+            </motion.div>
+
+            {/* Right — Step-by-step onboarding */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="space-y-6"
+            >
+              {[
+                {
+                  step: 1,
+                  icon: SearchIcon,
+                  title: 'Search for your name',
+                  description: 'Your NPI-verified profile may already be in our directory. Search to find it.',
+                },
+                {
+                  step: 2,
+                  icon: ClipboardCheck,
+                  title: 'Claim & complete your profile',
+                  description: 'Verify your identity, add your specialties, accepted insurance, and a personal bio.',
+                },
+                {
+                  step: 3,
+                  icon: Users,
+                  title: 'Start receiving patients',
+                  description: 'Patients search by location, specialty, and insurance — then contact you directly.',
+                },
+              ].map((item, i) => (
+                <motion.div
+                  key={item.step}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 + i * 0.15 }}
+                  className="flex items-start gap-5 bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/[0.07] transition-colors"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-teal-500/15 flex items-center justify-center flex-shrink-0">
+                    <item.icon size={22} className="text-teal-400" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-3 mb-1">
+                      <span className="text-[11px] font-bold text-teal-500 uppercase tracking-widest">Step {item.step}</span>
+                    </div>
+                    <h3 className="font-display font-bold text-white text-lg mb-1">{item.title}</h3>
+                    <p className="text-sm text-gray-400 leading-relaxed">{item.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </section>

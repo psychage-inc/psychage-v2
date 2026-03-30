@@ -35,6 +35,13 @@ export interface ConversationListItem {
   preview: string;
 }
 
+export interface ChatResponseMeta {
+  citations: CitationSource[];
+  safetyLevel: 'SAFE' | 'WATCH' | 'URGENT' | 'CRISIS';
+  isCrisis: boolean;
+  sessionId: string;
+}
+
 export type StreamingState = 'idle' | 'streaming' | 'error';
 
 export type TimeGroup = 'today' | 'yesterday' | 'last7days' | 'last30days' | 'older';

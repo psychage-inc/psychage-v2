@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
 
   const getPath = (view: string, id?: string) => {
     if (view === 'home') return '/';
-    if (view === 'category' && id) return `/category/${id}`;
+    if (view === 'category' && id) return `/learn/${id}`;
     if (view === 'clarity-score') return '/clarity-score';
     if (view === 'find-care' || view === 'providers') return '/providers';
     if (view === 'about') return '/about';
@@ -41,12 +41,12 @@ const Footer: React.FC = () => {
 
   const footerLinks: Record<string, FooterLink[]> = {
     learn: [
-      { name: 'Emotional Regulation', view: 'category', id: 'emotional-regulation' },
       { name: 'Anxiety & Stress', view: 'category', id: 'anxiety-stress' },
-      { name: 'Relationships', view: 'category', id: 'relationships-social' },
-      { name: 'Self-Worth & Identity', view: 'category', id: 'self-esteem-identity' },
-      { name: 'Work & Burnout', view: 'category', id: 'workplace-academic' },
-      { name: 'Depression & Grief', view: 'category', id: 'depression-grief' },
+      { name: 'Depression & Mood', view: 'category', id: 'depression-mood' },
+      { name: 'Trauma & PTSD', view: 'category', id: 'trauma-ptsd' },
+      { name: 'Relationships & Social', view: 'category', id: 'relationships-social' },
+      { name: 'Self-Esteem & Identity', view: 'category', id: 'self-esteem-identity' },
+      { name: 'Sleep & Circadian', view: 'category', id: 'sleep-circadian' },
       { name: 'All Articles', view: 'learn' },
     ],
     popular: [
@@ -93,8 +93,8 @@ const Footer: React.FC = () => {
             className="max-w-4xl"
           >
             <h2 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-8xl tracking-tight leading-[0.9] mb-8 text-gray-900">
-              Mental health <br />
-              <span className="text-gray-500">is just health.</span>
+              Good information <br />
+              <span className="text-gray-500">is the start of good care.</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-500 max-w-xl leading-relaxed font-light">
               Building a future where quality care is accessible, understandable, and destigmatized for everyone.
@@ -164,17 +164,17 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Socials & Legal */}
-        <div className="bg-white border-t border-gray-100 pt-16 pb-8 mt-24 mb-12 flex flex-col md:flex-row items-start md:items-end justify-between gap-8">
+        <div className="bg-white border-t border-gray-100 pt-16 pb-8 mt-24 mb-12 flex flex-col md:flex-row items-end justify-end gap-8">
           {/* TODO: Restore social links once real URLs are available */}
 
-          <div className="flex flex-col md:items-end gap-4 text-xs text-gray-500 font-medium tracking-wide">
+          <div className="flex flex-col items-end gap-4 text-xs text-gray-500 font-medium tracking-wide text-right">
             <button
               onClick={scrollToTop}
               className="flex items-center gap-2 text-gray-900 hover:text-teal-600 transition-colors mb-4 text-sm font-bold uppercase tracking-widest group"
             >
               Back to Top <ArrowUp size={16} className="group-hover:-translate-y-1 transition-transform" />
             </button>
-            <div className="flex flex-wrap gap-x-6 gap-y-2 md:justify-end">
+            <div className="flex flex-wrap gap-x-6 gap-y-2 justify-end">
               <Link to="/legal/privacy" className="hover:text-gray-900 transition-colors">Privacy</Link>
               <Link to="/legal/terms" className="hover:text-gray-900 transition-colors">Terms</Link>
               <Link to="/sitemap" className="hover:text-gray-900 transition-colors">Sitemap</Link>

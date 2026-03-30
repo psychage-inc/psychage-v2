@@ -4,7 +4,9 @@ import {
   Brain, Leaf, Briefcase, Heart, BarChart3, Edit, Moon,
   // Learn category icons (semantic system)
   Library, Cloud, ShieldCheck, Stethoscope, HeartPulse,
-  Star, Target, Users, Home, UserPlus, Smartphone, Globe
+  Star, Target, Users, Home, UserPlus, Smartphone, Globe,
+  // Additional category icons
+  RefreshCw, AlertTriangle, Apple, MessageCircle, Compass, Baby
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -29,17 +31,23 @@ const iconMap: Record<string, React.ElementType> = {
 
   // Learn category icons (semantic system)
   'library': Library,              // Browse All
-  'cloud': Cloud,                  // Depression & Grief
-  'shield-check': ShieldCheck,     // Trauma & Healing
+  'cloud': Cloud,                  // Depression & Mood
+  'shield-check': ShieldCheck,     // Trauma & PTSD
   'stethoscope': Stethoscope,      // Mental Health Conditions
   'heart-pulse': HeartPulse,       // Emotional Regulation
   'star': Star,                    // Self-Worth
   'target': Target,                // Habits & Motivation
-  'users': Users,                  // Relationships
+  'users': Users,                  // Relationships & Social
   'home': Home,                    // Family & Parenting
   'user-plus': UserPlus,           // Loneliness & Connection
   'smartphone': Smartphone,        // Digital Life
-  'globe': Globe,                  // Cultural Perspectives
+  'globe': Globe,                  // Global & Cultural MH
+  'refresh-cw': RefreshCw,         // OCD & Related
+  'alert-triangle': AlertTriangle, // Substance Use & Addiction
+  'apple': Apple,                  // Eating & Body
+  'message-circle': MessageCircle, // Therapy & Treatment
+  'compass': Compass,              // Life Transitions
+  'baby': Baby,                    // Children & Adolescents
 
   default: Zap
 };

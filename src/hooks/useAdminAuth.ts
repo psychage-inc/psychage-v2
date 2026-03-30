@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/lib/supabaseClient';
-import { mainUrl } from '@/lib/urls';
 import type { AdminRole, AdminUser } from '@/lib/admin/types';
 
 const isDev = import.meta.env.DEV;
@@ -9,6 +8,7 @@ const isDev = import.meta.env.DEV;
 export function useAdminAuth(requiredRoles?: AdminRole[]) {
   const [adminUser, setAdminUser] = useState<AdminUser | null>(null);
   const [loading, setLoading] = useState(true);
+  const [denied, setDenied] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export function useAdminAuth(requiredRoles?: AdminRole[]) {
           if (isDev && session.user.user_metadata?.role === 'admin') {
             console.warn(
               '[useAdminAuth] No admin_roles row found, but user_metadata.role is "admin". ' +
-              'Granting dev-mode viewer access. Add a row to admin_roles for production.',
+              'Granting dev-mode viewer access. Run `npx tsx scripts/create-demo-admin.ts` for full access.',
             );
             setAdminUser({
               id: session.user.id,
@@ -50,9 +50,11 @@ export function useAdminAuth(requiredRoles?: AdminRole[]) {
             return;
           }
 
-          // Not an admin — redirect to main site (use window.location to escape admin BrowserRouter)
-          setLoading(false);
-          window.location.href = mainUrl('/');
+          // Not an admin — show denied state (AdminLayout will render appropriate UI)
+          if (!cancelled) {
+            setDenied(true);
+            setLoading(false);
+          }
           return;
         }
 
@@ -86,5 +88,5 @@ export function useAdminAuth(requiredRoles?: AdminRole[]) {
     return () => { cancelled = true; };
   }, [navigate, requiredRoles]);
 
-  return { adminUser, loading };
+  return { adminUser, loading, denied };
 }

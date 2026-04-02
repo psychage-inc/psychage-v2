@@ -33,7 +33,7 @@ const NewsletterSection: React.FC = () => {
   return (
     <>
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 lg:py-28 px-6 bg-white dark:bg-slate-950">
+      <section aria-label="Get started" className="py-16 sm:py-20 lg:py-28 px-6 bg-white dark:bg-slate-950">
         <div className="container mx-auto max-w-content">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -88,7 +88,7 @@ const NewsletterSection: React.FC = () => {
       </section>
 
       {/* Newsletter Email Collection — Separate Section */}
-      <section className="py-16 px-6 bg-slate-50 dark:bg-slate-900/50">
+      <section aria-label="Newsletter signup" className="py-16 px-6 bg-slate-50 dark:bg-slate-900/50">
         <div className="container mx-auto max-w-xl">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -112,35 +112,43 @@ const NewsletterSection: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
+                role="status"
+                aria-live="polite"
                 className="flex items-center justify-center gap-2.5 py-3 rounded-xl bg-teal-50 dark:bg-teal-500/15 border border-teal-200 dark:border-teal-400/20"
               >
                 <CheckCircle size={18} className="text-teal-600 dark:text-teal-400" />
                 <span className="text-sm font-medium text-teal-700 dark:text-teal-300">You're subscribed — check your inbox!</span>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
-                  required
-                  className="h-12 px-4 flex-1 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-500/40 focus:border-teal-500/30 transition-all"
-                />
-                <button
-                  type="submit"
-                  disabled={status === 'loading'}
-                  className="h-12 px-6 bg-teal-600 hover:bg-teal-500 text-white text-sm font-semibold rounded-xl transition-all disabled:opacity-60 flex items-center justify-center gap-2 shrink-0 shadow-sm"
-                >
-                  {status === 'loading' ? (
-                    <Loader2 size={16} className="animate-spin" />
-                  ) : status === 'error' ? (
-                    'Try again'
-                  ) : (
-                    <>Subscribe <ArrowRight size={15} /></>
-                  )}
-                </button>
-              </form>
+              <>
+                <form onSubmit={handleSubmit} aria-label="Subscribe to newsletter" className="flex flex-col sm:flex-row gap-3">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email"
+                    aria-label="Email address"
+                    required
+                    className="h-12 px-4 flex-1 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-500/40 focus:border-teal-500/30 transition-all"
+                  />
+                  <button
+                    type="submit"
+                    disabled={status === 'loading'}
+                    className="h-12 px-6 bg-teal-600 hover:bg-teal-500 text-white text-sm font-semibold rounded-xl transition-all disabled:opacity-60 flex items-center justify-center gap-2 shrink-0 shadow-sm"
+                  >
+                    {status === 'loading' ? (
+                      <Loader2 size={16} className="animate-spin" />
+                    ) : status === 'error' ? (
+                      'Try again'
+                    ) : (
+                      <>Subscribe <ArrowRight size={15} /></>
+                    )}
+                  </button>
+                </form>
+                {status === 'error' && (
+                  <p role="alert" className="text-sm text-red-600 dark:text-red-400 mt-2">Something went wrong. Please try again.</p>
+                )}
+              </>
             )}
             <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-3">
               By subscribing you consent to receiving emails from Psychage.

@@ -42,11 +42,11 @@ const Footer: React.FC = () => {
   const footerLinks: Record<string, FooterLink[]> = {
     learn: [
       { name: 'Anxiety & Stress', view: 'category', id: 'anxiety-stress' },
-      { name: 'Depression & Mood', view: 'category', id: 'depression-mood' },
-      { name: 'Trauma & PTSD', view: 'category', id: 'trauma-ptsd' },
-      { name: 'Relationships & Social', view: 'category', id: 'relationships-social' },
-      { name: 'Self-Esteem & Identity', view: 'category', id: 'self-esteem-identity' },
-      { name: 'Sleep & Circadian', view: 'category', id: 'sleep-circadian' },
+      { name: 'Depression & Grief', view: 'category', id: 'depression-grief' },
+      { name: 'Trauma & Healing', view: 'category', id: 'trauma-healing' },
+      { name: 'Relationships', view: 'category', id: 'relationships-communication' },
+      { name: 'Self-Worth & Identity', view: 'category', id: 'self-worth-identity' },
+      { name: 'Sleep & Body', view: 'category', id: 'sleep-body-connection' },
       { name: 'All Articles', view: 'learn' },
     ],
     popular: [
@@ -66,18 +66,11 @@ const Footer: React.FC = () => {
     ]
   };
 
-  // TODO: Add real social media URLs — all were placeholder '#'
-  // const socialLinks = [
-  //   { icon: Twitter, href: 'https://twitter.com/psychage', label: 'Twitter' },
-  //   { icon: Instagram, href: 'https://instagram.com/psychage', label: 'Instagram' },
-  //   { icon: Linkedin, href: 'https://linkedin.com/company/psychage', label: 'LinkedIn' },
-  //   { icon: Youtube, href: 'https://youtube.com/@psychage', label: 'YouTube' },
-  // ];
 
   return (
-    <footer ref={footerRef} className="bg-white text-gray-900 relative font-sans overflow-hidden flex flex-col border-t border-gray-100 transition-colors duration-500">
+    <footer ref={footerRef} className="bg-background text-text-primary relative font-sans overflow-hidden flex flex-col border-t border-border transition-colors duration-500">
       {/* Crisis Banner floats on top */}
-      <div className="relative z-30 border-b border-gray-100">
+      <div className="relative z-30 border-b border-border">
         <CrisisBanner />
       </div>
 
@@ -92,11 +85,11 @@ const Footer: React.FC = () => {
             viewport={{ once: true }}
             className="max-w-4xl"
           >
-            <h2 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-8xl tracking-tight leading-[0.9] mb-8 text-gray-900">
+            <h2 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-8xl tracking-tight leading-[0.9] mb-8 text-text-primary">
               Good information <br />
-              <span className="text-gray-500">is the start of good care.</span>
+              <span className="text-text-tertiary">is the start of good care.</span>
             </h2>
-            <p className="text-xl md:text-2xl text-gray-500 max-w-xl leading-relaxed font-light">
+            <p className="text-xl md:text-2xl text-text-tertiary max-w-xl leading-relaxed font-light">
               Building a future where quality care is accessible, understandable, and destigmatized for everyone.
             </p>
           </motion.div>
@@ -110,12 +103,12 @@ const Footer: React.FC = () => {
           >
             <Link to="/about" className="group flex items-center gap-4 text-xl md:text-3xl font-semibold hover:text-teal-600 transition-colors">
               Join the movement
-              <span className="bg-gray-900 text-white rounded-full p-2 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+              <span className="bg-text-primary text-background rounded-full p-2 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
                 <ArrowRight className="group-hover:-rotate-45 transition-transform duration-300" size={24} />
               </span>
             </Link>
 
-            <div className="flex items-center gap-2 text-gray-600 text-sm font-medium border border-gray-300 rounded-full px-4 py-2 hover:border-gray-400 transition-colors cursor-pointer">
+            <div className="flex items-center gap-2 text-text-secondary text-sm font-medium border border-border rounded-full px-4 py-2 hover:border-text-tertiary transition-colors cursor-pointer">
               <Globe size={16} />
               <span>United States (English)</span>
             </div>
@@ -127,7 +120,7 @@ const Footer: React.FC = () => {
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.5, ease: "circOut" }}
-          className="h-px w-full bg-gray-100 mb-20 origin-left"
+          className="h-px w-full bg-border mb-20 origin-left"
         />
 
         {/* Massive Links Grid */}
@@ -145,13 +138,13 @@ const Footer: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: colIndex * 0.1 }}
             >
-              <h4 className="text-sm font-bold text-gray-400 mb-8 uppercase tracking-widest">{column.title}</h4>
+              <h4 className="text-sm font-bold text-text-tertiary mb-8 uppercase tracking-widest">{column.title}</h4>
               <ul className="space-y-4">
                 {column.links.map((link) => (
                   <li key={link.name}>
                     <Link
                       to={getPath(link.view, link.id)}
-                      className="group flex items-center gap-2 text-lg text-gray-600 hover:text-gray-900 transition-colors duration-300"
+                      className="group flex items-center gap-2 text-lg text-text-secondary hover:text-text-primary transition-colors duration-300"
                     >
                       <ArrowRight size={14} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-teal-600" />
                       <span className="group-hover:translate-x-1 transition-transform">{link.name}</span>
@@ -164,32 +157,31 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Socials & Legal */}
-        <div className="bg-white border-t border-gray-100 pt-16 pb-8 mt-24 mb-12 flex flex-col md:flex-row items-end justify-end gap-8">
-          {/* TODO: Restore social links once real URLs are available */}
+        <div className="bg-background border-t border-border pt-16 pb-8 mt-24 mb-12 flex flex-col md:flex-row items-end justify-end gap-8">
 
-          <div className="flex flex-col items-end gap-4 text-xs text-gray-500 font-medium tracking-wide text-right">
+          <div className="flex flex-col items-end gap-4 text-xs text-text-tertiary font-medium tracking-wide text-right">
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-2 text-gray-900 hover:text-teal-600 transition-colors mb-4 text-sm font-bold uppercase tracking-widest group"
+              className="flex items-center gap-2 text-text-primary hover:text-teal-600 transition-colors mb-4 text-sm font-bold uppercase tracking-widest group"
             >
               Back to Top <ArrowUp size={16} className="group-hover:-translate-y-1 transition-transform" />
             </button>
             <div className="flex flex-wrap gap-x-6 gap-y-2 justify-end">
-              <Link to="/legal/privacy" className="hover:text-gray-900 transition-colors">Privacy</Link>
-              <Link to="/legal/terms" className="hover:text-gray-900 transition-colors">Terms</Link>
-              <Link to="/sitemap" className="hover:text-gray-900 transition-colors">Sitemap</Link>
+              <Link to="/legal/privacy" className="hover:text-text-primary transition-colors">Privacy</Link>
+              <Link to="/legal/terms" className="hover:text-text-primary transition-colors">Terms</Link>
+              <Link to="/sitemap" className="hover:text-text-primary transition-colors">Sitemap</Link>
             </div>
-            <p className="max-w-xs md:max-w-md md:text-right text-gray-400">Psychage is an educational tool and does not provide medical advice, diagnosis, or treatment.</p>
+            <p className="max-w-xs md:max-w-md md:text-right text-text-tertiary">Psychage is an educational tool and does not provide medical advice, diagnosis, or treatment.</p>
             <p>© {currentYear} Psychage Health, Inc.</p>
           </div>
         </div>
       </div>
 
-      {/* Footer Watermark - large brand anchor like hims.com */}
-      <div className="w-full flex justify-center items-end select-none pointer-events-none pb-4">
-        <h1 className="font-display font-black text-[clamp(4rem,15vw,20rem)] leading-none text-gray-200 dark:text-gray-800 tracking-tighter whitespace-nowrap">
+      {/* Footer Watermark - decorative brand anchor */}
+      <div className="w-full flex justify-center items-end select-none pointer-events-none pb-4" aria-hidden="true">
+        <span className="font-display font-black text-[clamp(4rem,15vw,20rem)] leading-none text-border dark:text-border tracking-tighter whitespace-nowrap">
           psychage
-        </h1>
+        </span>
       </div>
     </footer >
   );

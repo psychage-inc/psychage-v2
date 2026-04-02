@@ -61,7 +61,7 @@ const ProductShowcase: React.FC = () => {
     const navigate = useNavigate();
 
     return (
-        <section className="py-16 sm:py-20 lg:py-28 px-6 bg-slate-50/50 dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800">
+        <section aria-label="Mental health tools" className="py-16 sm:py-20 lg:py-28 px-6 bg-slate-50/50 dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800">
             <div className="container mx-auto max-w-6xl">
                 {/* Header */}
                 <motion.div

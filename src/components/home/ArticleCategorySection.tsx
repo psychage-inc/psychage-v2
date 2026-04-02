@@ -63,7 +63,7 @@ const ArticleCategorySection: React.FC<ArticleCategorySectionProps> = ({
         : 'bg-white dark:bg-slate-950';
 
     return (
-        <section className={`py-16 sm:py-20 lg:py-24 px-6 ${bgClass}`}>
+        <section aria-label={heading} className={`py-16 sm:py-20 lg:py-24 px-6 ${bgClass}`}>
             <div className="container mx-auto max-w-6xl">
 
                 {/* Header */}
@@ -100,6 +100,7 @@ const ArticleCategorySection: React.FC<ArticleCategorySectionProps> = ({
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.3 }}
+                        aria-live="polite"
                     >
                         {loading ? (
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -120,8 +121,11 @@ const ArticleCategorySection: React.FC<ArticleCategorySectionProps> = ({
                                     return (
                                         <div
                                             key={article.id}
+                                            role="link"
+                                            tabIndex={0}
                                             onClick={() => navigate(getArticleUrl(article))}
-                                            className="group cursor-pointer"
+                                            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate(getArticleUrl(article)); } }}
+                                            className="group cursor-pointer rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2"
                                         >
                                             <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-4 bg-slate-100 dark:bg-slate-800">
                                                 {article.image && !imgBroken ? (

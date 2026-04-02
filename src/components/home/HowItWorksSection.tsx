@@ -147,7 +147,7 @@ const steps = [
 
 const HowItWorksSection: React.FC = () => {
     return (
-        <section id="how-it-works" className="relative py-16 sm:py-20 lg:py-28 overflow-hidden">
+        <section id="how-it-works" aria-label="How it works" className="relative py-16 sm:py-20 lg:py-28 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50/80 to-white dark:from-slate-950 dark:via-slate-900/50 dark:to-slate-950" />
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-800 to-transparent" />
 

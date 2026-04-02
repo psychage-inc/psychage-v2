@@ -79,6 +79,30 @@ const SEO: React.FC<SEOProps> = ({
         ],
     }) : null;
 
+    // Homepage structured data — Organization + WebSite with SearchAction
+    const isHomepage = type === 'website' && !article;
+    const homepageJsonLd = isHomepage ? JSON.stringify([
+        {
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Psychage',
+            url: 'https://psychage.com',
+            description: 'Free, evidence-based mental health tools, assessments, and educational resources.',
+            foundingDate: '2024',
+        },
+        {
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'Psychage',
+            url: 'https://psychage.com',
+            potentialAction: {
+                '@type': 'SearchAction',
+                target: 'https://psychage.com/search?q={search_term_string}',
+                'query-input': 'required name=search_term_string',
+            },
+        },
+    ]) : null;
+
     return (
         <Helmet>
             {/* Primary Meta Tags */}
@@ -118,6 +142,9 @@ const SEO: React.FC<SEOProps> = ({
             )}
             {breadcrumbJsonLd && (
                 <script type="application/ld+json">{breadcrumbJsonLd}</script>
+            )}
+            {homepageJsonLd && (
+                <script type="application/ld+json">{homepageJsonLd}</script>
             )}
         </Helmet>
     );

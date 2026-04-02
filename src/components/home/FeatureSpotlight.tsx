@@ -14,7 +14,7 @@ const FeatureSpotlight: React.FC = () => {
     const navigate = useNavigate();
 
     return (
-        <section className="py-16 sm:py-20 lg:py-28 px-6 relative overflow-hidden">
+        <section aria-label="Symptom Navigator privacy" className="py-16 sm:py-20 lg:py-28 px-6 relative overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0 bg-teal-950" />
 

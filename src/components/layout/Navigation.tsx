@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
-import { Search, Menu, ChevronDown, User, X, LogOut, LayoutDashboard, Settings } from 'lucide-react';
+import { Search, Menu, ChevronDown, User, X, LogOut, LayoutDashboard, Settings, Phone } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
 import NavMenu from './NavMenu';
 import MobileMenu from './MobileMenu';
@@ -145,7 +145,7 @@ const Navigation: React.FC = () => {
         <>
             <header
                 className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${isScrolled || activeTab || isSearchOpen
-                    ? 'bg-white/80 backdrop-blur-xl border-b border-gray-200 shadow-sm'
+                    ? 'bg-surface/80 backdrop-blur-xl border-b border-border shadow-sm'
                     : 'bg-transparent'
                     }`}
                 onMouseLeave={handleMouseLeave}
@@ -168,8 +168,8 @@ const Navigation: React.FC = () => {
                                         <button
                                             onMouseEnter={() => { handleMouseEnter(navItem.label); setHoveredLink(navItem.label); }}
                                             className={`relative px-4 py-2 rounded-full text-sm font-bold transition-colors duration-200 flex items-center gap-1.5 z-10 ${activeTab === navItem.label || hoveredLink === navItem.label
-                                                ? 'text-gray-900'
-                                                : 'text-gray-600'
+                                                ? 'text-text-primary'
+                                                : 'text-text-secondary'
                                                 }`}
                                             aria-expanded={activeTab === navItem.label}
                                             aria-haspopup="menu"
@@ -178,7 +178,7 @@ const Navigation: React.FC = () => {
                                             {activeTab === navItem.label && (
                                                 <motion.div
                                                     layoutId="nav-bg"
-                                                    className="absolute inset-0 bg-gray-100 rounded-full -z-10"
+                                                    className="absolute inset-0 bg-surface-hover rounded-full -z-10"
                                                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                                                 />
                                             )}
@@ -195,12 +195,12 @@ const Navigation: React.FC = () => {
                                         >
                                             <button
                                                 onClick={() => navigate(navItem.type === 'link' ? navItem.href : '/')}
-                                                className={`relative px-4 py-2 rounded-full text-sm font-bold transition-colors duration-200 z-10 ${hoveredLink === navItem.label ? 'text-gray-900' : 'text-gray-600'}`}
+                                                className={`relative px-4 py-2 rounded-full text-sm font-bold transition-colors duration-200 z-10 ${hoveredLink === navItem.label ? 'text-text-primary' : 'text-text-secondary'}`}
                                             >
                                                 {hoveredLink === navItem.label && (
                                                     <motion.div
                                                         layoutId="nav-bg"
-                                                        className="absolute inset-0 bg-gray-100 rounded-full -z-10"
+                                                        className="absolute inset-0 bg-surface-hover rounded-full -z-10"
                                                         transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                                                     />
                                                 )}
@@ -220,8 +220,8 @@ const Navigation: React.FC = () => {
                             onClick={() => setIsSearchOpen(!isSearchOpen)}
                             onMouseEnter={() => handleMouseEnter('')}
                             className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 ${isSearchOpen
-                                ? 'bg-gray-100 text-gray-900'
-                                : 'text-gray-500 hover:bg-gray-100 hover:text-gray-900'
+                                ? 'bg-surface-hover text-text-primary'
+                                : 'text-text-tertiary hover:bg-surface-hover hover:text-text-primary'
                                 }`}
                             aria-label={isSearchOpen ? 'Close search' : 'Open search'}
                             aria-expanded={isSearchOpen}
@@ -234,14 +234,15 @@ const Navigation: React.FC = () => {
                             <LanguageSwitcher />
                         </div> */}
 
-                        {/* Crisis Support Button */}
+                        {/* Crisis Support Button — always visible, compact on mobile */}
                         <button
                             onClick={() => navigate('/crisis')}
                             onMouseEnter={() => handleMouseEnter('')}
-                            className="hidden md:flex items-center justify-center px-4 h-10 rounded-full text-sm font-bold text-red-600 bg-red-50 hover:bg-red-100 transition-colors border border-red-100"
+                            className="flex items-center justify-center h-10 rounded-full text-sm font-bold text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors border border-red-100 dark:border-red-800/50 px-2.5 md:px-4"
                             aria-label="Crisis support - get immediate help"
                         >
-                            Crisis Support
+                            <Phone size={16} className="md:hidden" aria-hidden="true" />
+                            <span className="hidden md:inline">Crisis Support</span>
                         </button>
 
                         {isAuthenticated ? (
@@ -250,7 +251,7 @@ const Navigation: React.FC = () => {
                                 <div className="relative" ref={userMenuRef}>
                                     <button
                                         onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-                                        className={`hidden md:flex w-10 h-10 rounded-full items-center justify-center transition-all ${isUserMenuOpen ? 'bg-gray-100 text-gray-900' : 'text-gray-500 hover:bg-gray-100 hover:text-gray-900'}`}
+                                        className={`hidden md:flex w-10 h-10 rounded-full items-center justify-center transition-all ${isUserMenuOpen ? 'bg-surface-hover text-text-primary' : 'text-text-tertiary hover:bg-surface-hover hover:text-text-primary'}`}
                                         aria-label="User menu"
                                         aria-expanded={isUserMenuOpen}
                                         aria-haspopup="menu"
@@ -265,16 +266,16 @@ const Navigation: React.FC = () => {
                                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                                 exit={{ opacity: 0, y: 10, scale: 0.95 }}
                                                 transition={{ duration: 0.1 }}
-                                                className="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden py-1 z-[60]"
+                                                className="absolute right-0 top-full mt-2 w-56 bg-surface rounded-xl shadow-xl border border-border overflow-hidden py-1 z-[60]"
                                                 role="menu"
                                             >
-                                                <div className="px-4 py-3 border-b border-gray-100">
-                                                    <p className="text-sm font-medium text-gray-900 truncate">{user?.display_name || 'User'}</p>
-                                                    <p className="text-xs text-gray-500 truncate">{user?.email}</p>
+                                                <div className="px-4 py-3 border-b border-border">
+                                                    <p className="text-sm font-medium text-text-primary truncate">{user?.display_name || 'User'}</p>
+                                                    <p className="text-xs text-text-tertiary truncate">{user?.email}</p>
                                                 </div>
                                                 <button
                                                     onClick={() => { navigate(getDashboardPath()); setIsUserMenuOpen(false); }}
-                                                    className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 flex items-center gap-2"
+                                                    className="w-full text-left px-4 py-2 text-sm text-text-secondary hover:bg-surface-hover flex items-center gap-2"
                                                     role="menuitem"
                                                 >
                                                     <LayoutDashboard size={16} />
@@ -282,16 +283,16 @@ const Navigation: React.FC = () => {
                                                 </button>
                                                 <button
                                                     onClick={() => { navigate('/dashboard/settings'); setIsUserMenuOpen(false); }}
-                                                    className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 flex items-center gap-2"
+                                                    className="w-full text-left px-4 py-2 text-sm text-text-secondary hover:bg-surface-hover flex items-center gap-2"
                                                     role="menuitem"
                                                 >
                                                     <Settings size={16} />
                                                     Settings
                                                 </button>
-                                                <div className="h-px bg-gray-100 my-1" />
+                                                <div className="h-px bg-border my-1" />
                                                 <button
                                                     onClick={handleLogout}
-                                                    className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 flex items-center gap-2"
+                                                    className="w-full text-left px-4 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 flex items-center gap-2"
                                                     role="menuitem"
                                                 >
                                                     <LogOut size={16} />
@@ -323,7 +324,7 @@ const Navigation: React.FC = () => {
                                             key={authItem.id}
                                             onClick={() => navigate(authItem.href)}
                                             onMouseEnter={() => handleMouseEnter('')}
-                                            className="hidden md:flex px-4 py-2 rounded-full text-sm font-bold text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all"
+                                            className="hidden md:flex px-4 py-2 rounded-full text-sm font-bold text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-all"
                                         >
                                             {authItem.label}
                                         </button>
@@ -334,7 +335,7 @@ const Navigation: React.FC = () => {
 
                         {/* Mobile Menu Button */}
                         <button
-                            className="md:hidden w-10 h-10 rounded-full flex items-center justify-center text-gray-900 hover:bg-gray-100"
+                            className="md:hidden w-10 h-10 rounded-full flex items-center justify-center text-text-primary hover:bg-surface-hover"
                             onClick={() => setIsMobileMenuOpen(true)}
                             aria-label="Open navigation menu"
                             aria-expanded={isMobileMenuOpen}
@@ -351,21 +352,21 @@ const Navigation: React.FC = () => {
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: 'auto', opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
-                            className="border-t border-gray-100 bg-white overflow-hidden relative z-40"
+                            className="border-t border-border bg-surface overflow-hidden relative z-40"
                         >
                             <div className="max-w-3xl mx-auto px-4 py-6">
                                 <form onSubmit={handleSearchSubmit} className="relative">
-                                    <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+                                    <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-text-tertiary" size={20} />
                                     <input
                                         ref={searchInputRef}
                                         type="text"
                                         value={searchQuery}
                                         onChange={(e) => setSearchQuery(e.target.value)}
                                         placeholder="Search articles, tools, videos..."
-                                        className="w-full pl-12 pr-4 py-4 bg-gray-50 border-none rounded-2xl text-lg font-medium text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-teal-500"
+                                        className="w-full pl-12 pr-4 py-4 bg-surface-hover border-none rounded-2xl text-lg font-medium text-text-primary placeholder-text-tertiary focus:ring-2 focus:ring-teal-500"
                                     />
                                     <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-2">
-                                        <span className="text-xs font-bold text-gray-400 border border-gray-200 px-2 py-1 rounded-md">ESC</span>
+                                        <span className="text-xs font-bold text-text-tertiary border border-border px-2 py-1 rounded-md">ESC</span>
                                     </div>
                                 </form>
                             </div>
@@ -382,7 +383,7 @@ const Navigation: React.FC = () => {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
                             transition={{ duration: 0.2 }}
-                            className="absolute top-full left-0 right-0 border-t border-gray-100 bg-white/95 backdrop-blur-xl shadow-xl z-50"
+                            className="absolute top-full left-0 right-0 border-t border-border bg-surface/95 backdrop-blur-xl shadow-xl z-50"
                             onMouseEnter={handleMenuEnter}
                             onMouseLeave={handleMenuLeave}
                         >

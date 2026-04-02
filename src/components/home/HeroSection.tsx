@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
             : { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] } };
 
     return (
-        <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-background pt-24 pb-20">
+        <section aria-label="Welcome" className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-background pt-24 pb-20">
             {/* Soft ambient background */}
             {!prefersReducedMotion && (
                 <div className="absolute inset-0 overflow-hidden pointer-events-none hidden md:block">
@@ -75,23 +75,34 @@ const HeroSection: React.FC = () => {
                             title: 'Clarity Score',
                             desc: 'A 3-minute check-in to understand your mental baseline',
                             color: 'text-teal-600 dark:text-teal-400',
+                            href: '/clarity-score',
                         },
                         {
                             icon: BookOpen,
                             title: 'Learn & Grow',
                             desc: 'Expert-written guides on anxiety, mood, resilience, and more',
                             color: 'text-emerald-600 dark:text-emerald-400',
+                            href: '/learn',
                         },
                         {
                             icon: Shield,
                             title: 'Completely Private',
                             desc: 'No accounts needed. Nothing leaves your device — ever',
                             color: 'text-slate-600 dark:text-slate-400',
+                            href: null,
                         },
-                    ].map(({ icon: Icon, title, desc, color }) => (
+                    ].map(({ icon: Icon, title, desc, color, href }) => (
                         <div
                             key={title}
-                            className={`bg-surface border border-border/50 shadow-sm hover:scale-[1.01] hover:border-border rounded-2xl p-5 text-left transition-all`}
+                            role={href ? 'link' : undefined}
+                            tabIndex={href ? 0 : undefined}
+                            onClick={href ? () => navigate(href) : undefined}
+                            onKeyDown={href ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate(href); } } : undefined}
+                            className={`bg-surface border border-border/50 shadow-sm rounded-2xl p-5 text-left transition-all ${
+                                href
+                                    ? 'cursor-pointer hover:scale-[1.01] hover:border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2'
+                                    : ''
+                            }`}
                         >
                             <Icon className={`w-5 h-5 ${color} mb-3`} />
                             <h3 className="font-display font-semibold text-sm text-text-primary mb-1">{title}</h3>

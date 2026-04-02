@@ -158,7 +158,7 @@ const SignUpPage = () => {
                                 )}
                                 type="button"
                             >
-                                I'm a Patient
+                                I am an individual
                             </button>
                             <button
                                 onClick={() => setUserType('provider')}

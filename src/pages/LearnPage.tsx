@@ -136,7 +136,7 @@ const FeaturedHeroCard: React.FC<{
 
     return (
         <button onClick={onClick} className="group text-left w-full">
-            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-border">
+            <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-border">
                 {article.image && !imgError ? (
                     <img
                         src={article.image}
@@ -151,7 +151,7 @@ const FeaturedHeroCard: React.FC<{
                     </div>
                 )}
                 {/* Reading time badge */}
-                <span className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-semibold text-text-primary border border-border">
+                <span className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-semibold text-white border border-border">
                     {article.readTime ?? 5} min read
                 </span>
             </div>

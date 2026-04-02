@@ -128,7 +128,7 @@ function mapSupabaseToArticle(data: DBArticle): ArticleWithContent {
         status: data.status,
         author: {
             id: 'team',
-            name: 'PsychAge Team',
+            name: 'Psychage Team',
             role: 'Editor',
             image: ''
         },

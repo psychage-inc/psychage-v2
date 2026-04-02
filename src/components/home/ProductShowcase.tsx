@@ -75,7 +75,7 @@ const ProductShowcase: React.FC = () => {
                         Everything you need, in one place.
                     </h2>
                     <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Assessments, tracking tools, AI support, and professional connections — all free, all private.
+                        Assessments, tracking, AI support, and professional connections — all free, all private.
                     </p>
                 </motion.div>
 

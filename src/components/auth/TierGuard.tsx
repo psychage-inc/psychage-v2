@@ -18,6 +18,13 @@ interface TierGuardProps {
  *
  * Checks `profiles.subscription_tier` and shows an upgrade prompt
  * if the user's tier is insufficient for the feature.
+ *
+ * TODO [Phase 2]: This component is currently UNUSED (zero imports).
+ * To activate:
+ *  1. Integrate Stripe and implement checkout flow
+ *  2. Add subscription_tier to AuthContext to avoid per-component DB queries
+ *  3. Wire the upgrade button to a Stripe Checkout session
+ *  4. Wrap premium features with <TierGuard requiredTier="spark_plus">
  */
 const TierGuard: React.FC<TierGuardProps> = ({
     requiredTier,

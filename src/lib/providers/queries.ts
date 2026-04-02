@@ -466,7 +466,9 @@ export async function submitProviderApplication(
       license_state: application.license_state || null,
       provider_type_id: application.provider_type_id,
       status: 'submitted',
-      tier: application.tier,
+      // TODO: Allow application.tier once Stripe payment is verified (Phase 2).
+      // Until then, all providers start on 'free' to prevent unpaid premium claims.
+      tier: 'free' as ProviderTier,
       source: 'manual',
       display_name: application.display_name,
       credentials_suffix: application.credentials_suffix,

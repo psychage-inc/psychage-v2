@@ -103,6 +103,8 @@ export interface ProviderVerification {
 // --- Enum Types ---
 
 export type ProviderStatus = 'seeded' | 'claimed' | 'submitted' | 'verified' | 'active' | 'suspended' | 'rejected';
+// TODO [Phase 2]: PRD specifies 3 tiers: Free, Growth ($49/mo), Premium ($99/mo).
+// Add 'growth' here and in DB constraint (providers.tier CHECK) when Stripe is integrated.
 export type ProviderTier = 'free' | 'premium';
 export type ProviderSource = 'npi_registry' | 'samhsa' | 'hrsa_hc' | 'manual' | 'claim';
 

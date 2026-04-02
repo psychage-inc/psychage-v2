@@ -98,12 +98,13 @@ export const chatPersistenceService = {
             }
 
             // Update conversation metadata
-            await supabase
+            const { error: updateErr } = await supabase
                 .from('ai_conversations')
                 .update({
                     last_message_at: new Date().toISOString(),
                 })
                 .eq('id', conversationId);
+            if (updateErr) console.error('Failed to update conversation timestamp:', updateErr);
 
             // Increment message count via raw SQL update (RPC may not exist)
             try {

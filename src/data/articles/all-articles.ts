@@ -1,12 +1,12 @@
 /**
  * All Articles Aggregator
- * Imports and combines all article arrays from all 22 categories
+ * Imports and combines all article arrays from all 31 categories
  * Used by articleService.ts as mock data fallback
  */
 
 import type { Article } from '@/types/models';
 
-// Import category modules
+// Import category modules (1-22: original, 23-31: batch 2)
 import * as cat01 from './category-01';
 import * as cat02 from './category-02';
 import * as cat03 from './category-03';
@@ -29,6 +29,15 @@ import * as cat19 from './category-19';
 import * as cat20 from './category-20';
 import * as cat21 from './category-21';
 import * as cat22 from './category-22';
+import * as cat23 from './category-23';
+import * as cat24 from './category-24';
+import * as cat25 from './category-25';
+import * as cat26 from './category-26';
+import * as cat27 from './category-27';
+import * as cat28 from './category-28';
+import * as cat29 from './category-29';
+import * as cat30 from './category-30';
+import * as cat31 from './category-31';
 
 /**
  * Flatten a category module into an array of articles
@@ -70,4 +79,13 @@ export const allArticles: Article[] = [
   ...flattenCategoryModule(cat20),
   ...flattenCategoryModule(cat21),
   ...flattenCategoryModule(cat22),
+  ...flattenCategoryModule(cat23),
+  ...flattenCategoryModule(cat24),
+  ...flattenCategoryModule(cat25),
+  ...flattenCategoryModule(cat26),
+  ...flattenCategoryModule(cat27),
+  ...flattenCategoryModule(cat28),
+  ...flattenCategoryModule(cat29),
+  ...flattenCategoryModule(cat30),
+  ...flattenCategoryModule(cat31),
 ];

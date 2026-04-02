@@ -14,7 +14,7 @@ export const newsletterService = {
                 .from('newsletter_subscribers')
                 .select('id')
                 .eq('email', email.toLowerCase())
-                .single();
+                .maybeSingle();
 
             if (existing) {
                 return { success: true, message: 'You are already subscribed!' };

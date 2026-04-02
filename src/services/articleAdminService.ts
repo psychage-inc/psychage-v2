@@ -202,7 +202,7 @@ export async function updateArticleStatus(
 
   // Insert status history
   const { data: { user } } = await supabase.auth.getUser();
-  await supabase.from('article_status_history').insert({
+  const { error: histErr } = await supabase.from('article_status_history').insert({
     article_id: id,
     from_status: oldStatus,
     to_status: newStatus,
@@ -210,6 +210,7 @@ export async function updateArticleStatus(
     changed_by_name: reviewerName || user?.email || null,
     notes: notes || null,
   });
+  if (histErr) console.error('Failed to log status history:', histErr);
 
   logAdminAction({
     action: 'status_change',
@@ -504,7 +505,9 @@ export async function reorderClusterChildren(parentId: string, orderedIds: strin
   const updates = orderedIds.map((id, index) =>
     supabase.from('articles').update({ cluster_order: index }).eq('id', id)
   );
-  await Promise.all(updates);
+  const results = await Promise.allSettled(updates);
+  const failures = results.filter(r => r.status === 'rejected');
+  if (failures.length > 0) console.error('Cluster reorder partial failures:', failures);
 
   logAdminAction({
     action: 'reorder_cluster',

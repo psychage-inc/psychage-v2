@@ -1234,7 +1234,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
           <li>Spend more time organizing work than doing work</li>
           <li>Can't remember the last time you had two uninterrupted hours</li>
           <li>Check multiple tools to find information you know exists somewhere</li>
-          <li>Feel exhausted at the end of the day despite not finishing priority tasks</li>
+          <li>Feel exhausted by evening despite not finishing priority tasks</li>
           <li>Have recurring anxiety about missing messages or tasks</li>
           <li>Notice that adding a new tool didn't solve the problem it promised to fix</li>
         </ul>

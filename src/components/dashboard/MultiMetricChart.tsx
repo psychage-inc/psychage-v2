@@ -26,7 +26,7 @@ const METRIC_CONFIG = [
     {
         key: 'clarity' as const,
         label: 'Clarity Score',
-        color: '#0d9488',
+        color: '#1A9B8C',
         dataKey: 'clarityScore',
         yAxisId: 'left',
         activeBg: 'bg-teal-500/10',
@@ -187,7 +187,7 @@ const MultiMetricChart: React.FC<MultiMetricChartProps> = ({ data, availableMetr
                                 yAxisId="left"
                                 type="monotone"
                                 dataKey="clarityScore"
-                                stroke="#0d9488"
+                                stroke="#1A9B8C"
                                 strokeWidth={2.5}
                                 fillOpacity={1}
                                 fill="url(#gradient-clarity)"

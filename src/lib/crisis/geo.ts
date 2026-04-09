@@ -80,14 +80,26 @@ const LANGUAGE_TO_COUNTRY: Record<string, string> = {
 function inferCountryFromLanguage(lang: string): string | null {
   if (!lang) return null;
 
-  // Try extracting region subtag first (e.g., 'en-US' → 'US', 'en-BD' → 'BD')
+  // Try extracting region subtag first (e.g., 'en-US' → 'US', 'pt-BR' → 'BR')
   const regionMatch = lang.match(/^[a-z]{2,3}[-_]([A-Z]{2})$/i);
   if (regionMatch) {
-    return regionMatch[1].toUpperCase();
+    const region = regionMatch[1].toUpperCase();
+    const primaryLangPrefix = lang.split(/[-_]/)[0].toLowerCase();
+    // For English locales, only accept major English-speaking countries
+    // to avoid false positives from obscure region subtags
+    const MAJOR_EN_REGIONS = new Set(['US', 'GB', 'CA', 'AU', 'NZ', 'IE', 'ZA', 'IN']);
+    if (primaryLangPrefix === 'en' && !MAJOR_EN_REGIONS.has(region)) {
+      return 'US';
+    }
+    return region;
   }
 
   // Fall back to language → country mapping
   const primaryLang = lang.split(/[-_]/)[0].toLowerCase();
+
+  // English defaults to US (most users; avoids small-territory false positives)
+  if (primaryLang === 'en') return 'US';
+
   return LANGUAGE_TO_COUNTRY[primaryLang] ?? null;
 }
 

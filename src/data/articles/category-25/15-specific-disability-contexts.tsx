@@ -14,7 +14,7 @@ export const specificDisabilityContextsArticles: Article[] = [
   // --------------------------------------------------------------------------
   {
     id: catId(56),
-    slug: 'traumatic-brain-injury-mental-health',
+    slug: 'tbi-disability-mental-health',
     title: 'Traumatic Brain Injury and Mental Health: The Long Road to Recovery',
     description: 'How traumatic brain injury affects mental health long-term. Research on depression, anxiety, personality changes, and evidence-based recovery approaches after TBI.',
     image: '/images/articles/cat25/cover-056.svg',

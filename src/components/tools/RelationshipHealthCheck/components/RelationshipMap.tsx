@@ -23,7 +23,7 @@ const DOMAIN_COLORS: Record<RelationshipDomain, string> = {
   partner: '#f43f5e', // rose-500
   family: '#6366f1', // indigo-500
   friends: '#f59e0b', // amber-500
-  community: '#14b8a6', // teal-500
+  community: '#20B8A6', // teal-500
 };
 
 const DOMAIN_COLORS_LIGHT: Record<RelationshipDomain, string> = {

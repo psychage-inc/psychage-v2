@@ -15,36 +15,36 @@ import { AlertCircle, RefreshCw } from 'lucide-react';
 
 // Loading skeleton components
 const ArticleSkeleton = () => (
-    <div className="bg-white rounded-xl overflow-hidden shadow-sm animate-pulse">
-        <div className="h-48 bg-gray-200" />
+    <div className="bg-surface rounded-xl overflow-hidden shadow-sm animate-pulse">
+        <div className="h-48 bg-border" />
         <div className="p-4 space-y-3">
-            <div className="h-4 bg-gray-200 rounded w-3/4" />
-            <div className="h-3 bg-gray-100 rounded w-full" />
-            <div className="h-3 bg-gray-100 rounded w-5/6" />
+            <div className="h-4 bg-border rounded w-3/4" />
+            <div className="h-3 bg-surface-hover rounded w-full" />
+            <div className="h-3 bg-surface-hover rounded w-5/6" />
         </div>
     </div>
 );
 
 const VideoSkeleton = () => (
     <div className="animate-pulse">
-        <div className="aspect-video bg-gray-200 rounded-xl mb-4" />
-        <div className="h-4 bg-gray-200 rounded w-3/4 mb-2" />
-        <div className="h-3 bg-gray-100 rounded w-1/2" />
+        <div className="aspect-video bg-border rounded-xl mb-4" />
+        <div className="h-4 bg-border rounded w-3/4 mb-2" />
+        <div className="h-3 bg-surface-hover rounded w-1/2" />
     </div>
 );
 
 const ToolSkeleton = () => (
-    <div className="bg-white rounded-xl p-6 shadow-sm animate-pulse">
+    <div className="bg-surface rounded-xl p-6 shadow-sm animate-pulse">
         <div className="flex items-center gap-4 mb-4">
-            <div className="w-12 h-12 bg-gray-200 rounded-xl" />
+            <div className="w-12 h-12 bg-border rounded-xl" />
             <div className="flex-grow">
-                <div className="h-5 bg-gray-200 rounded w-1/2 mb-2" />
-                <div className="h-3 bg-gray-100 rounded w-1/3" />
+                <div className="h-5 bg-border rounded w-1/2 mb-2" />
+                <div className="h-3 bg-surface-hover rounded w-1/3" />
             </div>
         </div>
         <div className="space-y-2">
-            <div className="h-3 bg-gray-100 rounded w-full" />
-            <div className="h-3 bg-gray-100 rounded w-5/6" />
+            <div className="h-3 bg-surface-hover rounded w-full" />
+            <div className="h-3 bg-surface-hover rounded w-5/6" />
         </div>
     </div>
 );
@@ -97,7 +97,7 @@ const CategoryPage: React.FC = () => {
         return (
             <div className="min-h-screen bg-background flex items-center justify-center">
                 <div className="text-center">
-                    <h1 className="text-2xl font-bold text-gray-900 mb-2">Category not found</h1>
+                    <h1 className="text-2xl font-bold text-text-primary mb-2">Category not found</h1>
                     <button
                         onClick={() => navigate('/learn')}
                         className="text-teal-600 hover:text-teal-700 font-medium"
@@ -161,7 +161,7 @@ const CategoryPage: React.FC = () => {
                 {/* Articles Section */}
                 <section>
                     <div className="flex items-center justify-between mb-8">
-                        <h2 className="font-display font-bold text-3xl text-gray-900 dark:text-white">Latest Articles</h2>
+                        <h2 className="font-display font-bold text-3xl text-text-primary">Latest Articles</h2>
                         {!loading && categoryArticles.length > 0 && (
                             <button
                                 onClick={() => navigate(`/learn?category=${category}`)}
@@ -183,7 +183,7 @@ const CategoryPage: React.FC = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: idx * 0.05 }}
-                                    className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer group"
+                                    className="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer group"
                                     onClick={() => navigate(getArticleUrl(article))}
                                 >
                                     <ArticleCard article={article} />
@@ -191,7 +191,7 @@ const CategoryPage: React.FC = () => {
                             ))
                         ) : (
                             // Empty state
-                            <div className="col-span-full text-center py-12 bg-gray-50 rounded-xl">
+                            <div className="col-span-full text-center py-12 bg-surface-hover rounded-xl">
                                 <p className="text-gray-500">No articles found for this category.</p>
                             </div>
                         )}
@@ -200,7 +200,7 @@ const CategoryPage: React.FC = () => {
 
                 {/* Tools Section */}
                 <section>
-                    <h2 className="font-display font-bold text-3xl text-gray-900 dark:text-white mb-8">Interactive Tools</h2>
+                    <h2 className="font-display font-bold text-3xl text-text-primary mb-8">Interactive Tools</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {loading ? (
                             // Loading skeletons
@@ -219,7 +219,7 @@ const CategoryPage: React.FC = () => {
                             ))
                         ) : (
                             // Empty state
-                            <div className="col-span-full text-center py-12 bg-gray-50 rounded-xl">
+                            <div className="col-span-full text-center py-12 bg-surface-hover rounded-xl">
                                 <p className="text-gray-500">No tools available for this category.</p>
                             </div>
                         )}
@@ -229,7 +229,7 @@ const CategoryPage: React.FC = () => {
                 {/* Videos Section */}
                 <section>
                     <div className="flex items-center justify-between mb-8">
-                        <h2 className="font-display font-bold text-3xl text-gray-900 dark:text-white">Video Guides</h2>
+                        <h2 className="font-display font-bold text-3xl text-text-primary">Video Guides</h2>
                         {!loading && categoryVideos.length > 0 && (
                             <button className="text-teal-600 font-bold hover:text-teal-800 transition-colors">
                                 View All
@@ -256,7 +256,7 @@ const CategoryPage: React.FC = () => {
                             ))
                         ) : (
                             // Empty state
-                            <div className="col-span-full text-center py-12 bg-gray-50 rounded-xl">
+                            <div className="col-span-full text-center py-12 bg-surface-hover rounded-xl">
                                 <p className="text-gray-500">No videos available for this category.</p>
                             </div>
                         )}

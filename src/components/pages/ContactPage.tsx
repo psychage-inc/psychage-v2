@@ -31,15 +31,15 @@ const ContactPage: React.FC = () => {
             <div className="container mx-auto px-6 max-w-6xl">
 
                 <div className="text-center mb-16">
-                    <h1 className="font-display font-bold text-4xl md:text-5xl text-gray-900 mb-4">
+                    <h1 className="font-display font-bold text-4xl md:text-5xl text-text-primary mb-4">
                         Get in touch.
                     </h1>
-                    <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+                    <p className="text-xl text-text-secondary max-w-2xl mx-auto">
                         Whether you have a question about our tools, want to partner with us, or just want to say hello.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-white rounded-[2.5rem] overflow-hidden shadow-xl shadow-gray-200/50 border border-gray-100">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-surface rounded-[2.5rem] overflow-hidden shadow-xl shadow-black/5 border border-border">
 
                     {/* Contact Info Sidebar */}
                     <div className="lg:col-span-5 bg-teal-900 text-white p-10 md:p-12 flex flex-col justify-between relative overflow-hidden">
@@ -83,11 +83,11 @@ const ContactPage: React.FC = () => {
                     <div className="lg:col-span-7 p-10 md:p-12">
                         {submitted ? (
                             <div className="h-full flex flex-col items-center justify-center text-center py-12">
-                                <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6">
+                                <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center mb-6">
                                     <Check size={32} strokeWidth={3} />
                                 </div>
-                                <h3 className="font-display font-bold text-2xl text-gray-900 mb-2">Message Sent!</h3>
-                                <p className="text-gray-500 max-w-sm mx-auto mb-8">
+                                <h3 className="font-display font-bold text-2xl text-text-primary mb-2">Message Sent!</h3>
+                                <p className="text-text-secondary max-w-sm mx-auto mb-8">
                                     Thank you for reaching out. Our team will get back to you within 24 hours.
                                 </p>
                                 <Button variant="outline" onClick={() => setSubmitted(false)}>
@@ -98,38 +98,38 @@ const ContactPage: React.FC = () => {
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
-                                        <label className="text-sm font-bold text-gray-700 ml-1">First Name</label>
+                                        <label className="text-sm font-bold text-text-secondary ml-1">First Name</label>
                                         <input
                                             required
                                             type="text"
-                                            className="w-full px-4 py-3 rounded-xl bg-gray-50 border-transparent focus:bg-white focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all font-medium"
+                                            className="w-full px-4 py-3 rounded-xl bg-surface-hover border-transparent focus:bg-surface focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all font-medium text-text-primary"
                                             placeholder="Jane"
                                         />
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="text-sm font-bold text-gray-700 ml-1">Last Name</label>
+                                        <label className="text-sm font-bold text-text-secondary ml-1">Last Name</label>
                                         <input
                                             required
                                             type="text"
-                                            className="w-full px-4 py-3 rounded-xl bg-gray-50 border-transparent focus:bg-white focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all font-medium"
+                                            className="w-full px-4 py-3 rounded-xl bg-surface-hover border-transparent focus:bg-surface focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all font-medium text-text-primary"
                                             placeholder="Doe"
                                         />
                                     </div>
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold text-gray-700 ml-1">Email Address</label>
+                                    <label className="text-sm font-bold text-text-secondary ml-1">Email Address</label>
                                     <input
                                         required
                                         type="email"
-                                        className="w-full px-4 py-3 rounded-xl bg-gray-50 border-transparent focus:bg-white focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all font-medium"
+                                        className="w-full px-4 py-3 rounded-xl bg-surface-hover border-transparent focus:bg-surface focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all font-medium text-text-primary"
                                         placeholder="jane@example.com"
                                     />
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold text-gray-700 ml-1">Subject</label>
-                                    <select className="w-full px-4 py-3 rounded-xl bg-gray-50 border-transparent focus:bg-white focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all font-medium">
+                                    <label className="text-sm font-bold text-text-secondary ml-1">Subject</label>
+                                    <select className="w-full px-4 py-3 rounded-xl bg-surface-hover border-transparent focus:bg-surface focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all font-medium text-text-primary">
                                         <option>General Inquiry</option>
                                         <option>Technical Support</option>
                                         <option>Partnership Opportunity</option>
@@ -138,11 +138,11 @@ const ContactPage: React.FC = () => {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold text-gray-700 ml-1">Message</label>
+                                    <label className="text-sm font-bold text-text-secondary ml-1">Message</label>
                                     <textarea
                                         required
                                         rows={5}
-                                        className="w-full px-4 py-3 rounded-xl bg-gray-50 border-transparent focus:bg-white focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all font-medium resize-none"
+                                        className="w-full px-4 py-3 rounded-xl bg-surface-hover border-transparent focus:bg-surface focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all font-medium text-text-primary resize-none"
                                         placeholder="How can we help you?"
                                     />
                                 </div>

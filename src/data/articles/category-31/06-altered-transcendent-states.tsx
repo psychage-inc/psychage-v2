@@ -14,7 +14,7 @@ export const alteredtranscendentstatesArticles: Article[] = [
   // --------------------------------------------------------------------------
   {
     id: catId(50),
-    slug: 'mystical-experiences',
+    slug: 'mystical-experiences-spiritual-states',
     title: 'Mystical Experiences: The Psychology of Transcendent States',
     description: 'Understand mystical experiences—profound states of unity, transcendence, and ineffability. Explore their psychological characteristics, neurobiology, triggers, mental health impacts, and integration challenges.',
     image: '/images/articles/cat31/cover-050.svg',

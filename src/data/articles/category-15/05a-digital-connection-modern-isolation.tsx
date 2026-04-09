@@ -590,7 +590,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
   },
 
   // Articles 43-45 would continue here with the same structure...
-  // I'll add placeholders to show the pattern is continued
+
 
   {
     id: catId(43),

@@ -466,6 +466,7 @@ const LearnPage: React.FC = () => {
     const [articles, setArticles] = useState<Article[]>([]);
     const [categories, setCategories] = useState<Category[]>([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [fetchError, setFetchError] = useState<string | null>(null);
     const [searchQuery, setSearchQuery] = useState('');
     const [activeTab, setActiveTab] = useState<string>('');
     const [sortOrder, setSortOrder] = useState<'recent' | 'shortest' | 'longest'>('recent');
@@ -488,6 +489,7 @@ const LearnPage: React.FC = () => {
                 setCategories(categoriesData);
             } catch (error) {
                 console.error("Failed to fetch data:", error);
+                setFetchError("Unable to load articles. Please try again.");
             } finally {
                 setIsLoading(false);
             }
@@ -721,6 +723,24 @@ const LearnPage: React.FC = () => {
 
     if (isLoading) return <LearnPageSkeleton />;
 
+    if (fetchError) return (
+        <div className="min-h-screen bg-background pt-32 flex items-center justify-center">
+            <div className="text-center max-w-md mx-auto px-6">
+                <div className="w-14 h-14 bg-red-50 dark:bg-red-900/20 text-red-500 dark:text-red-400 rounded-full flex items-center justify-center mx-auto mb-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+                <h2 className="font-display font-bold text-xl text-text-primary mb-2">Something went wrong</h2>
+                <p className="text-text-secondary mb-6">{fetchError}</p>
+                <button
+                    onClick={() => { setFetchError(null); setIsLoading(true); window.location.reload(); }}
+                    className="px-6 py-3 bg-primary text-white rounded-xl font-bold hover:bg-primary/90 transition-colors"
+                >
+                    Try Again
+                </button>
+            </div>
+        </div>
+    );
+
     return (
         <div className="min-h-screen bg-background pb-20">
             <SEO
@@ -740,11 +760,9 @@ const LearnPage: React.FC = () => {
                         </p>
 
                         {/* Reading stats micro-banner */}
-                        {readingStats && (
-                            <p className="text-sm text-text-tertiary mb-6">
-                                {readingStats.totalArticles} articles · {readingStats.totalCategories} topics · ~{readingStats.avgReadTime} min avg read
-                            </p>
-                        )}
+                        <p className="text-sm text-text-tertiary mb-6">
+                            2,000+ articles · {readingStats?.totalCategories ?? 15} topics · ~{readingStats?.avgReadTime ?? 5} min avg read
+                        </p>
 
                         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
                             <div className="lg:col-span-3">
@@ -825,6 +843,11 @@ const LearnPage: React.FC = () => {
                                 onClick={() => {
                                     setSearchQuery('');
                                     setActiveTab(cat.slug);
+                                    // Scroll to the category content section
+                                    setTimeout(() => {
+                                        const tabMenu = document.querySelector('[role="tablist"]');
+                                        tabMenu?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                    }, 50);
                                 }}
                                 aria-pressed={activeTab === cat.slug}
                                 className={`rounded-full px-4 py-1.5 border text-sm transition-colors ${

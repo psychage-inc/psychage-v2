@@ -255,9 +255,9 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
     sparkMoment: 'ASPD is a description, not an explanation. It tells you what someone does. Understanding why—and what might change—requires looking beneath the label to the person, their history, their brain, and their unmet needs.',
 
     practicalExercise: {
-      title: 'If you have been diagnosed with ASPD',
+      title: 'For those living with an ASPD diagnosis',
       steps: [
-        { title: 'If you have been diagnosed with ASPD', description: ', know that the diagnosis describes patterns of behavior—it does not define your identity or your future. Seek out clinicians experienced with personality disorders who use evidence-based approaches rather than dismissing you as untreatable.' },
+        { title: 'For those living with an ASPD diagnosis', description: ', know that the diagnosis describes patterns of behavior—it does not define your identity or your future. Seek out clinicians experienced with personality disorders who use evidence-based approaches rather than dismissing you as untreatable.' },
         { title: 'If you work in forensic or correctional settings', description: ', advocate for treatment programs that address ASPD specifically. Cognitive-behavioral programs, mentalization-based treatment, and substance use interventions all have evidence bases in this population.' },
         { title: 'Recognize heterogeneity.', description: 'Not everyone with ASPD is the same. The impulsive person who cannot hold a job needs different support than the calculating person who manipulates systems. Assessment should guide treatment matching.' },
         { title: 'Support early intervention.', description: 'The most effective time to intervene in the trajectory toward ASPD is in childhood, when conduct problems and callous-unemotional traits are emerging. Investment in early intervention programs prevents adult antisocial behavior far more effectively than incarceration.' },

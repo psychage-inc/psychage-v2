@@ -132,7 +132,7 @@ const ContactPage: React.FC = () => {
                     <div className="lg:col-span-7 p-10 md:p-12">
                         {submitted ? (
                             <div className="h-full flex flex-col items-center justify-center text-center py-12">
-                                <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6">
+                                <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center mb-6">
                                     <Check size={32} strokeWidth={3} />
                                 </div>
                                 <h3 className="font-display font-bold text-2xl text-text-primary mb-2">Message Sent!</h3>
@@ -147,7 +147,7 @@ const ContactPage: React.FC = () => {
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 {/* Error Alert */}
                                 {error && (
-                                    <div className="flex items-start gap-3 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700">
+                                    <div className="flex items-start gap-3 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-red-700 dark:text-red-400">
                                         <AlertCircle size={20} className="shrink-0 mt-0.5" />
                                         <p className="text-sm">{error}</p>
                                     </div>

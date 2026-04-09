@@ -229,7 +229,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                         className={`w-full py-3.5 px-4 rounded-xl font-bold transition-all flex justify-center items-center gap-2 ${
                           isSignup
                             ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-lg shadow-gray-900/20 active:scale-[0.98]'
-                            : 'bg-white border border-gray-200 text-gray-900 hover:bg-gray-50'
+                            : 'bg-surface border border-border text-text-primary hover:bg-surface-hover'
                         }`}
                       >
                         {!isSignup && <User size={18} />}

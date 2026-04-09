@@ -37,7 +37,7 @@ const ProvidersLandingPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-gray-950">
+    <div className="min-h-screen bg-background">
       <SEO
         title="Find a Mental Health Provider | Psychage"
         description="Search over 400,000 verified therapists, psychologists, and counselors across all 50 states. Free to search, no account required."
@@ -52,11 +52,11 @@ const ProvidersLandingPage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-gray-900 dark:text-white mb-4 tracking-tight">
+            <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-text-primary mb-4 tracking-tight">
               Find a Mental Health Provider{' '}
               <span className="text-gray-400 dark:text-gray-500">You Can Trust</span>
             </h1>
-            <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-10">
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-10">
               Search over 400,000 verified therapists, psychologists, and counselors across all 50 states.
               Free to search, no account required.
             </p>
@@ -89,8 +89,8 @@ const ProvidersLandingPage: React.FC = () => {
                 <div className="w-12 h-12 rounded-2xl bg-teal-50 dark:bg-teal-900/20 flex items-center justify-center mx-auto mb-3">
                   <item.icon className="w-6 h-6 text-teal-600 dark:text-teal-400" />
                 </div>
-                <h3 className="font-display font-bold text-sm text-gray-900 dark:text-white mb-1">{item.label}</h3>
-                <p className="text-xs text-gray-500 dark:text-gray-400">{item.description}</p>
+                <h3 className="font-display font-bold text-sm text-text-primary mb-1">{item.label}</h3>
+                <p className="text-xs text-text-secondary">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -102,20 +102,20 @@ const ProvidersLandingPage: React.FC = () => {
       {/* Browse by Provider Type */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-display font-bold text-3xl text-gray-900 dark:text-white mb-2">Find the Right Type of Support</h2>
-          <p className="text-gray-500 dark:text-gray-400 mb-10">Different types of mental health professionals for different needs.</p>
+          <h2 className="font-display font-bold text-3xl text-text-primary mb-2">Find the Right Type of Support</h2>
+          <p className="text-text-secondary mb-10">Different types of mental health professionals for different needs.</p>
 
           <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
             {providerTypes.map(type => (
               <Link
                 key={type.id}
                 to={`/providers/search?type=${type.id}`}
-                className="flex-shrink-0 w-56 p-5 bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-teal-200 dark:hover:border-teal-800 hover:shadow-sm transition-all group"
+                className="flex-shrink-0 w-56 p-5 bg-surface rounded-2xl border border-border hover:border-teal-200 dark:hover:border-teal-800 hover:shadow-sm transition-all group"
               >
-                <h3 className="font-display font-bold text-sm text-gray-900 dark:text-white mb-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                <h3 className="font-display font-bold text-sm text-text-primary mb-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
                   {type.label}
                 </h3>
-                <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2">
+                <p className="text-xs text-text-secondary line-clamp-2">
                   {type.description}
                 </p>
               </Link>
@@ -125,9 +125,9 @@ const ProvidersLandingPage: React.FC = () => {
       </section>
 
       {/* How It Works */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-surface">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-display font-bold text-3xl text-gray-900 dark:text-white mb-12">How It Works</h2>
+          <h2 className="font-display font-bold text-3xl text-text-primary mb-12">How It Works</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {HOW_IT_WORKS.map((item) => (
@@ -142,8 +142,8 @@ const ProvidersLandingPage: React.FC = () => {
                   <item.icon className="w-7 h-7 text-teal-600 dark:text-teal-400" />
                 </div>
                 <div className="text-xs font-bold text-teal-600 dark:text-teal-400 uppercase tracking-widest mb-2">Step {item.step}</div>
-                <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{item.description}</p>
+                <h3 className="font-display font-bold text-lg text-text-primary mb-2">{item.title}</h3>
+                <p className="text-sm text-text-secondary">{item.description}</p>
               </motion.div>
             ))}
           </div>

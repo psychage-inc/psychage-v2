@@ -14,7 +14,7 @@ export const spiritualpsychologicalintegrationArticles: Article[] = [
   // --------------------------------------------------------------------------
   {
     id: catId(57),
-    slug: 'spiritual-bypassing',
+    slug: 'spiritual-bypassing-integration',
     title: 'Spiritual Bypassing: When Spirituality Becomes a Way to Avoid Difficult Emotions',
     description: 'Understand spiritual bypassing—using spiritual beliefs to avoid painful emotions. Learn to recognize the signs, understand the psychological costs, and integrate authentic spirituality with emotional processing.',
     image: '/images/articles/cat31/cover-057.svg',

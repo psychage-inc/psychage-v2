@@ -392,7 +392,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
     ),
   },
 
-  // Placeholder articles 22-25 for brevity in this response
+
   // In production, these would be fully written out
 
   {
@@ -434,7 +434,6 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
           </p>
         </div>
 
-        {/* Placeholder - full content would continue */}
         <h2
           id="why-disconnecting-matters"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
@@ -506,7 +505,6 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
           </p>
         </div>
 
-        {/* Placeholder - full content would continue with actual scripts */}
         <h2
           id="why-scripts-help"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
@@ -573,7 +571,6 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
           </p>
         </div>
 
-        {/* Placeholder - full content would continue */}
         <h2
           id="health-consequences"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
@@ -646,7 +643,6 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
           </p>
         </div>
 
-        {/* Placeholder - full content would continue */}
         <h2
           id="what-is-vacation-guilt"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"

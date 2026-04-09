@@ -6,3 +6,5 @@ export { moodDisordersArticlesC } from './02c-mood-disorders';
 export { traumaDissociativeArticles } from './03-trauma-dissociative';
 export { ocdImpulseArticles } from './04-ocd-impulse';
 export { neurodevelopmentalArticles } from './05-06-07-08-neurodevelopmental-eating-substance-psychotic';
+export { personalityDisordersArticles } from './05-personality-disorders';
+export { additionalConditionsArticles } from './06-additional-conditions';

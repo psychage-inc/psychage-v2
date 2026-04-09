@@ -4,15 +4,8 @@ import { Routes, Route, useLocation, useNavigate, Navigate } from 'react-router-
 import { Toaster } from 'sonner';
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
-import HeroSection from './components/home/HeroSection';
-import ProductShowcase from './components/home/ProductShowcase';
-import HowItWorksSection from './components/home/HowItWorksSection';
-import FeatureSpotlight from './components/home/FeatureSpotlight';
-// Lazy-loaded to avoid pulling articleService (+ 30MB mock data) into main chunk
-const ArticleCategorySection = React.lazy(() => import('./components/home/ArticleCategorySection'));
-import NewsletterSection from './components/home/NewsletterSection';
 import MindMate from './components/ai/MindMate';
-import { LazySection } from './components/ui/LazySection';
+const HomePage = React.lazy(() => import('./pages/home/HomePage'));
 import CookieConsent from './components/ui/CookieConsent';
 import NotFoundPage from './components/pages/NotFoundPage';
 import ErrorBoundary from './components/error/ErrorBoundary';
@@ -173,11 +166,11 @@ const App: React.FC = () => {
 
                     <ScrollManager />
 
-                    {!isLoading && (
-                        <div className="min-h-screen bg-background font-sans text-gray-900 overflow-x-hidden flex flex-col transition-colors duration-300">
+                    {/* App content always renders — Preloader is a fixed overlay (z-9999) that fades out */}
+                    <div className="min-h-screen bg-background font-sans text-gray-900 overflow-x-hidden flex flex-col transition-colors duration-300">
                             <Navigation />
 
-                            <main id="main-content" className={`flex-grow w-full outline-none ${location.pathname === '/tools/mindmate' ? '' : 'pb-24'} ${location.pathname !== '/' ? 'pt-20' : ''}`} tabIndex={-1}>
+                            <main id="main-content" className={`flex-grow w-full outline-none min-h-screen ${location.pathname === '/tools/mindmate' ? '' : 'pb-24'} ${location.pathname !== '/' ? 'pt-20' : ''}`} tabIndex={-1}>
                                 <ErrorBoundary
                                     resetKeys={[location.pathname]}
                                     fallback={(error, reset) => (
@@ -197,22 +190,7 @@ const App: React.FC = () => {
                                         <Routes location={location}>
                                             <Route path="/" element={
                                                 <PageTransition>
-                                                    <SEO title="Psychage | Understand Your Mind" description="Free, evidence-based mental health tools, assessments, and resources. Understand your mind — privately and on your terms." />
-                                                    <HeroSection />
-                                                    <HowItWorksSection />
-                                                    <LazySection>
-                                                        <ProductShowcase />
-                                                    </LazySection>
-                                                    {/* UserTestimonials removed per task cd1326b1 */}
-                                                    <LazySection>
-                                                        <FeatureSpotlight />
-                                                    </LazySection>
-                                                    <LazySection>
-                                                        <ArticleCategorySection categorySlug="emotional-regulation" heading="Featured Articles" subtitle="Expert-written guides to help you understand your mind." bg="white" hoverClass="group-hover:text-rose-600 dark:group-hover:text-rose-400" />
-                                                    </LazySection>
-                                                    <LazySection>
-                                                        <NewsletterSection />
-                                                    </LazySection>
+                                                    <HomePage />
                                                 </PageTransition>
                                             } />
 
@@ -390,8 +368,7 @@ const App: React.FC = () => {
                                 }}
                                 closeButton
                             />
-                        </div>
-                    )}
+                    </div>
                 </ProviderLookupsProvider>
             </BookmarkProvider>
         </MotionConfig>

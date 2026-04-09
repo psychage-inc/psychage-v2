@@ -227,8 +227,8 @@ const HistoryTab: React.FC<HistoryTabProps> = ({
           >
             <defs>
               <linearGradient id="trendGradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#0d9488" stopOpacity={0.2} />
-                <stop offset="95%" stopColor="#0d9488" stopOpacity={0} />
+                <stop offset="5%" stopColor="#1A9B8C" stopOpacity={0.2} />
+                <stop offset="95%" stopColor="#1A9B8C" stopOpacity={0} />
               </linearGradient>
             </defs>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
@@ -251,10 +251,10 @@ const HistoryTab: React.FC<HistoryTabProps> = ({
             <Area
               type="monotone"
               dataKey="score"
-              stroke="#0d9488"
+              stroke="#1A9B8C"
               strokeWidth={2}
               fill="url(#trendGradient)"
-              dot={{ r: 4, fill: '#0d9488', strokeWidth: 0 }}
+              dot={{ r: 4, fill: '#1A9B8C', strokeWidth: 0 }}
             />
           </AreaChart>
         </ResponsiveContainer>

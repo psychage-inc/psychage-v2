@@ -15,6 +15,7 @@ const CategoryPage: React.FC = () => {
     const navigate = useNavigate();
     const [category, setCategory] = React.useState<Category | undefined>(undefined);
     const [articles, setArticles] = React.useState<Article[]>([]);
+    const [allCategories, setAllCategories] = React.useState<Category[]>([]);
     const [isLoading, setIsLoading] = React.useState(true);
     const articleService = useArticleService();
 
@@ -24,15 +25,14 @@ const CategoryPage: React.FC = () => {
             if (!categorySlug) return;
             console.log('[CategoryPage] Fetching data for slug:', categorySlug);
             try {
-                const [cat, allArticles] = await Promise.all([
+                const [cat, allArticles, cats] = await Promise.all([
                     categoryService.getBySlug(categorySlug),
-                    articleService.getAll({ category: categorySlug })
+                    articleService.getAll({ category: categorySlug }),
+                    categoryService.getAll()
                 ]);
-                console.log('[CategoryPage] Category:', cat);
-                console.log('[CategoryPage] Articles fetched:', allArticles.length);
-                console.log('[CategoryPage] First article:', allArticles[0]);
                 setCategory(cat);
                 setArticles(allArticles);
+                setAllCategories(cats);
             } catch (error) {
                 console.error("Failed to fetch data:", error);
             } finally {
@@ -156,10 +156,13 @@ const CategoryPage: React.FC = () => {
                             <div>
                                 <h3 className="font-bold text-text-primary mb-4 text-sm uppercase tracking-wider">Related Categories</h3>
                                 <ul className="space-y-2">
-                                    {['Anxiety', 'Depression', 'Sleep', 'Mindfulness'].map(cat => (
-                                        <li key={cat}>
-                                            <Link to={`/learn/${cat.toLowerCase()}`} className="block p-3 rounded-lg hover:bg-surface-hover text-text-secondary hover:text-primary transition-colors text-sm font-medium">
-                                                {cat}
+                                    {allCategories
+                                        .filter(c => c.slug !== categorySlug)
+                                        .slice(0, 5)
+                                        .map(cat => (
+                                        <li key={cat.slug}>
+                                            <Link to={`/learn/${cat.slug}`} className="block p-3 rounded-lg hover:bg-surface-hover text-text-secondary hover:text-primary transition-colors text-sm font-medium">
+                                                {cat.name}
                                             </Link>
                                         </li>
                                     ))}

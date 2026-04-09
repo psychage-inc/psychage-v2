@@ -12,12 +12,12 @@ export interface Emotion {
 export const EMOTIONS: Emotion[] = [
   // Positive (12)
   { id: 'happy', name: 'Happy', category: 'positive', color: '#10b981', emoji: '😊' },
-  { id: 'grateful', name: 'Grateful', category: 'positive', color: '#14b8a6', emoji: '🙏' },
+  { id: 'grateful', name: 'Grateful', category: 'positive', color: '#20B8A6', emoji: '🙏' },
   { id: 'calm', name: 'Calm', category: 'positive', color: '#06b6d4', emoji: '😌' },
   { id: 'hopeful', name: 'Hopeful', category: 'positive', color: '#22c55e', emoji: '🌱' },
   { id: 'confident', name: 'Confident', category: 'positive', color: '#8b5cf6', emoji: '💪' },
   { id: 'energized', name: 'Energized', category: 'positive', color: '#f59e0b', emoji: '⚡' },
-  { id: 'content', name: 'Content', category: 'positive', color: '#0d9488', emoji: '☺️' },
+  { id: 'content', name: 'Content', category: 'positive', color: '#1A9B8C', emoji: '☺️' },
   { id: 'proud', name: 'Proud', category: 'positive', color: '#a855f7', emoji: '🏆' },
   { id: 'loved', name: 'Loved', category: 'positive', color: '#ec4899', emoji: '💕' },
   { id: 'excited', name: 'Excited', category: 'positive', color: '#f97316', emoji: '🎉' },

@@ -39,7 +39,7 @@ const DOMAIN_RING_COLORS: Record<RelationshipDomain, string> = {
   partner: '#f43f5e',
   family: '#6366f1',
   friends: '#f59e0b',
-  community: '#14b8a6',
+  community: '#20B8A6',
 };
 
 function getScoreLabel(score: number): { text: string; color: string } {

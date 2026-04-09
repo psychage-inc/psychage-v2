@@ -74,10 +74,10 @@ export default function HistoryTimeline({ history }: HistoryTimelineProps) {
                         type="monotone"
                         name="Total Score"
                         dataKey="total"
-                        stroke="#0D9488"
+                        stroke="#1A9B8C"
                         strokeWidth={3}
-                        dot={{ r: 4, fill: '#0D9488', strokeWidth: 0 }}
-                        activeDot={{ r: 6, fill: '#0D9488' }}
+                        dot={{ r: 4, fill: '#1A9B8C', strokeWidth: 0 }}
+                        activeDot={{ r: 6, fill: '#1A9B8C' }}
                     />
                     <Line type="monotone" name="Emotional" dataKey="emotional" stroke="#6366F1" strokeWidth={2} dot={false} strokeDasharray="5 5" />
                     <Line type="monotone" name="Vitality" dataKey="vitality" stroke="#F59E0B" strokeWidth={2} dot={false} strokeDasharray="5 5" />

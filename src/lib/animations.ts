@@ -221,3 +221,13 @@ export const hoverScale = {
 export const pressDown = {
   whileTap: { scale: 0.97, transition: { duration: duration.micro } },
 };
+
+/** Standard Fade + Translate. Use for: unified homepage section reveals. */
+export const fadeTranslate: Variants = {
+  hidden: { opacity: 0, y: 14 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: ease.decelerate },
+  },
+};

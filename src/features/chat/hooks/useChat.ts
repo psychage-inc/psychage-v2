@@ -1,6 +1,7 @@
 import { useState, useCallback, useRef } from 'react';
 import type { ChatMessage, ChatResponseMeta, StreamingState } from '../types/chat.types';
 import * as chatService from '../services/chatService';
+import { SafetyReplacementError } from '../services/chatService';
 
 interface UseChatReturn {
   messages: ChatMessage[];
@@ -20,7 +21,7 @@ export function useChat(): UseChatReturn {
   const [streamingState, setStreamingState] = useState<StreamingState>('idle');
   const [activeConversationId, setActiveConversationId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const abortRef = useRef(false);
+  const abortRef = useRef<AbortController | null>(null);
 
   const isStreaming = streamingState === 'streaming';
 
@@ -48,7 +49,10 @@ export function useChat(): UseChatReturn {
 
       setMessages((prev) => [...prev, userMessage, assistantMessage]);
       setStreamingState('streaming');
-      abortRef.current = false;
+
+      // Create a new AbortController for this request
+      const controller = new AbortController();
+      abortRef.current = controller;
 
       try {
         // Build full conversation history for the API
@@ -66,11 +70,10 @@ export function useChat(): UseChatReturn {
           (meta) => {
             responseMeta = meta;
           },
+          controller.signal,
         );
 
         for await (const token of stream) {
-          if (abortRef.current) break;
-
           setMessages((prev) =>
             prev.map((m) =>
               m.id === assistantId ? { ...m, content: m.content + token } : m,
@@ -94,6 +97,30 @@ export function useChat(): UseChatReturn {
 
         setStreamingState('idle');
       } catch (err) {
+        // AbortError is expected when user clicks stop — not a real error
+        if (err instanceof DOMException && err.name === 'AbortError') {
+          setMessages((prev) =>
+            prev.map((m) =>
+              m.id === assistantId ? { ...m, isStreaming: false } : m,
+            ),
+          );
+          setStreamingState('idle');
+          return;
+        }
+
+        // Safety filter replaced the response — swap in the replacement text
+        if (err instanceof SafetyReplacementError) {
+          setMessages((prev) =>
+            prev.map((m) =>
+              m.id === assistantId
+                ? { ...m, content: err.replacementText, isStreaming: false }
+                : m,
+            ),
+          );
+          setStreamingState('idle');
+          return;
+        }
+
         console.error('Chat error:', err);
         setError('Something went wrong. Please try again.');
         setStreamingState('error');
@@ -135,11 +162,12 @@ export function useChat(): UseChatReturn {
   }, [messages, sendMessage]);
 
   const startNewChat = useCallback(() => {
+    abortRef.current?.abort();
+    abortRef.current = null;
     setMessages([]);
     setActiveConversationId(null);
     setStreamingState('idle');
     setError(null);
-    abortRef.current = false;
   }, []);
 
   const loadConversation = useCallback(async (id: string) => {
@@ -153,7 +181,8 @@ export function useChat(): UseChatReturn {
   }, []);
 
   const stopStreaming = useCallback(() => {
-    abortRef.current = true;
+    abortRef.current?.abort();
+    abortRef.current = null;
     setStreamingState('idle');
     setMessages((prev) =>
       prev.map((m) => (m.isStreaming ? { ...m, isStreaming: false } : m)),

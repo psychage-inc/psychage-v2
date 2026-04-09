@@ -61,16 +61,6 @@ export default function WelcomeState({ onSuggestionClick }: WelcomeStateProps) {
   return (
     <div className="flex-1 flex items-center justify-center px-4">
       <div className="max-w-lg w-full text-center">
-        {/* Icon */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4 }}
-          className="mx-auto w-12 h-12 rounded-full bg-teal-600 dark:bg-teal-500 flex items-center justify-center mb-6"
-        >
-          <Brain size={24} className="text-white" />
-        </motion.div>
-
         {/* Greeting */}
         <motion.h1
           initial={{ opacity: 0, y: 8 }}

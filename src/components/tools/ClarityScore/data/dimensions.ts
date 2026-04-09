@@ -30,7 +30,7 @@ export const DIMENSION_META: Record<DomainKey, DimensionMeta> = {
     name: 'Emotional Wellness',
     shortName: 'Emotional',
     icon: Heart,
-    hexColor: '#0d9488',
+    hexColor: '#1A9B8C',
     tailwindBg: 'bg-teal-500',
     tailwindText: 'text-teal-500',
     tailwindBgLight: 'bg-teal-50 dark:bg-teal-900/20',

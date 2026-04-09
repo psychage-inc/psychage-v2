@@ -505,13 +505,13 @@ const ClarityScoreTool: React.FC = () => {
                 </div>
 
                 {/* Previous / Next navigation */}
-                <div className="flex items-center justify-between mt-10 pt-6 border-t border-gray-100 dark:border-gray-800">
+                <div className="flex items-center justify-between mt-10 pt-6 border-t border-border">
                   {currentIndex > 0 ? (
                     <motion.button
                       type="button"
                       onClick={handlePrevious}
                       whileTap={{ scale: 0.97 }}
-                      className="flex items-center gap-1.5 px-5 py-3 rounded-xl text-sm font-semibold bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors"
+                      className="flex items-center gap-1.5 px-5 py-3 rounded-xl text-sm font-semibold bg-text-primary text-background hover:opacity-90 transition-colors"
                     >
                       <ChevronLeft size={18} />
                       Previous
@@ -529,7 +529,7 @@ const ClarityScoreTool: React.FC = () => {
                     className={`flex items-center gap-1.5 px-6 py-3 rounded-xl text-sm font-semibold transition-all ${
                       isAnswered
                         ? 'bg-teal-600 hover:bg-teal-700 text-white shadow-sm shadow-teal-600/20'
-                        : 'bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-500 cursor-not-allowed'
+                        : 'bg-surface-hover text-text-tertiary cursor-not-allowed'
                     }`}
                   >
                     {isLastQuestion ? 'Finish' : 'Next'}

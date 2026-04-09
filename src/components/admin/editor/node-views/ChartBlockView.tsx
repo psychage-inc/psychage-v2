@@ -18,7 +18,7 @@ import {
 import ChartDataEditor from './ChartDataEditor';
 import type { ChartBlockData } from '../extensions/ChartBlock';
 
-const CHART_COLORS = ['#0D9488', '#6366F1', '#F59E0B', '#EF4444', '#8B5CF6', '#EC4899', '#06B6D4', '#84CC16'];
+const CHART_COLORS = ['#1A9B8C', '#6366F1', '#F59E0B', '#EF4444', '#8B5CF6', '#EC4899', '#06B6D4', '#84CC16'];
 
 const CustomTooltip = ({ active, payload, label }: any) => {
   if (active && payload?.length) {
@@ -106,7 +106,7 @@ const ChartBlockView: React.FC<NodeViewProps> = ({ node, updateAttributes, delet
               <XAxis dataKey="label" tick={{ fontSize: 11 }} stroke="#9ca3af" />
               <YAxis tick={{ fontSize: 11 }} stroke="#9ca3af" />
               <Tooltip content={<CustomTooltip />} />
-              <Line type="monotone" dataKey="value" stroke="#0D9488" strokeWidth={2} dot={{ r: 4 }} />
+              <Line type="monotone" dataKey="value" stroke="#1A9B8C" strokeWidth={2} dot={{ r: 4 }} />
             </LineChart>
           </ResponsiveContainer>
         );

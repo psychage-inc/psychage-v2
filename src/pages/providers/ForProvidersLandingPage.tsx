@@ -95,7 +95,7 @@ const ForProvidersLandingPage: React.FC = () => {
         description="Join the Psychage provider directory. Create a free listing, verify your credentials, and connect with people seeking mental health support."
       />
 
-      <div className="min-h-screen bg-slate-50 dark:bg-gray-950">
+      <div className="min-h-screen bg-background">
         {/* ================================================================
             HERO SECTION
             ================================================================ */}
@@ -167,10 +167,10 @@ const ForProvidersLandingPage: React.FC = () => {
               viewport={{ once: true, margin: '-100px' }}
               className="text-center mb-14"
             >
-              <h2 className="font-display font-bold text-3xl sm:text-4xl text-gray-900 dark:text-white mb-4">
+              <h2 className="font-display font-bold text-3xl sm:text-4xl text-text-primary mb-4">
                 Why List on Psychage?
               </h2>
-              <p className="text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto">
+              <p className="text-lg text-text-secondary max-w-xl mx-auto">
                 A directory built for modern mental health professionals.
               </p>
             </motion.div>
@@ -188,15 +188,15 @@ const ForProvidersLandingPage: React.FC = () => {
                   <motion.div
                     key={index}
                     variants={itemVariants}
-                    className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow group"
+                    className="bg-surface rounded-2xl p-6 border border-border shadow-sm hover:shadow-md transition-shadow group"
                   >
                     <div className="w-12 h-12 bg-teal-50 dark:bg-teal-900/30 rounded-xl flex items-center justify-center mb-4 group-hover:bg-teal-100 dark:group-hover:bg-teal-900/50 transition-colors">
                       <Icon size={24} className="text-teal-600 dark:text-teal-400" />
                     </div>
-                    <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-2">
+                    <h3 className="font-display font-bold text-lg text-text-primary mb-2">
                       {prop.title}
                     </h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                    <p className="text-sm text-text-secondary leading-relaxed">
                       {prop.description}
                     </p>
                   </motion.div>
@@ -209,7 +209,7 @@ const ForProvidersLandingPage: React.FC = () => {
         {/* ================================================================
             TIER COMPARISON
             ================================================================ */}
-        <section className="py-20 sm:py-24 bg-white dark:bg-gray-900">
+        <section className="py-20 sm:py-24 bg-surface">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -217,10 +217,10 @@ const ForProvidersLandingPage: React.FC = () => {
               viewport={{ once: true, margin: '-100px' }}
               className="text-center mb-12"
             >
-              <h2 className="font-display font-bold text-3xl sm:text-4xl text-gray-900 dark:text-white mb-4">
+              <h2 className="font-display font-bold text-3xl sm:text-4xl text-text-primary mb-4">
                 Choose Your Plan
               </h2>
-              <p className="text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto">
+              <p className="text-lg text-text-secondary max-w-xl mx-auto">
                 Start free and upgrade whenever you are ready for more visibility.
               </p>
             </motion.div>
@@ -263,7 +263,7 @@ const ForProvidersLandingPage: React.FC = () => {
               viewport={{ once: true, margin: '-100px' }}
               className="text-center mb-12"
             >
-              <h2 className="font-display font-bold text-3xl sm:text-4xl text-gray-900 dark:text-white mb-4">
+              <h2 className="font-display font-bold text-3xl sm:text-4xl text-text-primary mb-4">
                 Frequently Asked Questions
               </h2>
             </motion.div>
@@ -276,7 +276,7 @@ const ForProvidersLandingPage: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm overflow-hidden"
+                  className="bg-surface rounded-xl border border-border shadow-sm overflow-hidden"
                 >
                   <button
                     type="button"
@@ -285,7 +285,7 @@ const ForProvidersLandingPage: React.FC = () => {
                     aria-expanded={openFaq === index}
                     aria-controls={`faq-answer-${index}`}
                   >
-                    <span className="font-display font-bold text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                    <span className="font-display font-bold text-text-primary group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
                       {item.question}
                     </span>
                     <ChevronDown

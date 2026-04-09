@@ -50,7 +50,7 @@ const VideoDetail: React.FC = () => {
     }
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-surface">
             <SEO
                 title={`${video.title} | Psychage`}
                 description={`Watch ${video.title} on Psychage.`}
@@ -58,12 +58,12 @@ const VideoDetail: React.FC = () => {
                 type="video.other"
             />
             {/* Sticky Header */}
-            <div className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-100 px-6 py-4">
+            <div className="sticky top-0 z-40 bg-surface/80 backdrop-blur-md border-b border-border px-6 py-4">
                 <div className="container mx-auto max-w-content flex items-center gap-4">
-                    <button onClick={() => navigate('/')} aria-label="Go back" className="p-2 hover:bg-gray-100 rounded-full transition-colors">
-                        <ArrowLeft size={20} className="text-gray-600" />
+                    <button onClick={() => navigate('/')} aria-label="Go back" className="p-2 hover:bg-surface-hover rounded-full transition-colors">
+                        <ArrowLeft size={20} className="text-text-secondary" />
                     </button>
-                    <h1 className="text-sm font-bold text-gray-900 truncate flex-grow">
+                    <h1 className="text-sm font-bold text-text-primary truncate flex-grow">
                         {video.title}
                     </h1>
                     <Button size="sm" variant="primary" className="h-9 px-4 rounded-full">Subscribe</Button>
@@ -102,39 +102,39 @@ const VideoDetail: React.FC = () => {
                         </div>
 
                         {/* Video Header */}
-                        <h1 className="font-display font-bold text-2xl md:text-3xl text-gray-900 mb-4">
+                        <h1 className="font-display font-bold text-2xl md:text-3xl text-text-primary mb-4">
                             {video.title}
                         </h1>
 
                         {/* Stats & Actions */}
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 border-b border-gray-100 pb-6 mb-6">
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 border-b border-border pb-6 mb-6">
                             <div className="flex items-center gap-4">
                                 <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center font-bold text-teal-700">
                                     PS
                                 </div>
                                 <div>
-                                    <div className="font-bold text-gray-900">Psychage Studios</div>
-                                    <div className="text-xs text-gray-500">{video.views.toLocaleString()} views • 2 days ago</div>
+                                    <div className="font-bold text-text-primary">Psychage Studios</div>
+                                    <div className="text-xs text-text-secondary">{video.views.toLocaleString()} views • 2 days ago</div>
                                 </div>
                             </div>
 
                             <div className="flex items-center gap-2">
-                                <button aria-label="Like this video" className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-sm font-bold text-gray-700 hover:bg-gray-200 transition-colors">
+                                <button aria-label="Like this video" className="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-hover text-sm font-bold text-text-secondary hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
                                     <ThumbsUp size={16} /> 12K
                                 </button>
-                                <button aria-label="Share this video" className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-sm font-bold text-gray-700 hover:bg-gray-200 transition-colors">
+                                <button aria-label="Share this video" className="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-hover text-sm font-bold text-text-secondary hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
                                     <Share2 size={16} /> Share
                                 </button>
-                                <button aria-label="Save this video" className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-sm font-bold text-gray-700 hover:bg-gray-200 transition-colors">
+                                <button aria-label="Save this video" className="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-hover text-sm font-bold text-text-secondary hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
                                     <Bookmark size={16} /> Save
                                 </button>
                             </div>
                         </div>
 
                         {/* Description */}
-                        <div className="bg-gray-50 rounded-2xl p-6 mb-8">
-                            <div className="text-sm font-bold text-gray-900 mb-2">About this video</div>
-                            <p className="text-gray-600 leading-relaxed mb-4">
+                        <div className="bg-surface-hover rounded-2xl p-6 mb-8">
+                            <div className="text-sm font-bold text-text-primary mb-2">About this video</div>
+                            <p className="text-text-secondary leading-relaxed mb-4">
                                 {video.description || `In this session, we explore topics related to ${video.category.toLowerCase()} to help you on your mental wellness journey.`}
                             </p>
                             <div className="flex gap-2 text-xs font-bold text-teal-600">
@@ -146,8 +146,8 @@ const VideoDetail: React.FC = () => {
 
                         {/* Transcript */}
                         <div>
-                            <h3 className="font-bold text-gray-900 mb-4">Transcript</h3>
-                            <div className="h-64 overflow-y-auto border border-gray-100 rounded-xl p-4 text-sm text-gray-600 leading-relaxed space-y-4">
+                            <h3 className="font-bold text-text-primary mb-4">Transcript</h3>
+                            <div className="h-64 overflow-y-auto border border-border rounded-xl p-4 text-sm text-text-secondary leading-relaxed space-y-4">
                                 {video.transcript && video.transcript.length > 0 ? (
                                     video.transcript.map((segment, index) => (
                                         <p key={index}>
@@ -156,7 +156,7 @@ const VideoDetail: React.FC = () => {
                                         </p>
                                     ))
                                 ) : (
-                                    <div className="flex flex-col items-center justify-center h-full text-gray-400">
+                                    <div className="flex flex-col items-center justify-center h-full text-text-tertiary">
                                         <CheckCircle size={24} className="mb-2 opacity-50" />
                                         <p className="italic">Transcript coming soon...</p>
                                     </div>
@@ -167,7 +167,7 @@ const VideoDetail: React.FC = () => {
 
                     {/* Right Column: Related */}
                     <div className="lg:col-span-4">
-                        <h3 className="font-bold text-gray-900 mb-6">Up Next</h3>
+                        <h3 className="font-bold text-text-primary mb-6">Up Next</h3>
                         <div className="flex flex-col gap-4">
                             {relatedVideos.map((rel) => (
                                 <Link
@@ -175,18 +175,18 @@ const VideoDetail: React.FC = () => {
                                     to={`/watch/${rel.id}`}
                                     className="group flex gap-3"
                                 >
-                                    <div className="relative w-40 aspect-video rounded-lg overflow-hidden bg-gray-100 shrink-0">
+                                    <div className="relative w-40 aspect-video rounded-lg overflow-hidden bg-surface-hover shrink-0">
                                         <img src={rel.thumbnail} alt={rel.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                         <div className="absolute bottom-1 right-1 px-1 py-0.5 bg-black/80 rounded text-[10px] font-bold text-white">
                                             {Math.floor(rel.duration / 60)}:{(rel.duration % 60).toString().padStart(2, '0')}
                                         </div>
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-sm text-gray-900 leading-tight mb-1 line-clamp-2 group-hover:text-teal-600 transition-colors">
+                                        <h4 className="font-bold text-sm text-text-primary leading-tight mb-1 line-clamp-2 group-hover:text-teal-600 transition-colors">
                                             {rel.title}
                                         </h4>
-                                        <div className="text-xs text-gray-500">{rel.category}</div>
-                                        <div className="text-xs text-gray-400 mt-1">15K views</div>
+                                        <div className="text-xs text-text-secondary">{rel.category}</div>
+                                        <div className="text-xs text-text-tertiary mt-1">15K views</div>
                                     </div>
                                 </Link>
                             ))}

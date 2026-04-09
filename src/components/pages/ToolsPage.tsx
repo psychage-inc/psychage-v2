@@ -22,12 +22,12 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 const colorVariants: Record<string, string> = {
-    teal: 'bg-teal-100 text-teal-600 group-hover:bg-teal-600 group-hover:text-white',
-    amber: 'bg-amber-100 text-amber-600 group-hover:bg-amber-600 group-hover:text-white',
-    indigo: 'bg-indigo-100 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white',
-    sky: 'bg-sky-100 text-sky-600 group-hover:bg-sky-600 group-hover:text-white',
-    rose: 'bg-rose-100 text-rose-600 group-hover:bg-rose-600 group-hover:text-white',
-    red: 'bg-red-100 text-red-600 group-hover:bg-red-600 group-hover:text-white',
+    teal: 'bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 group-hover:bg-teal-600 group-hover:text-white',
+    amber: 'bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 group-hover:bg-amber-600 group-hover:text-white',
+    indigo: 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white',
+    sky: 'bg-sky-100 dark:bg-sky-900/30 text-sky-600 dark:text-sky-400 group-hover:bg-sky-600 group-hover:text-white',
+    rose: 'bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 group-hover:bg-rose-600 group-hover:text-white',
+    red: 'bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 group-hover:bg-red-600 group-hover:text-white',
 };
 
 const ToolsPage: React.FC = () => {
@@ -80,34 +80,34 @@ const ToolsPage: React.FC = () => {
         return ![1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12].includes(toolId);
     };
 
-    if (isLoading) return <div className="min-h-screen bg-gray-50 pt-32 text-center">Loading...</div>;
+    if (isLoading) return <div className="min-h-screen bg-background pt-32 text-center text-text-secondary">Loading...</div>;
 
     return (
-        <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-6">
+        <div className="min-h-screen bg-background pt-24 pb-12 px-6">
             <SEO title="Mental Health Toolkit | Psychage" description="Clinically-validated tools and exercises for your mental well-being." />
             <div className="container mx-auto max-w-6xl">
                 <div className="mb-8">
                     <Breadcrumbs />
                 </div>
                 <div className="text-center max-w-2xl mx-auto mb-16">
-                    <h1 className="font-display font-bold text-4xl md:text-5xl text-gray-900 mb-6">
+                    <h1 className="font-display font-bold text-4xl md:text-5xl text-text-primary mb-6">
                         Mental Health Toolkit
                     </h1>
-                    <p className="text-xl text-gray-500 leading-relaxed">
+                    <p className="text-xl text-text-secondary leading-relaxed">
                         A collection of clinically-validated tools and exercises to help you understand, manage, and improve your mental well-being.
                     </p>
                 </div>
 
                 {/* Filters & Search */}
-                <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 mb-12 flex flex-col md:flex-row gap-4 items-center justify-between">
+                <div className="bg-surface rounded-2xl p-4 shadow-sm border border-border mb-12 flex flex-col md:flex-row gap-4 items-center justify-between">
                     <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 no-scrollbar">
                         {categories.map(category => (
                             <button
                                 key={category}
                                 onClick={() => setSelectedCategory(category)}
                                 className={`px-4 py-2 rounded-full text-sm font-bold whitespace-nowrap transition-all ${selectedCategory === category
-                                    ? 'bg-gray-900 text-white'
-                                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                                    ? 'bg-text-primary text-background'
+                                    : 'bg-surface-hover text-text-secondary hover:bg-border'
                                     } `}
                             >
                                 {category}
@@ -116,13 +116,13 @@ const ToolsPage: React.FC = () => {
                     </div>
 
                     <div className="relative w-full md:w-64">
-                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-text-tertiary" size={18} />
                         <input
                             type="text"
                             placeholder="Search tools..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full pl-10 pr-4 py-2 rounded-xl border border-gray-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 outline-none transition-all"
+                            className="w-full pl-10 pr-4 py-2 rounded-xl border border-border bg-surface text-text-primary focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 outline-none transition-all"
                         />
                     </div>
                 </div>
@@ -139,36 +139,36 @@ const ToolsPage: React.FC = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
-                                className={`bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all group relative overflow-hidden ${comingSoon ? 'opacity-75' : ''} `}
+                                className={`bg-surface rounded-3xl p-8 border border-border shadow-sm hover:shadow-xl transition-all group relative overflow-hidden ${comingSoon ? 'opacity-75' : ''} `}
                             >
                                 <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-colors ${colorVariants[tool.color] || colorVariants.teal} `}>
                                     <Icon size={28} />
                                 </div>
 
                                 <div className="mb-4">
-                                    <span className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 block">
+                                    <span className="text-xs font-bold uppercase tracking-wider text-text-tertiary mb-2 block">
                                         {tool.category}
                                     </span>
-                                    <h3 className="font-display font-bold text-2xl text-gray-900 group-hover:text-teal-600 transition-colors">
+                                    <h3 className="font-display font-bold text-2xl text-text-primary group-hover:text-teal-600 transition-colors">
                                         {tool.name}
                                     </h3>
                                 </div>
 
-                                <p className="text-gray-500 mb-8 line-clamp-3">
+                                <p className="text-text-secondary mb-8 line-clamp-3">
                                     {tool.description}
                                 </p>
 
                                 <div className="space-y-3 mb-8">
                                     {tool.features.slice(0, 2).map(feature => (
-                                        <div key={feature} className="flex items-center gap-2 text-sm text-gray-600">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-gray-300" />
+                                        <div key={feature} className="flex items-center gap-2 text-sm text-text-secondary">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-border" />
                                             {feature}
                                         </div>
                                     ))}
                                 </div>
 
                                 {comingSoon ? (
-                                    <div className="w-full py-3 rounded-xl bg-gray-100 text-gray-400 font-bold text-center text-sm cursor-not-allowed">
+                                    <div className="w-full py-3 rounded-xl bg-surface-hover text-text-tertiary font-bold text-center text-sm cursor-not-allowed">
                                         Coming Soon
                                     </div>
                                 ) : (
@@ -185,11 +185,11 @@ const ToolsPage: React.FC = () => {
 
                 {filteredTools.length === 0 && (
                     <div className="text-center py-24">
-                        <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 text-gray-400">
+                        <div className="w-16 h-16 bg-surface-hover rounded-full flex items-center justify-center mx-auto mb-4 text-text-tertiary">
                             <Filter size={24} />
                         </div>
-                        <h3 className="font-bold text-gray-900 text-lg mb-2">No tools found</h3>
-                        <p className="text-gray-500">Try adjusting your search or filters</p>
+                        <h3 className="font-bold text-text-primary text-lg mb-2">No tools found</h3>
+                        <p className="text-text-secondary">Try adjusting your search or filters</p>
                         <button
                             onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
                             className="mt-4 text-teal-600 font-bold hover:underline"

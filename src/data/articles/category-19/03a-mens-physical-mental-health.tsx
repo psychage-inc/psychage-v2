@@ -839,8 +839,8 @@ export const mensPhysicalMentalHealthArticlesA: Article[] = [
           oncological settings where men receive their care.
         </p>
         <p className="mb-6">
-          If you have been diagnosed with prostate cancer, your psychological response is not
-          secondary to your medical treatment --- it is part of it. Seeking support is not a
+          For anyone who has received a prostate cancer diagnosis, the psychological response is not
+          secondary to medical treatment --- it is part of it. Seeking support is not a
           sign of weakness. It is an evidence-based response to one of the most challenging
           experiences a person can face. And if the medical system does not offer that support
           proactively, it is reasonable --- and necessary --- to ask for it.

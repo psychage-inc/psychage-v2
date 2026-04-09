@@ -8,7 +8,7 @@ import { getCitationDiversityReport } from '@/services/articleAdminService';
 import type { CitationDiversityEntry } from '@/lib/admin/types';
 import { adminPath } from '@/hooks/useAdminNavigate';
 
-const TIER_COLORS = ['#0D9488', '#6366F1', '#F59E0B', '#EF4444', '#94A3B8'];
+const TIER_COLORS = ['#1A9B8C', '#6366F1', '#F59E0B', '#EF4444', '#94A3B8'];
 const TIER_LABELS = ['T1 Peer-Reviewed', 'T2 Government', 'T3 Organizations', 'T4 Guidelines', 'T5 Reference'];
 
 // ============================================================

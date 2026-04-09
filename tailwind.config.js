@@ -35,9 +35,12 @@ export default {
                 // Psychage Brand System
                 teal: {
                     50: '#F0FDFA',
+                    100: '#E6F5F3',
                     400: '#2DD4BF',
-                    500: '#14B8A6',
-                    600: '#0D9488',
+                    500: '#20B8A6',
+                    600: '#1A9B8C',
+                    700: '#158A7D',
+                    900: '#0D5C54',
                 },
                 charcoal: {
                     50: '#FAFAF9',
@@ -65,7 +68,7 @@ export default {
                     green: '#059669',
                 },
                 relevance: {
-                    high: '#0D9488',
+                    high: '#1A9B8C',
                     moderate: '#6366F1',
                     explore: '#8B5CF6',
                 }
@@ -73,6 +76,7 @@ export default {
             fontFamily: {
                 sans: ['var(--font-sans)'],
                 display: ['var(--font-display)'],
+                mono: ["'IBM Plex Mono'", 'monospace'],
             },
             spacing: {
                 '1': 'var(--space-1)',
@@ -111,8 +115,8 @@ export default {
             typography: {
                 DEFAULT: {
                     css: {
-                        '--tw-prose-links': '#0d9488',
-                        '--tw-prose-quotes-border': '#0d9488',
+                        '--tw-prose-links': '#1A9B8C',
+                        '--tw-prose-quotes-border': '#1A9B8C',
                         maxWidth: 'none',
                     },
                 },

@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface LogoProps {
-    className?: string;
+  className?: string;
 }
 
 export const Logo: React.FC<LogoProps> = ({ className = "h-12 w-auto text-[#1A1A1A] dark:text-white" }) => (
@@ -20,7 +20,8 @@ export const Logo: React.FC<LogoProps> = ({ className = "h-12 w-auto text-[#1A1A
             </style>
         </defs>
         <text x="50%" y="70" textAnchor="middle" className="futura-text">
-            <tspan fill="#0D9488">PSY</tspan><tspan fill="currentColor">CHAGE</tspan>
+            <tspan fill="#1A9B8C">PSY</tspan>
+            <tspan fill="currentColor">CHAGE</tspan>
         </text>
     </svg>
 );

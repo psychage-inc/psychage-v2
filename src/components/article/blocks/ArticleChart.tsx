@@ -46,7 +46,7 @@ interface ArticleChartProps {
     labels?: string[];
 }
 
-const COLORS = ['#0D9488', '#6366F1', '#F59E0B', '#EF4444', '#8B5CF6', '#EC4899', '#06B6D4', '#84CC16'];
+const COLORS = ['#1A9B8C', '#6366F1', '#F59E0B', '#EF4444', '#8B5CF6', '#EC4899', '#06B6D4', '#84CC16'];
 
 const getColor = (index: number, point?: ChartDataPoint) =>
     (point?.color as string) || COLORS[index % COLORS.length];
@@ -103,9 +103,9 @@ const ChartRenderer: React.FC<{ type: ChartType; data: ReturnType<typeof normali
                         <Line
                             type="monotone"
                             dataKey="value"
-                            stroke="#0D9488"
+                            stroke="#1A9B8C"
                             strokeWidth={2.5}
-                            dot={{ r: 4, fill: '#0D9488' }}
+                            dot={{ r: 4, fill: '#1A9B8C' }}
                             activeDot={{ r: 6 }}
                             animationDuration={1000}
                         />
@@ -119,8 +119,8 @@ const ChartRenderer: React.FC<{ type: ChartType; data: ReturnType<typeof normali
                     <AreaChart data={data} margin={{ top: 10, right: 20, left: 0, bottom: 5 }}>
                         <defs>
                             <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0%" stopColor="#0D9488" stopOpacity={0.3} />
-                                <stop offset="100%" stopColor="#0D9488" stopOpacity={0.02} />
+                                <stop offset="0%" stopColor="#1A9B8C" stopOpacity={0.3} />
+                                <stop offset="100%" stopColor="#1A9B8C" stopOpacity={0.02} />
                             </linearGradient>
                         </defs>
                         <CartesianGrid strokeDasharray="3 3" stroke={gridStroke} />
@@ -130,7 +130,7 @@ const ChartRenderer: React.FC<{ type: ChartType; data: ReturnType<typeof normali
                         <Area
                             type="monotone"
                             dataKey="value"
-                            stroke="#0D9488"
+                            stroke="#1A9B8C"
                             strokeWidth={2}
                             fill="url(#areaGradient)"
                             animationDuration={1000}
@@ -176,8 +176,8 @@ const ChartRenderer: React.FC<{ type: ChartType; data: ReturnType<typeof normali
                         <PolarRadiusAxis tick={{ fontSize: 10, fill: '#9ca3af' }} />
                         <Radar
                             dataKey="value"
-                            stroke="#0D9488"
-                            fill="#0D9488"
+                            stroke="#1A9B8C"
+                            fill="#1A9B8C"
                             fillOpacity={0.2}
                             strokeWidth={2}
                             animationDuration={800}

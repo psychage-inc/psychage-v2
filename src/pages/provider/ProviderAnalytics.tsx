@@ -231,8 +231,8 @@ const ProviderAnalytics: React.FC = () => {
                                             <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                                                 <defs>
                                                     <linearGradient id="colorViews" x1="0" y1="0" x2="0" y2="1">
-                                                        <stop offset="5%" stopColor="#0d9488" stopOpacity={0.2} />
-                                                        <stop offset="95%" stopColor="#0d9488" stopOpacity={0} />
+                                                        <stop offset="5%" stopColor="#1A9B8C" stopOpacity={0.2} />
+                                                        <stop offset="95%" stopColor="#1A9B8C" stopOpacity={0} />
                                                     </linearGradient>
                                                 </defs>
                                                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E5E7EB" />
@@ -254,7 +254,7 @@ const ProviderAnalytics: React.FC = () => {
                                                 <Area
                                                     type="monotone"
                                                     dataKey="views"
-                                                    stroke="#0d9488"
+                                                    stroke="#1A9B8C"
                                                     strokeWidth={3}
                                                     fillOpacity={1}
                                                     fill="url(#colorViews)"

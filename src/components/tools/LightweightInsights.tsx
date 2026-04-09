@@ -57,8 +57,8 @@ export const LightweightInsights: React.FC<LightweightInsightsProps> = ({ entrie
                         <svg viewBox="0 -5 100 50" className="w-full h-full overflow-visible" preserveAspectRatio="none">
                             <defs>
                                 <linearGradient id="trendGradient" x1="0" y1="0" x2="0" y2="1">
-                                    <stop offset="0%" stopColor="#14b8a6" stopOpacity="0.2" />
-                                    <stop offset="100%" stopColor="#14b8a6" stopOpacity="0" />
+                                    <stop offset="0%" stopColor="#20B8A6" stopOpacity="0.2" />
+                                    <stop offset="100%" stopColor="#20B8A6" stopOpacity="0" />
                                 </linearGradient>
                             </defs>
                             <polygon
@@ -67,7 +67,7 @@ export const LightweightInsights: React.FC<LightweightInsightsProps> = ({ entrie
                             />
                             <polyline
                                 fill="none"
-                                stroke="#0d9488"
+                                stroke="#1A9B8C"
                                 strokeWidth="2.5"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
@@ -76,7 +76,7 @@ export const LightweightInsights: React.FC<LightweightInsightsProps> = ({ entrie
                             {last7.map((e, i) => {
                                 const x = (i / (last7.length - 1)) * 100;
                                 const y = 40 - ((e.mood / 10) * 40);
-                                return <circle key={i} cx={x} cy={y} r="3" fill="#0d9488" />;
+                                return <circle key={i} cx={x} cy={y} r="3" fill="#1A9B8C" />;
                             })}
                         </svg>
                     ) : (

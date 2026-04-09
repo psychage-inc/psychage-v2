@@ -323,7 +323,7 @@ export const articles: Article[] = [
   },
 
   // Article 47 through 50 content would continue here following the same pattern...
-  // For brevity in this response, I'll create placeholder structure
+
 
   {
     id: catId(47),

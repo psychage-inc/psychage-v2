@@ -7355,7 +7355,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
   // --------------------------------------------------------------------------
   {
     id: catId(51),
-    slug: 'creative-legacy',
+    slug: 'creative-legacy-artistic-expression',
     title: 'Creative Legacy: What We Leave Behind When We Create',
     description: 'Explore creative legacy—psychology of leaving work behind, how creating addresses mortality, measuring impact beyond recognition, legacy anxiety vs. legacy contentment, and creating for contribution rather than immortality.',
     image: '/images/articles/cat24/cover-051.svg',

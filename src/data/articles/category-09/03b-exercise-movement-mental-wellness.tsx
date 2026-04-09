@@ -994,7 +994,7 @@ export const exerciseMovementMentalWellnessArticlesB: Article[] = [
             <li>Experience intense guilt or panic when you can't exercise</li>
             <li>Have been told by medical professionals to reduce exercise but can't</li>
           </ul>
-          <p>You need professional support. Contact a therapist specializing in eating disorders or call the National Eating Disorders Association Helpline: 1-800-931-2237.</p>
+          <p>You need professional support. Contact a therapist specializing in eating disorders or call the National Alliance for Eating Disorders Helpline: 1-866-662-1235.</p>
         </ArticleCallout>
 
         <h2 id="psychological-drivers" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Psychological Drivers: Why People Over-Exercise</h2>
@@ -1078,9 +1078,9 @@ export const exerciseMovementMentalWellnessArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>National Eating Disorders Association Helpline: 1-800-931-2237</li>
-          <li>Crisis Text Line: Text "NEDA" to 741741</li>
-          <li>Find a therapist specializing in eating disorders: <a href="https://www.nationaleatingdisorders.org/find-treatment" className="text-primary-600 hover:underline">NEDA Treatment Finder</a></li>
+          <li>National Alliance for Eating Disorders Helpline: 1-866-662-1235</li>
+          <li>Crisis Text Line: Text "HELLO" to 741741</li>
+          <li>Find a therapist specializing in eating disorders: <a href="https://www.allianceforeatingdisorders.com" className="text-primary-600 hover:underline">National Alliance for Eating Disorders</a></li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">

@@ -247,7 +247,7 @@ const AdminArticleTree: React.FC = () => {
                 ? 'text-white'
                 : 'bg-surface-hover text-text-secondary hover:bg-surface-active'
             )}
-            style={categoryFilter === cat.id ? { backgroundColor: cat.color || '#0D9488' } : undefined}
+            style={categoryFilter === cat.id ? { backgroundColor: cat.color || '#1A9B8C' } : undefined}
           >
             {cat.name}
           </button>

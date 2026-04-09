@@ -5,6 +5,8 @@ import { useAuth } from '@/context/AuthContext';
 import { chatPersistenceService } from '@/services/chatPersistenceService';
 import { consentService } from '@/services/consentService';
 import { resolveCountry, getPrimaryCrisisLine } from '@/lib/crisis';
+import { parseSSEStream } from '@/lib/ai/streaming';
+import StreamingCursor from '@/features/chat/components/StreamingCursor';
 import AuthModal from '@/components/auth/AuthModal';
 
 interface Message {
@@ -12,6 +14,7 @@ interface Message {
     sender: 'user' | 'ai';
     text: string;
     type?: 'text' | 'crisis' | 'suggestion';
+    isStreaming?: boolean;
     suggestions?: { label: string; action: string }[];
 }
 
@@ -67,6 +70,7 @@ const MindMate: React.FC = () => {
     const [isTyping, setIsTyping] = useState(false);
     const [lastFailedInput, setLastFailedInput] = useState<string | null>(null);
     const messagesEndRef = useRef<HTMLDivElement>(null);
+    const abortControllerRef = useRef<AbortController | null>(null);
 
     // Check consent and hydrate from Supabase when authenticated
     useEffect(() => {
@@ -101,9 +105,12 @@ const MindMate: React.FC = () => {
         hydrate().catch(console.error);
     }, [isAuthenticated, user]);
 
-    // Persist chat to localStorage
+    // Persist chat to localStorage (strip transient streaming state)
     useEffect(() => {
-        if (messages.length > 0) localStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
+        if (messages.length > 0) {
+            const toSave = messages.map(({ isStreaming: _, ...rest }) => rest);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(toSave));
+        }
     }, [messages]);
 
     // Save a message to Supabase (fire-and-forget)
@@ -149,10 +156,15 @@ const MindMate: React.FC = () => {
     };
 
     const handleSend = async () => {
-        if (!inputText.trim()) return;
+        if (!inputText.trim() || isTyping) return;
+
+        // Abort any active stream
+        abortControllerRef.current?.abort();
 
         const currentInput = inputText.trim();
         const userMsg: Message = { id: Date.now().toString(), sender: 'user', text: currentInput };
+        const assistantMsgId = (Date.now() + 1).toString();
+
         setMessages(prev => [...prev, userMsg]);
         setInputText('');
         setIsTyping(true);
@@ -160,6 +172,9 @@ const MindMate: React.FC = () => {
 
         // Dual-write user message to Supabase
         persistMessage('user', currentInput);
+
+        const controller = new AbortController();
+        abortControllerRef.current = controller;
 
         try {
             // Build message history for the server-side API
@@ -169,7 +184,7 @@ const MindMate: React.FC = () => {
                     role: m.sender === 'user' ? 'user' as const : 'assistant' as const,
                     content: m.text,
                 }));
-            chatHistory.push({ role: 'user', content: inputText });
+            chatHistory.push({ role: 'user', content: currentInput });
 
             const res = await fetch('/api/ai/chat', {
                 method: 'POST',
@@ -177,7 +192,9 @@ const MindMate: React.FC = () => {
                 body: JSON.stringify({
                     messages: chatHistory,
                     sessionId: getOrCreateSessionId(),
+                    stream: true,
                 }),
+                signal: controller.signal,
             });
 
             if (!res.ok) {
@@ -185,31 +202,97 @@ const MindMate: React.FC = () => {
                 throw new Error(errorData.error || `Chat API error: ${res.status}`);
             }
 
-            const data = await res.json();
-            const responseText: string = data.message || '';
+            const contentType = res.headers.get('Content-Type') ?? '';
 
-            const aiMsg: Message = {
-                id: (Date.now() + 1).toString(),
+            // ── JSON response (crisis / harmful / fallback) ──
+            if (contentType.includes('application/json')) {
+                const data = await res.json();
+                const aiMsg: Message = {
+                    id: assistantMsgId,
+                    sender: 'ai',
+                    text: data.message || "I'm here for you, but I didn't catch that.",
+                    type: data.isCrisis || data.safetyLevel === 'CRISIS' ? 'crisis' : 'text',
+                };
+                setMessages(prev => [...prev, aiMsg]);
+                persistMessage('assistant', aiMsg.text);
+                return;
+            }
+
+            // ── SSE stream ──
+            if (!res.body) throw new Error('No response body');
+
+            // Add streaming placeholder
+            setMessages(prev => [...prev, {
+                id: assistantMsgId,
                 sender: 'ai',
-                text: responseText || "I'm here for you, but I didn't catch that.",
-                type: data.isCrisis || data.safetyLevel === 'CRISIS' ? 'crisis' : 'text',
-            };
+                text: '',
+                type: 'text',
+                isStreaming: true,
+            }]);
 
-            setMessages(prev => [...prev, aiMsg]);
+            let fullText = '';
+
+            for await (const event of parseSSEStream(res.body)) {
+                switch (event.type) {
+                    case 'token':
+                        fullText += event.content;
+                        setMessages(prev =>
+                            prev.map(m =>
+                                m.id === assistantMsgId ? { ...m, text: fullText } : m
+                            ),
+                        );
+                        break;
+
+                    case 'error':
+                        if (event.code === 'SAFETY_VIOLATION') {
+                            fullText = event.message;
+                            setMessages(prev =>
+                                prev.map(m =>
+                                    m.id === assistantMsgId ? { ...m, text: fullText } : m
+                                ),
+                            );
+                        }
+                        break;
+
+                    case 'done':
+                        // Finalize the message
+                        setMessages(prev =>
+                            prev.map(m =>
+                                m.id === assistantMsgId ? { ...m, isStreaming: false } : m
+                            ),
+                        );
+                        break;
+                }
+            }
+
+            // Ensure streaming flag is cleared even if no done event
+            setMessages(prev =>
+                prev.map(m =>
+                    m.id === assistantMsgId ? { ...m, isStreaming: false } : m
+                ),
+            );
 
             // Dual-write AI response to Supabase
-            persistMessage('assistant', aiMsg.text);
+            if (fullText) persistMessage('assistant', fullText);
         } catch (error) {
+            // Abort is not an error
+            if (error instanceof DOMException && error.name === 'AbortError') return;
+
             console.error("AI Error:", error);
             setLastFailedInput(currentInput);
-            setMessages(prev => [...prev, {
-                id: 'error-msg',
-                sender: 'ai',
-                text: "I'm having trouble connecting. Please try again in a moment.",
-                type: 'text'
-            }]);
+            // Remove streaming placeholder if it exists
+            setMessages(prev => {
+                const filtered = prev.filter(m => m.id !== assistantMsgId);
+                return [...filtered, {
+                    id: 'error-msg',
+                    sender: 'ai' as const,
+                    text: "I'm having trouble connecting. Please try again in a moment.",
+                    type: 'text' as const,
+                }];
+            });
         } finally {
             setIsTyping(false);
+            abortControllerRef.current = null;
         }
     };
 
@@ -303,7 +386,7 @@ const MindMate: React.FC = () => {
                                 <button onClick={clearChat} className="p-1.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors text-gray-400" aria-label="Clear chat history">
                                     <Trash2 size={16} />
                                 </button>
-                                <button onClick={() => setIsOpen(false)} className="p-1.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors text-gray-400" aria-label="Close chat panel">
+                                <button onClick={() => { abortControllerRef.current?.abort(); setIsOpen(false); }} className="p-1.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors text-gray-400" aria-label="Close chat panel">
                                     <X size={16} />
                                 </button>
                             </div>
@@ -335,6 +418,7 @@ const MindMate: React.FC = () => {
                                             </div>
                                         )}
                                         {msg.text}
+                                        {msg.isStreaming && <StreamingCursor />}
 
                                         {msg.type === 'crisis' && (
                                             <a href={`tel:${crisisLine.phone.replace(/[^0-9+]/g, '')}`} className="mt-3 flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg text-xs font-bold transition-colors w-full justify-center">
@@ -344,15 +428,17 @@ const MindMate: React.FC = () => {
                                     </div>
                                 </motion.div>
                             ))}
-                            {isTyping && (
+                            {isTyping && !messages.some(m => m.isStreaming && m.text) && (
                                 <div className="flex gap-3">
                                     <div className="w-7 h-7 rounded-lg bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center shrink-0">
                                         <Sparkles size={12} className="text-teal-600 dark:text-teal-400" />
                                     </div>
-                                    <div className="flex gap-1 items-center pt-1">
-                                        <span className="w-1.5 h-1.5 bg-gray-300 rounded-full animate-bounce" />
-                                        <span className="w-1.5 h-1.5 bg-gray-300 rounded-full animate-bounce [animation-delay:100ms]" />
-                                        <span className="w-1.5 h-1.5 bg-gray-300 rounded-full animate-bounce [animation-delay:200ms]" />
+                                    <div className="flex gap-1.5 items-center pt-1 text-xs text-gray-400 dark:text-gray-500">
+                                        <span className="inline-flex gap-1">
+                                            <span className="w-1.5 h-1.5 bg-teal-400 rounded-full animate-bounce" />
+                                            <span className="w-1.5 h-1.5 bg-teal-400 rounded-full animate-bounce [animation-delay:150ms]" />
+                                            <span className="w-1.5 h-1.5 bg-teal-400 rounded-full animate-bounce [animation-delay:300ms]" />
+                                        </span>
                                     </div>
                                 </div>
                             )}

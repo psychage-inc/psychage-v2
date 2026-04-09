@@ -8,7 +8,7 @@ interface BloomProps {
 export const BloomVisualization: React.FC<BloomProps> = ({ valence }) => {
     const colors = useMemo(() => {
         if (valence <= 3) return { primary: '#94a3b8', secondary: '#64748b', glow: 'rgba(148,163,184,0.3)' };
-        if (valence <= 7) return { primary: '#5eead4', secondary: '#14b8a6', glow: 'rgba(94,234,212,0.3)' };
+        if (valence <= 7) return { primary: '#5eead4', secondary: '#20B8A6', glow: 'rgba(94,234,212,0.3)' };
         return { primary: '#fdba74', secondary: '#f97316', glow: 'rgba(253,186,116,0.3)' };
     }, [valence]);
 

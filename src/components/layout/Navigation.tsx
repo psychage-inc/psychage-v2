@@ -383,7 +383,7 @@ const Navigation: React.FC = () => {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
                             transition={{ duration: 0.2 }}
-                            className="absolute top-full left-0 right-0 border-t border-border bg-surface/95 backdrop-blur-xl shadow-xl z-50"
+                            className="absolute top-full left-0 right-0 border-t border-border bg-white dark:bg-gray-900 shadow-xl z-50"
                             onMouseEnter={handleMenuEnter}
                             onMouseLeave={handleMenuLeave}
                         >

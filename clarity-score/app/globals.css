@@ -10,11 +10,11 @@
   --color-text-secondary: rgba(255, 255, 255, 0.55);
   --color-text-muted: rgba(255, 255, 255, 0.3);
 
-  --color-teal: #0D9488;
+  --color-teal: #1A9B8C;
   --color-teal-light: #5EEAD4;
-  --color-teal-dark: #0F766E;
+  --color-teal-dark: #158A7D;
 
-  --color-emotional: #0D9488;
+  --color-emotional: #1A9B8C;
   --color-vitality: #6366F1;
   --color-social: #EC4899;
   --color-cognitive: #F59E0B;
@@ -38,11 +38,11 @@
   --text-secondary: rgba(255, 255, 255, 0.55);
   --text-muted: rgba(255, 255, 255, 0.3);
 
-  --teal: #0D9488;
+  --teal: #1A9B8C;
   --teal-light: #5EEAD4;
-  --teal-dark: #0F766E;
+  --teal-dark: #158A7D;
 
-  --emotional: #0D9488;
+  --emotional: #1A9B8C;
   --vitality: #6366F1;
   --social: #EC4899;
   --cognitive: #F59E0B;

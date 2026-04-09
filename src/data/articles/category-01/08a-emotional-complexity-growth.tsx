@@ -42,7 +42,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         { title: 'Identify Your Top 3 Values', description: 'Write down three values that matter most to you right now, such as connection, growth, or authenticity.' },
         { title: 'Notice the Emotion', description: 'When you encounter a difficult emotion today, name it specifically: "I am noticing anxiety" or "I am feeling resentment."' },
         { title: 'Choose a Values-Aligned Action', description: 'Ask yourself: What would I do right now if I let my values lead instead of this emotion?' },
-        { title: 'Act and Reflect', description: 'Take the values-aligned action even if the emotion persists. At the end of the day, note what you did and how it felt.' },
+        { title: 'Act and Reflect', description: 'Take the values-aligned action even if the emotion persists. That evening, note what you did and how it felt.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Try the Mood Journal',

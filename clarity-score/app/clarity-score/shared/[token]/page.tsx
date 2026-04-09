@@ -39,8 +39,8 @@ export default function SharedAssessmentPage() {
                     <div className="flex items-center gap-3">
                         {/* Logo SVG (Simplified Orbit + Spark) */}
                         <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 38C30.0032 38 38 30.0032 38 20C38 9.99685 30.0032 2 20 2C9.99685 2 2 9.99685 2 20C2 30.0032 9.99685 38 20 38Z" stroke="#0D9488" strokeWidth="4" strokeLinecap="round" />
-                            <circle cx="20" cy="8" r="4" fill="#0D9488" />
+                            <path d="M20 38C30.0032 38 38 30.0032 38 20C38 9.99685 30.0032 2 20 2C9.99685 2 2 9.99685 2 20C2 30.0032 9.99685 38 20 38Z" stroke="#1A9B8C" strokeWidth="4" strokeLinecap="round" />
+                            <circle cx="20" cy="8" r="4" fill="#1A9B8C" />
                         </svg>
                         <span className="font-heading text-xl font-bold tracking-[0.15em] text-white">PSYCHAGE</span>
                     </div>

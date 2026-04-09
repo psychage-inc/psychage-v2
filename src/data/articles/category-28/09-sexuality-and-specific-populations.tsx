@@ -1096,7 +1096,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
   // --------------------------------------------------------------------------
   {
     id: catId(61),
-    slug: 'compulsive-sexual-behavior',
+    slug: 'compulsive-sexual-behavior-disorder',
     title: 'Compulsive Sexual Behavior: When Desire Becomes Distressing',
     description: 'Understanding compulsive sexual behavior disorder through a clinical lens, exploring its neurobiological basis, diagnostic considerations, evidence-based treatments, and the difference between high desire and distressing compulsive patterns.',
     image: '/images/articles/cat28/cover-061.svg',

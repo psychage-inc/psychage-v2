@@ -37,12 +37,7 @@ export default function ChatSidebar({
     <div className="flex flex-col h-full bg-slate-50 dark:bg-slate-900">
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-slate-200 dark:border-slate-800">
-        <Link
-          to="/"
-          className="flex items-center hover:opacity-80 transition-opacity"
-        >
-          <Logo className="h-7 w-auto text-[#1A1A1A] dark:text-white" />
-        </Link>
+        <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">MindMate</span>
         {isMobile && onClose && (
           <button
             onClick={onClose}

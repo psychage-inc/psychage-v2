@@ -14,7 +14,7 @@ export const spiritualpracticesmethodsArticles: Article[] = [
   // --------------------------------------------------------------------------
   {
     id: catId(55),
-    slug: 'contemplative-practices',
+    slug: 'contemplative-practices-spiritual-methods',
     title: 'Contemplative Practices: Beyond Meditation—Diverse Paths to Inner Stillness',
     description: 'Explore contemplative practices beyond meditation—from lectio divina to tea ceremony. Learn how diverse traditions cultivate presence, insight, and wellbeing through sustained attention and reflection.',
     image: '/images/articles/cat31/cover-055.svg',

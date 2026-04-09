@@ -88,7 +88,7 @@ const TrendLine: React.FC<{ history: RelationshipHistoryItem[] }> = ({ history }
         <polyline
           points={polyline}
           fill="none"
-          stroke="#14b8a6"
+          stroke="#20B8A6"
           strokeWidth={2}
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -104,7 +104,7 @@ const TrendLine: React.FC<{ history: RelationshipHistoryItem[] }> = ({ history }
               cy={y}
               r={3}
               fill="white"
-              stroke="#14b8a6"
+              stroke="#20B8A6"
               strokeWidth={2}
             />
           );

@@ -1964,7 +1964,7 @@ export const typesOfDepressionArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Here's the critical point: <strong>Having a trigger doesn't mean it's 'just situational' and will go away on its own.</strong> Many MDD episodes are triggered by life events. If you meet criteria for MDD, you need treatment---regardless of whether a stressor started it.</p>
+          <p>Here's the critical point: <strong>Having a trigger doesn't mean it's 'just situational' and will go away on its own.</strong> Many MDD episodes are triggered by life events. If someone meets criteria for MDD, professional support is recommended---regardless of whether a stressor started it.</p>
         </ArticleCallout>
 
         <h2 id="grief" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -2136,7 +2136,7 @@ export const typesOfDepressionArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-3">
-          <li><strong>"It's just situational, so I don't need treatment."</strong> Having a trigger doesn't mean symptoms will resolve on their own. If you meet MDD criteria, you need treatment—regardless of what started it. The stressor may have been the match, but now there's a fire that requires intervention.</li>
+          <li><strong>"It's just situational, so I don't need treatment."</strong> Having a trigger doesn't mean symptoms will resolve on their own. If a person meets MDD criteria, seeking professional support is recommended—regardless of what started it. The stressor may have been the match, but now there's a fire that requires intervention.</li>
           <li><strong>"I'm just weak for not handling this better."</strong> Vulnerability to depression after stress isn't weakness—it reflects biology (genetics, brain chemistry, prior experiences). Two people facing identical stressors respond differently because of factors beyond willpower.</li>
           <li><strong>"Time will heal this."</strong> Time alone doesn't treat depression. Untreated MDD often persists for months or years and increases risk for chronic depression, substance use, and suicide. Early treatment changes trajectory.</li>
           <li><strong>"My problems are real, so it can't be clinical depression."</strong> Real problems can trigger real depression. The two aren't mutually exclusive. You can acknowledge your stressors while also recognizing that your brain's response has become disordered and requires treatment.</li>

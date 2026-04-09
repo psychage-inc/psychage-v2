@@ -60,12 +60,12 @@ export const RadarChart: React.FC<RadarChartProps> = ({ domainScores, skipPartne
           <Radar
             name="Score"
             dataKey="score"
-            stroke="#14b8a6"
-            fill="#14b8a6"
+            stroke="#20B8A6"
+            fill="#20B8A6"
             fillOpacity={0.2}
             strokeWidth={2}
-            dot={{ r: 4, fill: '#14b8a6', strokeWidth: 0 }}
-            activeDot={{ r: 6, fill: '#14b8a6', stroke: '#fff', strokeWidth: 2 }}
+            dot={{ r: 4, fill: '#20B8A6', strokeWidth: 0 }}
+            activeDot={{ r: 6, fill: '#20B8A6', stroke: '#fff', strokeWidth: 2 }}
           />
         </RechartsRadarChart>
       </ResponsiveContainer>

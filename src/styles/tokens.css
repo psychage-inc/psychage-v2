@@ -56,12 +56,12 @@ html.light,
   --color-surface-hover: #f5f5f4;
   --color-surface-active: #e7e5e4;
 
-  --color-primary: #0d9488;
-  /* Teal-600 */
-  --color-primary-hover: #0f766e;
-  /* Teal-700 */
-  --color-primary-light: #14b8a6;
-  /* Teal-500 */
+  --color-primary: #1A9B8C;
+  /* Psychage Brand Teal */
+  --color-primary-hover: #158A7D;
+  /* Brand Teal Dark */
+  --color-primary-light: #20B8A6;
+  /* Brand Teal Light */
 
   --color-text-primary: #0a0a0a;
   /* Near Black */
@@ -92,23 +92,34 @@ html.light,
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.04);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.06);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.06);
-  --shadow-glow: 0 0 20px rgba(13, 148, 136, 0.12);
+  --shadow-glow: 0 0 20px rgba(26, 155, 140, 0.12);
+
+  /* Brand surface colors */
+  --color-background-warm: #F5F5F0;
+  --color-primary-bg: #E6F5F3;
+
+  /* Homepage redesign */
+  --color-homepage-bg: #F9F7F3;
+  --color-homepage-content: #F5F3EF;
+  --color-homepage-closing: #F0F7F6;
+  --color-homepage-provider: #0D5A52;
 }
 
 /* Dark Mode Theme */
 html.dark,
 :root.dark {
   /* Colors - Dark Premium Palette */
-  --color-background: #0a0a0a;
-  --color-surface: #18181b;
-  --color-surface-hover: #27272a;
-  --color-surface-active: #3f3f46;
+  --color-background: #1A1A2E;
+  /* Dark Navy */
+  --color-surface: #1E1E35;
+  --color-surface-hover: #27273F;
+  --color-surface-active: #32324A;
 
-  --color-primary: #14b8a6;
-  /* Teal-500 */
-  --color-primary-hover: #0d9488;
-  /* Teal-600 */
-  --color-primary-light: #2dd4bf;
+  --color-primary: #20B8A6;
+  /* Brand Teal Light (for dark mode) */
+  --color-primary-hover: #1A9B8C;
+  /* Brand Teal */
+  --color-primary-light: #2DD4BF;
   /* Teal-400 */
 
   --color-text-primary: #fafaf9;
@@ -134,16 +145,22 @@ html.dark,
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.4);
-  --shadow-glow: 0 0 30px rgba(20, 184, 166, 0.3);
+  --shadow-glow: 0 0 30px rgba(26, 155, 140, 0.3);
 
   /* Navigator-specific dark tokens */
-  --navigator-bg-overlay: rgba(10, 10, 10, 0.9);
+  --navigator-bg-overlay: rgba(26, 26, 46, 0.9);
   --navigator-border: rgba(255, 255, 255, 0.1);
   --navigator-card-bg: rgba(255, 255, 255, 0.05);
   --navigator-card-hover: rgba(255, 255, 255, 0.1);
   --navigator-glass-bg: rgba(255, 255, 255, 0.05);
   --navigator-glass-border: rgba(255, 255, 255, 0.1);
-  --navigator-floating-bar-bg: rgba(10, 10, 10, 0.8);
+  --navigator-floating-bar-bg: rgba(26, 26, 46, 0.8);
+
+  /* Homepage redesign — dark equivalents */
+  --color-homepage-bg: #1A1A2E;
+  --color-homepage-content: #1E1E32;
+  --color-homepage-closing: #1E2A2F;
+  --color-homepage-provider: #0A3D38;
 }
 
 /* Reduced Motion */

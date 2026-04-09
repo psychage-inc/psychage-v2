@@ -418,7 +418,7 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
 
     citations: [
       { id: '1', text: 'Eating disorders in males: An updated review', source: 'Current Psychiatry Reports', year: '2021', link: 'https://doi.org/10.1007/s11920-021-01274-2', tier: 1 },
-      { id: '2', text: 'Eating disorders statistics', source: 'National Eating Disorders Association', year: '2023', link: 'https://www.nationaleatingdisorders.org/statistics', tier: 3 },
+      { id: '2', text: 'Eating disorders statistics', source: 'National Alliance for Eating Disorders', year: '2023', link: 'https://www.allianceforeatingdisorders.com', tier: 3 },
       { id: '3', text: 'Gender differences in the presentation and treatment of eating disorders', source: 'Journal of Eating Disorders', year: '2020', link: 'https://doi.org/10.1186/s40337-020-00316-5', tier: 1 },
       { id: '4', text: 'Muscle dysmorphia: Current insights and future directions', source: 'Body Image', year: '2022', link: 'https://doi.org/10.1016/j.bodyim.2022.01.005', tier: 1 },
       { id: '5', text: 'Eating disorders in males: A systematic review of inclusion in research', source: 'International Journal of Eating Disorders', year: '2019', link: 'https://doi.org/10.1002/eat.23110', tier: 1 },
@@ -482,7 +482,7 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
             { value: 10, suffix: '%', label: 'Of treatment recipients are male', description: 'A massive treatment gap' },
             { value: 6, suffix: ' yrs', label: 'Additional delay to treatment for men', description: 'Compared to women' },
           ]}
-          citation="NEDA, 2023; Journal of Eating Disorders, 2020"
+          citation="National Alliance for Eating Disorders, 2023; Journal of Eating Disorders, 2020"
         />
 
         <h2 id="where-this-comes-from" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -528,7 +528,7 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
         <p className="mb-6">
           Research paints a very different picture from the myth. An estimated 10 million males in the
           United States will experience a clinically significant eating disorder in their
-          lifetime <Citation id="2" index={2} source="National Eating Disorders Association" year="2023" tier={3} />.
+          lifetime <Citation id="2" index={2} source="National Alliance for Eating Disorders" year="2023" tier={3} />.
           Men account for approximately 25-33% of all eating disorder cases, with some conditions --
           particularly binge eating disorder -- showing near-equal prevalence across
           genders <Citation id="1" index={1} source="Current Psychiatry Reports" year="2021" tier={1} />.

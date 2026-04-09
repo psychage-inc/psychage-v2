@@ -43,7 +43,7 @@ const ScoreGauge: React.FC<ScoreGaugeProps> = ({
   const _colors = getScoreTierColor(tier);
   const strokeHex: Record<ScoreTier, string> = {
     thriving: '#10b981',
-    balanced: '#0d9488',
+    balanced: '#1A9B8C',
     struggling: '#f59e0b',
     distressed: '#f97316',
     crisis: '#ef4444',

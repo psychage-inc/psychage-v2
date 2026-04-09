@@ -5,7 +5,7 @@
 import type { ReportConfig, ReportData } from '../types';
 import { formatDate, formatDateRange } from '../dates';
 
-const TEAL = [13, 148, 136] as const;     // #0D9488
+const TEAL = [26, 155, 140] as const;     // #1A9B8C
 const CHARCOAL = [26, 26, 46] as const;   // #1A1A2E
 const GRAY = [100, 116, 139] as const;    // #64748B
 const LIGHT_GRAY = [241, 245, 249] as const; // #F1F5F9

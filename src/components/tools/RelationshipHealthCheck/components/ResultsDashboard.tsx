@@ -92,7 +92,7 @@ function getStrokeColor(tier: RelationshipTier): string {
     case 'thriving':
       return '#10b981';
     case 'healthy':
-      return '#14b8a6';
+      return '#20B8A6';
     case 'mixed':
       return '#f59e0b';
     case 'strained':

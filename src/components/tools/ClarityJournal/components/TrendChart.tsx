@@ -24,7 +24,7 @@ interface TrendChartProps {
 
 const TrendChart: React.FC<TrendChartProps> = ({
   data,
-  color = '#0d9488',
+  color = '#1A9B8C',
   yDomain = [0, 10],
   height = 200,
   label,

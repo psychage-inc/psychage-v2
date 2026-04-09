@@ -22,7 +22,7 @@ const ProviderProfilePage: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-slate-50 dark:bg-gray-950 pt-24">
+      <div className="min-h-screen bg-background pt-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="animate-pulse space-y-6">
             <div className="h-6 w-32 bg-slate-200 dark:bg-slate-700 rounded" />
@@ -44,13 +44,13 @@ const ProviderProfilePage: React.FC = () => {
 
   if (error || !provider) {
     return (
-      <div className="min-h-screen bg-slate-50 dark:bg-gray-950 pt-24">
+      <div className="min-h-screen bg-background pt-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
           <AlertTriangle className="w-12 h-12 text-amber-500 mx-auto mb-4" />
-          <h1 className="font-display font-bold text-2xl text-gray-900 dark:text-white mb-2">
+          <h1 className="font-display font-bold text-2xl text-text-primary mb-2">
             Provider Not Found
           </h1>
-          <p className="text-gray-500 dark:text-gray-400 mb-6">
+          <p className="text-text-secondary mb-6">
             This provider profile may have been removed or the link may be incorrect.
           </p>
           <Button onClick={() => navigate('/providers/search')}>
@@ -64,7 +64,7 @@ const ProviderProfilePage: React.FC = () => {
   const topSpecialty = provider.specialties[0]?.slug;
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-gray-950">
+    <div className="min-h-screen bg-background">
       <SEO
         title={`${provider.display_name}${provider.credentials_suffix ? `, ${provider.credentials_suffix}` : ''} | Psychage`}
         description={provider.bio?.slice(0, 160) || `View ${provider.display_name}'s profile on Psychage.`}
@@ -79,7 +79,7 @@ const ProviderProfilePage: React.FC = () => {
         >
           <button
             onClick={() => navigate(-1)}
-            className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-teal-600 dark:text-gray-400 dark:hover:text-teal-400 transition-colors"
+            className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
           >
             <ArrowLeft size={16} />
             Back to results

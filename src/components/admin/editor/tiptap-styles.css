@@ -79,7 +79,7 @@
   padding-right: 0.1em;
   margin-top: 0.05em;
   font-weight: 700;
-  color: #0d9488;
+  color: #1A9B8C;
   font-family: Georgia, serif;
 }
 .dark .prose-medium > p:first-of-type::first-letter {
@@ -88,7 +88,7 @@
 
 /* Blockquotes — Medium-style pull quotes */
 .prose-medium blockquote {
-  border-left: 4px solid #0d9488;
+  border-left: 4px solid #1A9B8C;
   background: rgba(13, 148, 136, 0.04);
   padding: 1.5rem 2rem;
   margin: 2.5rem 0;
@@ -127,13 +127,13 @@
 
 /* Links */
 .prose-medium a {
-  color: #0d9488;
+  color: #1A9B8C;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.15s;
 }
 .prose-medium a:hover {
-  color: #0f766e;
+  color: #158A7D;
   text-decoration: underline;
 }
 .dark .prose-medium a {
@@ -154,7 +154,7 @@
   line-height: 1.75;
 }
 .prose-medium li::marker {
-  color: #0d9488;
+  color: #1A9B8C;
 }
 
 /* Code blocks */
@@ -163,7 +163,7 @@
   color: #e5e7eb;
   border-radius: 0.75rem;
   padding: 1.25rem;
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 0.875rem;
   overflow-x: auto;
   margin: 2rem 0;
@@ -174,7 +174,7 @@
   padding: 0.15em 0.4em;
   border-radius: 0.25rem;
   font-size: 0.9em;
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-family: 'IBM Plex Mono', monospace;
 }
 .dark .prose-medium code:not(pre code) {
   background: rgba(55, 65, 81, 0.5);
@@ -205,7 +205,7 @@
 /* Citation superscripts */
 .prose-medium sup {
   font-size: 0.75em;
-  color: #0d9488;
+  color: #1A9B8C;
   font-weight: 600;
   cursor: pointer;
 }
@@ -300,7 +300,7 @@ ul[data-type="taskList"] li > label {
   margin-top: 0.25rem;
 }
 ul[data-type="taskList"] li > label input[type="checkbox"] {
-  accent-color: #0d9488;
+  accent-color: #1A9B8C;
   cursor: pointer;
 }
 ul[data-type="taskList"] li > div {
@@ -348,7 +348,7 @@ div[data-youtube-video] iframe {
   top: 0;
   bottom: 0;
   width: 4px;
-  background: #0d9488;
+  background: #1A9B8C;
   cursor: col-resize;
   z-index: 10;
 }
@@ -405,7 +405,7 @@ div[data-youtube-video] iframe {
   margin: 1rem 0;
 }
 .ProseMirror img.ProseMirror-selectednode {
-  outline: 2px solid #0d9488;
+  outline: 2px solid #1A9B8C;
   outline-offset: 2px;
 }
 
@@ -415,14 +415,14 @@ div[data-youtube-video] iframe {
   color: rgb(229 231 235);
   border-radius: 0.5rem;
   padding: 1rem;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 0.875rem;
   overflow-x: auto;
 }
 
 /* Blockquote */
 .ProseMirror blockquote {
-  border-left: 3px solid #0d9488;
+  border-left: 3px solid #1A9B8C;
   padding-left: 1rem;
   margin-left: 0;
   color: rgb(75 85 99);

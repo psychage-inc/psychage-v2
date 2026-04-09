@@ -6,7 +6,7 @@ import { resolveCountry, getResourcesForCountry } from '@/lib/crisis';
 
 const CrisisBanner: React.FC = () => {
   const { primaryPhone, primaryLabel, textAction, countryName } = useMemo(() => {
-    const country = resolveCountry();
+    const country = resolveCountry({ explicit: 'US' });
     const result = getResourcesForCountry(country);
 
     // Find best phone resource
@@ -30,23 +30,22 @@ const CrisisBanner: React.FC = () => {
   const callHref = `tel:${primaryPhone.replace(/[^0-9+]/g, '')}`;
 
   return (
-    <div className="bg-white border-b border-gray-100 py-3 px-4 relative">
-      <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-teal-400 via-teal-500 to-teal-400" />
+    <div className="bg-red-600 dark:bg-red-700 py-3 px-4 relative">
       <div className="container mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-3">
         {/* Left: icon + message */}
         <div className="flex items-center gap-3 text-center sm:text-left min-w-0">
-          <div className="bg-teal-50 p-2 rounded-lg text-teal-600 hidden sm:flex shrink-0">
+          <div className="bg-white/15 p-2 rounded-lg text-white hidden sm:flex shrink-0">
             <HeartHandshake size={18} />
           </div>
           <div className="flex items-center gap-2 flex-wrap text-sm">
-            <span className="text-gray-500 font-medium">
+            <span className="text-white/90 font-medium">
               24/7 Support
             </span>
-            <span className="text-gray-300 hidden sm:inline">|</span>
-            <span className="text-gray-900 font-semibold">
+            <span className="text-white/40 hidden sm:inline">|</span>
+            <span className="text-white font-semibold">
               {primaryPhone}
             </span>
-            <span className="text-gray-400">
+            <span className="text-white/70">
               ({primaryLabel})
             </span>
           </div>
@@ -54,7 +53,7 @@ const CrisisBanner: React.FC = () => {
 
         {/* Right: country + actions */}
         <div className="flex items-center gap-3 shrink-0">
-          <span className="hidden md:flex items-center gap-1.5 text-xs text-gray-400 font-medium border border-gray-100 rounded-full px-3 py-1">
+          <span className="hidden md:flex items-center gap-1.5 text-xs text-white/80 font-medium border border-white/30 rounded-full px-3 py-1">
             <MapPin size={12} />
             {countryName}
           </span>
@@ -63,7 +62,7 @@ const CrisisBanner: React.FC = () => {
             variant="secondary"
             size="sm"
             leftIcon={<Phone size={14} />}
-            className="bg-teal-600 hover:bg-teal-700 border-transparent text-white shadow-sm text-xs"
+            className="bg-white hover:bg-white/90 border-transparent text-red-600 shadow-sm text-xs font-semibold"
             onClick={() => window.open(callHref)}
           >
             Call Now
@@ -74,7 +73,7 @@ const CrisisBanner: React.FC = () => {
               variant="outline"
               size="sm"
               leftIcon={<MessageSquare size={14} />}
-              className="bg-white border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 text-xs"
+              className="bg-transparent border-white/40 text-white hover:bg-white/10 hover:border-white/60 text-xs"
               onClick={() => {
                 const num = textAction.match(/\d+/)?.[0];
                 if (num) window.open(`sms:${num}`);
@@ -88,7 +87,7 @@ const CrisisBanner: React.FC = () => {
                 variant="outline"
                 size="sm"
                 leftIcon={<ExternalLink size={14} />}
-                className="bg-white border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 text-xs"
+                className="bg-transparent border-white/40 text-white hover:bg-white/10 hover:border-white/60 text-xs"
               >
                 Resources
               </Button>

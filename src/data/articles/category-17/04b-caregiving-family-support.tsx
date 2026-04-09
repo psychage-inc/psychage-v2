@@ -305,8 +305,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
 
         <QuoteBlock
           quote="The middle-class trap of elder care: too much money to qualify for Medicaid, too little money to afford private care. The system punishes prudence and rewards spend-down. But with advance planning, legal guidance, and realistic expectations, families can navigate this broken system without total financial ruin."
-          attribution="Dr. Lena Dobson"
-          role="Ph.D. in Clinical Neuropsychology"
+          attribution="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>
     ),
@@ -583,8 +582,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
 
         <QuoteBlock
           quote="Culture is not a costume you can take off when caregiving gets hard. It is the architecture of your sense of duty, shame, honor, and love. The question is not whether to honor culture, but how to honor it without destroying yourself. There is no honor in martyrdom that serves no one."
-          attribution="Dr. Lena Dobson"
-          role="Ph.D. in Clinical Neuropsychology"
+          attribution="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>
     ),
@@ -889,8 +887,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
 
         <QuoteBlock
           quote="The sandwich generation lives in permanent triage. You are not failing if you cannot do it all. You are failing if you destroy yourself trying. The difference between martyrdom and caregiving is whether you survive. Your family needs you alive, functional, and present---not burned out, resentful, and broken."
-          attribution="Dr. Lena Dobson"
-          role="Ph.D. in Clinical Neuropsychology"
+          attribution="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>
     ),
@@ -1155,8 +1152,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
 
         <QuoteBlock
           quote="Grief after caregiving is not just mourning a person---it is mourning the version of yourself who existed only in relation to them. You are not returning to your old life. There is no old life. There is only the strange, guilty work of building a new one. Be patient with yourself. It takes time."
-          attribution="Dr. Lena Dobson"
-          role="Ph.D. in Clinical Neuropsychology"
+          attribution="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>
     ),
@@ -1451,8 +1447,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
 
         <QuoteBlock
           quote="Elder abuse is invisible because we do not want to see it. We want to believe that families protect their elders, that nursing homes are safe, that the bruises are from falls. But abuse thrives in denial. Seeing it---and reporting it---is an act of courage and protection. You may be the only person who can save them."
-          attribution="Dr. Lena Dobson"
-          role="Ph.D. in Clinical Neuropsychology"
+          attribution="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>
     ),

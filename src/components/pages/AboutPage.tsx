@@ -51,27 +51,27 @@ const AboutPage: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-50 border border-teal-100 text-teal-800 font-bold text-xs uppercase tracking-widest mb-8">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-50 dark:bg-teal-900/20 border border-teal-100 dark:border-teal-800/50 text-teal-800 dark:text-teal-300 font-bold text-xs uppercase tracking-widest mb-8">
                         Since 2024
                     </div>
-                    <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-7xl text-gray-900 mb-8 tracking-tight leading-[1.1]">
+                    <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-7xl text-text-primary mb-8 tracking-tight leading-[1.1]">
                         Democratizing access to <br />
                         <span className="text-teal-600">mental clarity.</span>
                     </h1>
-                    <p className="text-xl md:text-2xl text-gray-500 max-w-3xl mx-auto leading-relaxed font-light">
+                    <p className="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed font-light">
                         Psychage is an adaptive mental health operating system designed to bridge the gap between clinical science and daily life.
                     </p>
                 </motion.div>
             </div>
 
             {/* Stats Grid */}
-            <div className="bg-white border-y border-gray-100 py-16 mb-24">
+            <div className="bg-surface border-y border-border py-16 mb-24">
                 <div className="container mx-auto px-6 max-w-dashboard">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {stats.map((stat, idx) => (
                             <div key={idx} className="text-center">
-                                <div className="font-display font-bold text-4xl md:text-5xl text-gray-900 mb-2">{stat.value}</div>
-                                <div className="text-sm font-bold uppercase tracking-widest text-gray-400">{stat.label}</div>
+                                <div className="font-display font-bold text-4xl md:text-5xl text-text-primary mb-2">{stat.value}</div>
+                                <div className="text-sm font-bold uppercase tracking-widest text-text-tertiary">{stat.label}</div>
                             </div>
                         ))}
                     </div>
@@ -90,24 +90,24 @@ const AboutPage: React.FC = () => {
                             />
                         </div>
                         {/* Floating Card */}
-                        <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 max-w-xs hidden md:block">
+                        <div className="absolute -bottom-8 -right-8 bg-surface p-6 rounded-2xl shadow-xl border border-border max-w-xs hidden md:block">
                             <div className="flex items-center gap-3 mb-3">
-                                <div className="p-2 bg-teal-100 text-teal-600 rounded-lg">
+                                <div className="p-2 bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 rounded-lg">
                                     <Brain size={20} />
                                 </div>
-                                <span className="font-bold text-gray-900">Evidence Based</span>
+                                <span className="font-bold text-text-primary">Evidence Based</span>
                             </div>
-                            <p className="text-sm text-gray-500 leading-relaxed">
+                            <p className="text-sm text-text-secondary leading-relaxed">
                                 Our content follows the APA guidelines for psychological education.
                             </p>
                         </div>
                     </div>
 
                     <div>
-                        <h2 className="font-display font-bold text-3xl md:text-4xl text-gray-900 mb-6">
+                        <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary mb-6">
                             Why we started Psychage.
                         </h2>
-                        <div className="prose prose-lg text-gray-600">
+                        <div className="prose prose-lg text-text-secondary dark:prose-invert">
                             <p className="mb-6">
                                 The mental health landscape is fragmented. Reliable information is locked behind paywalls or buried in academic journals, while social media is flooded with pseudoscience.
                             </p>
@@ -118,7 +118,7 @@ const AboutPage: React.FC = () => {
                                 We believe that understanding your own mind shouldn't be a luxury. It's a fundamental requirement for a well-lived life.
                             </p>
                         </div>
-                        <div className="mt-8 pt-8 border-t border-gray-200">
+                        <div className="mt-8 pt-8 border-t border-border">
                             <div className="flex items-center gap-4">
                                 <img
                                     src="/images/logo.png"
@@ -126,8 +126,8 @@ const AboutPage: React.FC = () => {
                                     className="w-12 h-12 object-contain"
                                 />
                                 <div>
-                                    <div className="font-bold text-gray-900">Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology</div>
-                                    <div className="text-sm text-gray-500">Founder</div>
+                                    <div className="font-bold text-text-primary">Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology</div>
+                                    <div className="text-sm text-text-secondary">Founder</div>
                                 </div>
                             </div>
                         </div>
@@ -161,7 +161,7 @@ const AboutPage: React.FC = () => {
 
             {/* CTA */}
             <div className="container mx-auto px-6 py-24 text-center">
-                <h2 className="font-display font-bold text-4xl text-gray-900 mb-8">Ready to explore?</h2>
+                <h2 className="font-display font-bold text-4xl text-text-primary mb-8">Ready to explore?</h2>
                 <div className="flex justify-center gap-4">
                     <Button size="lg" className="bg-teal-600 hover:bg-teal-700" onClick={() => navigate('/learn')}>Explore Articles</Button>
                     <Button size="lg" variant="outline" onClick={() => navigate('/contact')}>Join the Team</Button>

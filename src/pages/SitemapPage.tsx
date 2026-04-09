@@ -69,28 +69,28 @@ const sections: SitemapSection[] = [
 
 const SitemapPage: React.FC = () => {
     return (
-        <div className="min-h-screen bg-white pt-28 pb-20 px-6">
+        <div className="min-h-screen bg-background pt-28 pb-20 px-6">
             <SEO
                 title="Sitemap - Psychage"
                 description="Navigate all pages and features available on Psychage."
             />
 
             <div className="container mx-auto max-w-4xl">
-                <div className="text-center mb-16 border-b border-gray-100 pb-12">
-                    <h1 className="font-display font-bold text-4xl text-gray-900 mb-4">Sitemap</h1>
-                    <p className="text-gray-500 font-medium">All pages and features on Psychage</p>
+                <div className="text-center mb-16 border-b border-border pb-12">
+                    <h1 className="font-display font-bold text-4xl text-text-primary mb-4">Sitemap</h1>
+                    <p className="text-text-secondary font-medium">All pages and features on Psychage</p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
                     {sections.map((section) => (
                         <div key={section.title}>
-                            <h2 className="font-display font-bold text-lg text-gray-900 mb-4">{section.title}</h2>
+                            <h2 className="font-display font-bold text-lg text-text-primary mb-4">{section.title}</h2>
                             <ul className="space-y-2.5">
                                 {section.links.map((link) => (
                                     <li key={link.path}>
                                         <Link
                                             to={link.path}
-                                            className="text-sm text-gray-600 hover:text-teal-600 transition-colors"
+                                            className="text-sm text-text-secondary hover:text-teal-600 transition-colors"
                                         >
                                             {link.label}
                                         </Link>

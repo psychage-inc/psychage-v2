@@ -126,7 +126,7 @@ function useRecentActivity() {
 // Charts
 // ============================================================
 
-const _CHART_COLORS = ['#0d9488', '#f59e0b', '#ef4444', '#3b82f6', '#8b5cf6'];
+const _CHART_COLORS = ['#1A9B8C', '#f59e0b', '#ef4444', '#3b82f6', '#8b5cf6'];
 
 const UserGrowthChart: React.FC<{ data: { date: string; count: number }[] }> = ({ data }) => (
   <div className="bg-surface border border-border rounded-2xl p-5">
@@ -138,15 +138,15 @@ const UserGrowthChart: React.FC<{ data: { date: string; count: number }[] }> = (
         <AreaChart data={data}>
           <defs>
             <linearGradient id="userGrowthGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#0d9488" stopOpacity={0.3} />
-              <stop offset="95%" stopColor="#0d9488" stopOpacity={0} />
+              <stop offset="5%" stopColor="#1A9B8C" stopOpacity={0.3} />
+              <stop offset="95%" stopColor="#1A9B8C" stopOpacity={0} />
             </linearGradient>
           </defs>
           <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
           <XAxis dataKey="date" tick={{ fontSize: 11 }} tickFormatter={(v) => v.slice(5)} />
           <YAxis tick={{ fontSize: 11 }} allowDecimals={false} />
           <Tooltip />
-          <Area type="monotone" dataKey="count" stroke="#0d9488" fill="url(#userGrowthGradient)" strokeWidth={2} />
+          <Area type="monotone" dataKey="count" stroke="#1A9B8C" fill="url(#userGrowthGradient)" strokeWidth={2} />
         </AreaChart>
       </ResponsiveContainer>
     )}

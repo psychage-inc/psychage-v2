@@ -61,7 +61,7 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary
         {error && (
           <p style={{
             fontSize: '0.75rem',
-            fontFamily: 'monospace',
+            fontFamily: "'IBM Plex Mono', monospace",
             backgroundColor: '#f1f5f9',
             padding: '0.5rem',
             borderRadius: '0.375rem',

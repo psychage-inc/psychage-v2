@@ -89,14 +89,14 @@ const DimensionRadar: React.FC<DimensionRadarProps> = ({
           <Radar
             name="Score"
             dataKey="score"
-            stroke="#0d9488"
+            stroke="#1A9B8C"
             strokeWidth={2}
-            fill="#0d9488"
+            fill="#1A9B8C"
             fillOpacity={0.2}
-            dot={{ r: 4, fill: '#0d9488', strokeWidth: 0 }}
+            dot={{ r: 4, fill: '#1A9B8C', strokeWidth: 0 }}
             activeDot={{
               r: 6,
-              fill: '#0d9488',
+              fill: '#1A9B8C',
               stroke: '#fff',
               strokeWidth: 2,
               cursor: onDimensionClick ? 'pointer' : 'default',

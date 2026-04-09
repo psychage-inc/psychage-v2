@@ -66,9 +66,14 @@ CITATION RULES:
 export class AnthropicProvider implements LLMProvider {
   private apiKey: string;
   private baseUrl = 'https://api.anthropic.com/v1';
+  private _lastStreamUsage: { prompt: number; completion: number } | null = null;
 
   constructor(apiKey: string) {
     this.apiKey = apiKey;
+  }
+
+  get lastStreamUsage() {
+    return this._lastStreamUsage;
   }
 
   async generateCompletion(
@@ -168,6 +173,7 @@ export class AnthropicProvider implements LLMProvider {
 
     const decoder = new TextDecoder();
     let buffer = '';
+    this._lastStreamUsage = null;
 
     while (true) {
       const { done, value } = await reader.read();
@@ -189,6 +195,18 @@ export class AnthropicProvider implements LLMProvider {
             const parsed = JSON.parse(data);
             if (parsed.type === 'content_block_delta' && parsed.delta?.text) {
               yield { content: parsed.delta.text, done: false };
+            }
+            if (parsed.type === 'message_start' && parsed.message?.usage) {
+              this._lastStreamUsage = {
+                prompt: parsed.message.usage.input_tokens ?? 0,
+                completion: 0,
+              };
+            }
+            if (parsed.type === 'message_delta' && parsed.usage) {
+              this._lastStreamUsage = {
+                prompt: this._lastStreamUsage?.prompt ?? 0,
+                completion: parsed.usage.output_tokens ?? 0,
+              };
             }
             if (parsed.type === 'message_stop') {
               yield { content: '', done: true };
@@ -224,9 +242,14 @@ export class AnthropicProvider implements LLMProvider {
 export class OpenAIProvider implements LLMProvider {
   private apiKey: string;
   private baseUrl = 'https://api.openai.com/v1';
+  private _lastStreamUsage: { prompt: number; completion: number } | null = null;
 
   constructor(apiKey: string) {
     this.apiKey = apiKey;
+  }
+
+  get lastStreamUsage() {
+    return this._lastStreamUsage;
   }
 
   async generateCompletion(
@@ -284,6 +307,7 @@ export class OpenAIProvider implements LLMProvider {
       max_tokens: options?.maxTokens ?? 1024,
       temperature: options?.temperature ?? 0.7,
       stream: true,
+      stream_options: { include_usage: true },
       messages: messages.map((m) => ({
         role: m.role,
         content: m.content,
@@ -309,6 +333,7 @@ export class OpenAIProvider implements LLMProvider {
 
     const decoder = new TextDecoder();
     let buffer = '';
+    this._lastStreamUsage = null;
 
     while (true) {
       const { done, value } = await reader.read();
@@ -331,6 +356,12 @@ export class OpenAIProvider implements LLMProvider {
             const delta = parsed.choices?.[0]?.delta?.content;
             if (delta) {
               yield { content: delta, done: false };
+            }
+            if (parsed.usage) {
+              this._lastStreamUsage = {
+                prompt: parsed.usage.prompt_tokens ?? 0,
+                completion: parsed.usage.completion_tokens ?? 0,
+              };
             }
             if (parsed.choices?.[0]?.finish_reason) {
               yield { content: '', done: true };

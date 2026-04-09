@@ -126,8 +126,8 @@ const ProviderSearchPage: React.FC = () => {
             <p className="text-sm text-gray-500 dark:text-gray-400">
               {isLoading ? 'Searching...' : (
                 totalCount > 0
-                  ? `Showing ${providers.length} of ${totalCount} providers`
-                  : hasSearched ? 'No results' : ''
+                  ? `Showing ${providers.length} of ${totalCount.toLocaleString()} providers`
+                  : hasSearched ? 'No results' : '400K+ NPI-verified providers'
               )}
             </p>
 

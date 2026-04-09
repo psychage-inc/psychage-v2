@@ -577,8 +577,7 @@ export const socialIsolationLonelinessArticlesA: Article[] = [
 
         <QuoteBlock
           quote="The loneliest people are not those who are alone. They are those who are surrounded by people who do not see them."
-          attribution="Dr. Lena Dobson"
-          role="Ph.D. in Clinical Neuropsychology"
+          attribution="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaways">

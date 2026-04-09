@@ -897,7 +897,7 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4"><strong>Pattern:</strong> Inhale through your nose for 4 counts, hold for 7 counts, exhale through your mouth for 8 counts.</p>
-                  <p className="mb-4"><strong>Best for:</strong> Insomnia, general calming, winding down at the end of the day.</p>
+                  <p className="mb-4"><strong>Best for:</strong> Insomnia, general calming, winding down before sleep.</p>
                   <p className="mb-4"><strong>Why it works:</strong> The long exhale strongly activates the vagus nerve, signaling deep relaxation. The 7-count hold builds CO2 tolerance and creates a natural "pause" that interrupts racing thoughts. Developed by Dr. Andrew Weil, this technique has been clinically observed to help people fall asleep in minutes.</p>
                   <p className="mb-4"><strong>Duration:</strong> 4 rounds (about 3 minutes). Do not exceed 8 rounds when starting out, as the extended holds can cause lightheadedness.</p>
                   <p><strong>Tip:</strong> Start with 2-3-4 counts if 4-7-8 feels too long. Gradually increase as your capacity builds over days.</p>

@@ -33,7 +33,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 const AnalyticsChart: React.FC<AnalyticsChartProps> = ({
     data,
     title,
-    color = "#0d9488", // teal-600
+    color = "#1A9B8C", // teal-600
     dataKey = "score"
 }) => {
     return (

@@ -375,8 +375,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
 
         <QuoteBlock
           quote="Aging in place sounds like independence. But if you are aging in place alone, isolated, without community---is that independence or imprisonment? Sometimes moving is freedom."
-          attribution="Dr. Lena Dobson"
-          role="Ph.D. in Clinical Neuropsychology"
+          attribution="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>
     ),
@@ -701,8 +700,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
 
         <QuoteBlock
           quote="Faith communities are not perfect. They are messy, flawed, human institutions. But for older adults who have lost spouse, work, friends---the church, temple, or mosque is often the last place where someone still says your name, remembers your story, and holds your grief. That is sacred, even if nothing else is."
-          attribution="Dr. Lena Dobson"
-          role="Ph.D. in Clinical Neuropsychology"
+          attribution="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>
     ),
@@ -1032,8 +1030,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
 
         <QuoteBlock
           quote="Ageism kills---not through violence, but through exclusion, dismissal, and internalized belief that old age is worthless. The antidote is not pretending age does not matter, but insisting that age does not determine value, capacity, or humanity."
-          attribution="Dr. Lena Dobson"
-          role="Ph.D. in Clinical Neuropsychology"
+          attribution="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>
     ),
@@ -1356,8 +1353,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
 
         <QuoteBlock
           quote="COVID-19 is over, but isolation is not. Many seniors are still home, still alone, still waiting for permission to reconnect. The permission is yours to give---to yourself. The world is waiting."
-          attribution="Dr. Lena Dobson"
-          role="Ph.D. in Clinical Neuropsychology"
+          attribution="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>
     ),
@@ -1726,8 +1722,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
 
         <QuoteBlock
           quote="You cannot wait for connection to come to you. After 65, you must build it---one conversation, one invitation, one weekly commitment at a time. The work is hard. The awkwardness is real. But the alternative---isolation, loneliness, accelerated decline---is harder. Connection is life."
-          attribution="Dr. Lena Dobson"
-          role="Ph.D. in Clinical Neuropsychology"
+          attribution="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>
     ),

@@ -1,3 +1,4 @@
+import { parseSSEStream } from '@/lib/ai/streaming';
 import type {
   ChatResponseMeta,
   CitationSource,
@@ -53,6 +54,20 @@ function normalizeSafetyLevel(
 }
 
 // ============================================================
+// ERRORS
+// ============================================================
+
+/** Thrown when server-side output validation replaces the streamed content. */
+export class SafetyReplacementError extends Error {
+  readonly replacementText: string;
+  constructor(replacementText: string) {
+    super('Response replaced by safety filter');
+    this.name = 'SafetyReplacementError';
+    this.replacementText = replacementText;
+  }
+}
+
+// ============================================================
 // PUBLIC API
 // ============================================================
 
@@ -60,11 +75,13 @@ export async function* sendMessage(
   messages: ApiMessage[],
   sessionId?: string,
   onMeta?: (meta: ChatResponseMeta) => void,
+  signal?: AbortSignal,
 ): AsyncGenerator<string> {
   const response = await fetch('/api/ai/chat', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ messages, sessionId }),
+    body: JSON.stringify({ messages, sessionId, stream: true }),
+    signal,
   });
 
   if (!response.ok) {
@@ -74,31 +91,74 @@ export async function* sendMessage(
     );
   }
 
-  const data: ApiResponse = await response.json();
+  const contentType = response.headers.get('Content-Type') ?? '';
 
-  // Deliver metadata via callback
-  onMeta?.({
-    citations: (data.citations ?? []).map(mapCitation),
-    safetyLevel: normalizeSafetyLevel(data.safetyLevel),
-    isCrisis: data.isCrisis ?? false,
-    sessionId: data.sessionId,
-  });
+  // ── JSON fallback (crisis responses, non-streaming fallback) ──
+  if (contentType.includes('application/json')) {
+    const data: ApiResponse = await response.json();
 
-  // Stream the response text word-by-word for typing animation
-  const text = data.message || '';
-  const words = text.split(' ');
+    onMeta?.({
+      citations: (data.citations ?? []).map(mapCitation),
+      safetyLevel: normalizeSafetyLevel(data.safetyLevel),
+      isCrisis: data.isCrisis ?? false,
+      sessionId: data.sessionId,
+    });
 
-  for (let i = 0; i < words.length; i++) {
-    const word = words[i];
-    const delay =
-      word.endsWith('.') || word.endsWith('?') || word.endsWith('!')
-        ? Math.random() * 40 + 30
-        : word.startsWith('**')
-          ? Math.random() * 20 + 15
-          : Math.random() * 25 + 10;
+    // Yield full text at once for crisis/fallback responses
+    if (data.message) {
+      yield data.message;
+    }
+    return;
+  }
 
-    await new Promise((resolve) => setTimeout(resolve, delay));
-    yield words[i] + (i < words.length - 1 ? ' ' : '');
+  // ── SSE stream ──
+  if (!response.body) {
+    throw new Error('No response body for streaming');
+  }
+
+  let safetyLevel: 'SAFE' | 'WATCH' | 'URGENT' | 'CRISIS' = 'SAFE';
+  let receivedSessionId = sessionId ?? '';
+  const citations: CitationSource[] = [];
+
+  for await (const event of parseSSEStream(response.body)) {
+    switch (event.type) {
+      case 'token':
+        yield event.content;
+        break;
+
+      case 'metadata':
+        receivedSessionId = event.sessionId;
+        break;
+
+      case 'safety':
+        safetyLevel = normalizeSafetyLevel(event.level);
+        break;
+
+      case 'citations':
+        for (const c of event.citations) {
+          citations.push(mapCitation(c));
+        }
+        break;
+
+      case 'error':
+        if (event.code === 'SAFETY_VIOLATION') {
+          // Output was replaced by safety filter — throw so consumer can
+          // replace accumulated text instead of appending
+          throw new SafetyReplacementError(event.message);
+        } else {
+          throw new Error(event.message);
+        }
+        break;
+
+      case 'done':
+        onMeta?.({
+          citations,
+          safetyLevel,
+          isCrisis: false,
+          sessionId: receivedSessionId,
+        });
+        break;
+    }
   }
 }
 

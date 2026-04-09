@@ -670,7 +670,7 @@ export const articles: Article[] = [
   },
 
   // Article 53-55 would continue here with similar comprehensive content...
-  // For now, creating placeholder structure that will be expanded
+
 
   {
     id: catId(53),
@@ -1000,7 +1000,7 @@ export const articles: Article[] = [
 
   {
     id: catId(54),
-    slug: 'premenstrual-dysphoric-disorder-pmdd',
+    slug: 'pmdd-and-depression-anxiety',
     title: 'Premenstrual Dysphoric Disorder (PMDD): When PMS Becomes Severe',
     description:
       'Understanding PMDD—a severe form of premenstrual syndrome causing debilitating mood symptoms that require clinical treatment.',

@@ -52,7 +52,7 @@ const JournalInsights: React.FC = () => {
             {hasCheckInData && (
               <>
                 <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
-                  <TrendChart data={moodData} color="#0d9488" label="Mood Over Time" yDomain={[0, 10]} />
+                  <TrendChart data={moodData} color="#1A9B8C" label="Mood Over Time" yDomain={[0, 10]} />
                 </div>
                 <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
                   <TrendChart data={energyData} color="#6366f1" label="Energy Over Time" yDomain={[0, 10]} />

@@ -172,16 +172,16 @@ const SearchResults: React.FC = () => {
             />
             <div className="container mx-auto max-w-6xl px-6">
 
-                <button onClick={() => navigate('/')} className="flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white mb-8 font-bold text-sm uppercase tracking-wider transition-colors">
+                <button onClick={() => navigate('/')} className="flex items-center gap-2 text-text-secondary hover:text-text-primary mb-8 font-bold text-sm uppercase tracking-wider transition-colors">
                     <ArrowLeft size={16} /> Back to Home
                 </button>
 
                 <div className="mb-12">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
                         <div>
-                            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">Search Results</h1>
-                            <p className="text-xl text-gray-600 dark:text-gray-400">
-                                Found {totalResults} results for <span className="font-bold text-gray-900 dark:text-white">"{query}"</span>
+                            <h1 className="text-4xl font-bold text-text-primary mb-2">Search Results</h1>
+                            <p className="text-xl text-text-secondary">
+                                Found {totalResults} results for <span className="font-bold text-text-primary">"{query}"</span>
                             </p>
                         </div>
                         <div className="w-full md:w-96">
@@ -190,7 +190,7 @@ const SearchResults: React.FC = () => {
                     </div>
 
                     {/* Filters & Sort */}
-                    <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between pb-6 border-b border-gray-200 dark:border-gray-800">
+                    <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between pb-6 border-b border-border">
 
                         {/* Category Chips */}
                         <div className="flex flex-wrap gap-2">
@@ -198,7 +198,7 @@ const SearchResults: React.FC = () => {
                                 onClick={() => setSelectedCategory('all')}
                                 className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedCategory === 'all'
                                     ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
-                                    : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
+                                    : 'bg-surface text-text-secondary border border-border hover:border-gray-300 dark:hover:border-gray-600'
                                     }`}
                             >
                                 All
@@ -209,7 +209,7 @@ const SearchResults: React.FC = () => {
                                     onClick={() => setSelectedCategory(cat.id)}
                                     className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedCategory === cat.id
                                         ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
-                                        : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
+                                        : 'bg-surface text-text-secondary border border-border hover:border-gray-300 dark:hover:border-gray-600'
                                         }`}
                                 >
                                     {cat.name}
@@ -221,15 +221,15 @@ const SearchResults: React.FC = () => {
                         <div className="relative">
                             <button
                                 onClick={() => setIsSortOpen(!isSortOpen)}
-                                className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                                className="flex items-center gap-2 px-4 py-2 bg-surface border border-border rounded-lg text-sm font-medium text-text-secondary hover:bg-surface-hover transition-colors"
                             >
-                                <span className="text-gray-400">Sort by:</span>
+                                <span className="text-text-tertiary">Sort by:</span>
                                 <span className="capitalize">{sortBy}</span>
                                 <ChevronDown size={14} />
                             </button>
 
                             {isSortOpen && (
-                                <div className="absolute right-0 mt-2 w-40 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 z-10 overflow-hidden">
+                                <div className="absolute right-0 mt-2 w-40 bg-surface rounded-xl shadow-xl border border-border z-10 overflow-hidden">
                                     {(['relevance', 'date', 'title'] as SortOption[]).map(option => (
                                         <button
                                             key={option}
@@ -237,7 +237,7 @@ const SearchResults: React.FC = () => {
                                                 setSortBy(option);
                                                 setIsSortOpen(false);
                                             }}
-                                            className="w-full text-left px-4 py-2.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 capitalize transition-colors"
+                                            className="w-full text-left px-4 py-2.5 text-sm hover:bg-surface-hover text-text-secondary capitalize transition-colors"
                                         >
                                             {option}
                                         </button>
@@ -252,7 +252,7 @@ const SearchResults: React.FC = () => {
                 {loading && (
                     <div className="py-20 text-center">
                         <Loader2 className="w-12 h-12 text-teal-600 mx-auto mb-4 animate-spin" />
-                        <p className="text-gray-500 dark:text-gray-400">Searching...</p>
+                        <p className="text-text-secondary">Searching...</p>
                     </div>
                 )}
 
@@ -275,12 +275,12 @@ const SearchResults: React.FC = () => {
 
                 {/* Empty State */}
                 {!loading && !error && totalResults === 0 && query && (
-                    <div className="py-20 text-center bg-white dark:bg-gray-900 rounded-3xl border border-dashed border-gray-200 dark:border-gray-800">
-                        <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 text-gray-400">
+                    <div className="py-20 text-center bg-surface rounded-3xl border border-dashed border-border">
+                        <div className="w-16 h-16 bg-surface-hover rounded-full flex items-center justify-center mx-auto mb-6 text-text-tertiary">
                             <Search size={32} />
                         </div>
-                        <h3 className="font-bold text-xl text-gray-900 dark:text-white mb-2">No results found</h3>
-                        <p className="text-gray-500 dark:text-gray-400">Try adjusting your keywords or browsing by category.</p>
+                        <h3 className="font-bold text-xl text-text-primary mb-2">No results found</h3>
+                        <p className="text-text-secondary">Try adjusting your keywords or browsing by category.</p>
                         <button
                             onClick={() => {
                                 setSearchParams({ q: '' });
@@ -301,7 +301,7 @@ const SearchResults: React.FC = () => {
                             <section>
                                 <div className="flex items-center gap-3 mb-6">
                                     <div className="p-2 bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-lg"><PenTool size={20} /></div>
-                                    <h2 className="font-bold text-2xl text-gray-900 dark:text-white">Tools ({filteredTools.length})</h2>
+                                    <h2 className="font-bold text-2xl text-text-primary">Tools ({filteredTools.length})</h2>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                     {filteredTools.map((tool, idx) => (
@@ -322,7 +322,7 @@ const SearchResults: React.FC = () => {
                             <section>
                                 <div className="flex items-center gap-3 mb-6">
                                     <div className="p-2 bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 rounded-lg"><FileText size={20} /></div>
-                                    <h2 className="font-bold text-2xl text-gray-900 dark:text-white">Articles ({filteredArticles.length})</h2>
+                                    <h2 className="font-bold text-2xl text-text-primary">Articles ({filteredArticles.length})</h2>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                     {filteredArticles.map((article, idx) => (
@@ -331,7 +331,7 @@ const SearchResults: React.FC = () => {
                                             initial={{ opacity: 0, y: 20 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{ delay: idx * 0.05 }}
-                                            className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer group border border-gray-100 dark:border-gray-800"
+                                            className="bg-surface p-6 rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer group border border-border"
                                             onClick={() => navigate(getArticleUrl(article))}
                                         >
                                             <ArticleCard article={article} />
@@ -345,7 +345,7 @@ const SearchResults: React.FC = () => {
                             <section>
                                 <div className="flex items-center gap-3 mb-6">
                                     <div className="p-2 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-lg"><Video size={20} /></div>
-                                    <h2 className="font-bold text-2xl text-gray-900 dark:text-white">Videos ({filteredVideos.length})</h2>
+                                    <h2 className="font-bold text-2xl text-text-primary">Videos ({filteredVideos.length})</h2>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                     {filteredVideos.map((video, idx) => (

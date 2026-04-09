@@ -13,12 +13,12 @@ const ProviderClaimPage: React.FC = () => {
         description="Claim your existing provider profile on Psychage. Verify your NPI number to take ownership of your listing."
       />
 
-      <div className="min-h-screen bg-slate-50 dark:bg-gray-950">
+      <div className="min-h-screen bg-background">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
           {/* Back link */}
           <Link
             to="/for-providers"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors mb-8"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-text-secondary hover:text-teal-600 dark:hover:text-teal-400 transition-colors mb-8"
           >
             <ChevronLeft size={16} />
             Back to For Providers
@@ -31,10 +31,10 @@ const ProviderClaimPage: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="mb-10"
           >
-            <h1 className="font-display font-extrabold text-3xl sm:text-4xl text-gray-900 dark:text-white mb-3">
+            <h1 className="font-display font-extrabold text-3xl sm:text-4xl text-text-primary mb-3">
               Claim Your Profile
             </h1>
-            <p className="text-lg text-gray-500 dark:text-gray-400">
+            <p className="text-lg text-text-secondary">
               If your practice already appears in our directory, you can claim it
               by verifying your NPI number. This connects the listing to your
               Psychage account so you can manage it directly.

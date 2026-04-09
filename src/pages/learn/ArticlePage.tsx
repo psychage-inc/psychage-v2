@@ -28,6 +28,7 @@ import Badge from '@/components/ui/Badge';
 import { cn } from '@/lib/utils';
 import { useBookmarks } from '@/context/BookmarkContext';
 import ArticleHtmlRenderer from '@/components/article/ArticleHtmlRenderer';
+import { useReducedMotion } from '@/hooks/useReducedMotion';
 import '@/styles/article-prose.css';
 
 const MeshGradient = ({ className }: { className?: string }) => (
@@ -66,6 +67,7 @@ const ArticlePage: React.FC = () => {
     const { isBookmarked, toggleBookmark } = useBookmarks();
     const [showAuthModal, setShowAuthModal] = useState(false);
     const articleContentRef = useRef<HTMLDivElement>(null);
+    const prefersReducedMotion = useReducedMotion();
 
     const handleBookmark = useCallback(() => {
         if (!article) return;
@@ -130,7 +132,7 @@ const ArticlePage: React.FC = () => {
     // Show back-to-top after scrolling past hero
     const [showBackToTop, setShowBackToTop] = useState(false);
     useEffect(() => {
-        const handleScroll = () => setShowBackToTop(window.scrollY > 600);
+        const handleScroll = () => setShowBackToTop(window.scrollY > 1200);
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -232,7 +234,7 @@ const ArticlePage: React.FC = () => {
 
                 {/* Hero Content */}
                 <motion.div
-                    style={{ opacity: heroOpacity, y: heroY }}
+                    style={prefersReducedMotion ? undefined : { opacity: heroOpacity, y: heroY }}
                     className="container mx-auto max-w-content px-6 relative z-10"
                 >
                     {/* Breadcrumb */}
@@ -305,8 +307,8 @@ const ArticlePage: React.FC = () => {
 
                 {/* Scroll indicator */}
                 <motion.div
-                    animate={{ y: [0, 8, 0] }}
-                    transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
+                    animate={prefersReducedMotion ? undefined : { y: [0, 8, 0] }}
+                    transition={prefersReducedMotion ? undefined : { repeat: Infinity, duration: 2, ease: 'easeInOut' }}
                     className="absolute bottom-6 left-1/2 -translate-x-1/2 text-text-tertiary z-10"
                 >
                     <ChevronDown size={24} />
@@ -321,7 +323,7 @@ const ArticlePage: React.FC = () => {
                     <aside className="hidden lg:block">
                         <div className="sticky top-28 space-y-6">
                             <InteractiveCard className="p-5 bg-surface/30 backdrop-blur-sm border-white/5">
-                                <h3 className="font-bold text-text-primary mb-4 text-xs uppercase tracking-widest text-primary">On this page</h3>
+                                <p className="font-bold text-text-primary mb-4 text-xs uppercase tracking-widest text-primary">On this page</p>
                                 <TableOfContents />
                             </InteractiveCard>
 
@@ -342,7 +344,7 @@ const ArticlePage: React.FC = () => {
                                             "w-10 h-10 rounded-full border shadow-sm flex items-center justify-center transition-all",
                                             bookmarked
                                                 ? "bg-primary text-white border-primary"
-                                                : "bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 text-gray-500 hover:text-primary hover:border-primary/30"
+                                                : "bg-surface border-border text-text-tertiary hover:text-primary hover:border-primary/30"
                                         )}
                                         aria-label={bookmarked ? "Remove bookmark" : "Bookmark article"}
                                     >
@@ -354,7 +356,7 @@ const ArticlePage: React.FC = () => {
                             {/* Provider CTA */}
                             <Card className="p-5 bg-gradient-to-br from-primary/10 to-transparent border-primary/20 overflow-hidden relative">
                                 <div className="relative z-10">
-                                    <h4 className="font-bold text-base text-primary mb-2">Need professional help?</h4>
+                                    <p className="font-bold text-base text-primary mb-2">Need professional help?</p>
                                     <p className="text-xs text-text-secondary mb-3">Connect with licensed therapists who understand what you're going through.</p>
                                     <Button size="sm" className="w-full shadow-lg shadow-primary/20" onClick={() => navigate('/providers')}>Find a Provider</Button>
                                 </div>
@@ -437,15 +439,15 @@ const ArticlePage: React.FC = () => {
 
                         {/* Sources & Citations */}
                         <div id="sources-citations" className="mt-16 pt-8 border-t border-border/40 scroll-mt-32">
-                            <h3 className="font-bold text-lg mb-6 flex items-center gap-2">
+                            <h2 className="font-bold text-lg mb-6 flex items-center gap-2">
                                 <Search size={20} className="text-primary" />
                                 Sources & Citations
                                 {article.citations && article.citations.length > 0 && (
-                                    <span className="px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-xs text-gray-500 font-medium">
+                                    <span className="px-2 py-0.5 rounded-full bg-surface-hover text-xs text-text-tertiary font-medium">
                                         {article.citations.length}
                                     </span>
                                 )}
-                            </h3>
+                            </h2>
                             {article.citations && article.citations.length > 0 ? (
                                 <ReferenceList citations={article.citations} />
                             ) : (
@@ -472,7 +474,7 @@ const ArticlePage: React.FC = () => {
             {relatedArticles.length > 0 && (
                 <section className="bg-surface/30 backdrop-blur-sm py-16 px-6 border-t border-border/30">
                     <div className="container mx-auto max-w-content">
-                        <h3 className="font-display font-bold text-2xl text-text-primary mb-8">Related Articles</h3>
+                        <h2 className="font-display font-bold text-2xl text-text-primary mb-8">Related Articles</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {relatedArticles.slice(0, 3).map(rel => (
                                 <ArticleCard key={rel.id} article={rel} onClick={() => navigate(getArticleUrl(rel))} />
@@ -499,9 +501,9 @@ const ArticlePage: React.FC = () => {
             {/* Toolkit CTA */}
             <section className="bg-gradient-to-r from-primary/5 to-indigo-500/5 py-12 px-6 border-t border-border/30">
                 <div className="container mx-auto max-w-content text-center">
-                    <h3 className="font-display font-bold text-2xl text-text-primary mb-3">
+                    <h2 className="font-display font-bold text-2xl text-text-primary mb-3">
                         Explore Our Free Mental Health Tools
-                    </h3>
+                    </h2>
                     <p className="text-sm text-text-secondary mb-6 max-w-lg mx-auto">
                         From mood tracking to cognitive assessments, Psychage offers evidence-informed tools to support your mental wellness journey.
                     </p>
@@ -515,7 +517,7 @@ const ArticlePage: React.FC = () => {
                             <Link
                                 key={tool.name}
                                 to={tool.href}
-                                className="flex flex-col items-center gap-2 p-4 rounded-xl bg-white/70 dark:bg-gray-800/50 border border-border/40 hover:border-primary/40 hover:shadow-md transition-all group"
+                                className="flex flex-col items-center gap-2 p-4 rounded-xl bg-surface/70 border border-border/40 hover:border-primary/40 hover:shadow-md transition-all group"
                             >
                                 <div className={cn('w-10 h-10 rounded-full flex items-center justify-center', tool.bg)}>
                                     <tool.icon size={20} className={tool.color} />
@@ -541,7 +543,7 @@ const ArticlePage: React.FC = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.8 }}
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                        className="fixed bottom-6 right-20 z-[100] w-10 h-10 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-lg shadow-black/10 flex items-center justify-center text-text-secondary hover:text-primary hover:border-primary/40 transition-colors"
+                        className="fixed bottom-6 right-20 z-[100] w-10 h-10 rounded-full bg-surface border border-border shadow-lg shadow-black/10 flex items-center justify-center text-text-secondary hover:text-primary hover:border-primary/40 transition-colors"
                         aria-label="Back to top"
                     >
                         <ChevronUp size={20} />

@@ -1145,7 +1145,7 @@ export const anxietyDisordersArticlesB: Article[] = [
           Clinical Takeaway
         </h2>
         <p className="mb-6">
-          If you have been diagnosed with multiple anxiety disorders, you are not "broken" or uniquely complicated. You are experiencing a common pattern driven by shared vulnerabilities.
+          For anyone who has received a diagnosis of multiple anxiety disorders, it is important to understand that this does not mean being "broken" or uniquely complicated. It reflects a common pattern driven by shared vulnerabilities.
         </p>
         <p className="mb-6">
           Treatment does not need to address each disorder separately. By targeting the common roots --- whether biological, cognitive, or behavioral --- you can make progress across all your anxiety symptoms simultaneously.

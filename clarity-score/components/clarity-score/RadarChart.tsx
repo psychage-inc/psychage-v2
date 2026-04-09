@@ -20,7 +20,7 @@ export default function RadarChart({ scores }: RadarChartProps) {
     const points = 5;
 
     const data = [
-        { label: 'Emotional', value: scores.emotional, color: '#0D9488' }, // Teal
+        { label: 'Emotional', value: scores.emotional, color: '#1A9B8C' }, // Teal
         { label: 'Vitality', value: scores.vitality, color: '#6366F1' },   // Indigo
         { label: 'Social', value: scores.social, color: '#EC4899' },      // Pink
         { label: 'Cognitive', value: scores.cognitive, color: '#F59E0B' }, // Amber
@@ -54,7 +54,7 @@ export default function RadarChart({ scores }: RadarChartProps) {
 
     return (
         <div className="relative mx-auto flex aspect-square w-full max-w-sm items-center justify-center">
-            <svg viewBox="0 0 300 300" className="h-full w-full drop-shadow-[0_0_15px_rgba(13,148,136,0.2)]" role="img" aria-label={`Radar chart showing scores: Emotional ${scores.emotional}, Vitality ${scores.vitality}, Social ${scores.social}, Cognitive ${scores.cognitive}, Functioning ${scores.functioning}`}>
+            <svg viewBox="0 0 300 300" className="h-full w-full drop-shadow-[0_0_15px_rgba(26,155,140,0.2)]" role="img" aria-label={`Radar chart showing scores: Emotional ${scores.emotional}, Vitality ${scores.vitality}, Social ${scores.social}, Cognitive ${scores.cognitive}, Functioning ${scores.functioning}`}>
                 {[0.2, 0.4, 0.6, 0.8, 1].map((scale) => (
                     <polygon
                         key={scale}
@@ -86,8 +86,8 @@ export default function RadarChart({ scores }: RadarChartProps) {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, type: 'spring' }}
                     points={pathData}
-                    fill="rgba(13,148,136,0.2)"
-                    stroke="#0D9488"
+                    fill="rgba(26,155,140,0.2)"
+                    stroke="#1A9B8C"
                     strokeWidth="2"
                 />
 

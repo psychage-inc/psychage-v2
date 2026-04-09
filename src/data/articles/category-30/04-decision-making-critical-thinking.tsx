@@ -686,7 +686,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
       { text: 'Research by Tierney and Baumeister (2019) documented that decision fatigue operates through multiple mechanisms: the shift from active to passive decision-making (defaulting rather than choosing), the reduction in quality of analysis (considering few...', citationIndex: 5 },
     ],
 
-    sparkMoment: 'You have a finite budget of good decisions each day. You do not know the exact amount—it varies with sleep, stress, nutrition, and the demands already made on it. But it is finite, and every decision spends some of it: what to wear, what to eat, how to respond to an email, whether to exercise, which task to tackle first. By the time you arrive at the end of the day, the budget may be spent—and the decisions you make then will reflect not your values but your exhaustion.',
+    sparkMoment: 'You have a finite budget of good decisions each day. You do not know the exact amount—it varies with sleep, stress, nutrition, and the demands already made on it. But it is finite, and every decision spends some of it: what to wear, what to eat, how to respond to an email, whether to exercise, which task to tackle first. By the time evening arrives, the budget may be spent—and the decisions you make then will reflect not your values but your exhaustion.',
 
     practicalExercise: {
       title: 'Front-load important decisions.',

@@ -2,36 +2,59 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShieldCheck, Info, ChevronDown } from 'lucide-react';
 
+const tiers = [
+  {
+    icon: ShieldCheck,
+    title: 'Psychage Verified',
+    description: 'Credentials independently verified with complete profile — specialties, insurance, and languages.',
+    colors: {
+      bg: 'bg-white dark:bg-teal-950/30',
+      border: 'border-teal-200/60 dark:border-teal-800/40',
+      icon: 'text-teal-600 dark:text-teal-400',
+      iconBg: 'bg-teal-50 dark:bg-teal-900/30',
+      title: 'text-teal-700 dark:text-teal-300',
+    },
+  },
+  {
+    icon: Info,
+    title: 'Publicly Listed',
+    description: 'From the U.S. NPI public registry. Not individually reviewed. Profile information may be limited.',
+    colors: {
+      bg: 'bg-white dark:bg-gray-800/30',
+      border: 'border-gray-200/60 dark:border-gray-700/40',
+      icon: 'text-gray-500 dark:text-gray-400',
+      iconBg: 'bg-gray-50 dark:bg-gray-700/30',
+      title: 'text-gray-700 dark:text-gray-300',
+    },
+  },
+];
+
 export const VerificationExplainer: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const content = (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      {/* Psychage Verified */}
-      <div className="flex gap-3 p-4 bg-teal-50/50 dark:bg-teal-900/10 rounded-xl border border-teal-100 dark:border-teal-800/40">
-        <div className="w-9 h-9 rounded-lg bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center flex-shrink-0">
-          <ShieldCheck size={18} className="text-teal-600 dark:text-teal-400" />
-        </div>
-        <div>
-          <h4 className="font-display font-bold text-sm text-teal-700 dark:text-teal-300 mb-0.5">Psychage Verified</h4>
-          <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
-            Reviewed by our team. Credentials independently verified, with a complete profile including specialties, insurance, and languages.
-          </p>
-        </div>
-      </div>
-
-      {/* Publicly Listed */}
-      <div className="flex gap-3 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700/40">
-        <div className="w-9 h-9 rounded-lg bg-gray-100 dark:bg-gray-700/50 flex items-center justify-center flex-shrink-0">
-          <Info size={18} className="text-gray-500 dark:text-gray-400" />
-        </div>
-        <div>
-          <h4 className="font-display font-bold text-sm text-gray-700 dark:text-gray-300 mb-0.5">Publicly Listed</h4>
-          <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
-            Sourced from the U.S. National Provider Identifier (NPI) public registry. Not individually reviewed by Psychage. Profile information may be limited.
-          </p>
-        </div>
-      </div>
+    <div className="flex flex-col sm:flex-row gap-3">
+      {tiers.map((tier) => {
+        const Icon = tier.icon;
+        return (
+          <div
+            key={tier.title}
+            className={`flex-1 flex items-start gap-3 p-4 rounded-2xl border shadow-sm ${tier.colors.bg} ${tier.colors.border}`}
+          >
+            <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${tier.colors.iconBg}`}>
+              <Icon size={16} className={tier.colors.icon} />
+            </div>
+            <div className="min-w-0">
+              <h4 className={`font-semibold text-sm mb-0.5 ${tier.colors.title}`}>
+                {tier.title}
+              </h4>
+              <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                {tier.description}
+              </p>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 

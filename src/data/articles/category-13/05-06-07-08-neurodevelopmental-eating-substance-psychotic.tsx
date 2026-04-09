@@ -306,10 +306,10 @@ export const eatingDisordersArticles: Article[] = [
     </ul>
     <p className="mb-6">Don't wait for a crisis. If eating patterns, body image concerns, or weight are causing distress or interfering with daily life, reach out to a healthcare provider. Resources include:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
-      <li>National Eating Disorders Association (NEDA) Helpline: 1-800-931-2237</li>
-      <li>NEDA Crisis Text Line: Text "NEDA" to 741741</li>
+      <li>National Alliance for Eating Disorders Helpline: 1-866-662-1235</li>
+      <li>Crisis Text Line: Text "HELLO" to 741741</li>
       <li>Your primary care doctor, who can provide referrals to eating disorder specialists</li>
-      <li>Therapists specializing in eating disorders (find through NEDA or International Association of Eating Disorders Professionals)</li>
+      <li>Therapists specializing in eating disorders (find through the National Alliance for Eating Disorders or International Association of Eating Disorders Professionals)</li>
     </ul>
   </> },
   { id: catId(52), slug: 'bulimia-nervosa', status: 'draft', title: 'Bulimia Nervosa: The Hidden Cycle of Bingeing and Purging', description: 'BN involves binge-purge cycles, often at normal weight.', image: "/images/articles/cat13/cover-052.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["Bulimia", 'Eating Disorders'],
@@ -472,9 +472,9 @@ export const eatingDisordersArticles: Article[] = [
     <p className="mb-6">If you're experiencing binge-purge cycles, don't wait until things get worse. Bulimia tends to become more entrenched over time, making it harder to treat. Early intervention dramatically improves outcomes.</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Seeing your primary care doctor:</strong> They can assess medical complications, order lab work (especially electrolytes), and provide referrals to specialists</li>
-      <li><strong>Finding a therapist specializing in eating disorders:</strong> Look through the National Eating Disorders Association (NEDA) directory or the International Association of Eating Disorders Professionals (IAEDP)</li>
-      <li><strong>Calling the NEDA Helpline:</strong> 1-800-931-2237 (available Monday-Thursday 9am-9pm ET, Friday 9am-5pm ET)</li>
-      <li><strong>Using the NEDA Crisis Text Line:</strong> Text "NEDA" to 741741 for 24/7 support</li>
+      <li><strong>Finding a therapist specializing in eating disorders:</strong> Look through the National Alliance for Eating Disorders directory or the International Association of Eating Disorders Professionals (IAEDP)</li>
+      <li><strong>Calling the National Alliance for Eating Disorders Helpline:</strong> 1-866-662-1235</li>
+      <li><strong>Using the Crisis Text Line:</strong> Text "HELLO" to 741741 for 24/7 support</li>
     </ul>
   </> },
   { id: catId(53), slug: 'binge-eating-disorder', status: 'draft', title: "Binge Eating Disorder: The Most Common Eating Disorder Most People Haven't Heard Of", description: "BED involves recurrent bingeing without compensatory behaviors.", image: "/images/articles/cat13/cover-053.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 10, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["BED", 'Binge Eating'],
@@ -670,9 +670,9 @@ export const eatingDisordersArticles: Article[] = [
     <p className="mb-6">If you recognize yourself in this description, know that you're not alone and help is available. BED is a treatable condition--you don't have to live with this forever.</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Start with your primary care doctor:</strong> They can rule out medical causes of symptoms, assess for complications, and provide referrals to eating disorder specialists</li>
-      <li><strong>Find a therapist specializing in eating disorders:</strong> Look through the NEDA (National Eating Disorders Association) provider directory or BEDA (Binge Eating Disorder Association) resources</li>
-      <li><strong>Call the NEDA Helpline:</strong> 1-800-931-2237 for information, support, and treatment referrals</li>
-      <li><strong>Consider support groups:</strong> BEDA, Overeaters Anonymous, and NEDA offer peer support options</li>
+      <li><strong>Find a therapist specializing in eating disorders:</strong> Look through the National Alliance for Eating Disorders provider directory or BEDA (Binge Eating Disorder Association) resources</li>
+      <li><strong>Call the National Alliance for Eating Disorders Helpline:</strong> 1-866-662-1235 for information, support, and treatment referrals</li>
+      <li><strong>Consider support groups:</strong> BEDA, Overeaters Anonymous, and the National Alliance for Eating Disorders offer peer support options</li>
       <li><strong>Be patient with yourself:</strong> Recovery isn't linear. Setbacks are normal. What matters is continuing to move forward.</li>
     </ul>
   </> },
@@ -869,7 +869,7 @@ export const eatingDisordersArticles: Article[] = [
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Eating disorder specialists:</strong> Look for providers with experience treating ARFID specifically (not all eating disorder clinicians are familiar with ARFID)</li>
       <li><strong>Feeding specialists:</strong> Occupational therapists, speech-language pathologists, or psychologists specializing in pediatric feeding disorders</li>
-      <li><strong>NEDA (National Eating Disorders Association):</strong> 1-800-931-2237 for information and referrals</li>
+      <li><strong>National Alliance for Eating Disorders Helpline:</strong> 1-866-662-1235 for information and referrals</li>
       <li><strong>Medical evaluation:</strong> Primary care provider to assess nutritional status, growth, and medical complications</li>
     </ul>
   </> },
@@ -1087,7 +1087,7 @@ export const eatingDisordersArticles: Article[] = [
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Eating disorder specialists:</strong> Therapists and dietitians with experience treating orthorexia and other eating disorders</li>
       <li><strong>OCD specialists:</strong> If obsessive-compulsive features are prominent, OCD-trained clinicians may be helpful</li>
-      <li><strong>NEDA (National Eating Disorders Association):</strong> 1-800-931-2237 for screening, information, and referrals</li>
+      <li><strong>National Alliance for Eating Disorders Helpline:</strong> 1-866-662-1235 for screening, information, and referrals</li>
       <li><strong>Support groups:</strong> Connecting with others recovering from orthorexia can reduce shame and isolation</li>
     </ul>
     <p className="mb-6">Recovery is possible. Many people who once lived by rigid food rules have found freedom in flexible, balanced eating that truly supports all dimensions of health--physical, mental, and social.</p>
@@ -1115,7 +1115,7 @@ export const eatingDisordersArticles: Article[] = [
     { id: '4', text: 'Gender Differences in Eating Disorder Presentation', source: 'Journal of Clinical Psychology', year: '2021', link: 'https://doi.org/10.1002/jclp.23162', tier: 1 },
     { id: '5', text: 'Eating Disorders in Sexual Minority Men', source: 'American Journal of Men\'s Health', year: '2020', link: 'https://doi.org/10.1177/1557988320937155', tier: 1 },
     { id: '6', text: 'Screening Tools for Eating Disorders', source: 'International Journal of Eating Disorders', year: '2019', link: 'https://doi.org/10.1002/eat.23116', tier: 1 },
-    { id: '7', text: 'Men and Eating Disorders', source: 'National Eating Disorders Association', year: '2023', link: 'https://www.nationaleatingdisorders.org/men-eating-disorders', tier: 3 },
+    { id: '7', text: 'Men and Eating Disorders', source: 'National Alliance for Eating Disorders', year: '2023', link: 'https://www.allianceforeatingdisorders.com', tier: 3 },
     { id: '8', text: 'Masculinity Norms and Help-Seeking', source: 'Psychology of Men & Masculinity', year: '2021', link: 'https://doi.org/10.1037/men0000327', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
@@ -1210,7 +1210,7 @@ export const eatingDisordersArticles: Article[] = [
     <p className="mb-6">If you're a man struggling with food, body image, or exercise, know this: eating disorders are not gendered--pain is not gendered. Seeking help isn't weakness; it's courage. Here's how to start:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Talk to someone you trust.</strong> Breaking silence reduces shame. Choose a friend, family member, or partner who will listen without judgment.</li>
-      <li><strong>Find a provider who understands male eating disorders.</strong> Ask potential therapists about their experience treating men. Organizations like NEDA (nationaleatingdisorders.org) can help you find specialists.</li>
+      <li><strong>Find a provider who understands male eating disorders.</strong> Ask potential therapists about their experience treating men. The National Alliance for Eating Disorders (allianceforeatingdisorders.com) can help you find specialists.</li>
       <li><strong>Consider online or telehealth options.</strong> If local resources are limited or you're uncomfortable with in-person care, virtual treatment is effective and may feel more accessible.</li>
       <li><strong>Connect with other men in recovery.</strong> Support groups (in-person or online) help you realize you're not alone. Hearing other men's stories reduces isolation.</li>
       <li><strong>Address co-occurring issues.</strong> Many men with eating disorders also struggle with depression, anxiety, trauma, or substance use. Integrated treatment addressing all conditions produces best outcomes.</li>
@@ -1587,7 +1587,7 @@ export const eatingDisordersArticles: Article[] = [
     { id: '1', text: 'Family Involvement in Eating Disorder Treatment', source: 'Journal of Eating Disorders', year: '2020', link: 'https://doi.org/10.1186/s40337-020-00316-0', tier: 1 },
     { id: '2', text: 'Caregiver Burden in Eating Disorders', source: 'International Journal of Eating Disorders', year: '2021', link: 'https://doi.org/10.1002/eat.23512', tier: 1 },
     { id: '3', text: 'Communication Strategies for Families', source: 'Eating Disorders', year: '2020', link: 'https://doi.org/10.1080/10640266.2020.1751175', tier: 1 },
-    { id: '4', text: 'Supporting Someone with an Eating Disorder', source: 'National Eating Disorders Association', year: '2023', link: 'https://www.nationaleatingdisorders.org/help-support', tier: 3 },
+    { id: '4', text: 'Supporting Someone with an Eating Disorder', source: 'National Alliance for Eating Disorders', year: '2023', link: 'https://www.allianceforeatingdisorders.com', tier: 3 },
     { id: '5', text: 'Caregiver Support and Self-Care', source: 'Journal of Family Psychology', year: '2021', link: 'https://doi.org/10.1037/fam0000816', tier: 1 },
     { id: '6', text: 'Enabling versus Supporting in Eating Disorders', source: 'European Eating Disorders Review', year: '2020', link: 'https://doi.org/10.1002/erv.2728', tier: 1 },
     { id: '7', text: 'Family-Based Treatment for Adolescents', source: 'JAMA Psychiatry', year: '2020', link: 'https://doi.org/10.1001/jamapsychiatry.2020.0315', tier: 1 },
@@ -1674,7 +1674,7 @@ export const eatingDisordersArticles: Article[] = [
         },
         {
           title: 'How do I take care of myself?',
-          content: <p className="mb-4">Essential for long-term support capacity. Options: therapy for yourself to process fear/frustration/grief, caregiver support groups (F.E.A.S.T., NEDA), respite from caretaking role, maintaining your own health (sleep, exercise, social connections), setting boundaries about what you will/won\'t do. You can\'t pour from an empty cup—your wellbeing matters too.</p>
+          content: <p className="mb-4">Essential for long-term support capacity. Options: therapy for yourself to process fear/frustration/grief, caregiver support groups (F.E.A.S.T., National Alliance for Eating Disorders), respite from caretaking role, maintaining your own health (sleep, exercise, social connections), setting boundaries about what you will/won\'t do. You can\'t pour from an empty cup—your wellbeing matters too.</p>
         },
       ]}
     />
@@ -1692,7 +1692,7 @@ export const eatingDisordersArticles: Article[] = [
 
     <h2 id="resources" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Resources for Supporters</h2>
     <ul className="list-disc pl-6 mb-6 space-y-2">
-      <li><strong>National Eating Disorders Association (NEDA):</strong> 1-800-931-2237 for information, screening, treatment referrals, family support resources</li>
+      <li><strong>National Alliance for Eating Disorders Helpline:</strong> 1-866-662-1235 for information, screening, treatment referrals, family support resources</li>
       <li><strong>F.E.A.S.T.:</strong> Families Empowered and Supporting Treatment of Eating Disorders—caregiver-specific support groups and resources</li>
       <li><strong>Family therapy:</strong> Many eating disorder treatment programs offer family therapy teaching communication strategies and recovery support</li>
       <li><strong>Educational resources:</strong> Books like "Help Your Teenager Beat an Eating Disorder" or "Loving Someone with an Eating Disorder" provide practical guidance</li>

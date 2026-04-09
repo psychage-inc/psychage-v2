@@ -136,7 +136,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
                   <ul className="list-disc pl-5 space-y-1">
                     <li>Feeling emotionally overextended and exhausted by your work/role</li>
                     <li>Dread about facing another day</li>
-                    <li>Feeling used up at the end of the day</li>
+                    <li>Feeling completely used up by evening</li>
                     <li>Physical and emotional fatigue that rest doesn't fix</li>
                   </ul>
                 </div>
@@ -625,7 +625,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
         <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6">
           <ol className="list-decimal pl-6 space-y-3">
             <li>I feel emotionally drained from my work/role</li>
-            <li>I feel used up at the end of the day</li>
+            <li>I feel completely used up by evening</li>
             <li>I feel tired when I get up in the morning and have to face another day</li>
             <li>I have become more callous or cynical toward people in my work</li>
             <li>I worry that this work/role is hardening me emotionally</li>

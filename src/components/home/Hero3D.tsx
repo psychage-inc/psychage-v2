@@ -43,7 +43,7 @@ const ParticleField = (props: any) => {
             <Points ref={ref} positions={sphere} stride={3} frustumCulled={false} {...props}>
                 <PointMaterial
                     transparent
-                    color="#0d9488"
+                    color="#1A9B8C"
                     size={0.005}
                     sizeAttenuation={true}
                     depthWrite={false}

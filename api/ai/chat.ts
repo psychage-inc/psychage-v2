@@ -11,6 +11,7 @@ import { classifyInputSafety, generateCrisisResponse } from '../../src/lib/ai/sa
 import { retrieveRelevantContent } from '../../src/lib/ai/retrieval';
 import { AnthropicProvider, OpenAIProvider, SYSTEM_PROMPT } from '../../src/lib/ai/llm';
 import { getRequiredEnv, getOptionalEnv, getAIConfig } from '../../src/lib/ai/config';
+import { encodeSSE } from '../../src/lib/ai/streaming';
 import type { Message, SafetyLevel, Citation } from '../../src/lib/ai/types';
 
 // ============================================================================
@@ -89,9 +90,10 @@ export default async function handler(
 
   try {
     // Parse request
-    const { messages, sessionId: providedSessionId } = req.body as {
+    const { messages, sessionId: providedSessionId, stream: requestStream } = req.body as {
       messages: Message[];
       sessionId?: string;
+      stream?: boolean;
     };
 
     if (!messages || !Array.isArray(messages) || messages.length === 0) {
@@ -202,7 +204,7 @@ export default async function handler(
     );
 
     // ========================================================================
-    // Generate LLM Response
+    // Build LLM messages
     // ========================================================================
 
     const llmMessages = [
@@ -210,38 +212,104 @@ export default async function handler(
       ...messages.map(m => ({ role: m.role, content: m.content })),
     ];
 
-    const response = await llmProvider.generateCompletion(llmMessages, {
+    const llmOptions = {
       model: config.primaryModel,
       maxTokens: 1024,
       temperature: 0.7,
-    });
+    };
 
-    // ========================================================================
-    // LAYER 3: Output Validation
-    // ========================================================================
-
-    // Simple validation - check for diagnostic language
-    let finalContent = response.content;
+    // Output validation helper
     const diagnosticPatterns = [
       /you have (depression|anxiety|bipolar|schizophrenia|ptsd|ocd)/i,
       /this is (depression|anxiety|bipolar|schizophrenia|ptsd|ocd)/i,
       /you are (depressed|anxious|bipolar|schizophrenic)/i,
     ];
 
-    const hasDiagnostic = diagnosticPatterns.some(pattern => pattern.test(finalContent));
-    if (hasDiagnostic) {
-      finalContent = "I want to make sure I give you accurate information on this topic. For questions like this, I'd recommend checking Psychage's articles directly at psychage.com, or speaking with a licensed mental health professional who can give you personalized guidance.";
+    const DIAGNOSTIC_FALLBACK = "I want to make sure I give you accurate information on this topic. For questions like this, I'd recommend checking Psychage's articles directly at psychage.com, or speaking with a licensed mental health professional who can give you personalized guidance.";
+
+    // ========================================================================
+    // STREAMING PATH
+    // ========================================================================
+
+    if (requestStream) {
+      res.writeHead(200, {
+        'Content-Type': 'text/event-stream',
+        'Cache-Control': 'no-cache, no-transform',
+        'Connection': 'keep-alive',
+        'X-Accel-Buffering': 'no',
+      });
+
+      // Track client disconnect to stop LLM generation
+      let clientDisconnected = false;
+      req.on('close', () => { clientDisconnected = true; });
+
+      // Send metadata immediately
+      res.write(encodeSSE({ type: 'metadata', sessionId }));
+      res.write(encodeSSE({ type: 'safety', level: safetyCheck.level as SafetyLevel }));
+
+      let fullContent = '';
+      let firstTokenTime: number | null = null;
+
+      try {
+        for await (const chunk of llmProvider.streamCompletion(llmMessages, llmOptions)) {
+          if (clientDisconnected || chunk.done) break;
+
+          if (firstTokenTime === null) {
+            firstTokenTime = Date.now();
+          }
+
+          fullContent += chunk.content;
+          res.write(encodeSSE({ type: 'token', content: chunk.content }));
+        }
+
+        // Output validation on accumulated content
+        const hasDiagnostic = diagnosticPatterns.some(p => p.test(fullContent));
+        if (hasDiagnostic) {
+          fullContent = DIAGNOSTIC_FALLBACK;
+          // Send a replacement — client should use this as the final text
+          res.write(encodeSSE({ type: 'error', message: fullContent, code: 'SAFETY_VIOLATION' }));
+        }
+
+        // Extract citations and send
+        const citations = extractCitations(fullContent, searchResults);
+        if (citations.length > 0) {
+          res.write(encodeSSE({ type: 'citations', citations }));
+        }
+
+        // Done event with metrics
+        const usage = llmProvider.lastStreamUsage;
+        res.write(encodeSSE({
+          type: 'done',
+          responseTimeMs: Date.now() - startTime,
+          timeToFirstTokenMs: firstTokenTime ? firstTokenTime - startTime : 0,
+          tokensUsed: usage ?? undefined,
+        }));
+      } catch (streamError) {
+        console.error('Streaming error:', streamError);
+        res.write(encodeSSE({
+          type: 'error',
+          message: 'Something went wrong during generation. Please try again.',
+          code: 'LLM_ERROR',
+        }));
+      }
+
+      res.end();
+      return;
     }
 
     // ========================================================================
-    // Extract citations
+    // NON-STREAMING PATH (existing, preserved for backward compat / rollback)
     // ========================================================================
+
+    const response = await llmProvider.generateCompletion(llmMessages, llmOptions);
+
+    let finalContent = response.content;
+    const hasDiagnostic = diagnosticPatterns.some(pattern => pattern.test(finalContent));
+    if (hasDiagnostic) {
+      finalContent = DIAGNOSTIC_FALLBACK;
+    }
 
     const citations = extractCitations(finalContent, searchResults);
-
-    // ========================================================================
-    // Return response
-    // ========================================================================
 
     return res.status(200).json({
       message: finalContent,

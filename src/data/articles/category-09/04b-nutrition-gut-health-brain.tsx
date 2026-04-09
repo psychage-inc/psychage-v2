@@ -119,7 +119,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
         <ArticleCallout variant="warning">
           <p className="mb-4"><strong>Important Note</strong></p>
           <p>This article discusses eating disorders and their physical effects. If you're struggling with disordered eating, please seek professional help from an eating disorder specialist. Eating disorders are serious medical conditions requiring comprehensive treatment.</p>
-          <p className="mt-4"><strong>Crisis Resources:</strong> National Eating Disorders Association Helpline: 1-800-931-2237 or text "NEDA" to 741741</p>
+          <p className="mt-4"><strong>Crisis Resources:</strong> National Alliance for Eating Disorders Helpline: 1-866-662-1235 | Crisis Text Line: Text "HELLO" to 741741</p>
         </ArticleCallout>
 
         <h2 id="overview-eating-disorders" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -373,7 +373,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
             <li>Medical doctor monitoring physical health</li>
             <li>Psychiatrist if medications are needed</li>
           </ul>
-          <p className="mt-4">Resources: National Eating Disorders Association (nationaleatingdisorders.org) provides referrals and support.</p>
+          <p className="mt-4">Resources: National Alliance for Eating Disorders (allianceforeatingdisorders.com) provides referrals and support. Helpline: 1-866-662-1235.</p>
         </ArticleCallout>
 
         <h2 id="hope-and-recovery" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1638,7 +1638,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
         <ArticleCallout variant="warning">
           <p className="mb-4"><strong>Content Warning</strong></p>
           <p className="mb-4">This article discusses disordered eating, restrictive diets, and eating disorders. If you're in recovery from an eating disorder or struggling with disordered eating, this content may be triggering.</p>
-          <p><strong>If you need support</strong>: National Eating Disorders Association Helpline: 1-800-931-2237 or text "NEDA" to 741741</p>
+          <p><strong>If you need support</strong>: National Alliance for Eating Disorders Helpline: 1-866-662-1235 | Crisis Text Line: Text "HELLO" to 741741</p>
         </ArticleCallout>
 
         <h2 id="disordered-eating-vs-eating-disorder" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1690,7 +1690,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
             { value: 20, suffix: '%', label: 'Of those develop full eating disorders' },
             { value: 95, suffix: '%', label: 'Of diets fail within 5 years' },
           ]}
-          source="National Eating Disorders Association, 2023"
+          source="National Alliance for Eating Disorders, 2023"
         />
 
         <h2 id="orthorexia" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

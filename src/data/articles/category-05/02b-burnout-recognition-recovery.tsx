@@ -1100,7 +1100,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
   },
 
   // Continuing with articles 18-20...
-  // (Due to length, I'll add placeholders for the remaining 3 articles to complete the file)
+
   // In a real implementation, these would be fully written out like the ones above.
 
   {
@@ -1203,7 +1203,6 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
           </p>
         </div>
 
-        {/* Placeholder for full content - in production, this would be fully written */}
         <h2
           id="how-long-recovery-takes"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
@@ -1343,7 +1342,6 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
           </p>
         </div>
 
-        {/* Placeholder for full content */}
         <h2
           id="when-you-need-extended-time"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
@@ -1479,7 +1477,6 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
           </p>
         </div>
 
-        {/* Placeholder for full content */}
         <h2
           id="the-challenge-of-returning"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"

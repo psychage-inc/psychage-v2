@@ -15,15 +15,15 @@ const iconMap: Record<string, LucideIcon> = {
 
 // Color mapping for Tailwind classes (can't use dynamic classes due to purging)
 const colorClasses: Record<string, { bg: string; text: string }> = {
-    teal: { bg: 'bg-teal-100', text: 'text-teal-600' },
-    amber: { bg: 'bg-amber-100', text: 'text-amber-600' },
-    indigo: { bg: 'bg-indigo-100', text: 'text-indigo-600' },
-    sky: { bg: 'bg-sky-100', text: 'text-sky-600' },
-    rose: { bg: 'bg-rose-100', text: 'text-rose-600' },
-    red: { bg: 'bg-red-100', text: 'text-red-600' },
-    green: { bg: 'bg-green-100', text: 'text-green-600' },
-    purple: { bg: 'bg-purple-100', text: 'text-purple-600' },
-    blue: { bg: 'bg-blue-100', text: 'text-blue-600' },
+    teal: { bg: 'bg-teal-100 dark:bg-teal-900/30', text: 'text-teal-600 dark:text-teal-400' },
+    amber: { bg: 'bg-amber-100 dark:bg-amber-900/30', text: 'text-amber-600 dark:text-amber-400' },
+    indigo: { bg: 'bg-indigo-100 dark:bg-indigo-900/30', text: 'text-indigo-600 dark:text-indigo-400' },
+    sky: { bg: 'bg-sky-100 dark:bg-sky-900/30', text: 'text-sky-600 dark:text-sky-400' },
+    rose: { bg: 'bg-rose-100 dark:bg-rose-900/30', text: 'text-rose-600 dark:text-rose-400' },
+    red: { bg: 'bg-red-100 dark:bg-red-900/30', text: 'text-red-600 dark:text-red-400' },
+    green: { bg: 'bg-green-100 dark:bg-green-900/30', text: 'text-green-600 dark:text-green-400' },
+    purple: { bg: 'bg-purple-100 dark:bg-purple-900/30', text: 'text-purple-600 dark:text-purple-400' },
+    blue: { bg: 'bg-blue-100 dark:bg-blue-900/30', text: 'text-blue-600 dark:text-blue-400' },
 };
 
 const ToolsLandingPage: React.FC = () => {
@@ -146,7 +146,7 @@ const ToolsLandingPage: React.FC = () => {
                                     transition={{ delay: index * 0.1 }}
                                     className={`group bg-surface rounded-3xl p-8 border border-border shadow-sm hover:shadow-lg transition-all relative overflow-hidden ${isLocked ? 'opacity-75' : ''}`}
                                 >
-                                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${colorClasses[tool.color]?.bg || 'bg-gray-100'} ${colorClasses[tool.color]?.text || 'text-gray-600'}`}>
+                                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${colorClasses[tool.color]?.bg || 'bg-surface-hover'} ${colorClasses[tool.color]?.text || 'text-text-secondary'}`}>
                                         <Icon size={24} />
                                     </div>
                                     <h3 className="font-display font-bold text-xl text-text-primary mb-2 group-hover:text-primary transition-colors">{tool.name}</h3>

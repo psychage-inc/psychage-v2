@@ -111,44 +111,6 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
         ))}
       </FilterSection>
 
-      {/* Specialty — searchable, grouped */}
-      <FilterSection title="Specialty">
-        <div className="relative mb-2">
-          <Search size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400" />
-          <input
-            type="text"
-            value={specialtySearch}
-            onChange={e => setSpecialtySearch(e.target.value)}
-            placeholder="Search specialties..."
-            className="w-full pl-8 pr-3 py-1.5 text-xs bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-            aria-label="Search specialties"
-          />
-        </div>
-        {visibleSpecialties.map(spec => (
-          <CheckboxItem
-            key={spec.id}
-            label={spec.label}
-            sublabel={spec.group}
-            checked={(params.specialty_slugs || []).includes(spec.slug)}
-            onChange={() => {
-              const current = params.specialty_slugs || [];
-              const next = current.includes(spec.slug)
-                ? current.filter(s => s !== spec.slug)
-                : [...current, spec.slug];
-              onChange({ specialty_slugs: next.length > 0 ? next : undefined });
-            }}
-          />
-        ))}
-        {filteredSpecialties.length > 8 && (
-          <button
-            onClick={() => setShowAllSpecialties(!showAllSpecialties)}
-            className="text-xs font-medium text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 mt-1"
-          >
-            {showAllSpecialties ? 'Show fewer' : `Show all ${filteredSpecialties.length}`}
-          </button>
-        )}
-      </FilterSection>
-
       {/* Session Format */}
       <FilterSection title="Session Format">
         <CheckboxItem
@@ -168,26 +130,6 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
         />
       </FilterSection>
 
-      {/* Language */}
-      <FilterSection title="Language">
-        {(showAllLanguages ? filters.languages : filters.languages.slice(0, 6)).map(lang => (
-          <CheckboxItem
-            key={lang.id}
-            label={lang.label}
-            checked={(params.language_ids || []).includes(lang.id)}
-            onChange={() => toggleArrayParam('language_ids', lang.id)}
-          />
-        ))}
-        {filters.languages.length > 6 && (
-          <button
-            onClick={() => setShowAllLanguages(!showAllLanguages)}
-            className="text-xs font-medium text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 mt-1"
-          >
-            {showAllLanguages ? 'Show fewer' : `Show all ${filters.languages.length}`}
-          </button>
-        )}
-      </FilterSection>
-
       {/* More Filters */}
       <button
         onClick={() => setShowMore(!showMore)}
@@ -205,6 +147,64 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
             exit={{ height: 0, opacity: 0 }}
             className="space-y-6 overflow-hidden"
           >
+            {/* Specialty — searchable, grouped */}
+            <FilterSection title="Specialty">
+              <div className="relative mb-2">
+                <Search size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400" />
+                <input
+                  type="text"
+                  value={specialtySearch}
+                  onChange={e => setSpecialtySearch(e.target.value)}
+                  placeholder="Search specialties..."
+                  className="w-full pl-8 pr-3 py-1.5 text-xs bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  aria-label="Search specialties"
+                />
+              </div>
+              {visibleSpecialties.map(spec => (
+                <CheckboxItem
+                  key={spec.id}
+                  label={spec.label}
+                  sublabel={spec.group}
+                  checked={(params.specialty_slugs || []).includes(spec.slug)}
+                  onChange={() => {
+                    const current = params.specialty_slugs || [];
+                    const next = current.includes(spec.slug)
+                      ? current.filter(s => s !== spec.slug)
+                      : [...current, spec.slug];
+                    onChange({ specialty_slugs: next.length > 0 ? next : undefined });
+                  }}
+                />
+              ))}
+              {filteredSpecialties.length > 8 && (
+                <button
+                  onClick={() => setShowAllSpecialties(!showAllSpecialties)}
+                  className="text-xs font-medium text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 mt-1"
+                >
+                  {showAllSpecialties ? 'Show fewer' : `Show all ${filteredSpecialties.length}`}
+                </button>
+              )}
+            </FilterSection>
+
+            {/* Language */}
+            <FilterSection title="Language">
+              {(showAllLanguages ? filters.languages : filters.languages.slice(0, 6)).map(lang => (
+                <CheckboxItem
+                  key={lang.id}
+                  label={lang.label}
+                  checked={(params.language_ids || []).includes(lang.id)}
+                  onChange={() => toggleArrayParam('language_ids', lang.id)}
+                />
+              ))}
+              {filters.languages.length > 6 && (
+                <button
+                  onClick={() => setShowAllLanguages(!showAllLanguages)}
+                  className="text-xs font-medium text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 mt-1"
+                >
+                  {showAllLanguages ? 'Show fewer' : `Show all ${filters.languages.length}`}
+                </button>
+              )}
+            </FilterSection>
+
             {/* Cultural Competency */}
             <FilterSection title="Cultural Competency">
               {filters.culturalCompetencies.map(comp => (

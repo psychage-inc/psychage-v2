@@ -1,0 +1,2705 @@
+# Confirmed Corrupted Titles Audit
+
+Generated: 2026-04-09T19:21:52.017Z
+
+**656 articles** have a `title` field that exactly matches a poster filename from `~/Downloads/Psychage poster category *`. These titles were overwritten by the destructive cover-upload scripts (`upload-covers-categories-2-5.ts`, `-6-8-21.ts`, `-10-16.ts`, `upload-27-mismatched.ts`) which had this line:
+
+```ts
+if (needsRename) {
+  updatePayload.title = image.imageTitle;
+}
+```
+
+The original article titles are not recoverable from the DB alone — they need to be re-derived from `src/data/articles/category-*/*.tsx` source files (which retain the pre-corruption titles) or restored from a database backup.
+
+## Per-category counts
+
+| Category | Corrupted |
+|---|---|
+| Relationships & Social Health | 71 |
+| Chronic Illness, Pain & Medical Psychology | 66 |
+| Self-Esteem & Identity | 61 |
+| Habits, Motivation & Behavior Change | 57 |
+| Men's Mental Health | 56 |
+| Aging, Dementia & Late-Life Mental Health | 50 |
+| Understanding Mental Health Conditions | 47 |
+| Loneliness, Social Connection & Belonging | 42 |
+| Digital Life, Social Media & Modern Stressors | 40 |
+| Depression & Mood | 40 |
+| Therapy, Treatment & Mental Health Navigation | 39 |
+| Trauma-Informed Education & Healing | 35 |
+| Cultural Perspectives, Inclusion & Global Wellness | 29 |
+| Emotional Regulation & Self-Awareness | 22 |
+| Anxiety, Stress & Overwhelm | 1 |
+
+## Full list
+
+### Relationships & Social Health (71)
+
+- **CAT06-003**
+  - corrupted title: `Family Systems Theory`
+  - slug: `enmeshed-families-when-closeness-becomes-control`
+  - poster source: `Psychage poster category 6/FAM-003 — Family Systems Theory.jpeg`
+- **CAT06-073**
+  - corrupted title: `Understanding Teen Mental Health`
+  - slug: `estranged-siblings`
+  - poster source: `Psychage poster category 6/FAM-073 — Understanding Teen Mental Health.jpeg`
+- **CAT06-011**
+  - corrupted title: `What Is Good Enough Parenting`
+  - slug: `how-childhood-experiences-shape-your-adult-personality-and-relationships`
+  - poster source: `Psychage poster category 6/FAM-011 — What Is Good Enough Parenting.jpeg`
+- **CAT06-012**
+  - corrupted title: `Emotional Availability`
+  - slug: `adverse-childhood-experiences-aces-what-they-are-and-why-they-matter`
+  - poster source: `Psychage poster category 6/FAM-012 — Emotional Availability.jpeg`
+- **CAT06-061**
+  - corrupted title: `How Family Stories Shape Identity`
+  - slug: `sandwich-generation-caring-children-aging-parents`
+  - poster source: `Psychage poster category 6/FAM-061 — How Family Stories Shape Identity.jpeg`
+- **CAT06-029**
+  - corrupted title: `How Childhood Trauma Shapes the Adult Brain`
+  - slug: `stay-at-home-parent-identity-purpose-isolation-and-invisible-labor`
+  - poster source: `Psychage poster category 6/FAM-029 — How Childhood Trauma Shapes the Adult Brain.jpeg`
+- **CAT06-054**
+  - corrupted title: `Chosen Family`
+  - slug: `child-wont-go-school-understanding-school-avoidance`
+  - poster source: `Psychage poster category 6/FAM-054 — Chosen Family.jpeg`
+- **CAT06-056**
+  - corrupted title: `Parental Favoritism`
+  - slug: `children-grief-how-kids-process-loss-differently`
+  - poster source: `Psychage poster category 6/FAM-056 — Parental Favoritism.jpeg`
+- **CAT06-057**
+  - corrupted title: `How to Be a Supportive Parent`
+  - slug: `teen-self-harming-parents-guide-responding-care`
+  - poster source: `Psychage poster category 6/FAM-057 — How to Be a Supportive Parent.jpeg`
+- **CAT06-028**
+  - corrupted title: `The Lost Child`
+  - slug: `parental-anger-understanding-why-you-lose-your-temper-and-how-to-stop`
+  - poster source: `Psychage poster category 6/FAM-028 — The Lost Child.jpeg`
+- **CAT06-038**
+  - corrupted title: `Family Communication Patterns`
+  - slug: `healing-family-legacy-where-to-start`
+  - poster source: `Psychage poster category 6/FAM-038 — Family Communication Patterns.jpeg`
+- **CAT06-016**
+  - corrupted title: `Raising Emotionally Intelligent Children`
+  - slug: `children-of-divorce-long-term-psychological-effects-and-resilience`
+  - poster source: `Psychage poster category 6/FAM-016 — Raising Emotionally Intelligent Children.jpeg`
+- **CAT06-010**
+  - corrupted title: `Single Parenting`
+  - slug: `can-a-family-system-change-how-therapy-works-with-the-whole-unit`
+  - poster source: `Psychage poster category 6/FAM-010 — Single Parenting.jpeg`
+- **CAT06-046**
+  - corrupted title: `Emotionally Immature Parents`
+  - slug: `co-parenting-communication-tools-reducing-conflict`
+  - poster source: `Psychage poster category 6/FAM-046 — Emotionally Immature Parents.jpeg`
+- **CAT06-058**
+  - corrupted title: `The Psychology of Home`
+  - slug: `bullying-mental-health-supporting-child-social-cruelty`
+  - poster source: `Psychage poster category 6/FAM-058 — The Psychology of Home.jpeg`
+- **CAT06-025**
+  - corrupted title: `Family Roles`
+  - slug: `when-your-childs-mental-health-affects-your-own`
+  - poster source: `Psychage poster category 6/FAM-025 — Family Roles.jpeg`
+- **CAT06-032**
+  - corrupted title: `Attachment Between Parent and Child`
+  - slug: `epigenetics-and-trauma-can-stress-change-dna`
+  - poster source: `Psychage poster category 6/FAM-032 — Attachment Between Parent and Child.jpeg`
+- **CAT03-071**
+  - corrupted title: `Forgiveness`
+  - slug: `psychology-of-heartbreak-why-breakups-hurt`
+  - poster source: `Psychage poster category 20/SPI-015 — Forgiveness.jpeg`
+- **CAT06-026**
+  - corrupted title: `The Scapegoat`
+  - slug: `parenting-with-a-mental-health-condition-honesty-support-and-self-care`
+  - poster source: `Psychage poster category 6/FAM-026 — The Scapegoat.jpeg`
+- **CAT06-062**
+  - corrupted title: `The Pressure to Start a Family`
+  - slug: `caregiver-burnout-aging-parent-mental-health`
+  - poster source: `Psychage poster category 6/FAM-062 — The Pressure to Start a Family.jpeg`
+- **CAT06-019**
+  - corrupted title: `Parenting a Child With ADHD`
+  - slug: `the-inner-child-understanding-the-past-versions-of-yourself`
+  - poster source: `Psychage poster category 6/FAM-019 — Parenting a Child With ADHD.jpeg`
+- **CAT06-004**
+  - corrupted title: `The Role of Birth Order`
+  - slug: `disengaged-families-when-distance-replaces-connection`
+  - poster source: `Psychage poster category 6/FAM-004 — The Role of Birth Order.jpeg`
+- **CAT06-015**
+  - corrupted title: `Permissive Parenting`
+  - slug: `how-growing-up-with-an-addicted-parent-affects-adult-mental-health`
+  - poster source: `Psychage poster category 6/FAM-015 — Permissive Parenting.jpeg`
+- **CAT06-017**
+  - corrupted title: `How to Talk to Children About Mental Health`
+  - slug: `overprotective-parenting-when-keeping-kids-safe-prevents-them-from-growing`
+  - poster source: `Psychage poster category 6/FAM-017 — How to Talk to Children About Mental Health.jpeg`
+- **CAT06-018**
+  - corrupted title: `Parenting a Child With Anxiety`
+  - slug: `how-bullying-in-childhood-creates-lasting-psychological-patterns`
+  - poster source: `Psychage poster category 6/FAM-018 — Parenting a Child With Anxiety.jpeg`
+- **CAT06-064**
+  - corrupted title: `Pregnancy and Mental Health`
+  - slug: `watching-parent-decline-grief-before-loss`
+  - poster source: `Psychage poster category 6/FAM-064 — Pregnancy and Mental Health.jpeg`
+- **CAT06-070**
+  - corrupted title: `How Childhood Shapes Your Relationship With Food`
+  - slug: `self-care-for-caregivers`
+  - poster source: `Psychage poster category 6/FAM-070 — How Childhood Shapes Your Relationship With Food.jpeg`
+- **CAT06-071**
+  - corrupted title: `Parenting in the Digital Age`
+  - slug: `sibling-rivalry`
+  - poster source: `Psychage poster category 6/FAM-071 — Parenting in the Digital Age.jpeg`
+- **CAT06-033**
+  - corrupted title: `Secure Base and Safe Haven`
+  - slug: `breaking-the-cycle-stop-repeating-parents-patterns`
+  - poster source: `Psychage poster category 6/FAM-033 — Secure Base and Safe Haven.jpeg`
+- **CAT06-031**
+  - corrupted title: `Resilience in Childhood`
+  - slug: `what-is-intergenerational-trauma-how-pain-passes-down`
+  - poster source: `Psychage poster category 6/FAM-031 — Resilience in Childhood.jpeg`
+- **CAT06-036**
+  - corrupted title: `Breaking Generational Cycles`
+  - slug: `unprocessed-grief-anxiety-next-generation`
+  - poster source: `Psychage poster category 6/FAM-036 — Breaking Generational Cycles.jpeg`
+- **CAT06-037**
+  - corrupted title: `How to Parent Differently Than You Were Parented`
+  - slug: `genogram-mapping-family-emotional-history`
+  - poster source: `Psychage poster category 6/FAM-037 — How to Parent Differently Than You Were Parented.jpeg`
+- **CAT06-044**
+  - corrupted title: `When a Parent Has a Mental Illness`
+  - slug: `blended-families-psychological-challenges-stepparenting`
+  - poster source: `Psychage poster category 6/FAM-044 — When a Parent Has a Mental Illness.jpeg`
+- **CAT06-048**
+  - corrupted title: `The Inner Family System`
+  - slug: `shared-custody-attachment-transitions-young-children`
+  - poster source: `Psychage poster category 6/FAM-048 — The Inner Family System.jpeg`
+- **CAT06-049**
+  - corrupted title: `Family Meals and Mental Health`
+  - slug: `dating-again-single-parent-managing-emotions`
+  - poster source: `Psychage poster category 6/FAM-049 — Family Meals and Mental Health.jpeg`
+- **CAT06-039**
+  - corrupted title: `The Parentified Adult Child`
+  - slug: `forgiveness-family-trauma-necessary-for-healing`
+  - poster source: `Psychage poster category 6/FAM-039 — The Parentified Adult Child.jpeg`
+- **CAT06-040**
+  - corrupted title: `Enmeshment`
+  - slug: `when-healing-means-separating-estrangement-last-resort`
+  - poster source: `Psychage poster category 6/FAM-040 — Enmeshment.jpeg`
+- **CAT06-005**
+  - corrupted title: `Only Children`
+  - slug: `family-secrets-how-hidden-information-shapes-mental-health-across-generations`
+  - poster source: `Psychage poster category 6/FAM-005 — Only Children.jpeg`
+- **CAT06-050**
+  - corrupted title: `Siblings and Rivalry`
+  - slug: `long-term-mental-health-outcomes-children-divorce`
+  - poster source: `Psychage poster category 6/FAM-050 — Siblings and Rivalry.jpeg`
+- **CAT06-006**
+  - corrupted title: `Sibling Relationships`
+  - slug: `triangulation-when-two-people-use-a-third-to-manage-conflict`
+  - poster source: `Psychage poster category 6/FAM-006 — Sibling Relationships.jpeg`
+- **CAT06-014**
+  - corrupted title: `Authoritative vs Authoritarian Parenting`
+  - slug: `parentification-when-children-become-caregivers-too-soon`
+  - poster source: `Psychage poster category 6/FAM-014 — Authoritative vs Authoritarian Parenting.jpeg`
+- **CAT06-034**
+  - corrupted title: `How to Repair the Parent-Child Relationship`
+  - slug: `cultural-trauma-historical-oppression-affects-families`
+  - poster source: `Psychage poster category 6/FAM-034 — How to Repair the Parent-Child Relationship.jpeg`
+- **CAT06-007**
+  - corrupted title: `How Parental Conflict Affects Children`
+  - slug: `how-your-birth-order-affects-your-psychological-development`
+  - poster source: `Psychage poster category 6/FAM-007 — How Parental Conflict Affects Children.jpeg`
+- **CAT06-008**
+  - corrupted title: `Divorce and Children`
+  - slug: `family-rules-written-and-unwritten-how-they-shape-your-beliefs`
+  - poster source: `Psychage poster category 6/FAM-008 — Divorce and Children.jpeg`
+- **CAT06-047**
+  - corrupted title: `Healing From a Difficult Childhood`
+  - slug: `parent-speaks-negatively-other-impact-children`
+  - poster source: `Psychage poster category 6/FAM-047 — Healing From a Difficult Childhood.jpeg`
+- **CAT06-022**
+  - corrupted title: `The Empty Nest`
+  - slug: `postpartum-depression-and-anxiety-beyond-the-baby-blues`
+  - poster source: `Psychage poster category 6/FAM-022 — The Empty Nest.jpeg`
+- **CAT06-020**
+  - corrupted title: `The Teenage Brain`
+  - slug: `reparenting-yourself-how-to-give-yourself-what-you-didnt-receive`
+  - poster source: `Psychage poster category 6/FAM-020 — The Teenage Brain.jpeg`
+- **CAT06-021**
+  - corrupted title: `Letting Go`
+  - slug: `parental-burnout-when-the-job-that-matters-most-depletes-you`
+  - poster source: `Psychage poster category 6/FAM-021 — Letting Go.jpeg`
+- **CAT06-023**
+  - corrupted title: `Grandparents and Mental Health`
+  - slug: `parenting-guilt-why-no-parent-feels-like-theyre-doing-enough`
+  - poster source: `Psychage poster category 6/FAM-023 — Grandparents and Mental Health.jpeg`
+- **CAT06-024**
+  - corrupted title: `Estranged Family Relationships`
+  - slug: `single-parenting-and-mental-health-managing-alone-without-breaking-down`
+  - poster source: `Psychage poster category 6/FAM-024 — Estranged Family Relationships.jpeg`
+- **CAT06-051**
+  - corrupted title: `The Long Shadow of Childhood`
+  - slug: `signs-child-struggling-parents-guide-mental-health`
+  - poster source: `Psychage poster category 6/FAM-051 — The Long Shadow of Childhood.jpeg`
+- **CAT06-052**
+  - corrupted title: `Family Secrets`
+  - slug: `talk-child-mental-health-age-appropriate-conversations`
+  - poster source: `Psychage poster category 6/FAM-052 — Family Secrets.jpeg`
+- **CAT06-053**
+  - corrupted title: `How to Set Limits With Family`
+  - slug: `childhood-anxiety-what-it-looks-like-how-parents-help`
+  - poster source: `Psychage poster category 6/FAM-053 — How to Set Limits With Family.jpeg`
+- **CAT06-055**
+  - corrupted title: `Grief When a Parent Dies`
+  - slug: `helping-children-manage-big-emotions-emotion-coaching`
+  - poster source: `Psychage poster category 6/FAM-055 — Grief When a Parent Dies.jpeg`
+- **CAT06-066**
+  - corrupted title: `Miscarriage`
+  - slug: `sibling-conflicts-over-eldercare`
+  - poster source: `Psychage poster category 6/FAM-066 — Miscarriage.jpeg`
+- **CAT06-072**
+  - corrupted title: `How to Raise a Resilient Child`
+  - slug: `impact-of-losing-sibling`
+  - poster source: `Psychage poster category 6/FAM-072 — How to Raise a Resilient Child.jpeg`
+- **CAT06-059**
+  - corrupted title: `Moving House and Mental Health`
+  - slug: `should-child-see-therapist-when-seek-professional-help`
+  - poster source: `Psychage poster category 6/FAM-059 — Moving House and Mental Health.jpeg`
+- **CAT06-067**
+  - corrupted title: `Childhood Emotional Neglect`
+  - slug: `guilt-of-choosing-care-facility`
+  - poster source: `Psychage poster category 6/FAM-067 — Childhood Emotional Neglect.jpeg`
+- **CAT06-068**
+  - corrupted title: `How to Reparent Yourself`
+  - slug: `financial-stress-of-eldercare`
+  - poster source: `Psychage poster category 6/FAM-068 — How to Reparent Yourself.jpeg`
+- **CAT06-069**
+  - corrupted title: `The Psychology of Forgiveness in Families`
+  - slug: `cultural-expectations-around-eldercare`
+  - poster source: `Psychage poster category 6/FAM-069 — The Psychology of Forgiveness in Families.jpeg`
+- **CAT06-063**
+  - corrupted title: `Infertility and Grief`
+  - slug: `hard-conversations-driving-finances-end-of-life-parents`
+  - poster source: `Psychage poster category 6/FAM-063 — Infertility and Grief.jpeg`
+- **CAT06-060**
+  - corrupted title: `Family Rituals`
+  - slug: `building-resilience-children-research-what-works`
+  - poster source: `Psychage poster category 6/FAM-060 — Family Rituals.jpeg`
+- **CAT06-074**
+  - corrupted title: `When Adult Children Struggle`
+  - slug: `adult-sibling-relationships`
+  - poster source: `Psychage poster category 6/FAM-074 — When Adult Children Struggle.jpeg`
+- **CAT06-043**
+  - corrupted title: `Grief Within Families`
+  - slug: `how-children-process-divorce-different-ages`
+  - poster source: `Psychage poster category 6/FAM-043 — Grief Within Families.jpeg`
+- **CAT06-013**
+  - corrupted title: `How Parents Unknowingly Pass On Anxiety`
+  - slug: `the-long-shadow-of-emotional-neglect-what-happens-when-feelings-arent-validated`
+  - poster source: `Psychage poster category 6/FAM-013 — How Parents Unknowingly Pass On Anxiety.jpeg`
+- **CAT06-027**
+  - corrupted title: `Parentification`
+  - slug: `the-pressure-of-intensive-parenting-why-modern-parenting-is-exhausting`
+  - poster source: `Psychage poster category 6/FAM-027 — Parentification.jpeg`
+- **CAT06-030**
+  - corrupted title: `Adverse Childhood Experiences`
+  - slug: `managing-screen-time-battles-without-losing-your-mind`
+  - poster source: `Psychage poster category 6/FAM-030 — Adverse Childhood Experiences.jpeg`
+- **CAT06-042**
+  - corrupted title: `Caring for Aging Parents`
+  - slug: `parallel-parenting-when-co-parenting-isnt-possible`
+  - poster source: `Psychage poster category 6/FAM-042 — Caring for Aging Parents.jpeg`
+- **CAT06-041**
+  - corrupted title: `Family Estrangement`
+  - slug: `co-parenting-after-divorce-childrens-mental-health-first`
+  - poster source: `Psychage poster category 6/FAM-041 — Family Estrangement.jpeg`
+- **CAT06-002**
+  - corrupted title: `What Is a Healthy Family`
+  - slug: `the-roles-people-play-in-families-scapegoat-hero-lost-child-and-more`
+  - poster source: `Psychage poster category 6/FAM-002 — What Is a Healthy Family.jpeg`
+- **CAT06-009**
+  - corrupted title: `Blended Families`
+  - slug: `the-identified-patient-when-one-person-carries-the-familys-pain`
+  - poster source: `Psychage poster category 6/FAM-009 — Blended Families.jpeg`
+
+### Chronic Illness, Pain & Medical Psychology (66)
+
+- **CAT20-029**
+  - corrupted title: `Music and the Spirit`
+  - slug: `hiv-aids-and-mental-health-stigma-treatment-and-thriving`
+  - poster source: `Psychage poster category 20/SPI-029 — Music and the Spirit.jpeg`
+- **CAT20-030**
+  - corrupted title: `Art and the Sacred`
+  - slug: `chronic-kidney-disease-and-psychological-wellbeing`
+  - poster source: `Psychage poster category 20/SPI-030 — Art and the Sacred.jpeg`
+- **CAT20-042**
+  - corrupted title: `The Serenity Prayer`
+  - slug: `organ-transplant-psychology-the-emotional-journey-of-receiving-a-new-organ`
+  - poster source: `Psychage poster category 20/SPI-042 — The Serenity Prayer.jpeg`
+- **CAT20-043**
+  - corrupted title: `Spiritual Bypassing`
+  - slug: `pacing-and-energy-management-for-people-with-chronic-conditions`
+  - poster source: `Psychage poster category 20/SPI-043 — Spiritual Bypassing.jpeg`
+- **CAT20-044**
+  - corrupted title: `The Psychology of Wonder`
+  - slug: `building-a-medical-support-team-that-addresses-mind-and-body`
+  - poster source: `Psychage poster category 20/SPI-044 — The Psychology of Wonder.jpeg`
+- **CAT20-041**
+  - corrupted title: `Moral Injury`
+  - slug: `terminal-diagnosis-and-mental-health-finding-meaning-at-the-end`
+  - poster source: `Psychage poster category 20/SPI-041 — Moral Injury.jpeg`
+- **CAT20-005**
+  - corrupted title: `Awe and Mental Health`
+  - slug: `invisible-illness-the-mental-toll-of-looking-fine-while-suffering`
+  - poster source: `Psychage poster category 20/SPI-005 — Awe and Mental Health.jpeg`
+- **CAT20-048**
+  - corrupted title: `Compassion Fatigue in Helpers`
+  - slug: `self-compassion-when-your-body-lets-you-down`
+  - poster source: `Psychage poster category 20/SPI-048 — Compassion Fatigue in Helpers.jpeg`
+- **CAT20-010**
+  - corrupted title: `Death Anxiety`
+  - slug: `advocacy-and-assertiveness-in-healthcare-speaking-up-for-yourself`
+  - poster source: `Psychage poster category 20/SPI-010 — Death Anxiety.jpeg`
+- **CAT20-050**
+  - corrupted title: `Existential Crisis`
+  - slug: `complementary-approaches-to-chronic-illness-what-helps-and-whats-hype`
+  - poster source: `Psychage poster category 20/SPI-050 — Existential Crisis.jpeg`
+- **CAT20-011**
+  - corrupted title: `Existential Therapy`
+  - slug: `neuroscience-of-chronic-pain-why-your-brain-gets-stuck-on-pain-signals`
+  - poster source: `Psychage poster category 20/SPI-011 — Existential Therapy.jpeg`
+- **CAT20-022**
+  - corrupted title: `Stoicism and Mental Health`
+  - slug: `movement-and-chronic-pain-why-gentle-exercise-helps`
+  - poster source: `Psychage poster category 20/SPI-022 — Stoicism and Mental Health.jpeg`
+- **CAT20-046**
+  - corrupted title: `The Afterlife`
+  - slug: `when-your-partner-has-a-chronic-illness-the-healthy-partners-mental-health`
+  - poster source: `Psychage poster category 20/SPI-046 — The Afterlife.jpeg`
+- **CAT20-026**
+  - corrupted title: `Sacred Space`
+  - slug: `multiple-sclerosis-and-mental-health-neurological-and-emotional-challenges`
+  - poster source: `Psychage poster category 20/SPI-026 — Sacred Space.jpeg`
+- **CAT20-037**
+  - corrupted title: `Self-Compassion`
+  - slug: `surgery-and-mental-health-preparing-for-and-recovering-from-operations`
+  - poster source: `Psychage poster category 20/SPI-037 — Self-Compassion.jpeg`
+- **CAT20-027**
+  - corrupted title: `Community and Belonging`
+  - slug: `epilepsy-and-mental-health-seizures-stigma-and-psychological-impact`
+  - poster source: `Psychage poster category 20/SPI-027 — Community and Belonging.jpeg`
+- **CAT20-056**
+  - corrupted title: `The Spiritual Dimension of Trauma Healing`
+  - slug: `writing-about-illness-expressive-writing-as-a-tool-for-medical-coping`
+  - poster source: `Psychage poster category 20/SPI-056 — The Spiritual Dimension of Trauma Healing.jpeg`
+- **CAT20-059**
+  - corrupted title: `The Shadow`
+  - slug: `the-role-of-palliative-psychology-in-non-terminal-chronic-conditions`
+  - poster source: `Psychage poster category 20/SPI-059 — The Shadow.jpeg`
+- **CAT20-060**
+  - corrupted title: `Sacred Masculine and Sacred Feminine`
+  - slug: `rehabilitation-psychology-mental-health-support-through-physical-recovery`
+  - poster source: `Psychage poster category 20/SPI-060 — Sacred Masculine and Sacred Feminine.jpeg`
+- **CAT20-052**
+  - corrupted title: `Gratitude Practices`
+  - slug: `support-groups-for-chronic-illness-in-person-and-online-communities`
+  - poster source: `Psychage poster category 20/SPI-052 — Gratitude Practices.jpeg`
+- **CAT20-062**
+  - corrupted title: `The Spiritual Dimension of Recovery`
+  - slug: `the-spoon-theory-explained-a-framework-for-understanding-energy-limitation`
+  - poster source: `Psychage poster category 20/SPI-062 — The Spiritual Dimension of Recovery.jpeg`
+- **CAT20-063**
+  - corrupted title: `Meaning at Work`
+  - slug: `chronic-illness-and-body-image-when-your-body-doesnt-look-or-function-as-expected`
+  - poster source: `Psychage poster category 20/SPI-063 — Meaning at Work.jpeg`
+- **CAT20-064**
+  - corrupted title: `The Long Game`
+  - slug: `healthcare-navigators-the-mental-health-value-of-having-someone-guide-your-care`
+  - poster source: `Psychage poster category 20/SPI-064 — The Long Game.jpeg`
+- **CAT20-065**
+  - corrupted title: `Healing the Spiritual Wound`
+  - slug: `medical-decision-making-when-youre-overwhelmed-frameworks-for-clarity`
+  - poster source: `Psychage poster category 20/SPI-065 — Healing the Spiritual Wound.jpeg`
+- **CAT20-066**
+  - corrupted title: `Philosophy as Medicine`
+  - slug: `medication-adherence-and-mental-health-why-people-stop-taking-prescribed-treatments`
+  - poster source: `Psychage poster category 20/SPI-066 — Philosophy as Medicine.jpeg`
+- **CAT20-067**
+  - corrupted title: `Spiritual Community`
+  - slug: `chronic-illness-online-communities-benefits-and-risks-of-health-forums`
+  - poster source: `Psychage poster category 20/SPI-067 — Spiritual Community.jpeg`
+- **CAT20-068**
+  - corrupted title: `The Examined Death`
+  - slug: `integrated-care-models-when-mental-health-and-medical-treatment-work-together`
+  - poster source: `Psychage poster category 20/SPI-068 — The Examined Death.jpeg`
+- **CAT20-016**
+  - corrupted title: `Self-Transcendence`
+  - slug: `cognitive-behavioral-therapy-for-chronic-pain-rewiring-your-response`
+  - poster source: `Psychage poster category 20/SPI-016 — Self-Transcendence.jpeg`
+- **CAT20-021**
+  - corrupted title: `Buddhist Psychology`
+  - slug: `the-relationship-between-chronic-pain-and-depression`
+  - poster source: `Psychage poster category 20/SPI-021 — Buddhist Psychology.jpeg`
+- **CAT20-053**
+  - corrupted title: `Mindful Compassion`
+  - slug: `mindfulness-based-cognitive-therapy-for-recurrent-medical-conditions`
+  - poster source: `Psychage poster category 20/SPI-053 — Mindful Compassion.jpeg`
+- **CAT20-017**
+  - corrupted title: `Contemplative Practices`
+  - slug: `fibromyalgia-and-mental-health-the-condition-doctors-struggled-to-believe`
+  - poster source: `Psychage poster category 20/SPI-017 — Contemplative Practices.jpeg`
+- **CAT20-018**
+  - corrupted title: `The Dark Night of the Soul`
+  - slug: `complex-regional-pain-syndrome-when-pain-becomes-neurological`
+  - poster source: `Psychage poster category 20/SPI-018 — The Dark Night of the Soul.jpeg`
+- **CAT20-039**
+  - corrupted title: `Acceptance`
+  - slug: `pediatric-medical-trauma-how-hospital-experiences-affect-children`
+  - poster source: `Psychage poster category 20/SPI-039 — Acceptance.jpeg`
+- **CAT20-051**
+  - corrupted title: `Integration`
+  - slug: `health-literacy-and-mental-health-understanding-your-condition-reduces-anxiety`
+  - poster source: `Psychage poster category 20/SPI-051 — Integration.jpeg`
+- **CAT20-034**
+  - corrupted title: `Psychedelics and Spirituality`
+  - slug: `long-covid-and-mental-health-the-psychological-aftermath-of-persistent-symptoms`
+  - poster source: `Psychage poster category 20/SPI-034 — Psychedelics and Spirituality.jpeg`
+- **CAT20-057**
+  - corrupted title: `Psychospiritual Crisis`
+  - slug: `children-with-chronic-illness-supporting-young-patients-mental-health`
+  - poster source: `Psychage poster category 20/SPI-057 — Psychospiritual Crisis.jpeg`
+- **CAT20-061**
+  - corrupted title: `Flow States`
+  - slug: `chronic-illness-and-travel-managing-anxiety-about-being-far-from-medical-care`
+  - poster source: `Psychage poster category 20/SPI-061 — Flow States.jpeg`
+- **CAT20-001**
+  - corrupted title: `The Science of Meaning`
+  - slug: `the-emotional-stages-of-a-chronic-illness-diagnosis`
+  - poster source: `Psychage poster category 20/SPI-001 — The Science of Meaning.jpeg`
+- **CAT20-002**
+  - corrupted title: `Viktor Frankl and Logotherapy`
+  - slug: `identity-after-diagnosis-who-are-you-when-your-body-changes`
+  - poster source: `Psychage poster category 20/SPI-002 — Viktor Frankl and Logotherapy.jpeg`
+- **CAT20-004**
+  - corrupted title: `Secular Spirituality`
+  - slug: `the-grief-of-chronic-illness-mourning-the-life-you-expected`
+  - poster source: `Psychage poster category 20/SPI-004 — Secular Spirituality.jpeg`
+- **CAT20-007**
+  - corrupted title: `Prayer and Mental Health`
+  - slug: `the-boom-and-bust-cycle-why-people-with-chronic-illness-overdo-it`
+  - poster source: `Psychage poster category 20/SPI-007 — Prayer and Mental Health.jpeg`
+- **CAT20-003**
+  - corrupted title: `Religion and Mental Health`
+  - slug: `medical-gaslighting-when-doctors-dismiss-your-symptoms`
+  - poster source: `Psychage poster category 12/CUL-015 — Religion and Mental Health.jpeg`
+- **CAT20-008**
+  - corrupted title: `Gratitude`
+  - slug: `fatigue-and-mental-health-when-exhaustion-becomes-your-whole-identity`
+  - poster source: `Psychage poster category 20/SPI-008 — Gratitude.jpeg`
+- **CAT20-028**
+  - corrupted title: `Nature as Spiritual Experience`
+  - slug: `autoimmune-conditions-and-mental-health-when-your-body-attacks-itself`
+  - poster source: `Psychage poster category 20/SPI-028 — Nature as Spiritual Experience.jpeg`
+- **CAT20-036**
+  - corrupted title: `Compassion`
+  - slug: `icu-delirium-and-post-icu-ptsd-the-hidden-epidemic`
+  - poster source: `Psychage poster category 20/SPI-036 — Compassion.jpeg`
+- **CAT20-054**
+  - corrupted title: `Values Clarification`
+  - slug: `pain-psychology-a-growing-field-at-the-intersection-of-medicine-and-mental-health`
+  - poster source: `Psychage poster category 20/SPI-054 — Values Clarification.jpeg`
+- **CAT20-058**
+  - corrupted title: `The Gift of Impermanence`
+  - slug: `chronic-illness-and-parenting-managing-health-while-raising-children`
+  - poster source: `Psychage poster category 20/SPI-058 — The Gift of Impermanence.jpeg`
+- **CAT20-009**
+  - corrupted title: `The Meaning of Suffering`
+  - slug: `the-financial-toxicity-of-chronic-illness-when-healthcare-costs-destroy-wellbeing`
+  - poster source: `Psychage poster category 20/SPI-009 — The Meaning of Suffering.jpeg`
+- **CAT20-049**
+  - corrupted title: `The Psychology of Sacred Texts`
+  - slug: `navigating-disability-benefits-the-mental-health-impact-of-the-application-process`
+  - poster source: `Psychage poster category 20/SPI-049 — The Psychology of Sacred Texts.jpeg`
+- **CAT20-047**
+  - corrupted title: `Finding Your Why`
+  - slug: `return-to-work-after-serious-illness-psychological-readjustment`
+  - poster source: `Psychage poster category 20/SPI-047 — Finding Your Why.jpeg`
+- **CAT20-031**
+  - corrupted title: `Pilgrimage`
+  - slug: `inflammatory-bowel-disease-and-mental-health-the-gut-brain-axis-in-action`
+  - poster source: `Psychage poster category 20/SPI-031 — Pilgrimage.jpeg`
+- **CAT20-032**
+  - corrupted title: `End-of-Life and Meaning`
+  - slug: `chronic-respiratory-disease-and-anxiety-when-breathing-becomes-frightening`
+  - poster source: `Psychage poster category 20/SPI-032 — End-of-Life and Meaning.jpeg`
+- **CAT20-035**
+  - corrupted title: `Altruism and Wellbeing`
+  - slug: `medical-trauma-when-healthcare-experiences-leave-psychological-scars`
+  - poster source: `Psychage poster category 20/SPI-035 — Altruism and Wellbeing.jpeg`
+- **CAT20-045**
+  - corrupted title: `Transcendence`
+  - slug: `the-spoonie-community-finding-connection-through-shared-illness-experience`
+  - poster source: `Psychage poster category 20/SPI-045 — Transcendence.jpeg`
+- **CAT20-020**
+  - corrupted title: `Faith and Mental Health`
+  - slug: `pain-and-sleep-the-vicious-cycle-and-how-to-break-it`
+  - poster source: `Psychage poster category 20/SPI-020 — Faith and Mental Health.jpeg`
+- **CAT20-006**
+  - corrupted title: `Meditation`
+  - slug: `health-anxiety-vs-legitimate-concern-navigating-worry-after-diagnosis`
+  - poster source: `Psychage poster category 20/SPI-006 — Meditation.jpeg`
+- **CAT20-014**
+  - corrupted title: `The Psychology of Hope`
+  - slug: `acceptance-and-commitment-therapy-for-chronic-pain`
+  - poster source: `Psychage poster category 20/SPI-014 — The Psychology of Hope.jpeg`
+- **CAT20-012**
+  - corrupted title: `Post-Traumatic Growth`
+  - slug: `central-sensitization-when-your-nervous-system-amplifies-pain`
+  - poster source: `Psychage poster Category 1/EMO-071 — Post-Traumatic Growth.jpeg`
+- **CAT20-013**
+  - corrupted title: `Mindfulness`
+  - slug: `pain-catastrophizing-how-thoughts-make-pain-worse-and-how-to-stop`
+  - poster source: `Psychage poster category 20/SPI-013 — Mindfulness.jpeg`
+- **CAT20-015**
+  - corrupted title: `Forgiveness`
+  - slug: `mindfulness-based-pain-management-what-the-evidence-shows`
+  - poster source: `Psychage poster category 20/SPI-015 — Forgiveness.jpeg`
+- **CAT20-038**
+  - corrupted title: `The Inner Critic`
+  - slug: `needle-phobia-and-medical-avoidance-when-fear-prevents-healthcare`
+  - poster source: `Psychage poster category 20/SPI-038 — The Inner Critic.jpeg`
+- **CAT20-040**
+  - corrupted title: `The Examined Life`
+  - slug: `the-psychology-of-waiting-for-test-results-managing-medical-uncertainty`
+  - poster source: `Psychage poster category 20/SPI-040 — The Examined Life.jpeg`
+- **CAT20-019**
+  - corrupted title: `Religious Trauma`
+  - slug: `opioids-pain-and-mental-health-navigating-treatment-without-addiction`
+  - poster source: `Psychage poster category 20/SPI-019 — Religious Trauma.jpeg`
+- **CAT20-023**
+  - corrupted title: `Ikigai`
+  - slug: `cancer-and-mental-health-psychological-support-through-diagnosis-and-treatment`
+  - poster source: `Psychage poster category 20/SPI-023 — Ikigai.jpeg`
+- **CAT20-024**
+  - corrupted title: `Meaning-Making After Loss`
+  - slug: `diabetes-and-depression-managing-two-conditions-together`
+  - poster source: `Psychage poster category 20/SPI-024 — Meaning-Making After Loss.jpeg`
+- **CAT20-025**
+  - corrupted title: `The Psychology of Ritual`
+  - slug: `heart-disease-and-anxiety-the-cardiac-mental-health-connection`
+  - poster source: `Psychage poster category 20/SPI-025 — The Psychology of Ritual.jpeg`
+
+### Self-Esteem & Identity (61)
+
+- **CAT04-061**
+  - corrupted title: `Self-Worth in Recovery`
+  - slug: `what-is-perfectionism-high-standards-vs-self-punishment`
+  - poster source: `Psychage poster category 4/SLF-061 — Self-Worth in Recovery.jpeg`
+- **CAT04-024**
+  - corrupted title: `Confidence in Relationships`
+  - slug: `imposter-syndrome-in-academia-hidden-crisis-students-researchers`
+  - poster source: `Psychage poster category 4/SLF-024 — Confidence in Relationships.jpeg`
+- **CAT04-025**
+  - corrupted title: `What Identity Actually Means`
+  - slug: `how-perfectionism-fuels-imposter-syndrome`
+  - poster source: `Psychage poster category 4/SLF-025 — What Identity Actually Means.jpeg`
+- **CAT04-035**
+  - corrupted title: `Healthy Ambition vs Toxic Ambition`
+  - slug: `body-neutrality-alternative-to-body-positivity`
+  - poster source: `Psychage poster category 4/SLF-035 — Healthy Ambition vs Toxic Ambition.jpeg`
+- **CAT04-039**
+  - corrupted title: `Intrinsic vs Extrinsic Motivation`
+  - slug: `aging-body-image-navigating-physical-changes-self-compassion`
+  - poster source: `Psychage poster category 4/SLF-039 — Intrinsic vs Extrinsic Motivation.jpeg`
+- **CAT04-028**
+  - corrupted title: `Cultural Identity and Mental Health`
+  - slug: `overcoming-imposter-syndrome-evidence-based-strategies`
+  - poster source: `Psychage poster category 4/SLF-028 — Cultural Identity and Mental Health.jpeg`
+- **CAT04-030**
+  - corrupted title: `Sexual Identity and Wellbeing`
+  - slug: `from-fraud-to-competent-rewriting-internal-narrative`
+  - poster source: `Psychage poster category 4/SLF-030 — Sexual Identity and Wellbeing.jpeg`
+- **CAT04-033**
+  - corrupted title: `Parent Identity`
+  - slug: `social-media-body-image-filter-effect-self-perception`
+  - poster source: `Psychage poster category 4/SLF-033 — Parent Identity.jpeg`
+- **CAT04-027**
+  - corrupted title: `When Your Identity Feels Unstable`
+  - slug: `chronic-self-doubt-making-decisions-when-you-dont-trust-yourself`
+  - poster source: `Psychage poster category 4/SLF-027 — When Your Identity Feels Unstable.jpeg`
+- **CAT04-034**
+  - corrupted title: `The Psychology of Perfectionism`
+  - slug: `male-body-image-issues-overlooked-crisis`
+  - poster source: `Psychage poster category 4/SLF-034 — The Psychology of Perfectionism.jpeg`
+- **CAT04-040**
+  - corrupted title: `How to Reconnect With What Matters`
+  - slug: `helping-children-develop-healthy-body-image`
+  - poster source: `Psychage poster category 4/SLF-040 — How to Reconnect With What Matters.jpeg`
+- **CAT04-043**
+  - corrupted title: `The Psychology of Humility`
+  - slug: `living-authentically-what-it-means-why-difficult`
+  - poster source: `Psychage poster category 4/SLF-043 — The Psychology of Humility.jpeg`
+- **CAT04-052**
+  - corrupted title: `How to Stop Abandoning Yourself`
+  - slug: `self-efficacy-believing-makes-possible`
+  - poster source: `Psychage poster category 4/SLF-052 — How to Stop Abandoning Yourself.jpeg`
+- **CAT04-053**
+  - corrupted title: `Self-Sabotage`
+  - slug: `small-wins-build-major-confidence`
+  - poster source: `Psychage poster category 4/SLF-053 — Self-Sabotage.jpeg`
+- **CAT04-046**
+  - corrupted title: `How to Love Yourself`
+  - slug: `cultural-identity-mental-health-navigating-multiple-selves`
+  - poster source: `Psychage poster category 4/SLF-046 — How to Love Yourself.jpeg`
+- **CAT04-047**
+  - corrupted title: `The Science of Self-Acceptance`
+  - slug: `gender-identity-mental-health-psychological-impact`
+  - poster source: `Psychage poster category 4/SLF-047 — The Science of Self-Acceptance.jpeg`
+- **CAT04-051**
+  - corrupted title: `The Inner Child`
+  - slug: `confidence-gap-act-confident`
+  - poster source: `Psychage poster category 4/SLF-051 — The Inner Child.jpeg`
+- **CAT04-055**
+  - corrupted title: `The Relationship Between Self-Worth and Success`
+  - slug: `stop-comparing-yourself-to-others`
+  - poster source: `Psychage poster category 4/SLF-055 — The Relationship Between Self-Worth and Success.jpeg`
+- **CAT04-057**
+  - corrupted title: `How to Build Self-Worth That Lasts`
+  - slug: `public-speaking-confidence`
+  - poster source: `Psychage poster category 4/SLF-057 — How to Build Self-Worth That Lasts.jpeg`
+- **CAT04-056**
+  - corrupted title: `How Social Media Affects Self-Worth`
+  - slug: `confidence-after-failure-reframing-setbacks`
+  - poster source: `Psychage poster category 4/SLF-056 — How Social Media Affects Self-Worth.jpeg`
+- **CAT04-062**
+  - corrupted title: `The Connection Between Self-Worth and Physical Health`
+  - slug: `three-types-of-perfectionism`
+  - poster source: `Psychage poster category 4/SLF-062 — The Connection Between Self-Worth and Physical Health.jpeg`
+- **CAT04-064**
+  - corrupted title: `How to Accept a Compliment`
+  - slug: `good-enough-releasing-need-for-perfection`
+  - poster source: `Psychage poster category 4/SLF-064 — How to Accept a Compliment.jpeg`
+- **CAT04-065**
+  - corrupted title: `Identity After Divorce`
+  - slug: `people-pleasing-saying-yes-to-everyone`
+  - poster source: `Psychage poster category 4/SLF-065 — Identity After Divorce.jpeg`
+- **CAT04-066**
+  - corrupted title: `Identity After Job Loss`
+  - slug: `fawn-response-trauma-creates-people-pleasers`
+  - poster source: `Psychage poster category 4/SLF-066 — Identity After Job Loss.jpeg`
+- **CAT04-068**
+  - corrupted title: `The Psychology of Regret`
+  - slug: `perfectionism-in-parenting`
+  - poster source: `Psychage poster category 4/SLF-068 — The Psychology of Regret.jpeg`
+- **CAT04-016**
+  - corrupted title: `The Neuroscience of Confidence`
+  - slug: `common-humanity-reduces-self-blame`
+  - poster source: `Psychage poster category 4/SLF-016 — The Neuroscience of Confidence.jpeg`
+- **CAT04-050**
+  - corrupted title: `When You Don't Like Who You've Become`
+  - slug: `reinventing-yourself-navigate-major-identity-shifts`
+  - poster source: `Psychage poster category 4/SLF-050 — When You Don_t Like Who You_ve Become.jpeg`
+- **CAT04-042**
+  - corrupted title: `Dignity`
+  - slug: `identity-crisis-when-you-dont-know-who-you-are`
+  - poster source: `Psychage poster category 4/SLF-042 — Dignity.jpeg`
+- **CAT04-021**
+  - corrupted title: `Social Confidence`
+  - slug: `imposter-syndrome-explained-why-successful-people-feel-like-frauds`
+  - poster source: `Psychage poster category 4/SLF-021 — Social Confidence.jpeg`
+- **CAT04-029**
+  - corrupted title: `Gender Identity and Mental Health`
+  - slug: `dunning-kruger-effect-vs-imposter-syndrome-self-assessment`
+  - poster source: `Psychage poster category 4/SLF-029 — Gender Identity and Mental Health.jpeg`
+- **CAT04-015**
+  - corrupted title: `What Confidence Actually Is`
+  - slug: `self-compassion-break-3-minute-practice`
+  - poster source: `Psychage poster category 4/SLF-015 — What Confidence Actually Is.jpeg`
+- **CAT04-014**
+  - corrupted title: `How to Stop Seeking External Validation`
+  - slug: `practice-self-compassion-when-dont-feel-deserve`
+  - poster source: `Psychage poster category 4/SLF-014 — How to Stop Seeking External Validation.jpeg`
+- **CAT04-012**
+  - corrupted title: `The Link Between Self-Worth and Relationships`
+  - slug: `inner-critic-where-it-comes-from`
+  - poster source: `Psychage poster category 4/SLF-012 — The Link Between Self-Worth and Relationships.jpeg`
+- **CAT04-005**
+  - corrupted title: `How to Quiet the Inner Critic`
+  - slug: `why-positive-affirmations-dont-work-science`
+  - poster source: `Psychage poster category 4/SLF-005 — How to Quiet the Inner Critic.jpeg`
+- **CAT04-063**
+  - corrupted title: `When Compliments Feel Impossible to Receive`
+  - slug: `perfectionism-procrastination-burnout-depression`
+  - poster source: `Psychage poster category 4/SLF-063 — When Compliments Feel Impossible to Receive.jpeg`
+- **CAT04-037**
+  - corrupted title: `When Motivation Disappears`
+  - slug: `exercise-addiction-when-movement-becomes-body-image-weapon`
+  - poster source: `Psychage poster category 4/SLF-037 — When Motivation Disappears.jpeg`
+- **CAT04-045**
+  - corrupted title: `Reclaiming Your Sense of Self After Loss`
+  - slug: `masks-we-wear-code-switching-people-pleasing-losing-yourself`
+  - poster source: `Psychage poster category 4/SLF-045 — Reclaiming Your Sense of Self After Loss.jpeg`
+- **CAT04-048**
+  - corrupted title: `Authenticity`
+  - slug: `sexual-orientation-self-acceptance-psychological-perspective`
+  - poster source: `Psychage poster category 4/SLF-048 — Authenticity.jpeg`
+- **CAT04-026**
+  - corrupted title: `Identity Development Across the Lifespan`
+  - slug: `imposter-syndrome-marginalized-groups-systemic-barriers-self-doubt`
+  - poster source: `Psychage poster category 4/SLF-026 — Identity Development Across the Lifespan.jpeg`
+- **CAT04-036**
+  - corrupted title: `Setting Goals That Align With Your Values`
+  - slug: `how-diet-culture-damages-mental-health`
+  - poster source: `Psychage poster category 4/SLF-036 — Setting Goals That Align With Your Values.jpeg`
+- **CAT04-038**
+  - corrupted title: `The Psychology of Procrastination`
+  - slug: `body-image-across-cultures-different-ideals-same-impact`
+  - poster source: `Psychage poster category 4/SLF-038 — The Psychology of Procrastination.jpeg`
+- **CAT04-054**
+  - corrupted title: `Overcoming Self-Sabotage`
+  - slug: `comfort-zone-productive-discomfort`
+  - poster source: `Psychage poster category 4/SLF-054 — Overcoming Self-Sabotage.jpeg`
+- **CAT04-067**
+  - corrupted title: `Reinvention`
+  - slug: `breaking-perfectionism-cycle-cbt-strategies`
+  - poster source: `Psychage poster category 4/SLF-067 — Reinvention.jpeg`
+- **CAT04-023**
+  - corrupted title: `Body Confidence`
+  - slug: `imposter-syndrome-at-work-when-achievement-feels-like-luck`
+  - poster source: `Psychage poster category 4/SLF-023 — Body Confidence.jpeg`
+- **CAT04-032**
+  - corrupted title: `Work Identity`
+  - slug: `body-dysmorphia-vs-normal-dissatisfaction-where-is-the-line`
+  - poster source: `Psychage poster category 4/SLF-032 — Work Identity.jpeg`
+- **CAT04-022**
+  - corrupted title: `Confidence at Work`
+  - slug: `five-types-imposter-syndrome-which-one-affects-you`
+  - poster source: `Psychage poster category 4/SLF-022 — Confidence at Work.jpeg`
+- **CAT04-008**
+  - corrupted title: `The Imposter Phenomenon`
+  - slug: `culture-shapes-self-esteem-individualist-collectivist`
+  - poster source: `Psychage poster category 4/SLF-008 — The Imposter Phenomenon.jpeg`
+- **CAT04-013**
+  - corrupted title: `Self-Worth and Work`
+  - slug: `self-talk-patterns-helpful-harmful`
+  - poster source: `Psychage poster category 4/SLF-013 — Self-Worth and Work.jpeg`
+- **CAT04-049**
+  - corrupted title: `Why People Please`
+  - slug: `career-identity-when-what-you-do-becomes-who-you-are`
+  - poster source: `Psychage poster category 4/SLF-049 — Why People Please.jpeg`
+- **CAT04-031**
+  - corrupted title: `Religion, Spirituality, and Self-Identity`
+  - slug: `body-image-mental-health-how-you-see-yourself-matters`
+  - poster source: `Psychage poster category 4/SLF-031 — Religion, Spirituality, and Self-Identity.jpeg`
+- **CAT04-044**
+  - corrupted title: `How Trauma Affects Self-Worth`
+  - slug: `values-guide-life-practical-clarification-exercise`
+  - poster source: `Psychage poster category 4/SLF-044 — How Trauma Affects Self-Worth.jpeg`
+- **CAT04-011**
+  - corrupted title: `Building a Positive Self-Image`
+  - slug: `what-is-self-compassion-three-components`
+  - poster source: `Psychage poster category 4/SLF-011 — Building a Positive Self-Image.jpeg`
+- **CAT04-060**
+  - corrupted title: `Confidence After Failure`
+  - slug: `confidence-vs-arrogance`
+  - poster source: `Psychage poster category 4/SLF-060 — Confidence After Failure.jpeg`
+- **CAT04-058**
+  - corrupted title: `Mindfulness and Self-Awareness`
+  - slug: `social-confidence`
+  - poster source: `Psychage poster category 4/SLF-058 — Mindfulness and Self-Awareness.jpeg`
+- **CAT04-059**
+  - corrupted title: `The Role of Gratitude in Self-Worth`
+  - slug: `body-language-confidence-psychology`
+  - poster source: `Psychage poster category 4/SLF-059 — The Role of Gratitude in Self-Worth.jpeg`
+- **CAT04-041**
+  - corrupted title: `Self-Respect`
+  - slug: `who-am-i-guide-identity-formation-development`
+  - poster source: `Psychage poster category 4/SLF-041 — Self-Respect.jpeg`
+- **CAT04-069**
+  - corrupted title: `Resilience and Self-Worth`
+  - slug: `academic-perfectionism`
+  - poster source: `Psychage poster category 4/SLF-069 — Resilience and Self-Worth.jpeg`
+- **CAT04-070**
+  - corrupted title: `Living With Radical Self-Acceptance`
+  - slug: `recovery-from-perfectionism`
+  - poster source: `Psychage poster category 4/SLF-070 — Living With Radical Self-Acceptance.jpeg`
+- **CAT04-004**
+  - corrupted title: `The Critic in Your Head`
+  - slug: `self-esteem-spectrum-fragile-contingent-stable`
+  - poster source: `Psychage poster category 4/SLF-004 — The Critic in Your Head.jpeg`
+- **CAT04-009**
+  - corrupted title: `How Shame Differs From Guilt`
+  - slug: `gender-self-esteem-societal-expectations`
+  - poster source: `Psychage poster category 4/SLF-009 — How Shame Differs From Guilt.jpeg`
+- **CAT04-010**
+  - corrupted title: `Healing From Shame`
+  - slug: `measuring-self-esteem-validated-tools`
+  - poster source: `Psychage poster category 4/SLF-010 — Healing From Shame.jpeg`
+
+### Habits, Motivation & Behavior Change (57)
+
+- **CAT08-024**
+  - corrupted title: `The Habit of Exercise`
+  - slug: `sustainable-self-care-routine-not-face-mask`
+  - poster source: `Psychage poster category 8/HAB-024 — The Habit of Exercise.jpeg`
+- **CAT08-010**
+  - corrupted title: `The Two-Minute Rule`
+  - slug: `habit-tracking-apps-journals`
+  - poster source: `Psychage poster category 8/HAB-010 — The Two-Minute Rule.jpeg`
+- **CAT08-002**
+  - corrupted title: `The Habit Loop`
+  - slug: `neuroscience-of-habits-brain-autopilot`
+  - poster source: `Psychage poster category 8/HAB-002 — The Habit Loop.jpeg`
+- **CAT08-038**
+  - corrupted title: `The Habit of Gratitude`
+  - slug: `reduce-alcohol-use-without-complete-abstinence`
+  - poster source: `Psychage poster category 8/HAB-038 — The Habit of Gratitude.jpeg`
+- **CAT08-049**
+  - corrupted title: `The Science of Behavior Change`
+  - slug: `how-stress-destroys-self-control-what-to-do-about-it`
+  - poster source: `Psychage poster category 8/HAB-049 — The Science of Behavior Change.jpeg`
+- **CAT08-032**
+  - corrupted title: `Habit and Identity`
+  - slug: `break-social-media-addiction-step-by-step`
+  - poster source: `Psychage poster category 8/HAB-032 — Habit and Identity.jpeg`
+- **CAT08-040**
+  - corrupted title: `Exercise Habits`
+  - slug: `replacing-bad-habit-substitution-vs-elimination`
+  - poster source: `Psychage poster category 8/HAB-040 — Exercise Habits.jpeg`
+- **CAT08-008**
+  - corrupted title: `Habit Tracking`
+  - slug: `willpower-isnt-answer-reduce-friction`
+  - poster source: `Psychage poster category 8/HAB-008 — Habit Tracking.jpeg`
+- **CAT08-009**
+  - corrupted title: `When You Miss a Day`
+  - slug: `digital-habits-phone-shapes-behavior`
+  - poster source: `Psychage poster category 8/HAB-009 — When You Miss a Day.jpeg`
+- **CAT08-055**
+  - corrupted title: `The Compound Effect`
+  - slug: `action-first-90-days-of-building-new-behavior`
+  - poster source: `Psychage poster category 8/HAB-055 — The Compound Effect.jpeg`
+- **CAT08-027**
+  - corrupted title: `Habit Reversal Training`
+  - slug: `midday-reset-routine-prevent-afternoon-crash`
+  - poster source: `Psychage poster category 8/HAB-027 — Habit Reversal Training.jpeg`
+- **CAT08-053**
+  - corrupted title: `The Role of Accountability`
+  - slug: `contemplation-psychology-of-i-know-i-should-but`
+  - poster source: `Psychage poster category 8/HAB-053 — The Role of Accountability.jpeg`
+- **CAT08-005**
+  - corrupted title: `Habit Stacking`
+  - slug: `keystone-habits-chain-reaction`
+  - poster source: `Psychage poster category 8/HAB-005 — Habit Stacking.jpeg`
+- **CAT08-006**
+  - corrupted title: `The Role of Environment in Habit Formation`
+  - slug: `habit-stacking-attach-new-behaviors`
+  - poster source: `Psychage poster category 8/HAB-006 — The Role of Environment in Habit Formation.jpeg`
+- **CAT08-007**
+  - corrupted title: `Identity-Based Habits`
+  - slug: `environment-design-habit-formation`
+  - poster source: `Psychage poster category 8/HAB-007 — Identity-Based Habits.jpeg`
+- **CAT08-018**
+  - corrupted title: `The Overjustification Effect`
+  - slug: `role-autonomy-motivation-why-choice-matters`
+  - poster source: `Psychage poster category 8/HAB-018 — The Overjustification Effect.jpeg`
+- **CAT08-031**
+  - corrupted title: `Reframing Failure`
+  - slug: `why-bad-habits-hard-to-break-neuroscience`
+  - poster source: `Psychage poster category 8/HAB-031 — Reframing Failure.jpeg`
+- **CAT08-015**
+  - corrupted title: `The Role of Dopamine in Motivation`
+  - slug: `motivation-myth-waiting-inspired-keeps-stuck`
+  - poster source: `Psychage poster category 8/HAB-015 — The Role of Dopamine in Motivation.jpeg`
+- **CAT08-012**
+  - corrupted title: `The Psychology of Willpower`
+  - slug: `self-determination-theory-three-needs`
+  - poster source: `Psychage poster category 8/HAB-012 — The Psychology of Willpower.jpeg`
+- **CAT08-035**
+  - corrupted title: `Keystone Habits`
+  - slug: `stop-negative-self-talk-rewire-internal-monologue`
+  - poster source: `Psychage poster category 8/HAB-035 — Keystone Habits.jpeg`
+- **CAT08-022**
+  - corrupted title: `Temptation Bundling`
+  - slug: `evening-wind-down-routines-sleep-anxiety`
+  - poster source: `Psychage poster category 8/HAB-022 — Temptation Bundling.jpeg`
+- **CAT08-028**
+  - corrupted title: `Digital Habits`
+  - slug: `weekend-vs-weekday-routines-finding-balance`
+  - poster source: `Psychage poster category 8/HAB-028 — Digital Habits.jpeg`
+- **CAT08-041**
+  - corrupted title: `Nutrition Habits`
+  - slug: `what-is-self-control-brain-manages-impulses`
+  - poster source: `Psychage poster category 8/HAB-041 — Nutrition Habits.jpeg`
+- **CAT08-020**
+  - corrupted title: `The Power of Small Wins`
+  - slug: `when-nothing-motivates-you-anhedonia-low-drive`
+  - poster source: `Psychage poster category 8/HAB-020 — The Power of Small Wins.jpeg`
+- **CAT08-023**
+  - corrupted title: `Commitment Devices`
+  - slug: `build-exercise-routine-hate-working-out`
+  - poster source: `Psychage poster category 8/HAB-023 — Commitment Devices.jpeg`
+- **CAT08-003**
+  - corrupted title: `Why Bad Habits Are So Hard to Break`
+  - slug: `how-long-to-build-a-habit`
+  - poster source: `Psychage poster category 8/HAB-003 — Why Bad Habits Are So Hard to Break.jpeg`
+- **CAT08-042**
+  - corrupted title: `The Habit of Connection`
+  - slug: `willpower-battery-self-control-depletion`
+  - poster source: `Psychage poster category 8/HAB-042 — The Habit of Connection.jpeg`
+- **CAT08-056**
+  - corrupted title: `When Motivation Meets Discipline`
+  - slug: `maintenance-how-to-keep-going-when-novelty-wears-off`
+  - poster source: `Psychage poster category 8/HAB-056 — When Motivation Meets Discipline.jpeg`
+- **CAT08-057**
+  - corrupted title: `Habit and Purpose`
+  - slug: `relapse-why-setbacks-are-normal-and-how-to-get-back-on-track`
+  - poster source: `Psychage poster category 8/HAB-057 — Habit and Purpose.jpeg`
+- **CAT08-060**
+  - corrupted title: `When Good Habits Become Rigid`
+  - slug: `change-at-every-age-why-its-never-too-late-to-build-new-patterns`
+  - poster source: `Psychage poster category 8/HAB-060 — When Good Habits Become Rigid.jpeg`
+- **CAT08-061**
+  - corrupted title: `Rest and Recovery as Habit`
+  - slug: `identity-based-habits-becoming-the-type-of-person-who`
+  - poster source: `Psychage poster category 8/HAB-061 — Rest and Recovery as Habit.jpeg`
+- **CAT08-062**
+  - corrupted title: `Habits Across the Lifespan`
+  - slug: `systems-vs-goals-why-process-matters-more-than-outcomes`
+  - poster source: `Psychage poster category 8/HAB-062 — Habits Across the Lifespan.jpeg`
+- **CAT08-047**
+  - corrupted title: `Reducing Harmful Habits`
+  - slug: `temptation-bundling-pair-things-you-need-with-things-you-want`
+  - poster source: `Psychage poster category 8/HAB-047 — Reducing Harmful Habits.jpeg`
+- **CAT08-048**
+  - corrupted title: `Behavior Change and Identity`
+  - slug: `implementation-intentions-if-then-strategy-sticking-to-plans`
+  - poster source: `Psychage poster category 8/HAB-048 — Behavior Change and Identity.jpeg`
+- **CAT08-036**
+  - corrupted title: `Morning Routines`
+  - slug: `nail-biting-skin-picking-body-focused-repetitive-behaviors`
+  - poster source: `Psychage poster category 8/HAB-036 — Morning Routines.jpeg`
+- **CAT08-019**
+  - corrupted title: `Goal Setting That Works`
+  - slug: `how-social-connection-fuels-motivation-accountability`
+  - poster source: `Psychage poster category 8/HAB-019 — Goal Setting That Works.jpeg`
+- **CAT08-037**
+  - corrupted title: `Evening Routines`
+  - slug: `breaking-revenge-bedtime-procrastination`
+  - poster source: `Psychage poster category 8/HAB-037 — Evening Routines.jpeg`
+- **CAT08-004**
+  - corrupted title: `Building New Habits`
+  - slug: `atomic-habits-small-changes-big-results`
+  - poster source: `Psychage poster category 8/HAB-004 — Building New Habits.jpeg`
+- **CAT08-021**
+  - corrupted title: `Implementation Intentions`
+  - slug: `morning-routines-mental-health-what-works`
+  - poster source: `Psychage poster category 8/HAB-021 — Implementation Intentions.jpeg`
+- **CAT08-033**
+  - corrupted title: `Social Habits`
+  - slug: `emotional-eating-why-you-eat-when-not-hungry`
+  - poster source: `Psychage poster category 8/HAB-033 — Social Habits.jpeg`
+- **CAT08-034**
+  - corrupted title: `The Science of Self-Discipline`
+  - slug: `break-procrastination-habit-root-cause`
+  - poster source: `Psychage poster category 8/HAB-034 — The Science of Self-Discipline.jpeg`
+- **CAT08-051**
+  - corrupted title: `Habit and Self-Worth`
+  - slug: `stages-of-change-model-where-are-you-in-your-journey`
+  - poster source: `Psychage poster category 8/HAB-051 — Habit and Self-Worth.jpeg`
+- **CAT08-039**
+  - corrupted title: `Building the Reading Habit`
+  - slug: `shopping-addiction-buying-as-coping-mechanism`
+  - poster source: `Psychage poster category 8/HAB-039 — Building the Reading Habit.jpeg`
+- **CAT08-058**
+  - corrupted title: `Designing Your Life`
+  - slug: `how-to-support-someone-who-isnt-ready-to-change`
+  - poster source: `Psychage poster category 8/HAB-058 — Designing Your Life.jpeg`
+- **CAT08-063**
+  - corrupted title: `The Habit of Learning`
+  - slug: `how-to-design-your-environment-for-behavior-change`
+  - poster source: `Psychage poster category 8/HAB-063 — The Habit of Learning.jpeg`
+- **CAT08-065**
+  - corrupted title: `The Habit of Kindness`
+  - slug: `the-compound-effect-small-daily-actions-create-extraordinary-results`
+  - poster source: `Psychage poster category 8/HAB-065 — The Habit of Kindness.jpeg`
+- **CAT08-029**
+  - corrupted title: `Breaking Phone Addiction`
+  - slug: `routine-flexibility-when-to-stick-when-to-adjust`
+  - poster source: `Psychage poster category 8/HAB-029 — Breaking Phone Addiction.jpeg`
+- **CAT08-030**
+  - corrupted title: `The Psychology of Procrastination at Its Root`
+  - slug: `seasonal-routines-adapting-to-change-throughout-year`
+  - poster source: `Psychage poster category 8/HAB-030 — The Psychology of Procrastination at Its Root.jpeg`
+- **CAT08-043**
+  - corrupted title: `The Habit of Rest`
+  - slug: `delayed-gratification-marshmallow-test-actually-proved`
+  - poster source: `Psychage poster category 8/HAB-043 — The Habit of Rest.jpeg`
+- **CAT08-044**
+  - corrupted title: `Habit and Mental Health`
+  - slug: `how-to-make-difficult-tasks-easier-psychology-pre-commitment`
+  - poster source: `Psychage poster category 8/HAB-044 — Habit and Mental Health.jpeg`
+- **CAT08-045**
+  - corrupted title: `When Habits Break Down`
+  - slug: `discipline-myth-consistency-beats-intensity-every-time`
+  - poster source: `Psychage poster category 8/HAB-045 — When Habits Break Down.jpeg`
+- **CAT08-046**
+  - corrupted title: `The Psychology of Addiction`
+  - slug: `how-sleep-affects-willpower-self-control`
+  - poster source: `Psychage poster category 8/HAB-046 — The Psychology of Addiction.jpeg`
+- **CAT08-052**
+  - corrupted title: `Building Habits When You Have Mental Illness`
+  - slug: `pre-contemplation-when-you-dont-yet-see-need-to-change`
+  - poster source: `Psychage poster category 8/HAB-052 — Building Habits When You Have Mental Illness.jpeg`
+- **CAT08-025**
+  - corrupted title: `The Habit of Sleep`
+  - slug: `minimum-effective-dose-smallest-routine`
+  - poster source: `Psychage poster category 8/HAB-025 — The Habit of Sleep.jpeg`
+- **CAT08-026**
+  - corrupted title: `The Habit of Mindfulness`
+  - slug: `adapting-routine-when-life-gets-chaotic`
+  - poster source: `Psychage poster category 8/HAB-026 — The Habit of Mindfulness.jpeg`
+- **CAT08-014**
+  - corrupted title: `How to Get Motivated`
+  - slug: `motivational-interviewing-techniques-self`
+  - poster source: `Psychage poster category 8/HAB-014 — How to Get Motivated.jpeg`
+- **CAT08-054**
+  - corrupted title: `Habit Apps and Technology`
+  - slug: `preparation-setting-yourself-up-for-successful-change`
+  - poster source: `Psychage poster category 8/HAB-054 — Habit Apps and Technology.jpeg`
+
+### Men's Mental Health (56)
+
+- **CAT19-065**
+  - corrupted title: `Gender Identity Development`
+  - slug: `men-and-creative-expression-music-art-and-writing-as-emotional-outlets`
+  - poster source: `Psychage poster category 19/GEN-065 — Gender Identity Development.jpeg`
+- **CAT19-015**
+  - corrupted title: `Menopause and Mental Health`
+  - slug: `boys-dont-cry-how-childhood-messaging-shapes-adult-emotional-health`
+  - poster source: `Psychage poster category 19/GEN-015 — Menopause and Mental Health.jpeg`
+- **CAT19-007**
+  - corrupted title: `Men and Emotional Expression`
+  - slug: `male-body-image-issues-the-rise-of-muscle-dysmorphia`
+  - poster source: `Psychage poster category 19/GEN-007 — Men and Emotional Expression.jpeg`
+- **CAT19-008**
+  - corrupted title: `Father Mental Health`
+  - slug: `men-and-alcohol-why-substance-use-is-often-mens-first-coping-strategy`
+  - poster source: `Psychage poster category 19/GEN-008 — Father Mental Health.jpeg`
+- **CAT19-009**
+  - corrupted title: `Men and Addiction`
+  - slug: `retirement-and-mens-identity-when-your-job-was-your-whole-self`
+  - poster source: `Psychage poster category 19/GEN-009 — Men and Addiction.jpeg`
+- **CAT19-011**
+  - corrupted title: `Men and Body Image`
+  - slug: `fatherhood-and-mental-health-the-emotional-transition-most-men-dont-discuss`
+  - poster source: `Psychage poster category 19/GEN-011 — Men and Body Image.jpeg`
+- **CAT19-021**
+  - corrupted title: `Women and Work`
+  - slug: `testosterone-and-mood-what-hormonal-changes-mean-for-mens-mental-health`
+  - poster source: `Psychage poster category 19/GEN-021 — Women and Work.jpeg`
+- **CAT19-062**
+  - corrupted title: `Gender and Trauma`
+  - slug: `men-and-volunteering-the-mental-health-benefits-of-service`
+  - poster source: `Psychage poster category 19/GEN-062 — Gender and Trauma.jpeg`
+- **CAT19-061**
+  - corrupted title: `Gender-Affirming Workplaces`
+  - slug: `reducing-male-suicide-evidence-based-prevention-strategies-that-work`
+  - poster source: `Psychage poster category 19/GEN-061 — Gender-Affirming Workplaces.jpeg`
+- **CAT19-026**
+  - corrupted title: `Intersex and Mental Health`
+  - slug: `exercise-addiction-in-men-when-fitness-becomes-a-disorder`
+  - poster source: `Psychage poster category 19/GEN-026 — Intersex and Mental Health.jpeg`
+- **CAT19-040**
+  - corrupted title: `Gender and Parenting Stress`
+  - slug: `unemployed-men-and-self-worth-when-providing-defines-identity`
+  - poster source: `Psychage poster category 19/GEN-040 — Gender and Parenting Stress.jpeg`
+- **CAT19-037**
+  - corrupted title: `Aging and Gender`
+  - slug: `young-men-and-social-media-comparison-radicalization-and-identity`
+  - poster source: `Psychage poster category 19/GEN-037 — Aging and Gender.jpeg`
+- **CAT19-029**
+  - corrupted title: `Gender and Eating Disorders`
+  - slug: `men-and-chronic-pain-suffering-in-silence`
+  - poster source: `Psychage poster category 19/GEN-029 — Gender and Eating Disorders.jpeg`
+- **CAT19-030**
+  - corrupted title: `Gender and Anxiety`
+  - slug: `the-male-midlife-crisis-separating-myth-from-psychological-reality`
+  - poster source: `Psychage poster category 19/GEN-030 — Gender and Anxiety.jpeg`
+- **CAT19-028**
+  - corrupted title: `Fatherhood and Identity`
+  - slug: `anger-management-for-men-understanding-and-channeling-rage`
+  - poster source: `Psychage poster category 19/GEN-028 — Fatherhood and Identity.jpeg`
+- **CAT19-042**
+  - corrupted title: `Feminist Therapy`
+  - slug: `myth-men-dont-get-eating-disorders`
+  - poster source: `Psychage poster category 19/GEN-042 — Feminist Therapy.jpeg`
+- **CAT19-043**
+  - corrupted title: `Men's Grief`
+  - slug: `myth-men-are-naturally-better-at-handling-stress`
+  - poster source: `Psychage poster category 19/GEN-043 — Men_s Grief.jpeg`
+- **CAT19-045**
+  - corrupted title: `Gender and Education`
+  - slug: `myth-talking-about-feelings-makes-men-weak`
+  - poster source: `Psychage poster category 19/GEN-045 — Gender and Education.jpeg`
+- **CAT19-041**
+  - corrupted title: `Gender Minority Stress`
+  - slug: `myth-real-men-dont-need-therapy`
+  - poster source: `Psychage poster category 19/GEN-041 — Gender Minority Stress.jpeg`
+- **CAT19-046**
+  - corrupted title: `Online Masculinity`
+  - slug: `myth-men-cant-be-victims-of-domestic-abuse`
+  - poster source: `Psychage poster category 19/GEN-046 — Online Masculinity.jpeg`
+- **CAT19-047**
+  - corrupted title: `Positive Masculinity`
+  - slug: `mens-sheds-community-workshops-as-mental-health-intervention`
+  - poster source: `Psychage poster category 19/GEN-047 — Positive Masculinity.jpeg`
+- **CAT19-051**
+  - corrupted title: `Gender and Financial Stress`
+  - slug: `digital-mental-health-tools-for-men-apps-and-platforms-that-engage-male-users`
+  - poster source: `Psychage poster category 19/GEN-051 — Gender and Financial Stress.jpeg`
+- **CAT19-052**
+  - corrupted title: `Gender Dysphoria in Adolescence`
+  - slug: `fatherhood-programs-supporting-dads-mental-health-and-parenting-skills`
+  - poster source: `Psychage poster category 19/GEN-052 — Gender Dysphoria in Adolescence.jpeg`
+- **CAT19-053**
+  - corrupted title: `Gender and Loneliness`
+  - slug: `men-and-meditation-overcoming-the-perception-that-mindfulness-is-soft`
+  - poster source: `Psychage poster category 19/GEN-053 — Gender and Loneliness.jpeg`
+- **CAT19-027**
+  - corrupted title: `Masculinity in Crisis`
+  - slug: `men-and-sleep-why-sleep-problems-hit-men-differently`
+  - poster source: `Psychage poster category 19/GEN-027 — Masculinity in Crisis.jpeg`
+- **CAT19-036**
+  - corrupted title: `Caretaking and Gender`
+  - slug: `rural-men-and-mental-health-geographic-isolation-and-limited-access`
+  - poster source: `Psychage poster category 19/GEN-036 — Caretaking and Gender.jpeg`
+- **CAT19-054**
+  - corrupted title: `Sports and Masculine Identity`
+  - slug: `mens-support-groups-why-peer-connection-changes-everything`
+  - poster source: `Psychage poster category 19/GEN-054 — Sports and Masculine Identity.jpeg`
+- **CAT19-064**
+  - corrupted title: `Gender and Community`
+  - slug: `challenging-the-provider-mandate-redefining-masculinity-for-mental-health`
+  - poster source: `Psychage poster category 19/GEN-064 — Gender and Community.jpeg`
+- **CAT19-056**
+  - corrupted title: `Gendered Caregiving`
+  - slug: `male-mentorship-and-mental-health-the-protective-power-of-role-models`
+  - poster source: `Psychage poster category 19/GEN-056 — Gendered Caregiving.jpeg`
+- **CAT19-055**
+  - corrupted title: `Gender and Chronic Illness`
+  - slug: `adventure-therapy-for-men-using-outdoor-challenges-for-emotional-growth`
+  - poster source: `Psychage poster category 19/GEN-055 — Gender and Chronic Illness.jpeg`
+- **CAT19-057**
+  - corrupted title: `Gender and Body Pain`
+  - slug: `workplace-mental-health-programs-designed-for-male-dominated-industries`
+  - poster source: `Psychage poster category 19/GEN-057 — Gender and Body Pain.jpeg`
+- **CAT19-059**
+  - corrupted title: `Gender and Neurodivergence`
+  - slug: `grief-retreats-for-men-structured-programs-that-honor-male-mourning`
+  - poster source: `Psychage poster category 19/GEN-059 — Gender and Neurodivergence.jpeg`
+- **CAT19-017**
+  - corrupted title: `Premenstrual Syndrome and PMDD`
+  - slug: `men-as-caregivers-the-hidden-population-of-male-family-carers`
+  - poster source: `Psychage poster category 19/GEN-017 — Premenstrual Syndrome and PMDD.jpeg`
+- **CAT19-020**
+  - corrupted title: `The Mental Load`
+  - slug: `men-and-dating-anxiety-performance-pressure-and-fear-of-rejection`
+  - poster source: `Psychage poster category 19/GEN-020 — The Mental Load.jpeg`
+- **CAT19-063**
+  - corrupted title: `Single Parenting and Gender`
+  - slug: `anger-as-a-gateway-emotion-helping-men-access-whats-underneath`
+  - poster source: `Psychage poster category 19/GEN-063 — Single Parenting and Gender.jpeg`
+- **CAT19-060**
+  - corrupted title: `Men's Groups`
+  - slug: `men-and-cooking-how-kitchen-skills-build-emotional-competence-and-community`
+  - poster source: `Psychage poster category 19/GEN-060 — Men_s Groups.jpeg`
+- **CAT19-025**
+  - corrupted title: `Gender-Affirming Care`
+  - slug: `men-pain-and-stoicism-why-ignoring-physical-symptoms-is-a-mental-health-problem`
+  - poster source: `Psychage poster category 19/GEN-025 — Gender-Affirming Care.jpeg`
+- **CAT19-044**
+  - corrupted title: `Gender and Healthcare`
+  - slug: `myth-depression-in-men-is-just-laziness-or-lack-of-motivation`
+  - poster source: `Psychage poster category 19/GEN-044 — Gender and Healthcare.jpeg`
+- **CAT19-058**
+  - corrupted title: `Masculinity and Physical Health`
+  - slug: `men-and-journaling-writing-as-an-unexpected-tool-for-emotional-processing`
+  - poster source: `Psychage poster category 19/GEN-058 — Masculinity and Physical Health.jpeg`
+- **CAT19-033**
+  - corrupted title: `Masculinity and Vulnerability`
+  - slug: `incarcerated-men-and-mental-health-inside-the-prison-system`
+  - poster source: `Psychage poster category 19/GEN-033 — Masculinity and Vulnerability.jpeg`
+- **CAT19-066**
+  - corrupted title: `Gender and Aging`
+  - slug: `the-role-of-humor-in-mens-mental-health-when-laughter-helps-and-when-it-hides`
+  - poster source: `Psychage poster category 19/GEN-066 — Gender and Aging.jpeg`
+- **CAT19-022**
+  - corrupted title: `Non-Binary and Gender Non-Conforming Mental Health`
+  - slug: `prostate-cancer-and-mental-health-the-psychological-impact-of-diagnosis`
+  - poster source: `Psychage poster category 19/GEN-022 — Non-Binary and Gender Non-Conforming Mental Health.jpeg`
+- **CAT19-012**
+  - corrupted title: `Women's Mental Health`
+  - slug: `paternal-postnatal-depression-the-condition-no-one-talks-about`
+  - poster source: `Psychage poster category 19/GEN-012 — Women_s Mental Health.jpeg`
+- **CAT19-014**
+  - corrupted title: `Perimenopause and Mental Health`
+  - slug: `men-and-custody-battles-the-psychological-toll-of-legal-conflict`
+  - poster source: `Psychage poster category 19/GEN-014 — Perimenopause and Mental Health.jpeg`
+- **CAT19-010**
+  - corrupted title: `Boys and Mental Health`
+  - slug: `men-and-grief-cultural-permission-to-mourn`
+  - poster source: `Psychage poster category 19/GEN-010 — Boys and Mental Health.jpeg`
+- **CAT19-016**
+  - corrupted title: `Postpartum Mental Health`
+  - slug: `mens-friendships-building-real-connection-beyond-sports-and-beer`
+  - poster source: `Psychage poster category 19/GEN-016 — Postpartum Mental Health.jpeg`
+- **CAT19-024**
+  - corrupted title: `Gender Dysphoria`
+  - slug: `heart-disease-and-depression-in-men-the-deadly-overlap`
+  - poster source: `Psychage poster category 19/GEN-024 — Gender Dysphoria.jpeg`
+- **CAT19-018**
+  - corrupted title: `Antenatal Mental Health`
+  - slug: `men-and-romantic-vulnerability-why-opening-up-feels-like-weakness`
+  - poster source: `Psychage poster category 19/GEN-018 — Antenatal Mental Health.jpeg`
+- **CAT19-019**
+  - corrupted title: `Gender-Based Violence and Mental Health`
+  - slug: `father-son-relationships-and-emotional-inheritance`
+  - poster source: `Psychage poster category 19/GEN-019 — Gender-Based Violence and Mental Health.jpeg`
+- **CAT19-032**
+  - corrupted title: `Gender and PTSD`
+  - slug: `male-athletes-and-mental-health-the-breaking-point-of-performance`
+  - poster source: `Psychage poster category 19/GEN-032 — Gender and PTSD.jpeg`
+- **CAT19-031**
+  - corrupted title: `Gender and Depression`
+  - slug: `men-in-high-pressure-careers-finance-law-and-medicine`
+  - poster source: `Psychage poster category 19/GEN-031 — Gender and Depression.jpeg`
+- **CAT19-038**
+  - corrupted title: `Gender and Substance Use`
+  - slug: `men-in-the-military-service-sacrifice-and-psychological-impact`
+  - poster source: `Psychage poster category 19/GEN-038 — Gender and Substance Use.jpeg`
+- **CAT19-039**
+  - corrupted title: `Masculinity and Anger`
+  - slug: `blue-collar-mens-mental-health-physical-demands-and-emotional-silence`
+  - poster source: `Psychage poster category 19/GEN-039 — Masculinity and Anger.jpeg`
+- **CAT19-048**
+  - corrupted title: `Gender and the Workplace`
+  - slug: `barbershop-therapy-meeting-men-where-they-already-gather`
+  - poster source: `Psychage poster category 19/GEN-048 — Gender and the Workplace.jpeg`
+- **CAT19-049**
+  - corrupted title: `Gender and Sleep`
+  - slug: `sports-based-mental-health-programs-for-boys-and-men`
+  - poster source: `Psychage poster category 19/GEN-049 — Gender and Sleep.jpeg`
+- **CAT19-050**
+  - corrupted title: `Toxic Positivity and Gender`
+  - slug: `male-specific-therapy-approaches-what-works-for-men-in-treatment`
+  - poster source: `Psychage poster category 19/GEN-050 — Toxic Positivity and Gender.jpeg`
+
+### Aging, Dementia & Late-Life Mental Health (50)
+
+- **CAT17-014**
+  - corrupted title: `Hearing Loss and Dementia Risk`
+  - slug: `vascular-dementia-lewy-body-and-other-types`
+  - poster source: `Psychage poster category 21/AGE-014 — Hearing Loss and Dementia Risk.jpeg`
+- **CAT17-026**
+  - corrupted title: `Late Life Depression`
+  - slug: `paying-for-elder-care-medicare-medicaid-and-long-term-care-insurance`
+  - poster source: `Psychage poster category 21/AGE-026 — Late Life Depression.jpeg`
+- **CAT17-039**
+  - corrupted title: `Pain Management in Older Adults`
+  - slug: `making-friends-after-65-social-connection-strategies`
+  - poster source: `Psychage poster category 21/AGE-039 — Pain Management in Older Adults.jpeg`
+- **CAT17-040**
+  - corrupted title: `Sleep in Older Adults`
+  - slug: `coping-outliving-friends-spouse-grief-isolation`
+  - poster source: `Psychage poster category 21/AGE-040 — Sleep in Older Adults.jpeg`
+- **CAT17-001**
+  - corrupted title: `Normal Cognitive Aging`
+  - slug: `the-landscape-of-mental-health-in-later-life-what-changes-and-what-does-not`
+  - poster source: `Psychage poster category 21/AGE-001 — Normal Cognitive Aging.jpeg`
+- **CAT17-002**
+  - corrupted title: `Mild Cognitive Impairment`
+  - slug: `normal-aging-vs-mental-illness-recognizing-the-difference`
+  - poster source: `Psychage poster category 21/AGE-002 — Mild Cognitive Impairment.jpeg`
+- **CAT17-003**
+  - corrupted title: `Alzheimer's Disease`
+  - slug: `why-late-life-mental-health-is-often-overlooked-and-undertreated`
+  - poster source: `Psychage poster category 21/AGE-003 — Alzheimer_s Disease.jpeg`
+- **CAT17-004**
+  - corrupted title: `Vascular Dementia`
+  - slug: `the-brain-in-later-life-neuroplasticity-resilience-and-decline`
+  - poster source: `Psychage poster category 21/AGE-004 — Vascular Dementia.jpeg`
+- **CAT17-020**
+  - corrupted title: `Dementia Prevention`
+  - slug: `family-caregiving-depression-and-burden`
+  - poster source: `Psychage poster category 21/AGE-020 — Dementia Prevention.jpeg`
+- **CAT17-007**
+  - corrupted title: `Young-Onset Dementia`
+  - slug: `anxiety-disorders-in-older-adults-more-than-just-worry`
+  - poster source: `Psychage poster category 21/AGE-007 — Young-Onset Dementia.jpeg`
+- **CAT17-047**
+  - corrupted title: `Animal-Assisted Therapy and Dementia`
+  - slug: `losing-a-spouse-in-later-life-widowhood-and-rebuilding-identity`
+  - poster source: `Psychage poster category 21/AGE-047 — Animal-Assisted Therapy and Dementia.jpeg`
+- **CAT17-048**
+  - corrupted title: `Intergenerational Programs`
+  - slug: `retirement-transition-mental-health-identity-and-purpose-after-work`
+  - poster source: `Psychage poster category 21/AGE-048 — Intergenerational Programs.jpeg`
+- **CAT17-008**
+  - corrupted title: `Dementia Diagnosis`
+  - slug: `substance-use-and-addiction-in-later-life-the-overlooked-crisis`
+  - poster source: `Psychage poster category 21/AGE-008 — Dementia Diagnosis.jpeg`
+- **CAT17-022**
+  - corrupted title: `Caregiver Burnout in Dementia`
+  - slug: `long-distance-caregiving-strategies-for-supporting-aging-parents-remotely`
+  - poster source: `Psychage poster category 21/AGE-022 — Caregiver Burnout in Dementia.jpeg`
+- **CAT17-033**
+  - corrupted title: `Successful Aging`
+  - slug: `technology-video-calls-social-media-seniors`
+  - poster source: `Psychage poster category 21/AGE-033 — Successful Aging.jpeg`
+- **CAT17-025**
+  - corrupted title: `Dementia and Relationships`
+  - slug: `managing-caregiver-guilt-and-setting-boundaries-without-abandoning-your-loved-one`
+  - poster source: `Psychage poster category 21/AGE-025 — Dementia and Relationships.jpeg`
+- **CAT17-010**
+  - corrupted title: `Physical Exercise and Brain Health`
+  - slug: `suicide-prevention-in-older-adults-the-silent-epidemic`
+  - poster source: `Psychage poster category 21/AGE-010 — Physical Exercise and Brain Health.jpeg`
+- **CAT17-016**
+  - corrupted title: `Depression and Dementia Risk`
+  - slug: `medication-management-for-late-life-depression-and-anxiety`
+  - poster source: `Psychage poster category 21/AGE-016 — Depression and Dementia Risk.jpeg`
+- **CAT17-015**
+  - corrupted title: `Cognitive Training`
+  - slug: `risk-factors-and-prevention-of-dementia`
+  - poster source: `Psychage poster category 21/AGE-015 — Cognitive Training.jpeg`
+- **CAT17-012**
+  - corrupted title: `The Mediterranean Diet and Brain Health`
+  - slug: `alzheimer-disease-brain-changes-symptoms-and-stages`
+  - poster source: `Psychage poster category 21/AGE-012 — The Mediterranean Diet and Brain Health.jpeg`
+- **CAT17-011**
+  - corrupted title: `Social Engagement and Cognitive Reserve`
+  - slug: `what-is-dementia-types-causes-and-progression`
+  - poster source: `Psychage poster category 21/AGE-011 — Social Engagement and Cognitive Reserve.jpeg`
+- **CAT17-030**
+  - corrupted title: `Social Isolation in Older Adults`
+  - slug: `recognizing-elder-abuse-and-neglect-warning-signs-reporting`
+  - poster source: `Psychage poster category 21/AGE-030 — Social Isolation in Older Adults.jpeg`
+- **CAT17-017**
+  - corrupted title: `Cognitive Reserve`
+  - slug: `psychotherapy-for-late-life-depression-and-anxiety`
+  - poster source: `Psychage poster category 21/AGE-017 — Cognitive Reserve.jpeg`
+- **CAT17-050**
+  - corrupted title: `Dementia Research`
+  - slug: `end-of-life-anxiety-and-mortality-awareness-in-older-adults`
+  - poster source: `Psychage poster category 21/AGE-050 — Dementia Research.jpeg`
+- **CAT17-042**
+  - corrupted title: `Technology and Cognitive Aging`
+  - slug: `faith-communities-spiritual-connection-mental-health`
+  - poster source: `Psychage poster category 21/AGE-042 — Technology and Cognitive Aging.jpeg`
+- **CAT17-043**
+  - corrupted title: `End-of-Life Planning`
+  - slug: `ageism-social-exclusion-mental-health-impact`
+  - poster source: `Psychage poster category 21/AGE-043 — End-of-Life Planning.jpeg`
+- **CAT17-028**
+  - corrupted title: `Suicide in Older Adults`
+  - slug: `sandwich-generation-caregiving-for-parents-and-children`
+  - poster source: `Psychage poster category 21/AGE-028 — Suicide in Older Adults.jpeg`
+- **CAT17-023**
+  - corrupted title: `Communication and Dementia`
+  - slug: `advance-directives-and-end-of-life-care-decisions-for-older-adults`
+  - poster source: `Psychage poster category 21/AGE-023 — Communication and Dementia.jpeg`
+- **CAT17-024**
+  - corrupted title: `Dementia and Dignity`
+  - slug: `choosing-a-nursing-home-or-assisted-living-facility-what-to-look-for`
+  - poster source: `Psychage poster category 21/AGE-024 — Dementia and Dignity.jpeg`
+- **CAT17-027**
+  - corrupted title: `Late Life Anxiety`
+  - slug: `cultural-considerations-in-elder-care-family-expectations`
+  - poster source: `Psychage poster category 21/AGE-027 — Late Life Anxiety.jpeg`
+- **CAT17-021**
+  - corrupted title: `Caring for Someone With Dementia`
+  - slug: `caring-for-the-caregiver-professional-support-and-resources`
+  - poster source: `Psychage poster category 21/AGE-021 — Caring for Someone With Dementia.jpeg`
+- **CAT17-006**
+  - corrupted title: `Frontotemporal Dementia`
+  - slug: `late-life-depression-recognition-and-treatment-approaches`
+  - poster source: `Psychage poster category 21/AGE-006 — Frontotemporal Dementia.jpeg`
+- **CAT17-009**
+  - corrupted title: `The 12 Modifiable Risk Factors for Dementia`
+  - slug: `grief-bereavement-and-complicated-mourning-in-later-life`
+  - poster source: `Psychage poster category 21/AGE-009 — The 12 Modifiable Risk Factors for Dementia.jpeg`
+- **CAT17-013**
+  - corrupted title: `Sleep and Dementia Risk`
+  - slug: `treatment-and-management-of-alzheimer-disease`
+  - poster source: `Psychage poster category 21/AGE-013 — Sleep and Dementia Risk.jpeg`
+- **CAT17-005**
+  - corrupted title: `Lewy Body Dementia`
+  - slug: `social-isolation-and-loneliness-in-older-adults-the-hidden-epidemic`
+  - poster source: `Psychage poster category 21/AGE-005 — Lewy Body Dementia.jpeg`
+- **CAT17-031**
+  - corrupted title: `Purpose in Later Life`
+  - slug: `loneliness-health-consequences-older-adults`
+  - poster source: `Psychage poster category 21/AGE-031 — Purpose in Later Life.jpeg`
+- **CAT17-034**
+  - corrupted title: `Longevity and Mental Health`
+  - slug: `senior-centers-community-programs-social-connection`
+  - poster source: `Psychage poster category 21/AGE-034 — Longevity and Mental Health.jpeg`
+- **CAT17-032**
+  - corrupted title: `Wisdom and Aging`
+  - slug: `social-isolation-vs-loneliness-understanding-difference`
+  - poster source: `Psychage poster category 21/AGE-032 — Wisdom and Aging.jpeg`
+- **CAT17-018**
+  - corrupted title: `Subjective Cognitive Decline`
+  - slug: `depression-and-chronic-illness-in-older-adults`
+  - poster source: `Psychage poster category 21/AGE-018 — Subjective Cognitive Decline.jpeg`
+- **CAT17-019**
+  - corrupted title: `Genetics of Alzheimer's`
+  - slug: `social-determinants-of-late-life-depression-and-anxiety`
+  - poster source: `Psychage poster category 21/AGE-019 — Genetics of Alzheimer_s.jpeg`
+- **CAT17-029**
+  - corrupted title: `Grief in Older Adults`
+  - slug: `transitioning-from-caregiver-to-bereavement-grief-after-caregiving`
+  - poster source: `Psychage poster category 21/AGE-029 — Grief in Older Adults.jpeg`
+- **CAT17-035**
+  - corrupted title: `Neurology of Memory`
+  - slug: `volunteering-purpose-retirement-mental-health`
+  - poster source: `Psychage poster category 21/AGE-035 — Neurology of Memory.jpeg`
+- **CAT17-036**
+  - corrupted title: `Delirium`
+  - slug: `pet-ownership-companionship-mental-health-older-adults`
+  - poster source: `Psychage poster category 21/AGE-036 — Delirium.jpeg`
+- **CAT17-037**
+  - corrupted title: `Medication in Older Adults`
+  - slug: `intergenerational-programs-relationships-mental-health`
+  - poster source: `Psychage poster category 21/AGE-037 — Medication in Older Adults.jpeg`
+- **CAT17-049**
+  - corrupted title: `Elder Abuse`
+  - slug: `moving-in-later-life-downsizing-relocation-and-psychological-impact`
+  - poster source: `Psychage poster category 21/AGE-049 — Elder Abuse.jpeg`
+- **CAT17-038**
+  - corrupted title: `Falls and Mental Health`
+  - slug: `overcoming-barriers-socialization-mobility-hearing-transportation`
+  - poster source: `Psychage poster category 21/AGE-038 — Falls and Mental Health.jpeg`
+- **CAT17-041**
+  - corrupted title: `Dementia-Friendly Communities`
+  - slug: `moving-senior-living-communities-social-connection`
+  - poster source: `Psychage poster category 21/AGE-041 — Dementia-Friendly Communities.jpeg`
+- **CAT17-044**
+  - corrupted title: `The Person With Dementia Speaks`
+  - slug: `covid-19-lasting-impact-senior-isolation`
+  - poster source: `Psychage poster category 21/AGE-044 — The Person With Dementia Speaks.jpeg`
+- **CAT17-045**
+  - corrupted title: `Reminiscence Therapy`
+  - slug: `building-social-support-network-late-life`
+  - poster source: `Psychage poster category 21/AGE-045 — Reminiscence Therapy.jpeg`
+- **CAT17-046**
+  - corrupted title: `Music and Dementia`
+  - slug: `grief-and-bereavement-in-older-adults-when-loss-is-cumulative`
+  - poster source: `Psychage poster category 21/AGE-046 — Music and Dementia.jpeg`
+
+### Understanding Mental Health Conditions (47)
+
+- **CAT13-003**
+  - corrupted title: `Diagnosis`
+  - slug: `panic-disorder-understanding-recurrent-panic-attacks`
+  - poster source: `Psychage poster category 13/MHC-003 — Diagnosis.jpeg`
+- **CAT13-027**
+  - corrupted title: `Anxiety Across the Lifespan`
+  - slug: `dissociation-double-edged`
+  - poster source: `Psychage poster category 13/MHC-027 — Anxiety Across the Lifespan.jpeg`
+- **CAT13-009**
+  - corrupted title: `Specific Phobias`
+  - slug: `anxiety-disorders-in-children-early-signs-and-early-intervention`
+  - poster source: `Psychage poster category 13/MHC-009 — Specific Phobias.jpeg`
+- **CAT13-018**
+  - corrupted title: `Schizophrenia`
+  - slug: `mood-disorders-in-adolescents-early-detection-saves-lives`
+  - poster source: `Psychage poster category 13/MHC-018 — Schizophrenia.jpeg`
+- **CAT13-048**
+  - corrupted title: `Hoarding Disorder`
+  - slug: `autism-masking`
+  - poster source: `Psychage poster category 13/MHC-048 — Hoarding Disorder.jpeg`
+- **CAT13-001**
+  - corrupted title: `What Is a Mental Health Condition`
+  - slug: `generalized-anxiety-disorder-living-with-chronic-worry`
+  - poster source: `Psychage poster category 13/MHC-001 — What Is a Mental Health Condition.jpeg`
+- **CAT13-030**
+  - corrupted title: `Dissociative Disorders`
+  - slug: `advances-trauma-treatment`
+  - poster source: `Psychage poster category 13/MHC-030 — Dissociative Disorders.jpeg`
+- **CAT13-002**
+  - corrupted title: `The Medical Model vs Biopsychosocial Model`
+  - slug: `social-anxiety-disorder-when-fear-of-judgment-becomes-disabling`
+  - poster source: `Psychage poster category 13/MHC-002 — The Medical Model vs Biopsychosocial Model.jpeg`
+- **CAT13-036**
+  - corrupted title: `Fibromyalgia`
+  - slug: `intermittent-explosive-disorder`
+  - poster source: `Psychage poster category 13/MHC-036 — Fibromyalgia.jpeg`
+- **CAT13-041**
+  - corrupted title: `Reactive Attachment Disorder`
+  - slug: `adhd-adults`
+  - poster source: `Psychage poster category 13/MHC-041 — Reactive Attachment Disorder.jpeg`
+- **CAT13-033**
+  - corrupted title: `The Spectrum Model of Mental Health`
+  - slug: `body-dysmorphic-disorder`
+  - poster source: `Psychage poster category 13/MHC-033 — The Spectrum Model of Mental Health.jpeg`
+- **CAT13-015**
+  - corrupted title: `Narcissistic Personality Disorder`
+  - slug: `cyclothymic-disorder-chronic-mood-fluctuation-below-bipolar-threshold`
+  - poster source: `Psychage poster category 13/MHC-015 — Narcissistic Personality Disorder.jpeg`
+- **CAT13-044**
+  - corrupted title: `Internet and Technology Addiction`
+  - slug: `late-diagnosed-autism`
+  - poster source: `Psychage poster category 13/MHC-044 — Internet and Technology Addiction.jpeg`
+- **CAT13-050**
+  - corrupted title: `Selective Mutism`
+  - slug: `support-accommodation`
+  - poster source: `Psychage poster category 13/MHC-050 — Selective Mutism.jpeg`
+- **CAT13-022**
+  - corrupted title: `Binge Eating Disorder`
+  - slug: `complex-ptsd`
+  - poster source: `Psychage poster category 13/MHC-022 — Binge Eating Disorder.jpeg`
+- **CAT13-034**
+  - corrupted title: `Psychosomatic Conditions`
+  - slug: `trichotillomania`
+  - poster source: `Psychage poster category 13/MHC-034 — Psychosomatic Conditions.jpeg`
+- **CAT13-037**
+  - corrupted title: `Seasonal Affective Disorder`
+  - slug: `hoarding-disorder`
+  - poster source: `Psychage poster category 13/MHC-037 — Seasonal Affective Disorder.jpeg`
+- **CAT13-025**
+  - corrupted title: `Alcohol Use Disorder`
+  - slug: `osdd`
+  - poster source: `Psychage poster category 13/MHC-025 — Alcohol Use Disorder.jpeg`
+- **CAT13-026**
+  - corrupted title: `Depression Across the Lifespan`
+  - slug: `depersonalization-derealization`
+  - poster source: `Psychage poster category 13/MHC-026 — Depression Across the Lifespan.jpeg`
+- **CAT13-038**
+  - corrupted title: `Premenstrual Dysphoric Disorder`
+  - slug: `ocd-spectrum`
+  - poster source: `Psychage poster category 13/MHC-038 — Premenstrual Dysphoric Disorder.jpeg`
+- **CAT13-024**
+  - corrupted title: `Addiction`
+  - slug: `dissociative-identity-disorder`
+  - poster source: `Psychage poster category 13/MHC-024 — Addiction.jpeg`
+- **CAT13-029**
+  - corrupted title: `Psychosis`
+  - slug: `trauma-substance-use`
+  - poster source: `Psychage poster category 13/MHC-029 — Psychosis.jpeg`
+- **CAT13-042**
+  - corrupted title: `Conduct Disorder`
+  - slug: `adhd-women`
+  - poster source: `Psychage poster category 13/MHC-042 — Conduct Disorder.jpeg`
+- **CAT13-031**
+  - corrupted title: `Personality Disorders`
+  - slug: `ocd-explained`
+  - poster source: `Psychage poster category 13/MHC-031 — Personality Disorders.jpeg`
+- **CAT13-035**
+  - corrupted title: `Chronic Fatigue Syndrome`
+  - slug: `excoriation-disorder`
+  - poster source: `Psychage poster category 13/MHC-035 — Chronic Fatigue Syndrome.jpeg`
+- **CAT13-039**
+  - corrupted title: `Perinatal Mental Health Conditions`
+  - slug: `ocd-children`
+  - poster source: `Psychage poster category 13/MHC-039 — Perinatal Mental Health Conditions.jpeg`
+- **CAT13-043**
+  - corrupted title: `Oppositional Defiant Disorder`
+  - slug: `autism-adults`
+  - poster source: `Psychage poster category 13/MHC-043 — Oppositional Defiant Disorder.jpeg`
+- **CAT13-021**
+  - corrupted title: `Bulimia Nervosa`
+  - slug: `ptsd-deep-dive`
+  - poster source: `Psychage poster category 13/MHC-021 — Bulimia Nervosa.jpeg`
+- **CAT13-023**
+  - corrupted title: `Body Dysmorphic Disorder`
+  - slug: `acute-stress-disorder`
+  - poster source: `Psychage poster category 13/MHC-023 — Body Dysmorphic Disorder.jpeg`
+- **CAT13-010**
+  - corrupted title: `OCD`
+  - slug: `the-neurobiology-of-anxiety-disorders-what-happens-in-the-brain`
+  - poster source: `Psychage poster category 13/MHC-010 — OCD.jpeg`
+- **CAT13-028**
+  - corrupted title: `Comorbidity`
+  - slug: `trauma-military-veterans`
+  - poster source: `Psychage poster category 13/MHC-028 — Comorbidity.jpeg`
+- **CAT13-032**
+  - corrupted title: `Trauma and Its Diagnoses`
+  - slug: `ocd-subtypes`
+  - poster source: `Psychage poster category 13/MHC-032 — Trauma and Its Diagnoses.jpeg`
+- **CAT13-040**
+  - corrupted title: `Grief and Prolonged Grief Disorder`
+  - slug: `erp-treatment`
+  - poster source: `Psychage poster category 13/MHC-040 — Grief and Prolonged Grief Disorder.jpeg`
+- **CAT13-046**
+  - corrupted title: `Sex and Relationship Addiction`
+  - slug: `hyperkinetic-disorder`
+  - poster source: `Psychage poster category 13/MHC-046 — Sex and Relationship Addiction.jpeg`
+- **CAT13-006**
+  - corrupted title: `Panic Disorder`
+  - slug: `separation-anxiety-in-adults-when-distance-from-loved-ones-triggers-fear`
+  - poster source: `Psychage poster category 13/MHC-006 — Panic Disorder.jpeg`
+- **CAT13-004**
+  - corrupted title: `Stigma and Mental Health Conditions`
+  - slug: `specific-phobias-when-fear-becomes-disproportionate`
+  - poster source: `Psychage poster category 13/MHC-004 — Stigma and Mental Health Conditions.jpeg`
+- **CAT13-005**
+  - corrupted title: `Anxiety Disorders Overview`
+  - slug: `agoraphobia-when-avoiding-panic-shrinks-your-world`
+  - poster source: `Psychage poster category 13/MHC-005 — Anxiety Disorders Overview.jpeg`
+- **CAT13-007**
+  - corrupted title: `Generalised Anxiety Disorder`
+  - slug: `selective-mutism-when-anxiety-silences-speech`
+  - poster source: `Psychage poster category 13/MHC-007 — Generalised Anxiety Disorder.jpeg`
+- **CAT13-008**
+  - corrupted title: `Social Anxiety Disorder`
+  - slug: `how-anxiety-disorders-overlap-comorbidity-and-shared-mechanisms`
+  - poster source: `Psychage poster category 13/MHC-008 — Social Anxiety Disorder.jpeg`
+- **CAT13-014**
+  - corrupted title: `Borderline Personality Disorder`
+  - slug: `bipolar-ii-disorder-hypomania-depression-diagnostic-challenge`
+  - poster source: `Psychage poster category 13/MHC-014 — Borderline Personality Disorder.jpeg`
+- **CAT13-016**
+  - corrupted title: `ADHD`
+  - slug: `spectrum-of-mood-disorders-how-they-relate-and-differ`
+  - poster source: `Psycahge poster category 17/NEU-003 — ADHD.jpeg`
+- **CAT13-011**
+  - corrupted title: `PTSD`
+  - slug: `major-depressive-episode-diagnosis-symptoms-path-to-treatment`
+  - poster source: `Psychage poster category 11/TRA-007 — PTSD.jpeg`
+- **CAT13-017**
+  - corrupted title: `Autism Spectrum Disorder`
+  - slug: `mood-disorders-and-creativity-the-complicated-relationship`
+  - poster source: `Psychage poster category 13/MHC-017 — Autism Spectrum Disorder.jpeg`
+- **CAT13-020**
+  - corrupted title: `Anorexia Nervosa`
+  - slug: `living-well-with-mood-disorder-long-term-management-strategies`
+  - poster source: `Psychage poster category 13/MHC-020 — Anorexia Nervosa.jpeg`
+- **CAT13-045**
+  - corrupted title: `Gambling Disorder`
+  - slug: `adhd-autism-overlap`
+  - poster source: `Psychage poster category 13/MHC-045 — Gambling Disorder.jpeg`
+- **CAT13-047**
+  - corrupted title: `Anger Disorders`
+  - slug: `adhd-executive-function`
+  - poster source: `Psychage poster category 13/MHC-047 — Anger Disorders.jpeg`
+- **CAT13-049**
+  - corrupted title: `Tourette Syndrome`
+  - slug: `neurodevelopmental-mental-health`
+  - poster source: `Psycahge poster category 17/NEU-029 — Tourette Syndrome.jpeg`
+
+### Loneliness, Social Connection & Belonging (42)
+
+- **CAT15-010**
+  - corrupted title: `Belonging`
+  - slug: `measuring-loneliness-ucla-scale-what-your-score-means`
+  - poster source: `Psychage poster category 15/LON-010 — Belonging.jpeg`
+- **CAT15-019**
+  - corrupted title: `Technology and Older Adult Loneliness`
+  - slug: `loneliness-in-caregivers-isolated-by-demands-looking-after-someone`
+  - poster source: `Psychage poster category 15/LON-019 — Technology and Older Adult Loneliness.jpeg`
+- **CAT15-044**
+  - corrupted title: `The Future of Human Connection`
+  - slug: `loneliness-chronic-illness-health-barriers-social-connection`
+  - poster source: `Psychage poster category 15/LON-044 — The Future of Human Connection.jpeg`
+- **CAT15-045**
+  - corrupted title: `You Are Not Alone`
+  - slug: `pandemic-loneliness-covid-need-for-each-other`
+  - poster source: `Psychage poster category 15/LON-045 — You Are Not Alone.jpeg`
+- **CAT15-022**
+  - corrupted title: `Friendship and Mental Health`
+  - slug: `three-ingredients-of-friendship-proximity-frequency-vulnerability`
+  - poster source: `Psychage poster category 15/LON-022 — Friendship and Mental Health.jpeg`
+- **CAT15-011**
+  - corrupted title: `How to Make Friends as an Adult`
+  - slug: `loneliness-in-children-adolescents-young-people-disconnected`
+  - poster source: `Psychage poster category 15/LON-011 — How to Make Friends as an Adult.jpeg`
+- **CAT15-015**
+  - corrupted title: `Quality vs Quantity in Social Connection`
+  - slug: `midlife-loneliness-when-social-circle-shrinks-without-noticing`
+  - poster source: `Psychage poster category 15/LON-015 — Quality vs Quantity in Social Connection.jpeg`
+- **CAT15-017**
+  - corrupted title: `Loneliness in Young People`
+  - slug: `loneliness-after-retirement-losing-work-identity-social-circle`
+  - poster source: `Psychage poster category 15/LON-017 — Loneliness in Young People.jpeg`
+- **CAT15-018**
+  - corrupted title: `Loneliness in Older Adults`
+  - slug: `loneliness-after-loss-when-grief-removes-your-person`
+  - poster source: `Psychage poster category 15/LON-018 — Loneliness in Older Adults.jpeg`
+- **CAT15-020**
+  - corrupted title: `Community as Medicine`
+  - slug: `lgbtq-loneliness-minority-stress-search-for-belonging`
+  - poster source: `Psychage poster category 15/LON-020 — Community as Medicine.jpeg`
+- **CAT15-004**
+  - corrupted title: `Who Gets Lonely`
+  - slug: `surgeon-general-advisory-on-loneliness-what-it-says-why-it-matters`
+  - poster source: `Psychage poster category 15/LON-004 — Who Gets Lonely.jpeg`
+- **CAT15-005**
+  - corrupted title: `Loneliness and Physical Health`
+  - slug: `loneliness-vs-solitude-how-alone-time-healing-or-harmful`
+  - poster source: `Psychage poster category 15/LON-005 — Loneliness and Physical Health.jpeg`
+- **CAT15-006**
+  - corrupted title: `Loneliness and Mental Health`
+  - slug: `loneliness-epidemic-how-modern-life-disconnected-us`
+  - poster source: `Psychage poster category 15/LON-006 — Loneliness and Mental Health.jpeg`
+- **CAT15-012**
+  - corrupted title: `Shyness and Social Anxiety`
+  - slug: `college-loneliness-best-years-of-life-feel-isolating`
+  - poster source: `Psychage poster category 15/LON-012 — Shyness and Social Anxiety.jpeg`
+- **CAT15-008**
+  - corrupted title: `The Neuroscience of Social Connection`
+  - slug: `how-loneliness-affects-immune-system-sleep-physical-health`
+  - poster source: `Psychage poster category 15/LON-008 — The Neuroscience of Social Connection.jpeg`
+- **CAT15-009**
+  - corrupted title: `Oxytocin`
+  - slug: `evolutionary-roots-of-loneliness-why-social-pain-exists`
+  - poster source: `Psychage poster category 15/LON-009 — Oxytocin.jpeg`
+- **CAT15-013**
+  - corrupted title: `The Fear of Rejection`
+  - slug: `loneliness-in-20s-30s-when-adult-friendships-get-hard`
+  - poster source: `Psychage poster category 15/LON-013 — The Fear of Rejection.jpeg`
+- **CAT15-024**
+  - corrupted title: `Digital Communities and Mental Health`
+  - slug: `how-to-be-better-friend-strengthen-relationships`
+  - poster source: `Psychage poster category 15/LON-024 — Digital Communities and Mental Health.jpeg`
+- **CAT15-025**
+  - corrupted title: `Social Skills`
+  - slug: `friendship-after-conflict-repair-rebuild`
+  - poster source: `Psychage poster category 15/LON-025 — Social Skills.jpeg`
+- **CAT15-026**
+  - corrupted title: `How to Be Less Lonely`
+  - slug: `finding-your-people-build-friend-group-feels-like-home`
+  - poster source: `Psychage poster category 15/LON-026 — How to Be Less Lonely.jpeg`
+- **CAT15-023**
+  - corrupted title: `The Gift of Solitude`
+  - slug: `from-acquaintance-to-close-friend-deepen-connections`
+  - poster source: `Psychage poster category 15/LON-023 — The Gift of Solitude.jpeg`
+- **CAT15-027**
+  - corrupted title: `When Loneliness Becomes Chronic`
+  - slug: `art-of-reaching-out-making-first-move`
+  - poster source: `Psychage poster category 15/LON-027 — When Loneliness Becomes Chronic.jpeg`
+- **CAT15-028**
+  - corrupted title: `Love and Attachment`
+  - slug: `friendship-vulnerability-opening-up-builds-closer-bonds`
+  - poster source: `Psychage poster category 15/LON-028 — Love and Attachment.jpeg`
+- **CAT15-029**
+  - corrupted title: `Connection After Loss`
+  - slug: `maintaining-long-distance-friendships-strategies-that-work`
+  - poster source: `Psychage poster category 15/LON-029 — Connection After Loss.jpeg`
+- **CAT15-030**
+  - corrupted title: `Loneliness and Purpose`
+  - slug: `when-to-let-friendship-go-recognizing-connection-run-course`
+  - poster source: `Psychage poster category 15/LON-030 — Loneliness and Purpose.jpeg`
+- **CAT15-031**
+  - corrupted title: `The Mental Health Benefits of Pets`
+  - slug: `psychology-of-belonging-feeling-part-something-bigger`
+  - poster source: `Psychage poster category 15/LON-031 — The Mental Health Benefits of Pets.jpeg`
+- **CAT15-033**
+  - corrupted title: `The Loneliness of Leadership`
+  - slug: `finding-your-tribe-shared-interests-values-search-connection`
+  - poster source: `Psychage poster category 15/LON-033 — The Loneliness of Leadership.jpeg`
+- **CAT15-034**
+  - corrupted title: `Loneliness in Caregiving`
+  - slug: `places-of-worship-mental-health-social-benefits-religious-community`
+  - poster source: `Psychage poster category 15/LON-034 — Loneliness in Caregiving.jpeg`
+- **CAT15-035**
+  - corrupted title: `Social Prescribing`
+  - slug: `support-groups-shared-experience-creates-powerful-healing`
+  - poster source: `Psychage poster category 15/LON-035 — Social Prescribing.jpeg`
+- **CAT15-036**
+  - corrupted title: `Connection and Creativity`
+  - slug: `third-place-spaces-not-home-work`
+  - poster source: `Psychage poster category 15/LON-036 — Connection and Creativity.jpeg`
+- **CAT15-042**
+  - corrupted title: `Acts of Kindness and Connection`
+  - slug: `social-media-friendships-online-connections-count`
+  - poster source: `Psychage poster category 15/LON-042 — Acts of Kindness and Connection.jpeg`
+- **CAT15-043**
+  - corrupted title: `Loneliness and Democracy`
+  - slug: `remote-work-social-isolation-working-from-home`
+  - poster source: `Psychage poster category 15/LON-043 — Loneliness and Democracy.jpeg`
+- **CAT15-021**
+  - corrupted title: `Volunteering and Mental Health`
+  - slug: `how-to-make-friends-as-adult-research-backed-guide`
+  - poster source: `Psychage poster category 15/LON-021 — Volunteering and Mental Health.jpeg`
+- **CAT15-032**
+  - corrupted title: `Urban Planning and Loneliness`
+  - slug: `community-involvement-mental-health-volunteering-changes-brain`
+  - poster source: `Psychage poster category 15/LON-032 — Urban Planning and Loneliness.jpeg`
+- **CAT15-041**
+  - corrupted title: `Connection in the Digital Age`
+  - slug: `paradox-connection-most-connected-generation-loneliest`
+  - poster source: `Psychage poster category 15/LON-041 — Connection in the Digital Age.jpeg`
+- **CAT15-007**
+  - corrupted title: `Social Media and Loneliness`
+  - slug: `social-isolation-vs-perceived-isolation-lonely-in-crowd`
+  - poster source: `Psychage poster category 15/LON-007 — Social Media and Loneliness.jpeg`
+- **CAT15-002**
+  - corrupted title: `Loneliness vs Aloneness`
+  - slug: `neuroscience-of-social-connection-why-brain-needs-other-people`
+  - poster source: `Psychage poster category 15/LON-002 — Loneliness vs Aloneness.jpeg`
+- **CAT15-016**
+  - corrupted title: `How Loneliness Distorts Thinking`
+  - slug: `loneliness-in-older-adults-health-crisis-aging-alone`
+  - poster source: `Psychage poster category 15/LON-016 — How Loneliness Distorts Thinking.jpeg`
+- **CAT15-014**
+  - corrupted title: `Building a Social Life From Scratch`
+  - slug: `loneliness-after-having-baby-isolation-new-parents-dont-talk-about`
+  - poster source: `Psychage poster category 15/LON-014 — Building a Social Life From Scratch.jpeg`
+- **CAT15-038**
+  - corrupted title: `The Long-Distance Friendship`
+  - slug: `community-gardens-book-clubs-running-groups-low-barrier-social`
+  - poster source: `Psychage poster category 15/LON-038 — The Long-Distance Friendship.jpeg`
+- **CAT15-039**
+  - corrupted title: `The Power of Weak Ties`
+  - slug: `online-communities-mental-health-virtual-belonging`
+  - poster source: `Psychage poster category 15/LON-039 — The Power of Weak Ties.jpeg`
+- **CAT15-046**
+  - corrupted title: `Psychage`
+  - slug: `architecture-urban-design-affect-social-connection`
+  - poster source: `Psychage poster category 15/LON-046 — Psychage.jpeg`
+
+### Digital Life, Social Media & Modern Stressors (40)
+
+- **CAT10-035**
+  - corrupted title: `Trolling and Online Harassment`
+  - slug: `misinformation-mental-health-false-claims-real-harm`
+  - poster source: `Psychage poster category 10/DIG-035 — Trolling and Online Harassment.jpeg`
+- **CAT10-002**
+  - corrupted title: `The Attention Economy`
+  - slug: `comparison-trap-scrolling-mental-health`
+  - poster source: `Psychage poster category 10/DIG-002 — The Attention Economy.jpeg`
+- **CAT10-031**
+  - corrupted title: `The Right to Disconnect`
+  - slug: `what-is-doomscrolling-psychology-compulsive-news`
+  - poster source: `Psychage poster category 10/DIG-031 — The Right to Disconnect.jpeg`
+- **CAT10-025**
+  - corrupted title: `Influencer Culture`
+  - slug: `online-radicalization-mental-health-extreme-content`
+  - poster source: `Psychage poster category 10/DIG-025 — Influencer Culture.jpeg`
+- **CAT10-004**
+  - corrupted title: `Comparison Culture`
+  - slug: `fomo-fear-of-missing-out-anxiety`
+  - poster source: `Psychage poster category 10/DIG-004 — Comparison Culture.jpeg`
+- **CAT10-005**
+  - corrupted title: `FOMO`
+  - slug: `instagram-tiktok-body-image-mental-health`
+  - poster source: `Psychage poster category 10/DIG-005 — FOMO.jpeg`
+- **CAT10-006**
+  - corrupted title: `Cyberbullying`
+  - slug: `social-media-loneliness-connection`
+  - poster source: `Psychage poster category 10/DIG-006 — Cyberbullying.jpeg`
+- **CAT10-008**
+  - corrupted title: `Digital Detox`
+  - slug: `highlight-reel-effect-social-media`
+  - poster source: `Psychage poster category 10/DIG-008 — Digital Detox.jpeg`
+- **CAT10-009**
+  - corrupted title: `Online Identity`
+  - slug: `social-media-breaks-research`
+  - poster source: `Psychage poster category 10/DIG-009 — Online Identity.jpeg`
+- **CAT10-029**
+  - corrupted title: `Misinformation and Anxiety`
+  - slug: `online-impersonation-catfishing-digital-deception`
+  - poster source: `Psychage poster category 10/DIG-029 — Misinformation and Anxiety.jpeg`
+- **CAT10-011**
+  - corrupted title: `Social Media and Body Image`
+  - slug: `how-much-screen-time-is-too-much-evidence`
+  - poster source: `Psychage poster category 10/DIG-011 — Social Media and Body Image.jpeg`
+- **CAT10-013**
+  - corrupted title: `Gaming Disorder`
+  - slug: `attention-economy-apps-designed-to-hook`
+  - poster source: `Psychage poster category 10/DIG-013 — Gaming Disorder.jpeg`
+- **CAT10-014**
+  - corrupted title: `Pornography and Mental Health`
+  - slug: `digital-minimalism-reduce-tech-footprint`
+  - poster source: `Psychage poster category 10/DIG-014 — Pornography and Mental Health.jpeg`
+- **CAT10-028**
+  - corrupted title: `Cancel Culture`
+  - slug: `parasocial-relationships-one-sided-connection`
+  - poster source: `Psychage poster category 10/DIG-028 — Cancel Culture.jpeg`
+- **CAT10-032**
+  - corrupted title: `Digital Minimalism`
+  - slug: `information-overload-how-too-much-input-overwhelms-brain`
+  - poster source: `Psychage poster category 10/DIG-032 — Digital Minimalism.jpeg`
+- **CAT10-033**
+  - corrupted title: `Technology and Human Connection`
+  - slug: `news-anxiety-24-7-news-cycle-mental-health`
+  - poster source: `Psychage poster category 10/DIG-033 — Technology and Human Connection.jpeg`
+- **CAT10-027**
+  - corrupted title: `Digital Empathy`
+  - slug: `online-dating-mental-health-rejection-ghosting`
+  - poster source: `Psychage poster category 10/DIG-027 — Digital Empathy.jpeg`
+- **CAT10-030**
+  - corrupted title: `Social Media and Political Polarization`
+  - slug: `helping-teens-navigate-online-cruelty-parents-guide`
+  - poster source: `Psychage poster category 10/DIG-030 — Social Media and Political Polarization.jpeg`
+- **CAT10-015**
+  - corrupted title: `Social Media and Sleep`
+  - slug: `screen-time-children-age-appropriate-guidelines`
+  - poster source: `Psychage poster category 10/DIG-015 — Social Media and Sleep.jpeg`
+- **CAT10-016**
+  - corrupted title: `Online Communities`
+  - slug: `night-time-screen-use-disrupts-sleep`
+  - poster source: `Psychage poster category 10/DIG-016 — Online Communities.jpeg`
+- **CAT10-007**
+  - corrupted title: `Screen Time`
+  - slug: `dopamine-social-media-reward-system`
+  - poster source: `Psychage poster category 10/DIG-007 — Screen Time.jpeg`
+- **CAT10-017**
+  - corrupted title: `Digital Loneliness`
+  - slug: `dopamine-detox-science-or-snake-oil`
+  - poster source: `Psychage poster category 10/DIG-017 — Digital Loneliness.jpeg`
+- **CAT10-019**
+  - corrupted title: `Doomscrolling`
+  - slug: `productivity-paradox-technology-less-efficient`
+  - poster source: `Psychage poster category 10/DIG-019 — Doomscrolling.jpeg`
+- **CAT10-010**
+  - corrupted title: `Digital Communication`
+  - slug: `mindful-social-media-use-strategies`
+  - poster source: `Psychage poster category 10/DIG-010 — Digital Communication.jpeg`
+- **CAT10-034**
+  - corrupted title: `Algorithms and Self-Worth`
+  - slug: `climate-anxiety-internet-awareness-overwhelm`
+  - poster source: `Psychage poster category 10/DIG-034 — Algorithms and Self-Worth.jpeg`
+- **CAT10-040**
+  - corrupted title: `Children and Screens`
+  - slug: `building-healthy-information-diet-practical-strategies`
+  - poster source: `Psychage poster category 10/DIG-040 — Children and Screens.jpeg`
+- **CAT10-044**
+  - corrupted title: `Technology and Loneliness`
+  - slug: `reclaim-attention-training-focus-distracted-world`
+  - poster source: `Psychage poster category 10/DIG-044 — Technology and Loneliness.jpeg`
+- **CAT10-045**
+  - corrupted title: `Digital Activism`
+  - slug: `nature-technology-getting-outside-counteracts-screen-exposure`
+  - poster source: `Psychage poster category 10/DIG-045 — Digital Activism.jpeg`
+- **CAT10-046**
+  - corrupted title: `The Right to Privacy`
+  - slug: `analog-activities-mental-health-rediscovering-offline-joy`
+  - poster source: `Psychage poster category 10/DIG-046 — The Right to Privacy.jpeg`
+- **CAT10-026**
+  - corrupted title: `Creating vs Consuming Online`
+  - slug: `online-reviews-ratings-social-anxiety`
+  - poster source: `Psychage poster category 10/DIG-026 — Creating vs Consuming Online.jpeg`
+- **CAT10-050**
+  - corrupted title: `Finding Balance`
+  - slug: `personal-digital-wellness-plan-step-by-step-guide`
+  - poster source: `Psychage poster category 10/DIG-050 — Finding Balance.jpeg`
+- **CAT10-037**
+  - corrupted title: `Social Media and Relationships`
+  - slug: `stay-informed-without-becoming-anxious`
+  - poster source: `Psychage poster category 10/DIG-037 — Social Media and Relationships.jpeg`
+- **CAT10-039**
+  - corrupted title: `Parasocial Relationships`
+  - slug: `mental-health-impact-constant-pandemic-news`
+  - poster source: `Psychage poster category 10/DIG-039 — Parasocial Relationships.jpeg`
+- **CAT10-021**
+  - corrupted title: `Social Media and Teenagers`
+  - slug: `cyberbullying-mental-health-impact-online-harassment`
+  - poster source: `Psychage poster category 10/DIG-021 — Social Media and Teenagers.jpeg`
+- **CAT10-024**
+  - corrupted title: `The Psychology of Likes`
+  - slug: `revenge-porn-digital-exploitation-psychological-damage`
+  - poster source: `Psychage poster category 10/DIG-024 — The Psychology of Likes.jpeg`
+- **CAT10-036**
+  - corrupted title: `The Digital Self`
+  - slug: `infinite-scroll-endless-content-feeds-exploit-attention`
+  - poster source: `Psychage poster category 10/DIG-036 — The Digital Self.jpeg`
+- **CAT10-048**
+  - corrupted title: `Boundaries in Online Spaces`
+  - slug: `teaching-children-digital-literacy-raising-healthy-digital-citizens`
+  - poster source: `Psychage poster category 10/DIG-048 — Boundaries in Online Spaces.jpeg`
+- **CAT10-012**
+  - corrupted title: `Gaming and Mental Health`
+  - slug: `smartphone-addiction-real-or-bad-habit`
+  - poster source: `Psychage poster category 10/DIG-012 — Gaming and Mental Health.jpeg`
+- **CAT10-038**
+  - corrupted title: `Healthy Social Media Habits`
+  - slug: `echo-chambers-mental-health-feed-reinforces-fears`
+  - poster source: `Psychage poster category 10/DIG-038 — Healthy Social Media Habits.jpeg`
+- **CAT10-041**
+  - corrupted title: `Mindful Technology Use`
+  - slug: `what-is-digital-wellness-framework-healthy-tech-relationship`
+  - poster source: `Psychage poster category 10/DIG-041 — Mindful Technology Use.jpeg`
+
+### Depression & Mood (40)
+
+- **CAT07-038**
+  - corrupted title: `Grief and Physical Health`
+  - slug: `how-to-support-yourself-between-therapy-sessions`
+  - poster source: `Psychage poster category 7/DEP-038 — Grief and Physical Health.jpeg`
+- **CAT07-054**
+  - corrupted title: `The Manic Episode`
+  - slug: `depression-college-students-crisis-campus`
+  - poster source: `Psychage poster category 7/DEP-054 — The Manic Episode.jpeg`
+- **CAT07-060**
+  - corrupted title: `Crisis Resources and Support`
+  - slug: `depression-immigrants-refugees-displacement`
+  - poster source: `Psychage poster category 7/DEP-060 — Crisis Resources and Support.jpeg`
+- **CAT07-063**
+  - corrupted title: `Depression in Different Cultures`
+  - slug: `psychotherapy-vs-medication-combining-both`
+  - poster source: `Psychage poster category 7/DEP-063 — Depression in Different Cultures.jpeg`
+- **CAT07-030**
+  - corrupted title: `How to Support a Grieving Person`
+  - slug: `how-long-does-grief-last`
+  - poster source: `Psychage poster category 7/DEP-030 — How to Support a Grieving Person.jpeg`
+- **CAT07-059**
+  - corrupted title: `How to Ask for Help`
+  - slug: `depression-healthcare-workers-cost-of-caring`
+  - poster source: `Psychage poster category 7/DEP-059 — How to Ask for Help.jpeg`
+- **CAT07-008**
+  - corrupted title: `The Social Withdrawal of Depression`
+  - slug: `depression-physical-health-bidirectional`
+  - poster source: `Psychage poster category 7/DEP-008 — The Social Withdrawal of Depression.jpeg`
+- **CAT07-039**
+  - corrupted title: `Traumatic Grief`
+  - slug: `creating-safety-plan-depressive-episodes`
+  - poster source: `Psychage poster category 7/DEP-039 — Traumatic Grief.jpeg`
+- **CAT07-040**
+  - corrupted title: `How Culture Shapes Grief`
+  - slug: `mindfulness-based-cognitive-therapy-preventing-depression-relapse`
+  - poster source: `Psychage poster category 7/DEP-040 — How Culture Shapes Grief.jpeg`
+- **CAT07-049**
+  - corrupted title: `How to Help Someone With Depression`
+  - slug: `tracking-your-mood-tools-techniques-pattern-recognition`
+  - poster source: `Psychage poster category 7/DEP-049 — How to Help Someone With Depression.jpeg`
+- **CAT07-034**
+  - corrupted title: `Meaning-Making in Grief`
+  - slug: `journaling-for-depression-prompts-process-difficult-emotions`
+  - poster source: `Psychage poster category 7/DEP-034 — Meaning-Making in Grief.jpeg`
+- **CAT07-042**
+  - corrupted title: `The Second Year of Grief`
+  - slug: `light-therapy-sad-how-it-works-evidence`
+  - poster source: `Psychage poster category 7/DEP-042 — The Second Year of Grief.jpeg`
+- **CAT07-033**
+  - corrupted title: `How Loss Changes Relationships`
+  - slug: `depression-toolkit-daily-practices-research-supports`
+  - poster source: `Psychage poster category 7/DEP-033 — How Loss Changes Relationships.jpeg`
+- **CAT07-032**
+  - corrupted title: `Grief and Anger`
+  - slug: `how-to-get-out-of-bed-when-depression-weighs-you-down`
+  - poster source: `Psychage poster category 7/DEP-032 — Grief and Anger.jpeg`
+- **CAT07-031**
+  - corrupted title: `Loss of Identity`
+  - slug: `behavioral-activation-evidence-based-self-help-strategy-depression`
+  - poster source: `Psychage poster category 7/DEP-031 — Loss of Identity.jpeg`
+- **CAT07-050**
+  - corrupted title: `Depression and Anger`
+  - slug: `light-vitamin-d-mental-health-science-hype`
+  - poster source: `Psychage poster category 7/DEP-050 — Depression and Anger.jpeg`
+- **CAT07-041**
+  - corrupted title: `When Depression and Grief Overlap`
+  - slug: `seasonal-affective-disorder-complete-guide-winter-depression`
+  - poster source: `Psychage poster category 7/DEP-041 — When Depression and Grief Overlap.jpeg`
+- **CAT07-047**
+  - corrupted title: `When Depression Lifts`
+  - slug: `anniversary-reactions-dates-trigger-emotional-waves`
+  - poster source: `Psychage poster category 7/DEP-047 — When Depression Lifts.jpeg`
+- **CAT07-048**
+  - corrupted title: `Depression and Relationships`
+  - slug: `cyclothymia-chronic-mood-swings-without-bipolar`
+  - poster source: `Psychage poster category 7/DEP-048 — Depression and Relationships.jpeg`
+- **CAT07-015**
+  - corrupted title: `Treatment-Resistant Depression`
+  - slug: `postpartum-depression-after-birth`
+  - poster source: `Psychage poster category 7/DEP-015 — Treatment-Resistant Depression.jpeg`
+- **CAT07-012**
+  - corrupted title: `Teen Depression`
+  - slug: `persistent-depressive-disorder-dysthymia`
+  - poster source: `Psychage poster category 7/DEP-012 — Teen Depression.jpeg`
+- **CAT07-019**
+  - corrupted title: `Sleep and Depression`
+  - slug: `premenstrual-dysphoric-disorder-pmdd`
+  - poster source: `Psychage poster category 7/DEP-019 — Sleep and Depression.jpeg`
+- **CAT07-035**
+  - corrupted title: `Continuing Bonds With the Dead`
+  - slug: `exercise-depression-movement-changes-brain-chemistry`
+  - poster source: `Psychage poster category 7/DEP-035 — Continuing Bonds With the Dead.jpeg`
+- **CAT07-036**
+  - corrupted title: `Depression After a Breakup`
+  - slug: `nutrition-depression-evidence-food-mood`
+  - poster source: `Psychage poster category 7/DEP-036 — Depression After a Breakup.jpeg`
+- **CAT07-037**
+  - corrupted title: `The Grief of Infertility`
+  - slug: `social-connection-when-you-want-to-withdraw-starting-small`
+  - poster source: `Psychage poster category 7/DEP-037 — The Grief of Infertility.jpeg`
+- **CAT07-027**
+  - corrupted title: `Pet Loss`
+  - slug: `grief-after-suicide`
+  - poster source: `Psychage poster category 7/DEP-027 — Pet Loss.jpeg`
+- **CAT07-053**
+  - corrupted title: `Bipolar Disorder`
+  - slug: `teen-depression-warning-signs-parents-teachers`
+  - poster source: `Psychage poster category 13/MHC-013 — Bipolar Disorder.jpeg`
+- **CAT07-025**
+  - corrupted title: `Grief After Suicide Loss`
+  - slug: `anticipatory-grief`
+  - poster source: `Psychage poster category 7/DEP-025 — Grief After Suicide Loss.jpeg`
+- **CAT07-057**
+  - corrupted title: `Suicidal Thoughts`
+  - slug: `depression-new-parents-postpartum-partners`
+  - poster source: `Psychage poster category 7/DEP-057 — Suicidal Thoughts.jpeg`
+- **CAT07-058**
+  - corrupted title: `After a Suicide Attempt`
+  - slug: `depression-chronic-illness-managing-mood`
+  - poster source: `Psychage poster category 7/DEP-058 — After a Suicide Attempt.jpeg`
+- **CAT07-044**
+  - corrupted title: `Exercise and Grief`
+  - slug: `how-seasons-affect-everyones-mood-without-sad`
+  - poster source: `Psychage poster category 7/DEP-044 — Exercise and Grief.jpeg`
+- **CAT07-045**
+  - corrupted title: `What Helps Depression`
+  - slug: `circadian-rhythms-mood-internal-clock-matters`
+  - poster source: `Psychage poster category 7/DEP-045 — What Helps Depression.jpeg`
+- **CAT07-046**
+  - corrupted title: `Living With Chronic Depression`
+  - slug: `holiday-depression-most-wonderful-time-doesnt-feel-wonderful`
+  - poster source: `Psychage poster category 7/DEP-046 — Living With Chronic Depression.jpeg`
+- **CAT07-055**
+  - corrupted title: `Depression After Mania`
+  - slug: `depression-older-adults-mistaken-for-aging`
+  - poster source: `Psychage poster category 7/DEP-055 — Depression After Mania.jpeg`
+- **CAT07-056**
+  - corrupted title: `The Role of Routine in Recovery`
+  - slug: `depression-lgbtq-community-minority-stress`
+  - poster source: `Psychage poster category 7/DEP-056 — The Role of Routine in Recovery.jpeg`
+- **CAT07-066**
+  - corrupted title: `Exercise as an Antidepressant`
+  - slug: `relapse-prevention-staying-well-after-recovery`
+  - poster source: `Psychage poster category 7/DEP-066 — Exercise as an Antidepressant.jpeg`
+- **CAT07-069**
+  - corrupted title: `The Gift of Depression`
+  - slug: `recovery-is-not-linear-understanding-setbacks`
+  - poster source: `Psychage poster category 7/DEP-069 — The Gift of Depression.jpeg`
+- **CAT07-070**
+  - corrupted title: `Recovery Is Not Linear`
+  - slug: `life-after-depression-rebuilding-meaning-purpose-connection`
+  - poster source: `Psychage poster category 7/DEP-070 — Recovery Is Not Linear.jpeg`
+- **CAT07-064**
+  - corrupted title: `When a Loved One Is Depressed`
+  - slug: `emerging-treatments-ketamine-tms-psilocybin`
+  - poster source: `Psychage poster category 7/DEP-064 — When a Loved One Is Depressed.jpeg`
+- **CAT07-068**
+  - corrupted title: `Behavioral Activation`
+  - slug: `when-someone-you-love-is-depressed-helping-without-burnout`
+  - poster source: `Psychage poster category 7/DEP-068 — Behavioral Activation.jpeg`
+
+### Therapy, Treatment & Mental Health Navigation (39)
+
+- **CAT14-001**
+  - corrupted title: `How to Know If You Need Therapy`
+  - slug: `cognitive-behavioral-therapy-cbt-most-studied-treatment`
+  - poster source: `Psychage poster category 14/THR-001 — How to Know If You Need Therapy.jpeg`
+- **CAT14-047**
+  - corrupted title: `Recovery-Oriented Care`
+  - slug: `what-to-do-when-someone-refuses-treatment`
+  - poster source: `Psychage poster category 14/THR-047 — Recovery-Oriented Care.jpeg`
+- **CAT14-009**
+  - corrupted title: `Mindfulness-Based Therapies`
+  - slug: `group-therapy-healing-in-community-works`
+  - poster source: `Psychage poster category 14/THR-009 — Mindfulness-Based Therapies.jpeg`
+- **CAT14-021**
+  - corrupted title: `Mood Stabilizers`
+  - slug: `how-to-know-when-its-time-to-see-therapist`
+  - poster source: `Psychage poster category 14/THR-021 — Mood Stabilizers.jpeg`
+- **CAT14-039**
+  - corrupted title: `When Medication Isn't Enough`
+  - slug: `mental-health-records-privacy-patient-rights`
+  - poster source: `Psychage poster category 14/THR-039 — When Medication Isn_t Enough.jpeg`
+- **CAT14-040**
+  - corrupted title: `Stopping Therapy`
+  - slug: `advocating-for-yourself-mental-health-system`
+  - poster source: `Psychage poster category 14/THR-040 — Stopping Therapy.jpeg`
+- **CAT14-030**
+  - corrupted title: `Psychedelic-Assisted Therapy`
+  - slug: `therapeutic-relationship-why-bond-with-therapist-matters-most`
+  - poster source: `Psychage poster category 14/THR-030 — Psychedelic-Assisted Therapy.jpeg`
+- **CAT14-003**
+  - corrupted title: `Cognitive Behavioural Therapy`
+  - slug: `emdr-eye-movement-therapy-processes-trauma`
+  - poster source: `Psychage poster category 14/THR-003 — Cognitive Behavioural Therapy.jpeg`
+- **CAT14-013**
+  - corrupted title: `How Long Does Therapy Take`
+  - slug: `anti-anxiety-medications-benzodiazepines-buspirone-what-you-need-to-know`
+  - poster source: `Psychage poster category 14/THR-013 — How Long Does Therapy Take.jpeg`
+- **CAT14-014**
+  - corrupted title: `Therapy Isn't Working`
+  - slug: `mood-stabilizers-medications-bipolar-disorder-mood-regulation`
+  - poster source: `Psychage poster category 14/THR-014 — Therapy Isn_t Working.jpeg`
+- **CAT14-015**
+  - corrupted title: `Online Therapy`
+  - slug: `antipsychotic-medications-what-they-treat-how-they-work`
+  - poster source: `Psychage poster category 14/THR-015 — Online Therapy.jpeg`
+- **CAT14-018**
+  - corrupted title: `Couples Therapy`
+  - slug: `side-effects-psychiatric-medication-what-to-expect-when-to-speak-up`
+  - poster source: `Psychage poster category 14/THR-018 — Couples Therapy.jpeg`
+- **CAT14-006**
+  - corrupted title: `Dialectical Behaviour Therapy`
+  - slug: `interpersonal-therapy-ipt-healing-through-relationship-patterns`
+  - poster source: `Psychage poster category 14/THR-006 — Dialectical Behaviour Therapy.jpeg`
+- **CAT14-007**
+  - corrupted title: `EMDR`
+  - slug: `humanistic-person-centered-therapy-unconditional-positive-regard`
+  - poster source: `Psychage poster category 11/TRA-014 — EMDR.jpeg`
+- **CAT14-017**
+  - corrupted title: `Family Therapy`
+  - slug: `how-psychiatric-medication-works-neurotransmitters-plain-language`
+  - poster source: `Psychage poster category 14/THR-017 — Family Therapy.jpeg`
+- **CAT14-022**
+  - corrupted title: `Antipsychotics`
+  - slug: `your-first-therapy-session-what-actually-happens`
+  - poster source: `Psychage poster category 14/THR-022 — Antipsychotics.jpeg`
+- **CAT14-023**
+  - corrupted title: `ADHD Medication`
+  - slug: `how-to-find-right-therapist-practical-step-by-step-guide`
+  - poster source: `Psycahge poster category 17/NEU-012 — ADHD Medication.jpeg`
+- **CAT14-024**
+  - corrupted title: `Therapy for Children`
+  - slug: `therapist-red-flags-signs-provider-not-right-fit`
+  - poster source: `Psychage poster category 14/THR-024 — Therapy for Children.jpeg`
+- **CAT14-026**
+  - corrupted title: `Therapy for Older Adults`
+  - slug: `therapy-for-people-who-never-done-therapy-answering-unasked-questions`
+  - poster source: `Psychage poster category 14/THR-026 — Therapy for Older Adults.jpeg`
+- **CAT14-027**
+  - corrupted title: `Trauma-Focused Therapies`
+  - slug: `how-to-talk-to-your-doctor-about-mental-health`
+  - poster source: `Psychage poster category 14/THR-027 — Trauma-Focused Therapies.jpeg`
+- **CAT14-028**
+  - corrupted title: `Eating Disorder Treatment`
+  - slug: `what-if-therapy-not-working-how-to-assess-and-adjust`
+  - poster source: `Psychage poster category 14/THR-028 — Eating Disorder Treatment.jpeg`
+- **CAT14-031**
+  - corrupted title: `Crisis Support`
+  - slug: `understanding-mental-health-insurance-coverage-what-included-not`
+  - poster source: `Psychage poster category 14/THR-031 — Crisis Support.jpeg`
+- **CAT14-032**
+  - corrupted title: `Psychiatric Hospitals`
+  - slug: `sliding-scale-therapy-how-to-find-affordable-mental-health-care`
+  - poster source: `Psychage poster category 14/THR-032 — Psychiatric Hospitals.jpeg`
+- **CAT14-033**
+  - corrupted title: `Partial Hospitalization and Intensive Outpatient`
+  - slug: `community-mental-health-centers-free-low-cost-treatment-options`
+  - poster source: `Psychage poster category 14/THR-033 — Partial Hospitalization and Intensive Outpatient.jpeg`
+- **CAT14-034**
+  - corrupted title: `Peer Support in Treatment`
+  - slug: `crisis-services-what-happens-call-988-go-to-er`
+  - poster source: `Psychage poster category 14/THR-034 — Peer Support in Treatment.jpeg`
+- **CAT14-035**
+  - corrupted title: `Complementary Approaches`
+  - slug: `psychiatric-hospitalization-what-to-expect-admitted`
+  - poster source: `Psychage poster category 14/THR-035 — Complementary Approaches.jpeg`
+- **CAT14-036**
+  - corrupted title: `Self-Help for Mental Health`
+  - slug: `psychiatrist-psychologist-counselor-social-worker-differences`
+  - poster source: `Psychage poster category 14/THR-036 — Self-Help for Mental Health.jpeg`
+- **CAT14-038**
+  - corrupted title: `Paying for Therapy`
+  - slug: `navigating-mental-health-diagnosis`
+  - poster source: `Psychage poster category 14/THR-038 — Paying for Therapy.jpeg`
+- **CAT14-043**
+  - corrupted title: `Therapy for LGBTQ+ People`
+  - slug: `when-friend-tells-you-theyre-struggling-respond-with-care`
+  - poster source: `Psychage poster category 14/THR-043 — Therapy for LGBTQ+ People.jpeg`
+- **CAT14-045**
+  - corrupted title: `First Aid for Mental Health`
+  - slug: `caregiver-fatigue-taking-care-of-yourself`
+  - poster source: `Psychage poster category 14/THR-045 — First Aid for Mental Health.jpeg`
+- **CAT14-044**
+  - corrupted title: `Involuntary Treatment`
+  - slug: `staging-intervention-evidence-based-approaches`
+  - poster source: `Psychage poster category 14/THR-044 — Involuntary Treatment.jpeg`
+- **CAT14-046**
+  - corrupted title: `Suicide Prevention`
+  - slug: `talk-to-someone-about-getting-help-without-pushing-away`
+  - poster source: `Psychage poster category 14/THR-046 — Suicide Prevention.jpeg`
+- **CAT14-048**
+  - corrupted title: `Trauma-Informed Systems`
+  - slug: `supporting-someone-after-psychiatric-hospitalization`
+  - poster source: `Psychage poster category 14/THR-048 — Trauma-Informed Systems.jpeg`
+- **CAT14-050**
+  - corrupted title: `A World Where Help Is Always Available`
+  - slug: `building-support-network-mental-health`
+  - poster source: `Psychage poster category 14/THR-050 — A World Where Help Is Always Available.jpeg`
+- **CAT14-016**
+  - corrupted title: `Group Therapy`
+  - slug: `adhd-medications-stimulants-non-stimulants-finding-right-fit`
+  - poster source: `Psychage poster category 14/THR-016 — Group Therapy.jpeg`
+- **CAT14-012**
+  - corrupted title: `What to Expect in the First Session`
+  - slug: `snris-tcas-maois-beyond-ssris-other-antidepressant-options`
+  - poster source: `Psychage poster category 14/THR-012 — What to Expect in the First Session.jpeg`
+- **CAT14-019**
+  - corrupted title: `Medication for Mental Health`
+  - slug: `starting-stopping-medication-why-never-go-cold-turkey`
+  - poster source: `Psychage poster category 14/THR-019 — Medication for Mental Health.jpeg`
+- **CAT14-011**
+  - corrupted title: `Finding the Right Therapist`
+  - slug: `ssris-explained-most-common-medications-depression-anxiety`
+  - poster source: `Psychage poster category 14/THR-011 — Finding the Right Therapist.jpeg`
+- **CAT14-020**
+  - corrupted title: `Antidepressants`
+  - slug: `medication-vs-therapy-debate-combined-treatment-research`
+  - poster source: `Psychage poster category 14/THR-020 — Antidepressants.jpeg`
+
+### Trauma-Informed Education & Healing (35)
+
+- **CAT11-011**
+  - corrupted title: `Dissociation`
+  - slug: `ptsd-complete-guide-post-traumatic-stress-disorder`
+  - poster source: `Psychage poster category 11/TRA-011 — Dissociation.jpeg`
+- **CAT11-002**
+  - corrupted title: `How Trauma Affects the Brain`
+  - slug: `big-t-little-t-spectrum-traumatic-experiences`
+  - poster source: `Psychage poster category 11/TRA-002 — How Trauma Affects the Brain.jpeg`
+- **CAT11-032**
+  - corrupted title: `Trauma and Addiction`
+  - slug: `emdr-explained-eye-movements-process-traumatic-memories`
+  - poster source: `Psychage poster category 11/TRA-032 — Trauma and Addiction.jpeg`
+- **CAT11-003**
+  - corrupted title: `Big T and Small t Trauma`
+  - slug: `how-trauma-changes-brain-neuroscience`
+  - poster source: `Psychage poster category 11/TRA-003 — Big T and Small t Trauma.jpeg`
+- **CAT11-025**
+  - corrupted title: `Narrative Therapy`
+  - slug: `trauma-triggers-what-they-are-how-to-manage`
+  - poster source: `Psychage poster category 11/TRA-025 — Narrative Therapy.jpeg`
+- **CAT11-038**
+  - corrupted title: `Trauma and Chronic Illness`
+  - slug: `nature-supports-trauma-recovery-ecotherapy-green-space`
+  - poster source: `Psychage poster category 11/TRA-038 — Trauma and Chronic Illness.jpeg`
+- **CAT11-030**
+  - corrupted title: `Racial Trauma`
+  - slug: `hyperarousal-living-in-constant-alert`
+  - poster source: `Psychage poster category 11/TRA-030 — Racial Trauma.jpeg`
+- **CAT11-007**
+  - corrupted title: `PTSD`
+  - slug: `window-of-tolerance-understanding-capacity-for-stress`
+  - poster source: `Psychage poster category 11/TRA-007 — PTSD.jpeg`
+- **CAT11-014**
+  - corrupted title: `EMDR`
+  - slug: `hypervigilance-brain-wont-stop-scanning-danger`
+  - poster source: `Psychage poster category 11/TRA-014 — EMDR.jpeg`
+- **CAT11-010**
+  - corrupted title: `The Freeze Response`
+  - slug: `trauma-prevalence-how-common-traumatic-experiences`
+  - poster source: `Psychage poster category 11/TRA-010 — The Freeze Response.jpeg`
+- **CAT11-015**
+  - corrupted title: `Somatic Experiencing`
+  - slug: `emotional-numbness-after-trauma-cant-feel-anything`
+  - poster source: `Psychage poster category 11/TRA-015 — Somatic Experiencing.jpeg`
+- **CAT11-020**
+  - corrupted title: `Resilience After Trauma`
+  - slug: `ptsd-vs-acute-stress-disorder-understanding-timeline`
+  - poster source: `Psychage poster category 11/TRA-020 — Resilience After Trauma.jpeg`
+- **CAT11-022**
+  - corrupted title: `Trauma and Relationships`
+  - slug: `fawn-response-people-pleasing-survival-strategy`
+  - poster source: `Psychage poster category 11/TRA-022 — Trauma and Relationships.jpeg`
+- **CAT11-037**
+  - corrupted title: `Childhood Abuse`
+  - slug: `sensorimotor-psychotherapy-body-gateway-healing`
+  - poster source: `Psychage poster category 11/TRA-037 — Childhood Abuse.jpeg`
+- **CAT11-043**
+  - corrupted title: `When Therapy Helps Trauma`
+  - slug: `trauma-affects-relationships-attachment-trust-intimacy`
+  - poster source: `Psychage poster category 11/TRA-043 — When Therapy Helps Trauma.jpeg`
+- **CAT11-044**
+  - corrupted title: `The Biology of Healing`
+  - slug: `trauma-substance-use-self-medication-hypothesis`
+  - poster source: `Psychage poster category 11/TRA-044 — The Biology of Healing.jpeg`
+- **CAT11-045**
+  - corrupted title: `Trauma and Creativity`
+  - slug: `supporting-partner-ptsd-what-helps-what-doesnt`
+  - poster source: `Psychage poster category 11/TRA-045 — Trauma and Creativity.jpeg`
+- **CAT11-026**
+  - corrupted title: `The Wounded Healer`
+  - slug: `avoidance-after-trauma-staying-safe-keeps-you-stuck`
+  - poster source: `Psychage poster category 11/TRA-026 — The Wounded Healer.jpeg`
+- **CAT11-048**
+  - corrupted title: `Forgiveness in Trauma Recovery`
+  - slug: `trauma-informed-healthcare-doctor-should-ask-about-past`
+  - poster source: `Psychage poster category 11/TRA-048 — Forgiveness in Trauma Recovery.jpeg`
+- **CAT11-009**
+  - corrupted title: `Hypervigilance`
+  - slug: `complex-trauma-vs-single-incident-why-distinction-matters`
+  - poster source: `Psychage poster category 11/TRA-009 — Hypervigilance.jpeg`
+- **CAT11-052**
+  - corrupted title: `Medical Trauma`
+  - slug: `post-traumatic-growth-emerge-stronger-adversity`
+  - poster source: `Psychage poster category 11/TRA-052 — Medical Trauma.jpeg`
+- **CAT11-053**
+  - corrupted title: `Building Trauma-Resilient Communities`
+  - slug: `resilience-after-trauma-protective-factors`
+  - poster source: `Psychage poster category 11/TRA-053 — Building Trauma-Resilient Communities.jpeg`
+- **CAT11-047**
+  - corrupted title: `The Role of Safety in Healing`
+  - slug: `workplace-trauma-harassment-accidents-psychological-safety`
+  - poster source: `Psychage poster category 11/TRA-047 — The Role of Safety in Healing.jpeg`
+- **CAT11-041**
+  - corrupted title: `Trauma-Sensitive Yoga`
+  - slug: `trauma-informed-care-principles-everyone-should-know`
+  - poster source: `Psychage poster category 11/TRA-041 — Trauma-Sensitive Yoga.jpeg`
+- **CAT11-018**
+  - corrupted title: `Secondary Trauma`
+  - slug: `ptsd-first-responders-cost-witnessing-crisis`
+  - poster source: `Psychage poster category 11/TRA-018 — Secondary Trauma.jpeg`
+- **CAT11-019**
+  - corrupted title: `Compassion Fatigue`
+  - slug: `military-ptsd-combat-trauma-challenges-coming-home`
+  - poster source: `Psychage poster category 11/TRA-019 — Compassion Fatigue.jpeg`
+- **CAT11-034**
+  - corrupted title: `Trauma in the Emergency Services`
+  - slug: `vagus-nerve-trauma-recovery-activating-calm-system`
+  - poster source: `Psychage poster category 11/TRA-034 — Trauma in the Emergency Services.jpeg`
+- **CAT11-004**
+  - corrupted title: `Complex Trauma`
+  - slug: `ace-study-childhood-adversity-adult-health`
+  - poster source: `Psychage poster category 11/TRA-004 — Complex Trauma.jpeg`
+- **CAT11-005**
+  - corrupted title: `Developmental Trauma`
+  - slug: `why-two-people-same-event-affected-differently`
+  - poster source: `Psychage poster category 11/TRA-005 — Developmental Trauma.jpeg`
+- **CAT11-021**
+  - corrupted title: `Post-Traumatic Growth`
+  - slug: `fight-flight-freeze-fawn-trauma-responses`
+  - poster source: `Psychage poster Category 1/EMO-071 — Post-Traumatic Growth.jpeg`
+- **CAT11-046**
+  - corrupted title: `Nature and Trauma Healing`
+  - slug: `trauma-informed-education-schools-support-affected-students`
+  - poster source: `Psychage poster category 11/TRA-046 — Nature and Trauma Healing.jpeg`
+- **CAT11-012**
+  - corrupted title: `Trauma-Informed Care`
+  - slug: `complex-ptsd-dsm-catching-up`
+  - poster source: `Psychage poster category 11/TRA-012 — Trauma-Informed Care.jpeg`
+- **CAT11-033**
+  - corrupted title: `Trauma-Informed Schools`
+  - slug: `yoga-trauma-therapy-research-movement-healing`
+  - poster source: `Psychage poster category 11/TRA-033 — Trauma-Informed Schools.jpeg`
+- **CAT11-040**
+  - corrupted title: `Self-Harm`
+  - slug: `traditional-talk-therapy-not-enough-trauma`
+  - poster source: `Psychage poster category 11/TRA-040 — Self-Harm.jpeg`
+- **CAT11-039**
+  - corrupted title: `Trauma and the Immune System`
+  - slug: `animal-assisted-therapy-trauma-dogs-horses-evidence`
+  - poster source: `Psychage poster category 11/TRA-039 — Trauma and the Immune System.jpeg`
+
+### Cultural Perspectives, Inclusion & Global Wellness (29)
+
+- **CAT12-034**
+  - corrupted title: `Storytelling and Mental Health`
+  - slug: `acculturation-stress-adapting-new-culture-overwhelms`
+  - poster source: `Psychage poster category 12/CUL-034 — Storytelling and Mental Health.jpeg`
+- **CAT12-006**
+  - corrupted title: `Acculturation Stress`
+  - slug: `mental-health-african-afro-diasporic-communities`
+  - poster source: `Psychage poster category 12/CUL-006 — Acculturation Stress.jpeg`
+- **CAT12-016**
+  - corrupted title: `Mindfulness Across Cultures`
+  - slug: `language-of-stigma-words-shape-attitudes`
+  - poster source: `Psychage poster category 12/CUL-016 — Mindfulness Across Cultures.jpeg`
+- **CAT12-026**
+  - corrupted title: `A World That Cares`
+  - slug: `hispanic-latino-mental-health-language-barriers-immigration-cultural-values`
+  - poster source: `Psychage poster category 12/CUL-026 — A World That Cares.jpeg`
+- **CAT12-010**
+  - corrupted title: `Shame and Honor Cultures`
+  - slug: `western-psychology-blind-spots`
+  - poster source: `Psychage poster category 12/CUL-010 — Shame and Honor Cultures.jpeg`
+- **CAT12-009**
+  - corrupted title: `Somatic Expressions of Distress`
+  - slug: `indigenous-mental-health`
+  - poster source: `Psychage poster category 12/CUL-009 — Somatic Expressions of Distress.jpeg`
+- **CAT12-022**
+  - corrupted title: `Humor and Culture`
+  - slug: `mental-health-disparities-people-of-color-care-access`
+  - poster source: `Psychage poster category 12/CUL-022 — Humor and Culture.jpeg`
+- **CAT12-041**
+  - corrupted title: `Community Mental Health`
+  - slug: `traditional-healing-evidence-based-practice-can-they-work-together`
+  - poster source: `Psychage poster category 12/CUL-041 — Community Mental Health.jpeg`
+- **CAT12-023**
+  - corrupted title: `Grief Across Cultures`
+  - slug: `microaggressions-mental-health-cumulative-toll-everyday-racism`
+  - poster source: `Psychage poster category 12/CUL-023 — Grief Across Cultures.jpeg`
+- **CAT12-045**
+  - corrupted title: `Aging Across Cultures`
+  - slug: `indigenous-healing-practices-ceremony-community-connection`
+  - poster source: `Psychage poster category 12/CUL-045 — Aging Across Cultures.jpeg`
+- **CAT12-036**
+  - corrupted title: `Social Media and Culture`
+  - slug: `undocumented-anxious-mental-health-in-shadows`
+  - poster source: `Psychage poster category 12/CUL-036 — Social Media and Culture.jpeg`
+- **CAT12-011**
+  - corrupted title: `Masculinity Across Cultures`
+  - slug: `mental-health-stigma-what-it-is-how-to-fight-it`
+  - poster source: `Psychage poster category 12/CUL-011 — Masculinity Across Cultures.jpeg`
+- **CAT12-037**
+  - corrupted title: `Suicide Across Cultures`
+  - slug: `children-of-immigrants-growing-up-between-two-worlds`
+  - poster source: `Psychage poster category 12/CUL-037 — Suicide Across Cultures.jpeg`
+- **CAT12-004**
+  - corrupted title: `Traditional Healing Practices`
+  - slug: `mental-health-east-asian-cultures`
+  - poster source: `Psychage poster category 12/CUL-004 — Traditional Healing Practices.jpeg`
+- **CAT12-003**
+  - corrupted title: `Stigma Around Mental Health`
+  - slug: `collectivist-vs-individualist-cultures`
+  - poster source: `Psychage poster category 12/CUL-003 — Stigma Around Mental Health.jpeg`
+- **CAT12-002**
+  - corrupted title: `Collectivism vs Individualism`
+  - slug: `culture-bound-syndromes`
+  - poster source: `Psychage poster category 12/CUL-002 — Collectivism vs Individualism.jpeg`
+- **CAT12-013**
+  - corrupted title: `LGBTQ+ Mental Health`
+  - slug: `why-men-dont-seek-help-masculinity-stigma`
+  - poster source: `Psychage poster category 12/CUL-013 — LGBTQ+ Mental Health.jpeg`
+- **CAT12-012**
+  - corrupted title: `Femininity and Mental Health`
+  - slug: `self-stigma-internalized-judgment`
+  - poster source: `Psychage poster category 12/CUL-012 — Femininity and Mental Health.jpeg`
+- **CAT12-021**
+  - corrupted title: `Multicultural Identities`
+  - slug: `racial-trauma-psychological-impact-racism-mental-health`
+  - poster source: `Psychage poster category 12/CUL-021 — Multicultural Identities.jpeg`
+- **CAT12-017**
+  - corrupted title: `Food, Culture, and Mental Health`
+  - slug: `anti-stigma-campaigns-what-works`
+  - poster source: `Psychage poster category 12/CUL-017 — Food, Culture, and Mental Health.jpeg`
+- **CAT12-024**
+  - corrupted title: `Mental Health Advocacy Across Cultures`
+  - slug: `cultural-competence-therapy-what-to-look-for-provider`
+  - poster source: `Psychage poster category 12/CUL-024 — Mental Health Advocacy Across Cultures.jpeg`
+- **CAT12-046**
+  - corrupted title: `Children's Rights and Mental Health`
+  - slug: `faith-based-counseling-spiritual-support-meets-psychological-need`
+  - poster source: `Psychage poster category 12/CUL-046 — Children_s Rights and Mental Health.jpeg`
+- **CAT12-047**
+  - corrupted title: `Climate Change and Mental Health`
+  - slug: `art-therapy-across-cultures-creative-healing-universal-language`
+  - poster source: `Psychage poster category 12/CUL-047 — Climate Change and Mental Health.jpeg`
+- **CAT12-007**
+  - corrupted title: `The Model Minority Myth`
+  - slug: `mental-health-middle-eastern-cultures`
+  - poster source: `Psychage poster category 12/CUL-007 — The Model Minority Myth.jpeg`
+- **CAT12-019**
+  - corrupted title: `Disability and Culture`
+  - slug: `celebrity-mental-health-disclosure`
+  - poster source: `Psychage poster category 12/CUL-019 — Disability and Culture.jpeg`
+- **CAT12-030**
+  - corrupted title: `Wealth and Mental Health`
+  - slug: `culturally-adapted-therapies-treatment-work-across-racial-groups`
+  - poster source: `Psychage poster category 12/CUL-030 — Wealth and Mental Health.jpeg`
+- **CAT12-042**
+  - corrupted title: `Peer Support`
+  - slug: `mindfulness-beyond-mcmindfulness-buddhist-origins-clinical-applications`
+  - poster source: `Psychage poster category 12/CUL-042 — Peer Support.jpeg`
+- **CAT12-044**
+  - corrupted title: `Disability Rights and Mental Health`
+  - slug: `traditional-chinese-medicine-psychological-wellness`
+  - poster source: `Psychage poster category 12/CUL-044 — Disability Rights and Mental Health.jpeg`
+- **CAT12-050**
+  - corrupted title: `Mental Health as a Human Right`
+  - slug: `future-culturally-responsive-mental-healthcare-integration-not-replacement`
+  - poster source: `Psychage poster category 12/CUL-050 — Mental Health as a Human Right.jpeg`
+
+### Emotional Regulation & Self-Awareness (22)
+
+- **CAT01-016**
+  - corrupted title: `How to Sit with Uncomfortable Feelings`
+  - slug: `rain-method-mindful-approach-difficult-emotions`
+  - poster source: `Psychage poster Category 1/EMO-015 — How to Sit with Uncomfortable Feelings.jpeg`
+- **CAT01-031**
+  - corrupted title: `The Link Between Emotional Intelligence and Mental Health`
+  - slug: `what-is-emotional-intelligence-beyond-the-buzzword`
+  - poster source: `Psychage poster Category 1/EMO-039 — The Link Between Emotional Intelligence and Mental Health.jpeg`
+- **CAT01-034**
+  - corrupted title: `The Pause Technique`
+  - slug: `how-to-respond-not-react-in-emotionally-charged-situations`
+  - poster source: `Psychage poster Category 1/EMO-019 — The Pause Technique.jpeg`
+- **CAT01-030**
+  - corrupted title: `Why Self-Reflection Feels Hard`
+  - slug: `self-awareness-without-self-judgment`
+  - poster source: `Psychage poster Category 1/EMO-025 — Why Self-Reflection Feels Hard.jpeg`
+- **CAT01-042**
+  - corrupted title: `What Your Recurring Emotions Are Trying to Tell You`
+  - slug: `why-you-always-react-the-same-way-understanding-emotional-triggers`
+  - poster source: `Psychage poster Category 1/EMO-029 — What Your Recurring Emotions Are Trying to Tell You.jpeg`
+- **CAT01-039**
+  - corrupted title: `Managing Your Emotions in High-Stakes Conversations`
+  - slug: `how-to-have-difficult-conversations-with-emotional-intelligence`
+  - poster source: `Psychage poster Category 1/EMO-036 — Managing Your Emotions in High-Stakes Conversations.jpeg`
+- **CAT01-050**
+  - corrupted title: `How to Use Opposite Action`
+  - slug: `breaking-the-pattern-how-to-build-new-emotional-responses`
+  - poster source: `Psychage poster Category 1/EMO-022 — How to Use Opposite Action.jpeg`
+- **CAT01-078**
+  - corrupted title: `How Acceptance Changes Your Relationship With Emotions`
+  - slug: `radical-acceptance-letting-go-of-fight-against-your-feelings`
+  - poster source: `Psychage poster Category 1/EMO-078 — How Acceptance Changes Your Relationship With Emotions.jpeg`
+- **CAT01-074**
+  - corrupted title: `The Role of Vulnerability in Emotional Strength`
+  - slug: `role-of-positive-emotions-in-building-resilience`
+  - poster source: `Psychage poster Category 1/EMO-074 — The Role of Vulnerability in Emotional Strength.jpeg`
+- **CAT01-051**
+  - corrupted title: `How the Prefrontal Cortex Regulates Emotion`
+  - slug: `your-brain-on-emotions-neural-networks-that-create-feelings`
+  - poster source: `Psychage poster Category 1/EMO-054 — How the Prefrontal Cortex Regulates Emotion.jpeg`
+- **CAT01-005**
+  - corrupted title: `The Name It to Tame It Technique`
+  - slug: `emotional-granularity-naming-feelings`
+  - poster source: `Psychage poster Category 1/EMO-013 — The Name It to Tame It Technique.jpeg`
+- **CAT01-043**
+  - corrupted title: `The Paradox of Emotional Pain`
+  - slug: `the-cycle-of-emotional-avoidance-why-running-from-feelings-makes-them-louder`
+  - poster source: `Psychage poster Category 1/EMO-072 — The Paradox of Emotional Pain.jpeg`
+- **CAT01-048**
+  - corrupted title: `The Negativity Bias`
+  - slug: `rumination-why-your-brain-replays-painful-moments-and-how-to-stop`
+  - poster source: `Psychage poster Category 1/EMO-044 — The Negativity Bias.jpeg`
+- **CAT01-036**
+  - corrupted title: `How Culture Shapes the Way You Experience Emotions`
+  - slug: `the-empathy-spectrum-from-cognitive-to-affective-to-compassionate`
+  - poster source: `Psychage poster Category 1/EMO-070 — How Culture Shapes the Way You Experience Emotions.jpeg`
+- **CAT01-020**
+  - corrupted title: `Distress Tolerance Skills`
+  - slug: `emotions-uncontrollable-de-escalation-guide`
+  - poster source: `Psychage poster Category 1/EMO-021 — Distress Tolerance Skills.jpeg`
+- **CAT01-037**
+  - corrupted title: `When Emotional Intelligence Is Used Manipulatively`
+  - slug: `emotional-contagion-why-other-peoples-moods-affect-yours`
+  - poster source: `Psychage poster Category 1/EMO-042 — When Emotional Intelligence Is Used Manipulatively.jpeg`
+- **CAT01-024**
+  - corrupted title: `The Thought Record Explained`
+  - slug: `how-thoughts-shape-feelings-notice-the-pattern`
+  - poster source: `Psychage poster Category 1/EMO-032 — The Thought Record Explained.jpeg`
+- **CAT01-025**
+  - corrupted title: `The Difference Between Self-Awareness and Overthinking`
+  - slug: `observer-self-watch-emotions-without-being-consumed`
+  - poster source: `Psychage poster Category 1/EMO-030 — The Difference Between Self-Awareness and Overthinking.jpeg`
+- **CAT01-041**
+  - corrupted title: `Recognizing Your Emotional Defaults`
+  - slug: `emotional-habits-how-repetitive-feeling-patterns-form-and-stick`
+  - poster source: `Psychage poster Category 1/EMO-028 — Recognizing Your Emotional Defaults.jpeg`
+- **CAT01-065**
+  - corrupted title: `Emotions in Older Adults`
+  - slug: `emotional-wellbeing-older-adulthood-resilience-loss-wisdom`
+  - poster source: `Psychage poster Category 1/EMO-065 — Emotions in Older Adults.jpeg`
+- **CAT01-066**
+  - corrupted title: `Grief Across the Lifespan`
+  - slug: `how-major-life-transitions-reshape-emotional-landscape`
+  - poster source: `Psychage poster Category 1/EMO-067 — Grief Across the Lifespan.jpeg`
+- **CAT01-071**
+  - corrupted title: `Finding Meaning in Difficult Emotions`
+  - slug: `emotional-agility-moving-flexibly-through-complex-feelings`
+  - poster source: `Psychage poster Category 1/EMO-077 — Finding Meaning in Difficult Emotions.jpeg`
+
+### Anxiety, Stress & Overwhelm (1)
+
+- **CAT02-036**
+  - corrupted title: `Compassion Fatigue`
+  - slug: `chronic-stress-and-physical-health-the-long-term-consequences`
+  - poster source: `Psychage poster category 11/TRA-019 — Compassion Fatigue.jpeg`
+

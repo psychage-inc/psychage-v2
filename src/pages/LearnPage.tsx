@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, BookOpen, ArrowRight, Clock, Bookmark, User, Mail, Loader2, CheckCircle, X } from 'lucide-react';
+import { Search, BookOpen, ArrowRight, Clock, Bookmark, Mail, Loader2, CheckCircle, X } from 'lucide-react';
 import SEO from '../components/SEO';
 import { useArticleService } from '../services/articleService';
 import { categoryService } from '../services/categoryService';
@@ -15,6 +15,10 @@ import AuthModal from '../components/auth/AuthModal';
 import { LiveRegion } from '../components/a11y/LiveRegion';
 import { useNewsletterService } from '../services/newsletterService';
 import { consentService } from '../services/consentService';
+import FlatArticleCard from '../components/articles/FlatArticleCard';
+import FeaturedHeroCard from '../components/articles/FeaturedHeroCard';
+import TrendingListItem from '../components/articles/TrendingListItem';
+import { saveRecentlyRead, getRecentlyReadIds } from '../components/articles/recentlyRead';
 
 // ─── Priority ordering ──────────────────────────────────────────────
 const PRIORITY_CATEGORY_SLUGS = [
@@ -26,46 +30,6 @@ const PRIORITY_CATEGORY_SLUGS = [
     'mens-mental-health',
     'chronic-illness-pain',
 ];
-
-// ─── Recently Read localStorage helpers ─────────────────────────────
-const RECENTLY_READ_KEY = 'psychage_recently_read';
-interface RecentlyReadEntry {
-    id: string | number;
-    timestamp: number;
-}
-
-function getRecentlyReadIds(): RecentlyReadEntry[] {
-    try {
-        const stored = localStorage.getItem(RECENTLY_READ_KEY);
-        return stored ? JSON.parse(stored) : [];
-    } catch {
-        return [];
-    }
-}
-
-function saveRecentlyRead(articleId: string | number): void {
-    try {
-        const entries = getRecentlyReadIds().filter(e => String(e.id) !== String(articleId));
-        entries.unshift({ id: articleId, timestamp: Date.now() });
-        localStorage.setItem(RECENTLY_READ_KEY, JSON.stringify(entries.slice(0, 10)));
-    } catch {
-        // Storage full or unavailable
-    }
-}
-
-// ─── Format date helper ─────────────────────────────────────────────
-function formatDate(dateStr: string | undefined): string | null {
-    if (!dateStr) return null;
-    try {
-        return new Date(dateStr).toLocaleDateString('en-US', {
-            month: 'short',
-            day: 'numeric',
-            year: 'numeric',
-        });
-    } catch {
-        return null;
-    }
-}
 
 // ─── Skeleton Loading State ─────────────────────────────────────────
 const SkeletonPulse: React.FC<{ className?: string }> = ({ className = '' }) => (
@@ -124,184 +88,6 @@ const LearnPageSkeleton: React.FC = () => (
         <span className="sr-only">Loading articles, please wait...</span>
     </div>
 );
-
-// ─── Featured Hero Card (Editor's Picks — left column) ──────────────
-const FeaturedHeroCard: React.FC<{
-    article: Article;
-    onClick: () => void;
-}> = ({ article, onClick }) => {
-    const theme = getCategoryTheme(article.category.slug);
-    const FallbackIcon = theme.icon;
-    const [imgError, setImgError] = React.useState(false);
-
-    return (
-        <button onClick={onClick} className="group text-left w-full">
-            <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-border">
-                {article.image && !imgError ? (
-                    <img
-                        src={article.image}
-                        alt={article.title}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                        onError={() => setImgError(true)}
-                    />
-                ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-surface">
-                        <FallbackIcon size={64} className="text-text-tertiary opacity-30" />
-                    </div>
-                )}
-                {/* Reading time badge */}
-                <span className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-semibold text-white border border-border">
-                    {article.readTime ?? 5} min read
-                </span>
-            </div>
-
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary tracking-tight leading-tight mt-5 group-hover:text-primary transition-colors line-clamp-2">
-                {article.title}
-            </h2>
-
-            {article.description && (
-                <p className="text-lg text-text-secondary leading-relaxed mt-3 line-clamp-2">
-                    {article.description}
-                </p>
-            )}
-
-            <div className="flex items-center gap-4 mt-4">
-                {article.author && (
-                    <span className="flex items-center gap-1.5 text-xs text-text-tertiary font-semibold uppercase tracking-wider">
-                        <User size={14} />
-                        {typeof article.author === 'string' ? article.author : article.author.name}
-                    </span>
-                )}
-                <span className="flex items-center gap-1.5 text-xs text-text-tertiary font-semibold uppercase tracking-wider">
-                    <Clock size={14} />
-                    {article.readTime ?? 5} min read
-                </span>
-                <span className="text-xs text-text-tertiary font-semibold uppercase tracking-wider">
-                    {article.category.name}
-                </span>
-            </div>
-        </button>
-    );
-};
-
-// ─── Trending List Item (Editor's Picks — right column, text-only) ──
-const TrendingListItem: React.FC<{
-    article: Article;
-    index: number;
-    onClick: () => void;
-}> = ({ article, index, onClick }) => {
-    return (
-        <button
-            onClick={onClick}
-            className="group flex items-start gap-5 w-full py-5 text-left border-b border-border last:border-b-0"
-        >
-            <span className="text-3xl font-bold text-border font-display leading-none shrink-0 w-8">
-                {String(index + 1).padStart(2, '0')}
-            </span>
-            <div className="flex-1 min-w-0">
-                <h3 className="font-display font-bold text-base text-text-primary leading-snug group-hover:text-primary transition-colors line-clamp-2">
-                    {article.title}
-                </h3>
-                <div className="flex items-center gap-3 mt-2 text-xs text-text-tertiary">
-                    <span>{article.category.name}</span>
-                    <span className="w-1 h-1 rounded-full bg-text-tertiary inline-block" />
-                    <span>{article.readTime ?? 5} min read</span>
-                </div>
-            </div>
-        </button>
-    );
-};
-
-// ─── Flat Article Card (Topic Explorer + Search Results) ────────────
-const FlatArticleCard: React.FC<{
-    article: Article;
-    onNavigate: () => void;
-    isBookmarked: boolean;
-    onToggleBookmark: (e: React.MouseEvent) => void;
-}> = ({ article, onNavigate, isBookmarked: bookmarked, onToggleBookmark }) => {
-    const theme = getCategoryTheme(article.category.slug);
-    const FallbackIcon = theme.icon;
-    const [imgError, setImgError] = React.useState(false);
-    const dateStr = formatDate(article.publishedAt || article.published_at);
-
-    return (
-        <article className="group cursor-pointer" onClick={onNavigate}>
-            <div className="aspect-[16/9] w-full overflow-hidden rounded-lg border border-border/50 bg-surface">
-                {article.image && !imgError ? (
-                    <img
-                        src={article.image}
-                        alt={article.title}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                        onError={() => setImgError(true)}
-                    />
-                ) : (
-                    <div className="w-full h-full flex items-center justify-center">
-                        <FallbackIcon size={40} className="text-text-tertiary opacity-25" />
-                    </div>
-                )}
-            </div>
-
-            <div className="pt-4">
-                <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs text-text-tertiary font-semibold uppercase tracking-wider">
-                        {article.category.name}
-                    </span>
-                    <button
-                        onClick={onToggleBookmark}
-                        className="p-1.5 rounded-full hover:bg-surface-hover transition-colors"
-                        aria-label={bookmarked ? 'Remove bookmark' : 'Save for later'}
-                    >
-                        <Bookmark
-                            size={16}
-                            className={bookmarked ? 'text-primary fill-primary' : 'text-text-tertiary'}
-                            fill={bookmarked ? 'currentColor' : 'none'}
-                        />
-                    </button>
-                </div>
-
-                <h3 className="font-display font-bold text-lg text-text-primary leading-snug group-hover:text-primary transition-colors line-clamp-2">
-                    {article.title}
-                </h3>
-
-                {article.description && (
-                    <p className="text-sm text-text-secondary leading-relaxed mt-1.5 line-clamp-2">
-                        {article.description}
-                    </p>
-                )}
-
-                {/* Tags */}
-                {article.tags && article.tags.length > 0 && (
-                    <p className="text-xs text-text-tertiary mt-2 line-clamp-1">
-                        {article.tags.slice(0, 2).join(' · ')}
-                    </p>
-                )}
-
-                <div className="flex items-center gap-3 mt-3 text-xs text-text-tertiary">
-                    <span className="flex items-center gap-1">
-                        <Clock size={12} />
-                        {article.readTime ?? 5} min read
-                    </span>
-                    {dateStr && (
-                        <>
-                            <span className="w-1 h-1 rounded-full bg-text-tertiary inline-block" />
-                            <span>{dateStr}</span>
-                        </>
-                    )}
-                    {article.author && (
-                        <>
-                            <span className="w-1 h-1 rounded-full bg-text-tertiary inline-block" />
-                            <span>
-                                {typeof article.author === 'string' ? article.author : article.author.name}
-                            </span>
-                        </>
-                    )}
-                </div>
-            </div>
-        </article>
-    );
-};
 
 // ─── Reading Plan Card (horizontal scroll) ──────────────────────────
 const ReadingPlanCard: React.FC<{

@@ -145,10 +145,10 @@ const HeroSection: React.FC = () => {
                 'text-[var(--color-text-primary)]'
               )}
             >
-              Understand mental health
+              Clarity for the moments
               <br />
               <span className="text-[var(--color-text-tertiary)]">
-                clearly, freely, privately.
+                that need it most.
               </span>
             </motion.h1>
 
@@ -160,8 +160,8 @@ const HeroSection: React.FC = () => {
                 'mt-6 max-w-[480px] mx-auto lg:mx-0'
               )}
             >
-              Evidence-based articles, interactive tools, and a complete provider
-              directory — built for everyone.
+              When you're worried about yourself or someone you love, Psychage
+              helps you understand what's happening and what to do next.
             </motion.p>
 
             <motion.div

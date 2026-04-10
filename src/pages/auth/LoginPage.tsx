@@ -146,13 +146,25 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                     return;
                 }
 
-                // If we have a specific destination, go there
-                if (from) {
-                    navigate(from, { replace: true });
-                } else {
-                    // Default to dashboard
-                    navigate('/dashboard', { replace: true });
+                // Patient user — check onboarding before routing
+                if (!from) {
+                    try {
+                        const { data: profile, error: profileError } = await supabase
+                            .from('profiles')
+                            .select('onboarding_completed')
+                            .eq('id', authUser!.id)
+                            .single();
+
+                        if (!profileError && profile && profile.onboarding_completed === false) {
+                            navigate('/onboarding', { replace: true });
+                            return;
+                        }
+                    } catch {
+                        // Fail-open: DB error means go to dashboard
+                    }
                 }
+
+                navigate(from || '/dashboard', { replace: true });
             } else {
                 // Handle specific error types
                 const errorMessage = result.error || 'Login failed';

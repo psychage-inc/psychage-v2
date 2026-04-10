@@ -4,8 +4,9 @@
 
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Moon } from 'lucide-react';
+import { Moon, Cloud } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useAuth } from '@/context/AuthContext';
 import type { useSleepEntries } from '../hooks/useSleepEntries';
 import { useSleepScore } from '../hooks/useSleepScore';
 import SleepScoreGauge from './SleepScoreGauge';
@@ -17,11 +18,13 @@ import WeeklyDigest from './WeeklyDigest';
 
 interface SleepDashboardProps {
   sleepData: ReturnType<typeof useSleepEntries>;
+  onSignIn?: () => void;
 }
 
 type TimeRange = '7' | '30' | '90';
 
-const SleepDashboard: React.FC<SleepDashboardProps> = ({ sleepData }) => {
+const SleepDashboard: React.FC<SleepDashboardProps> = ({ sleepData, onSignIn }) => {
+  const { isAuthenticated } = useAuth();
   const [range, setRange] = useState<TimeRange>('7');
   const score = useSleepScore(sleepData.entries, parseInt(range), sleepData.settings.age_range);
 
@@ -97,6 +100,23 @@ const SleepDashboard: React.FC<SleepDashboardProps> = ({ sleepData }) => {
       </div>
 
       <QualityTrend entries={filteredEntries} />
+
+      {/* Level 3: Range auth prompt */}
+      {!isAuthenticated && range !== '7' && onSignIn && (
+        <div className="flex items-center gap-3 bg-indigo-50 dark:bg-indigo-900/10 border border-indigo-100 dark:border-indigo-800/30 rounded-xl px-4 py-3">
+          <Cloud size={16} className="text-indigo-400 flex-shrink-0" />
+          <p className="text-xs text-indigo-600 dark:text-indigo-300 flex-1">
+            Sign in to preserve your full history across devices and sessions.
+          </p>
+          <button
+            type="button"
+            onClick={onSignIn}
+            className="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline flex-shrink-0"
+          >
+            Sign in
+          </button>
+        </div>
+      )}
     </div>
   );
 };

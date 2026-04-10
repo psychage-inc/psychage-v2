@@ -5,6 +5,7 @@ import SEO from '@/components/SEO';
 import { useAuth } from '@/context/AuthContext';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { onboardingService } from '@/services/onboardingService';
+import { useToast } from '@/context/ToastContext';
 import WelcomeStep from '@/components/onboarding/WelcomeStep';
 import FocusSelectionStep from '@/components/onboarding/FocusSelectionStep';
 import FirstMoodStep from '@/components/onboarding/FirstMoodStep';
@@ -16,6 +17,7 @@ const OnboardingPage: React.FC = () => {
     const { user } = useAuth();
     const navigate = useNavigate();
     const reduced = useReducedMotion();
+    const toast = useToast();
 
     const [step, setStep] = useState(0);
     const [wellnessFocus, setWellnessFocus] = useState<string[]>([]);
@@ -32,16 +34,23 @@ const OnboardingPage: React.FC = () => {
                 setCheckingStatus(false);
             }
         });
-    }, [user?.id, navigate]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [user?.id]);
 
     const handleFinish = async () => {
         if (!user?.id) return;
         setIsSubmitting(true);
         try {
-            await onboardingService.completeOnboarding(user.id, wellnessFocus);
-            navigate('/dashboard', { replace: true });
+            const success = await onboardingService.completeOnboarding(user.id, wellnessFocus);
+            if (success) {
+                navigate('/dashboard', { replace: true });
+            } else {
+                toast.error('Unable to save your selections. Please try again.');
+                setIsSubmitting(false);
+            }
         } catch {
-            navigate('/dashboard', { replace: true });
+            toast.error('Something went wrong. Please try again.');
+            setIsSubmitting(false);
         }
     };
 

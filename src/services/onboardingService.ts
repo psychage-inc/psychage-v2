@@ -18,15 +18,17 @@ export const onboardingService = {
                 .single();
 
             if (error || !data) {
-                return { completed: false, wellnessFocus: null };
+                console.warn('[onboardingService] Failed to read onboarding status, failing open:', error?.message);
+                return { completed: true, wellnessFocus: null };
             }
 
             return {
                 completed: data.onboarding_completed ?? false,
                 wellnessFocus: data.wellness_focus as string[] | null,
             };
-        } catch {
-            return { completed: false, wellnessFocus: null };
+        } catch (err) {
+            console.warn('[onboardingService] Exception reading onboarding status, failing open:', err);
+            return { completed: true, wellnessFocus: null };
         }
     },
 

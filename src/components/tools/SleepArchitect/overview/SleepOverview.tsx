@@ -15,15 +15,18 @@ import {
   ChevronRight,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useAuth } from '@/context/AuthContext';
 import { useSleepScore } from '../hooks/useSleepScore';
 import { formatDuration, calculateMetrics } from '@/lib/sleep/calculations';
 import type { SleepTab } from '@/lib/sleep/types';
 import type { useSleepEntries } from '../hooks/useSleepEntries';
 import SleepDisclaimer from '../shared/SleepDisclaimer';
+import SaveDataPrompt from '../shared/SaveDataPrompt';
 
 interface SleepOverviewProps {
   sleepData: ReturnType<typeof useSleepEntries>;
   onNavigateTab: (tab: SleepTab) => void;
+  onSignIn?: () => void;
 }
 
 function scoreColor(score: number): string {
@@ -43,7 +46,9 @@ function scoreLabel(score: number): string {
 const SleepOverview: React.FC<SleepOverviewProps> = ({
   sleepData,
   onNavigateTab,
+  onSignIn,
 }) => {
+  const { isAuthenticated } = useAuth();
   const score = useSleepScore(sleepData.entries);
   const recentEntries = sleepData.getRecentEntries(7);
   const hasData = recentEntries.length > 0;
@@ -253,6 +258,14 @@ const SleepOverview: React.FC<SleepOverviewProps> = ({
             </div>
           </button>
         </motion.div>
+      )}
+
+      {/* Save Data Prompt (shown after 3+ entries when not authenticated) */}
+      {!isAuthenticated && onSignIn && (
+        <SaveDataPrompt
+          entryCount={sleepData.entryCount}
+          onSignIn={onSignIn}
+        />
       )}
 
       <SleepDisclaimer />

@@ -53,10 +53,26 @@ const AuthCallback: React.FC = () => {
                                 : adminUrl('/');
                         }
                     } else {
+                        // Patient — check onboarding before routing
+                        let needsPatientOnboarding = false;
+                        try {
+                            const { data: profile, error: profileError } = await supabase
+                                .from('profiles')
+                                .select('onboarding_completed')
+                                .eq('id', data.session.user.id)
+                                .single();
+
+                            if (!profileError && profile && profile.onboarding_completed === false) {
+                                needsPatientOnboarding = true;
+                            }
+                        } catch {
+                            // Fail-open: DB error means go to dashboard
+                        }
+
                         if (onAdminDomain) {
-                            window.location.href = mainUrl('/dashboard');
+                            window.location.href = mainUrl(needsPatientOnboarding ? '/onboarding' : '/dashboard');
                         } else {
-                            navigate('/dashboard', { replace: true });
+                            navigate(needsPatientOnboarding ? '/onboarding' : '/dashboard', { replace: true });
                         }
                     }
                 } else {
@@ -71,7 +87,8 @@ const AuthCallback: React.FC = () => {
         };
 
         handleCallback();
-    }, [navigate]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">

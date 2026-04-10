@@ -25,6 +25,7 @@ export interface SleepEntry {
   substances: SubstanceLog;
   notes?: string;
   created_at: string; // ISO datetime
+  updated_at?: string; // ISO datetime — used for sync conflict resolution
 }
 
 export interface NapEntry {
@@ -228,3 +229,7 @@ export type SleepTab =
   | 'tools'
   | 'wind-down'
   | 'insights';
+
+// ─── Sync ───────────────────────────────────────────────────────────────────
+
+export type SyncStatus = 'idle' | 'syncing' | 'synced' | 'error' | 'offline';

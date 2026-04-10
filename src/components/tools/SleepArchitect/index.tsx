@@ -3,8 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Moon, ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
+import { useAuth } from '@/context/AuthContext';
 import Breadcrumbs from '../../ui/Breadcrumbs';
+import AuthModal from '../../auth/AuthModal';
 import { useSleepEntries } from './hooks/useSleepEntries';
+import SyncBanner from './shared/SyncBanner';
 import type { SleepTab } from '@/lib/sleep/types';
 
 // Lazy-loaded tab contents
@@ -34,17 +37,30 @@ const TabSkeleton: React.FC = () => (
 
 const SleepArchitect: React.FC = () => {
   const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
   const [activeTab, setActiveTab] = useState<SleepTab>('overview');
+  const [showAuthModal, setShowAuthModal] = useState(false);
   const sleepData = useSleepEntries();
 
   const renderTab = () => {
     switch (activeTab) {
       case 'overview':
-        return <SleepOverview sleepData={sleepData} onNavigateTab={setActiveTab} />;
+        return (
+          <SleepOverview
+            sleepData={sleepData}
+            onNavigateTab={setActiveTab}
+            onSignIn={() => setShowAuthModal(true)}
+          />
+        );
       case 'diary':
         return <SleepDiary sleepData={sleepData} />;
       case 'dashboard':
-        return <SleepDashboard sleepData={sleepData} />;
+        return (
+          <SleepDashboard
+            sleepData={sleepData}
+            onSignIn={() => setShowAuthModal(true)}
+          />
+        );
       case 'tools':
         return <SleepTools sleepData={sleepData} />;
       case 'wind-down':
@@ -76,7 +92,7 @@ const SleepArchitect: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-8"
+          className="mb-6"
         >
           <div className="flex items-center gap-4 mb-3">
             <div className="w-14 h-14 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center">
@@ -92,6 +108,16 @@ const SleepArchitect: React.FC = () => {
             </div>
           </div>
         </motion.div>
+
+        {/* Sync Banner */}
+        <div className="mb-4">
+          <SyncBanner
+            isAuthenticated={isAuthenticated}
+            syncStatus={sleepData.syncStatus}
+            syncedCount={sleepData.syncedCount}
+            onSignIn={() => setShowAuthModal(true)}
+          />
+        </div>
 
         {/* Tab Navigation */}
         <div className="mb-8 -mx-4 px-4 overflow-x-auto scrollbar-hide">
@@ -136,6 +162,9 @@ const SleepArchitect: React.FC = () => {
           </motion.div>
         </AnimatePresence>
       </div>
+
+      {/* Auth Modal */}
+      <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
     </div>
   );
 };

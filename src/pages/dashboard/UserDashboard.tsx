@@ -14,6 +14,7 @@ import { staggerContainer, staggerItem } from '@/lib/animations';
 import { onboardingService } from '@/services/onboardingService';
 import { moodService, type MoodEntry, type MoodStats } from '@/services/moodService';
 import { sleepService, type SleepEntry, type SleepStats } from '@/services/sleepService';
+import { sleepDiaryService, type SleepV2DashboardStats } from '@/services/sleepDiaryService';
 import { bookmarkService } from '@/services/bookmarkService';
 import { supabase } from '@/lib/supabaseClient';
 
@@ -132,6 +133,7 @@ const UserDashboard: React.FC = () => {
 
     const [moodStats, setMoodStats] = useState<MoodStats | null>(null);
     const [sleepStats, setSleepStats] = useState<SleepStats | null>(null);
+    const [sleepV2Stats, setSleepV2Stats] = useState<SleepV2DashboardStats | null>(null);
     const [todayMood, setTodayMood] = useState<MoodEntry | null>(null);
     const [todaySleep, setTodaySleep] = useState<SleepEntry | null>(null);
     const [moodHistory, setMoodHistory] = useState<MoodEntry[]>([]);
@@ -140,6 +142,7 @@ const UserDashboard: React.FC = () => {
     const [navigatorLastDate, setNavigatorLastDate] = useState<string | null>(null);
     const [bookmarkCount, setBookmarkCount] = useState<number>(0);
     const [wellnessFocus, setWellnessFocus] = useState<string[] | null>(null);
+    const [onboardingChecked, setOnboardingChecked] = useState(false);
 
     // ── Onboarding gate ──
     useEffect(() => {
@@ -149,9 +152,11 @@ const UserDashboard: React.FC = () => {
                 navigate('/onboarding', { replace: true });
             } else {
                 setWellnessFocus(status.wellnessFocus);
+                setOnboardingChecked(true);
             }
         });
-    }, [user?.id, navigate]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [user?.id]);
 
     // ── Data fetching ──
     const fetchData = useCallback(async () => {
@@ -229,6 +234,21 @@ const UserDashboard: React.FC = () => {
             }
             if (Array.isArray(sleepRangeRes)) setSleepHistory(sleepRangeRes);
 
+            // Also try V2 diary stats (preferred if available)
+            try {
+                const v2 = await sleepDiaryService.getDashboardStats(user.id);
+                if (v2) {
+                    setSleepV2Stats(v2);
+                    // Override legacy stats with V2 data for the snapshot cards
+                    setSleepStats({
+                        averageHours: v2.averageHours,
+                        averageQuality: v2.averageQuality,
+                        totalEntries: v2.totalEntries,
+                        trend: v2.trend,
+                    });
+                }
+            } catch { /* V2 table may not exist yet — use legacy */ }
+
             if (navigatorRes) {
                 setNavigatorCount(navigatorRes.count);
                 setNavigatorLastDate(navigatorRes.latest);
@@ -269,6 +289,14 @@ const UserDashboard: React.FC = () => {
     const moodSparkline = moodHistory.map(e => e.value);
     const sleepSparkline = sleepHistory.map(e => e.hours);
     const claritySparkline = clarityHistory.map(e => e.score);
+
+    if (!onboardingChecked) {
+        return (
+            <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full border-2 border-gray-200 border-t-teal-500 animate-spin" />
+            </div>
+        );
+    }
 
     return (
         <div className="min-h-screen bg-gray-50 dark:bg-gray-950 pt-24 pb-20 lg:pb-8 px-4 sm:px-6">
@@ -371,6 +399,7 @@ const UserDashboard: React.FC = () => {
                                         moodHistory={moodSparkline}
                                         sleepHistory={sleepSparkline}
                                         clarityHistory={claritySparkline}
+                                        sleepEfficiency={sleepV2Stats?.averageEfficiency}
                                     />
                                 </motion.div>
 

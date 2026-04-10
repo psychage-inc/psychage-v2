@@ -22,6 +22,8 @@ interface WellnessSnapshotCardsProps {
     moodHistory?: number[];
     sleepHistory?: number[];
     clarityHistory?: number[];
+    /** V2 Sleep Architect efficiency percentage (optional) */
+    sleepEfficiency?: number;
 }
 
 // ── Mini Sparkline SVG ──
@@ -163,7 +165,7 @@ function MoodSnapshotCard({ stats, sparkline }: { stats: MoodStats | null; spark
 }
 
 // ── Sleep Card ──
-function SleepSnapshotCard({ stats, sparkline }: { stats: SleepStats | null; sparkline?: number[] }) {
+function SleepSnapshotCard({ stats, sparkline, efficiency }: { stats: SleepStats | null; sparkline?: number[]; efficiency?: number }) {
     const hasData = stats && stats.totalEntries > 0;
 
     return (
@@ -186,6 +188,9 @@ function SleepSnapshotCard({ stats, sparkline }: { stats: SleepStats | null; spa
                     </div>
                     <p className="text-xs text-gray-400 dark:text-gray-500 mb-3">
                         Quality: {stats.averageQuality.toFixed(1)} / 5
+                        {efficiency != null && efficiency > 0 && (
+                            <span className="ml-2">&middot; Efficiency: {Math.round(efficiency)}%</span>
+                        )}
                     </p>
                     {sparkline && sparkline.length >= 2 && (
                         <div className="mt-auto h-7">
@@ -264,12 +269,13 @@ function ClaritySnapshotCard({ stats, sparkline }: { stats: DashboardStats | nul
 
 const WellnessSnapshotCards: React.FC<WellnessSnapshotCardsProps> = ({
     moodStats, sleepStats, clarityStats,
-    moodHistory, sleepHistory, clarityHistory
+    moodHistory, sleepHistory, clarityHistory,
+    sleepEfficiency,
 }) => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <MoodSnapshotCard stats={moodStats} sparkline={moodHistory} />
-            <SleepSnapshotCard stats={sleepStats} sparkline={sleepHistory} />
+            <SleepSnapshotCard stats={sleepStats} sparkline={sleepHistory} efficiency={sleepEfficiency} />
             <ClaritySnapshotCard stats={clarityStats} sparkline={clarityHistory} />
         </div>
     );

@@ -1,14 +1,15 @@
 /**
  * Sleep Diary — Entry CRUD Hook
  *
- * localStorage-first with optional Supabase sync when authenticated.
+ * localStorage-first with Supabase sync when authenticated.
  * Entries persist immediately to localStorage, then background-sync.
  */
 
 import { useState, useCallback, useEffect } from 'react';
-import type { SleepEntry, SleepSettings, StreakData } from '@/lib/sleep/types';
+import type { SleepEntry, SleepSettings, StreakData, SyncStatus } from '@/lib/sleep/types';
 import { calculateStreak } from '@/lib/sleep/calculations';
 import { DEFAULT_SLEEP_SETTINGS } from '@/lib/sleep/constants';
+import { useSleepSync } from './useSleepSync';
 
 const STORAGE_KEYS = {
   entries: 'psychage_sleep_entries',
@@ -42,6 +43,16 @@ export function useSleepEntries() {
     loadFromStorage<SleepSettings>(STORAGE_KEYS.settings, DEFAULT_SLEEP_SETTINGS as SleepSettings)
   );
 
+  // ── Sync integration ──────────────────────────────────────────────────
+  const { syncStatus, syncedCount, backgroundUpsert, backgroundDelete } =
+    useSleepSync({
+      entries,
+      setEntries: (merged) => {
+        setEntries(merged);
+        saveToStorage(STORAGE_KEYS.entries, merged);
+      },
+    });
+
   // Persist entries on change
   useEffect(() => {
     saveToStorage(STORAGE_KEYS.entries, entries);
@@ -62,27 +73,40 @@ export function useSleepEntries() {
   }, [settings]);
 
   const addEntry = useCallback((entry: SleepEntry) => {
+    // Stamp updated_at
+    const stamped = { ...entry, updated_at: new Date().toISOString() };
     setEntries((prev) => {
-      // Replace if same date already exists
-      const existing = prev.findIndex((e) => e.date === entry.date);
+      const existing = prev.findIndex((e) => e.date === stamped.date);
       if (existing >= 0) {
         const updated = [...prev];
-        updated[existing] = entry;
+        updated[existing] = stamped;
         return updated;
       }
-      return [...prev, entry];
+      return [...prev, stamped];
     });
-  }, []);
+    // Background sync to Supabase
+    backgroundUpsert(stamped);
+  }, [backgroundUpsert]);
 
   const updateEntry = useCallback((id: string, updates: Partial<SleepEntry>) => {
+    let updatedEntry: SleepEntry | null = null;
     setEntries((prev) =>
-      prev.map((e) => (e.id === id ? { ...e, ...updates } : e))
+      prev.map((e) => {
+        if (e.id === id) {
+          updatedEntry = { ...e, ...updates, updated_at: new Date().toISOString() };
+          return updatedEntry;
+        }
+        return e;
+      })
     );
-  }, []);
+    if (updatedEntry) backgroundUpsert(updatedEntry);
+  }, [backgroundUpsert]);
 
   const deleteEntry = useCallback((id: string) => {
+    const entry = entries.find((e) => e.id === id);
     setEntries((prev) => prev.filter((e) => e.id !== id));
-  }, []);
+    if (entry) backgroundDelete(entry.date);
+  }, [entries, backgroundDelete]);
 
   const getEntryByDate = useCallback(
     (date: string) => entries.find((e) => e.date === date) ?? null,
@@ -123,5 +147,7 @@ export function useSleepEntries() {
     getRecentEntries,
     streak,
     entryCount: entries.length,
+    syncStatus,
+    syncedCount,
   };
 }

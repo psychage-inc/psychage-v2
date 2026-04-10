@@ -278,7 +278,8 @@ const MindMate: React.FC = () => {
             // Abort is not an error
             if (error instanceof DOMException && error.name === 'AbortError') return;
 
-            console.error("AI Error:", error);
+            const errorMsg = error instanceof Error ? error.message : 'Unknown error';
+            console.error("AI Error:", errorMsg, error);
             setLastFailedInput(currentInput);
             // Remove streaming placeholder if it exists
             setMessages(prev => {
@@ -286,7 +287,7 @@ const MindMate: React.FC = () => {
                 return [...filtered, {
                     id: 'error-msg',
                     sender: 'ai' as const,
-                    text: "I'm having trouble connecting. Please try again in a moment.",
+                    text: `Something went wrong: ${errorMsg}`,
                     type: 'text' as const,
                 }];
             });

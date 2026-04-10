@@ -6,8 +6,6 @@ import type {
   ConversationListItem,
 } from '../types/chat.types';
 
-const API_BASE = import.meta.env.VITE_API_URL || '';
-
 // ============================================================
 // API TYPES
 // ============================================================
@@ -79,7 +77,7 @@ export async function* sendMessage(
   onMeta?: (meta: ChatResponseMeta) => void,
   signal?: AbortSignal,
 ): AsyncGenerator<string> {
-  const response = await fetch(`${API_BASE}/api/ai/chat`, {
+  const response = await fetch('/api/ai/chat', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ messages, sessionId, stream: true }),

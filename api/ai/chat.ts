@@ -89,6 +89,22 @@ export default async function handler(
   const startTime = Date.now();
 
   try {
+    // ========================================================================
+    // Preflight: Check required environment variables
+    // ========================================================================
+
+    const missingEnvVars: string[] = [];
+    if (!process.env.ANTHROPIC_API_KEY) missingEnvVars.push('ANTHROPIC_API_KEY');
+    if (!process.env.VITE_SUPABASE_URL) missingEnvVars.push('VITE_SUPABASE_URL');
+    if (!process.env.SUPABASE_SERVICE_ROLE_KEY) missingEnvVars.push('SUPABASE_SERVICE_ROLE_KEY');
+
+    if (missingEnvVars.length > 0) {
+      console.error(`[MindMate] Missing env vars: ${missingEnvVars.join(', ')}`);
+      return res.status(500).json({
+        error: `Server configuration error: missing ${missingEnvVars.join(', ')}. Add these to your Vercel environment variables.`,
+      });
+    }
+
     // Parse request
     const { messages, sessionId: providedSessionId, stream: requestStream } = req.body as {
       messages: Message[];
@@ -121,6 +137,7 @@ export default async function handler(
     }
 
     // Initialize clients
+    console.log('[MindMate] Initializing clients...');
     const supabase = createClient(
       getRequiredEnv('VITE_SUPABASE_URL'),
       getRequiredEnv('SUPABASE_SERVICE_ROLE_KEY')
@@ -133,11 +150,13 @@ export default async function handler(
     // LAYER 1: Input Safety Check
     // ========================================================================
 
+    console.log('[MindMate] Running safety check...');
     const safetyCheck = await classifyInputSafety(
       userMessage.content,
       messages.slice(0, -1),
       llmProvider
     );
+    console.log(`[MindMate] Safety: ${safetyCheck.level} (confidence: ${safetyCheck.confidence})`);
 
     // ========================================================================
     // Crisis Bypass - Never invoke LLM for crisis
@@ -232,6 +251,7 @@ export default async function handler(
     // ========================================================================
 
     if (requestStream) {
+      console.log(`[MindMate] Starting stream (model: ${llmOptions.model}, RAG chunks: ${searchResults.length})`);
       res.writeHead(200, {
         'Content-Type': 'text/event-stream',
         'Cache-Control': 'no-cache, no-transform',
@@ -321,10 +341,10 @@ export default async function handler(
     });
 
   } catch (error) {
-    console.error('Chat API error:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    console.error('[MindMate] Chat API error:', errorMessage, error);
     return res.status(500).json({
-      error: 'Internal server error',
-      message: error instanceof Error ? error.message : 'Unknown error',
+      error: errorMessage,
     });
   }
 }

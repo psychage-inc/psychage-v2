@@ -121,8 +121,9 @@ export function useChat(): UseChatReturn {
           return;
         }
 
-        console.error('Chat error:', err);
-        setError('Something went wrong. Please try again.');
+        const errorMsg = err instanceof Error ? err.message : 'Unknown error';
+        console.error('Chat error:', errorMsg, err);
+        setError(errorMsg);
         setStreamingState('error');
 
         setMessages((prev) =>
@@ -130,7 +131,7 @@ export function useChat(): UseChatReturn {
             m.id === assistantId
               ? {
                   ...m,
-                  content: "I'm having trouble connecting right now. Please try again in a moment.",
+                  content: `Something went wrong: ${errorMsg}\n\nPlease try again. If this keeps happening, check the browser console for details.`,
                   isStreaming: false,
                 }
               : m,

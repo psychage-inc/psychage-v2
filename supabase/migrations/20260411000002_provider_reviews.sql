@@ -35,8 +35,14 @@ CREATE TABLE IF NOT EXISTS public.provider_reviews (
 );
 
 -- One review per provider per user per quarter (90-day rolling)
+-- date_trunc is STABLE, so we need an IMMUTABLE wrapper for index expressions
+CREATE OR REPLACE FUNCTION public.immutable_date_trunc_quarter(ts timestamptz)
+  RETURNS timestamptz
+  LANGUAGE sql IMMUTABLE PARALLEL SAFE AS
+$$SELECT date_trunc('quarter', ts AT TIME ZONE 'UTC')$$;
+
 CREATE UNIQUE INDEX idx_reviews_unique_90day
-  ON public.provider_reviews(provider_id, reviewer_user_id, (date_trunc('quarter', created_at)));
+  ON public.provider_reviews(provider_id, reviewer_user_id, (public.immutable_date_trunc_quarter(created_at)));
 
 -- Query reviews by provider + status
 CREATE INDEX idx_reviews_provider_status

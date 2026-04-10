@@ -117,7 +117,11 @@ serve(async (req) => {
       timestamp: new Date().toISOString(),
       function: 'assessment-shared',
       action: 'share_link_accessed',
-      assessment_count: (decryptedData as any).assessments?.length || 0,
+      assessment_count: (decryptedData as Record<string, unknown>).assessments
+        ? (
+            (decryptedData as Record<string, unknown>).assessments as unknown[]
+          ).length
+        : 0,
       status: 200,
     }));
 

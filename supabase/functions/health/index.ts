@@ -9,7 +9,7 @@
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
 import { handleCorsPreflightRequest, createCorsResponse } from '../_shared/cors.ts';
 
-serve(async (req) => {
+serve((req) => {
   // Handle CORS preflight
   if (req.method === 'OPTIONS') {
     return handleCorsPreflightRequest();

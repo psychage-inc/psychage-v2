@@ -172,8 +172,8 @@ Deno.test('validateResponses - valid responses', () => {
 
 Deno.test('validateResponses - missing items', () => {
   const incomplete = { ...perfectWellnessResponses };
-  delete (incomplete as any).phq2_1;
-  delete (incomplete as any).who5_3;
+  delete (incomplete as Record<string, unknown>).phq2_1;
+  delete (incomplete as Record<string, unknown>).who5_3;
 
   const errors = validateResponses(incomplete);
   assertEquals(errors.length >= 2, true);

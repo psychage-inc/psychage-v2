@@ -80,7 +80,7 @@ export class AnthropicProvider implements LLMProvider {
     messages: LLMMessage[],
     options?: LLMOptions
   ): Promise<LLMResponse> {
-    const systemMessage = messages.find((m) => m.role === 'system');
+    const systemMessages = messages.filter((m) => m.role === 'system');
     const nonSystemMessages = messages.filter((m) => m.role !== 'system');
 
     const body: Record<string, unknown> = {
@@ -93,8 +93,8 @@ export class AnthropicProvider implements LLMProvider {
       })),
     };
 
-    if (systemMessage) {
-      body.system = systemMessage.content;
+    if (systemMessages.length > 0) {
+      body.system = systemMessages.map((m) => m.content).join('\n\n');
     }
 
     if (options?.stopSequences) {
@@ -135,7 +135,7 @@ export class AnthropicProvider implements LLMProvider {
     messages: LLMMessage[],
     options?: LLMOptions
   ): AsyncGenerator<LLMStreamChunk> {
-    const systemMessage = messages.find((m) => m.role === 'system');
+    const systemMessages = messages.filter((m) => m.role === 'system');
     const nonSystemMessages = messages.filter((m) => m.role !== 'system');
 
     const body: Record<string, unknown> = {
@@ -149,8 +149,8 @@ export class AnthropicProvider implements LLMProvider {
       })),
     };
 
-    if (systemMessage) {
-      body.system = systemMessage.content;
+    if (systemMessages.length > 0) {
+      body.system = systemMessages.map((m) => m.content).join('\n\n');
     }
 
     const response = await fetch(`${this.baseUrl}/messages`, {

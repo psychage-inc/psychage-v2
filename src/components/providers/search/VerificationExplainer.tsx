@@ -48,7 +48,7 @@ export const VerificationExplainer: React.FC = () => {
               <h4 className={`font-semibold text-sm mb-0.5 ${tier.colors.title}`}>
                 {tier.title}
               </h4>
-              <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+              <p className="text-xs text-text-tertiary leading-relaxed">
                 {tier.description}
               </p>
             </div>
@@ -67,7 +67,7 @@ export const VerificationExplainer: React.FC = () => {
       <div className="sm:hidden">
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors w-full"
+          className="flex items-center gap-2 text-sm font-medium text-text-tertiary hover:text-text-secondary transition-colors w-full"
         >
           <ShieldCheck size={14} className="text-teal-500" />
           About provider verification

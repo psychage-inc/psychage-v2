@@ -251,7 +251,7 @@ const SearchResults: React.FC = () => {
                 {/* Loading State */}
                 {loading && (
                     <div className="py-20 text-center">
-                        <Loader2 className="w-12 h-12 text-teal-600 mx-auto mb-4 animate-spin" />
+                        <Loader2 className="w-12 h-12 text-primary mx-auto mb-4 animate-spin" />
                         <p className="text-text-secondary">Searching...</p>
                     </div>
                 )}
@@ -286,7 +286,7 @@ const SearchResults: React.FC = () => {
                                 setSearchParams({ q: '' });
                                 setSelectedCategory('all');
                             }}
-                            className="mt-6 px-6 py-2 bg-teal-600 text-white rounded-lg font-bold hover:bg-teal-700 transition-colors"
+                            className="mt-6 px-6 py-2 bg-primary text-white rounded-lg font-bold hover:bg-primary-hover transition-colors"
                         >
                             Clear Filters
                         </button>

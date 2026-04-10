@@ -48,7 +48,7 @@ export const RelatedToolsBlock: React.FC<RelatedToolsBlockProps> = ({
           <h3 className="text-sm font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
             Related Tools
           </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+          <p className="text-sm text-text-secondary">
             Interactive resources to help you apply what you've learned
           </p>
         </div>
@@ -57,7 +57,7 @@ export const RelatedToolsBlock: React.FC<RelatedToolsBlockProps> = ({
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {displayTools.map((tool, index) => {
           const isExternal = !!tool.link;
-          const commonClass = "group relative bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 rounded-xl p-5 hover:border-primary dark:hover:border-primary transition-all duration-300 hover:shadow-md";
+          const commonClass = "group relative bg-surface border border-border rounded-xl p-5 hover:border-primary dark:hover:border-primary transition-all duration-300 hover:shadow-md";
           const inner = (
             <>
               <div className="flex items-start gap-3 mb-3">
@@ -71,16 +71,16 @@ export const RelatedToolsBlock: React.FC<RelatedToolsBlockProps> = ({
                   </div>
                 )}
                 <div className="flex-1">
-                  <h4 className="text-base font-bold text-gray-900 dark:text-gray-100 mb-1 group-hover:text-primary transition-colors">
+                  <h4 className="text-base font-bold text-text-primary mb-1 group-hover:text-primary transition-colors">
                     {tool.name}
                   </h4>
                 </div>
                 <ArrowRight
                   size={18}
-                  className="text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all shrink-0 mt-0.5"
+                  className="text-text-tertiary group-hover:text-primary group-hover:translate-x-1 transition-all shrink-0 mt-0.5"
                 />
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-sm text-text-secondary leading-relaxed">
                 {tool.description}
               </p>
             </>

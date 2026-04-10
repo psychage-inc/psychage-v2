@@ -72,14 +72,14 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-white dark:bg-gray-900 shadow-2xl z-[120] md:hidden flex flex-col border-l border-gray-100 dark:border-gray-800"
+            className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-surface shadow-2xl z-[120] md:hidden flex flex-col border-l border-border"
           >
             {/* Header */}
-            <div className="p-6 flex items-center justify-between border-b border-gray-100 dark:border-gray-800">
+            <div className="p-6 flex items-center justify-between border-b border-border">
               <div className="flex items-center gap-2">
                 <Logo className="h-10 w-auto text-[#1A1A1A] dark:text-white" />
                 {isAuthenticated && (
-                  <div className="ml-2 px-2 py-0.5 bg-gray-100 rounded-md text-xs font-semibold text-gray-600 capitalize">
+                  <div className="ml-2 px-2 py-0.5 bg-surface-active rounded-md text-xs font-semibold text-text-secondary capitalize">
                     {user?.role}
                   </div>
                 )}
@@ -88,7 +88,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                 <ThemeToggle />
                 <button
                   onClick={onClose}
-                  className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+                  className="p-2 text-text-tertiary hover:text-text-primary hover:bg-surface-hover rounded-full transition-colors"
                   aria-label="Close navigation menu"
                 >
                   <X size={24} aria-hidden="true" />
@@ -116,17 +116,17 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                 if (navItem.type !== 'mega-menu') return null;
 
                 return (
-                  <div key={navItem.id} className="border-b border-gray-100 dark:border-gray-800 last:border-0 pb-2 mb-2">
+                  <div key={navItem.id} className="border-b border-border last:border-0 pb-2 mb-2">
                     <button
                       onClick={() => toggleSection(navItem.id)}
-                      className="w-full flex items-center justify-between py-3 text-lg font-bold text-gray-800 dark:text-gray-200"
+                      className="w-full flex items-center justify-between py-3 text-lg font-bold text-text-primary"
                       aria-expanded={expandedSection === navItem.id}
                       aria-controls={`mobile-section-${navItem.id}`}
                     >
                       <span>{navItem.label}</span>
                       <ChevronDown
                         size={20}
-                        className={`transition-transform duration-200 ${expandedSection === navItem.id ? 'rotate-180 text-teal-600' : 'text-gray-400'}`}
+                        className={`transition-transform duration-200 ${expandedSection === navItem.id ? 'rotate-180 text-teal-600' : 'text-text-tertiary'}`}
                         aria-hidden="true"
                       />
                     </button>
@@ -147,7 +147,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                                     key={item.href}
                                     to={item.href}
                                     onClick={() => handleNav(item.href)}
-                                    className="block text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 py-1"
+                                    className="block text-sm font-medium text-text-secondary hover:text-primary py-1"
                                   >
                                     {item.label}
                                   </Link>
@@ -155,13 +155,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                               </div>
                             ))}
                             {navItem.quickActions && (
-                              <div className="pt-2 border-t border-gray-100 dark:border-gray-800 space-y-2">
+                              <div className="pt-2 border-t border-border space-y-2">
                                 {navItem.quickActions.map(action => (
                                   <Link
                                     key={action.href}
                                     to={action.href}
                                     onClick={() => handleNav(action.href)}
-                                    className="flex items-center text-sm font-semibold text-teal-600 dark:text-teal-400"
+                                    className="flex items-center text-sm font-semibold text-primary"
                                   >
                                     {action.label} <ChevronRight size={14} />
                                   </Link>
@@ -185,7 +185,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                     key={navItem.id}
                     to={navItem.href}
                     onClick={() => handleNav(navItem.href)}
-                    className="py-3 text-lg font-bold text-gray-800 dark:text-gray-200 border-b border-gray-100 dark:border-gray-800 mb-2 block"
+                    className="py-3 text-lg font-bold text-text-primary border-b border-border mb-2 block"
                   >
                     {navItem.label}
                   </Link>
@@ -195,7 +195,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             </nav>
 
             {/* Footer / CTA */}
-            <div className="p-6 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 space-y-3">
+            <div className="p-6 border-t border-border bg-surface-hover space-y-3">
               {/* Language switcher hidden for English-only launch — uncomment when i18n re-enabled */}
               {/* <div className="flex justify-center mb-3">
                 <LanguageSwitcher direction="up" />

@@ -38,7 +38,7 @@ export const ProviderSortDropdown: React.FC<ProviderSortDropdownProps> = ({
     <div className="relative" ref={ref}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+        className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-text-secondary bg-surface border border-border rounded-lg hover:bg-surface-hover transition-colors"
         aria-expanded={isOpen}
         aria-haspopup="listbox"
       >
@@ -47,7 +47,7 @@ export const ProviderSortDropdown: React.FC<ProviderSortDropdownProps> = ({
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 top-full mt-1 w-40 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg overflow-hidden z-20" role="listbox">
+        <div className="absolute right-0 top-full mt-1 w-40 bg-surface border border-border rounded-lg shadow-lg overflow-hidden z-20" role="listbox">
           {options.map(option => (
             <button
               key={option.value}
@@ -57,8 +57,8 @@ export const ProviderSortDropdown: React.FC<ProviderSortDropdownProps> = ({
               }}
               className={`w-full text-left px-4 py-2.5 text-sm transition-colors ${
                 value === option.value
-                  ? 'bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300 font-semibold'
-                  : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+                  ? 'bg-primary/10 text-primary font-semibold'
+                  : 'text-text-secondary hover:bg-surface-hover'
               }`}
               role="option"
               aria-selected={value === option.value}

@@ -81,7 +81,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
         <select
           value={params.state || ''}
           onChange={e => onChange({ state: e.target.value || undefined })}
-          className="w-full px-3 py-2 text-sm bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+          className="w-full px-3 py-2 text-sm bg-surface border border-border rounded-lg text-text-primary focus:ring-2 focus:ring-primary focus:border-transparent"
           aria-label="Filter by state"
         >
           <option value="">All states</option>
@@ -94,7 +94,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
           value={params.city || ''}
           onChange={e => onChange({ city: e.target.value || undefined })}
           placeholder="City name..."
-          className="w-full mt-2 px-3 py-2 text-sm bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+          className="w-full mt-2 px-3 py-2 text-sm bg-surface border border-border rounded-lg text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-transparent"
           aria-label="Filter by city"
         />
       </FilterSection>
@@ -133,7 +133,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
       {/* More Filters */}
       <button
         onClick={() => setShowMore(!showMore)}
-        className="flex items-center gap-2 text-sm font-medium text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 transition-colors"
+        className="flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-hover transition-colors"
       >
         <ChevronDown size={16} className={`transition-transform ${showMore ? 'rotate-180' : ''}`} />
         {showMore ? 'Fewer filters' : 'More filters'}
@@ -150,13 +150,13 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
             {/* Specialty — searchable, grouped */}
             <FilterSection title="Specialty">
               <div className="relative mb-2">
-                <Search size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400" />
+                <Search size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
                 <input
                   type="text"
                   value={specialtySearch}
                   onChange={e => setSpecialtySearch(e.target.value)}
                   placeholder="Search specialties..."
-                  className="w-full pl-8 pr-3 py-1.5 text-xs bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="w-full pl-8 pr-3 py-1.5 text-xs bg-surface border border-border rounded-lg text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-transparent"
                   aria-label="Search specialties"
                 />
               </div>
@@ -178,7 +178,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
               {filteredSpecialties.length > 8 && (
                 <button
                   onClick={() => setShowAllSpecialties(!showAllSpecialties)}
-                  className="text-xs font-medium text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 mt-1"
+                  className="text-xs font-medium text-primary hover:text-primary-hover mt-1"
                 >
                   {showAllSpecialties ? 'Show fewer' : `Show all ${filteredSpecialties.length}`}
                 </button>
@@ -198,7 +198,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
               {filters.languages.length > 6 && (
                 <button
                   onClick={() => setShowAllLanguages(!showAllLanguages)}
-                  className="text-xs font-medium text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 mt-1"
+                  className="text-xs font-medium text-primary hover:text-primary-hover mt-1"
                 >
                   {showAllLanguages ? 'Show fewer' : `Show all ${filters.languages.length}`}
                 </button>
@@ -252,11 +252,11 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
               animate={{ y: 0 }}
               exit={{ y: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-900 rounded-t-3xl z-50 max-h-[80vh] flex flex-col"
+              className="fixed bottom-0 left-0 right-0 bg-surface rounded-t-3xl z-50 max-h-[80vh] flex flex-col"
             >
               <div className="flex items-center justify-between p-6 pb-0">
-                <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white">Filters</h3>
-                <button onClick={onClose} className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full">
+                <h3 className="font-display font-bold text-lg text-text-primary">Filters</h3>
+                <button onClick={onClose} className="p-2 hover:bg-surface-hover rounded-full">
                   <X size={20} />
                 </button>
               </div>
@@ -269,10 +269,10 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
                   </div>
                 ) : content}
               </div>
-              <div className="p-4 border-t border-gray-200 dark:border-gray-700">
+              <div className="p-4 border-t border-border">
                 <Button
                   onClick={onClose}
-                  className="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold"
+                  className="w-full bg-primary hover:bg-primary-hover text-white font-bold"
                 >
                   Show results
                 </Button>
@@ -287,8 +287,8 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
   // Desktop: sidebar
   return (
     <aside className="w-[280px] flex-shrink-0 hidden lg:block">
-      <div className="sticky top-28 bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-5 max-h-[calc(100vh-8rem)] overflow-y-auto">
-        <h3 className="font-display font-bold text-sm text-gray-900 dark:text-white mb-5 flex items-center gap-2">
+      <div className="sticky top-28 bg-surface rounded-2xl border border-border p-5 max-h-[calc(100vh-8rem)] overflow-y-auto">
+        <h3 className="font-display font-bold text-sm text-text-primary mb-5 flex items-center gap-2">
           <SlidersHorizontal size={16} />
           Filters
         </h3>
@@ -308,7 +308,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
 
 const FilterSection: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
   <div>
-    <h4 className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-3">{title}</h4>
+    <h4 className="text-xs font-bold text-text-tertiary uppercase tracking-wider mb-3">{title}</h4>
     <div className="space-y-2">{children}</div>
   </div>
 );
@@ -319,9 +319,9 @@ const RadioItem: React.FC<{ label: string; checked: boolean; onChange: () => voi
       type="radio"
       checked={checked}
       onChange={onChange}
-      className="w-4 h-4 border-gray-300 dark:border-gray-600 text-teal-600 focus:ring-teal-500 focus:ring-offset-0"
+      className="w-4 h-4 border-gray-300 dark:border-gray-600 text-primary focus:ring-primary focus:ring-offset-0"
     />
-    <span className="text-sm text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
+    <span className="text-sm text-text-secondary group-hover:text-text-primary transition-colors">
       {label}
     </span>
   </label>
@@ -333,12 +333,12 @@ const CheckboxItem: React.FC<{ label: string; sublabel?: string; checked: boolea
       type="checkbox"
       checked={checked}
       onChange={onChange}
-      className="w-4 h-4 rounded border-gray-300 dark:border-gray-600 text-teal-600 focus:ring-teal-500 focus:ring-offset-0"
+      className="w-4 h-4 rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary focus:ring-offset-0"
     />
-    <span className="text-sm text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
+    <span className="text-sm text-text-secondary group-hover:text-text-primary transition-colors">
       {label}
       {sublabel && (
-        <span className="text-[10px] text-gray-400 dark:text-gray-500 ml-1">({sublabel})</span>
+        <span className="text-[10px] text-text-tertiary ml-1">({sublabel})</span>
       )}
     </span>
   </label>

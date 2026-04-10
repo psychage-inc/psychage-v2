@@ -222,7 +222,7 @@ const ArticleAudioPlayer: React.FC<ArticleAudioPlayerProps> = ({
     return (
         <div
             className={cn(
-                'flex items-center gap-3 bg-white dark:bg-gray-900/60 border border-gray-200 dark:border-gray-700 rounded-full px-4 py-2 shadow-sm',
+                'flex items-center gap-3 bg-white dark:bg-gray-900/60 border border-border rounded-full px-4 py-2 shadow-sm',
                 className,
             )}
             role="region"
@@ -238,7 +238,7 @@ const ArticleAudioPlayer: React.FC<ArticleAudioPlayerProps> = ({
             {!isTTS && (
                 <button
                     onClick={() => skipAudio(-15)}
-                    className="p-1 text-gray-500 hover:text-primary transition-colors"
+                    className="p-1 text-text-tertiary hover:text-primary transition-colors"
                     aria-label="Skip back 15 seconds"
                 >
                     <SkipBack size={14} />
@@ -258,7 +258,7 @@ const ArticleAudioPlayer: React.FC<ArticleAudioPlayerProps> = ({
             {!isTTS && (
                 <button
                     onClick={() => skipAudio(15)}
-                    className="p-1 text-gray-500 hover:text-primary transition-colors"
+                    className="p-1 text-text-tertiary hover:text-primary transition-colors"
                     aria-label="Skip forward 15 seconds"
                 >
                     <SkipForward size={14} />
@@ -276,7 +276,7 @@ const ArticleAudioPlayer: React.FC<ArticleAudioPlayerProps> = ({
             </div>
 
             {/* Time */}
-            <span className="text-xs text-gray-500 dark:text-gray-400 tabular-nums whitespace-nowrap">
+            <span className="text-xs text-text-tertiary tabular-nums whitespace-nowrap">
                 {formatTime(currentTime)}
                 {duration > 0 && ` / ${formatTime(duration)}`}
             </span>
@@ -292,7 +292,7 @@ const ArticleAudioPlayer: React.FC<ArticleAudioPlayerProps> = ({
 
             {/* TTS notice */}
             {isTTS && (
-                <span className="hidden lg:inline text-[10px] text-gray-400 dark:text-gray-500 whitespace-nowrap">
+                <span className="hidden lg:inline text-[10px] text-text-tertiary whitespace-nowrap">
                     Device TTS
                 </span>
             )}

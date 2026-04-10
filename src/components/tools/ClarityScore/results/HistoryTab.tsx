@@ -155,19 +155,19 @@ const HistoryTab: React.FC<HistoryTabProps> = ({
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-12 text-center"
+        className="bg-surface rounded-2xl border border-border shadow-sm p-12 text-center"
       >
-        <div className="w-16 h-16 rounded-full bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center mx-auto mb-6 text-teal-600 dark:text-teal-400">
+        <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6 text-primary">
           <Clock size={28} />
         </div>
-        <h3 className="font-display font-bold text-2xl text-gray-900 dark:text-white mb-3">
+        <h3 className="font-display font-bold text-2xl text-text-primary mb-3">
           Track Your Clarity Over Time
         </h3>
-        <p className="text-gray-500 dark:text-gray-400 max-w-md mx-auto mb-2">
+        <p className="text-text-tertiary max-w-md mx-auto mb-2">
           Your first result has been saved. Retake in 2 weeks to start seeing
           trends in your wellness journey.
         </p>
-        <p className="text-xs text-gray-400 dark:text-gray-500">
+        <p className="text-xs text-text-tertiary">
           Your data stays on your device.
         </p>
       </motion.div>
@@ -183,18 +183,18 @@ const HistoryTab: React.FC<HistoryTabProps> = ({
         transition={{ duration: 0.3 }}
         className="space-y-6"
       >
-        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-8 text-center">
-          <div className="w-16 h-16 rounded-full bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center mx-auto mb-4 text-teal-600 dark:text-teal-400">
+        <div className="bg-surface rounded-2xl border border-border shadow-sm p-8 text-center">
+          <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 text-primary">
             <Clock size={28} />
           </div>
-          <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-2">
+          <h3 className="font-display font-bold text-xl text-text-primary mb-2">
             Your First Assessment is Recorded
           </h3>
-          <p className="text-gray-500 dark:text-gray-400 mb-4">
+          <p className="text-text-tertiary mb-4">
             Score: <strong>{history[0].score}</strong> —{' '}
             {history[0].label || getScoreLabel(history[0].score).label}
           </p>
-          <p className="text-sm text-gray-400 dark:text-gray-500">
+          <p className="text-sm text-text-tertiary">
             Retake in 2 weeks to see how your wellness changes over time. Trend
             charts appear after 2 or more assessments.
           </p>
@@ -215,8 +215,8 @@ const HistoryTab: React.FC<HistoryTabProps> = ({
       className="space-y-6"
     >
       {/* ─── Composite Trend ─── */}
-      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 md:p-8">
-        <h3 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+      <div className="bg-surface rounded-2xl border border-border shadow-sm p-6 md:p-8">
+        <h3 className="font-bold text-text-primary mb-4 flex items-center gap-2">
           <TrendingUp size={18} className="text-teal-500" />
           Score Trend
         </h3>
@@ -263,8 +263,8 @@ const HistoryTab: React.FC<HistoryTabProps> = ({
       {/* ─── Change Summary ─── */}
       {insights && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 p-4 text-center">
-            <p className="text-xs text-gray-400 mb-1">Overall Change</p>
+          <div className="bg-surface rounded-xl border border-border p-4 text-center">
+            <p className="text-xs text-text-tertiary mb-1">Overall Change</p>
             <p
               className={`text-2xl font-display font-bold ${
                 insights.totalChange > 0
@@ -278,14 +278,14 @@ const HistoryTab: React.FC<HistoryTabProps> = ({
               {insights.totalChange} pts
             </p>
           </div>
-          <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 p-4 text-center">
-            <p className="text-xs text-gray-400 mb-1">Assessments Taken</p>
-            <p className="text-2xl font-display font-bold text-gray-900 dark:text-white">
+          <div className="bg-surface rounded-xl border border-border p-4 text-center">
+            <p className="text-xs text-text-tertiary mb-1">Assessments Taken</p>
+            <p className="text-2xl font-display font-bold text-text-primary">
               {history.length}
             </p>
           </div>
-          <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 p-4 text-center">
-            <p className="text-xs text-gray-400 mb-1">Since Last</p>
+          <div className="bg-surface rounded-xl border border-border p-4 text-center">
+            <p className="text-xs text-text-tertiary mb-1">Since Last</p>
             <p
               className={`text-2xl font-display font-bold ${
                 insights.recentChange > 0
@@ -304,8 +304,8 @@ const HistoryTab: React.FC<HistoryTabProps> = ({
 
       {/* ─── Domain Trends ─── */}
       {hasDomainData && domainTrendData.length >= 2 && (
-        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 md:p-8">
-          <h3 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+        <div className="bg-surface rounded-2xl border border-border shadow-sm p-6 md:p-8">
+          <h3 className="font-bold text-text-primary mb-4 flex items-center gap-2">
             <Layers size={18} className="text-teal-500" />
             Dimension Trends
           </h3>
@@ -389,8 +389,8 @@ const HistoryTab: React.FC<HistoryTabProps> = ({
       )}
 
       {/* ─── History List ─── */}
-      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6">
-        <h3 className="font-bold text-gray-900 dark:text-white mb-4 text-sm">
+      <div className="bg-surface rounded-2xl border border-border shadow-sm p-6">
+        <h3 className="font-bold text-text-primary mb-4 text-sm">
           Assessment History
         </h3>
         <div className="space-y-3">
@@ -399,13 +399,13 @@ const HistoryTab: React.FC<HistoryTabProps> = ({
             return (
               <div
                 key={entry.id || i}
-                className="flex items-center gap-4 p-3 rounded-xl bg-gray-50 dark:bg-gray-800/50"
+                className="flex items-center gap-4 p-3 rounded-xl bg-surface-hover"
               >
-                <div className="w-12 h-12 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 flex items-center justify-center font-bold text-gray-900 dark:text-white">
+                <div className="w-12 h-12 rounded-full bg-surface border border-border flex items-center justify-center font-bold text-text-primary">
                   {entry.score}
                 </div>
                 <div className="flex-1">
-                  <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <p className="text-sm font-medium text-text-secondary">
                     {entry.date}
                   </p>
                   <TierBadge tier={tier} size="sm" />
@@ -431,8 +431,8 @@ const HistoryTab: React.FC<HistoryTabProps> = ({
 
 function MilestoneRow({ milestones }: { milestones: Milestone[] }) {
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6">
-      <h3 className="font-bold text-gray-900 dark:text-white mb-4 text-sm flex items-center gap-2">
+    <div className="bg-surface rounded-2xl border border-border shadow-sm p-6">
+      <h3 className="font-bold text-text-primary mb-4 text-sm flex items-center gap-2">
         <Award size={16} className="text-teal-500" />
         Milestones
       </h3>
@@ -445,14 +445,14 @@ function MilestoneRow({ milestones }: { milestones: Milestone[] }) {
               className={`rounded-xl p-4 text-center border transition-all ${
                 m.earned
                   ? 'bg-emerald-50 dark:bg-emerald-900/10 border-emerald-200 dark:border-emerald-800'
-                  : 'bg-gray-50 dark:bg-gray-800/50 border-gray-100 dark:border-gray-800 opacity-50'
+                  : 'bg-surface-hover border-border opacity-50'
               }`}
             >
               <div
                 className={`w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-2 ${
                   m.earned
                     ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400'
-                    : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500'
+                    : 'bg-gray-200 dark:bg-gray-700 text-text-tertiary'
                 }`}
               >
                 <MIcon size={18} />
@@ -460,13 +460,13 @@ function MilestoneRow({ milestones }: { milestones: Milestone[] }) {
               <p
                 className={`text-xs font-semibold ${
                   m.earned
-                    ? 'text-gray-900 dark:text-white'
-                    : 'text-gray-400 dark:text-gray-500'
+                    ? 'text-text-primary'
+                    : 'text-text-tertiary'
                 }`}
               >
                 {m.label}
               </p>
-              <p className="text-[10px] text-gray-400 dark:text-gray-500 mt-0.5">
+              <p className="text-[10px] text-text-tertiary mt-0.5">
                 {m.description}
               </p>
             </div>

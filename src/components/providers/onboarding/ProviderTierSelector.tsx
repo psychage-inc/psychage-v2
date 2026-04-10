@@ -107,7 +107,7 @@ const TierCard: React.FC<TierCardProps> = ({
       disabled={displayOnly}
       className={cn(
         'relative w-full text-left rounded-2xl p-6 border-2 transition-all duration-300',
-        'bg-white dark:bg-gray-900',
+        'bg-surface',
         displayOnly && 'cursor-default',
         !displayOnly && 'cursor-pointer',
         isSelected && !isPremium &&
@@ -115,7 +115,7 @@ const TierCard: React.FC<TierCardProps> = ({
         isSelected && isPremium &&
           'border-amber-400 dark:border-amber-500 shadow-lg shadow-amber-400/10 ring-1 ring-amber-400/20',
         !isSelected &&
-          'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600',
+          'border-border hover:border-gray-300 dark:hover:border-gray-600',
         isPremium && !isSelected &&
           'border-amber-200 dark:border-amber-800/50'
       )}
@@ -145,10 +145,10 @@ const TierCard: React.FC<TierCardProps> = ({
       )}
 
       {/* Title */}
-      <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-1">
+      <h3 className="font-display font-bold text-xl text-text-primary mb-1">
         {title}
       </h3>
-      <p className="text-sm text-gray-500 dark:text-gray-400 mb-5">
+      <p className="text-sm text-text-tertiary mb-5">
         {subtitle}
       </p>
 
@@ -166,7 +166,7 @@ const TierCard: React.FC<TierCardProps> = ({
             >
               {feature.icon}
             </span>
-            <span className="text-sm text-gray-700 dark:text-gray-300">
+            <span className="text-sm text-text-secondary">
               {feature.label}
             </span>
           </li>

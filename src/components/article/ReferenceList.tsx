@@ -37,7 +37,7 @@ const BackLink: React.FC<{ citationId: string; index: number }> = ({ citationId,
         <a
             href={`#citation-ref-${citationId}`}
             onClick={scrollBack}
-            className="inline-flex items-center justify-center w-5 h-5 ml-2 text-xs text-teal-500 hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded transition-colors"
+            className="inline-flex items-center justify-center w-5 h-5 ml-2 text-xs text-primary hover:text-primary/80 hover:bg-primary/5 rounded transition-colors"
             aria-label={`Jump back to citation ${index} in text`}
             title="Jump back to citation in text"
         >
@@ -64,7 +64,7 @@ const ReferenceList: React.FC<ReferenceListProps> = ({ citations: citationsProp,
                         className="relative pl-8 py-3 rounded-lg transition-colors"
                     >
                         {/* Reference number */}
-                        <span className="absolute left-0 top-3 w-6 h-6 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-xs font-bold text-gray-500 dark:text-gray-400">
+                        <span className="absolute left-0 top-3 w-6 h-6 flex items-center justify-center rounded-full bg-surface-active text-xs font-bold text-text-tertiary">
                             {idx + 1}
                         </span>
 
@@ -83,33 +83,33 @@ const ReferenceList: React.FC<ReferenceListProps> = ({ citations: citationsProp,
                             </div>
 
                             {/* APA 7th edition format */}
-                            <div className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            <div className="text-sm text-text-secondary leading-relaxed">
                                 {/* Authors or source */}
                                 {citation.authors && citation.authors.length > 0 ? (
-                                    <span className="text-gray-800 dark:text-gray-200 font-medium">
+                                    <span className="text-text-primary font-medium">
                                         {citation.authors.join(', ')}
                                     </span>
                                 ) : (
-                                    <span className="text-gray-800 dark:text-gray-200 font-medium">
+                                    <span className="text-text-primary font-medium">
                                         {citation.source}
                                     </span>
                                 )}
 
                                 {/* Year */}
                                 {citation.year && (
-                                    <span className="text-gray-500 dark:text-gray-500">
+                                    <span className="text-text-tertiary">
                                         {' '}({citation.year}).{' '}
                                     </span>
                                 )}
 
                                 {/* Title */}
-                                <span className="italic text-gray-700 dark:text-gray-300">
+                                <span className="italic text-text-secondary">
                                     {citation.text || citation.title}
                                 </span>
 
                                 {/* Journal */}
                                 {citation.journalName && (
-                                    <span className="text-gray-600 dark:text-gray-400">
+                                    <span className="text-text-secondary">
                                         . <em>{citation.journalName}</em>
                                     </span>
                                 )}
@@ -123,10 +123,10 @@ const ReferenceList: React.FC<ReferenceListProps> = ({ citations: citationsProp,
                                     rel="noopener noreferrer"
                                     className="
                                         inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg
-                                        bg-teal-50 dark:bg-teal-900/20
-                                        text-teal-700 dark:text-teal-300
+                                        bg-primary/10
+                                        text-primary
                                         text-xs font-medium
-                                        hover:bg-teal-100 dark:hover:bg-teal-900/40
+                                        hover:bg-primary/15
                                         transition-colors
                                     "
                                 >
@@ -134,7 +134,7 @@ const ReferenceList: React.FC<ReferenceListProps> = ({ citations: citationsProp,
                                     {citation.doi ? `doi:${citation.doi}` : 'View Source'}
                                 </a>
                             ) : (
-                                <span className="inline-block text-xs text-gray-400 dark:text-gray-600 italic">
+                                <span className="inline-block text-xs text-text-tertiary italic">
                                     Source not available online
                                 </span>
                             )}

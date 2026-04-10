@@ -62,15 +62,15 @@ const SingleCitation: React.FC<{ id: string; index: number; source?: string; yea
                     className="
                         inline-flex items-center justify-center
                         w-[18px] h-[18px] ml-0.5 -mt-2
-                        text-[10px] font-bold text-teal-600 dark:text-teal-400
-                        bg-teal-50 dark:bg-teal-900/30
+                        text-[10px] font-bold text-primary
+                        bg-primary/10
                         rounded-full cursor-pointer
                         hover:bg-teal-100 dark:hover:bg-teal-900/50
                         hover:scale-110
                         active:scale-95
                         transition-all duration-150
                         align-super
-                        focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1
                     "
                     aria-label={`Citation ${index} — click to view reference`}
                 >
@@ -83,8 +83,8 @@ const SingleCitation: React.FC<{ id: string; index: number; source?: string; yea
                     sideOffset={8}
                     className="
                         z-[200] w-72 p-3 rounded-xl shadow-2xl
-                        bg-white dark:bg-gray-900
-                        border border-gray-200 dark:border-gray-700
+                        bg-surface
+                        border border-border
                         pointer-events-auto
                         data-[state=delayed-open]:animate-in data-[state=delayed-open]:fade-in-0 data-[state=delayed-open]:zoom-in-95
                         data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95
@@ -92,18 +92,18 @@ const SingleCitation: React.FC<{ id: string; index: number; source?: string; yea
                 >
                     <div className="space-y-2">
                         {source && (
-                            <p className="text-sm font-semibold text-gray-900 dark:text-white leading-snug">
+                            <p className="text-sm font-semibold text-text-primary leading-snug">
                                 {source}
                             </p>
                         )}
                         <div className="flex items-center gap-2 flex-wrap">
                             {journalName && (
-                                <span className="text-xs italic text-gray-500 dark:text-gray-400">
+                                <span className="text-xs italic text-text-tertiary">
                                     {journalName}
                                 </span>
                             )}
                             {year && (
-                                <span className="text-xs text-gray-400 dark:text-gray-500">
+                                <span className="text-xs text-text-tertiary">
                                     ({year})
                                 </span>
                             )}
@@ -122,7 +122,7 @@ const SingleCitation: React.FC<{ id: string; index: number; source?: string; yea
                                 rel="noopener noreferrer"
                                 className="
                                     flex items-center gap-1.5 w-full mt-1 px-3 py-1.5 rounded-lg
-                                    bg-teal-50 dark:bg-teal-900/20
+                                    bg-primary/10
                                     text-teal-700 dark:text-teal-300
                                     text-xs font-medium
                                     hover:bg-teal-100 dark:hover:bg-teal-900/40
@@ -135,7 +135,7 @@ const SingleCitation: React.FC<{ id: string; index: number; source?: string; yea
                             </a>
                         )}
                     </div>
-                    <TooltipPrimitive.Arrow className="fill-white dark:fill-gray-900" />
+                    <TooltipPrimitive.Arrow className="fill-surface" />
                 </TooltipPrimitive.Content>
             </TooltipPrimitive.Portal>
         </TooltipPrimitive.Root>

@@ -327,32 +327,32 @@ const MindMate: React.FC = () => {
                         exit={{ opacity: 0, y: 50, scale: 0.9 }}
                         className="fixed bottom-6 right-6 z-[100] w-[90vw] max-w-[22.5rem] md:w-[22.5rem] font-sans"
                     >
-                        <div className="bg-white dark:bg-slate-950 rounded-3xl shadow-2xl shadow-black/10 border border-gray-200 dark:border-gray-800 p-6">
+                        <div className="bg-white dark:bg-slate-950 rounded-3xl shadow-2xl shadow-black/10 border border-border p-6">
                             <div className="flex items-center justify-between mb-5">
                                 <div className="flex items-center gap-3">
-                                    <div className="w-8 h-8 rounded-xl bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center">
-                                        <Sparkles size={16} className="text-teal-600 dark:text-teal-400" />
+                                    <div className="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center">
+                                        <Sparkles size={16} className="text-primary" />
                                     </div>
-                                    <span className="font-display font-semibold text-sm text-gray-900 dark:text-gray-100">Psychage AI</span>
+                                    <span className="font-display font-semibold text-sm text-text-primary">Psychage AI</span>
                                 </div>
-                                <button onClick={() => setIsOpen(false)} className="p-1.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors text-gray-400" aria-label="Close chat panel">
+                                <button onClick={() => setIsOpen(false)} className="p-1.5 hover:bg-surface-hover rounded-lg transition-colors text-text-tertiary" aria-label="Close chat panel">
                                     <X size={16} />
                                 </button>
                             </div>
 
                             <div className="text-center">
-                                <div className="mx-auto w-12 h-12 rounded-2xl bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center mb-4">
-                                    <LogIn size={20} className="text-teal-600 dark:text-teal-400" />
+                                <div className="mx-auto w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
+                                    <LogIn size={20} className="text-primary" />
                                 </div>
-                                <h3 className="font-display font-semibold text-base text-gray-900 dark:text-gray-100 mb-2">
+                                <h3 className="font-display font-semibold text-base text-text-primary mb-2">
                                     Sign in to chat
                                 </h3>
-                                <p className="text-sm text-gray-500 dark:text-gray-400 mb-5 leading-relaxed">
+                                <p className="text-sm text-text-tertiary mb-5 leading-relaxed">
                                     Create a free account to use Psychage AI and get personalized mental health guidance.
                                 </p>
                                 <button
                                     onClick={() => setShowAuthModal(true)}
-                                    className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-teal-600 hover:bg-teal-700 text-white rounded-xl text-sm font-semibold transition-colors shadow-sm shadow-teal-600/20"
+                                    className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-primary hover:bg-primary-hover text-white rounded-xl text-sm font-semibold transition-colors shadow-sm shadow-teal-600/20"
                                 >
                                     <LogIn size={16} />
                                     Sign In to Continue
@@ -372,21 +372,21 @@ const MindMate: React.FC = () => {
                         className="fixed bottom-6 right-6 z-[100] w-[90vw] max-w-[25rem] md:w-[25rem] h-[600px] max-h-[80vh] flex flex-col font-sans"
                     >
                         {/* Clean Container */}
-                        <div className="absolute inset-0 bg-white dark:bg-slate-950 rounded-3xl shadow-2xl shadow-black/10 border border-gray-200 dark:border-gray-800" />
+                        <div className="absolute inset-0 bg-white dark:bg-slate-950 rounded-3xl shadow-2xl shadow-black/10 border border-border" />
 
                         {/* Header — minimal */}
-                        <div className="relative z-10 px-5 py-4 border-b border-gray-100 dark:border-gray-800 flex items-center justify-between">
+                        <div className="relative z-10 px-5 py-4 border-b border-border flex items-center justify-between">
                             <div className="flex items-center gap-3">
-                                <div className="w-8 h-8 rounded-xl bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center">
-                                    <Sparkles size={16} className="text-teal-600 dark:text-teal-400" />
+                                <div className="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center">
+                                    <Sparkles size={16} className="text-primary" />
                                 </div>
-                                <span className="font-display font-semibold text-sm text-gray-900 dark:text-gray-100">Psychage AI</span>
+                                <span className="font-display font-semibold text-sm text-text-primary">Psychage AI</span>
                             </div>
                             <div className="flex gap-1">
-                                <button onClick={clearChat} className="p-1.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors text-gray-400" aria-label="Clear chat history">
+                                <button onClick={clearChat} className="p-1.5 hover:bg-surface-hover rounded-lg transition-colors text-text-tertiary" aria-label="Clear chat history">
                                     <Trash2 size={16} />
                                 </button>
-                                <button onClick={() => { abortControllerRef.current?.abort(); setIsOpen(false); }} className="p-1.5 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors text-gray-400" aria-label="Close chat panel">
+                                <button onClick={() => { abortControllerRef.current?.abort(); setIsOpen(false); }} className="p-1.5 hover:bg-surface-hover rounded-lg transition-colors text-text-tertiary" aria-label="Close chat panel">
                                     <X size={16} />
                                 </button>
                             </div>
@@ -402,15 +402,15 @@ const MindMate: React.FC = () => {
                                     className={`flex gap-3 ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                                 >
                                     {msg.sender === 'ai' && (
-                                        <div className="w-7 h-7 rounded-lg bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center shrink-0 mt-0.5">
-                                            <Sparkles size={12} className="text-teal-600 dark:text-teal-400" />
+                                        <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                                            <Sparkles size={12} className="text-primary" />
                                         </div>
                                     )}
                                     <div className={`max-w-[80%] text-sm leading-relaxed ${msg.sender === 'user'
-                                            ? 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-4 py-3 rounded-2xl rounded-br-md'
+                                            ? 'bg-surface-active text-text-primary px-4 py-3 rounded-2xl rounded-br-md'
                                             : msg.type === 'crisis'
                                                 ? 'bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-200 border border-red-200 dark:border-red-800 px-4 py-3 rounded-2xl'
-                                                : 'text-gray-700 dark:text-gray-300 pt-0.5'
+                                                : 'text-text-secondary pt-0.5'
                                         }`}>
                                         {msg.type === 'crisis' && (
                                             <div className="flex items-center gap-2 font-bold mb-2 text-red-600 dark:text-red-400">
@@ -430,10 +430,10 @@ const MindMate: React.FC = () => {
                             ))}
                             {isTyping && !messages.some(m => m.isStreaming && m.text) && (
                                 <div className="flex gap-3">
-                                    <div className="w-7 h-7 rounded-lg bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center shrink-0">
-                                        <Sparkles size={12} className="text-teal-600 dark:text-teal-400" />
+                                    <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                                        <Sparkles size={12} className="text-primary" />
                                     </div>
-                                    <div className="flex gap-1.5 items-center pt-1 text-xs text-gray-400 dark:text-gray-500">
+                                    <div className="flex gap-1.5 items-center pt-1 text-xs text-text-tertiary">
                                         <span className="inline-flex gap-1">
                                             <span className="w-1.5 h-1.5 bg-teal-400 rounded-full animate-bounce" />
                                             <span className="w-1.5 h-1.5 bg-teal-400 rounded-full animate-bounce [animation-delay:150ms]" />
@@ -468,7 +468,7 @@ const MindMate: React.FC = () => {
                                     onKeyDown={(e) => e.key === 'Enter' && handleSend()}
                                     placeholder="Message Psychage AI..."
                                     aria-label="Type a message to Psychage AI"
-                                    className="w-full pl-4 pr-12 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-teal-500/30 focus:border-teal-400 outline-none text-sm transition-all dark:text-white placeholder-gray-400"
+                                    className="w-full pl-4 pr-12 py-3 bg-surface-hover border border-border rounded-2xl focus:ring-2 focus:ring-primary/30 focus:border-teal-400 outline-none text-sm transition-all dark:text-white placeholder:text-text-tertiary"
                                 />
                                 <button
                                     onClick={handleSend}

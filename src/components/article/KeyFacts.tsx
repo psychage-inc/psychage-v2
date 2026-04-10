@@ -33,7 +33,7 @@ const KeyFacts: React.FC<KeyFactsProps> = ({ facts: factsProp, citations, childr
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1, ease: 'easeOut' }}
             id="key-facts"
-            className={`not-prose bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 my-8 shadow-sm scroll-mt-32 ${className}`}
+            className={`not-prose bg-surface border border-border rounded-2xl p-6 my-8 shadow-sm scroll-mt-32 ${className}`}
         >
             <div className="flex items-center gap-2 mb-4">
                 <ListChecks size={20} className="text-primary" />
@@ -47,15 +47,15 @@ const KeyFacts: React.FC<KeyFactsProps> = ({ facts: factsProp, citations, childr
                     const hasStructuredData = fact.label && fact.value;
 
                     return hasStructuredData ? (
-                        <div key={i} className="flex flex-col gap-1 p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700">
-                            <div className="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                        <div key={i} className="flex flex-col gap-1 p-4 rounded-lg bg-surface-hover border border-border">
+                            <div className="text-xs font-semibold uppercase tracking-wider text-text-tertiary">
                                 {fact.label}
                             </div>
                             <div className="text-2xl font-bold text-primary">
                                 {fact.value}
                             </div>
                             {fact.context && (
-                                <div className="text-sm text-gray-600 dark:text-gray-400">
+                                <div className="text-sm text-text-secondary">
                                     {fact.context}
                                 </div>
                             )}
@@ -65,7 +65,7 @@ const KeyFacts: React.FC<KeyFactsProps> = ({ facts: factsProp, citations, childr
                             <span className="shrink-0 w-7 h-7 rounded-full bg-primary/10 text-primary text-sm font-bold flex items-center justify-center mt-0.5">
                                 {i + 1}
                             </span>
-                            <span className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
+                            <span className="text-base leading-relaxed text-text-secondary">
                                 {fact.text}
                                 {fact.citationIndex != null && (
                                     <sup className="ml-0.5">

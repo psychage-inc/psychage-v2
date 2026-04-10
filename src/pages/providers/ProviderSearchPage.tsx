@@ -72,7 +72,7 @@ const ProviderSearchPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-gray-950 pt-28 pb-20">
+    <div className="min-h-screen bg-background pt-28 pb-20">
       <SEO
         title="Find a Provider | Psychage"
         description="Search thousands of verified mental health providers. Filter by specialty, location, insurance, and more."
@@ -123,7 +123,7 @@ const ProviderSearchPage: React.FC = () => {
         {/* Results Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-4">
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-sm text-text-tertiary">
               {isLoading ? 'Searching...' : (
                 totalCount > 0
                   ? `Showing ${providers.length} of ${totalCount.toLocaleString()} providers`
@@ -133,12 +133,12 @@ const ProviderSearchPage: React.FC = () => {
 
             <button
                 onClick={() => setMobileFiltersOpen(true)}
-                className="lg:hidden flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50"
+                className="lg:hidden flex items-center gap-2 px-3 py-2 text-sm font-medium text-text-secondary bg-surface border border-border rounded-lg hover:bg-surface-hover"
               >
                 <SlidersHorizontal size={16} />
                 Filters
                 {hasActiveFilters && (
-                  <span className="w-2 h-2 rounded-full bg-teal-500" />
+                  <span className="w-2 h-2 rounded-full bg-primary" />
                 )}
               </button>
           </div>
@@ -186,7 +186,7 @@ const ProviderSearchPage: React.FC = () => {
                       variant="outline"
                       onClick={loadMore}
                       isLoading={isLoadingMore}
-                      className="px-8 text-teal-600 dark:text-teal-400 border-teal-200 dark:border-teal-800 hover:bg-teal-50 dark:hover:bg-teal-900/20"
+                      className="px-8 text-primary border-primary/20 hover:bg-primary/5"
                     >
                       Load more providers
                     </Button>

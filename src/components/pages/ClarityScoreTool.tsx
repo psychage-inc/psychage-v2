@@ -275,7 +275,7 @@ const ClarityScoreTool: React.FC = () => {
               aria-modal="true"
               aria-labelledby="crisis-title"
               aria-describedby="crisis-desc"
-              className="bg-white dark:bg-gray-900 max-w-lg w-full rounded-3xl overflow-hidden shadow-2xl border border-red-200 dark:border-red-900"
+              className="bg-surface max-w-lg w-full rounded-3xl overflow-hidden shadow-2xl border border-red-200 dark:border-red-900"
             >
               <div className="flex flex-col items-center bg-red-50 dark:bg-red-950/30 p-6 border-b border-red-100 dark:border-red-900">
                 <div className="w-16 h-16 rounded-full bg-red-100 dark:bg-red-900/40 flex items-center justify-center text-red-600 dark:text-red-400 mb-4 ring-4 ring-red-100 dark:ring-red-900/20">
@@ -283,7 +283,7 @@ const ClarityScoreTool: React.FC = () => {
                 </div>
                 <h2
                   id="crisis-title"
-                  className="text-2xl font-bold text-gray-900 dark:text-white text-center"
+                  className="text-2xl font-bold text-text-primary text-center"
                 >
                   Support is Available
                 </h2>
@@ -292,11 +292,11 @@ const ClarityScoreTool: React.FC = () => {
               <div className="p-8 space-y-6">
                 <p
                   id="crisis-desc"
-                  className="text-center text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+                  className="text-center text-lg text-text-secondary leading-relaxed"
                 >
                   Your responses suggest you may be experiencing significant
                   distress.{' '}
-                  <strong className="text-gray-900 dark:text-white block mt-2">
+                  <strong className="text-text-primary block mt-2">
                     You don't have to face this alone.
                   </strong>
                 </p>
@@ -318,12 +318,12 @@ const ClarityScoreTool: React.FC = () => {
 
                   <a
                     href="sms:741741&body=HOME"
-                    className="flex items-center gap-4 w-full p-4 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-xl font-medium transition-colors"
+                    className="flex items-center gap-4 w-full p-4 bg-surface-active hover:bg-gray-200 dark:hover:bg-gray-700 text-text-primary rounded-xl font-medium transition-colors"
                   >
                     <MessageCircle size={24} className="shrink-0" />
                     <div className="flex-1">
                       <div className="font-bold">Text HOME to 741741</div>
-                      <div className="text-sm text-gray-500 dark:text-gray-400">
+                      <div className="text-sm text-text-tertiary">
                         Crisis Text Line — 24/7
                       </div>
                     </div>
@@ -331,23 +331,23 @@ const ClarityScoreTool: React.FC = () => {
 
                   <Link
                     to="/crisis"
-                    className="flex items-center gap-4 w-full p-4 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-xl font-medium transition-colors"
+                    className="flex items-center gap-4 w-full p-4 bg-surface-active hover:bg-gray-200 dark:hover:bg-gray-700 text-text-primary rounded-xl font-medium transition-colors"
                   >
                     <ExternalLink size={24} className="shrink-0" />
                     <div className="flex-1">
                       <div className="font-bold">More Crisis Resources</div>
-                      <div className="text-sm text-gray-500 dark:text-gray-400">
+                      <div className="text-sm text-text-tertiary">
                         Region-specific support services
                       </div>
                     </div>
                   </Link>
                 </div>
 
-                <div className="pt-4 border-t border-gray-100 dark:border-gray-800">
+                <div className="pt-4 border-t border-border">
                   <button
                     ref={crisisContinueRef}
                     onClick={handleCrisisContinue}
-                    className="w-full py-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm font-medium transition-colors rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                    className="w-full py-4 text-text-tertiary hover:text-gray-600 dark:hover:text-gray-200 text-sm font-medium transition-colors rounded-xl hover:bg-surface-hover"
                   >
                     I'm safe right now — continue assessment
                   </button>
@@ -369,31 +369,31 @@ const ClarityScoreTool: React.FC = () => {
               exit={{ opacity: 0, y: -20 }}
               className="text-center"
             >
-              <div className="w-20 h-20 bg-teal-100 dark:bg-teal-900/30 rounded-3xl flex items-center justify-center mx-auto mb-8 text-teal-600 dark:text-teal-400">
+              <div className="w-20 h-20 bg-primary/10 rounded-3xl flex items-center justify-center mx-auto mb-8 text-primary">
                 <BarChart2 size={40} />
               </div>
-              <h1 className="font-display font-bold text-4xl md:text-5xl text-gray-900 dark:text-white mb-6">
+              <h1 className="font-display font-bold text-4xl md:text-5xl text-text-primary mb-6">
                 Clarity Score
               </h1>
-              <p className="text-xl text-gray-500 dark:text-gray-400 mb-12 leading-relaxed">
+              <p className="text-xl text-text-tertiary mb-12 leading-relaxed">
                 A structured wellness check-in built on validated psychological
                 instruments. 20 questions, five dimensions, under 3 minutes.
               </p>
 
               {history.length > 0 && (
-                <div className="mb-12 bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm">
-                  <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">
+                <div className="mb-12 bg-surface rounded-2xl p-6 border border-border shadow-sm">
+                  <h3 className="text-sm font-bold text-text-tertiary uppercase tracking-wider mb-4">
                     Recent History
                   </h3>
                   <div className="flex justify-center gap-4 flex-wrap">
                     {history.slice(0, 5).map((entry) => (
                       <div key={entry.id || entry.date} className="text-center">
                         <div
-                          className={`w-12 h-12 rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center font-bold mb-1 border border-gray-200 dark:border-gray-700 ${
+                          className={`w-12 h-12 rounded-full bg-surface-hover flex items-center justify-center font-bold mb-1 border border-border ${
                             entry.score >= 80
                               ? 'text-emerald-600 dark:text-emerald-400'
                               : entry.score >= 60
-                                ? 'text-teal-600 dark:text-teal-400'
+                                ? 'text-primary'
                                 : entry.score >= 40
                                   ? 'text-amber-600 dark:text-amber-400'
                                   : 'text-red-600 dark:text-red-400'
@@ -401,7 +401,7 @@ const ClarityScoreTool: React.FC = () => {
                         >
                           {entry.score}
                         </div>
-                        <span className="text-[10px] text-gray-400">
+                        <span className="text-[10px] text-text-tertiary">
                           {entry.label || entry.date}
                         </span>
                       </div>
@@ -433,10 +433,10 @@ const ClarityScoreTool: React.FC = () => {
                 initial={{ opacity: 0, x: directionRef.current === 'forward' ? 50 : -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: directionRef.current === 'forward' ? -50 : 50 }}
-                className="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-xl shadow-gray-200/50 dark:shadow-none border border-gray-100 dark:border-gray-800"
+                className="bg-surface rounded-3xl p-8 md:p-12 shadow-xl shadow-gray-200/50 dark:shadow-none border border-border"
               >
                 {/* Progress header */}
-                <div className="mb-6 flex justify-between items-center text-sm font-medium text-gray-400">
+                <div className="mb-6 flex justify-between items-center text-sm font-medium text-text-tertiary">
                   <span>
                     Question {currentIndex + 1} of {QUESTIONS.length}
                   </span>
@@ -447,7 +447,7 @@ const ClarityScoreTool: React.FC = () => {
                 </div>
 
                 {/* Progress bar */}
-                <div className="w-full h-2 bg-gray-100 dark:bg-gray-800 rounded-full mb-8 overflow-hidden">
+                <div className="w-full h-2 bg-surface-active rounded-full mb-8 overflow-hidden">
                   <motion.div
                     className={`h-full ${getDomainBarColor(currentQuestion.domainId)}`}
                     initial={{ width: 0 }}
@@ -459,7 +459,7 @@ const ClarityScoreTool: React.FC = () => {
                 </div>
 
                 {/* Domain banner */}
-                <div className="flex items-center gap-3 mb-4 px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700">
+                <div className="flex items-center gap-3 mb-4 px-4 py-3 rounded-xl bg-surface-hover border border-border">
                   <span
                     className={`inline-flex items-center justify-center w-10 h-10 rounded-xl ${getDomainBarColor(currentQuestion.domainId)} text-white shrink-0`}
                   >
@@ -469,15 +469,15 @@ const ClarityScoreTool: React.FC = () => {
                     <span className={`text-lg font-bold ${currentDomain.color}`}>
                       {currentDomain.name}
                     </span>
-                    <span className="block text-xs text-gray-400 dark:text-gray-500">
+                    <span className="block text-xs text-text-tertiary">
                       {currentDomain.description}
                     </span>
                   </div>
                 </div>
 
                 {/* Question text with integrated time-period context */}
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-10 leading-tight">
-                  <span className="flex items-center gap-2 text-base font-semibold text-teal-600 dark:text-teal-400 mb-3">
+                <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-10 leading-tight">
+                  <span className="flex items-center gap-2 text-base font-semibold text-primary mb-3">
                     <Calendar size={16} className="shrink-0" />
                     {currentDomain.citation}
                   </span>
@@ -494,8 +494,8 @@ const ClarityScoreTool: React.FC = () => {
                         onClick={() => handleAnswer(option.value)}
                         className={`w-full text-left p-5 rounded-2xl border-2 transition-all font-medium text-lg ${
                           isSelected
-                            ? 'border-teal-500 bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300'
-                            : 'border-gray-100 dark:border-gray-800 hover:border-teal-500 dark:hover:border-teal-500 hover:bg-teal-50 dark:hover:bg-teal-900/20 text-gray-700 dark:text-gray-200'
+                            ? 'border-teal-500 bg-primary/10 text-teal-700 dark:text-teal-300'
+                            : 'border-border hover:border-teal-500 dark:hover:border-teal-500 hover:bg-primary/10 text-text-secondary'
                         }`}
                       >
                         {option.label}
@@ -528,7 +528,7 @@ const ClarityScoreTool: React.FC = () => {
                     whileHover={isAnswered ? { scale: 1.02 } : undefined}
                     className={`flex items-center gap-1.5 px-6 py-3 rounded-xl text-sm font-semibold transition-all ${
                       isAnswered
-                        ? 'bg-teal-600 hover:bg-teal-700 text-white shadow-sm shadow-teal-600/20'
+                        ? 'bg-primary hover:bg-primary-hover text-white shadow-sm shadow-teal-600/20'
                         : 'bg-surface-hover text-text-tertiary cursor-not-allowed'
                     }`}
                   >
@@ -558,7 +558,7 @@ const ClarityScoreTool: React.FC = () => {
               aria-live="polite"
             >
               <div className="relative w-24 h-24 mx-auto mb-8">
-                <motion.div className="absolute inset-0 border-4 border-gray-200 dark:border-gray-800 rounded-full" />
+                <motion.div className="absolute inset-0 border-4 border-border rounded-full" />
                 <motion.div
                   className="absolute inset-0 border-4 border-teal-500 rounded-full border-t-transparent"
                   animate={{ rotate: 360 }}
@@ -569,10 +569,10 @@ const ClarityScoreTool: React.FC = () => {
                   }}
                 />
               </div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              <h2 className="text-2xl font-bold text-text-primary mb-2">
                 Analyzing your responses...
               </h2>
-              <p className="text-gray-500 dark:text-gray-400">
+              <p className="text-text-tertiary">
                 Computing your Clarity Score across five dimensions
               </p>
             </motion.div>
@@ -598,7 +598,7 @@ const ClarityScoreTool: React.FC = () => {
                     className={`w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all shadow-sm ${
                       saved
                         ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 cursor-default'
-                        : 'bg-teal-600 hover:bg-teal-700 text-white shadow-teal-600/20 disabled:opacity-60'
+                        : 'bg-primary hover:bg-primary-hover text-white shadow-teal-600/20 disabled:opacity-60'
                     }`}
                   >
                     {saved ? (
@@ -644,7 +644,7 @@ const ClarityScoreTool: React.FC = () => {
                     className={`w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm transition-all shadow-sm ${
                       saved
                         ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 cursor-default'
-                        : 'bg-teal-600 hover:bg-teal-700 text-white shadow-teal-600/20 disabled:opacity-60'
+                        : 'bg-primary hover:bg-primary-hover text-white shadow-teal-600/20 disabled:opacity-60'
                     }`}
                   >
                     {saved ? (

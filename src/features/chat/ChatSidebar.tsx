@@ -110,7 +110,7 @@ export default function ChatSidebar({
                 className="w-7 h-7 rounded-full object-cover"
               />
             ) : (
-              <div className="w-7 h-7 rounded-full bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center text-xs font-semibold text-teal-700 dark:text-teal-300">
+              <div className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-xs font-semibold text-teal-700 dark:text-teal-300">
                 {(user.display_name || user.email || '?')[0].toUpperCase()}
               </div>
             )}

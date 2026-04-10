@@ -72,18 +72,18 @@ export const DiagramBlock: React.FC<DiagramBlockProps> = ({
         transition={{ duration: 0.4, ease: 'easeOut' }}
         className={`not-prose my-10 scroll-mt-32 ${className}`}
       >
-        <div className="bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 shadow-sm">
-          <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-6">
+        <div className="bg-surface border border-border rounded-2xl p-6 shadow-sm">
+          <h3 className="text-lg font-bold text-text-primary mb-6">
             {title}
           </h3>
           {description && (
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">{description}</p>
+            <p className="text-sm text-text-secondary mb-6">{description}</p>
           )}
           <div className="grid gap-4">
             {items.map((item, i) => (
-              <div key={i} className="flex flex-col gap-2 p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700">
+              <div key={i} className="flex flex-col gap-2 p-4 rounded-lg bg-surface-hover border border-border">
                 <div className="flex items-baseline justify-between gap-4">
-                  <div className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                  <div className="text-sm font-semibold text-text-primary">
                     {item.label}
                   </div>
                   {item.value && (
@@ -93,7 +93,7 @@ export const DiagramBlock: React.FC<DiagramBlockProps> = ({
                   )}
                 </div>
                 {item.description && (
-                  <div className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                  <div className="text-sm text-text-secondary leading-relaxed">
                     {item.description}
                   </div>
                 )}
@@ -101,7 +101,7 @@ export const DiagramBlock: React.FC<DiagramBlockProps> = ({
             ))}
           </div>
           {source && (
-            <p className="text-xs text-gray-500 dark:text-gray-400 mt-4 italic">
+            <p className="text-xs text-text-tertiary mt-4 italic">
               {source}
             </p>
           )}
@@ -514,8 +514,8 @@ export const DiagramBlock: React.FC<DiagramBlockProps> = ({
       transition={{ duration: 0.4, ease: 'easeOut' }}
       className={`not-prose my-10 scroll-mt-32 ${className}`}
     >
-      <div className="bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 shadow-sm">
-        <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-4">
+      <div className="bg-surface border border-border rounded-2xl p-6 shadow-sm">
+        <h3 className="text-lg font-bold text-text-primary mb-4">
           {title}
         </h3>
 
@@ -524,7 +524,7 @@ export const DiagramBlock: React.FC<DiagramBlockProps> = ({
         </div>
 
         {source && (
-          <p className="text-xs text-gray-500 dark:text-gray-400 mt-4 italic">
+          <p className="text-xs text-text-tertiary mt-4 italic">
             {source}
           </p>
         )}

@@ -99,7 +99,7 @@ const ProviderProfile: React.FC = () => {
         return (
             <div className="min-h-screen flex items-center justify-center bg-background">
                 <div className="text-center">
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Provider not found</h2>
+                    <h2 className="text-2xl font-bold text-text-primary mb-4">Provider not found</h2>
                     <Button onClick={() => navigate('/providers')}>Back to Directory</Button>
                 </div>
             </div>
@@ -111,7 +111,7 @@ const ProviderProfile: React.FC = () => {
             <SEO title={`${provider.name} - ${provider.role} | Psychage`} description={`Book an appointment with ${provider.name}, ${provider.role} in ${provider.location}.`} />
 
             <div className="container mx-auto max-w-[68.75rem] px-6">
-                <button onClick={() => navigate('/providers')} className="flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white mb-8 font-bold text-sm uppercase tracking-wider transition-colors">
+                <button onClick={() => navigate('/providers')} className="flex items-center gap-2 text-text-tertiary hover:text-text-primary mb-8 font-bold text-sm uppercase tracking-wider transition-colors">
                     <ArrowLeft size={16} /> Back to Directory
                 </button>
 
@@ -120,7 +120,7 @@ const ProviderProfile: React.FC = () => {
                     <div className="lg:col-span-8 space-y-8">
 
                         {/* Hero Card */}
-                        <div className="bg-white dark:bg-gray-900 rounded-3xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm">
+                        <div className="bg-surface rounded-3xl p-8 border border-border shadow-sm">
                             <div className="flex flex-col md:flex-row gap-8 items-start">
                                 <div className="relative shrink-0">
                                     {!imageError && provider.image ? (
@@ -145,7 +145,7 @@ const ProviderProfile: React.FC = () => {
 
                                 <div className="flex-grow">
                                     <div className="flex flex-wrap items-center gap-3 mb-2">
-                                        <h1 className="text-3xl md:text-4xl font-display font-bold text-gray-900 dark:text-white">
+                                        <h1 className="text-3xl md:text-4xl font-display font-bold text-text-primary">
                                             {provider.name}
                                         </h1>
                                         {provider.isVideoVisit && (
@@ -154,13 +154,13 @@ const ProviderProfile: React.FC = () => {
                                             </Badge>
                                         )}
                                     </div>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 font-medium mb-4">{provider.role}</p>
+                                    <p className="text-lg text-text-secondary font-medium mb-4">{provider.role}</p>
 
-                                    <div className="flex flex-wrap gap-6 text-sm text-gray-600 dark:text-gray-400 mb-6">
+                                    <div className="flex flex-wrap gap-6 text-sm text-text-secondary mb-6">
                                         {provider.rating != null && (
                                             <div className="flex items-center gap-2">
                                                 <Star className="text-amber-500 fill-amber-500" size={18} />
-                                                <span className="font-bold text-gray-900 dark:text-white">{provider.rating}</span>
+                                                <span className="font-bold text-text-primary">{provider.rating}</span>
                                                 <span className="underline decoration-dotted">({provider.reviews ?? 0} reviews)</span>
                                             </div>
                                         )}
@@ -176,7 +176,7 @@ const ProviderProfile: React.FC = () => {
 
                                     <div className="flex flex-wrap gap-2">
                                         {provider.specialties.map(spec => (
-                                            <Badge key={spec} variant="neutral" className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
+                                            <Badge key={spec} variant="neutral" className="bg-surface-active text-text-secondary">
                                                 {spec}
                                             </Badge>
                                         ))}
@@ -186,20 +186,20 @@ const ProviderProfile: React.FC = () => {
                         </div>
 
                         {/* About Section */}
-                        <section className="bg-white dark:bg-gray-900 rounded-3xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm">
-                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">About</h2>
-                            <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg mb-8">
+                        <section className="bg-surface rounded-3xl p-8 border border-border shadow-sm">
+                            <h2 className="text-2xl font-bold text-text-primary mb-6">About</h2>
+                            <p className="text-text-secondary leading-relaxed text-lg mb-8">
                                 {provider.bio || provider.approach}
                             </p>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <div>
-                                    <h3 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                                    <h3 className="font-bold text-text-primary mb-4 flex items-center gap-2">
                                         <GraduationCap size={20} className="text-teal-500" /> Education & Training
                                     </h3>
                                     <ul className="space-y-3">
                                         {provider.education.map((edu, idx) => (
-                                            <li key={idx} className="text-gray-600 dark:text-gray-400 text-sm flex items-start gap-2">
+                                            <li key={idx} className="text-text-secondary text-sm flex items-start gap-2">
                                                 <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600 shrink-0" />
                                                 {edu}
                                             </li>
@@ -207,12 +207,12 @@ const ProviderProfile: React.FC = () => {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                                    <h3 className="font-bold text-text-primary mb-4 flex items-center gap-2">
                                         <Languages size={20} className="text-teal-500" /> Languages
                                     </h3>
                                     <div className="flex flex-wrap gap-2">
                                         {provider.languages.map(lang => (
-                                            <span key={lang} className="px-3 py-1 bg-gray-50 dark:bg-gray-800 rounded-lg text-sm text-gray-700 dark:text-gray-300 font-medium border border-gray-100 dark:border-gray-700">
+                                            <span key={lang} className="px-3 py-1 bg-surface-hover rounded-lg text-sm text-text-secondary font-medium border border-border">
                                                 {lang}
                                             </span>
                                         ))}
@@ -222,30 +222,30 @@ const ProviderProfile: React.FC = () => {
                         </section>
 
                         {/* Reviews Section */}
-                        <section className="bg-white dark:bg-gray-900 rounded-3xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm">
-                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-                                Patient Reviews <span className="text-gray-400 text-lg font-normal">({provider.reviews ?? 0})</span>
+                        <section className="bg-surface rounded-3xl p-8 border border-border shadow-sm">
+                            <h2 className="text-2xl font-bold text-text-primary mb-6 flex items-center gap-2">
+                                Patient Reviews <span className="text-text-tertiary text-lg font-normal">({provider.reviews ?? 0})</span>
                             </h2>
 
                             {provider.reviewsList && provider.reviewsList.length > 0 ? (
                                 <div className="space-y-6">
                                     {provider.reviewsList.map(review => (
-                                        <div key={review.id} className="border-b border-gray-100 dark:border-gray-800 last:border-0 pb-6 last:pb-0">
+                                        <div key={review.id} className="border-b border-border last:border-0 pb-6 last:pb-0">
                                             <div className="flex items-center justify-between mb-2">
-                                                <span className="font-bold text-gray-900 dark:text-white">{review.user}</span>
-                                                <span className="text-sm text-gray-400">{review.date}</span>
+                                                <span className="font-bold text-text-primary">{review.user}</span>
+                                                <span className="text-sm text-text-tertiary">{review.date}</span>
                                             </div>
                                             <div className="flex text-amber-500 mb-2">
                                                 {[...Array(5)].map((_, i) => (
                                                     <Star key={i} size={14} fill={i < review.rating ? "currentColor" : "none"} className={i >= review.rating ? "text-gray-300 dark:text-gray-700" : ""} />
                                                 ))}
                                             </div>
-                                            <p className="text-gray-600 dark:text-gray-300 italic">"{review.comment}"</p>
+                                            <p className="text-text-secondary italic">"{review.comment}"</p>
                                         </div>
                                     ))}
                                 </div>
                             ) : (
-                                <div className="text-center py-8 text-gray-500 dark:text-gray-400">
+                                <div className="text-center py-8 text-text-tertiary">
                                     No written reviews yet.
                                 </div>
                             )}
@@ -255,10 +255,10 @@ const ProviderProfile: React.FC = () => {
                     {/* Sticky Sidebar */}
                     <div className="lg:col-span-4">
                         <div className="sticky top-28 space-y-6">
-                            <div className="bg-white dark:bg-gray-900 rounded-3xl p-6 border border-gray-100 dark:border-gray-800 shadow-lg shadow-gray-200/50 dark:shadow-none">
+                            <div className="bg-surface rounded-3xl p-6 border border-border shadow-lg shadow-gray-200/50 dark:shadow-none">
                                 <div className="flex items-center justify-between mb-6">
                                     <div>
-                                        <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Availability</p>
+                                        <p className="text-sm text-text-tertiary font-medium">Availability</p>
                                         <p className="font-bold text-green-600 dark:text-green-400 flex items-center gap-2">
                                             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                                             {provider.availability}
@@ -266,8 +266,8 @@ const ProviderProfile: React.FC = () => {
                                     </div>
                                     {provider.nextAvailable && (
                                         <div className="text-right">
-                                            <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Next Opening</p>
-                                            <p className="font-bold text-gray-900 dark:text-white">{provider.nextAvailable.split(',')[0]}</p>
+                                            <p className="text-sm text-text-tertiary font-medium">Next Opening</p>
+                                            <p className="font-bold text-text-primary">{provider.nextAvailable.split(',')[0]}</p>
                                         </div>
                                     )}
                                 </div>
@@ -283,24 +283,24 @@ const ProviderProfile: React.FC = () => {
                                     </div>
                                 )}
                                 <Button
-                                    className="w-full h-12 text-lg font-bold bg-teal-600 hover:bg-teal-700 text-white mb-3"
+                                    className="w-full h-12 text-lg font-bold bg-primary hover:bg-primary-hover text-white mb-3"
                                     onClick={() => setIsBookingOpen(true)}
                                 >
                                     Book Appointment
                                 </Button>
                                 <Button
                                     variant="outline"
-                                    className="w-full h-12 font-bold border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+                                    className="w-full h-12 font-bold border-border hover:bg-surface-hover"
                                     onClick={() => setIsMessagingOpen(true)}
                                 >
                                     Message Provider
                                 </Button>
 
-                                <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-800">
-                                    <p className="text-sm text-gray-500 dark:text-gray-400 font-medium mb-3">Accepted Insurance</p>
+                                <div className="mt-6 pt-6 border-t border-border">
+                                    <p className="text-sm text-text-tertiary font-medium mb-3">Accepted Insurance</p>
                                     <div className="flex flex-wrap gap-2">
                                         {provider.insurance.map(ins => (
-                                            <span key={ins} className="text-xs font-bold px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded">
+                                            <span key={ins} className="text-xs font-bold px-2 py-1 bg-surface-active text-text-secondary rounded">
                                                 {ins}
                                             </span>
                                         ))}

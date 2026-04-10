@@ -117,7 +117,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
                     rel="noopener noreferrer"
                     aria-label={`Share on ${target.name}`}
                     className={cn(
-                        'w-10 h-10 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 flex items-center justify-center text-gray-500 transition-all duration-200 shadow-sm',
+                        'w-10 h-10 rounded-full border border-border bg-surface flex items-center justify-center text-text-tertiary transition-all duration-200 shadow-sm',
                         target.color,
                     )}
                 >
@@ -130,10 +130,10 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
                 onClick={handleCopyLink}
                 aria-label={copied ? 'Link copied!' : 'Copy link'}
                 className={cn(
-                    'w-10 h-10 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 flex items-center justify-center transition-all duration-200 shadow-sm',
+                    'w-10 h-10 rounded-full border border-border bg-surface flex items-center justify-center transition-all duration-200 shadow-sm',
                     copied
                         ? 'bg-green-500 border-green-500 text-white'
-                        : 'text-gray-500 hover:bg-primary hover:border-primary hover:text-white',
+                        : 'text-text-tertiary hover:bg-primary hover:border-primary hover:text-white',
                 )}
             >
                 {copied ? <Check size={16} /> : <Link2 size={16} />}
@@ -144,7 +144,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
                 <button
                     onClick={handleNativeShare}
                     aria-label="Share"
-                    className="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 flex items-center justify-center text-gray-500 hover:bg-primary hover:border-primary hover:text-white transition-all duration-200 shadow-sm md:hidden"
+                    className="w-10 h-10 rounded-full border border-border bg-surface flex items-center justify-center text-text-tertiary hover:bg-primary hover:border-primary hover:text-white transition-all duration-200 shadow-sm md:hidden"
                 >
                     <Share2 size={16} />
                 </button>

@@ -151,7 +151,7 @@ const ClarityResultsDashboard: React.FC<ClarityResultsDashboardProps> = ({
         ref={tabListRef}
         role="tablist"
         aria-label="Results sections"
-        className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 rounded-b-none flex overflow-x-auto"
+        className="bg-surface border-b border-border rounded-b-none flex overflow-x-auto"
         onKeyDown={handleTabKeyDown}
       >
         {TABS.map((tab) => {
@@ -167,10 +167,10 @@ const ClarityResultsDashboard: React.FC<ClarityResultsDashboardProps> = ({
               aria-controls={`panel-${tab.id}`}
               tabIndex={isActive ? 0 : -1}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center gap-2 px-5 py-3.5 text-sm font-medium border-b-2 transition-colors whitespace-nowrap focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus-visible:outline-none ${
+              className={`flex items-center gap-2 px-5 py-3.5 text-sm font-medium border-b-2 transition-colors whitespace-nowrap focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:outline-none ${
                 isActive
-                  ? 'border-teal-500 text-teal-600 dark:text-teal-400'
-                  : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600'
+                  ? 'border-teal-500 text-primary'
+                  : 'border-transparent text-text-tertiary hover:text-text-secondary hover:border-gray-300 dark:hover:border-gray-600'
               }`}
             >
               <TabIcon size={16} />

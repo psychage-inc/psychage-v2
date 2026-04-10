@@ -147,12 +147,12 @@ function CountrySelector({
     <div className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+        className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-border bg-surface text-sm font-medium text-text-secondary hover:bg-surface-hover transition-colors"
         aria-label="Change country"
       >
-        <MapPin size={14} className="text-gray-400" />
+        <MapPin size={14} className="text-text-tertiary" />
         <span>{currentCountry?.country_name ?? 'Select country'}</span>
-        <ChevronDown size={14} className="text-gray-400" />
+        <ChevronDown size={14} className="text-text-tertiary" />
       </button>
 
       {open && (
@@ -162,19 +162,19 @@ function CountrySelector({
             onClick={() => setOpen(false)}
             aria-hidden="true"
           />
-          <div className="absolute top-full mt-2 right-0 w-72 max-h-80 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-xl z-50 overflow-hidden">
-            <div className="p-3 border-b border-gray-100 dark:border-gray-800">
+          <div className="absolute top-full mt-2 right-0 w-72 max-h-80 bg-surface rounded-xl border border-border shadow-xl z-50 overflow-hidden">
+            <div className="p-3 border-b border-border">
               <div className="relative">
                 <Search
                   size={14}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 text-text-tertiary"
                 />
                 <input
                   type="text"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="Search countries..."
-                  className="w-full pl-8 pr-3 py-2 text-sm rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full pl-8 pr-3 py-2 text-sm rounded-lg border border-border bg-surface-active text-text-primary focus:outline-none focus:ring-2 focus:ring-teal-500"
                   autoFocus
                 />
               </div>
@@ -188,18 +188,18 @@ function CountrySelector({
                     setOpen(false);
                     setQuery('');
                   }}
-                  className={`w-full text-left px-4 py-2.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-center justify-between ${
+                  className={`w-full text-left px-4 py-2.5 text-sm hover:bg-surface-hover transition-colors flex items-center justify-between ${
                     country.iso2 === currentIso2
                       ? 'bg-teal-50 dark:bg-teal-950/30 text-teal-700 dark:text-teal-300'
-                      : 'text-gray-700 dark:text-gray-300'
+                      : 'text-text-secondary'
                   }`}
                 >
                   <span>{country.country_name}</span>
-                  <span className="text-xs text-gray-400">{country.iso2}</span>
+                  <span className="text-xs text-text-tertiary">{country.iso2}</span>
                 </button>
               ))}
               {countries.length === 0 && (
-                <p className="px-4 py-3 text-sm text-gray-400 text-center">
+                <p className="px-4 py-3 text-sm text-text-tertiary text-center">
                   No countries found
                 </p>
               )}
@@ -413,7 +413,7 @@ const CrisisPage: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35 }}
-            className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800 mb-8"
+            className="bg-surface rounded-2xl p-6 border border-border mb-8"
           >
             <h2 className="text-lg font-bold text-text-primary mb-4 flex items-center gap-2">
               <Globe
@@ -436,20 +436,20 @@ const CrisisPage: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="bg-slate-50 dark:bg-slate-900/50 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 md:p-8"
+          className="bg-surface-hover rounded-2xl border border-border p-6 md:p-8"
         >
           <div className="flex items-start gap-3 mb-4">
-            <Shield size={20} className="text-slate-400 dark:text-slate-500 shrink-0 mt-0.5" />
-            <h3 className="font-bold text-slate-700 dark:text-slate-300 text-sm">
+            <Shield size={20} className="text-text-tertiary shrink-0 mt-0.5" />
+            <h3 className="font-bold text-text-secondary text-sm">
               Important Information About These Resources
             </h3>
           </div>
-          <div className="space-y-3 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+          <div className="space-y-3 text-sm text-text-tertiary leading-relaxed">
             <p>
               Psychage curates these crisis resources from verified directories to connect you with help when you need it most. All listed resources are free and confidential.
             </p>
             <p>
-              <strong className="text-slate-600 dark:text-slate-300">Psychage is not an emergency service.</strong>{' '}
+              <strong className="text-text-secondary">Psychage is not an emergency service.</strong>{' '}
               If you are in immediate physical danger, call your local emergency number ({emergency_number}) or go to your nearest emergency room.
             </p>
             <p>
@@ -458,10 +458,10 @@ const CrisisPage: React.FC = () => {
             <p>
               The resources listed are operated by independent organizations. Psychage does not control, endorse, or accept responsibility for the services they provide or the outcomes of any interactions.
             </p>
-            <p className="text-xs text-slate-400 dark:text-slate-500 pt-2 border-t border-slate-200 dark:border-slate-700">
+            <p className="text-xs text-text-tertiary pt-2 border-t border-border">
               Resource data is sourced from verified crisis directories and reviewed regularly.
               If you notice outdated information, please contact us at{' '}
-              <a href="mailto:info@psychage.com" className="text-teal-600 dark:text-teal-400 hover:underline">
+              <a href="mailto:info@psychage.com" className="text-primary hover:underline">
                 info@psychage.com
               </a>{' '}
               so we can update it.

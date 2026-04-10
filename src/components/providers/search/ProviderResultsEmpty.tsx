@@ -12,13 +12,13 @@ export const ProviderResultsEmpty: React.FC<ProviderResultsEmptyProps> = ({
   hasFilters,
 }) => (
   <div className="flex flex-col items-center justify-center py-20 px-4 text-center">
-    <div className="w-16 h-16 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center mb-6">
-      <SearchX className="w-8 h-8 text-gray-400" />
+    <div className="w-16 h-16 rounded-full bg-surface-active flex items-center justify-center mb-6">
+      <SearchX className="w-8 h-8 text-text-tertiary" />
     </div>
-    <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-2">
+    <h3 className="font-display font-bold text-xl text-text-primary mb-2">
       No providers found
     </h3>
-    <p className="text-gray-500 dark:text-gray-400 max-w-md mb-6">
+    <p className="text-text-tertiary max-w-md mb-6">
       {hasFilters
         ? "We couldn't find any providers matching your filters. Try broadening your search or removing some filters."
         : "We couldn't find any providers at this time. Please check back later."}
@@ -27,7 +27,7 @@ export const ProviderResultsEmpty: React.FC<ProviderResultsEmptyProps> = ({
       <Button
         variant="outline"
         onClick={onClearFilters}
-        className="text-teal-600 dark:text-teal-400 border-teal-200 dark:border-teal-800 hover:bg-teal-50 dark:hover:bg-teal-900/20"
+        className="text-primary border-primary/20 hover:bg-primary/10"
       >
         Clear all filters
       </Button>

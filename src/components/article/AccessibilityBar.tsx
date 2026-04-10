@@ -73,7 +73,7 @@ const AccessibilityBar: React.FC<AccessibilityBarProps> = ({
                             'flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-colors shrink-0',
                             showPlayer
                                 ? 'bg-primary text-white'
-                                : 'bg-white dark:bg-gray-900 text-primary border border-primary/30 hover:bg-primary hover:text-white hover:border-primary shadow-sm',
+                                : 'bg-surface text-primary border border-primary/30 hover:bg-primary hover:text-white hover:border-primary shadow-sm',
                         )}
                     >
                         <Headphones size={16} />
@@ -84,7 +84,7 @@ const AccessibilityBar: React.FC<AccessibilityBarProps> = ({
                     {/* Read summary */}
                     <button
                         onClick={scrollToSummary}
-                        className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-white dark:bg-gray-900 text-primary border border-primary/30 hover:bg-primary hover:text-white hover:border-primary shadow-sm transition-colors shrink-0"
+                        className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-surface text-primary border border-primary/30 hover:bg-primary hover:text-white hover:border-primary shadow-sm transition-colors shrink-0"
                     >
                         <span className="hidden sm:inline">Read Summary</span>
                         <span className="sm:hidden">Summary</span>
@@ -96,7 +96,7 @@ const AccessibilityBar: React.FC<AccessibilityBarProps> = ({
                         <button
                             onClick={() => adjustFontSize('down')}
                             disabled={fontSizeIndex === 0}
-                            className="w-7 h-7 rounded-full bg-white dark:bg-gray-900 border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/10 dark:hover:bg-primary/20 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shadow-sm"
+                            className="w-7 h-7 rounded-full bg-surface border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/10 dark:hover:bg-primary/20 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shadow-sm"
                             aria-label={`Decrease font size, currently ${FONT_SIZES[fontSizeIndex].label}`}
                         >
                             <Minus size={12} />
@@ -107,7 +107,7 @@ const AccessibilityBar: React.FC<AccessibilityBarProps> = ({
                         <button
                             onClick={() => adjustFontSize('up')}
                             disabled={fontSizeIndex === FONT_SIZES.length - 1}
-                            className="w-7 h-7 rounded-full bg-white dark:bg-gray-900 border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/10 dark:hover:bg-primary/20 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shadow-sm"
+                            className="w-7 h-7 rounded-full bg-surface border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/10 dark:hover:bg-primary/20 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shadow-sm"
                             aria-label={`Increase font size, currently ${FONT_SIZES[fontSizeIndex].label}`}
                         >
                             <Plus size={12} />

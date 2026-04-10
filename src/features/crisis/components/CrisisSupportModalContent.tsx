@@ -71,7 +71,7 @@ const ResourceLineCard: React.FC<{ line: CrisisLine; prominent?: boolean }> = ({
     className={`rounded-xl p-4 border ${
       prominent
         ? 'bg-rose-50 dark:bg-rose-950/30 border-rose-200 dark:border-rose-800'
-        : 'bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700'
+        : 'bg-surface border-border'
     }`}
   >
     <div className="flex items-center justify-between gap-3">
@@ -80,12 +80,12 @@ const ResourceLineCard: React.FC<{ line: CrisisLine; prominent?: boolean }> = ({
           className={`font-semibold text-sm ${
             prominent
               ? 'text-rose-900 dark:text-rose-200'
-              : 'text-gray-900 dark:text-white'
+              : 'text-text-primary'
           }`}
         >
           {line.name}
         </p>
-        <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+        <p className="text-xs text-text-tertiary mt-0.5">
           {line.available}
           {line.languages ? ` \u00b7 ${line.languages.join(', ')}` : ''}
         </p>
@@ -97,7 +97,7 @@ const ResourceLineCard: React.FC<{ line: CrisisLine; prominent?: boolean }> = ({
             className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-bold transition-colors ${
               prominent
                 ? 'bg-rose-600 text-white hover:bg-rose-700'
-                : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700'
+                : 'bg-surface-active text-text-primary hover:bg-gray-200 dark:hover:bg-gray-700'
             }`}
           >
             <Phone size={14} />
@@ -107,7 +107,7 @@ const ResourceLineCard: React.FC<{ line: CrisisLine; prominent?: boolean }> = ({
         {line.text && (
           <a
             href={`sms:${line.text.match(/\d+/)?.[0] ?? ''}&body=${line.text.match(/Text (\w+)/)?.[1] ?? 'HELLO'}`}
-            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium bg-surface-active text-text-primary hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
           >
             <MessageSquare size={14} />
             Text
@@ -154,7 +154,7 @@ const TrustedContactSection: React.FC<{
             value={contact}
             onChange={(e) => setContact(e.target.value)}
             placeholder="Name or phone number"
-            className="w-full px-3 py-2 rounded-lg border border-amber-300 dark:border-amber-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"
+            className="w-full px-3 py-2 rounded-lg border border-amber-300 dark:border-amber-700 bg-surface text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"
           />
           <div className="flex gap-2">
             <button
@@ -173,7 +173,7 @@ const TrustedContactSection: React.FC<{
                 setShowConfirm(false);
                 setContact('');
               }}
-              className="px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              className="px-4 py-2 rounded-lg bg-surface-active text-text-secondary text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             >
               Cancel
             </button>
@@ -257,7 +257,7 @@ const CrisisSupportModalContent: React.FC<CrisisSupportProps> = ({
         role="dialog"
         aria-modal="true"
         aria-label={`Crisis support \u2014 ${severity} level`}
-        className={`relative w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl border shadow-2xl ${config.bg} ${config.border} bg-white dark:bg-gray-950`}
+        className={`relative w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl border shadow-2xl ${config.bg} ${config.border} bg-surface`}
       >
         {/* Severity accent bar */}
         <div
@@ -273,7 +273,7 @@ const CrisisSupportModalContent: React.FC<CrisisSupportProps> = ({
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          className="absolute top-4 right-4 p-1.5 rounded-full bg-surface-active text-text-tertiary hover:text-text-primary hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
           aria-label="Close crisis support dialog"
         >
           <X size={18} />
@@ -284,11 +284,11 @@ const CrisisSupportModalContent: React.FC<CrisisSupportProps> = ({
           <div className="text-center pt-2">
             <div className="flex justify-center mb-3">{config.icon}</div>
             <h2
-              className={`text-xl font-bold text-gray-900 dark:text-white mb-2`}
+              className={`text-xl font-bold text-text-primary mb-2`}
             >
               {config.title}
             </h2>
-            <p className="text-sm text-gray-600 dark:text-gray-300 max-w-sm mx-auto leading-relaxed">
+            <p className="text-sm text-text-secondary max-w-sm mx-auto leading-relaxed">
               {config.subtitle}
             </p>
           </div>
@@ -300,13 +300,13 @@ const CrisisSupportModalContent: React.FC<CrisisSupportProps> = ({
               {!showResources ? (
                 <button
                   onClick={() => setShowResources(true)}
-                  className="w-full py-2.5 rounded-lg border border-gray-200 dark:border-gray-700 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                  className="w-full py-2.5 rounded-lg border border-border text-sm font-medium text-text-secondary hover:bg-surface-hover transition-colors"
                 >
                   View support options
                 </button>
               ) : (
                 <div className="space-y-3">
-                  <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                  <p className="text-xs font-semibold text-text-tertiary uppercase tracking-wide">
                     Support Resources \u2014 {resources.name}{' '}
                     {resources.flag}
                   </p>
@@ -323,7 +323,7 @@ const CrisisSupportModalContent: React.FC<CrisisSupportProps> = ({
             <>
               <GroundingExercise />
               <div className="space-y-3">
-                <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                <p className="text-xs font-semibold text-text-tertiary uppercase tracking-wide">
                   Support Resources \u2014 {resources.name}{' '}
                   {resources.flag}
                 </p>
@@ -350,7 +350,7 @@ const CrisisSupportModalContent: React.FC<CrisisSupportProps> = ({
               )}
 
               <div className="space-y-3">
-                <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                <p className="text-xs font-semibold text-text-tertiary uppercase tracking-wide">
                   All Resources \u2014 {resources.name}{' '}
                   {resources.flag}
                 </p>
@@ -378,7 +378,7 @@ const CrisisSupportModalContent: React.FC<CrisisSupportProps> = ({
               href={safetyPlanUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
+              className="flex items-center justify-center gap-2 text-sm text-text-tertiary hover:text-text-secondary transition-colors"
             >
               <ExternalLink size={14} />
               Download Safety Plan Template
@@ -386,7 +386,7 @@ const CrisisSupportModalContent: React.FC<CrisisSupportProps> = ({
           )}
 
           {/* Disclaimer */}
-          <p className="text-xs text-center text-gray-400 dark:text-gray-500 leading-relaxed">
+          <p className="text-xs text-center text-text-tertiary leading-relaxed">
             This is a wellness check-in, not a clinical assessment. All
             resources listed are free and confidential. In a medical emergency,
             call {resources.emergency}.

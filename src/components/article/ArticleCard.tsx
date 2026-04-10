@@ -32,7 +32,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onClick }) => {
 
   return (
     <InteractiveCard
-      className={`group h-full flex flex-col cursor-pointer shadow-sm hover:shadow-md bg-white dark:bg-gray-900 ${theme.classes.border} ${theme.classes.borderDark} hover:border-primary/20 transition-all duration-300`}
+      className={`group h-full flex flex-col cursor-pointer shadow-sm hover:shadow-md bg-surface ${theme.classes.border} ${theme.classes.borderDark} hover:border-primary/20 transition-all duration-300`}
       onClick={onClick}
       spotlightColor={getCategoryTheme(article.category.slug).classes.spotlight}
     >
@@ -40,7 +40,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onClick }) => {
       <NoiseTexture opacity={0.03} />
 
       {/* Image Container */}
-      <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-100 dark:bg-gray-800 rounded-t-2xl">
+      <div className="relative aspect-[16/9] w-full overflow-hidden bg-surface-active rounded-t-2xl">
         {article.image && !imgError ? (
           <img
             src={article.image}
@@ -88,18 +88,18 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onClick }) => {
       {/* Content */}
       <div className="relative z-10 flex flex-col flex-grow p-6">
         <div className="flex justify-between items-start mb-3 gap-4">
-          <h3 className="font-display font-bold text-xl text-gray-900 dark:text-gray-100 leading-tight group-hover:text-primary transition-colors line-clamp-2">
+          <h3 className="font-display font-bold text-xl text-text-primary leading-tight group-hover:text-primary transition-colors line-clamp-2">
             {article.title}
           </h3>
-          <ArrowUpRight size={20} className="text-gray-400 group-hover:text-primary group-hover:-translate-y-1 group-hover:translate-x-1 transition-all duration-300 shrink-0" />
+          <ArrowUpRight size={20} className="text-text-tertiary group-hover:text-primary group-hover:-translate-y-1 group-hover:translate-x-1 transition-all duration-300 shrink-0" />
         </div>
 
-        <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed line-clamp-2 mb-6 flex-grow">
+        <p className="text-text-secondary text-sm leading-relaxed line-clamp-2 mb-6 flex-grow">
           {article.description}
         </p>
 
         {/* Footer */}
-        <div className="flex items-center text-gray-500 dark:text-gray-400 text-xs font-bold uppercase tracking-wider pt-4 border-t border-gray-100/10 dark:border-gray-800/50 mt-auto">
+        <div className="flex items-center text-text-tertiary text-xs font-bold uppercase tracking-wider pt-4 border-t border-border/50 mt-auto">
           <Clock size={14} className="mr-2 text-primary" />
           <span>{article.readTime} min read</span>
         </div>

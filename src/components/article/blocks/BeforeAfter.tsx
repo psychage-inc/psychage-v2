@@ -48,15 +48,15 @@ const BeforeAfter: React.FC<BeforeAfterProps> = ({
             transition={{ duration: 0.4, ease: 'easeOut' }}
             className={`not-prose my-8 ${className}`}
         >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-2xl overflow-hidden border border-border">
                 {/* Before panel */}
-                <div className="bg-red-50/50 dark:bg-red-950/10 p-6 border-b md:border-b-0 md:border-r border-gray-200 dark:border-gray-700">
+                <div className="bg-red-50/50 dark:bg-red-950/10 p-6 border-b md:border-b-0 md:border-r border-border">
                     <div className="flex items-center gap-2 mb-4">
                         <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400">
                             {before.title}
                         </span>
                     </div>
-                    <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed [&>p]:mb-3 [&>p:last-child]:mb-0 [&>ul]:space-y-2 [&>ul]:list-disc [&>ul]:pl-4">
+                    <div className="text-sm text-text-secondary leading-relaxed [&>p]:mb-3 [&>p:last-child]:mb-0 [&>ul]:space-y-2 [&>ul]:list-disc [&>ul]:pl-4">
                         <PanelContent panel={before} />
                     </div>
                 </div>
@@ -73,7 +73,7 @@ const BeforeAfter: React.FC<BeforeAfterProps> = ({
                             {after.title}
                         </span>
                     </div>
-                    <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed [&>p]:mb-3 [&>p:last-child]:mb-0 [&>ul]:space-y-2 [&>ul]:list-disc [&>ul]:pl-4">
+                    <div className="text-sm text-text-secondary leading-relaxed [&>p]:mb-3 [&>p:last-child]:mb-0 [&>ul]:space-y-2 [&>ul]:list-disc [&>ul]:pl-4">
                         <PanelContent panel={after} />
                     </div>
                 </div>
@@ -81,8 +81,8 @@ const BeforeAfter: React.FC<BeforeAfterProps> = ({
 
             {/* Mobile arrow between panels */}
             <div className="flex md:hidden justify-center -mt-1 -mb-1">
-                <div className="w-8 h-8 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center shadow-sm -translate-y-5">
-                    <ArrowRight size={14} className="text-gray-400 rotate-90" />
+                <div className="w-8 h-8 rounded-full bg-surface border border-border flex items-center justify-center shadow-sm -translate-y-5">
+                    <ArrowRight size={14} className="text-text-tertiary rotate-90" />
                 </div>
             </div>
         </motion.div>

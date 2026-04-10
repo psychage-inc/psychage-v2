@@ -53,7 +53,7 @@ const PracticalExercise: React.FC<PracticalExerciseProps> = ({
                     <p className="text-xs font-bold uppercase tracking-wider text-indigo-500 dark:text-indigo-400">
                         Try This
                     </p>
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                    <h3 className="text-lg font-bold text-text-primary">
                         {title}
                     </h3>
                 </div>
@@ -70,11 +70,11 @@ const PracticalExercise: React.FC<PracticalExerciseProps> = ({
                                 {i + 1}
                             </span>
                             <div>
-                                <p className="font-semibold text-gray-900 dark:text-gray-100 mb-1">
+                                <p className="font-semibold text-text-primary mb-1">
                                     {title}
                                 </p>
                                 {desc && (
-                                    <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                                    <p className="text-sm leading-relaxed text-text-secondary">
                                         {desc}
                                     </p>
                                 )}
@@ -120,10 +120,10 @@ export const DefaultToolkitCTA: React.FC = () => (
         className="not-prose bg-gradient-to-r from-primary/5 to-indigo-500/5 border border-primary/20 rounded-2xl p-6 md:p-8 my-10 text-center scroll-mt-32"
     >
         <Activity size={28} className="mx-auto text-primary mb-3" />
-        <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">
+        <h3 className="text-lg font-bold text-text-primary mb-2">
             Explore Our Free Mental Health Tools
         </h3>
-        <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 max-w-md mx-auto">
+        <p className="text-sm text-text-secondary mb-4 max-w-md mx-auto">
             From mood tracking to breathing exercises, Psychage offers evidence-informed tools to support your mental wellness journey.
         </p>
         <Link

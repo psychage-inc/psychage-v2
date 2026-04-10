@@ -54,7 +54,7 @@ const AboutPage: React.FC = () => {
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary font-bold text-xs uppercase tracking-widest mb-8">
                         Since 2024
                     </div>
-                    <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-7xl text-text-primary mb-8 tracking-tight leading-[1.1]">
+                    <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-text-primary mb-8 tracking-tight leading-[1.1]">
                         Democratizing access to <br />
                         <span className="text-primary">mental clarity.</span>
                     </h1>
@@ -82,7 +82,7 @@ const AboutPage: React.FC = () => {
             <div className="container mx-auto px-6 max-w-dashboard mb-24">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div className="relative">
-                        <div className="aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-shadow/10">
+                        <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl shadow-shadow/10">
                             <img
                                 src="/images/ui/about-team.svg"
                                 alt="Team meeting"

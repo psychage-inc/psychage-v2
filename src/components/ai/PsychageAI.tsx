@@ -227,7 +227,7 @@ const PsychageAI: React.FC = () => {
       </AnimatePresence>
 
       {/* Header */}
-      <div className="relative border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-hidden">
+      <div className="relative border-b border-border bg-surface overflow-hidden">
         {/* Gradient accent */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-500 via-emerald-500 to-cyan-500" />
 
@@ -243,10 +243,10 @@ const PsychageAI: React.FC = () => {
 
             <div>
               <div className="flex items-center gap-2">
-                <h2 className="font-bold text-gray-900 dark:text-white text-lg">Psychage AI</h2>
+                <h2 className="font-bold text-text-primary text-lg">Psychage AI</h2>
                 <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               </div>
-              <p className="text-xs text-gray-600 dark:text-gray-400 font-medium">
+              <p className="text-xs text-text-secondary font-medium">
                 Mental Health Education Assistant
               </p>
             </div>
@@ -255,7 +255,7 @@ const PsychageAI: React.FC = () => {
           {messages.length > 0 && (
             <button
               onClick={handleClear}
-              className="px-3 py-1.5 text-xs font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all"
+              className="px-3 py-1.5 text-xs font-medium text-text-secondary hover:text-text-primary hover:bg-surface-hover rounded-lg transition-all"
             >
               Clear chat
             </button>
@@ -271,21 +271,21 @@ const PsychageAI: React.FC = () => {
             <div className="relative w-20 h-20 mx-auto mb-6">
               <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-3xl blur-xl opacity-30 animate-pulse" />
               <div className="relative w-20 h-20 rounded-3xl bg-gradient-to-br from-teal-100 to-emerald-100 dark:from-teal-900 dark:to-emerald-900 flex items-center justify-center ring-4 ring-teal-50 dark:ring-teal-900/30">
-                <Sparkles className="text-teal-600 dark:text-teal-400" size={36} />
+                <Sparkles className="text-primary" size={36} />
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+            <h3 className="text-2xl font-bold text-text-primary mb-3">
               Welcome to Psychage AI
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm max-w-lg mx-auto leading-relaxed">
+            <p className="text-text-secondary text-sm max-w-lg mx-auto leading-relaxed">
               I'm here to help you understand mental health topics, discover evidence-based resources,
               and support your wellness journey. Ask me anything!
             </p>
 
             {/* Enhanced Suggested Questions */}
             <div className="mt-8 space-y-3 max-w-2xl mx-auto">
-              <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-4">
+              <p className="text-xs font-semibold uppercase tracking-wide text-text-tertiary mb-4">
                 Try asking about...
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -300,10 +300,10 @@ const PsychageAI: React.FC = () => {
                   <button
                     key={q}
                     onClick={() => setInputText(q)}
-                    className="group flex items-center gap-3 px-4 py-3 text-left bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-800/50 hover:from-teal-50 hover:to-emerald-50 dark:hover:from-teal-900/20 dark:hover:to-emerald-900/20 border border-gray-200 dark:border-gray-700 hover:border-teal-300 dark:hover:border-teal-700 rounded-xl transition-all duration-200 hover:shadow-md"
+                    className="group flex items-center gap-3 px-4 py-3 text-left bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-800/50 hover:from-teal-50 hover:to-emerald-50 dark:hover:from-teal-900/20 dark:hover:to-emerald-900/20 border border-border hover:border-teal-300 dark:hover:border-teal-700 rounded-xl transition-all duration-200 hover:shadow-md"
                   >
                     <span className="text-2xl shrink-0">{icon}</span>
-                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-teal-700 dark:group-hover:text-teal-300 transition-colors">
+                    <span className="text-sm font-medium text-text-secondary group-hover:text-teal-700 dark:group-hover:text-teal-300 transition-colors">
                       {q}
                     </span>
                   </button>
@@ -325,7 +325,7 @@ const PsychageAI: React.FC = () => {
               <div className="relative shrink-0 mt-1">
                 <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-xl blur-sm opacity-20" />
                 <div className="relative w-9 h-9 rounded-xl bg-gradient-to-br from-teal-100 to-emerald-100 dark:from-teal-900/50 dark:to-emerald-900/50 flex items-center justify-center ring-2 ring-teal-50 dark:ring-teal-900/30">
-                  <Sparkles size={18} className="text-teal-600 dark:text-teal-400" />
+                  <Sparkles size={18} className="text-primary" />
                 </div>
               </div>
             )}
@@ -337,7 +337,7 @@ const PsychageAI: React.FC = () => {
                     ? 'bg-gradient-to-br from-teal-600 to-emerald-600 text-white rounded-br-sm shadow-lg shadow-teal-200/50 dark:shadow-teal-900/50'
                     : message.isCrisis
                     ? 'bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 text-red-900 dark:text-red-100 border-2 border-red-200 dark:border-red-800 rounded-bl-sm'
-                    : 'bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 text-gray-900 dark:text-gray-100 border border-gray-200 dark:border-gray-700 rounded-bl-sm'
+                    : 'bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 text-text-primary border border-border rounded-bl-sm'
                 }`}
               >
                 <div className={`text-sm leading-relaxed whitespace-pre-wrap ${
@@ -365,7 +365,7 @@ const PsychageAI: React.FC = () => {
                     className={`p-1.5 rounded-lg transition-colors ${
                       feedbackGiven.has(message.id)
                         ? 'text-gray-300 dark:text-gray-600 cursor-not-allowed'
-                        : 'text-gray-400 hover:text-teal-600 dark:text-gray-500 dark:hover:text-teal-400 hover:bg-gray-100 dark:hover:bg-gray-800'
+                        : 'text-text-tertiary hover:text-primary hover:bg-surface-hover'
                     }`}
                     title="Helpful"
                   >
@@ -377,7 +377,7 @@ const PsychageAI: React.FC = () => {
                     className={`p-1.5 rounded-lg transition-colors ${
                       feedbackGiven.has(message.id)
                         ? 'text-gray-300 dark:text-gray-600 cursor-not-allowed'
-                        : 'text-gray-400 hover:text-red-600 dark:text-gray-500 dark:hover:text-red-400 hover:bg-gray-100 dark:hover:bg-gray-800'
+                        : 'text-text-tertiary hover:text-red-600 dark:hover:text-red-400 hover:bg-surface-hover'
                     }`}
                     title="Not helpful"
                   >
@@ -399,13 +399,13 @@ const PsychageAI: React.FC = () => {
             <div className="relative shrink-0">
               <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-xl blur-sm opacity-20 animate-pulse" />
               <div className="relative w-9 h-9 rounded-xl bg-gradient-to-br from-teal-100 to-emerald-100 dark:from-teal-900/50 dark:to-emerald-900/50 flex items-center justify-center ring-2 ring-teal-50 dark:ring-teal-900/30">
-                <Sparkles size={18} className="text-teal-600 dark:text-teal-400 animate-pulse" />
+                <Sparkles size={18} className="text-primary animate-pulse" />
               </div>
             </div>
-            <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 border border-gray-200 dark:border-gray-700 p-4 rounded-2xl rounded-bl-sm">
+            <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 border border-border p-4 rounded-2xl rounded-bl-sm">
               <div className="flex items-center gap-2">
-                <Loader2 size={18} className="animate-spin text-teal-600 dark:text-teal-400" />
-                <span className="text-xs text-gray-500 dark:text-gray-400">Thinking...</span>
+                <Loader2 size={18} className="animate-spin text-primary" />
+                <span className="text-xs text-text-tertiary">Thinking...</span>
               </div>
             </div>
           </motion.div>
@@ -415,7 +415,7 @@ const PsychageAI: React.FC = () => {
       </div>
 
       {/* Enhanced Input */}
-      <div className="relative p-4 border-t border-gray-200 dark:border-gray-800 bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
+      <div className="relative p-4 border-t border-border bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
         {/* Top gradient accent */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-teal-500/50 to-transparent" />
 
@@ -429,7 +429,7 @@ const PsychageAI: React.FC = () => {
               onKeyDown={(e) => e.key === 'Enter' && !e.shiftKey && handleSend()}
               placeholder="Ask me about mental health, wellness, or any topic..."
               disabled={isLoading}
-              className="w-full px-5 py-3.5 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-teal-500 focus:border-teal-500 dark:focus:border-teal-500 outline-none text-sm disabled:opacity-50 disabled:cursor-not-allowed dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition-all shadow-sm hover:shadow-md"
+              className="w-full px-5 py-3.5 bg-surface border-2 border-border rounded-2xl focus:ring-2 focus:ring-primary focus:border-teal-500 dark:focus:border-teal-500 outline-none text-sm disabled:opacity-50 disabled:cursor-not-allowed dark:text-white placeholder:text-text-tertiary transition-all shadow-sm hover:shadow-md"
               aria-label="Chat message input"
             />
           </div>
@@ -450,7 +450,7 @@ const PsychageAI: React.FC = () => {
 
         <div className="flex items-center justify-center gap-2 mt-3">
           <div className="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-600" />
-          <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
+          <p className="text-xs text-text-tertiary text-center">
             Psychage AI is an education assistant • Not a therapist or medical professional
           </p>
           <div className="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-600" />

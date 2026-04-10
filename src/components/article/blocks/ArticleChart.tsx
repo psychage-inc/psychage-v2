@@ -211,8 +211,8 @@ const ArticleChart: React.FC<ArticleChartProps> = ({
             ref={ref}
             className={`
                 not-prose my-8 p-6 rounded-2xl
-                bg-white dark:bg-gray-900/50
-                border border-gray-100 dark:border-gray-800
+                bg-surface
+                border border-border
                 shadow-sm
                 ${className}
             `}
@@ -237,8 +237,8 @@ const ArticleChart: React.FC<ArticleChartProps> = ({
                 ) : (
                     <div className="flex items-center justify-center h-full animate-pulse" style={{ minHeight: height }}>
                         <div className="flex flex-col items-center gap-3">
-                            <div className="w-16 h-16 rounded-xl bg-gray-100 dark:bg-gray-800" />
-                            <div className="h-2.5 w-28 bg-gray-100 dark:bg-gray-800 rounded" />
+                            <div className="w-16 h-16 rounded-xl bg-surface-active" />
+                            <div className="h-2.5 w-28 bg-surface-active rounded" />
                         </div>
                     </div>
                 )}

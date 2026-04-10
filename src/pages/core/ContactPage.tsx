@@ -88,7 +88,7 @@ const ContactPage: React.FC = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-surface rounded-[2.5rem] overflow-hidden shadow-xl shadow-shadow/10 border border-border">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-surface rounded-3xl overflow-hidden shadow-xl shadow-shadow/10 border border-border">
 
                     {/* Contact Info Sidebar */}
                     <div className="lg:col-span-5 bg-surface-active text-text-primary p-10 md:p-12 flex flex-col justify-between relative overflow-hidden border-r border-border">

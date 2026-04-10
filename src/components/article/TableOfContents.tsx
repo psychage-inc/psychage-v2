@@ -96,7 +96,7 @@ const TOCList: React.FC<{
     );
 
     return (
-        <ul className="space-y-1 border-l border-gray-100 dark:border-gray-800">
+        <ul className="space-y-1 border-l border-border">
             {sections.map((section) => {
                 const isActive = activeId === section.id;
                 return (
@@ -109,8 +109,8 @@ const TOCList: React.FC<{
                                 ${section.level === 3 ? 'pl-8 text-xs' : 'pl-4'}
                                 ${
                                     isActive
-                                        ? 'text-teal-600 dark:text-teal-400 font-semibold border-l-2 border-teal-500'
-                                        : 'text-gray-500 dark:text-gray-400 font-medium hover:text-teal-600 dark:hover:text-teal-400 hover:border-l-2 hover:border-teal-500/50'
+                                        ? 'text-primary font-semibold border-l-2 border-primary'
+                                        : 'text-text-secondary font-medium hover:text-primary hover:border-l-2 hover:border-primary/50'
                                 }
                             `}
                         >
@@ -136,22 +136,22 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({
     if (variant === 'sidebar') {
         return (
             <div className="hidden lg:block">
-                <div className="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-6">
+                <div className="text-xs font-bold uppercase tracking-widest text-text-tertiary mb-6">
                     Contents
                 </div>
                 <TOCList sections={sections} activeId={activeId} />
 
                 {/* Find Provider CTA */}
-                <div className="mt-12 p-6 bg-teal-50 dark:bg-teal-900/20 rounded-2xl border border-teal-100 dark:border-teal-800/30">
-                    <h4 className="font-bold text-teal-900 dark:text-teal-100 mb-2 text-sm">
+                <div className="mt-12 p-6 bg-primary/10 rounded-2xl border border-primary/20">
+                    <h4 className="font-bold text-text-primary mb-2 text-sm">
                         Need professional help?
                     </h4>
-                    <p className="text-xs text-teal-700/80 dark:text-teal-300/60 mb-4 leading-relaxed">
+                    <p className="text-xs text-text-secondary mb-4 leading-relaxed">
                         Find verified therapists specializing in your area of need.
                     </p>
                     <button
                         onClick={() => navigate('/providers')}
-                        className="w-full py-2 bg-teal-600 text-white rounded-lg text-xs font-bold hover:bg-teal-700 transition-colors"
+                        className="w-full py-2 bg-primary text-white rounded-lg text-xs font-bold hover:bg-primary-hover transition-colors"
                     >
                         Find Provider
                     </button>
@@ -185,7 +185,7 @@ const MobileTOC: React.FC<{ articleSelector?: string }> = ({ articleSelector = '
             {/* Floating pill — bottom of screen, above MindMate FAB */}
             <button
                 onClick={() => setOpen(true)}
-                className="lg:hidden fixed bottom-20 left-4 z-[100] flex items-center gap-2 px-4 py-2.5 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-lg shadow-black/10 text-sm font-medium text-text-primary hover:border-primary/40 transition-all"
+                className="lg:hidden fixed bottom-20 left-4 z-[100] flex items-center gap-2 px-4 py-2.5 rounded-full bg-surface border border-border shadow-lg shadow-black/10 text-sm font-medium text-text-primary hover:border-primary/40 transition-all"
                 aria-label="Open table of contents"
             >
                 <List size={16} className="text-primary shrink-0" />
@@ -208,18 +208,18 @@ const MobileTOC: React.FC<{ articleSelector?: string }> = ({ articleSelector = '
                             animate={{ y: 0 }}
                             exit={{ y: '100%' }}
                             transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-                            className="lg:hidden fixed bottom-0 left-0 right-0 z-[201] bg-white dark:bg-gray-900 rounded-t-2xl shadow-2xl max-h-[70vh] overflow-y-auto"
+                            className="lg:hidden fixed bottom-0 left-0 right-0 z-[201] bg-surface rounded-t-2xl shadow-2xl max-h-[70vh] overflow-y-auto"
                         >
-                            <div className="sticky top-0 bg-white dark:bg-gray-900 px-5 pt-4 pb-3 border-b border-gray-100 dark:border-gray-800 flex items-center justify-between">
-                                <h3 className="text-sm font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
+                            <div className="sticky top-0 bg-surface px-5 pt-4 pb-3 border-b border-border flex items-center justify-between">
+                                <h3 className="text-sm font-bold uppercase tracking-widest text-text-tertiary">
                                     On this page
                                 </h3>
                                 <button
                                     onClick={() => setOpen(false)}
-                                    className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                                    className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-hover transition-colors"
                                     aria-label="Close table of contents"
                                 >
-                                    <X size={18} className="text-gray-500" />
+                                    <X size={18} className="text-text-tertiary" />
                                 </button>
                             </div>
                             <div className="px-5 py-4">

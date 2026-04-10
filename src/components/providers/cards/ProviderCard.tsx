@@ -47,9 +47,11 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
     <motion.div
       {...hoverLift}
       className={`bg-surface rounded-2xl p-6 border shadow-sm hover:shadow-lg hover:border-teal-200 dark:hover:border-teal-800/60 transition-all duration-300 flex flex-col h-full group ${
-        provider.tier === 'premium'
+        provider.tier === 'elite'
           ? 'border-l-4 border-l-amber-400 border-t-border border-r-border border-b-border dark:border-l-amber-500 ring-1 ring-amber-100 dark:ring-amber-900/20'
-          : isVerified
+          : provider.tier === 'pro'
+            ? 'border-l-4 border-l-teal-500 border-t-border border-r-border border-b-border dark:border-l-teal-400 ring-1 ring-teal-100 dark:ring-teal-900/20'
+            : isVerified
             ? 'border-l-[3px] border-l-teal-500 border-t-border border-r-border border-b-border dark:border-l-teal-400'
             : 'border-border'
       }`}

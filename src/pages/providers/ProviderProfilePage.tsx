@@ -14,11 +14,19 @@ import { InsuranceList } from '@/components/providers/profile/InsuranceList';
 import { LanguageBadges } from '@/components/providers/profile/LanguageBadges';
 import { CulturalBadges } from '@/components/providers/profile/CulturalBadges';
 import { FindSupportCTA } from '@/components/providers/shared/FindSupportCTA';
+import { trackProfileView } from '@/services/provider-analytics';
 
 const ProviderProfilePage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { provider, isLoading, error } = useProviderProfile(id || '');
+
+  // Track profile view (deduplicates per session)
+  React.useEffect(() => {
+    if (provider?.id) {
+      trackProfileView(provider.id);
+    }
+  }, [provider?.id]);
 
   if (isLoading) {
     return (

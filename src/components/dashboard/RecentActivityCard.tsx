@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { BrainCircuit, Calendar, ArrowRight, Activity } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Activity, Calendar, BrainCircuit, ArrowRight } from 'lucide-react';
-import Button from '@/components/ui/Button';
-import { format } from 'date-fns';
+import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { formatDistanceToNow, format } from 'date-fns';
 
 interface ActivityItem {
     type: 'assessment' | 'appointment';
@@ -16,54 +16,71 @@ interface RecentActivityCardProps {
 }
 
 const RecentActivityCard: React.FC<RecentActivityCardProps> = ({ activity }) => {
+    const reduced = useReducedMotion();
+    const items = activity.slice(0, 5);
+
     return (
         <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={reduced ? {} : { opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.35 }}
+            transition={{ delay: 0.2, duration: 0.35 }}
             className="h-full"
         >
-            <div className="p-5 h-full rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-md flex flex-col hover:border-white/[0.12] transition-colors duration-200">
-                <div className="flex items-center gap-2 mb-3">
-                    <div className="w-7 h-7 rounded-lg bg-rose-500/10 flex items-center justify-center">
-                        <Activity size={14} className="text-rose-400" />
+            <div className="h-full rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 shadow-sm p-5 flex flex-col">
+                <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2.5">
+                        <div className="w-8 h-8 rounded-lg bg-sky-500/10 flex items-center justify-center">
+                            <Activity size={16} className="text-sky-500" />
+                        </div>
+                        <h3 className="font-semibold text-sm text-gray-900 dark:text-white">Recent Activity</h3>
                     </div>
-                    <span className="text-xs font-medium text-text-secondary tracking-wide uppercase">Activity</span>
+                    <Link
+                        to="/dashboard/history"
+                        className="text-xs text-gray-400 dark:text-gray-500 hover:text-teal-600 dark:hover:text-teal-400 transition-colors flex items-center gap-1"
+                    >
+                        View All <ArrowRight size={12} />
+                    </Link>
                 </div>
 
-                {activity.length > 0 ? (
-                    <div className="space-y-1 flex-grow">
-                        {activity.slice(0, 3).map((item, idx) => (
-                            <div
-                                key={idx}
-                                className="flex items-center gap-3 group p-3 rounded-xl hover:bg-white/[0.04] transition-colors cursor-default min-h-[48px]"
-                            >
-                                <div className="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/[0.06] flex items-center justify-center text-text-tertiary shrink-0 group-hover:text-primary group-hover:border-primary/20 transition-colors">
-                                    {item.type === 'assessment' ? <BrainCircuit size={14} /> : <Calendar size={14} />}
-                                </div>
-                                <div className="flex-grow min-w-0">
-                                    <p className="font-medium text-text-primary text-[13px] group-hover:text-primary transition-colors truncate">
-                                        {item.title}
-                                    </p>
-                                    <p className="text-xs text-text-tertiary/60">
-                                        {item.date ? format(new Date(item.date), 'MMM d, h:mm a') : ''}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
+                {items.length === 0 ? (
+                    <div className="flex-grow flex flex-col items-center justify-center text-center py-4">
+                        <Activity size={28} className="text-gray-300 dark:text-gray-600 mb-2" />
+                        <p className="text-xs text-gray-400 dark:text-gray-500">Your activity will show up here as you use the platform.</p>
                     </div>
                 ) : (
-                    <div className="text-center py-5 flex flex-col items-center justify-center flex-grow border border-dashed border-white/[0.06] rounded-xl">
-                        <p className="text-sm text-text-tertiary/70">No recent activity</p>
-                        <p className="text-xs text-text-tertiary/50 mt-0.5">Your actions will appear here.</p>
+                    <div className="relative flex-grow">
+                        {/* Timeline line */}
+                        <div className="absolute left-[11px] top-2 bottom-2 w-px bg-gray-200 dark:bg-gray-800" />
+
+                        <div className="flex flex-col gap-3">
+                            {items.map((item, idx) => {
+                                let timeLabel: string;
+                                try {
+                                    timeLabel = formatDistanceToNow(new Date(item.date), { addSuffix: true });
+                                } catch {
+                                    timeLabel = format(new Date(item.date), 'MMM d');
+                                }
+
+                                return (
+                                    <motion.div
+                                        key={`${item.type}-${item.date}-${idx}`}
+                                        initial={reduced ? {} : { opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{ delay: 0.05 * idx }}
+                                        className="flex items-start gap-3 relative pl-6"
+                                    >
+                                        {/* Timeline dot */}
+                                        <div className="absolute left-[7px] top-1.5 w-[9px] h-[9px] rounded-full bg-gray-300 dark:bg-gray-600 border-2 border-white dark:border-gray-900 z-10" />
+                                        <div className="flex-grow min-w-0">
+                                            <p className="text-sm text-gray-700 dark:text-gray-300 font-medium truncate">{item.title}</p>
+                                            <p className="text-[11px] text-gray-400 dark:text-gray-500">{timeLabel}</p>
+                                        </div>
+                                    </motion.div>
+                                );
+                            })}
+                        </div>
                     </div>
                 )}
-
-                <Link to="/dashboard/history" className="mt-3">
-                    <Button variant="ghost" className="w-full text-xs text-text-tertiary hover:text-primary">
-                        View All <ArrowRight size={12} className="ml-1" />
-                    </Button>
-                </Link>
             </div>
         </motion.div>
     );

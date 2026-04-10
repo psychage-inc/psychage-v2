@@ -22,8 +22,9 @@ export function scoreProvider(
     score += matchCount * 3;
   }
 
-  // Premium tier boost
-  if (provider.tier === 'premium') score += 1;
+  // Paid tier boost
+  if (provider.tier === 'elite') score += 2;
+  else if (provider.tier === 'pro') score += 1;
 
   // Profile completeness signals
   if (provider.photo_url) score += 0.5;

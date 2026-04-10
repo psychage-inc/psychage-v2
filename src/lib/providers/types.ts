@@ -72,6 +72,8 @@ export interface ProviderRow {
   sliding_fee_scale: boolean;
   emergency_services: boolean;
   data_last_synced_at: string | null;
+  claimed_at: string | null;
+  trust_score_cached: number;
   created_at: string;
   updated_at: string;
 }
@@ -95,7 +97,15 @@ export interface ProviderVerification {
   provider_id: string;
   verification_type: 'npi_check' | 'license_check' | 'email' | 'manual';
   status: 'passed' | 'failed' | 'pending';
+  tier: 'npi' | 'license' | 'certified';
   details: Record<string, unknown> | null;
+  license_number: string | null;
+  license_state: string | null;
+  license_expiry: string | null;
+  certification_application: Record<string, unknown> | null;
+  reviewed_by: string | null;
+  reviewed_at: string | null;
+  expires_at: string | null;
   verified_at: string | null;
   created_at: string;
 }
@@ -103,9 +113,8 @@ export interface ProviderVerification {
 // --- Enum Types ---
 
 export type ProviderStatus = 'seeded' | 'claimed' | 'submitted' | 'verified' | 'active' | 'suspended' | 'rejected';
-// TODO [Phase 2]: PRD specifies 3 tiers: Free, Growth ($49/mo), Premium ($99/mo).
-// Add 'growth' here and in DB constraint (providers.tier CHECK) when Stripe is integrated.
-export type ProviderTier = 'free' | 'premium';
+import type { ProviderTier as _ProviderTier } from '@/lib/provider-tier';
+export type ProviderTier = _ProviderTier;
 export type ProviderSource = 'npi_registry' | 'samhsa' | 'hrsa_hc' | 'manual' | 'claim';
 
 // --- Joined / Enriched Types ---
@@ -139,6 +148,7 @@ export interface ProviderCardData {
   in_person_available: boolean;
   is_accepting_patients: boolean;
   verified_at: string | null;
+  trust_score_cached: number | null;
   provider_type_slug: string;
   provider_type_label: string;
   primary_city: string | null;

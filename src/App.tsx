@@ -2,6 +2,8 @@ import React, { Suspense, useState } from 'react';
 import { MotionConfig } from 'framer-motion';
 import { Routes, Route, useLocation, useNavigate, Navigate } from 'react-router-dom';
 import { Toaster } from 'sonner';
+import { QueryClientProvider } from '@tanstack/react-query';
+import { queryClient } from './lib/queryClient';
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
 import MindMate from './components/ai/MindMate';
@@ -78,15 +80,26 @@ const AccountSettings = React.lazy(() => import('./pages/dashboard/AccountSettin
 const PrivacySettings = React.lazy(() => import('./pages/dashboard/PrivacySettings'));
 const BookmarksPage = React.lazy(() => import('./pages/dashboard/BookmarksPage'));
 const AssessmentHistory = React.lazy(() => import('./pages/dashboard/AssessmentHistory'));
+const OnboardingPage = React.lazy(() => import('./pages/OnboardingPage'));
 
 // Admin redirect — admin panel lives on a separate domain (admin.psychage.com)
 // In local dev (no VITE_ADMIN_URL), redirects to /admin.html entry point
 
-// Provider Dashboard
+// Provider Dashboard (legacy — redirects to /portal/*)
 const ProviderDashboard = React.lazy(() => import('./pages/provider/ProviderDashboard'));
 const ProviderProfileEditor = React.lazy(() => import('./pages/provider/ProviderProfileEditor'));
 const ProviderAnalytics = React.lazy(() => import('./pages/provider/ProviderAnalytics'));
 const ProviderPatients = React.lazy(() => import('./pages/provider/ProviderPatients'));
+
+// Provider Portal V2
+const PortalLayout = React.lazy(() => import('./components/portal/PortalLayout'));
+const PortalDashboard = React.lazy(() => import('./pages/portal/PortalDashboard'));
+const PortalProfile = React.lazy(() => import('./pages/portal/PortalProfile'));
+const PortalReviews = React.lazy(() => import('./pages/portal/PortalReviews'));
+const PortalVerification = React.lazy(() => import('./pages/portal/PortalVerification'));
+const PortalSubscription = React.lazy(() => import('./pages/portal/PortalSubscription'));
+const PortalAnalytics = React.lazy(() => import('./pages/portal/PortalAnalytics'));
+const PortalSettings = React.lazy(() => import('./pages/portal/PortalSettings'));
 
 // Provider Registration (legacy — kept for admin reference only)
 
@@ -146,6 +159,7 @@ const App: React.FC = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     return (
+        <QueryClientProvider client={queryClient}>
         <MotionConfig reducedMotion="user">
             <BookmarkProvider>
                 <ProviderLookupsProvider>
@@ -256,6 +270,13 @@ const App: React.FC = () => {
                                             <Route path="/update-password" element={<PageTransition><UpdatePasswordPage /></PageTransition>} />
                                             <Route path="/auth/callback" element={<AuthCallback />} />
 
+                                            {/* Onboarding (auth-only, no role guard) */}
+                                            <Route path="/onboarding" element={
+                                                <ProtectedRoute>
+                                                    <PageTransition><RouteErrorBoundary><OnboardingPage /></RouteErrorBoundary></PageTransition>
+                                                </ProtectedRoute>
+                                            } />
+
                                             {/* Protected Routes: User Dashboard */}
                                             <Route path="/dashboard" element={
                                                 <ProtectedRoute>
@@ -298,35 +319,28 @@ const App: React.FC = () => {
                                             {/* Admin Panel — redirect to admin domain */}
                                             <Route path="/admin/*" element={<AdminRedirect />} />
 
-                                            {/* Protected Routes: Provider Dashboard */}
-                                            <Route path="/provider" element={
+                                            {/* Provider Portal V2 */}
+                                            <Route path="/portal" element={
                                                 <ProtectedRoute>
                                                     <RoleGuard allowedRoles={['provider', 'admin']}>
-                                                        <PageTransition><RouteErrorBoundary><ProviderDashboard /></RouteErrorBoundary></PageTransition>
+                                                        <PageTransition><RouteErrorBoundary><PortalLayout /></RouteErrorBoundary></PageTransition>
                                                     </RoleGuard>
                                                 </ProtectedRoute>
-                                            } />
-                                            <Route path="/provider/profile" element={
-                                                <ProtectedRoute>
-                                                    <RoleGuard allowedRoles={['provider', 'admin']}>
-                                                        <PageTransition><ProviderProfileEditor /></PageTransition>
-                                                    </RoleGuard>
-                                                </ProtectedRoute>
-                                            } />
-                                            <Route path="/provider/analytics" element={
-                                                <ProtectedRoute>
-                                                    <RoleGuard allowedRoles={['provider', 'admin']}>
-                                                        <PageTransition><ProviderAnalytics /></PageTransition>
-                                                    </RoleGuard>
-                                                </ProtectedRoute>
-                                            } />
-                                            <Route path="/provider/patients" element={
-                                                <ProtectedRoute>
-                                                    <RoleGuard allowedRoles={['provider', 'admin']}>
-                                                        <PageTransition><ProviderPatients /></PageTransition>
-                                                    </RoleGuard>
-                                                </ProtectedRoute>
-                                            } />
+                                            }>
+                                                <Route index element={<PortalDashboard />} />
+                                                <Route path="profile" element={<PortalProfile />} />
+                                                <Route path="reviews" element={<PortalReviews />} />
+                                                <Route path="verification" element={<PortalVerification />} />
+                                                <Route path="subscription" element={<PortalSubscription />} />
+                                                <Route path="analytics" element={<PortalAnalytics />} />
+                                                <Route path="settings" element={<PortalSettings />} />
+                                            </Route>
+
+                                            {/* Legacy provider dashboard — redirect to portal */}
+                                            <Route path="/provider" element={<Navigate to="/portal" replace />} />
+                                            <Route path="/provider/profile" element={<Navigate to="/portal/profile" replace />} />
+                                            <Route path="/provider/analytics" element={<Navigate to="/portal/analytics" replace />} />
+                                            <Route path="/provider/patients" element={<Navigate to="/portal" replace />} />
 
                                             <Route path="*" element={
                                                 <PageTransition>
@@ -338,9 +352,9 @@ const App: React.FC = () => {
                                 </ErrorBoundary>
                             </main>
 
-                            {location.pathname !== '/tools/mindmate' && <Footer />}
+                            {location.pathname !== '/tools/mindmate' && !location.pathname.startsWith('/dashboard') && !location.pathname.startsWith('/portal') && location.pathname !== '/onboarding' && <Footer />}
 
-                            {location.pathname !== '/tools/mindmate' && <MindMate />}
+                            {location.pathname !== '/tools/mindmate' && !location.pathname.startsWith('/dashboard') && !location.pathname.startsWith('/portal') && location.pathname !== '/onboarding' && <MindMate />}
                             <CookieConsent />
 
                             {/* Persistent Mobile CTA (Homepage Only) */}
@@ -372,6 +386,7 @@ const App: React.FC = () => {
                 </ProviderLookupsProvider>
             </BookmarkProvider>
         </MotionConfig>
+        </QueryClientProvider>
     );
 };
 

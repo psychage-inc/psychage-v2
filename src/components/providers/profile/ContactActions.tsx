@@ -2,9 +2,10 @@ import React from 'react';
 import { Phone, Mail, Globe, Calendar } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { ProviderWithDetails } from '@/lib/providers/types';
+import { trackContactClick } from '@/services/provider-analytics';
 
 interface ContactActionsProps {
-  provider: Pick<ProviderWithDetails, 'phone' | 'email' | 'website_url' | 'appointment_url'>;
+  provider: Pick<ProviderWithDetails, 'id' | 'phone' | 'email' | 'website_url' | 'appointment_url'>;
   sticky?: boolean;
 }
 
@@ -12,6 +13,7 @@ interface ActionItem {
   label: string;
   href: string;
   icon: React.ReactNode;
+  trackType?: 'phone_click' | 'email_click' | 'website_click';
 }
 
 export const ContactActions: React.FC<ContactActionsProps> = ({ provider, sticky = false }) => {
@@ -22,6 +24,7 @@ export const ContactActions: React.FC<ContactActionsProps> = ({ provider, sticky
       label: 'Call',
       href: `tel:${provider.phone}`,
       icon: <Phone size={16} />,
+      trackType: 'phone_click' as const,
     });
   }
 
@@ -30,6 +33,7 @@ export const ContactActions: React.FC<ContactActionsProps> = ({ provider, sticky
       label: 'Email',
       href: `mailto:${provider.email}`,
       icon: <Mail size={16} />,
+      trackType: 'email_click' as const,
     });
   }
 
@@ -38,6 +42,7 @@ export const ContactActions: React.FC<ContactActionsProps> = ({ provider, sticky
       label: 'Website',
       href: provider.website_url,
       icon: <Globe size={16} />,
+      trackType: 'website_click' as const,
     });
   }
 
@@ -46,6 +51,7 @@ export const ContactActions: React.FC<ContactActionsProps> = ({ provider, sticky
       label: 'Book Appointment',
       href: provider.appointment_url,
       icon: <Calendar size={16} />,
+      trackType: 'website_click' as const,
     });
   }
 
@@ -70,6 +76,11 @@ export const ContactActions: React.FC<ContactActionsProps> = ({ provider, sticky
           <a
             key={action.label}
             href={action.href}
+            onClick={() => {
+              if (action.trackType && provider.id) {
+                trackContactClick(provider.id, action.trackType);
+              }
+            }}
             {...(isExternal
               ? { target: '_blank', rel: 'noopener noreferrer' }
               : {})}

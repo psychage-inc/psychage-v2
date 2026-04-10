@@ -78,6 +78,7 @@ function mapToCardData(p: ProviderWithDetails): ProviderCardData {
     in_person_available: p.in_person_available,
     is_accepting_patients: p.is_accepting_patients,
     verified_at: p.verified_at,
+    trust_score_cached: p.trust_score_cached ?? null,
     provider_type_slug: p.provider_type?.slug || '',
     provider_type_label: p.provider_type?.label || '',
     primary_city: loc?.city || null,
@@ -112,6 +113,7 @@ function mapMockToCardData(p: Provider): ProviderCardData {
     in_person_available: !p.isVideoVisit,
     is_accepting_patients: p.availability !== 'Waitlist',
     verified_at: p.verified ? new Date().toISOString() : null,
+    trust_score_cached: null,
     provider_type_slug: '',
     provider_type_label: p.role || '',
     primary_city: locationParts[0] || null,
@@ -172,10 +174,11 @@ function sortProviderCards(cards: ProviderCardData[], sortBy?: string): Provider
   if (sortBy === 'name') {
     sorted.sort((a, b) => a.display_name.localeCompare(b.display_name));
   } else {
-    // Relevance: premium first, then verified, then alphabetical
+    // Relevance: elite > pro > free, then verified, then alphabetical
+    const tierRank = (t: string) => t === 'elite' ? 0 : t === 'pro' ? 1 : 2;
     sorted.sort((a, b) => {
-      if (a.tier === 'premium' && b.tier !== 'premium') return -1;
-      if (a.tier !== 'premium' && b.tier === 'premium') return 1;
+      const tierDiff = tierRank(a.tier) - tierRank(b.tier);
+      if (tierDiff !== 0) return tierDiff;
 
       const aVerified = a.verified_at != null || a.status === 'verified' || a.status === 'active';
       const bVerified = b.verified_at != null || b.status === 'verified' || b.status === 'active';
@@ -243,6 +246,7 @@ async function searchViaRPC(params: ProviderSearchParams, page: number, perPage:
     in_person_available: row.in_person_available,
     is_accepting_patients: row.is_accepting_patients,
     verified_at: row.verified_at,
+    trust_score_cached: row.trust_score_cached ?? null,
     provider_type_slug: row.provider_type_slug,
     provider_type_label: row.provider_type_label,
     primary_city: row.primary_city,

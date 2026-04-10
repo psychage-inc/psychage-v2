@@ -131,7 +131,7 @@ const ReviewStep: React.FC<Props> = ({ formData, filters, submitResult }) => {
       </ReviewSection>
 
       <ReviewSection title="Plan">
-        <ReviewRow label="Selected Tier" value={formData.tier === 'premium' ? 'Premium' : 'Free'} />
+        <ReviewRow label="Selected Tier" value={formData.tier === 'elite' ? 'Elite' : formData.tier === 'pro' ? 'Pro' : 'Free'} />
       </ReviewSection>
     </div>
   );

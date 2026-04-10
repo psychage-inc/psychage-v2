@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { Compass, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
+import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { format } from 'date-fns';
 
 interface NavigatorAwarenessCardProps {
@@ -10,71 +11,68 @@ interface NavigatorAwarenessCardProps {
     lastExplorationDate: string | null;
 }
 
-const NavigatorAwarenessCard: React.FC<NavigatorAwarenessCardProps> = ({
-    totalExplorations,
-    lastExplorationDate,
-}) => {
-    const hasData = totalExplorations > 0 && lastExplorationDate;
+const NavigatorAwarenessCard: React.FC<NavigatorAwarenessCardProps> = ({ totalExplorations, lastExplorationDate }) => {
+    const reduced = useReducedMotion();
+    const hasData = totalExplorations > 0;
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={reduced ? {} : { opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.25, duration: 0.35 }}
+            transition={{ delay: 0.15, duration: 0.35 }}
             className="h-full"
         >
-            <div className="p-5 rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-md h-full flex flex-col hover:border-white/[0.12] transition-colors duration-200">
-                <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-2">
-                        <div className="w-7 h-7 rounded-lg bg-purple-500/10 flex items-center justify-center">
-                            <Compass size={14} className="text-purple-400" />
-                        </div>
-                        <span className="text-xs font-medium text-text-secondary tracking-wide uppercase">Navigator</span>
+            <div className="h-full rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 shadow-sm p-5 flex flex-col">
+                <div className="flex items-center gap-2.5 mb-4">
+                    <div className="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                        <Compass size={16} className="text-purple-500" />
                     </div>
-                    {hasData && (
-                        <span className="text-xs text-text-tertiary/60">
-                            {format(new Date(lastExplorationDate), 'MMM d')}
-                        </span>
-                    )}
+                    <h3 className="font-semibold text-sm text-gray-900 dark:text-white">Symptom Navigator</h3>
                 </div>
 
                 {hasData ? (
-                    <div className="flex flex-col flex-grow">
-                        <p className="text-sm text-text-secondary mb-2 leading-relaxed">
-                            <span className="font-semibold text-text-primary tabular-nums">{totalExplorations}</span>{' '}
-                            exploration{totalExplorations !== 1 ? 's' : ''} completed.
+                    <div className="flex-grow">
+                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">
+                            <span className="font-semibold text-gray-900 dark:text-white">{totalExplorations}</span>{' '}
+                            {totalExplorations === 1 ? 'exploration' : 'explorations'} completed
                         </p>
-                        <p className="text-xs text-text-tertiary/70 mb-4 leading-relaxed">
-                            Self-reflection helps you understand patterns over time.
-                        </p>
-
-                        <div className="mt-auto">
-                            <Link to="/tools/symptom-navigator">
-                                <Button variant="ghost" size="sm" className="text-xs">
-                                    Explore Again <ArrowRight size={12} className="ml-1" />
-                                </Button>
-                            </Link>
-                            <p className="text-[11px] text-text-tertiary/50 mt-2.5 italic">
-                                Educational tool, not a medical diagnosis.
+                        {lastExplorationDate && (
+                            <p className="text-xs text-gray-400 dark:text-gray-500 mb-4">
+                                Last explored {format(new Date(lastExplorationDate), 'MMM d, yyyy')}
                             </p>
-                        </div>
+                        )}
+                        <Link to="/tools/symptom-navigator">
+                            <Button variant="outline" size="sm" className="rounded-lg text-xs" rightIcon={<ArrowRight size={12} />}>
+                                Explore Again
+                            </Button>
+                        </Link>
                     </div>
                 ) : (
-                    <div className="flex flex-col items-center justify-center text-center py-4 flex-grow">
-                        <div className="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center mb-3">
-                            <Compass size={20} className="text-purple-400" />
-                        </div>
-                        <p className="text-sm text-text-secondary mb-1">No explorations yet</p>
-                        <p className="text-xs text-text-tertiary/70 mb-4 max-w-[200px] leading-relaxed">
-                            Learn about patterns in your experiences.
+                    <div className="flex-grow flex flex-col items-center justify-center text-center py-2">
+                        {/* Warm compass illustration */}
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" className="mb-3 text-purple-300 dark:text-purple-700">
+                            <circle cx="24" cy="24" r="20" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 3" />
+                            <circle cx="24" cy="24" r="8" stroke="currentColor" strokeWidth="1.5" />
+                            <circle cx="24" cy="24" r="2" fill="currentColor" />
+                            <line x1="24" y1="4" x2="24" y2="12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                            <line x1="24" y1="36" x2="24" y2="44" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                            <line x1="4" y1="24" x2="12" y2="24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                            <line x1="36" y1="24" x2="44" y2="24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                        </svg>
+                        <p className="text-xs text-gray-500 dark:text-gray-400 mb-3 max-w-[200px]">
+                            Understand your patterns with the Symptom Navigator.
                         </p>
                         <Link to="/tools/symptom-navigator">
-                            <Button variant="outline" size="sm" className="text-xs">
-                                Get Started <ArrowRight size={12} className="ml-1" />
+                            <Button variant="primary" size="sm" className="rounded-lg text-xs" rightIcon={<ArrowRight size={12} />}>
+                                Get Started
                             </Button>
                         </Link>
                     </div>
                 )}
+
+                <p className="text-[10px] text-gray-400 dark:text-gray-500 mt-auto pt-3 border-t border-gray-100 dark:border-gray-800/60">
+                    Educational tool — not a medical diagnosis
+                </p>
             </div>
         </motion.div>
     );

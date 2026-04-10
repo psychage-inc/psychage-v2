@@ -65,7 +65,7 @@ const FocusSelectionStep: React.FC<FocusSelectionStepProps> = ({ selected, onSel
             <motion.div
                 variants={reduced ? undefined : staggerContainer}
                 initial="hidden"
-                animate="show"
+                animate="visible"
                 className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full mb-8"
             >
                 {FOCUS_OPTIONS.map((option) => {

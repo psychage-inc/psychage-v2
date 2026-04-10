@@ -117,9 +117,6 @@ const NavigatorShowcase: React.FC = () => {
               </span>
             </p>
 
-            <p className="text-[13px] text-[var(--color-primary)]/60 mt-5 font-sans tracking-wide">
-              106 symptoms · 45 conditions · 6 severity tiers · 100% on-device
-            </p>
           </motion.div>
         </div>
       </div>

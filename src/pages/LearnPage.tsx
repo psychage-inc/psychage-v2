@@ -355,7 +355,7 @@ const LearnPage: React.FC = () => {
         return result;
     }, [categories, categoriesFromArticles, articlesByCategory]);
 
-    // Featured articles: 5 picks (1 hero + 4 trending) from priority categories
+    // Featured articles: 7 picks (1 hero + 6 trending) from priority categories
     const featuredArticles = useMemo(() => {
         const picks: Article[] = [];
         const usedCategories = new Set<string>();
@@ -363,21 +363,21 @@ const LearnPage: React.FC = () => {
             a => PRIORITY_CATEGORY_SLUGS.includes(a.category.slug)
         );
         for (const a of priorityArticles) {
-            if (picks.length >= 5) break;
+            if (picks.length >= 7) break;
             if (a.tags.includes('featured') && !usedCategories.has(a.category.slug)) {
                 picks.push(a);
                 usedCategories.add(a.category.slug);
             }
         }
         for (const a of priorityArticles) {
-            if (picks.length >= 5) break;
+            if (picks.length >= 7) break;
             if (!usedCategories.has(a.category.slug)) {
                 picks.push(a);
                 usedCategories.add(a.category.slug);
             }
         }
         for (const a of priorityArticles) {
-            if (picks.length >= 5) break;
+            if (picks.length >= 7) break;
             if (!picks.includes(a)) {
                 picks.push(a);
             }
@@ -545,10 +545,6 @@ const LearnPage: React.FC = () => {
                             Editor's Picks
                         </p>
 
-                        {/* Reading stats micro-banner */}
-                        <p className="text-sm text-text-tertiary mb-6">
-                            2,000+ articles · {readingStats?.totalCategories ?? 15} topics · ~{readingStats?.avgReadTime ?? 5} min avg read
-                        </p>
 
                         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
                             <div className="lg:col-span-3">
@@ -563,7 +559,7 @@ const LearnPage: React.FC = () => {
                                     <h3 className="text-xs text-text-tertiary font-semibold uppercase tracking-wider mb-4">
                                         Trending
                                     </h3>
-                                    {featuredArticles.slice(1, 5).map((article, i) => (
+                                    {featuredArticles.slice(1, 7).map((article, i) => (
                                         <TrendingListItem
                                             key={article.id}
                                             article={article}

@@ -21,7 +21,6 @@ import AuthModal from '@/components/auth/AuthModal';
 
 import SEO from '@/components/SEO';
 import Button from '@/components/ui/Button';
-import { Card } from '@/components/ui/Card';
 import InteractiveCard from '@/components/ui/InteractiveCard';
 import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion';
 import Badge from '@/components/ui/Badge';
@@ -321,7 +320,7 @@ const ArticlePage: React.FC = () => {
 
                     {/* Left Sidebar — TOC + Share + Bookmark (desktop only) */}
                     <aside className="hidden lg:block">
-                        <div className="sticky top-28 space-y-6">
+                        <div className="sticky top-28 space-y-6 max-h-[calc(100vh-8rem)] overflow-y-auto overscroll-contain scrollbar-thin">
                             <InteractiveCard className="p-5 bg-surface/30 backdrop-blur-sm border-white/5">
                                 <p className="font-bold text-text-primary mb-4 text-xs uppercase tracking-widest text-primary">On this page</p>
                                 <TableOfContents />
@@ -353,15 +352,6 @@ const ArticlePage: React.FC = () => {
                                 </div>
                             </div>
 
-                            {/* Provider CTA */}
-                            <Card className="p-5 bg-gradient-to-br from-primary/10 to-transparent border-primary/20 overflow-hidden relative">
-                                <div className="relative z-10">
-                                    <p className="font-bold text-base text-primary mb-2">Need professional help?</p>
-                                    <p className="text-xs text-text-secondary mb-3">Connect with licensed therapists who understand what you're going through.</p>
-                                    <Button size="sm" className="w-full shadow-lg shadow-primary/20" onClick={() => navigate('/providers')}>Find a Provider</Button>
-                                </div>
-                                <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-primary/10 rounded-full blur-xl" />
-                            </Card>
                         </div>
                     </aside>
 

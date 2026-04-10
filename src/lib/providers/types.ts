@@ -185,7 +185,7 @@ export interface ProviderSearchParams {
   telehealth?: boolean;
   in_person?: boolean;
   accepting_patients?: boolean;
-  verification_status?: 'all' | 'verified' | 'listed';
+  verification_status?: 'verified' | 'listed';
   sort_by?: 'relevance' | 'distance' | 'name';
   page?: number;
   per_page?: number;

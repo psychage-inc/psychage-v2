@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Headphones, Minus, Plus, Type } from 'lucide-react';
+import { Headphones, Minus, Plus, Type, BookOpen } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import ArticleAudioPlayer from './ArticleAudioPlayer';
 
@@ -58,22 +58,30 @@ const AccessibilityBar: React.FC<AccessibilityBarProps> = ({
     return (
         <div
             className={cn(
-                'bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 dark:from-primary/20 dark:via-primary/10 dark:to-primary/20 backdrop-blur-md border-b border-primary/20 dark:border-primary/30',
+                'sticky top-20 z-40 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b-2 border-primary/30 dark:border-primary/40 shadow-sm',
                 className,
             )}
             role="toolbar"
-            aria-label="Article accessibility tools"
+            aria-label="Article reading tools"
         >
             <div className="container mx-auto max-w-content px-6">
-                <div className="flex items-center gap-3 py-2 overflow-x-auto hide-scrollbar">
+                <div className="flex items-center gap-3 py-2.5 overflow-x-auto hide-scrollbar">
+                    {/* Reading tools label */}
+                    <div className="flex items-center gap-1.5 text-primary shrink-0" aria-hidden="true">
+                        <BookOpen size={16} strokeWidth={2.5} />
+                        <span className="text-xs font-bold uppercase tracking-wider hidden sm:inline">Reading Tools</span>
+                    </div>
+
+                    <div className="w-px h-5 bg-border/60 shrink-0 hidden sm:block" />
+
                     {/* Listen button */}
                     <button
                         onClick={() => setShowPlayer(!showPlayer)}
                         className={cn(
-                            'flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-colors shrink-0',
+                            'flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all shrink-0',
                             showPlayer
-                                ? 'bg-primary text-white'
-                                : 'bg-surface text-primary border border-primary/30 hover:bg-primary hover:text-white hover:border-primary shadow-sm',
+                                ? 'bg-primary text-white shadow-md shadow-primary/25'
+                                : 'bg-primary/10 text-primary hover:bg-primary hover:text-white shadow-sm',
                         )}
                     >
                         <Headphones size={16} />
@@ -84,7 +92,7 @@ const AccessibilityBar: React.FC<AccessibilityBarProps> = ({
                     {/* Read summary */}
                     <button
                         onClick={scrollToSummary}
-                        className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-surface text-primary border border-primary/30 hover:bg-primary hover:text-white hover:border-primary shadow-sm transition-colors shrink-0"
+                        className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-primary/10 text-primary hover:bg-primary hover:text-white shadow-sm transition-all shrink-0"
                     >
                         <span className="hidden sm:inline">Read Summary</span>
                         <span className="sm:hidden">Summary</span>

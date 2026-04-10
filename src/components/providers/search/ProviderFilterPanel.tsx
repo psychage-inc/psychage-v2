@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronDown, SlidersHorizontal, Search } from 'lucide-react';
 import { useProviderFilters } from '@/hooks/useProviderFilters';
+import { US_STATE_ABBRS_LIST } from '@/lib/providers/locationUtils';
 import type { ProviderSearchParams } from '@/lib/providers/types';
 import Button from '@/components/ui/Button';
 
@@ -12,13 +13,6 @@ interface ProviderFilterPanelProps {
   isOpen?: boolean;
   onClose?: () => void;
 }
-
-const US_STATES = [
-  'AL','AK','AZ','AR','CA','CO','CT','DE','DC','FL','GA','HI','ID','IL','IN',
-  'IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH',
-  'NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT',
-  'VT','VA','WA','WV','WI','WY',
-];
 
 export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
   params,
@@ -61,7 +55,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
       <FilterSection title="Verification Status">
         <RadioItem
           label="All providers"
-          checked={!params.verification_status || params.verification_status === 'all'}
+          checked={!params.verification_status}
           onChange={() => onChange({ verification_status: undefined })}
         />
         <RadioItem
@@ -85,7 +79,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
           aria-label="Filter by state"
         >
           <option value="">All states</option>
-          {US_STATES.map(s => (
+          {US_STATE_ABBRS_LIST.map(s => (
             <option key={s} value={s}>{s}</option>
           ))}
         </select>

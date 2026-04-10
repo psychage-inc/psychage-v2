@@ -1,6 +1,5 @@
  
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { List, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -129,7 +128,6 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({
     variant = 'sidebar',
 }) => {
     const { sections, activeId } = useTOCSections(propSections, articleSelector);
-    const navigate = useNavigate();
 
     if (sections.length === 0) return null;
 
@@ -141,21 +139,6 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({
                 </div>
                 <TOCList sections={sections} activeId={activeId} />
 
-                {/* Find Provider CTA */}
-                <div className="mt-12 p-6 bg-primary/10 rounded-2xl border border-primary/20">
-                    <h4 className="font-bold text-text-primary mb-2 text-sm">
-                        Need professional help?
-                    </h4>
-                    <p className="text-xs text-text-secondary mb-4 leading-relaxed">
-                        Find verified therapists specializing in your area of need.
-                    </p>
-                    <button
-                        onClick={() => navigate('/providers')}
-                        className="w-full py-2 bg-primary text-white rounded-lg text-xs font-bold hover:bg-primary-hover transition-colors"
-                    >
-                        Find Provider
-                    </button>
-                </div>
             </div>
         );
     }

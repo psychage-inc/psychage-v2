@@ -21,17 +21,15 @@ export const ProviderResultsEmpty: React.FC<ProviderResultsEmptyProps> = ({
     <p className="text-text-tertiary max-w-md mb-6">
       {hasFilters
         ? "We couldn't find any providers matching your filters. Try broadening your search or removing some filters."
-        : "We couldn't find any providers at this time. Please check back later."}
+        : "We couldn't find any providers matching your search. Try different keywords or browse all providers."}
     </p>
-    {hasFilters && (
-      <Button
-        variant="outline"
-        onClick={onClearFilters}
-        className="text-primary border-primary/20 hover:bg-primary/10"
-      >
-        Clear all filters
-      </Button>
-    )}
+    <Button
+      variant="outline"
+      onClick={onClearFilters}
+      className="text-primary border-primary/20 hover:bg-primary/10"
+    >
+      {hasFilters ? 'Clear all filters' : 'Browse all providers'}
+    </Button>
   </div>
 );
 

@@ -407,34 +407,54 @@ export const articleService = {
     ): Promise<ArticleWithContent[]> => {
         const currentIdStr = String(currentId);
 
-        // Try Supabase: articles in the same category
+        // Try Supabase: prioritize same-category articles, then backfill
         try {
-            const { data, error } = await supabase
+            // Step 1: Fetch same-category articles (most relevant)
+            const { data: sameCatData } = await supabase
                 .from('articles')
-                .select('*, category:article_categories!category_id(*)')
+                .select('*, category:article_categories!category_id!inner(*)')
                 .eq('status', 'published')
                 .neq('id', currentId)
+                .eq('category.slug', categorySlug)
                 .order('created_at', { ascending: false })
-                .limit(limit * 2); // fetch extra to filter/rank
+                .limit(limit * 2);
 
-            if (!error && data && data.length > 0) {
-                const mapped = (data as unknown as DBArticle[]).map(mapSupabaseToArticle);
+            let results: ArticleWithContent[] = [];
 
-                // Score: same category = 10, shared tag = 2 each
+            if (sameCatData && sameCatData.length > 0) {
+                const mapped = (sameCatData as unknown as DBArticle[]).map(mapSupabaseToArticle);
+
+                // Rank same-category articles by shared tags
                 const scored = mapped.map(a => {
                     let score = 0;
-                    if (a.category.slug === categorySlug) score += 10;
                     if (tags && tags.length > 0 && a.tags) {
                         const shared = a.tags.filter(t => tags.includes(t)).length;
                         score += shared * 2;
                     }
                     return { article: a, score };
                 });
-
                 scored.sort((a, b) => b.score - a.score);
-                const result = scored.slice(0, limit).map(s => s.article);
-                if (result.length > 0) return result;
+                results = scored.slice(0, limit).map(s => s.article);
             }
+
+            // Step 2: If not enough same-category articles, backfill from other categories
+            if (results.length < limit) {
+                const excludeIds = [currentId, ...results.map(r => r.id)];
+                const { data: otherData } = await supabase
+                    .from('articles')
+                    .select('*, category:article_categories!category_id(*)')
+                    .eq('status', 'published')
+                    .not('id', 'in', `(${excludeIds.join(',')})`)
+                    .order('created_at', { ascending: false })
+                    .limit(limit - results.length);
+
+                if (otherData && otherData.length > 0) {
+                    const backfill = (otherData as unknown as DBArticle[]).map(mapSupabaseToArticle);
+                    results = [...results, ...backfill];
+                }
+            }
+
+            if (results.length > 0) return results;
         } catch (error) {
             console.warn('[ArticleService] Related articles query failed:', error);
         }

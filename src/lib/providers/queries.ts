@@ -18,6 +18,7 @@ import type {
   ProviderStatus,
   ProviderTier,
 } from './types';
+import { isProviderVerified } from '@/components/providers/shared/VerificationBadge';
 import { providers as mockProviders } from '@/data/providers';
 import type { Provider } from '@/types/models';
 
@@ -152,14 +153,12 @@ function filterProviderCards(cards: ProviderCardData[], params: ProviderSearchPa
     if (params.in_person && !p.in_person_available) return false;
     if (params.accepting_patients && !p.is_accepting_patients) return false;
 
-    // Verification status filter
+    // Verification status filter — matches RPC logic
     if (params.verification_status === 'verified') {
-      const isVerified = p.verified_at != null || p.status === 'verified' || p.status === 'active';
-      if (!isVerified) return false;
+      if (!isProviderVerified(p.status, p.verified_at)) return false;
     }
     if (params.verification_status === 'listed') {
-      const isVerified = p.verified_at != null || p.status === 'verified' || p.status === 'active';
-      if (isVerified) return false;
+      if (p.status !== 'seeded' || p.verified_at != null) return false;
     }
 
     return true;
@@ -215,6 +214,7 @@ async function searchViaRPC(params: ProviderSearchParams, page: number, perPage:
     p_accepting: params.accepting_patients ?? null,
     p_state: params.state || null,
     p_city: params.city || null,
+    p_verification_status: params.verification_status || null,
     p_sort: params.sort_by === 'name' ? 'name' : 'relevance',
     p_limit: perPage,
     p_offset: offset,
@@ -267,15 +267,31 @@ async function searchViaRPC(params: ProviderSearchParams, page: number, perPage:
 }
 
 /**
- * Try 2: Direct Supabase query with joins + client-side filtering.
+ * Try 2: Direct Supabase query with server-side filters where possible,
+ * then client-side filtering for the rest.
  */
 async function searchViaDirectQuery(params: ProviderSearchParams, page: number, perPage: number): Promise<ProviderCardSearchResult | null> {
-  const { data, error } = await supabase
+  let query = supabase
     .from('providers')
     .select(PROVIDER_SELECT)
     .in('status', ['active', 'seeded'])
     .order('display_name')
-    .limit(200);
+    .limit(1000);
+
+  // Apply server-side filters where Supabase query builder supports them
+  if (params.query) {
+    query = query.or(
+      `display_name.ilike.%${params.query}%,practice_name.ilike.%${params.query}%,credentials_suffix.ilike.%${params.query}%`
+    );
+  }
+  if (params.telehealth) query = query.eq('telehealth_available', true);
+  if (params.in_person) query = query.eq('in_person_available', true);
+  if (params.accepting_patients) query = query.eq('is_accepting_patients', true);
+  if (params.provider_type_ids?.length === 1) {
+    query = query.eq('provider_type_id', params.provider_type_ids[0]);
+  }
+
+  const { data, error } = await query;
 
   if (error || !data || data.length === 0) {
     if (error) console.warn('Direct provider query failed, will try mock data:', error.message);

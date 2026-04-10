@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SlidersHorizontal, AlertTriangle, RefreshCw } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { useProviderSearch } from '@/hooks/useProviderSearch';
+import { useProviderLookups } from '@/context/ProviderLookupsContext';
+import { parseLocation } from '@/lib/providers/locationUtils';
+import { resolveSpecialtySlugs } from '@/lib/providers/specialtyResolver';
+import { getProviderCount } from '@/lib/providers/queries';
 import { ProviderSearchBar } from '@/components/providers/search/ProviderSearchBar';
 import { ProviderFilterPanel } from '@/components/providers/search/ProviderFilterPanel';
 import { ProviderFilterChips } from '@/components/providers/search/ProviderFilterChips';
@@ -11,13 +15,6 @@ import { ProviderResultsEmpty } from '@/components/providers/search/ProviderResu
 import { VerificationExplainer } from '@/components/providers/search/VerificationExplainer';
 import { VerificationCTA } from '@/components/providers/search/VerificationCTA';
 import Button from '@/components/ui/Button';
-
-const US_STATE_ABBRS = new Set([
-  'AL','AK','AZ','AR','CA','CO','CT','DE','DC','FL','GA','HI','ID','IL','IN',
-  'IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH',
-  'NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT',
-  'VT','VA','WA','WV','WI','WY',
-]);
 
 const ProviderSearchPage: React.FC = () => {
   const {
@@ -33,8 +30,16 @@ const ProviderSearchPage: React.FC = () => {
     loadMore,
     reset,
   } = useProviderSearch();
+  const { specialties } = useProviderLookups();
 
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const [dbProviderCount, setDbProviderCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    getProviderCount().then(count => {
+      if (count > 0) setDbProviderCount(count);
+    });
+  }, []);
 
   const hasActiveFilters = !!(
     params.query ||
@@ -48,23 +53,32 @@ const ProviderSearchPage: React.FC = () => {
     params.accepting_patients ||
     params.state ||
     params.city ||
-    (params.verification_status && params.verification_status !== 'all')
+    params.verification_status
   );
 
   const handleSearch = (query: string, location: string) => {
-    let city: string | undefined;
-    let state: string | undefined;
+    // Parse location into structured city/state fields
+    const { city, state } = (location && location !== 'Near me')
+      ? parseLocation(location)
+      : { city: undefined, state: undefined };
 
-    if (location && location !== 'Near me') {
-      const trimmed = location.trim();
-      if (trimmed.length === 2 && US_STATE_ABBRS.has(trimmed.toUpperCase())) {
-        state = trimmed.toUpperCase();
-      } else {
-        city = trimmed;
-      }
-    }
+    // Resolve query against specialty labels (cached, no DB call)
+    const matchedSlugs = query ? resolveSpecialtySlugs(query, specialties) : [];
 
-    setParams({ query: query || undefined, city, state });
+    // Merge with any existing specialty_slugs from the filter panel
+    const existingSlugs = params.specialty_slugs || [];
+    const mergedSlugs = matchedSlugs.length > 0
+      ? [...new Set([...existingSlugs, ...matchedSlugs])]
+      : existingSlugs.length > 0 ? existingSlugs : undefined;
+
+    // If query matches specialties, use specialty_slugs only (not p_query)
+    // to avoid the RPC's AND between text search and specialty filter
+    setParams({
+      query: matchedSlugs.length > 0 ? undefined : (query || undefined),
+      city,
+      state,
+      specialty_slugs: mergedSlugs?.length ? mergedSlugs : undefined,
+    });
   };
 
   const handleUseLocation = (lat: number, lng: number) => {
@@ -127,7 +141,11 @@ const ProviderSearchPage: React.FC = () => {
               {isLoading ? 'Searching...' : (
                 totalCount > 0
                   ? `Showing ${providers.length} of ${totalCount.toLocaleString()} providers`
-                  : hasSearched ? 'No results' : '400K+ NPI-verified providers'
+                  : hasSearched
+                    ? 'No results'
+                    : dbProviderCount
+                      ? `${dbProviderCount.toLocaleString()} NPI-verified providers`
+                      : 'Search our provider directory'
               )}
             </p>
 

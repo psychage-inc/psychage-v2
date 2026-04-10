@@ -159,7 +159,7 @@ export function useProviderSearch(): UseProviderSearchReturn {
       else next.delete('accepting');
     }
     if (newParams.verification_status !== undefined) {
-      if (newParams.verification_status && newParams.verification_status !== 'all') next.set('verified', newParams.verification_status);
+      if (newParams.verification_status) next.set('verified', newParams.verification_status);
       else next.delete('verified');
     }
     if (newParams.sort_by !== undefined) {

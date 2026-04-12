@@ -64,8 +64,8 @@ const SleepTimeline: React.FC<SleepTimelineProps> = ({
               style={{ backgroundColor: STAGE_COLORS.latency.bg }}
               title={`Falling asleep: ~${latencyMinutes} min`}
             >
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <span className="text-[10px] font-bold text-gray-500 whitespace-nowrap">
+              <div className="absolute inset-0 flex items-center justify-center opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
+                <span className="text-xs font-bold text-gray-500 whitespace-nowrap">
                   {latencyMinutes}m
                 </span>
               </div>
@@ -106,8 +106,8 @@ const SleepTimeline: React.FC<SleepTimelineProps> = ({
                   <div className="absolute right-0 top-0 h-full w-px bg-white/50" />
                 )}
                 {/* Cycle number label */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                  <span className="text-[10px] font-bold text-white drop-shadow-md whitespace-nowrap bg-black/30 px-1.5 py-0.5 rounded">
+                <div className="absolute inset-0 flex items-center justify-center opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity pointer-events-none">
+                  <span className="text-xs font-bold text-white drop-shadow-md whitespace-nowrap bg-black/30 px-1.5 py-0.5 rounded">
                     C{cycle.cycleNumber}
                   </span>
                 </div>
@@ -120,7 +120,7 @@ const SleepTimeline: React.FC<SleepTimelineProps> = ({
         <div className="flex mt-1.5">
           {latencyMinutes > 0 && (
             <div style={{ width: `${latencyWidth}%` }} className="text-center">
-              <span className="text-[10px] text-gray-400">
+              <span className="text-xs text-gray-400">
                 {formatTime(sleepStart)}
               </span>
             </div>
@@ -129,7 +129,7 @@ const SleepTimeline: React.FC<SleepTimelineProps> = ({
             const cycleWidth = (cycle.durationMinutes / totalBarMinutes) * 100;
             return (
               <div key={cycle.cycleNumber} style={{ width: `${cycleWidth}%` }} className="text-center">
-                <span className="text-[10px] text-gray-400">
+                <span className="text-xs text-gray-400">
                   {formatTime(sleepStart + cycle.endMinuteFromSleep)}
                 </span>
               </div>
@@ -151,7 +151,7 @@ const SleepTimeline: React.FC<SleepTimelineProps> = ({
               ].map(s => (
                 <span
                   key={s.label}
-                  className="inline-flex items-center gap-0.5 text-[10px] font-medium"
+                  className="inline-flex items-center gap-0.5 text-xs font-medium"
                 >
                   <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: s.color }} />
                   {s.pct}%

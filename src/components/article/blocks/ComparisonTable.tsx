@@ -2,6 +2,7 @@ import React from 'react';
 import { Check, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from './shared/useScrollAnimation';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 interface ComparisonItem {
     feature?: string;
@@ -56,6 +57,7 @@ function extractColumnLabels(columns: ColumnDef[]): string[] {
 const ComparisonTable: React.FC<ComparisonTableProps> = (props) => {
     const { title, highlightColumn, className = '' } = props;
     const { ref, isInView } = useScrollAnimation();
+    const isMobile = useMediaQuery('(max-width: 639px)');
 
     // Normalize columns
     let resolvedColumns: string[];
@@ -149,56 +151,91 @@ const ComparisonTable: React.FC<ComparisonTableProps> = (props) => {
                     {title}
                 </h4>
             )}
-            <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700">
-                <table className="w-full text-left">
-                    <thead>
-                        <tr>
-                            <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700">
-                                {firstColHeader}
-                            </th>
-                            {resolvedColumns.map((col, i) => (
-                                <th
-                                    key={i}
-                                    className={`
-                                        px-4 py-3 text-center text-xs font-semibold uppercase tracking-wider
-                                        border-b border-gray-200 dark:border-gray-700
-                                        ${
-                                            highlightColumn === i
-                                                ? 'bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300'
-                                                : 'bg-gray-50 dark:bg-gray-800/50 text-gray-500 dark:text-gray-400'
-                                        }
-                                    `}
-                                >
-                                    {col}
-                                </th>
-                            ))}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {resolvedItems.map((item, rowIdx) => (
-                            <tr
-                                key={rowIdx}
-                                className="border-b border-gray-100 dark:border-gray-800 last:border-b-0 hover:bg-gray-50/50 dark:hover:bg-gray-800/30 transition-colors"
-                            >
-                                <td className="px-4 py-3 text-sm font-medium text-gray-800 dark:text-gray-200">
+
+            {/* Mobile: stacked cards */}
+            {isMobile ? (
+                <div className="space-y-3">
+                    {resolvedItems.map((item, rowIdx) => (
+                        <div
+                            key={rowIdx}
+                            className="rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden"
+                        >
+                            <div className="px-4 py-2.5 bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700">
+                                <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">
                                     {item.feature}
-                                </td>
+                                </span>
+                            </div>
+                            <div className="divide-y divide-gray-100 dark:divide-gray-800">
                                 {item.values.map((value, colIdx) => (
-                                    <td
+                                    <div
                                         key={colIdx}
+                                        className={`flex items-center justify-between px-4 py-2.5 ${
+                                            highlightColumn === colIdx ? 'bg-teal-50/50 dark:bg-teal-900/10' : ''
+                                        }`}
+                                    >
+                                        <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                                            {resolvedColumns[colIdx]}
+                                        </span>
+                                        <CellContent value={value} />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            ) : (
+                /* Desktop: standard table */
+                <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700">
+                    <table className="w-full text-left">
+                        <thead>
+                            <tr>
+                                <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700">
+                                    {firstColHeader}
+                                </th>
+                                {resolvedColumns.map((col, i) => (
+                                    <th
+                                        key={i}
                                         className={`
-                                            px-4 py-3 text-center
-                                            ${highlightColumn === colIdx ? 'bg-teal-50/50 dark:bg-teal-900/10' : ''}
+                                            px-4 py-3 text-center text-xs font-semibold uppercase tracking-wider
+                                            border-b border-gray-200 dark:border-gray-700
+                                            ${
+                                                highlightColumn === i
+                                                    ? 'bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300'
+                                                    : 'bg-gray-50 dark:bg-gray-800/50 text-gray-500 dark:text-gray-400'
+                                            }
                                         `}
                                     >
-                                        <CellContent value={value} />
-                                    </td>
+                                        {col}
+                                    </th>
                                 ))}
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
+                        </thead>
+                        <tbody>
+                            {resolvedItems.map((item, rowIdx) => (
+                                <tr
+                                    key={rowIdx}
+                                    className="border-b border-gray-100 dark:border-gray-800 last:border-b-0 hover:bg-gray-50/50 dark:hover:bg-gray-800/30 transition-colors"
+                                >
+                                    <td className="px-4 py-3 text-sm font-medium text-gray-800 dark:text-gray-200">
+                                        {item.feature}
+                                    </td>
+                                    {item.values.map((value, colIdx) => (
+                                        <td
+                                            key={colIdx}
+                                            className={`
+                                                px-4 py-3 text-center
+                                                ${highlightColumn === colIdx ? 'bg-teal-50/50 dark:bg-teal-900/10' : ''}
+                                            `}
+                                        >
+                                            <CellContent value={value} />
+                                        </td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            )}
         </motion.div>
     );
 };

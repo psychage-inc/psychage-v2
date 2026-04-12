@@ -181,10 +181,10 @@ const App: React.FC = () => {
                     <ScrollManager />
 
                     {/* App content always renders — Preloader is a fixed overlay (z-9999) that fades out */}
-                    <div className="min-h-screen bg-background font-sans text-gray-900 overflow-x-hidden flex flex-col transition-colors duration-300">
+                    <div className="min-h-[100dvh] bg-background font-sans text-gray-900 overflow-x-hidden flex flex-col transition-colors duration-300">
                             <Navigation />
 
-                            <main id="main-content" className={`flex-grow w-full outline-none min-h-screen ${location.pathname === '/tools/mindmate' ? '' : 'pb-24'} ${location.pathname !== '/' ? 'pt-20' : ''}`} tabIndex={-1}>
+                            <main id="main-content" className={`flex-grow w-full outline-none min-h-[100dvh] ${location.pathname === '/tools/mindmate' ? '' : 'pb-24'} ${location.pathname !== '/' ? 'pt-20' : ''}`} tabIndex={-1}>
                                 <ErrorBoundary
                                     resetKeys={[location.pathname]}
                                     fallback={(error, reset) => (

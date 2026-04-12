@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
-import { Headphones, Minus, Plus, Type, BookOpen } from 'lucide-react';
+import { Headphones, Minus, Plus, Type, BookOpen, Settings2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 import ArticleAudioPlayer from './ArticleAudioPlayer';
 
 interface AccessibilityBarProps {
@@ -25,6 +26,8 @@ const AccessibilityBar: React.FC<AccessibilityBarProps> = ({
 }) => {
     const [showPlayer, setShowPlayer] = useState(false);
     const [fontSizeIndex, setFontSizeIndex] = useState(1); // Default: M (matches article-prose.css base)
+    const [mobileExpanded, setMobileExpanded] = useState(false);
+    const isMobile = useMediaQuery('(max-width: 639px)');
 
     const adjustFontSize = useCallback(
         (direction: 'up' | 'down') => {
@@ -65,74 +68,102 @@ const AccessibilityBar: React.FC<AccessibilityBarProps> = ({
             aria-label="Article reading tools"
         >
             <div className="container mx-auto max-w-content px-6">
-                <div className="flex items-center gap-3 py-2.5 overflow-x-auto hide-scrollbar">
-                    {/* Reading tools label */}
-                    <div className="flex items-center gap-1.5 text-primary shrink-0" aria-hidden="true">
-                        <BookOpen size={16} strokeWidth={2.5} />
-                        <span className="text-xs font-bold uppercase tracking-wider hidden sm:inline">Reading Tools</span>
+                {/* Mobile: collapsed toggle */}
+                {isMobile && !mobileExpanded ? (
+                    <div className="flex items-center justify-between py-2">
+                        <button
+                            onClick={() => setMobileExpanded(true)}
+                            className="flex items-center gap-2 px-3 py-2 min-h-[44px] rounded-full bg-primary/10 text-primary text-sm font-semibold transition-all"
+                            aria-label="Open reading tools"
+                            aria-expanded={false}
+                        >
+                            <Settings2 size={16} />
+                            <span>Reading Tools</span>
+                        </button>
                     </div>
+                ) : (
+                    <>
+                        <div className="flex items-center gap-3 py-2.5 overflow-x-auto hide-scrollbar">
+                            {/* Reading tools label (desktop) / Close button (mobile) */}
+                            {isMobile ? (
+                                <button
+                                    onClick={() => setMobileExpanded(false)}
+                                    className="flex items-center gap-1.5 text-primary shrink-0 min-h-[44px] px-2"
+                                    aria-label="Close reading tools"
+                                >
+                                    <Settings2 size={16} strokeWidth={2.5} />
+                                    <span className="text-xs font-bold uppercase tracking-wider">Close</span>
+                                </button>
+                            ) : (
+                                <div className="flex items-center gap-1.5 text-primary shrink-0" aria-hidden="true">
+                                    <BookOpen size={16} strokeWidth={2.5} />
+                                    <span className="text-xs font-bold uppercase tracking-wider">Reading Tools</span>
+                                </div>
+                            )}
 
-                    <div className="w-px h-5 bg-border/60 shrink-0 hidden sm:block" />
+                            <div className="w-px h-5 bg-border/60 shrink-0 hidden sm:block" />
 
-                    {/* Listen button */}
-                    <button
-                        onClick={() => setShowPlayer(!showPlayer)}
-                        className={cn(
-                            'flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all shrink-0',
-                            showPlayer
-                                ? 'bg-primary text-white shadow-md shadow-primary/25'
-                                : 'bg-primary/10 text-primary hover:bg-primary hover:text-white shadow-sm',
+                            {/* Listen button */}
+                            <button
+                                onClick={() => setShowPlayer(!showPlayer)}
+                                className={cn(
+                                    'flex items-center gap-2 px-4 py-2 min-h-[44px] rounded-full text-sm font-semibold transition-all shrink-0',
+                                    showPlayer
+                                        ? 'bg-primary text-white shadow-md shadow-primary/25'
+                                        : 'bg-primary/10 text-primary hover:bg-primary hover:text-white shadow-sm',
+                                )}
+                            >
+                                <Headphones size={16} />
+                                <span className="hidden sm:inline">Listen to this article</span>
+                                <span className="sm:hidden">Listen</span>
+                            </button>
+
+                            {/* Read summary */}
+                            <button
+                                onClick={scrollToSummary}
+                                className="flex items-center gap-2 px-4 py-2 min-h-[44px] rounded-full text-sm font-semibold bg-primary/10 text-primary hover:bg-primary hover:text-white shadow-sm transition-all shrink-0"
+                            >
+                                <span className="hidden sm:inline">Read Summary</span>
+                                <span className="sm:hidden">Summary</span>
+                            </button>
+
+                            {/* Font size controls */}
+                            <div className="flex items-center gap-1.5 ml-auto shrink-0" role="group" aria-label="Text size controls">
+                                <Type size={12} className="text-primary/50 dark:text-primary/40" aria-hidden="true" />
+                                <button
+                                    onClick={() => adjustFontSize('down')}
+                                    disabled={fontSizeIndex === 0}
+                                    className="w-10 h-10 rounded-full bg-surface border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/10 dark:hover:bg-primary/20 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shadow-sm"
+                                    aria-label={`Decrease font size, currently ${FONT_SIZES[fontSizeIndex].label}`}
+                                >
+                                    <Minus size={14} />
+                                </button>
+                                <span className="text-xs font-semibold text-primary/70 dark:text-primary/60 w-6 text-center select-none" aria-live="polite">
+                                    {FONT_SIZES[fontSizeIndex].label}
+                                </span>
+                                <button
+                                    onClick={() => adjustFontSize('up')}
+                                    disabled={fontSizeIndex === FONT_SIZES.length - 1}
+                                    className="w-10 h-10 rounded-full bg-surface border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/10 dark:hover:bg-primary/20 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shadow-sm"
+                                    aria-label={`Increase font size, currently ${FONT_SIZES[fontSizeIndex].label}`}
+                                >
+                                    <Plus size={14} />
+                                </button>
+                                <Type size={18} className="text-primary/70 dark:text-primary/60" aria-hidden="true" />
+                            </div>
+                        </div>
+
+                        {/* Audio player (expandable) */}
+                        {showPlayer && (
+                            <div className="pb-3">
+                                <ArticleAudioPlayer
+                                    audioUrl={audioUrl}
+                                    articleText={articleText}
+                                    articleTitle={articleTitle}
+                                />
+                            </div>
                         )}
-                    >
-                        <Headphones size={16} />
-                        <span className="hidden sm:inline">Listen to this article</span>
-                        <span className="sm:hidden">Listen</span>
-                    </button>
-
-                    {/* Read summary */}
-                    <button
-                        onClick={scrollToSummary}
-                        className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-primary/10 text-primary hover:bg-primary hover:text-white shadow-sm transition-all shrink-0"
-                    >
-                        <span className="hidden sm:inline">Read Summary</span>
-                        <span className="sm:hidden">Summary</span>
-                    </button>
-
-                    {/* Font size controls */}
-                    <div className="flex items-center gap-1.5 ml-auto shrink-0" role="group" aria-label="Text size controls">
-                        <Type size={12} className="text-primary/50 dark:text-primary/40" aria-hidden="true" />
-                        <button
-                            onClick={() => adjustFontSize('down')}
-                            disabled={fontSizeIndex === 0}
-                            className="w-7 h-7 rounded-full bg-surface border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/10 dark:hover:bg-primary/20 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shadow-sm"
-                            aria-label={`Decrease font size, currently ${FONT_SIZES[fontSizeIndex].label}`}
-                        >
-                            <Minus size={12} />
-                        </button>
-                        <span className="text-xs font-semibold text-primary/70 dark:text-primary/60 w-6 text-center select-none" aria-live="polite">
-                            {FONT_SIZES[fontSizeIndex].label}
-                        </span>
-                        <button
-                            onClick={() => adjustFontSize('up')}
-                            disabled={fontSizeIndex === FONT_SIZES.length - 1}
-                            className="w-7 h-7 rounded-full bg-surface border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/10 dark:hover:bg-primary/20 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shadow-sm"
-                            aria-label={`Increase font size, currently ${FONT_SIZES[fontSizeIndex].label}`}
-                        >
-                            <Plus size={12} />
-                        </button>
-                        <Type size={18} className="text-primary/70 dark:text-primary/60" aria-hidden="true" />
-                    </div>
-                </div>
-
-                {/* Audio player (expandable) */}
-                {showPlayer && (
-                    <div className="pb-3">
-                        <ArticleAudioPlayer
-                            audioUrl={audioUrl}
-                            articleText={articleText}
-                            articleTitle={articleTitle}
-                        />
-                    </div>
+                    </>
                 )}
             </div>
         </div>

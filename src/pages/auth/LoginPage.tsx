@@ -198,7 +198,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
     };
 
     return (
-        <div className="h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden bg-background">
+        <div className="min-h-[100dvh] flex items-center justify-center px-4 py-20 relative overflow-hidden bg-background">
             {/* Dynamic Background */}
                         <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
 

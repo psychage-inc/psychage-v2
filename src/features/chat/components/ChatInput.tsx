@@ -51,16 +51,16 @@ export default function ChatInput({ onSend, onStop, isStreaming, onCrisisClick }
             placeholder="Ask anything about mental health..."
             minRows={1}
             maxRows={8}
-            className="w-full resize-none pl-4 pr-14 py-3 border border-slate-300 dark:border-slate-600 rounded-2xl focus:border-teal-400 focus:ring-2 focus:ring-teal-100 dark:focus:ring-teal-900/30 outline-none text-[15px] text-slate-900 dark:text-slate-100 placeholder-slate-400 bg-white dark:bg-slate-800 transition-all"
+            className="w-full resize-none pl-4 pr-14 py-3 border border-slate-300 dark:border-slate-600 rounded-2xl focus:border-teal-400 focus:ring-2 focus:ring-teal-100 dark:focus:ring-teal-900/30 outline-none text-base text-slate-900 dark:text-slate-100 placeholder-slate-400 bg-white dark:bg-slate-800 transition-all"
             aria-label="Message input"
           />
 
           {/* Send / Stop button */}
-          <div className="absolute right-2 bottom-2">
+          <div className="absolute right-1.5 bottom-1.5">
             {isStreaming ? (
               <button
                 onClick={onStop}
-                className="w-8 h-8 rounded-full bg-slate-800 dark:bg-slate-200 text-white dark:text-slate-800 flex items-center justify-center hover:bg-slate-700 dark:hover:bg-slate-300 transition-colors"
+                className="w-10 h-10 rounded-full bg-slate-800 dark:bg-slate-200 text-white dark:text-slate-800 flex items-center justify-center hover:bg-slate-700 dark:hover:bg-slate-300 transition-colors"
                 aria-label="Stop generating"
               >
                 <Square size={14} fill="currentColor" />
@@ -69,7 +69,7 @@ export default function ChatInput({ onSend, onStop, isStreaming, onCrisisClick }
               <button
                 onClick={handleSend}
                 disabled={!hasContent || isOverLimit}
-                className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
+                className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
                   hasContent && !isOverLimit
                     ? 'bg-teal-600 text-white hover:bg-teal-700 cursor-pointer'
                     : 'bg-slate-200 dark:bg-slate-700 text-slate-400 cursor-not-allowed'

@@ -10,7 +10,7 @@ const ContentShowcase = React.lazy(() => import('@/components/home/v2/ContentWor
 
 const HomePage: React.FC = () => {
   return (
-    <div className="relative bg-[#FAF9F6] min-h-screen">
+    <div className="relative bg-[#FAF9F6] min-h-[100dvh]">
       <SEO
         title="Psychage — Free Mental Health Education, Tools & Provider Directory"
         description="Understand mental health clearly, freely, and privately. Evidence-based articles, a symptom navigator, interactive tools, and 423K+ verified providers — in 5 languages."

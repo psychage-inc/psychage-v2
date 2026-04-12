@@ -91,9 +91,13 @@
     .scrollbar-hide::-webkit-scrollbar {
         display: none;
     }
-    .scrollbar-hide {
+    .scrollbar-hide,
+    .hide-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
     }
 
     /* Touch target minimum — WCAG 2.5.8 */

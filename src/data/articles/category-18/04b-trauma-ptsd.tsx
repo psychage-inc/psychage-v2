@@ -16,6 +16,7 @@ export const articles: Article[] = [
   {
     id: catId(36),
     slug: 'trauma-focused-therapy-what-works',
+    status: 'archived',
     title: 'Trauma-Focused Therapy: What Works and Why',
     description:
       'A comprehensive guide to evidence-based trauma therapies including CPT, PE, and EMDR, helping you understand treatment options and choose what\'s right for you.',
@@ -336,6 +337,7 @@ export const articles: Article[] = [
   {
     id: catId(37),
     slug: 'emdr-eye-movement-therapy-trauma',
+    status: 'archived',
     title: 'EMDR: Eye Movement Therapy for Trauma',
     description:
       'An in-depth exploration of Eye Movement Desensitization and Reprocessing therapy, how it works, what to expect, and its effectiveness for trauma recovery.',
@@ -636,6 +638,7 @@ export const articles: Article[] = [
   {
     id: catId(38),
     slug: 'somatic-therapy-healing-trauma-body',
+    status: 'archived',
     title: 'Somatic Therapy: Healing Trauma Through the Body',
     description:
       'Exploring body-centered approaches to trauma recovery that work directly with physical sensations, movement, and the nervous system to release stored trauma.',
@@ -948,6 +951,7 @@ export const articles: Article[] = [
   {
     id: catId(39),
     slug: 'trauma-attachment-intimate-relationships',
+    status: 'archived',
     title: 'Trauma, Attachment, and Intimate Relationships',
     description:
       'How trauma affects romantic relationships, attachment patterns, and intimacy---and how couples can heal together while honoring individual recovery.',
@@ -1269,6 +1273,7 @@ export const articles: Article[] = [
   {
     id: catId(40),
     slug: 'religious-spiritual-trauma-women',
+    status: 'archived',
     title: 'Religious and Spiritual Trauma in Women',
     description:
       'Understanding the psychological impact of harmful religious teachings and experiences, particularly those targeting women, and pathways to healing and meaning-making.',

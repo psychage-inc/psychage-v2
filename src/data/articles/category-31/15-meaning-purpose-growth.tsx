@@ -14,19 +14,19 @@ import {
 } from '../../../components/article/blocks';
 
 // ============================================================================
-// Subcategory 2 --- Meaning, Purpose & Existential Growth | Articles 7--11
+// Subcategory 15 --- Meaning, Purpose & Existential Growth (absorbed from Cat 22) | Articles 65--69
 // ============================================================================
 
-export const meaningExistentialArticles: Article[] = [
+export const meaningPurposeGrowthArticles: Article[] = [
   // --------------------------------------------------------------------------
   // PSY-SPR-007 | Finding Purpose After Loss
   // --------------------------------------------------------------------------
   {
-    id: catId(7),
+    id: catId(65),
     slug: 'finding-purpose-after-loss',
     title: 'Finding Purpose After Loss: Existential Growth in Grief',
     description: 'An evidence-based exploration of how people find renewed meaning and purpose after significant loss, drawing on Viktor Frankl\'s logotherapy, post-traumatic growth research, and modern bereavement psychology.',
-    image: '/images/articles/cat22/cover-007.svg',
+    image: '/images/articles/cat31/cover-007.svg',
     category: CATEGORY_SPIRITUALITY_MEANING,
     readTime: 13,
     publishedAt: '2026-04-01',
@@ -414,11 +414,11 @@ export const meaningExistentialArticles: Article[] = [
   // PSY-SPR-008 | The Psychology of Meaning
   // --------------------------------------------------------------------------
   {
-    id: catId(8),
+    id: catId(66),
     slug: 'psychology-of-meaning-purpose-mental-health',
     title: 'The Psychology of Meaning: Why Purpose Matters for Mental Health',
     description: 'A comprehensive review of psychological research on meaning in life --- how it protects mental health, what happens when it is absent, and practical approaches for cultivating a deeper sense of purpose.',
-    image: '/images/articles/cat22/cover-008.svg',
+    image: '/images/articles/cat31/cover-008.svg',
     category: CATEGORY_SPIRITUALITY_MEANING,
     readTime: 14,
     publishedAt: '2026-04-01',
@@ -789,11 +789,11 @@ export const meaningExistentialArticles: Article[] = [
   // PSY-SPR-009 | Existential Anxiety: Confronting Life's Big Questions
   // --------------------------------------------------------------------------
   {
-    id: catId(9),
+    id: catId(67),
     slug: 'existential-anxiety-big-questions',
     title: "Existential Anxiety: Confronting Life's Big Questions",
     description: 'An in-depth exploration of existential anxiety through the lens of Irvin Yalom\'s four existential givens --- death, freedom, isolation, and meaninglessness --- and the psychotherapeutic approaches that help people live courageously alongside these realities.',
-    image: '/images/articles/cat22/cover-009.svg',
+    image: '/images/articles/cat31/cover-009.svg',
     category: CATEGORY_SPIRITUALITY_MEANING,
     readTime: 14,
     publishedAt: '2026-04-01',
@@ -1141,11 +1141,11 @@ export const meaningExistentialArticles: Article[] = [
   // PSY-SPR-010 | Moral Injury: When Values Are Violated
   // --------------------------------------------------------------------------
   {
-    id: catId(10),
+    id: catId(68),
     slug: 'moral-injury-values-violated',
     title: 'Moral Injury: When Values Are Violated',
     description: 'A comprehensive exploration of moral injury --- the deep psychological wound that occurs when a person perpetrates, witnesses, or fails to prevent acts that violate their moral code --- and the therapeutic approaches that help people heal.',
-    image: '/images/articles/cat22/cover-010.svg',
+    image: '/images/articles/cat31/cover-010.svg',
     category: CATEGORY_SPIRITUALITY_MEANING,
     readTime: 14,
     publishedAt: '2026-04-01',
@@ -1425,11 +1425,11 @@ export const meaningExistentialArticles: Article[] = [
   // PSY-SPR-011 | The Search for Authenticity
   // --------------------------------------------------------------------------
   {
-    id: catId(11),
+    id: catId(69),
     slug: 'search-for-authenticity-living-true',
     title: 'The Search for Authenticity: Living True to Yourself',
     description: 'An exploration of authenticity through the lens of humanistic psychology --- what it means to live as your true self, why it is so difficult, and how self-compassion and awareness can help people overcome the barriers to genuine self-expression.',
-    image: '/images/articles/cat22/cover-011.svg',
+    image: '/images/articles/cat31/cover-011.svg',
     category: CATEGORY_SPIRITUALITY_MEANING,
     readTime: 13,
     publishedAt: '2026-04-01',

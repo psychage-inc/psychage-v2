@@ -14,19 +14,19 @@ import {
 } from '../../../components/article/blocks';
 
 // ============================================================================
-// Subcategory 1 --- Existential Psychology | Articles 1--6
+// Subcategory 14 --- Existential Foundations (absorbed from Cat 22) | Articles 59--64
 // ============================================================================
 
-export const existentialPsychologyArticles: Article[] = [
+export const existentialFoundationsArticles: Article[] = [
   // --------------------------------------------------------------------------
   // PSY-SPR-001 | Existential Anxiety
   // --------------------------------------------------------------------------
   {
-    id: catId(1),
+    id: catId(59),
     slug: 'existential-anxiety-confronting-mortality-freedom-meaninglessness',
     title: 'Existential Anxiety: Confronting Mortality, Freedom, and Meaninglessness',
     description: 'A deep dive into existential anxiety --- the dread that arises from confronting mortality, radical freedom, and the absence of inherent meaning --- and how existential therapy helps people live more fully.',
-    image: '/images/articles/cat22/cover-001.svg',
+    image: '/images/articles/cat31/cover-001.svg',
     category: CATEGORY_SPIRITUALITY_MEANING,
     readTime: 12,
     publishedAt: '2026-03-26',
@@ -405,11 +405,11 @@ export const existentialPsychologyArticles: Article[] = [
   // PSY-SPR-002 | The Search for Meaning
   // --------------------------------------------------------------------------
   {
-    id: catId(2),
+    id: catId(60),
     slug: 'search-for-meaning-viktor-frankls-logotherapy-modern-applications',
     title: "The Search for Meaning: Viktor Frankl's Logotherapy and Modern Applications",
     description: "An exploration of Viktor Frankl's logotherapy --- the psychotherapy built on the premise that the search for meaning is the primary drive of human life --- and how modern adaptations help people find purpose.",
-    image: '/images/articles/cat22/cover-002.svg',
+    image: '/images/articles/cat31/cover-002.svg',
     category: CATEGORY_SPIRITUALITY_MEANING,
     readTime: 11,
     publishedAt: '2026-03-26',
@@ -734,11 +734,11 @@ export const existentialPsychologyArticles: Article[] = [
   // PSY-SPR-003 | Death Anxiety
   // --------------------------------------------------------------------------
   {
-    id: catId(3),
+    id: catId(61),
     slug: 'death-anxiety-why-thinking-about-mortality-affects-daily-life',
     title: 'Death Anxiety: Why Thinking About Mortality Affects Your Daily Life',
     description: 'An evidence-based guide to death anxiety --- how awareness of mortality shapes your behavior, relationships, and choices, and what you can do when the fear becomes overwhelming.',
-    image: '/images/articles/cat22/cover-003.svg',
+    image: '/images/articles/cat31/cover-003.svg',
     category: CATEGORY_SPIRITUALITY_MEANING,
     readTime: 10,
     publishedAt: '2026-03-26',
@@ -976,11 +976,11 @@ export const existentialPsychologyArticles: Article[] = [
   // PSY-SPR-004 | Existential Loneliness
   // --------------------------------------------------------------------------
   {
-    id: catId(4),
+    id: catId(62),
     slug: 'existential-loneliness-type-of-isolation-no-relationship-can-fix',
     title: 'Existential Loneliness: The Type of Isolation That No Relationship Can Fix',
     description: 'An exploration of existential loneliness --- the fundamental aloneness inherent in human consciousness --- and how people can learn to live with it rather than flee from it.',
-    image: '/images/articles/cat22/cover-004.svg',
+    image: '/images/articles/cat31/cover-004.svg',
     category: CATEGORY_SPIRITUALITY_MEANING,
     readTime: 10,
     publishedAt: '2026-03-26',
@@ -1226,11 +1226,11 @@ export const existentialPsychologyArticles: Article[] = [
   // PSY-SPR-005 | Freedom and Responsibility
   // --------------------------------------------------------------------------
   {
-    id: catId(5),
+    id: catId(63),
     slug: 'freedom-and-responsibility-when-too-many-choices-cause-paralysis',
     title: 'Freedom and Responsibility: When Too Many Choices Cause Paralysis',
     description: 'An exploration of existential freedom --- the anxiety-inducing reality that you are the author of your life --- and how the paradox of choice, decision fatigue, and responsibility avoidance affect mental health.',
-    image: '/images/articles/cat22/cover-005.svg',
+    image: '/images/articles/cat31/cover-005.svg',
     category: CATEGORY_SPIRITUALITY_MEANING,
     readTime: 10,
     publishedAt: '2026-03-26',
@@ -1475,11 +1475,11 @@ export const existentialPsychologyArticles: Article[] = [
   // PSY-SPR-006 | The Absurd
   // --------------------------------------------------------------------------
   {
-    id: catId(6),
+    id: catId(64),
     slug: 'the-absurd-what-camus-can-teach-us-about-living-without-guaranteed-meaning',
     title: 'The Absurd: What Camus Can Teach Us About Living Without Guaranteed Meaning',
     description: "An exploration of Albert Camus's philosophy of the absurd --- the confrontation between humanity's search for meaning and the universe's silence --- and what it offers for psychological resilience.",
-    image: '/images/articles/cat22/cover-006.svg',
+    image: '/images/articles/cat31/cover-006.svg',
     category: CATEGORY_SPIRITUALITY_MEANING,
     readTime: 10,
     publishedAt: '2026-03-26',

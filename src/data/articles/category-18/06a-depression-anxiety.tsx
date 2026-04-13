@@ -16,6 +16,7 @@ export const articles: Article[] = [
   {
     id: catId(51),
     slug: 'gender-differences-depression-women',
+    status: 'archived',
     title: 'Gender Differences in Depression: Why Women Experience Higher Rates',
     description:
       'Exploring why women are twice as likely to experience depression as men, examining biological, psychological, and social factors.',
@@ -341,6 +342,7 @@ export const articles: Article[] = [
   {
     id: catId(52),
     slug: 'hormonal-influences-mood-menstrual-cycle',
+    status: 'archived',
     title: 'Hormonal Influences on Mood: The Menstrual Cycle and Emotional Well-being',
     description:
       'Understanding how menstrual cycle hormones affect mood, energy, and emotional regulation across the month.',
@@ -675,6 +677,7 @@ export const articles: Article[] = [
   {
     id: catId(53),
     slug: 'anxiety-disorders-women',
+    status: 'archived',
     title: 'Anxiety Disorders in Women: Beyond General Anxiety',
     description:
       'Understanding the specific anxiety disorders more common in women and gender differences in anxiety presentation and treatment.',
@@ -1001,6 +1004,7 @@ export const articles: Article[] = [
   {
     id: catId(54),
     slug: 'pmdd-and-depression-anxiety',
+    status: 'archived',
     title: 'Premenstrual Dysphoric Disorder (PMDD): When PMS Becomes Severe',
     description:
       'Understanding PMDD—a severe form of premenstrual syndrome causing debilitating mood symptoms that require clinical treatment.',
@@ -1352,6 +1356,7 @@ export const articles: Article[] = [
   {
     id: catId(55),
     slug: 'depression-anxiety-perimenopause-menopause',
+    status: 'archived',
     title: 'Depression and Anxiety During Perimenopause and Menopause',
     description:
       'Understanding mental health challenges during the menopausal transition and effective treatment approaches.',

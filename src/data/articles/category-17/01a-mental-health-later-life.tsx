@@ -18,6 +18,7 @@ export const mentalHealthLaterLifeArticlesA: Article[] = [
   {
     id: catId(1),
     slug: 'the-landscape-of-mental-health-in-later-life-what-changes-and-what-does-not',
+    status: 'archived',
     title: 'The Landscape of Mental Health in Later Life: What Changes and What Does Not',
     description:
       'Explore how mental health evolves with age--what is normal aging, what constitutes illness, and why older adults face unique psychological challenges and strengths.',
@@ -469,6 +470,7 @@ export const mentalHealthLaterLifeArticlesA: Article[] = [
   {
     id: catId(2),
     slug: 'normal-aging-vs-mental-illness-recognizing-the-difference',
+    status: 'archived',
     title: 'Normal Aging vs. Mental Illness: Recognizing the Difference',
     description:
       'Learn to distinguish between normal age-related changes and treatable mental illness--from memory lapses vs. dementia to sadness vs. depression.',
@@ -810,6 +812,7 @@ export const mentalHealthLaterLifeArticlesA: Article[] = [
   {
     id: catId(3),
     slug: 'why-late-life-mental-health-is-often-overlooked-and-undertreated',
+    status: 'archived',
     title: 'Why Late-Life Mental Health Is Often Overlooked and Undertreated',
     description:
       'Examine the systemic, cultural, and individual factors that cause mental illness in older adults to be missed--and what can change.',
@@ -1151,6 +1154,7 @@ export const mentalHealthLaterLifeArticlesA: Article[] = [
   {
     id: catId(4),
     slug: 'the-brain-in-later-life-neuroplasticity-resilience-and-decline',
+    status: 'archived',
     title: 'The Brain in Later Life: Neuroplasticity, Resilience, and Decline',
     description:
       'Understand how the aging brain changes--what declines, what improves, and how neuroplasticity enables learning and recovery throughout life.',
@@ -1519,6 +1523,7 @@ export const mentalHealthLaterLifeArticlesA: Article[] = [
   {
     id: catId(5),
     slug: 'social-isolation-and-loneliness-in-older-adults-the-hidden-epidemic',
+    status: 'archived',
     title: 'Social Isolation and Loneliness in Older Adults: The Hidden Epidemic',
     description:
       'Examine the profound health impacts of social isolation and loneliness in older adults--and evidence-based strategies to reconnect.',

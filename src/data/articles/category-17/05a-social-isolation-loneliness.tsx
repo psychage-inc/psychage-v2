@@ -21,6 +21,7 @@ export const socialIsolationLonelinessArticlesA: Article[] = [
   {
     id: catId(31),
     slug: 'loneliness-health-consequences-older-adults',
+    status: 'archived',
     title: 'The Health Consequences of Loneliness in Older Adults',
     description: `Loneliness is not just emotional pain---it increases mortality risk by 26%, raises dementia risk by 50%, and accelerates cognitive decline comparable to smoking 15 cigarettes daily.`,
     image: '/images/articles/cat17/cover-031.svg',
@@ -314,6 +315,7 @@ export const socialIsolationLonelinessArticlesA: Article[] = [
   {
     id: catId(32),
     slug: 'social-isolation-vs-loneliness-understanding-difference',
+    status: 'archived',
     title: 'Social Isolation vs. Loneliness: Understanding the Difference',
     description: `Social isolation is objective lack of contact; loneliness is subjective feeling of disconnection. You can be surrounded by people and lonely, or live alone and connected.`,
     image: '/images/articles/cat17/cover-032.svg',
@@ -597,6 +599,7 @@ export const socialIsolationLonelinessArticlesA: Article[] = [
   {
     id: catId(33),
     slug: 'technology-video-calls-social-media-seniors',
+    status: 'archived',
     title: 'Technology and Connection: Video Calls and Social Media for Seniors',
     description: `Technology can reduce loneliness in older adults---video calls with family, online communities, and social media---but requires training, accessibility, and realistic expectations.`,
     image: '/images/articles/cat17/cover-033.svg',
@@ -863,6 +866,7 @@ export const socialIsolationLonelinessArticlesA: Article[] = [
   {
     id: catId(34),
     slug: 'senior-centers-community-programs-social-connection',
+    status: 'archived',
     title: 'Senior Centers and Community Programs for Social Connection',
     description: `Senior centers offer meals, activities, exercise classes, and social connection---serving 1 million older adults daily and reducing isolation, depression, and healthcare costs.`,
     image: '/images/articles/cat17/cover-034.svg',
@@ -1150,6 +1154,7 @@ export const socialIsolationLonelinessArticlesA: Article[] = [
   {
     id: catId(35),
     slug: 'volunteering-purpose-retirement-mental-health',
+    status: 'archived',
     title: 'Volunteering and Purpose in Retirement: Mental Health Benefits',
     description: `Volunteering in retirement reduces depression by 40%, increases life satisfaction, and provides purpose---the antidote to the identity crisis many retirees face.`,
     image: '/images/articles/cat17/cover-035.svg',

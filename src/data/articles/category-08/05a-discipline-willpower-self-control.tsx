@@ -19,6 +19,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
   {
     id: catId(41),
     slug: 'what-is-self-control-brain-manages-impulses',
+    status: 'archived',
     title: 'What Is Self-Control? How the Brain Manages Impulses',
     description: 'Explore the neuroscience of self-control, from prefrontal regulation to dopamine pathways and how the brain weighs immediate rewards against long-term goals.',
     image: "/images/articles/cat08/cover-041.svg",
@@ -276,6 +277,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
   {
     id: catId(42),
     slug: 'willpower-battery-self-control-depletion',
+    status: 'archived',
     title: 'The Willpower Battery: Does Self-Control Really Get Depleted?',
     description: 'Examine the ego depletion debate, recent replications challenging the "willpower as limited resource" model, and what this means for behavior change.',
     image: "/images/articles/cat08/cover-042.svg",
@@ -594,6 +596,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
   {
     id: catId(43),
     slug: 'delayed-gratification-marshmallow-test-actually-proved',
+    status: 'archived',
     title: `Delayed Gratification: What the Marshmallow Test Actually Proved (And What It Didn\'t)`,
     description: `Revisit the famous Stanford marshmallow experiment, what recent replications revealed about self-control and socioeconomic context, and why 'just wait' isn\'t universal advice.`,
     image: "/images/articles/cat08/cover-043.svg",
@@ -908,6 +911,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
   {
     id: catId(44),
     slug: 'how-to-make-difficult-tasks-easier-psychology-pre-commitment',
+    status: 'archived',
     title: 'How to Make Difficult Tasks Easier: The Psychology of Pre-Commitment',
     description: 'Learn how pre-commitment devices lock in future behavior when motivation is high, reducing the need for in-the-moment self-control.',
     image: "/images/articles/cat08/cover-044.svg",
@@ -1213,6 +1217,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
   {
     id: catId(45),
     slug: 'discipline-myth-consistency-beats-intensity-every-time',
+    status: 'archived',
     title: 'The Discipline Myth: Why Consistency Beats Intensity Every Time',
     description: 'Discover why showing up daily with modest effort outperforms sporadic bursts of heroic discipline, and how to build sustainable routines.',
     image: "/images/articles/cat08/cover-045.svg",

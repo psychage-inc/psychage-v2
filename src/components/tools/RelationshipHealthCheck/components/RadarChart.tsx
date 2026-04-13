@@ -34,38 +34,38 @@ export const RadarChart: React.FC<RadarChartProps> = ({ domainScores, skipPartne
       <ResponsiveContainer width="100%" height={300}>
         <RechartsRadarChart data={data} cx="50%" cy="50%" outerRadius="75%">
           <PolarGrid
-            stroke="#e5e7eb"
+            stroke="var(--color-border)"
             strokeDasharray="3 3"
           />
           <PolarAngleAxis
             dataKey="domain"
-            tick={{ fill: '#6b7280', fontSize: 12, fontWeight: 600 }}
+            tick={{ fill: 'var(--color-text-secondary)', fontSize: 12, fontWeight: 600 }}
           />
           <PolarRadiusAxis
             angle={90}
             domain={[0, 100]}
-            tick={{ fill: '#9ca3af', fontSize: 10 }}
+            tick={{ fill: 'var(--color-text-tertiary)', fontSize: 10 }}
             tickCount={5}
           />
           <Tooltip
             contentStyle={{
-              background: '#fff',
-              border: '1px solid #e5e7eb',
+              background: 'var(--color-surface)',
+              border: '1px solid var(--color-border)',
               borderRadius: '0.75rem',
               padding: '0.5rem 0.75rem',
-              boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)',
+              boxShadow: 'var(--shadow-md)',
             }}
             formatter={(value: number) => [`${value}/100`, 'Score']}
           />
           <Radar
             name="Score"
             dataKey="score"
-            stroke="#20B8A6"
-            fill="#20B8A6"
-            fillOpacity={0.2}
+            stroke="var(--color-primary)"
+            fill="var(--color-primary)"
+            fillOpacity={0.15}
             strokeWidth={2}
-            dot={{ r: 4, fill: '#20B8A6', strokeWidth: 0 }}
-            activeDot={{ r: 6, fill: '#20B8A6', stroke: '#fff', strokeWidth: 2 }}
+            dot={{ r: 4, fill: 'var(--color-primary)', strokeWidth: 0 }}
+            activeDot={{ r: 6, fill: 'var(--color-primary)', stroke: 'var(--color-surface)', strokeWidth: 2 }}
           />
         </RechartsRadarChart>
       </ResponsiveContainer>

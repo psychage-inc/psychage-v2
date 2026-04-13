@@ -16,6 +16,7 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
   {
     id: catId(1),
     slug: 'how-habits-form-cue-routine-reward',
+    status: 'archived',
     title: 'How Habits Form: The Habit Loop of Cue, Routine, and Reward',
     description: 'Understand the three-part neurological pattern that drives every habit and learn how to use this loop to build better behaviors.',
     image: "/images/articles/cat08/cover-001.svg",
@@ -393,6 +394,7 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
   {
     id: catId(2),
     slug: 'neuroscience-of-habits-brain-autopilot',
+    status: 'archived',
     title: 'The Neuroscience of Habits: Why Your Brain Loves Autopilot',
     description: 'Explore the brain regions and neurochemical processes that make habits automatic, and why your brain is wired to prefer effortless routines.',
     image: "/images/articles/cat08/cover-002.svg",
@@ -729,6 +731,7 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
   {
     id: catId(3),
     slug: 'how-long-to-build-a-habit',
+    status: 'archived',
     title: `How Long Does It Really Take to Build a Habit? (It's Not 21 Days)`,
     description: "The truth about habit formation timelines, what the research actually shows, and why individual differences matter more than averages.",
     image: "/images/articles/cat08/cover-003.svg",
@@ -1084,6 +1087,7 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
   {
     id: catId(4),
     slug: 'atomic-habits-small-changes-big-results',
+    status: 'archived',
     title: 'Atomic Habits in Practice: Small Changes That Create Big Results',
     description: 'Learn how tiny, consistent improvements compound over time and why focusing on systems instead of goals leads to lasting change.',
     image: "/images/articles/cat08/cover-004.svg",
@@ -1503,6 +1507,7 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
   {
     id: catId(5),
     slug: 'keystone-habits-chain-reaction',
+    status: 'archived',
     title: 'Keystone Habits: The One Change That Triggers a Chain Reaction',
     description: 'Discover how certain foundational habits create ripple effects that transform multiple areas of your life simultaneously.',
     image: "/images/articles/cat08/cover-005.svg",

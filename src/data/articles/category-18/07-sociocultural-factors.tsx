@@ -16,6 +16,7 @@ export const articles: Article[] = [
   {
     id: catId(61),
     slug: 'beauty-standards-body-image-mental-health',
+    status: 'archived',
     title: 'Beauty Standards, Body Image, and Mental Health in Women',
     description:
       'How cultural beauty ideals and appearance pressures affect women\'s self-esteem, body image, and psychological wellbeing.',
@@ -449,6 +450,7 @@ export const articles: Article[] = [
   {
     id: catId(62),
     slug: 'motherhood-mental-health-identity',
+    status: 'archived',
     title: 'Motherhood, Identity, and Mental Health: Navigating the Transition',
     description:
       'How becoming a mother affects identity, autonomy, and psychological wellbeing beyond postpartum depression.',
@@ -821,6 +823,7 @@ export const articles: Article[] = [
   {
     id: catId(63),
     slug: 'work-life-balance-women-mental-health',
+    status: 'archived',
     title: 'The Myth of Work-Life Balance: Women, Career, and Mental Health',
     description:
       'How workplace demands, domestic labor, and societal expectations create chronic stress and burnout for women.',
@@ -1083,6 +1086,7 @@ export const articles: Article[] = [
   {
     id: catId(64),
     slug: 'childlessness-mental-health-women',
+    status: 'archived',
     title: 'Childlessness and Mental Health: Voluntary and Involuntary',
     description:
       'The psychological experiences of women without children—both by choice and circumstance—and societal judgment they face.',
@@ -1277,6 +1281,7 @@ export const articles: Article[] = [
   {
     id: catId(65),
     slug: 'aging-mental-health-older-women',
+    status: 'archived',
     title: 'Aging and Mental Health in Women: Beyond Menopause',
     description:
       'How aging affects women\'s psychological wellbeing, identity, and mental health in later life.',
@@ -1481,6 +1486,7 @@ export const articles: Article[] = [
   {
     id: catId(66),
     slug: 'intersectionality-women-mental-health',
+    status: 'archived',
     title: 'Intersectionality and Women\'s Mental Health: Race, Class, Identity',
     description:
       'How overlapping identities shape women\'s mental health experiences and access to care.',

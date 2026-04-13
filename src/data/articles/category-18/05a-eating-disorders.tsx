@@ -16,6 +16,7 @@ export const articles: Article[] = [
   {
     id: catId(41),
     slug: 'anorexia-nervosa-women-beyond-stereotypes',
+    status: 'archived',
     title: 'Anorexia Nervosa in Women: Beyond the Stereotypes',
     description:
       'Understanding anorexia nervosa beyond stereotypes, including medical complications, psychological features, and evidence-based treatment approaches.',
@@ -341,6 +342,7 @@ export const articles: Article[] = [
   {
     id: catId(42),
     slug: 'bulimia-nervosa-cycle-binging-purging',
+    status: 'archived',
     title: 'Bulimia Nervosa: The Cycle of Binging and Purging',
     description:
       'Understanding bulimia nervosa, the binge-purge cycle, medical complications, psychological factors, and evidence-based treatments for recovery.',
@@ -654,6 +656,7 @@ export const articles: Article[] = [
   {
     id: catId(43),
     slug: 'binge-eating-disorder-most-common',
+    status: 'archived',
     title: 'Binge Eating Disorder: The Most Common Eating Disorder',
     description:
       'Understanding binge eating disorder, its distinct features from bulimia, medical and psychological impacts, and evidence-based treatments.',
@@ -948,6 +951,7 @@ export const articles: Article[] = [
   {
     id: catId(44),
     slug: 'arfid-orthorexia-emerging-eating-disorders',
+    status: 'archived',
     title: 'ARFID and Orthorexia: Emerging Eating Disorders',
     description:
       'Understanding Avoidant/Restrictive Food Intake Disorder and orthorexia nervosa---emerging eating disorder presentations with distinct features.',
@@ -1264,6 +1268,7 @@ export const articles: Article[] = [
   {
     id: catId(45),
     slug: 'diet-culture-eating-disorders-women',
+    status: 'archived',
     title: 'Diet Culture and Eating Disorders in Women',
     description:
       'Examining how diet culture contributes to eating disorder development in women and strategies for resisting harmful cultural messages.',

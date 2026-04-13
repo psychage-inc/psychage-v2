@@ -12,3 +12,5 @@ export { spiritualcriseschallengesArticles } from './10-spiritual-crises-challen
 export { spiritualpracticesmethodsArticles } from './11-spiritual-practices-methods';
 export { spiritualpsychologicalintegrationArticles } from './12-spiritual-psychological-integration';
 export { valuesethicsconscienceArticles } from './13-values-ethics-conscience';
+export { existentialFoundationsArticles } from './14-existential-foundations';
+export { meaningPurposeGrowthArticles } from './15-meaning-purpose-growth';

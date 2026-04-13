@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LogIn, Sparkles } from 'lucide-react';
+import { LogIn } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 import AuthModal from './AuthModal';
 
@@ -42,9 +42,6 @@ const AuthGate: React.FC<AuthGateProps> = ({
             <>
                 <div className="rounded-xl border border-border/50 bg-surface/50 backdrop-blur-sm p-5">
                     <div className="flex items-start gap-3">
-                        <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
-                            <Sparkles size={18} />
-                        </div>
                         <div className="flex-1">
                             <p className="text-sm text-text-secondary leading-relaxed mb-3">
                                 {message}

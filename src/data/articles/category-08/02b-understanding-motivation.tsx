@@ -16,6 +16,7 @@ export const understandingMotivationArticlesB: Article[] = [
   {
     id: catId(16),
     slug: 'how-purpose-values-drive-sustained-motivation',
+    status: 'archived',
     title: 'How Purpose and Values Drive Sustained Motivation',
     description: 'Learn why connecting your goals to core values and sense of purpose creates more durable motivation than willpower or external rewards alone.',
     image: "/images/articles/cat08/cover-016.svg",
@@ -433,6 +434,7 @@ export const understandingMotivationArticlesB: Article[] = [
   {
     id: catId(17),
     slug: 'reward-systems-incentives-without-undermining-motivation',
+    status: 'archived',
     title: 'Reward Systems: How to Use Incentives Without Undermining Intrinsic Motivation',
     description: 'Discover evidence-based strategies for using rewards and incentives effectively---without destroying the internal motivation that makes behavior sustainable.',
     image: "/images/articles/cat08/cover-017.svg",
@@ -844,6 +846,7 @@ export const understandingMotivationArticlesB: Article[] = [
   {
     id: catId(18),
     slug: 'role-autonomy-motivation-why-choice-matters',
+    status: 'archived',
     title: 'The Role of Autonomy in Motivation: Why Choice Matters',
     description: 'Explore why feeling self-directed---rather than controlled---is essential for sustained motivation, even in structured environments where choice seems limited.',
     image: "/images/articles/cat08/cover-018.svg",
@@ -1241,6 +1244,7 @@ export const understandingMotivationArticlesB: Article[] = [
   {
     id: catId(19),
     slug: 'how-social-connection-fuels-motivation-accountability',
+    status: 'archived',
     title: 'How Social Connection Fuels Motivation: The Power of Accountability',
     description: 'Learn why social support and accountability are among the most powerful motivational tools---and how to harness them without sacrificing autonomy.',
     image: "/images/articles/cat08/cover-019.svg",
@@ -1633,6 +1637,7 @@ export const understandingMotivationArticlesB: Article[] = [
   {
     id: catId(20),
     slug: 'when-nothing-motivates-you-anhedonia-low-drive',
+    status: 'archived',
     title: 'When Nothing Motivates You: Understanding Anhedonia and Low Drive',
     description: 'Recognize when persistent loss of motivation signals anhedonia or other clinical issues---and what to do when nothing brings you joy or interest anymore.',
     image: "/images/articles/cat08/cover-020.svg",

@@ -23,6 +23,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
   {
     id: catId(51),
     slug: 'stages-of-change-model-where-are-you-in-your-journey',
+    status: 'archived',
     title: 'The Stages of Change Model: Where Are You in Your Journey?',
     description: "Discover the research-backed framework for understanding behavior change, identify which stage you're in, and learn what helps you move forward.",
     image: '/images/articles/cat08/cover-051.svg',
@@ -631,6 +632,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
   {
     id: catId(52),
     slug: 'pre-contemplation-when-you-dont-yet-see-need-to-change',
+    status: 'archived',
     title: "Pre-Contemplation: When You Don't Yet See the Need to Change",
     description: "Understand the first stage of change where awareness is limited, explore why resistance emerges, and learn gentle approaches that can shift perspective.",
     image: "/images/articles/cat08/cover-052.svg",
@@ -1143,6 +1145,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
   {
     id: catId(53),
     slug: 'contemplation-psychology-of-i-know-i-should-but',
+    status: 'archived',
     title: "Contemplation: The Psychology of 'I Know I Should, But...'",
     description: "Explore the stage where awareness meets ambivalence, understand why people get stuck weighing pros and cons, and learn strategies to move toward commitment.",
     image: "/images/articles/cat08/cover-053.svg",
@@ -1632,6 +1635,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
   {
     id: catId(54),
     slug: 'preparation-setting-yourself-up-for-successful-change',
+    status: 'archived',
     title: 'Preparation: Setting Yourself Up for Successful Change',
     description: 'Learn how to transition from thinking about change to planning for it, build a strong foundation for action, and avoid common pitfalls that derail progress.',
     image: "/images/articles/cat08/cover-054.svg",
@@ -2117,6 +2121,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
   {
     id: catId(55),
     slug: 'action-first-90-days-of-building-new-behavior',
+    status: 'archived',
     title: 'Action: The First 90 Days of Building New Behavior',
     description: 'Navigate the most visible and challenging stage of change, understand why motivation fades, and learn strategies to sustain new behaviors through early obstacles.',
     image: "/images/articles/cat08/cover-055.svg",

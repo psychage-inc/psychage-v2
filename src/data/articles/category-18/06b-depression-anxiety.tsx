@@ -13,6 +13,7 @@ export const articles: Article[] = [
   {
     id: catId(56),
     slug: 'medication-pregnancy-breastfeeding',
+    status: 'archived',
     title: 'Mental Health Medication During Pregnancy and Breastfeeding',
     description:
       'Navigating the complex decisions about psychiatric medication use during pregnancy and lactation.',
@@ -1104,6 +1105,7 @@ export const articles: Article[] = [
   {
     id: catId(60),
     slug: 'self-care-lifestyle-womens-mental-health',
+    status: 'archived',
     title: 'Self-Care and Lifestyle Interventions for Women\'s Mental Health',
     description:
       'Evidence-based lifestyle strategies that support mental health and complement professional treatment.',

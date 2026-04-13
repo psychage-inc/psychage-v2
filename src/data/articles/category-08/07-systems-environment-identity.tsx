@@ -21,6 +21,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
   {
     id: catId(61),
     slug: 'identity-based-habits-becoming-the-type-of-person-who',
+    status: 'archived',
     title: 'Identity-Based Habits: Becoming the Type of Person Who...',
     description: 'Move beyond outcome-based goals to identity-level change. Learn how shifting your self-concept creates lasting behavior transformation.',
     image: "/images/articles/cat08/cover-061.svg",
@@ -530,6 +531,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
   {
     id: catId(62),
     slug: 'systems-vs-goals-why-process-matters-more-than-outcomes',
+    status: 'archived',
     title: 'Systems vs. Goals: Why Process Matters More Than Outcomes',
     description: 'Shift from outcome-obsession to process optimization. Learn why building systems creates sustainable success while goal-fixation leads to chronic dissatisfaction.',
     image: "/images/articles/cat08/cover-062.svg",
@@ -988,6 +990,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
   {
     id: catId(63),
     slug: 'how-to-design-your-environment-for-behavior-change',
+    status: 'archived',
     title: 'How to Design Your Environment for Behavior Change',
     description: 'Stop relying on willpower alone. Learn evidence-based strategies to architect your physical and digital spaces to make good habits automatic and bad habits inconvenient.',
     image: "/images/articles/cat08/cover-063.svg",
@@ -1536,6 +1539,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
   {
     id: catId(64),
     slug: 'social-systems-and-behavior-change-people-shape-habits',
+    status: 'archived',
     title: 'Social Systems and Behavior Change: The People Around You Shape Your Habits',
     description: 'Your friends, family, and social circles exert powerful influence on your behavior. Learn how to harness social systems for sustainable change and navigate relationships that hinder growth.',
     image: "/images/articles/cat08/cover-064.svg",
@@ -2112,6 +2116,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
   {
     id: catId(65),
     slug: 'the-compound-effect-small-daily-actions-create-extraordinary-results',
+    status: 'archived',
     title: 'The Compound Effect: How Small Daily Actions Create Extraordinary Results',
     description: 'Understand the mathematics and psychology of compounding: why 1% improvements stack exponentially, and how to leverage time and consistency for transformational change.',
     image: "/images/articles/cat08/cover-065.svg",

@@ -29,10 +29,10 @@ function formatDate(iso: string): string {
 }
 
 function getScoreColor(score: number): string {
-  if (score >= 80) return 'text-emerald-600';
-  if (score >= 60) return 'text-teal-600';
-  if (score >= 40) return 'text-amber-600';
-  return 'text-rose-600';
+  if (score >= 80) return 'text-emerald-600 dark:text-emerald-400';
+  if (score >= 60) return 'text-primary';
+  if (score >= 40) return 'text-amber-600 dark:text-amber-400';
+  return 'text-red-600 dark:text-red-400';
 }
 
 /** Simple SVG sparkline for trend */
@@ -57,19 +57,12 @@ const TrendLine: React.FC<{ history: RelationshipHistoryItem[] }> = ({ history }
   });
 
   const polyline = points.join(' ');
-  // Area fill path
-  const firstX = padding;
-  const lastX = padding + ((scores.length - 1) / (scores.length - 1)) * (width - 2 * padding);
-  const _areaPath = `M ${firstX},${height - padding} L ${polyline.replace(/,/g, ' ').split(' ').reduce((acc, val, idx) => {
-    if (idx % 2 === 0) return [...acc, val];
-    return [...acc.slice(0, -1), `${acc[acc.length - 1]},${val}`];
-  }, [] as string[]).join(' L ')} L ${lastX},${height - padding} Z`;
 
   return (
-    <div className="bg-white rounded-xl border border-gray-100 p-4 mb-6">
+    <div className="bg-surface rounded-2xl border border-border p-4 mb-6">
       <div className="flex items-center gap-2 mb-3">
-        <TrendingUp size={16} className="text-gray-400" />
-        <span className="text-sm font-bold text-gray-700">Score Trend</span>
+        <TrendingUp size={16} className="text-text-tertiary" />
+        <span className="text-sm font-semibold text-text-primary">Score Trend</span>
       </div>
       <svg viewBox={`0 0 ${width} ${height}`} className="w-full" aria-hidden="true">
         {/* Grid lines */}
@@ -80,7 +73,7 @@ const TrendLine: React.FC<{ history: RelationshipHistoryItem[] }> = ({ history }
             y1={height - padding - pct * (height - 2 * padding)}
             x2={width - padding}
             y2={height - padding - pct * (height - 2 * padding)}
-            stroke="#f3f4f6"
+            stroke="var(--color-border)"
             strokeWidth={1}
           />
         ))}
@@ -88,7 +81,7 @@ const TrendLine: React.FC<{ history: RelationshipHistoryItem[] }> = ({ history }
         <polyline
           points={polyline}
           fill="none"
-          stroke="#20B8A6"
+          stroke="var(--color-primary)"
           strokeWidth={2}
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -103,8 +96,8 @@ const TrendLine: React.FC<{ history: RelationshipHistoryItem[] }> = ({ history }
               cx={x}
               cy={y}
               r={3}
-              fill="white"
-              stroke="#20B8A6"
+              fill="var(--color-surface)"
+              stroke="var(--color-primary)"
               strokeWidth={2}
             />
           );
@@ -121,7 +114,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
   onStartNew,
 }) => {
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-6">
+    <div className="min-h-screen bg-background pt-24 pb-12 px-4 sm:px-6 transition-colors duration-300">
       <SEO
         title="Assessment History | Relationship Health Check | Psychage"
         description="View your past relationship health assessment results."
@@ -136,7 +129,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
             <Button variant="ghost" size="sm" onClick={onBack} leftIcon={<ArrowLeft size={16} />}>
               Back
             </Button>
-            <h1 className="font-display font-bold text-2xl text-gray-900">
+            <h1 className="font-display font-bold text-2xl text-text-primary">
               Assessment History
             </h1>
           </div>
@@ -146,10 +139,10 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
         </div>
 
         {history.length === 0 ? (
-          <div className="text-center py-16 bg-white rounded-2xl border border-gray-100">
-            <Calendar size={32} className="text-gray-300 mx-auto mb-4" />
-            <p className="text-gray-500 mb-2">No saved assessments yet</p>
-            <p className="text-sm text-gray-400">
+          <div className="text-center py-16 bg-surface rounded-2xl border border-border">
+            <Calendar size={32} className="text-text-tertiary mx-auto mb-4" />
+            <p className="text-text-secondary mb-2">No saved assessments yet</p>
+            <p className="text-sm text-text-tertiary">
               Complete your first relationship health check to start tracking over time.
             </p>
           </div>
@@ -165,21 +158,21 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
                     key={item.id}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5"
+                    className="bg-surface rounded-2xl border border-border p-5"
                   >
                     <div className="flex items-center justify-between mb-3">
                       <div>
-                        <p className="text-xs text-gray-400">{formatDate(item.date)}</p>
+                        <p className="text-xs text-text-tertiary">{formatDate(item.date)}</p>
                         <div className="flex items-center gap-2 mt-1">
-                          <span className={`text-2xl font-bold ${getScoreColor(item.compositeScore)}`}>
+                          <span className={`text-2xl font-display font-bold ${getScoreColor(item.compositeScore)}`}>
                             {item.compositeScore}
                           </span>
-                          <span className="text-xs text-gray-400">/ 100</span>
+                          <span className="text-xs text-text-tertiary">/ 100</span>
                         </div>
                       </div>
                       <button
                         onClick={() => onDelete(item.id)}
-                        className="p-2 text-gray-300 hover:text-red-500 transition-colors rounded-lg hover:bg-red-50"
+                        className="p-2 text-text-tertiary hover:text-red-500 dark:hover:text-red-400 transition-colors rounded-lg hover:bg-red-50 dark:hover:bg-red-900/10"
                         aria-label="Delete this assessment"
                       >
                         <Trash2 size={16} />
@@ -195,7 +188,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
                         return (
                           <span
                             key={domain}
-                            className={`inline-flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium ${meta.bgColor} ${meta.textColor}`}
+                            className="inline-flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium bg-surface-hover border border-border text-text-secondary"
                           >
                             {meta.name}: {score}
                           </span>

@@ -18,6 +18,7 @@ export const caregivingFamilySupportArticlesA: Article[] = [
   {
     id: catId(21),
     slug: 'caring-for-the-caregiver-professional-support-and-resources',
+    status: 'archived',
     title: 'Caring for the Caregiver: Professional Support and Resources',
     description:
       'Comprehensive guide to respite care, adult day programs, in-home services, and community resources that support family caregivers.',
@@ -648,6 +649,7 @@ export const caregivingFamilySupportArticlesA: Article[] = [
   {
     id: catId(23),
     slug: 'advance-directives-and-end-of-life-care-decisions-for-older-adults',
+    status: 'archived',
     title: 'Advance Directives and End-of-Life Care Decisions for Older Adults',
     description:
       'Navigate advance care planning with clarity: living wills, healthcare proxies, DNR orders, POLST forms, and how to honor wishes when crisis comes.',
@@ -914,6 +916,7 @@ export const caregivingFamilySupportArticlesA: Article[] = [
   {
     id: catId(24),
     slug: 'choosing-a-nursing-home-or-assisted-living-facility-what-to-look-for',
+    status: 'archived',
     title: 'Choosing a Nursing Home or Assisted Living Facility: What to Look For',
     description:
       'Navigate nursing home selection with clear criteria: staff ratios, inspection reports, resident care quality, and red flags that signal poor facilities.',
@@ -1187,6 +1190,7 @@ export const caregivingFamilySupportArticlesA: Article[] = [
   {
     id: catId(25),
     slug: 'managing-caregiver-guilt-and-setting-boundaries-without-abandoning-your-loved-one',
+    status: 'archived',
     title: 'Managing Caregiver Guilt and Setting Boundaries Without Abandoning Your Loved One',
     description:
       'Understand caregiver guilt as a structural problem, not a personal failing, and learn how to set sustainable boundaries that preserve both care and self.',

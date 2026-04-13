@@ -16,6 +16,7 @@ export const understandingMotivationArticlesA: Article[] = [
   {
     id: catId(11),
     slug: 'intrinsic-vs-extrinsic-motivation-why-source-matters',
+    status: 'archived',
     title: 'Intrinsic vs. Extrinsic Motivation: Why the Source of Your Drive Matters',
     description: 'Explore the critical difference between motivation that comes from within and motivation driven by external rewards---and why one leads to sustainable change.',
     image: "/images/articles/cat08/cover-011.svg",
@@ -360,6 +361,7 @@ export const understandingMotivationArticlesA: Article[] = [
   {
     id: catId(12),
     slug: 'self-determination-theory-three-needs',
+    status: 'archived',
     title: 'Self-Determination Theory: The Three Things Every Person Needs to Feel Motivated',
     description: 'Discover the three universal psychological needs---autonomy, competence, and relatedness---that fuel intrinsic motivation and psychological wellbeing.',
     image: "/images/articles/cat08/cover-012.svg",
@@ -750,6 +752,7 @@ export const understandingMotivationArticlesA: Article[] = [
   {
     id: catId(13),
     slug: 'why-motivation-fades-psychology-losing-interest',
+    status: 'archived',
     title: 'Why Motivation Fades: The Psychology of Losing Interest',
     description: 'Discover the psychological mechanisms behind waning motivation---from hedonic adaptation to value drift---and what to do when you stop caring about goals that once mattered.',
     image: "/images/articles/cat08/cover-013.svg",
@@ -1114,6 +1117,7 @@ export const understandingMotivationArticlesA: Article[] = [
   {
     id: catId(14),
     slug: 'motivational-interviewing-techniques-self',
+    status: 'archived',
     title: 'Motivational Interviewing Techniques You Can Use on Yourself',
     description: 'Learn evidence-based strategies from motivational interviewing therapy---originally designed for counselors---that you can adapt to explore and strengthen your own motivation for change.',
     image: "/images/articles/cat08/cover-014.svg",
@@ -1565,6 +1569,7 @@ export const understandingMotivationArticlesA: Article[] = [
   {
     id: catId(15),
     slug: 'motivation-myth-waiting-inspired-keeps-stuck',
+    status: 'archived',
     title: 'The Motivation Myth: Why Waiting to Feel Inspired Keeps You Stuck',
     description: 'Challenge the common belief that motivation must come before action---and learn why reversing this sequence is often more effective for behavior change.',
     image: "/images/articles/cat08/cover-015.svg",

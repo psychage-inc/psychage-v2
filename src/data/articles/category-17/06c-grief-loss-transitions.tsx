@@ -19,6 +19,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
   {
     id: catId(56),
     slug: 'adult-sibling-relationships-in-later-life-caregiving-and-conflict',
+    status: 'archived',
     title: `Adult Sibling Relationships in Later Life: Caregiving and Conflict`,
     description: `Navigate the complex dynamics of adult siblings caring for aging parents and learn strategies for managing conflict, inequity, and family rifts.`,
     image: '/images/articles/cat17/cover-056.svg',
@@ -256,6 +257,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
   {
     id: catId(57),
     slug: 'financial-anxiety-in-later-life-when-retirement-savings-fall-short',
+    status: 'archived',
     title: `Financial Anxiety in Later Life: When Retirement Savings Fall Short`,
     description: `Address the psychological impact of insufficient retirement funds and discover coping strategies for financial insecurity in older adulthood.`,
     image: '/images/articles/cat17/cover-057.svg',
@@ -479,6 +481,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
   {
     id: catId(58),
     slug: 'later-life-divorce-gray-divorce-and-rebuilding-after-long-marriages',
+    status: 'archived',
     title: `Later-Life Divorce: Gray Divorce and Rebuilding After Long Marriages`,
     description: `Navigate the unique challenges of divorcing after decades of marriage and discover strategies for rebuilding identity and life in later adulthood.`,
     image: '/images/articles/cat17/cover-058.svg',
@@ -696,6 +699,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
   {
     id: catId(59),
     slug: 'life-review-and-reminiscence-therapy-for-older-adults',
+    status: 'archived',
     title: `Life Review and Reminiscence Therapy for Older Adults`,
     description: `Explore the therapeutic benefits of structured reflection on life experiences and discover how life review can increase well-being in later adulthood.`,
     image: '/images/articles/cat17/cover-059.svg',
@@ -856,6 +860,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
   {
     id: catId(60),
     slug: 'preparing-for-death-psychological-approaches-to-mortality',
+    status: 'archived',
     title: `Preparing for Death: Psychological Approaches to Mortality`,
     description: `Explore healthy ways to prepare emotionally and psychologically for end of life and discover paths to peace with mortality in later adulthood.`,
     image: '/images/articles/cat17/cover-060.svg',

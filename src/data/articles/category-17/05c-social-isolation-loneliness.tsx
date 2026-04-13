@@ -24,6 +24,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
   {
     id: catId(41),
     slug: 'moving-senior-living-communities-social-connection',
+    status: 'archived',
     title: 'Moving to Senior Living Communities: Social Connection Benefits',
     description: `Senior living communities offer built-in social connection, activities, and support---but require accepting loss of independence and home. Weigh carefully.`,
     image: '/images/articles/cat17/cover-041.svg',
@@ -383,6 +384,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
   {
     id: catId(42),
     slug: 'faith-communities-spiritual-connection-mental-health',
+    status: 'archived',
     title: 'Faith Communities and Spiritual Connection for Mental Health',
     description: `Faith communities provide social support, purpose, ritual, and meaning---reducing loneliness, depression, and mortality in older adults who participate regularly.`,
     image: '/images/articles/cat17/cover-042.svg',
@@ -708,6 +710,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
   {
     id: catId(43),
     slug: 'ageism-social-exclusion-mental-health-impact',
+    status: 'archived',
     title: 'Ageism and Social Exclusion: Mental Health Impact on Older Adults',
     description: `Ageism---stereotyping, discrimination, exclusion based on age---increases loneliness, depression, and mortality in older adults. Internalized ageism is self-fulfilling prophecy.`,
     image: '/images/articles/cat17/cover-043.svg',
@@ -1038,6 +1041,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
   {
     id: catId(44),
     slug: 'covid-19-lasting-impact-senior-isolation',
+    status: 'archived',
     title: 'COVID-19\'s Lasting Impact on Senior Isolation and Mental Health',
     description: `COVID-19 lockdowns increased senior isolation by 40%; many have not returned to pre-pandemic social participation, leaving lasting mental health consequences.`,
     image: '/images/articles/cat17/cover-044.svg',
@@ -1361,6 +1365,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
   {
     id: catId(45),
     slug: 'building-social-support-network-late-life',
+    status: 'archived',
     title: 'Building a Social Support Network in Late Life: Practical Strategies',
     description: `Social networks shrink with age, but can be rebuilt through intentional strategies: joining groups, volunteering, using technology, and practicing vulnerability.`,
     image: '/images/articles/cat17/cover-045.svg',

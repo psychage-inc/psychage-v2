@@ -13,8 +13,8 @@ export const DOMAINS: ClarityDomain[] = [
     key: 'emotional',
     description: 'PHQ-4',
     citation: 'Over the last 2 weeks, how often have you been bothered by...',
-    color: 'text-teal-500',
-    bgColor: 'bg-teal-500',
+    color: 'text-rose-500',
+    bgColor: 'bg-rose-500',
   },
   {
     id: 1,

@@ -25,6 +25,7 @@ export const articles: Article[] = [
   {
     id: catId(21),
     slug: 'perimenopause-and-mental-health-understanding-the-transition',
+    status: 'archived',
     title: `Perimenopause and Mental Health: Understanding the Transition`,
     description: `Explore how perimenopause affects mental health, including mood changes, anxiety, and cognitive symptoms during the years leading to menopause.`,
     image: '/images/articles/cat18/cover-021.svg',
@@ -914,6 +915,7 @@ export const articles: Article[] = [
   {
     id: catId(23),
     slug: 'sleep-menopause-and-mental-health-breaking-the-vicious-cycle',
+    status: 'archived',
     title: `Sleep, Menopause, and Mental Health: Breaking the Vicious Cycle`,
     description: `Explore how menopause disrupts sleep, the bidirectional relationship between sleep and mental health, and strategies for improving sleep during the transition.`,
     image: '/images/articles/cat18/cover-023.svg',
@@ -1268,6 +1270,7 @@ export const articles: Article[] = [
   {
     id: catId(24),
     slug: 'brain-fog-and-cognitive-changes-in-menopause-memory-and-focus',
+    status: 'archived',
     title: `Brain Fog and Cognitive Changes in Menopause: Memory and Focus`,
     description: `Understand cognitive changes during menopause including memory lapses, difficulty concentrating, and word-finding problems, plus strategies to support brain health.`,
     image: '/images/articles/cat18/cover-024.svg',
@@ -1650,6 +1653,7 @@ export const articles: Article[] = [
   {
     id: catId(25),
     slug: 'sexuality-and-body-image-during-menopause-desire-and-self-perception',
+    status: 'archived',
     title: `Sexuality and Body Image During Menopause: Desire and Self-Perception`,
     description: `Explore changes in sexuality and body image during menopause, including decreased desire, physical changes affecting intimacy, and strategies for maintaining sexual health and positive body relationship.`,
     image: '/images/articles/cat18/cover-025.svg',

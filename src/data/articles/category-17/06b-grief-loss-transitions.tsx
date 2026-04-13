@@ -7,6 +7,7 @@ export const griefLossTransitionsArticlesB: Article[] = [
   {
     id: catId(51),
     slug: 'legacy-and-generativity-leaving-something-behind-in-later-life',
+    status: 'archived',
     title: `Legacy and Generativity: Leaving Something Behind in Later Life`,
     description: `Explore the psychological importance of creating legacy in older adulthood and discover meaningful ways to contribute wisdom and values to future generations.`,
     image: '/images/articles/cat17/cover-051.svg',
@@ -163,6 +164,7 @@ export const griefLossTransitionsArticlesB: Article[] = [
   {
     id: catId(52),
     slug: 'outliving-your-children-grief-when-the-natural-order-is-reversed',
+    status: 'archived',
     title: `Outliving Your Children: Grief When the Natural Order Is Reversed`,
     description: `Understand the profound grief of losing an adult child and discover support strategies for this particularly devastating bereavement experience.`,
     image: '/images/articles/cat17/cover-052.svg',
@@ -699,6 +701,7 @@ export const griefLossTransitionsArticlesB: Article[] = [
   {
     id: catId(55),
     slug: 'saying-goodbye-to-independence-navigating-increasing-dependence',
+    status: 'archived',
     title: `Saying Goodbye to Independence: Navigating Increasing Dependence`,
     description: `Understand the psychological impact of losing independence in later life and discover strategies for maintaining dignity amid increasing need for support.`,
     image: '/images/articles/cat17/cover-055.svg',

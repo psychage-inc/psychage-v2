@@ -16,6 +16,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
   {
     id: catId(6),
     slug: 'habit-stacking-attach-new-behaviors',
+    status: 'archived',
     title: 'Habit Stacking: How to Attach New Behaviors to Existing Routines',
     description: 'Learn how to leverage your current habits as triggers for new ones using the proven habit stacking technique.',
     image: "/images/articles/cat08/cover-006.svg",
@@ -435,6 +436,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
   {
     id: catId(7),
     slug: 'environment-design-habit-formation',
+    status: 'archived',
     title: 'The Role of Environment in Habit Formation: Design Your Space for Success',
     description: 'Learn how your physical environment shapes your behavior and how to design spaces that make good habits inevitable and bad habits difficult.',
     image: "/images/articles/cat08/cover-007.svg",
@@ -853,6 +855,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
   {
     id: catId(8),
     slug: 'willpower-isnt-answer-reduce-friction',
+    status: 'archived',
     title: "Why Willpower Isn't the Answer: Reducing Friction Instead",
     description: "Discover why relying on willpower sets you up for failure and how to make behavior change effortless by removing obstacles.",
     image: "/images/articles/cat08/cover-008.svg",
@@ -1206,6 +1209,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
   {
     id: catId(9),
     slug: 'digital-habits-phone-shapes-behavior',
+    status: 'archived',
     title: 'Digital Habits: How Your Phone Shapes Your Daily Behavior',
     description: 'Understand the psychological mechanisms that make your phone addictive and learn evidence-based strategies to reclaim your attention.',
     image: "/images/articles/cat08/cover-009.svg",
@@ -1547,6 +1551,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
   {
     id: catId(10),
     slug: 'habit-tracking-apps-journals',
+    status: 'archived',
     title: 'Tracking Your Habits: Do Apps and Journals Actually Help?',
     description: 'Examine the research on habit tracking, when it works, when it backfires, and how to use it effectively to build lasting behavior change.',
     image: "/images/articles/cat08/cover-010.svg",

@@ -16,6 +16,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
   {
     id: catId(36),
     slug: 'nail-biting-skin-picking-body-focused-repetitive-behaviors',
+    status: 'archived',
     title: 'Nail Biting, Skin Picking, and Other Body-Focused Repetitive Behaviors',
     description: 'Understand BFRBs (body-focused repetitive behaviors) and learn evidence-based strategies to reduce or stop them.',
     image: "/images/articles/cat08/cover-036.svg",
@@ -551,6 +552,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
   {
     id: catId(37),
     slug: 'breaking-revenge-bedtime-procrastination',
+    status: 'archived',
     title: 'Breaking the Cycle of Staying Up Too Late: Revenge Bedtime Procrastination',
     description: 'Understand why you sacrifice sleep for leisure time and how to reclaim control over your evening routine.',
     image: "/images/articles/cat08/cover-037.svg",
@@ -1018,6 +1020,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
   {
     id: catId(38),
     slug: 'reduce-alcohol-use-without-complete-abstinence',
+    status: 'archived',
     title: 'How to Reduce Alcohol Use Without Complete Abstinence',
     description: 'Evidence-based strategies for moderating alcohol consumption when you want to cut back but not quit entirely.',
     image: "/images/articles/cat08/cover-038.svg",
@@ -1558,6 +1561,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
   {
     id: catId(39),
     slug: 'shopping-addiction-buying-as-coping-mechanism',
+    status: 'archived',
     title: 'Shopping Addiction: When Buying Things Becomes a Coping Mechanism',
     description: 'Understand compulsive buying disorder and learn to break the cycle of emotional spending.',
     image: "/images/articles/cat08/cover-039.svg",
@@ -2116,6 +2120,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
   {
     id: catId(40),
     slug: 'replacing-bad-habit-substitution-vs-elimination',
+    status: 'archived',
     title: 'Replacing a Bad Habit: Why Substitution Works Better Than Elimination',
     description: 'Learn why trying to "just stop" a bad habit usually fails and how strategic replacement creates lasting change.',
     image: "/images/articles/cat08/cover-040.svg",

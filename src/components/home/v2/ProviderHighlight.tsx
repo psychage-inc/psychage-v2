@@ -78,13 +78,8 @@ const ProviderHighlight: React.FC = () => {
                 const Icon = item.icon;
                 return (
                   <div key={item.label} className="flex items-center gap-3">
-                    <div
-                      className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
-                      style={{
-                        backgroundColor: 'color-mix(in srgb, var(--color-primary) 10%, transparent)',
-                      }}
-                    >
-                      <Icon size={16} style={{ color: 'var(--color-primary)' }} />
+                    <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-gray-100 dark:bg-gray-800">
+                      <Icon size={16} className="text-gray-500 dark:text-gray-400" />
                     </div>
                     <span className="text-sm text-[var(--color-text-secondary)]">
                       {item.label}

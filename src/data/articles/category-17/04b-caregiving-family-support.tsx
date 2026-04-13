@@ -22,6 +22,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
   {
     id: catId(26),
     slug: 'paying-for-elder-care-medicare-medicaid-and-long-term-care-insurance',
+    status: 'archived',
     title: 'Paying for Elder Care: Medicare, Medicaid, and Long-Term Care Insurance',
     description: `Navigate the complex landscape of elder care financing: what Medicare covers (and doesn't), Medicaid spend-down rules, long-term care insurance, and out-of-pocket costs.`,
     image: '/images/articles/cat17/cover-026.svg',
@@ -590,6 +591,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
   {
     id: catId(28),
     slug: 'sandwich-generation-caregiving-for-parents-and-children',
+    status: 'archived',
     title: 'Sandwich Generation: Caregiving for Parents and Children Simultaneously',
     description: `Navigate the unique pressures of caring for aging parents while raising children: time scarcity, financial strain, and strategies for sustainable dual caregiving.`,
     image: '/images/articles/cat17/cover-028.svg',
@@ -895,6 +897,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
   {
     id: catId(29),
     slug: 'transitioning-from-caregiver-to-bereavement-grief-after-caregiving',
+    status: 'archived',
     title: 'Transitioning from Caregiver to Bereavement: Grief After Long-Term Caregiving',
     description: `Understand the complex grief that follows caregiving: relief, guilt, identity loss, and the process of rebuilding life after years of intensive care.`,
     image: '/images/articles/cat17/cover-029.svg',

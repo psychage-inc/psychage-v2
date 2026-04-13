@@ -18,6 +18,7 @@ export const mentalHealthLaterLifeArticlesB: Article[] = [
   {
     id: catId(6),
     slug: 'late-life-depression-recognition-and-treatment-approaches',
+    status: 'archived',
     title: 'Late-Life Depression: Recognition and Treatment Approaches',
     description:
       'Comprehensive guide to diagnosing and treating depression in older adults--from medications to therapy to lifestyle interventions.',
@@ -378,6 +379,7 @@ export const mentalHealthLaterLifeArticlesB: Article[] = [
   {
     id: catId(7),
     slug: 'anxiety-disorders-in-older-adults-more-than-just-worry',
+    status: 'archived',
     title: 'Anxiety Disorders in Older Adults: More Than Just Worry',
     description:
       'Understand how anxiety manifests in later life--from generalized anxiety to panic attacks--and evidence-based treatments.',
@@ -720,6 +722,7 @@ export const mentalHealthLaterLifeArticlesB: Article[] = [
   {
     id: catId(8),
     slug: 'substance-use-and-addiction-in-later-life-the-overlooked-crisis',
+    status: 'archived',
     title: 'Substance Use and Addiction in Later Life: The Overlooked Crisis',
     description:
       'Examine alcohol and prescription medication misuse in older adults--prevalence, risks, and age-appropriate treatment approaches.',
@@ -1082,6 +1085,7 @@ export const mentalHealthLaterLifeArticlesB: Article[] = [
   {
     id: catId(9),
     slug: 'grief-bereavement-and-complicated-mourning-in-later-life',
+    status: 'archived',
     title: 'Grief, Bereavement, and Complicated Mourning in Later Life',
     description:
       'Navigate the profound losses of later life--distinguishing normal grief from complicated grief and depression, and finding paths through sorrow.',
@@ -1455,6 +1459,7 @@ export const mentalHealthLaterLifeArticlesB: Article[] = [
   {
     id: catId(10),
     slug: 'suicide-prevention-in-older-adults-the-silent-epidemic',
+    status: 'archived',
     title: 'Suicide Prevention in Older Adults: The Silent Epidemic',
     description:
       'Understand the highest-risk demographic for suicide--older adults, especially men--and learn how to recognize warning signs and intervene.',

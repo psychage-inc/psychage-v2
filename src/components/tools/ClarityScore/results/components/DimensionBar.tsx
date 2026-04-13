@@ -31,7 +31,7 @@ const DimensionBar: React.FC<DimensionBarProps> = ({
       onClick={onClick}
       className={`w-full text-left ${
         onClick
-          ? 'cursor-pointer rounded-xl p-3 -mx-3 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus-visible:outline-none'
+          ? 'cursor-pointer rounded-xl p-3 -mx-3 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:outline-none'
           : ''
       }`}
       {...(onClick ? { type: 'button' as const } : {})}

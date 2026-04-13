@@ -21,40 +21,26 @@ const DOMAIN_ICONS: Record<RelationshipDomain, React.ReactNode> = {
   community: <Globe size={20} />,
 };
 
-const DOMAIN_BAR_COLORS: Record<RelationshipDomain, string> = {
-  partner: 'bg-rose-500',
-  family: 'bg-indigo-500',
-  friends: 'bg-amber-500',
-  community: 'bg-teal-500',
-};
-
-const DOMAIN_CONTEXT_BG: Record<RelationshipDomain, string> = {
-  partner: 'bg-rose-50',
-  family: 'bg-indigo-50',
-  friends: 'bg-amber-50',
-  community: 'bg-teal-50',
-};
-
-const DOMAIN_RING_COLORS: Record<RelationshipDomain, string> = {
-  partner: '#f43f5e',
-  family: '#6366f1',
-  friends: '#f59e0b',
-  community: '#20B8A6',
-};
+function getBarColor(score: number): string {
+  if (score >= 80) return 'bg-emerald-500';
+  if (score >= 60) return 'bg-primary';
+  if (score >= 40) return 'bg-amber-500';
+  return 'bg-red-500';
+}
 
 function getScoreLabel(score: number): { text: string; color: string } {
-  if (score >= 80) return { text: 'Thriving', color: 'text-emerald-600 bg-emerald-50' };
-  if (score >= 60) return { text: 'Healthy', color: 'text-teal-600 bg-teal-50' };
-  if (score >= 40) return { text: 'Mixed', color: 'text-amber-600 bg-amber-50' };
-  if (score >= 20) return { text: 'Strained', color: 'text-orange-600 bg-orange-50' };
-  return { text: 'Needs attention', color: 'text-rose-600 bg-rose-50' };
+  if (score >= 80) return { text: 'Thriving', color: 'text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/20' };
+  if (score >= 60) return { text: 'Healthy', color: 'text-primary bg-primary/10' };
+  if (score >= 40) return { text: 'Mixed', color: 'text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/20' };
+  if (score >= 20) return { text: 'Strained', color: 'text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-900/20' };
+  return { text: 'Needs attention', color: 'text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20' };
 }
 
 function getSubDimLabel(score: number): { text: string; color: string } {
-  if (score >= 75) return { text: 'Strong', color: 'text-emerald-600' };
-  if (score >= 50) return { text: 'Moderate', color: 'text-teal-600' };
-  if (score >= 25) return { text: 'Growth area', color: 'text-amber-600' };
-  return { text: 'Focus here', color: 'text-rose-600' };
+  if (score >= 75) return { text: 'Strong', color: 'text-emerald-600 dark:text-emerald-400' };
+  if (score >= 50) return { text: 'Moderate', color: 'text-primary' };
+  if (score >= 25) return { text: 'Growth area', color: 'text-amber-600 dark:text-amber-400' };
+  return { text: 'Focus here', color: 'text-red-600 dark:text-red-400' };
 }
 
 function getEvidenceInsight(domain: RelationshipDomain, score: number, subScores: Record<string, number>): string {
@@ -103,6 +89,9 @@ export const DomainCard: React.FC<DomainCardProps> = ({
   const gaugeCircumference = 2 * Math.PI * 28;
   const gaugeOffset = gaugeCircumference - (score / 100) * gaugeCircumference;
 
+  // Score-based gauge color
+  const gaugeStroke = score >= 80 ? '#10b981' : score >= 60 ? 'var(--color-primary)' : score >= 40 ? '#f59e0b' : '#ef4444';
+
   // Get sub-dimension data for this domain
   const domainSubDims = useMemo(() => {
     const subDims = SUB_DIMENSION_META.filter((m) => m.domain === domain);
@@ -122,17 +111,17 @@ export const DomainCard: React.FC<DomainCardProps> = ({
 
   if (skipped) {
     return (
-      <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm opacity-50">
+      <div className="bg-surface rounded-2xl p-6 border border-border opacity-40">
         <div className="flex items-center gap-3 mb-4">
-          <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${meta.bgColor} ${meta.textColor}`}>
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-surface-hover text-text-tertiary">
             {DOMAIN_ICONS[domain]}
           </div>
           <div>
-            <h3 className="font-bold text-gray-900">{meta.name}</h3>
-            <p className="text-xs text-gray-400">Skipped</p>
+            <h3 className="font-semibold text-text-primary">{meta.name}</h3>
+            <p className="text-xs text-text-tertiary">Skipped</p>
           </div>
         </div>
-        <p className="text-sm text-gray-400">
+        <p className="text-sm text-text-tertiary">
           This domain was not included in your assessment.
         </p>
       </div>
@@ -140,7 +129,7 @@ export const DomainCard: React.FC<DomainCardProps> = ({
   }
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-shadow hover:shadow-md">
+    <div className="bg-surface rounded-2xl border border-border overflow-hidden transition-shadow hover:shadow-md">
       <button
         onClick={() => setExpanded((prev) => !prev)}
         className="w-full p-6 text-left cursor-pointer"
@@ -148,11 +137,11 @@ export const DomainCard: React.FC<DomainCardProps> = ({
       >
         <div className="flex items-start justify-between mb-4">
           <div className="flex items-center gap-3">
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${meta.bgColor} ${meta.textColor}`}>
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-primary/10 text-primary">
               {DOMAIN_ICONS[domain]}
             </div>
             <div>
-              <h3 className="font-bold text-gray-900">{meta.name}</h3>
+              <h3 className="font-semibold text-text-primary">{meta.name}</h3>
               <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${scoreLabel.color}`}>
                 {scoreLabel.text}
               </span>
@@ -161,13 +150,13 @@ export const DomainCard: React.FC<DomainCardProps> = ({
 
           <div className="relative w-14 h-14 shrink-0">
             <svg viewBox="0 0 64 64" className="w-full h-full -rotate-90">
-              <circle cx="32" cy="32" r="28" fill="none" stroke="#f3f4f6" strokeWidth="4" />
+              <circle cx="32" cy="32" r="28" fill="none" stroke="var(--color-border)" strokeWidth="4" />
               <circle
                 cx="32"
                 cy="32"
                 r="28"
                 fill="none"
-                stroke={DOMAIN_RING_COLORS[domain]}
+                stroke={gaugeStroke}
                 strokeWidth="4"
                 strokeDasharray={gaugeCircumference}
                 strokeDashoffset={gaugeOffset}
@@ -175,19 +164,19 @@ export const DomainCard: React.FC<DomainCardProps> = ({
               />
             </svg>
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-sm font-bold text-gray-900">{score}</span>
+              <span className="text-sm font-bold text-text-primary">{score}</span>
             </div>
           </div>
         </div>
 
-        <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden mb-3">
+        <div className="h-1.5 bg-surface-active rounded-full overflow-hidden mb-3">
           <div
-            className={`h-full rounded-full ${DOMAIN_BAR_COLORS[domain]}`}
+            className={`h-full rounded-full ${getBarColor(score)}`}
             style={{ width: `${score}%` }}
           />
         </div>
 
-        <p className="text-sm text-gray-600 leading-relaxed mb-3">
+        <p className="text-sm text-text-secondary leading-relaxed mb-3">
           {subDimensionScores
             ? getEvidenceInsight(domain, score, subScoresMap)
             : meta.description}
@@ -197,13 +186,13 @@ export const DomainCard: React.FC<DomainCardProps> = ({
           <Link
             to={action.to}
             onClick={(e) => e.stopPropagation()}
-            className="inline-flex items-center gap-1 text-sm font-bold text-teal-600 hover:text-teal-700 transition-colors"
+            className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-primary-hover transition-colors"
           >
             {action.text}
             <ArrowRight size={14} />
           </Link>
           <motion.div animate={{ rotate: expanded ? 180 : 0 }} transition={{ duration: 0.2 }}>
-            <ChevronDown size={18} className="text-gray-400" />
+            <ChevronDown size={18} className="text-text-tertiary" />
           </motion.div>
         </div>
       </button>
@@ -217,30 +206,30 @@ export const DomainCard: React.FC<DomainCardProps> = ({
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-6 border-t border-gray-100 pt-4">
+            <div className="px-6 pb-6 border-t border-border pt-4">
               {/* Sub-dimension breakdown */}
-              <h4 className="text-sm font-bold text-gray-900 mb-4">Sub-Dimension Breakdown</h4>
+              <h4 className="text-sm font-semibold text-text-primary mb-4">Sub-Dimension Breakdown</h4>
               <div className="space-y-3 mb-6">
                 {domainSubDims.map((sub) => {
                   const label = getSubDimLabel(sub.score);
                   return (
                     <div key={sub.key}>
                       <div className="flex items-center justify-between mb-1">
-                        <span className="text-xs font-medium text-gray-700">{sub.name}</span>
+                        <span className="text-xs font-medium text-text-secondary">{sub.name}</span>
                         <div className="flex items-center gap-2">
-                          <span className={`text-xs font-bold ${label.color}`}>{label.text}</span>
-                          <span className="text-xs text-gray-400 font-medium w-8 text-right">{sub.score}</span>
+                          <span className={`text-xs font-semibold ${label.color}`}>{label.text}</span>
+                          <span className="text-xs text-text-tertiary font-medium w-8 text-right">{sub.score}</span>
                         </div>
                       </div>
-                      <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                      <div className="h-2 bg-surface-active rounded-full overflow-hidden">
                         <motion.div
-                          className={`h-full rounded-full ${DOMAIN_BAR_COLORS[domain]}`}
+                          className={`h-full rounded-full ${getBarColor(sub.score)}`}
                           initial={{ width: 0 }}
                           animate={{ width: `${sub.score}%` }}
                           transition={{ duration: 0.6, ease: 'easeOut' }}
                         />
                       </div>
-                      <p className="text-[11px] text-gray-400 mt-0.5">{sub.description}</p>
+                      <p className="text-[11px] text-text-tertiary mt-0.5">{sub.description}</p>
                     </div>
                   );
                 })}
@@ -248,12 +237,12 @@ export const DomainCard: React.FC<DomainCardProps> = ({
 
               {/* Framework attribution */}
               {domainSubDims.length > 0 && (
-                <div className="bg-slate-50 rounded-lg p-3 mb-4">
+                <div className="bg-surface-hover rounded-lg p-3 mb-4 border border-border">
                   <div className="flex items-start gap-2">
-                    <BookOpen size={14} className="text-slate-400 mt-0.5 shrink-0" />
+                    <BookOpen size={14} className="text-text-tertiary mt-0.5 shrink-0" />
                     <div>
-                      <p className="text-xs font-bold text-slate-600 mb-1">Research basis</p>
-                      <p className="text-[11px] text-slate-500 leading-relaxed">
+                      <p className="text-xs font-semibold text-text-secondary mb-1">Research basis</p>
+                      <p className="text-[11px] text-text-tertiary leading-relaxed">
                         {(() => {
                           const refs = [...new Set(domainSubDims.map((d) => d.frameworkRef))];
                           const names = refs.map((r) => FRAMEWORKS[r]?.shortName).filter(Boolean);
@@ -266,8 +255,8 @@ export const DomainCard: React.FC<DomainCardProps> = ({
               )}
 
               {/* Score context */}
-              <div className={`rounded-lg p-3 ${DOMAIN_CONTEXT_BG[domain]}`}>
-                <p className="text-xs text-gray-600 leading-relaxed">
+              <div className="rounded-lg p-3 bg-surface-hover border border-border">
+                <p className="text-xs text-text-secondary leading-relaxed">
                   <strong>What this means:</strong> Your {meta.name.toLowerCase()} score of{' '}
                   <strong>{score}/100</strong> places you in the{' '}
                   <strong>{scoreLabel.text.toLowerCase()}</strong> range.

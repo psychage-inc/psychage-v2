@@ -28,7 +28,7 @@ export const MedicationCard: React.FC<Props> = ({
     pct >= 80 ? 'text-emerald-500' : pct >= 50 ? 'text-amber-500' : 'text-red-500';
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 hover:shadow-md transition-shadow">
+    <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-md transition-all">
       <div className="flex items-start gap-4">
         {/* Color accent + adherence ring */}
         <div className="relative flex-shrink-0">

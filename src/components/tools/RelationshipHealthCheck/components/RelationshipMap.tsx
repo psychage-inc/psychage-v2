@@ -19,19 +19,13 @@ interface DomainNode {
   y: number;
 }
 
-const DOMAIN_COLORS: Record<RelationshipDomain, string> = {
-  partner: '#f43f5e', // rose-500
-  family: '#6366f1', // indigo-500
-  friends: '#f59e0b', // amber-500
-  community: '#20B8A6', // teal-500
-};
-
-const DOMAIN_COLORS_LIGHT: Record<RelationshipDomain, string> = {
-  partner: '#ffe4e6', // rose-100
-  family: '#e0e7ff', // indigo-100
-  friends: '#fef3c7', // amber-100
-  community: '#ccfbf1', // teal-100
-};
+/** Muted, clinical colors -- uses score-based coloring instead of domain-based */
+function getNodeColor(score: number): { fill: string; stroke: string } {
+  if (score >= 80) return { fill: '#d1fae5', stroke: '#10b981' }; // emerald
+  if (score >= 60) return { fill: '#e0f2f1', stroke: '#1A9B8C' }; // primary/teal
+  if (score >= 40) return { fill: '#fef3c7', stroke: '#f59e0b' }; // amber
+  return { fill: '#fee2e2', stroke: '#ef4444' }; // red
+}
 
 function getNodes(skipPartner: boolean): DomainNode[] {
   const domains: RelationshipDomain[] = skipPartner
@@ -86,6 +80,7 @@ export const RelationshipMap: React.FC<RelationshipMapProps> = ({
         {nodes.map((node, i) => {
           const score = domainScores[node.domain];
           const width = getLineWidth(score);
+          const colors = getNodeColor(score);
           return (
             <motion.line
               key={`line-${node.domain}`}
@@ -93,10 +88,10 @@ export const RelationshipMap: React.FC<RelationshipMapProps> = ({
               y1={CY}
               x2={node.x}
               y2={node.y}
-              stroke={DOMAIN_COLORS[node.domain]}
+              stroke={colors.stroke}
               strokeWidth={width}
               strokeLinecap="round"
-              strokeOpacity={0.4}
+              strokeOpacity={0.3}
               initial={{ pathLength: 0, opacity: 0 }}
               animate={{ pathLength: 1, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 + i * 0.15 }}
@@ -131,6 +126,7 @@ export const RelationshipMap: React.FC<RelationshipMapProps> = ({
           const score = domainScores[node.domain];
           const r = getNodeRadius(score);
           const meta = DOMAIN_META[node.domain];
+          const colors = getNodeColor(score);
 
           return (
             <motion.g
@@ -145,8 +141,8 @@ export const RelationshipMap: React.FC<RelationshipMapProps> = ({
                 cx={node.x}
                 cy={node.y}
                 r={r}
-                fill={DOMAIN_COLORS_LIGHT[node.domain]}
-                stroke={DOMAIN_COLORS[node.domain]}
+                fill={colors.fill}
+                stroke={colors.stroke}
                 strokeWidth={2}
               />
 
@@ -156,7 +152,7 @@ export const RelationshipMap: React.FC<RelationshipMapProps> = ({
                 y={node.y + 1}
                 textAnchor="middle"
                 dominantBaseline="central"
-                fill={DOMAIN_COLORS[node.domain]}
+                fill={colors.stroke}
                 fontSize="12"
                 fontWeight="700"
               >

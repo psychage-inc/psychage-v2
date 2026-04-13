@@ -27,6 +27,7 @@ export const articles: Article[] = [
   {
     id: catId(26),
     slug: 'hormone-therapy-and-mental-health-benefits-risks-and-decisions',
+    status: 'archived',
     title: `Hormone Therapy and Mental Health: Benefits, Risks, and Decisions`,
     description: `Understand how hormone therapy affects mental health during menopause, weigh benefits and risks, and make informed decisions about treatment.`,
     image: '/images/articles/cat18/cover-026.svg',
@@ -459,6 +460,7 @@ export const articles: Article[] = [
   {
     id: catId(27),
     slug: 'menopause-and-anxiety-managing-increased-worry-and-panic',
+    status: 'archived',
     title: `Menopause and Anxiety: Managing Increased Worry and Panic`,
     description: `Understand why anxiety often worsens during menopause, recognize symptoms of generalized anxiety and panic, and learn evidence-based treatments.`,
     image: '/images/articles/cat18/cover-027.svg',

@@ -19,6 +19,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
   {
     id: catId(61),
     slug: 'grandparent-estrangement-losing-access-to-grandchildren',
+    status: 'archived',
     title: `Grandparent Estrangement: Losing Access to Grandchildren`,
     description: `Navigate the painful reality of being cut off from grandchildren and discover coping strategies for this increasingly common late-life loss.`,
     image: '/images/articles/cat17/cover-061.svg',
@@ -265,6 +266,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
   {
     id: catId(62),
     slug: 'positive-aging-resilience-and-post-traumatic-growth-in-later-life',
+    status: 'archived',
     title: `Positive Aging: Resilience and Post-Traumatic Growth in Later Life`,
     description: `Discover how many older adults demonstrate remarkable resilience after loss and trauma, sometimes emerging stronger through adversity.`,
     image: '/images/articles/cat17/cover-062.svg',
@@ -485,6 +487,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
   {
     id: catId(63),
     slug: 'spirituality-and-religion-in-later-life-faith-and-aging',
+    status: 'archived',
     title: `Spirituality and Religion in Later Life: Faith and Aging`,
     description: `Explore the role of spiritual and religious beliefs in later adulthood and their impact on mental health, coping, and end-of-life well-being.`,
     image: '/images/articles/cat17/cover-063.svg',
@@ -749,6 +752,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
   {
     id: catId(64),
     slug: 'aging-parents-and-adult-children-navigating-role-reversal',
+    status: 'archived',
     title: `Aging Parents and Adult Children: Navigating Role Reversal`,
     description: `Understand the psychological challenges when adult children become caregivers and parents become dependent, and learn strategies for maintaining dignity.`,
     image: '/images/articles/cat17/cover-064.svg',
@@ -1023,6 +1027,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
   {
     id: catId(65),
     slug: 'celebrating-life-milestones-in-later-adulthood-meaning-and-joy',
+    status: 'archived',
     title: `Celebrating Life Milestones in Later Adulthood: Meaning and Joy`,
     description: `Discover the importance of marking achievements and transitions in later life and creating opportunities for celebration and meaning-making.`,
     image: '/images/articles/cat17/cover-065.svg',

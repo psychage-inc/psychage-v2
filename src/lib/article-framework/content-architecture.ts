@@ -1,9 +1,9 @@
 // ============================================================================
-// Psychage Content Architecture — 15 Categories × 1,000 Articles
+// Psychage Content Architecture — 31 Categories × 2,000+ Articles
 // ============================================================================
 //
 // Source: "THE ARTICLE's" — Content Architecture for Psychage
-// Prepared for Dr. Lena Dobson, March 2026
+// Prepared for Dr. Lena Dobson, March 2026 · Expanded April 2026
 //
 // Built from 5 layers of analysis:
 //   1. Validated Psychological Instruments (PHQ-4, WHO-5, UCLA-3, PSS-4, WHODAS)
@@ -12,8 +12,10 @@
 //   4. Search Behavior & Reader Intent (keyword demand, intent classification)
 //   5. Cultural & Demographic Reach (global/multilingual stress testing)
 //
-// Categories 1–12: Life-context foundation
+// Categories 1–12:  Life-context foundation
 // Categories 13–15 (★): Clinical & structural gap-closers
+// Categories 16–21: Specialized populations & conditions (22 merged into 31)
+// Categories 23–31: Extended domains & applied psychology
 // ============================================================================
 
 // ---------------------------------------------------------------------------
@@ -21,7 +23,7 @@
 // ---------------------------------------------------------------------------
 
 export interface ContentCategory {
-  /** Category number (1–15) */
+  /** Category number (1–31) */
   number: number;
   /** Full category name from the content architecture */
   name: string;
@@ -329,19 +331,269 @@ export const CONTENT_CATEGORIES: ContentCategory[] = [
     relatedCategories: [3, 10, 12],
     isGapCloser: true,
   },
+
+  // =========================================================================
+  // CATEGORIES 16–22: Specialized Populations & Conditions
+  // =========================================================================
+  {
+    number: 16,
+    name: 'Psychosis, Schizophrenia & Severe Mental Illness',
+    slug: 'psychosis-schizophrenia',
+    articleTarget: 60,
+    description:
+      'Comprehensive education on psychotic disorders, schizophrenia spectrum conditions, and severe mental illness — from neuroscience and treatment to family support and recovery.',
+    researchBasis:
+      'Schizophrenia affects ~24 million people globally (WHO, 2022). Psychotic disorders remain among the most stigmatized and misunderstood mental health conditions. Early intervention research shows that reducing duration of untreated psychosis significantly improves outcomes. Public education is critical for early recognition and reducing treatment delays.',
+    platformRole:
+      'Directly supports Symptom Navigator condition profiles for SCZ and SA. Fills a critical educational gap — most mental health platforms provide only surface-level psychosis content. Family support content serves caregivers who are often the first to notice warning signs.',
+    clarityScoreInstruments: ['PHQ-4', 'WHODAS'],
+    navigatorConditions: ['SCZ', 'SA'],
+    relatedCategories: [13, 14, 17],
+    isGapCloser: false,
+  },
+  {
+    number: 17,
+    name: 'Aging, Dementia & Late-Life Mental Health',
+    slug: 'aging-dementia-late-life',
+    articleTarget: 60,
+    description:
+      'Comprehensive resources on mental health challenges unique to older adults, including dementia, Alzheimer disease, late-life depression, cognitive decline, caregiving, and strategies for healthy aging.',
+    researchBasis:
+      'Over 55 million people live with dementia globally (WHO, 2023), projected to reach 139 million by 2050. Late-life depression affects 5.7% of older adults and is frequently underdiagnosed. Caregiver burden research shows that family caregivers experience depression rates 2–3x higher than non-caregivers. Cognitive reserve and brain health interventions show promise for delaying decline.',
+    platformRole:
+      'Serves an underrepresented demographic in digital mental health. Bridges to Family (6) for caregiver support content. Supports the growing "sandwich generation" audience managing both aging parents and children. Expands Psychage\'s reach beyond the 18–45 primary demographic.',
+    clarityScoreInstruments: ['WHO-5', 'WHODAS'],
+    navigatorConditions: [],
+    relatedCategories: [6, 9, 20],
+    isGapCloser: false,
+  },
+  {
+    number: 18,
+    name: 'Women\'s Mental Health',
+    slug: 'womens-mental-health',
+    articleTarget: 70,
+    description:
+      'Comprehensive coverage of mental health issues affecting women across the lifespan, from reproductive health to gender-specific risk factors, treatment considerations, and sociocultural influences on women\'s psychological well-being.',
+    researchBasis:
+      'Women experience depression and anxiety at roughly 2x the rate of men (WHO). Reproductive transitions — menstruation, pregnancy, postpartum, perimenopause — each carry distinct mental health risks. Research on perinatal mood disorders, PMDD, and menopause-related cognitive changes has expanded significantly. Gender-specific trauma (IPV, sexual violence) requires specialized content.',
+    platformRole:
+      'Captures high-volume search traffic around pregnancy mental health, postpartum depression, and menopause. Serves a majority-female mental health content audience. Provides nuanced, evidence-based alternatives to wellness misinformation targeting women.',
+    clarityScoreInstruments: ['PHQ-4', 'WHO-5'],
+    navigatorConditions: ['MDE', 'GAD', 'PTSD'],
+    relatedCategories: [6, 7, 9, 19],
+    isGapCloser: false,
+  },
+  {
+    number: 19,
+    name: 'Men\'s Mental Health',
+    slug: 'mens-mental-health',
+    articleTarget: 70,
+    description:
+      'Evidence-based education on men\'s mental health — exploring the gender paradox in suicide, masked depression, help-seeking barriers, and the impact of cultural norms on men\'s psychological wellbeing.',
+    researchBasis:
+      'Men die by suicide at 3.5x the rate of women (CDC, 2023) despite lower depression diagnosis rates — the "gender paradox" in suicide. Research shows men present depression differently (irritability, anger, risk-taking) leading to underdiagnosis. Masculine norms research (Addis & Mahalik) documents how traditional expectations create barriers to help-seeking.',
+    platformRole:
+      'Addresses a critical gap in mental health content. Most platforms skew female in audience and content framing. Captures an underserved audience searching for "am I depressed or just tired" and "why can\'t I talk about feelings." Bridges to Relationships (3) and Work (5).',
+    clarityScoreInstruments: ['PHQ-4', 'WHO-5'],
+    navigatorConditions: ['MDE', 'AUD', 'SUD'],
+    relatedCategories: [3, 5, 7, 18],
+    isGapCloser: false,
+  },
+  {
+    number: 20,
+    name: 'Chronic Illness, Pain & Medical Psychology',
+    slug: 'chronic-illness-pain',
+    articleTarget: 65,
+    description:
+      'Evidence-based education on the psychological dimensions of chronic illness — covering pain neuroscience, medical trauma, identity shifts after diagnosis, and resilience-building strategies for people living with ongoing health conditions.',
+    researchBasis:
+      'Chronic pain affects 20% of adults globally. Comorbidity between chronic illness and depression/anxiety exceeds 30%. Pain neuroscience education (PNE) research shows that understanding pain mechanisms reduces disability. Medical trauma — distressing healthcare experiences — is increasingly recognized as a distinct trauma type.',
+    platformRole:
+      'Bridges physical and mental health in a way few competitors do. Serves the large population managing both chronic conditions and mental health challenges. Supports readers who approach Psychage through a physical health lens rather than a mental health one.',
+    clarityScoreInstruments: ['WHO-5', 'WHODAS'],
+    navigatorConditions: ['SSD', 'IAD', 'ADJ'],
+    relatedCategories: [9, 11, 14],
+    isGapCloser: false,
+  },
+  {
+    number: 21,
+    name: 'Technology, Digital Life & Mental Health',
+    slug: 'technology-digital-life',
+    articleTarget: 70,
+    description:
+      'Evidence-based education on the psychological impact of technology — from social media and smartphone use to emerging tools like VR therapy and digital therapeutics, exploring both harms and benefits for mental health.',
+    researchBasis:
+      'Digital therapeutics (DTx) is a rapidly growing field with FDA-approved treatments for substance use and insomnia. VR therapy shows promise for PTSD, phobias, and pain management. AI mental health tools are proliferating with limited regulation. Balanced coverage of both risks (addiction, comparison, cyberbullying) and opportunities (teletherapy, apps, digital communities) is needed.',
+    platformRole:
+      'Forward-looking content that positions Psychage at the intersection of technology and mental health. Captures audiences interested in VR therapy, AI chatbots, and digital wellness tools. Complements Category 10 (Digital Life) with deeper clinical and research content.',
+    clarityScoreInstruments: ['UCLA-3', 'PSS-4'],
+    navigatorConditions: [],
+    relatedCategories: [10, 14, 23],
+    isGapCloser: false,
+  },
+  // NOTE: Category 22 was merged into Category 31 (both used slug 'spirituality-meaning')
+  // Cat 22's 11 articles are now in Cat 31's subcategories 14-15
+
+  // =========================================================================
+  // CATEGORIES 23–31: Extended Domains & Applied Psychology
+  // =========================================================================
+  {
+    number: 23,
+    name: 'Brain, Neuroscience & Biological Basis',
+    slug: 'brain-neuroscience',
+    articleTarget: 66,
+    description:
+      'Understanding the biological foundations of mental health — neurotransmitters, brain structure, neuroplasticity, and the intersection of biology and psychology.',
+    researchBasis:
+      'Neuroscience literacy is foundational to understanding modern mental health treatment. Research on neuroplasticity (Merzenich, Doidge) demonstrates the brain\'s capacity for change throughout life. Understanding neurotransmitter systems, the HPA axis, and brain circuitry helps readers contextualize their experiences and treatment options.',
+    platformRole:
+      'Educational backbone for readers who want to understand the "why" behind mental health conditions. Supports informed decision-making about medication, brain stimulation therapies, and lifestyle interventions. Bridges to Sleep (9), Chronic Illness (20), and Conditions (13).',
+    clarityScoreInstruments: ['PHQ-4', 'WHODAS'],
+    navigatorConditions: ['ADHD', 'SCZ', 'BPD_I', 'BPD_II'],
+    relatedCategories: [9, 13, 16, 20],
+    isGapCloser: false,
+  },
+  {
+    number: 24,
+    name: 'Creativity, Therapeutic Arts & Expressive Healing',
+    slug: 'creativity-therapeutic-arts',
+    articleTarget: 64,
+    description:
+      'The science and practice of creative expression as a pathway to mental health — art therapy, music therapy, drama therapy, writing therapy, and the psychology of the creative process.',
+    researchBasis:
+      'Art therapy, music therapy, and expressive arts have growing evidence bases for depression, PTSD, and dementia. Research on creative flow states (Csikszentmihalyi) shows associations with wellbeing. Writing therapy (Pennebaker) demonstrates measurable health benefits from expressive disclosure. Creative arts therapies are recognized by the APA as evidence-based treatments.',
+    platformRole:
+      'Offers alternative entry points for readers who connect with creative/artistic approaches rather than traditional clinical framing. Highly shareable content — art projects, music playlists, journaling prompts. Bridges to Emotional Regulation (1) and Trauma (11).',
+    clarityScoreInstruments: ['WHO-5'],
+    navigatorConditions: [],
+    relatedCategories: [1, 8, 11, 17],
+    isGapCloser: false,
+  },
+  {
+    number: 25,
+    name: 'Disability, Accessibility & Inclusive Mental Health',
+    slug: 'disability-accessibility',
+    articleTarget: 64,
+    description:
+      'Mental health at the intersection of disability — identity, access to care, chronic illness, neurodivergence, universal design, and the psychology of inclusion and advocacy.',
+    researchBasis:
+      'People with disabilities experience mental health conditions at 2–3x the rate of the general population. Access barriers — physical, attitudinal, communication — significantly limit mental health service utilization. Disability-affirming approaches and the social model of disability reframe mental health support. Neurodiversity-affirming practice is increasingly recognized as best practice.',
+    platformRole:
+      'Core inclusivity play — ensures Psychage serves the 1.3 billion people globally living with significant disability. Captures underserved audiences searching for accessible therapy, disability identity, and neurodivergent mental health. Supports platform accessibility commitments.',
+    clarityScoreInstruments: ['WHODAS', 'WHO-5'],
+    navigatorConditions: ['ADHD', 'AUT'],
+    relatedCategories: [12, 13, 14, 20],
+    isGapCloser: false,
+  },
+  {
+    number: 26,
+    name: 'Forensic Psychology & Criminal Justice Mental Health',
+    slug: 'forensic-legal-justice',
+    articleTarget: 64,
+    description:
+      'Psychology within the legal and justice systems — criminal behavior, forensic assessment, mental health in incarceration, juvenile justice, victim psychology, and rehabilitation.',
+    researchBasis:
+      'Approximately 37% of incarcerated individuals have a diagnosed mental health condition (BJS). Forensic psychology research covers risk assessment, competency evaluation, and rehabilitation effectiveness. Juvenile justice mental health research shows that early intervention reduces recidivism. Victim psychology and restorative justice have growing evidence bases.',
+    platformRole:
+      'Serves an underrepresented but high-interest topic area. Captures audiences interested in criminal psychology, true crime from a scientific lens, and justice reform. Provides educational content for families of incarcerated individuals and crime survivors.',
+    clarityScoreInstruments: ['PHQ-4', 'WHODAS'],
+    navigatorConditions: ['ASPD', 'SUD', 'PTSD'],
+    relatedCategories: [11, 13, 19],
+    isGapCloser: false,
+  },
+  {
+    number: 27,
+    name: 'Military, Veterans & First Responder Mental Health',
+    slug: 'military-veterans-firstresponder',
+    articleTarget: 44,
+    description:
+      'Mental health for those who serve — combat trauma, moral injury, first responder stress, military families, transition challenges, and evidence-based treatment approaches.',
+    researchBasis:
+      'PTSD rates among veterans range from 11–30% depending on service era (VA). Moral injury — violating one\'s moral code in service — is increasingly recognized as distinct from PTSD. First responders experience PTSD at rates 5x the general population. Military-to-civilian transition is a critical vulnerability period. Evidence-based treatments (CPT, PE, EMDR) show strong outcomes for military populations.',
+    platformRole:
+      'Serves military, veteran, and first responder communities with specialized content. Captures family members searching for support resources. Bridges to Trauma (11) and Therapy Navigation (14).',
+    clarityScoreInstruments: ['PHQ-4', 'WHO-5'],
+    navigatorConditions: ['PTSD', 'CPTSD', 'AUD', 'MDE'],
+    relatedCategories: [5, 11, 14],
+    isGapCloser: false,
+  },
+  {
+    number: 28,
+    name: 'Sexuality, Intimacy & Sexual Health',
+    slug: 'sexuality-intimacy',
+    articleTarget: 64,
+    description:
+      'The psychology of human sexuality — sexual health, intimacy, identity, dysfunction, trauma recovery, sex therapy, and the intersection of sexuality with mental wellbeing.',
+    researchBasis:
+      'Sexual dysfunction affects 31% of men and 43% of women (Laumann et al.). Sexual trauma is a leading cause of PTSD, depression, and relationship difficulties. LGBTQ+ mental health disparities persist due to minority stress. Sex therapy and intimacy counseling have strong evidence bases. Sexual health is recognized by WHO as integral to overall wellbeing.',
+    platformRole:
+      'Addresses a topic many mental health platforms avoid or handle superficially. Captures high-demand search traffic around sexual dysfunction, intimacy issues, and sexual trauma recovery. Serves LGBTQ+ audiences with affirming content.',
+    clarityScoreInstruments: ['UCLA-3', 'WHO-5'],
+    navigatorConditions: ['PTSD'],
+    relatedCategories: [3, 4, 11],
+    isGapCloser: false,
+  },
+  {
+    number: 29,
+    name: 'Environmental, Eco-Psychology & Planetary Mental Health',
+    slug: 'environmental-eco-psychology',
+    articleTarget: 66,
+    description:
+      'The psychological dimensions of our relationship with the natural world — eco-anxiety, climate grief, nature-based therapy, urban psychology, and environmental justice.',
+    researchBasis:
+      'Climate anxiety affects 45% of young people globally (Hickman et al., 2021). Eco-psychology research demonstrates bidirectional relationships between environmental degradation and mental health. Nature-based therapy (ecotherapy, forest bathing) has growing evidence for depression and anxiety. Urban design and green space access significantly impact psychological wellbeing.',
+    platformRole:
+      'Timely content addressing a rapidly growing concern — especially among younger audiences. Captures search traffic around "eco-anxiety," "climate grief," and "nature therapy." Positions Psychage as forward-thinking on emerging mental health topics.',
+    clarityScoreInstruments: ['PSS-4', 'WHO-5'],
+    navigatorConditions: ['GAD', 'ADJ'],
+    relatedCategories: [2, 9, 12],
+    isGapCloser: false,
+  },
+  {
+    number: 30,
+    name: 'Applied Life Skills, Self-Design & Practical Psychology',
+    slug: 'life-skills-practical-psychology',
+    articleTarget: 110,
+    description:
+      'Practical psychology for everyday life — decision-making, emotional intelligence, communication, productivity, habit formation, financial psychology, and the examined life.',
+    researchBasis:
+      'Positive psychology and applied behavioral science provide robust frameworks for everyday functioning. Decision science (Kahneman, Tversky), emotional intelligence (Goleman, Salovey & Mayer), and financial psychology research document how psychological principles improve daily life. Life skills education is identified by WHO as protective against mental health problems.',
+    platformRole:
+      'Broadest audience appeal — captures readers searching for self-improvement content through a psychological lens. High social media engagement potential. Bridges traditional mental health content with practical personal development. Largest category by article count.',
+    clarityScoreInstruments: ['WHO-5', 'WHODAS', 'PSS-4'],
+    navigatorConditions: [],
+    relatedCategories: [1, 5, 8],
+    isGapCloser: false,
+  },
+  {
+    number: 31,
+    name: 'Spirituality, Meaning & Existential Mental Health',
+    slug: 'spirituality-meaning',
+    articleTarget: 69,
+    description:
+      'Evidence-based exploration of existential psychology — confronting questions of meaning, mortality, freedom, and isolation through philosophical frameworks and therapeutic approaches.',
+    researchBasis:
+      'Extended content covering positive psychology, secular meaning-making, altered states of consciousness, spiritual crises, and the integration of spiritual and psychological wellbeing. Research on post-traumatic growth, values-based living (ACT), and transpersonal psychology provides an evidence base beyond traditional existential frameworks.',
+    platformRole:
+      'Expands Category 22\'s existential foundation into broader territory — positive psychology, spiritual practice, values and ethics, collective meaning. Captures audiences interested in human flourishing, consciousness, and integrated wellbeing beyond symptom reduction.',
+    clarityScoreInstruments: ['WHO-5', 'UCLA-3'],
+    navigatorConditions: [],
+    relatedCategories: [7, 8, 15, 22],
+    isGapCloser: false,
+  },
 ];
 
 // ---------------------------------------------------------------------------
 // Lookup Helpers
 // ---------------------------------------------------------------------------
 
-/** Total planned articles across all 15 categories */
+/** Total planned articles across all 31 categories */
 export const TOTAL_ARTICLE_TARGET = CONTENT_CATEGORIES.reduce(
   (sum, c) => sum + c.articleTarget,
   0
 );
 
-/** Get a category by its number (1–15) */
+/** Get a category by its number (1–31) */
 export const getCategoryByNumber = (n: number): ContentCategory | undefined =>
   CONTENT_CATEGORIES.find((c) => c.number === n);
 
@@ -361,4 +613,14 @@ export const getCategoriesForCondition = (conditionId: string): ContentCategory[
 export const GAP_CLOSER_CATEGORIES = CONTENT_CATEGORIES.filter((c) => c.isGapCloser);
 
 /** Get the 12 life-context foundation categories (1–12) */
-export const FOUNDATION_CATEGORIES = CONTENT_CATEGORIES.filter((c) => !c.isGapCloser);
+export const FOUNDATION_CATEGORIES = CONTENT_CATEGORIES.filter(
+  (c) => !c.isGapCloser && c.number <= 12,
+);
+
+/** Get the specialized populations & conditions categories (16–21) */
+export const SPECIALIZED_CATEGORIES = CONTENT_CATEGORIES.filter(
+  (c) => c.number >= 16 && c.number <= 21,
+);
+
+/** Get the extended domains & applied psychology categories (23–31) */
+export const EXTENDED_CATEGORIES = CONTENT_CATEGORIES.filter((c) => c.number >= 23);

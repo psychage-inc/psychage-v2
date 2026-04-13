@@ -1,6 +1,17 @@
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Clock, LayoutGrid, HelpCircle, History, ChevronDown, FlaskConical } from 'lucide-react';
+import {
+  Clock,
+  LayoutGrid,
+  HelpCircle,
+  History,
+  ChevronDown,
+  FlaskConical,
+  Heart,
+  Home,
+  Users,
+  Globe,
+} from 'lucide-react';
 import SEO from '@/components/SEO';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import Button from '@/components/ui/Button';
@@ -12,6 +23,29 @@ import { saveResult, loadHistory, deleteResult } from './storage';
 import type { RelationshipHealthResult, RelationshipHistoryItem } from './types';
 
 type View = 'landing' | 'wizard' | 'results' | 'history';
+
+const DOMAIN_PREVIEW = [
+  {
+    icon: Heart,
+    name: 'Partner',
+    description: 'Emotional responsiveness, conflict patterns, appreciation',
+  },
+  {
+    icon: Home,
+    name: 'Family',
+    description: 'Boundaries, emotional support, intergenerational patterns',
+  },
+  {
+    icon: Users,
+    name: 'Friends',
+    description: 'Reciprocity, vulnerability, social maintenance',
+  },
+  {
+    icon: Globe,
+    name: 'Community',
+    description: 'Belonging, civic engagement, social identity',
+  },
+];
 
 const RelationshipHealthCheck: React.FC = () => {
   const [view, setView] = useState<View>('landing');
@@ -89,12 +123,12 @@ const RelationshipHealthCheck: React.FC = () => {
 
   // --- Landing view ---
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-6">
+    <div className="min-h-screen bg-background pt-24 pb-16 px-4 sm:px-6 transition-colors duration-300">
       <SEO
         title="Relationship Health Check | Psychage"
         description="A clinically-grounded assessment of your relationship health across 17 sub-dimensions, backed by Gottman, EFT, Attachment Theory, and relationship science."
       />
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-2xl">
         <div className="mb-8">
           <Breadcrumbs />
         </div>
@@ -103,51 +137,151 @@ const RelationshipHealthCheck: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center max-w-2xl mx-auto mb-12"
+          className="text-center mb-12"
         >
-          <div className="w-20 h-20 bg-rose-100 rounded-3xl flex items-center justify-center mx-auto mb-6">
-            <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="15" cy="14" r="5" fill="#e11d48" opacity="0.7" />
-              <path d="M8 28c0-4.5 3.2-7 7-7s7 2.5 7 7" stroke="#e11d48" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.7" />
-              <circle cx="33" cy="14" r="5" fill="#e11d48" opacity="0.7" />
-              <path d="M26 28c0-4.5 3.2-7 7-7s7 2.5 7 7" stroke="#e11d48" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.7" />
-              <path d="M24 30c-1.5-1.5-5-4-5-6.5a3 3 0 0 1 5-2.2 3 3 0 0 1 5 2.2c0 2.5-3.5 5-5 6.5z" fill="#e11d48" />
-              <path d="M14 32c3 6 17 6 20 0" stroke="#e11d48" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.5" strokeDasharray="3 2" />
-            </svg>
-          </div>
-          <h1 className="font-display font-bold text-4xl md:text-5xl text-gray-900 mb-4">
+          <h1 className="font-display font-bold text-4xl md:text-5xl text-text-primary mb-4 tracking-tight">
             Relationship Health Check
           </h1>
-          <p className="text-xl text-gray-500 leading-relaxed mb-6">
-            A clinically-grounded assessment that measures 17 dimensions of your
-            relationship health across four key areas of your life — with pattern
-            detection, evidence-based insights, and personalized action steps.
+          <p className="text-lg md:text-xl text-text-secondary max-w-xl mx-auto leading-relaxed">
+            A structured assessment grounded in validated relationship science
+            frameworks. Understand the health of your connections across four
+            life domains.
           </p>
+        </motion.div>
 
-          {/* Framework attribution */}
-          <div className="bg-teal-50 border border-teal-100 rounded-xl p-5 mb-8 text-left">
-            <div className="flex items-start gap-3">
-              <FlaskConical size={20} className="text-teal-600 mt-0.5 shrink-0" />
-              <div>
-                <p className="text-sm font-bold text-teal-800 mb-1">Grounded in clinical research</p>
-                <p className="text-sm text-teal-700 leading-relaxed">
-                  Built on frameworks from the Gottman Institute, Emotionally Focused Therapy (EFT),
-                  Attachment Theory, and relationship science meta-analyses spanning 40+ years and
-                  11,000+ couples studied.
-                </p>
-              </div>
+        {/* Three info cards — matches Clarity Score pattern */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.05 }}
+          className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-12"
+        >
+          <div className="bg-surface rounded-2xl border border-border p-6">
+            <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+              <FlaskConical size={20} className="text-primary" />
             </div>
+            <h3 className="font-display font-semibold text-base text-text-primary mb-2">
+              What it measures
+            </h3>
+            <p className="text-sm text-text-tertiary leading-relaxed">
+              17 clinical sub-dimensions across four relationship domains, drawn
+              from the Gottman Institute, EFT, and Attachment Theory research.
+            </p>
           </div>
+          <div className="bg-surface rounded-2xl border border-border p-6">
+            <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+              <HelpCircle size={20} className="text-primary" />
+            </div>
+            <h3 className="font-display font-semibold text-base text-text-primary mb-2">
+              How it works
+            </h3>
+            <p className="text-sm text-text-tertiary leading-relaxed">
+              Up to 34 questions rated on a simple scale. Pattern detection
+              identifies dynamics like the Four Horsemen and pursue-withdraw
+              cycles.
+            </p>
+          </div>
+          <div className="bg-surface rounded-2xl border border-border p-6">
+            <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+              <Clock size={20} className="text-primary" />
+            </div>
+            <h3 className="font-display font-semibold text-base text-text-primary mb-2">
+              What to expect
+            </h3>
+            <p className="text-sm text-text-tertiary leading-relaxed">
+              Takes 5-10 minutes. You will receive a composite score, domain
+              breakdowns, detected patterns, and evidence-based action steps.
+            </p>
+          </div>
+        </motion.div>
 
-          {/* What makes this different — expandable */}
+        {/* Four domains preview */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="mb-12"
+        >
+          <h2 className="font-display font-semibold text-sm uppercase tracking-wider text-text-tertiary mb-5 text-center">
+            Four Relationship Domains
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {DOMAIN_PREVIEW.map((d) => {
+              const Icon = d.icon;
+              return (
+                <div
+                  key={d.name}
+                  className="flex flex-col items-center gap-2 bg-surface rounded-xl border border-border px-3 py-4 text-center"
+                >
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Icon size={16} className="text-primary" />
+                  </div>
+                  <span className="text-sm font-medium text-text-primary">
+                    {d.name}
+                  </span>
+                  <span className="text-[11px] text-text-tertiary leading-snug">
+                    {d.description}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </motion.div>
+
+        {/* Partner selection */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15 }}
+          className="mb-12"
+        >
+          <p className="text-center text-sm font-semibold text-text-secondary mb-4">
+            Are you currently in a romantic relationship?
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <button
+              onClick={() => handleStartAssessment(false)}
+              className="bg-surface rounded-2xl p-5 border-2 border-border hover:border-primary/40 transition-all text-left group"
+            >
+              <p className="font-semibold text-text-primary group-hover:text-primary transition-colors">
+                Yes, I have a partner
+              </p>
+              <p className="text-sm text-text-tertiary mt-1">34 questions across 4 domains</p>
+            </button>
+            <button
+              onClick={() => handleStartAssessment(true)}
+              className="bg-surface rounded-2xl p-5 border-2 border-border hover:border-primary/40 transition-all text-left group"
+            >
+              <p className="font-semibold text-text-primary group-hover:text-primary transition-colors">
+                No, not currently
+              </p>
+              <p className="text-sm text-text-tertiary mt-1">24 questions across 3 domains</p>
+            </button>
+          </div>
+        </motion.div>
+
+        {/* Science expandable */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="mb-10"
+        >
           <button
             onClick={() => setScienceOpen((prev) => !prev)}
-            className="inline-flex items-center gap-1.5 text-sm font-bold text-teal-600 hover:text-teal-700 transition-colors mb-6"
+            className="w-full bg-surface rounded-2xl border border-border p-5 text-left hover:bg-surface-hover transition-colors"
           >
-            What makes this assessment different
-            <motion.div animate={{ rotate: scienceOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
-              <ChevronDown size={16} />
-            </motion.div>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <FlaskConical size={18} className="text-text-tertiary" />
+                <span className="text-sm font-semibold text-text-primary">
+                  What makes this assessment different
+                </span>
+              </div>
+              <motion.div animate={{ rotate: scienceOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
+                <ChevronDown size={16} className="text-text-tertiary" />
+              </motion.div>
+            </div>
           </button>
           <AnimatePresence>
             {scienceOpen && (
@@ -158,101 +292,38 @@ const RelationshipHealthCheck: React.FC = () => {
                 transition={{ duration: 0.3 }}
                 className="overflow-hidden"
               >
-                <div className="bg-white border border-gray-100 rounded-xl p-5 mb-6 text-left">
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <span className="w-6 h-6 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</span>
+                <div className="bg-surface border border-t-0 border-border rounded-b-2xl p-5 space-y-3">
+                  {[
+                    {
+                      num: '1',
+                      title: 'Sub-dimensional analysis',
+                      desc: 'Every domain is broken into specific clinical constructs -- emotional responsiveness, conflict quality, trust, appreciation, and more -- not just a single flat score.',
+                    },
+                    {
+                      num: '2',
+                      title: 'Pattern detection',
+                      desc: 'Identifies dynamics like the Gottman Four Horsemen, pursue-withdraw cycles, intimate isolation, and social withdrawal -- patterns that predict relationship outcomes.',
+                    },
+                    {
+                      num: '3',
+                      title: 'Evidence-based action steps',
+                      desc: 'Not generic advice -- specific behavioral exercises from Gottman Method, EFT, and maintenance behavior research, each with academic citations.',
+                    },
+                  ].map((item) => (
+                    <div key={item.num} className="flex items-start gap-3">
+                      <span className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+                        {item.num}
+                      </span>
                       <div>
-                        <p className="text-sm font-bold text-gray-900">Sub-dimensional analysis</p>
-                        <p className="text-xs text-gray-500">Every domain is broken into specific clinical constructs — emotional responsiveness, conflict quality, trust, appreciation, and more — not just a single flat score.</p>
+                        <p className="text-sm font-semibold text-text-primary">{item.title}</p>
+                        <p className="text-xs text-text-tertiary leading-relaxed">{item.desc}</p>
                       </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="w-6 h-6 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</span>
-                      <div>
-                        <p className="text-sm font-bold text-gray-900">Pattern detection</p>
-                        <p className="text-xs text-gray-500">Identifies dynamics like the Gottman Four Horsemen, pursue-withdraw cycles, intimate isolation, and social withdrawal — patterns that predict relationship outcomes.</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="w-6 h-6 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</span>
-                      <div>
-                        <p className="text-sm font-bold text-gray-900">Evidence-based action steps</p>
-                        <p className="text-xs text-gray-500">Not generic advice — specific behavioral exercises from Gottman Method, EFT, and maintenance behavior research, each with academic citations.</p>
-                      </div>
-                    </li>
-                  </ul>
+                    </div>
+                  ))}
                 </div>
               </motion.div>
             )}
           </AnimatePresence>
-
-          {/* Grief/loss note */}
-          <p className="text-sm text-gray-400 mb-8">
-            If you've recently lost someone close, some questions may feel difficult. You
-            can skip any question at any time.
-          </p>
-        </motion.div>
-
-        {/* Partner selection */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="max-w-xl mx-auto mb-10"
-        >
-          <p className="text-center text-sm font-bold text-gray-700 mb-4">
-            Are you currently in a romantic relationship?
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <button
-              onClick={() => handleStartAssessment(false)}
-              className="bg-white rounded-2xl p-5 border-2 border-gray-100 shadow-sm hover:border-rose-300 hover:shadow-md transition-all text-left group"
-            >
-              <p className="font-bold text-gray-900 group-hover:text-rose-600 transition-colors">
-                Yes, I have a partner
-              </p>
-              <p className="text-sm text-gray-400 mt-1">34 questions across 4 domains</p>
-            </button>
-            <button
-              onClick={() => handleStartAssessment(true)}
-              className="bg-white rounded-2xl p-5 border-2 border-gray-100 shadow-sm hover:border-teal-300 hover:shadow-md transition-all text-left group"
-            >
-              <p className="font-bold text-gray-900 group-hover:text-teal-600 transition-colors">
-                No, not currently
-              </p>
-              <p className="text-sm text-gray-400 mt-1">24 questions across 3 domains</p>
-            </button>
-          </div>
-        </motion.div>
-
-        {/* Stat cards */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.15 }}
-          className="max-w-3xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10"
-        >
-          <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
-            <LayoutGrid size={18} className="text-gray-400 mx-auto mb-2" />
-            <p className="text-2xl font-bold text-gray-900 mb-0.5">4</p>
-            <p className="text-xs text-gray-500">Life domains</p>
-          </div>
-          <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
-            <FlaskConical size={18} className="text-gray-400 mx-auto mb-2" />
-            <p className="text-2xl font-bold text-gray-900 mb-0.5">17</p>
-            <p className="text-xs text-gray-500">Sub-dimensions</p>
-          </div>
-          <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
-            <HelpCircle size={18} className="text-gray-400 mx-auto mb-2" />
-            <p className="text-2xl font-bold text-gray-900 mb-0.5">34</p>
-            <p className="text-xs text-gray-500">Questions</p>
-          </div>
-          <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
-            <Clock size={18} className="text-gray-400 mx-auto mb-2" />
-            <p className="text-2xl font-bold text-gray-900 mb-0.5">5-10</p>
-            <p className="text-xs text-gray-500">Minutes</p>
-          </div>
         </motion.div>
 
         {/* View history link */}
@@ -260,8 +331,8 @@ const RelationshipHealthCheck: React.FC = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-center"
+            transition={{ delay: 0.25 }}
+            className="text-center mb-8"
           >
             <Button
               variant="ghost"
@@ -277,17 +348,21 @@ const RelationshipHealthCheck: React.FC = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.25 }}
-          className="max-w-xl mx-auto mt-12 bg-slate-50 border border-slate-200 rounded-xl p-5"
+          transition={{ delay: 0.3 }}
+          className="bg-surface rounded-2xl border border-border p-6"
         >
-          <p className="text-xs font-bold text-slate-600 mb-2">Before you begin</p>
-          <ul className="text-xs text-slate-500 leading-relaxed space-y-1.5 list-disc list-inside">
-            <li>This is <strong>not</strong> a diagnostic tool — it is a clinically-informed self-reflection exercise grounded in validated research frameworks.</li>
+          <p className="text-xs font-semibold text-text-secondary mb-2">Before you begin</p>
+          <ul className="text-xs text-text-tertiary leading-relaxed space-y-1.5 list-disc list-inside">
+            <li>This is <strong className="text-text-secondary">not</strong> a diagnostic tool -- it is a clinically-informed self-reflection exercise grounded in validated research frameworks.</li>
             <li>Your responses are processed entirely on your device and are never sent to any server.</li>
             <li>Results are educational and cannot replace a professional clinical assessment.</li>
-            <li>If you are experiencing relationship difficulties, domestic violence, or safety concerns, please reach out to a qualified professional or call the National DV Hotline at <strong>1-800-799-7233</strong>.</li>
-            <li>Use this tool as a starting point for self-awareness — not as a final answer.</li>
+            <li>If you are experiencing relationship difficulties, domestic violence, or safety concerns, please reach out to a qualified professional or call the National DV Hotline at <strong className="text-text-secondary">1-800-799-7233</strong>.</li>
+            <li>Use this tool as a starting point for self-awareness -- not as a final answer.</li>
           </ul>
+          <p className="text-xs text-text-tertiary mt-3">
+            If you've recently lost someone close, some questions may feel difficult. You
+            can skip any question at any time.
+          </p>
         </motion.div>
       </div>
     </div>

@@ -43,7 +43,6 @@ const STATS = [
   { icon: Shield, value: '423,404+', label: 'NPI-Verified Providers' },
   { icon: MapPin, value: '50 States + DC', label: 'Complete Coverage' },
   { icon: Sparkles, value: '6 Interactive', label: 'Patient Tools' },
-  { icon: Globe, value: '5 Languages', label: 'Multilingual Platform' },
 ];
 
 const PLATFORM_FEATURES = [
@@ -520,7 +519,7 @@ const ForProvidersLandingPage: React.FC = () => {
               initial={prefersReducedMotion ? undefined : 'hidden'}
               whileInView={prefersReducedMotion ? undefined : 'visible'}
               viewport={{ once: true, amount: 0.25 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-8"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-8"
             >
               {STATS.map((stat) => {
                 const Icon = stat.icon;
@@ -651,7 +650,7 @@ const ForProvidersLandingPage: React.FC = () => {
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
               {HOW_IT_WORKS.map((item, index) => (
                 <motion.div
                   key={item.step}
@@ -660,17 +659,20 @@ const ForProvidersLandingPage: React.FC = () => {
                 >
                   {/* Connecting line (desktop) */}
                   {index < 2 && (
-                    <div className="hidden md:block absolute top-7 left-[calc(50%+28px)] w-[calc(100%-56px)] h-px bg-[var(--color-border)]" />
+                    <div className="hidden md:block absolute top-10 left-[calc(50%+36px)] w-[calc(100%-72px)] border-t-2 border-dashed border-[var(--color-border)]" />
                   )}
                   <div
-                    className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5"
-                    style={{ backgroundColor: 'var(--color-primary)' }}
+                    className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
+                    style={{
+                      backgroundColor: 'var(--color-primary)',
+                      boxShadow: '0 8px 24px color-mix(in srgb, var(--color-primary) 30%, transparent)',
+                    }}
                   >
-                    <span className="font-display font-bold text-xl text-white">
+                    <span className="font-display font-bold text-2xl text-white">
                       {item.step}
                     </span>
                   </div>
-                  <h3 className="font-display font-bold text-lg text-[var(--color-text-primary)] mb-2">
+                  <h3 className="font-display font-bold text-xl text-[var(--color-text-primary)] mb-3">
                     {item.title}
                   </h3>
                   <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed max-w-xs mx-auto">

@@ -51,8 +51,8 @@ html.light,
 :root.light,
 :root:not(.dark) {
   /* Colors - Light Premium Palette */
-  --color-background: #ffffff;
-  --color-surface: #ffffff;
+  --color-background: #F9F7F3;
+  --color-surface: #F9F7F3;
   --color-surface-hover: #f5f5f4;
   --color-surface-active: #e7e5e4;
 

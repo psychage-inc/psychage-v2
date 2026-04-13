@@ -22,6 +22,7 @@ export const articles: Article[] = [
   {
     id: catId(16),
     slug: 'pregnancy-after-loss-navigating-fear-hope-and-complicated-emotions',
+    status: 'archived',
     title: `Pregnancy After Loss: Navigating Fear, Hope, and Complicated Emotions`,
     description: `Understand the unique psychological challenges of pregnancy after miscarriage, stillbirth, or infant loss, including managing anxiety and honoring both grief and hope.`,
     image: '/images/articles/cat18/cover-016.svg',
@@ -491,6 +492,7 @@ export const articles: Article[] = [
   {
     id: catId(17),
     slug: 'perinatal-ocd-intrusive-thoughts-and-compulsive-safety-behaviors',
+    status: 'archived',
     title: `Perinatal OCD: Intrusive Thoughts and Compulsive Safety Behaviors`,
     description: `Understand perinatal obsessive-compulsive disorder, distinguish it from normal worry, and learn about exposure-based treatments that reduce obsessions and compulsions.`,
     image: '/images/articles/cat18/cover-017.svg',

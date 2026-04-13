@@ -23,12 +23,12 @@ export const ClinicalInsights: React.FC<ClinicalInsightsProps> = ({
   return (
     <div>
       <div className="flex items-center gap-2 mb-2">
-        <Brain size={20} className="text-indigo-600" />
-        <h2 className="font-display font-bold text-xl text-gray-900">
+        <Brain size={20} className="text-text-tertiary" />
+        <h2 className="font-display font-bold text-xl text-text-primary">
           Clinical Insights
         </h2>
       </div>
-      <p className="text-sm text-gray-500 mb-6">
+      <p className="text-sm text-text-tertiary mb-6">
         Patterns detected in your responses, grounded in validated research
       </p>
 

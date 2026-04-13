@@ -26,7 +26,7 @@ export const WelcomeScreen: React.FC = () => {
 
             <h1 className="text-4xl sm:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
                 Understand your experience. <br />
-                <span className="text-teal-600 dark:text-teal-400">Find your path forward.</span>
+                <span className="text-gray-500 dark:text-gray-400">Find your path forward.</span>
             </h1>
 
             <p className="text-lg text-text-secondary leading-relaxed mb-10 max-w-xl">
@@ -72,7 +72,7 @@ export const WelcomeScreen: React.FC = () => {
                     onClick={handleStart}
                     isDisabled={!canStart}
                     isLoading={isLoading}
-                    className="mb-12 shadow-lg hover:shadow-xl transition-shadow bg-teal-600 hover:bg-teal-500"
+                    className="mb-12 shadow-lg hover:shadow-xl transition-shadow bg-teal-600 hover:bg-teal-700"
                     aria-label={isLoading ? 'Loading symptom library, please wait' : 'Start the Navigator'}
                 >
                     {isLoading ? 'Loading...' : 'Start the Navigator'}

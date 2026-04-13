@@ -19,6 +19,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
   {
     id: catId(26),
     slug: 'adapting-routine-when-life-gets-chaotic',
+    status: 'archived',
     title: 'Adapting Your Routine When Life Gets Chaotic',
     description: 'How to maintain mental health routines during transitions, crises, and unexpected disruptions without guilt or rigidity.',
     image: "/images/articles/cat08/cover-026.svg",
@@ -512,6 +513,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
   {
     id: catId(27),
     slug: 'midday-reset-routine-prevent-afternoon-crash',
+    status: 'archived',
     title: 'Building a Midday Reset Routine to Prevent the Afternoon Crash',
     description: 'Research-backed strategies to maintain energy, focus, and emotional regulation through the afternoon slump---without relying on caffeine.',
     image: "/images/articles/cat08/cover-027.svg",
@@ -951,6 +953,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
   {
     id: catId(28),
     slug: 'weekend-vs-weekday-routines-finding-balance',
+    status: 'archived',
     title: 'Weekend vs. Weekday Routines: Finding the Right Balance',
     description: 'How much structure should weekends have? Research on sleep consistency, routine flexibility, and the mental health benefits of structured downtime.',
     image: "/images/articles/cat08/cover-028.svg",
@@ -1429,6 +1432,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
   {
     id: catId(29),
     slug: 'routine-flexibility-when-to-stick-when-to-adjust',
+    status: 'archived',
     title: 'Routine Flexibility: When to Stick to the Plan vs. When to Adjust',
     description: 'How to distinguish between resistance that requires discipline and resistance that signals genuine need for adjustment.',
     image: "/images/articles/cat08/cover-029.svg",
@@ -1922,6 +1926,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
   {
     id: catId(30),
     slug: 'seasonal-routines-adapting-to-change-throughout-year',
+    status: 'archived',
     title: 'Seasonal Routines: Adapting to Change Throughout the Year',
     description: 'How seasonal shifts affect mood, energy, and behavior---and how to adjust routines to match natural cycles rather than fight them.',
     image: "/images/articles/cat08/cover-030.svg",

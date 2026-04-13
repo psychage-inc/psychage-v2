@@ -13,9 +13,9 @@ const DIFFICULTY_CONFIG: Record<
   Intervention['difficulty'],
   { label: string; color: string }
 > = {
-  easy: { label: 'Easy', color: 'bg-emerald-100 text-emerald-700' },
-  moderate: { label: 'Moderate', color: 'bg-amber-100 text-amber-700' },
-  challenging: { label: 'Challenging', color: 'bg-rose-100 text-rose-700' },
+  easy: { label: 'Easy', color: 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400' },
+  moderate: { label: 'Moderate', color: 'bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400' },
+  challenging: { label: 'Challenging', color: 'bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400' },
 };
 
 export const ActionPlanV2: React.FC<ActionPlanV2Props> = ({ patterns }) => {
@@ -25,14 +25,14 @@ export const ActionPlanV2: React.FC<ActionPlanV2Props> = ({ patterns }) => {
   if (interventions.length === 0) return null;
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:p-8 transition-shadow hover:shadow-md">
+    <div className="bg-surface rounded-2xl border border-border p-6 md:p-8 transition-shadow hover:shadow-md">
       <div className="flex items-center gap-2 mb-2">
-        <Sparkles size={20} className="text-teal-600" />
-        <h2 className="font-display font-bold text-xl text-gray-900">
+        <Sparkles size={20} className="text-text-tertiary" />
+        <h2 className="font-display font-bold text-xl text-text-primary">
           Evidence-Based Action Plan
         </h2>
       </div>
-      <p className="text-sm text-gray-500 mb-6">
+      <p className="text-sm text-text-tertiary mb-6">
         Specific exercises from validated clinical frameworks, matched to your results
       </p>
 
@@ -45,26 +45,26 @@ export const ActionPlanV2: React.FC<ActionPlanV2Props> = ({ patterns }) => {
           return (
             <div
               key={intervention.id}
-              className="rounded-xl border border-gray-100 overflow-hidden"
+              className="rounded-xl border border-border overflow-hidden"
             >
               <button
                 onClick={() => setExpandedId(isExpanded ? null : intervention.id)}
-                className="w-full p-4 text-left cursor-pointer hover:bg-gray-50 transition-colors"
+                className="w-full p-4 text-left cursor-pointer hover:bg-surface-hover transition-colors"
               >
                 <div className="flex items-start gap-3">
-                  <div className="flex items-center justify-center w-7 h-7 rounded-full bg-teal-100 text-teal-700 font-bold text-xs shrink-0 mt-0.5">
+                  <div className="flex items-center justify-center w-7 h-7 rounded-full bg-primary/10 text-primary font-bold text-xs shrink-0 mt-0.5">
                     {i + 1}
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap mb-1">
-                      <h4 className="font-bold text-sm text-gray-900">
+                      <h4 className="font-semibold text-sm text-text-primary">
                         {intervention.title}
                       </h4>
                       <span className={`text-[10px] font-semibold px-2.5 py-0.5 rounded-full ${difficulty.color}`}>
                         {difficulty.label}
                       </span>
                     </div>
-                    <p className="text-xs text-gray-500 leading-relaxed line-clamp-2">
+                    <p className="text-xs text-text-tertiary leading-relaxed line-clamp-2">
                       {intervention.description}
                     </p>
                   </div>
@@ -73,7 +73,7 @@ export const ActionPlanV2: React.FC<ActionPlanV2Props> = ({ patterns }) => {
                     transition={{ duration: 0.2 }}
                     className="shrink-0 mt-1"
                   >
-                    <ChevronDown size={16} className="text-gray-400" />
+                    <ChevronDown size={16} className="text-text-tertiary" />
                   </motion.div>
                 </div>
               </button>
@@ -89,7 +89,7 @@ export const ActionPlanV2: React.FC<ActionPlanV2Props> = ({ patterns }) => {
                   >
                     <div className="px-4 pb-4 pt-0 ml-10">
                       {/* Meta badges */}
-                      <div className="flex flex-wrap items-center gap-3 mb-3 text-[11px] text-gray-400">
+                      <div className="flex flex-wrap items-center gap-3 mb-3 text-[11px] text-text-tertiary">
                         <span className="inline-flex items-center gap-1">
                           <Clock size={11} />
                           {intervention.timeEstimate}
@@ -109,8 +109,8 @@ export const ActionPlanV2: React.FC<ActionPlanV2Props> = ({ patterns }) => {
                       {/* Steps */}
                       <ol className="space-y-2 mb-3">
                         {intervention.steps.map((step, j) => (
-                          <li key={j} className="flex items-start gap-2 text-xs text-gray-600">
-                            <span className="text-teal-500 font-bold shrink-0 mt-px w-4 text-right">
+                          <li key={j} className="flex items-start gap-2 text-xs text-text-secondary">
+                            <span className="text-primary font-bold shrink-0 mt-px w-4 text-right">
                               {j + 1}.
                             </span>
                             <span className="leading-relaxed">{step}</span>
@@ -119,7 +119,7 @@ export const ActionPlanV2: React.FC<ActionPlanV2Props> = ({ patterns }) => {
                       </ol>
 
                       {/* Citation */}
-                      <p className="text-[10px] text-gray-400 italic leading-relaxed">
+                      <p className="text-[10px] text-text-tertiary italic leading-relaxed">
                         {intervention.citation}
                       </p>
                     </div>

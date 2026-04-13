@@ -19,6 +19,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
   {
     id: catId(46),
     slug: 'grief-and-bereavement-in-older-adults-when-loss-is-cumulative',
+    status: 'archived',
     title: `Grief and Bereavement in Older Adults: When Loss Is Cumulative`,
     description: `Understand how multiple losses in later life create unique grief patterns and learn strategies for navigating cumulative bereavement with resilience.`,
     image: '/images/articles/cat17/cover-046.svg',
@@ -256,6 +257,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
   {
     id: catId(47),
     slug: 'losing-a-spouse-in-later-life-widowhood-and-rebuilding-identity',
+    status: 'archived',
     title: `Losing a Spouse in Later Life: Widowhood and Rebuilding Identity`,
     description: `Navigate the profound identity shift of losing a life partner after decades together and discover paths toward renewed purpose and connection.`,
     image: '/images/articles/cat17/cover-047.svg',
@@ -466,6 +468,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
   {
     id: catId(48),
     slug: 'retirement-transition-mental-health-identity-and-purpose-after-work',
+    status: 'archived',
     title: `Retirement Transition: Mental Health, Identity, and Purpose After Work`,
     description: `Explore the psychological challenges of retiring after decades of career identity and discover strategies for creating meaningful post-work life.`,
     image: '/images/articles/cat17/cover-048.svg',
@@ -727,6 +730,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
   {
     id: catId(49),
     slug: 'moving-in-later-life-downsizing-relocation-and-psychological-impact',
+    status: 'archived',
     title: `Moving in Later Life: Downsizing, Relocation, and Psychological Impact`,
     description: `Understand the emotional challenges of leaving a long-time home in older adulthood and learn strategies for healthy transition to new living situations.`,
     image: '/images/articles/cat17/cover-049.svg',
@@ -967,6 +971,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
   {
     id: catId(50),
     slug: 'end-of-life-anxiety-and-mortality-awareness-in-older-adults',
+    status: 'archived',
     title: `End-of-Life Anxiety and Mortality Awareness in Older Adults`,
     description: `Navigate the psychological impact of contemplating mortality in later life and discover approaches for finding peace amid existential awareness.`,
     image: '/images/articles/cat17/cover-050.svg',

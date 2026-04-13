@@ -25,6 +25,7 @@ export const articles: Article[] = [
   {
     id: catId(11),
     slug: 'perinatal-depression-understanding-depression-during-pregnancy',
+    status: 'archived',
     title: `Perinatal Depression: Understanding Depression During Pregnancy`,
     description: `Explore depression during pregnancy, including risk factors, symptoms, treatment safety, and why maternal mental health is essential prenatal care.`,
     image: '/images/articles/cat18/cover-011.svg',
@@ -479,6 +480,7 @@ export const articles: Article[] = [
   {
     id: catId(12),
     slug: 'postpartum-depression-beyond-the-baby-blues',
+    status: 'archived',
     title: `Postpartum Depression: Beyond the Baby Blues`,
     description: `Distinguish between baby blues and postpartum depression, understand risk factors and symptoms, and learn about evidence-based treatments for this common postpartum condition.`,
     image: '/images/articles/cat18/cover-012.svg',
@@ -937,6 +939,7 @@ export const articles: Article[] = [
   {
     id: catId(13),
     slug: 'perinatal-anxiety-when-worry-becomes-overwhelming',
+    status: 'archived',
     title: `Perinatal Anxiety: When Worry Becomes Overwhelming`,
     description: `Understand anxiety disorders during pregnancy and postpartum, including generalized anxiety, panic disorder, and health anxiety, plus strategies for managing intrusive worries.`,
     image: '/images/articles/cat18/cover-013.svg',
@@ -1334,6 +1337,7 @@ export const articles: Article[] = [
   {
     id: catId(14),
     slug: 'birth-trauma-and-ptsd-healing-after-difficult-births',
+    status: 'archived',
     title: `Birth Trauma and PTSD: Healing After Difficult Births`,
     description: `Understand birth trauma and postpartum PTSD, recognize symptoms, and learn about trauma-focused treatments that support recovery and bonding.`,
     image: '/images/articles/cat18/cover-014.svg',
@@ -1857,6 +1861,7 @@ export const articles: Article[] = [
   {
     id: catId(15),
     slug: 'postpartum-psychosis-recognizing-and-responding-to-psychiatric-emergency',
+    status: 'archived',
     title: `Postpartum Psychosis: Recognizing and Responding to Psychiatric Emergency`,
     description: `Understand postpartum psychosis as a rare but serious psychiatric emergency, learn to recognize symptoms, and know when and how to seek urgent care.`,
     image: '/images/articles/cat18/cover-015.svg',

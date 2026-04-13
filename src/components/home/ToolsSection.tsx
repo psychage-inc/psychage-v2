@@ -43,7 +43,6 @@ const getToolLink = (toolId: number) => {
         case 8: return '/tools/mindmate';
         case 10: return '/tools/clarity-journal';
         case 11: return '/tools/relationship-health';
-        case 12: return '/tools/medication-tracker';
         default: return '#';
     }
 };

@@ -22,6 +22,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
   {
     id: catId(36),
     slug: 'pet-ownership-companionship-mental-health-older-adults',
+    status: 'archived',
     title: 'Pet Ownership and Companionship for Mental Health in Older Adults',
     description: `Pets reduce loneliness, lower blood pressure, increase physical activity, and provide purpose---but require realistic assessment of care capacity and costs.`,
     image: '/images/articles/cat17/cover-036.svg',
@@ -324,6 +325,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
   {
     id: catId(37),
     slug: 'intergenerational-programs-relationships-mental-health',
+    status: 'archived',
     title: 'Intergenerational Programs and Relationships for Mental Health',
     description: `Intergenerational programs---pairing seniors with children or young adults---reduce loneliness, increase purpose, and benefit both generations through mutual support.`,
     image: '/images/articles/cat17/cover-037.svg',
@@ -664,6 +666,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
   {
     id: catId(38),
     slug: 'overcoming-barriers-socialization-mobility-hearing-transportation',
+    status: 'archived',
     title: 'Overcoming Barriers to Socialization: Mobility, Hearing Loss, Transportation',
     description: `Physical barriers (mobility issues, hearing loss, lack of transportation) isolate older adults---but each barrier has practical solutions that restore connection.`,
     image: '/images/articles/cat17/cover-038.svg',
@@ -980,6 +983,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
   {
     id: catId(39),
     slug: 'making-friends-after-65-social-connection-strategies',
+    status: 'archived',
     title: 'Making Friends After 65: Strategies for Social Connection in Late Life',
     description: `Making friends after 65 is hard---you lack work environment, childhood connections died or moved---but structured activities, vulnerability, and consistency work.`,
     image: '/images/articles/cat17/cover-039.svg',
@@ -1340,6 +1344,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
   {
     id: catId(40),
     slug: 'coping-outliving-friends-spouse-grief-isolation',
+    status: 'archived',
     title: 'Coping with Outliving Friends and Spouse: Grief and Isolation',
     description: `Outliving your peers brings cumulative grief and shrinking social networks---yet strategies exist to grieve losses while building new connections.`,
     image: '/images/articles/cat17/cover-040.svg',

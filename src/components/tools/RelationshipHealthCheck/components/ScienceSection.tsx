@@ -27,25 +27,25 @@ export const ScienceSection: React.FC<ScienceSectionProps> = ({ patterns }) => {
   const frameworks = getRelevantFrameworks(refs, 4);
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+    <div className="bg-surface rounded-2xl border border-border overflow-hidden">
       <button
         onClick={() => setExpanded((prev) => !prev)}
-        className="w-full p-6 text-left cursor-pointer hover:bg-gray-50/50 transition-colors"
+        className="w-full p-6 text-left cursor-pointer hover:bg-surface-hover transition-colors"
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <FlaskConical size={20} className="text-violet-600" />
+            <FlaskConical size={20} className="text-text-tertiary" />
             <div>
-              <h2 className="font-display font-bold text-lg text-gray-900">
+              <h2 className="font-display font-bold text-lg text-text-primary">
                 Understanding the Science
               </h2>
-              <p className="text-xs text-gray-500 mt-0.5">
+              <p className="text-xs text-text-tertiary mt-0.5">
                 The research frameworks behind your assessment
               </p>
             </div>
           </div>
           <motion.div animate={{ rotate: expanded ? 180 : 0 }} transition={{ duration: 0.2 }}>
-            <ChevronDown size={18} className="text-gray-400" />
+            <ChevronDown size={18} className="text-text-tertiary" />
           </motion.div>
         </div>
       </button>
@@ -65,7 +65,7 @@ export const ScienceSection: React.FC<ScienceSectionProps> = ({ patterns }) => {
               ))}
 
               <div className="pt-2">
-                <p className="text-[11px] text-gray-400 text-center leading-relaxed">
+                <p className="text-[11px] text-text-tertiary text-center leading-relaxed">
                   This assessment draws on {Object.keys(FRAMEWORKS).length} validated clinical
                   frameworks spanning 40+ years of longitudinal research and data from 11,000+
                   couples. It is designed for educational insight, not clinical diagnosis.
@@ -81,24 +81,24 @@ export const ScienceSection: React.FC<ScienceSectionProps> = ({ patterns }) => {
 
 function FrameworkCard({ framework }: { framework: FrameworkInfo }) {
   return (
-    <div className="rounded-xl bg-gradient-to-br from-violet-50 to-slate-50 border border-violet-100/50 p-4">
+    <div className="rounded-xl bg-surface-hover border border-border p-4">
       <div className="flex items-start justify-between mb-2">
         <div>
-          <h4 className="font-bold text-sm text-gray-900">{framework.name}</h4>
-          <p className="text-[11px] text-gray-400">
+          <h4 className="font-semibold text-sm text-text-primary">{framework.name}</h4>
+          <p className="text-[11px] text-text-tertiary">
             {framework.authors} ({framework.year})
           </p>
         </div>
       </div>
-      <p className="text-xs text-gray-600 leading-relaxed mb-2">
+      <p className="text-xs text-text-secondary leading-relaxed mb-2">
         {framework.description}
       </p>
-      <div className="bg-white/60 rounded-lg p-2.5">
-        <p className="text-[11px] text-violet-700 leading-relaxed">
+      <div className="bg-surface rounded-lg p-2.5 border border-border">
+        <p className="text-[11px] text-text-secondary leading-relaxed">
           <strong>Key insight:</strong> {framework.keyInsight}
         </p>
       </div>
-      <p className="text-[10px] text-gray-400 mt-2 italic">{framework.citation}</p>
+      <p className="text-[10px] text-text-tertiary mt-2 italic">{framework.citation}</p>
     </div>
   );
 }

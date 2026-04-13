@@ -33,7 +33,7 @@ const ThemeContext = createContext<ThemeContextType>({
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [theme, setThemeState] = useState<Theme>(() => {
         const stored = localStorage.getItem(STORAGE_KEY) as Theme | null;
-        return stored && ['light', 'dark', 'system'].includes(stored) ? stored : 'system';
+        return stored && ['light', 'dark', 'system'].includes(stored) ? stored : 'light';
     });
 
     const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>(() => resolveTheme(theme));

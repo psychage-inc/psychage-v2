@@ -1080,6 +1080,7 @@ export const depressionAnxietyOlderAdultsArticlesA: Article[] = [
   {
     id: catId(19),
     slug: 'social-determinants-of-late-life-depression-and-anxiety',
+    status: 'archived',
     title: 'Social Determinants of Late-Life Depression and Anxiety',
     description:
       'Examine how poverty, housing, food insecurity, transportation, and social isolation drive mental health disparities in older adults.',
@@ -1451,6 +1452,7 @@ export const depressionAnxietyOlderAdultsArticlesA: Article[] = [
   {
     id: catId(20),
     slug: 'family-caregiving-depression-and-burden',
+    status: 'archived',
     title: 'Family Caregiving: Depression and Burden',
     description:
       'Understand caregiver burnout, depression, and strategies for self-care while caring for loved ones with dementia or chronic illness.',

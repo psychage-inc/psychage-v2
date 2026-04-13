@@ -289,6 +289,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
   {
     id: catId(47),
     slug: 'temptation-bundling-pair-things-you-need-with-things-you-want',
+    status: 'archived',
     title: 'Temptation Bundling: Pairing Things You Need to Do with Things You Want to Do',
     description: 'Learn how to make unpleasant tasks more appealing by pairing them with immediate rewards, a strategy backed by behavioral economics.',
     image: "/images/articles/cat08/cover-047.svg",
@@ -561,6 +562,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
   {
     id: catId(48),
     slug: 'implementation-intentions-if-then-strategy-sticking-to-plans',
+    status: 'archived',
     title: `Implementation Intentions: The 'If-Then' Strategy for Sticking to Plans`,
     description: "Discover how pre-planning specific responses to anticipated obstacles doubles goal achievement rates through the power of if-then planning.",
     image: "/images/articles/cat08/cover-048.svg",
@@ -854,6 +856,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
   {
     id: catId(49),
     slug: 'how-stress-destroys-self-control-what-to-do-about-it',
+    status: 'archived',
     title: 'How Stress Destroys Self-Control (And What to Do About It)',
     description: 'Understand the neurobiological pathways through which stress impairs impulse control and discover strategies to maintain self-regulation under pressure.',
     image: "/images/articles/cat08/cover-049.svg",
@@ -1133,6 +1136,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
   {
     id: catId(50),
     slug: 'building-self-discipline-without-self-punishment',
+    status: 'archived',
     title: 'Building Self-Discipline Without Self-Punishment',
     description: 'Learn how compassionate self-regulation outperforms harsh self-criticism, and why sustainable discipline comes from support, not shame.',
     image: "/images/articles/cat08/cover-050.svg",

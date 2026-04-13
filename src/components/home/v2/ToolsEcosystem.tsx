@@ -189,7 +189,7 @@ const ToolsEcosystem: React.FC = () => {
               </p>
               <div
                 className="mt-5 flex items-center gap-2 text-sm font-semibold"
-                style={{ color: 'var(--color-primary)' }}
+                style={{ color: 'color-mix(in srgb, var(--color-primary) 75%, var(--color-text-secondary))' }}
               >
                 Explore Navigator
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" />

@@ -17,6 +17,7 @@ export const articles: Article[] = [
   {
     id: catId(1),
     slug: 'fertility-struggles-and-mental-health-coping-with-infertility',
+    status: 'archived',
     title: `Fertility Struggles and Mental Health: Coping with Infertility`,
     description: `Understand the profound psychological impact of infertility and discover evidence-based strategies for managing the emotional challenges of trying to conceive.`,
     image: '/images/articles/cat18/cover-001.svg',
@@ -215,6 +216,7 @@ export const articles: Article[] = [
   {
     id: catId(2),
     slug: 'pregnancy-loss-mental-health-impact-of-miscarriage-and-stillbirth',
+    status: 'archived',
     title: `Pregnancy Loss: Mental Health Impact of Miscarriage and Stillbirth`,
     description: `Navigate the profound grief of pregnancy loss and understand why this experience deserves recognition, support, and adequate time for psychological healing.`,
     image: '/images/articles/cat18/cover-002.svg',
@@ -417,6 +419,7 @@ export const articles: Article[] = [
   {
     id: catId(3),
     slug: 'premenstrual-dysphoric-disorder-pmdd-severe-mood-changes',
+    status: 'archived',
     title: `Premenstrual Dysphoric Disorder (PMDD): Severe Mood Changes and Treatment`,
     description: `Recognize PMDD as a serious mood disorder, not just PMS, and explore evidence-based treatments for debilitating premenstrual symptoms.`,
     image: '/images/articles/cat18/cover-003.svg',
@@ -850,6 +853,7 @@ export const articles: Article[] = [
   {
     id: catId(5),
     slug: 'ivf-and-fertility-treatment-psychological-impact-and-coping',
+    status: 'archived',
     title: `IVF and Fertility Treatment: Psychological Impact and Coping Strategies`,
     description: `Navigate the intense emotional and psychological challenges of assisted reproductive technology while protecting mental health through the process.`,
     image: '/images/articles/cat18/cover-005.svg',

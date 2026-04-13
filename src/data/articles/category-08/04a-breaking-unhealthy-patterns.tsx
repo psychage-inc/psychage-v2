@@ -16,6 +16,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
   {
     id: catId(31),
     slug: 'why-bad-habits-hard-to-break-neuroscience',
+    status: 'archived',
     title: 'Why Bad Habits Are So Hard to Break: The Neuroscience of Compulsive Behavior',
     description: 'Explore the brain mechanisms that make unwanted habits stick and why willpower alone often fails to break them.',
     image: "/images/articles/cat08/cover-031.svg",
@@ -385,6 +386,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
   {
     id: catId(32),
     slug: 'break-social-media-addiction-step-by-step',
+    status: 'archived',
     title: 'How to Break a Social Media Addiction: A Step-by-Step Guide',
     description: 'A practical, evidence-based approach to reducing compulsive social media use and reclaiming your attention.',
     image: "/images/articles/cat08/cover-032.svg",
@@ -879,6 +881,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
   {
     id: catId(33),
     slug: 'emotional-eating-why-you-eat-when-not-hungry',
+    status: 'archived',
     title: `Emotional Eating: Understanding Why You Eat When You're Not Hungry`,
     description: "Explore the psychological drivers behind emotional eating and learn strategies to break the cycle without rigid dieting.",
     image: "/images/articles/cat08/cover-033.svg",
@@ -1329,6 +1332,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
   {
     id: catId(34),
     slug: 'break-procrastination-habit-root-cause',
+    status: 'archived',
     title: 'Breaking the Procrastination Habit: Strategies That Address the Root Cause',
     description: 'Go beyond time management tips to understand and address the emotional and psychological drivers of chronic procrastination.',
     image: "/images/articles/cat08/cover-034.svg",
@@ -1838,6 +1842,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
   {
     id: catId(35),
     slug: 'stop-negative-self-talk-rewire-internal-monologue',
+    status: 'archived',
     title: 'How to Stop Negative Self-Talk: Rewiring Your Internal Monologue',
     description: 'Learn evidence-based cognitive techniques to identify, challenge, and change the critical voice in your head.',
     image: "/images/articles/cat08/cover-035.svg",

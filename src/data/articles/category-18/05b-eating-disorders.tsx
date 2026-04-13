@@ -16,6 +16,7 @@ export const articles: Article[] = [
   {
     id: catId(46),
     slug: 'body-image-eating-disorders-women',
+    status: 'archived',
     title: 'Body Image and Eating Disorders in Women',
     description:
       'Exploring the complex relationship between body image disturbance and eating disorders, and paths to developing healthier body relationship.',
@@ -328,6 +329,7 @@ export const articles: Article[] = [
   {
     id: catId(47),
     slug: 'eating-disorder-recovery-stages-process',
+    status: 'archived',
     title: 'Eating Disorder Recovery: Stages and Process',
     description:
       'Understanding the stages of eating disorder recovery, what to expect at each phase, and how to navigate setbacks and challenges.',
@@ -674,6 +676,7 @@ export const articles: Article[] = [
   {
     id: catId(48),
     slug: 'family-dynamics-eating-disorders',
+    status: 'archived',
     title: 'Family Dynamics and Eating Disorders',
     description:
       'How family relationships influence eating disorder development and recovery, and how families can support healing.',
@@ -1012,6 +1015,7 @@ export const articles: Article[] = [
   {
     id: catId(49),
     slug: 'relapse-prevention-eating-disorders',
+    status: 'archived',
     title: 'Relapse Prevention in Eating Disorder Recovery',
     description:
       'Identifying warning signs of relapse, creating prevention plans, and maintaining recovery gains long-term.',
@@ -1348,6 +1352,7 @@ export const articles: Article[] = [
   {
     id: catId(50),
     slug: 'medical-complications-eating-disorders',
+    status: 'archived',
     title: 'Medical Complications of Eating Disorders',
     description:
       'Understanding the serious medical consequences of eating disorders across body systems and importance of medical monitoring.',

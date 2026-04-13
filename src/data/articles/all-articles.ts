@@ -6,7 +6,8 @@
 
 import type { Article } from '@/types/models';
 
-// Import category modules (1-22: original, 23-31: batch 2)
+// Import category modules (1-21: original, 23-31: expanded)
+// Note: Cat 22 was merged into Cat 31 (both used slug 'spirituality-meaning')
 import * as cat01 from './category-01';
 import * as cat02 from './category-02';
 import * as cat03 from './category-03';
@@ -28,7 +29,6 @@ import * as cat18 from './category-18';
 import * as cat19 from './category-19';
 import * as cat20 from './category-20';
 import * as cat21 from './category-21';
-import * as cat22 from './category-22';
 import * as cat23 from './category-23';
 import * as cat24 from './category-24';
 import * as cat25 from './category-25';
@@ -78,7 +78,6 @@ export const allArticles: Article[] = [
   ...flattenCategoryModule(cat19),
   ...flattenCategoryModule(cat20),
   ...flattenCategoryModule(cat21),
-  ...flattenCategoryModule(cat22),
   ...flattenCategoryModule(cat23),
   ...flattenCategoryModule(cat24),
   ...flattenCategoryModule(cat25),

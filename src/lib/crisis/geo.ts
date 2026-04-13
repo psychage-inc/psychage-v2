@@ -122,6 +122,49 @@ function getVercelCountry(): string | null {
   return null;
 }
 
+/**
+ * Major timezone → country mapping for privacy-friendly geolocation.
+ * Only maps unambiguous timezones (e.g., America/New_York → US).
+ */
+const TIMEZONE_TO_COUNTRY: Record<string, string> = {
+  'America/New_York': 'US', 'America/Chicago': 'US', 'America/Denver': 'US',
+  'America/Los_Angeles': 'US', 'America/Anchorage': 'US', 'Pacific/Honolulu': 'US',
+  'America/Phoenix': 'US', 'America/Indiana/Indianapolis': 'US',
+  'America/Toronto': 'CA', 'America/Vancouver': 'CA', 'America/Edmonton': 'CA',
+  'America/Winnipeg': 'CA', 'America/Halifax': 'CA', 'America/St_Johns': 'CA',
+  'Europe/London': 'GB', 'Europe/Dublin': 'IE', 'Europe/Paris': 'FR',
+  'Europe/Berlin': 'DE', 'Europe/Madrid': 'ES', 'Europe/Rome': 'IT',
+  'Europe/Amsterdam': 'NL', 'Europe/Brussels': 'BE', 'Europe/Zurich': 'CH',
+  'Europe/Vienna': 'AT', 'Europe/Stockholm': 'SE', 'Europe/Oslo': 'NO',
+  'Europe/Copenhagen': 'DK', 'Europe/Helsinki': 'FI', 'Europe/Warsaw': 'PL',
+  'Europe/Prague': 'CZ', 'Europe/Budapest': 'HU', 'Europe/Bucharest': 'RO',
+  'Europe/Athens': 'GR', 'Europe/Lisbon': 'PT', 'Europe/Moscow': 'RU',
+  'Europe/Istanbul': 'TR', 'Europe/Kiev': 'UA', 'Europe/Kyiv': 'UA',
+  'Asia/Tokyo': 'JP', 'Asia/Seoul': 'KR', 'Asia/Shanghai': 'CN',
+  'Asia/Hong_Kong': 'HK', 'Asia/Taipei': 'TW', 'Asia/Singapore': 'SG',
+  'Asia/Kolkata': 'IN', 'Asia/Calcutta': 'IN', 'Asia/Karachi': 'PK',
+  'Asia/Dhaka': 'BD', 'Asia/Bangkok': 'TH', 'Asia/Jakarta': 'ID',
+  'Asia/Manila': 'PH', 'Asia/Kuala_Lumpur': 'MY', 'Asia/Ho_Chi_Minh': 'VN',
+  'Asia/Dubai': 'AE', 'Asia/Riyadh': 'SA', 'Asia/Tehran': 'IR',
+  'Asia/Jerusalem': 'IL', 'Asia/Colombo': 'LK',
+  'Australia/Sydney': 'AU', 'Australia/Melbourne': 'AU', 'Australia/Brisbane': 'AU',
+  'Australia/Perth': 'AU', 'Australia/Adelaide': 'AU',
+  'Pacific/Auckland': 'NZ', 'Pacific/Fiji': 'FJ',
+  'Africa/Johannesburg': 'ZA', 'Africa/Lagos': 'NG', 'Africa/Nairobi': 'KE',
+  'Africa/Cairo': 'EG', 'Africa/Casablanca': 'MA',
+  'America/Mexico_City': 'MX', 'America/Sao_Paulo': 'BR', 'America/Argentina/Buenos_Aires': 'AR',
+  'America/Bogota': 'CO', 'America/Lima': 'PE', 'America/Santiago': 'CL',
+};
+
+function inferCountryFromTimezone(): string | null {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    return TIMEZONE_TO_COUNTRY[tz] ?? null;
+  } catch {
+    return null;
+  }
+}
+
 /** Save user's country selection to localStorage */
 export function saveCountryPreference(iso2: string): void {
   try {
@@ -182,12 +225,16 @@ export function resolveCountry(options?: {
     return vercelCountry;
   }
 
-  // 4. Browser locale inference
+  // 4. Timezone inference (privacy-friendly, no API calls)
+  const tzCountry = inferCountryFromTimezone();
+  if (tzCountry) return tzCountry;
+
+  // 5. Browser locale inference
   if (typeof navigator !== 'undefined' && navigator.language) {
     const inferred = inferCountryFromLanguage(navigator.language);
     if (inferred) return inferred;
   }
 
-  // 5. Safe default
+  // 6. Safe default
   return 'US';
 }

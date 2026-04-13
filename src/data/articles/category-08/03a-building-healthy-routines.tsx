@@ -19,6 +19,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
   {
     id: catId(21),
     slug: 'morning-routines-mental-health-what-works',
+    status: 'archived',
     title: 'Morning Routines That Support Mental Health: What Actually Works',
     description: 'Evidence-based morning routine strategies that genuinely improve mood, focus, and emotional regulation---backed by research, not influencer trends.',
     image: "/images/articles/cat08/cover-021.svg",
@@ -416,6 +417,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
   {
     id: catId(22),
     slug: 'evening-wind-down-routines-sleep-anxiety',
+    status: 'archived',
     title: 'Evening Wind-Down Routines for Better Sleep and Less Anxiety',
     description: 'Build an evening routine that signals your nervous system to transition from activity to rest---reducing anxiety and improving sleep quality.',
     image: "/images/articles/cat08/cover-022.svg",
@@ -857,6 +859,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
   {
     id: catId(23),
     slug: 'build-exercise-routine-hate-working-out',
+    status: 'archived',
     title: 'How to Build an Exercise Routine When You Hate Working Out',
     description: 'Evidence-based strategies to make movement sustainable when you genuinely dislike traditional exercise---focusing on mental health benefits, not fitness goals.',
     image: "/images/articles/cat08/cover-023.svg",
@@ -1325,6 +1328,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
   {
     id: catId(24),
     slug: 'sustainable-self-care-routine-not-face-mask',
+    status: 'archived',
     title: `Creating a Self-Care Routine That's Sustainable (Not Just a Face Mask)`,
     description: "Build a self-care routine based on actual needs and emotional regulation---not trendy wellness products or social media aesthetics.",
     image: "/images/articles/cat08/cover-024.svg",
@@ -1789,6 +1793,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
   {
     id: catId(25),
     slug: 'minimum-effective-dose-smallest-routine',
+    status: 'archived',
     title: 'The Minimum Effective Dose: The Smallest Routine That Still Moves the Needle',
     description: 'Find the absolute minimum routine that produces meaningful mental health benefits---because perfection is the enemy of consistency.',
     image: "/images/articles/cat08/cover-025.svg",

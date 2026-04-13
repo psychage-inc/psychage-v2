@@ -20,6 +20,30 @@ const DOMAIN_ICONS: Record<RelationshipDomain, React.ReactNode> = {
   community: <Globe size={16} />,
 };
 
+/** Muted domain accent colors that work with design-system neutrals */
+const DOMAIN_ACCENT: Record<RelationshipDomain, { badge: string; progress: string; selected: string }> = {
+  partner: {
+    badge: 'bg-rose-50 dark:bg-rose-900/20 text-rose-600 dark:text-rose-400 border-rose-200 dark:border-rose-800',
+    progress: 'bg-rose-500',
+    selected: 'bg-rose-600 dark:bg-rose-500',
+  },
+  family: {
+    badge: 'bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 border-indigo-200 dark:border-indigo-800',
+    progress: 'bg-indigo-500',
+    selected: 'bg-indigo-600 dark:bg-indigo-500',
+  },
+  friends: {
+    badge: 'bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 border-amber-200 dark:border-amber-800',
+    progress: 'bg-amber-500',
+    selected: 'bg-amber-600 dark:bg-amber-500',
+  },
+  community: {
+    badge: 'bg-primary/10 text-primary border-primary/20',
+    progress: 'bg-primary',
+    selected: 'bg-primary',
+  },
+};
+
 export const QuestionWizard: React.FC<QuestionWizardProps> = ({
   skipPartner,
   onComplete,
@@ -48,7 +72,7 @@ export const QuestionWizard: React.FC<QuestionWizardProps> = ({
   const showMilestone = useMemo(() => {
     const pct = Math.round(progress);
     if (pct >= 49 && pct <= 52) return 'You\'re halfway there!';
-    if (pct >= 74 && pct <= 77) return 'Almost done — just a few more!';
+    if (pct >= 74 && pct <= 77) return 'Almost done -- just a few more!';
     return null;
   }, [progress]);
 
@@ -60,7 +84,7 @@ export const QuestionWizard: React.FC<QuestionWizardProps> = ({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Detect domain transitions — only show once per domain, only going forward
+  // Detect domain transitions -- only show once per domain, only going forward
   useEffect(() => {
     if (!currentQuestion) return;
     const currentDomain = currentQuestion.domain;
@@ -125,40 +149,30 @@ export const QuestionWizard: React.FC<QuestionWizardProps> = ({
 
   const domainMeta = DOMAIN_META[currentQuestion.domain];
   const selectedValue = answers[currentQuestion.id];
-
-  const domainBadgeClasses: Record<RelationshipDomain, string> = {
-    partner: 'bg-rose-50 text-rose-600 border-rose-200',
-    family: 'bg-indigo-50 text-indigo-600 border-indigo-200',
-    friends: 'bg-amber-50 text-amber-600 border-amber-200',
-    community: 'bg-teal-50 text-teal-600 border-teal-200',
-  };
-
-  const domainProgressColors: Record<RelationshipDomain, string> = {
-    partner: 'bg-rose-500',
-    family: 'bg-indigo-500',
-    friends: 'bg-amber-500',
-    community: 'bg-teal-500',
-  };
+  const accent = DOMAIN_ACCENT[currentQuestion.domain];
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-6">
+    <div className="min-h-screen bg-background pt-24 pb-12 px-4 sm:px-6 transition-colors duration-300">
       <SEO
         title="Relationship Health Check | Psychage"
         description="Complete your relationship health assessment."
       />
       <div className="container mx-auto max-w-2xl">
-        {/* Progress bar */}
-        <div className="mb-8">
+        {/* Question card */}
+        <div className="bg-surface rounded-3xl p-8 md:p-12 shadow-xl shadow-gray-200/50 dark:shadow-none border border-border">
+          {/* Progress header */}
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs text-gray-400 font-medium">
+            <span className="text-xs text-text-tertiary font-medium">
               Question {currentIndex + 1} of {totalQuestions}
             </span>
-            <span className="text-xs text-gray-400 font-medium">
+            <span className="text-xs text-text-tertiary font-medium">
               {Math.round(progress)}%
             </span>
           </div>
+
+          {/* Progress bar */}
           <div
-            className="h-2 bg-gray-200 rounded-full overflow-hidden"
+            className="h-2 bg-surface-active rounded-full overflow-hidden mb-8"
             role="progressbar"
             aria-valuenow={currentIndex + 1}
             aria-valuemin={1}
@@ -166,136 +180,134 @@ export const QuestionWizard: React.FC<QuestionWizardProps> = ({
             aria-label={`Question ${currentIndex + 1} of ${totalQuestions}`}
           >
             <motion.div
-              className={`h-full rounded-full ${domainProgressColors[currentQuestion.domain]}`}
+              className={`h-full rounded-full ${accent.progress}`}
               initial={false}
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
             />
           </div>
-        </div>
 
-        {/* Progress milestone */}
-        <AnimatePresence>
-          {showMilestone && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              className="text-center mb-4"
+          {/* Progress milestone */}
+          <AnimatePresence>
+            {showMilestone && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="text-center mb-4"
+              >
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">
+                  {showMilestone}
+                </span>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Domain + sub-dimension badges */}
+          <div className="flex items-center gap-3 mb-4 px-4 py-3 rounded-xl bg-surface-hover border border-border">
+            <span
+              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold border ${accent.badge}`}
             >
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-teal-50 text-teal-700 text-xs font-bold">
-                {showMilestone}
-              </span>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* Domain + sub-dimension badges */}
-        <div className="flex flex-col items-center gap-1 mb-6">
-          <span
-            className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border ${domainBadgeClasses[currentQuestion.domain]}`}
-          >
-            {DOMAIN_ICONS[currentQuestion.domain]}
-            {domainMeta.name}
-          </span>
-          {currentSubDimMeta && (
-            <span className="text-[11px] text-gray-400 font-medium">
-              {currentSubDimMeta.name}
+              {DOMAIN_ICONS[currentQuestion.domain]}
+              {domainMeta.name}
             </span>
-          )}
-        </div>
+            {currentSubDimMeta && (
+              <span className="text-[11px] text-text-tertiary font-medium">
+                {currentSubDimMeta.name}
+              </span>
+            )}
+          </div>
 
-        {/* Domain transition banner */}
-        <AnimatePresence>
-          {showDomainTransition && (
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3, ease: 'easeOut' }}
-              className={`mb-6 rounded-xl border p-4 flex items-center gap-3 ${domainMeta.bgColor} ${domainMeta.borderColor}`}
-            >
-              <div
-                className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${domainMeta.bgColor} ${domainMeta.textColor}`}
+          {/* Domain transition banner */}
+          <AnimatePresence>
+            {showDomainTransition && (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3, ease: 'easeOut' }}
+                className="mb-6 rounded-xl border border-border bg-surface-hover p-4 flex items-center gap-3"
               >
-                {DOMAIN_ICONS[currentQuestion.domain]}
-              </div>
-              <div>
-                <p className="font-bold text-sm text-gray-900">
-                  Now exploring: {domainMeta.name}
-                </p>
-                <p className="text-xs text-gray-500">{domainMeta.description}</p>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* Question */}
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.div
-            key={currentQuestion.id}
-            initial={{ opacity: 0, x: direction > 0 ? 40 : -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: direction > 0 ? -40 : 40 }}
-            transition={{ duration: 0.25 }}
-            className="mb-8"
-          >
-            <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center leading-snug">
-              {currentQuestion.text}
-            </h2>
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Likert options */}
-        <div className="space-y-3 max-w-md mx-auto mb-8">
-          {LIKERT_OPTIONS.map((option) => {
-            const isSelected = selectedValue === option.value;
-            return (
-              <button
-                key={option.value}
-                onClick={() => handleAnswer(option.value)}
-                className={`w-full p-4 rounded-xl border-2 text-left transition-all min-h-[48px] ${
-                  isSelected
-                    ? 'border-teal-500 bg-teal-50 text-teal-800'
-                    : 'border-gray-100 bg-white text-gray-700 hover:border-gray-300 hover:shadow-sm'
-                }`}
-                aria-pressed={isSelected}
-              >
-                <div className="flex items-center gap-3">
-                  <div
-                    className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 ${
-                      isSelected ? 'border-teal-500 bg-teal-500' : 'border-gray-300'
-                    }`}
-                  >
-                    {isSelected && (
-                      <div className="w-2 h-2 rounded-full bg-white" />
-                    )}
-                  </div>
-                  <span className="font-medium text-sm">{option.label}</span>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-primary/10 text-primary">
+                  {DOMAIN_ICONS[currentQuestion.domain]}
                 </div>
-              </button>
-            );
-          })}
-        </div>
+                <div>
+                  <p className="font-semibold text-sm text-text-primary">
+                    Now exploring: {domainMeta.name}
+                  </p>
+                  <p className="text-xs text-text-tertiary">{domainMeta.description}</p>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
-        {/* Navigation */}
-        <div className="flex items-center justify-between max-w-md mx-auto">
-          <Button
-            variant="outline"
-            size="sm"
-            leftIcon={<ArrowLeft size={16} />}
-            onClick={currentIndex > 0 ? handleBack : onCancel}
-          >
-            {currentIndex > 0 ? 'Back' : 'Cancel'}
-          </Button>
-          <Button
-            variant="ghost"
-            size="sm"
-            rightIcon={<SkipForward size={16} />}
-            onClick={handleSkip}
-          >
-            Skip
-          </Button>
+          {/* Question */}
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={currentQuestion.id}
+              initial={{ opacity: 0, x: direction > 0 ? 40 : -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: direction > 0 ? -40 : 40 }}
+              transition={{ duration: 0.25 }}
+              className="mb-10"
+            >
+              <h2 className="text-2xl md:text-3xl font-bold text-text-primary text-center leading-tight">
+                {currentQuestion.text}
+              </h2>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Likert options */}
+          <div className="space-y-3 max-w-md mx-auto mb-10">
+            {LIKERT_OPTIONS.map((option) => {
+              const isSelected = selectedValue === option.value;
+              return (
+                <button
+                  key={option.value}
+                  onClick={() => handleAnswer(option.value)}
+                  className={`w-full p-4 rounded-xl border-2 text-left transition-all min-h-[48px] ${
+                    isSelected
+                      ? `${accent.selected} text-white border-transparent shadow-md`
+                      : 'border-border bg-surface text-text-secondary hover:border-border-hover hover:bg-surface-hover'
+                  }`}
+                  aria-pressed={isSelected}
+                >
+                  <div className="flex items-center gap-3">
+                    <div
+                      className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 ${
+                        isSelected ? 'border-white bg-white' : 'border-gray-300 dark:border-gray-600'
+                      }`}
+                    >
+                      {isSelected && (
+                        <div className={`w-2 h-2 rounded-full ${accent.progress}`} />
+                      )}
+                    </div>
+                    <span className="font-medium text-sm">{option.label}</span>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Navigation */}
+          <div className="flex items-center justify-between max-w-md mx-auto pt-6 border-t border-border">
+            <Button
+              variant="outline"
+              size="sm"
+              leftIcon={<ArrowLeft size={16} />}
+              onClick={currentIndex > 0 ? handleBack : onCancel}
+            >
+              {currentIndex > 0 ? 'Back' : 'Cancel'}
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              rightIcon={<SkipForward size={16} />}
+              onClick={handleSkip}
+            >
+              Skip
+            </Button>
+          </div>
         </div>
       </div>
     </div>

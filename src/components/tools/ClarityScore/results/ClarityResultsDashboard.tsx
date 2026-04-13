@@ -1,20 +1,15 @@
 import React, { useState, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  BarChart2,
-  Layers,
-  BookOpen,
-  Clock,
   RefreshCw,
 } from 'lucide-react';
-import type { LucideIcon } from 'lucide-react';
 import type {
   ClarityScoreResult,
   ClarityHistoryItem,
   Recommendation,
   DomainKey,
 } from '@/lib/clarity/types';
-import { getScoreTierColor, getTierHexColor } from '@/lib/clarity/scoring';
+import { getScoreTierColor } from '@/lib/clarity/scoring';
 import TierBadge from './components/TierBadge';
 import OverviewTab from './OverviewTab';
 import DimensionsTab from './DimensionsTab';
@@ -28,14 +23,13 @@ type TabId = 'overview' | 'dimensions' | 'guide' | 'history';
 interface TabDef {
   id: TabId;
   label: string;
-  icon: LucideIcon;
 }
 
 const TABS: TabDef[] = [
-  { id: 'overview', label: 'Overview', icon: BarChart2 },
-  { id: 'dimensions', label: 'Dimensions', icon: Layers },
-  { id: 'guide', label: 'Score Guide', icon: BookOpen },
-  { id: 'history', label: 'History', icon: Clock },
+  { id: 'overview', label: 'Overview' },
+  { id: 'dimensions', label: 'Dimensions' },
+  { id: 'guide', label: 'Score Guide' },
+  { id: 'history', label: 'History' },
 ];
 
 // ─── Props ──────────────────────────────────────────────────────────
@@ -104,45 +98,58 @@ const ClarityResultsDashboard: React.FC<ClarityResultsDashboardProps> = ({
     [activeTab]
   );
 
-  const _tierColors = getScoreTierColor(results.tier);
+  const tierColors = getScoreTierColor(results.tier);
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
       className="space-y-0"
     >
       {/* ─── Score Banner Header ─── */}
-      <div
-        className="text-white rounded-t-3xl overflow-hidden relative"
-        style={{
-          background: `linear-gradient(135deg, ${getTierHexColor(results.tier)}dd, ${getTierHexColor(results.tier)}88)`,
-        }}
-      >
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-white/20 to-transparent" />
-        <div className="relative z-10 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-6">
-            <div className="text-center">
-              <div className="text-6xl md:text-7xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
-                {results.totalScore}
+      <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-t-2xl">
+        <div className="px-8 py-10 md:px-10 md:py-12">
+          <div className="flex flex-col md:flex-row items-center md:items-end justify-between gap-6">
+            {/* Score display */}
+            <div className="flex items-end gap-6">
+              <div className="text-center md:text-left">
+                <p className="text-xs font-medium uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-2">
+                  Your Clarity Score
+                </p>
+                <div className="flex items-baseline gap-2">
+                  <span className={`text-7xl md:text-8xl font-display font-bold tracking-tight ${tierColors.text}`}>
+                    {results.totalScore}
+                  </span>
+                  <span className="text-lg text-gray-300 dark:text-gray-600 font-light">
+                    / 100
+                  </span>
+                </div>
               </div>
-              <p className="text-xs text-white/60 mt-1">Clarity Score</p>
+              <div className="hidden md:block w-px h-14 bg-gray-200 dark:bg-gray-700 mx-2" />
+              <div className="hidden md:flex flex-col gap-1.5 pb-2">
+                <TierBadge tier={results.tier} label={results.label} size="lg" />
+                <p className="text-xs text-gray-400 dark:text-gray-500">
+                  Assessment complete
+                </p>
+              </div>
             </div>
-            <div className="hidden md:block w-px h-16 bg-white/20" />
-            <div>
-              <TierBadge tier={results.tier} label={results.label} size="lg" />
-            </div>
+
+            {/* Retake button */}
+            <button
+              onClick={onRetake}
+              type="button"
+              className="text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 font-medium flex items-center gap-2 transition-colors text-sm"
+            >
+              <RefreshCw size={14} />
+              Retake
+            </button>
           </div>
 
-          <button
-            onClick={onRetake}
-            type="button"
-            className="text-white/70 hover:text-white font-medium flex items-center gap-2 transition-colors text-sm"
-          >
-            <RefreshCw size={16} />
-            Retake Assessment
-          </button>
+          {/* Mobile tier badge */}
+          <div className="mt-4 md:hidden">
+            <TierBadge tier={results.tier} label={results.label} size="md" />
+          </div>
         </div>
       </div>
 
@@ -151,12 +158,11 @@ const ClarityResultsDashboard: React.FC<ClarityResultsDashboardProps> = ({
         ref={tabListRef}
         role="tablist"
         aria-label="Results sections"
-        className="bg-surface border-b border-border rounded-b-none flex overflow-x-auto"
+        className="bg-white dark:bg-gray-900 border-x border-b border-gray-200 dark:border-gray-800 flex"
         onKeyDown={handleTabKeyDown}
       >
         {TABS.map((tab) => {
           const isActive = activeTab === tab.id;
-          const TabIcon = tab.icon;
           return (
             <button
               key={tab.id}
@@ -167,21 +173,27 @@ const ClarityResultsDashboard: React.FC<ClarityResultsDashboardProps> = ({
               aria-controls={`panel-${tab.id}`}
               tabIndex={isActive ? 0 : -1}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center gap-2 px-5 py-3.5 text-sm font-medium border-b-2 transition-colors whitespace-nowrap focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:outline-none ${
+              className={`relative flex-1 px-4 py-3 text-sm font-medium transition-colors whitespace-nowrap focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-inset focus-visible:outline-none ${
                 isActive
-                  ? 'border-teal-500 text-primary'
-                  : 'border-transparent text-text-tertiary hover:text-text-secondary hover:border-gray-300 dark:hover:border-gray-600'
+                  ? 'text-gray-900 dark:text-white'
+                  : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-400'
               }`}
             >
-              <TabIcon size={16} />
-              <span className="hidden sm:inline">{tab.label}</span>
+              {tab.label}
+              {isActive && (
+                <motion.div
+                  layoutId="clarity-tab-indicator"
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-900 dark:bg-white"
+                  transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                />
+              )}
             </button>
           );
         })}
       </div>
 
       {/* ─── Tab Content ─── */}
-      <div className="pt-6">
+      <div className="pt-8">
         <AnimatePresence mode="wait">
           {activeTab === 'overview' && (
             <div

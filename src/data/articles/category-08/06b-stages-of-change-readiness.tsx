@@ -21,6 +21,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
   {
     id: catId(56),
     slug: 'maintenance-how-to-keep-going-when-novelty-wears-off',
+    status: 'archived',
     title: 'Maintenance: How to Keep Going When the Novelty Wears Off',
     description: 'Navigate the long-term stage where behavior becomes routine, understand relapse prevention, and learn strategies to sustain change for years, not months.',
     image: "/images/articles/cat08/cover-056.svg",
@@ -546,6 +547,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
   {
     id: catId(57),
     slug: 'relapse-why-setbacks-are-normal-and-how-to-get-back-on-track',
+    status: 'archived',
     title: 'Relapse: Why Setbacks Are Normal and How to Get Back on Track',
     description: 'Understand the difference between a lapse and relapse, explore why setbacks happen, and learn evidence-based strategies to recover without shame or giving up.',
     image: "/images/articles/cat08/cover-057.svg",
@@ -1084,6 +1086,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
   {
     id: catId(58),
     slug: 'how-to-support-someone-who-isnt-ready-to-change',
+    status: 'archived',
     title: `How to Support Someone Who Isn't Ready to Change`,
     description: "Learn stage-appropriate ways to help someone you care about, avoid common mistakes that create resistance, and understand the limits of your influence.",
     image: "/images/articles/cat08/cover-058.svg",
@@ -1634,6 +1637,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
   {
     id: catId(59),
     slug: 'behavior-change-in-couples-when-partners-are-at-different-stages',
+    status: 'archived',
     title: 'Behavior Change in Couples: When Partners Are at Different Stages',
     description: 'Navigate the unique challenges when couples pursue change at different paces, learn communication strategies that prevent conflict, and build mutual support.',
     image: "/images/articles/cat08/cover-059.svg",
@@ -2178,6 +2182,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
   {
     id: catId(60),
     slug: 'change-at-every-age-why-its-never-too-late-to-build-new-patterns',
+    status: 'archived',
     title: `Change at Every Age: Why It's Never Too Late to Build New Patterns`,
     description: "Explore how behavior change evolves across the lifespan, understand age-specific challenges and advantages, and find hope in the neuroplasticity that persists throughout life.",
     image: "/images/articles/cat08/cover-060.svg",

@@ -74,8 +74,8 @@ const ProvidersLandingPage: React.FC = () => {
       </section>
 
       {/* Trust Indicators */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
+      <section className="px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto border-y border-border py-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {TRUST_INDICATORS.map((item, i) => (
               <motion.div
@@ -86,8 +86,8 @@ const ProvidersLandingPage: React.FC = () => {
                 transition={{ delay: i * 0.1 }}
                 className="text-center"
               >
-                <div className="w-12 h-12 rounded-2xl bg-teal-50 dark:bg-teal-900/20 flex items-center justify-center mx-auto mb-3">
-                  <item.icon className="w-6 h-6 text-teal-600 dark:text-teal-400" />
+                <div className="w-12 h-12 rounded-2xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center mx-auto mb-3">
+                  <item.icon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                 </div>
                 <h3 className="font-display font-bold text-sm text-text-primary mb-1">{item.label}</h3>
                 <p className="text-xs text-text-secondary">{item.description}</p>
@@ -129,7 +129,9 @@ const ProvidersLandingPage: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-display font-bold text-3xl text-text-primary mb-12">How It Works</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+            {/* Desktop connecting lines */}
+            <div className="hidden md:block absolute top-7 left-[calc(16.67%+28px)] right-[calc(16.67%+28px)] border-t-2 border-dashed border-border" />
             {HOW_IT_WORKS.map((item) => (
               <motion.div
                 key={item.step}
@@ -137,9 +139,10 @@ const ProvidersLandingPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: item.step * 0.15 }}
+                className="relative"
               >
-                <div className="w-14 h-14 rounded-2xl bg-teal-50 dark:bg-teal-900/20 flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-7 h-7 text-teal-600 dark:text-teal-400" />
+                <div className="w-14 h-14 rounded-full bg-teal-600 dark:bg-teal-500 flex items-center justify-center mx-auto mb-5 shadow-lg shadow-teal-600/20 dark:shadow-teal-500/20">
+                  <span className="font-display font-bold text-xl text-white">{item.step}</span>
                 </div>
                 <div className="text-xs font-bold text-teal-600 dark:text-teal-400 uppercase tracking-widest mb-2">Step {item.step}</div>
                 <h3 className="font-display font-bold text-lg text-text-primary mb-2">{item.title}</h3>

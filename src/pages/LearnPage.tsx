@@ -269,6 +269,7 @@ const LearnPage: React.FC = () => {
     const { bookmarks, toggleBookmark, isBookmarked } = useBookmarks();
 
     useEffect(() => {
+        let isCancelled = false;
         window.scrollTo(0, 0);
         const fetchData = async () => {
             try {
@@ -276,16 +277,19 @@ const LearnPage: React.FC = () => {
                     articleService.getAll(),
                     categoryService.getAll()
                 ]);
+                if (isCancelled) return;
                 setArticles(articlesData);
                 setCategories(categoriesData);
             } catch (error) {
+                if (isCancelled) return;
                 console.error("Failed to fetch data:", error);
                 setFetchError("Unable to load articles. Please try again.");
             } finally {
-                setIsLoading(false);
+                if (!isCancelled) setIsLoading(false);
             }
         };
         fetchData();
+        return () => { isCancelled = true; };
     }, [articleService]);
 
     // Load recent searches on mount

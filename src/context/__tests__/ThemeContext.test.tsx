@@ -1,28 +1,63 @@
- 
 import { render, screen } from '@testing-library/react';
-import { renderHook } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import { renderHook, act } from '@testing-library/react';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { ThemeProvider, useTheme } from '../ThemeContext';
 
 describe('ThemeContext', () => {
-    it('should provide light theme by default', () => {
+    beforeEach(() => {
+        localStorage.clear();
+        document.documentElement.classList.remove('light', 'dark');
+    });
+
+    it('should default to system theme', () => {
         const { result } = renderHook(() => useTheme(), {
             wrapper: ThemeProvider,
         });
 
-        expect(result.current.theme).toBe('light');
-        expect(result.current.isDark).toBe(false);
+        expect(result.current.theme).toBe('system');
+        // resolvedTheme depends on system preference (jsdom defaults to light)
+        expect(['light', 'dark']).toContain(result.current.resolvedTheme);
     });
 
-    it('should apply light class to document root', () => {
+    it('should apply theme class to document root', () => {
         render(
             <ThemeProvider>
                 <div>test</div>
             </ThemeProvider>
         );
 
-        expect(document.documentElement.classList.contains('light')).toBe(true);
-        expect(document.documentElement.classList.contains('dark')).toBe(false);
+        const hasThemeClass = document.documentElement.classList.contains('light')
+            || document.documentElement.classList.contains('dark');
+        expect(hasThemeClass).toBe(true);
+    });
+
+    it('should toggle between light, dark, and system', () => {
+        const { result } = renderHook(() => useTheme(), {
+            wrapper: ThemeProvider,
+        });
+
+        // Default is system — toggle to light
+        act(() => result.current.setTheme('light'));
+        expect(result.current.theme).toBe('light');
+        expect(result.current.isDark).toBe(false);
+
+        // Toggle to dark
+        act(() => result.current.toggleTheme());
+        expect(result.current.theme).toBe('dark');
+        expect(result.current.isDark).toBe(true);
+
+        // Toggle to system
+        act(() => result.current.toggleTheme());
+        expect(result.current.theme).toBe('system');
+    });
+
+    it('should persist theme to localStorage', () => {
+        const { result } = renderHook(() => useTheme(), {
+            wrapper: ThemeProvider,
+        });
+
+        act(() => result.current.setTheme('dark'));
+        expect(localStorage.getItem('psychage_theme')).toBe('dark');
     });
 
     it('should render children', () => {

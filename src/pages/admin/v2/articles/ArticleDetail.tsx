@@ -1,4 +1,5 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react';
+import React, { useState, useCallback, useEffect, useRef, useMemo } from 'react';
+import DOMPurify from 'dompurify';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import ReactMarkdown from 'react-markdown';
@@ -182,6 +183,11 @@ const AdminArticleDetail: React.FC = () => {
 function ArticleHtmlRenderer({ html, className }: { html: string; className?: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
 
+  const sanitizedHtml = useMemo(() => DOMPurify.sanitize(html, {
+    ADD_ATTR: ['data-chart-block', 'data-chart', 'loading', 'target'],
+    ADD_TAGS: ['iframe'],
+  }), [html]);
+
   useEffect(() => {
     if (!containerRef.current) return;
     const chartNodes = containerRef.current.querySelectorAll<HTMLElement>('[data-chart-block]');
@@ -214,13 +220,13 @@ function ArticleHtmlRenderer({ html, className }: { html: string; className?: st
     return () => {
       roots.forEach((root) => root.unmount());
     };
-  }, [html]);
+  }, [sanitizedHtml]);
 
   return (
     <article
       ref={containerRef}
       className={className}
-      dangerouslySetInnerHTML={{ __html: html }}
+      dangerouslySetInnerHTML={{ __html: sanitizedHtml }}
     />
   );
 }

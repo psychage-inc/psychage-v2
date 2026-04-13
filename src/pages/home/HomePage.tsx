@@ -14,7 +14,7 @@ const HomePage: React.FC = () => {
   const { user } = useAuth();
 
   return (
-    <div className="relative bg-[#FAF9F6] min-h-[100dvh]">
+    <div className="relative bg-[var(--color-homepage-bg)] min-h-[100dvh]">
       <SEO
         title="Psychage — Free Mental Health Education, Tools & Provider Directory"
         description="Understand mental health clearly, freely, and privately. Evidence-based articles, a symptom navigator, interactive tools, and 423K+ verified providers — in 5 languages."

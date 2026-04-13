@@ -18,6 +18,7 @@ const BookmarksPage: React.FC = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        let isCancelled = false;
         const fetchData = async () => {
             setIsLoading(true);
             try {
@@ -25,6 +26,8 @@ const BookmarksPage: React.FC = () => {
                     api.articles.getBookmarks(),
                     api.providers.getFavorites()
                 ]);
+
+                if (isCancelled) return;
 
                 if (articlesRes.success && articlesRes.data) {
                     setBookmarks(articlesRes.data as unknown as Article[]);
@@ -36,11 +39,12 @@ const BookmarksPage: React.FC = () => {
             } catch {
                 // Failed to fetch bookmarks — show empty state
             } finally {
-                setIsLoading(false);
+                if (!isCancelled) setIsLoading(false);
             }
         };
 
         fetchData();
+        return () => { isCancelled = true; };
     }, []);
 
     const removeBookmark = async (id: string) => {

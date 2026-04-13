@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, ChevronRight, LogOut, User, ChevronDown, HeartHandshake } from 'lucide-react';
 import { Logo } from '../ui/Logo';
+import ThemeToggle from '../ui/ThemeToggle';
 import { useAuth } from '../../context/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
 import { navigationConfig } from '../../config/navigation';
@@ -84,6 +85,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                 )}
               </div>
               <div className="flex items-center gap-2">
+                <ThemeToggle />
                 <button
                   onClick={onClose}
                   className="p-2 text-text-tertiary hover:text-text-primary hover:bg-surface-hover rounded-full transition-colors"

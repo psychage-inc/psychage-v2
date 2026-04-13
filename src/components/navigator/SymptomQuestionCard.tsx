@@ -20,7 +20,7 @@ export const SymptomQuestionCard: React.FC<SymptomQuestionCardProps> = ({
     return (
         <div
             className={cn(
-                "relative rounded-[2rem] transition-all duration-500 overflow-hidden outline-none backdrop-blur-2xl",
+                "relative rounded-[2rem] transition-all duration-500 overflow-hidden outline-none focus-visible:ring-2 focus-visible:ring-teal-500/50 backdrop-blur-2xl",
                 isActive
                     ? "bg-surface/80 border border-teal-500/40 ring-1 ring-teal-500/20"
                     : isCompleted

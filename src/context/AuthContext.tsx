@@ -34,8 +34,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   // Check for existing session on mount and set up auth state listener
   useEffect(() => {
+    let isCancelled = false;
+
     // Get initial session
     supabase.auth.getSession().then(({ data: { session } }) => {
+      if (isCancelled) return;
       const mapped = mapSupabaseUser(session?.user ?? null);
       const stableUser = usersEqual(mapped, userRef.current) ? userRef.current : mapped;
       userRef.current = stableUser;
@@ -52,6 +55,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (isCancelled) return;
       const mapped = mapSupabaseUser(session?.user ?? null);
       const stableUser = usersEqual(mapped, userRef.current) ? userRef.current : mapped;
       userRef.current = stableUser;
@@ -64,7 +68,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       });
     });
 
-    return () => subscription.unsubscribe();
+    return () => {
+      isCancelled = true;
+      subscription.unsubscribe();
+    };
   }, []);
 
   const login = useCallback(async (email: string, password: string) => {

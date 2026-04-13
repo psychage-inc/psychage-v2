@@ -115,10 +115,11 @@ const UsersTab: React.FC<UsersTabProps> = ({ dateRange, cache }) => {
   const [data, setData] = useState<AdminAnalyticsUserMetrics | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const fetchData = useCallback(async () => {
+  const fetchData = useCallback(async (signal?: { cancelled: boolean }) => {
     const key = cacheKey('users', dateRange);
     const cached = cache.current.get(key) as AdminAnalyticsUserMetrics | undefined;
     if (cached) {
+      if (signal?.cancelled) return;
       setData(cached);
       setIsLoading(false);
       return;
@@ -126,15 +127,18 @@ const UsersTab: React.FC<UsersTabProps> = ({ dateRange, cache }) => {
     setIsLoading(true);
     try {
       const result = await getUserAnalytics(dateRange);
+      if (signal?.cancelled) return;
       cache.current.set(key, result);
       setData(result);
     } finally {
-      setIsLoading(false);
+      if (!signal?.cancelled) setIsLoading(false);
     }
   }, [dateRange, cache]);
 
   useEffect(() => {
-    fetchData();
+    const signal = { cancelled: false };
+    fetchData(signal);
+    return () => { signal.cancelled = true; };
   }, [fetchData]);
 
   return (
@@ -267,10 +271,11 @@ const ContentTab: React.FC<ContentTabProps> = ({ dateRange, cache }) => {
   const [data, setData] = useState<AdminAnalyticsContentMetrics | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const fetchData = useCallback(async () => {
+  const fetchData = useCallback(async (signal?: { cancelled: boolean }) => {
     const key = cacheKey('content', dateRange);
     const cached = cache.current.get(key) as AdminAnalyticsContentMetrics | undefined;
     if (cached) {
+      if (signal?.cancelled) return;
       setData(cached);
       setIsLoading(false);
       return;
@@ -278,15 +283,18 @@ const ContentTab: React.FC<ContentTabProps> = ({ dateRange, cache }) => {
     setIsLoading(true);
     try {
       const result = await getContentAnalytics(dateRange);
+      if (signal?.cancelled) return;
       cache.current.set(key, result);
       setData(result);
     } finally {
-      setIsLoading(false);
+      if (!signal?.cancelled) setIsLoading(false);
     }
   }, [dateRange, cache]);
 
   useEffect(() => {
-    fetchData();
+    const signal = { cancelled: false };
+    fetchData(signal);
+    return () => { signal.cancelled = true; };
   }, [fetchData]);
 
   return (
@@ -429,10 +437,11 @@ const AssessmentsTab: React.FC<AssessmentsTabProps> = ({ dateRange, cache }) => 
   const [data, setData] = useState<AdminAnalyticsAssessmentMetrics | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const fetchData = useCallback(async () => {
+  const fetchData = useCallback(async (signal?: { cancelled: boolean }) => {
     const key = cacheKey('assessments', dateRange);
     const cached = cache.current.get(key) as AdminAnalyticsAssessmentMetrics | undefined;
     if (cached) {
+      if (signal?.cancelled) return;
       setData(cached);
       setIsLoading(false);
       return;
@@ -440,15 +449,18 @@ const AssessmentsTab: React.FC<AssessmentsTabProps> = ({ dateRange, cache }) => 
     setIsLoading(true);
     try {
       const result = await getAssessmentAnalytics(dateRange);
+      if (signal?.cancelled) return;
       cache.current.set(key, result);
       setData(result);
     } finally {
-      setIsLoading(false);
+      if (!signal?.cancelled) setIsLoading(false);
     }
   }, [dateRange, cache]);
 
   useEffect(() => {
-    fetchData();
+    const signal = { cancelled: false };
+    fetchData(signal);
+    return () => { signal.cancelled = true; };
   }, [fetchData]);
 
   return (
@@ -565,10 +577,11 @@ const ProvidersTab: React.FC<ProvidersTabProps> = ({ dateRange, cache }) => {
   const [data, setData] = useState<AdminAnalyticsProviderMetrics | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const fetchData = useCallback(async () => {
+  const fetchData = useCallback(async (signal?: { cancelled: boolean }) => {
     const key = cacheKey('providers', dateRange);
     const cached = cache.current.get(key) as AdminAnalyticsProviderMetrics | undefined;
     if (cached) {
+      if (signal?.cancelled) return;
       setData(cached);
       setIsLoading(false);
       return;
@@ -576,15 +589,18 @@ const ProvidersTab: React.FC<ProvidersTabProps> = ({ dateRange, cache }) => {
     setIsLoading(true);
     try {
       const result = await getProviderAnalytics(dateRange);
+      if (signal?.cancelled) return;
       cache.current.set(key, result);
       setData(result);
     } finally {
-      setIsLoading(false);
+      if (!signal?.cancelled) setIsLoading(false);
     }
   }, [dateRange, cache]);
 
   useEffect(() => {
-    fetchData();
+    const signal = { cancelled: false };
+    fetchData(signal);
+    return () => { signal.cancelled = true; };
   }, [fetchData]);
 
   return (

@@ -9,10 +9,14 @@ const AuthCallback: React.FC = () => {
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
+        let isCancelled = false;
+
         const handleCallback = async () => {
             try {
                 // Get the session from the URL hash
                 const { data, error } = await supabase.auth.getSession();
+
+                if (isCancelled) return;
 
                 if (error) {
                     console.error('Auth callback error:', error);
@@ -41,6 +45,8 @@ const AuthCallback: React.FC = () => {
                             .eq('id', data.session.user.id)
                             .single();
 
+                        if (isCancelled) return;
+
                         if (!profileError && profile && !profile.onboarding_completed_at) {
                             needsOnboarding = true;
                         }
@@ -62,12 +68,16 @@ const AuthCallback: React.FC = () => {
                                 .eq('id', data.session.user.id)
                                 .single();
 
+                            if (isCancelled) return;
+
                             if (!profileError && profile && profile.onboarding_completed === false) {
                                 needsPatientOnboarding = true;
                             }
                         } catch {
                             // Fail-open: DB error means go to dashboard
                         }
+
+                        if (isCancelled) return;
 
                         if (onAdminDomain) {
                             window.location.href = mainUrl(needsPatientOnboarding ? '/onboarding' : '/dashboard');
@@ -80,6 +90,7 @@ const AuthCallback: React.FC = () => {
                     navigate('/login', { replace: true });
                 }
             } catch (err) {
+                if (isCancelled) return;
                 console.error('Callback processing error:', err);
                 setError('Failed to complete authentication');
                 setTimeout(() => navigate('/login'), 3000);
@@ -87,6 +98,7 @@ const AuthCallback: React.FC = () => {
         };
 
         handleCallback();
+        return () => { isCancelled = true; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 

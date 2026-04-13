@@ -74,7 +74,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({
     editorProps: {
       attributes: {
         class:
-          'prose prose-sm dark:prose-invert max-w-none min-h-[400px] outline-none px-4 py-3 ' +
+          'prose prose-sm dark:prose-invert max-w-none min-h-[400px] outline-none focus-visible:ring-2 focus-visible:ring-primary/50 px-4 py-3 ' +
           'prose-h1:text-3xl prose-h1:font-bold prose-h1:mt-8 prose-h1:mb-4 ' +
           'prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-6 prose-h2:mb-3 ' +
           'prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-5 prose-h3:mb-2 ' +

@@ -629,6 +629,7 @@ const AdminSettingsPage: React.FC = () => {
 
   // Load all data on mount
   useEffect(() => {
+    let isCancelled = false;
     const loadData = async () => {
       setIsLoading(true);
       const [settingsData, flagsData, historyData] = await Promise.all([
@@ -636,12 +637,14 @@ const AdminSettingsPage: React.FC = () => {
         getMockFeatureFlags(),
         getMockConfigHistory(),
       ]);
+      if (isCancelled) return;
       setSettings(settingsData);
       setFlags(flagsData);
       setHistory(historyData);
       setIsLoading(false);
     };
     loadData();
+    return () => { isCancelled = true; };
   }, []);
 
   // Feature flag toggle

@@ -5,6 +5,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import NavMenu from './NavMenu';
 import MobileMenu from './MobileMenu';
 import Button from '../ui/Button';
+import ThemeToggle from '../ui/ThemeToggle';
 import { Logo } from '../ui/Logo';
 import { useAuth } from '../../context/AuthContext';
 import { navigationConfig } from '../../config/navigation';
@@ -222,6 +223,11 @@ const Navigation: React.FC = () => {
 
                     {/* Right Actions */}
                     <div className="flex items-center gap-2">
+                        {/* Theme Toggle */}
+                        <div className="hidden md:flex">
+                            <ThemeToggle />
+                        </div>
+
                         {/* Search Toggle */}
                         <button
                             onClick={() => setIsSearchOpen(!isSearchOpen)}

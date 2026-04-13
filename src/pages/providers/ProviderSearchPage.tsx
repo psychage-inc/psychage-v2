@@ -36,9 +36,11 @@ const ProviderSearchPage: React.FC = () => {
   const [dbProviderCount, setDbProviderCount] = useState<number | null>(null);
 
   useEffect(() => {
+    let isCancelled = false;
     getProviderCount().then(count => {
-      if (count > 0) setDbProviderCount(count);
+      if (!isCancelled && count > 0) setDbProviderCount(count);
     });
+    return () => { isCancelled = true; };
   }, []);
 
   const hasActiveFilters = !!(

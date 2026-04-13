@@ -261,7 +261,7 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ open, onClose }) => {
                 setActiveIndex(0);
               }}
               placeholder="Search commands..."
-              className="flex-1 text-sm bg-transparent text-text-primary placeholder:text-text-tertiary outline-none"
+              className="flex-1 text-sm bg-transparent text-text-primary placeholder:text-text-tertiary outline-none focus-visible:ring-2 focus-visible:ring-primary/50 rounded"
             />
             <kbd className="hidden sm:inline-flex items-center gap-1 px-1.5 py-0.5 text-[10px] font-mono text-text-tertiary bg-surface-hover rounded">
               ESC

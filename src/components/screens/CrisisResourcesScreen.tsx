@@ -25,7 +25,7 @@ export const CrisisResourcesScreen: React.FC = () => {
         <div className="min-h-screen bg-charcoal-50 dark:bg-charcoal-900 pt-24 pb-12">
             <SEO title="Crisis Resources | Psychage" description="If you or someone you know is in crisis, help is available right now. Free, confidential support 24/7." />
             <div className="max-w-3xl mx-auto px-4 sm:px-6">
-                <Link to="/" className="inline-flex items-center text-charcoal-500 hover:text-charcoal-900 dark:text-charcoal-400 dark:hover:text-white font-medium mb-8 focus:outline-none transition-colors">
+                <Link to="/" className="inline-flex items-center text-charcoal-500 hover:text-charcoal-900 dark:text-charcoal-400 dark:hover:text-white font-medium mb-8 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500/50 rounded transition-colors">
                     <ArrowLeft className="w-4 h-4 mr-2" />
                     Back to Home
                 </Link>

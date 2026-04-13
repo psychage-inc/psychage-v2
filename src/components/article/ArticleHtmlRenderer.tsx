@@ -1,4 +1,5 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useMemo } from 'react';
+import DOMPurify from 'dompurify';
 
 /**
  * Renders HTML string content safely with chart block hydration
@@ -8,6 +9,12 @@ import React, { useRef, useEffect } from 'react';
  */
 function ArticleHtmlRenderer({ html, className }: { html: string; className?: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Sanitize HTML to prevent XSS — allow data attributes for chart hydration
+  const sanitizedHtml = useMemo(() => DOMPurify.sanitize(html, {
+    ADD_ATTR: ['data-chart-block', 'data-chart', 'loading', 'target'],
+    ADD_TAGS: ['iframe'],
+  }), [html]);
 
   // Auto-generate IDs for headings + add lazy loading to images
   useEffect(() => {
@@ -61,7 +68,7 @@ function ArticleHtmlRenderer({ html, className }: { html: string; className?: st
     <div
       ref={containerRef}
       className={className}
-      dangerouslySetInnerHTML={{ __html: html }}
+      dangerouslySetInnerHTML={{ __html: sanitizedHtml }}
     />
   );
 }

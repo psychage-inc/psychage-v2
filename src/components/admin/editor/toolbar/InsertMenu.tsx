@@ -82,7 +82,7 @@ const InsertMenu: React.FC<InsertMenuProps> = ({ editor }) => {
           {/* Table */}
           <DropdownMenu.Item
             onSelect={insertTable}
-            className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none"
+            className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
           >
             <Table size={14} className="text-text-tertiary" />
             Table (3x3)
@@ -91,7 +91,7 @@ const InsertMenu: React.FC<InsertMenuProps> = ({ editor }) => {
           {/* Divider */}
           <DropdownMenu.Item
             onSelect={insertDivider}
-            className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none"
+            className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
           >
             <Minus size={14} className="text-text-tertiary" />
             Horizontal Divider
@@ -101,7 +101,7 @@ const InsertMenu: React.FC<InsertMenuProps> = ({ editor }) => {
 
           {/* Callout submenu */}
           <DropdownMenu.Sub>
-            <DropdownMenu.SubTrigger className="flex items-center justify-between px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none">
+            <DropdownMenu.SubTrigger className="flex items-center justify-between px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary/50">
               <span className="flex items-center gap-2">
                 <Info size={14} className="text-blue-500" />
                 Callout Block
@@ -115,25 +115,25 @@ const InsertMenu: React.FC<InsertMenuProps> = ({ editor }) => {
               >
                 <DropdownMenu.Item
                   onSelect={() => insertCallout('info')}
-                  className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none"
+                  className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
                 >
                   <Info size={14} className="text-blue-500" /> Info
                 </DropdownMenu.Item>
                 <DropdownMenu.Item
                   onSelect={() => insertCallout('warning')}
-                  className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none"
+                  className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
                 >
                   <AlertTriangle size={14} className="text-amber-500" /> Warning
                 </DropdownMenu.Item>
                 <DropdownMenu.Item
                   onSelect={() => insertCallout('tip')}
-                  className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none"
+                  className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
                 >
                   <Lightbulb size={14} className="text-emerald-500" /> Tip
                 </DropdownMenu.Item>
                 <DropdownMenu.Item
                   onSelect={() => insertCallout('note')}
-                  className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none"
+                  className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
                 >
                   <StickyNote size={14} className="text-gray-500" /> Note
                 </DropdownMenu.Item>
@@ -143,7 +143,7 @@ const InsertMenu: React.FC<InsertMenuProps> = ({ editor }) => {
 
           {/* Chart submenu */}
           <DropdownMenu.Sub>
-            <DropdownMenu.SubTrigger className="flex items-center justify-between px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none">
+            <DropdownMenu.SubTrigger className="flex items-center justify-between px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary/50">
               <span className="flex items-center gap-2">
                 <BarChart3 size={14} className="text-indigo-500" />
                 Chart
@@ -157,19 +157,19 @@ const InsertMenu: React.FC<InsertMenuProps> = ({ editor }) => {
               >
                 <DropdownMenu.Item
                   onSelect={() => insertChart('bar')}
-                  className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none"
+                  className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
                 >
                   <BarChart3 size={14} className="text-indigo-500" /> Bar Chart
                 </DropdownMenu.Item>
                 <DropdownMenu.Item
                   onSelect={() => insertChart('pie')}
-                  className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none"
+                  className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
                 >
                   <PieChart size={14} className="text-indigo-500" /> Pie Chart
                 </DropdownMenu.Item>
                 <DropdownMenu.Item
                   onSelect={() => insertChart('line')}
-                  className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none"
+                  className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
                 >
                   <TrendingUp size={14} className="text-indigo-500" /> Line Chart
                 </DropdownMenu.Item>

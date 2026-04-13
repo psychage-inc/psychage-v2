@@ -127,7 +127,7 @@ const ChartBlockView: React.FC<NodeViewProps> = ({ node, updateAttributes, delet
           <input
             value={chartData.title}
             onChange={(e) => updateChartData({ ...chartData, title: e.target.value })}
-            className="text-sm font-medium bg-transparent border-none outline-none text-text-primary placeholder:text-text-tertiary"
+            className="text-sm font-medium bg-transparent border-none outline-none focus-visible:ring-2 focus-visible:ring-primary/50 rounded text-text-primary placeholder:text-text-tertiary"
             placeholder="Chart Title"
           />
           <div className="flex items-center gap-1">

@@ -107,7 +107,6 @@ export async function getArticleById(id: string): Promise<ArticleRecord | null> 
     if (error) throw error;
     return data as ArticleRecord;
   } catch (err) {
-    console.warn('getArticleById: falling back to mock data', err);
     const articles = getMockArticles();
     return articles.find((a) => a.id === id) || null;
   }
@@ -278,7 +277,6 @@ export async function getArticleComments(articleId: string): Promise<ArticleComm
     if (error) throw error;
     return (data || []) as ArticleCommentRecord[];
   } catch (err) {
-    console.warn('getArticleComments: falling back to mock data', err);
     return getMockArticleComments(articleId);
   }
 }
@@ -363,7 +361,6 @@ export async function getArticleStatusHistory(articleId: string): Promise<Articl
     if (error) throw error;
     return (data || []) as ArticleStatusHistoryRecord[];
   } catch (err) {
-    console.warn('getArticleStatusHistory: falling back to mock data', err);
     return getMockArticleStatusHistory(articleId);
   }
 }
@@ -382,7 +379,6 @@ export async function getArticleImages(articleId: string): Promise<ArticleImageR
     if (error) throw error;
     return (data || []) as ArticleImageRecord[];
   } catch (err) {
-    console.warn('getArticleImages: falling back to mock data', err);
     return getMockArticleImages(articleId);
   }
 }
@@ -481,7 +477,6 @@ export async function getTopicClusters(): Promise<ArticleRecord[]> {
     if (error) throw error;
     return (data || []) as ArticleRecord[];
   } catch (err) {
-    console.warn('getTopicClusters: falling back to mock data', err);
     return getMockArticles().filter((a) => a.is_parent);
   }
 }
@@ -496,7 +491,6 @@ export async function getClusterChildren(parentId: string): Promise<ArticleRecor
     if (error) throw error;
     return (data || []) as ArticleRecord[];
   } catch (err) {
-    console.warn('getClusterChildren: falling back to mock data', err);
     return getMockArticles().filter((a) => a.parent_article_id === parentId);
   }
 }
@@ -676,7 +670,6 @@ export async function getArticleCitations(articleId: string): Promise<EnhancedCi
       createdAt: row.created_at as string,
     }));
   } catch (err) {
-    console.warn('getArticleCitations: error', err);
     return [];
   }
 }
@@ -797,7 +790,6 @@ export async function getArticleCategories(): Promise<ArticleCategoryRecord[]> {
       published_count: countMap[cat.id]?.published || 0,
     })) as ArticleCategoryRecord[];
   } catch (err) {
-    console.warn('getArticleCategories: error', err);
     return [];
   }
 }
@@ -812,7 +804,6 @@ export async function getSubcategoriesForCategory(categoryId: string): Promise<A
     if (error) throw error;
     return (data || []) as ArticleSubcategoryRecord[];
   } catch (err) {
-    console.warn('getSubcategoriesForCategory: error', err);
     return [];
   }
 }
@@ -848,7 +839,6 @@ export async function getCategoryArticleDistribution(): Promise<CategoryArticleD
       byStage: (distMap[cat.id]?.byStage || {}) as Record<ArticleReviewStage, number>,
     }));
   } catch (err) {
-    console.warn('getCategoryArticleDistribution: error', err);
     return [];
   }
 }
@@ -867,7 +857,6 @@ export async function getArticleDerivatives(articleId: string): Promise<ArticleD
     if (error) throw error;
     return (data || []) as ArticleDerivativeRecord[];
   } catch (err) {
-    console.warn('getArticleDerivatives: error', err);
     return [];
   }
 }
@@ -951,7 +940,7 @@ export async function getArticlesByReviewStage(): Promise<Record<ArticleReviewSt
       }
     }
   } catch (err) {
-    console.warn('getArticlesByReviewStage: error', err);
+    // Silently fall back to empty stages
   }
 
   return result;
@@ -1033,7 +1022,6 @@ export async function getArticlesWithTaxonomy(filters?: {
     if (error) throw error;
     return (data || []) as ArticleRecord[];
   } catch (err) {
-    console.warn('getArticlesWithTaxonomy: error', err);
     return [];
   }
 }
@@ -1069,7 +1057,6 @@ export async function getCitationDiversityReport(): Promise<CitationDiversityEnt
         tierCount: Object.keys(citationMap[a.id].tiers).length,
       }));
   } catch (err) {
-    console.warn('getCitationDiversityReport: error', err);
     return [];
   }
 }
@@ -1102,7 +1089,6 @@ export async function generateArticleProductionId(categorySlug: string): Promise
 
     return `${fullPrefix}${String(nextNum).padStart(3, '0')}`;
   } catch (err) {
-    console.warn('generateArticleProductionId: error', err);
     return `${fullPrefix}001`;
   }
 }

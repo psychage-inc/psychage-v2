@@ -38,7 +38,7 @@ const HeadingDropdown: React.FC<HeadingDropdownProps> = ({ editor }) => {
         >
           <DropdownMenu.Item
             onSelect={() => editor.chain().focus().setParagraph().run()}
-            className="flex items-center justify-between px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none"
+            className="flex items-center justify-between px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
           >
             <span>Normal text</span>
             {!activeHeading && <span className="text-primary text-xs">Active</span>}
@@ -50,7 +50,7 @@ const HeadingDropdown: React.FC<HeadingDropdownProps> = ({ editor }) => {
             <DropdownMenu.Item
               key={h.level}
               onSelect={() => editor.chain().focus().toggleHeading({ level: h.level }).run()}
-              className="flex items-center justify-between px-3 py-2 hover:bg-surface-hover cursor-pointer outline-none"
+              className="flex items-center justify-between px-3 py-2 hover:bg-surface-hover cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
             >
               <span className={h.className}>{h.label}</span>
               <span className="text-xs text-text-tertiary ml-4">

@@ -98,10 +98,11 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
         <div ref={wrapperRef} className={`relative ${className}`}>
             <form onSubmit={handleSearch} className="relative">
                 <input
-                    type="text"
+                    type="search"
                     value={query}
                     onChange={handleQueryChange}
                     placeholder={placeholder}
+                    aria-label="Search articles, conditions, and resources"
                     className="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all text-sm text-gray-900 dark:text-white placeholder-gray-400"
                 />
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
@@ -141,7 +142,7 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
                                     >
                                         {article.image && (
                                             <div className="w-8 h-8 rounded-md overflow-hidden shrink-0 bg-gray-100 dark:bg-gray-800">
-                                                <img src={article.image} alt="" className="w-full h-full object-cover" />
+                                                <img src={article.image} alt="" loading="lazy" className="w-full h-full object-cover" />
                                             </div>
                                         )}
                                         <div className="flex-grow min-w-0">

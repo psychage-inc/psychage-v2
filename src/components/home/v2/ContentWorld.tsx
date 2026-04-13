@@ -111,9 +111,9 @@ const ContentWorld: React.FC = () => {
 
                   {trendingArticles.length > 0 && (
                     <div className="lg:col-span-2 flex flex-col">
-                      <h3 className="text-xs text-text-tertiary font-semibold uppercase tracking-wider mb-4">
+                      <p className="text-xs text-text-tertiary font-semibold uppercase tracking-wider mb-4">
                         Trending
-                      </h3>
+                      </p>
                       {trendingArticles.map((article, i) => (
                         <TrendingListItem
                           key={article.id}

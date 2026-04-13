@@ -125,7 +125,7 @@ const RecommendedArticles: React.FC<RecommendedArticlesProps> = ({ wellnessFocus
                                     {article.image && (
                                         <img
                                             src={article.image}
-                                            alt=""
+                                            alt={article.title || ''}
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                             loading="lazy"
                                         />

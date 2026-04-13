@@ -174,7 +174,7 @@ const ProfileSettings: React.FC = () => {
                         {/* Profile Info Card */}
                         <Card className="p-8">
                             <div className="flex flex-col md:flex-row items-start gap-8 mb-8">
-                                <div className="relative group cursor-pointer" onClick={handleAvatarClick}>
+                                <div className="relative group cursor-pointer" role="button" tabIndex={0} aria-label="Change profile picture" onClick={handleAvatarClick} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleAvatarClick(); } }}>
                                     <input
                                         type="file"
                                         ref={fileInputRef}

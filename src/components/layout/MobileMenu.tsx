@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, ChevronRight, LogOut, User, ChevronDown, HeartHandshake } from 'lucide-react';
-import ThemeToggle from '../ui/ThemeToggle';
 import { Logo } from '../ui/Logo';
 import { useAuth } from '../../context/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
@@ -85,7 +84,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                 )}
               </div>
               <div className="flex items-center gap-2">
-                <ThemeToggle />
                 <button
                   onClick={onClose}
                   className="p-2 text-text-tertiary hover:text-text-primary hover:bg-surface-hover rounded-full transition-colors"
@@ -147,7 +145,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                                     key={item.href}
                                     to={item.href}
                                     onClick={() => handleNav(item.href)}
-                                    className="block text-sm font-medium text-text-secondary hover:text-primary py-1"
+                                    className="block text-sm font-medium text-text-secondary hover:text-primary active:text-primary py-3 px-2 -mx-2 rounded-lg active:bg-surface-hover"
                                   >
                                     {item.label}
                                   </Link>

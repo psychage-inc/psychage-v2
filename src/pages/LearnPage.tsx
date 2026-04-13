@@ -538,6 +538,7 @@ const LearnPage: React.FC = () => {
             <LiveRegion politeMessage={searchAnnouncement} assertiveMessage="" />
 
             {/* ── 1. Hero: Editor's Picks ──────────────────────────── */}
+            <h1 className="sr-only">Learn — Mental Health Education</h1>
             {featuredArticles.length > 0 && (
                 <section className="pt-20 pb-16 px-6">
                     <div className="container mx-auto max-w-content">

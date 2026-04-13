@@ -37,7 +37,6 @@ export const sleepService = {
             if (!targetUserId) {
                 const { data: { user } } = await supabase.auth.getUser();
                 if (!user) {
-                    console.warn('No authenticated user found');
                     return [];
                 }
                 targetUserId = user.id;

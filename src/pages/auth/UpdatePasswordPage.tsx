@@ -10,6 +10,7 @@ import { Alert, AlertDescription } from '@/components/ui/Alert';
 import { supabase } from '@/lib/supabaseClient';
 import { cn } from '@/lib/utils';
 import InteractiveCard from '@/components/ui/InteractiveCard';
+import SEO from '@/components/SEO';
 
 const UpdatePasswordPage = () => {
     const navigate = useNavigate();
@@ -199,6 +200,7 @@ const UpdatePasswordPage = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-background relative overflow-hidden">
+            <SEO title="Update Password | Psychage" description="Set your new Psychage account password." />
             {/* Dynamic Background */}
                         <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
 

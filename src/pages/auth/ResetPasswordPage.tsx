@@ -9,6 +9,7 @@ import { Display, Text } from '@/components/ui/Typography';
 import { Alert, AlertDescription } from '@/components/ui/Alert';
 import { useAuth } from '../../context/AuthContext';
 import InteractiveCard from '@/components/ui/InteractiveCard';
+import SEO from '@/components/SEO';
 
 const ResetPasswordPage = () => {
     const [email, setEmail] = useState('');
@@ -35,6 +36,7 @@ const ResetPasswordPage = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-background relative overflow-hidden">
+            <SEO title="Reset Password | Psychage" description="Reset your Psychage account password." />
             {/* Dynamic Background */}
                         <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
 

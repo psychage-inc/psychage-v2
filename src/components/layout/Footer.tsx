@@ -2,7 +2,6 @@
 import React, { useRef } from 'react';
 import {
   ArrowRight,
-  Globe,
   ArrowUp
 } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -57,6 +56,8 @@ const Footer: React.FC = () => {
     ],
     company: [
       { name: 'About Us', view: 'about' },
+      { name: 'Advisory Board', view: 'advisory-board' },
+      { name: 'Content Standards', view: 'content-standards' },
       { name: 'Contact Us', view: 'contact' },
     ],
     connect: [
@@ -108,10 +109,6 @@ const Footer: React.FC = () => {
               </span>
             </Link>
 
-            <div className="flex items-center gap-2 text-text-secondary text-sm font-medium border border-border rounded-full px-4 py-2 hover:border-text-tertiary transition-colors cursor-pointer">
-              <Globe size={16} />
-              <span>United States (English)</span>
-            </div>
           </motion.div>
         </div>
 

@@ -97,7 +97,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
                     sessionStorage.setItem(STORAGE_KEY, 'true');
                 }, 500);
             }
-        }, 5000);
+        }, 3000);
         return () => {
             clearTimeout(timeout);
             if (exitTimeoutRef.current) clearTimeout(exitTimeoutRef.current);

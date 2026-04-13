@@ -6,7 +6,7 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from './lib/queryClient';
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
-import MindMate from './components/ai/MindMate';
+const MindMateWidget = React.lazy(() => import('./components/ai/MindMate'));
 const HomePage = React.lazy(() => import('./pages/home/HomePage'));
 import CookieConsent from './components/ui/CookieConsent';
 import NotFoundPage from './components/pages/NotFoundPage';
@@ -44,6 +44,9 @@ const SearchResults = React.lazy(() => import('./components/pages/SearchResults'
 const ClarityScoreTool = React.lazy(() => import('./components/pages/ClarityScoreTool'));
 const AboutPage = React.lazy(() => import('./components/pages/AboutPage'));
 const ContactPage = React.lazy(() => import('./pages/core/ContactPage'));
+const ContentStandardsPage = React.lazy(() => import('./pages/core/ContentStandardsPage'));
+const AdvisoryBoardPage = React.lazy(() => import('./pages/core/AdvisoryBoardPage'));
+const AuthorProfilePage = React.lazy(() => import('./pages/core/AuthorProfilePage'));
 const LegalPage = React.lazy(() => import('./components/pages/LegalPages'));
 const CrisisPage = React.lazy(() => import('./components/pages/CrisisPage'));
 const NavigatorPage = React.lazy(() => import('./components/pages/NavigatorPage'));
@@ -254,6 +257,9 @@ const App: React.FC = () => {
                                             <Route path="/clarity-score" element={<PageTransition><RouteErrorBoundary><ClarityScoreTool /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/about" element={<PageTransition><AboutPage /></PageTransition>} />
                                             <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
+                                            <Route path="/content-standards" element={<PageTransition><ContentStandardsPage /></PageTransition>} />
+                                            <Route path="/advisory-board" element={<PageTransition><AdvisoryBoardPage /></PageTransition>} />
+                                            <Route path="/authors/:slug" element={<PageTransition><AuthorProfilePage /></PageTransition>} />
                                             <Route path="/legal/privacy" element={<PageTransition><LegalPage type="privacy" /></PageTransition>} />
                                             <Route path="/legal/terms" element={<PageTransition><LegalPage type="terms" /></PageTransition>} />
                                             <Route path="/crisis" element={<PageTransition><CrisisPage /></PageTransition>} />
@@ -354,13 +360,18 @@ const App: React.FC = () => {
 
                             {location.pathname !== '/tools/mindmate' && !location.pathname.startsWith('/dashboard') && !location.pathname.startsWith('/portal') && location.pathname !== '/onboarding' && <Footer />}
 
-                            {location.pathname !== '/tools/mindmate' && !location.pathname.startsWith('/dashboard') && !location.pathname.startsWith('/portal') && location.pathname !== '/onboarding' && <MindMate />}
+                            {location.pathname !== '/tools/mindmate' && !location.pathname.startsWith('/dashboard') && !location.pathname.startsWith('/portal') && location.pathname !== '/onboarding' && (
+                                <Suspense fallback={null}>
+                                    <MindMateWidget />
+                                </Suspense>
+                            )}
                             <CookieConsent />
 
                             {/* Persistent Mobile CTA (Homepage Only) */}
                             {location.pathname === '/' && (
                                 <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-surface/90 backdrop-blur-md border-t border-border z-[60] shadow-[0_-4px_12px_rgba(0,0,0,0.05)] pb-[calc(1rem+env(safe-area-inset-bottom))]">
                                     <button
+                                        type="button"
                                         onClick={() => navigate('/clarity-score')}
                                         className="w-full bg-primary hover:bg-primary-hover text-white font-medium rounded-xl h-12 flex items-center justify-center transition-colors shadow-sm"
                                     >

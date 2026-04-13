@@ -28,7 +28,6 @@ export const bookmarkService = {
             if (!targetUserId) {
                 const { data: { user } } = await supabase.auth.getUser();
                 if (!user) {
-                    console.warn('No authenticated user found');
                     // Return cached bookmarks for unauthenticated users
                     return getLocalBookmarks();
                 }

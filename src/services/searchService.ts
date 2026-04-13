@@ -6,10 +6,9 @@
  * 2. Client-side filtering (fallback - local data)
  */
 
-import { api, ApiError } from '../lib/api';
+import { api } from '../lib/api';
 import { Article, Provider } from '../types/models';
 
-const DEBUG = import.meta.env.VITE_DEBUG_MODE === 'true';
 import { useMemo, useCallback, useState } from 'react';
 import { articleService } from './articleService';
 import { providerService } from './providerService';
@@ -112,16 +111,11 @@ export const searchService = {
                     total: response.data.total
                 };
             }
-        } catch (error) {
+        } catch {
             // API not available, fall through to local search
-            if (error instanceof ApiError && error.status !== 0) {
-                console.warn('[SearchService] Backend search failed:', error.message);
-            }
         }
 
         // Fallback to client-side search
-        if (DEBUG) console.log('[SearchService] Using client-side search');
-
         const results: SearchResult = {
             articles: [],
             providers: [],
@@ -165,7 +159,7 @@ export const searchService = {
                 return response.data as Article[];
             }
         } catch {
-            console.warn('[SearchService] Backend article search failed, using local search');
+            // Backend article search unavailable, fall through to local search
         }
 
         // Fallback to local search
@@ -186,7 +180,7 @@ export const searchService = {
                 return response.data as Provider[];
             }
         } catch {
-            console.warn('[SearchService] Backend provider search failed, using local search');
+            // Backend provider search unavailable, fall through to local search
         }
 
         // Fallback to local search

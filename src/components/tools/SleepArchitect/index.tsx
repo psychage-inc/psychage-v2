@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 import { useAuth } from '@/context/AuthContext';
 import Breadcrumbs from '../../ui/Breadcrumbs';
 import AuthModal from '../../auth/AuthModal';
+import SEO from '@/components/SEO';
 import { useSleepEntries } from './hooks/useSleepEntries';
 import SyncBanner from './shared/SyncBanner';
 import type { SleepTab } from '@/lib/sleep/types';
@@ -74,6 +75,7 @@ const SleepArchitect: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-indigo-50/30 dark:bg-gray-900 pt-24 pb-12 px-4 sm:px-6">
+      <SEO title="Sleep Architect | Psychage" description="Build better sleep habits with guided tracking, diary entries, and evidence-based insights." />
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
         <div className="mb-6">

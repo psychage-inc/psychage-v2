@@ -250,8 +250,8 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
             >
               <div className="flex items-center justify-between p-6 pb-0">
                 <h3 className="font-display font-bold text-lg text-text-primary">Filters</h3>
-                <button onClick={onClose} className="p-2 hover:bg-surface-hover rounded-full">
-                  <X size={20} />
+                <button onClick={onClose} className="p-2 hover:bg-surface-hover rounded-full" aria-label="Close filters">
+                  <X size={20} aria-hidden="true" />
                 </button>
               </div>
               <div className="flex-1 overflow-y-auto p-6">

@@ -222,7 +222,7 @@ const ProfileSettings: React.FC = () => {
                         >
                             <InteractiveCard className="p-8 bg-surface/50 backdrop-blur-md border-white/5">
                                 <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8 border-b border-border/50 pb-8">
-                                    <div className="relative group cursor-pointer" onClick={handleAvatarClick}>
+                                    <div className="relative group cursor-pointer" role="button" tabIndex={0} aria-label="Change profile picture" onClick={handleAvatarClick} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleAvatarClick(); } }}>
                                         <input
                                             type="file"
                                             ref={fileInputRef}

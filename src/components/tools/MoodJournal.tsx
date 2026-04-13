@@ -8,6 +8,8 @@ import { moodService, MoodEntry as ServiceMoodEntry } from '../../services/moodS
 import { useAuth } from '../../context/AuthContext';
 import { MoodWizard, WizardState } from './MoodWizard/MoodWizard';
 import { LightweightInsights } from './LightweightInsights';
+import ToolRecommendation from './shared/ToolRecommendation';
+import SEO from '@/components/SEO';
 
 interface MoodEntry {
     id: string;
@@ -130,6 +132,7 @@ const MoodJournal: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-white pt-24 pb-12 px-6">
+            <SEO title="Mood Journal | Psychage" description="Track your emotional patterns and discover what drives them with Psychage's mood journal." />
             {view === 'new' ? (
                 <MoodWizard onComplete={handleSaveWizard} onCancel={() => setView('history')} />
             ) : (
@@ -232,8 +235,14 @@ const MoodJournal: React.FC = () => {
 
                         {/* Sidebar Stats */}
                         <div className="lg:col-span-1">
-                            <div className="sticky top-24">
+                            <div className="sticky top-24 space-y-6">
                                 <LightweightInsights entries={entries} />
+                                <ToolRecommendation
+                                    signal={{
+                                        toolSlug: 'mood-journal',
+                                        moodScore: entries[0]?.mood,
+                                    }}
+                                />
                             </div>
                         </div>
                     </div>

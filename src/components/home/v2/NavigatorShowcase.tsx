@@ -117,6 +117,21 @@ const NavigatorShowcase: React.FC = () => {
               </span>
             </p>
 
+            <div className="mt-7 flex justify-center lg:justify-start">
+              <Link
+                to="/tools/symptom-navigator"
+                className={cn(
+                  'inline-flex items-center gap-2',
+                  'text-[15px] font-semibold',
+                  'text-[var(--color-primary)]',
+                  'hover:underline transition-colors'
+                )}
+              >
+                Try the Navigator
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </Link>
+            </div>
+
           </motion.div>
         </div>
       </div>

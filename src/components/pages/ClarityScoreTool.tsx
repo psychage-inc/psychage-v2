@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  BarChart2,
   Phone,
   ChevronRight,
   ChevronLeft,
@@ -11,6 +10,9 @@ import {
   Save,
   CheckCircle2,
   Calendar,
+  Clock,
+  ClipboardList,
+  Target,
 } from 'lucide-react';
 import Button from '../ui/Button';
 import { Link } from 'react-router-dom';
@@ -29,7 +31,7 @@ import type {
   DomainKey,
 } from '../../lib/clarity';
 import ClarityResultsDashboard from '../tools/ClarityScore/results/ClarityResultsDashboard';
-import { DIMENSION_META } from '../tools/ClarityScore/data/dimensions';
+import { DIMENSION_META, DIMENSION_ORDER } from '../tools/ClarityScore/data/dimensions';
 import AuthGate from '../auth/AuthGate';
 import { useAuth } from '@/context/AuthContext';
 import { useToast } from '@/context/ToastContext';
@@ -367,24 +369,98 @@ const ClarityScoreTool: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="text-center"
             >
-              <div className="w-20 h-20 bg-primary/10 rounded-3xl flex items-center justify-center mx-auto mb-8 text-primary">
-                <BarChart2 size={40} />
+              {/* Header */}
+              <div className="text-center mb-12">
+                <h1 className="font-display font-bold text-4xl md:text-5xl text-text-primary mb-4 tracking-tight">
+                  Clarity Score
+                </h1>
+                <p className="text-lg md:text-xl text-text-secondary max-w-xl mx-auto leading-relaxed">
+                  A structured wellness check-in grounded in validated
+                  psychological instruments. Understand where you are today so
+                  you can take meaningful steps forward.
+                </p>
               </div>
-              <h1 className="font-display font-bold text-4xl md:text-5xl text-text-primary mb-6">
-                Clarity Score
-              </h1>
-              <p className="text-xl text-text-tertiary mb-12 leading-relaxed">
-                A structured wellness check-in built on validated psychological
-                instruments. 20 questions, five dimensions, under 3 minutes.
-              </p>
 
-              {history.length > 0 && (
-                <div className="mb-12 bg-surface rounded-2xl p-6 border border-border shadow-sm">
-                  <h3 className="text-sm font-bold text-text-tertiary uppercase tracking-wider mb-4">
-                    Recent History
+              {/* Three info points */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-12">
+                <div className="bg-surface rounded-2xl border border-border p-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <Target size={20} className="text-primary" />
+                  </div>
+                  <h3 className="font-display font-semibold text-base text-text-primary mb-2">
+                    What it measures
                   </h3>
+                  <p className="text-sm text-text-tertiary leading-relaxed">
+                    Five core dimensions of mental wellness, each drawn from
+                    peer-reviewed screening tools used in clinical settings.
+                  </p>
+                </div>
+                <div className="bg-surface rounded-2xl border border-border p-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <ClipboardList size={20} className="text-primary" />
+                  </div>
+                  <h3 className="font-display font-semibold text-base text-text-primary mb-2">
+                    How it works
+                  </h3>
+                  <p className="text-sm text-text-tertiary leading-relaxed">
+                    20 straightforward questions rated on a simple scale. There
+                    are no right or wrong answers — just honest reflection.
+                  </p>
+                </div>
+                <div className="bg-surface rounded-2xl border border-border p-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <Clock size={20} className="text-primary" />
+                  </div>
+                  <h3 className="font-display font-semibold text-base text-text-primary mb-2">
+                    What to expect
+                  </h3>
+                  <p className="text-sm text-text-tertiary leading-relaxed">
+                    Takes under 3 minutes. You will receive a personalized score
+                    with dimension breakdowns and actionable recommendations.
+                  </p>
+                </div>
+              </div>
+
+              {/* Five dimensions */}
+              <div className="mb-12">
+                <h2 className="font-display font-semibold text-sm uppercase tracking-wider text-text-tertiary mb-5 text-center">
+                  Five Dimensions of Wellness
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-5 gap-3">
+                  {DIMENSION_ORDER.map((key) => {
+                    const dim = DIMENSION_META[key];
+                    const DimIcon = dim.icon;
+                    return (
+                      <div
+                        key={key}
+                        className="flex sm:flex-col items-center sm:items-center gap-3 sm:gap-2 bg-surface rounded-xl border border-border px-4 py-3 sm:py-4 sm:px-3 sm:text-center"
+                      >
+                        <div
+                          className={`w-8 h-8 rounded-lg ${dim.tailwindBgLight} flex items-center justify-center flex-shrink-0`}
+                        >
+                          <DimIcon size={16} className={dim.tailwindText} />
+                        </div>
+                        <div className="sm:space-y-0.5">
+                          <span className="text-sm font-medium text-text-primary">
+                            {dim.name}
+                          </span>
+                          <span className="hidden sm:block text-[11px] text-text-tertiary">
+                            {dim.instrument}
+                          </span>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Recent History */}
+              {history.length > 0 && (
+                <div className="mb-12 bg-surface rounded-2xl p-6 border border-border">
+                  <h2 className="text-sm font-semibold text-text-tertiary uppercase tracking-wider mb-4 text-center">
+                    Recent History
+                  </h2>
                   <div className="flex justify-center gap-4 flex-wrap">
                     {history.slice(0, 5).map((entry) => (
                       <div key={entry.id || entry.date} className="text-center">
@@ -410,13 +486,19 @@ const ClarityScoreTool: React.FC = () => {
                 </div>
               )}
 
-              <Button
-                onClick={() => setStep('questions')}
-                size="lg"
-                rightIcon={<ChevronRight size={20} />}
-              >
-                Start Assessment
-              </Button>
+              {/* CTA */}
+              <div className="text-center">
+                <Button
+                  onClick={() => setStep('questions')}
+                  size="lg"
+                  rightIcon={<ChevronRight size={20} />}
+                >
+                  Start Assessment
+                </Button>
+                <p className="text-xs text-text-tertiary mt-4">
+                  Your responses stay on your device unless you choose to save them.
+                </p>
+              </div>
             </motion.div>
           )}
 
@@ -447,7 +529,14 @@ const ClarityScoreTool: React.FC = () => {
                 </div>
 
                 {/* Progress bar */}
-                <div className="w-full h-2 bg-surface-active rounded-full mb-8 overflow-hidden">
+                <div
+                  className="w-full h-2 bg-surface-active rounded-full mb-8 overflow-hidden"
+                  role="progressbar"
+                  aria-valuenow={currentIndex + 1}
+                  aria-valuemin={1}
+                  aria-valuemax={QUESTIONS.length}
+                  aria-label={`Question ${currentIndex + 1} of ${QUESTIONS.length}`}
+                >
                   <motion.div
                     className={`h-full ${getDomainBarColor(currentQuestion.domainId)}`}
                     initial={{ width: 0 }}
@@ -477,9 +566,9 @@ const ClarityScoreTool: React.FC = () => {
 
                 {/* Question text with integrated time-period context */}
                 <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-10 leading-tight">
-                  <span className="flex items-center gap-2 text-base font-semibold text-primary mb-3">
-                    <Calendar size={16} className="shrink-0" />
-                    {currentDomain.citation}
+                  <span className="inline-flex items-center gap-2 text-sm font-bold text-text-primary mb-4 px-3.5 py-2 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800/40">
+                    <Calendar size={16} className="shrink-0 text-amber-600 dark:text-amber-400" />
+                    <span className="text-amber-700 dark:text-amber-300">{currentDomain.citation}</span>
                   </span>
                   {currentQuestion.text}
                 </h2>
@@ -492,10 +581,11 @@ const ClarityScoreTool: React.FC = () => {
                       <button
                         key={idx}
                         onClick={() => handleAnswer(option.value)}
+                        aria-pressed={isSelected}
                         className={`w-full text-left p-5 rounded-2xl border-2 transition-all font-medium text-lg ${
                           isSelected
-                            ? 'border-teal-500 bg-primary/10 text-teal-700 dark:text-teal-300'
-                            : 'border-border hover:border-teal-500 dark:hover:border-teal-500 hover:bg-primary/10 text-text-secondary'
+                            ? `${currentDomain.bgColor} text-white border-transparent shadow-md`
+                            : 'border-border hover:border-gray-300 dark:hover:border-gray-600 hover:bg-surface-hover text-text-secondary'
                         }`}
                       >
                         {option.label}

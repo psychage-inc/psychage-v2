@@ -33,8 +33,8 @@ const BookmarksPage: React.FC = () => {
                 if (providersRes.success && providersRes.data) {
                     setFavorites(providersRes.data as unknown as Provider[]);
                 }
-            } catch (error) {
-                console.error('Failed to fetch bookmarks', error);
+            } catch {
+                // Failed to fetch bookmarks — show empty state
             } finally {
                 setIsLoading(false);
             }
@@ -48,8 +48,7 @@ const BookmarksPage: React.FC = () => {
         setBookmarks(prev => prev.filter(b => b.id !== id));
         try {
             await api.articles.bookmark(id); // Toggle off
-        } catch (error) {
-            console.error('Failed to remove bookmark', error);
+        } catch {
             // Revert on error would go here if strict
         }
     };
@@ -59,8 +58,8 @@ const BookmarksPage: React.FC = () => {
         setFavorites(prev => prev.filter(f => f.id !== id));
         try {
             await api.providers.toggleFavorite(id);
-        } catch (error) {
-            console.error('Failed to remove favorite', error);
+        } catch {
+            // Failed to remove favorite
         }
     };
 
@@ -106,8 +105,11 @@ const BookmarksPage: React.FC = () => {
                     <div className="lg:col-span-3">
                         <InteractiveCard className="p-0 overflow-hidden bg-surface/30 backdrop-blur-md border-white/5 h-full">
                             {/* Tabs */}
-                            <div className="flex border-b border-white/10 p-2 gap-2">
+                            <div className="flex border-b border-white/10 p-2 gap-2" role="tablist" aria-label="Bookmark categories">
                                 <button
+                                    role="tab"
+                                    aria-selected={activeTab === 'articles'}
+                                    aria-controls="bookmarks-articles-panel"
                                     onClick={() => setActiveTab('articles')}
                                     className={cn(
                                         "flex-1 py-3 px-4 rounded-xl text-sm font-bold transition-all flex items-center justify-center gap-2 relative overflow-hidden",
@@ -126,6 +128,9 @@ const BookmarksPage: React.FC = () => {
                                     </span>
                                 </button>
                                 <button
+                                    role="tab"
+                                    aria-selected={activeTab === 'providers'}
+                                    aria-controls="bookmarks-providers-panel"
                                     onClick={() => setActiveTab('providers')}
                                     className={cn(
                                         "flex-1 py-3 px-4 rounded-xl text-sm font-bold transition-all flex items-center justify-center gap-2 relative overflow-hidden",
@@ -145,7 +150,7 @@ const BookmarksPage: React.FC = () => {
                                 </button>
                             </div>
 
-                            <div className="p-6 md:p-8">
+                            <div className="p-6 md:p-8" id={`bookmarks-${activeTab}-panel`} role="tabpanel" aria-label={activeTab === 'articles' ? 'Saved Articles' : 'Favorite Providers'}>
                                 <AnimatePresence mode="wait">
                                     {isLoading ? (
                                         <motion.div key="loading" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
@@ -209,7 +214,7 @@ const BookmarksPage: React.FC = () => {
                                                         <div className="flex items-start gap-4">
                                                             <div className="w-14 h-14 rounded-full bg-surface border-2 border-surface shadow-md overflow-hidden flex-shrink-0 relative">
                                                                 {provider.image ? (
-                                                                    <img src={provider.image} alt={provider.name} className="w-full h-full object-cover" />
+                                                                    <img src={provider.image} alt={provider.name} loading="lazy" className="w-full h-full object-cover" />
                                                                 ) : (
                                                                     <div className="w-full h-full flex items-center justify-center bg-primary/10 text-primary font-bold text-lg">
                                                                         {provider.name?.charAt(0) || 'P'}

@@ -35,11 +35,11 @@ const ConsentCheckboxes: React.FC<ConsentCheckboxesProps> = ({ consent, onChange
             >
                 <span className={labelSize}>
                     I agree to the{' '}
-                    <Link to="/legal/terms" className="text-primary hover:text-primary-hover hover:underline font-medium" target="_blank">
+                    <Link to="/legal/terms" className="text-primary hover:text-primary-hover hover:underline font-medium" target="_blank" rel="noopener noreferrer">
                         Terms of Service
                     </Link>
                     {' '}and{' '}
-                    <Link to="/legal/privacy" className="text-primary hover:text-primary-hover hover:underline font-medium" target="_blank">
+                    <Link to="/legal/privacy" className="text-primary hover:text-primary-hover hover:underline font-medium" target="_blank" rel="noopener noreferrer">
                         Privacy Policy
                     </Link>
                     .

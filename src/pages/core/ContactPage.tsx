@@ -56,8 +56,7 @@ const ContactPage: React.FC = () => {
             } else {
                 setError(result.error || 'Failed to send message. Please try again.');
             }
-        } catch (err) {
-            console.error('Contact form error:', err);
+        } catch {
             setError('An unexpected error occurred. Please try again or email us directly.');
         } finally {
             setIsLoading(false);
@@ -95,7 +94,7 @@ const ContactPage: React.FC = () => {
                         <div className="absolute top-0 right-0 w-64 h-64 bg-primary rounded-full blur-[80px] opacity-10 translate-x-1/2 -translate-y-1/2" />
 
                         <div className="relative z-10">
-                            <h3 className="font-display font-bold text-2xl mb-8">Contact Information</h3>
+                            <h2 className="font-display font-bold text-2xl mb-8">Contact Information</h2>
 
                             <div className="space-y-8">
                                 <div className="flex items-start gap-4">
@@ -147,7 +146,7 @@ const ContactPage: React.FC = () => {
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 {/* Error Alert */}
                                 {error && (
-                                    <div className="flex items-start gap-3 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-red-700 dark:text-red-400">
+                                    <div role="alert" className="flex items-start gap-3 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-red-700 dark:text-red-400">
                                         <AlertCircle size={20} className="shrink-0 mt-0.5" />
                                         <p className="text-sm">{error}</p>
                                     </div>

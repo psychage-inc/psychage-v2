@@ -11,8 +11,6 @@ import { supabase } from '../lib/supabaseClient';
 import { useMemo } from 'react';
 import { getCategoryTheme } from '../config/categoryThemes';
 
-const DEBUG = import.meta.env.VITE_DEBUG_MODE === 'true';
-
 // Lazy-loaded mock articles — only fetched when Supabase fails or JSX content is needed.
 // This avoids pulling ~30MB of article TSX into the main bundle at load time.
 let _cachedMockArticles: Article[] | null = null;
@@ -189,7 +187,7 @@ export const articleService = {
                 supabaseArticles = (data as unknown as DBArticle[]).map(mapSupabaseToArticle);
             }
         } catch (error) {
-            console.warn('[ArticleService] Supabase fetch failed, using mock data:', error);
+            // Supabase fetch failed — fall through to mock data
         }
 
         // Build mock article set (filtered by params), resolve image URLs
@@ -208,7 +206,6 @@ export const articleService = {
 
         // No Supabase data — return mock only
         if (supabaseArticles.length === 0) {
-            if (DEBUG) console.log(`[ArticleService] Using ${mockResult.length} mock articles`);
             return mockResult;
         }
 
@@ -217,7 +214,6 @@ export const articleService = {
         const supplementalMock = mockResult.filter(a => !supabaseSlugs.has(a.slug));
         const merged = [...supabaseArticles, ...supplementalMock];
 
-        if (DEBUG) console.log(`[ArticleService] Merged ${supabaseArticles.length} Supabase + ${supplementalMock.length} mock articles (${merged.length} total)`);
         return merged;
     },
 
@@ -240,7 +236,6 @@ export const articleService = {
             }
             return mapSupabaseToArticle(data);
         } catch (error) {
-            console.warn('[ArticleService] Supabase getById failed, using mock data:', error);
             const publishedMock = await getMockArticles();
             const mockArticle = publishedMock.find(a => a.id.toString() === id.toString());
             return mockArticle ? { ...mockArticle, image: resolveImageUrl(mockArticle.image), _source: 'mock' } : undefined;
@@ -260,8 +255,6 @@ export const articleService = {
         // If mock data has JSX content (charts, tables, accordions etc.), prefer it
         // because Supabase only stores string content which loses all interactive components
         if (hasRichMockContent) {
-            if (DEBUG) console.log(`[ArticleService] Using rich JSX content for "${slug}" from mock data`);
-
             // Still try to get Supabase metadata (title, description, image, etc.)
             try {
                 const { data, error } = await supabase
@@ -304,16 +297,14 @@ export const articleService = {
                 else throw error;
             }
             if (data) {
-                if (DEBUG) console.log(`[ArticleService] Fetched article "${slug}" from Supabase`);
                 return mapSupabaseToArticle(data);
             }
         } catch (error) {
-            console.warn('[ArticleService] Supabase getBySlug failed:', error);
+            // Supabase getBySlug failed — fall through to mock
         }
 
         // Final fallback to mock data
         if (mockArticle) {
-            if (DEBUG) console.log(`[ArticleService] Fetched article "${slug}" from mock data`);
             return { ...mockArticle, image: resolveImageUrl(mockArticle.image), _source: 'mock' };
         }
 
@@ -339,7 +330,6 @@ export const articleService = {
      */
     toggleBookmark: async (articleId: string | number, userId: string): Promise<{ bookmarked: boolean }> => {
         if (!userId) {
-            console.warn('Cannot toggle bookmark: No user ID provided');
             return { bookmarked: false };
         }
 
@@ -357,7 +347,6 @@ export const articleService = {
      */
     getBookmarks: async (userId: string): Promise<ArticleWithContent[]> => {
         if (!userId) {
-            console.warn('Cannot get bookmarks: No user ID provided');
             return [];
         }
 
@@ -456,7 +445,7 @@ export const articleService = {
 
             if (results.length > 0) return results;
         } catch (error) {
-            console.warn('[ArticleService] Related articles query failed:', error);
+            // Related articles query failed — fall through to mock
         }
 
         // Fallback to mock data

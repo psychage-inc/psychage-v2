@@ -44,10 +44,11 @@ export const ProviderSearchBar: React.FC<ProviderSearchBarProps> = ({
         <div className="relative flex-1">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-text-tertiary" size={18} />
           <input
-            type="text"
+            type="search"
             value={query}
             onChange={e => setQuery(e.target.value)}
             placeholder="Search by name, specialty, or condition..."
+            aria-label="Search providers by name, specialty, or condition"
             className="w-full pl-11 pr-4 py-3.5 bg-surface border border-border rounded-xl text-sm font-medium text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
           />
         </div>
@@ -60,6 +61,7 @@ export const ProviderSearchBar: React.FC<ProviderSearchBarProps> = ({
             value={location}
             onChange={e => setLocation(e.target.value)}
             placeholder="City, state, or zip..."
+            aria-label="Provider location — city, state, or zip code"
             className="w-full pl-11 pr-10 py-3.5 bg-surface border border-border rounded-xl text-sm font-medium text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
           />
           <button

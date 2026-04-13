@@ -167,6 +167,13 @@ const Navigation: React.FC = () => {
                                     {navItem.type === 'mega-menu' ? (
                                         <button
                                             onMouseEnter={() => { handleMouseEnter(navItem.label); setHoveredLink(navItem.label); }}
+                                            onClick={() => setActiveTab(prev => prev === navItem.label ? null : navItem.label)}
+                                            onKeyDown={(e) => {
+                                                if (e.key === 'ArrowDown') {
+                                                    e.preventDefault();
+                                                    setActiveTab(navItem.label);
+                                                }
+                                            }}
                                             className={`relative px-4 py-2 rounded-full text-sm font-bold transition-colors duration-200 flex items-center gap-1.5 z-10 ${activeTab === navItem.label || hoveredLink === navItem.label
                                                 ? 'text-text-primary'
                                                 : 'text-text-secondary'
@@ -359,10 +366,11 @@ const Navigation: React.FC = () => {
                                     <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-text-tertiary" size={20} />
                                     <input
                                         ref={searchInputRef}
-                                        type="text"
+                                        type="search"
                                         value={searchQuery}
                                         onChange={(e) => setSearchQuery(e.target.value)}
                                         placeholder="Search articles, tools, videos..."
+                                        aria-label="Search articles, tools, and videos"
                                         className="w-full pl-12 pr-4 py-4 bg-surface-hover border-none rounded-2xl text-lg font-medium text-text-primary placeholder-text-tertiary focus:ring-2 focus:ring-teal-500"
                                     />
                                     <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-2">

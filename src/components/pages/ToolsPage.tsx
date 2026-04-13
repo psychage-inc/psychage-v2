@@ -149,9 +149,9 @@ const ToolsPage: React.FC = () => {
                                     <span className="text-xs font-bold uppercase tracking-wider text-text-tertiary mb-2 block">
                                         {tool.category}
                                     </span>
-                                    <h3 className="font-display font-bold text-2xl text-text-primary group-hover:text-teal-600 transition-colors">
+                                    <h2 className="font-display font-bold text-2xl text-text-primary group-hover:text-teal-600 transition-colors">
                                         {tool.name}
-                                    </h3>
+                                    </h2>
                                 </div>
 
                                 <p className="text-text-secondary mb-8 line-clamp-3">
@@ -188,7 +188,7 @@ const ToolsPage: React.FC = () => {
                         <div className="w-16 h-16 bg-surface-hover rounded-full flex items-center justify-center mx-auto mb-4 text-text-tertiary">
                             <Filter size={24} />
                         </div>
-                        <h3 className="font-bold text-text-primary text-lg mb-2">No tools found</h3>
+                        <h2 className="font-bold text-text-primary text-lg mb-2">No tools found</h2>
                         <p className="text-text-secondary">Try adjusting your search or filters</p>
                         <button
                             onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}

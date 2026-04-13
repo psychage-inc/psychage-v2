@@ -12,13 +12,11 @@ import InteractiveCard from '@/components/ui/InteractiveCard';
 import { LogoIcon } from '@/components/ui/LogoIcon';
 import { supabase } from '@/lib/supabaseClient';
 import { adminUrl, mainUrl } from '@/lib/urls';
+import SEO from '@/components/SEO';
 
 interface LoginPageProps {
     variant?: 'main' | 'admin';
 }
-
-const DEMO_EMAIL = 'demo@psychage.com';
-const DEMO_PASSWORD = 'PsychageAdmin2026!';
 
 const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
     const [email, setEmail] = useState('');
@@ -199,6 +197,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
 
     return (
         <div className="min-h-[100dvh] flex items-center justify-center px-4 py-20 relative overflow-hidden bg-background">
+            <SEO title="Sign In | Psychage" description="Sign in to your Psychage account to access your dashboard, tools, and saved resources." />
             {/* Dynamic Background */}
                         <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
 
@@ -235,21 +234,25 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                     spotlightColor="rgba(20, 184, 166, 0.1)"
                     className="p-8 md:p-10 border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl"
                 >
-                    {isDev && variant === 'admin' && (
-                        <div className="mb-6 p-4 rounded-lg border border-amber-300/50 bg-amber-50/80 dark:bg-amber-900/20 dark:border-amber-500/30">
-                            <p className="text-sm font-semibold text-amber-800 dark:text-amber-300 mb-2">Dev Mode — Admin Credentials</p>
-                            <p className="text-xs text-amber-700 dark:text-amber-400 mb-3">
-                                First run: <code className="bg-amber-100 dark:bg-amber-900/40 px-1.5 py-0.5 rounded text-[11px]">npx tsx scripts/create-demo-admin.ts</code>
-                            </p>
-                            <button
-                                type="button"
-                                onClick={() => { setEmail(DEMO_EMAIL); setPassword(DEMO_PASSWORD); }}
-                                className="w-full px-3 py-2 text-xs font-medium bg-amber-600 text-white rounded-md hover:bg-amber-700 transition-colors"
-                            >
-                                Fill Demo Credentials ({DEMO_EMAIL})
-                            </button>
-                        </div>
-                    )}
+                    {isDev && variant === 'admin' && (() => {
+                        const demoEmail = 'demo@psychage.com';
+                        const demoPassword = 'PsychageAdmin2026!';
+                        return (
+                            <div className="mb-6 p-4 rounded-lg border border-amber-300/50 bg-amber-50/80 dark:bg-amber-900/20 dark:border-amber-500/30">
+                                <p className="text-sm font-semibold text-amber-800 dark:text-amber-300 mb-2">Dev Mode — Admin Credentials</p>
+                                <p className="text-xs text-amber-700 dark:text-amber-400 mb-3">
+                                    First run: <code className="bg-amber-100 dark:bg-amber-900/40 px-1.5 py-0.5 rounded text-[11px]">npx tsx scripts/create-demo-admin.ts</code>
+                                </p>
+                                <button
+                                    type="button"
+                                    onClick={() => { setEmail(demoEmail); setPassword(demoPassword); }}
+                                    className="w-full px-3 py-2 text-xs font-medium bg-amber-600 text-white rounded-md hover:bg-amber-700 transition-colors"
+                                >
+                                    Fill Demo Credentials ({demoEmail})
+                                </button>
+                            </div>
+                        );
+                    })()}
 
                     <form onSubmit={handleSubmit} className="space-y-6">
                         {infoMessage && (

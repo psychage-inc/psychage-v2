@@ -15,9 +15,9 @@ export const ProviderResultsEmpty: React.FC<ProviderResultsEmptyProps> = ({
     <div className="w-16 h-16 rounded-full bg-surface-active flex items-center justify-center mb-6">
       <SearchX className="w-8 h-8 text-text-tertiary" />
     </div>
-    <h3 className="font-display font-bold text-xl text-text-primary mb-2">
+    <h2 className="font-display font-bold text-xl text-text-primary mb-2">
       No providers found
-    </h3>
+    </h2>
     <p className="text-text-tertiary max-w-md mb-6">
       {hasFilters
         ? "We couldn't find any providers matching your filters. Try broadening your search or removing some filters."

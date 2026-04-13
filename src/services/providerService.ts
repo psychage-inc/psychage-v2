@@ -137,12 +137,10 @@ export const providerService = {
 
             if (error) {
                 console.error('Error fetching providers from Supabase:', error);
-                console.warn('Falling back to mock providers');
                 return filterMockProviders(mockProviders, params);
             }
 
             if (!data || data.length === 0) {
-                console.warn('No providers found in database, using mock data');
                 return filterMockProviders(mockProviders, params);
             }
 
@@ -192,7 +190,6 @@ export const providerService = {
                 .limit(200);
 
             if (error || !data || data.length === 0) {
-                console.warn('No locations from database, using mock data');
                 const mockLocations = new Set(mockProviders.map(p => p.location.split(',')[1]?.trim()).filter(Boolean));
                 return Array.from(mockLocations).sort();
             }
@@ -217,7 +214,6 @@ export const providerService = {
                 .limit(200);
 
             if (error || !data || data.length === 0) {
-                console.warn('No specializations from database, using mock data');
                 const specialties = new Set<string>();
                 mockProviders.forEach(p => p.specialties.forEach(s => specialties.add(s)));
                 return Array.from(specialties).sort();
@@ -254,7 +250,6 @@ export const providerService = {
                 .limit(200);
 
             if (error || !data || data.length === 0) {
-                console.warn('No insurance data from database, using mock data');
                 const insurance = new Set<string>();
                 mockProviders.forEach(p => p.insurance.forEach(i => insurance.add(i)));
                 return Array.from(insurance).sort();
@@ -306,7 +301,6 @@ export const providerService = {
         try {
             const { data: { user } } = await supabase.auth.getUser();
             if (!user) {
-                console.warn('User not authenticated');
                 return { favorited: false };
             }
 

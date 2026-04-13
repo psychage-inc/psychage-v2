@@ -126,9 +126,8 @@ export const userProfileService = {
                         id: user.id,
                         ...profileUpdates,
                     });
-            } catch (profileError) {
+            } catch (_profileError) {
                 // user_profiles table might not exist, that's okay
-                console.warn('Could not update user_profiles table:', profileError);
             }
 
             // Return updated profile
@@ -262,9 +261,8 @@ export const userProfileService = {
                             .from('user-uploads')
                             .remove([pathMatch[1]]);
                     }
-                } catch (e) {
+                } catch (_e) {
                     // URL parsing failed or file doesn't exist, continue anyway
-                    console.warn('Could not delete old avatar file:', e);
                 }
             }
 
@@ -288,7 +286,6 @@ export const userProfileService = {
         try {
             const { data: { user } } = await supabase.auth.getUser();
             if (!user) {
-                console.warn('No authenticated user found');
                 return [];
             }
 
@@ -323,7 +320,6 @@ export const userProfileService = {
         try {
             const { data: { user } } = await supabase.auth.getUser();
             if (!user) {
-                console.warn('No authenticated user found');
                 return false;
             }
 

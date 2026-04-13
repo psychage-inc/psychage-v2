@@ -35,8 +35,8 @@ const UserAssessmentHistory: React.FC = () => {
                 if (response.success && response.data) {
                     setHistory(response.data as unknown as AssessmentHistoryItem[]);
                 }
-            } catch (error) {
-                console.error("Failed to fetch assessment history", error);
+            } catch {
+                // Failed to fetch history — show empty state
             } finally {
                 setIsLoading(false);
             }

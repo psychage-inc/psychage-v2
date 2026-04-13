@@ -13,6 +13,7 @@ import InteractiveCard from '@/components/ui/InteractiveCard';
 import { LogoIcon } from '@/components/ui/LogoIcon';
 import ConsentCheckboxes, { ConsentState, defaultConsentState, isConsentValid } from '@/components/privacy/ConsentCheckboxes';
 import { consentService } from '@/services/consentService';
+import SEO from '@/components/SEO';
 
 const SignUpPage = () => {
     const [userType, setUserType] = useState<'patient' | 'provider'>('patient');
@@ -105,6 +106,7 @@ const SignUpPage = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden bg-background">
+            <SEO title="Create Account | Psychage" description="Create your free Psychage account to access mental health tools, articles, and provider directory." />
             {/* Dynamic Background */}
                         <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
 

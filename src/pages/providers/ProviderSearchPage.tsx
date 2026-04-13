@@ -93,6 +93,7 @@ const ProviderSearchPage: React.FC = () => {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 className="sr-only">Find a Mental Health Provider</h1>
         {/* Search Bar */}
         <div className="mb-6">
           <ProviderSearchBar

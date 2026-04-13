@@ -149,10 +149,11 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
               )}
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+              <label htmlFor="med-unit" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
                 Unit
               </label>
               <select
+                id="med-unit"
                 value={unit}
                 onChange={(e) => setUnit(e.target.value)}
                 className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
@@ -166,10 +167,11 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
 
           {/* Frequency */}
           <div>
-            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+            <label htmlFor="med-frequency" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
               Frequency
             </label>
             <select
+              id="med-frequency"
               value={frequency}
               onChange={(e) => setFrequency(e.target.value as MedicationFrequency)}
               className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"

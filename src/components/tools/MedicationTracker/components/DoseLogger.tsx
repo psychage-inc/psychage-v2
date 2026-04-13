@@ -139,6 +139,7 @@ export const DoseLogger: React.FC<Props> = ({ schedule, onLog }) => {
                   value={noteText}
                   onChange={(e) => setNoteText(e.target.value)}
                   placeholder="Optional note (e.g. took with food)"
+                  aria-label="Dose note"
                   className="w-full px-3 py-1.5 text-sm rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                   autoFocus
                 />

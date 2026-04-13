@@ -168,6 +168,7 @@ const DailyCheckIn: React.FC = () => {
                       key={opt.value}
                       type="button"
                       onClick={() => setSleepQuality(opt.value)}
+                      aria-pressed={sleepQuality === opt.value}
                       className={`px-3 py-2 rounded-xl text-sm font-medium transition-all ${
                         sleepQuality === opt.value
                           ? 'bg-teal-600 text-white'

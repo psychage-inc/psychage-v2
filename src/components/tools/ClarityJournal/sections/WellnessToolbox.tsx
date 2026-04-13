@@ -87,8 +87,10 @@ const WellnessToolbox: React.FC = () => {
         <p className="text-slate-500 mb-6">Your personal plan for hard days and crisis moments.</p>
 
         {/* Tab toggle */}
-        <div className="flex gap-2 mb-6">
+        <div className="flex gap-2 mb-6" role="tablist" aria-label="Wellness sections">
           <button
+            role="tab"
+            aria-selected={activeTab === 'toolbox'}
             onClick={() => setActiveTab('toolbox')}
             className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
               activeTab === 'toolbox' ? 'bg-teal-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
@@ -97,6 +99,8 @@ const WellnessToolbox: React.FC = () => {
             Wellness Toolbox
           </button>
           <button
+            role="tab"
+            aria-selected={activeTab === 'safety'}
             onClick={() => setActiveTab('safety')}
             className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
               activeTab === 'safety' ? 'bg-red-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'

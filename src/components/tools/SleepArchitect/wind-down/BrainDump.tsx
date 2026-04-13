@@ -135,6 +135,7 @@ const BrainDump: React.FC = () => {
           }
         }}
         placeholder="What's on your mind tonight..."
+        aria-label="Brain dump — write what's on your mind"
         className="w-full p-4 rounded-xl border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700/50 text-gray-900 dark:text-white text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 resize-none h-40 leading-relaxed"
         autoFocus
       />

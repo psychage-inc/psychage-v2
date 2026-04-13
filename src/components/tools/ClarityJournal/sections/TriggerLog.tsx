@@ -129,6 +129,7 @@ const TriggerLog: React.FC = () => {
                               value={newText}
                               onChange={e => setNewText(e.target.value)}
                               placeholder={`Describe the ${cat === 'triggers' ? 'trigger' : cat === 'warning_signs' ? 'warning sign' : 'item'}...`}
+                              aria-label={`New ${cat === 'triggers' ? 'trigger' : cat === 'warning_signs' ? 'warning sign' : 'item'} description`}
                               className="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                               autoFocus
                             />
@@ -136,6 +137,7 @@ const TriggerLog: React.FC = () => {
                               <select
                                 value={newSubCategory}
                                 onChange={e => setNewSubCategory(e.target.value)}
+                                aria-label="Category"
                                 className="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                               >
                                 <option value="">Category (optional)</option>
@@ -147,13 +149,13 @@ const TriggerLog: React.FC = () => {
                             {cat === 'triggers' && (
                               <div>
                                 <label className="text-xs text-slate-500">Severity: {newSeverity}/5</label>
-                                <input type="range" min={1} max={5} value={newSeverity} onChange={e => setNewSeverity(Number(e.target.value))} className="w-full" />
+                                <input type="range" min={1} max={5} value={newSeverity} onChange={e => setNewSeverity(Number(e.target.value))} aria-label={`Severity: ${newSeverity} out of 5`} className="w-full" />
                               </div>
                             )}
                             {cat === 'what_helps' && (
                               <div>
                                 <label className="text-xs text-slate-500">Effectiveness: {newEffectiveness}/5</label>
-                                <input type="range" min={1} max={5} value={newEffectiveness} onChange={e => setNewEffectiveness(Number(e.target.value))} className="w-full" />
+                                <input type="range" min={1} max={5} value={newEffectiveness} onChange={e => setNewEffectiveness(Number(e.target.value))} aria-label={`Effectiveness: ${newEffectiveness} out of 5`} className="w-full" />
                               </div>
                             )}
                             <div className="flex gap-2">

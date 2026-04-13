@@ -243,6 +243,7 @@ const MorningCheckIn: React.FC<MorningCheckInProps> = ({
                     step={5}
                     value={onsetMinutes}
                     onChange={(e) => setOnsetMinutes(parseInt(e.target.value))}
+                    aria-label={`Time to fall asleep: ${onsetMinutes} minutes`}
                     className="w-full accent-indigo-600 dark:accent-indigo-400"
                   />
                   <div className="flex justify-between text-[10px] text-gray-400 dark:text-gray-500 mt-1">
@@ -410,6 +411,7 @@ const MorningCheckIn: React.FC<MorningCheckInProps> = ({
                     step={10}
                     value={screens}
                     onChange={(e) => setScreens(parseInt(e.target.value))}
+                    aria-label={`Screen time before bed: ${screens} minutes`}
                     className="w-full accent-indigo-600 dark:accent-indigo-400"
                   />
                   <div className="flex justify-between text-[10px] text-gray-400 dark:text-gray-500 mt-0.5">
@@ -434,6 +436,7 @@ const MorningCheckIn: React.FC<MorningCheckInProps> = ({
                     value={notes}
                     onChange={(e) => setNotes(e.target.value)}
                     placeholder="Anything notable about last night's sleep..."
+                    aria-label="Sleep notes"
                     className="w-full p-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 resize-none h-24"
                   />
                 </div>
@@ -449,6 +452,7 @@ const MorningCheckIn: React.FC<MorningCheckInProps> = ({
                       value={dreamNotes}
                       onChange={(e) => setDreamNotes(e.target.value)}
                       placeholder="Describe your dream..."
+                      aria-label="Dream notes"
                       className="w-full mt-2 p-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 resize-none h-20"
                     />
                   )}

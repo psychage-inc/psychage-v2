@@ -5,10 +5,14 @@ import NavigatorShowcase from '@/components/home/v2/NavigatorShowcase';
 import ToolsEcosystem from '@/components/home/v2/ToolsEcosystem';
 import ProviderHighlight from '@/components/home/v2/ProviderHighlight';
 import ClosingSection from '@/components/home/v2/ClosingSection';
+import AnonymousWelcomeBanner from '@/components/onboarding/AnonymousWelcomeBanner';
+import { useAuth } from '@/context/AuthContext';
 
 const ContentShowcase = React.lazy(() => import('@/components/home/v2/ContentWorld'));
 
 const HomePage: React.FC = () => {
+  const { user } = useAuth();
+
   return (
     <div className="relative bg-[#FAF9F6] min-h-[100dvh]">
       <SEO
@@ -17,6 +21,14 @@ const HomePage: React.FC = () => {
       />
 
       <HeroSection />
+
+      {/* First-visit guide for anonymous users */}
+      {!user && (
+        <div className="max-w-6xl mx-auto px-6 md:px-8 -mt-4 mb-8">
+          <AnonymousWelcomeBanner />
+        </div>
+      )}
+
       <NavigatorShowcase />
       <Suspense fallback={<div className="min-h-[400px]" />}>
         <ContentShowcase />

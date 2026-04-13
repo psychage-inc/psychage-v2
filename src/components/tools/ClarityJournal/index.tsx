@@ -17,6 +17,7 @@ import { useClarityJournal } from './hooks/useClarityJournal';
 import { JOURNAL_SECTIONS } from './constants';
 import { formatDate } from './dates';
 import { Link } from 'react-router-dom';
+import ToolRecommendation from '../shared/ToolRecommendation';
 
 const ClarityJournal: React.FC = () => {
   const _navigate = useNavigate();
@@ -319,6 +320,15 @@ const ClarityJournal: React.FC = () => {
             <TrendChart data={recentMoods} label="Recent Mood Trend" />
           </motion.div>
         )}
+
+        {/* Cross-Tool Recommendations */}
+        <ToolRecommendation
+          signal={{
+            toolSlug: 'clarity-journal',
+            moodScore: recentMoods[0]?.value,
+          }}
+          className="mb-10"
+        />
 
         {/* Data Management */}
         <motion.div

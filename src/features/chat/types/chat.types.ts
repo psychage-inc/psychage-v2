@@ -1,3 +1,10 @@
+export interface ChatActionCard {
+  type: 'tool' | 'article';
+  title: string;
+  description: string;
+  href: string;
+}
+
 export interface ChatMessage {
   id: string;
   role: 'user' | 'assistant';
@@ -5,6 +12,7 @@ export interface ChatMessage {
   timestamp: Date;
   isStreaming?: boolean;
   sources?: CitationSource[];
+  actionCards?: ChatActionCard[];
   suggestedFollowUps?: string[];
   safetyLevel?: 'SAFE' | 'WATCH' | 'URGENT' | 'CRISIS';
   thinkingContent?: string;

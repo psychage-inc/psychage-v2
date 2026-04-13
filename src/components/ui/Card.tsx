@@ -50,3 +50,56 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
 );
 
 Card.displayName = "Card";
+
+export const CardHeader = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("flex items-center gap-3 mb-4", className)}
+    {...props}
+  />
+));
+CardHeader.displayName = "CardHeader";
+
+export const CardBody = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("flex-1", className)}
+    {...props}
+  />
+));
+CardBody.displayName = "CardBody";
+
+export const CardFooter = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("flex items-center gap-3 mt-4 pt-4 border-t border-border", className)}
+    {...props}
+  />
+));
+CardFooter.displayName = "CardFooter";
+
+export const CardIcon: React.FC<{
+  className?: string;
+  children: React.ReactNode;
+}> = ({ className, children }) => (
+  <div
+    className={cn(
+      "w-10 h-10 rounded-xl flex items-center justify-center shrink-0",
+      className
+    )}
+    style={{
+      backgroundColor: 'color-mix(in srgb, var(--color-primary) 12%, transparent)',
+    }}
+  >
+    {children}
+  </div>
+);

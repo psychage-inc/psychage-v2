@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Shield, Globe, Heart, Brain } from 'lucide-react';
 import Button from '@/components/ui/Button';
@@ -23,7 +23,8 @@ const AboutPage: React.FC = () => {
         {
             icon: Shield,
             title: "Integrity",
-            desc: "Every piece of content is reviewed by professional mental health experts to ensure accuracy."
+            desc: "Every piece of content is reviewed by professional mental health experts to ensure accuracy.",
+            link: { label: "Our content standards", to: "/content-standards" }
         },
         {
             icon: Heart,
@@ -153,9 +154,34 @@ const AboutPage: React.FC = () => {
                                 <p className="text-text-secondary leading-relaxed">
                                     {val.desc}
                                 </p>
+                                {val.link && (
+                                    <Link to={val.link.to} className="inline-flex items-center gap-1 mt-3 text-sm font-semibold text-primary hover:underline transition-colors">
+                                        {val.link.label}
+                                    </Link>
+                                )}
                             </div>
                         ))}
                     </div>
+                </div>
+            </div>
+
+            {/* Advisory Board CTA */}
+            <div className="container mx-auto px-6 max-w-5xl mb-24">
+                <div className="bg-surface border border-border rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div>
+                        <h2 className="font-display font-bold text-2xl text-text-primary mb-2 tracking-tight">
+                            Meet our advisory board
+                        </h2>
+                        <p className="text-text-secondary leading-relaxed">
+                            Real clinicians with real credentials review every piece of content we publish.
+                        </p>
+                    </div>
+                    <Link
+                        to="/advisory-board"
+                        className="inline-flex items-center gap-2 bg-[var(--color-primary)] text-white font-semibold text-[15px] py-3.5 px-7 rounded-2xl hover:bg-[var(--color-primary-hover)] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-6px_rgba(26,155,140,0.3)] transition-all duration-300 ease-out shrink-0"
+                    >
+                        View Board
+                    </Link>
                 </div>
             </div>
 

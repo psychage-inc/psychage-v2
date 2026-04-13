@@ -5,9 +5,13 @@ import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { articleService } from '@/services/articleService';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { getRecommendedCategories } from '@/lib/recommendations/articleRecommender';
+import { getRecentlyReadIds } from '@/components/articles/recentlyRead';
 
 interface RecommendedArticlesProps {
     wellnessFocus: string[] | null;
+    navigatorConditions?: string[];
+    recentToolSlugs?: string[];
 }
 
 interface ArticlePreview {
@@ -19,7 +23,11 @@ interface ArticlePreview {
     readTime?: number;
 }
 
-const RecommendedArticles: React.FC<RecommendedArticlesProps> = ({ wellnessFocus }) => {
+const RecommendedArticles: React.FC<RecommendedArticlesProps> = ({
+    wellnessFocus,
+    navigatorConditions,
+    recentToolSlugs,
+}) => {
     const reduced = useReducedMotion();
     const [articles, setArticles] = useState<ArticlePreview[]>([]);
     const [loading, setLoading] = useState(true);
@@ -27,43 +35,44 @@ const RecommendedArticles: React.FC<RecommendedArticlesProps> = ({ wellnessFocus
     useEffect(() => {
         (async () => {
             try {
-                // Try to get articles by wellness focus category, fall back to featured
+                const readIds = new Set(getRecentlyReadIds().map((e) => String(e.id)));
+                const toPreview = (a: { id: string | number; slug: string; title: string; image?: string; category?: string | { name: string }; readTime?: number }): ArticlePreview => ({
+                    id: String(a.id),
+                    slug: a.slug,
+                    title: a.title,
+                    image: a.image,
+                    category: typeof a.category === 'string' ? a.category : a.category?.name,
+                    readTime: a.readTime,
+                });
+
                 let fetched: ArticlePreview[] = [];
 
-                if (wellnessFocus && wellnessFocus.length > 0) {
-                    // Map focus areas to potential category slugs
-                    const categoryMap: Record<string, string> = {
-                        mood: 'emotional-regulation',
-                        sleep: 'sleep-and-rest',
-                        stress: 'stress-and-anxiety',
-                        relationships: 'relationships',
-                        'self-understanding': 'self-awareness',
-                        support: 'finding-support',
-                    };
-                    const slug = categoryMap[wellnessFocus[0]];
-                    if (slug) {
-                        const catArticles = await articleService.getByCategory(slug);
-                        fetched = catArticles.slice(0, 4).map(a => ({
-                            id: String(a.id),
-                            slug: a.slug,
-                            title: a.title,
-                            image: a.image,
-                            category: typeof a.category === 'string' ? a.category : a.category?.name,
-                            readTime: a.readTime,
-                        }));
-                    }
+                // Use recommender to get ranked category slugs
+                const rankedCategories = getRecommendedCategories({
+                    wellnessFocus,
+                    navigatorConditions,
+                    recentToolSlugs,
+                });
+
+                // Fetch from the top recommended category
+                for (const slug of rankedCategories) {
+                    if (fetched.length >= 4) break;
+                    const catArticles = await articleService.getByCategory(slug);
+                    const newArticles = catArticles
+                        .filter((a) => !readIds.has(String(a.id)))
+                        .slice(0, 4 - fetched.length)
+                        .map(toPreview);
+                    fetched.push(...newArticles);
                 }
 
-                if (fetched.length === 0) {
+                // Fallback to featured if not enough personalized results
+                if (fetched.length < 4) {
                     const featured = await articleService.getFeatured();
-                    fetched = featured.slice(0, 4).map(a => ({
-                        id: String(a.id),
-                        slug: a.slug,
-                        title: a.title,
-                        image: a.image,
-                        category: typeof a.category === 'string' ? a.category : a.category?.name,
-                        readTime: a.readTime,
-                    }));
+                    const remaining = featured
+                        .filter((a) => !readIds.has(String(a.id)) && !fetched.some((f) => f.id === String(a.id)))
+                        .slice(0, 4 - fetched.length)
+                        .map(toPreview);
+                    fetched.push(...remaining);
                 }
 
                 setArticles(fetched);
@@ -73,7 +82,7 @@ const RecommendedArticles: React.FC<RecommendedArticlesProps> = ({ wellnessFocus
                 setLoading(false);
             }
         })();
-    }, [wellnessFocus]);
+    }, [wellnessFocus, navigatorConditions, recentToolSlugs]);
 
     return (
         <div className="h-full rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 shadow-sm p-5 flex flex-col">

@@ -5,6 +5,7 @@ import { CheckCircle2, BarChart2, Calendar, RefreshCw, Share2, Download, Chevron
 import Button from '@/components/ui/Button';
 import { Display } from '@/components/ui/Typography';
 import SEO from '@/components/SEO';
+import ToolRecommendation from '@/components/tools/shared/ToolRecommendation';
 
 const STORAGE_KEY = 'psychage_clarity_progress';
 const HISTORY_KEY = 'psychage_clarity_history';
@@ -182,11 +183,13 @@ const AssessmentResultsPage: React.FC = () => {
                                         </Button>
                                     </Link>
                                 </div>
-                                <div className="mt-6 flex flex-col gap-3">
-                                    <h4 className="font-bold text-text-primary text-sm">Helpful Resources:</h4>
-                                    <Link to="/learn/anxiety-101" className="text-primary hover:underline text-sm block">Understanding Anxiety Triggers</Link>
-                                    <Link to="/tools/mood-journal" className="text-primary hover:underline text-sm block">Start a Mood Journal</Link>
-                                </div>
+                                <ToolRecommendation
+                                    signal={{
+                                        toolSlug: 'clarity-score',
+                                        clarityScore: score ?? undefined,
+                                    }}
+                                    className="mt-6"
+                                />
                             </div>
                         </div>
 

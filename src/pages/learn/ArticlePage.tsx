@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef, useMemo } from 'react';
-import { Bookmark, ChevronRight, ChevronDown, ChevronUp, Clock, Calendar, Search, ArrowRight, BrainCircuit, PenTool, Compass, Sparkles } from 'lucide-react';
+import { Bookmark, ChevronRight, ChevronDown, ChevronUp, Clock, Calendar, Search, ArrowRight, BrainCircuit, PenTool, Compass, Sparkles, Shield } from 'lucide-react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useArticleService } from '@/services/articleService';
 import { Article } from '@/types/models';
@@ -12,6 +12,7 @@ import Disclaimer from '@/components/article/Disclaimer';
 import SummaryBox from '@/components/article/SummaryBox';
 import KeyFacts from '@/components/article/KeyFacts';
 import SparkMoment from '@/components/article/SparkMoment';
+import FeedbackWidget from '@/components/ui/FeedbackWidget';
 import PracticalExercise, { DefaultToolkitCTA } from '@/components/article/PracticalExercise';
 import CompanionVideo from '@/components/article/CompanionVideo';
 import CrisisResourceBanner from '@/components/article/CrisisResourceBanner';
@@ -445,6 +446,20 @@ const ArticlePage: React.FC = () => {
                                     Sources for this article are being compiled and will be added shortly.
                                 </p>
                             )}
+                        </div>
+
+                        {/* Feedback */}
+                        <FeedbackWidget contentType="article" contentId={String(article.id)} className="mt-8" />
+
+                        {/* Trust Badge */}
+                        <div className="mt-6 flex items-center gap-2 text-xs text-text-tertiary">
+                            <Shield size={14} className="text-primary" />
+                            <span>
+                                This article follows our{' '}
+                                <Link to="/content-standards" className="text-primary hover:underline font-medium">
+                                    evidence-based content standards
+                                </Link>.
+                            </span>
                         </div>
 
                         {/* Mobile Share Buttons */}

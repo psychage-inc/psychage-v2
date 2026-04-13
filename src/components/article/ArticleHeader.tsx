@@ -6,6 +6,7 @@ import { useBookmarks } from '../../context/BookmarkContext';
 import Breadcrumbs from '../ui/Breadcrumbs';
 import { getCategoryBadgeClasses } from '../../config/categoryThemes';
 import AuthModal from '../auth/AuthModal';
+import AuthorLink from './AuthorLink';
 
 interface ArticleHeaderProps {
   article: Article;
@@ -65,7 +66,7 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({ article }) => {
             />
           )}
           <div className="text-left">
-            <div className="font-bold text-gray-900 dark:text-white text-sm">{article.author?.name || 'Psychage Editorial'}</div>
+            <AuthorLink author={article.author} className="font-bold text-gray-900 dark:text-white text-sm" />
             <div className="text-xs text-gray-500 dark:text-gray-400 font-medium">{article.author?.role || 'Medical Review Team'}</div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { MotionConfig } from 'framer-motion';
 import { Routes, Route, useLocation, useNavigate, Navigate } from 'react-router-dom';
 import { Toaster } from 'sonner';
@@ -18,6 +18,9 @@ import SkipLink from './components/ui/SkipLink';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import RoleGuard from './components/auth/RoleGuard';
 import { adminUrl } from './lib/urls';
+import { notificationService } from './lib/notifications/notificationService';
+import { analytics } from './lib/analytics';
+import { plausibleProvider } from './lib/analytics/plausible';
 import Preloader from './components/Preloader';
 import PageTransition from './components/ui/PageTransition';
 import { ScrollManager } from './components/ui/ScrollManager';
@@ -149,10 +152,13 @@ const RouteErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children 
 
 // --- MAIN APP COMPONENT ---
 
-/** Lightweight Suspense fallback — only shown on first-ever load of a lazy chunk */
+/** Lightweight Suspense fallback — matches GlobalLoading style from Skeletons.tsx */
 const RouteLoadingIndicator = () => (
     <div className="flex items-center justify-center min-h-[60vh]">
-        <div className="w-8 h-8 rounded-full border-2 border-gray-200 border-t-teal-500 animate-spin" />
+        <div className="flex flex-col items-center gap-3">
+            <div className="w-10 h-10 rounded-full border-2 border-gray-200 dark:border-gray-700 border-t-[var(--color-primary)] animate-spin" />
+            <span className="text-xs text-text-tertiary">Loading...</span>
+        </div>
     </div>
 );
 
@@ -160,6 +166,13 @@ const App: React.FC = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState(true);
+
+    // Register service worker + initialize analytics (once)
+    useEffect(() => {
+        notificationService.registerServiceWorker();
+        analytics.setProvider(plausibleProvider);
+        analytics.init();
+    }, []);
 
     return (
         <QueryClientProvider client={queryClient}>

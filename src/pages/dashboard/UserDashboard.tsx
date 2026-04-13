@@ -28,7 +28,10 @@ import NavigatorAwarenessCard from '@/components/dashboard/NavigatorAwarenessCar
 import RecentActivityCard from '@/components/dashboard/RecentActivityCard';
 import MindMateCard from '@/components/dashboard/MindMateCard';
 import RecommendedArticles from '@/components/dashboard/RecommendedArticles';
+import WellnessProgressCard from '@/components/dashboard/WellnessProgressCard';
+import NotificationPrompt from '@/components/ui/NotificationPrompt';
 import DashboardMinimalFooter from '@/components/dashboard/DashboardMinimalFooter';
+import { useWellnessProgress } from '@/hooks/useWellnessProgress';
 
 // ── Motivational copy pool (rotated by day of year) ──
 const DAILY_QUOTES = [
@@ -143,6 +146,7 @@ const UserDashboard: React.FC = () => {
     const [bookmarkCount, setBookmarkCount] = useState<number>(0);
     const [wellnessFocus, setWellnessFocus] = useState<string[] | null>(null);
     const [onboardingChecked, setOnboardingChecked] = useState(false);
+    const wellnessProgress = useWellnessProgress();
 
     // ── Onboarding gate ──
     useEffect(() => {
@@ -425,7 +429,10 @@ const UserDashboard: React.FC = () => {
                                     <MindMateCard />
                                 </motion.div>
                                 <motion.div variants={reduced ? undefined : staggerItem} className="md:col-span-6">
-                                    <RecommendedArticles wellnessFocus={wellnessFocus} />
+                                    <RecommendedArticles
+                                        wellnessFocus={wellnessFocus}
+                                        recentToolSlugs={wellnessProgress.toolsUsed.map(t => t.toLowerCase().replace(/\s+/g, '-'))}
+                                    />
                                 </motion.div>
 
                                 {/* ── Section: Your Tools ── */}
@@ -444,6 +451,14 @@ const UserDashboard: React.FC = () => {
                                 </motion.div>
                                 <motion.div variants={reduced ? undefined : staggerItem} className="md:col-span-6">
                                     <RecentActivityCard activity={activity} />
+                                </motion.div>
+
+                                {/* ── Row 8: Progress (6) + Notifications (6) ── */}
+                                <motion.div variants={reduced ? undefined : staggerItem} className="md:col-span-6">
+                                    <WellnessProgressCard />
+                                </motion.div>
+                                <motion.div variants={reduced ? undefined : staggerItem} className="md:col-span-6">
+                                    <NotificationPrompt />
                                 </motion.div>
 
                                 {/* ── Minimal Footer ── */}

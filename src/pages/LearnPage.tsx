@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useUrlFilterState } from '@/hooks/useUrlFilterState';
 import { Search, BookOpen, ArrowRight, Clock, Bookmark, Mail, Loader2, CheckCircle, X } from 'lucide-react';
 import SEO from '../components/SEO';
 import { useArticleService } from '../services/articleService';
@@ -253,9 +254,13 @@ const LearnPage: React.FC = () => {
     const [categories, setCategories] = useState<Category[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [fetchError, setFetchError] = useState<string | null>(null);
-    const [searchQuery, setSearchQuery] = useState('');
-    const [activeTab, setActiveTab] = useState<string>('');
-    const [sortOrder, setSortOrder] = useState<'recent' | 'shortest' | 'longest'>('recent');
+    const [urlFilters, setUrlFilters] = useUrlFilterState({ q: undefined, category: undefined, sort: undefined });
+    const searchQuery = urlFilters.q || '';
+    const setSearchQuery = useCallback((q: string) => setUrlFilters({ q: q || undefined }), [setUrlFilters]);
+    const activeTab = urlFilters.category || '';
+    const setActiveTab = useCallback((cat: string) => setUrlFilters({ category: cat || undefined }), [setUrlFilters]);
+    const sortOrder = (urlFilters.sort || 'recent') as 'recent' | 'shortest' | 'longest';
+    const setSortOrder = useCallback((s: 'recent' | 'shortest' | 'longest') => setUrlFilters({ sort: s === 'recent' ? undefined : s }), [setUrlFilters]);
     const [showAuthModal, setShowAuthModal] = useState(false);
     const [recentSearches, setRecentSearches] = useState<string[]>([]);
     const [isSearchFocused, setIsSearchFocused] = useState(false);

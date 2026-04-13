@@ -1,6 +1,7 @@
  
 import { useEffect, useState, useRef } from 'react';
-import lottie, { AnimationItem } from 'lottie-web';
+import lottie from 'lottie-web/build/player/lottie_light';
+import type { AnimationItem } from 'lottie-web';
 
 const STORAGE_KEY = 'psychage_intro_shown';
 

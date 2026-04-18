@@ -115,7 +115,8 @@
     }
 
     .dark .glass {
-        @apply bg-surface/80 border-white/10 shadow-black/20;
+        background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
+        @apply border-white/10 shadow-black/20;
     }
 
     .glass-hover {
@@ -123,7 +124,10 @@
     }
 
     .dark .glass-hover {
-        @apply hover:bg-surface/90 hover:border-white/20;
+        @apply hover:border-white/20;
+        &:hover {
+            background-color: color-mix(in srgb, var(--color-surface) 90%, transparent);
+        }
     }
 
     /* Grain Effect */

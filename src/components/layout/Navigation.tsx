@@ -326,7 +326,7 @@ const Navigation: React.FC = () => {
                                     return isGetStarted ? (
                                         <Button
                                             key={authItem.id}
-                                            className={`hidden md:flex rounded-full px-6 h-10 ${authItem.className || 'bg-teal-600 hover:bg-teal-700 text-white'} shadow-lg shadow-teal-900/20 border-none font-bold text-sm ml-2`}
+                                            className={`hidden md:flex rounded-full px-6 h-10 ${authItem.className || 'bg-primary hover:bg-primary-hover text-white'} shadow-lg shadow-primary/20 border-none font-bold text-sm ml-2`}
                                             onClick={() => navigate(authItem.href)}
                                             onMouseEnter={() => handleMouseEnter('')}
                                         >
@@ -397,7 +397,7 @@ const Navigation: React.FC = () => {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
                             transition={{ duration: 0.2 }}
-                            className="absolute top-full left-0 right-0 border-t border-border bg-white dark:bg-gray-900 shadow-xl z-50"
+                            className="absolute top-full left-0 right-0 border-t border-border bg-surface shadow-xl z-50"
                             onMouseEnter={handleMenuEnter}
                             onMouseLeave={handleMenuLeave}
                         >

@@ -63,7 +63,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-gray-900/60 backdrop-blur-sm z-[110] md:hidden"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[110] md:hidden"
           />
 
           {/* Slide-out Menu */}
@@ -126,7 +126,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                       <span>{navItem.label}</span>
                       <ChevronDown
                         size={20}
-                        className={`transition-transform duration-200 ${expandedSection === navItem.id ? 'rotate-180 text-teal-600' : 'text-text-tertiary'}`}
+                        className={`transition-transform duration-200 ${expandedSection === navItem.id ? 'rotate-180 text-primary' : 'text-text-tertiary'}`}
                         aria-hidden="true"
                       />
                     </button>
@@ -204,13 +204,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                 <>
                   <button
                     onClick={() => handleNav(dashboardConfig?.path || '/dashboard')}
-                    className="w-full py-3.5 px-4 bg-teal-600 text-white rounded-xl font-bold shadow-lg shadow-teal-900/20 active:scale-[0.98] transition-all flex justify-center items-center gap-2"
+                    className="w-full py-3.5 px-4 bg-primary text-white rounded-xl font-bold shadow-lg shadow-primary/20 active:scale-[0.98] transition-all flex justify-center items-center gap-2"
                   >
                     Dashboard <ArrowRight size={18} />
                   </button>
                   <button
                     onClick={handleLogout}
-                    className="w-full py-3.5 px-4 bg-red-50 text-red-600 hover:bg-red-100 rounded-xl font-bold transition-all flex justify-center items-center gap-2"
+                    className="w-full py-3.5 px-4 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-900/30 rounded-xl font-bold transition-all flex justify-center items-center gap-2"
                   >
                     <LogOut size={18} /> Sign Out
                   </button>
@@ -228,7 +228,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                         onClick={() => handleNav(authItem.href)}
                         className={`w-full py-3.5 px-4 rounded-xl font-bold transition-all flex justify-center items-center gap-2 ${
                           isSignup
-                            ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-lg shadow-gray-900/20 active:scale-[0.98]'
+                            ? 'bg-text-primary text-background shadow-lg shadow-black/20 active:scale-[0.98]'
                             : 'bg-surface border border-border text-text-primary hover:bg-surface-hover'
                         }`}
                       >

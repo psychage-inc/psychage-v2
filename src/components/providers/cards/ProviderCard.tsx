@@ -64,10 +64,10 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
               src={provider.photo_url}
               alt={provider.display_name}
               loading="lazy"
-              className="w-16 h-16 rounded-full object-cover border-2 border-white dark:border-gray-800 shadow-sm"
+              className="w-16 h-16 rounded-full object-cover border-2 border-surface shadow-sm"
             />
           ) : (
-            <FallbackAvatar name={provider.display_name} muted={isSeeded} className="w-16 h-16 rounded-full border-2 border-white dark:border-gray-800 shadow-sm" />
+            <FallbackAvatar name={provider.display_name} muted={isSeeded} className="w-16 h-16 rounded-full border-2 border-surface shadow-sm" />
           )}
         </Link>
 

@@ -127,17 +127,17 @@ const ProviderProfile: React.FC = () => {
                                         <img
                                             src={provider.image}
                                             alt={provider.name}
-                                            className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-lg"
+                                            className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-surface shadow-lg"
                                             onError={() => setImageError(true)}
                                         />
                                     ) : (
                                         <FallbackAvatar
                                             name={provider.name}
-                                            className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white dark:border-gray-800 shadow-lg"
+                                            className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-surface shadow-lg"
                                         />
                                     )}
                                     {provider.verified && (
-                                        <div className="absolute bottom-1 right-1 bg-white dark:bg-gray-800 rounded-full p-1.5 shadow-md">
+                                        <div className="absolute bottom-1 right-1 bg-surface rounded-full p-1.5 shadow-md">
                                             <ShieldCheck size={24} className="text-teal-500 fill-teal-50 dark:fill-teal-900/30" />
                                         </div>
                                     )}
@@ -200,7 +200,7 @@ const ProviderProfile: React.FC = () => {
                                     <ul className="space-y-3">
                                         {provider.education.map((edu, idx) => (
                                             <li key={idx} className="text-text-secondary text-sm flex items-start gap-2">
-                                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600 shrink-0" />
+                                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-text-tertiary/40 shrink-0" />
                                                 {edu}
                                             </li>
                                         ))}
@@ -237,7 +237,7 @@ const ProviderProfile: React.FC = () => {
                                             </div>
                                             <div className="flex text-amber-500 mb-2">
                                                 {[...Array(5)].map((_, i) => (
-                                                    <Star key={i} size={14} fill={i < review.rating ? "currentColor" : "none"} className={i >= review.rating ? "text-gray-300 dark:text-gray-700" : ""} />
+                                                    <Star key={i} size={14} fill={i < review.rating ? "currentColor" : "none"} className={i >= review.rating ? "text-border" : ""} />
                                                 ))}
                                             </div>
                                             <p className="text-text-secondary italic">"{review.comment}"</p>

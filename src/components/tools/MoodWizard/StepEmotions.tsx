@@ -24,7 +24,7 @@ export const StepEmotions: React.FC<StepProps> = ({ data, updateData, onNext }) 
 
     return (
         <div className="flex flex-col items-center w-full">
-            <h2 className="font-display text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-8 mt-4">What best describes this feeling?</h2>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold text-text-primary text-center mb-8 mt-4">What best describes this feeling?</h2>
 
             <div className="flex flex-wrap justify-center gap-3 mb-12">
                 {EMOTIONS.map(emotion => (

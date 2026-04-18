@@ -61,10 +61,10 @@ export const FindSupportCTA: React.FC<FindSupportCTAProps> = ({
             <Heart className="w-6 h-6 text-teal-600 dark:text-teal-400" />
           </div>
           <div>
-            <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-1">
+            <h3 className="font-display font-bold text-xl text-text-primary mb-1">
               {headline}
             </h3>
-            <p className="text-gray-500 dark:text-gray-400 text-sm">
+            <p className="text-text-tertiary text-sm">
               {description}
             </p>
           </div>

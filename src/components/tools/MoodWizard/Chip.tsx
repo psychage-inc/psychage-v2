@@ -21,7 +21,7 @@ const EMOTION_COLORS: Record<string, { bg: string; border: string; text: string 
     Lonely: { bg: 'bg-purple-400/20 backdrop-blur-sm', border: 'border-purple-300/40', text: 'text-purple-900' },
 };
 
-const DEFAULT_COLOR = { bg: 'bg-gray-400/20 backdrop-blur-sm', border: 'border-gray-300/40', text: 'text-gray-900' };
+const DEFAULT_COLOR = { bg: 'bg-gray-400/20 backdrop-blur-sm', border: 'border-gray-300/40', text: 'text-text-primary' };
 
 export const Chip: React.FC<ChipProps> = ({ label, selected, onClick }) => {
     const color = EMOTION_COLORS[label] || DEFAULT_COLOR;
@@ -33,7 +33,7 @@ export const Chip: React.FC<ChipProps> = ({ label, selected, onClick }) => {
             className={`px-6 py-3 rounded-full text-base font-medium transition-all duration-200
         ${selected
                     ? `${color.bg} ${color.text} border ${color.border} shadow-lg scale-105`
-                    : 'bg-white/60 text-gray-700 hover:bg-white border border-white/40 shadow-sm hover:scale-[1.02]'
+                    : 'bg-white/60 text-text-secondary hover:bg-white border border-white/40 shadow-sm hover:scale-[1.02]'
                 } focus:outline-none focus:ring-2 focus:ring-gray-900/20`}
         >
             {label}

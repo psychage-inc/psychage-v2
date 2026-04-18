@@ -14,7 +14,7 @@ export const ProviderCardCompact: React.FC<ProviderCardCompactProps> = ({ provid
   return (
     <Link
       to={`/providers/${provider.id}`}
-      className="group flex items-center gap-4 p-4 bg-white/70 dark:bg-gray-900/70 backdrop-blur-md rounded-xl border border-gray-100 dark:border-gray-800 hover:border-teal-200 dark:hover:border-teal-800 hover:shadow-sm transition-all"
+      className="group flex items-center gap-4 p-4 bg-surface/70 backdrop-blur-md rounded-xl border border-border hover:border-teal-200 dark:hover:border-teal-800 hover:shadow-sm transition-all"
     >
       {/* Avatar */}
       <div className="flex-shrink-0">
@@ -36,20 +36,20 @@ export const ProviderCardCompact: React.FC<ProviderCardCompactProps> = ({ provid
       {/* Info */}
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2">
-          <h4 className="font-display font-bold text-sm text-gray-900 dark:text-white truncate">
+          <h4 className="font-display font-bold text-sm text-text-primary truncate">
             {provider.display_name}
             {provider.credentials_suffix && (
-              <span className="text-gray-400 font-medium">, {provider.credentials_suffix}</span>
+              <span className="text-text-tertiary font-medium">, {provider.credentials_suffix}</span>
             )}
           </h4>
           <VerificationBadge status={provider.status} verifiedAt={provider.verified_at} size="sm" />
         </div>
-        <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
+        <p className="text-xs text-text-tertiary truncate">
           {provider.specialty_tags[0]?.label || provider.provider_type_label || 'Provider'}
         </p>
         <div className="flex items-center gap-3 mt-1">
           {locationText && (
-            <span className="flex items-center gap-1 text-xs text-gray-400">
+            <span className="flex items-center gap-1 text-xs text-text-tertiary">
               <MapPin size={10} />
               {locationText}
             </span>
@@ -64,7 +64,7 @@ export const ProviderCardCompact: React.FC<ProviderCardCompactProps> = ({ provid
       </div>
 
       {/* Arrow */}
-      <ArrowRight size={16} className="text-gray-300 group-hover:text-teal-500 group-hover:translate-x-1 transition-all flex-shrink-0" />
+      <ArrowRight size={16} className="text-text-tertiary/40 group-hover:text-teal-500 group-hover:translate-x-1 transition-all flex-shrink-0" />
     </Link>
   );
 };

@@ -23,7 +23,7 @@ export const StepImpact: React.FC<StepProps> = ({ data, updateData, onNext }) =>
 
     return (
         <div className="flex flex-col items-center w-full">
-            <h2 className="font-display text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-8 mt-4">What's having the biggest impact on you?</h2>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold text-text-primary text-center mb-8 mt-4">What's having the biggest impact on you?</h2>
 
             <div className="flex flex-wrap justify-center gap-3 mb-10">
                 {IMPACT_AREAS.map(area => (
@@ -43,7 +43,7 @@ export const StepImpact: React.FC<StepProps> = ({ data, updateData, onNext }) =>
                     value={data.note}
                     onChange={(e) => updateData({ note: e.target.value })}
                     placeholder="Add additional context (optional)..."
-                    className="w-full p-5 bg-white/60 backdrop-blur-md border border-white/40 rounded-3xl focus:outline-none focus:ring-2 focus:ring-gray-900/20 resize-none min-h-[120px] text-gray-800 placeholder:text-gray-400"
+                    className="w-full p-5 bg-white/60 backdrop-blur-md border border-white/40 rounded-3xl focus:outline-none focus:ring-2 focus:ring-gray-900/20 resize-none min-h-[120px] text-text-primary placeholder:text-text-tertiary"
                 />
             </div>
 

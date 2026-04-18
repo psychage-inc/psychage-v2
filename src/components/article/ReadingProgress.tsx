@@ -11,7 +11,7 @@ const ReadingProgress: React.FC = () => {
 
   return (
     <div className="fixed top-0 left-0 right-0 h-1 z-[110]">
-      <div className="absolute inset-0 bg-gray-200/50 dark:bg-gray-700/30" />
+      <div className="absolute inset-0 bg-border/50" />
       <motion.div
         className="absolute inset-0 bg-teal-600 origin-left"
         style={{ scaleX }}

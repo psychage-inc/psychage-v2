@@ -475,7 +475,7 @@ const MindMate: React.FC = () => {
                                     onClick={handleSend}
                                     disabled={!inputText.trim()}
                                     aria-label="Send message"
-                                    className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 text-white dark:text-gray-900 rounded-xl disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                                    className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-text-primary hover:bg-text-secondary text-surface rounded-xl disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
                                 >
                                     <Send size={14} />
                                 </button>

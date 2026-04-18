@@ -43,7 +43,7 @@ const CellContent: React.FC<{ value: boolean | string }> = ({ value }) => {
             </span>
         );
     }
-    return <span className="text-sm text-gray-700 dark:text-gray-300">{value}</span>;
+    return <span className="text-sm text-text-secondary">{value}</span>;
 };
 
 function extractColumnKeys(columns: ColumnDef[]): string[] {
@@ -147,7 +147,7 @@ const ComparisonTable: React.FC<ComparisonTableProps> = (props) => {
             className={`not-prose my-8 ${className}`}
         >
             {title && (
-                <h4 className="text-base font-bold text-gray-900 dark:text-white mb-4">
+                <h4 className="text-base font-bold text-text-primary mb-4">
                     {title}
                 </h4>
             )}
@@ -158,14 +158,14 @@ const ComparisonTable: React.FC<ComparisonTableProps> = (props) => {
                     {resolvedItems.map((item, rowIdx) => (
                         <div
                             key={rowIdx}
-                            className="rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden"
+                            className="rounded-xl border border-border overflow-hidden"
                         >
-                            <div className="px-4 py-2.5 bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700">
-                                <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">
+                            <div className="px-4 py-2.5 bg-surface border-b border-border">
+                                <span className="text-sm font-semibold text-text-primary">
                                     {item.feature}
                                 </span>
                             </div>
-                            <div className="divide-y divide-gray-100 dark:divide-gray-800">
+                            <div className="divide-y divide-border">
                                 {item.values.map((value, colIdx) => (
                                     <div
                                         key={colIdx}
@@ -173,7 +173,7 @@ const ComparisonTable: React.FC<ComparisonTableProps> = (props) => {
                                             highlightColumn === colIdx ? 'bg-teal-50/50 dark:bg-teal-900/10' : ''
                                         }`}
                                     >
-                                        <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                                        <span className="text-xs font-medium text-text-tertiary uppercase tracking-wider">
                                             {resolvedColumns[colIdx]}
                                         </span>
                                         <CellContent value={value} />
@@ -185,11 +185,11 @@ const ComparisonTable: React.FC<ComparisonTableProps> = (props) => {
                 </div>
             ) : (
                 /* Desktop: standard table */
-                <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700">
+                <div className="overflow-x-auto rounded-xl border border-border">
                     <table className="w-full text-left">
                         <thead>
                             <tr>
-                                <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700">
+                                <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-text-tertiary bg-surface border-b border-border">
                                     {firstColHeader}
                                 </th>
                                 {resolvedColumns.map((col, i) => (
@@ -197,11 +197,11 @@ const ComparisonTable: React.FC<ComparisonTableProps> = (props) => {
                                         key={i}
                                         className={`
                                             px-4 py-3 text-center text-xs font-semibold uppercase tracking-wider
-                                            border-b border-gray-200 dark:border-gray-700
+                                            border-b border-border
                                             ${
                                                 highlightColumn === i
                                                     ? 'bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300'
-                                                    : 'bg-gray-50 dark:bg-gray-800/50 text-gray-500 dark:text-gray-400'
+                                                    : 'bg-surface text-text-tertiary'
                                             }
                                         `}
                                     >
@@ -214,9 +214,9 @@ const ComparisonTable: React.FC<ComparisonTableProps> = (props) => {
                             {resolvedItems.map((item, rowIdx) => (
                                 <tr
                                     key={rowIdx}
-                                    className="border-b border-gray-100 dark:border-gray-800 last:border-b-0 hover:bg-gray-50/50 dark:hover:bg-gray-800/30 transition-colors"
+                                    className="border-b border-border last:border-b-0 hover:bg-surface-hover transition-colors"
                                 >
-                                    <td className="px-4 py-3 text-sm font-medium text-gray-800 dark:text-gray-200">
+                                    <td className="px-4 py-3 text-sm font-medium text-text-primary">
                                         {item.feature}
                                     </td>
                                     {item.values.map((value, colIdx) => (

@@ -81,17 +81,17 @@ const VideoPlayer: React.FC<{
 };
 
 const ComingSoonPlaceholder: React.FC = () => (
-    <div className="bg-gray-100 dark:bg-gray-800/60 rounded-2xl p-8 text-center">
+    <div className="bg-surface-hover rounded-2xl p-8 text-center">
         <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
             <Film size={28} className="text-primary" />
         </div>
-        <h4 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">
+        <h4 className="text-lg font-bold text-text-primary mb-2">
             Video Coming Soon
         </h4>
-        <p className="text-sm text-gray-600 dark:text-gray-400 mb-1 max-w-sm mx-auto">
+        <p className="text-sm text-text-secondary mb-1 max-w-sm mx-auto">
             A companion video for this article is currently in production.
         </p>
-        <p className="text-xs text-gray-500 dark:text-gray-500 mb-4">
+        <p className="text-xs text-text-tertiary mb-4">
             Narrated by Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology
         </p>
         <button
@@ -138,14 +138,14 @@ const CompanionVideo: React.FC<CompanionVideoProps> = ({
                     Companion Video
                 </h3>
                 {isPublished && videoDurationSeconds && (
-                    <span className="text-xs text-gray-500 dark:text-gray-400 ml-auto">
+                    <span className="text-xs text-text-tertiary ml-auto">
                         {formatDuration(videoDurationSeconds)}
                     </span>
                 )}
             </div>
 
             {isPublished ? (
-                <div className="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-sm">
+                <div className="rounded-2xl overflow-hidden border border-border shadow-sm">
                     <div className="relative aspect-video bg-black">
                         <VideoPlayer
                             videoUrl={videoUrl}
@@ -163,16 +163,16 @@ const CompanionVideo: React.FC<CompanionVideoProps> = ({
                 <div className="mt-3">
                     <button
                         onClick={() => setShowTranscript(!showTranscript)}
-                        className="flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+                        className="flex items-center gap-2 text-sm font-medium text-text-secondary hover:text-primary transition-colors"
                         aria-expanded={showTranscript}
                     >
                         {showTranscript ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                         {showTranscript ? 'Hide Transcript' : 'Show Transcript'}
                     </button>
                     {showTranscript && (
-                        <div className="mt-3 p-4 bg-gray-50 dark:bg-gray-900/40 rounded-xl border border-gray-200 dark:border-gray-800 max-h-64 overflow-y-auto text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                        <div className="mt-3 p-4 bg-surface rounded-xl border border-border max-h-64 overflow-y-auto text-sm leading-relaxed text-text-secondary">
                             {videoTranscript || (
-                                <p className="text-gray-400 dark:text-gray-500 italic">
+                                <p className="text-text-tertiary italic">
                                     Transcript coming soon.
                                 </p>
                             )}

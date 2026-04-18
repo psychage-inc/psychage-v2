@@ -50,11 +50,11 @@ const QuoteBlock: React.FC<QuoteBlockProps> = ({
             <blockquote
                 className={`
                     relative p-8 rounded-2xl
-                    bg-gray-50 dark:bg-gray-800/50
+                    bg-surface
                     border-l-4 border-teal-500
                     ${isLarge ? 'text-2xl md:text-3xl' : 'text-lg md:text-xl'}
                     italic font-medium
-                    text-gray-800 dark:text-gray-200
+                    text-text-primary
                     leading-relaxed
                 `}
             >
@@ -64,20 +64,20 @@ const QuoteBlock: React.FC<QuoteBlockProps> = ({
                 />
                 <span className="relative z-10">{quote}</span>
             </blockquote>
-            <figcaption className="mt-4 flex items-center justify-end gap-2 text-sm text-gray-500 dark:text-gray-400">
+            <figcaption className="mt-4 flex items-center justify-end gap-2 text-sm text-text-tertiary">
                 <span>
-                    — <strong className="text-gray-700 dark:text-gray-300">{resolvedAttribution}</strong>
-                    {resolvedRole && <span className="text-gray-400 dark:text-gray-500">, {resolvedRole}</span>}
+                    — <strong className="text-text-secondary">{resolvedAttribution}</strong>
+                    {resolvedRole && <span className="text-text-tertiary">, {resolvedRole}</span>}
                 </span>
                 {source && (
                     <>
-                        <span className="text-gray-300 dark:text-gray-600">|</span>
+                        <span className="text-border">|</span>
                         {sourceLink ? (
                             <a
                                 href={sourceLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 text-teal-600 dark:text-teal-400 hover:underline"
+                                className="inline-flex items-center gap-1 text-primary hover:underline"
                             >
                                 <em>{source}</em>
                                 <ExternalLink size={11} />

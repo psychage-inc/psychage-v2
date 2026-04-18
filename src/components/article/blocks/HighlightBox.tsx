@@ -13,7 +13,7 @@ const VARIANT_STYLES = {
     stat: {
         bg: 'bg-gradient-to-br from-teal-50 to-white dark:from-teal-950/30 dark:to-gray-900/50',
         border: 'border-teal-100 dark:border-teal-800/30',
-        text: 'text-gray-900 dark:text-white',
+        text: 'text-text-primary',
     },
     quote: {
         bg: 'bg-gradient-to-br from-violet-50 to-white dark:from-violet-950/30 dark:to-gray-900/50',
@@ -51,7 +51,7 @@ const HighlightBox: React.FC<HighlightBoxProps> = ({
                 ${className}
             `}
         >
-            <div className="space-y-3 [&>span]:block [&>p]:text-base [&>p]:text-gray-600 [&>p]:dark:text-gray-400">
+            <div className="space-y-3 [&>span]:block [&>p]:text-base [&>p]:text-text-secondary">
                 {children}
             </div>
         </motion.div>

@@ -65,12 +65,12 @@ const CitationCard: React.FC<CitationCardProps> = ({ citation }) => {
         {/* Content */}
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between gap-2">
-            <h4 className={`text-sm font-bold text-gray-900 dark:text-white line-clamp-2 transition-colors group-hover:text-teal-600 dark:group-hover:text-teal-400`}>
+            <h4 className={`text-sm font-bold text-text-primary line-clamp-2 transition-colors group-hover:text-primary`}>
               {title}
             </h4>
             <ExternalLink
               size={15}
-              className={`shrink-0 text-gray-400 transition-colors mt-0.5 group-hover:text-teal-600 dark:group-hover:text-teal-400`}
+              className={`shrink-0 text-text-tertiary transition-colors mt-0.5 group-hover:text-primary`}
             />
           </div>
 

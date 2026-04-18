@@ -43,7 +43,7 @@ const ProgressSteps: React.FC<ProgressStepsProps> = ({
                         >
                             {/* Connector line */}
                             {i < steps.length - 1 && (
-                                <div className="absolute top-5 left-[calc(50%+16px)] right-0 h-0.5 bg-gray-200 dark:bg-gray-700" />
+                                <div className="absolute top-5 left-[calc(50%+16px)] right-0 h-0.5 bg-border" />
                             )}
 
                             <div className="flex flex-col items-center text-center">
@@ -54,10 +54,10 @@ const ProgressSteps: React.FC<ProgressStepsProps> = ({
                                         </span>
                                     )}
                                 </div>
-                                <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-1">
+                                <h4 className="text-sm font-semibold text-text-primary mb-1">
                                     {step.title}
                                 </h4>
-                                <div className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                                <div className="text-xs text-text-tertiary leading-relaxed">
                                     {step.description ?? step.content}
                                 </div>
                             </div>
@@ -73,7 +73,7 @@ const ProgressSteps: React.FC<ProgressStepsProps> = ({
         <div ref={ref} className={`not-prose my-8 ${className}`}>
             <div className="relative pl-8">
                 {/* Vertical connector line */}
-                <div className="absolute left-[15px] top-2 bottom-2 w-0.5 bg-gray-200 dark:bg-gray-700" />
+                <div className="absolute left-[15px] top-2 bottom-2 w-0.5 bg-border" />
 
                 <div className="space-y-8">
                     {steps.map((step, i) => (
@@ -99,10 +99,10 @@ const ProgressSteps: React.FC<ProgressStepsProps> = ({
 
                             {/* Content */}
                             <div className="pl-4">
-                                <h4 className="text-base font-semibold text-gray-900 dark:text-white mb-1">
+                                <h4 className="text-base font-semibold text-text-primary mb-1">
                                     {step.title}
                                 </h4>
-                                <div className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0">
+                                <div className="text-sm text-text-secondary leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0">
                                     {step.description ?? step.content}
                                 </div>
                             </div>

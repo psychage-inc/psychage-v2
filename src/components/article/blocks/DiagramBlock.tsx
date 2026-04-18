@@ -140,12 +140,12 @@ export const DiagramBlock: React.FC<DiagramBlockProps> = ({
                     y2={y + nodeHeight + gap}
                     stroke="currentColor"
                     strokeWidth="2"
-                    className="text-gray-400 dark:text-gray-600"
+                    className="text-text-tertiary"
                   />
                   <polygon
                     points={`${x + nodeWidth / 2},${y + nodeHeight + gap - 8} ${x + nodeWidth / 2 - 5},${y + nodeHeight + gap - 16} ${x + nodeWidth / 2 + 5},${y + nodeHeight + gap - 16}`}
                     fill="currentColor"
-                    className="text-gray-400 dark:text-gray-600"
+                    className="text-text-tertiary"
                   />
                 </>
               )}
@@ -169,7 +169,7 @@ export const DiagramBlock: React.FC<DiagramBlockProps> = ({
                 y={y + nodeHeight / 2}
                 textAnchor="middle"
                 dominantBaseline="middle"
-                className="fill-gray-900 dark:fill-gray-100 text-sm font-medium"
+                className="fill-text-primary text-sm font-medium"
               >
                 {node.label.length > 30 ? (
                   <>
@@ -222,7 +222,7 @@ export const DiagramBlock: React.FC<DiagramBlockProps> = ({
                 stroke="currentColor"
                 strokeWidth="2"
                 fill="none"
-                className="text-gray-300 dark:text-gray-700"
+                className="text-border"
                 markerEnd="url(#arrowhead)"
               />
             </g>
@@ -238,7 +238,7 @@ export const DiagramBlock: React.FC<DiagramBlockProps> = ({
             refX="9"
             refY="3"
             orient="auto"
-            className="text-gray-300 dark:text-gray-700"
+            className="text-border"
           >
             <polygon points="0 0, 10 3, 0 6" fill="currentColor" />
           </marker>
@@ -266,7 +266,7 @@ export const DiagramBlock: React.FC<DiagramBlockProps> = ({
                 y={y}
                 textAnchor="middle"
                 dominantBaseline="middle"
-                className="fill-gray-900 dark:fill-gray-100 text-xs font-bold"
+                className="fill-text-primary text-xs font-bold"
               >
                 {node.label.length > 15 ? (
                   <>
@@ -325,7 +325,7 @@ export const DiagramBlock: React.FC<DiagramBlockProps> = ({
             y={40 + nodeHeight / 2}
             textAnchor="middle"
             dominantBaseline="middle"
-            className="fill-gray-900 dark:fill-gray-100 text-sm font-bold"
+            className="fill-text-primary text-sm font-bold"
           >
             {root.label}
           </text>
@@ -350,7 +350,7 @@ export const DiagramBlock: React.FC<DiagramBlockProps> = ({
                 y2={y}
                 stroke="currentColor"
                 strokeWidth="2"
-                className="text-gray-300 dark:text-gray-700"
+                className="text-border"
               />
 
               {/* Node */}
@@ -370,7 +370,7 @@ export const DiagramBlock: React.FC<DiagramBlockProps> = ({
                 y={y + nodeHeight / 2}
                 textAnchor="middle"
                 dominantBaseline="middle"
-                className="fill-gray-900 dark:fill-gray-100 text-xs font-medium"
+                className="fill-text-primary text-xs font-medium"
               >
                 {node.label.length > 20 ? (
                   <>
@@ -422,12 +422,12 @@ export const DiagramBlock: React.FC<DiagramBlockProps> = ({
                     y2={startY + nodeHeight / 2}
                     stroke="currentColor"
                     strokeWidth="2"
-                    className="text-gray-400 dark:text-gray-600"
+                    className="text-text-tertiary"
                   />
                   <polygon
                     points={`${x + nodeWidth + gap},${startY + nodeHeight / 2} ${x + nodeWidth + gap - 10},${startY + nodeHeight / 2 - 6} ${x + nodeWidth + gap - 10},${startY + nodeHeight / 2 + 6}`}
                     fill="currentColor"
-                    className="text-gray-400 dark:text-gray-600"
+                    className="text-text-tertiary"
                   />
                 </>
               )}
@@ -469,7 +469,7 @@ export const DiagramBlock: React.FC<DiagramBlockProps> = ({
                 y={startY + nodeHeight / 2}
                 textAnchor="middle"
                 dominantBaseline="middle"
-                className="fill-gray-900 dark:fill-gray-100 text-xs font-medium"
+                className="fill-text-primary text-xs font-medium"
               >
                 {node.label.length > 25 ? (
                   <>

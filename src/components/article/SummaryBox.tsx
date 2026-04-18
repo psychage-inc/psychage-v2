@@ -38,14 +38,14 @@ const SummaryBox: React.FC<SummaryBoxProps> = ({ summary, keyPoints, children, c
                     {isArray ? (
                         <ul className="space-y-2">
                             {(content as string[]).map((point, index) => (
-                                <li key={index} className="text-base leading-relaxed text-gray-700 dark:text-gray-300 flex items-start">
+                                <li key={index} className="text-base leading-relaxed text-text-secondary flex items-start">
                                     <span className="text-primary mr-2 mt-1">•</span>
                                     <span>{point}</span>
                                 </li>
                             ))}
                         </ul>
                     ) : (
-                        <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
+                        <p className="text-base leading-relaxed text-text-secondary">
                             {content as string}
                         </p>
                     )}

@@ -46,7 +46,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category, onClick }) => {
 
             {/* Body */}
             <div className="p-6 flex flex-col flex-grow relative">
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6 flex-grow">
+                <p className="text-text-secondary text-sm leading-relaxed mb-6 flex-grow">
                     {category.description}
                 </p>
 

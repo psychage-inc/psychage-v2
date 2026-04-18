@@ -85,7 +85,7 @@ const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
     <motion.div
       whileHover={{ y: -8 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className={`group flex flex-col h-full bg-white dark:bg-gray-900 rounded-3xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-300 relative overflow-hidden ${styles.border}`}
+      className={`group flex flex-col h-full bg-surface rounded-3xl p-8 border border-border shadow-sm hover:shadow-xl transition-all duration-300 relative overflow-hidden ${styles.border}`}
     >
       {/* Top Section */}
       <div className="flex justify-between items-start mb-6">
@@ -105,11 +105,11 @@ const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
       </div>
 
       {/* Content */}
-      <h3 className="font-display font-bold text-2xl text-gray-900 dark:text-white mb-3 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">
+      <h3 className="font-display font-bold text-2xl text-text-primary mb-3 group-hover:text-text-secondary transition-colors">
         {tool.name}
       </h3>
 
-      <p className="text-gray-500 dark:text-gray-400 mb-8 leading-relaxed flex-grow">
+      <p className="text-text-secondary mb-8 leading-relaxed flex-grow">
         {tool.description}
       </p>
 
@@ -117,7 +117,7 @@ const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
       <div className="mt-auto space-y-6">
         <Button
           variant="outline"
-          className={`w-full justify-between dark:border-gray-700 dark:text-white group-hover:text-white group-hover:border-transparent transition-all duration-300 ${styles.buttonHover}`}
+          className={`w-full justify-between border-border group-hover:text-white group-hover:border-transparent transition-all duration-300 ${styles.buttonHover}`}
           rightIcon={<ArrowRight size={18} />}
         >
           Try Tool
@@ -126,7 +126,7 @@ const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
         {/* Features */}
         <div className="space-y-2">
           {tool.features.map((feature, idx) => (
-            <div key={idx} className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+            <div key={idx} className="flex items-center text-sm text-text-secondary">
               <Check size={14} className={`mr-2 ${styles.text}`} strokeWidth={3} />
               <span>{feature}</span>
             </div>

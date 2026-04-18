@@ -157,7 +157,7 @@ const ArticleCategoryPage: React.FC = () => {
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <button
                                     onClick={() => navigate('/learn')}
-                                    className="px-6 py-3 text-sm font-bold text-text-secondary bg-surface border border-border rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                                    className="px-6 py-3 text-sm font-bold text-text-secondary bg-surface border border-border rounded-xl hover:bg-surface-hover transition-colors"
                                 >
                                     Browse Other Topics
                                 </button>

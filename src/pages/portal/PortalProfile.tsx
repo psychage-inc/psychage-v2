@@ -226,7 +226,7 @@ const PracticeTab: React.FC<TabProps> = ({ provider, onSave, saveStatus }) => {
                 )}
               >
                 <span className={cn(
-                  'absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white transition-transform shadow-sm',
+                  'absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white dark:bg-neutral-200 transition-transform shadow-sm',
                   toggle.value && 'translate-x-4'
                 )} />
               </button>

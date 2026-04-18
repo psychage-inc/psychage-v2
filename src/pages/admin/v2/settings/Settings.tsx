@@ -114,9 +114,9 @@ const AdminSettingsV2: React.FC = () => {
           </div>
           <button
             onClick={() => handleChange(field.key, !boolValue, field.critical)}
-            className={`w-11 h-6 rounded-full transition-colors relative ${boolValue ? 'bg-primary' : 'bg-gray-300'}`}
+            className={`w-11 h-6 rounded-full transition-colors relative ${boolValue ? 'bg-primary' : 'bg-gray-300 dark:bg-neutral-600'}`}
           >
-            <div className={`absolute top-0.5 w-5 h-5 rounded-full bg-white shadow transition-all ${boolValue ? 'left-5' : 'left-0.5'}`} />
+            <div className={`absolute top-0.5 w-5 h-5 rounded-full bg-white dark:bg-neutral-200 shadow transition-all ${boolValue ? 'left-5' : 'left-0.5'}`} />
           </button>
         </div>
       );

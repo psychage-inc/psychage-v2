@@ -23,7 +23,7 @@ export default function SourceCitations({ sources }: SourceCitationsProps) {
       transition={{ duration: 0.3 }}
       className="mt-3"
     >
-      <p className="text-xs text-slate-400 font-medium uppercase tracking-wider mb-2">Sources</p>
+      <p className="text-xs text-slate-400 dark:text-neutral-500 font-medium uppercase tracking-wider mb-2">Sources</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
         {sources.map((source) => {
           const Icon = TYPE_ICONS[source.type] || FileText;

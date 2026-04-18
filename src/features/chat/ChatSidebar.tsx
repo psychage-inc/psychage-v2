@@ -62,7 +62,7 @@ export default function ChatSidebar({
       {/* Search */}
       <div className="px-3 pb-2">
         <div className="relative">
-          <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+          <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-neutral-500" />
           <input
             type="text"
             value={searchQuery}
@@ -76,13 +76,13 @@ export default function ChatSidebar({
       {/* Conversation list */}
       <div className="flex-1 overflow-y-auto px-2 pb-3">
         {grouped.length === 0 ? (
-          <p className="text-xs text-slate-400 text-center py-8">
+          <p className="text-xs text-slate-400 dark:text-neutral-500 text-center py-8">
             {searchQuery ? 'No conversations found' : 'No conversations yet'}
           </p>
         ) : (
           grouped.map((group) => (
             <div key={group.key} className="mb-3">
-              <p className="text-xs text-slate-400 font-medium uppercase tracking-wider px-3 py-1.5">
+              <p className="text-xs text-slate-400 dark:text-neutral-500 font-medium uppercase tracking-wider px-3 py-1.5">
                 {group.label}
               </p>
               {group.items.map((conv) => (

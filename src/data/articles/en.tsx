@@ -39,7 +39,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="what-is-anxiety" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-400 mb-8 leading-relaxed">
             Anxiety is more than just feeling stressed or worried. It is a natural body response designed to keep us safe, but when it becomes chronic or disproportionate to the situation, it can interfere with daily life <Citation id="1" index={1} source="APA" year="2024" />.
           </p>
           <p className="mb-6">
@@ -47,7 +47,7 @@ export const articles: Article[] = [
           </p>
         </div>
 
-        <h2 id="common-symptoms" className="text-3xl font-display font-bold text-gray-900 mt-12 mb-6 scroll-mt-32">
+        <h2 id="common-symptoms" className="text-3xl font-display font-bold text-gray-900 dark:text-neutral-100 mt-12 mb-6 scroll-mt-32">
           Common Symptoms
         </h2>
         <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -96,7 +96,7 @@ export const articles: Article[] = [
     citations: [],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-400 mb-8 leading-relaxed">
           While people often use the terms interchangeably, panic attacks and anxiety attacks have distinct clinical features. Understanding these differences is key to effective management.
         </p>
         <div className="my-8 p-6 bg-red-50 rounded-xl border-l-4 border-red-400">
@@ -134,7 +134,7 @@ export const articles: Article[] = [
     citations: [],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-400 mb-8 leading-relaxed">
           Depression is not just 'feeling blue' or a character flaw. It is a real illness with real symptoms that affects how you think, feel, and manage daily activities.
         </p>
         <h2 className="text-2xl font-bold mt-8 mb-4">Core Symptoms</h2>
@@ -165,7 +165,7 @@ export const articles: Article[] = [
     citations: [],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-400 mb-8 leading-relaxed">
           Bipolar disorder causes unusual shifts in mood, energy, activity levels, and the ability to carry out day-to-day tasks.
         </p>
       </>
@@ -192,7 +192,7 @@ export const articles: Article[] = [
     citations: [],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-400 mb-8 leading-relaxed">
           Many adults live their entire lives without knowing they have ADHD, attributing their struggles to laziness or disorganization.
         </p>
         <div className="my-8 p-6 bg-orange-50 rounded-xl border-l-4 border-orange-400">
@@ -223,7 +223,7 @@ export const articles: Article[] = [
     citations: [],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-400 mb-8 leading-relaxed">
           Sleep is the foundation of mental health. Without restorative sleep, emotional regulation becomes nearly impossible.
         </p>
         <h2 className="text-2xl font-bold mt-8 mb-4">The Golden Rules</h2>
@@ -256,7 +256,7 @@ export const articles: Article[] = [
     citations: [],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-400 mb-8 leading-relaxed">
           Trauma is not just about what happened to you; it's about the imprint left on your mind and body.
         </p>
       </>
@@ -283,7 +283,7 @@ export const articles: Article[] = [
     citations: [],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-400 mb-8 leading-relaxed">
           Stress is about 'too much': too many pressures, too much demand. Burnout is about 'not enough': not enough energy, not enough motivation, not enough caring.
         </p>
       </>
@@ -310,7 +310,7 @@ export const articles: Article[] = [
     citations: [],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-400 mb-8 leading-relaxed">
           95% of your serotonin is produced in your gastrointestinal tract. What you eat directly fuels your brain.
         </p>
       </>
@@ -337,7 +337,7 @@ export const articles: Article[] = [
     citations: [],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-400 mb-8 leading-relaxed">
           Meditation isn't about stopping your thoughts. It's about noticing them without judgment.
         </p>
       </>
@@ -364,7 +364,7 @@ export const articles: Article[] = [
     citations: [],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-400 mb-8 leading-relaxed">
           Boundaries are the distance at which I can love you and me simultaneously.
         </p>
       </>
@@ -391,7 +391,7 @@ export const articles: Article[] = [
     citations: [],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-400 mb-8 leading-relaxed">
           Men are less likely to seek help for depression, often viewing it as a weakness rather than an illness.
         </p>
       </>
@@ -418,7 +418,7 @@ export const articles: Article[] = [
     citations: [],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-400 mb-8 leading-relaxed">
           In a hyper-connected world, the ability to disconnect is a superpower for your mental health.
         </p>
       </>
@@ -445,7 +445,7 @@ export const articles: Article[] = [
     citations: [],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-400 mb-8 leading-relaxed">
           CBT is based on the concept that your thoughts, feelings, and actions are interconnected.
         </p>
       </>
@@ -472,7 +472,7 @@ export const articles: Article[] = [
     citations: [],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-400 mb-8 leading-relaxed">
           Reduced sunlight in winter can disrupt your body's internal clock and lead to a drop in serotonin.
         </p>
       </>

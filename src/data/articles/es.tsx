@@ -31,7 +31,7 @@ export const articles: Article[] = [
         content: (
             <>
                 <div id="what-is-anxiety" className="scroll-mt-32">
-                    <p className="lead text-xl text-gray-600 mb-8 leading-relaxed">
+                    <p className="lead text-xl text-gray-600 dark:text-neutral-400 mb-8 leading-relaxed">
                         La ansiedad es más que solo sentirse estresado o preocupado. Es una respuesta natural del cuerpo diseñada para mantenernos a salvo.
                     </p>
                 </div>

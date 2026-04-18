@@ -24,7 +24,7 @@ const ActionCards: React.FC<ActionCardsProps> = ({ cards }) => {
       transition={{ duration: 0.3 }}
       className="mt-3"
     >
-      <p className="text-xs text-slate-400 font-medium uppercase tracking-wider mb-2">
+      <p className="text-xs text-slate-400 dark:text-neutral-500 font-medium uppercase tracking-wider mb-2">
         Suggested
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">

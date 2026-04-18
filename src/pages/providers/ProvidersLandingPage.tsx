@@ -184,7 +184,7 @@ const ProvidersLandingPage: React.FC = () => {
                   </Button>
                 </Link>
                 <Link to="/for-providers/claim">
-                  <Button variant="outline" className="text-white border-gray-600 hover:bg-white/10 font-bold px-8 py-3 text-base">
+                  <Button variant="outline" className="text-white border-gray-600 dark:border-neutral-500 hover:bg-white/10 font-bold px-8 py-3 text-base">
                     Claim Your Profile
                   </Button>
                 </Link>

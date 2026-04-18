@@ -23,7 +23,7 @@ export default function SuggestedFollowUps({ suggestions, onSelect }: SuggestedF
           <span className="text-sm text-slate-700 dark:text-neutral-300">{suggestion}</span>
           <ArrowRight
             size={16}
-            className="text-slate-400 group-hover:text-teal-500 group-hover:translate-x-0.5 transition-all shrink-0 ml-3"
+            className="text-slate-400 dark:text-neutral-500 group-hover:text-teal-500 group-hover:translate-x-0.5 transition-all shrink-0 ml-3"
           />
         </motion.button>
       ))}

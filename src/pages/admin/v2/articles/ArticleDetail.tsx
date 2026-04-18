@@ -1065,13 +1065,13 @@ function WorkflowTab({ article }: { article: ArticleRecord }) {
   const allowedTransitions = ARTICLE_STATUS_TRANSITIONS[article.status as ArticleStatus] || [];
 
   const statusColor: Record<string, string> = {
-    draft: 'bg-gray-400',
+    draft: 'bg-gray-400 dark:bg-neutral-500',
     in_review: 'bg-blue-500',
     approved: 'bg-emerald-500',
     rejected: 'bg-red-500',
     published: 'bg-emerald-600',
     paused: 'bg-orange-500',
-    archived: 'bg-gray-500',
+    archived: 'bg-gray-500 dark:bg-neutral-600',
   };
 
   return (
@@ -1083,7 +1083,7 @@ function WorkflowTab({ article }: { article: ArticleRecord }) {
           {history.map((entry, i) => (
             <div key={entry.id} className="flex gap-4">
               <div className="flex flex-col items-center">
-                <div className={`w-3 h-3 rounded-full ${statusColor[entry.to_status] || 'bg-gray-400'}`} />
+                <div className={`w-3 h-3 rounded-full ${statusColor[entry.to_status] || 'bg-gray-400 dark:bg-neutral-500'}`} />
                 {i < history.length - 1 && <div className="w-0.5 flex-1 bg-surface-active" />}
               </div>
               <div className="pb-6">

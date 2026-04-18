@@ -89,7 +89,7 @@ export default function ChatInput({ onSend, onStop, isStreaming, onCrisisClick }
                   ? 'text-red-500'
                   : charCount > 1800
                     ? 'text-amber-500'
-                    : 'text-slate-400'
+                    : 'text-slate-400 dark:text-neutral-500'
               }`}
             >
               {charCount}/2000

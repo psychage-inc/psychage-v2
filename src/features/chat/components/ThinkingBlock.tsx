@@ -13,7 +13,7 @@ export default function ThinkingBlock({ content }: ThinkingBlockProps) {
     <div className="mb-3">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-slate-600 transition-colors cursor-pointer"
+        className="flex items-center gap-1.5 text-sm text-slate-400 dark:text-neutral-500 hover:text-slate-600 dark:hover:text-neutral-300 transition-colors cursor-pointer"
       >
         <motion.span
           animate={{ rotate: isOpen ? 90 : 0 }}

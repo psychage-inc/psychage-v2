@@ -167,7 +167,7 @@ const AdminProviderList: React.FC = () => {
       cell: ({ row }) => row.original.telehealth_available ? (
         <Wifi size={16} className="text-emerald-500" />
       ) : (
-        <WifiOff size={16} className="text-gray-300" />
+        <WifiOff size={16} className="text-gray-300 dark:text-neutral-600" />
       ),
     },
     {

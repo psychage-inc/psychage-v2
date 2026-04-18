@@ -114,7 +114,7 @@ const AssessmentResultsPage: React.FC = () => {
 
                         <div className="relative z-10">
                             <p className="text-text-secondary font-bold tracking-wider uppercase text-sm mb-4">Your Clarity Score</p>
-                            <div className="text-8xl font-display font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
+                            <div className="text-8xl font-display font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white dark:from-neutral-100 to-gray-500 dark:to-neutral-400">
                                 {score}
                             </div>
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-sm font-medium text-white">

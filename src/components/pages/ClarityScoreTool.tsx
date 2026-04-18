@@ -249,7 +249,7 @@ const ClarityScoreTool: React.FC = () => {
 
   // --- Domain color helpers ---
   const getDomainBarColor = (domainId: number): string => {
-    return DOMAINS[domainId]?.bgColor || 'bg-gray-500';
+    return DOMAINS[domainId]?.bgColor || 'bg-gray-500 dark:bg-neutral-600';
   };
 
   // --- Render ---

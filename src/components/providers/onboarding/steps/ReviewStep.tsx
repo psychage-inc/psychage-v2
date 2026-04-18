@@ -97,7 +97,7 @@ const ReviewStep: React.FC<Props> = ({ formData, filters, submitResult }) => {
                 <Badge key={s.id} variant="teal">{s.label}</Badge>
               ))
             ) : (
-              <span className="text-sm text-gray-400">None selected</span>
+              <span className="text-sm text-gray-400 dark:text-neutral-500">None selected</span>
             )}
           </div>
         </div>
@@ -109,7 +109,7 @@ const ReviewStep: React.FC<Props> = ({ formData, filters, submitResult }) => {
                 <Badge key={l.id} variant="info">{l.label}</Badge>
               ))
             ) : (
-              <span className="text-sm text-gray-400">None selected</span>
+              <span className="text-sm text-gray-400 dark:text-neutral-500">None selected</span>
             )}
           </div>
         </div>

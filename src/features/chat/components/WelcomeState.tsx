@@ -106,7 +106,7 @@ export default function WelcomeState({ onSuggestionClick }: WelcomeStateProps) {
             >
               <Icon
                 size={18}
-                className="text-slate-400 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors shrink-0 mt-0.5"
+                className="text-slate-400 dark:text-neutral-500 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors shrink-0 mt-0.5"
               />
               <span className="text-sm text-slate-700 dark:text-neutral-300 group-hover:text-slate-900 dark:group-hover:text-slate-100 transition-colors">
                 {text}

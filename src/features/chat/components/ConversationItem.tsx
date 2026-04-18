@@ -42,7 +42,7 @@ export default function ConversationItem({
             e.stopPropagation();
             setShowMenu(!showMenu);
           }}
-          className="p-1 rounded-md opacity-0 group-hover:opacity-100 text-slate-400 hover:text-slate-600 hover:bg-slate-200 dark:hover:bg-neutral-700 transition-all"
+          className="p-1 rounded-md opacity-0 group-hover:opacity-100 text-slate-400 dark:text-neutral-500 hover:text-slate-600 dark:hover:text-neutral-400 hover:bg-slate-200 dark:hover:bg-neutral-700 transition-all"
         >
           <MoreHorizontal size={14} />
         </button>

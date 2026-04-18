@@ -80,7 +80,7 @@ const CredentialsStep: React.FC<Props> = ({ formData, updateField, filters, filt
         Provider Type *
       </label>
       {filtersLoading ? (
-        <div className="flex items-center gap-2 text-sm text-gray-400">
+        <div className="flex items-center gap-2 text-sm text-gray-400 dark:text-neutral-500">
           <Loader2 size={16} className="animate-spin" /> Loading provider types...
         </div>
       ) : (
@@ -111,7 +111,7 @@ const CredentialsStep: React.FC<Props> = ({ formData, updateField, filters, filt
         value={formData.credentials_suffix}
         onChange={(e) => updateField('credentials_suffix', e.target.value)}
       />
-      <p className="text-xs text-gray-400 mt-1">
+      <p className="text-xs text-gray-400 dark:text-neutral-500 mt-1">
         These will appear after your name (e.g., "Dr. Smith, PhD, LCSW").
       </p>
     </div>

@@ -247,7 +247,7 @@ const ProviderClaimForm: React.FC = () => {
                   <h4 className="font-display font-bold text-gray-900 dark:text-white">
                     {matchedProvider.display_name}
                     {matchedProvider.credentials_suffix && (
-                      <span className="text-gray-400 font-medium">, {matchedProvider.credentials_suffix}</span>
+                      <span className="text-gray-400 dark:text-neutral-500 font-medium">, {matchedProvider.credentials_suffix}</span>
                     )}
                   </h4>
                   <Badge variant="teal" className="mt-1">
@@ -267,7 +267,7 @@ const ProviderClaimForm: React.FC = () => {
                         <Badge key={spec.id} variant="neutral">{spec.label}</Badge>
                       ))}
                       {matchedProvider.specialties.length > 4 && (
-                        <span className="text-xs text-gray-400">
+                        <span className="text-xs text-gray-400 dark:text-neutral-500">
                           +{matchedProvider.specialties.length - 4} more
                         </span>
                       )}

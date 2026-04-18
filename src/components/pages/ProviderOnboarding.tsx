@@ -74,11 +74,11 @@ const ProviderOnboarding: React.FC = () => {
                                     <div key={s.id} className="flex flex-col items-center gap-2 bg-gray-50 dark:bg-neutral-900 px-2">
                                         <div className={`
                                             w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm transition-colors
-                                            ${step >= s.id ? 'bg-teal-500 text-white' : 'bg-white dark:bg-neutral-800 border-2 border-gray-200 dark:border-neutral-600 text-gray-400'}
+                                            ${step >= s.id ? 'bg-teal-500 text-white' : 'bg-white dark:bg-neutral-800 border-2 border-gray-200 dark:border-neutral-600 text-gray-400 dark:text-neutral-500'}
                                         `}>
                                             {step > s.id ? <CheckCircle2 size={20} /> : s.id}
                                         </div>
-                                        <span className={`text-xs font-bold uppercase tracking-wider ${step >= s.id ? 'text-teal-600 dark:text-teal-400' : 'text-gray-400'}`}>
+                                        <span className={`text-xs font-bold uppercase tracking-wider ${step >= s.id ? 'text-teal-600 dark:text-teal-400' : 'text-gray-400 dark:text-neutral-500'}`}>
                                             {s.title}
                                         </span>
                                     </div>

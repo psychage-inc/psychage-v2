@@ -41,7 +41,7 @@ export default function ChatSidebar({
         {isMobile && onClose && (
           <button
             onClick={onClose}
-            className="p-1.5 rounded-md text-slate-400 hover:text-slate-600 hover:bg-slate-200 dark:hover:bg-neutral-700 transition-colors"
+            className="p-1.5 rounded-md text-slate-400 dark:text-neutral-500 hover:text-slate-600 dark:hover:text-neutral-400 hover:bg-slate-200 dark:hover:bg-neutral-700 transition-colors"
           >
             <X size={18} />
           </button>

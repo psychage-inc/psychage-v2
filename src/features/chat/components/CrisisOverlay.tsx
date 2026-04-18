@@ -70,7 +70,7 @@ export default function CrisisOverlay({ isAutoTriggered, onClose }: CrisisOverla
         {/* Return link */}
         <button
           onClick={onClose}
-          className="mt-8 inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-slate-600 dark:hover:text-neutral-300 transition-colors"
+          className="mt-8 inline-flex items-center gap-1.5 text-sm text-slate-400 dark:text-neutral-500 hover:text-slate-600 dark:hover:text-neutral-400 dark:hover:text-neutral-300 transition-colors"
         >
           <ArrowLeft size={14} />
           Return to chat

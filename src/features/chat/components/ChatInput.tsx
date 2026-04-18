@@ -72,7 +72,7 @@ export default function ChatInput({ onSend, onStop, isStreaming, onCrisisClick }
                 className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
                   hasContent && !isOverLimit
                     ? 'bg-teal-600 text-white hover:bg-teal-700 cursor-pointer'
-                    : 'bg-slate-200 dark:bg-neutral-700 text-slate-400 cursor-not-allowed'
+                    : 'bg-slate-200 dark:bg-neutral-700 text-slate-400 dark:text-neutral-500 cursor-not-allowed'
                 }`}
                 aria-label="Send message"
               >

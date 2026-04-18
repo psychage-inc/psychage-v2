@@ -14,7 +14,7 @@ const Badge: React.FC<BadgeProps> = ({
   children
 }) => {
   const variants = {
-    neutral: "bg-gray-100 text-gray-700 dark:bg-gray-800/50 dark:text-gray-300",
+    neutral: "bg-gray-100 text-gray-700 dark:bg-neutral-800/50 dark:text-neutral-300",
     success: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400",
     warning: "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400",
     error: "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400",

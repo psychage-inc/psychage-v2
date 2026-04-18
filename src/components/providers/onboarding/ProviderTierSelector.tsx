@@ -150,7 +150,7 @@ const TierCard: React.FC<TierCardProps> = ({
         isSelected && isAmber &&
           'border-amber-400 dark:border-amber-500 shadow-lg shadow-amber-400/10 ring-1 ring-amber-400/20',
         !isSelected && !isAmber &&
-          'border-border hover:border-gray-300 dark:hover:border-gray-600',
+          'border-border hover:border-gray-300 dark:hover:border-neutral-600',
         !isSelected && isAmber &&
           'border-amber-200 dark:border-amber-800/50 hover:border-amber-300 dark:hover:border-amber-700'
       )}
@@ -164,7 +164,7 @@ const TierCard: React.FC<TierCardProps> = ({
             'absolute top-4 right-4 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors',
             isSelected && !isAmber && 'border-teal-500 bg-teal-500',
             isSelected && isAmber && 'border-amber-400 bg-amber-400',
-            !isSelected && 'border-gray-300 dark:border-gray-600'
+            !isSelected && 'border-gray-300 dark:border-neutral-600'
           )}
         >
           {isSelected && <Check size={12} className="text-white" />}

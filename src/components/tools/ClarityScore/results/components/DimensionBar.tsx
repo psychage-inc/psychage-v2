@@ -31,7 +31,7 @@ const DimensionBar: React.FC<DimensionBarProps> = ({
       onClick={onClick}
       className={`w-full text-left ${
         onClick
-          ? 'cursor-pointer rounded-xl p-3 -mx-3 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:outline-none'
+          ? 'cursor-pointer rounded-xl p-3 -mx-3 hover:bg-gray-50 dark:hover:bg-neutral-800/50 transition-colors focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:outline-none'
           : ''
       }`}
       {...(onClick ? { type: 'button' as const } : {})}
@@ -39,7 +39,7 @@ const DimensionBar: React.FC<DimensionBarProps> = ({
       <div className="flex items-center justify-between mb-1.5">
         <div className="flex items-center gap-2">
           <Icon size={16} className={meta.tailwindText} />
-          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+          <span className="text-sm font-medium text-gray-700 dark:text-neutral-300">
             {meta.name}
           </span>
           {showTier && <TierBadge tier={tier} size="sm" />}
@@ -48,7 +48,7 @@ const DimensionBar: React.FC<DimensionBarProps> = ({
           {Math.round(score)}/20
         </span>
       </div>
-      <div className="h-3 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+      <div className="h-3 bg-gray-100 dark:bg-neutral-800 rounded-full overflow-hidden">
         <motion.div
           className={`h-full rounded-full ${meta.tailwindBg}`}
           initial={{ width: 0 }}

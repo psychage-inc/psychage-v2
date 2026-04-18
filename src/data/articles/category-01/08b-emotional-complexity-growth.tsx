@@ -132,7 +132,7 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Some people struggle to identify what they're feeling beyond basic categories like "good" or "bad." This isn't emotional suppression or avoidance---it's alexithymia, a trait involving difficulty recognizing and describing emotions.
           </p>
           <p className="mb-6">
@@ -494,7 +494,7 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Emotion-Focused Therapy (EFT) is an evidence-based approach that treats emotions not as problems to eliminate, but as valuable information to understand and transform for healing.
           </p>
           <p className="mb-6">

@@ -41,11 +41,11 @@ const SleepDashboard: React.FC<SleepDashboardProps> = ({ sleepData, onSignIn }) 
         animate={{ opacity: 1, y: 0 }}
         className="text-center py-16"
       >
-        <Moon size={48} className="mx-auto mb-4 text-gray-300 dark:text-gray-600" />
+        <Moon size={48} className="mx-auto mb-4 text-gray-300 dark:text-neutral-600" />
         <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-2">
           No data yet
         </h3>
-        <p className="text-sm text-gray-500 dark:text-gray-400 max-w-md mx-auto">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 max-w-md mx-auto">
           Log your first night in the Diary tab to start seeing your sleep
           dashboard with scores, trends, and weekly insights.
         </p>
@@ -56,7 +56,7 @@ const SleepDashboard: React.FC<SleepDashboardProps> = ({ sleepData, onSignIn }) 
   return (
     <div className="space-y-6">
       {/* Time range toggle */}
-      <div className="flex items-center gap-2 bg-white dark:bg-gray-800 rounded-xl p-1 border border-gray-100 dark:border-gray-700 w-fit">
+      <div className="flex items-center gap-2 bg-white dark:bg-neutral-800 rounded-xl p-1 border border-gray-100 dark:border-neutral-700 w-fit">
         {(['7', '30', '90'] as TimeRange[]).map((r) => (
           <button
             key={r}
@@ -66,7 +66,7 @@ const SleepDashboard: React.FC<SleepDashboardProps> = ({ sleepData, onSignIn }) 
               'px-3 py-1.5 rounded-lg text-xs font-bold transition-colors',
               range === r
                 ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400'
-                : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300'
+                : 'text-gray-400 dark:text-neutral-500 hover:text-gray-600 dark:hover:text-neutral-300'
             )}
           >
             {r}d

@@ -43,7 +43,7 @@ const PracticalExercise: React.FC<PracticalExerciseProps> = ({
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
             id="practical-exercise"
-            className={`not-prose bg-gradient-to-br from-indigo-50 via-white to-teal-50 dark:from-indigo-950/20 dark:via-gray-900/50 dark:to-teal-950/20 border border-indigo-200/60 dark:border-indigo-800/30 rounded-2xl p-6 md:p-8 my-10 scroll-mt-32 ${className}`}
+            className={`not-prose bg-gradient-to-br from-indigo-50 via-white to-teal-50 dark:from-indigo-950/20 dark:via-neutral-900/50 dark:to-teal-950/20 border border-indigo-200/60 dark:border-indigo-800/30 rounded-2xl p-6 md:p-8 my-10 scroll-mt-32 ${className}`}
         >
             <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-900/40 flex items-center justify-center">

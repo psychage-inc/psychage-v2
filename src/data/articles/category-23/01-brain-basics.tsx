@@ -54,7 +54,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Neurotransmitters are chemical messengers that carry signals between neurons. Your brain uses dozens of these molecules—serotonin, dopamine, GABA, glutamate, norepinephrine, acetylcholine, and more—to regulate mood, motivation, anxiety, focus, memory, and sleep.
           </p>
         </div>
@@ -168,7 +168,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -220,7 +220,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Stress begins in your brain. When you perceive threat—real or imagined—a cascade of neural and hormonal signals prepares your body for action.
           </p>
         </div>
@@ -347,7 +347,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -399,7 +399,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sleep isn&apos;t passive shutdown—it&apos;s active restoration. While you sleep, your brain performs critical maintenance: Consolidates memories, processes emotions, clears metabolic waste, restores neurotransmitter systems, repairs synaptic connections.
           </p>
         </div>
@@ -512,7 +512,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -564,7 +564,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The teenage brain is under construction. Brain development doesn&apos;t end at childhood—adolescence (roughly 12-25 years) is period of dramatic reorganization rivaling early childhood changes.
           </p>
         </div>
@@ -700,7 +700,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -752,7 +752,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mental health isn&apos;t just chemistry—it&apos;s also immunity. Neuroinflammation (inflammation in the brain) increasingly recognized as major mechanism underlying depression, anxiety, cognitive impairment, and other psychiatric conditions.
           </p>
         </div>
@@ -896,7 +896,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -948,7 +948,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your gut and brain are in constant conversation. Gut-brain axis is bidirectional communication network connecting digestive system to central nervous system via multiple pathways: Vagus nerve (direct neural highway carrying signals both directions), immune system (gut bacteria influence inflammatory signaling affecting brain), endocrine system (gut hormones affect mood), and metabolic products (bacteria produce neurotransmitters, short-chain fatty acids, other molecules entering bloodstream and reaching brain).
           </p>
         </div>
@@ -1084,7 +1084,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1136,7 +1136,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Can brain scans diagnose mental health conditions? Not yet—but they&apos;re revealing underlying neurobiology. Neuroimaging technologies visualize brain structure and function: Structural MRI shows anatomy (hippocampal shrinkage in depression, PTSD); functional MRI (fMRI) measures brain activity during tasks (hyperactive amygdala in anxiety); PET scans track neurotransmitter systems and metabolic activity (reduced dopamine receptors in addiction); EEG records electrical brain waves (abnormal rhythms in depression, seizure disorders).
           </p>
         </div>
@@ -1263,7 +1263,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1328,7 +1328,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Epigenetics reveals that your genes aren&apos;t your destiny. Environmental factors—stress, trauma, nurture, diet, toxins—can turn genes &quot;on&quot; or &quot;off&quot; without changing the DNA sequence itself.
           </p>
         </div>
@@ -1349,7 +1349,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1411,7 +1411,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Executive functions are the cognitive processes that allow you to plan, focus, remember instructions, manage emotions, and juggle multiple tasks—essentially, to organize and direct your behavior toward goals. These functions are primarily orchestrated by the prefrontal cortex, the brain region right behind your forehead.
           </p>
         </div>
@@ -1432,7 +1432,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1494,7 +1494,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Memory isn&apos;t a single system—it&apos;s a collection of distinct processes that store different types of information in different brain regions. The hippocampus, a seahorse-shaped structure deep in the temporal lobe, is critical for forming new episodic memories (memories of events and experiences).
           </p>
         </div>
@@ -1515,7 +1515,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1577,7 +1577,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The brain&apos;s reward system is a network of structures—primarily the ventral tegmental area, nucleus accumbens, and prefrontal cortex—that uses dopamine to signal reward, motivation, and learning. This system evolved to reinforce survival behaviors (eating, sex, social bonding) but can be hijacked by drugs, gambling, and other addictive behaviors.
           </p>
         </div>
@@ -1598,7 +1598,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1660,7 +1660,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The default mode network (DMN) is a set of brain regions that activate when you&apos;re not focused on the outside world—when your mind wanders, you daydream, remember the past, imagine the future, or think about yourself and others. It&apos;s the brain&apos;s &quot;default&quot; state, contrasting with task-focused networks.
           </p>
         </div>
@@ -1681,7 +1681,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1743,7 +1743,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The amygdala is an almond-shaped structure deep in the temporal lobe that acts as the brain&apos;s threat-detection system. It rapidly evaluates sensory information for danger, triggers the fight-or-flight response, and creates emotional memories—particularly fear.
           </p>
         </div>
@@ -1764,7 +1764,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1826,7 +1826,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Chronic pain isn&apos;t just prolonged acute pain—it&apos;s a distinct condition where pain persists long after tissue damage has healed, or arises without clear physical injury. The brain changes: pain-processing regions become hyperactive, pain signals are amplified (central sensitization), and neural circuits reorganize in maladaptive ways.
           </p>
         </div>
@@ -1847,7 +1847,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1909,7 +1909,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Psychedelics—psilocybin (magic mushrooms), LSD, DMT, and MDMA—profoundly alter brain function by acting primarily on serotonin 2A receptors. They disrupt the default mode network (the brain&apos;s self-referential hub), increase connectivity between brain regions that don&apos;t normally communicate, and promote neuroplasticity.
           </p>
         </div>
@@ -1930,7 +1930,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1992,7 +1992,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Brain stimulation therapies use electromagnetic fields, electrical currents, or implanted devices to directly alter neural activity in targeted brain regions. These interventions—transcranial magnetic stimulation (TMS), electroconvulsive therapy (ECT), transcranial direct current stimulation (tDCS), deep brain stimulation (DBS), and vagus nerve stimulation (VNS)—are used to treat depression, OCD, PTSD, and other psychiatric conditions when medications and therapy haven&apos;t worked.
           </p>
         </div>
@@ -2013,7 +2013,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2075,7 +2075,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Humans are profoundly social creatures, and the brain reflects this. Specialized neural systems—mirror neurons, the mentalizing network, the empathy circuit—allow us to understand others&apos; actions, thoughts, and emotions.
           </p>
         </div>
@@ -2096,7 +2096,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2158,7 +2158,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The popular idea that people are &quot;left-brained&quot; (logical, analytical) or &quot;right-brained&quot; (creative, intuitive) is a neuromyth—not supported by evidence. While the brain&apos;s two hemispheres do have some specialized functions (language is typically left-lateralized, spatial attention favors the right hemisphere), both hemispheres work together on virtually all tasks.
           </p>
         </div>
@@ -2179,7 +2179,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2241,7 +2241,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For most of the 20th century, neuroscience dogma held that the adult brain couldn&apos;t generate new neurons—you were born with all you&apos;d ever have, and it was downhill from there. In the 1990s, this was overturned: the adult hippocampus (a brain region critical for learning and memory) produces thousands of new neurons every day through a process called neurogenesis.
           </p>
         </div>
@@ -2262,7 +2262,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2324,7 +2324,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Some cognitive decline is normal with aging: processing speed slows, it takes longer to recall names, multitasking gets harder. But severe memory loss, getting lost in familiar places, or losing daily functioning are not normal—they signal possible mild cognitive impairment (MCI) or dementia.
           </p>
         </div>
@@ -2345,7 +2345,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2407,7 +2407,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Traumatic brain injury (TBI) occurs when an external force—from a fall, car accident, sports collision, blast, or assault—damages the brain. TBIs range from mild (concussion) to severe (coma, permanent disability).
           </p>
         </div>
@@ -2428,7 +2428,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2490,7 +2490,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Hormones—chemical messengers produced by endocrine glands—profoundly influence brain function, mood, cognition, and behavior. Estrogen enhances memory and mood, drops during menopause causing cognitive changes and mood vulnerability.
           </p>
         </div>
@@ -2511,7 +2511,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2573,7 +2573,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Circadian rhythms are 24-hour biological cycles that regulate sleep-wake patterns, hormone release, body temperature, and brain function. The master clock resides in the suprachiasmatic nucleus (SCN) of the hypothalamus, synchronized by light exposure.
           </p>
         </div>
@@ -2594,7 +2594,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2656,7 +2656,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The vagus nerve is the longest cranial nerve, connecting the brainstem to the heart, lungs, digestive system, and other organs. It&apos;s the primary pathway of the parasympathetic nervous system, which calms the body after stress (the &quot;rest and digest&quot; system).
           </p>
         </div>
@@ -2677,7 +2677,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2739,7 +2739,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Exercise is one of the most powerful, evidence-based interventions for brain health and mental health. Aerobic exercise (running, cycling, swimming) increases brain-derived neurotrophic factor (BDNF), a protein that promotes neurogenesis, synaptic plasticity, and neuron survival.
           </p>
         </div>
@@ -2760,7 +2760,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2822,7 +2822,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Meditation isn&apos;t just relaxation—it physically changes the brain. Neuroimaging studies show that regular meditation practice increases cortical thickness in the prefrontal cortex (attention, decision-making), shrinks the amygdala (threat detection, anxiety), strengthens connectivity between the prefrontal cortex and amygdala (better emotion regulation), and reduces activity in the default mode network (less mind-wandering and rumination).
           </p>
         </div>
@@ -2843,7 +2843,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2905,7 +2905,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Nutritional psychiatry is an emerging field showing that diet significantly affects mental health. The Mediterranean diet (rich in vegetables, fruits, whole grains, fish, olive oil, nuts) reduces depression risk by 30-35% compared to Western diets high in processed foods, sugar, and unhealthy fats.
           </p>
         </div>
@@ -2926,7 +2926,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2987,7 +2987,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Neurofeedback (also called EEG biofeedback) is a technique that displays your brain&apos;s electrical activity in real time, allowing you to learn to regulate it through operant conditioning. Sensors on the scalp measure brainwaves (EEG), and a computer translates this activity into visual or auditory feedback—when your brain produces desired patterns, you see a reward (a game progresses, a tone plays).
           </p>
         </div>
@@ -3008,7 +3008,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -3070,7 +3070,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Anxiety disorders involve dysfunction in brain circuits that detect, evaluate, and respond to threat. The amygdala (rapid threat detection), bed nucleus of the stria terminalis (BNST, sustained worry), prefrontal cortex (threat appraisal and regulation), hippocampus (contextual memory), and insula (interoception—sensing body states) all play specific roles.
           </p>
         </div>
@@ -3091,7 +3091,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -3153,7 +3153,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Depression is far more complex than a &quot;chemical imbalance.&quot; While serotonin, norepinephrine, and dopamine play roles, depression involves dysfunction across entire brain networks: the prefrontal cortex (reduced executive function and emotion regulation), hippocampus (memory impairment and stress dysregulation), amygdala (heightened negative emotion), default mode network (excessive rumination), and reward circuitry (loss of motivation and pleasure).
           </p>
         </div>
@@ -3174,7 +3174,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -3236,7 +3236,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Obsessive-compulsive disorder (OCD) involves dysfunction in the cortico-striato-thalamo-cortical (CSTC) circuit—a brain loop connecting the orbitofrontal cortex (error detection), anterior cingulate cortex (anxiety signaling), caudate nucleus (habit gating), and thalamus (relay station). In OCD, this circuit gets &quot;stuck in a loop&quot;: the brain generates persistent error signals (&quot;something is wrong,&quot; &quot;that&apos;s contaminated,&quot; &quot;the door isn&apos;t locked&quot;) that the person can&apos;t dismiss, driving repetitive compulsive behaviors to neutralize the distress.
           </p>
         </div>
@@ -3257,7 +3257,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -3320,7 +3320,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Schizophrenia is a neurodevelopmental disorder involving widespread brain circuit dysfunction—not a &quot;split personality&quot; or character flaw. Structural brain changes include progressive gray matter loss (particularly in the prefrontal and temporal cortices), enlarged ventricles, and white matter disconnection between brain regions.
           </p>
         </div>
@@ -3341,7 +3341,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -3403,7 +3403,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Bipolar disorder is a brain regulation disorder—the neural circuits that normally maintain emotional and energy homeostasis fail to hold stable states. The core dysfunction involves a weakened prefrontal cortex that can&apos;t adequately regulate an overactive limbic system (particularly the amygdala), combined with circadian rhythm instability, mitochondrial dysfunction, and progressive structural changes.
           </p>
         </div>
@@ -3424,7 +3424,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -3486,7 +3486,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Attention-deficit/hyperactivity disorder (ADHD) is a neurodevelopmental condition involving delayed brain maturation, dopamine and norepinephrine deficiency in prefrontal circuits, and impaired executive function networks. The ADHD brain isn&apos;t &quot;broken&quot;—it&apos;s structurally and functionally different.
           </p>
         </div>
@@ -3507,7 +3507,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -3569,7 +3569,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Autism spectrum disorder (ASD) involves fundamentally different brain architecture—not a &quot;broken&quot; version of a typical brain, but a brain organized around different connectivity principles. Key neurological features include early brain overgrowth in the first 2-3 years of life followed by reduced growth, altered connectivity patterns (increased local short-range connections, decreased long-range connections between distant brain regions), differences in synaptic pruning (too many synapses are retained rather than eliminated), altered sensory processing (both hyper- and hypo-sensitivity reflecting differences in sensory filtering), and differences in the &quot;social brain&quot; network (fusiform face area, superior temporal sulcus, medial prefrontal cortex).
           </p>
         </div>
@@ -3590,7 +3590,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -3651,7 +3651,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Consciousness—the subjective experience of being aware—remains one of science&apos;s greatest puzzles, but neuroscience has made remarkable progress identifying its neural foundations. Two leading theories dominate: Global Workspace Theory proposes that consciousness arises when information is broadcast widely across the cortex via fronto-parietal networks, making it accessible to multiple brain systems simultaneously; Integrated Information Theory proposes that consciousness is a fundamental property of systems that integrate information in complex ways, measured by a quantity called Phi (Φ).
           </p>
         </div>
@@ -3672,7 +3672,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -3733,7 +3733,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Music engages more of the brain simultaneously than virtually any other human activity. When you listen to music, your auditory cortex decodes the sound; your motor cortex synchronizes to the beat (even when you&apos;re sitting still); your limbic system generates emotional responses; your prefrontal cortex tracks structure, expectation, and surprise; your hippocampus links the music to autobiographical memories; and your reward system releases dopamine—the same neurotransmitter involved in food, sex, and addictive drugs.
           </p>
         </div>
@@ -3754,7 +3754,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -3816,7 +3816,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Addiction is a disorder of brain plasticity—substances hijack the same learning and reward systems that evolved to motivate survival behaviors (eating, sex, social bonding), producing changes that persist long after drug use stops. The process involves three stages and three brain circuits: (1) Binge/intoxication, driven by dopamine surges in the nucleus accumbens that far exceed natural rewards, creating powerful &quot;this is important&quot; signals; (2) Withdrawal/negative affect, driven by downregulation of the reward system and upregulation of the brain&apos;s stress (anti-reward) system—the amygdala, CRF, and dynorphin circuits that create the dysphoria, anxiety, and irritability of withdrawal; (3) Preoccupation/anticipation (craving), driven by a weakened prefrontal cortex that can no longer inhibit the conditioned drug-seeking responses mediated by the striatum and habit circuits.
           </p>
         </div>
@@ -3837,7 +3837,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -3898,7 +3898,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Alcohol is the most widely used neurotoxin in the world. While moderate drinking&apos;s effects are subtler, heavy and chronic alcohol use produces devastating brain damage—shrinking the prefrontal cortex and hippocampus, degrading white matter connectivity, killing cerebellar neurons, and depleting thiamine (vitamin B1), which can cause Wernicke-Korsakoff syndrome (permanent memory destruction).
           </p>
         </div>
@@ -3919,7 +3919,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -3980,7 +3980,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The placebo effect isn&apos;t imaginary—it&apos;s a measurable neurobiological event. When a person expects to receive an effective treatment, their brain activates endogenous opioid, dopamine, and cannabinoid systems that produce real physiological changes: genuine pain reduction, dopamine release in Parkinson&apos;s patients, reduced anxiety, and improved immune function.
           </p>
         </div>
@@ -4001,7 +4001,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -4062,7 +4062,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Social media platforms are not neutral technologies—they are engagement-optimized systems engineered to exploit specific brain circuits. The infinite scroll, variable reward schedules, social validation metrics (likes, followers, comments), and algorithmic content curation all target the mesolimbic dopamine system, creating patterns of compulsive checking that mirror behavioral addiction.
           </p>
         </div>
@@ -4083,7 +4083,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -4144,7 +4144,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Language is the most complex cognitive ability the human brain produces, involving distributed networks across both hemispheres—not simply &quot;Broca&apos;s area&quot; and &quot;Wernicke&apos;s area&quot; as textbooks traditionally taught. Speech production involves a cascade from conceptualization (prefrontal cortex) → word selection (temporal-parietal cortex) → phonological encoding (posterior inferior frontal gyrus) → motor execution (primary motor cortex, cerebellum, basal ganglia), all coordinated within milliseconds.
           </p>
         </div>
@@ -4165,7 +4165,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -4226,7 +4226,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Interoception—the brain&apos;s perception of internal bodily signals (heartbeat, breathing, hunger, temperature, pain, muscle tension, gut feelings)—is a fundamental sense that shapes emotion, decision-making, self-awareness, and mental health. The primary interoceptive cortex is the anterior insula, which integrates signals from the body to create a moment-to-moment representation of &quot;how I feel right now.
           </p>
         </div>
@@ -4247,7 +4247,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -4308,7 +4308,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             &quot;Dementia&quot; is not a single disease—it&apos;s a syndrome (a cluster of symptoms) caused by multiple distinct brain diseases, each destroying different circuits through different mechanisms and producing different clinical profiles. Alzheimer&apos;s disease (60-70% of cases) involves amyloid plaques and tau tangles spreading from the hippocampus to the cortex, progressively destroying memory, then language, visuospatial function, and eventually all cognitive domains.
           </p>
         </div>
@@ -4329,7 +4329,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -4390,7 +4390,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The endocannabinoid system (ECS) is one of the most widespread and important signaling systems in the brain, yet most people have never heard of it. Discovered in the 1990s while researchers were investigating how cannabis affects the brain, the ECS consists of endogenous cannabinoids (anandamide and 2-AG), cannabinoid receptors (CB1 in the brain, CB2 in the immune system), and enzymes that synthesize and degrade these molecules.
           </p>
         </div>
@@ -4411,7 +4411,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -4472,7 +4472,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The neuroscience of sex and gender differences in the brain is one of the most politically charged and scientifically nuanced topics in the field. The evidence, stripped of ideology: Human brains are not dimorphic (&quot;male brain&quot; vs.
           </p>
         </div>
@@ -4493,7 +4493,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -4554,7 +4554,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sleep disorders affect over 50 million Americans and represent some of the most underdiagnosed conditions in medicine. Each disorder involves specific brain circuit dysfunction: insomnia involves hyperarousal—the brain&apos;s wake-promoting circuits (locus coeruleus, hypothalamic orexin neurons, reticular activating system) remain abnormally active during intended sleep, driven by hyperactive amygdala-cortical anxiety circuits.
           </p>
         </div>
@@ -4575,7 +4575,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -4636,7 +4636,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Brain-computer interfaces (BCIs) translate neural activity into commands or use external signals to modulate brain function—creating a direct communication channel between the brain and technology. Originally developed for motor restoration in paralysis, BCIs are increasingly being explored for mental health applications.
           </p>
         </div>
@@ -4657,7 +4657,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -4718,7 +4718,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Nicotine is the most widely used addictive substance on Earth, consumed by over 1 billion people. Its addictive power derives from a precise neurochemical fit: nicotine mimics acetylcholine—one of the brain&apos;s most important neurotransmitters—by binding to nicotinic acetylcholine receptors (nAChRs) throughout the brain.
           </p>
         </div>
@@ -4739,7 +4739,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -4800,7 +4800,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Caffeine is the most widely consumed psychoactive substance on Earth, used daily by an estimated 85% of American adults and over 2 billion people worldwide. Its mechanism is deceptively simple: caffeine blocks adenosine receptors in the brain.
           </p>
         </div>
@@ -4821,7 +4821,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -4882,7 +4882,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Learning is not metaphorical—it is a physical process that changes the brain&apos;s structure and function at the molecular, synaptic, and circuit levels. The fundamental mechanism is synaptic plasticity: the ability of connections between neurons to strengthen or weaken based on experience.
           </p>
         </div>
@@ -4903,7 +4903,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -4964,7 +4964,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The division of brain disorders into &quot;neurological&quot; (Parkinson&apos;s, epilepsy, stroke, multiple sclerosis) and &quot;psychiatric&quot; (depression, schizophrenia, anxiety, bipolar disorder) is not based on any fundamental biological distinction. It is a historical artifact of Cartesian mind-body dualism—the 17th-century philosophical assumption that the mind and brain are separate entities.
           </p>
         </div>
@@ -4985,7 +4985,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -5046,7 +5046,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Electroconvulsive therapy (ECT) is the most effective acute treatment for severe depression—producing remission in 50-70% of patients who have failed multiple medications. Yet it remains one of the most stigmatized treatments in all of medicine, largely due to its brutal historical application (unmodified seizures without anesthesia) and its portrayal in popular media (One Flew Over the Cuckoo&apos;s Nest).
           </p>
         </div>
@@ -5067,7 +5067,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -5128,7 +5128,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Creativity—the ability to produce ideas or artifacts that are both novel and useful—is not a mystical gift confined to artists. It&apos;s a cognitive capacity rooted in measurable brain processes that involve the dynamic interaction of three major neural networks.
           </p>
         </div>
@@ -5149,7 +5149,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -5210,7 +5210,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Post-traumatic stress disorder (PTSD) is not a failure of willpower or an inability to &quot;move on&quot;—it is a brain disorder involving measurable structural and functional changes in the neural circuits that process fear, memory, and emotional regulation. The three core brain changes in PTSD are: (1) amygdala hyperactivation—the brain&apos;s threat detector is stuck in overdrive, firing alarm signals in response to stimuli that resemble the original trauma (and sometimes in response to neutral stimuli), producing hypervigilance, exaggerated startle, and intrusive re-experiencing; (2) hippocampal dysfunction and volume reduction—the brain structure responsible for contextualizing memories (placing them in time and place) is impaired, causing traumatic memories to feel like they&apos;re happening now rather than being recalled as past events, and impairing the ability to distinguish safe contexts from dangerous ones; (3) medial prefrontal cortex (mPFC) underactivation—the brain region that normally inhibits amygdala activity and enables top-down emotional regulation is weakened, reducing the ability to suppress fear responses even when the person knows they are safe.
           </p>
         </div>
@@ -5231,7 +5231,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -5292,7 +5292,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Eating disorders—anorexia nervosa, bulimia nervosa, and binge eating disorder—are severe psychiatric conditions with the highest mortality rate of any mental illness. They are not about vanity, diet culture, or lack of willpower.
           </p>
         </div>
@@ -5313,7 +5313,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -5374,7 +5374,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Personality disorders—enduring patterns of inner experience and behavior that deviate markedly from cultural expectations—are not character flaws or moral failures. They involve measurable differences in brain structure and function, particularly in circuits governing emotional regulation, impulse control, social cognition, and self-representation.
           </p>
         </div>
@@ -5395,7 +5395,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -5456,7 +5456,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The human brain is never finished developing—it changes continuously from conception through old age, with different systems maturing on different timelines that have profound implications for mental health. Prenatal development establishes the brain&apos;s basic architecture through neurogenesis (producing ~86 billion neurons), neural migration, and initial circuit formation—disruptions during this period (infections, toxins, severe stress) produce lasting structural abnormalities linked to schizophrenia, autism, and intellectual disability.
           </p>
         </div>
@@ -5477,7 +5477,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -5538,7 +5538,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Epigenetics—the study of changes in gene expression that occur without changes to the DNA sequence itself—has revolutionized our understanding of how experience shapes biology. The genome is not a fixed blueprint; it&apos;s a dynamic document that is continuously annotated by life experience through chemical modifications (DNA methylation, histone modification, non-coding RNA) that turn genes up or down without altering the genetic code.
           </p>
         </div>
@@ -5559,7 +5559,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -5620,7 +5620,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Pain is not a simple sensation transmitted from injured tissue to the brain—it is an active construction by the brain, produced when the nervous system determines that tissue is threatened and that a protective response is needed. This paradigm shift—from the biomedical model (pain = tissue damage) to the biopsychosocial model (pain = brain&apos;s threat assessment)—has transformed pain science.
           </p>
         </div>
@@ -5641,7 +5641,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -5702,7 +5702,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Stroke—the sudden interruption of blood supply to a region of the brain—destroys neural tissue within minutes, producing immediate deficits in movement, sensation, language, cognition, or vision depending on which brain areas are affected. Approximately 800,000 Americans experience a stroke each year, and stroke is the leading cause of long-term disability in adults.
           </p>
         </div>
@@ -5723,7 +5723,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -5784,7 +5784,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Loneliness—the subjective perception that your social connections are insufficient—is not merely an emotional inconvenience. It is a neurobiological state that profoundly alters brain function, accelerates cognitive decline, increases systemic inflammation, impairs immune function, and raises mortality risk by 26% (equivalent to smoking 15 cigarettes per day).
           </p>
         </div>
@@ -5805,7 +5805,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -5866,7 +5866,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The developing brain is exquisitely sensitive to environmental input—and when that input includes chronic adversity (abuse, neglect, household dysfunction, poverty, community violence), the brain adapts to a threatening world in ways that are protective in the short term but damaging in the long term. Childhood trauma produces measurable changes in brain structure and function: accelerated amygdala development (earlier maturation, heightened threat detection), reduced hippocampal volume (impaired contextual memory and stress regulation), delayed prefrontal cortex maturation (weakened executive function and impulse control), altered white matter integrity (disrupted communication between brain regions), and dysregulated HPA axis function (chronic cortisol elevation or blunted cortisol response).
           </p>
         </div>
@@ -5887,7 +5887,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -5948,7 +5948,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The DSM-5 groups several conditions together under &quot;Obsessive-Compulsive and Related Disorders&quot;—conditions that share a common neural profile of dysfunctional cortico-striatal-thalamo-cortical (CSTC) circuits, excessive habit-loop activation, and impaired cognitive flexibility. Beyond classical OCD (covered elsewhere), this spectrum includes hoarding disorder (difficulty discarding possessions due to excessive attachment and distorted decision-making involving abnormal activity in the anterior cingulate cortex and insula during discard decisions), body dysmorphic disorder (BDD) (preoccupation with perceived physical flaws that are slight or unobservable, involving abnormal visual processing—the brain literally processes its own appearance through a detail-focused rather than holistic lens—with hyperactivity in the caudate nucleus and abnormal connectivity between visual processing regions and frontal executive areas), trichotillomania (compulsive hair pulling involving dysfunctional habit circuits in the dorsal striatum and reduced prefrontal inhibition), and excoriation disorder (compulsive skin picking with similar basal ganglia-prefrontal dysfunction).
           </p>
         </div>
@@ -5969,7 +5969,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -6030,7 +6030,7 @@ export const brainBasicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The next decade of neuroscience promises to transform mental health from a field of syndromal diagnosis and trial-and-error treatment to one of precise, biologically informed intervention. Precision psychiatry aims to replace the &quot;one-size-fits-all&quot; approach with treatment selection guided by neuroimaging biomarkers, genetic profiles, and computational models—matching each patient to the treatment most likely to work for their specific brain circuit dysfunction.
           </p>
         </div>
@@ -6051,7 +6051,7 @@ export const brainBasicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

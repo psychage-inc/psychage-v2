@@ -134,7 +134,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Self-control is the ability to override immediate impulses, desires, or emotional responses in service of broader goals or values.
           </p>
           <p className="mb-6">
@@ -392,7 +392,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You\'ve made it through a difficult meeting, resisted snacks all morning, and forced yourself to reply to demanding emails. By afternoon, you reach for the cookies you swore you\'d avoid. Your willpower, it seems, has run out. For two decades, this experience was explained by a simple metaphor: willpower as a battery that depletes with use. But what if that metaphor is wrong?
           </p>
           <p className="mb-6">
@@ -711,7 +711,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A four-year-old sits alone in a room with a marshmallow. She\'s told: eat it now, or wait 15 minutes and get two. This simple experiment, conducted at Stanford in the late 1960s, became one of psychology\'s most famous studies—and one of its most misunderstood. The story we tell is that children who waited grew up more successful. The story we should tell is far more complicated.
           </p>
           <p className="mb-6">
@@ -1010,7 +1010,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You know you\'ll regret staying up scrolling. You know you\'ll wish you\'d gone to the gym. You know the cookies aren\'t worth it. But when the moment arrives, all that knowledge evaporates. What if, instead of fighting yourself in the moment, you could make the decision when you\'re thinking clearly—and make it stick?
           </p>
           <p className="mb-6">
@@ -1316,7 +1316,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You sign up for the gym with a plan to work out six days a week. You overhaul your entire diet overnight. You commit to writing 2,000 words daily. Three weeks later, you\'ve quit. The problem wasn\'t your motivation—it was your strategy. You chose intensity over consistency.
           </p>
           <p className="mb-6">

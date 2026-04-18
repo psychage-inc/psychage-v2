@@ -66,7 +66,7 @@ export const digitalCultureSocietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In 2013, a communications director with 170 Twitter followers posted a tone-deaf joke before boarding a flight to South Africa. By the time she landed eleven hours later, the tweet had gone viral, she had been fired, and her name had become a global shorthand for online humiliation. The speed and totality of her destruction --- career ended, reputation permanently altered, mental health severely damaged --- became one of the earliest high-profile case studies in what would later be called cancel culture.
           </p>
           <p className="mb-6">
@@ -402,7 +402,7 @@ export const digitalCultureSocietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your great-grandparents learned about world events from a newspaper that arrived once a day. Your grandparents added a nightly television broadcast. Your parents added cable news. You carry a device in your pocket that can deliver every crisis, disaster, conflict, and tragedy happening anywhere on earth directly to your nervous system at any moment, accompanied by push notifications designed to ensure you do not miss a single one.
           </p>
           <p className="mb-6">
@@ -656,7 +656,7 @@ export const digitalCultureSocietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you open a social media app, a search engine, or a news aggregator, you are not seeing the internet. You are seeing a version of the internet that has been specifically constructed for you by an algorithm that has analyzed your past behavior --- what you clicked, how long you looked, what you shared, what made you angry, what made you stay --- and used that analysis to predict what will keep you engaged for the longest possible time.
           </p>
           <p className="mb-6">
@@ -893,7 +893,7 @@ export const digitalCultureSocietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You have 47,000 photos on your phone. You have not looked at 45,000 of them since the day they were taken. Your email inbox contains 12,000 unread messages dating back seven years. Your desktop has 300 files in a folder called "Unsorted." You have 14 cloud storage accounts, three of which you have forgotten the passwords to. You know, rationally, that you will never need most of this data again. But the thought of deleting any of it produces a tightness in your chest that feels entirely disproportionate to the situation.
           </p>
           <p className="mb-6">
@@ -1167,7 +1167,7 @@ export const digitalCultureSocietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A 22-year-old college student posts a 15-second video of herself dancing in her dorm room. She has 300 followers. Three days later, the video has 14 million views. Her phone has not stopped vibrating for 72 hours. Her inbox contains 4,000 unread messages --- some admiring, some sexual, some threatening. Strangers recognize her at the grocery store. A talent agency has emailed her. So has a hate forum. Her college friends are acting differently around her. She has not slept more than three hours in any of the last four nights.
           </p>
           <p className="mb-6">

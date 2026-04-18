@@ -65,7 +65,7 @@ export const communicationSocialSkillsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Listening appears passive—the person who listens seems to be doing less than the person who speaks. But research in communication psychology reveals that effective listening is among the most cognitively demanding and interpersonally powerful skills a person can develop.
           </p>
         </div>
@@ -113,7 +113,7 @@ export const communicationSocialSkillsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -176,7 +176,7 @@ export const communicationSocialSkillsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Assertiveness—the ability to express one&apos;s needs, feelings, and boundaries clearly and directly while respecting the rights and dignity of others—occupies a narrow psychological space between passivity and aggression. The passive communicator sacrifices their own needs to avoid conflict.
           </p>
         </div>
@@ -225,7 +225,7 @@ export const communicationSocialSkillsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -288,7 +288,7 @@ export const communicationSocialSkillsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Conflict is not a sign that a relationship has failed—it is a sign that two people with different perspectives, needs, and values are attempting to share a life, a workspace, or a community. Research in conflict psychology has consistently demonstrated that the presence of conflict is not what determines whether relationships thrive or deteriorate; rather, it is the manner in which conflict is managed.
           </p>
         </div>
@@ -336,7 +336,7 @@ export const communicationSocialSkillsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -399,7 +399,7 @@ export const communicationSocialSkillsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Nonviolent Communication (NVC), developed by clinical psychologist Marshall Rosenberg, is a communication framework built on a simple but radical premise: all human behavior is an attempt to meet universal human needs, and when people can identify and express those needs clearly—and hear others&apos; needs empathically—the possibility of connection and resolution exists even in the most difficult interpersonal situations. NVC proposes four components of communication: observation (what happened, without evaluation), feeling (the emotional response), need (the underlying human need connected to the feeling), and request (a specific, actionable step).
           </p>
         </div>
@@ -447,7 +447,7 @@ export const communicationSocialSkillsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -510,7 +510,7 @@ export const communicationSocialSkillsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Social anxiety—the persistent fear of being negatively evaluated, judged, or rejected by others in social situations—is one of the most common psychological difficulties, affecting an estimated 7–13% of the population at clinical levels and a far larger proportion at subclinical levels that nevertheless constrain social participation, career development, and quality of life. The cognitive model of social anxiety, developed by Clark and Wells (1995), reveals that social anxiety is maintained not by the social situations themselves but by a self-perpetuating cycle of negative self-beliefs, biased attention, safety behaviors, and post-event rumination that together create the very experiences the anxious person fears.
           </p>
         </div>
@@ -556,7 +556,7 @@ export const communicationSocialSkillsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -619,7 +619,7 @@ export const communicationSocialSkillsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Fear of public speaking—glossophobia—consistently ranks among the most common human fears, with surveys regularly finding that a substantial proportion of the population fears speaking in front of groups more than they fear death, financial ruin, or serious illness. This prevalence is not irrational: the evolutionary psychology of social evaluation suggests that the fear of public speaking is rooted in the same threat detection system that protects humans from social exclusion—a fate that, in ancestral environments, could be as dangerous as physical threats.
           </p>
         </div>
@@ -664,7 +664,7 @@ export const communicationSocialSkillsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -727,7 +727,7 @@ export const communicationSocialSkillsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Empathy—the capacity to understand and share the psychological experience of another person—is one of the most important human abilities, underpinning moral reasoning, social bonding, effective communication, conflict resolution, and prosocial behavior. Yet empathy is not a single, unitary capacity.
           </p>
         </div>
@@ -772,7 +772,7 @@ export const communicationSocialSkillsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -835,7 +835,7 @@ export const communicationSocialSkillsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The conversations people most need to have are often the conversations they most avoid. Telling a partner that something in the relationship needs to change.
           </p>
         </div>
@@ -880,7 +880,7 @@ export const communicationSocialSkillsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -943,7 +943,7 @@ export const communicationSocialSkillsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A boundary is a limit that defines where one person ends and another begins—a psychological line that separates what is acceptable from what is not, what is one&apos;s own responsibility from what is another&apos;s, and what one is willing to give from what one needs to preserve. Boundaries exist on multiple dimensions—physical, emotional, temporal, material, and digital—and their quality shapes nearly every aspect of psychological wellbeing.
           </p>
         </div>
@@ -995,7 +995,7 @@ export const communicationSocialSkillsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1058,7 +1058,7 @@ export const communicationSocialSkillsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Negotiation is not merely a business skill—it is a fundamental life skill that people use daily, whether they recognize it or not. Every time two or more people with different preferences attempt to reach an agreement—about where to eat dinner, how to divide household responsibilities, what salary to accept, how to resolve a dispute—they are negotiating.
           </p>
         </div>
@@ -1104,7 +1104,7 @@ export const communicationSocialSkillsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1167,7 +1167,7 @@ export const communicationSocialSkillsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Small talk—the seemingly trivial exchanges about weather, weekends, and surface-level observations that fill the margins of social life—is widely dismissed as meaningless, superficial, and even painful. Many people, particularly introverts and those with social anxiety, view small talk as an obligation to endure rather than an activity with genuine value.
           </p>
         </div>
@@ -1213,7 +1213,7 @@ export const communicationSocialSkillsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1276,7 +1276,7 @@ export const communicationSocialSkillsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Feedback—information about the effects of one&apos;s behavior—is essential for learning, growth, and effective functioning. Without feedback, people cannot correct errors, build on strengths, or adjust their behavior to meet changing demands.
           </p>
         </div>
@@ -1323,7 +1323,7 @@ export const communicationSocialSkillsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

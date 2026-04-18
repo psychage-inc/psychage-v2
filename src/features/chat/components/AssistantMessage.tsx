@@ -49,7 +49,7 @@ export default function AssistantMessage({
           )}
 
           {/* Message content */}
-          <div className="text-[15px] leading-relaxed text-slate-800 dark:text-slate-200">
+          <div className="text-[15px] leading-relaxed text-slate-800 dark:text-neutral-200">
             <MarkdownRenderer content={message.content} />
             {message.isStreaming && <StreamingCursor />}
           </div>

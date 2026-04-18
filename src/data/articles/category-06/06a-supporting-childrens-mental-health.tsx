@@ -58,7 +58,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Is your child just going through a phase, or is something more serious happening? Distinguishing typical developmental challenges from mental health concerns is one of the hardest parts of parenting.
           </p>
           <p className="mb-6">
@@ -403,7 +403,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Why am I feeling like this?", "Is something wrong with me?" Children have questions about their emotions and mental health, but many parents struggle to answer them. The good news: talking about mental health doesn't have to be complicated.
           </p>
           <p className="mb-6">
@@ -762,7 +762,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             All children worry sometimes. But when worry becomes constant, interferes with daily life, or causes physical distress, it may be anxiety --- one of the most common mental health issues in childhood.
           </p>
           <p className="mb-6">
@@ -1097,7 +1097,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "I can't go to school. My stomach hurts.", "Please don't make me go." School refusal is terrifying for parents --- you know education matters, but your child is genuinely distressed. What do you do?
           </p>
           <p className="mb-6">
@@ -1400,7 +1400,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your child is having a meltdown over a broken crayon. You're exhausted. Your instinct might be "It's just a crayon, stop crying." But what if this moment is an opportunity to teach your child lifelong emotional skills?
           </p>
           <p className="mb-6">

@@ -19,8 +19,8 @@ interface AnalyticsChartProps {
 const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
         return (
-            <div className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-md p-4 rounded-xl border border-gray-100 dark:border-gray-700 shadow-xl">
-                <p className="font-bold text-gray-900 dark:text-gray-100 mb-1">{label}</p>
+            <div className="bg-white/90 dark:bg-neutral-800/90 backdrop-blur-md p-4 rounded-xl border border-gray-100 dark:border-neutral-700 shadow-xl">
+                <p className="font-bold text-gray-900 dark:text-neutral-100 mb-1">{label}</p>
                 <p className="text-sm font-medium" style={{ color: payload[0].color }}>
                     Score: {payload[0].value}
                 </p>
@@ -39,7 +39,7 @@ const AnalyticsChart: React.FC<AnalyticsChartProps> = ({
     return (
         <div className="w-full h-full min-h-[300px] flex flex-col">
             <div className="flex items-center justify-between mb-6">
-                <h3 className="font-bold text-gray-900 dark:text-gray-100 text-lg">{title}</h3>
+                <h3 className="font-bold text-gray-900 dark:text-neutral-100 text-lg">{title}</h3>
                 {/* Legend or other controls could go here */}
             </div>
 

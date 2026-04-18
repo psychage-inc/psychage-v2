@@ -69,7 +69,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For two years, Sarah tracked ovulation, scheduled sex, took supplements, eliminated alcohol and caffeine, and waited. Every month brought hope, then crushing disappointment. Friends got pregnant accidentally while she spent thousands on specialists. Her marriage strained under the pressure. Social media became unbearable. She stopped attending baby showers. Most painful was the invisibility of her loss---she was grieving children who didn't exist yet, futures that might never happen, and no one understood why she couldn't just relax.
           </p>
           <p className="mb-6">
@@ -268,7 +268,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             At her 12-week ultrasound, there was no heartbeat. The baby had stopped developing weeks earlier. Rachel was sent home to miscarry naturally, given no pain management plan and told it was common, not to worry, she could try again soon. No one mentioned the grief, the milk that would still come in, the phantom kicks she'd feel for months, or how devastating it would be to pass the fetus at home alone. She was expected back at work in days, functioning normally, as if she hadn't just lost a child.
           </p>
           <p className="mb-6">
@@ -471,7 +471,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For ten days every month, Claire became someone she didn't recognize. Rage erupted over minor frustrations. Suicidal thoughts appeared out of nowhere. She sobbed uncontrollably, convinced her life was hopeless and her relationships doomed. Then her period would start, and within 48 hours, clarity returned. For years, doctors dismissed this as stress or normal PMS. One suggested she learn better coping skills. It wasn't until she tracked symptoms alongside her cycle that a psychiatrist finally diagnosed PMDD---a disorder she'd been suffering from for a decade.
           </p>
           <p className="mb-6">
@@ -718,7 +718,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Within two months of starting the pill, Maya felt emotionally numb. Activities she usually loved felt meaningless. She cried easily, felt anxious constantly, and her libido disappeared. When she mentioned this to her gynecologist, she was told the pill doesn't cause depression and maybe she was just stressed. A year later, she switched to non-hormonal contraception and within weeks felt like herself again. The connection was undeniable, yet she'd been dismissed and gaslit for months.
           </p>
           <p className="mb-6">
@@ -905,7 +905,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The first IVF cycle consumed Emma's life. Daily injections at precise times, monitoring appointments disrupting work, painful egg retrieval, agonizing wait for fertilization reports, embryo transfer, then the two-week wait checking for pregnancy symptoms. When her period came, the devastation was crushing. She'd spent $25,000, endured weeks of physical discomfort and emotional torment, and had nothing to show for it. Her clinic immediately scheduled the next cycle. No one asked how she was coping or acknowledged her grief.
           </p>
           <p className="mb-6">

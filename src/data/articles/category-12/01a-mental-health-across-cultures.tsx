@@ -125,7 +125,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The way you understand sadness, express distress, and seek help is deeply shaped by the culture you grew up in. What looks like depression in New York might be described as a physical pain in Seoul, or a spiritual crisis in Mumbai. Culture is not a minor detail in mental health---it is the lens through which we interpret our entire inner world.
           </p>
           <p className="mb-6">
@@ -430,7 +430,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In Malaysia and Southeast Asia, men have been known to experience sudden, overwhelming fear that their genitals are retracting into their body, leading to panic and sometimes fatal attempts to prevent this imagined retraction. In Japan, people suffer intense anxiety about offending others through their body odor or facial expressions. In Latin America, a frightening experience can cause one\'s soul to leave the body, resulting in physical illness.
           </p>
           <p className="mb-6">
@@ -805,7 +805,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In the United States, therapy often focuses on helping you become more independent, assertive, and focused on your own needs. In Japan, the same problems might be approached by helping you better fulfill your family roles and restore social harmony. Neither approach is wrong---they reflect fundamentally different cultural values about what it means to be a healthy person.
           </p>
           <p className="mb-6">
@@ -1141,7 +1141,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A Chinese woman suffering from depression might visit her doctor complaining of chronic headaches, dizziness, and fatigue---but never mention the sadness, hopelessness, or sleep problems she also experiences. A Japanese student overwhelmed by anxiety might withdraw from social contact, describing only stomach pain and exhaustion. This is not deception or denial. It is how mental distress is often experienced and communicated in East Asian cultures.
           </p>
           <p className="mb-6">
@@ -1523,7 +1523,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When a Latina woman faces depression, she might first turn to her mother, her comadre (close friend), or her priest before considering a therapist. A Mexican American man struggling with anxiety might visit a curandero (traditional healer) for a cleansing ritual. A Puerto Rican family might describe emotional distress as an <em>ataque de nervios</em>---a culturally specific way of expressing overwhelming stress that brings the family together to provide support.
           </p>
           <p className="mb-6">

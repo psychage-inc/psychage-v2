@@ -78,7 +78,7 @@ export const treatmentPsychoticArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For most of psychiatry's history, intervention for psychosis meant waiting for a
             crisis --- a psychotic break severe enough to warrant hospitalization --- and then
             treating it reactively. By that point, months or years of untreated psychosis had
@@ -270,7 +270,7 @@ export const treatmentPsychoticArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Psychosis involves experiences that often defy ordinary description. How do you
             explain what it's like to hear voices that no one else can hear? How do you put
             into words the texture of a paranoid belief that feels as real as the chair you're
@@ -520,7 +520,7 @@ export const treatmentPsychoticArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "I want to work." It's one of the most commonly expressed goals among people with
             psychotic disorders --- and one of the most commonly
             unaddressed <Citation id="3" index={3} source="Social Psychiatry and Psychiatric Epidemiology" year="2019" tier={1} />.
@@ -753,7 +753,7 @@ export const treatmentPsychoticArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A person diagnosed with schizophrenia at age 25 can expect, on average, to live
             15--20 fewer years than someone without the
             condition <Citation id="1" index={1} source="The Lancet Psychiatry" year="2019" tier={1} />.
@@ -998,7 +998,7 @@ export const treatmentPsychoticArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Receiving a diagnosis of a psychotic disorder --- or watching someone you love
             receive one --- often feels like being dropped into a foreign country without a
             map or

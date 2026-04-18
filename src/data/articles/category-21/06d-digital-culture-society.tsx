@@ -85,7 +85,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The metaverse is no longer a science fiction concept. Millions of people now spend
             significant portions of their daily lives inside immersive virtual environments &mdash;
             socializing through avatars, attending virtual events, building digital property, and
@@ -618,7 +618,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
         </ArticleCallout>
 
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Technology has transformed nearly every aspect of daily life &mdash; including the
             dynamics of abuse. The same devices and platforms that connect people to support networks
             and safety resources can also be turned into sophisticated instruments of surveillance,
@@ -1061,7 +1061,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Today&rsquo;s students are navigating a digital landscape that no previous generation
             has faced. They carry powerful computers in their pockets from an increasingly young age,
             maintain social lives across multiple platforms, and consume more media content in a week
@@ -1534,7 +1534,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There are more than 20,000 mental health apps available in commercial app stores. The
             vast majority have never been evaluated in a clinical trial, many collect extensive
             personal data for advertising purposes, and most are abandoned by users within two
@@ -1974,7 +1974,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mental health care is on the cusp of a technological transformation that is likely
             to be as disruptive as the introduction of psychopharmacology in the 1950s or the
             development of cognitive behavioral therapy in the 1960s. Technologies now in clinical

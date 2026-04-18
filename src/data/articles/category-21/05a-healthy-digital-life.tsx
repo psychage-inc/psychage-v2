@@ -179,7 +179,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You did not decide to check your phone 96 times today. You did not choose to
             spend three and a half hours scrolling. Nobody sat down one morning and
             consciously selected the digital life most people now lead. It accumulated ---
@@ -1010,7 +1010,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The advice sounds simple: just put your phone down. Just stop checking email
             after work. Just stay off social media before bed. But if it were actually
             simple, you would have done it already. The reason digital limits are so
@@ -1824,7 +1824,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Notice something the next time you pick up your phone. Not what you do on it ---
             notice the moment itself. Were you aware of deciding to pick it up, or did you
             find it already in your hand? Was there a specific reason, or did it just

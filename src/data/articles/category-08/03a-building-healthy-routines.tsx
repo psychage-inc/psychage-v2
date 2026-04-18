@@ -106,7 +106,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The 5 AM ice bath followed by journaling and a green smoothie looks great on Instagram. But does it actually work? Most viral morning routines are built on aspiration, not science. Let's look at what genuinely supports mental health in the morning hours---and what's just wellness theater.
           </p>
           <p className="mb-6">
@@ -496,7 +496,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You can't force your brain to fall asleep. But you can create conditions that make sleep more likely. An evening wind-down routine isn't about herbal tea and face masks---it's about systematically downregulating your nervous system and signaling to your body that it's safe to rest.
           </p>
           <p className="mb-6">
@@ -946,7 +946,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Just exercise!" is the advice you've heard a thousand times for anxiety and depression. And it's infuriating---because you know exercise helps, but you genuinely hate working out. The sweating, the discomfort, the gym culture, the whole performance of it. You're not lazy. You just don't want to do burpees in compression pants.
           </p>
           <p className="mb-6">
@@ -1407,7 +1407,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Self-care has been hijacked by the wellness industry. It's now synonymous with bubble baths, jade rollers, and $80 candles. But real self-care---the kind that actually sustains mental health---isn't aesthetic. It's often boring, unglamorous, and involves saying 'no' to people. It's going to bed on time when you'd rather scroll. It's eating when you're hungry even though you're behind on work. It's setting boundaries that make you temporarily uncomfortable.
           </p>
           <p className="mb-6">
@@ -1872,7 +1872,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've seen the morning routines: wake at 5 AM, meditate for 30 minutes, journal for 20, cold shower, green smoothie, workout for an hour, read for 30 minutes---all before 8 AM. It's impressive. It's also completely unrealistic for most people's lives. And here's the secret: you don't need it. You need the minimum effective dose---the smallest routine that still produces meaningful results.
           </p>
           <p className="mb-6">

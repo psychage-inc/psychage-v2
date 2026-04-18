@@ -70,7 +70,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mental health insurance coverage is confusing. Terms like "deductible,", "copay,", "in-network," and "prior authorization" make it hard to know what you'll actually pay for therapy or medication. But understanding your benefits can save you hundreds or thousands of dollars --- and help you access the care you need.
           </p>
           <p className="mb-6">
@@ -422,7 +422,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Therapy is expensive. Full-fee sessions cost $100-250+ per week. Without insurance, that's $400-1,000/month --- unaffordable for most people. But affordable options exist: sliding scale therapy, community clinics, training programs, and online platforms can bring costs down to $0-80/session <Citation id="1" index={1} source="Psychiatric Services" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
@@ -700,7 +700,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Community Mental Health Centers (CMHCs) are federally funded clinics that provide mental health and substance use services regardless of ability to pay. If you're uninsured, underinsured, or can't afford private therapy, CMHCs offer free or extremely low-cost treatment <Citation id="1" index={1} source="Psychiatric Services" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
@@ -1001,7 +1001,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mental health crises happen. Suicidal thoughts, psychotic episodes, panic attacks, manic episodes --- when you or someone you love is in crisis, you need to know your options. The 988 Lifeline, mobile crisis teams, and emergency rooms all provide crisis care, but they work differently <Citation id="1" index={1} source="JAMA Psychiatry" year="2023" tier={1} />.
           </p>
           <p className="mb-6">
@@ -1256,7 +1256,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Psychiatric hospitalization is scary and often misunderstood. Movies show locked wards, restraints, and loss of control. Reality is different: most psychiatric units are safe, structured environments focused on stabilization <Citation id="1" index={1} source="Psychiatric Services" year="2021" tier={1} />. But not knowing what to expect makes it more frightening.
           </p>
           <p className="mb-6">Here's what actually happens during a psychiatric hospital stay --- from admission to discharge.</p>

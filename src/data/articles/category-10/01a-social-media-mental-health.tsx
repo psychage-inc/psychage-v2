@@ -131,7 +131,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Over the past five years, researchers have published hundreds of studies examining how platforms like Instagram, TikTok, and Facebook shape our mental health. The findings paint a nuanced picture that goes far beyond simple harm or benefit.
           </p>
           <p className="mb-6">
@@ -414,7 +414,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You open Instagram to check messages. Thirty minutes later, you're deep in someone's vacation photos, feeling vaguely terrible about yourself. This isn't an accident. It's the comparison trap, and it's how social media platforms keep you engaged.
           </p>
           <p className="mb-6">
@@ -715,7 +715,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In 2023, the U.S. Surgeon General issued a rare public health advisory about social media and youth mental health. The message was clear: we don't yet know if social media is safe for children and teenagers. As a parent, this is what you need to know.
           </p>
           <p className="mb-6">
@@ -995,7 +995,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're at dinner with friends, but you keep checking your phone. You see people posting from a party you weren't invited to. Suddenly, you're not really present anymore. You're anxious, distracted, and vaguely resentful. This is FOMO---Fear of Missing Out---and it's one of the most powerful drivers of social media use.
           </p>
           <p className="mb-6">
@@ -1300,7 +1300,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Instagram and TikTok are image factories. Every photo is filtered, edited, and optimized. Every video is shot from the best angle. The platforms reward visual perfection, and your brain compares your unfiltered body to everyone else's highlight reel. This is the visual platform problem.
           </p>
           <p className="mb-6">

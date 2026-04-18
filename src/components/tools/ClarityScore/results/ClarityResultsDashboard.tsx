@@ -108,28 +108,28 @@ const ClarityResultsDashboard: React.FC<ClarityResultsDashboardProps> = ({
       className="space-y-0"
     >
       {/* ─── Score Banner Header ─── */}
-      <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-t-2xl">
+      <div className="bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 rounded-t-2xl">
         <div className="px-8 py-10 md:px-10 md:py-12">
           <div className="flex flex-col md:flex-row items-center md:items-end justify-between gap-6">
             {/* Score display */}
             <div className="flex items-end gap-6">
               <div className="text-center md:text-left">
-                <p className="text-xs font-medium uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-2">
+                <p className="text-xs font-medium uppercase tracking-widest text-gray-400 dark:text-neutral-500 mb-2">
                   Your Clarity Score
                 </p>
                 <div className="flex items-baseline gap-2">
                   <span className={`text-7xl md:text-8xl font-display font-bold tracking-tight ${tierColors.text}`}>
                     {results.totalScore}
                   </span>
-                  <span className="text-lg text-gray-300 dark:text-gray-600 font-light">
+                  <span className="text-lg text-gray-300 dark:text-neutral-600 font-light">
                     / 100
                   </span>
                 </div>
               </div>
-              <div className="hidden md:block w-px h-14 bg-gray-200 dark:bg-gray-700 mx-2" />
+              <div className="hidden md:block w-px h-14 bg-gray-200 dark:bg-neutral-700 mx-2" />
               <div className="hidden md:flex flex-col gap-1.5 pb-2">
                 <TierBadge tier={results.tier} label={results.label} size="lg" />
-                <p className="text-xs text-gray-400 dark:text-gray-500">
+                <p className="text-xs text-gray-400 dark:text-neutral-500">
                   Assessment complete
                 </p>
               </div>
@@ -139,7 +139,7 @@ const ClarityResultsDashboard: React.FC<ClarityResultsDashboardProps> = ({
             <button
               onClick={onRetake}
               type="button"
-              className="text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 font-medium flex items-center gap-2 transition-colors text-sm"
+              className="text-gray-400 hover:text-gray-600 dark:text-neutral-500 dark:hover:text-neutral-300 font-medium flex items-center gap-2 transition-colors text-sm"
             >
               <RefreshCw size={14} />
               Retake
@@ -158,7 +158,7 @@ const ClarityResultsDashboard: React.FC<ClarityResultsDashboardProps> = ({
         ref={tabListRef}
         role="tablist"
         aria-label="Results sections"
-        className="bg-white dark:bg-gray-900 border-x border-b border-gray-200 dark:border-gray-800 flex"
+        className="bg-white dark:bg-neutral-900 border-x border-b border-gray-200 dark:border-neutral-800 flex"
         onKeyDown={handleTabKeyDown}
       >
         {TABS.map((tab) => {
@@ -176,7 +176,7 @@ const ClarityResultsDashboard: React.FC<ClarityResultsDashboardProps> = ({
               className={`relative flex-1 px-4 py-3 text-sm font-medium transition-colors whitespace-nowrap focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-inset focus-visible:outline-none ${
                 isActive
                   ? 'text-gray-900 dark:text-white'
-                  : 'text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-400'
+                  : 'text-gray-400 dark:text-neutral-500 hover:text-gray-600 dark:hover:text-neutral-400'
               }`}
             >
               {tab.label}

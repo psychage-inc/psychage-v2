@@ -65,7 +65,7 @@ export const mythsFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sexual health remains one of the most myth-saturated domains of human knowledge, with persistent misconceptions shaping individual behavior, clinical practice, relationship expectations, and public health policy. Despite decades of rigorous research, myths about masturbation causing harm, the hymen serving as proof of virginity, penis size determining sexual satisfaction, most women achieving orgasm through intercourse alone, humans having a defined &quot;sexual peak&quot; after which function inevitably declines, and sexual desire disappearing with age continue to circulate through popular culture, inadequate sex education, internet misinformation, and generational transmission.
           </p>
         </div>
@@ -108,7 +108,7 @@ export const mythsFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -171,7 +171,7 @@ export const mythsFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The landscape of sexual health is undergoing a transformation driven by converging advances in technology, neuroscience, social policy, and cultural understanding. Telemedicine platforms are expanding access to sex therapy beyond the geographic, financial, and stigma-related barriers that have historically restricted care.
           </p>
         </div>
@@ -215,7 +215,7 @@ export const mythsFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

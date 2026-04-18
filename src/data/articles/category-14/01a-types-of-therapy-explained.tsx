@@ -110,7 +110,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             If you've looked into therapy options, you've likely encountered CBT --- Cognitive Behavioral Therapy. It's the most widely researched form of psychotherapy in the world, with thousands of studies supporting its effectiveness for dozens of mental health conditions <Citation id="1" index={1} source="American Journal of Psychiatry" year="2021" tier={1} />. But what makes it so effective, and is it the right approach for you?
           </p>
           <p className="mb-6">
@@ -420,7 +420,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When emotions feel overwhelming, when relationships are constantly in crisis, when you swing between extremes --- traditional therapy might not be enough. That's where Dialectical Behavior Therapy (DBT) comes in. Originally developed for people with borderline personality disorder who were experiencing suicidal crises, DBT has become one of the most effective treatments for anyone struggling with intense emotional pain <Citation id="1" index={1} source="Journal of Consulting and Clinical Psychology" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
@@ -761,7 +761,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Moving your eyes back and forth while recalling a traumatic memory sounds unusual --- perhaps even too simple to work. Yet EMDR (Eye Movement Desensitization and Reprocessing) has become one of the most researched and effective treatments for PTSD, recognized by the World Health Organization, the American Psychological Association, and the U.S. Department of Veterans Affairs <Citation id="1" index={1} source="Clinical Psychology Review" year="2021" tier={1} /> <Citation id="3" index={3} source="American Psychological Association" year="2017" tier={4} />.
           </p>
           <p className="mb-6">
@@ -1115,7 +1115,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You find yourself repeating the same relationship patterns. You react to situations in ways that surprise even you. You feel stuck, but you can't quite explain why. These might be signs that unconscious processes --- patterns learned early in life --- are shaping your present choices without your awareness. Psychodynamic therapy helps bring these hidden patterns to light <Citation id="1" index={1} source="American Journal of Psychiatry" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
@@ -1503,7 +1503,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             What if the problem isn't that you have difficult thoughts and feelings --- but that you're spending so much energy trying to get rid of them? Acceptance and Commitment Therapy (ACT, pronounced as the word 'act') offers a radically different approach: instead of fighting your inner experience, you learn to make room for it while moving toward what matters most in your life <Citation id="1" index={1} source="Behaviour Research and Therapy" year="2021" tier={1} />.
           </p>
           <p className="mb-6">

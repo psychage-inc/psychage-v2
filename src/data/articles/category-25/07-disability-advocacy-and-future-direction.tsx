@@ -65,7 +65,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Universal design—the practice of creating environments, products, and systems that work for the widest possible range of human bodies and minds without requiring special adaptation—is not just an accessibility strategy. It is a mental health intervention.
           </p>
         </div>
@@ -109,7 +109,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -172,7 +172,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Media is where culture teaches itself what to believe. For disabled people, what media has taught is a narrow and damaging set of stories: the tragic victim, the inspirational overcomer, the villain whose disability explains their evil, the burden whose existence justifies pity.
           </p>
         </div>
@@ -215,7 +215,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -278,7 +278,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Disabled people die in disasters at rates two to four times higher than non-disabled people—not because disability makes survival impossible, but because emergency systems were designed without them. Evacuation routes assume ambulatory mobility.
           </p>
         </div>
@@ -319,7 +319,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -382,7 +382,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Assistive technology—from wheelchairs and hearing aids to speech-generating devices and screen readers—is typically discussed in functional terms: it helps people do things they otherwise could not. This framing, while accurate, misses the deeper psychological story.
           </p>
         </div>
@@ -425,7 +425,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -488,7 +488,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The disability rights movement achieved landmark legal protections—the Americans with Disabilities Act, the UN Convention on the Rights of Persons with Disabilities, anti-discrimination legislation worldwide. These laws matter enormously.
           </p>
         </div>
@@ -536,7 +536,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -599,7 +599,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The neurodiversity movement—rooted in the principle that neurological differences like autism, ADHD, dyslexia, and Tourette syndrome are natural variations of the human brain rather than disorders to be cured—has fundamentally challenged how mental health professionals, educators, and societies understand cognitive difference. Emerging from the autistic self-advocacy community in the late 1990s, neurodiversity does not deny that neurological differences can cause genuine difficulty.
           </p>
         </div>
@@ -644,7 +644,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -707,7 +707,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Professional mental health services are designed to treat clinical conditions. What they often cannot provide is the specific, experience-based understanding that comes from someone who has navigated the same disability, faced the same barriers, and built a life on the other side.
           </p>
         </div>
@@ -752,7 +752,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -815,7 +815,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Disabled people are sexual beings. This statement should not be revolutionary, but in a culture that systematically desexualizes disabled people—treating them as asexual, childlike, or too fragile for intimacy—it remains a radical assertion.
           </p>
         </div>
@@ -857,7 +857,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -920,7 +920,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Climate change is not an equal-opportunity crisis. Disabled people are among the most vulnerable to its effects—from heat waves that are more dangerous for people on certain medications, to floods that trap people who cannot self-evacuate, to supply chain disruptions that cut off access to medications, assistive devices, and personal care services.
           </p>
         </div>
@@ -959,7 +959,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1022,7 +1022,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Disabled people are incarcerated at rates far exceeding their proportion of the general population. In the United States, nearly 40% of state and federal prisoners report having a disability—more than double the general population rate.
           </p>
         </div>
@@ -1061,7 +1061,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1124,7 +1124,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Disability causes poverty. Poverty causes disability.
           </p>
         </div>
@@ -1167,7 +1167,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1230,7 +1230,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Disability is a universal human experience, but the meaning of disability—what it signifies, how it is treated, and what rights disabled people possess—varies enormously across cultures. In some societies, disability is understood as a spiritual gift.
           </p>
         </div>
@@ -1275,7 +1275,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1338,7 +1338,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mental health professionals are trained to help people. But when those people are disabled, the training often falls short.
           </p>
         </div>
@@ -1380,7 +1380,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1443,7 +1443,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Disabled people have always made art—painting with mouths, composing with adapted instruments, writing from beds, performing from wheelchairs, sculpting with prosthetics. But disability art is more than art made by disabled people.
           </p>
         </div>
@@ -1484,7 +1484,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1547,7 +1547,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Emerging technologies are poised to transform the relationship between disability and mental health in ways that are both exhilarating and deeply unsettling. Artificial intelligence promises personalized mental health support, real-time communication assistance, and predictive care models.
           </p>
         </div>
@@ -1589,7 +1589,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1652,7 +1652,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Disability burnout is the state of physical, emotional, and psychological exhaustion that results from the chronic, cumulative effort of living with a disability in a world not designed for disabled bodies and minds. It is distinct from general burnout in its origins: where occupational burnout comes from overwork, disability burnout comes from the unrelenting effort of navigating inaccessible environments, managing chronic pain or fatigue, advocating for basic accommodations, enduring microaggressions, and performing the emotional labor of educating others about your own existence.
           </p>
         </div>
@@ -1699,7 +1699,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1762,7 +1762,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Disability does not exist in isolation. Every disabled person is also raced, gendered, classed, and sexualized—and these identities do not simply add together but interact to produce specific, unique experiences of marginalization, resilience, and need.
           </p>
         </div>
@@ -1805,7 +1805,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1868,7 +1868,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Positive psychology—the study of what makes life worth living—has largely ignored disability. When it has engaged with disability, it has often done so through the lens of &quot;overcoming&quot; or &quot;inspiration,&quot; treating disabled lives as remarkable when they are happy rather than recognizing that happiness is not remarkable at all.
           </p>
         </div>
@@ -1910,7 +1910,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1973,7 +1973,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             School is where children learn who they are—and for disabled children, what they learn depends heavily on how their school includes or excludes them. A disabled student in a genuinely inclusive classroom, with appropriate supports and a sense of belonging, develops academic confidence, social skills, and a positive disability identity.
           </p>
         </div>
@@ -2016,7 +2016,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2079,7 +2079,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Caring for a disabled family member is one of the most demanding and least supported roles in society. Family caregivers—parents, spouses, siblings, children—provide an estimated $470 billion worth of unpaid care annually in the United States alone.
           </p>
         </div>
@@ -2119,7 +2119,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2182,7 +2182,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Resilience is one of the most studied constructs in disability psychology, and the findings are clear: disabled people demonstrate remarkable psychological resilience—the capacity to adapt, recover, and even grow in the face of adversity. But resilience in the disability context requires careful framing.
           </p>
         </div>
@@ -2225,7 +2225,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2288,7 +2288,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The mental health system was not built for disabled people. Its buildings are often physically inaccessible.
           </p>
         </div>
@@ -2328,7 +2328,7 @@ export const disabilityAdvocacyAndFutureDirectionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

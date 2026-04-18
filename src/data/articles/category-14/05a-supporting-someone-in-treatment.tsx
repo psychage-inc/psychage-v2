@@ -93,7 +93,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your partner just started therapy. You want to help, but you're not sure how. Do you ask about sessions? Offer advice? Give them space? The line between supportive and intrusive can feel impossibly thin.
           </p>
           <p className="mb-6">
@@ -319,7 +319,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've done the hard part---you recognized your child needed help and found them a therapist. But now what? How involved should you be? What do you do when they won't talk about sessions? And how do you handle the guilt, fear, or confusion that comes with watching your child struggle?
           </p>
           <p className="mb-6">
@@ -577,7 +577,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your friend just told you they're depressed. Or anxious. Or thinking about therapy. They've opened up about something deeply personal---and you have no idea what to say. Your mind races: Should I offer advice? Share my own experience? Just listen? What if I say the wrong thing and make it worse?
           </p>
           <p className="mb-6">
@@ -817,7 +817,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your loved one is spiraling---addiction, untreated mental illness, or both---and they refuse to get help. You've tried reasoning, pleading, threatening, ignoring. Nothing works. Now you're considering an intervention, that dramatic confrontation you've seen on TV where family and friends gather to deliver ultimatums.
           </p>
           <p className="mb-6">
@@ -1104,7 +1104,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're exhausted. Your sleep is broken by worry. You've canceled plans to be available, skipped doctor's appointments because there's no time, snapped at people you love because you have nothing left to give. You tell yourself it's selfish to think about your own needs when your loved one is suffering---but you're running on empty.
           </p>
           <p className="mb-6">

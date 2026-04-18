@@ -76,7 +76,7 @@ export const meaningPurposeGrowthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When someone you love dies, the world doesn't just lose a person. It loses a version of itself.
             The future you imagined --- the one that included them --- ceases to exist. Routines that made
             sense yesterday become absurd today. And the question that rises through the wreckage is not
@@ -468,7 +468,7 @@ export const meaningPurposeGrowthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Ask someone what they want from life, and most will say happiness. Ask a psychologist what
             predicts a good life, and the answer is different: meaning. The distinction matters more than
             it sounds. Happiness is a feeling --- pleasant, transient, dependent on circumstances. Meaning
@@ -843,7 +843,7 @@ export const meaningPurposeGrowthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There are questions that no amount of therapy, medication, or positive thinking can answer.
             <em> What happens when I die? Why am I here? Am I fundamentally alone?</em> These questions
             are not symptoms. They are the bedrock of human consciousness --- the price of being aware
@@ -1195,7 +1195,7 @@ export const meaningPurposeGrowthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Some wounds don't come from what was done to you. They come from what you did. Or what you
             watched happen. Or what you were ordered to participate in. Or what you couldn't stop. Moral
             injury is the psychological damage that occurs when a person's actions --- or the actions of
@@ -1479,7 +1479,7 @@ export const meaningPurposeGrowthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Most people spend a significant portion of their lives performing a version of themselves
             rather than being themselves. The performance is often so seamless, so habitual, that
             they don't notice it anymore. They say what is expected. They suppress what isn't. They

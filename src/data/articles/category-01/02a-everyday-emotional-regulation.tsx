@@ -136,7 +136,7 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
       <>
         {/* Introduction */}
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You are in a meeting and your heart starts racing. Someone cuts you off in traffic and rage floods your body. A text message sends you spiraling into worry. These moments happen every day, and how you respond to them shapes your mental health, your relationships, and your quality of life.
           </p>
           <p className="mb-6">
@@ -508,7 +508,7 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
       <>
         {/* Introduction */}
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your boss criticizes your work in front of the team. Your partner says something that stings. Your child throws a tantrum in the grocery store. In moments like these, your brain floods with stress hormones and your rational mind takes a back seat. What if you had a technique that could reset your nervous system in under 60 seconds?
           </p>
           <p className="mb-6">
@@ -805,7 +805,7 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
       <>
         {/* Introduction */}
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Breathing is the only autonomic function you can control consciously. Every other automatic process --- your heartbeat, digestion, pupil dilation --- runs beyond your reach. But your breath? You can slow it, deepen it, and change its pattern. And when you do, you send a direct signal to your nervous system that shifts your entire emotional state.
           </p>
           <p className="mb-6">
@@ -1117,7 +1117,7 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
       <>
         {/* Introduction */}
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Have you ever been so overwhelmed by a feeling that you lost track of where you were? Maybe anxiety made the room feel distant. Maybe a painful memory pulled you out of the present. Maybe panic made everything feel unreal. In these moments, your mind has disconnected from the here-and-now. Grounding brings you back.
           </p>
           <p className="mb-6">
@@ -1450,7 +1450,7 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
       <>
         {/* Introduction */}
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your colleague does not reply to your email for two days. You could think, "They are ignoring me because they are upset with me." Or you could think, "They are probably swamped with deadlines this week." Same situation. Completely different emotional outcomes. This is the power of cognitive reappraisal --- one of the most well-researched emotion regulation strategies in psychology.
           </p>
           <p className="mb-6">

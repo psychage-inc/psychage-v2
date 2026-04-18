@@ -56,13 +56,13 @@ const SleepCalendar: React.FC<SleepCalendarProps> = ({
     setViewDate(new Date(year, month + 1, 1));
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl p-5 border border-gray-100 dark:border-gray-700">
+    <div className="bg-white dark:bg-neutral-800 rounded-2xl p-5 border border-gray-100 dark:border-neutral-700">
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <button
           type="button"
           onClick={prevMonth}
-          className="p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+          className="p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-colors"
           aria-label="Previous month"
         >
           <ChevronLeft size={18} />
@@ -76,7 +76,7 @@ const SleepCalendar: React.FC<SleepCalendarProps> = ({
         <button
           type="button"
           onClick={nextMonth}
-          className="p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+          className="p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-colors"
           aria-label="Next month"
         >
           <ChevronRight size={18} />
@@ -88,7 +88,7 @@ const SleepCalendar: React.FC<SleepCalendarProps> = ({
         {DAYS.map((d) => (
           <div
             key={d}
-            className="text-center text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase"
+            className="text-center text-[10px] font-bold text-gray-400 dark:text-neutral-500 uppercase"
           >
             {d}
           </div>
@@ -123,7 +123,7 @@ const SleepCalendar: React.FC<SleepCalendarProps> = ({
                 isFuture && 'opacity-30 cursor-not-allowed',
                 isSelected && 'ring-2 ring-indigo-500 ring-offset-1 dark:ring-offset-gray-800',
                 isToday && !isSelected && 'ring-1 ring-indigo-300 dark:ring-indigo-600',
-                !entry && !isFuture && 'hover:bg-gray-50 dark:hover:bg-gray-700/50',
+                !entry && !isFuture && 'hover:bg-gray-50 dark:hover:bg-neutral-700/50',
               )}
             >
               <span
@@ -133,7 +133,7 @@ const SleepCalendar: React.FC<SleepCalendarProps> = ({
                     ? 'text-white'
                     : isToday
                       ? 'text-indigo-600 dark:text-indigo-400 font-bold'
-                      : 'text-gray-600 dark:text-gray-400'
+                      : 'text-gray-600 dark:text-neutral-400'
                 )}
               >
                 {day}
@@ -152,7 +152,7 @@ const SleepCalendar: React.FC<SleepCalendarProps> = ({
       </div>
 
       {/* Legend */}
-      <div className="flex items-center justify-center gap-3 mt-4 text-[10px] text-gray-400 dark:text-gray-500">
+      <div className="flex items-center justify-center gap-3 mt-4 text-[10px] text-gray-400 dark:text-neutral-500">
         <div className="flex items-center gap-1">
           <div className="w-2.5 h-2.5 rounded-sm bg-red-400" />
           <span>Poor</span>

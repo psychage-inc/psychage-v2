@@ -90,7 +90,7 @@ export const seasonalPatternsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For many people, the winter holidays aren't joyful---they're exhausting, lonely, or triggering. The cultural expectation to feel grateful, festive, and connected creates a painful contrast for those who are grieving, depressed, or isolated. And that contrast can deepen the darkness.
           </p>
           <p className="mb-6">
@@ -343,7 +343,7 @@ export const seasonalPatternsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A date on the calendar arrives, and suddenly you feel inexplicably sad, anxious, or disconnected---even if you can't immediately remember why. Then it hits you: it's the anniversary of a death, a breakup, a trauma, or another significant loss. Your body remembered, even if your conscious mind didn't.
           </p>
           <p className="mb-6">
@@ -623,7 +623,7 @@ export const seasonalPatternsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Some people live on a mood roller coaster---not the extreme highs and lows of bipolar disorder, but a persistent, low-grade oscillation between mild depression and mild hypomania. Good weeks followed by bad weeks, with little stability in between. This is cyclothymia.
           </p>
           <p className="mb-6">
@@ -885,7 +885,7 @@ export const seasonalPatternsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Depression distorts your memory. Bad days feel endless, and good moments disappear. Over time, it's easy to lose track of patterns---what makes you feel better, what makes you worse, and whether you're actually improving. Mood tracking creates an objective record that cuts through the fog.
           </p>
           <p className="mb-6">
@@ -1190,7 +1190,7 @@ export const seasonalPatternsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Just get more sun and take vitamin D!" If only treating depression were that simple. The relationship between light exposure, vitamin D, and mental health is real---but it's nuanced, and the evidence doesn't support vitamin D as a cure-all for depression.
           </p>
           <p className="mb-6">

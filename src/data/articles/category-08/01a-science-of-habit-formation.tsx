@@ -115,7 +115,7 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every morning, you reach for your phone before your feet hit the floor. You brew coffee without thinking about each step. You drive the same route to work on autopilot. These aren't random behaviors---they're habits, and they follow a predictable neurological pattern that shapes nearly half of what you do every day.
           </p>
           <p className="mb-6">
@@ -501,7 +501,7 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your brain weighs about three pounds but consumes roughly 20% of your body's total energy at rest. To manage this extraordinary metabolic cost, your brain has evolved an elegant solution: outsource repetitive behaviors to autopilot systems that require minimal conscious attention.
           </p>
           <p className="mb-6">
@@ -830,7 +830,7 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "It takes 21 days to form a habit." You've heard this claim in self-help books, productivity blogs, and motivational speeches. It's repeated so often that it feels like scientific fact. There's just one problem: it's not true.
           </p>
           <p className="mb-6">
@@ -1186,7 +1186,7 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             If you get 1% better each day for a year, you don't end up 365% better---you end up nearly 38 times better. This is the mathematics of compounding, and it's the foundation of atomic habits: tiny, consistent changes that accumulate into remarkable transformations over time.
           </p>
           <p className="mb-6">
@@ -1606,7 +1606,7 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Not all habits are created equal. Some behaviors have disproportionate power---they don't just change one thing, they trigger cascading improvements across multiple domains of your life. These are called keystone habits, and identifying yours might be the single most strategic decision you make in your behavior change journey.
           </p>
           <p className="mb-6">

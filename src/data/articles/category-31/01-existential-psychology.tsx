@@ -65,7 +65,7 @@ export const existentialPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             An existential crisis occurs when you confront fundamental questions about your existence, purpose, freedom, or mortality—questions that challenge your previous understanding of yourself and the world. Research shows these periods are developmentally common, particularly during major life transitions, and can lead to personal growth when navigated with support.
           </p>
         </div>
@@ -78,7 +78,7 @@ export const existentialPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -136,7 +136,7 @@ export const existentialPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Generativity—the concern for establishing and guiding the next generation—is a core developmental stage identified by Erik Erikson that typically emerges in midlife but can appear across the lifespan. Research shows that people who engage in generative activities (mentoring, creating, contributing to their communities) report higher life satisfaction, lower depression, and greater sense of purpose.
           </p>
         </div>
@@ -149,7 +149,7 @@ export const existentialPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -213,7 +213,7 @@ export const existentialPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Regret is the painful feeling that arises when we believe a different choice would have led to a better outcome. Research shows regret is universal—95% of people report at least one major life regret—and serves an adaptive function when it motivates learning and course correction.
           </p>
         </div>
@@ -226,7 +226,7 @@ export const existentialPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -290,7 +290,7 @@ export const existentialPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Authenticity means living in alignment with your core values, beliefs, and sense of self rather than conforming to external expectations or wearing masks to gain approval. Research consistently shows that people who report living authentically experience lower rates of depression and anxiety, higher life satisfaction, and stronger relationships.
           </p>
         </div>
@@ -303,7 +303,7 @@ export const existentialPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

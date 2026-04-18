@@ -114,7 +114,7 @@ export const traumaResponsesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             After trauma, your instinct is to avoid anything that reminds you of what happened. You avoid places, people, conversations, even thoughts. It makes sense: why would you willingly approach something that triggers pain? But here's the paradox---while avoidance feels protective, it's the very thing that keeps trauma alive. Every time you avoid, you teach your brain that the danger is still there. And your world gets smaller.
           </p>
           <p className="mb-6">
@@ -477,7 +477,7 @@ export const traumaResponsesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             People ask: <em>Why don't they just leave?</em> They don't understand that leaving feels impossible---not because you're weak, but because your nervous system has been rewired to crave the very person who hurts you. This is trauma bonding: an intense emotional attachment formed through cycles of abuse, intermittent kindness, and psychological manipulation. It's not love. It's a neurobiological response to trauma that makes the abuser feel like your lifeline, even as they destroy you.
           </p>
           <p className="mb-6">
@@ -810,7 +810,7 @@ export const traumaResponsesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             After trauma, the first question many survivors ask isn't "Why did this happen?" It's "What did I do wrong?" You replay the event in your mind, cataloging every choice that might have prevented it. <em>If I hadn't gone there. If I'd fought back. If I'd been smarter, stronger, more careful.</em> Self-blame becomes the story you tell to make sense of the senseless---but it's a story built on distortions, not truth.
           </p>
           <p className="mb-6">
@@ -1122,7 +1122,7 @@ export const traumaResponsesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             After trauma, you`re allowed to be sad. You're allowed to be scared. But anger? That's dangerous. Unproductive. A sign you haven't `moved on." So you push it down. You perform forgiveness you don't feel. You smile through rage because angry victims aren't sympathetic. But here's what no one tells you: <strong>anger is the emotion that knows you were wronged</strong>. And suppressing it doesn't make you heal faster---it keeps you stuck.
           </p>
           <p className="mb-6">
@@ -1388,7 +1388,7 @@ export const traumaResponsesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your heart pounds at the slightest unexpected noise. You can't sleep because your mind won't stop scanning for danger. You startle when someone touches you, even gently. You feel wired, jittery, like you're waiting for something terrible to happen. This is hyperarousal---your nervous system stuck in high alert, unable to distinguish between past threat and present safety. The trauma is over, but your body doesn't know it.
           </p>
           <p className="mb-6">

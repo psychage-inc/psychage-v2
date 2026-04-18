@@ -67,7 +67,7 @@ export const specificDisabilityContextsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Traumatic brain injury (TBI) affects an estimated 69 million people worldwide each year, and its consequences extend far beyond the initial physical damage. Depression, anxiety, irritability, impulsivity, and personality changes are among the most common and most disabling long-term effects—yet they are also the most frequently overlooked in rehabilitation programs that focus on motor and cognitive recovery.
           </p>
         </div>
@@ -111,7 +111,7 @@ export const specificDisabilityContextsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -174,7 +174,7 @@ export const specificDisabilityContextsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Cerebral palsy (CP) is the most common motor disability in childhood, affecting approximately 17 million people worldwide. While CP is primarily understood as a movement disorder, its psychological dimensions are equally significant and far less recognized.
           </p>
         </div>
@@ -218,7 +218,7 @@ export const specificDisabilityContextsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -282,7 +282,7 @@ export const specificDisabilityContextsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Limb loss—whether from trauma, disease, or congenital absence—fundamentally alters the relationship between a person and their body. The psychological consequences extend well beyond the obvious functional limitations: depression affects 30–40% of amputees, phantom limb pain torments up to 80%, and the disruption to body image, identity, and social role can be as disabling as the physical loss itself.
           </p>
         </div>
@@ -323,7 +323,7 @@ export const specificDisabilityContextsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -386,7 +386,7 @@ export const specificDisabilityContextsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Visual impairment—ranging from low vision to complete blindness—affects approximately 2.2 billion people worldwide, and its psychological consequences are as significant as its functional impact.
           </p>
         </div>
@@ -427,7 +427,7 @@ export const specificDisabilityContextsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -490,7 +490,7 @@ export const specificDisabilityContextsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Hearing loss is one of the most prevalent chronic conditions worldwide, affecting approximately 1.5 billion people, yet its psychological consequences remain dramatically underrecognized.
           </p>
         </div>
@@ -532,7 +532,7 @@ export const specificDisabilityContextsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -596,7 +596,7 @@ export const specificDisabilityContextsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Myalgic encephalomyelitis/chronic fatigue syndrome (ME/CFS) is a complex, multi-system disease affecting an estimated 17–24 million people worldwide, characterized by profound fatigue that is not improved by rest and is worsened by physical or cognitive exertion. The psychological impact of ME/CFS is immense—not because the disease is psychological in origin (it is not), but because living with a debilitating, poorly understood, frequently dismissed condition takes an extraordinary toll on mental health.
           </p>
         </div>
@@ -639,7 +639,7 @@ export const specificDisabilityContextsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -702,7 +702,7 @@ export const specificDisabilityContextsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Approximately 75 million people worldwide use wheelchairs, and their mental health is shaped not by the wheelchair itself but by the world around it. Research consistently shows that the wheelchair is a tool of independence and freedom—the device that makes mobility possible, not the thing that takes it away.
           </p>
         </div>
@@ -741,7 +741,7 @@ export const specificDisabilityContextsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -804,7 +804,7 @@ export const specificDisabilityContextsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             People with Down syndrome experience rich emotional lives—forming deep relationships, pursuing passions, experiencing joy and heartbreak, and navigating complex social worlds. Yet their mental health needs are among the most overlooked in all of healthcare.
           </p>
         </div>
@@ -849,7 +849,7 @@ export const specificDisabilityContextsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

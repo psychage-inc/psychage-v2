@@ -65,7 +65,7 @@ export const mentalHealthInTheJusticeSystemArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The largest mental health facilities in the United States are not hospitals—they are jails and prisons. An estimated 37% of people in state and federal prisons and 44% of people in local jails have a diagnosed mental health condition, representing approximately 1.
           </p>
         </div>
@@ -105,7 +105,7 @@ export const mentalHealthInTheJusticeSystemArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -168,7 +168,7 @@ export const mentalHealthInTheJusticeSystemArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Competency to stand trial (CST) is the most frequently requested forensic mental health evaluation in the United States, with an estimated 60,000 evaluations conducted annually. The legal standard, established in Dusky v.
           </p>
         </div>
@@ -211,7 +211,7 @@ export const mentalHealthInTheJusticeSystemArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -274,7 +274,7 @@ export const mentalHealthInTheJusticeSystemArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             No aspect of forensic psychology is more misunderstood by the public than the insanity defense. Polls consistently show that Americans believe it is overused, frequently successful, and allows dangerous criminals to escape punishment.
           </p>
         </div>
@@ -318,7 +318,7 @@ export const mentalHealthInTheJusticeSystemArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -381,7 +381,7 @@ export const mentalHealthInTheJusticeSystemArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             On any given day, approximately 80,000–100,000 people in the United States are held in solitary confinement—locked in cells the size of a parking space for 22–24 hours per day, with minimal human contact, no meaningful activity, and no end date. The psychological evidence against this practice is overwhelming and unambiguous.
           </p>
         </div>
@@ -425,7 +425,7 @@ export const mentalHealthInTheJusticeSystemArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -488,7 +488,7 @@ export const mentalHealthInTheJusticeSystemArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Approximately 2,400 people sit on death rows across the United States, living under a sentence of execution that will take, on average, 20 years to carry out—if it is carried out at all. The psychological reality of death row is defined by a paradox: the state maintains these individuals in conditions that produce and exacerbate mental illness, and then uses that mental illness as a potential barrier to the execution it has spent decades pursuing.
           </p>
         </div>
@@ -530,7 +530,7 @@ export const mentalHealthInTheJusticeSystemArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -593,7 +593,7 @@ export const mentalHealthInTheJusticeSystemArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Suicide is the leading cause of death in US jails and a major cause of death in prisons, with rates substantially higher than in the general population. Jail suicide rates are approximately 46 per 100,000 inmates—roughly three times the national average—and the risk is highest in the first 24–48 hours of incarceration, when the shock of arrest, intoxication withdrawal, isolation from support systems, and the sudden loss of autonomy converge to create a perfect storm of suicidal crisis.
           </p>
         </div>
@@ -639,7 +639,7 @@ export const mentalHealthInTheJusticeSystemArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -702,7 +702,7 @@ export const mentalHealthInTheJusticeSystemArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The relationship between trauma and incarceration is bidirectional and devastating. People who end up in prison carry extraordinary levels of pre-existing trauma: approximately 90% of incarcerated women and 75% of incarcerated men report significant childhood adversity—physical abuse, sexual abuse, neglect, household dysfunction—at rates far exceeding the general population.
           </p>
         </div>
@@ -745,7 +745,7 @@ export const mentalHealthInTheJusticeSystemArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -808,7 +808,7 @@ export const mentalHealthInTheJusticeSystemArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Women are the fastest-growing segment of the incarcerated population in the United States, with numbers increasing over 700% since 1980. Yet the criminal justice system—its facilities, programs, policies, and underlying philosophy—was designed for men and has been retrofitted for women as an afterthought.
           </p>
         </div>
@@ -851,7 +851,7 @@ export const mentalHealthInTheJusticeSystemArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

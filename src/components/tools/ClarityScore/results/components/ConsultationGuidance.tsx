@@ -88,7 +88,7 @@ const ConsultationGuidance: React.FC<ConsultationGuidanceProps> = ({
 
   return (
     <div
-      className="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700"
+      className="rounded-2xl overflow-hidden border border-gray-200 dark:border-neutral-700"
       role="region"
       aria-label="Consultation guidance"
     >
@@ -108,7 +108,7 @@ const ConsultationGuidance: React.FC<ConsultationGuidanceProps> = ({
             {config.title}
           </h4>
           {flags.length > 0 && (
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
+            <p className="text-sm text-gray-500 dark:text-neutral-400 mt-0.5">
               {flags.length} clinical indicator
               {flags.length !== 1 ? 's' : ''} flagged
             </p>
@@ -117,8 +117,8 @@ const ConsultationGuidance: React.FC<ConsultationGuidanceProps> = ({
       </div>
 
       {/* Body */}
-      <div className="p-6 bg-white dark:bg-gray-900 space-y-5">
-        <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+      <div className="p-6 bg-white dark:bg-neutral-900 space-y-5">
+        <p className="text-sm text-gray-600 dark:text-neutral-300 leading-relaxed">
           {config.description}
         </p>
 
@@ -131,7 +131,7 @@ const ConsultationGuidance: React.FC<ConsultationGuidanceProps> = ({
             {config.whatYouCanDo.map((item, i) => (
               <li
                 key={i}
-                className="flex items-start gap-2.5 text-sm text-gray-600 dark:text-gray-300"
+                className="flex items-start gap-2.5 text-sm text-gray-600 dark:text-neutral-300"
               >
                 <CheckCircle2
                   size={16}
@@ -153,7 +153,7 @@ const ConsultationGuidance: React.FC<ConsultationGuidanceProps> = ({
                 className={`inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl transition-colors ${
                   link.primary
                     ? 'text-white hover:opacity-90'
-                    : 'text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'
+                    : 'text-gray-700 dark:text-neutral-300 bg-gray-100 dark:bg-neutral-800 hover:bg-gray-200 dark:hover:bg-neutral-700'
                 }`}
                 style={
                   link.primary ? { backgroundColor: tierColor } : undefined

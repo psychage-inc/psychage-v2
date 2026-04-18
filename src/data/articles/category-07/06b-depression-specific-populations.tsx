@@ -113,7 +113,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             LGBTQ+ individuals experience depression at rates two to three times higher than their heterosexual and cisgender peers---not because of their identity, but because of how society treats them.
           </p>
           <p className="mb-6">
@@ -585,7 +585,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When we talk about postpartum depression, most people picture a new mother struggling after childbirth. But depression affects non-birthing parents too---and it's far more common than many realize.
           </p>
           <p className="mb-6">
@@ -1117,7 +1117,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you're managing diabetes, autoimmune disease, chronic pain, or any long-term health condition, depression isn't just an unfortunate coincidence---it's a common and often overlooked part of the experience.
           </p>
           <p className="mb-6">
@@ -1590,7 +1590,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Healthcare workers dedicate their lives to caring for others. But who cares for them? Depression among physicians, nurses, EMTs, and other healthcare professionals occurs at rates significantly higher than the general population---and it's often hidden behind a culture of stoicism and self-sacrifice.
           </p>
           <p className="mb-6">
@@ -1978,7 +1978,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Leaving your homeland---whether by choice or force---is one of life's most psychologically demanding experiences. Immigration and forced displacement involve loss, uncertainty, cultural disorientation, and often trauma that significantly increase depression risk.
           </p>
           <p className="mb-6">

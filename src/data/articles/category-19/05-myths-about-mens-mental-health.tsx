@@ -79,7 +79,7 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "I should be able to handle this on my own." It is one of the most common sentences
             therapists never hear -- because the men who think it rarely walk through the door.
             The belief that seeking professional help is a sign of personal failure keeps millions
@@ -432,7 +432,7 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When most people picture someone with an eating disorder, they picture a young, thin,
             white woman. That image is not just incomplete -- it is actively dangerous. It has shaped
             diagnostic criteria, screening practices, treatment models, and public understanding in
@@ -778,7 +778,7 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             He never panics. He never complains. He absorbs pressure at work, conflict at home,
             and financial stress without visible reaction. He is the "rock" everyone leans on. And
             according to prevailing cultural mythology, he is handling stress better than the
@@ -1080,7 +1080,7 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             He used to be the first one at work and the last to leave. He coached his kid's soccer
             team, kept the house running, planned weekend trips. Now he can barely get through the
             day. He snaps at his partner over nothing. He drinks more than he used to. He lies on the
@@ -1381,7 +1381,7 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Just keep it to yourself." "Don't be so emotional." "Nobody wants to hear about your
             feelings." Messages like these, absorbed from childhood, create a simple equation in many
             men's minds: emotional expression equals weakness, and weakness equals failure as a man.
@@ -1692,7 +1692,7 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When we picture domestic abuse, we picture a specific scene: a man hurting a woman. That
             image, while representing a real and devastating form of violence, is dangerously incomplete.
             It erases millions of men who experience abuse from intimate partners -- men who are hit,

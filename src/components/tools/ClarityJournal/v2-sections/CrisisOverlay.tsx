@@ -12,7 +12,7 @@ const CrisisOverlay: React.FC<CrisisOverlayProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-      <div className="bg-white dark:bg-slate-900 rounded-2xl max-w-md w-full shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+      <div className="bg-white dark:bg-neutral-900 rounded-2xl max-w-md w-full shadow-2xl border border-slate-200 dark:border-neutral-700 overflow-hidden">
         {/* Header */}
         <div className="bg-red-50 dark:bg-red-900/20 px-6 py-4 border-b border-red-100 dark:border-red-900/30">
           <div className="flex items-center justify-between">
@@ -60,7 +60,7 @@ const CrisisOverlay: React.FC<CrisisOverlayProps> = ({ isOpen, onClose }) => {
 
           <Link
             to="/crisis"
-            className="flex items-center gap-3 p-3 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+            className="flex items-center gap-3 p-3 rounded-xl text-sm font-medium text-slate-600 dark:text-neutral-400 hover:bg-slate-50 dark:hover:bg-neutral-800 transition-colors"
           >
             <ExternalLink className="w-4 h-4" />
             Find local crisis resources
@@ -71,7 +71,7 @@ const CrisisOverlay: React.FC<CrisisOverlayProps> = ({ isOpen, onClose }) => {
         <div className="px-6 pb-6">
           <button
             onClick={onClose}
-            className="w-full py-3 rounded-xl text-sm font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+            className="w-full py-3 rounded-xl text-sm font-medium text-slate-500 dark:text-neutral-400 bg-slate-100 dark:bg-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-700 transition-colors"
           >
             I've seen these resources — continue journaling
           </button>

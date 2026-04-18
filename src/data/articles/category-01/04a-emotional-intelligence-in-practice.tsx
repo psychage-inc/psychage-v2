@@ -121,7 +121,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've probably heard the term "emotional intelligence" thrown around in job interviews, self-help books, and leadership seminars. But what does it actually mean, and why does it matter more than ever in our increasingly complex social world?
           </p>
           <p className="mb-6">
@@ -254,32 +254,32 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
           Here's what emotional intelligence looks like in everyday situations:
         </p>
 
-        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-neutral-800/50 rounded-xl border border-gray-200 dark:border-neutral-700">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Example 1: Conflict at Work</h4>
-          <p className="mb-3 text-sm text-gray-700 dark:text-gray-300">
+          <p className="mb-3 text-sm text-gray-700 dark:text-neutral-300">
             <strong>Low EQ response:</strong> Your colleague criticizes your project in a meeting. You feel your face flush with anger, immediately fire back a defensive comment, and stew about it for days.
           </p>
-          <p className="text-sm text-gray-700 dark:text-gray-300">
+          <p className="text-sm text-gray-700 dark:text-neutral-300">
             <strong>High EQ response:</strong> You notice the physical sensation of anger (perceiving), recognize that your colleague's tone suggests their own stress (understanding), take three deep breaths before responding (managing), and say: "I hear your concerns. Can we schedule time to discuss specific improvements?" Later, you process your hurt feelings through journaling rather than rumination.
           </p>
         </div>
 
-        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-neutral-800/50 rounded-xl border border-gray-200 dark:border-neutral-700">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Example 2: Family Tension</h4>
-          <p className="mb-3 text-sm text-gray-700 dark:text-gray-300">
+          <p className="mb-3 text-sm text-gray-700 dark:text-neutral-300">
             <strong>Low EQ response:</strong> Your parent makes a comment that triggers childhood wounds. You shut down emotionally, leave abruptly, and avoid them for weeks.
           </p>
-          <p className="text-sm text-gray-700 dark:text-gray-300">
+          <p className="text-sm text-gray-700 dark:text-neutral-300">
             <strong>High EQ response:</strong> You notice the surge of old pain (perceiving), recognize it's tied to past patterns rather than present intent (understanding), and set a boundary: "I need to pause this conversation. I'm feeling overwhelmed right now." You return when regulated and communicate your needs clearly without blame.
           </p>
         </div>
 
-        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-neutral-800/50 rounded-xl border border-gray-200 dark:border-neutral-700">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Example 3: Personal Setback</h4>
-          <p className="mb-3 text-sm text-gray-700 dark:text-gray-300">
+          <p className="mb-3 text-sm text-gray-700 dark:text-neutral-300">
             <strong>Low EQ response:</strong> You don't get the promotion you wanted. You tell yourself "I'm a failure," lose motivation, and become resentful toward coworkers who succeeded.
           </p>
-          <p className="text-sm text-gray-700 dark:text-gray-300">
+          <p className="text-sm text-gray-700 dark:text-neutral-300">
             <strong>High EQ response:</strong> You acknowledge the disappointment and let yourself feel it (perceiving), separate the setback from your self-worth (understanding), and use the frustration as fuel to identify skill gaps and create a development plan (using emotions to facilitate thinking).
           </p>
         </div>
@@ -517,7 +517,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Have you ever walked into a room and immediately sensed tension, even though no one said a word? Or misread someone's mood completely, only to realize later you were way off? Reading emotions in others is a skill that shapes every interaction---and it's far more complex than most people realize.
           </p>
           <p className="mb-6">
@@ -849,7 +849,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Most of us think we're good listeners. But research shows there's a massive gap between what we think we're doing and what others experience. Truly listening---with emotional intelligence---is rarer and more powerful than most people realize.
           </p>
           <p className="mb-6">
@@ -1181,7 +1181,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Someone cuts you off in traffic. Your partner makes a sarcastic comment. A coworker takes credit for your idea in a meeting. In these moments, what you do next determines whether the situation escalates or de-escalates. The difference between reacting and responding is the difference between emotional chaos and emotional intelligence.
           </p>
           <p className="mb-6">
@@ -1508,7 +1508,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You spend a third of your waking life at work. Yet most professional settings operate under the unspoken rule that emotions should be checked at the door. The reality? Suppressing emotions doesn't make them disappear---it just makes work more exhausting.
           </p>
           <p className="mb-6">

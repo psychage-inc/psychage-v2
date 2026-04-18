@@ -54,7 +54,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Maker culture—the contemporary resurgence of hands-on craft, DIY, and handmade goods—represents more than a trend. Research shows that making physical objects by hand provides distinct psychological benefits: rhythmic, repetitive craft activities (knitting, woodworking, pottery) induce meditative states that reduce anxiety and rumination; completing tangible projects provides concrete evidence of accomplishment that counters modern work&apos;s abstraction; tactile engagement activates sensory-motor systems underutilized in digital life; and craft communities provide belonging and meaning.
           </p>
         </div>
@@ -140,7 +140,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -192,7 +192,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Photography—once requiring specialized equipment and technical skill—is now nearly universal. Most people carry cameras in their pockets (smartphones), yet many don&apos;t consider themselves photographers or think photography is &quot;creative enough&quot; compared to painting or writing.
           </p>
         </div>
@@ -285,7 +285,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -337,7 +337,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Digital technology fundamentally changes creative practice—not just translating traditional art to screens, but enabling entirely new forms. Drawing tablets, creative software, algorithmic generation, and AI tools make certain creative acts easier (infinite undo, perfect symmetry, instant color changes) while introducing new challenges (choice overload, perfectionism enabled by endless revision, questions about authenticity).
           </p>
         </div>
@@ -434,7 +434,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -486,7 +486,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Gardening is simultaneously creative practice, physical activity, and nature connection—a rare convergence that makes it uniquely therapeutic. Research consistently shows that gardening reduces cortisol (stress hormone), lowers blood pressure, improves mood, and supports recovery from mental health conditions including depression, anxiety, and PTSD.
           </p>
         </div>
@@ -570,7 +570,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -622,7 +622,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Cooking is creative practice hiding in daily necessity—combining aesthetic choices (color, plating, flavor combinations), technical skill (timing, temperature, technique), cultural expression (family recipes, tradition), and immediate, multisensory reward (you eat what you create). Research shows cooking supports mental health through multiple pathways: mindful engagement with present-moment sensory experience, mastery and competence from learning skills, social connection through shared meals, and self-care through nourishing yourself and others.
           </p>
         </div>
@@ -727,7 +727,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -779,7 +779,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Most people consume music (listening) but don&apos;t make music—a historically unusual situation. For most of human history, music was participatory: people sang together, played instruments, created music as community practice.
           </p>
         </div>
@@ -885,7 +885,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -937,7 +937,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Dance—moving your body to music—is one of humanity&apos;s oldest creative expressions, yet many adults stopped dancing after childhood unless they pursued formal training. This is loss: research shows recreational and social dance (moving for pleasure, not performance) provides robust mental health benefits through embodied creativity, physical activity, rhythmic entrainment, social connection, and non-verbal emotional expression.
           </p>
         </div>
@@ -1042,7 +1042,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1094,7 +1094,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Creative writing—fiction, poetry, memoir, experimental prose—is different from journaling or therapeutic writing. It transforms raw experience into crafted narrative, character, and language.
           </p>
         </div>
@@ -1170,7 +1170,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1222,7 +1222,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The myth that creativity declines with age is persistent and wrong. Research shows creativity changes across the lifespan—not necessarily declining, but transforming.
           </p>
         </div>
@@ -1291,7 +1291,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1343,7 +1343,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Trauma—especially early, repeated, or violent trauma—often resists verbal processing. Traumatic memories store differently in the brain than ordinary memories: fragmented sensory impressions (images, sounds, bodily sensations) without coherent narrative structure.
           </p>
         </div>
@@ -1418,7 +1418,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1470,7 +1470,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Performance art—using your body as primary medium, creating live actions for witnesses, often confronting personal or political taboos—is creativity&apos;s most vulnerable form. Unlike painting (which you create privately and display finished product) or theater (where you perform character, not yourself), performance art collapses distance between artist and art, private and public, self and work.
           </p>
         </div>
@@ -1543,7 +1543,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1595,7 +1595,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Improvisation—creating spontaneously without script, plan, or predetermined outcome—is creativity&apos;s most anxiety-provoking and liberating form. Whether jazz musicians responding to each other in real time, improv comedians building scenes from audience suggestions, or contact improvisation dancers following movement impulses, improvisation demands: accepting whatever emerges (&quot;yes, and&quot;), relinquishing control over outcomes, trusting collaborators completely, and embracing failure as generative rather than catastrophic.
           </p>
         </div>
@@ -1679,7 +1679,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1731,7 +1731,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Western psychology defines creativity as generating novel, useful ideas—emphasizing originality, individual genius, and breaking traditions. But this definition reflects Western individualist cultural values, not universal truth.
           </p>
         </div>
@@ -1800,7 +1800,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1852,7 +1852,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Perfectionism and creativity have toxic relationship. Creativity requires experimentation, risk-taking, and tolerating work-in-progress messiness.
           </p>
         </div>
@@ -1951,7 +1951,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2003,7 +2003,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Creative work guarantees failure—repeatedly. Writers collect rejection letters (J.
           </p>
         </div>
@@ -2101,7 +2101,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2153,7 +2153,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Creative entrepreneurship—turning creative practice into income—creates unique psychological tension. The same traits that support creative work (openness, risk-taking, intrinsic motivation) can conflict with business requirements (marketing, self-promotion, financial management, consistent production).
           </p>
         </div>
@@ -2251,7 +2251,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2303,7 +2303,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Technology radically reshapes creativity—democratizing access (anyone with smartphone can photograph, record music, edit video), expanding possibilities (digital art forms impossible in physical media), and accelerating iteration (undo button, infinite versions). But technology also creates tensions: Does software template thinking (Photoshop filters, Instagram aesthetics)? Does algorithmic recommendation narrow creative exploration (TikTok For You page shows similar content)? And now: generative AI (ChatGPT, Midjourney, DALL-E) that creates text, images, music from prompts—is this creative tool or creative replacement? Research shows technology&apos;s impact on creativity is double-edged: digital tools lower barriers to entry, enabling people who couldn&apos;t afford art supplies/instruments to create.
           </p>
         </div>
@@ -2406,7 +2406,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2458,7 +2458,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Romantic mythology celebrates spontaneous creative inspiration—artist struck by muse, creating in frenzied burst. Reality of professional creative work: showing up consistently, even when uninspired.
           </p>
         </div>
@@ -2555,7 +2555,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2607,7 +2607,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Film and video making—combining visual composition, narrative structure, sound design, editing, and performance—is uniquely comprehensive creative form engaging multiple creative modalities simultaneously. Unlike static visual art (single image) or writing (text alone), film is temporal, multisensory, collaborative medium.
           </p>
         </div>
@@ -2703,7 +2703,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2755,7 +2755,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Body modification—tattooing, piercing, scarification, and other intentional alterations—is uniquely permanent creative expression. Unlike painting (can be discarded) or music (ephemeral performance), body modification is you.
           </p>
         </div>
@@ -2844,7 +2844,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -2896,7 +2896,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Fashion and personal style—how you dress, adorn, and present your body—is everyday creativity practiced by billions. Unlike painting (requires studio, supplies) or music (requires instrument), fashion requires only body and clothing (which everyone has).
           </p>
         </div>
@@ -3000,7 +3000,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -3052,7 +3052,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Disability and creativity have complex, often misunderstood relationship. Ableist culture assumes creativity requires certain abilities (fine motor control for visual art, hearing for music, verbal fluency for writing)—but disabled artists continuously prove these assumptions false.
           </p>
         </div>
@@ -3150,7 +3150,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -3202,7 +3202,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Creative practice, often romanticized as solitary genius, is fundamentally social. Research consistently shows creative communities—artist collectives, writing groups, maker spaces, music scenes, dance troupes—significantly predict creative productivity, skill development, and psychological wellbeing.
           </p>
         </div>
@@ -3311,7 +3311,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -3363,7 +3363,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Teaching creativity—whether formal classes, informal mentoring, online tutorials, or peer workshops—paradoxically deepens your own creative practice. Research documents &quot;protégé effect&quot;: teaching material increases teacher&apos;s own mastery, clarifies understanding, and reveals gaps in knowledge.
           </p>
         </div>
@@ -3485,7 +3485,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -3537,7 +3537,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Creative work is uniquely positioned to outlive its creator—paintings persist for centuries, books read by generations unborn, music performed long after composer&apos;s death. This temporal transcendence gives creativity profound psychological meaning: you create something that exists beyond your lifespan, contributing to culture in ways unknowable during life.
           </p>
         </div>
@@ -3646,7 +3646,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -3698,7 +3698,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sharing creative work is act of profound vulnerability—you externalize something internal, making invisible visible, and invite judgment on expression that emerged from deepest self. Research documents near-universal fear among creatives: &quot;What if they hate it? What if I&apos;m not good enough? What if I&apos;m exposed as fraud?&quot; This isn&apos;t weakness—it&apos;s rational response to real risk.
           </p>
         </div>
@@ -3822,7 +3822,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -3874,7 +3874,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Hustle culture celebrates constant productivity—&quot;real artists create daily, never stop, no excuses.&quot; But biology, psychology, and creative history teach opposite lesson: rest is essential.
           </p>
         </div>
@@ -3978,7 +3978,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -4030,7 +4030,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every creative person faces rejection. Manuscript rejected.
           </p>
         </div>
@@ -4165,7 +4165,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -4217,7 +4217,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Creative jealousy is near-universal but rarely discussed. You see someone&apos;s work—more successful, more talented, more recognized—and feel crushing inadequacy: &quot;I&apos;ll never be that good.
           </p>
         </div>
@@ -4346,7 +4346,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -4398,7 +4398,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Cultural myth says creativity belongs to youth—&quot;If you haven&apos;t made it by 30, you never will.&quot; Research tells opposite story: creativity doesn&apos;t peak and decline uniformly; it transforms across lifespan, often improving in certain dimensions with age.
           </p>
         </div>
@@ -4505,7 +4505,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -4557,7 +4557,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Incarceration strips people of autonomy, identity, privacy, and purpose. In environment designed to control and punish, creative expression becomes profound act of resistance, self-preservation, and humanity.
           </p>
         </div>
@@ -4668,7 +4668,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -4720,7 +4720,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When dementia steals memory, language, and daily functioning—creative capacity often remains remarkably preserved. Research documents people with Alzheimer&apos;s disease and related dementias maintaining ability to create art, respond to music, engage in dance, and participate in creative activities even in moderate-to-severe disease stages.
           </p>
         </div>
@@ -4843,7 +4843,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -4895,7 +4895,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Chronic illness transforms creative practice. When you live with chronic pain, fatigue, unpredictable symptoms, disability—creating requires adaptation.
           </p>
         </div>
@@ -5006,7 +5006,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -5058,7 +5058,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Western psychology and art theory center individual creative genius—&quot;the artist as solitary visionary.&quot; This framing erases vast majority of human creative traditions: Indigenous storytelling transmitted across generations, African call-and-response music creating community cohesion, South Asian temple dance as spiritual practice, Pacific Islander navigation chants encoding survival knowledge, Indigenous beadwork carrying cultural identity and resistance.
           </p>
         </div>
@@ -5164,7 +5164,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -5216,7 +5216,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Digital art existed long before NFTs—digital painting, 3D modeling, generative art, pixel art spanning decades. But 2021 NFT boom transformed digital art landscape: suddenly, digital works could be &quot;owned&quot; via blockchain tokens, sold for millions, creating new economic possibilities and cultural controversies.
           </p>
         </div>
@@ -5343,7 +5343,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -5395,7 +5395,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Neurodivergent people (ADHD, autism, dyslexia, and other neurological differences) often demonstrate distinctive creative patterns—not &quot;better&quot; or &quot;worse,&quot; but different. Research documents both creative advantages and challenges: ADHD creatives show high novelty-seeking, divergent thinking, hyperfocus on passionate projects, but struggle with executive function (starting/finishing projects, organizing creative time).
           </p>
         </div>
@@ -5535,7 +5535,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -5587,7 +5587,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             &quot;It takes 10,000 hours to become expert&quot; became cultural mantra after Malcolm Gladwell&apos;s Outliers (2008)—but Gladwell oversimplified research. Original study (Ericsson et al.
           </p>
         </div>
@@ -5712,7 +5712,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -5764,7 +5764,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Creative procrastination is chronic delay of creative work despite intention to create—&quot;I want to paint, but I&apos;ll clean kitchen first.&quot; Differs from writer&apos;s block (inability to generate ideas) or burnout (exhaustion preventing work).
           </p>
         </div>
@@ -5904,7 +5904,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -5956,7 +5956,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Flow is psychological state of complete absorption—&quot;losing yourself&quot; in activity, hours passing unnoticed, effortless engagement, peak performance. Mihály Csíkszentmihályi&apos;s research (1970s-1990s) identified flow as &quot;optimal experience&quot;—people across cultures describe flow as among most satisfying life experiences.
           </p>
         </div>
@@ -6107,7 +6107,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -6159,7 +6159,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             &quot;Good artists copy, great artists steal&quot; (attributed to Picasso, though actually T.S.
           </p>
         </div>
@@ -6317,7 +6317,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -6369,7 +6369,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             &quot;Find your voice&quot; is common creative advice—frustratingly vague. What is artistic voice? It&apos;s recognizable way you create—themes you return to, techniques you favor, perspective you bring, emotional quality your work carries.
           </p>
         </div>
@@ -6510,7 +6510,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -6562,7 +6562,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Feedback is essential for creative growth—but psychologically treacherous. Criticism activates threat response: brain doesn&apos;t distinguish &quot;your work needs improvement&quot; from &quot;you are under attack.
           </p>
         </div>
@@ -6733,7 +6733,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -6785,7 +6785,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Creative intuition is that &quot;gut feeling&quot; guiding decisions: &quot;This color feels right.&quot; &quot;Delete this paragraph.
           </p>
         </div>
@@ -6926,7 +6926,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -6978,7 +6978,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Paradox: Unlimited creative freedom often produces paralysis, not productivity. &quot;Write about anything!&quot; = blank page anxiety.
           </p>
         </div>
@@ -7141,7 +7141,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -7193,7 +7193,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Creative growth requires risk—trying techniques you haven&apos;t mastered, sharing work before it&apos;s &quot;ready,&quot; experimenting with unfamiliar forms, deviating from successful formula. But risk triggers threat response: What if I fail? What if it&apos;s bad? What if people judge me? Research distinguishes productive creative risk (experimentation with learning potential) from reckless risk (ignoring craft, pursuing novelty without purpose).
           </p>
         </div>
@@ -7343,7 +7343,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -7395,7 +7395,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             &quot;What will I leave behind?&quot; Existential question creativity uniquely addresses. Unlike most work (forgotten when you&apos;re gone), creative work can outlast creator—poems read centuries later, paintings viewed by unborn generations, music heard long after composer dead.
           </p>
         </div>
@@ -7540,7 +7540,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

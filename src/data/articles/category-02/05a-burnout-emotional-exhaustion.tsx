@@ -98,7 +98,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You wake up exhausted despite sleeping eight hours. The work that once energized you now feels meaningless. You're going through the motions, emotionally detached, cynical about things you used to care about. You're not sad, exactly --- you're hollow. This isn't depression. This isn't ordinary stress. This is burnout.
           </p>
           <p className="mb-6">
@@ -455,7 +455,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're exhausted. But is it burnout, or have you just had a really hard week? Is a weekend of rest going to fix this, or do you need something more? The line between normal fatigue and burnout can feel blurry --- but there are clear distinctions that matter for how you respond.
           </p>
           <p className="mb-6">
@@ -622,7 +622,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
           Rate each statement from 0 (never) to 4 (always/every day) based on how you've felt in the past month <Citation id="4" index={4} source="American Psychological Association" year="2023" tier={3} />:
         </p>
 
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6">
+        <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg mb-6">
           <ol className="list-decimal pl-6 space-y-3">
             <li>I feel emotionally drained from my work/role</li>
             <li>I feel completely used up by evening</li>
@@ -821,7 +821,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Burnout doesn't announce itself with a dramatic crash. It's a slow burn --- a progressive deterioration that unfolds in predictable stages. By the time most people recognize they're burned out, they're deep into the cycle. Understanding the 12 stages helps you catch it early, when intervention is easier and recovery is faster.
           </p>
           <p className="mb-6">
@@ -1204,7 +1204,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The very people we rely on to heal others are themselves breaking down. Healthcare worker burnout has reached epidemic proportions --- and it was a crisis long before COVID-19 made it undeniable. Physicians, nurses, EMTs, therapists, social workers: the toll of caring for others in a broken system is devastating careers, health, and lives.
           </p>
           <p className="mb-6">
@@ -1501,7 +1501,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You used to love learning. Now the sight of your textbook triggers dread. You're pulling all-nighters not because you procrastinated, but because there's genuinely too much to do. Your GPA matters more than your wellbeing. Grades define your worth. You're exhausted, cynical about education, and questioning whether any of this matters.
           </p>
           <p className="mb-6">

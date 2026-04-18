@@ -95,7 +95,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Teachers are leaving the profession in record numbers. Those who remain report
             exhaustion, cynicism, and a sense of futility. This isn't just about tough days---it's a
             systemic crisis threatening the foundation of education.
@@ -620,7 +620,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Move fast and break things.", "Disrupt or die.", "Hustle harder." Tech culture
             celebrates relentless work, passion-driven dedication, and sacrificing everything for
             the mission. But behind the glossy startup narratives, tech workers are burning out at
@@ -1184,7 +1184,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "How long until I feel normal again?" This is the question everyone recovering from
             burnout asks. The answer, unfortunately, is: it depends---and it takes longer than you
             think.
@@ -1329,7 +1329,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Two weeks of vacation won't fix burnout. Sometimes, you need real time away---weeks,
             months, or even a year. But taking extended leave feels impossible, scary, and
             financially risky.
@@ -1459,7 +1459,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've taken time off. You've rested, recovered, and rebuilt some energy. Now comes the
             hardest part: going back. The anxiety is real---what if you burn out again?
           </p>

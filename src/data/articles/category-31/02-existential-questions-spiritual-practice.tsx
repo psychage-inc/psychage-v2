@@ -50,7 +50,7 @@ export const existentialQuestionsSpiritualPracticeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Death anxiety is psychological distress related to awareness of mortality—fear of dying, fear of death itself, fear of what comes after, or fear of ceasing to exist. Ernest Becker&apos;s The Denial of Death and subsequent terror management theory propose that much of human behavior is motivated by managing anxiety about inevitable mortality.
           </p>
         </div>
@@ -61,7 +61,7 @@ export const existentialQuestionsSpiritualPracticeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -110,7 +110,7 @@ export const existentialQuestionsSpiritualPracticeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mindfulness is the practice of intentionally paying attention to present-moment experience with openness, curiosity, and acceptance—without judgment or reactivity. Originating in Buddhist contemplative traditions and adapted for secular contexts by Jon Kabat-Zinn and others, mindfulness has become one of the most researched psychological interventions.
           </p>
         </div>
@@ -121,7 +121,7 @@ export const existentialQuestionsSpiritualPracticeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

@@ -45,7 +45,7 @@ const ProvidersLandingPage: React.FC = () => {
 
       {/* Hero */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-teal-50 to-white dark:from-gray-900 dark:to-gray-950" />
+        <div className="absolute inset-0 bg-gradient-to-b from-teal-50 to-white dark:from-neutral-900 dark:to-neutral-950" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

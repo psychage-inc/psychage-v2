@@ -17,7 +17,7 @@ const SpecialtiesStep: React.FC<Props> = ({ formData, toggleArrayItem, filters, 
       <h2 className="font-display font-bold text-2xl text-gray-900 dark:text-white mb-2">
         Specialties & Languages
       </h2>
-      <p className="text-gray-500 dark:text-gray-400">
+      <p className="text-gray-500 dark:text-neutral-400">
         Select the areas you specialize in and languages you offer services in.
       </p>
     </div>

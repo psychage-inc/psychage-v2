@@ -65,7 +65,7 @@ export const sustainabilityAndWellbeingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             One of the most frustrating puzzles in environmental psychology is the &quot;value-action gap&quot;—the persistent discrepancy between what people believe about the environment and what they actually do. Surveys consistently show that large majorities care about the environment, support sustainability, and express willingness to change their behavior—yet actual sustainable behavior remains insufficient to address the environmental crises those same people are concerned about.
           </p>
         </div>
@@ -108,7 +108,7 @@ export const sustainabilityAndWellbeingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -171,7 +171,7 @@ export const sustainabilityAndWellbeingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The relationship between material possessions and psychological wellbeing is one of the most consistently counterintuitive findings in psychology. Beyond a threshold of basic material security, the accumulation of possessions does not increase happiness—and may actively decrease it.
           </p>
         </div>
@@ -221,7 +221,7 @@ export const sustainabilityAndWellbeingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -284,7 +284,7 @@ export const sustainabilityAndWellbeingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Environmental activists occupy a psychologically paradoxical position: the same emotional intensity that motivates their engagement with ecological crisis also makes them vulnerable to burnout, compassion fatigue, and moral injury. Research documents that environmental activists experience elevated rates of depression, anxiety, and burnout compared to the general population—not because activism is inherently harmful, but because sustained engagement with existential threats under conditions of inadequate progress, institutional resistance, and public indifference creates chronic psychological strain that most activist cultures lack the structures to address.
           </p>
         </div>
@@ -327,7 +327,7 @@ export const sustainabilityAndWellbeingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -390,7 +390,7 @@ export const sustainabilityAndWellbeingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Growing food—whether in a backyard garden, a community allotment, a balcony planter, or a windowsill herb pot—engages psychological mechanisms that are remarkably well-suited to counteracting the mental health challenges of modern life. The act of food growing combines physical activity, nature exposure, mindful attention, delayed gratification, sensory engagement, and the experience of agency and competence into a single activity that research consistently links to improved mood, reduced stress, enhanced self-esteem, and stronger social connections.
           </p>
         </div>
@@ -434,7 +434,7 @@ export const sustainabilityAndWellbeingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -497,7 +497,7 @@ export const sustainabilityAndWellbeingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The acceleration of modern life—the relentless increase in the pace of work, communication, consumption, and stimulation—is not merely a cultural phenomenon but a psychological and physiological stressor with documented consequences for mental health. Research documents that chronic time pressure is associated with elevated cortisol, impaired immune function, reduced relationship quality, decreased life satisfaction, and increased rates of anxiety and depression.
           </p>
         </div>
@@ -542,7 +542,7 @@ export const sustainabilityAndWellbeingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -605,7 +605,7 @@ export const sustainabilityAndWellbeingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The modern consumer is not merely a person who buys things. The modern consumer is the product of a century-long, scientifically informed effort to engineer desire, exploit psychological vulnerabilities, and create a culture in which purchasing is the primary response to emotional needs.
           </p>
         </div>
@@ -648,7 +648,7 @@ export const sustainabilityAndWellbeingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -711,7 +711,7 @@ export const sustainabilityAndWellbeingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The average adult in the developed world spends more than seven hours per day looking at screens—a figure that has increased steadily and that represents a fundamental restructuring of human attention, experience, and relationship with the physical environment. Simultaneously, time spent in natural environments has declined to the point where the average American child spends less time outdoors than a federal prison inmate.
           </p>
         </div>
@@ -755,7 +755,7 @@ export const sustainabilityAndWellbeingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -818,7 +818,7 @@ export const sustainabilityAndWellbeingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The relationship between food and mental health is one of the most rapidly advancing areas of psychiatric research, driven by the recognition that the brain—the organ responsible for all psychological experience—is profoundly influenced by the nutrients, microorganisms, and inflammatory signals that the food we eat delivers to it. The emerging field of nutritional psychiatry has documented that dietary patterns are significantly associated with mental health outcomes: whole-food, plant-rich, nutrient-dense diets are associated with reduced risk of depression and anxiety, while ultra-processed, nutrient-poor diets are associated with increased risk.
           </p>
         </div>
@@ -863,7 +863,7 @@ export const sustainabilityAndWellbeingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

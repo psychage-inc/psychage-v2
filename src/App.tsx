@@ -136,11 +136,11 @@ const RouteErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children 
                 <div className="flex flex-col items-center justify-center py-24 px-6 text-center">
                     <div className="w-16 h-16 bg-amber-100 dark:bg-amber-900/30 text-amber-500 rounded-2xl flex items-center justify-center mb-6 text-2xl">!</div>
                     <h2 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-2">This page encountered an error</h2>
-                    <p className="text-gray-500 dark:text-gray-400 mb-1 max-w-md">Something went wrong loading this page.</p>
+                    <p className="text-gray-500 dark:text-neutral-400 mb-1 max-w-md">Something went wrong loading this page.</p>
                     {error && <p className="text-xs font-mono text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 px-3 py-1.5 rounded mt-2 mb-4">{error.message}</p>}
                     <div className="flex gap-3 mt-4">
-                        <button onClick={reset} className="px-4 py-2 text-sm font-medium bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg hover:opacity-90 transition-opacity">Try Again</button>
-                        <button onClick={() => navigate('/', { replace: true })} className="px-4 py-2 text-sm font-medium border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Return Home</button>
+                        <button onClick={reset} className="px-4 py-2 text-sm font-medium bg-gray-900 dark:bg-white text-white dark:text-neutral-900 rounded-lg hover:opacity-90 transition-opacity">Try Again</button>
+                        <button onClick={() => navigate('/', { replace: true })} className="px-4 py-2 text-sm font-medium border border-gray-300 dark:border-neutral-600 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition-colors">Return Home</button>
                     </div>
                 </div>
             )}
@@ -156,7 +156,7 @@ const RouteErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children 
 const RouteLoadingIndicator = () => (
     <div className="flex items-center justify-center min-h-[60vh]">
         <div className="flex flex-col items-center gap-3">
-            <div className="w-10 h-10 rounded-full border-2 border-gray-200 dark:border-gray-700 border-t-[var(--color-primary)] animate-spin" />
+            <div className="w-10 h-10 rounded-full border-2 border-gray-200 dark:border-neutral-700 border-t-[var(--color-primary)] animate-spin" />
             <span className="text-xs text-text-tertiary">Loading...</span>
         </div>
     </div>
@@ -207,11 +207,11 @@ const App: React.FC = () => {
                                         <div className="flex flex-col items-center justify-center py-24 px-6 text-center">
                                             <div className="w-16 h-16 bg-red-100 dark:bg-red-900/30 text-red-500 rounded-2xl flex items-center justify-center mb-6 text-2xl">!</div>
                                             <h2 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-2">This page encountered an error</h2>
-                                            <p className="text-gray-500 dark:text-gray-400 mb-1 max-w-md">Something went wrong loading this page. Try again or navigate to another page.</p>
+                                            <p className="text-gray-500 dark:text-neutral-400 mb-1 max-w-md">Something went wrong loading this page. Try again or navigate to another page.</p>
                                             {error && <p className="text-xs font-mono text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 px-3 py-1.5 rounded mt-2 mb-4">{error.message}</p>}
                                             <div className="flex gap-3 mt-4">
-                                                <button onClick={reset} className="px-4 py-2 text-sm font-medium bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg hover:opacity-90 transition-opacity">Try Again</button>
-                                                <button onClick={() => navigate('/', { replace: true })} className="px-4 py-2 text-sm font-medium border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Return Home</button>
+                                                <button onClick={reset} className="px-4 py-2 text-sm font-medium bg-gray-900 dark:bg-white text-white dark:text-neutral-900 rounded-lg hover:opacity-90 transition-opacity">Try Again</button>
+                                                <button onClick={() => navigate('/', { replace: true })} className="px-4 py-2 text-sm font-medium border border-gray-300 dark:border-neutral-600 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition-colors">Return Home</button>
                                             </div>
                                         </div>
                                     )}

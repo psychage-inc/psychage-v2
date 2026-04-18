@@ -65,7 +65,7 @@ export const intimacyRelationshipsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Desire discrepancy—the difference in sexual desire between partners in a relationship—is the single most common presenting complaint in sex therapy, affecting an estimated 80% of couples at some point in their relationship. The experience of wanting sex more or less frequently than one&apos;s partner produces a cascade of emotional, relational, and psychological consequences: the higher-desire partner feels rejected, undesirable, and frustrated; the lower-desire partner feels pressured, inadequate, and guilty; and both partners may develop avoidance patterns, resentment, and communication breakdowns that compound the original discrepancy.
           </p>
         </div>
@@ -106,7 +106,7 @@ export const intimacyRelationshipsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -169,7 +169,7 @@ export const intimacyRelationshipsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Infidelity—the violation of a couple&apos;s emotional and/or sexual exclusivity agreement—is one of the most devastating experiences a relationship can undergo and one of the most common reasons couples seek therapy. Estimated to occur in 20–25% of marriages (with higher rates in non-marital committed relationships), infidelity produces in the betrayed partner a psychological response that mirrors the symptoms of post-traumatic stress: intrusive thoughts, hypervigilance, emotional volatility, flashbacks, sleep disturbance, and a shattering of fundamental assumptions about the trustworthiness of their partner and the safety of their world.
           </p>
         </div>
@@ -208,7 +208,7 @@ export const intimacyRelationshipsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -271,7 +271,7 @@ export const intimacyRelationshipsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Attachment theory, originally developed to explain the bond between infants and caregivers, has become one of the most powerful frameworks for understanding adult sexual relationships. The internal working models we form in early childhood--expectations about whether others will be available, responsive, and trustworthy--follow us into the bedroom with remarkable fidelity.
           </p>
         </div>
@@ -314,7 +314,7 @@ export const intimacyRelationshipsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -377,7 +377,7 @@ export const intimacyRelationshipsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Chronic illness transforms virtually every dimension of a person&apos;s life, and sexuality is no exception--yet it remains one of the least discussed consequences of living with a long-term health condition. An estimated 50-75% of individuals with chronic illness report significant changes in their sexual functioning, desire, or intimate relationships, yet fewer than 20% report that their healthcare providers have ever raised the topic.
           </p>
         </div>
@@ -416,7 +416,7 @@ export const intimacyRelationshipsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -479,7 +479,7 @@ export const intimacyRelationshipsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The term &quot;sexless relationship&quot; carries enormous cultural weight--a whispered confession, a source of shame, a presumed marker of relational failure. Researchers typically define a sexless marriage as one in which sexual contact occurs fewer than ten times per year, and by this measure approximately 15-20% of married couples in the United States qualify.
           </p>
         </div>
@@ -521,7 +521,7 @@ export const intimacyRelationshipsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -584,7 +584,7 @@ export const intimacyRelationshipsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Technology has transformed virtually every dimension of human life, and sexuality is no exception. From the swipe mechanics of dating apps that restructure how people find partners to the ubiquitous availability of pornography that reshapes sexual expectations and arousal templates, from sexting that creates new forms of intimate communication to teledildonics that enable physical sensation across geographic distance, from AI companions that simulate emotional and erotic connection to the complex questions of digital consent in an era of screenshots and deepfakes--technology is not merely augmenting human sexuality but fundamentally altering the psychological, relational, and cultural landscape in which sexual connection occurs.
           </p>
         </div>
@@ -628,7 +628,7 @@ export const intimacyRelationshipsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -691,7 +691,7 @@ export const intimacyRelationshipsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The transition to parenthood is one of the most profound transformations a couple can undergo, and its impact on sexuality is dramatic, poorly understood, and woefully underdiscussed. During pregnancy, sexual desire and function fluctuate across trimesters as hormonal shifts, physical changes, fatigue, nausea, and psychological adaptation interact in complex and highly individual ways.
           </p>
         </div>
@@ -733,7 +733,7 @@ export const intimacyRelationshipsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -796,7 +796,7 @@ export const intimacyRelationshipsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             One of the most persistent cultural narratives about long-term relationships is that sexual passion inevitably declines--that the fiery desire of early romance must cool into something more tepid as familiarity increases, responsibilities accumulate, and bodies age. This narrative is not entirely wrong: research consistently documents a decline in sexual frequency over the course of long-term relationships, with the steepest drop occurring in the first four years and a more gradual decline continuing thereafter.
           </p>
         </div>
@@ -838,7 +838,7 @@ export const intimacyRelationshipsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

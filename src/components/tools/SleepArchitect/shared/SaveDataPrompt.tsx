@@ -62,13 +62,13 @@ const SaveDataPrompt: React.FC<SaveDataPromptProps> = ({
           <h4 className="font-display font-bold text-sm text-gray-900 dark:text-white mb-1">
             Save your sleep data
           </h4>
-          <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+          <p className="text-xs text-gray-600 dark:text-neutral-400 leading-relaxed mb-4">
             You have {entryCount} nights logged. Create a free account to keep
             your data safe across devices and unlock your full sleep history on
             the dashboard.
           </p>
 
-          <div className="flex flex-wrap gap-3 mb-4 text-[10px] text-gray-500 dark:text-gray-400">
+          <div className="flex flex-wrap gap-3 mb-4 text-[10px] text-gray-500 dark:text-neutral-400">
             <div className="flex items-center gap-1">
               <Shield size={12} className="text-indigo-400" />
               Encrypted & private
@@ -94,7 +94,7 @@ const SaveDataPrompt: React.FC<SaveDataPromptProps> = ({
             <button
               type="button"
               onClick={handleDismiss}
-              className="text-xs font-medium text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+              className="text-xs font-medium text-gray-400 dark:text-neutral-500 hover:text-gray-600 dark:hover:text-neutral-300 transition-colors"
             >
               Maybe later
             </button>

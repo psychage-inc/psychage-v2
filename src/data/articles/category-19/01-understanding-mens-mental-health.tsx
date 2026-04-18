@@ -76,7 +76,7 @@ export const understandingMensMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Ask many men how they're feeling and the answer comes from a vocabulary of roughly five
             words: fine, good, tired, stressed, angry. Not because men don't have complex emotional
             lives --- they do. But because most men grew up in a world that systematically
@@ -523,7 +523,7 @@ export const understandingMensMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Most men can tell you who they'd call to help move a sofa. Far fewer can name someone
             they'd call at 2 a.m. to say they're falling apart. This is the friendship crisis
             hiding in plain sight --- not the absence of acquaintances, but the absence of
@@ -923,7 +923,7 @@ export const understandingMensMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When people talk about body image problems, they usually mean women. That blind spot
             is itself part of the problem. Research now shows that 30-40% of men experience
             significant body dissatisfaction --- and the rates are climbing
@@ -1272,7 +1272,7 @@ export const understandingMensMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When a man has a bad day, the first thing many cultures tell him to do is have a drink.
             Not call a friend. Not sit with the feeling. Not ask for help. Have a drink. This isn't
             just a casual observation --- it reflects one of the most well-documented patterns in
@@ -1622,7 +1622,7 @@ export const understandingMensMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "So what do you do?" It's the first question at every gathering, the social shorthand
             we use to place each other. For men who have spent 30, 40, even 50 years answering
             that question with a job title, retirement doesn't just end a career. It removes the
@@ -1985,7 +1985,7 @@ export const understandingMensMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When someone dies, attention goes to the person crying. The man standing at the back
             of the funeral, dry-eyed and organizing logistics, is usually assumed to be "handling
             it well." He might be. He might also be drowning in a grief he has no language for,

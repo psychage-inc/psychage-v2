@@ -418,7 +418,7 @@ export const DurationSeverityScreen: React.FC = () => {
                         <NavigatorButton
                             variant="secondary"
                             onClick={handleBack}
-                            className="w-auto px-4 sm:px-6 text-sm sm:text-base bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 border-slate-900 dark:border-white"
+                            className="w-auto px-4 sm:px-6 text-sm sm:text-base bg-slate-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-slate-800 dark:hover:bg-neutral-100 border-slate-900 dark:border-white"
                         >
                             Back
                         </NavigatorButton>

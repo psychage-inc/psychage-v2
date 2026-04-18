@@ -79,7 +79,7 @@ export const aiEmergingTechnologyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Before 2020, online therapy was a niche service used primarily by people in remote
             areas or with mobility constraints. Then the pandemic forced the entire mental health
             system online overnight. What many expected to be a temporary workaround became a
@@ -617,7 +617,7 @@ export const aiEmergingTechnologyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your smartwatch knows when you are stressed. Or at least, it claims to. It tracks
             your heart rate variability while you sleep, measures your electrodermal activity
             during meetings, and assigns you a "readiness score" each morning. Wearable
@@ -1139,7 +1139,7 @@ export const aiEmergingTechnologyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There are more than 350,000 health-related apps in the Apple App Store and Google
             Play Store. Many claim to help with anxiety, depression, sleep, or stress. Most
             have no clinical evidence behind them. But a small and growing number of software
@@ -1613,7 +1613,7 @@ export const aiEmergingTechnologyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You track your steps, your sleep, your heart rate, your calories, your macros,
             your water intake, your mood, your meditation minutes, your screen time, and your
             productivity score. You have spreadsheets, apps, dashboards, and weekly reviews.
@@ -2124,7 +2124,7 @@ export const aiEmergingTechnologyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your smart TV may be analyzing your facial expressions while you watch. Your
             employer's video conferencing platform might be scoring your "engagement level"
             during meetings. A voice analysis algorithm could be evaluating your speech

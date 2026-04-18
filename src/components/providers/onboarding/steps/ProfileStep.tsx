@@ -16,13 +16,13 @@ const ProfileStep: React.FC<Props> = ({ formData, updateField }) => (
       <h2 className="font-display font-bold text-2xl text-gray-900 dark:text-white mb-2">
         Your Profile
       </h2>
-      <p className="text-gray-500 dark:text-gray-400">
+      <p className="text-gray-500 dark:text-neutral-400">
         Craft the profile that prospective clients will see.
       </p>
     </div>
 
     <div>
-      <label htmlFor="display_name" className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">
+      <label htmlFor="display_name" className="block text-sm font-semibold text-gray-700 dark:text-neutral-200 mb-1.5">
         Display Name *
       </label>
       <Input
@@ -39,7 +39,7 @@ const ProfileStep: React.FC<Props> = ({ formData, updateField }) => (
     </div>
 
     <div>
-      <label htmlFor="bio" className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">
+      <label htmlFor="bio" className="block text-sm font-semibold text-gray-700 dark:text-neutral-200 mb-1.5">
         Bio *
       </label>
       <textarea
@@ -74,15 +74,15 @@ const ProfileStep: React.FC<Props> = ({ formData, updateField }) => (
 
     {/* Photo placeholder */}
     <div>
-      <label className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">
+      <label className="block text-sm font-semibold text-gray-700 dark:text-neutral-200 mb-1.5">
         Professional Photo
       </label>
-      <div className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-2xl p-8 text-center hover:border-teal-400 transition-colors">
-        <UserCircle size={48} className="mx-auto text-gray-300 dark:text-gray-600 mb-3" />
-        <p className="text-sm text-gray-500 dark:text-gray-400">
+      <div className="border-2 border-dashed border-gray-300 dark:border-neutral-600 rounded-2xl p-8 text-center hover:border-teal-400 transition-colors">
+        <UserCircle size={48} className="mx-auto text-gray-300 dark:text-neutral-600 mb-3" />
+        <p className="text-sm text-gray-500 dark:text-neutral-400">
           Photo upload will be available after your application is approved.
         </p>
-        <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
+        <p className="text-xs text-gray-400 dark:text-neutral-500 mt-1">
           Recommended: 400x400px, professional headshot
         </p>
       </div>

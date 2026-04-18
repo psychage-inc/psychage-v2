@@ -118,7 +118,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It's late at night. You open your phone "just to check" the news before bed. An hour later, you're still scrolling through disaster reports, political crises, and pandemic updates. Your heart is racing, your mind is churning with worry, but you can't seem to stop. You're doomscrolling.
           </p>
           <p className="mb-6">
@@ -513,7 +513,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You have 47 unread emails, 12 browser tabs open, three Slack conversations happening simultaneously, a podcast playing in the background, and your phone is buzzing with notifications. You feel like you're drowning in information, unable to think clearly or make decisions. Your brain is overloaded.
           </p>
           <p className="mb-6">
@@ -928,7 +928,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your phone buzzes with a breaking news alert. Within seconds, your heart rate increases, your muscles tense, and a wave of anxiety washes over you --- before you've even read what happened. This is news anxiety, and it's affecting millions of people in the age of the 24/7 news cycle.
           </p>
           <p className="mb-6">
@@ -1291,7 +1291,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You open Instagram and see photos of unprecedented flooding. You scroll Twitter and encounter threads about ecosystem collapse. You watch a YouTube video about climate tipping points. Within minutes, you're overwhelmed by dread about the future. This is climate anxiety, and the internet has amplified it to levels previous generations never experienced.
           </p>
           <p className="mb-6">
@@ -1618,7 +1618,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your aunt shares a Facebook post about a miracle cure for cancer that "doctors don't want you to know about." Your former college friend tweets a conspiracy theory about global elites. A viral video claims vaccines cause autism. You're left confused, anxious, and unsure what's real anymore. This is the mental health toll of the misinformation age.
           </p>
           <p className="mb-6">

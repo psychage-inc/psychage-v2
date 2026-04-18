@@ -111,7 +111,7 @@ export const settingBoundariesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Boundaries are one of the most misunderstood concepts in mental health and relationships. They're often confused with walls, ultimatums, or selfishness. But healthy boundaries aren't about shutting people out or being rigid---they're about defining where you end and others begin.
           </p>
           <p className="mb-6">
@@ -704,7 +704,7 @@ export const settingBoundariesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You know you need to say no. You've practiced the words. You understand intellectually that boundaries are healthy. But when the moment comes, your stomach drops, your heart races, and a wave of guilt washes over you. So you say yes---again---and spend the next week resenting it.
           </p>
           <p className="mb-6">

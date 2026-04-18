@@ -57,7 +57,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The end of a marriage is painful, but how parents handle divorce determines its impact on children. Research shows that children's adjustment depends less on divorce itself and more on how parents manage conflict and co-parenting <Citation id="1" index={1} source="Child Development" year="2019" tier={1} />.
           </p>
           <p className="mb-6">
@@ -327,7 +327,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sometimes, no amount of effort can make co-parenting work. When your ex is high-conflict, refuses boundaries, or consistently escalates every interaction, traditional co-parenting may actually increase harm.
           </p>
           <p className="mb-6">
@@ -541,7 +541,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A three-year-old and a fifteen-year-old don't experience divorce the same way. Developmental stage shapes how children understand, react to, and process their parents' separation.
           </p>
           <p className="mb-6">
@@ -755,7 +755,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Blending families sounds simple: two adults fall in love, bring their children together, and create one happy household. Reality is far more complex. Stepfamilies face unique psychological challenges that nuclear families don't encounter.
           </p>
           <p className="mb-6">
@@ -979,7 +979,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Don't tell your mom I said this.", "If you loved me, you wouldn't want to go to your dad's.", "Whose house do you like better?" These questions put children in impossible positions --- forced to choose between parents they love.
           </p>
           <p className="mb-6">

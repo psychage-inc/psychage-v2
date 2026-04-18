@@ -120,7 +120,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You walk into your childhood home and feel instantly small. Your phone buzzes with a work email and anxiety floods your chest before you've even read it. Someone criticizes you and shame washes over you like clockwork. These aren't random reactions---they're emotional habits, deeply grooved patterns your brain has learned to run automatically.
           </p>
           <p className="mb-6">
@@ -598,7 +598,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A colleague says "We need to talk, ' and your heart races. Someone raises their voice slightly and you shut down completely. You see a car accident on the highway and panic floods your system hours later. These aren't overreactions---they're triggers, and understanding them is key to breaking free from automatic emotional patterns.
           </p>
           <p className="mb-6">
@@ -999,7 +999,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Just don't think about it.", "Distract yourself.", "Keep busy." We've all tried to outrun uncomfortable emotions. And for a moment, it works---until the feeling comes back stronger, more persistent, demanding to be felt.
           </p>
           <p className="mb-6">
@@ -1345,7 +1345,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're not hungry, but you're standing in front of the fridge. You don't need anything, but your shopping cart has five items. You're exhausted, but you've been scrolling for an hour. These aren't random behaviors---they're emotional coping mechanisms in disguise.
           </p>
           <p className="mb-6">
@@ -1635,7 +1635,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Why do I always shut down when someone gets angry?" "Why do I panic when people get too close?" "Why do I feel responsible for everyone's emotions?" The answers often trace back to childhood---not because you're stuck in the past, but because your brain learned patterns early that it still runs today.
           </p>
           <p className="mb-6">

@@ -89,7 +89,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The image of a lonely child sitting alone at lunch, left out of playground games, captures a pain that runs deeper than many adults realize. Loneliness in childhood and adolescence is not a minor inconvenience --- it's a serious experience that shapes mental health, development, and life trajectories.
           </p>
           <p className="mb-6">
@@ -500,7 +500,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Everyone says college will be the best years of your life. You're surrounded by thousands of peers, living in a vibrant community, with endless opportunities to connect. So why do so many college students feel profoundly, achingly lonely?
           </p>
           <p className="mb-6">
@@ -848,7 +848,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In high school and college, friendships felt effortless. You saw the same people every day, had endless free time, and bonded over shared experiences. Then you hit your mid-20s, and suddenly maintaining friendships feels like a second job you don't have time for.
           </p>
           <p className="mb-6">
@@ -1228,7 +1228,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You imagined becoming a parent would bring you into a warm community of other parents. You'd have something profound in common with millions of others. You'd never be alone --- you'd have this tiny person who needs you constantly. So why do you feel so desperately, achingly lonely?
           </p>
           <p className="mb-6">
@@ -1573,7 +1573,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             One day you realize: you haven't seen your college friends in years. The couple you used to have dinner with every month moved away three years ago. Your social calendar, once full, now has weeks of empty space. When did this happen?
           </p>
           <p className="mb-6">

@@ -113,7 +113,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A cancer diagnosis changes everything---not just physically, but emotionally, psychologically, and existentially. The emotional journey through diagnosis, treatment, and survivorship is as real and significant as the medical journey, yet it often receives far less attention.
           </p>
           <p className="mb-6">
@@ -626,7 +626,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you've been diagnosed with a real medical condition---cancer, autoimmune disease, heart disease, chronic pain---paying attention to your body is not only appropriate, it's necessary. But where's the line between healthy vigilance and debilitating health anxiety?
           </p>
           <p className="mb-6">
@@ -1031,7 +1031,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "But you don't look sick." These five words capture the core challenge of living with an invisible illness---chronic conditions that profoundly affect your daily life but leave no visible trace on your body.
           </p>
           <p className="mb-6">
@@ -1440,7 +1440,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you're preparing for surgery, medical teams focus on the physical: the procedure itself, anesthesia protocols, post-operative care instructions. But surgery is not just a physical event---it's a psychological one that can trigger anxiety, depression, trauma, and significant emotional adjustment.
           </p>
           <p className="mb-6">
@@ -1824,7 +1824,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Be your own advocate." Healthcare providers say it often, but rarely explain what it actually means or how to do it---especially when you're overwhelmed, unwell, or navigating a system that can feel dismissive or confusing.
           </p>
           <p className="mb-6">

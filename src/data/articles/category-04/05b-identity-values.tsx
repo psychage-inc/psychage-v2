@@ -52,7 +52,7 @@ export const identityValuesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You navigate multiple worlds every day. The culture you were raised in, the culture you live in now, the cultures of your parents, your partner, your closest friends. Each world comes with its own values, expectations, humor, and unspoken rules. Managing these multiple cultural identities can be a source of extraordinary strength and, at times, quiet exhaustion.
           </p>
           <p className="mb-6">
@@ -230,7 +230,7 @@ export const identityValuesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Gender identity -- your internal sense of being male, female, both, neither, or another gender -- is one of the most fundamental aspects of who you are. For many people, gender identity aligns with the sex assigned at birth. For others, it does not align, creating a lived experience that is both deeply personal and shaped by how the world responds.
           </p>
           <p className="mb-6">
@@ -412,7 +412,7 @@ export const identityValuesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Discovering and accepting your sexual orientation can be one of the most liberating experiences of your life -- or one of the most frightening. For lesbian, gay, bisexual, and other non-heterosexual individuals, the path to self-acceptance often involves unlearning deeply internalized stigma, navigating unpredictable family responses, and building an authentic identity in a world that frequently assumes heterosexuality as the default.
           </p>
           <p className="mb-6">
@@ -580,7 +580,7 @@ export const identityValuesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "I'm a doctor." "I'm an engineer." "I'm an artist." Notice how naturally we define ourselves by what we do for a living. For many people, career is the single largest pillar of identity -- a source of meaning, status, community, and self-worth. But when "what you do" becomes "who you are," that pillar can become a trap. Job loss, retirement, burnout, or simply outgrowing a profession can shatter the very foundation of how you understand yourself.
           </p>
           <p className="mb-6">
@@ -821,7 +821,7 @@ export const identityValuesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Divorce ends a marriage, but it also ends being a spouse. Retirement ends a career, but it also ends professional identity. A diagnosis changes abilities, changing how you see yourself in the world. Major life transitions do not just alter your circumstances -- they dismantle the very foundation of who you believe yourself to be, and they demand that you rebuild.
           </p>
           <p className="mb-6">

@@ -114,7 +114,7 @@ export const traumaInformedCareArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Nearly half of all children in the United States have experienced at least one adverse childhood experience---trauma that can profoundly affect their ability to learn, form relationships, and regulate emotions in the classroom.
           </p>
           <p className="mb-6">
@@ -519,7 +519,7 @@ export const traumaInformedCareArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A construction worker who witnessed a colleague\'s fatal fall. An employee subjected to years of sexual harassment by a supervisor. A nurse who holds the hand of dying patients through every shift. These experiences---varied as they are---share a common thread: workplace trauma.
           </p>
           <p className="mb-6">
@@ -930,7 +930,7 @@ export const traumaInformedCareArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You\'re in a medical exam room. The doctor performs a routine examination without warning or explanation. Their touch feels invasive, clinical, detached. For many people, this is merely uncomfortable. But for survivors of sexual assault, this can trigger a cascade of traumatic memories, freezing responses, and dissociation.
           </p>
           <p className="mb-6">
@@ -1334,7 +1334,7 @@ export const traumaInformedCareArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A therapist listens as a client describes childhood sexual abuse in excruciating detail. Another hears a veteran recount watching his best friend die in combat. A third sits with a domestic violence survivor who fears for her life. Session after session, day after day, year after year.
           </p>
           <p className="mb-6">
@@ -1774,7 +1774,7 @@ export const traumaInformedCareArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Imagine walking into a building to seek help for trauma. Fluorescent lights buzz overhead. The waiting area has hard plastic chairs in rows, all facing a reception desk behind plexiglass. Signs warn about prohibited behaviors. Security cameras watch from every corner. Before anyone has spoken a word, the environment has already communicated: You are not safe. You are not in control. You are being monitored.
           </p>
           <p className="mb-6">

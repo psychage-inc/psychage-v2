@@ -80,7 +80,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You live in constant fear. Every knock on the door could be ICE. You avoid driving because a traffic stop could mean deportation. You can't report abuse or crime because involving police puts you at risk. You work long hours for low pay, but you can't complain---your employer knows you're undocumented. You're always looking over your shoulder, always afraid.
           </p>
           <p className="mb-6">
@@ -427,7 +427,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             At home, you speak one language, follow certain rules, and are expected to honor traditions. At school, you speak another language, follow different norms, and feel pressure to fit in. You translate for your parents at the doctor's office. You mediate their conflicts. You feel caught between two worlds---not fully belonging to either.
           </p>
           <p className="mb-6">
@@ -698,7 +698,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You spent years abroad. You adapted, grew, and changed. Now you're back "home"---except it doesn't feel like home anymore. Your friends don't understand your experiences. Your family thinks you've become "too different." The place that used to feel familiar now feels small, stifling, or just... wrong. You thought coming home would be a relief, but instead, you feel more lost than you did abroad.
           </p>
           <p className="mb-6">
@@ -950,7 +950,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You came here for opportunity---better education, a brighter future. But you didn't expect the loneliness. You didn't expect to struggle with the language in class, to miss your family every day, to feel like an outsider everywhere you go. The academic pressure is immense. Your visa status feels precarious. You can't afford to fail, but you're not sure you can keep going.
           </p>
           <p className="mb-6">
@@ -1217,7 +1217,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Immigrants and refugees face some of the highest rates of mental health challenges---yet they're among the least likely to receive care. Language barriers, cultural stigma, fear of authorities, and lack of culturally responsive services create a chasm between need and access. Mental health systems weren't built with newcomers in mind, and the results are devastating.
           </p>
           <p className="mb-6">

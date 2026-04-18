@@ -95,7 +95,7 @@ export const friendshipsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Friendship isn't just nice to have---it's essential. Close connections protect mental health, extend lifespan, and provide a buffer against life's stressors in ways that few other relationships can.
           </p>
           <p className="mb-6">
@@ -401,7 +401,7 @@ export const friendshipsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             If making friends feels harder than it used to, you're not imagining it. Adult friendship formation faces structural, psychological, and social barriers that didn't exist in childhood---but understanding these obstacles is the first step to overcoming them.
           </p>
           <p className="mb-6">
@@ -759,7 +759,7 @@ export const friendshipsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When a friendship ends, the grief can be profound---yet society offers no rituals, no sympathy cards, and little recognition of the loss. This silence doesn't reflect the pain's reality: friendship breakups hurt as much as romantic ones, sometimes more.
           </p>
           <p className="mb-6">
@@ -1067,7 +1067,7 @@ export const friendshipsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The gap between wanting to see friends and actually having time to see them is one of adulthood's quiet tragedies. But busy doesn't have to mean lonely---friendship maintenance is a skill, and there are proven strategies to keep connections alive even when your schedule is maxed out.
           </p>
           <p className="mb-6">
@@ -1431,7 +1431,7 @@ export const friendshipsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In an age of social media metrics and "networking, ' it's easy to feel inadequate about your friend count. But research offers reassuring news: you don't need hundreds of friends. You might not even need dozens. What matters most is the quality of the connections you have, not the size of your social circle.
           </p>
           <p className="mb-6">

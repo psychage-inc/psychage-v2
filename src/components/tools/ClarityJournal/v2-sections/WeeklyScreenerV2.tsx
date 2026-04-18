@@ -79,7 +79,7 @@ const WeeklyScreenerV2: React.FC<WeeklyScreenerV2Props> = ({ onSave, onCrisisDet
             <Check className="w-7 h-7" />
           </div>
           <h3 className="font-display font-semibold text-lg text-slate-900 dark:text-white">Your Scores This Week</h3>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">These help you notice patterns, not diagnose anything.</p>
+          <p className="text-sm text-slate-500 dark:text-neutral-400 mt-1">These help you notice patterns, not diagnose anything.</p>
         </div>
 
         <div className="space-y-3">
@@ -102,32 +102,32 @@ const WeeklyScreenerV2: React.FC<WeeklyScreenerV2Props> = ({ onSave, onCrisisDet
 
       {/* PHQ-2 */}
       <div>
-        <h3 className="font-display font-semibold text-slate-800 dark:text-slate-200 mb-3">Depression Screen (PHQ-2)</h3>
+        <h3 className="font-display font-semibold text-slate-800 dark:text-neutral-200 mb-3">Depression Screen (PHQ-2)</h3>
         <ScreeningQuestion question={PHQ2_QUESTIONS[0]} options={FREQUENCY_OPTIONS} value={phq1} onChange={setPhq1} />
         <ScreeningQuestion question={PHQ2_QUESTIONS[1]} options={FREQUENCY_OPTIONS} value={phq2} onChange={setPhq2} />
       </div>
 
-      <hr className="border-slate-100 dark:border-slate-800" />
+      <hr className="border-slate-100 dark:border-neutral-800" />
 
       {/* GAD-2 */}
       <div>
-        <h3 className="font-display font-semibold text-slate-800 dark:text-slate-200 mb-3">Anxiety Screen (GAD-2)</h3>
+        <h3 className="font-display font-semibold text-slate-800 dark:text-neutral-200 mb-3">Anxiety Screen (GAD-2)</h3>
         <ScreeningQuestion question={GAD2_QUESTIONS[0]} options={FREQUENCY_OPTIONS} value={gad1} onChange={setGad1} />
         <ScreeningQuestion question={GAD2_QUESTIONS[1]} options={FREQUENCY_OPTIONS} value={gad2} onChange={setGad2} />
       </div>
 
-      <hr className="border-slate-100 dark:border-slate-800" />
+      <hr className="border-slate-100 dark:border-neutral-800" />
 
       {/* Safety Check */}
       <div>
         <div className="flex items-center gap-2 mb-4">
           <AlertTriangle className="w-4 h-4 text-amber-500" />
-          <h3 className="font-display font-semibold text-slate-800 dark:text-slate-200">Safety Check</h3>
+          <h3 className="font-display font-semibold text-slate-800 dark:text-neutral-200">Safety Check</h3>
         </div>
 
         <div className="space-y-4">
           <div>
-            <p className="text-sm text-slate-700 dark:text-slate-300 mb-2">
+            <p className="text-sm text-slate-700 dark:text-neutral-300 mb-2">
               In the past week, have you had thoughts of hurting yourself?
             </p>
             <div className="flex gap-2">
@@ -139,7 +139,7 @@ const WeeklyScreenerV2: React.FC<WeeklyScreenerV2Props> = ({ onSave, onCrisisDet
                   className={`px-6 py-2 rounded-xl text-sm font-medium transition-all ${
                     selfHarm === opt.value
                       ? opt.value ? 'bg-red-500 text-white' : 'bg-teal-600 text-white'
-                      : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200'
+                      : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200'
                   }`}
                 >
                   {opt.label}
@@ -149,7 +149,7 @@ const WeeklyScreenerV2: React.FC<WeeklyScreenerV2Props> = ({ onSave, onCrisisDet
           </div>
 
           <div>
-            <p className="text-sm text-slate-700 dark:text-slate-300 mb-2">
+            <p className="text-sm text-slate-700 dark:text-neutral-300 mb-2">
               In the past week, have you had thoughts that you would be better off dead, or of hurting yourself in some way?
             </p>
             <div className="flex gap-2">
@@ -161,7 +161,7 @@ const WeeklyScreenerV2: React.FC<WeeklyScreenerV2Props> = ({ onSave, onCrisisDet
                   className={`px-6 py-2 rounded-xl text-sm font-medium transition-all ${
                     suicidal === opt.value
                       ? opt.value ? 'bg-red-500 text-white' : 'bg-teal-600 text-white'
-                      : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200'
+                      : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200'
                   }`}
                 >
                   {opt.label}

@@ -109,7 +109,7 @@ export const digitalWellnessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Digital wellness isn't about rejecting technology or going off-grid. It's about using technology in ways that support, rather than undermine, your physical, mental, and emotional well-being. It's the difference between technology as a tool that serves you and technology as a master that controls you.
           </p>
           <p className="mb-6">
@@ -452,7 +452,7 @@ export const digitalWellnessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For $2,000 to $10,000, you can spend a week at a luxury retreat center, surrendering your phone and laptop to disconnect from the digital world. You'll meditate, do yoga, hike in nature, and rediscover life without screens. Proponents say it's life-changing. Critics call it an expensive band-aid. What does the research actually show?
           </p>
           <p className="mb-6">
@@ -755,7 +755,7 @@ export const digitalWellnessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It`s 9 PM on a Saturday. You're with your family when your work Slack pings. Your manager needs `just a quick answer." You respond. Ten minutes later, you're in a full work conversation. Your weekend has been interrupted. This is now normal --- but should it be?
           </p>
           <p className="mb-6">
@@ -1078,7 +1078,7 @@ export const digitalWellnessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You sit down to write an important document. Within five minutes, you've checked your phone twice, clicked on a news headline, and answered a Slack message. An hour later, you've produced three sentences. Your attention has been hijacked, and you're not sure how to get it back.
           </p>
           <p className="mb-6">
@@ -1423,7 +1423,7 @@ export const digitalWellnessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             After hours of staring at screens, your eyes are strained, your mind is scattered, and your body feels restless. Then you step outside. Within minutes, you notice a shift --- your breathing slows, your shoulders relax, your thoughts clear. This isn't imagination. It's neuroscience.
           </p>
           <p className="mb-6">
@@ -1462,7 +1462,7 @@ export const digitalWellnessArticlesA: Article[] = [
           highlightColumn={1}
         />
 
-        <h2 id="attention-restoration" className="text-3xl font-display font-bold text-gray-900 dark:text-gray-300 mb-8 leading-relaxed mt-12 mb-6 scroll-mt-32">
+        <h2 id="attention-restoration" className="text-3xl font-display font-bold text-gray-900 dark:text-neutral-300 mb-8 leading-relaxed mt-12 mb-6 scroll-mt-32">
           Attention Restoration Theory: Why Nature Heals Mental Fatigue
         </h2>
         <p className="mb-6">

@@ -124,7 +124,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             If you've researched anxiety treatment, you've encountered this term: CBT. Cognitive-Behavioral Therapy. It's recommended by the American Psychological Association, the National Institute of Mental Health, and countless clinical guidelines. It's called the 'gold standard' for anxiety disorders. But what does that actually mean? How does talking to a therapist about your thoughts change your anxiety? And most importantly---does it really work?
           </p>
           <p className="mb-6">
@@ -559,7 +559,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The thought terrifies you. Maybe it's contamination---touching a doorknob feels like exposing yourself to deadly germs. Maybe it's a phobia---seeing a spider triggers panic so intense you can't enter the room. So you do what feels right: you avoid, you wash, you check, you seek reassurance. The relief is immediate. The anxiety drops. But hours later, the fear returns, stronger. The compulsion or avoidance that 'worked' yesterday demands to be repeated today---more intensely, more frequently, consuming more of your life. This is the trap of OCD and phobias. And there's one treatment that breaks it: Exposure and Response Prevention (ERP).
           </p>
           <p className="mb-6">
@@ -985,7 +985,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've tried to stop the anxious thoughts. You've challenged them, rationalized them, distracted from them. Sometimes it works for a few minutes, but they always come back. You've spent years fighting anxiety, trying to control it, desperately seeking the day when you'll finally be anxiety-free. But what if the problem isn't the anxiety itself---it's the struggle against it? What if freedom comes not from winning the battle with anxiety, but from stopping the fight?
           </p>
           <p className="mb-6">
@@ -1375,7 +1375,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've tried therapy, lifestyle changes, and coping skills. The anxiety is still there---perhaps not as severe, but persistent enough to interfere with your life. Your doctor suggests medication. Suddenly you're facing a bewildering alphabet soup: SSRIs, SNRIs, benzodiazepines, buspirone. Which one is right for you? What are the risks? Will you be on medication forever? These are the questions everyone asks, and they deserve clear, evidence-based answers.
           </p>
           <p className="mb-6">
@@ -1726,7 +1726,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've been telling yourself it's not that bad. Everyone gets anxious sometimes, right? You can handle it on your own. You've read articles, tried breathing exercises, pushed through. But months pass, maybe years, and the anxiety is still there---perhaps worse. You wonder: At what point does 'normal anxiety' become a problem that needs professional help? When do you stop trying to manage alone and actually seek treatment?
           </p>
           <p className="mb-6">

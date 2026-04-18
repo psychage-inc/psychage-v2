@@ -65,7 +65,7 @@ export const victimsAndSurvivorsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Criminal victimization is among the most psychologically destabilizing experiences a person can undergo. It shatters assumptions about personal safety, the predictability of the world, and one&apos;s own capacity to protect oneself—what Ronnie Janoff-Bulman called the &quot;assumptive world.
           </p>
         </div>
@@ -110,7 +110,7 @@ export const victimsAndSurvivorsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -173,7 +173,7 @@ export const victimsAndSurvivorsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sexual assault is one of the most psychologically devastating forms of criminal victimization. Approximately 1 in 5 women and 1 in 71 men in the United States experience completed rape at some point in their lives, and the psychological aftermath is severe: 94% of sexual assault survivors experience PTSD symptoms in the first two weeks, 50% still meet full PTSD criteria at three months, and approximately 30% meet criteria years after the assault.
           </p>
         </div>
@@ -220,7 +220,7 @@ export const victimsAndSurvivorsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -283,7 +283,7 @@ export const victimsAndSurvivorsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Child abuse—physical, sexual, emotional, and neglect—is not merely a childhood experience. It is a developmental catastrophe whose effects ripple across the lifespan, altering brain development, shaping attachment patterns, disrupting emotional regulation, and increasing vulnerability to mental illness, substance use, chronic disease, and early death.
           </p>
         </div>
@@ -329,7 +329,7 @@ export const victimsAndSurvivorsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -392,7 +392,7 @@ export const victimsAndSurvivorsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When a person is murdered, the immediate victim is not the only one harmed. The family members, friends, partners, and children left behind—known in the forensic literature as &quot;co-victims&quot; or &quot;homicide survivors&quot;—experience a form of grief that is qualitatively different from bereavement following natural death.
           </p>
         </div>
@@ -434,7 +434,7 @@ export const victimsAndSurvivorsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -497,7 +497,7 @@ export const victimsAndSurvivorsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Human trafficking—the use of force, fraud, or coercion to exploit people for labor or commercial sex—is one of the most severe forms of interpersonal violence, producing psychological harm comparable to torture. An estimated 24.
           </p>
         </div>
@@ -539,7 +539,7 @@ export const victimsAndSurvivorsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -602,7 +602,7 @@ export const victimsAndSurvivorsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Restorative justice represents a fundamentally different response to crime—one that centers the needs of victims, holds offenders meaningfully accountable, and involves communities in the process of repair. Where the traditional criminal justice system asks &quot;what law was broken, who broke it, and what punishment do they deserve?&quot;, restorative justice asks &quot;who was harmed, what are their needs, and whose obligation is it to meet those needs?&quot; Research consistently demonstrates that restorative justice practices—victim-offender mediation, community conferencing, circles of support and accountability—produce higher victim satisfaction (75–90% versus 30–40% for traditional justice), reduce reoffending by 25–30%, and provide victims with something the courtroom rarely offers: answers, acknowledgment, and a voice.
           </p>
         </div>
@@ -645,7 +645,7 @@ export const victimsAndSurvivorsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

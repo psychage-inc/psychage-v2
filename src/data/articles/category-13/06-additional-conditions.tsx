@@ -133,7 +133,7 @@ export const additionalConditionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             One week you are on top of the world — bursting with energy, sleeping only a few hours, launching ambitious projects, and feeling invincible. The next, you can barely get out of bed, weighed down by a sadness so heavy it feels physical. This is not normal fluctuation in mood. This is Bipolar I Disorder, a condition that takes the brain's mood thermostat and breaks the dial.
           </p>
           <p className="mb-6">
@@ -508,7 +508,7 @@ export const additionalConditionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For years, you have been told you have depression. The antidepressants help for a while, then stop working — or worse, make you feel wired and unstable. Nobody ever asked about the days when you felt unusually productive, needed less sleep, and had an almost electric energy. Those days did not seem like a problem. They seemed like you were finally feeling normal. But those days are the missing piece of the puzzle — and they change the diagnosis entirely.
           </p>
           <p className="mb-6">
@@ -850,7 +850,7 @@ export const additionalConditionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Schizophrenia is surrounded by more stigma, fear, and misunderstanding than almost any other health condition. In popular culture, it is confused with split personality, equated with violence, and treated as a hopeless diagnosis. None of these characterizations are accurate. Schizophrenia is a brain condition — one that affects how a person thinks, feels, and perceives the world — and it is treatable.
           </p>
           <p className="mb-6">
@@ -1217,7 +1217,7 @@ export const additionalConditionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You check the door lock. It is locked. You know it is locked. But five seconds later, a thought creeps in: "What if it is not locked?" So you check again. And again. And again. Each time, the relief lasts only moments before the doubt returns, stronger than before. This is not careful behavior. This is Obsessive-Compulsive Disorder.
           </p>
           <p className="mb-6">
@@ -1614,7 +1614,7 @@ export const additionalConditionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The car accident happened three years ago, but your body acts as if it happened three minutes ago. A car horn sends your heart racing. The smell of burning rubber makes your palms sweat. You dream about it, think about it, relive it — even though you desperately want to forget. You are not going crazy. You are not weak. Your brain is doing exactly what it was designed to do after a life-threatening experience. The problem is that it cannot turn off.
           </p>
           <p className="mb-6">

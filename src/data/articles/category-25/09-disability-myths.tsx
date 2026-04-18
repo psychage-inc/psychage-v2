@@ -65,7 +65,7 @@ export const disabilityMythsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             One of the most persistent assumptions about disability is that it inevitably leads to depression—that living with a physical, sensory, or cognitive impairment is inherently tragic and that disabled people must be suffering. This assumption is not only wrong; it is harmful.
           </p>
         </div>
@@ -86,7 +86,7 @@ export const disabilityMythsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -149,7 +149,7 @@ export const disabilityMythsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When most people picture disability, they imagine a wheelchair, a white cane, a prosthetic limb—something visible. This image shapes everything from how buildings are designed to who receives accommodation to whom society believes when they say they are disabled.
           </p>
         </div>
@@ -170,7 +170,7 @@ export const disabilityMythsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -233,7 +233,7 @@ export const disabilityMythsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The belief that disabled people cannot have fulfilling romantic relationships, deep friendships, or satisfying intimate lives persists across cultures and generations. It shows up in the surprised reactions when people learn a disabled person is married, in the assumption that disabled people&apos;s partners must be &quot;saints,&quot; and in the near-total absence of disabled people in romantic media representation.
           </p>
         </div>
@@ -254,7 +254,7 @@ export const disabilityMythsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -317,7 +317,7 @@ export const disabilityMythsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             One of the most pervasive and damaging myths about disability is the equation: disability equals dependence. This belief frames disabled people as passive recipients of care, incapable of making their own decisions, managing their own lives, or contributing meaningfully to their communities.
           </p>
         </div>
@@ -338,7 +338,7 @@ export const disabilityMythsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -401,7 +401,7 @@ export const disabilityMythsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The claim that disability accommodations give disabled people an &quot;unfair advantage&quot; over their non-disabled peers is one of the most common and consequential disability myths in education, employment, and public life. Extended test time, flexible scheduling, assistive technology, modified workstations, service animals, and accessible parking are routinely framed as special privileges rather than what they actually are: tools that remove barriers so disabled people can participate on equal terms.
           </p>
         </div>
@@ -422,7 +422,7 @@ export const disabilityMythsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -485,7 +485,7 @@ export const disabilityMythsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Two of the most common tools used to dismiss disabled people&apos;s experiences are age and functioning level. &quot;You&apos;re too young to be disabled&quot; suggests that disability belongs only to the elderly.
           </p>
         </div>
@@ -506,7 +506,7 @@ export const disabilityMythsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

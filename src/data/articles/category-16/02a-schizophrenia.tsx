@@ -76,7 +76,7 @@ export const schizophreniaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Few diagnoses carry as much weight --- and as much misunderstanding --- as schizophrenia. For
             the general public, the word conjures images drawn from horror films and sensationalized
             news stories. For the estimated 24 million people worldwide who live with the condition,
@@ -344,7 +344,7 @@ export const schizophreniaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Ask most people what schizophrenia looks like, and they'll describe voices and delusions.
             Those are real --- and often the most distressing symptoms during acute episodes. But they
             represent only one-third of the clinical picture. The other two-thirds --- the quiet erosion
@@ -570,7 +570,7 @@ export const schizophreniaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Some conditions fit neatly into diagnostic boxes. Schizoaffective disorder doesn't.
             It lives in the messy overlap between schizophrenia and mood disorders --- featuring
             prominent symptoms of both, fully explained by neither, and prompting more diagnostic
@@ -763,7 +763,7 @@ export const schizophreniaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When a person develops psychotic symptoms that look exactly like schizophrenia but haven't
             yet lasted six months, clinicians face a diagnostic crossroads. Is this the beginning of
             schizophrenia --- or a self-limiting condition that will resolve? Schizophreniform disorder
@@ -951,7 +951,7 @@ export const schizophreniaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "My father has schizophrenia. Will I get it too?" Few questions in psychiatry carry more
             emotional weight. The genetic dimension of schizophrenia is real, measurable, and significant.
             But it's also widely misunderstood --- both by the public, which often treats family history as

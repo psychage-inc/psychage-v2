@@ -39,7 +39,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="what-is-anxiety" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Anxiety is more than just feeling stressed or worried. It is a natural body response designed to keep us safe, but when it becomes chronic or disproportionate to the situation, it can interfere with daily life <Citation id="1" index={1} source="APA" year="2024" />.
           </p>
           <p className="mb-6">
@@ -121,7 +121,7 @@ export const articles: Article[] = [
         <p className="mb-6">
           Occasional anxiety is a normal part of life. However, it may be worth speaking with a professional if:
         </p>
-        <ul className="list-disc list-inside space-y-2 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+        <ul className="list-disc list-inside space-y-2 mb-8 text-gray-700 dark:text-neutral-300 ml-4">
           <li>Your anxiety interferes with your ability to work, study, or socialize.</li>
           <li>You feel unable to control your fear or worry.</li>
           <li>You develop unhealthy coping mechanisms, such as substance use.</li>
@@ -129,11 +129,11 @@ export const articles: Article[] = [
         </ul>
 
         <figure className="my-12">
-          <blockquote className="relative p-8 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border-l-4 border-teal-500 italic text-xl text-gray-700 dark:text-gray-300 leading-relaxed font-display">
+          <blockquote className="relative p-8 bg-gray-50 dark:bg-neutral-800/50 rounded-2xl border-l-4 border-teal-500 italic text-xl text-gray-700 dark:text-neutral-300 leading-relaxed font-display">
             <Quote className="absolute top-4 left-4 text-teal-200 dark:text-teal-800 w-8 h-8 -z-10 opacity-50" />
             "The goal of therapy isn't to eliminate anxiety entirely, but to reduce it to a manageable level where it no longer dictates your choices."
           </blockquote>
-          <figcaption className="mt-4 text-sm text-gray-500 dark:text-gray-400 font-medium text-right">— Dr. Emily Carter, Clinical Psychologist</figcaption>
+          <figcaption className="mt-4 text-sm text-gray-500 dark:text-neutral-400 font-medium text-right">— Dr. Emily Carter, Clinical Psychologist</figcaption>
         </figure>
 
         <h2 id="treatment-options" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -186,7 +186,7 @@ export const articles: Article[] = [
     tags: ["Sleep", "Wellness", "Health"],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
           Sleep is not just a passive state of rest; it is an active, vital process that restores the body and mind. The link between sleep and mental health is bidirectional: poor sleep can worsen mental health conditions, and mental health challenges can disrupt sleep.
         </p>
 
@@ -194,7 +194,7 @@ export const articles: Article[] = [
         <p className="mb-6">
           Understanding sleep cycles is key to optimizing rest. A typical night consists of 4-6 cycles, each lasting about 90 minutes, moving between NREM (Non-Rapid Eye Movement) and REM (Rapid Eye Movement) sleep.
         </p>
-        <ul className="list-disc list-inside space-y-2 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+        <ul className="list-disc list-inside space-y-2 mb-8 text-gray-700 dark:text-neutral-300 ml-4">
           <li><strong>Stage 1 (Light Sleep):</strong> The transition from wakefulness to sleep.</li>
           <li><strong>Stage 2 (Deep Relaxation):</strong> Body temperature drops, and heart rate slows.</li>
           <li><strong>Stage 3 (Deep Sleep):</strong> Critical for physical repair and immune function.</li>
@@ -236,7 +236,7 @@ export const articles: Article[] = [
     tags: ["Mindfulness", "Stress", "Work"],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
           In a world that glorifies "hustle culture," finding moments of stillness can feel impossible. However, mindfulness doesn't require a 30-minute meditation session on a cushion. It can be integrated seamlessly into your busy workday.
         </p>
 
@@ -283,7 +283,7 @@ export const articles: Article[] = [
     tags: ["Burnout", "Workplace", "Mental Health"],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
           Burnout is not just stress; it is a state of emotional, physical, and mental exhaustion caused by excessive and prolonged stress. It occurs when you feel overwhelmed, emotionally drained, and unable to meet constant demands.
         </p>
 
@@ -291,7 +291,7 @@ export const articles: Article[] = [
         <p className="mb-6">
           Psychologists define burnout by three main characteristics:
         </p>
-        <ul className="list-disc list-inside space-y-4 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+        <ul className="list-disc list-inside space-y-4 mb-8 text-gray-700 dark:text-neutral-300 ml-4">
           <li>
             <strong>Exhaustion:</strong> Feeling completely drained, unable to cope, and tired even after sleep.
           </li>
@@ -334,7 +334,7 @@ export const articles: Article[] = [
     tags: ["CBT", "Therapy", "Psychology"],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
           Cognitive Behavioral Therapy (CBT) is a form of psychological treatment that has been demonstrated to be effective for a range of problems including depression, anxiety disorders, alcohol and drug use problems, marital problems, eating disorders, and severe mental illness.
         </p>
 
@@ -343,16 +343,16 @@ export const articles: Article[] = [
           CBT is based on the concept that your thoughts, feelings, and physical sensations are interconnected, and that negative thoughts and feelings can trap you in a vicious cycle.
         </p>
 
-        <div className="my-8 p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 text-center">
+        <div className="my-8 p-8 bg-white dark:bg-neutral-800 rounded-2xl shadow-sm border border-gray-200 dark:border-neutral-700 text-center">
           <p className="font-display text-2xl font-bold text-gray-800 dark:text-white mb-4">Situation → Thought → Emotion → Behavior</p>
-          <p className="text-gray-600 dark:text-gray-400">CBT intervenes at the "Thought" stage to change the downstream Emotion and Behavior.</p>
+          <p className="text-gray-600 dark:text-neutral-400">CBT intervenes at the "Thought" stage to change the downstream Emotion and Behavior.</p>
         </div>
 
         <h2 className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6">Common Cognitive Distortions</h2>
         <p className="mb-6">
           CBT helps you identify "cognitive distortions"—irrational thought patterns that fuel anxiety and depression.
         </p>
-        <ul className="list-disc list-inside space-y-2 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+        <ul className="list-disc list-inside space-y-2 mb-8 text-gray-700 dark:text-neutral-300 ml-4">
           <li><strong>All-or-Nothing Thinking:</strong> Seeing things in black and white categories.</li>
           <li><strong>Catastrophizing:</strong> Expecting the worst-case scenario to happen.</li>
           <li><strong>Personalization:</strong> Believing that everything others do or say is some kind of direct, personal reaction to you.</li>
@@ -379,7 +379,7 @@ export const articles: Article[] = [
     tags: ["Resilience", "Growth", "Self-Improvement"],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
           Resilience is not a fixed trait that you either have or don't have. It's a set of behaviors, thoughts, and actions that can be learned and developed by anyone. It's the ability to bounce back from adversity, trauma, tragedy, threats, or significant sources of stress.
         </p>
 
@@ -420,7 +420,7 @@ export const articles: Article[] = [
     tags: ["Anxiety", "Social", "Self-Help"],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
           Social anxiety is more than just shyness. It's an intense fear of being watched and judged by others. This fear can affect work, school, and other daily activities. But it is treatable, and small steps can lead to big changes.
         </p>
 
@@ -431,7 +431,7 @@ export const articles: Article[] = [
         <p className="mb-6">
           <strong>Try this:</strong> When you catch yourself predicting a disaster, ask yourself:
         </p>
-        <ul className="list-disc list-inside space-y-2 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+        <ul className="list-disc list-inside space-y-2 mb-8 text-gray-700 dark:text-neutral-300 ml-4">
           <li>"What is the evidence for this thought?"</li>
           <li>"How many times has this actually happened before?"</li>
           <li>"If the worst did happen, could I cope?"</li>
@@ -461,7 +461,7 @@ export const articles: Article[] = [
     tags: ["Depression", "Mental Health", "Education"],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
           Sadness is a normal human emotion that everyone experiences. It's usually triggered by a specific event, like a loss or disappointment. Depression, however, is a clinical condition that is more persistent and pervasive.
         </p>
 
@@ -470,22 +470,22 @@ export const articles: Article[] = [
           <table className="w-full text-left border-collapse">
             <thead>
               <tr>
-                <th className="p-4 border-b border-gray-200 dark:border-gray-700 font-bold">Sadness</th>
-                <th className="p-4 border-b border-gray-200 dark:border-gray-700 font-bold">Depression</th>
+                <th className="p-4 border-b border-gray-200 dark:border-neutral-700 font-bold">Sadness</th>
+                <th className="p-4 border-b border-gray-200 dark:border-neutral-700 font-bold">Depression</th>
               </tr>
             </thead>
-            <tbody className="text-gray-700 dark:text-gray-300">
+            <tbody className="text-gray-700 dark:text-neutral-300">
               <tr>
-                <td className="p-4 border-b border-gray-100 dark:border-gray-800">Usually passes with time</td>
-                <td className="p-4 border-b border-gray-100 dark:border-gray-800">Persists for at least 2 weeks</td>
+                <td className="p-4 border-b border-gray-100 dark:border-neutral-800">Usually passes with time</td>
+                <td className="p-4 border-b border-gray-100 dark:border-neutral-800">Persists for at least 2 weeks</td>
               </tr>
               <tr>
-                <td className="p-4 border-b border-gray-100 dark:border-gray-800">Related to specific events</td>
-                <td className="p-4 border-b border-gray-100 dark:border-gray-800">Can occur without a clear trigger</td>
+                <td className="p-4 border-b border-gray-100 dark:border-neutral-800">Related to specific events</td>
+                <td className="p-4 border-b border-gray-100 dark:border-neutral-800">Can occur without a clear trigger</td>
               </tr>
               <tr>
-                <td className="p-4 border-b border-gray-100 dark:border-gray-800">Mood fluctuates</td>
-                <td className="p-4 border-b border-gray-100 dark:border-gray-800">Mood is constantly low</td>
+                <td className="p-4 border-b border-gray-100 dark:border-neutral-800">Mood fluctuates</td>
+                <td className="p-4 border-b border-gray-100 dark:border-neutral-800">Mood is constantly low</td>
               </tr>
             </tbody>
           </table>
@@ -512,7 +512,7 @@ export const articles: Article[] = [
     tags: ["Wellness", "Routine", "Lifestyle"],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
           How you start your morning often sets the tone for the rest of your day. A chaotic morning can lead to a stressful day, while a calm, intentional morning can build resilience against stress.
         </p>
 
@@ -520,7 +520,7 @@ export const articles: Article[] = [
         <p className="mb-6">
           Popularized by Hal Elrod, this framework provides a structured way to start your day with purpose:
         </p>
-        <ul className="list-disc list-inside space-y-2 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+        <ul className="list-disc list-inside space-y-2 mb-8 text-gray-700 dark:text-neutral-300 ml-4">
           <li><strong>S - Silence:</strong> Meditation or prayer.</li>
           <li><strong>A - Affirmations:</strong> Positive self-talk.</li>
           <li><strong>V - Visualization:</strong> Imagining your goals.</li>
@@ -550,12 +550,12 @@ export const articles: Article[] = [
     tags: ["Meditation", "Mindfulness", "Beginner"],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
           Meditation is simple, but it's not easy. It's the practice of training your attention and awareness, and achieving a mentally clear and emotionally calm and stable state.
         </p>
 
         <h2 className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6">How to Meditate: A Simple Guide</h2>
-        <ol className="list-decimal list-inside space-y-4 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+        <ol className="list-decimal list-inside space-y-4 mb-8 text-gray-700 dark:text-neutral-300 ml-4">
           <li>
             <strong>Sit comfortably.</strong> Find a quiet spot where you won't be disturbed. You can sit on a chair or on the floor. Keep your back straight.
           </li>
@@ -592,12 +592,12 @@ export const articles: Article[] = [
     tags: ["Workplace", "Boundaries", "Career"],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
           In today's "always-on" work culture, setting boundaries is an act of radical self-care. Without them, we risk burnout, resentment, and reduced productivity.
         </p>
 
         <h2 className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6">Types of Work Boundaries</h2>
-        <ul className="list-disc list-inside space-y-4 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+        <ul className="list-disc list-inside space-y-4 mb-8 text-gray-700 dark:text-neutral-300 ml-4">
           <li><strong>Physical:</strong> Your workspace, your body, your privacy.</li>
           <li><strong>Emotional:</strong> Separating your feelings from your work tasks.</li>
           <li><strong>Time:</strong> When you work and when you don't.</li>
@@ -607,7 +607,7 @@ export const articles: Article[] = [
         <p className="mb-6">
           You can decline requests without being rude. Try these scripts:
         </p>
-        <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg space-y-4">
+        <div className="bg-gray-100 dark:bg-neutral-800 p-6 rounded-lg space-y-4">
           <p><em>"I'd love to help, but I don't have the capacity right now."</em></p>
           <p><em>"I can do this, but it will mean delaying [Project X]. Which would you prefer I prioritize?"</em></p>
           <p><em>"I'm not checking emails after 6 PM, but I'll get back to you first thing tomorrow."</em></p>
@@ -629,7 +629,7 @@ export const articles: Article[] = [
     tags: ["Therapy", "Mental Health", "Guide"],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
           Therapy is not one-size-fits-all. Different approaches work for different people and different issues. Here is a breakdown of the most common types.
         </p>
 
@@ -663,7 +663,7 @@ export const articles: Article[] = [
     tags: ["Anxiety", "Panic", "Help"],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
           A panic attack can feel like you're dying or losing your mind. But physically, it's an adrenaline surge. The key to stopping it is to signal safety to your body.
         </p>
 
@@ -671,7 +671,7 @@ export const articles: Article[] = [
         <p className="mb-6">
           Use your senses to anchor yourself in the present moment:
         </p>
-        <ul className="list-none space-y-4 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+        <ul className="list-none space-y-4 mb-8 text-gray-700 dark:text-neutral-300 ml-4">
           <li>👀 <strong>5 things you can see:</strong> A chair, a plant, a crack in the wall.</li>
           <li>✋ <strong>4 things you can touch:</strong> The fabric of your shirt, the cool table, your hair.</li>
           <li>👂 <strong>3 things you can hear:</strong> Traffic, a clock ticking, your own breath.</li>
@@ -700,7 +700,7 @@ export const articles: Article[] = [
     tags: ["Depression", "SAD", "Winter"],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
           As the days get shorter, many people feel their mood dip. Seasonal Affective Disorder (SAD) is a type of depression that's related to changes in seasons.
         </p>
 
@@ -735,7 +735,7 @@ export const articles: Article[] = [
     tags: ["Nutrition", "Wellness", "Health"],
     content: (
       <>
-        <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+        <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
           Your brain is always "on." It requires a constant supply of fuel. That "fuel" comes from the foods you eat, and what's in that fuel makes all the difference.
         </p>
 
@@ -745,7 +745,7 @@ export const articles: Article[] = [
         </p>
 
         <h2 className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6">Brain Foods</h2>
-        <ul className="list-disc list-inside space-y-2 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+        <ul className="list-disc list-inside space-y-2 mb-8 text-gray-700 dark:text-neutral-300 ml-4">
           <li><strong>Omega-3 Fatty Acids:</strong> Found in salmon, walnuts, and flaxseeds. Essential for brain health.</li>
           <li><strong>Probiotics:</strong> Yogurt, kefir, kimchi. Support a healthy gut microbiome.</li>
           <li><strong>Leafy Greens:</strong> Spinach, kale. Rich in folate, which is important for dopamine production.</li>

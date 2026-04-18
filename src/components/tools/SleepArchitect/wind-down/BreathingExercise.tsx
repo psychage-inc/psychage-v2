@@ -91,7 +91,7 @@ const BreathingExercise: React.FC<BreathingExerciseProps> = ({ onClose }) => {
   })();
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-gray-700">
+    <div className="bg-white dark:bg-neutral-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-neutral-700">
       <div className="flex items-center justify-between mb-5">
         <div className="flex items-center gap-2">
           <Wind size={20} className="text-sky-500" />
@@ -103,7 +103,7 @@ const BreathingExercise: React.FC<BreathingExerciseProps> = ({ onClose }) => {
           <button
             type="button"
             onClick={onClose}
-            className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
+            className="text-gray-400 hover:text-gray-600 dark:hover:text-neutral-200"
           >
             <X size={18} />
           </button>
@@ -122,7 +122,7 @@ const BreathingExercise: React.FC<BreathingExerciseProps> = ({ onClose }) => {
                 'flex-1 p-3 rounded-xl text-xs font-bold transition-all border text-center',
                 selectedPattern === ex.id
                   ? 'bg-sky-50 dark:bg-sky-900/20 border-sky-200 dark:border-sky-700 text-sky-700 dark:text-sky-300'
-                  : 'border-gray-200 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:border-gray-300'
+                  : 'border-gray-200 dark:border-neutral-600 text-gray-500 dark:text-neutral-400 hover:border-gray-300'
               )}
             >
               {ex.name}
@@ -133,7 +133,7 @@ const BreathingExercise: React.FC<BreathingExerciseProps> = ({ onClose }) => {
 
       {/* Description */}
       {!isRunning && (
-        <p className="text-xs text-gray-500 dark:text-gray-400 mb-6 leading-relaxed">
+        <p className="text-xs text-gray-500 dark:text-neutral-400 mb-6 leading-relaxed">
           {config.description}
         </p>
       )}
@@ -177,7 +177,7 @@ const BreathingExercise: React.FC<BreathingExerciseProps> = ({ onClose }) => {
                 <div className="text-center">
                   {isRunning && !isComplete && (
                     <>
-                      <div className="text-sm font-bold text-gray-700 dark:text-gray-300">
+                      <div className="text-sm font-bold text-gray-700 dark:text-neutral-300">
                         {currentPhase.label}
                       </div>
                       <div className="text-3xl font-display font-bold text-gray-900 dark:text-white">
@@ -191,7 +191,7 @@ const BreathingExercise: React.FC<BreathingExerciseProps> = ({ onClose }) => {
                     </div>
                   )}
                   {!isRunning && !isComplete && (
-                    <div className="text-sm text-gray-400 dark:text-gray-500">
+                    <div className="text-sm text-gray-400 dark:text-neutral-500">
                       Tap start
                     </div>
                   )}
@@ -204,7 +204,7 @@ const BreathingExercise: React.FC<BreathingExerciseProps> = ({ onClose }) => {
 
       {/* Cycle counter */}
       {isRunning && (
-        <div className="text-center text-xs text-gray-400 dark:text-gray-500 mb-4">
+        <div className="text-center text-xs text-gray-400 dark:text-neutral-500 mb-4">
           Cycle {Math.min(currentCycle + 1, config.cycles)} of {config.cycles}
         </div>
       )}
@@ -233,7 +233,7 @@ const BreathingExercise: React.FC<BreathingExerciseProps> = ({ onClose }) => {
           <button
             type="button"
             onClick={reset}
-            className="px-4 py-2.5 border border-gray-200 dark:border-gray-600 text-gray-500 dark:text-gray-400 font-bold text-sm rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+            className="px-4 py-2.5 border border-gray-200 dark:border-neutral-600 text-gray-500 dark:text-neutral-400 font-bold text-sm rounded-xl hover:bg-gray-50 dark:hover:bg-neutral-700 transition-colors"
           >
             Reset
           </button>

@@ -119,7 +119,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You can feel lonely in a crowded room, surrounded by people. And you can be completely alone without feeling lonely at all. That paradox holds the key to understanding what loneliness really is.
           </p>
           <p className="mb-6">
@@ -372,7 +372,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your brain is fundamentally social. It evolved not in isolation, but in groups. Every neural circuit, neurotransmitter system, and brain structure was shaped by hundreds of thousands of years of social living.
           </p>
           <p className="mb-6">
@@ -753,7 +753,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In 2015, a landmark meta-analysis of 70 studies involving over 3.4 million people reached a startling conclusion: loneliness and social isolation increase your risk of early death by 26-32% --- comparable to smoking 15 cigarettes a day.
           </p>
           <p className="mb-6">
@@ -1119,7 +1119,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In May 2023, U.S. Surgeon General Dr. Vivek Murthy issued a rare public health advisory declaring loneliness and social isolation an epidemic in America. This marked the first time the nation's top doctor had formally addressed the crisis of disconnection.
           </p>
           <p className="mb-6">
@@ -1532,7 +1532,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Alone time can restore your energy, spark creativity, and provide essential space for self-reflection. Or it can spiral into painful loneliness that harms your mental and physical health. The difference lies not in whether you're alone, but in how and why.
           </p>
           <p className="mb-6">

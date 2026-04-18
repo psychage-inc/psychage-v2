@@ -94,7 +94,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             After a long-term relationship ends, one of the most disorienting realizations is this: you don't know who you are anymore. Not as part of a "we," but as a singular "I." The self you built around the relationship has collapsed, leaving questions where certainty used to be.
           </p>
           <p className="mb-6">
@@ -243,7 +243,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           source="Personality and Social Psychology Bulletin, 2018"
         />
 
-        <h2 id="step-3-clarify-your-values" className="text-3xl font-display font-bold text-gray-900 dark:text-gray-300 mt-12 mb-6 scroll-mt-32">
+        <h2 id="step-3-clarify-your-values" className="text-3xl font-display font-bold text-gray-900 dark:text-neutral-300 mt-12 mb-6 scroll-mt-32">
           Step 3: Clarify Your Values
         </h2>
         <p className="mb-6">
@@ -480,7 +480,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Romantic breakups get songs, movies, and sympathy. Friend breakups get awkward silence. "It's just a friendship, " people say, as if the person you talked to every day for years doesn't deserve to be mourned. But you know the truth: this loss is devastating.
           </p>
           <p className="mb-6">
@@ -825,7 +825,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You don't have to like your ex. You don't have to forgive them. You don't even have to speak to them if it can be avoided. But if you share children, you do have to put those children's needs above your own pain. This is the hardest, most important work you'll do post-breakup.
           </p>
           <p className="mb-6">
@@ -1200,7 +1200,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "When can I date again?" is one of the most common post-breakup questions --- and one of the most important. Rush it, and you risk harming yourself and someone new. Wait too long, and you might miss connection out of fear. So how do you know when you're truly ready?
           </p>
           <p className="mb-6">
@@ -1568,7 +1568,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             After heartbreak, the idea of opening yourself to someone new can feel impossible. You've been burned. You know how badly love can hurt. Why risk it again? And yet --- you also know how beautiful connection can be. Starting over means carrying the wisdom of your pain into new possibilities, building something better because of what you've learned, not despite it.
           </p>
           <p className="mb-6">

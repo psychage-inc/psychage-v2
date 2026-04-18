@@ -113,7 +113,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Lying awake at 2 AM, watching the clock, calculating how many hours of sleep you'll get if you fall asleep <em>right now</em>---this is the exhausting reality of insomnia, the most common sleep disorder worldwide.
           </p>
           <p className="mb-6">
@@ -542,7 +542,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             If you told your doctor you have chronic insomnia, you'd likely receive a prescription for sleeping pills. But there's a more effective, longer-lasting treatment that most people have never heard of: Cognitive Behavioral Therapy for Insomnia, or CBT-I.
           </p>
           <p className="mb-6">
@@ -932,7 +932,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You sleep 8 hours but wake exhausted. Your partner says you snore loudly and sometimes stop breathing. You fall asleep during the day despite "full nights" of sleep. These are hallmarks of sleep apnea---a serious disorder affecting 25 million Americans.
           </p>
           <p className="mb-6">
@@ -1263,7 +1263,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Just as you're about to fall asleep, an overwhelming urge to move your legs jolts you awake. Your legs feel tingly, crawling, aching---relief comes only with movement. This is Restless Leg Syndrome (RLS), a neurological disorder affecting 5-10% of adults.
           </p>
           <p className="mb-6">
@@ -1324,7 +1324,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
           RLS is classified as either primary (idiopathic) or secondary (caused by another condition or medication).
         </p>
 
-        <h3 className="text-2xl font-display font-semibold text-gray-800 dark:text-gray-200 mt-8 mb-4">
+        <h3 className="text-2xl font-display font-semibold text-gray-800 dark:text-neutral-200 mt-8 mb-4">
           Primary RLS
         </h3>
         <p className="mb-6">
@@ -1334,7 +1334,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
           Genetics aren't the full story---environmental factors likely play a role in triggering symptoms in genetically susceptible individuals.
         </p>
 
-        <h3 className="text-2xl font-display font-semibold text-gray-800 dark:text-gray-200 mt-8 mb-4">
+        <h3 className="text-2xl font-display font-semibold text-gray-800 dark:text-neutral-200 mt-8 mb-4">
           Secondary RLS
         </h3>
         <p className="mb-6">
@@ -1577,7 +1577,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Movies depict narcolepsy as people randomly collapsing into sleep mid-sentence. The reality is more complex---and more challenging. Narcolepsy is a chronic neurological disorder affecting the brain's ability to regulate sleep-wake cycles.
           </p>
           <p className="mb-6">

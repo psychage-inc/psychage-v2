@@ -33,7 +33,7 @@ export default function ThinkingBlock({ content }: ThinkingBlockProps) {
             transition={{ duration: 0.2 }}
             className="overflow-hidden"
           >
-            <div className="mt-1 text-sm text-slate-500 italic bg-slate-50 dark:bg-slate-800/50 rounded-lg p-3">
+            <div className="mt-1 text-sm text-slate-500 italic bg-slate-50 dark:bg-neutral-800/50 rounded-lg p-3">
               {content}
             </div>
           </motion.div>

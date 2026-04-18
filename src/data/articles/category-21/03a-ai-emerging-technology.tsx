@@ -158,7 +158,7 @@ export const aiEmergingTechnologyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A headline announces another company replacing workers with software. A colleague shares an article predicting that half of all jobs will be automated within two decades. Your stomach tightens. You wonder: will I still have a career in ten years?
           </p>
           <p className="mb-6">
@@ -565,7 +565,7 @@ export const aiEmergingTechnologyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             At 2 a.m., when no therapist is available and calling a friend feels like too much, a chatbot responds instantly. It does not judge. It does not tire. It is always there. But is it actually helping?
           </p>
           <p className="mb-6">
@@ -906,7 +906,7 @@ export const aiEmergingTechnologyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Imagine discovering a video of yourself online --- one that looks completely real, sounds like your voice, moves like your body --- except you never made it. Someone created it using your photos and a machine learning algorithm. This is the reality of deepfakes.
           </p>
           <p className="mb-6">
@@ -1267,7 +1267,7 @@ export const aiEmergingTechnologyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You stand at the edge of a glass bridge suspended 30 stories above a city. Your palms sweat. Your heart races. Your mind knows you are in a therapist's office wearing a headset --- but your body responds as if the height is real. That is exactly the point.
           </p>
           <p className="mb-6">
@@ -1630,7 +1630,7 @@ export const aiEmergingTechnologyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You download a mental health app because you are struggling. You answer its questions honestly --- about your mood, your sleep, your relationships, your darkest thoughts. You trust that this information will help you. But where does that data actually go? And does the app actually work?
           </p>
           <p className="mb-6">

@@ -121,7 +121,7 @@ export const copingWithDepressionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The internet is full of claims about "depression-fighting superfoods" and restrictive elimination diets that promise to cure mental illness. The reality is more nuanced---but also more hopeful. Emerging research shows that what you eat does influence depression, though it's not as simple as a single food or supplement fixing everything.
           </p>
           <p className="mb-6">
@@ -460,7 +460,7 @@ export const copingWithDepressionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Depression has a cruel way of making you want the exact opposite of what you need. When connection could help, depression whispers that you're a burden, that no one wants to hear from you, that it's easier to be alone. The urge to withdraw feels like self-protection, but isolation deepens the depression.
           </p>
           <p className="mb-6">
@@ -748,7 +748,7 @@ export const copingWithDepressionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Therapy sessions typically last 50 minutes. That leaves 10,030 minutes in the rest of your week. What you do in those between-session hours matters just as much as what happens in the therapy room---sometimes more.
           </p>
           <p className="mb-6">
@@ -1044,7 +1044,7 @@ export const copingWithDepressionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Depression can feel like a fog that descends without warning, clouding your judgment and making it hard to remember what helps. A safety plan is a personalized, written guide you create when you're stable, so when things get dark, you have a roadmap to follow.
           </p>
           <p className="mb-6">
@@ -1382,7 +1382,7 @@ export const copingWithDepressionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Depression has a high relapse rate: after recovering from one episode, there's a 50% chance of experiencing another. After three episodes, the risk climbs to 90%. Mindfulness-Based Cognitive Therapy (MBCT) was specifically designed to break this cycle---and research shows it works.
           </p>
           <p className="mb-6">

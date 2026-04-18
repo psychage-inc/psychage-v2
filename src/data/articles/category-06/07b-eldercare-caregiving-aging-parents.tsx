@@ -117,7 +117,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When your mother needs help, you step up. But when your brother refuses to visit and your sister criticizes every decision you make, the hardest part of caregiving becomes navigating family conflict rather than managing medical appointments.
           </p>
           <p className="mb-6">
@@ -512,7 +512,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You promised your mother she'd never end up in a nursing home. But now she wanders at night, falls regularly, and doesn't remember to eat. You're exhausted, your marriage is suffering, and you know keeping her at home is no longer safe. The guilt feels crushing.
           </p>
           <p className="mb-6">
@@ -921,7 +921,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your mother needs 24-hour care that costs more than your mortgage. Your retirement savings are disappearing. You've cut back your work hours to manage her care, reducing your income just as expenses skyrocket. The financial pressure feels as overwhelming as the caregiving itself.
           </p>
           <p className="mb-6">
@@ -1337,7 +1337,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In your culture, sending a parent to a nursing home is unthinkable. Good children care for aging parents at home, no matter the cost to career, marriage, or health. But your mother needs round-the-clock care, your children need you, and you're collapsing under the weight of expectations you can no longer meet.
           </p>
           <p className="mb-6">
@@ -1759,7 +1759,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Take care of yourself" is the advice every caregiver hears. But when you're managing medications, doctor appointments, behavioral crises, and maybe your own job and children, self-care feels like a luxury you cannot afford. Yet research is clear: caregiver wellbeing directly predicts care quality and sustainability.
           </p>
           <p className="mb-6">

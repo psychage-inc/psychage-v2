@@ -9,7 +9,7 @@ const TIER_BADGE_COLORS: Record<SourceTier, string> = {
     2: 'bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-400',
     3: 'bg-teal-100 text-teal-800 dark:bg-teal-900/40 dark:text-teal-400',
     4: 'bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-400',
-    5: 'bg-surface-hover text-text-secondary dark:bg-slate-700 dark:text-slate-400',
+    5: 'bg-surface-hover text-text-secondary dark:bg-neutral-700 dark:text-neutral-400',
 };
 
 interface CitationProps {

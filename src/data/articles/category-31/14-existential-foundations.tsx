@@ -76,7 +76,7 @@ export const existentialFoundationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There's a kind of anxiety that no breathing exercise can fix. It doesn't attach to a meeting
             or a medical test or a social situation. It sits underneath everything, quiet and persistent,
             and it asks questions you can't answer: <em>What's the point? What happens when I die? Am I
@@ -457,7 +457,7 @@ export const existentialFoundationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In 1942, Viktor Frankl was deported to Theresienstadt concentration camp. Over the next three
             years, he would be transferred to Auschwitz and Dachau, lose his wife, his mother, his brother,
             and the manuscript of his life's work. He emerged in 1945 weighing less than 90 pounds. Within
@@ -786,7 +786,7 @@ export const existentialFoundationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Here's something you probably don't want to think about: you are going to die. Not in the
             abstract, philosophical sense. <em>You</em> --- the person reading this sentence, with your
             particular memories and relationships and unfinished plans --- will one day cease to exist. If
@@ -1027,7 +1027,7 @@ export const existentialFoundationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're at a dinner party. People you like are around you. The conversation is warm. Someone
             makes you laugh. And then --- without warning --- a feeling arrives: a quiet, deep recognition
             that despite all of this, you are fundamentally alone. Not lonely, exactly. Not unloved. Just...
@@ -1277,7 +1277,7 @@ export const existentialFoundationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Jean-Paul Sartre never said "Hell is other people" the way most people think he did. What he
             meant was subtler and more disturbing: the presence of other people forces us to confront
             that we are being observed, evaluated, and --- most unsettling of all --- that we are free to
@@ -1526,7 +1526,7 @@ export const existentialFoundationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "One must imagine Sisyphus happy." That single sentence, the closing line of Albert Camus's
             <em> The Myth of Sisyphus</em>, has confused, irritated, and liberated readers since 1942.
             How can a man condemned by the gods to push a boulder up a hill for eternity --- only to watch

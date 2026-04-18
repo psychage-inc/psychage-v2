@@ -86,7 +86,7 @@ export const onlineRelationshipsCommunityArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When we think about online radicalization, we tend to imagine a specific kind of person
             --- someone already predisposed to violence, already seeking hateful ideologies. The
             research tells a different story. Most people who become radicalized online start in
@@ -685,7 +685,7 @@ export const onlineRelationshipsCommunityArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For many remote workers, the first few months felt like freedom. No commute, no
             forced small talk, no fluorescent lighting. Then something shifted. The silence that
             once felt productive started feeling oppressive. The flexibility that felt liberating
@@ -1122,7 +1122,7 @@ export const onlineRelationshipsCommunityArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You are, in all likelihood, at least two people. There is the person reading this
             article --- with their current mood, their actual surroundings, the private texture of
             their inner experience. And there is the person represented by your social media
@@ -1617,7 +1617,7 @@ export const onlineRelationshipsCommunityArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The person was everything you had been looking for. Attentive, emotionally available,
             interested in your life in ways no one had been before. The conversations flowed
             naturally. The connection felt rare. You began to plan for a future together. And

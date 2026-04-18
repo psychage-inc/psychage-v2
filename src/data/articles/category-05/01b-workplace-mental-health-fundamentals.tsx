@@ -95,7 +95,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You check your email constantly for signs. You overanalyze every conversation with your
             boss. You lie awake at night running through worst-case scenarios. This is job
             insecurity---and it takes a profound toll on mental health.
@@ -526,7 +526,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For decades, companies have redesigned workspaces to promote collaboration and save
             money. Open-plan offices, hot desking, and shared spaces became the norm. But new
             research reveals these environments may be harming our brains---and our mental health.
@@ -1021,7 +1021,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Some people clock in and out, trading hours for money. Others feel like their work
             matters---that it contributes to something larger than themselves. This difference, called{', '}
             <strong>meaningful work</strong>, has profound effects on mental health.
@@ -1451,7 +1451,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your manager wants updates every hour. They rewrite your work. They need to approve
             every small decision. You feel like you're being watched, judged, and controlled. This
             is micromanagement---and it's destroying your mental health.
@@ -1916,7 +1916,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Meditation apps. Fruit bowls in the break room. Mandatory resilience training. Companies
             spend billions on employee wellbeing programs. But do they actually work? And if so,
             which ones?

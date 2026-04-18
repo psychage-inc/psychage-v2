@@ -72,7 +72,7 @@ export const medicalTraumaHealthcareArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             We go to hospitals and clinics expecting to be healed. For most people, this expectation is met --- procedures
             work, providers are competent, and the experience, while unpleasant, fades into memory. But for a significant
             minority, healthcare encounters themselves become a source of lasting psychological harm. The examination room,
@@ -591,7 +591,7 @@ export const medicalTraumaHealthcareArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The intensive care unit represents medicine at its most powerful --- a place where critically ill patients are
             monitored every second, where ventilators breathe for lungs that cannot, and where pharmacological arsenals
             keep organs functioning. But the ICU also represents one of the most psychologically extreme environments a
@@ -1017,7 +1017,7 @@ export const medicalTraumaHealthcareArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             More than 300 million surgical procedures are performed globally each year. For each one, a person lies on a
             table and surrenders control of their body to others --- trusting that they will wake up, that the operation
             will help, and that the pain will be manageable. Surgery asks more of the human psyche than almost any other
@@ -1401,7 +1401,7 @@ export const medicalTraumaHealthcareArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It is often treated as a joke --- the strong adult who faints at the sight of a needle, the nervous patient
             who avoids the flu shot, the child who screams in the doctor's office. But needle phobia is far from trivial.
             It is one of the most common specific phobias in the world, it has a distinct and unusual physiology unlike

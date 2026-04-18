@@ -64,7 +64,7 @@ export const parentingStressMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You love your children more than anything. Yet some mornings, the thought of another day of caregiving makes you want to hide under the covers. You feel exhausted beyond sleep, emotionally numb, and increasingly convinced you're failing at the job that matters most.
           </p>
           <p className="mb-6">
@@ -323,7 +323,7 @@ export const parentingStressMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The early weeks with a new baby are supposed to be filled with joy. But for you, they're filled with overwhelming sadness, anxiety that won't quiet, and a terrifying disconnection from the tiny person you're caring for. You wonder what's wrong with you. Why can't you just feel grateful?
           </p>
           <p className="mb-6">
@@ -593,7 +593,7 @@ export const parentingStressMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You fed your kids cereal for dinner again. You snapped when they spilled juice. You chose work over the school play. You let them have too much screen time. You didn't let them have enough freedom. The list of ways you're apparently failing grows longer every day.
           </p>
           <p className="mb-6">
@@ -893,7 +893,7 @@ export const parentingStressMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It's 2 AM. Your child has a fever. You're the one checking temperature, deciding whether to go to the ER, and knowing that if you do, there's no one to stay home with your other kids. You're also the one who has to call in sick to work tomorrow, risking your job security, because there's no backup plan.
           </p>
           <p className="mb-6">
@@ -1059,7 +1059,7 @@ export const parentingStressMentalHealthArticlesA: Article[] = [
           <p className="italic">
             "I wouldn't have chosen single parenting, but it taught me I'm capable of far more than I ever believed. My kids see a parent who doesn't give up, who solves problems, who asks for help when needed. That's worth something."
           </p>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
+          <p className="text-sm text-gray-600 dark:text-neutral-400 mt-4">
             — Single mother, quoted in research study <Citation id="7" index={7} source="Psychology of Women Quarterly" year="2021" tier={1} />
           </p>
         </HighlightBox>
@@ -1149,7 +1149,7 @@ export const parentingStressMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your child is struggling. Maybe it's anxiety that keeps them home from school, depression that's stolen their spark, ADHD that makes every day a battle, or something more severe. You watch them suffer and feel helpless. You navigate complex treatment systems, advocate with schools, manage medications, and try to hold your family together.
           </p>
           <p className="mb-6">

@@ -81,7 +81,7 @@ const FocusSelectionStep: React.FC<FocusSelectionStepProps> = ({ selected, onSel
                                 'relative flex items-start gap-3.5 p-4 rounded-xl border-2 transition-all text-left',
                                 isSelected
                                     ? 'border-teal-500 bg-teal-50/60 dark:bg-teal-900/20 dark:border-teal-400'
-                                    : 'border-border bg-surface hover:border-gray-300 dark:hover:border-gray-600'
+                                    : 'border-border bg-surface hover:border-gray-300 dark:hover:border-neutral-600'
                             )}
                         >
                             <div className={cn('w-10 h-10 rounded-lg flex items-center justify-center shrink-0', option.color)}>

@@ -31,7 +31,7 @@ const ReviewStep: React.FC<Props> = ({ formData, filters, submitResult }) => {
         <h2 className="font-display font-bold text-2xl text-gray-900 dark:text-white mb-3">
           Application Submitted
         </h2>
-        <p className="text-gray-500 dark:text-gray-400 max-w-md mx-auto">
+        <p className="text-gray-500 dark:text-neutral-400 max-w-md mx-auto">
           Thank you for applying. Our team will review your application and you will
           receive an email once your profile has been approved.
         </p>
@@ -45,7 +45,7 @@ const ReviewStep: React.FC<Props> = ({ formData, filters, submitResult }) => {
         <h2 className="font-display font-bold text-2xl text-gray-900 dark:text-white mb-2">
           Review Your Application
         </h2>
-        <p className="text-gray-500 dark:text-gray-400">
+        <p className="text-gray-500 dark:text-neutral-400">
           Please review your information before submitting.
         </p>
       </div>
@@ -90,7 +90,7 @@ const ReviewStep: React.FC<Props> = ({ formData, filters, submitResult }) => {
 
       <ReviewSection title="Specialties & Languages">
         <div className="space-y-2">
-          <p className="text-sm font-medium text-gray-600 dark:text-gray-300">Specialties</p>
+          <p className="text-sm font-medium text-gray-600 dark:text-neutral-300">Specialties</p>
           <div className="flex flex-wrap gap-1.5">
             {selectedSpecialties.length > 0 ? (
               selectedSpecialties.map(s => (
@@ -102,7 +102,7 @@ const ReviewStep: React.FC<Props> = ({ formData, filters, submitResult }) => {
           </div>
         </div>
         <div className="space-y-2 mt-3">
-          <p className="text-sm font-medium text-gray-600 dark:text-gray-300">Languages</p>
+          <p className="text-sm font-medium text-gray-600 dark:text-neutral-300">Languages</p>
           <div className="flex flex-wrap gap-1.5">
             {selectedLanguages.length > 0 ? (
               selectedLanguages.map(l => (
@@ -115,7 +115,7 @@ const ReviewStep: React.FC<Props> = ({ formData, filters, submitResult }) => {
         </div>
         {selectedCompetencies.length > 0 && (
           <div className="space-y-2 mt-3">
-            <p className="text-sm font-medium text-gray-600 dark:text-gray-300">Cultural Competencies</p>
+            <p className="text-sm font-medium text-gray-600 dark:text-neutral-300">Cultural Competencies</p>
             <div className="flex flex-wrap gap-1.5">
               {selectedCompetencies.map(c => (
                 <Badge key={c.id} variant="amber">{c.label}</Badge>

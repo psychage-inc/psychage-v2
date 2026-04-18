@@ -57,10 +57,10 @@ export const HistoryView: React.FC<Props> = ({ data, onDeleteLog, onBack }) => {
       <div className="flex items-center gap-3 mb-6">
         <button
           onClick={onBack}
-          className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-neutral-800 transition-colors"
           aria-label="Back to dashboard"
         >
-          <ArrowLeft size={20} className="text-slate-600 dark:text-slate-400" />
+          <ArrowLeft size={20} className="text-slate-600 dark:text-neutral-400" />
         </button>
         <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
           Dose History
@@ -74,7 +74,7 @@ export const HistoryView: React.FC<Props> = ({ data, onDeleteLog, onBack }) => {
           <select
             value={filterMed}
             onChange={(e) => setFilterMed(e.target.value)}
-            className="text-sm px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="text-sm px-3 py-1.5 rounded-lg border border-slate-200 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-700 dark:text-neutral-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           >
             <option value="all">All medications</option>
             {data.medications.map((m) => (
@@ -85,7 +85,7 @@ export const HistoryView: React.FC<Props> = ({ data, onDeleteLog, onBack }) => {
         <select
           value={filterStatus}
           onChange={(e) => setFilterStatus(e.target.value)}
-          className="text-sm px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          className="text-sm px-3 py-1.5 rounded-lg border border-slate-200 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-700 dark:text-neutral-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
         >
           <option value="all">All statuses</option>
           <option value="taken">Taken</option>
@@ -96,14 +96,14 @@ export const HistoryView: React.FC<Props> = ({ data, onDeleteLog, onBack }) => {
 
       {/* Entries */}
       {filtered.length === 0 ? (
-        <div className="text-center py-12 text-slate-500 dark:text-slate-400 text-sm">
+        <div className="text-center py-12 text-slate-500 dark:text-neutral-400 text-sm">
           No dose logs found.
         </div>
       ) : (
         <div className="space-y-6">
           {Array.from(grouped.entries()).map(([date, logs]) => (
             <div key={date}>
-              <h3 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">
+              <h3 className="text-xs font-semibold text-slate-500 dark:text-neutral-400 uppercase tracking-wider mb-2">
                 {new Date(date + 'T00:00:00').toLocaleDateString(undefined, {
                   weekday: 'long',
                   month: 'short',
@@ -116,7 +116,7 @@ export const HistoryView: React.FC<Props> = ({ data, onDeleteLog, onBack }) => {
                   return (
                     <div
                       key={log.id}
-                      className="flex items-center gap-3 p-3 rounded-lg bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700"
+                      className="flex items-center gap-3 p-3 rounded-lg bg-white dark:bg-neutral-800 border border-slate-100 dark:border-neutral-700"
                     >
                       <div
                         className="w-2.5 h-2.5 rounded-full flex-shrink-0"
@@ -126,12 +126,12 @@ export const HistoryView: React.FC<Props> = ({ data, onDeleteLog, onBack }) => {
                         <p className="text-sm font-medium text-slate-900 dark:text-white truncate">
                           {med?.name ?? 'Unknown'}
                         </p>
-                        <p className="text-xs text-slate-500 dark:text-slate-400">
+                        <p className="text-xs text-slate-500 dark:text-neutral-400">
                           Scheduled: {log.scheduledTime.slice(11, 16)}
                           {log.takenAt && ` · Taken: ${new Date(log.takenAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`}
                         </p>
                         {log.notes && (
-                          <p className="text-xs text-slate-400 dark:text-slate-500 italic mt-0.5">
+                          <p className="text-xs text-slate-400 dark:text-neutral-500 italic mt-0.5">
                             {log.notes}
                           </p>
                         )}

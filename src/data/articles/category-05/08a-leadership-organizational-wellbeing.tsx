@@ -93,7 +93,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're in a tense meeting. A team member challenges your decision. You feel anger rising. What you do in the next ten seconds will shape your team's psychological safety, trust, and performance more than any strategy document or motivational speech.
           </p>
           <p className="mb-6">
@@ -348,7 +348,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             One of your team members seems different lately---withdrawn, missing deadlines, emotional in meetings. You want to help but you're not a therapist. What do you say? What's your role? Where's the line between supportive manager and inappropriate involvement?
           </p>
           <p className="mb-6">
@@ -614,7 +614,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your team delivered excellent results last quarter. You celebrated, then immediately piled on more ambitious goals. Now, three months later, your star performer just resigned citing burnout. Two others are showing warning signs. You wonder: Could I have prevented this?
           </p>
           <p className="mb-6">
@@ -875,7 +875,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In one team meeting, someone proposes a risky idea. Everyone stays silent, knowing the leader punishes "bad" suggestions. In another meeting, someone shares the same risky idea. The leader asks curious questions, others build on it, and innovation emerges. Same idea, different outcomes. The difference? Psychological safety.
           </p>
           <p className="mb-6">
@@ -1131,7 +1131,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your company announces a new wellness initiative: free meditation app subscriptions, on-site yoga, and mental health days. Meanwhile, you're working 60-hour weeks, your manager emails at midnight expecting responses, and speaking up about workload gets you labeled as "not a team player." The wellness perks feel like band-aids on a broken system.
           </p>
           <p className="mb-6">

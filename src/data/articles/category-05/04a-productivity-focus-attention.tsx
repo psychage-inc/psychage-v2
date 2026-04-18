@@ -94,7 +94,7 @@ export const productivityFocusAttentionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The myth that longer hours equal higher productivity is deeply embedded in workplace culture. Yet cognitive science reveals the opposite: beyond a certain threshold, additional hours actively damage performance, creativity, and decision-making quality.
           </p>
           <p className="mb-6">
@@ -334,7 +334,7 @@ export const productivityFocusAttentionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Deep work---prolonged, undistracted focus on cognitively demanding tasks---is both increasingly valuable and increasingly rare. Most modern workdays fragment into shallow work: email, meetings, notifications, and administrative tasks that feel productive but generate minimal value.
           </p>
           <p className="mb-6">
@@ -547,7 +547,7 @@ export const productivityFocusAttentionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you switch from one task to another, your attention doesn't immediately follow. Part of your mind remains engaged with the previous task---a phenomenon researchers call attention residue. This cognitive fragmentation significantly impairs performance on the new task, yet knowledge workers switch tasks every few minutes throughout the workday.
           </p>
           <p className="mb-6">
@@ -805,7 +805,7 @@ export const productivityFocusAttentionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Productivity techniques promise to transform your work habits: the Pomodoro Technique, time-boxing, Getting Things Done, Eat That Frog. Some have research support. Others are popular despite lacking evidence. Understanding what actually works---and for whom---helps you adopt effective strategies rather than chasing viral productivity trends.
           </p>
           <p className="mb-6">
@@ -1051,7 +1051,7 @@ export const productivityFocusAttentionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Procrastination is often misunderstood as laziness or poor time management. In reality, it's primarily an emotion regulation problem: we avoid tasks that trigger uncomfortable feelings---anxiety, boredom, overwhelm, self-doubt---seeking immediate mood repair through distraction.
           </p>
           <p className="mb-6">

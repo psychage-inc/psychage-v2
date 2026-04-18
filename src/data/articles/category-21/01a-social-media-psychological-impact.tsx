@@ -71,7 +71,7 @@ export const socialMediaPsychologicalImpactArticlesA: Article[] = [
       <>
         {/* ── Section 1: Introduction ──────────────────────────────────────────── */}
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Social media has rewired how billions of people communicate, consume information, and form their sense of self. In less than two decades, platforms like Facebook, Instagram, TikTok, and X have become central to daily life, with the average person spending over two hours per day scrolling, posting, and reacting <Citation id="1" index={1} />. But what is actually happening in our brains during those hours? And is social media helping us connect or slowly eroding our mental health?
           </p>
           <p className="mb-6">
@@ -408,7 +408,7 @@ export const socialMediaPsychologicalImpactArticlesA: Article[] = [
       <>
         {/* ── Section 1: Introduction ──────────────────────────────────────────── */}
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every day, billions of images flow through Instagram and TikTok --- selfies with smoothing filters, workout transformation photos, fashion hauls, beauty tutorials, and carefully staged "casual" moments. These platforms are not simply communication tools; they are visual environments that shape how people see themselves, evaluate their worth, and define attractiveness. Understanding the psychological mechanisms at work is essential for navigating these spaces with awareness.
           </p>
           <p className="mb-6">
@@ -702,7 +702,7 @@ export const socialMediaPsychologicalImpactArticlesA: Article[] = [
       <>
         {/* ── Section 1: Introduction ──────────────────────────────────────────── */}
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It is 11:30 PM. You told yourself thirty minutes ago that you would put the phone down and sleep. Instead, you are reading about a climate disaster, then a political crisis, then a mass shooting, then an economic warning --- each headline pulling you deeper into a vortex of anxiety that feels impossible to escape. You are not weak. You are not addicted. You are experiencing a collision between ancient brain wiring and modern information architecture.
           </p>
           <p className="mb-6">
@@ -992,7 +992,7 @@ export const socialMediaPsychologicalImpactArticlesA: Article[] = [
       <>
         {/* ── Section 1: Introduction ──────────────────────────────────────────── */}
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It is Friday evening. You are at home, comfortable and relaxed, when you open Instagram and see three groups of friends at different events --- a rooftop party, a new restaurant, a concert. Suddenly, the evening you were perfectly content with five minutes ago feels inadequate. Something better is happening without you, and the knowledge sits in your chest like a small stone of anxiety. This is FOMO, and it is reshaping how millions of people experience their own lives.
           </p>
           <p className="mb-6">
@@ -1268,7 +1268,7 @@ export const socialMediaPsychologicalImpactArticlesA: Article[] = [
       <>
         {/* ── Section 1: Introduction ──────────────────────────────────────────── */}
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Open any social media platform for five minutes and you will encounter outrage. Someone said something terrible. A company did something inexcusable. A politician made a decision that is either saving or destroying the country, depending on which side of the feed you are on. The comments are a wall of fury. The shares are climbing. Your own blood pressure is rising, and you have not even finished your morning coffee.
           </p>
           <p className="mb-6">

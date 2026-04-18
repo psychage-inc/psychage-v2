@@ -65,7 +65,7 @@ export const sexTherapyAndProfessionalHelpArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sex therapy remains one of the most misunderstood forms of psychotherapy. Misconceptions abound: that it involves sexual activity in the therapist&apos;s office, that it&apos;s only for people with severe dysfunction, or that attending means your relationship has failed.
           </p>
         </div>
@@ -117,7 +117,7 @@ export const sexTherapyAndProfessionalHelpArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -179,7 +179,7 @@ export const sexTherapyAndProfessionalHelpArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Finding a qualified sex therapist can feel overwhelming—particularly when the stigma surrounding sexual difficulties makes the search itself anxiety-provoking. The field of sex therapy lacks the public visibility of other therapeutic specialties, and the absence of universal licensing requirements means that the title &quot;sex therapist&quot; can be claimed by practitioners with vastly different levels of training and expertise.
           </p>
         </div>
@@ -233,7 +233,7 @@ export const sexTherapyAndProfessionalHelpArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -296,7 +296,7 @@ export const sexTherapyAndProfessionalHelpArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sexual difficulties exist within relationships even when they manifest in one partner&apos;s body. Desire discrepancy, arousal difficulties, communication breakdown around sex, post-affair sexual rebuilding, and the gradual erosion of physical intimacy in long-term relationships—these concerns belong to the couple system, not to one individual&apos;s dysfunction.
           </p>
         </div>
@@ -341,7 +341,7 @@ export const sexTherapyAndProfessionalHelpArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -404,7 +404,7 @@ export const sexTherapyAndProfessionalHelpArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sensate focus remains the most widely used and empirically validated behavioral technique in sex therapy more than fifty years after its introduction by William Masters and Virginia Johnson. This structured series of touch exercises systematically removes the performance demands that maintain many sexual difficulties—replacing goal-oriented sexual activity with exploratory, pleasure-focused physical contact.
           </p>
         </div>
@@ -455,7 +455,7 @@ export const sexTherapyAndProfessionalHelpArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -518,7 +518,7 @@ export const sexTherapyAndProfessionalHelpArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Cognitive behavioral sex therapy (CBST) applies the principles of cognitive behavioral therapy—identifying and modifying unhelpful thought patterns and behaviors—to the specific domain of sexual difficulties. Research has established that many sexual problems are maintained not by physiological deficits but by the cognitive processes that surround sexual experiences: catastrophic predictions about performance, self-critical monitoring during intimacy, rigid beliefs about how sex &quot;should&quot; be, and avoidance patterns that prevent corrective experiences.
           </p>
         </div>
@@ -567,7 +567,7 @@ export const sexTherapyAndProfessionalHelpArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -630,7 +630,7 @@ export const sexTherapyAndProfessionalHelpArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The bedroom is often where relationship difficulties become undeniable. Sexual problems can exist independently—rooted in medical conditions, medication effects, or individual psychological factors—but they frequently function as the visible symptom of invisible relational dynamics.
           </p>
         </div>
@@ -678,7 +678,7 @@ export const sexTherapyAndProfessionalHelpArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

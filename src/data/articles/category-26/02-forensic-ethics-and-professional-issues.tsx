@@ -65,7 +65,7 @@ export const forensicEthicsAndProfessionalIssuesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Forensic psychology occupies an ethically treacherous intersection between two systems with fundamentally different purposes, values, and methods. Clinical psychology serves the individual—the therapeutic relationship is built on trust, confidentiality, and the pursuit of the client&apos;s wellbeing.
           </p>
         </div>
@@ -113,7 +113,7 @@ export const forensicEthicsAndProfessionalIssuesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -176,7 +176,7 @@ export const forensicEthicsAndProfessionalIssuesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When psychological knowledge enters the courtroom through expert witness testimony, two fundamentally different epistemological systems collide. Science deals in probabilities, effect sizes, and falsifiable hypotheses.
           </p>
         </div>
@@ -223,7 +223,7 @@ export const forensicEthicsAndProfessionalIssuesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -286,7 +286,7 @@ export const forensicEthicsAndProfessionalIssuesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Civil commitment—the legal process by which individuals with mental illness can be confined and treated against their will—represents one of the most profound intersections of psychology, law, and ethics. It is the only area of American law where citizens can be deprived of liberty not for what they have done but for what they might do—based on a prediction that they pose a danger to themselves or others as a result of mental illness.
           </p>
         </div>
@@ -334,7 +334,7 @@ export const forensicEthicsAndProfessionalIssuesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -397,7 +397,7 @@ export const forensicEthicsAndProfessionalIssuesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The jury trial is one of democracy&apos;s most remarkable experiments—the idea that twelve ordinary citizens, with no specialized training in law or evidence evaluation, can be entrusted with decisions that determine liberty, fortune, and sometimes life itself. Yet the psychological research on jury decision-making reveals that this process is far more complex, flawed, and fascinating than the idealized civic textbook version suggests.
           </p>
         </div>
@@ -446,7 +446,7 @@ export const forensicEthicsAndProfessionalIssuesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

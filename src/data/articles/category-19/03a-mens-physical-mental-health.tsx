@@ -79,7 +79,7 @@ export const mensPhysicalMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Few hormones carry as much cultural weight as testosterone. It has been credited with
             everything from risk-taking behavior to leadership ability to artistic genius --- and
             blamed for aggression, impulsivity, and violence. Most of these narratives are
@@ -538,7 +538,7 @@ export const mensPhysicalMentalHealthArticlesA: Article[] = [
             </p>
           </ArticleCallout>
 
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 mt-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 mt-8 leading-relaxed">
             The phone call, the appointment, the biopsy results --- the moment a man hears the
             words "you have prostate cancer," something changes that medicine alone cannot
             address. Even when the prognosis is excellent --- and for most prostate cancers, it
@@ -920,7 +920,7 @@ export const mensPhysicalMentalHealthArticlesA: Article[] = [
             </p>
           </ArticleCallout>
 
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 mt-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 mt-8 leading-relaxed">
             Erectile dysfunction is one of the most psychologically loaded medical conditions a
             man can experience. It touches on identity, desirability, masculinity, relationship
             security, and self-worth --- all at once. And yet the dominant clinical approach
@@ -1280,7 +1280,7 @@ export const mensPhysicalMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Two of the most devastating conditions affecting men share more than coincidence.
             Heart disease --- the leading killer of men globally --- and depression --- the leading
             cause of disability worldwide --- are biologically intertwined in ways that multiply
@@ -1661,7 +1661,7 @@ export const mensPhysicalMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There is a story men are told from childhood that sounds like a virtue but
             functions like a threat: tough it out. Walk it off. Pain is weakness leaving the
             body. Rub some dirt on it. These messages are delivered by coaches, fathers, peers,

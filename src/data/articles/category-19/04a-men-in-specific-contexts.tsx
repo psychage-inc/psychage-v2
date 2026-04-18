@@ -95,7 +95,7 @@ export const menInSpecificContextsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             He bills 2,400 hours a year, closes eight-figure deals, or operates for twelve hours
             straight --- and everyone calls him successful. But behind the prestige, the numbers tell
             a different story: elevated cortisol, disrupted sleep, mounting depression, and a
@@ -457,7 +457,7 @@ export const menInSpecificContextsArticlesA: Article[] = [
           weakness --- they are clinical indicators that your current strategy is not
           sustainable <Citation id="10" index={10} source="Centers for Disease Control and Prevention" year="2022" tier={2} />:
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-700 dark:text-gray-300">
+        <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-700 dark:text-neutral-300">
           <li>Persistent difficulty sleeping despite exhaustion, lasting more than two weeks</li>
           <li>Increasing reliance on alcohol, stimulants, or sedatives to manage your state</li>
           <li>Loss of satisfaction from achievements that previously felt meaningful</li>
@@ -595,7 +595,7 @@ export const menInSpecificContextsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When Michael Phelps described his post-Olympic depression, when Tyson Fury spoke
             about wanting to die at the height of his boxing career, when Simone Biles withdrew
             from Olympic competition citing mental health --- each disclosure shattered the myth
@@ -1055,7 +1055,7 @@ export const menInSpecificContextsArticlesA: Article[] = [
             </p>
           </ArticleCallout>
 
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 mt-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 mt-8 leading-relaxed">
             The United States holds approximately 1.8 million people in prisons and jails --- a
             number larger than the population of fourteen US states. Roughly 93% of those in
             state and federal prisons are men. Within this population lives one of the largest
@@ -1551,7 +1551,7 @@ export const menInSpecificContextsArticlesA: Article[] = [
             </p>
           </ArticleCallout>
 
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 mt-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 mt-8 leading-relaxed">
             The mental health disparities facing LGBTQ+ men are not subtle. They are among the
             largest and most consistently documented disparities in all of psychiatric
             epidemiology --- and they have a clear cause. Not sexual orientation. Not gender
@@ -1854,7 +1854,7 @@ export const menInSpecificContextsArticlesA: Article[] = [
           particularly strong in LGBTQ+
           populations <Citation id="5" index={5} source="Journal of Homosexuality" year="2021" tier={1} />:
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-700 dark:text-gray-300">
+        <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-700 dark:text-neutral-300">
           <li>
             <strong>Identity pride</strong>: Moving from internalized shame to authentic
             self-acceptance is associated with significant improvements in mental health and
@@ -2024,7 +2024,7 @@ export const menInSpecificContextsArticlesA: Article[] = [
             </p>
           </ArticleCallout>
 
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 mt-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 mt-8 leading-relaxed">
             When we talk about men and mental health, the conversation often assumes a default
             experience --- one that does not account for what it means to navigate masculine
             expectations while simultaneously managing the psychological weight of racial

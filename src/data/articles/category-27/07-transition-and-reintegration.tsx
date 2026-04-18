@@ -65,7 +65,7 @@ export const transitionAndReintegrationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The transition from military to civilian life is one of the most psychologically demanding experiences a service member will face—and it is routinely underestimated by military systems, civilian society, and veterans themselves. Approximately 200,000 service members leave the military each year, and while many navigate the transition successfully, a substantial minority experience significant psychological distress, unemployment, homelessness, substance use, relationship disruption, and suicidal ideation.
           </p>
         </div>
@@ -108,7 +108,7 @@ export const transitionAndReintegrationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -171,7 +171,7 @@ export const transitionAndReintegrationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             On any given night in the United States, approximately 33,000 veterans are homeless—sleeping in shelters, in cars, under bridges, or on the streets. While this number has decreased dramatically from the approximately 74,000 homeless veterans counted in 2010—a reduction driven by targeted federal investment and the Housing First model—it remains a moral and public health crisis that disproportionately affects the people who served their country.
           </p>
         </div>
@@ -214,7 +214,7 @@ export const transitionAndReintegrationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

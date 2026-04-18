@@ -123,7 +123,7 @@ export const understandingMotivationArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You can motivate yourself to exercise by promising a reward---a treat, a shopping trip, a night out. Or you can exercise because you genuinely enjoy how it makes you feel. Both approaches might get you to the gym, but only one will keep you going when life gets complicated. The source of your motivation matters more than the strength of it.
           </p>
           <p className="mb-6">
@@ -351,7 +351,7 @@ export const understandingMotivationArticlesA: Article[] = [
         />
 
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600">
-          <p className="text-sm text-gray-600 dark:text-gray-300">
+          <p className="text-sm text-gray-600 dark:text-neutral-300">
             <strong>Next:</strong> The source of your motivation matters, but so do the conditions that support it. Learn about Self-Determination Theory and the three psychological needs that fuel all motivation.
           </p>
         </div>
@@ -476,7 +476,7 @@ export const understandingMotivationArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've probably noticed that some environments energize you while others drain your motivation completely. You might thrive in one job and feel unmotivated in another that pays better. You might stick with one hobby for years and abandon another after weeks. Self-determination theory explains why: certain psychological needs must be met for you to feel motivated, engaged, and psychologically healthy.
           </p>
           <p className="mb-6">
@@ -674,7 +674,7 @@ export const understandingMotivationArticlesA: Article[] = [
         <div className="mt-8 space-y-6">
           <div>
             <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Supporting Autonomy</h4>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
               <li>Offer meaningful choices even in structured contexts (when to work, how to approach tasks)</li>
               <li>Provide rationale for necessary constraints (explain why something matters)</li>
               <li>Minimize controlling language ("you should,", "you must") and use invitational language ("you might,", "consider")</li>
@@ -685,7 +685,7 @@ export const understandingMotivationArticlesA: Article[] = [
 
           <div>
             <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Supporting Competence</h4>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
               <li>Provide optimal challenges that stretch but don't overwhelm current skills</li>
               <li>Give specific, constructive feedback that focuses on process and improvement</li>
               <li>Structure tasks with clear goals and progress markers</li>
@@ -696,7 +696,7 @@ export const understandingMotivationArticlesA: Article[] = [
 
           <div>
             <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Supporting Relatedness</h4>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
               <li>Show genuine interest in others" perspectives and experiences</li>
               <li>Create opportunities for meaningful social interaction and collaboration</li>
               <li>Express care, appreciation, and recognition</li>
@@ -742,7 +742,7 @@ export const understandingMotivationArticlesA: Article[] = [
         />
 
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600">
-          <p className="text-sm text-gray-600 dark:text-gray-300">
+          <p className="text-sm text-gray-600 dark:text-neutral-300">
             <strong>Next:</strong> Understanding these needs is the first step---but what happens when your motivation disappears despite your best efforts? Learn why motivation fades and how to respond when you lose interest in things you used to care about.
           </p>
         </div>
@@ -859,7 +859,7 @@ export const understandingMotivationArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Three months ago, you were fired up about a new project. You set goals, made plans, started strong. Now? You can barely remember why you cared. The motivation that once felt so real has evaporated, leaving you wondering what went wrong. If this pattern feels familiar, you're not broken---you're experiencing one of the most common and least discussed aspects of human psychology: motivation naturally fades.
           </p>
           <p className="mb-6">
@@ -1107,7 +1107,7 @@ export const understandingMotivationArticlesA: Article[] = [
         />
 
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600">
-          <p className="text-sm text-gray-600 dark:text-gray-300">
+          <p className="text-sm text-gray-600 dark:text-neutral-300">
             <strong>Next:</strong> When motivation fails, you need different tools. Discover motivational interviewing techniques---therapeutic strategies originally designed for counseling---that you can adapt to work on yourself when your drive disappears.
           </p>
         </div>
@@ -1224,7 +1224,7 @@ export const understandingMotivationArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You know you should exercise more, but you don't. You want to cut back on drinking, but you keep making excuses. You've set the same goal five times and abandoned it five times. Traditional self-help says 'just do it' or "find your why, ' but what if the problem isn't that you lack motivation---it's that you're ambivalent, and no amount of pep talks can resolve internal conflict?
           </p>
           <p className="mb-6">
@@ -1559,7 +1559,7 @@ export const understandingMotivationArticlesA: Article[] = [
         />
 
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600">
-          <p className="text-sm text-gray-600 dark:text-gray-300">
+          <p className="text-sm text-gray-600 dark:text-neutral-300">
             <strong>Next:</strong> You've explored your ambivalence and built some motivation---but what about the popular advice to "just wait until you feel motivated"? Learn why this strategy keeps you stuck and what to do instead.
           </p>
         </div>
@@ -1676,7 +1676,7 @@ export const understandingMotivationArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "I'll start exercising when I feel motivated.", "I'll work on my project when inspiration strikes.", "I just need to wait until I'm in the right headspace." If you've ever said something like this, you've fallen for one of the most persistent myths about behavior change: that motivation comes first, and action follows. The truth is far more useful---and counterintuitive.
           </p>
           <p className="mb-6">
@@ -1691,11 +1691,11 @@ export const understandingMotivationArticlesA: Article[] = [
           Most people assume this sequence:
         </p>
 
-        <div className="mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
+        <div className="mb-8 p-6 bg-gray-100 dark:bg-neutral-800 rounded-lg">
           <p className="text-center text-lg font-semibold text-gray-900 dark:text-white mb-2">
             Traditional Model
           </p>
-          <p className="text-center text-gray-700 dark:text-gray-300">
+          <p className="text-center text-gray-700 dark:text-neutral-300">
             Motivation → Action → Results
           </p>
         </div>
@@ -1708,7 +1708,7 @@ export const understandingMotivationArticlesA: Article[] = [
           <p className="text-center text-lg font-semibold text-gray-900 dark:text-white mb-2">
             Reality-Based Model
           </p>
-          <p className="text-center text-gray-700 dark:text-gray-300">
+          <p className="text-center text-gray-700 dark:text-neutral-300">
             Action → Small Results → Motivation → More Action → Better Results
           </p>
         </div>
@@ -1954,7 +1954,7 @@ export const understandingMotivationArticlesA: Article[] = [
         />
 
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600">
-          <p className="text-sm text-gray-600 dark:text-gray-300">
+          <p className="text-sm text-gray-600 dark:text-neutral-300">
             <strong>Next:</strong> You've learned that action can create motivation---but what should that action be aimed toward? Discover how connecting behavior change to your core values and sense of purpose creates the most durable form of motivation.
           </p>
         </div>

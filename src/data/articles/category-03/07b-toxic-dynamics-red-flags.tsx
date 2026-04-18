@@ -117,7 +117,7 @@ export const toxicDynamicsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're trying to help. You cover for them when they can't make it to work. You pay their rent when their addiction drains their bank account. You lie to family about how bad things are. You think you're being supportive, but you're actually removing the consequences that might motivate them to change. This is enabling: well-intentioned actions that perpetuate destructive behavior.
           </p>
           <p className="mb-6">
@@ -623,7 +623,7 @@ export const toxicDynamicsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You can't make a decision without consulting them first. They know your passwords, read your texts, and feel entitled to every detail of your life. When you try to assert independence, they act wounded: "I thought we were close," "You're shutting me out," "Family doesn't keep secrets." This isn't closeness. This is enmeshment—a toxic fusion where boundaries dissolve and individual identity gets lost.
           </p>
           <p className="mb-6">
@@ -1132,7 +1132,7 @@ export const toxicDynamicsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             One person controls the money, making all financial decisions while the other must ask for permission to spend. A 40-year-old dates a 22-year-old, leveraging life experience and resources to maintain control. A celebrity uses fame to manipulate partners who feel lucky to be chosen. These are power imbalances---structural inequalities that shape who gets to decide, who gets believed, and who holds leverage.
           </p>
           <p className="mb-6">
@@ -1618,7 +1618,7 @@ export const toxicDynamicsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You know the relationship is draining you, but you're not ready---or not able---to leave. Maybe there are children involved, financial constraints, or you're still holding out hope for change. Leaving isn't always immediate or possible. In the meantime, you need strategies to protect your mental health while navigating a difficult dynamic.
           </p>
           <p className="mb-6">
@@ -2063,7 +2063,7 @@ export const toxicDynamicsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You love them. You genuinely do. But you're exhausted, diminished, and losing yourself. You keep thinking, "If I just love them enough, it'll get better." But love---real, deep, committed love---isn't always sufficient to sustain a relationship. Sometimes love exists alongside incompatibility, toxicity, or fundamental misalignment. And sometimes, the most loving thing you can do is walk away.
           </p>
           <p className="mb-6">

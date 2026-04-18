@@ -50,12 +50,12 @@ export const secularApproachesToMeaningArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Secular spirituality involves pursuing meaning, connection, awe, and transcendence without belief in God or adherence to religious institutions. Research shows that non-religious people can achieve psychological wellbeing, moral development, and self-transcendent experiences through secular means: connection to nature, creative expression, ethical commitment, contemplative practices, relationships, and engagement with beauty.
           </p>
         </div>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -118,7 +118,7 @@ export const secularApproachesToMeaningArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Existential therapy is an approach to psychotherapy that addresses the fundamental human concerns that underlie psychological distress: death, freedom, isolation, and meaninglessness. Rather than treating symptoms, existential therapists help clients confront these &quot;givens of existence&quot; and construct authentic meaning despite life&apos;s inherent uncertainty.
           </p>
         </div>
@@ -131,7 +131,7 @@ export const secularApproachesToMeaningArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -193,7 +193,7 @@ export const secularApproachesToMeaningArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Logotherapy is a form of existential therapy developed by Austrian psychiatrist Viktor Frankl based on his experiences surviving Auschwitz. The core premise: humans are driven by a &quot;will to meaning&quot;—the need to find significance and purpose in life—and psychological distress often stems from the &quot;existential vacuum&quot; when that will is frustrated.
           </p>
         </div>
@@ -206,7 +206,7 @@ export const secularApproachesToMeaningArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

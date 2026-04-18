@@ -79,7 +79,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When a child is diagnosed with a chronic illness, the focus understandably centers on
             the medical --- medications, specialist appointments, treatment protocols, symptom management.
             But beneath the clinical logistics, there is a child trying to make sense of why their
@@ -174,7 +174,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
             content: (
               <div className="space-y-3">
                 <p className="font-medium text-gray-900 dark:text-white">Developmental challenges at this stage:</p>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                   <li>Magical thinking about illness causation --- believing they did something wrong</li>
                   <li>Difficulty understanding why painful treatments are necessary</li>
                   <li>Separation anxiety intensified by hospital visits and caregiver stress</li>
@@ -189,7 +189,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
             content: (
               <div className="space-y-3">
                 <p className="font-medium text-gray-900 dark:text-white">Key psychological impacts:</p>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                   <li>Growing awareness that their condition is permanent, triggering grief reactions</li>
                   <li>Comparison with healthy peers leading to feelings of inadequacy or unfairness</li>
                   <li>School absenteeism creating academic gaps and social disconnection</li>
@@ -204,7 +204,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
             content: (
               <div className="space-y-3">
                 <p className="font-medium text-gray-900 dark:text-white">Unique challenges for teens:</p>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                   <li>Identity formation complicated by the patient role and medical limitations</li>
                   <li>Treatment non-adherence as a form of autonomy-seeking or denial</li>
                   <li>Social withdrawal or concealment of illness to fit in with peers</li>
@@ -518,7 +518,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There is a particular loneliness in being a parent with a chronic illness. You are surrounded
             by parenting advice that assumes you have energy you do not have, by social media images of
             parents running alongside their children at the park, and by an internal voice that measures
@@ -916,7 +916,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When most people hear the word "palliative," they think of hospice, terminal diagnoses,
             and end-of-life care. This association is understandable but incomplete --- and for the
             hundreds of millions of people worldwide living with chronic, non-terminal conditions,
@@ -1283,7 +1283,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Physical rehabilitation is one of the most demanding experiences a person can undergo.
             It requires showing up every day to do difficult, often painful work with uncertain
             outcomes, in a body that feels foreign. The popular narrative frames rehabilitation as
@@ -1412,7 +1412,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
             label: 'Depression',
             content: (
               <div className="space-y-3">
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 dark:text-neutral-300">
                   Depression in rehabilitation is both common and consequential. It reduces engagement
                   with therapy, increases pain perception, interferes with sleep and appetite, and
                   impairs the cognitive functions needed for motor learning. Critically, depression
@@ -1427,7 +1427,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
             label: 'Pain Catastrophizing',
             content: (
               <div className="space-y-3">
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 dark:text-neutral-300">
                   Pain catastrophizing --- the tendency to ruminate about pain, magnify its threat, and
                   feel helpless in response to it --- is one of the strongest psychological predictors
                   of poor rehabilitation outcomes. It leads to avoidance of therapeutic exercises,
@@ -1443,7 +1443,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
             label: 'Fear-Avoidance',
             content: (
               <div className="space-y-3">
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 dark:text-neutral-300">
                   When a person avoids movement or activities because they fear re-injury or increased
                   pain, they enter a cycle that paradoxically worsens their condition. Muscles weaken,
                   joints stiffen, and the nervous system becomes increasingly sensitized. Breaking the
@@ -1458,7 +1458,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
             label: 'Identity Disruption',
             content: (
               <div className="space-y-3">
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 dark:text-neutral-300">
                   When physical abilities are central to a person's identity --- the athlete, the manual
                   laborer, the independent elder --- injury creates not just a functional loss but an
                   identity crisis. The question "Who am I if I cannot do what defined me?" is not
@@ -1676,7 +1676,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The invitation sits on the counter for three days. A friend's wedding in another city.
             A family reunion across the country. A trip you have been dreaming about for years.
             And the conversation in your head begins: What if I have a flare-up? What if I cannot
@@ -2051,7 +2051,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In 2003, a woman named Christine Miserandino sat in a diner with a friend who asked
             a simple but impossible question: "What does it feel like to be sick?" Miserandino,
             who lives with lupus, grabbed a handful of spoons from neighboring tables and placed

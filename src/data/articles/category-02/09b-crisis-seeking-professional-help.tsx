@@ -77,7 +77,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You need therapy, but the barriers feel insurmountable: the nearest anxiety specialist is an hour away, you work irregular hours, leaving your house during high-anxiety periods feels impossible, or the cost of traditional in-person therapy is prohibitive. Then you hear about online therapy---sessions from your living room, flexible scheduling, often lower cost. But does it actually work? Can you really build a therapeutic relationship through a screen? Is it as effective as face-to-face treatment?
           </p>
           <p className="mb-6">
@@ -405,7 +405,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Just exercise more" might be the most frustrating advice you receive when you mention anxiety. As if you haven't heard it before. As if anxiety doesn't make the thought of going to a gym feel overwhelming. As if a 30-minute run could magically fix a disorder that's been disrupting your life for years. But here's what people miss when they casually throw out this advice: Exercise isn't a simplistic 'cure' for anxiety---it's a neurobiologically active intervention with effects comparable to medication and therapy.
           </p>
           <p className="mb-6">
@@ -733,7 +733,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your therapist suggests you consider medication. Or your doctor prescribes an SSRI and recommends you also start therapy. You wonder: Do I really need both? Won't one be enough? Is combining them overkill, or will it actually work better? These are the questions that matter when you're trying to build an effective treatment plan.
           </p>
           <p className="mb-6">
@@ -1073,7 +1073,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've done the work. Therapy taught you skills. Medication stabilized your symptoms. For months, maybe a year, anxiety has been manageable---maybe even barely noticeable. Then stress hits: a job change, relationship conflict, a health scare. The familiar tightness returns. The catastrophic thoughts creep back. You wonder: Is this relapse? Did all that progress disappear? Am I starting over from scratch?
           </p>
           <p className="mb-6">
@@ -1392,7 +1392,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Week 4 of therapy, you feel amazing. The anxiety that ruled your life for years suddenly feels manageable. You think: "I'm cured! This is it!" Then week 6 hits. A bad day becomes a bad week. The old thoughts return. Panic creeps back. You spiral: "I thought I was getting better. What went wrong? Did I fail? Is this whole treatment pointless?" This is the painful misconception at the heart of anxiety recovery---the belief that healing is a straight line from sick to well.
           </p>
           <p className="mb-6">

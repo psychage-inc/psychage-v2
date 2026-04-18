@@ -68,7 +68,7 @@ export default function MessageList({
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.15 }}
             onClick={() => scrollToBottom('smooth')}
-            className="absolute bottom-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-lg flex items-center justify-center text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
+            className="absolute bottom-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white dark:bg-neutral-800 border border-slate-200 dark:border-neutral-700 shadow-lg flex items-center justify-center text-slate-500 hover:text-slate-700 dark:hover:text-neutral-300 transition-colors"
             aria-label="Scroll to bottom"
           >
             <ArrowDown size={16} />

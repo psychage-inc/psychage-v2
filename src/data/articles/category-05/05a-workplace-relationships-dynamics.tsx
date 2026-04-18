@@ -94,7 +94,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Office politics exists in every organization---the informal systems of power, influence, and social dynamics that operate alongside formal structures. Many people react to workplace politics with either naive avoidance or cynical manipulation. The third option: strategic engagement grounded in integrity.
           </p>
           <p className="mb-6">
@@ -377,7 +377,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your relationship with your direct manager profoundly shapes your work experience, performance, and mental health. A difficult boss can make even objectively good jobs feel unbearable. Understanding different challenging management patterns---and specific strategies for each---helps you navigate these relationships more effectively and decide when the situation is salvageable.
           </p>
           <p className="mb-6">
@@ -654,7 +654,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Workplace bullying---repeated, deliberate mistreatment by colleagues or supervisors---affects an estimated 30% of workers at some point in their careers. Unlike one-time conflicts or personality clashes, bullying involves persistent hostile behavior that creates a hostile work environment and causes significant psychological harm.
           </p>
           <p className="mb-6">
@@ -952,7 +952,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Why do some teams with talented individuals produce mediocre results while others with average individuals excel? Team effectiveness isn't simply the sum of individual capabilities---it emerges from psychological and social dynamics that either amplify or suppress collective potential.
           </p>
           <p className="mb-6">
@@ -1205,7 +1205,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mentorship---guidance from someone more experienced in your field---affects far more than career trajectory. Good mentors provide psychological support, confidence-building, reality checks, and belonging that significantly impact mental health and workplace wellbeing.
           </p>
           <p className="mb-6">

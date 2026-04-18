@@ -18,7 +18,7 @@ export const InsuranceList: React.FC<InsuranceListProps> = ({ provider }) => {
   const hasMore = plans.length > INITIAL_COUNT;
 
   return (
-    <section className="rounded-2xl border border-slate-200 bg-white/70 p-6 backdrop-blur-md dark:border-slate-700 dark:bg-slate-800/70">
+    <section className="rounded-2xl border border-slate-200 bg-white/70 p-6 backdrop-blur-md dark:border-neutral-700 dark:bg-neutral-800/70">
       <h2 className="font-display mb-4 text-lg font-bold text-slate-900 dark:text-white">
         Insurance Accepted
       </h2>
@@ -27,17 +27,17 @@ export const InsuranceList: React.FC<InsuranceListProps> = ({ provider }) => {
         {visiblePlans.map((plan) => (
           <li
             key={plan.id}
-            className="flex items-center gap-2.5 rounded-lg border border-slate-100 bg-white/60 px-3 py-2.5 dark:border-slate-600 dark:bg-slate-700/40"
+            className="flex items-center gap-2.5 rounded-lg border border-slate-100 bg-white/60 px-3 py-2.5 dark:border-neutral-600 dark:bg-neutral-700/40"
           >
             <Shield
               size={14}
               className="shrink-0 text-teal-600 dark:text-teal-400"
             />
             <div className="min-w-0">
-              <span className="block text-sm font-medium text-slate-700 dark:text-slate-200">
+              <span className="block text-sm font-medium text-slate-700 dark:text-neutral-200">
                 {plan.name}
               </span>
-              <span className="text-xs text-slate-400 dark:text-slate-500">
+              <span className="text-xs text-slate-400 dark:text-neutral-500">
                 {plan.carrier}
               </span>
             </div>
@@ -62,7 +62,7 @@ export const InsuranceList: React.FC<InsuranceListProps> = ({ provider }) => {
         </button>
       )}
 
-      <p className="mt-4 text-[11px] text-slate-400 dark:text-slate-500 leading-relaxed">
+      <p className="mt-4 text-[11px] text-slate-400 dark:text-neutral-500 leading-relaxed">
         Insurance information is provided by the provider and may not reflect current network
         status. Please verify coverage directly with the provider or your insurance company.
       </p>

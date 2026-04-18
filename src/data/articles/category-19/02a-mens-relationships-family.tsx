@@ -76,7 +76,7 @@ export const mensRelationshipsFamilyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Somewhere between the elation and the terror, most new fathers have a moment of
             reckoning: the realization that everything has changed --- their identity, their
             relationship, their sleep, their priorities, their entire sense of self --- and
@@ -512,7 +512,7 @@ export const mensRelationshipsFamilyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When the conversation turns to postnatal depression, it's almost always about
             mothers. The research, the screening tools, the support services, the public
             awareness campaigns --- all of it centers on maternal mental health. And it should:
@@ -930,7 +930,7 @@ export const mensRelationshipsFamilyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The popular narrative says that men are the ones who "move on" after divorce --- quickly
             dating again, throwing themselves into work, appearing functional within weeks. The
             clinical evidence says something different. Behind the appearance of coping, divorced
@@ -1372,7 +1372,7 @@ export const mensRelationshipsFamilyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There are few experiences in a man's life more psychologically devastating than
             fighting for custody of his children and losing --- or winning a partial version of
             what he had, where "access" replaces "fathering" and a court schedule replaces the
@@ -1728,7 +1728,7 @@ export const mensRelationshipsFamilyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Three words --- "boys don't cry" --- carry more psychological weight than almost any
             other message a child can receive. Not because the words themselves are so powerful,
             but because they're just the tip of a system: a pervasive, often invisible process

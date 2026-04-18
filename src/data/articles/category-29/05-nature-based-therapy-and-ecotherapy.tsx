@@ -65,7 +65,7 @@ export const naturebasedTherapyAndEcotherapyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Humans evolved in intimate, continuous contact with the natural world. For the vast majority of our species&apos; history, nature was not a destination or an activity—it was the medium in which all of life occurred.
           </p>
         </div>
@@ -111,7 +111,7 @@ export const naturebasedTherapyAndEcotherapyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -174,7 +174,7 @@ export const naturebasedTherapyAndEcotherapyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Shinrin-yoku—literally &quot;forest bathing&quot; in Japanese—is the practice of immersing oneself in a forest environment through slow, mindful engagement with the natural surroundings. Introduced as a public health initiative by the Japanese Ministry of Agriculture, Forestry and Fisheries in 1982, shinrin-yoku has since become one of the most rigorously studied nature-based health practices in the world, with a research base spanning immunology, endocrinology, neuroscience, and clinical psychology.
           </p>
         </div>
@@ -223,7 +223,7 @@ export const naturebasedTherapyAndEcotherapyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -286,7 +286,7 @@ export const naturebasedTherapyAndEcotherapyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Horticultural therapy—the structured use of gardening activities to achieve therapeutic goals under the guidance of a trained professional—is one of the oldest and most extensively documented forms of nature-based therapy. The healing properties of gardens have been recognized since ancient Egyptian physicians prescribed garden walks for mentally distressed patients, and therapeutic gardens were established in medieval European monasteries for the care of the ill.
           </p>
         </div>
@@ -330,7 +330,7 @@ export const naturebasedTherapyAndEcotherapyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -393,7 +393,7 @@ export const naturebasedTherapyAndEcotherapyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Water exerts a profound and disproportionate effect on the human mind. Across cultures, centuries, and continents, people have gravitated toward water—oceans, rivers, lakes, waterfalls, fountains—for rest, renewal, and psychological refuge.
           </p>
         </div>
@@ -441,7 +441,7 @@ export const naturebasedTherapyAndEcotherapyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -504,7 +504,7 @@ export const naturebasedTherapyAndEcotherapyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Wilderness therapy—the use of outdoor living, travel, and challenge in natural environments as a vehicle for psychological treatment—occupies a distinctive and sometimes controversial position in the mental health landscape. At its best, wilderness therapy provides a powerful therapeutic intervention that removes individuals from the environments maintaining their difficulties, places them in direct dependence on the natural world, and uses the challenges of wilderness living to build competence, resilience, and self-awareness that transfers to everyday life.
           </p>
         </div>
@@ -553,7 +553,7 @@ export const naturebasedTherapyAndEcotherapyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -616,7 +616,7 @@ export const naturebasedTherapyAndEcotherapyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The therapeutic use of animals in mental health treatment draws on one of the oldest and most powerful interspecies relationships in human evolutionary history. Humans have co-evolved with domesticated animals for at least 15,000 years, and the psychological bond between humans and animals—particularly dogs and horses—activates neurological systems that overlap with those mediating human attachment and social connection.
           </p>
         </div>
@@ -664,7 +664,7 @@ export const naturebasedTherapyAndEcotherapyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -727,7 +727,7 @@ export const naturebasedTherapyAndEcotherapyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Ecopsychology—a field that emerged in the early 1990s at the intersection of psychology and ecology—challenges one of Western psychology&apos;s most fundamental but rarely examined assumptions: that the human psyche can be meaningfully understood in isolation from the natural world. Traditional psychology locates mental health and illness within the individual mind, shaped by family, social relationships, and cultural context—but rarely extends its analysis to include the person&apos;s relationship with the broader living world.
           </p>
         </div>
@@ -772,7 +772,7 @@ export const naturebasedTherapyAndEcotherapyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

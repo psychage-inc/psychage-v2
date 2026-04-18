@@ -93,7 +93,7 @@ const SleepDiary: React.FC<SleepDiaryProps> = ({ sleepData }) => {
       {/* Controls bar */}
       {!showCheckIn && (
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 bg-white dark:bg-gray-800 rounded-xl p-1 border border-gray-100 dark:border-gray-700">
+          <div className="flex items-center gap-2 bg-white dark:bg-neutral-800 rounded-xl p-1 border border-gray-100 dark:border-neutral-700">
             <button
               type="button"
               onClick={() => setView('calendar')}
@@ -101,7 +101,7 @@ const SleepDiary: React.FC<SleepDiaryProps> = ({ sleepData }) => {
                 'p-2 rounded-lg transition-colors',
                 view === 'calendar'
                   ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400'
-                  : 'text-gray-400 hover:text-gray-600 dark:hover:text-gray-300'
+                  : 'text-gray-400 hover:text-gray-600 dark:hover:text-neutral-300'
               )}
               aria-label="Calendar view"
             >
@@ -114,7 +114,7 @@ const SleepDiary: React.FC<SleepDiaryProps> = ({ sleepData }) => {
                 'p-2 rounded-lg transition-colors',
                 view === 'list'
                   ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400'
-                  : 'text-gray-400 hover:text-gray-600 dark:hover:text-gray-300'
+                  : 'text-gray-400 hover:text-gray-600 dark:hover:text-neutral-300'
               )}
               aria-label="List view"
             >
@@ -165,7 +165,7 @@ const SleepDiary: React.FC<SleepDiaryProps> = ({ sleepData }) => {
           ) : (
             <div className="space-y-3">
               {sortedEntries.length === 0 ? (
-                <div className="text-center py-12 text-gray-400 dark:text-gray-500">
+                <div className="text-center py-12 text-gray-400 dark:text-neutral-500">
                   <Moon size={32} className="mx-auto mb-3 opacity-50" />
                   <p className="text-sm font-medium">No entries yet</p>
                   <p className="text-xs mt-1">

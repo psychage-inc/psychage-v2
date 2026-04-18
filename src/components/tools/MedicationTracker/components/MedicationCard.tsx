@@ -28,7 +28,7 @@ export const MedicationCard: React.FC<Props> = ({
     pct >= 80 ? 'text-emerald-500' : pct >= 50 ? 'text-amber-500' : 'text-red-500';
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-md transition-all">
+    <div className="bg-white dark:bg-neutral-900 rounded-2xl border border-slate-200 dark:border-neutral-800 p-5 shadow-sm hover:shadow-md transition-all">
       <div className="flex items-start gap-4">
         {/* Color accent + adherence ring */}
         <div className="relative flex-shrink-0">
@@ -70,16 +70,16 @@ export const MedicationCard: React.FC<Props> = ({
               {medication.name}
             </h3>
             {!medication.isActive && (
-              <span className="text-xs px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-400">
+              <span className="text-xs px-2 py-0.5 rounded-full bg-slate-100 dark:bg-neutral-700 text-slate-500 dark:text-neutral-400">
                 Inactive
               </span>
             )}
           </div>
-          <p className="text-sm text-slate-600 dark:text-slate-400">
+          <p className="text-sm text-slate-600 dark:text-neutral-400">
             {medication.dosage} {medication.unit} &middot; {FREQUENCY_LABELS[medication.frequency]}
           </p>
           {medication.timesOfDay.length > 0 && (
-            <div className="flex items-center gap-1 mt-1 text-xs text-slate-500 dark:text-slate-500">
+            <div className="flex items-center gap-1 mt-1 text-xs text-slate-500 dark:text-neutral-500">
               <Clock size={12} />
               <span>{medication.timesOfDay.join(', ')}</span>
             </div>
@@ -91,7 +91,7 @@ export const MedicationCard: React.FC<Props> = ({
                 {pct}% adherence
               </span>
               {adherence.currentStreak > 0 && (
-                <span className="text-slate-400 dark:text-slate-500">
+                <span className="text-slate-400 dark:text-neutral-500">
                   &middot; {adherence.currentStreak}-day streak
                 </span>
               )}
@@ -120,7 +120,7 @@ export const MedicationCard: React.FC<Props> = ({
 
       {/* Prescriber / refill warnings */}
       {medication.prescriber && (
-        <p className="text-xs text-slate-400 dark:text-slate-500 mt-2">
+        <p className="text-xs text-slate-400 dark:text-neutral-500 mt-2">
           Prescribed by {medication.prescriber}
         </p>
       )}

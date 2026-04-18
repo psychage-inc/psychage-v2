@@ -60,7 +60,7 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Someone cuts you off in traffic and rage floods your body. Your partner forgets an important date and fury erupts. A colleague takes credit for your idea and you snap. But is anger really what you're feeling---or is it protecting you from something deeper?
           </p>
           <p className="mb-6">
@@ -175,49 +175,49 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
           Practical Exercises: Exploring Your Anger Iceberg
         </h2>
 
-        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Exercise 1: The Anger Journal</h3>
-          <p className="mb-4 text-gray-700 dark:text-gray-300">
+          <p className="mb-4 text-gray-700 dark:text-neutral-300">
             For one week, keep a simple log every time you feel angry, irritated, or frustrated.
           </p>
-          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li><strong>What happened?</strong> (The trigger: traffic, a comment, a forgotten task)</li>
             <li><strong>What did I feel on the surface?</strong> (Anger, frustration, irritation)</li>
             <li><strong>What might be underneath?</strong> (Hurt, fear, shame, exhaustion, helplessness)</li>
             <li><strong>What need wasn't met?</strong> (Respect, safety, connection, rest, control)</li>
           </ul>
-          <p className="mt-4 text-gray-700 dark:text-gray-300">
+          <p className="mt-4 text-gray-700 dark:text-neutral-300">
             After one week, review your entries. Do you see patterns? Does one underlying emotion appear more than others?
           </p>
         </div>
 
-        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Exercise 2: The Body Scan for Anger</h3>
-          <p className="mb-4 text-gray-700 dark:text-gray-300">
+          <p className="mb-4 text-gray-700 dark:text-neutral-300">
             Next time you feel angry, pause and scan your body from head to toe.
           </p>
-          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li>Where do you feel the anger physically? (Jaw clenching, chest tightness, fists clenching)</li>
             <li>Breathe into that area for 30 seconds</li>
             <li>Ask: "What is this tension protecting me from feeling?"</li>
             <li>Notice if a softer emotion emerges (sadness in your chest, fear in your stomach)</li>
           </ul>
-          <p className="mt-4 text-gray-700 dark:text-gray-300">
+          <p className="mt-4 text-gray-700 dark:text-neutral-300">
             This exercise helps you connect anger to its emotional roots through somatic awareness.
           </p>
         </div>
 
-        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Exercise 3: Rewrite the Script</h3>
-          <p className="mb-4 text-gray-700 dark:text-gray-300">
+          <p className="mb-4 text-gray-700 dark:text-neutral-300">
             Think of a recent anger outburst. Rewrite what you said to express the vulnerable feeling instead.
           </p>
-          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li><strong>What I said:</strong> "You never listen to me!"</li>
             <li><strong>What I meant:</strong> "I feel hurt and invisible when I'm interrupted."</li>
             <li><strong>Practice saying:</strong> "When you interrupt me, I feel hurt, like my words don't matter. I need you to hear me out."</li>
           </ul>
-          <p className="mt-4 text-gray-700 dark:text-gray-300">
+          <p className="mt-4 text-gray-700 dark:text-neutral-300">
             Practice this reframing with past situations. It builds the skill for future real-time use.
           </p>
         </div>
@@ -340,7 +340,7 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You make a mistake. Do you think "I did something bad" or "I am bad"? That subtle difference---between guilt and shame---determines whether you grow from the experience or spiral into self-loathing.
           </p>
           <p className="mb-6">
@@ -489,49 +489,49 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
           Practical Exercises: From Shame to Self-Compassion
         </h2>
 
-        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Exercise 1: The Shame vs. Guilt Audit</h3>
-          <p className="mb-4 text-gray-700 dark:text-gray-300">
+          <p className="mb-4 text-gray-700 dark:text-neutral-300">
             Write down a recent situation where you felt bad about yourself.
           </p>
-          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li><strong>What happened?</strong> (The event or trigger)</li>
             <li><strong>What did I tell myself?</strong> (Write your exact internal dialogue)</li>
             <li><strong>Is this shame or guilt?</strong> (Does it attack who you are or what you did?)</li>
             <li><strong>Reframe it as guilt:</strong> "Instead of 'I'm a terrible person,' I can say: 'I did something I regret, and I can make it right.'"</li>
           </ul>
-          <p className="mt-4 text-gray-700 dark:text-gray-300">
+          <p className="mt-4 text-gray-700 dark:text-neutral-300">
             Practice this reframing daily until it becomes automatic.
           </p>
         </div>
 
-        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Exercise 2: Shame Resilience Through Connection</h3>
-          <p className="mb-4 text-gray-700 dark:text-gray-300">
+          <p className="mb-4 text-gray-700 dark:text-neutral-300">
             Shame can only survive in isolation. This exercise brings it into the light.
           </p>
-          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li>Identify one thing you feel ashamed about</li>
             <li>Choose someone safe---a trusted friend, therapist, or support group</li>
             <li>Say it out loud: "I feel ashamed about [X]. I've been carrying this alone."</li>
             <li>Notice what happens. Often, the other person responds with empathy, not judgment.</li>
           </ul>
-          <p className="mt-4 text-gray-700 dark:text-gray-300">
+          <p className="mt-4 text-gray-700 dark:text-neutral-300">
             This breaks the isolation that feeds shame. You don't have to carry it alone.
           </p>
         </div>
 
-        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Exercise 3: The Self-Compassion Break</h3>
-          <p className="mb-4 text-gray-700 dark:text-gray-300">
+          <p className="mb-4 text-gray-700 dark:text-neutral-300">
             When shame arises, pause and offer yourself the compassion you'd give a friend.
           </p>
-          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li><strong>Acknowledge the pain:</strong> "This is really hard right now. I'm hurting."</li>
             <li><strong>Remember common humanity:</strong> "I'm not alone in making mistakes. Everyone struggles."</li>
             <li><strong>Speak kindly:</strong> "What would I say to a friend feeling this way?" Then say it to yourself.</li>
           </ul>
-          <p className="mt-4 text-gray-700 dark:text-gray-300">
+          <p className="mt-4 text-gray-700 dark:text-neutral-300">
             Self-compassion doesn't mean excusing harmful behavior. It means treating yourself with dignity while you make it right.
           </p>
         </div>
@@ -654,7 +654,7 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It's 3 AM. You're replaying a conversation from three weeks ago, thinking of what you should have said. Or you're analyzing a mistake you made, spiraling through all the ways you're a failure. You know this mental loop isn't helping---but you can't stop.
           </p>
           <p className="mb-6">
@@ -750,25 +750,25 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
         <div className="mb-6">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">1. Post-Mortem Rumination</h3>
           <p className="mb-3">Endlessly replaying a past event, analyzing what went wrong, wishing you'd done something different.</p>
-          <p className="italic text-gray-600 dark:text-gray-400">Example: "I can't stop thinking about that argument. If only I hadn't said that one thing..."</p>
+          <p className="italic text-gray-600 dark:text-neutral-400">Example: "I can't stop thinking about that argument. If only I hadn't said that one thing..."</p>
         </div>
 
         <div className="mb-6">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">2. Why Me? Rumination</h3>
           <p className="mb-3">Asking unanswerable questions about why bad things happen to you.</p>
-          <p className="italic text-gray-600 dark:text-gray-400">Example: "Why do I always get treated this way? Why can't things ever work out for me?"</p>
+          <p className="italic text-gray-600 dark:text-neutral-400">Example: "Why do I always get treated this way? Why can't things ever work out for me?"</p>
         </div>
 
         <div className="mb-6">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">3. Shame Spirals</h3>
           <p className="mb-3">Ruminating on your perceived flaws and failures, reinforcing a narrative that you're broken or unworthy.</p>
-          <p className="italic text-gray-600 dark:text-gray-400">Example: "I'm such a failure. Everyone can see how incompetent I am. I'll never succeed at anything."</p>
+          <p className="italic text-gray-600 dark:text-neutral-400">Example: "I'm such a failure. Everyone can see how incompetent I am. I'll never succeed at anything."</p>
         </div>
 
         <div className="mb-6">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">4. Relationship Rumination</h3>
           <p className="mb-3">Obsessively analyzing interactions with someone, looking for hidden meanings or proof of rejection.</p>
-          <p className="italic text-gray-600 dark:text-gray-400">Example: "They didn't text back. Did I say something wrong? Do they hate me now?"</p>
+          <p className="italic text-gray-600 dark:text-neutral-400">Example: "They didn't text back. Did I say something wrong? Do they hate me now?"</p>
         </div>
 
         <h2 id="how-to-stop" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -790,50 +790,50 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
           Practical Exercises: Interrupting Rumination
         </h2>
 
-        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Exercise 1: The Rumination Log</h3>
-          <p className="mb-4 text-gray-700 dark:text-gray-300">
+          <p className="mb-4 text-gray-700 dark:text-neutral-300">
             For one week, track every time you notice yourself ruminating.
           </p>
-          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li><strong>What was I ruminating about?</strong> (The topic: work, relationship, past mistake)</li>
             <li><strong>How long did it last?</strong> (5 minutes? 2 hours?)</li>
             <li><strong>What triggered it?</strong> (Boredom, stress, being alone)</li>
             <li><strong>Did it solve anything?</strong> (Almost always: no)</li>
           </ul>
-          <p className="mt-4 text-gray-700 dark:text-gray-300">
+          <p className="mt-4 text-gray-700 dark:text-neutral-300">
             After one week, review. Do certain triggers lead to rumination? Certain times of day? Recognizing patterns helps you intervene early.
           </p>
         </div>
 
-        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Exercise 2: The Two-Minute Rule</h3>
-          <p className="mb-4 text-gray-700 dark:text-gray-300">
+          <p className="mb-4 text-gray-700 dark:text-neutral-300">
             When you catch yourself ruminating, set a timer for two minutes.
           </p>
-          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li>For two minutes, allow yourself to ruminate fully</li>
             <li>When the timer goes off, deliberately shift your focus</li>
             <li>Do something physical: 10 jumping jacks, wash your hands, step outside</li>
             <li>If the rumination returns, repeat: two minutes, then shift</li>
           </ul>
-          <p className="mt-4 text-gray-700 dark:text-gray-300">
+          <p className="mt-4 text-gray-700 dark:text-neutral-300">
             This builds the skill of deliberately interrupting rumination. You're training your brain that you're in control, not the thought.
           </p>
         </div>
 
-        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Exercise 3: From Rumination to Reflection</h3>
-          <p className="mb-4 text-gray-700 dark:text-gray-300">
+          <p className="mb-4 text-gray-700 dark:text-neutral-300">
             Transform rumination into productive reflection by writing it down.
           </p>
-          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li><strong>What happened?</strong> (Just the facts, no interpretation)</li>
             <li><strong>What can I learn from this?</strong> (One specific takeaway)</li>
             <li><strong>What will I do differently next time?</strong> (One concrete action)</li>
             <li><strong>What do I need to let go of?</strong> (What's outside my control)</li>
           </ul>
-          <p className="mt-4 text-gray-700 dark:text-gray-300">
+          <p className="mt-4 text-gray-700 dark:text-neutral-300">
             This exercise gives rumination a purpose: to learn and move forward, not to loop endlessly.
           </p>
         </div>
@@ -922,7 +922,7 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Good vibes only.", "Just be positive.", "Don't be so negative." We live in a culture that treats discomfort like failure and negative emotions like character flaws. The result? A hidden epidemic of emotional perfectionism---the belief that you should always feel good, and that anything else is wrong.
           </p>
           <p className="mb-6">
@@ -1046,49 +1046,49 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
           Practical Exercises: Embracing Your Full Emotional Range
         </h2>
 
-        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Exercise 1: The Emotion Permission Slip</h3>
-          <p className="mb-4 text-gray-700 dark:text-gray-300">
+          <p className="mb-4 text-gray-700 dark:text-neutral-300">
             Write yourself permission slips for emotions you tend to reject.
           </p>
-          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li>Pick an emotion you judge yourself for (sadness, anger, anxiety, jealousy)</li>
             <li>Write: "I give myself permission to feel [emotion]. It's okay that I feel this way."</li>
             <li>Add: "Feeling [emotion] doesn't mean I'm weak/broken/failing. It means I'm human."</li>
             <li>Keep these permission slips visible (phone wallpaper, sticky note, journal)</li>
           </ul>
-          <p className="mt-4 text-gray-700 dark:text-gray-300">
+          <p className="mt-4 text-gray-700 dark:text-neutral-300">
             Example: "I give myself permission to feel sad today. It's okay that I feel this way. Feeling sad doesn't mean I'm broken. It means I'm processing something hard."
           </p>
         </div>
 
-        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Exercise 2: The Emotion Function Journal</h3>
-          <p className="mb-4 text-gray-700 dark:text-gray-300">
+          <p className="mb-4 text-gray-700 dark:text-neutral-300">
             When a "negative" emotion arises, explore its function.
           </p>
-          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li><strong>What emotion am I feeling?</strong> (Name it specifically)</li>
             <li><strong>What is this emotion trying to tell me?</strong> (What need, value, or threat does it signal?)</li>
             <li><strong>What would happen if I listened to it instead of fighting it?</strong></li>
           </ul>
-          <p className="mt-4 text-gray-700 dark:text-gray-300">
+          <p className="mt-4 text-gray-700 dark:text-neutral-300">
             Example: "I'm feeling anxious about this deadline. It's telling me this project matters to me and I need to prioritize it. If I listen, I'll create a plan instead of spiraling."
           </p>
         </div>
 
-        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Exercise 3: The Opposite of Toxic Positivity</h3>
-          <p className="mb-4 text-gray-700 dark:text-gray-300">
+          <p className="mb-4 text-gray-700 dark:text-neutral-300">
             Practice validating instead of dismissing emotions---first for yourself, then for others.
           </p>
-          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li><strong>Toxic positivity says:</strong> "Just look on the bright side!"</li>
             <li><strong>Validation says:</strong> "This is really hard. It makes sense you're struggling."</li>
             <li><strong>Toxic positivity says:</strong> "Everything happens for a reason!"</li>
             <li><strong>Validation says:</strong> "This is unfair and painful. I'm so sorry you're going through this."</li>
           </ul>
-          <p className="mt-4 text-gray-700 dark:text-gray-300">
+          <p className="mt-4 text-gray-700 dark:text-neutral-300">
             Notice how validation creates space for healing, while toxic positivity shuts it down. Practice this in your self-talk and in conversations with others.
           </p>
         </div>
@@ -1169,7 +1169,7 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've spent this series learning about emotional patterns---how they form, why they persist, and what drives them. Now comes the most important part: how do you actually change them?
           </p>
           <p className="mb-6">
@@ -1287,12 +1287,12 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
           Practical Exercises: Rewiring Your Responses
         </h2>
 
-        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Exercise 1: Pattern Mapping</h3>
-          <p className="mb-4 text-gray-700 dark:text-gray-300">
+          <p className="mb-4 text-gray-700 dark:text-neutral-300">
             Create a visual map of one emotional pattern you want to change.
           </p>
-          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li><strong>Trigger:</strong> What situations activate this pattern? (conflict, feeling ignored, uncertainty)</li>
             <li><strong>Thoughts:</strong> What do you tell yourself? ("I'm not good enough," "They're attacking me")</li>
             <li><strong>Emotions:</strong> What do you feel? (fear, shame, anger, sadness)</li>
@@ -1300,41 +1300,41 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
             <li><strong>Behavior:</strong> What do you do? (withdraw, snap, shut down, numb out)</li>
             <li><strong>Outcome:</strong> What happens next? (relationship damage, regret, missed connection)</li>
           </ul>
-          <p className="mt-4 text-gray-700 dark:text-gray-300">
+          <p className="mt-4 text-gray-700 dark:text-neutral-300">
             Seeing the full pattern on paper helps you identify where to intervene. You can interrupt at any point: thoughts, body sensations, or behavior.
           </p>
         </div>
 
-        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Exercise 2: The Implementation Intention Script</h3>
-          <p className="mb-4 text-gray-700 dark:text-gray-300">
+          <p className="mb-4 text-gray-700 dark:text-neutral-300">
             Write out your if-then plan and rehearse it daily.
           </p>
-          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li><strong>Identify your trigger:</strong> "When my partner makes a comment about my parenting..."</li>
             <li><strong>Name the old response:</strong> "I usually feel defensive and snap back."</li>
             <li><strong>Design the new response:</strong> "Instead, I will pause for three breaths and ask: 'Can you tell me more about what you mean?'"</li>
             <li><strong>Visualize success:</strong> Close your eyes and imagine the trigger happening. See yourself doing the new response. Feel what that would be like.</li>
             <li><strong>Rehearse daily:</strong> Read your script each morning for 30 days. Visualization strengthens the neural pathway.</li>
           </ul>
-          <p className="mt-4 text-gray-700 dark:text-gray-300">
+          <p className="mt-4 text-gray-700 dark:text-neutral-300">
             This primes your brain to recognize the trigger and activate the new response when the moment comes.
           </p>
         </div>
 
-        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Exercise 3: The Setback Debrief</h3>
-          <p className="mb-4 text-gray-700 dark:text-gray-300">
+          <p className="mb-4 text-gray-700 dark:text-neutral-300">
             When you default to the old pattern, use it as data, not evidence of failure.
           </p>
-          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li><strong>What happened?</strong> (Describe the situation factually)</li>
             <li><strong>What triggered the old pattern?</strong> (High stress? Fatigue? Strong emotion?)</li>
             <li><strong>What can I learn from this?</strong> (Maybe I need to practice more in low-stress moments, or address the underlying belief)</li>
             <li><strong>How can I be kind to myself?</strong> ("I'm learning a new skill. This is hard. I'm doing my best.")</li>
             <li><strong>What will I try next time?</strong> (Adjust your plan based on what you learned)</li>
           </ul>
-          <p className="mt-4 text-gray-700 dark:text-gray-300">
+          <p className="mt-4 text-gray-700 dark:text-neutral-300">
             This reframes "failure" as feedback. Each setback teaches you something about the pattern and how to interrupt it.
           </p>
         </div>

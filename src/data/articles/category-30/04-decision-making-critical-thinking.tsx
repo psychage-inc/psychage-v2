@@ -65,7 +65,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every day, you make thousands of decisions—from the trivial (what to eat for breakfast) to the consequential (whether to change careers, end a relationship, or move across the country). Yet most people have never studied how decisions are actually made, relying instead on intuition and folk wisdom about &quot;going with your gut&quot; or &quot;thinking it through.
           </p>
         </div>
@@ -114,7 +114,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -177,7 +177,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Cognitive biases are systematic patterns of deviation from rationality in judgment—predictable errors that arise not from stupidity or carelessness but from the architecture of the human cognitive system itself. The brain, evolved to make fast decisions in a world of limited information and immediate threats, relies on shortcuts that usually work well enough but that produce reliable errors in specific, identifiable circumstances.
           </p>
         </div>
@@ -222,7 +222,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -285,7 +285,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Critical thinking—the ability to evaluate evidence, assess claims, identify flawed reasoning, and distinguish reliable information from unreliable—has never been more important than in the current information environment, where misinformation, persuasive manipulation, and emotionally charged narratives compete for attention and belief. Yet critical thinking is not a natural cognitive mode.
           </p>
         </div>
@@ -330,7 +330,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -393,7 +393,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Risk is a constant feature of human life—every decision involves uncertainty about outcomes, and the ability to accurately assess risk is fundamental to navigating health decisions, financial choices, career moves, relationship commitments, and daily safety. Yet decades of research on risk perception reveal that humans are systematically poor at evaluating risk: we overestimate the probability of dramatic, vivid, emotionally charged events (airplane crashes, terrorist attacks, shark attacks) while underestimating the probability of common, mundane, statistically significant risks (car accidents, heart disease, medication side effects).
           </p>
         </div>
@@ -434,7 +434,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -497,7 +497,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             &quot;Trust your gut&quot; is among the most common advice people give and receive—and among the most misleading when taken without qualification. Intuition—the feeling of knowing without being able to articulate why—is a real psychological phenomenon with a real neural basis, and research has documented conditions under which intuitive judgments are remarkably accurate.
           </p>
         </div>
@@ -544,7 +544,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -607,7 +607,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every day, you are the target of persuasion attempts—from advertising, marketing, political messaging, sales tactics, social media algorithms, and the ordinary social influence of the people around you. Most of these attempts operate below your conscious awareness, exploiting psychological principles that the persuader understands and you do not.
           </p>
         </div>
@@ -653,7 +653,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -716,7 +716,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every decision you make—from what to wear in the morning to how to respond to an email to what to eat for lunch—consumes a finite psychological resource. As the number of decisions accumulates across the day, the quality of those decisions deteriorates: you become more likely to take the default option, to avoid making a decision at all, to give in to impulses, and to make choices that prioritize short-term comfort over long-term benefit.
           </p>
         </div>
@@ -762,7 +762,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -825,7 +825,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every day presents moral choices—some obvious, most subtle. Whether to tell the truth when lying would be easier.
           </p>
         </div>
@@ -872,7 +872,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -935,7 +935,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The human brain evolved to process information in an environment of scarcity: limited data, slow change, and long intervals between consequential decisions. The modern information environment inverts every feature of this ancestral context: data is superabundant, change is constant, and demands for attention arrive at a pace that exceeds the cognitive system&apos;s capacity to process them.
           </p>
         </div>
@@ -980,7 +980,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1043,7 +1043,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             First-order thinking asks: &quot;What happens if I do this?&quot; Second-order thinking asks: &quot;And then what?&quot; The distinction matters because most of the important consequences of a decision are not the immediate, obvious effects but the downstream, secondary, often unintended effects that unfold over time and across connected systems. The person who quits a job considers the immediate relief (first-order) but may not consider the gap in their resume, the loss of professional relationships, or the change in daily structure (second-order).
           </p>
         </div>
@@ -1093,7 +1093,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1156,7 +1156,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A mental model is a representation of how something works—a simplified framework that the mind uses to understand, predict, and navigate the world. Everyone uses mental models, but most people use a narrow set of models drawn from their personal experience and professional training, applying the same few frameworks to every situation.
           </p>
         </div>
@@ -1201,7 +1201,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1264,7 +1264,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Regret—the painful emotion that arises from the recognition that a different choice would have produced a better outcome—is one of the most common and most psychologically significant human emotions. Research documents that virtually everyone experiences regret, that the experience is associated with measurable psychological and physiological consequences, and that regret shapes future decision-making in ways that are both adaptive and maladaptive.
           </p>
         </div>
@@ -1308,7 +1308,7 @@ export const decisionmakingCriticalThinkingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

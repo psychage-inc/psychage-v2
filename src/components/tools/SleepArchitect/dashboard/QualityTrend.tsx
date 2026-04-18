@@ -31,7 +31,7 @@ const QualityTrend: React.FC<QualityTrendProps> = ({ entries }) => {
   });
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl p-5 border border-gray-100 dark:border-gray-700">
+    <div className="bg-white dark:bg-neutral-800 rounded-2xl p-5 border border-gray-100 dark:border-neutral-700">
       <h4 className="font-display font-bold text-sm text-gray-900 dark:text-white mb-4">
         Quality & Mood Trend
       </h4>
@@ -87,7 +87,7 @@ const QualityTrend: React.FC<QualityTrendProps> = ({ entries }) => {
           />
         </LineChart>
       </ResponsiveContainer>
-      <div className="flex items-center justify-center gap-4 mt-2 text-[10px] text-gray-400 dark:text-gray-500">
+      <div className="flex items-center justify-center gap-4 mt-2 text-[10px] text-gray-400 dark:text-neutral-500">
         <div className="flex items-center gap-1.5">
           <div className="w-3 h-0.5 bg-violet-500 rounded" />
           Sleep Quality

@@ -37,7 +37,7 @@ export const sleepDisordersCommonProblemsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your child screams in the night, eyes open but unseeing---a night terror. Or you wake drenched in sweat from a vivid nightmare. While both disrupt sleep, they're fundamentally different phenomena requiring different responses.
           </p>
           <p className="mb-6">
@@ -99,7 +99,7 @@ export const sleepDisordersCommonProblemsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Waking to find you've rearranged furniture in your sleep. Carrying on full conversations while unconscious. Acting out violent dreams. These are parasomnias---abnormal behaviors that occur during sleep transitions or within sleep stages.
           </p>
           <p className="mb-6">
@@ -160,7 +160,7 @@ export const sleepDisordersCommonProblemsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Working when your body expects to sleep disrupts more than your schedule---it fights against millions of years of evolutionary biology. Shift work sleep disorder affects 10-40% of night and rotating shift workers.
           </p>
           <p className="mb-6">
@@ -222,7 +222,7 @@ export const sleepDisordersCommonProblemsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It's 10 PM. You need to sleep because tomorrow is important. But the thought "I need to sleep" triggers anxiety, which triggers arousal, which prevents sleep. The harder you try, the more awake you become. This is sleep anxiety.
           </p>
           <p className="mb-6">
@@ -284,7 +284,7 @@ export const sleepDisordersCommonProblemsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Everyone has occasional bad nights. But when sleep problems persist despite good sleep hygiene, or when they significantly impair your daily life, it's time to seek professional evaluation.
           </p>
           <p className="mb-6">

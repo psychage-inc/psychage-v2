@@ -63,7 +63,7 @@ export const neurodivergenceDisabilityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The neurodiversity paradigm—the view that neurological differences such as autism, ADHD, dyslexia, Tourette syndrome, and other conditions represent natural human variation rather than deficits to be cured—has transformed how millions of people understand their own brains. Coined by sociologist Judy Singer in 1998, the term &quot;neurodiversity&quot; draws a direct parallel to biodiversity: just as ecological systems benefit from species diversity, human societies benefit from cognitive diversity.
           </p>
         </div>
@@ -84,7 +84,7 @@ export const neurodivergenceDisabilityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

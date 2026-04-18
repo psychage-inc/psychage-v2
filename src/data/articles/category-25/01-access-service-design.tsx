@@ -63,7 +63,7 @@ export const accessServiceDesignArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Despite experiencing mental health conditions at two to four times the general population rate, disabled people face systematic barriers to accessing mental health services—barriers that exist at every stage of the care pathway, from finding a provider to sitting in a therapy session. Physical barriers (offices without wheelchair access, therapy rooms too small for mobility devices, inaccessible parking) remain common despite legal mandates like the Americans with Disabilities Act.
           </p>
         </div>
@@ -84,7 +84,7 @@ export const accessServiceDesignArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

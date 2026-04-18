@@ -65,7 +65,7 @@ export const sexualTraumaRecoveryArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sexual trauma fundamentally alters a survivor&apos;s relationship with their own body, desire, and capacity for intimate connection. Research consistently demonstrates that sexual assault produces unique neurobiological changes that distinguish it from other forms of trauma in its impact on sexual function, body ownership, and relational trust.
           </p>
         </div>
@@ -106,7 +106,7 @@ export const sexualTraumaRecoveryArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -169,7 +169,7 @@ export const sexualTraumaRecoveryArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Childhood sexual abuse (CSA) represents one of the most significant developmental disruptions to the formation of healthy sexuality, affecting approximately one in four girls and one in thirteen boys before adulthood. The long-term sexual consequences of CSA are both pervasive and heterogeneous—survivors may experience sexual avoidance, compulsive sexual behavior, dissociation during intimate encounters, difficulty distinguishing between genuine desire and conditioned compliance, pain disorders, and complex patterns of revictimization.
           </p>
         </div>
@@ -207,7 +207,7 @@ export const sexualTraumaRecoveryArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -270,7 +270,7 @@ export const sexualTraumaRecoveryArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sexual coercion exists on a continuum between freely given, enthusiastic consent and violent sexual assault—a vast middle territory that remains poorly understood, insufficiently named, and frequently minimized within intimate relationships. Coercion encompasses the range of tactics through which one partner pressures, manipulates, guilt-trips, or emotionally coerces another into unwanted sexual activity without resorting to physical force.
           </p>
         </div>
@@ -309,7 +309,7 @@ export const sexualTraumaRecoveryArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -372,7 +372,7 @@ export const sexualTraumaRecoveryArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sexual shame—the deeply internalized belief that something about one&apos;s sexual self is fundamentally flawed, dirty, or unacceptable—is one of the most pervasive and psychologically damaging consequences of living in cultures that systematically pathologize, silence, and control human sexuality. Unlike guilt, which says &quot;I did something bad,&quot; shame says &quot;I am something bad&quot;—a distinction with profound implications for sexual functioning, intimate relationships, and psychological well-being.
           </p>
         </div>
@@ -413,7 +413,7 @@ export const sexualTraumaRecoveryArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

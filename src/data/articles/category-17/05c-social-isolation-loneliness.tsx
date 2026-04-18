@@ -162,7 +162,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mrs. Williams lived in her house for 40 years. She raised her children there, hosted Thanksgiving dinners, tended her garden. After her husband died, she stayed---the house was full of memories. But she was alone. Days passed without speaking to anyone. Her daughter suggested assisted living. Mrs. Williams resisted: "I am not giving up my home." After a fall that left her on the floor for six hours, she moved---reluctantly, angry, grieving. Six months later, sitting in the common room playing cards with three new friends, she admits: "I wish I had moved sooner. I have friends here. I eat meals with people. I am not lonely anymore." <Citation id="1" index={1} source="The Gerontologist" year="2009" tier={1} />
           </p>
           <p className="mb-6">
@@ -514,7 +514,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mr. Patel has attended temple every Saturday for 50 years. After his wife died, he almost stopped going---too painful to sit alone in the pew where they sat together. But his temple community reached out. They invited him to volunteer in the kitchen. They checked on him by phone. They brought meals when he was too grief-stricken to cook. Slowly, he returned. Now he goes not just for worship, but for community. The temple is where people know his name, his story, his grief. It is where he belongs. <Citation id="1" index={1} source="JAMA Internal Medicine" year="2016" tier={1} />
           </p>
           <p className="mb-6">
@@ -840,7 +840,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You are 70 years old. You go to the doctor for knee pain. Without examining you, he says, "You are 70---what do you expect?" Your pain is dismissed as inevitable aging, not a treatable condition. You apply for a part-time job. The interviewer asks, "Are you familiar with computers?" (You have used computers for 30 years, managed IT projects.) You are assumed incompetent based on gray hair. You attend a family gathering. Younger relatives talk over you, make decisions about your life without consulting you, speak to you in a patronizing tone. You are invisible---and when visible, infantilized. This is ageism. <Citation id="1" index={1} source="Journal of Cross-Cultural Gerontology" year="2004" tier={1} />
           </p>
           <p className="mb-6">
@@ -1171,7 +1171,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             March 2020: Senior centers close. Churches cancel services. Families stop visiting nursing homes, forbidden by lockdown orders. You are told to stay home---for your safety. Weeks turn into months. You lose your routines: no tai chi class on Tuesday, no coffee with friends on Thursday, no Sunday dinners with family. You see no one. Days blur together. By 2021, vaccines arrive. Restrictions lift. But you do not return. You lost confidence after two years inside. Your book club never reformed---some members died, others moved, the rest scattered. You got used to isolation. Now, in 2026, six years after lockdowns began, you are still home. Alone. <Citation id="1" index={1} source="The Journals of Gerontology Series B" year="2021" tier={1} />
           </p>
           <p className="mb-6">
@@ -1495,7 +1495,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You are 72. Your social network has shrunk dramatically over the past decade: retirement ended work friendships (no more coffee breaks with colleagues, no shared projects), your spouse died two years ago, your best friend moved to assisted living across the country, mobility issues prevent you from attending evening events, and hearing loss makes group conversations exhausting. You realize you have no one to call on a bad day. The phone never rings unless it is a telemarketer. You are lonely. But you are not helpless. Social networks can be rebuilt---with intention, effort, and courage. <Citation id="1" index={1} source="Journal of Health and Social Behavior" year="2009" tier={1} />
           </p>
           <p className="mb-6">

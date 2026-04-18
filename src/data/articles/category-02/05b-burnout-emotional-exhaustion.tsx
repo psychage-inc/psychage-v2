@@ -91,7 +91,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You love your children. You'd do anything for them. And yet, you're so tired that the sound of 'Mom!" or "Dad!" makes you want to hide. You snap at them over small things. You feel nothing when they share their accomplishments. You fantasize about running away. Then you feel crushing guilt for feeling this way.
           </p>
           <p className="mb-6">
@@ -429,7 +429,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You took a week off. You rested. You came back to work, and within three days, you felt just as burned out as before. So you wonder: Is recovery even possible? How long does it actually take? And what does "recovered" even mean?
           </p>
           <p className="mb-6">
@@ -795,7 +795,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You used to believe your work mattered. Now you think it's all pointless. You used to care about the people you serve. Now you see them as interruptions or problems. You used to feel hopeful. Now everything feels like a performance, and you're just going through the motions.
           </p>
           <p className="mb-6">
@@ -931,7 +931,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your workplace offers yoga classes and meditation apps. They talk about resilience and self-care. Meanwhile, you're working 60-hour weeks with impossible deadlines and no control over your schedule. The message is clear: burnout is your problem to fix, not theirs.
           </p>
           <p className="mb-6">
@@ -1256,7 +1256,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You took a week off. By day three, you finally felt like yourself again. You slept in. You read books. You didn't check email. You came back feeling refreshed --- and within 72 hours, you were right back where you started. Exhausted. Depleted. Wondering if the vacation was just a temporary illusion.
           </p>
           <p className="mb-6">

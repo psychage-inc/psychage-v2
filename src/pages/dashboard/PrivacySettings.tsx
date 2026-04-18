@@ -57,7 +57,7 @@ const ConsentToggle: React.FC<ConsentToggleProps> = ({
             disabled={disabled}
             onClick={() => onChange(!checked)}
             className={`relative shrink-0 w-11 h-6 rounded-full transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 outline-none ${
-                checked ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-600'
+                checked ? 'bg-primary' : 'bg-gray-300 dark:bg-neutral-600'
             } ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}
         >
             <span
@@ -77,7 +77,7 @@ const DSARStatusBadge: React.FC<{ status: string }> = ({ status }) => {
         processing: { color: 'text-blue-600 bg-blue-50 dark:bg-blue-900/20 dark:text-blue-400', icon: <Loader2 size={12} className="animate-spin" /> },
         completed: { color: 'text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20 dark:text-emerald-400', icon: <CheckCircle size={12} /> },
         rejected: { color: 'text-red-600 bg-red-50 dark:bg-red-900/20 dark:text-red-400', icon: <XCircle size={12} /> },
-        cancelled: { color: 'text-gray-500 bg-gray-100 dark:bg-gray-800 dark:text-gray-400', icon: <XCircle size={12} /> },
+        cancelled: { color: 'text-gray-500 bg-gray-100 dark:bg-neutral-800 dark:text-neutral-400', icon: <XCircle size={12} /> },
     };
     const { color, icon } = config[status] || config.pending;
 

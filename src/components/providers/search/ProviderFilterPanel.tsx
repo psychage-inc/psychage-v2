@@ -258,7 +258,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
                 {isLoading ? (
                   <div className="space-y-4">
                     {[...Array(5)].map((_, i) => (
-                      <div key={i} className="h-8 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+                      <div key={i} className="h-8 bg-gray-200 dark:bg-neutral-700 rounded animate-pulse" />
                     ))}
                   </div>
                 ) : content}
@@ -289,7 +289,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
         {isLoading ? (
           <div className="space-y-4">
             {[...Array(5)].map((_, i) => (
-              <div key={i} className="h-8 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+              <div key={i} className="h-8 bg-gray-200 dark:bg-neutral-700 rounded animate-pulse" />
             ))}
           </div>
         ) : content}
@@ -313,7 +313,7 @@ const RadioItem: React.FC<{ label: string; checked: boolean; onChange: () => voi
       type="radio"
       checked={checked}
       onChange={onChange}
-      className="w-4 h-4 border-gray-300 dark:border-gray-600 text-primary focus:ring-primary focus:ring-offset-0"
+      className="w-4 h-4 border-gray-300 dark:border-neutral-600 text-primary focus:ring-primary focus:ring-offset-0"
     />
     <span className="text-sm text-text-secondary group-hover:text-text-primary transition-colors">
       {label}
@@ -327,7 +327,7 @@ const CheckboxItem: React.FC<{ label: string; sublabel?: string; checked: boolea
       type="checkbox"
       checked={checked}
       onChange={onChange}
-      className="w-4 h-4 rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary focus:ring-offset-0"
+      className="w-4 h-4 rounded border-gray-300 dark:border-neutral-600 text-primary focus:ring-primary focus:ring-offset-0"
     />
     <span className="text-sm text-text-secondary group-hover:text-text-primary transition-colors">
       {label}

@@ -31,14 +31,14 @@ export default function SourceCitations({ sources }: SourceCitationsProps) {
             <a
               key={source.id}
               href={source.url}
-              className="flex items-start gap-2.5 border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-2.5 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors"
+              className="flex items-start gap-2.5 border border-slate-200 dark:border-neutral-700 rounded-lg px-3 py-2.5 hover:bg-slate-50 dark:hover:bg-neutral-800/50 cursor-pointer transition-colors"
             >
               <Icon size={16} className="text-teal-600 dark:text-teal-400 shrink-0 mt-0.5" />
               <div className="min-w-0">
-                <p className="text-sm font-medium text-slate-800 dark:text-slate-200 truncate">
+                <p className="text-sm font-medium text-slate-800 dark:text-neutral-200 truncate">
                   {source.title}
                 </p>
-                <p className="text-xs text-slate-500 dark:text-slate-400 truncate">
+                <p className="text-xs text-slate-500 dark:text-neutral-400 truncate">
                   {source.snippet}
                 </p>
               </div>

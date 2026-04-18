@@ -36,10 +36,10 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({ provider }) => {
         <img
           src={provider.photo_url}
           alt={provider.display_name}
-          className="h-24 w-24 shrink-0 rounded-full object-cover ring-2 ring-white shadow-lg dark:ring-slate-700 sm:h-28 sm:w-28"
+          className="h-24 w-24 shrink-0 rounded-full object-cover ring-2 ring-white shadow-lg dark:ring-neutral-700 sm:h-28 sm:w-28"
         />
       ) : (
-        <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-teal-500 to-teal-700 text-3xl font-bold text-white shadow-lg ring-2 ring-white dark:ring-slate-700 sm:h-28 sm:w-28 sm:text-4xl">
+        <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-teal-500 to-teal-700 text-3xl font-bold text-white shadow-lg ring-2 ring-white dark:ring-neutral-700 sm:h-28 sm:w-28 sm:text-4xl">
           {initials}
         </div>
       )}
@@ -59,13 +59,13 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({ provider }) => {
         </div>
 
         {provider.practice_name && (
-          <p className="text-sm text-slate-500 dark:text-slate-400">
+          <p className="text-sm text-slate-500 dark:text-neutral-400">
             {provider.practice_name}
           </p>
         )}
 
         {provider.npi_number && (
-          <p className="text-xs text-slate-400 dark:text-slate-500 font-mono">
+          <p className="text-xs text-slate-400 dark:text-neutral-500 font-mono">
             NPI: {provider.npi_number}
           </p>
         )}

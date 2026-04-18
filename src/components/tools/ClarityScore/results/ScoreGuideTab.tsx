@@ -69,7 +69,7 @@ const ScoreGuideTab: React.FC<ScoreGuideTabProps> = ({ currentTier }) => {
       className="space-y-6"
     >
       {/* ─── Understanding Your Clarity Score ─── */}
-      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 md:p-8">
+      <div className="bg-white dark:bg-neutral-900 rounded-2xl border border-gray-100 dark:border-neutral-800 shadow-sm p-6 md:p-8">
         <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-6 flex items-center gap-2">
           <BookOpen size={20} className="text-teal-500" />
           Understanding Your Clarity Score
@@ -102,7 +102,7 @@ const ScoreGuideTab: React.FC<ScoreGuideTabProps> = ({ currentTier }) => {
             return (
               <div
                 key={i}
-                className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-center"
+                className="bg-gray-50 dark:bg-neutral-800/50 rounded-xl p-4 text-center"
               >
                 <div className="w-10 h-10 rounded-full bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center mx-auto mb-3 text-teal-600 dark:text-teal-400">
                   <ItemIcon size={18} />
@@ -110,7 +110,7 @@ const ScoreGuideTab: React.FC<ScoreGuideTabProps> = ({ currentTier }) => {
                 <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-1">
                   {item.title}
                 </h4>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
+                <p className="text-xs text-gray-500 dark:text-neutral-400">
                   {item.desc}
                 </p>
               </div>
@@ -120,11 +120,11 @@ const ScoreGuideTab: React.FC<ScoreGuideTabProps> = ({ currentTier }) => {
       </div>
 
       {/* ─── How Scoring Works ─── */}
-      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 md:p-8">
+      <div className="bg-white dark:bg-neutral-900 rounded-2xl border border-gray-100 dark:border-neutral-800 shadow-sm p-6 md:p-8">
         <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-4">
           How Scoring Works
         </h3>
-        <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+        <p className="text-sm text-gray-600 dark:text-neutral-300 leading-relaxed mb-6">
           Each of the 20 questions uses a validated scale appropriate to its
           instrument. Your responses map to five wellness dimensions, each
           producing a sub-score from 0 to 20. The composite Clarity Score is the
@@ -140,30 +140,30 @@ const ScoreGuideTab: React.FC<ScoreGuideTabProps> = ({ currentTier }) => {
               <React.Fragment key={key}>
                 <div className={`flex items-center gap-2 px-3 py-2 rounded-lg ${m.tailwindBgLight}`}>
                   <DimIcon size={14} className={m.tailwindText} />
-                  <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
+                  <span className="text-xs font-medium text-gray-700 dark:text-neutral-300">
                     {m.shortName}
                   </span>
                   <span className="text-xs text-gray-400">0–20</span>
                 </div>
                 {i < DIMENSION_ORDER.length - 1 && (
-                  <span className="text-gray-300 dark:text-gray-600 text-lg font-light">
+                  <span className="text-gray-300 dark:text-neutral-600 text-lg font-light">
                     +
                   </span>
                 )}
               </React.Fragment>
             );
           })}
-          <span className="text-gray-300 dark:text-gray-600 text-lg font-light">
+          <span className="text-gray-300 dark:text-neutral-600 text-lg font-light">
             =
           </span>
-          <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-900 dark:bg-white text-white dark:text-gray-900">
+          <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-900 dark:bg-white text-white dark:text-neutral-900">
             <span className="text-xs font-bold">Clarity Score 0–100</span>
           </div>
         </div>
       </div>
 
       {/* ─── Score Tiers Explained ─── */}
-      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 md:p-8">
+      <div className="bg-white dark:bg-neutral-900 rounded-2xl border border-gray-100 dark:border-neutral-800 shadow-sm p-6 md:p-8">
         <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-6">
           Score Tiers Explained
         </h3>
@@ -180,7 +180,7 @@ const ScoreGuideTab: React.FC<ScoreGuideTabProps> = ({ currentTier }) => {
                 className={`rounded-xl border overflow-hidden transition-colors ${
                   isCurrent
                     ? 'border-teal-300 dark:border-teal-700 ring-1 ring-teal-200 dark:ring-teal-800'
-                    : 'border-gray-100 dark:border-gray-800'
+                    : 'border-gray-100 dark:border-neutral-800'
                 }`}
               >
                 <button
@@ -188,12 +188,12 @@ const ScoreGuideTab: React.FC<ScoreGuideTabProps> = ({ currentTier }) => {
                   onClick={() =>
                     setExpandedTier(isExpanded ? null : tierKey)
                   }
-                  className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus-visible:outline-none"
+                  className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 dark:hover:bg-neutral-800/50 transition-colors focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus-visible:outline-none"
                   aria-expanded={isExpanded}
                 >
                   <div className="flex items-center gap-3">
                     <TierBadge tier={tierKey} size="md" />
-                    <span className="text-sm text-gray-400 dark:text-gray-500">
+                    <span className="text-sm text-gray-400 dark:text-neutral-500">
                       {td.range}
                     </span>
                     {isCurrent && (
@@ -214,10 +214,10 @@ const ScoreGuideTab: React.FC<ScoreGuideTabProps> = ({ currentTier }) => {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="border-t border-gray-100 dark:border-gray-800"
+                    className="border-t border-gray-100 dark:border-neutral-800"
                   >
                     <div className="p-4">
-                      <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                      <p className="text-sm text-gray-600 dark:text-neutral-300 mb-4">
                         {td.description}
                       </p>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -256,7 +256,7 @@ const ScoreGuideTab: React.FC<ScoreGuideTabProps> = ({ currentTier }) => {
       </div>
 
       {/* ─── Validated Instruments ─── */}
-      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 md:p-8">
+      <div className="bg-white dark:bg-neutral-900 rounded-2xl border border-gray-100 dark:border-neutral-800 shadow-sm p-6 md:p-8">
         <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-6">
           Validated Instruments
         </h3>
@@ -268,24 +268,24 @@ const ScoreGuideTab: React.FC<ScoreGuideTabProps> = ({ currentTier }) => {
             return (
               <div
                 key={inst.badge}
-                className="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl"
+                className="flex items-start gap-4 p-4 bg-gray-50 dark:bg-neutral-800/50 rounded-xl"
               >
                 <div className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${m.tailwindBgLight} ${m.tailwindText}`}>
                   <DimIcon size={18} />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-xs font-bold text-gray-900 dark:text-white bg-gray-200 dark:bg-gray-700 px-2 py-0.5 rounded">
+                    <span className="text-xs font-bold text-gray-900 dark:text-white bg-gray-200 dark:bg-neutral-700 px-2 py-0.5 rounded">
                       {inst.badge}
                     </span>
-                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                    <span className="text-sm font-medium text-gray-700 dark:text-neutral-300">
                       {inst.name}
                     </span>
                   </div>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                  <p className="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">
                     {inst.measures}
                   </p>
-                  <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
+                  <p className="text-xs text-gray-400 dark:text-neutral-500 mt-1">
                     Maps to: <strong>{inst.dimension}</strong>
                   </p>
                 </div>
@@ -294,30 +294,30 @@ const ScoreGuideTab: React.FC<ScoreGuideTabProps> = ({ currentTier }) => {
           })}
 
           {/* Custom domain note */}
-          <div className="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+          <div className="flex items-start gap-4 p-4 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
             <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-500">
               <DIMENSION_META.functioning.icon size={18} />
             </div>
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-xs font-bold text-gray-900 dark:text-white bg-gray-200 dark:bg-gray-700 px-2 py-0.5 rounded">
+                <span className="text-xs font-bold text-gray-900 dark:text-white bg-gray-200 dark:bg-neutral-700 px-2 py-0.5 rounded">
                   Custom
                 </span>
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                <span className="text-sm font-medium text-gray-700 dark:text-neutral-300">
                   WHODAS-adapted Daily Functioning Items
                 </span>
               </div>
-              <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+              <p className="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">
                 Four items adapted from the WHO Disability Assessment Schedule measuring symptom interference, relationship difficulty, responsibility management, and mental-physical health connection.
               </p>
-              <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
+              <p className="text-xs text-gray-400 dark:text-neutral-500 mt-1">
                 Maps to: <strong>Daily Functioning</strong>
               </p>
             </div>
           </div>
         </div>
 
-        <p className="text-xs text-gray-400 dark:text-gray-500 mt-6 leading-relaxed">
+        <p className="text-xs text-gray-400 dark:text-neutral-500 mt-6 leading-relaxed">
           All instrument selection and scoring methodology reviewed and approved
           by Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology.
         </p>

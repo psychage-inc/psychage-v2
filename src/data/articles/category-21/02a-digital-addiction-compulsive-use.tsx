@@ -79,7 +79,7 @@ export const digitalAddictionCompulsiveUseArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You reach for it before your eyes are fully open. You scroll through it while eating,
             while walking, while waiting for anything at all. When you accidentally leave it in
             another room, something tightens in your chest. The device in your pocket has become
@@ -307,9 +307,9 @@ export const digitalAddictionCompulsiveUseArticlesA: Article[] = [
         />
 
         <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 border border-gray-200 dark:border-neutral-700">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Sleep disruption</h3>
-            <p className="text-gray-600 dark:text-gray-300 text-sm">
+            <p className="text-gray-600 dark:text-neutral-300 text-sm">
               Blue light exposure suppresses melatonin production, but the bigger issue is
               cognitive arousal. Engaging content --- social conflict, news, games --- activates
               the sympathetic nervous system right when your brain needs to wind down. Studies
@@ -318,9 +318,9 @@ export const digitalAddictionCompulsiveUseArticlesA: Article[] = [
               quality <Citation id="6" index={6} />.
             </p>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 border border-gray-200 dark:border-neutral-700">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Attention fragmentation</h3>
-            <p className="text-gray-600 dark:text-gray-300 text-sm">
+            <p className="text-gray-600 dark:text-neutral-300 text-sm">
               The mere presence of a smartphone --- even when turned off --- has been shown to reduce
               available cognitive capacity. This "brain drain" effect occurs because part of your
               executive function is dedicated to resisting the urge to check the device. Over time,
@@ -328,9 +328,9 @@ export const digitalAddictionCompulsiveUseArticlesA: Article[] = [
               to sustain deep focus.
             </p>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 border border-gray-200 dark:border-neutral-700">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Anxiety and depression</h3>
-            <p className="text-gray-600 dark:text-gray-300 text-sm">
+            <p className="text-gray-600 dark:text-neutral-300 text-sm">
               A systematic review of 23 studies found consistent associations between problematic
               smartphone use and elevated symptoms of anxiety and depression, particularly among
               younger populations <Citation id="9" index={9} />. The relationship appears
@@ -338,9 +338,9 @@ export const digitalAddictionCompulsiveUseArticlesA: Article[] = [
               amplifies anxiety symptoms.
             </p>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 border border-gray-200 dark:border-neutral-700">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Reduced face-to-face connection</h3>
-            <p className="text-gray-600 dark:text-gray-300 text-sm">
+            <p className="text-gray-600 dark:text-neutral-300 text-sm">
               "Phubbing" --- snubbing someone in favor of your phone --- has been linked to lower
               relationship satisfaction and increased feelings of social exclusion. The irony is
               that a device designed to connect people often disrupts the most meaningful form
@@ -599,7 +599,7 @@ export const digitalAddictionCompulsiveUseArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Video games are the largest entertainment industry in the world, generating more
             revenue than film and music combined. Over 3 billion people play them. For the
             vast majority, gaming is what it appears to be: a hobby, a social activity, a form
@@ -1001,7 +1001,7 @@ export const digitalAddictionCompulsiveUseArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It starts with "just one more episode." Three hours later, the credits roll for the
             fifth time, the room is dark, and you realize you've been in the same position so
             long your body has gone stiff. You didn't plan this. You didn't especially enjoy
@@ -1411,7 +1411,7 @@ export const digitalAddictionCompulsiveUseArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The notification appears: "24-hour flash sale --- 60% off." You weren't looking to buy
             anything. But you click. And within the first scroll, something catches your eye. It's
             not expensive. It's on sale. The reviews are good. You add it to your cart. Then
@@ -1833,7 +1833,7 @@ export const digitalAddictionCompulsiveUseArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Pornography is one of the most widely consumed forms of digital content in the world.
             It is also one of the most politically and morally charged topics in psychology. Public
             discourse tends to oscillate between two poles: pornography as a harmless expression of

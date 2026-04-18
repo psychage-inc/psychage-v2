@@ -113,7 +113,7 @@ export const toxicDynamicsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Toxic relationships don't always announce themselves with obvious abuse. More often, they creep in gradually---subtle control disguised as care, manipulation framed as love, boundary violations normalized as intimacy. Learning to recognize these patterns is essential for protecting your mental health and wellbeing.
           </p>
           <p className="mb-6">
@@ -585,7 +585,7 @@ export const toxicDynamicsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Emotional manipulation is psychological warfare disguised as love. It rewrites your reality, erodes your self-trust, and keeps you tethered to someone who harms you. Understanding the specific tactics---gaslighting, love-bombing, DARVO, triangulation---is essential for recognizing when you're being manipulated and reclaiming your sense of reality.
           </p>
           <p className="mb-6">
@@ -1050,7 +1050,7 @@ export const toxicDynamicsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You pour yourself into others---fixing their problems, managing their emotions, sacrificing your needs to keep the peace. It feels like love, like being a good person. But underneath, you're exhausted, resentful, and losing yourself. This is codependency: when caring for others becomes compulsive and comes at the cost of your own wellbeing.
           </p>
           <p className="mb-6">
@@ -1547,7 +1547,7 @@ export const toxicDynamicsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             At first, they made you feel like the most special person in the world. Now, you walk on eggshells, doubt your own reality, and feel like you can never do anything right. Welcome to the narcissistic relationship cycle---a predictable pattern of idealization, devaluation, and discard that leaves survivors questioning their sanity and self-worth.
           </p>
           <p className="mb-6">
@@ -2027,7 +2027,7 @@ export const toxicDynamicsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You know the relationship is bad for you. Your friends see it, your family sees it, you see it. Yet you can't leave. Every time you try, you feel pulled back---not just emotionally, but almost physically. This isn't weakness. This is trauma bonding: a powerful psychological and neurobiological attachment to someone who harms you, created by cycles of abuse and intermittent reinforcement.
           </p>
           <p className="mb-6">

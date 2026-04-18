@@ -98,7 +98,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You have individual friendships, but no real friend group. You're always the one bridging different social circles, never feeling like you fully belong to any of them. You watch other people with their tight-knit crews and wonder how they found their people --- and how you can find yours.
           </p>
           <p className="mb-6">
@@ -480,7 +480,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You want to text that friend you haven't talked to in months, but what if they think it's weird? You'd love to suggest coffee with that acquaintance, but what if they say no? You think about reaching out constantly but never do, waiting for the other person to make the first move. Meanwhile, they're probably doing the same thing.
           </p>
           <p className="mb-6">
@@ -893,7 +893,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You have friends, but the conversations stay surface-level. You talk about work, weekend plans, and the weather. You never share what you're really struggling with, what you're afraid of, or who you really are beneath the pleasant exterior. The friendships feel hollow, and you wonder why you don't feel closer to anyone.
           </p>
           <p className="mb-6">
@@ -1329,7 +1329,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your best friend moved across the country for a job. You promised to stay close, but months later, you've texted a few times and had one awkward video call. The friendship that once felt effortless now requires planning, and you're not sure how to maintain closeness when you can't just grab coffee spontaneously.
           </p>
           <p className="mb-6">
@@ -1772,7 +1772,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've been friends for years, but it doesn't feel right anymore. Your values have diverged. Your lives went in different directions. Every interaction feels forced, like you're both trying to hold onto something that's already gone. But letting go feels like failure, like giving up on someone you once cared deeply about.
           </p>
           <p className="mb-6">

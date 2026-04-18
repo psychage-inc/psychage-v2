@@ -45,12 +45,12 @@ const WellnessProgressCard: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.25, duration: 0.35 }}
     >
-      <div className="p-5 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 shadow-sm">
+      <div className="p-5 rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 shadow-sm">
         <div className="flex items-center gap-2.5 mb-4">
           <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center">
             <TrendingUp size={14} className="text-primary" />
           </div>
-          <span className="text-xs font-medium text-gray-500 dark:text-gray-400 tracking-wide uppercase">
+          <span className="text-xs font-medium text-gray-500 dark:text-neutral-400 tracking-wide uppercase">
             Your Journey
           </span>
         </div>
@@ -70,7 +70,7 @@ const WellnessProgressCard: React.FC = () => {
                 >
                   {stat.value}
                 </motion.span>
-                <p className="text-[10px] text-gray-400 dark:text-gray-500 leading-tight">
+                <p className="text-[10px] text-gray-400 dark:text-neutral-500 leading-tight">
                   {stat.label}
                 </p>
               </div>
@@ -79,8 +79,8 @@ const WellnessProgressCard: React.FC = () => {
         </div>
 
         {progress.toolsUsed.length > 0 && (
-          <div className="mt-4 pt-3 border-t border-gray-100 dark:border-gray-800">
-            <p className="text-[10px] text-gray-400 dark:text-gray-500 mb-1.5">
+          <div className="mt-4 pt-3 border-t border-gray-100 dark:border-neutral-800">
+            <p className="text-[10px] text-gray-400 dark:text-neutral-500 mb-1.5">
               Tools you've used
             </p>
             <div className="flex flex-wrap gap-1">

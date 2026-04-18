@@ -182,7 +182,7 @@ const CALLOUT_CONFIG: Record<
         icon: Info,
         defaultTitle: 'Science',
         bg: 'bg-slate-600',
-        darkBg: 'dark:bg-slate-700',
+        darkBg: 'dark:bg-neutral-700',
         border: 'border-l-slate-800',
         iconColor: 'text-white',
         titleColor: 'text-white',

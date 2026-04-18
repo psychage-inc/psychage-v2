@@ -112,7 +112,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your child's emotional world is developing as rapidly as their physical growth---from the first cries of infancy to the complex feelings of early childhood, understanding these changes helps you support them effectively.
           </p>
           <p className="mb-6">
@@ -138,7 +138,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">Infants display pleasure, distress, and interest. They begin social smiling around 6-8 weeks and start recognizing familiar faces.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Example: Two-month-old James lights up when his father comes into view, his whole body wiggling with excitement. This social smile represents his brain beginning to connect positive emotions with specific people.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">Example: Two-month-old James lights up when his father comes into view, his whole body wiggling with excitement. This social smile represents his brain beginning to connect positive emotions with specific people.</p>
                 </div>
               ),
             },
@@ -147,7 +147,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">Babies show joy, anger, surprise, and sadness. They laugh, may show stranger anxiety, and respond to emotional tones in voices.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Example: Five-month-old Aisha laughs at peek-a-boo but fusses when held by unfamiliar relatives at a family gathering. She's learning to differentiate between safe and unfamiliar people.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">Example: Five-month-old Aisha laughs at peek-a-boo but fusses when held by unfamiliar relatives at a family gathering. She's learning to differentiate between safe and unfamiliar people.</p>
                 </div>
               ),
             },
@@ -156,7 +156,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">Fear emerges (especially separation anxiety). Babies show clear preferences, demonstrate affection, and begin emotional referencing---looking to caregivers to know how to feel.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Example: Nine-month-old Kai encounters a friendly dog at the park and immediately looks at his mother. When she smiles and says "nice puppy," he relaxes. When she looks worried, he becomes distressed. This social referencing shows sophisticated emotional understanding.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">Example: Nine-month-old Kai encounters a friendly dog at the park and immediately looks at his mother. When she smiles and says "nice puppy," he relaxes. When she looks worried, he becomes distressed. This social referencing shows sophisticated emotional understanding.</p>
                 </div>
               ),
             },
@@ -219,7 +219,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">Don't dismiss or minimize emotions. Say "I see you're really angry" instead of "It's not a big deal." All emotions are acceptable; behaviors may need limits.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">When 3-year-old David screams "I hate you!" after being told it's bedtime, his father responds: "You're really angry with me right now. It's okay to feel angry. It's not okay to scream at people. Let's use words: 'Dad, I'm angry because I don't want bedtime yet.'" This validates the feeling while teaching appropriate expression.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">When 3-year-old David screams "I hate you!" after being told it's bedtime, his father responds: "You're really angry with me right now. It's okay to feel angry. It's not okay to scream at people. Let's use words: 'Dad, I'm angry because I don't want bedtime yet.'" This validates the feeling while teaching appropriate expression.</p>
                 </div>
               ),
             },
@@ -229,7 +229,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">Build emotional vocabulary by labeling feelings: "You seem frustrated that the tower fell down." This helps children identify and communicate their internal states.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Go beyond basic emotions. Use words like "disappointed," "overwhelmed," "excited," "worried," and "proud." The more nuanced their emotional vocabulary, the better they can eventually regulate their feelings.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">Go beyond basic emotions. Use words like "disappointed," "overwhelmed," "excited," "worried," and "proud." The more nuanced their emotional vocabulary, the better they can eventually regulate their feelings.</p>
                 </div>
               ),
             },
@@ -239,7 +239,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">Children learn by watching. When you're upset, narrate your process: "I'm feeling stressed, so I'm going to take some deep breaths." Show healthy coping in action.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">When you lose your temper, repair the rupture: "I yelled earlier and that was wrong. I was frustrated, but yelling isn't okay. I'm sorry." This teaches that mistakes happen and can be fixed, a crucial emotional lesson.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">When you lose your temper, repair the rupture: "I yelled earlier and that was wrong. I was frustrated, but yelling isn't okay. I'm sorry." This teaches that mistakes happen and can be fixed, a crucial emotional lesson.</p>
                 </div>
               ),
             },
@@ -249,7 +249,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">Let children express difficult emotions without punishment. Provide alternatives for physical release (pillow to hit, space to cry) while setting boundaries on harmful behaviors.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Set up a "calm corner" with soft items, books, and sensory toys where children can go when overwhelmed. This teaches self-awareness about needing breaks and provides tools for self-soothing.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">Set up a "calm corner" with soft items, books, and sensory toys where children can go when overwhelmed. This teaches self-awareness about needing breaks and provides tools for self-soothing.</p>
                 </div>
               ),
             },
@@ -272,7 +272,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               <p><span className="font-semibold">Step 3:</span> Share your own feelings: "I felt proud when I finished that project" or "I felt frustrated when the internet stopped working."</p>
               <p><span className="font-semibold">Step 4:</span> When emotions arise in real life, reference the practice: "Remember when the character in the book felt disappointed? That's what we're feeling now."</p>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 italic">Practice daily for 5-10 minutes. The goal is making emotion talk normal and natural, not interrogating feelings.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400 italic">Practice daily for 5-10 minutes. The goal is making emotion talk normal and natural, not interrogating feelings.</p>
           </div>
         </ArticleCallout>
 
@@ -286,7 +286,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               <p><span className="font-semibold">Step 4:</span> After the storm passes, connect and reflect: "That was really hard. You were so angry when I said no. Next time you feel that angry, what could you do instead of throwing toys?"</p>
               <p><span className="font-semibold">Step 5:</span> Follow through on boundaries while maintaining connection: "I know you're still upset. The answer is still no, and I love you."</p>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 italic">Don't expect instant change. Each regulated response builds a tiny bit more capacity. Progress happens over months, not days.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400 italic">Don't expect instant change. Each regulated response builds a tiny bit more capacity. Progress happens over months, not days.</p>
           </div>
         </ArticleCallout>
 
@@ -300,7 +300,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               <p><span className="font-semibold">Step 4:</span> Listen without immediately problem-solving. Sometimes kids just need to be heard, not fixed.</p>
               <p><span className="font-semibold">Step 5:</span> End with connection: "Thank you for sharing that with me. I love knowing what's in your heart."</p>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 italic">This routine teaches that all emotions belong and that you're a safe person to share them with---lessons that support mental health into adulthood.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400 italic">This routine teaches that all emotions belong and that you're a safe person to share them with---lessons that support mental health into adulthood.</p>
           </div>
         </ArticleCallout>
 
@@ -467,7 +467,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Teenage emotions aren't drama or overreaction---they're the result of profound brain changes that make feelings genuinely more intense during this developmental window.
           </p>
           <p className="mb-6">
@@ -522,11 +522,11 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-3">
           <li>
             <strong>Heightened reward sensitivity:</strong> The brain's reward system becomes hyperactive, making positive experiences feel amazing and losses feel devastating. This explains why teens pursue intense experiences and why rejection feels unbearable.
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Example: When 14-year-old Zoe gets a text from her crush, the dopamine spike in her brain is significantly higher than an adult would experience in the same situation. When that crush later ignores her text, the dopamine crash is equally amplified.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400 mt-1">Example: When 14-year-old Zoe gets a text from her crush, the dopamine spike in her brain is significantly higher than an adult would experience in the same situation. When that crush later ignores her text, the dopamine crash is equally amplified.</p>
           </li>
           <li>
             <strong>Increased emotional reactivity:</strong> The amygdala (threat detector) shows exaggerated responses to emotional stimuli. What feels like mild criticism to an adult can register as severe threat to a teen's social standing.
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Example: When 17-year-old Marcus's teacher corrects his answer in class, his amygdala processes this as social exposure and potential humiliation. His face flushes, his heart races, and he feels genuine panic---the same physiological response adults experience during actual threats.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400 mt-1">Example: When 17-year-old Marcus's teacher corrects his answer in class, his amygdala processes this as social exposure and potential humiliation. His face flushes, his heart races, and he feels genuine panic---the same physiological response adults experience during actual threats.</p>
           </li>
           <li>
             <strong>Peer sensitivity:</strong> Social evaluation and acceptance become neurologically more important than at any other life stage <Citation id="5" index={5} source="Journal of Research on Adolescence" year="2019" tier={1} />. Peer relationships literally light up different brain regions in teens than in adults.
@@ -551,7 +551,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">Don't minimize what teens feel. Their emotions ARE bigger than yours would be in the same situation. Saying "You'll feel better tomorrow" dismisses real neurological experience.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Try: "This feels huge right now, I can see that" instead of "It's not that big of a deal." Validation doesn't mean agreement---it means acknowledging the reality of their experience.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">Try: "This feels huge right now, I can see that" instead of "It's not that big of a deal." Validation doesn't mean agreement---it means acknowledging the reality of their experience.</p>
                 </div>
               ),
             },
@@ -560,7 +560,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">Focus on building regulation tools rather than criticizing emotional reactions. Offer strategies like taking space, movement, or talking through feelings.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">When 14-year-old Jenna comes home crying about friend drama, her mother says: "Sounds like you need to feel this for a bit. Want to take a walk, or would you rather talk it through?" She's offering tools, not telling Jenna she shouldn't feel upset.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">When 14-year-old Jenna comes home crying about friend drama, her mother says: "Sounds like you need to feel this for a bit. Want to take a walk, or would you rather talk it through?" She's offering tools, not telling Jenna she shouldn't feel upset.</p>
                 </div>
               ),
             },
@@ -569,7 +569,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">Teens need both independence and secure attachment. Stay emotionally available even when they push away. Consistent presence matters more than perfect responses.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">When teens reject your comfort, it's not personal---it's developmental. Continue offering connection without forcing it. A simple "I'm here if you need me" respects autonomy while maintaining availability.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">When teens reject your comfort, it's not personal---it's developmental. Continue offering connection without forcing it. A simple "I'm here if you need me" respects autonomy while maintaining availability.</p>
                 </div>
               ),
             },
@@ -578,7 +578,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">Help teens understand their brain development. Knowing why emotions feel overwhelming reduces shame and increases self-compassion.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Explain: "Your brain's emotion center is running at full power while the regulation center is still building. That's why feelings hit so hard right now. It's temporary, and it's normal." This knowledge helps teens not pathologize their own experiences.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">Explain: "Your brain's emotion center is running at full power while the regulation center is still building. That's why feelings hit so hard right now. It's temporary, and it's normal." This knowledge helps teens not pathologize their own experiences.</p>
                 </div>
               ),
             },
@@ -598,7 +598,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               <p><span className="font-semibold">Step 3:</span> Develop a menu of "7 strategies"---things you can do when you notice intensity building. Examples: text a friend, go for a walk, listen to a specific playlist, do 20 jumping jacks, write in a journal.</p>
               <p><span className="font-semibold">Step 4:</span> Practice these strategies when you're calm so they're automatic when you're not. Your 10/10 emotional self can't problem-solve; your 3/10 self needs to prepare strategies in advance.</p>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 italic">This isn't about suppressing emotions---it's about catching them early enough to ride them rather than being swept away.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400 italic">This isn't about suppressing emotions---it's about catching them early enough to ride them rather than being swept away.</p>
           </div>
         </ArticleCallout>
 
@@ -612,7 +612,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               <p><span className="font-semibold">Step 4:</span> Problem-solve together: "Next time this happens, what could we each do differently?"</p>
               <p><span className="font-semibold">Step 5:</span> End with connection: "I love you even when we disagree" or "Thanks for working through this with me."</p>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 italic">Repair after conflict teaches teens that relationship ruptures can be fixed---a crucial skill for all future relationships. You don't need to avoid all conflict; you need to demonstrate effective repair.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400 italic">Repair after conflict teaches teens that relationship ruptures can be fixed---a crucial skill for all future relationships. You don't need to avoid all conflict; you need to demonstrate effective repair.</p>
           </div>
         </ArticleCallout>
 
@@ -626,7 +626,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               <p><span className="font-semibold">Step 4:</span> Problem-solve together: "Knowing this about your brain, what strategies might help when you're feeling overwhelmed?"</p>
               <p><span className="font-semibold">Step 5:</span> Revisit this conversation periodically. One talk isn't enough---this understanding needs to be woven into ongoing dialogue.</p>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 italic">When teens understand the neuroscience, they're less likely to see themselves as broken or overly emotional. They can reframe "I'm so messed up" as "My brain is developing normally."</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400 italic">When teens understand the neuroscience, they're less likely to see themselves as broken or overly emotional. They can reframe "I'm so messed up" as "My brain is developing normally."</p>
           </div>
         </ArticleCallout>
 
@@ -789,7 +789,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your twenties can feel like standing at a crossroads with a thousand paths and no map---the emotional weight of possibility mixed with uncertainty creates unique challenges this decade.
           </p>
           <p className="mb-6">
@@ -905,7 +905,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">Trying and eliminating options is productive, not wasteful. Every experience teaches you what you want and don't want---that's valuable data, not lost time.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">When 25-year-old Alex quit his finance job to try nonprofit work, his parents saw it as backsliding. But Alex learned he values meaningful work over high salary---information he couldn't have gained without trying both. That's not failure; that's successful exploration.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">When 25-year-old Alex quit his finance job to try nonprofit work, his parents saw it as backsliding. But Alex learned he values meaningful work over high salary---information he couldn't have gained without trying both. That's not failure; that's successful exploration.</p>
                 </div>
               ),
             },
@@ -914,7 +914,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">When external markers are unreliable, internal values provide direction. Identify what matters to you (creativity, impact, security, connection) and use it to evaluate decisions.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Instead of asking "What should I do?" ask "What do I value?" If autonomy and creativity rank high, that prestigious corporate job might make you miserable even if it impresses others. If security matters most, freelancing might create unbearable anxiety despite seeming exciting.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">Instead of asking "What should I do?" ask "What do I value?" If autonomy and creativity rank high, that prestigious corporate job might make you miserable even if it impresses others. If security matters most, freelancing might create unbearable anxiety despite seeming exciting.</p>
                 </div>
               ),
             },
@@ -923,7 +923,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">Curate your media consumption. Unfollow accounts that trigger comparison. Remember: you're comparing your behind-the-scenes to everyone else's highlight reel.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Try a "comparison detox": take a break from social media for two weeks and notice how your mood shifts. Many people report feeling significantly less anxious and more content with their own path when they stop constant exposure to others' curated success.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">Try a "comparison detox": take a break from social media for two weeks and notice how your mood shifts. Many people report feeling significantly less anxious and more content with their own path when they stop constant exposure to others' curated success.</p>
                 </div>
               ),
             },
@@ -932,7 +932,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">Connect with others navigating similar terrain. Honest conversations about struggle reduce isolation and normalize the experience.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">When 29-year-old Liam finally opened up to friends about feeling lost and behind, he discovered they all felt the same way---they'd just been hiding it. Vulnerability creates connection and reveals you're not alone in the struggle.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">When 29-year-old Liam finally opened up to friends about feeling lost and behind, he discovered they all felt the same way---they'd just been hiding it. Vulnerability creates connection and reveals you're not alone in the struggle.</p>
                 </div>
               ),
             },
@@ -953,7 +953,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               <p><span className="font-semibold">Step 4:</span> Apply this to a current decision: which option aligns better with your top values? This isn't about right/wrong; it's about consistency with who you are.</p>
               <p><span className="font-semibold">Step 5:</span> Revisit this annually. Values shift as you grow---what mattered at 22 might not resonate at 28.</p>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 italic">This exercise helps you make choices based on internal alignment rather than external validation or comparison.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400 italic">This exercise helps you make choices based on internal alignment rather than external validation or comparison.</p>
           </div>
         </ArticleCallout>
 
@@ -967,7 +967,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               <p><span className="font-semibold">Step 4:</span> For each comparison, write what you don't know about that person's situation. Remind yourself you're seeing a curated slice, not the full reality.</p>
               <p><span className="font-semibold">Step 5:</span> Based on your patterns, make one concrete change (unfollow certain accounts, limit social media time, curate your feed differently).</p>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 italic">Awareness is the first step to changing compulsive comparison. You can't shift a pattern you don't notice.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400 italic">Awareness is the first step to changing compulsive comparison. You can't shift a pattern you don't notice.</p>
           </div>
         </ArticleCallout>
 
@@ -981,7 +981,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               <p><span className="font-semibold">Step 4:</span> Compare: which decision produced more positive feelings overall? Not excitement (that fades), but rightness---a sense of alignment.</p>
               <p><span className="font-semibold">Step 5:</span> Make the actual decision based on which felt more aligned with your values, not which sounded better on paper.</p>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 italic">This technique helps you access your intuition when logic alone can't solve the problem. Your emotional response to hypothetically choosing reveals what you actually want.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400 italic">This technique helps you access your intuition when logic alone can't solve the problem. Your emotional response to hypothetically choosing reveals what you actually want.</p>
           </div>
         </ArticleCallout>
 
@@ -1115,7 +1115,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Midlife brings unexpected emotional shifts---not the crisis culture depicts, but a recalibration of what matters as you face mortality, reassess priorities, and often discover deeper satisfaction.
           </p>
           <p className="mb-6">
@@ -1183,7 +1183,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">You become more aware of time's limits. This can feel sobering but often leads to greater intentionality---focusing on what truly matters rather than chasing external markers of success.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Forty-six-year-old Sarah realized she's been saying "someday I'll learn to paint" for two decades. The awareness that her "somedays" are finite prompted her to actually start. She's not great at it, but that doesn't matter---the doing is the point. Midlife clarifies that later isn't guaranteed.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">Forty-six-year-old Sarah realized she's been saying "someday I'll learn to paint" for two decades. The awareness that her "somedays" are finite prompted her to actually start. She's not great at it, but that doesn't matter---the doing is the point. Midlife clarifies that later isn't guaranteed.</p>
                 </div>
               ),
             },
@@ -1193,7 +1193,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">Questions like "Is this what I want?" and "What's my legacy?" become more pressing <Citation id="5" index={5} source="Journal of Adult Development" year="2020" tier={1} />. This isn't crisis---it's appropriate developmental work.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Many people in midlife reassess careers, relationships, or lifestyles that felt right at 25 but no longer fit at 50. This questioning can lead to significant changes or simply a recommitment to current paths with greater intentionality.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">Many people in midlife reassess careers, relationships, or lifestyles that felt right at 25 but no longer fit at 50. This questioning can lead to significant changes or simply a recommitment to current paths with greater intentionality.</p>
                 </div>
               ),
             },
@@ -1203,7 +1203,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">You become more selective about relationships, investing in quality over quantity. Surface-level connections feel less fulfilling; deep, authentic relationships matter more.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Fifty-three-year-old Lisa stopped attending her college reunion group events. The relationships were based on shared history, not current connection. She didn't feel guilty---she redirected that energy to friendships where vulnerability and depth are reciprocated. Midlife gives you permission to prioritize authenticity over obligation.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">Fifty-three-year-old Lisa stopped attending her college reunion group events. The relationships were based on shared history, not current connection. She didn't feel guilty---she redirected that energy to friendships where vulnerability and depth are reciprocated. Midlife gives you permission to prioritize authenticity over obligation.</p>
                 </div>
               ),
             },
@@ -1213,7 +1213,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">Roles that defined you (parent of young children, rising professional) may shift. Finding new sources of identity and purpose becomes important emotional work.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">When your last child leaves home or you reach a career plateau, the identities you've inhabited for decades may no longer fit. This transition requires building new self-concepts based on who you're becoming, not who you've been.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">When your last child leaves home or you reach a career plateau, the identities you've inhabited for decades may no longer fit. This transition requires building new self-concepts based on who you're becoming, not who you've been.</p>
                 </div>
               ),
             },
@@ -1223,7 +1223,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">Hormonal changes (perimenopause, andropause) can impact emotional regulation <Citation id="6" index={6} source="Menopause" year="2020" tier={1} />. What feels like psychological struggle may have physiological components.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Forty-nine-year-old Jen experienced increased irritability and mood swings she attributed to stress. Her doctor identified perimenopause-related hormonal shifts. Hormone therapy and lifestyle adjustments dramatically improved her emotional stability. Don't pathologize what might be biological.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">Forty-nine-year-old Jen experienced increased irritability and mood swings she attributed to stress. Her doctor identified perimenopause-related hormonal shifts. Hormone therapy and lifestyle adjustments dramatically improved her emotional stability. Don't pathologize what might be biological.</p>
                 </div>
               ),
             },
@@ -1244,7 +1244,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
         <ArticleCallout variant="tip">
           <div>
             <p className="mb-3"><strong>Managing caregiver stress:</strong> Set boundaries, accept help, acknowledge your limits, and recognize that you cannot do it all. Self-care isn't selfish---it's essential for sustainable caregiving.</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400">This might mean saying no to some parental requests, hiring help when possible, or accepting that you can't be physically present for everything. Guilt is common, but burning out serves no one.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400">This might mean saying no to some parental requests, hiring help when possible, or accepting that you can't be physically present for everything. Guilt is common, but burning out serves no one.</p>
           </div>
         </ArticleCallout>
 
@@ -1274,7 +1274,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               <p><span className="font-semibold">Step 4:</span> For highly-rated areas, identify what makes them work well. Can you apply those principles to lower-rated domains?</p>
               <p><span className="font-semibold">Step 5:</span> Revisit this quarterly. Midlife isn't about fixing everything---it's about intentional attention to what matters.</p>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 italic">This inventory helps move from vague dissatisfaction to specific action steps, transforming midlife questioning into meaningful change.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400 italic">This inventory helps move from vague dissatisfaction to specific action steps, transforming midlife questioning into meaningful change.</p>
           </div>
         </ArticleCallout>
 
@@ -1288,7 +1288,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               <p><span className="font-semibold">Step 4:</span> Make one concrete change this month that moves you toward alignment. Small steps count---legacy isn't built in dramatic gestures but in daily choices.</p>
               <p><span className="font-semibold">Step 5:</span> Share your legacy intentions with someone you trust. Articulating them makes them more real and creates accountability.</p>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 italic">Midlife's awareness of mortality can paralyze or motivate. This exercise channels that awareness into purposeful living rather than anxious rumination.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400 italic">Midlife's awareness of mortality can paralyze or motivate. This exercise channels that awareness into purposeful living rather than anxious rumination.</p>
           </div>
         </ArticleCallout>
 
@@ -1302,7 +1302,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               <p><span className="font-semibold">Step 4:</span> Identify one high-quality relationship to deepen. How can you invest more time/vulnerability/presence there?</p>
               <p><span className="font-semibold">Step 5:</span> Practice saying no to relationship obligations that drain you without guilt. Your time and energy are finite---midlife is when you finally get to be selective about where they go.</p>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 italic">Midlife allows relationship pruning not possible in earlier stages. You no longer need to maintain friendships out of proximity or obligation---you can choose depth over breadth.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400 italic">Midlife allows relationship pruning not possible in earlier stages. You no longer need to maintain friendships out of proximity or obligation---you can choose depth over breadth.</p>
           </div>
         </ArticleCallout>
 
@@ -1412,7 +1412,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Contrary to stereotypes of decline, research reveals that many older adults report greater emotional wellbeing than younger people---a pattern scientists call the "aging paradox."
           </p>
           <p className="mb-6">
@@ -1463,7 +1463,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
         <ArticleCallout variant="key-takeaway">
           <div>
             <p className="mb-3"><strong>What emotional wisdom looks like:</strong> Recognizing that most situations aren't black-and-white, accepting that you can't control everything, knowing which battles matter, and understanding that difficult emotions pass. This wisdom is earned, not taught.</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400">When 68-year-old Ruth's son went through a divorce, she didn't offer solutions or take sides. She listened, validated his pain, and reminded him that grief and relief can coexist. Her younger self would have tried to fix everything. Now she knows: some pain must be felt, not solved. That's wisdom.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400">When 68-year-old Ruth's son went through a divorce, she didn't offer solutions or take sides. She listened, validated his pain, and reminded him that grief and relief can coexist. Her younger self would have tried to fix everything. Now she knows: some pain must be felt, not solved. That's wisdom.</p>
           </div>
         </ArticleCallout>
 
@@ -1493,7 +1493,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
                     <li><strong>Independence losses:</strong> Driving, living alone, managing finances independently, making medical decisions without assistance</li>
                     <li><strong>Cognitive changes:</strong> Processing speed, memory changes, difficulty learning new technologies</li>
                   </ul>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">These losses are real and deserve acknowledgment. The goal isn't to minimize them but to develop capacity to adapt while maintaining emotional wellbeing.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">These losses are real and deserve acknowledgment. The goal isn't to minimize them but to develop capacity to adapt while maintaining emotional wellbeing.</p>
                 </div>
               ),
             },
@@ -1510,7 +1510,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
                     <li>Acceptance of life's impermanence that reduces struggle against inevitable change</li>
                     <li>Gratitude practice that coexists with grief---ability to hold both pain and appreciation simultaneously</li>
                   </ul>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Eighty-three-year-old Dorothy lost her husband of 58 years. She grieved deeply for months---and also found meaning in deepening friendships with other widows, volunteering at the senior center, and appreciating solitude for the first time in decades. Both the grief and the growth are real.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">Eighty-three-year-old Dorothy lost her husband of 58 years. She grieved deeply for months---and also found meaning in deepening friendships with other widows, volunteering at the senior center, and appreciating solitude for the first time in decades. Both the grief and the growth are real.</p>
                 </div>
               ),
             },
@@ -1568,7 +1568,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               <p><span className="font-semibold">Step 4:</span> Notice how you can hold both: "I grieve what I've lost AND I appreciate what remains." Not "but"---"AND."</p>
               <p><span className="font-semibold">Step 5:</span> Practice this daily for a month. The goal is emotional flexibility: the capacity to feel loss and joy, grief and gratitude, without one invalidating the other.</p>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 italic">This practice reflects the emotional wisdom of aging: integrating difficult realities without letting them dominate your entire emotional landscape.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400 italic">This practice reflects the emotional wisdom of aging: integrating difficult realities without letting them dominate your entire emotional landscape.</p>
           </div>
         </ArticleCallout>
 
@@ -1582,7 +1582,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               <p><span className="font-semibold">Step 4:</span> Identify one new connection opportunity. This could be: joining a group, reaching out to an acquaintance, volunteering, or using technology to connect with distant people.</p>
               <p><span className="font-semibold">Step 5:</span> Make one concrete social action this week. Small steps count: send one text, make one call, attend one group meeting.</p>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 italic">Social connection requires more intentionality in older age but remains possible and deeply protective of emotional health.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400 italic">Social connection requires more intentionality in older age but remains possible and deeply protective of emotional health.</p>
           </div>
         </ArticleCallout>
 
@@ -1596,7 +1596,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               <p><span className="font-semibold">Step 4:</span> For items on your list that are no longer possible (due to health, mobility, etc.), ask: "What's the core of why that mattered? Can I find a different avenue for that same core purpose?"</p>
               <p><span className="font-semibold">Step 5:</span> Make purpose engagement a weekly practice. The goal isn't grand gestures---it's regular connection to what makes life feel meaningful.</p>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 italic">Purpose doesn't end with retirement or changing capabilities. It shifts form, but the human need for meaning continues throughout life.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400 italic">Purpose doesn't end with retirement or changing capabilities. It shifts form, but the human need for meaning continues throughout life.</p>
           </div>
         </ArticleCallout>
 
@@ -1625,7 +1625,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
         <ArticleCallout variant="tip">
           <div>
             <p className="mb-3">For older adults and their families: emotional struggles are not weakness or "normal aging." The same resources available to younger people---therapy, support groups, crisis lines (988)---work for older adults too.</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400">Many therapists specialize in geriatric mental health and understand the unique challenges of this life stage. Treatment can dramatically improve quality of life---and it's never too late to start.</p>
+            <p className="text-sm text-gray-600 dark:text-neutral-400">Many therapists specialize in geriatric mental health and understand the unique challenges of this life stage. Treatment can dramatically improve quality of life---and it's never too late to start.</p>
           </div>
         </ArticleCallout>
 

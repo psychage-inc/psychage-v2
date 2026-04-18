@@ -94,7 +94,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "What do you do?" is among the first questions we ask new acquaintances. For many, the answer defines identity: "I'm a teacher,", "I'm an engineer,", "I'm a lawyer." When careers change---by choice or circumstance---this identity anchor disappears, triggering profound questions: Who am I without this role? What defines my worth?
           </p>
           <p className="mb-6">
@@ -381,7 +381,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Being laid off---losing your job through no fault of your own---triggers a complex psychological response combining shock, grief, financial stress, and identity disruption. Unlike voluntary career changes where you control timing and direction, layoffs happen to you, stripping agency at the same moment they remove income and structure.
           </p>
           <p className="mb-6">
@@ -668,7 +668,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Job searching combines multiple psychological stressors: repeated rejection, financial pressure, uncertain timeline, loss of control, and constant self-evaluation. What should be a straightforward transactional process---matching skills to needs---becomes emotionally grueling because jobs represent not just income but identity, security, and worth.
           </p>
           <p className="mb-6">
@@ -941,7 +941,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Starting a new job should feel exciting---you wanted this role, they chose you, it's a fresh start. Yet most people experience significant anxiety during the first weeks and months: fear of making mistakes, overwhelming new information, uncertainty about fitting in, and the pressure to prove the hiring decision was correct.
           </p>
           <p className="mb-6">
@@ -1217,7 +1217,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've spent 15 years building your career. You've achieved what you once thought would bring satisfaction: promotions, salary increases, expertise, respect. Yet instead of fulfillment, you feel hollow. The path that once excited you now feels like someone else's life. This is mid-career crisis---the unsettling realization that success as you defined it doesn't deliver the meaning you need.
           </p>
           <p className="mb-6">

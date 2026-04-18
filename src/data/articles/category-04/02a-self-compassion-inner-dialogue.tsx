@@ -115,7 +115,7 @@ export const selfCompassionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Self-compassion sounds simple: treating yourself with kindness. But psychologist Kristin Neff's research reveals it's a nuanced construct with three interconnected components that work together to transform how you relate to yourself, especially during difficult times.
           </p>
           <p className="mb-6">
@@ -620,7 +620,7 @@ export const selfCompassionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             That harsh voice in your head calling you inadequate, stupid, or worthless --- your inner critic --- isn't inherently part of who you are. It's a learned pattern, often rooted in early experiences, that can be understood and ultimately transformed.
           </p>
           <p className="mb-6">

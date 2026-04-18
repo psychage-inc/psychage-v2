@@ -74,13 +74,13 @@ const BrainDump: React.FC = () => {
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-white dark:bg-gray-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-gray-700 text-center"
+        className="bg-white dark:bg-neutral-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-neutral-700 text-center"
       >
         <Check size={32} className="text-emerald-500 mx-auto mb-3" />
         <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-2">
           Thoughts captured
         </h3>
-        <p className="text-sm text-gray-500 dark:text-gray-400 max-w-sm mx-auto">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 max-w-sm mx-auto">
           Now close this screen and let go of these thoughts. They'll be here
           tomorrow if you need them.
         </p>
@@ -101,7 +101,7 @@ const BrainDump: React.FC = () => {
   }
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-gray-700">
+    <div className="bg-white dark:bg-neutral-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-neutral-700">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <Pencil size={20} className="text-violet-500" />
@@ -109,13 +109,13 @@ const BrainDump: React.FC = () => {
             Brain Dump
           </h3>
         </div>
-        <div className="flex items-center gap-2 text-xs font-bold text-gray-400 dark:text-gray-500">
+        <div className="flex items-center gap-2 text-xs font-bold text-gray-400 dark:text-neutral-500">
           <Clock size={14} />
           {formatTimer(timeLeft)}
         </div>
       </div>
 
-      <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
+      <p className="text-xs text-gray-500 dark:text-neutral-400 mb-4">
         Write down everything on your mind right now. Don't organize — just dump.
         The timer is a suggestion, not a deadline.
       </p>
@@ -136,7 +136,7 @@ const BrainDump: React.FC = () => {
         }}
         placeholder="What's on your mind tonight..."
         aria-label="Brain dump — write what's on your mind"
-        className="w-full p-4 rounded-xl border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700/50 text-gray-900 dark:text-white text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 resize-none h-40 leading-relaxed"
+        className="w-full p-4 rounded-xl border border-gray-200 dark:border-neutral-600 bg-gray-50 dark:bg-neutral-700/50 text-gray-900 dark:text-white text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 resize-none h-40 leading-relaxed"
         autoFocus
       />
 
@@ -149,7 +149,7 @@ const BrainDump: React.FC = () => {
             'px-5 py-2 rounded-xl text-sm font-bold transition-colors',
             text.trim().length > 0
               ? 'bg-indigo-600 dark:bg-indigo-500 hover:bg-indigo-700 dark:hover:bg-indigo-600 text-white'
-              : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed'
+              : 'bg-gray-200 dark:bg-neutral-700 text-gray-400 dark:text-neutral-500 cursor-not-allowed'
           )}
         >
           Done

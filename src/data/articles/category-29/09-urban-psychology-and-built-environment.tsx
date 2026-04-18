@@ -65,7 +65,7 @@ export const urbanPsychologyAndBuiltEnvironmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             More than half the world&apos;s population now lives in cities, and that proportion is projected to reach 68% by 2050. The mental health implications of urbanization are significant: urban residents experience higher rates of depression, anxiety, schizophrenia, and loneliness compared to rural populations, even after controlling for socioeconomic factors.
           </p>
         </div>
@@ -113,7 +113,7 @@ export const urbanPsychologyAndBuiltEnvironmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -176,7 +176,7 @@ export const urbanPsychologyAndBuiltEnvironmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Noise pollution—unwanted or harmful sound in the environment—is the most pervasive and least recognized environmental threat to mental health in the developed world. The World Health Organization has identified environmental noise as the second-largest environmental health risk in Europe after air pollution, estimating that chronic noise exposure causes the loss of over one million healthy life-years annually in Western Europe alone.
           </p>
         </div>
@@ -223,7 +223,7 @@ export const urbanPsychologyAndBuiltEnvironmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -286,7 +286,7 @@ export const urbanPsychologyAndBuiltEnvironmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For the vast majority of human evolutionary history, the light environment was simple: bright, blue-enriched light during the day from the sun; dim, warm-toned light in the evening from fire; and near-total darkness at night. The human circadian system—the internal biological clock that regulates sleep-wake cycles, hormone production, mood, cognitive function, and virtually every physiological process—evolved in perfect synchrony with this natural light-dark cycle.
           </p>
         </div>
@@ -332,7 +332,7 @@ export const urbanPsychologyAndBuiltEnvironmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -395,7 +395,7 @@ export const urbanPsychologyAndBuiltEnvironmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The average person in a developed nation spends approximately 90% of their life indoors—in homes, offices, schools, hospitals, vehicles, and commercial buildings. The quality of these indoor environments—their air, light, temperature, humidity, acoustic properties, and design—exerts a continuous, cumulative, and largely unrecognized influence on cognitive function, mood, productivity, and mental health.
           </p>
         </div>
@@ -447,7 +447,7 @@ export const urbanPsychologyAndBuiltEnvironmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -510,7 +510,7 @@ export const urbanPsychologyAndBuiltEnvironmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Buildings are not psychologically neutral containers. The spaces we inhabit—their proportions, materials, lighting, color, ceiling height, spatial complexity, and relationship to the outside world—exert continuous, measurable influences on mood, stress, cognitive function, social behavior, and creative thinking.
           </p>
         </div>
@@ -559,7 +559,7 @@ export const urbanPsychologyAndBuiltEnvironmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

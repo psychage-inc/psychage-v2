@@ -111,7 +111,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Depression rarely happens in a vacuum. Often, it's intertwined with relationship struggles --- conflict, loss, isolation, or major life transitions. Interpersonal Therapy (IPT) operates on this premise: by improving your relationships and communication, you can reduce depression and build a more supportive social world <Citation id="1" index={1} source="American Journal of Psychiatry" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
@@ -435,7 +435,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             What if healing didn't require a therapist to diagnose, interpret, or direct you --- but instead to simply see you, accept you fully, and trust your capacity to find your own way forward? This is the radical premise of person-centered therapy, developed by psychologist Carl Rogers in the 1940s and 1950s <Citation id="2" index={2} source="Mariner Books" year="1961" tier={5} />.
           </p>
           <p className="mb-6">
@@ -772,7 +772,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When one person in a family struggles, everyone feels it. A child's anxiety, a parent's depression, a couple's conflict—these aren't isolated problems, but symptoms of patterns within the family system. Family therapy operates from this understanding: families are interconnected emotional units where each person's behavior affects everyone else <Citation id="1" index={1} source="Journal of Marital and Family Therapy" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
@@ -1174,7 +1174,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There's something powerfully healing about realizing you're not alone. Group therapy offers what individual therapy cannot: the experience of being seen, understood, and supported by people who truly get it because they're struggling too. For many people, this shared humanity becomes the most transformative aspect of treatment <Citation id="1" index={1} source="American Journal of Psychiatry" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
@@ -1573,7 +1573,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Human beings are complex. Your depression might involve negative thought patterns, relationship dynamics, unprocessed grief, and biological factors—all at once. So why would one single therapeutic approach be enough? Integrative therapy recognizes that no single theory has all the answers, and draws from multiple evidence-based approaches to create treatment tailored to you <Citation id="1" index={1} source="Journal of Psychotherapy Integration" year="2021" tier={1} />.
           </p>
           <p className="mb-6">

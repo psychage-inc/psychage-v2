@@ -116,7 +116,7 @@ export const understandingDepressionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You show up to work on time. You meet deadlines. You smile at social gatherings and answer "I'm fine' when people ask. On paper, your life looks functional, maybe even successful. But internally, you're drowning---numb, exhausted, disconnected, going through the motions while feeling nothing.
           </p>
           <p className="mb-6">
@@ -629,7 +629,7 @@ export const understandingDepressionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             People often think of depression primarily as an emotional condition---sadness, emptiness, loss of pleasure. But for many, the cognitive symptoms are equally debilitating: the brain fog, the inability to concentrate, the paralysis when facing simple decisions, the memory lapses that make you feel like you're losing your mind.
           </p>
           <p className="mb-6">
@@ -1161,7 +1161,7 @@ export const understandingDepressionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Depression isn't just in your head---it's in your cardiovascular system, your immune function, your metabolic health, and your entire body. The relationship between depression and physical health runs in both directions: physical illness increases depression risk, and depression worsens physical health outcomes.
           </p>
           <p className="mb-6">
@@ -1639,7 +1639,7 @@ export const understandingDepressionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you're depressed, canceling plans feels like self-care. Being alone feels safer than facing people. Social interaction feels exhausting rather than energizing. The problem: isolation is both a symptom and a cause of depression, creating a self-reinforcing cycle that's difficult to break.
           </p>
           <p className="mb-6">
@@ -2166,7 +2166,7 @@ export const understandingDepressionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Depression is a universal human experience---it exists in every society across the globe. But how people experience, express, interpret, and respond to depression varies profoundly across cultures. The same underlying condition can manifest as primarily emotional symptoms in one culture, predominantly physical complaints in another, and spiritual crisis in a third.
           </p>
           <p className="mb-6">

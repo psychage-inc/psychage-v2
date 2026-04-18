@@ -114,7 +114,7 @@ export const collectiveTraumaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             September 11th, 2001. Hurricane Katrina. The COVID-19 pandemic. The Pulse nightclub shooting. George Floyd\'s murder. Mass school shootings. These events didn\'t just traumatize individuals who directly experienced them---they wounded entire communities, nations, and in some cases, the global collective.
           </p>
           <p className="mb-6">
@@ -509,7 +509,7 @@ export const collectiveTraumaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "The wound is the place where the Light enters you." This line from the 13th-century poet Rumi captures a paradox observed across cultures and centuries: sometimes, devastating trauma becomes the catalyst for profound positive change.
           </p>
           <p className="mb-6">
@@ -970,7 +970,7 @@ export const collectiveTraumaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Two people experience similar traumas---a car accident, the death of a loved one, a natural disaster. One develops chronic PTSD, depression, and struggles to function years later. The other experiences acute distress but gradually returns to baseline functioning and, in some ways, emerges stronger. What accounts for this difference?
           </p>
           <p className="mb-6">
@@ -1461,7 +1461,7 @@ export const collectiveTraumaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In 2021, ground-penetrating radar revealed the remains of 215 children at the site of a former residential school in Kamloops, British Columbia. Then 751 unmarked graves in Saskatchewan. Then 182 in British Columbia. The discoveries---horrifying yet unsurprising to Indigenous communities---brought international attention to what many had been saying for generations: the trauma didn\'t end when the schools closed.
           </p>
           <p className="mb-6">
@@ -1844,7 +1844,7 @@ export const collectiveTraumaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Before the accident, I knew who I was. I was a dancer. After I lost my leg, I didn\'t know anymore. It took years to build a new story about my life---one where losing my leg wasn\'t the end of my identity but the beginning of something different. Now I teach adaptive dance to children with disabilities. The trauma didn\'t disappear, but it found a place in my story that makes sense."
           </p>
           <p className="mb-6">

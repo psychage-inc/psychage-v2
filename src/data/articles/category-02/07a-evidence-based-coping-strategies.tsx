@@ -126,7 +126,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've heard all the advice: "Just breathe.", "Think positive.", "Drink chamomile tea." But when anxiety hits, vague suggestions don't cut it. You need strategies that actually work --- backed by research, not just wellness influencer anecdotes.
           </p>
           <p className="mb-6">
@@ -501,7 +501,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your heart is racing. Your thoughts are spiraling. You feel disconnected from your body, like you're watching yourself from outside. Anxiety has pulled you into a vortex of "what ifs" and worst-case scenarios. You need an anchor --- something to bring you back to right now, where you're actually safe.
           </p>
           <p className="mb-6">
@@ -876,7 +876,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your shoulders are hunched. Your jaw is clenched. Your stomach is tight. You don't even realize how much tension you're carrying until someone points it out --- or until it manifests as headaches, backaches, or insomnia. Anxiety doesn't just live in your mind. It lives in your muscles.
           </p>
           <p className="mb-6">
@@ -1237,7 +1237,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Just breathe." You've heard it a million times when anxious. And it's maddening because you <em>are</em> breathing --- shallow, rapid, chest-heaving breathing that makes you feel worse. The problem isn't that you're not breathing. It's <em>how</em> you're breathing.
           </p>
           <p className="mb-6">
@@ -1598,7 +1598,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Everyone thinks I'm incompetent.", "This will definitely end in disaster.", "I can't handle this." Your anxious thoughts feel like facts --- urgent, certain, undeniable. But they're not facts. They're interpretations, predictions, stories your anxious brain tells to keep you safe. And you can learn to question them.
           </p>
           <p className="mb-6">

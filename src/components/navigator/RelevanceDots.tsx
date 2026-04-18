@@ -56,7 +56,7 @@ export const RelevanceDots: React.FC<RelevanceDotsProps> = ({ level, className }
                             "w-2 h-2 rounded-full",
                             i < config.filledDots
                                 ? config.bgColorClass
-                                : "bg-gray-300 dark:bg-gray-600"
+                                : "bg-gray-300 dark:bg-neutral-600"
                         )}
                     />
                 ))}

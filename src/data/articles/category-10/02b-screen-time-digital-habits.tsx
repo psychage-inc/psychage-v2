@@ -114,7 +114,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You know you should put your phone away before bed. But you scroll anyway---just one more video, one more post. An hour later, you're still awake, mind racing, unable to fall asleep. This isn't willpower failure. It's biology. Screens at night hijack the systems that regulate sleep.
           </p>
           <p className="mb-6">
@@ -470,7 +470,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The dopamine detox trend promises to "reset your brain" by avoiding all pleasurable activities---no social media, no music, no tasty food, sometimes not even conversation or eye contact. Advocates claim this resets your dopamine receptors and restores your ability to enjoy simple things. It sounds scientific. But is it?
           </p>
           <p className="mb-6">
@@ -772,7 +772,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your phone's default settings are designed to maximize engagement, not your well-being. Every notification, every colorful app icon, every placement decision is calibrated to capture attention and keep you checking. But you can reconfigure your device to work for you instead of against you.
           </p>
           <p className="mb-6">
@@ -1150,7 +1150,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've adopted a project management tool, a time-tracking app, three different communication platforms, a note-taking system, and a calendar sync service. You're more connected and 'productive' than ever. So why do you feel like you're getting less done?
           </p>
           <p className="mb-6">
@@ -1473,7 +1473,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Screen time rules are easy to set and hard to enforce. Parents say "no phones at dinner," then check work email at the table. Kids agree to limits, then negotiate exceptions until the rule dissolves. Without a clear, agreed-upon framework, digital boundaries become a source of constant conflict.
           </p>
           <p className="mb-6">

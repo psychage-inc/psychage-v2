@@ -108,7 +108,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Eating disorders are complex mental health conditions that profoundly affect both brain and body. While traditionally understood as primarily psychological disorders, emerging research reveals that eating disorders fundamentally disrupt the gut-brain axis---the bidirectional communication system between your digestive system and brain.
           </p>
           <p className="mb-6">
@@ -481,7 +481,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Can changing what you eat actually treat depression? It sounds too simple---yet a growing body of research suggests that dietary interventions can be legitimate mental health treatments, not just lifestyle recommendations.
           </p>
           <p className="mb-6">
@@ -855,7 +855,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Understanding that nutrition affects mental health is one thing---actually changing what you eat is another. This article translates nutritional psychiatry research into practical, sustainable eating strategies you can implement today.
           </p>
           <p className="mb-6">
@@ -1226,7 +1226,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Walk into any health store and you'll find dozens of supplements claiming to boost mood, reduce anxiety, or sharpen focus. Some have solid scientific backing. Many don't. This article cuts through the hype to examine what the research actually shows.
           </p>
           <p className="mb-6">
@@ -1627,7 +1627,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There's a fine line between healthy nutrition and unhealthy obsession. While eating well supports mental health, rigid dietary rules, elimination of entire food groups, and constant food anxiety can create or worsen mental health problems.
           </p>
           <p className="mb-6">

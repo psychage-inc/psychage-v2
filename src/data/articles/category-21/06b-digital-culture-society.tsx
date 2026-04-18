@@ -86,7 +86,7 @@ export const digitalCultureSocietyArticlesB: Article[] = [
         </ArticleCallout>
 
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The distribution of intimate images without consent is not a new phenomenon, but the
             digital age has transformed its scale, permanence, and capacity for harm in ways that
             demand serious clinical and societal attention. What was once limited to a physical
@@ -604,7 +604,7 @@ export const digitalCultureSocietyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When the pandemic forced millions of workers onto video conferencing platforms
             overnight, the arrangement was supposed to be temporary. Years later, video meetings
             have become a permanent feature of working life &mdash; and the fatigue they produce
@@ -972,7 +972,7 @@ export const digitalCultureSocietyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The promise of online therapy platforms is compelling: licensed mental health care
             delivered to your phone or laptop, available from anywhere, often at a lower cost
             than traditional in-person therapy, and without the waiting lists that plague many
@@ -1383,7 +1383,7 @@ export const digitalCultureSocietyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The dark web occupies a peculiar position in public consciousness &mdash;
             simultaneously mythologized as a vast criminal underworld and dismissed as
             irrelevant to ordinary people. The reality is more nuanced and more concerning.
@@ -1776,7 +1776,7 @@ export const digitalCultureSocietyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Before a child speaks their first word, they are likely to have a digital identity.
             Ultrasound images posted to social media, birth announcements with full names and
             dates, first-day-of-school photos with identifiable school logos, and videos of

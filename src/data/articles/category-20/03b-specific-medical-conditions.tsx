@@ -72,7 +72,7 @@ export const specificMedicalConditionsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In 1996, the introduction of combination antiretroviral therapy transformed HIV from a death sentence
             into a chronic condition. A person diagnosed with HIV today, who begins treatment promptly, can expect
             to live a near-normal lifespan<Citation id="2" index={2} />. Yet despite
@@ -484,7 +484,7 @@ export const specificMedicalConditionsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The kidneys filter blood, balance electrolytes, regulate blood pressure, and produce hormones
             essential for red blood cell production. When they fail, the consequences extend far beyond the
             renal system --- reaching into the brain, disrupting mood, clouding cognition, and fundamentally
@@ -812,7 +812,7 @@ export const specificMedicalConditionsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The idea that the gut and brain are connected is ancient --- we speak of "gut feelings," "butterflies
             in the stomach," and decisions made "from the gut." But the scientific understanding of the gut-brain
             axis has advanced dramatically in the past decade, revealing a bidirectional communication system of
@@ -1117,7 +1117,7 @@ export const specificMedicalConditionsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Breathing is so automatic that most people never think about it --- until it becomes difficult. The
             sensation of breathlessness, called dyspnea, is one of the most distressing symptoms a person can
             experience. Unlike pain, which can be localized and tolerated to a degree, the feeling of not
@@ -1446,7 +1446,7 @@ export const specificMedicalConditionsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A stroke happens in seconds. A blood vessel in the brain ruptures or becomes blocked, and within
             minutes, neurons that controlled movement, speech, memory, or personality begin to die. The person
             who wakes up in the hospital is, in a very real neurological sense, different from the person who
@@ -1764,7 +1764,7 @@ export const specificMedicalConditionsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When the acute phase of COVID-19 ends, for many people the illness does not. Weeks become months,
             months become years, and symptoms persist: crushing fatigue, cognitive dysfunction so severe it
             disrupts work and daily life, breathlessness, heart palpitations, and a pervasive sense that the

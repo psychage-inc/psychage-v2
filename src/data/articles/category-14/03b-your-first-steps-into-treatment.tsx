@@ -70,7 +70,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've never been to therapy. You don't know what to expect, what to say, or how to act. You have questions you're too embarrassed to google. That's normal. Most people starting therapy feel this way <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
@@ -356,7 +356,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Bringing up mental health with your doctor can feel awkward. You're there for a physical, and suddenly you're supposed to say "I think I'm depressed"? Many people avoid the topic entirely --- but primary care doctors are increasingly trained to screen for and treat mental health conditions <Citation id="1" index={1} source="JAMA" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
@@ -658,7 +658,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've been in therapy for months. You're showing up, doing the work, and yet… nothing feels different. Maybe you're worse. Maybe you're the same. You're starting to wonder: is therapy not working, or am I not doing it right?
           </p>
           <p className="mb-6">
@@ -944,7 +944,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "How long will I be in therapy?" It's one of the first questions people ask --- and one of the hardest to answer. Therapy isn't one-size-fits-all. Some people see meaningful improvement in 8-12 sessions. Others benefit from years of ongoing work. Most fall somewhere in between <Citation id="1" index={1} source="The Lancet Psychiatry" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
@@ -1254,7 +1254,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Decades of research has tried to answer: What makes therapy work? Is it the technique (CBT vs. psychodynamic)? The therapist's credentials? The number of sessions? The answer is surprising: <strong>the relationship between you and your therapist</strong> --- called the therapeutic alliance --- is the <strong>strongest predictor</strong> of whether therapy works <Citation id="1" index={1} source="Psychotherapy Research" year="2021" tier={1} />.
           </p>
           <p className="mb-6">

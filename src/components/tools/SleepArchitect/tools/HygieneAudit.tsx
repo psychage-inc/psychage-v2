@@ -61,14 +61,14 @@ const HygieneAudit: React.FC = () => {
     totalItems > 0 ? Math.round((totalChecked / totalItems) * 100) : 0;
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-gray-700">
+    <div className="bg-white dark:bg-neutral-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-neutral-700">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
           <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white">
             Sleep Hygiene Audit
           </h3>
-          <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+          <p className="text-xs text-gray-500 dark:text-neutral-400 mt-0.5">
             Evidence-based habits for better sleep
           </p>
         </div>
@@ -85,7 +85,7 @@ const HygieneAudit: React.FC = () => {
           >
             {overallScore}%
           </div>
-          <div className="text-[10px] text-gray-400 dark:text-gray-500">
+          <div className="text-[10px] text-gray-400 dark:text-neutral-500">
             {totalChecked}/{totalItems}
           </div>
         </div>
@@ -102,7 +102,7 @@ const HygieneAudit: React.FC = () => {
           return (
             <div
               key={cat.id}
-              className="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden"
+              className="border border-gray-100 dark:border-neutral-700 rounded-xl overflow-hidden"
             >
               {/* Category header */}
               <button
@@ -110,7 +110,7 @@ const HygieneAudit: React.FC = () => {
                 onClick={() =>
                   setExpanded(isExpanded ? null : cat.id)
                 }
-                className="w-full flex items-center justify-between p-3 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
+                className="w-full flex items-center justify-between p-3 hover:bg-gray-50 dark:hover:bg-neutral-700/50 transition-colors"
                 aria-expanded={isExpanded}
               >
                 <div className="flex items-center gap-2.5">
@@ -120,7 +120,7 @@ const HygieneAudit: React.FC = () => {
                   <span className="text-sm font-bold text-gray-900 dark:text-white">
                     {cat.title}
                   </span>
-                  <span className="text-[10px] font-medium text-gray-400 dark:text-gray-500">
+                  <span className="text-[10px] font-medium text-gray-400 dark:text-neutral-500">
                     {catChecked}/{cat.items.length}
                   </span>
                 </div>
@@ -154,7 +154,7 @@ const HygieneAudit: React.FC = () => {
                               'w-full flex items-start gap-2.5 p-2.5 rounded-lg transition-all text-left text-xs',
                               isChecked
                                 ? 'bg-emerald-50 dark:bg-emerald-900/20'
-                                : 'hover:bg-gray-50 dark:hover:bg-gray-700/30'
+                                : 'hover:bg-gray-50 dark:hover:bg-neutral-700/30'
                             )}
                             role="checkbox"
                             aria-checked={isChecked}
@@ -164,7 +164,7 @@ const HygieneAudit: React.FC = () => {
                                 'w-4 h-4 rounded-full border-2 flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors',
                                 isChecked
                                   ? 'border-emerald-500 bg-emerald-500'
-                                  : 'border-gray-300 dark:border-gray-500'
+                                  : 'border-gray-300 dark:border-neutral-500'
                               )}
                             >
                               {isChecked && (
@@ -175,8 +175,8 @@ const HygieneAudit: React.FC = () => {
                               className={cn(
                                 'leading-relaxed',
                                 isChecked
-                                  ? 'text-gray-700 dark:text-gray-300'
-                                  : 'text-gray-500 dark:text-gray-400'
+                                  ? 'text-gray-700 dark:text-neutral-300'
+                                  : 'text-gray-500 dark:text-neutral-400'
                               )}
                             >
                               {item.label}

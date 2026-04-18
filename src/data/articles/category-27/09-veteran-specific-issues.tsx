@@ -65,7 +65,7 @@ export const veteranspecificIssuesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Women represent the fastest-growing segment of the veteran population—approximately 2 million of the 18 million living U.S.
           </p>
         </div>
@@ -110,7 +110,7 @@ export const veteranspecificIssuesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -173,7 +173,7 @@ export const veteranspecificIssuesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             LGBTQ+ veterans carry a unique psychological burden—the compounding of military service stress with the chronic minority stress of serving in an institution that historically defined their identity as incompatible with military service. For decades, the U.
           </p>
         </div>
@@ -215,7 +215,7 @@ export const veteranspecificIssuesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -278,7 +278,7 @@ export const veteranspecificIssuesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For many veterans, the psychological consequences of military service do not emerge immediately upon return from deployment—they surface decades later, triggered by the developmental transitions of aging. Retirement removes the occupational structure and identity that kept traumatic memories at bay.
           </p>
         </div>
@@ -324,7 +324,7 @@ export const veteranspecificIssuesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -387,7 +387,7 @@ export const veteranspecificIssuesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The Veterans Health Administration (VHA) operates the largest integrated healthcare system in the United States—serving over 9 million enrolled veterans through 1,298 healthcare facilities, including 171 VA Medical Centers and 1,113 outpatient clinics. Within this system, VA Mental Health Services provides a comprehensive range of psychological and psychiatric care that includes evidence-based psychotherapy, medication management, substance use treatment, residential rehabilitation, homelessness services, and crisis intervention.
           </p>
         </div>
@@ -435,7 +435,7 @@ export const veteranspecificIssuesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -498,7 +498,7 @@ export const veteranspecificIssuesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Gulf War Illness (GWI)—a chronic, multi-symptom condition affecting an estimated 25–32% of the nearly 700,000 U.S.
           </p>
         </div>
@@ -545,7 +545,7 @@ export const veteranspecificIssuesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -608,7 +608,7 @@ export const veteranspecificIssuesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             An estimated 181,500 veterans are incarcerated in U.S.
           </p>
         </div>
@@ -651,7 +651,7 @@ export const veteranspecificIssuesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

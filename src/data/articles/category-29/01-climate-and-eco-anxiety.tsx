@@ -65,7 +65,7 @@ export const climateAndEcoanxietyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Eco-anxiety—chronic fear, worry, and distress related to environmental degradation and climate change—has emerged as one of the defining psychological phenomena of the 21st century. Unlike traditional anxiety disorders, eco-anxiety is not a pathological overreaction to an imagined threat but a proportionate emotional response to an actual, escalating crisis.
           </p>
         </div>
@@ -110,7 +110,7 @@ export const climateAndEcoanxietyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -173,7 +173,7 @@ export const climateAndEcoanxietyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Climate grief—also termed ecological grief—is the mourning process that accompanies the loss of ecosystems, species, landscapes, and anticipated futures to environmental degradation and climate change. First formally conceptualized by Ashlee Cunsolo and Neville Ellis in a landmark 2018 paper in Nature Climate Change, ecological grief represents a legitimate and growing category of human suffering that existing psychological frameworks have been slow to recognize.
           </p>
         </div>
@@ -218,7 +218,7 @@ export const climateAndEcoanxietyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -281,7 +281,7 @@ export const climateAndEcoanxietyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Solastalgia—a term coined by Australian environmental philosopher Glenn Albrecht in 2005—describes the distress experienced when one&apos;s home environment is degraded or transformed in unwelcome ways while one still lives in it. Unlike nostalgia, which is homesickness for a place left behind, solastalgia is the experience of homesickness while still at home: the painful recognition that the place you inhabit is no longer the place you knew, loved, and drew comfort from.
           </p>
         </div>
@@ -329,7 +329,7 @@ export const climateAndEcoanxietyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -392,7 +392,7 @@ export const climateAndEcoanxietyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Children and young people are experiencing climate anxiety at rates that have alarmed researchers, educators, and mental health professionals worldwide. A landmark 2021 survey of 10,000 young people across ten countries found that 84% were at least moderately worried about climate change, 59% were very or extremely worried, and 45% reported that climate distress affected their daily functioning and ability to concentrate, eat, and sleep.
           </p>
         </div>
@@ -438,7 +438,7 @@ export const climateAndEcoanxietyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -501,7 +501,7 @@ export const climateAndEcoanxietyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Eco-paralysis—the state of psychological immobilization that prevents environmental action despite genuine concern about ecological crisis—is one of the most common and least discussed responses to the climate emergency. The person experiencing eco-paralysis cares deeply about the environment, understands the urgency of the crisis, and may even possess knowledge about what actions would help—yet finds themselves unable to act.
           </p>
         </div>
@@ -547,7 +547,7 @@ export const climateAndEcoanxietyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -610,7 +610,7 @@ export const climateAndEcoanxietyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Climate denial—the rejection or minimization of scientific evidence for anthropogenic climate change—has puzzled scientists, communicators, and policymakers for decades. The evidence for human-caused climate change is overwhelming, supported by 97% of climate scientists and every national scientific academy in the world.
           </p>
         </div>
@@ -661,7 +661,7 @@ export const climateAndEcoanxietyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

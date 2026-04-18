@@ -104,7 +104,7 @@ export const digitalWellnessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When was the last time you did something purely for enjoyment that didn't involve a screen? Painted, played an instrument, baked bread, worked with your hands, played a board game? If you can't remember, you're not alone --- and you're missing out on a powerful source of mental well-being.
           </p>
           <p className="mb-6">
@@ -112,7 +112,7 @@ export const digitalWellnessArticlesB: Article[] = [
           </p>
         </div>
 
-        <h2 id="why-analog-matters" className="text-3xl font-display font-bold text-gray-900 dark:text-gray-300 mb-8 leading-relaxed mt-12 mb-6 scroll-mt-32">
+        <h2 id="why-analog-matters" className="text-3xl font-display font-bold text-gray-900 dark:text-neutral-300 mb-8 leading-relaxed mt-12 mb-6 scroll-mt-32">
           Why Analog Activities Are Different
         </h2>
         <p className="mb-6">
@@ -593,7 +593,7 @@ export const digitalWellnessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Imagine putting on a VR headset to safely practice public speaking in a simulated auditorium. Or an AI that detects early warning signs of depression from your phone usage patterns weeks before you consciously feel symptoms. Or a chatbot therapist available 24/7 for a fraction of the cost of human therapy. This isn't science fiction --- it's already happening.
           </p>
           <p className="mb-6">
@@ -1101,7 +1101,7 @@ export const digitalWellnessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your five-year-old can navigate YouTube better than you can navigate your work email. Your ten-year-old knows every TikTok trend before it hits mainstream news. Your teenager spends hours in group chats you don't understand. Welcome to digital parenting in 2026 --- where the technology changes faster than the advice.
           </p>
           <p className="mb-6">
@@ -1578,7 +1578,7 @@ export const digitalWellnessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There are over 20,000 mental health apps available. Some are evidence-based tools that genuinely help. Most are digital snake oil --- unproven, ineffective, or even harmful. How do you tell the difference? And which ones are actually worth your time, money, and trust?
           </p>
           <p className="mb-6">
@@ -1998,7 +1998,7 @@ export const digitalWellnessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've read the articles. You understand the problems. You know technology affects your mental health, sleep, relationships, and productivity. But knowledge without a plan is just information. This article helps you translate awareness into action by creating a personalized digital wellness plan that actually works for your life.
           </p>
           <p className="mb-6">

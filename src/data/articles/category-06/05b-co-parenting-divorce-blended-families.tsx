@@ -61,7 +61,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Communicating with an ex about children is rarely easy. Old hurts, blame, and resentment can turn simple scheduling questions into fights. But effective co-parenting requires functional communication.
           </p>
           <p className="mb-6">
@@ -331,7 +331,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Your dad doesn't really care about you.", "Your mom is a liar.", "If it weren't for your father, we'd have money." When parents speak negatively about each other, children don't just hear criticism --- they internalize pain.
           </p>
           <p className="mb-6">
@@ -575,7 +575,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A two-year-old can't understand "You'll see Daddy in three days." They experience separations as disappearances. For young children, attachment security depends on predictability, consistency, and the presence of primary caregivers.
           </p>
           <p className="mb-6">
@@ -788,7 +788,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Dating as a single parent is complicated. You're healing from heartbreak, figuring out your identity, protecting your children, and trying to stay open to connection --- all at once. And every step affects not just you, but your kids.
           </p>
           <p className="mb-6">
@@ -1004,7 +1004,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Does divorce ruin children's lives? The answer is more nuanced than headlines suggest. Long-term research shows that most children of divorce grow into well-adjusted adults --- but the path depends heavily on how parents handle the divorce.
           </p>
           <p className="mb-6">

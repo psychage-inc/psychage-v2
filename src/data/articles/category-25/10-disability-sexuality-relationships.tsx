@@ -63,7 +63,7 @@ export const disabilitySexualityRelationshipsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sexuality is a fundamental dimension of human experience—and disability does not erase it. Yet disabled people are among the most desexualized populations in contemporary society: treated as asexual by default, excluded from sex education, absent from media representations of desire, and subjected to a cultural narrative that frames disability and sexuality as incompatible.
           </p>
         </div>
@@ -84,7 +84,7 @@ export const disabilitySexualityRelationshipsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

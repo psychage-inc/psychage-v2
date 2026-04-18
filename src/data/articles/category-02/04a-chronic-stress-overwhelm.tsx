@@ -98,7 +98,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've been feeling tired for months. Your jaw aches from clenching. You can't remember the last time you truly relaxed. Welcome to chronic stress --- the silent epidemic reshaping millions of brains and bodies every day.
           </p>
           <p className="mb-6">
@@ -428,7 +428,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every time you encounter a stressor --- a looming deadline, a difficult conversation, a scary diagnosis --- a complex biological orchestra begins to play. This is your stress response system, an ancient survival mechanism that has kept humans alive for millennia.
           </p>
           <p className="mb-6">
@@ -793,7 +793,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You stare at your to-do list. Twelve items. Twenty items. More keep appearing in your mind. Your inbox has 247 unread messages. Three people need responses today. A project deadline looms. And you haven't even opened the bills yet. You feel frozen. You can't start anything because everything demands your attention at once.
           </p>
           <p className="mb-6">
@@ -1150,7 +1150,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             By 9 a.m., you've already made dozens of decisions. What to wear. What to eat. Which route to take. Which email to answer first. Reply now or later. Coffee or tea. By the afternoon, choosing where to order lunch feels impossibly difficult. By evening, you can't decide what to watch on Netflix, so you scroll aimlessly for 20 minutes before giving up.
           </p>
           <p className="mb-6">
@@ -1494,7 +1494,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You walk into an exam you studied for all week. Your mind goes blank. You can't recall basic concepts that were clear the night before. Or you're giving a presentation and suddenly forget the key point you meant to make. Later, when the pressure is off, it all comes flooding back.
           </p>
           <p className="mb-6">

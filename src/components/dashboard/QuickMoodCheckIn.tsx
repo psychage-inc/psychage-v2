@@ -73,7 +73,7 @@ const QuickMoodCheckIn: React.FC<QuickMoodCheckInProps> = ({ userId, todayEntry,
         >
             <div
                 className={cn(
-                    'p-5 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 shadow-sm h-full transition-colors duration-500',
+                    'p-5 rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 shadow-sm h-full transition-colors duration-500',
                     selectedOption && !showSuccess && !todayEntry ? selectedOption.bgLight + ' ' + selectedOption.bgDark : ''
                 )}
             >
@@ -103,7 +103,7 @@ const QuickMoodCheckIn: React.FC<QuickMoodCheckInProps> = ({ userId, todayEntry,
                             <div className="w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
                                 <Check size={16} className="text-emerald-600 dark:text-emerald-400" />
                             </div>
-                            <p className="text-sm text-gray-600 dark:text-gray-300 font-medium">
+                            <p className="text-sm text-gray-600 dark:text-neutral-300 font-medium">
                                 Noted. You're building awareness.
                             </p>
                         </motion.div>
@@ -112,7 +112,7 @@ const QuickMoodCheckIn: React.FC<QuickMoodCheckInProps> = ({ userId, todayEntry,
                             key="logged"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl"
+                            className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-neutral-800/50 rounded-xl"
                         >
                             <div
                                 className="w-10 h-10 rounded-full shrink-0"
@@ -122,7 +122,7 @@ const QuickMoodCheckIn: React.FC<QuickMoodCheckInProps> = ({ userId, todayEntry,
                                 <p className="text-sm font-medium text-gray-900 dark:text-white">
                                     {todayOption?.label || 'Logged'}
                                 </p>
-                                <p className="text-[11px] text-gray-400 dark:text-gray-500">
+                                <p className="text-[11px] text-gray-400 dark:text-neutral-500">
                                     {format(new Date(todayEntry.created_at), 'h:mm a')}
                                 </p>
                             </div>
@@ -150,7 +150,7 @@ const QuickMoodCheckIn: React.FC<QuickMoodCheckInProps> = ({ userId, todayEntry,
                                                 'flex-1 flex flex-col items-center gap-2 py-3 px-2 rounded-xl transition-colors border-2 min-h-[72px]',
                                                 isSelected
                                                     ? 'border-current shadow-md'
-                                                    : 'border-transparent hover:bg-gray-50 dark:hover:bg-gray-800/50'
+                                                    : 'border-transparent hover:bg-gray-50 dark:hover:bg-neutral-800/50'
                                             )}
                                             style={isSelected ? { borderColor: option.color } : undefined}
                                         >
@@ -160,7 +160,7 @@ const QuickMoodCheckIn: React.FC<QuickMoodCheckInProps> = ({ userId, todayEntry,
                                             />
                                             <span className={cn(
                                                 'text-[10px] sm:text-xs font-medium transition-colors',
-                                                isSelected ? 'text-gray-900 dark:text-white' : 'text-gray-400 dark:text-gray-500'
+                                                isSelected ? 'text-gray-900 dark:text-white' : 'text-gray-400 dark:text-neutral-500'
                                             )}>
                                                 {option.label}
                                             </span>
@@ -183,7 +183,7 @@ const QuickMoodCheckIn: React.FC<QuickMoodCheckInProps> = ({ userId, todayEntry,
                                             placeholder="Want to add a note? (optional)"
                                             value={notes}
                                             onChange={e => setNotes(e.target.value)}
-                                            className="w-full bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-xl p-3 text-sm text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 resize-none h-20 mb-3 focus:outline-none focus:ring-2 focus:ring-teal-500/30 focus:border-teal-500/50"
+                                            className="w-full bg-gray-50 dark:bg-neutral-800/50 border border-gray-200 dark:border-neutral-700 rounded-xl p-3 text-sm text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 resize-none h-20 mb-3 focus:outline-none focus:ring-2 focus:ring-teal-500/30 focus:border-teal-500/50"
                                             maxLength={500}
                                         />
                                         <div className="flex items-center gap-3">
@@ -199,7 +199,7 @@ const QuickMoodCheckIn: React.FC<QuickMoodCheckInProps> = ({ userId, todayEntry,
                                             </Button>
                                             <button
                                                 onClick={() => { setShowNotes(false); setSelectedMood(null); }}
-                                                className="text-xs text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                                                className="text-xs text-gray-400 dark:text-neutral-500 hover:text-gray-600 dark:hover:text-neutral-300 transition-colors"
                                             >
                                                 Cancel
                                             </button>

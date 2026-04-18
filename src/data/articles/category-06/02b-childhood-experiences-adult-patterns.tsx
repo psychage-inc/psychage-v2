@@ -65,7 +65,7 @@ export const childhoodExperiencesAdultPatternsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Nearly half of marriages end in divorce, meaning millions of children navigate this transition each year. If you're one of them, you've probably wondered: how did this shape who I am today?
           </p>
           <p className="mb-6">
@@ -302,7 +302,7 @@ export const childhoodExperiencesAdultPatternsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every parent wants to keep their child safe. But when safety becomes the only priority, something critical gets lost: the chance for children to discover they can handle difficulty on their own.
           </p>
           <p className="mb-6">
@@ -534,7 +534,7 @@ export const childhoodExperiencesAdultPatternsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Just toughen up. Kids are mean." If you were bullied as a child and heard this response from adults, you learned a devastating lesson: your pain didn't matter, and you were weak for feeling it.
           </p>
           <p className="mb-6">
@@ -802,7 +802,7 @@ export const childhoodExperiencesAdultPatternsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're in a meeting when your boss offers mild criticism, and suddenly you feel small, defensive, like you've done everything wrong. Or your partner is late without calling, and you spiral into panic that they're abandoning you. What's happening?
           </p>
           <p className="mb-6">
@@ -1041,7 +1041,7 @@ export const childhoodExperiencesAdultPatternsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You feel guilty when you rest. You apologize constantly. You push yourself relentlessly and still feel like you're not enough. A voice inside says you're failing, selfish, or weak. Where did that voice come from?
           </p>
           <p className="mb-6">

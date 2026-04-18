@@ -65,7 +65,7 @@ export const moodDisordersArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For a week, you feel invincible. You sleep two hours a night and wake up energized. Ideas pour from your mind faster than you can write them down. You make impulsive decisions that later seem reckless. Then the crash comes, and you plunge into deep depression. This is Bipolar I Disorder.
           </p>
           <p className="mb-6">
@@ -388,7 +388,7 @@ export const moodDisordersArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You have been treated for depression for years, but the medications never seem to work quite right. Sometimes you feel great---productive, social, energized---but those periods are brief. Then you crash back into deep depression. You may have Bipolar II, not depression.
           </p>
           <p className="mb-6">
@@ -631,7 +631,7 @@ export const moodDisordersArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your moods are unpredictable. Some days you feel on top of the world, energized and optimistic. Other days you are down, lethargic, and pessimistic. The swings are not severe enough to be bipolar disorder, but they never stop. This is cyclothymic disorder.
           </p>
           <p className="mb-6">
@@ -680,7 +680,7 @@ export const moodDisordersArticlesB: Article[] = [
                 <li>Increased goal-directed activity or productivity bursts</li>
                 <li>Mild impulsivity (small spending sprees, minor risk-taking)</li>
               </ul>
-              <p className="text-sm text-gray-600 dark:text-gray-400">These symptoms are noticeable but do not cause severe impairment or require hospitalization.</p>
+              <p className="text-sm text-gray-600 dark:text-neutral-400">These symptoms are noticeable but do not cause severe impairment or require hospitalization.</p>
             </div>
           )},
           { id: 'dep', label: 'Depressive Symptoms', content: (
@@ -695,7 +695,7 @@ export const moodDisordersArticlesB: Article[] = [
                 <li>Difficulty concentrating or making decisions</li>
                 <li>Changes in sleep or appetite (but not as extreme as major depression)</li>
               </ul>
-              <p className="text-sm text-gray-600 dark:text-gray-400">These symptoms are distressing but do not meet full criteria for a major depressive episode.</p>
+              <p className="text-sm text-gray-600 dark:text-neutral-400">These symptoms are distressing but do not meet full criteria for a major depressive episode.</p>
             </div>
           )},
         ]} />

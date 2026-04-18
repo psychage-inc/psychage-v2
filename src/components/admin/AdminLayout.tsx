@@ -35,7 +35,7 @@ const AdminLayout: React.FC = () => {
         {denied ? (
           <div className="max-w-md text-center space-y-3">
             <p className="text-sm text-text-secondary">
-              Your account does not have an <code className="bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-xs font-mono">admin_roles</code> entry.
+              Your account does not have an <code className="bg-gray-100 dark:bg-neutral-800 px-1.5 py-0.5 rounded text-xs font-mono">admin_roles</code> entry.
             </p>
             {isDev && (
               <div className="p-4 rounded-lg border border-amber-300/50 bg-amber-50/80 dark:bg-amber-900/20 dark:border-amber-500/30 text-left space-y-2">

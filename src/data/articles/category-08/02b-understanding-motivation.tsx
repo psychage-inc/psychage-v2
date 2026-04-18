@@ -103,7 +103,7 @@ export const understandingMotivationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You can force yourself to exercise for weeks through sheer willpower. You can chase external rewards---money, status, approval---for months or even years. But sustainable motivation, the kind that carries you through setbacks and keeps you going when no one's watching, comes from a deeper source: alignment between your actions and your core values, between your daily behaviors and your sense of purpose.
           </p>
           <p className="mb-6">
@@ -424,7 +424,7 @@ export const understandingMotivationArticlesB: Article[] = [
         />
 
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600">
-          <p className="text-sm text-gray-600 dark:text-gray-300">
+          <p className="text-sm text-gray-600 dark:text-neutral-300">
             <strong>Next:</strong> Values provide direction, but external incentives are part of life. Learn how to use reward systems strategically without undermining your intrinsic motivation.
           </p>
         </div>
@@ -513,7 +513,7 @@ export const understandingMotivationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You want to build a habit, so you create a reward system: "If I exercise five times this week, I'll buy myself that new book." It works for a while---you hit your targets, earn your rewards. But then something strange happens: when you stop the rewards, the behavior stops too. Even though you used to enjoy exercise, it now feels like work without the payoff. You've accidentally undermined your intrinsic motivation.
           </p>
           <p className="mb-6">
@@ -836,7 +836,7 @@ export const understandingMotivationArticlesB: Article[] = [
         />
 
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600">
-          <p className="text-sm text-gray-600 dark:text-gray-300">
+          <p className="text-sm text-gray-600 dark:text-neutral-300">
             <strong>Next:</strong> Rewards can support or undermine motivation---but so can the fundamental sense of control you have over your actions. Discover why autonomy is the most powerful predictor of sustained motivation.
           </p>
         </div>
@@ -933,7 +933,7 @@ export const understandingMotivationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Two people receive the same health advice: exercise three times weekly. One feels motivated and follows through. The other feels pressured and resists. The difference? The first person feels the recommendation respects their autonomy---they choose to follow it because it aligns with their values. The second feels controlled---the advice is imposed, removing their sense of choice. Same behavior, different motivation.
           </p>
           <p className="mb-6">
@@ -1234,7 +1234,7 @@ export const understandingMotivationArticlesB: Article[] = [
         />
 
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600">
-          <p className="text-sm text-gray-600 dark:text-gray-300">
+          <p className="text-sm text-gray-600 dark:text-neutral-300">
             <strong>Next:</strong> Autonomy is powerful, but humans are also fundamentally social. Discover how social connection and accountability can fuel motivation---when done right.
           </p>
         </div>
@@ -1323,7 +1323,7 @@ export const understandingMotivationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've committed to going to the gym three times this week. On Monday morning, your alarm goes off and you don't feel like going. If you're alone with this decision, you might roll over and skip it. But if you know your workout partner is waiting for you, you get up. Social connection doesn't just make behavior change more pleasant---it fundamentally alters your motivation structure.
           </p>
           <p className="mb-6">
@@ -1627,7 +1627,7 @@ export const understandingMotivationArticlesB: Article[] = [
         />
 
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600">
-          <p className="text-sm text-gray-600 dark:text-gray-300">
+          <p className="text-sm text-gray-600 dark:text-neutral-300">
             <strong>Next:</strong> Social support helps, but sometimes motivation disappears completely---not from lack of discipline or support, but from a deeper loss of interest in everything. Learn about anhedonia and when motivation loss signals something more serious.
           </p>
         </div>
@@ -1716,7 +1716,7 @@ export const understandingMotivationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've lost interest in everything. Not just one goal or hobby---everything. Activities that once brought you joy feel empty. You can't remember the last time you felt excited about anything. You go through the motions, but there's no spark, no drive, no pleasure. This isn't ordinary low motivation---this is anhedonia, and it's a signal that something deeper is happening.
           </p>
           <p className="mb-6">
@@ -1986,7 +1986,7 @@ export const understandingMotivationArticlesB: Article[] = [
         />
 
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600">
-          <p className="text-sm text-gray-600 dark:text-gray-300">
+          <p className="text-sm text-gray-600 dark:text-neutral-300">
             <strong>Related Resources:</strong> If you're struggling with persistent low motivation or anhedonia, explore our articles on depression, seeking mental health care, and building support systems. You don't have to face this alone.
           </p>
         </div>

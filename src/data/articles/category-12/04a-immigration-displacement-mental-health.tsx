@@ -110,7 +110,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Leaving your home country---whether by choice or necessity---is one of life\'s most significant stressors. You leave behind family, language, culture, career, and everything familiar. You arrive in a place where nothing feels like home, where you may not speak the language, where your credentials aren\'t recognized, and where you\'re navigating systems you don\'t understand.
           </p>
           <p className="mb-6">
@@ -494,7 +494,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You didn\'t choose to leave. You were forced to flee---war, persecution, violence, or disaster made staying impossible. You left behind your home, your community, sometimes your family. You survived a dangerous journey. You arrived in a new country where everything is unfamiliar, where you may be unwanted, where you\'re starting over with nothing.
           </p>
           <p className="mb-6">
@@ -828,7 +828,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You fled persecution. You survived the journey. You arrived at a border and asked for protection---something international law guarantees you the right to seek. Instead, you were detained. You were separated from your children. You waited months, then years, in legal limbo, not knowing if you\'ll be sent back to the danger you escaped or allowed to stay. Every day is uncertainty, fear, and powerlessness.
           </p>
           <p className="mb-6">
@@ -1141,7 +1141,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You don\'t speak the language well enough. Your accent marks you as foreign. The customs are confusing---when to make eye contact, how close to stand, what\'s polite and what\'s rude. Your qualifications from home aren\'t recognized. You miss your food, your community, the way life used to make sense. But when you try to hold onto your culture, people tell you: "You\'re in America now. You need to assimilate."
           </p>
           <p className="mb-6">
@@ -1416,7 +1416,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You\'re sitting in a therapist\'s office, trying to explain how you feel. But the words don\'t exist in English. The language you learned to express emotion, to describe family roles, to talk about your body and spirit---none of it translates. The therapist doesn\'t understand. You feel more alone than when you walked in.
           </p>
           <p className="mb-6">

@@ -65,7 +65,7 @@ export const reentryRehabilitationPreventionArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Approximately 600,000 people are released from state and federal prisons in the United States each year—returning to communities, families, and lives that have continued without them. The transition from incarceration to community living is one of the most psychologically demanding experiences a person can face.
           </p>
         </div>
@@ -110,7 +110,7 @@ export const reentryRehabilitationPreventionArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -173,7 +173,7 @@ export const reentryRehabilitationPreventionArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Drug courts represent one of the most significant innovations in criminal justice over the past three decades—a structured alternative to traditional prosecution that combines judicial supervision, substance abuse treatment, regular drug testing, graduated sanctions and incentives, and case management to address the addiction that drives much drug-related offending. Since the first drug court opened in Miami-Dade County in 1989, the model has expanded to more than 3,800 courts operating in all 50 states.
           </p>
         </div>
@@ -218,7 +218,7 @@ export const reentryRehabilitationPreventionArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -281,7 +281,7 @@ export const reentryRehabilitationPreventionArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             America&apos;s jails and prisons have become the nation&apos;s largest mental health facilities—a development as unplanned as it is devastating. Approximately 37% of state prisoners and 44% of jail inmates meet criteria for a mental health disorder, with serious mental illness (schizophrenia, bipolar disorder, major depression) affecting approximately 15% of incarcerated men and 30% of incarcerated women.
           </p>
         </div>
@@ -325,7 +325,7 @@ export const reentryRehabilitationPreventionArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -388,7 +388,7 @@ export const reentryRehabilitationPreventionArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sex offender registration and notification (SORN) laws—which require convicted sex offenders to register their address with law enforcement and, in many jurisdictions, make this information publicly available—are among the most popular and least evidence-based criminal justice policies in America. Born from the understandable anguish of parents whose children were harmed by strangers, these laws—including Megan&apos;s Law (1996), the Jacob Wetterling Act (1994), and the Sex Offender Registration and Notification Act (SORNA, 2006)—enjoy near-universal public support.
           </p>
         </div>
@@ -434,7 +434,7 @@ export const reentryRehabilitationPreventionArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -497,7 +497,7 @@ export const reentryRehabilitationPreventionArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mental health courts emerged in the late 1990s as a response to the growing recognition that the criminal justice system was failing people with serious mental illness—cycling them through arrest, brief incarceration, release without treatment, and re-arrest in a pattern that served neither public safety nor individual well-being. By 2022, more than 500 mental health courts operated across the United States, built on the therapeutic jurisprudence principle that the legal process can be designed to promote therapeutic outcomes.
           </p>
         </div>
@@ -543,7 +543,7 @@ export const reentryRehabilitationPreventionArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -606,7 +606,7 @@ export const reentryRehabilitationPreventionArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Crime Prevention Through Environmental Design (CPTED) represents one of the most practical applications of psychology to public safety—the recognition that the physical environment shapes human behavior, including criminal behavior, and that intentional design can reduce opportunities for crime while enhancing the well-being of communities. Rooted in the work of architect Oscar Newman (defensible space theory, 1972) and criminologist C.
           </p>
         </div>
@@ -652,7 +652,7 @@ export const reentryRehabilitationPreventionArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -715,7 +715,7 @@ export const reentryRehabilitationPreventionArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Approximately 70–100 million Americans—nearly one in three adults—have some form of criminal record, ranging from minor misdemeanors to serious felony convictions. For the millions who have served their sentences and returned to communities, the criminal record functions as a permanent mark that extends punishment far beyond what any court imposed.
           </p>
         </div>
@@ -760,7 +760,7 @@ export const reentryRehabilitationPreventionArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -823,7 +823,7 @@ export const reentryRehabilitationPreventionArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The traditional correctional environment—built on control, compliance, and punishment—is fundamentally at odds with what we know about the psychological profiles of incarcerated people. Research consistently shows that 60–80% of incarcerated individuals have significant trauma histories, including childhood abuse and neglect, community violence, sexual assault, and combat exposure.
           </p>
         </div>
@@ -874,7 +874,7 @@ export const reentryRehabilitationPreventionArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -937,7 +937,7 @@ export const reentryRehabilitationPreventionArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Violence is not an inevitable feature of human societies—it is a preventable public health problem. The World Health Organization has advocated for a public health approach to violence since the late 1990s, treating violence not as a moral failing requiring punishment but as a complex phenomenon with identifiable risk factors and evidence-based prevention strategies.
           </p>
         </div>
@@ -985,7 +985,7 @@ export const reentryRehabilitationPreventionArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

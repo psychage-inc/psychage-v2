@@ -79,7 +79,7 @@ export const mensHealthInterventions1ArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In a converted garage in suburban Melbourne, eight men arrive on a Tuesday
             morning. They make tea, check the project board, and settle into their work --
             one repairing a chair for a neighbor, another building nesting boxes for a local
@@ -635,7 +635,7 @@ export const mensHealthInterventions1ArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The barbershop is one of the oldest informal institutions in men's lives. It is a
             place where conversation flows naturally, where men return regularly, and where the
             relationship between barber and client often spans years or decades. A growing
@@ -1052,7 +1052,7 @@ export const mensHealthInterventions1ArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For millions of boys and men, the sports team is the most important community they
             belong to. It is where they form their closest friendships, develop their identity,
             learn about discipline and resilience, and experience the vulnerability of defeat and
@@ -1467,7 +1467,7 @@ export const mensHealthInterventions1ArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Therapy has a man problem. Not because men do not benefit from psychological
             treatment -- they demonstrably do. The problem is that the standard format of therapy
             -- sitting face-to-face in an office, exploring emotions through open-ended
@@ -1910,7 +1910,7 @@ export const mensHealthInterventions1ArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There is a tool that men already carry everywhere, check dozens of times per day,
             and use to manage nearly every aspect of their lives -- from banking to fitness to
             social connection. The smartphone may be the most promising mental health

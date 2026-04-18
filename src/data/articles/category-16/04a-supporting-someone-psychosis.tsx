@@ -77,7 +77,7 @@ export const supportingSomeoneArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your brother tells you the government has implanted a tracking device in his arm.
             Your mother says she's been receiving messages from God through the television.
             Your partner sits in silence, staring at the wall, unreachable. In each case, your
@@ -273,7 +273,7 @@ export const supportingSomeoneArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Nobody trains you for this. One day your child, partner, sibling, or parent
             develops psychosis, and suddenly you're managing medication schedules, interpreting
             bizarre behavior, fielding crisis calls, battling insurance companies, and holding
@@ -581,7 +581,7 @@ export const supportingSomeoneArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "I'm not sick. There's nothing wrong with me. I don't need medication." For families
             of people with psychosis, these words --- spoken with absolute conviction by someone
             who is clearly unwell --- represent one of the most painful and confusing aspects of the
@@ -832,7 +832,7 @@ export const supportingSomeoneArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Without a stable place to live, recovery from psychosis is nearly impossible. You
             can't take medication consistently if you have no secure place to store it. You
             can't attend therapy appointments if you don't know where you'll sleep tonight.
@@ -1061,7 +1061,7 @@ export const supportingSomeoneArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In the 1960s, the United States began closing its state psychiatric hospitals ---
             a process called deinstitutionalization --- with the promise that community-based
             mental health services would replace them. The hospitals closed. The community

@@ -64,7 +64,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Positive psychology is the scientific study of what makes life worth living—examining strengths, virtues, wellbeing, and optimal functioning rather than just pathology and dysfunction. Founded by psychologist Martin Seligman in 1998, it shifted psychology&apos;s focus from &quot;What&apos;s wrong with people?&quot; to &quot;What&apos;s right with people? What helps them flourish?&quot; Research has identified core components of wellbeing (Seligman&apos;s PERMA model: Positive emotion, Engagement, Relationships, Meaning, Accomplishment), evidence-based interventions (gratitude practices, strength-spotting, savoring), and biological underpinnings of happiness.
           </p>
         </div>
@@ -77,7 +77,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -139,7 +139,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Flow is the psychological state in which you&apos;re so completely absorbed in an activity that time disappears, self-consciousness fades, and you perform at your peak. Identified by psychologist Mihaly Csikszentmihalyi through studies of artists, athletes, and surgeons, flow occurs when challenge and skill are perfectly matched, goals are clear, and feedback is immediate.
           </p>
         </div>
@@ -152,7 +152,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -214,7 +214,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Ikigai (生き甲斐) is a Japanese concept translating roughly to &quot;reason for being&quot; or &quot;that which makes life worth living.&quot; Unlike Western concepts of purpose (often focused on grand achievements or career success), ikigai emphasizes finding joy and meaning in everyday life—in small pleasures, relationships, contributions, and activities that make you feel alive.
           </p>
         </div>
@@ -227,7 +227,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -289,7 +289,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Post-traumatic growth (PTG) refers to positive psychological changes that can occur as people struggle with highly challenging life circumstances—cancer, combat, bereavement, assault, disaster. This isn&apos;t resilience (bouncing back to baseline) or toxic positivity (denying harm).
           </p>
         </div>
@@ -302,7 +302,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -364,7 +364,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Resilience is the capacity to adapt successfully in the face of adversity, trauma, tragedy, threats, or significant stress—and to bounce back or even grow stronger from these experiences. For decades, resilience was thought to be rare—a special quality possessed by exceptional people.
           </p>
         </div>
@@ -377,7 +377,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -439,7 +439,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Hope isn&apos;t wishful thinking or naive optimism—it&apos;s a cognitive-motivational system involving goal-directed thinking, pathways planning, and agency (belief you can follow those pathways). Psychologist C.
           </p>
         </div>
@@ -452,7 +452,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -514,7 +514,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Self-compassion means treating yourself with the same kindness, care, and understanding you&apos;d offer a good friend who&apos;s struggling—rather than harsh self-criticism, shame, or self-judgment. Psychologist Kristin Neff defines self-compassion as having three components: self-kindness (warmth toward yourself when you fail or suffer), common humanity (recognizing suffering is part of being human, not evidence you&apos;re defective), and mindfulness (balanced awareness of painful feelings without over-identifying).
           </p>
         </div>
@@ -527,7 +527,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -589,7 +589,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Strengths-based approaches in psychology focus on identifying and cultivating what&apos;s right with people rather than exclusively diagnosing and treating what&apos;s wrong. This represents a fundamental shift from traditional deficit-focused models.
           </p>
         </div>
@@ -602,7 +602,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -666,7 +666,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Wisdom is the capacity to use knowledge, experience, and deep understanding to navigate life&apos;s complexities with insight, compassion, and good judgment. Unlike intelligence (which often peaks in young adulthood), wisdom can increase across the lifespan as people accumulate experience, develop emotional regulation, and gain perspective on life&apos;s patterns and paradoxes.
           </p>
         </div>
@@ -679,7 +679,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -743,7 +743,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Savoring is the capacity to attend to, appreciate, and enhance positive experiences—whether past (reminiscing), present (being fully present with pleasure), or future (anticipation). Unlike mindfulness (which emphasizes non-judgmental awareness of whatever arises), savoring specifically focuses on positive experiences and intentionally amplifies them.
           </p>
         </div>
@@ -756,7 +756,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -821,7 +821,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Grit—defined as sustained passion and perseverance toward long-term goals—has emerged as one of the strongest predictors of achievement across domains from education to military training. Psychologist Angela Duckworth&apos;s research shows that grit often matters more than talent or intelligence, explaining 4-16% of achievement variance beyond IQ.
           </p>
         </div>
@@ -834,7 +834,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -901,7 +901,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Explanatory style—the habitual way you explain why good or bad things happen—is one of the most researched predictors of mental and physical health outcomes. Psychologist Martin Seligman&apos;s decades of work shows that pessimistic explanatory style (attributing bad events to internal, stable, global causes and good events to external, temporary, specific causes) predicts depression, poor physical health, lower achievement, and even earlier mortality.
           </p>
         </div>
@@ -914,7 +914,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -976,7 +976,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Awe—the emotion triggered by encounters with vastness that transcends current understanding—is emerging as one of the most psychologically and physically transformative positive emotions. Defined by psychologists Dacher Keltner and Jonathan Haidt as requiring both perceived vastness and need for accommodation (updating mental schemas), awe shrinks the sense of self, expands time perception, and increases prosocial behavior.
           </p>
         </div>
@@ -989,7 +989,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1056,7 +1056,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Curiosity—the intrinsic desire to seek new information and experiences—is one of the most adaptive human traits, predicting academic achievement, career success, relationship satisfaction, and even longevity. Neuroscience reveals curiosity activates the brain&apos;s dopamine reward circuits in anticipation of learning, not just upon receiving answers, making the state of questioning itself pleasurable.
           </p>
         </div>
@@ -1069,7 +1069,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1136,7 +1136,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The VIA (Values in Action) classification, developed by psychologists Christopher Peterson and Martin Seligman, identifies 24 character strengths organized under six universal virtues—wisdom, courage, humanity, justice, temperance, and transcendence. Unlike talent or intelligence, character strengths are moral traits reflecting &quot;who you are at your best.
           </p>
         </div>
@@ -1149,7 +1149,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1216,7 +1216,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Intellectual humility—the recognition that your beliefs might be wrong and your knowledge has limits—is emerging as one of the most adaptive cognitive traits in the information age. Unlike general humility (modest about abilities) or self-deprecation (low self-worth), intellectual humility combines confidence with openness: you hold convictions while remaining receptive to evidence that challenges them.
           </p>
         </div>
@@ -1229,7 +1229,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1277,12 +1277,12 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Meaning in life—the sense that your existence has purpose, coherence, and significance—is one of the strongest predictors of psychological and physical wellbeing across the lifespan. Psychologist Michael Steger&apos;s tripartite model defines meaning through three components: comprehension (life makes sense), purpose (having valued goals and direction), and mattering (your life is significant beyond yourself).
           </p>
         </div>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1346,7 +1346,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Psychological richness—characterized by interesting, varied experiences that shift perspectives and promote intellectual curiosity—has emerged as a third dimension of the good life, distinct from hedonic happiness and eudaimonic meaning. Psychologists Shigehiro Oishi and Erin Westgate&apos;s research (2021) shows that while happiness prioritizes positive emotions and meaning emphasizes purpose, psychological richness values novelty, complexity, and perspective-changing experiences—even when difficult or uncomfortable.
           </p>
         </div>
@@ -1359,7 +1359,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1426,7 +1426,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Psychological flexibility—the ability to remain in contact with the present moment while accepting uncomfortable thoughts and feelings, and choosing actions aligned with values despite internal obstacles—is the central therapeutic target of Acceptance and Commitment Therapy (ACT) and a powerful predictor of mental health. Steven Hayes and colleagues&apos; research shows psychological flexibility comprises six interrelated processes: acceptance (allowing difficult experiences), cognitive defusion (seeing thoughts as thoughts, not reality), present moment awareness, self-as-context (observing perspective), values clarification, and committed action.
           </p>
         </div>
@@ -1439,7 +1439,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1489,7 +1489,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Self-Determination Theory (SDT), developed by psychologists Edward Deci and Richard Ryan, proposes that humans have three universal psychological needs—autonomy, competence, and relatedness—that must be satisfied for optimal motivation and wellbeing. When these needs are met, people experience greater intrinsic motivation, persistence, creativity, psychological health, and life satisfaction.
           </p>
         </div>
@@ -1500,7 +1500,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1548,7 +1548,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Prosocial behavior—voluntary actions intended to benefit others—is one of the most reliable predictors of human wellbeing. Research across psychology, neuroscience, and public health shows that helping others activates reward circuits in the brain, triggers the release of oxytocin and endorphins, reduces stress hormones, and predicts greater happiness, life satisfaction, and even longevity.
           </p>
         </div>
@@ -1559,7 +1559,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1608,7 +1608,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mattering is the feeling that you make a difference to others and the world—that your existence is noticed, your actions are consequential, and your absence would be felt. Sociologist Morris Rosenberg first conceptualized mattering as a core component of self-esteem in the 1980s, but research has since shown it&apos;s a distinct construct with unique effects on mental health.
           </p>
         </div>
@@ -1619,7 +1619,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1667,7 +1667,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Psychologists distinguish two major conceptions of wellbeing: hedonic wellbeing (pleasure, enjoyment, positive emotion, life satisfaction) and eudaimonic wellbeing (meaning, personal growth, virtue, self-realization). While correlated (r = .
           </p>
         </div>
@@ -1678,7 +1678,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1726,7 +1726,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Narrative identity is the internalized, evolving story you construct about your life—integrating past, present, and anticipated future into a coherent account of &quot;who I am.&quot; Psychologist Dan McAdams has shown that the specific narrative themes people use to organize their life stories predict wellbeing beyond personality traits.
           </p>
         </div>
@@ -1737,7 +1737,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1785,7 +1785,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Self-transcendence is the capacity to expand your perspective beyond self-focused concerns and connect to something larger—nature, humanity, art, spirituality, or universal values. Abraham Maslow identified transcendence as the highest human need, beyond even self-actualization.
           </p>
         </div>
@@ -1796,7 +1796,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1844,7 +1844,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Peak experiences, identified by Abraham Maslow, are profound moments of love, understanding, happiness, or rapture—often described as the best moments of life. Characterized by feelings of unity, transcendence of time/space, positive affect, sense of sacredness, and ineffability, peak experiences can be triggered by nature, art, love, achievement, or spontaneously.
           </p>
         </div>
@@ -1855,7 +1855,7 @@ export const positivePsychologyHumanFlourishingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

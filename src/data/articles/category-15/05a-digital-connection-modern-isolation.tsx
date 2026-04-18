@@ -100,7 +100,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You have 500 friends on Facebook. You follow 200 people on Instagram. You are in 12 group chats. And yet, you feel profoundly alone.
           </p>
           <p className="mb-6">
@@ -397,7 +397,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You have never met them in person. You have never heard their voice. But when something good happens, they are among the first people you want to tell. Are they really your friend?
           </p>
           <p className="mb-6">
@@ -674,7 +674,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Working from home sounded like a dream. No commute. No office politics. Total flexibility. Then you realized: you miss people.
           </p>
           <p className="mb-6">
@@ -775,7 +775,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Living with chronic illness is hard enough. But one of the cruelest parts is often invisible: the profound isolation it creates.
           </p>
           <p className="mb-6">
@@ -896,7 +896,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In March 2020, the world went inside. And we learned, suddenly and collectively, how much we need each other.
           </p>
           <p className="mb-6">
@@ -994,7 +994,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
           Humans are resilient. When in-person connection disappeared, we found new ways to meet our social needs.
         </p>
 
-        <h3 className="text-2xl font-display font-semibold text-gray-800 dark:text-gray-200 mt-8 mb-4">
+        <h3 className="text-2xl font-display font-semibold text-gray-800 dark:text-neutral-200 mt-8 mb-4">
           The Virtual Connection Boom
         </h3>
         <p className="mb-6">
@@ -1018,7 +1018,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
           Research identified what made virtual connection effective: small groups, structured activities, audio-only options, and breaks between calls. Zoom fatigue was real, but so was its ability to maintain relationships across distance <Citation id="6" index={6} source="Cyberpsychology, Behavior, and Social Networking" year="2021" tier={1} />.
         </p>
 
-        <h3 className="text-2xl font-display font-semibold text-gray-800 dark:text-gray-200 mt-8 mb-4">
+        <h3 className="text-2xl font-display font-semibold text-gray-800 dark:text-neutral-200 mt-8 mb-4">
           The Mutual Aid Movement
         </h3>
         <p className="mb-6">
@@ -1039,7 +1039,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
           The pandemic changed how we think about connection permanently. Some changes are positive. Some are concerning <Citation id="4" index={4} source="American Journal of Public Health" year="2022" tier={1} />.
         </p>
 
-        <h3 className="text-2xl font-display font-semibold text-gray-800 dark:text-gray-200 mt-8 mb-4">
+        <h3 className="text-2xl font-display font-semibold text-gray-800 dark:text-neutral-200 mt-8 mb-4">
           Positive Changes
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1049,7 +1049,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
           <li><strong>Mental health destigmatized:</strong> The shared trauma of the pandemic made it easier to talk about loneliness, isolation, and mental health struggles.</li>
         </ul>
 
-        <h3 className="text-2xl font-display font-semibold text-gray-800 dark:text-gray-200 mt-8 mb-4">
+        <h3 className="text-2xl font-display font-semibold text-gray-800 dark:text-neutral-200 mt-8 mb-4">
           Concerning Changes
         </h3>
         <p className="mb-6">

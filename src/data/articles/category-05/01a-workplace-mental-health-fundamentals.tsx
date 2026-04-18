@@ -114,7 +114,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You spend roughly one-third of your waking hours at work. Over the course of a
             lifetime, that adds up to approximately 90,000 hours --- more time than most people
             spend with their families, friends, or on personal interests combined. Yet many of
@@ -701,7 +701,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Beyond your formal employment contract lies an invisible agreement --- one that
             shapes your satisfaction, loyalty, and mental health at work more profoundly
             than any job description, benefits package, or salary figure ever could. This
@@ -1277,7 +1277,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Not all workplace stress is created equal. Some pressure can sharpen your focus,
             boost performance, and even feel exhilarating. But when stress crosses an
             invisible line --- one that is different for every person and every situation ---
@@ -1847,7 +1847,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You wake up with dread. Your stomach tightens as you pull into the parking lot
             or open your laptop. Every notification from your boss triggers a spike of
             anxiety. You spend your evenings replaying conversations, rehearsing defenses,
@@ -2481,7 +2481,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Imagine working on a team where you can admit a mistake without being punished,
             ask a question without being ridiculed, propose an unconventional idea without
             being dismissed, and challenge the status quo without being labeled difficult.

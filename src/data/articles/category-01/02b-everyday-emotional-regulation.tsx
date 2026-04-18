@@ -134,7 +134,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Name it to tame it" has become a popular phrase in therapy circles. But this is not just a clever slogan --- it is grounded in rigorous neuroscience. When you put your emotions into specific words, measurable changes happen in your brain within seconds.
           </p>
           <p className="mb-6">
@@ -366,7 +366,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When a strong emotion hits, the first five minutes are critical. This is when stress hormones flood your system, your thinking brain goes partially offline, and the urge to react is strongest. What you do in this window determines whether the emotion passes through you or takes over your entire day.
           </p>
           <p className="mb-6">
@@ -585,7 +585,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When painful emotions arise, your brain sends an urgent message: make it stop. So you scroll through your phone, pour a drink, binge-watch a show, eat comfort food, or simply push the feeling away. These strategies work --- briefly. But the emotion does not disappear. It goes underground and returns stronger.
           </p>
           <p className="mb-6">
@@ -814,7 +814,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you feel anxious, your body tenses up. When you feel sad, you curl inward. When you feel angry, your muscles tighten and your jaw clenches. Emotions live in the body, and one of the most direct ways to change your emotional state is through physical movement.
           </p>
           <p className="mb-6">
@@ -1042,7 +1042,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You have read about breathing exercises, grounding techniques, cognitive reappraisal, movement, and naming emotions. But knowing techniques is not the same as having a plan. When emotions hit hard, your thinking brain goes partially offline, and you need strategies that are pre-selected, practiced, and easy to access. That is what a regulation toolkit gives you.
           </p>
           <p className="mb-6">

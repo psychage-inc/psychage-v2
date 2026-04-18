@@ -12,8 +12,8 @@ export default function UserMessage({ content }: UserMessageProps) {
       transition={{ duration: 0.2, ease: 'easeOut' }}
       className="flex justify-end mb-6"
     >
-      <div className="max-w-[85%] md:max-w-[80%] bg-slate-100 dark:bg-slate-800 rounded-2xl px-4 py-3">
-        <p className="text-[15px] leading-relaxed text-slate-900 dark:text-slate-100 whitespace-pre-wrap">
+      <div className="max-w-[85%] md:max-w-[80%] bg-slate-100 dark:bg-neutral-800 rounded-2xl px-4 py-3">
+        <p className="text-[15px] leading-relaxed text-slate-900 dark:text-neutral-100 whitespace-pre-wrap">
           {content}
         </p>
       </div>

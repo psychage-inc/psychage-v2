@@ -120,7 +120,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The runner who misses a workout feels different than someone "trying to get in shape" who
             skipped the gym. The difference? <strong>Identity</strong>. When behavior becomes part of
             who you are—not just what you do—change becomes self-sustaining.
@@ -630,7 +630,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Winners and losers share the same goals. Both the Olympian and the person who quit after
             three gym sessions wanted to "get in shape." The difference isn't the goal—it's the
             <strong> system</strong>.
@@ -1089,7 +1089,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You walk into your kitchen tired. If chips sit on the counter, you'll eat chips. If sliced
             vegetables sit on the counter, you'll eat vegetables. That's not weak willpower—that's
             <strong> environment design</strong>.
@@ -1638,7 +1638,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             If your three closest friends smoke, you're 61% more likely to smoke—even if you've never
             met them <Citation id="1" index={1} source="New England Journal of Medicine" year="2007" tier={1} />. The people around you don't just influence your choices—they
             <strong> become</strong> your choices.
@@ -2215,7 +2215,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             If you improve by 1% every day for a year, you don't end up 365% better—you end up
             <strong> 37 times better</strong>. That's the math of compounding, and it's the most
             powerful force in behavior change.

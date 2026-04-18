@@ -33,7 +33,7 @@ export const AdherenceChart: React.FC<Props> = ({ data }) => {
 
   if (activeMeds.length === 0) {
     return (
-      <div className="text-center py-8 text-slate-500 dark:text-slate-400 text-sm">
+      <div className="text-center py-8 text-slate-500 dark:text-neutral-400 text-sm">
         Add medications to see adherence data.
       </div>
     );
@@ -41,7 +41,7 @@ export const AdherenceChart: React.FC<Props> = ({ data }) => {
 
   if (chartData.every((d) => d.total === 0)) {
     return (
-      <div className="text-center py-8 text-slate-500 dark:text-slate-400 text-sm">
+      <div className="text-center py-8 text-slate-500 dark:text-neutral-400 text-sm">
         Log some doses to see your adherence chart.
       </div>
     );
@@ -49,7 +49,7 @@ export const AdherenceChart: React.FC<Props> = ({ data }) => {
 
   return (
     <div>
-      <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">
+      <h3 className="text-sm font-semibold text-slate-700 dark:text-neutral-300 mb-3">
         7-Day Adherence by Medication
       </h3>
       <ResponsiveContainer width="100%" height={Math.max(160, activeMeds.length * 50)}>

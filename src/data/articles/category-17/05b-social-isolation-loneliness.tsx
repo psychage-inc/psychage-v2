@@ -160,7 +160,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mrs. Garcia has been a widow for three years. She lives alone. Some days she does not speak to anyone. Her daughter suggests getting a dog. Mrs. Garcia adopts a small terrier named Max. Every morning, Max wakes her at 7 a.m. for breakfast. They walk around the block---slowly, but daily. Other dog owners stop to chat. Max sits on her lap while she reads. She is no longer alone. She has purpose: Max needs her.
           </p>
           <p className="mb-6">
@@ -463,7 +463,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mr. Thompson volunteers at the elementary school library every Tuesday. He reads to kindergarteners. They sit in a circle, wide-eyed, as he acts out voices from picture books. They call him "Mr. T." One child asks, "Are you my grandpa?" He is not---his own grandchildren live 1,000 miles away. But for one hour a week, he is someone's grandpa. That is enough.
           </p>
           <p className="mb-6">
@@ -804,7 +804,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mrs. Lee loves her book club---or she did, before her hearing got worse. Now she sits in meetings straining to follow conversations. Everyone talks over each other. She smiles and nods but understands half. Afterward, she is exhausted. She stops going. She tells herself it is fine. But she is lonelier than ever.
           </p>
           <p className="mb-6">
@@ -1121,7 +1121,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You are 68 years old. You retired two years ago. Your work friends have drifted away. Your childhood best friend died last year. Your spouse is your only close relationship---and you worry about putting all your social needs on one person. You want friends. But how do you make friends at 68? You do not go to bars. You do not have kids in school to connect with other parents. You feel awkward introducing yourself at senior center. Where do you even start?
           </p>
           <p className="mb-6">
@@ -1149,7 +1149,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
           <p className="text-center italic text-lg">
             "Developing a casual friendship requires approximately 50 hours of interaction. Close friendship requires 200+ hours. Friendship is not instant---it is built through consistent, repeated contact over time."
           </p>
-          <p className="text-center text-sm mt-4 text-gray-600 dark:text-gray-400">
+          <p className="text-center text-sm mt-4 text-gray-600 dark:text-neutral-400">
             — Journal of Social and Personal Relationships, 2019
           </p>
         </HighlightBox>
@@ -1482,7 +1482,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You are 85. Your spouse died five years ago. Your sister died last year. Your best friend from college died six months ago. You attend more funerals than birthdays. Each loss shrinks your world. Who is left who remembers your wedding? Your first job? The person you were at 30? You are the last one standing. And standing alone.
           </p>
           <p className="mb-6">

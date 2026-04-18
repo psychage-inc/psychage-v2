@@ -65,7 +65,7 @@ export const genderIdentitySexualityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Gender identity—the deeply felt, internal sense of being male, female, both, neither, or somewhere along the gender spectrum—is one of the most fundamental aspects of human self-concept and one of the most actively researched and politically contested topics in contemporary psychology. The scientific understanding of gender has evolved dramatically from earlier models that treated gender as a simple binary determined entirely by chromosomes and genitalia to a nuanced biopsychosocial framework that recognizes gender identity as a complex, multidimensional phenomenon shaped by the interaction of biological factors (genetics, prenatal hormone exposure, neuroanatomical development), psychological processes (cognitive development, self-categorization, social learning), and sociocultural forces (gender roles, cultural norms, family socialization).
           </p>
         </div>
@@ -106,7 +106,7 @@ export const genderIdentitySexualityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -169,7 +169,7 @@ export const genderIdentitySexualityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Transgender individuals experience mental health disparities that are among the most severe of any population: depression rates 4–10 times higher than the general population, anxiety disorders in 30–60% of transgender adults, lifetime suicide attempt rates of 40–45% (compared to 4.6% in the general population), and rates of non-suicidal self-injury, substance use, eating disorders, and PTSD that dramatically exceed population norms.
           </p>
         </div>
@@ -212,7 +212,7 @@ export const genderIdentitySexualityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -275,7 +275,7 @@ export const genderIdentitySexualityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Nonbinary gender identities—encompassing individuals whose gender identity falls outside the traditional male-female binary, including those who identify as genderqueer, genderfluid, agender, bigender, demigender, and numerous other identities—represent one of the fastest-growing and most visible segments of gender diversity. Population surveys suggest that 25–40% of transgender-identified individuals describe their gender as nonbinary, and among younger cohorts (Generation Z and younger millennials), nonbinary identification has increased dramatically.
           </p>
         </div>
@@ -320,7 +320,7 @@ export const genderIdentitySexualityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -383,7 +383,7 @@ export const genderIdentitySexualityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Conversion therapy—encompassing sexual orientation change efforts (SOCE) and gender identity change efforts (GICE)—refers to any practice that attempts to change an individual&apos;s sexual orientation from homosexual or bisexual to heterosexual, or to change a person&apos;s gender identity to align with their sex assigned at birth. These practices have existed in various forms since the mid-20th century, ranging from psychoanalytic talk therapy to aversion conditioning (pairing homosexual stimuli with electric shocks or nausea-inducing chemicals) to religious counseling and prayer-based approaches.
           </p>
         </div>
@@ -425,7 +425,7 @@ export const genderIdentitySexualityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -488,7 +488,7 @@ export const genderIdentitySexualityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Intersex variations—also termed differences of sex development (DSD)—encompass a range of conditions in which chromosomal, gonadal, or anatomical sex development follows a pattern that does not fit typical definitions of male or female. Affecting an estimated 1.
           </p>
         </div>
@@ -528,7 +528,7 @@ export const genderIdentitySexualityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -591,7 +591,7 @@ export const genderIdentitySexualityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             BDSM—an umbrella term encompassing bondage and discipline, dominance and submission, and sadism and masochism—represents a diverse range of consensual sexual and relational practices involving the negotiated exchange of power, the exploration of sensation, and the expansion of erotic experience beyond conventional sexual scripts. An estimated 5–25% of the general population reports engaging in some form of BDSM activity, with higher estimates when the definition includes mild practices like restraint or role-playing.
           </p>
         </div>
@@ -631,7 +631,7 @@ export const genderIdentitySexualityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -694,7 +694,7 @@ export const genderIdentitySexualityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sexual identity development—the process by which individuals come to understand, accept, and integrate their sexual orientation into their broader sense of self—is one of the most significant developmental tasks of adolescence and young adulthood, though for many individuals the process extends well into midlife and beyond. The early models of sexual identity development (Cass, 1979; Troiden, 1989) described a linear, stage-based progression from initial awareness of same-sex attraction through identity confusion, comparison, tolerance, acceptance, pride, and synthesis.
           </p>
         </div>
@@ -734,7 +734,7 @@ export const genderIdentitySexualityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -797,7 +797,7 @@ export const genderIdentitySexualityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Consensual non-monogamy (CNM)—an umbrella term encompassing polyamory, open relationships, swinging, and relationship anarchy, in which all partners agree that the relationship structure may include more than two people—is practiced by an estimated 4–5% of the U.S.
           </p>
         </div>
@@ -839,7 +839,7 @@ export const genderIdentitySexualityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

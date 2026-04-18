@@ -32,7 +32,7 @@ const SectionLabel: React.FC<{
     label: string;
 }> = ({ number, label }) => (
     <div className="flex items-center gap-3 mb-3">
-        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 dark:bg-white/[0.06] text-[11px] font-bold text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-white/10">
+        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 dark:bg-white/[0.06] text-[11px] font-bold text-gray-500 dark:text-neutral-400 border border-gray-200 dark:border-white/10">
             {number}
         </span>
         <span className="text-xs font-semibold uppercase tracking-wider text-text-tertiary">
@@ -54,7 +54,7 @@ function severityLabel(severity?: number): string | null {
 
 function severityColor(severity?: number): string {
     if (!severity) return 'text-text-tertiary';
-    if (severity <= 3) return 'text-gray-400 dark:text-gray-500';
+    if (severity <= 3) return 'text-gray-400 dark:text-neutral-500';
     if (severity <= 6) return 'text-amber-600 dark:text-amber-400';
     if (severity <= 8) return 'text-orange-600 dark:text-orange-400';
     return 'text-red-600 dark:text-red-400';
@@ -294,7 +294,7 @@ export const ResultsScreen: React.FC = () => {
                                     className="flex items-center justify-between gap-4 py-3 px-4 rounded-lg bg-gray-50 dark:bg-white/[0.03] border border-gray-100 dark:border-white/[0.06]"
                                 >
                                     <div className="flex items-center gap-3 min-w-0">
-                                        <Activity className="w-3.5 h-3.5 text-gray-400 dark:text-gray-500 flex-shrink-0" />
+                                        <Activity className="w-3.5 h-3.5 text-gray-400 dark:text-neutral-500 flex-shrink-0" />
                                         <span className="text-sm font-medium text-text-primary truncate">
                                             {symptom.name}
                                         </span>
@@ -411,7 +411,7 @@ export const ResultsScreen: React.FC = () => {
                         {/* When to see a clinician */}
                         <div className="bg-gray-50 dark:bg-white/[0.03] border border-gray-100 dark:border-white/[0.06] rounded-xl p-5 mb-8">
                             <div className="flex items-center gap-2.5 mb-4">
-                                <Stethoscope className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                                <Stethoscope className="w-4 h-4 text-gray-500 dark:text-neutral-400" />
                                 <h3 className="text-sm font-display font-bold text-text-primary uppercase tracking-wide">
                                     When to See a Clinician
                                 </h3>
@@ -430,15 +430,15 @@ export const ResultsScreen: React.FC = () => {
                                     </li>
                                 )}
                                 <li className="flex items-start gap-2.5">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600 mt-2 flex-shrink-0" />
+                                    <span className="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-neutral-600 mt-2 flex-shrink-0" />
                                     <span>If your symptoms persist for more than <strong className="text-text-primary font-medium">two weeks</strong> or interfere with daily activities, work, or relationships.</span>
                                 </li>
                                 <li className="flex items-start gap-2.5">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600 mt-2 flex-shrink-0" />
+                                    <span className="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-neutral-600 mt-2 flex-shrink-0" />
                                     <span>If you notice symptoms worsening over time or new symptoms emerging.</span>
                                 </li>
                                 <li className="flex items-start gap-2.5">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600 mt-2 flex-shrink-0" />
+                                    <span className="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-neutral-600 mt-2 flex-shrink-0" />
                                     <span>If self-care strategies aren't providing relief, or you're unsure about what you're experiencing.</span>
                                 </li>
                             </ul>
@@ -459,7 +459,7 @@ export const ResultsScreen: React.FC = () => {
                     {/* ─── Questions for Your Provider ─── */}
                     <motion.section variants={slideUp} className="pb-10 mb-10 border-b border-border">
                         <div className="flex items-center gap-2.5 mb-5">
-                            <Compass className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                            <Compass className="w-4 h-4 text-gray-500 dark:text-neutral-400" />
                             <h3 className="text-sm font-display font-bold text-text-primary uppercase tracking-wide">
                                 Conversation Starters
                             </h3>

@@ -159,7 +159,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             At 44, Jennifer felt like she was losing her mind. She cried over minor frustrations,
             snapped at her family for no reason, and couldn't remember simple words mid-
             conversation. Her periods were all over the place---21 days, then 45, then 30.
@@ -618,7 +618,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For two months, Lisa had felt hollowed out. Nothing brought joy---not her work, not time
             with friends, not the hobbies she'd loved for years. She was exhausted but couldn't
             sleep. Irritable with everyone.
@@ -1057,7 +1057,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Denise hadn't slept through the night in six months. She'd wake at 2 AM drenched in sweat, throw off the covers, then freeze 10 minutes later and pile them back on. By morning she felt exhausted, irritable, unable to concentrate. Her doctor prescribed sleeping pills, which helped her fall asleep but not stay asleep through the night sweats. "Is this just my life now?" she asked. "Am I never going to sleep again?"
           </p>
           <p className="mb-6">
@@ -1404,7 +1404,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In the middle of a presentation, the word vanished. Claudia stood in front of her team, mid-sentence, searching for a common word that should have been automatic. Silence stretched. "Um... the thing... you know..." Finally, a colleague offered the word. This happened constantly now---words disappearing, forgetting why she walked into a room, reading the same paragraph three times without comprehension. At 48, Claudia feared early-onset dementia.
           </p>
           <p className="mb-6">
@@ -1787,7 +1787,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sex had become something Anita avoided. What used to be pleasurable now felt like a chore---or worse, painful. Vaginal dryness made intercourse uncomfortable despite lubricants. Her body felt foreign: weight had shifted to her midsection, skin had changed texture, breasts sagged. She felt invisible---culturally dismissed as a sexual being now that she was in her 50s. When her partner initiated intimacy, Anita felt pressure and guilt rather than desire. She wondered if this was just "how it is now," or if there was room for sexuality to look different---not less, just different.
           </p>
           <p className="mb-6">

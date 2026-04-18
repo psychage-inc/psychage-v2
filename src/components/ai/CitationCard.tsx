@@ -57,7 +57,7 @@ const CitationCard: React.FC<CitationCardProps> = ({ citation }) => {
         {/* Enhanced Icon for articles */}
         <div className="shrink-0 relative">
           <div className={`absolute inset-0 ${iconBgClass} rounded-xl blur-sm opacity-30 group-hover:opacity-50 transition-opacity`} />
-          <div className={`relative w-11 h-11 rounded-xl ${iconBgClass} flex items-center justify-center ring-2 ring-white dark:ring-gray-800`}>
+          <div className={`relative w-11 h-11 rounded-xl ${iconBgClass} flex items-center justify-center ring-2 ring-white dark:ring-neutral-800`}>
             <Icon size={22} className={iconColor} />
           </div>
         </div>

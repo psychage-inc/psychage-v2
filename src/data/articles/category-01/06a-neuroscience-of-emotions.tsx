@@ -66,7 +66,7 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Emotions feel automatic and mysterious--but they're the product of specific brain networks firing in coordinated patterns. Understanding the neuroscience of emotions reveals why you feel what you feel, how regulation works at a biological level, and why some people struggle more with emotional control than others.
           </p>
           <p className="mb-6">
@@ -317,7 +317,7 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're walking alone at night. You see a shadow move. Instantly--before you've consciously processed what it is--your heart races, your muscles tense, and adrenaline floods your system. That's your amygdala at work.
           </p>
           <p className="mb-6">
@@ -538,7 +538,7 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "You can't teach an old dog new tricks." For decades, neuroscience believed the adult brain was fixed and unchangeable. Then came the discovery of neuroplasticity--the brain's lifelong ability to reorganize itself by forming new neural connections.
           </p>
           <p className="mb-6">
@@ -793,7 +793,7 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Deep breathing calms you down. Cold water on your face slows your heart rate. Humming or singing soothes anxiety. These aren't just folk remedies--they all activate the vagus nerve, your body's built-in calm-down system.
           </p>
           <p className="mb-6">
@@ -1054,7 +1054,7 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're running late, stuck in traffic, and your boss just sent an angry email. Your heart pounds. Your mind races. You snap at the person next to you. This isn't a character flaw--it's cortisol and adrenaline flooding your system, temporarily shutting down your prefrontal cortex.
           </p>
           <p className="mb-6">

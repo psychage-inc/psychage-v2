@@ -53,13 +53,13 @@ const CopingUseSection: React.FC<CopingUseSectionProps> = ({ onSave, existingUse
     <div className="space-y-6">
       {/* Existing uses */}
       {existingUses.length > 0 && (
-        <div className="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-3 space-y-2">
-          <p className="text-xs font-medium text-slate-500 dark:text-slate-400">Today's coping ({existingUses.length})</p>
+        <div className="bg-slate-50 dark:bg-neutral-800/50 rounded-xl p-3 space-y-2">
+          <p className="text-xs font-medium text-slate-500 dark:text-neutral-400">Today's coping ({existingUses.length})</p>
           {existingUses.map(u => {
             const t = COPING_TOOLS.find(ct => ct.value === u.tool);
             const reduction = u.distressBefore - u.distressAfter;
             return (
-              <div key={u.id} className="text-xs text-slate-600 dark:text-slate-400 bg-white dark:bg-slate-900 rounded-lg px-3 py-2 border border-slate-100 dark:border-slate-700 flex items-center justify-between">
+              <div key={u.id} className="text-xs text-slate-600 dark:text-neutral-400 bg-white dark:bg-neutral-900 rounded-lg px-3 py-2 border border-slate-100 dark:border-neutral-700 flex items-center justify-between">
                 <span>{t?.emoji} {t?.label || u.tool}</span>
                 <span className={reduction > 0 ? 'text-green-600' : 'text-slate-400'}>
                   {reduction > 0 ? `↓${reduction}` : '→0'} distress
@@ -72,7 +72,7 @@ const CopingUseSection: React.FC<CopingUseSectionProps> = ({ onSave, existingUse
 
       {/* Tool selection */}
       <div>
-        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">What did you use?</label>
+        <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">What did you use?</label>
         <div className="grid grid-cols-2 gap-2">
           {COPING_TOOLS.map(ct => (
             <button
@@ -82,7 +82,7 @@ const CopingUseSection: React.FC<CopingUseSectionProps> = ({ onSave, existingUse
               className={`flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium transition-all text-left ${
                 tool === ct.value
                   ? 'bg-teal-600 text-white'
-                  : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200'
+                  : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200'
               }`}
             >
               <span>{ct.emoji}</span> {ct.label}
@@ -96,13 +96,13 @@ const CopingUseSection: React.FC<CopingUseSectionProps> = ({ onSave, existingUse
 
       {/* Helpful toggle */}
       <div className="flex items-center gap-3">
-        <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Was this helpful?</label>
+        <label className="text-sm font-medium text-slate-700 dark:text-neutral-300">Was this helpful?</label>
         <div className="flex gap-2">
           <button
             type="button"
             onClick={() => setHelpful(true)}
             className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all ${
-              helpful ? 'bg-green-600 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'
+              helpful ? 'bg-green-600 text-white' : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400'
             }`}
           >
             Yes
@@ -111,7 +111,7 @@ const CopingUseSection: React.FC<CopingUseSectionProps> = ({ onSave, existingUse
             type="button"
             onClick={() => setHelpful(false)}
             className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all ${
-              !helpful ? 'bg-red-500 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'
+              !helpful ? 'bg-red-500 text-white' : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400'
             }`}
           >
             No
@@ -120,7 +120,7 @@ const CopingUseSection: React.FC<CopingUseSectionProps> = ({ onSave, existingUse
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+        <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">
           Note <span className="text-slate-400 font-normal">(optional)</span>
         </label>
         <input
@@ -128,7 +128,7 @@ const CopingUseSection: React.FC<CopingUseSectionProps> = ({ onSave, existingUse
           value={note}
           onChange={e => setNote(e.target.value)}
           placeholder="Any reflections..."
-          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
         />
       </div>
 

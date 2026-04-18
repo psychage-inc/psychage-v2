@@ -118,7 +118,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Depression affects millions of men, yet they're significantly less likely than women to be diagnosed or to seek help. This isn't because men experience less depression---it's because depression in men often looks different, and cultural expectations around masculinity discourage vulnerability and help-seeking.
           </p>
           <p className="mb-6">
@@ -526,7 +526,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Women are diagnosed with depression at roughly twice the rate of men---a disparity that begins in adolescence and persists throughout the lifespan. This isn't because women are "more emotional" or weaker. It's because women face a unique combination of biological, psychological, and social risk factors that converge to increase vulnerability.
           </p>
           <p className="mb-6">
@@ -914,7 +914,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Adolescence is already a time of mood swings, identity exploration, and intense emotions. So how do you tell the difference between normal teenage angst and clinical depression? The answer matters: teen depression is common, serious, and treatable---but only if it's recognized.
           </p>
           <p className="mb-6">
@@ -1320,7 +1320,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             College is supposed to be the best years of your life. So why are so many students struggling? Depression among college students has reached crisis levels, with nearly 40% of undergraduates reporting symptoms in the past year. The combination of academic pressure, social transition, financial stress, and isolation has created a mental health emergency on campuses across the country.
           </p>
           <p className="mb-6">
@@ -1682,7 +1682,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "They're just slowing down.", "It's natural to be sad at their age.", "Memory problems are part of getting old." These assumptions lead to a tragic outcome: depression in older adults is chronically underdiagnosed and undertreated. The result is unnecessary suffering, functional decline, and increased risk of medical complications and death.
           </p>
           <p className="mb-6">

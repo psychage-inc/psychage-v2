@@ -116,7 +116,7 @@ export const typesOfDepressionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When most people think of depression, they picture insomnia, loss of appetite, and unrelenting sadness. But some people with depression sleep excessively, crave carbs and gain weight, and can briefly feel better when something good happens---only to crash back down when the positive moment passes. This is atypical depression, and despite the name, it's actually quite common.
           </p>
           <p className="mb-6">
@@ -518,7 +518,7 @@ export const typesOfDepressionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've tried three different antidepressants. You've been in therapy for months. You've changed your diet, started exercising, practiced meditation. Yet depression persists, barely budging despite your best efforts. If this is your experience, you may have treatment-resistant depression---and you're far from alone.
           </p>
           <p className="mb-6">
@@ -971,7 +971,7 @@ export const typesOfDepressionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Depression is devastating on its own. But when it becomes so severe that you lose touch with reality---when you believe things that aren't true, when you hear voices no one else hears, when you're certain you've committed unforgivable sins or that you're rotting from the inside---the suffering transcends ordinary depression. This is psychotic depression, and it's a psychiatric emergency requiring immediate, specialized treatment.
           </p>
           <p className="mb-6">
@@ -1389,7 +1389,7 @@ export const typesOfDepressionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're fine for three weeks. Then, like clockwork, darkness descends. Rage, despair, hopelessness crash over you. You can't concentrate, can't sleep, can't tolerate being around people. Everything feels unbearable. Then your period starts, and within a day or two, you're yourself again---until next month. This cyclical nightmare isn't 'just PMS"---it's Premenstrual Dysphoric Disorder, and it's a diagnosable, treatable condition.
           </p>
           <p className="mb-6">
@@ -1802,7 +1802,7 @@ export const typesOfDepressionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You lost your job. Your relationship ended. You moved to a new city. You're grieving a death. It's normal to feel sad, anxious, or overwhelmed in response to major life stressors. But when does normal distress cross the line into something requiring professional help? How do you distinguish between appropriate sadness and clinical depression?
           </p>
           <p className="mb-6">

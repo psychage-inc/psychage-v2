@@ -126,7 +126,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When we talk about empathy, most people think of a single, unified ability. But neuroscience reveals a more complex picture: empathy is not one thing---it's a spectrum of related but distinct processes that involve different brain networks, serve different functions, and have very different effects on mental health.
           </p>
           <p className="mb-6">
@@ -615,7 +615,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You walk into a room where two people are arguing. Within seconds, your heart rate increases and your shoulders tense---even though you're not part of the conflict. You scroll through social media and feel anxious, though you can't pinpoint why. You leave lunch with a friend feeling drained, as if their stress seeped into your bones.
           </p>
           <p className="mb-6">
@@ -986,7 +986,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Just set boundaries" is advice that sounds simple but feels impossible. How do you protect your emotional energy without seeming cold? How do you care about someone's pain without absorbing it as your own? How do you stay connected while maintaining separateness?
           </p>
           <p className="mb-6">
@@ -1362,7 +1362,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "We need to talk." Four words that make your heart sink. Whether it's addressing a conflict, delivering critical feedback, or bringing up a sensitive issue, difficult conversations are where relationships are tested---and where emotional intelligence matters most.
           </p>
           <p className="mb-6">
@@ -1732,7 +1732,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You can't teach a child emotional intelligence by lecturing them about feelings. You teach it by modeling it, naming it, and creating a safe space for emotions to exist without judgment. Whether you're a parent, teacher, coach, or mentor, the way you respond to a child's emotions shapes their lifelong relationship with their inner world.
           </p>
           <p className="mb-6">

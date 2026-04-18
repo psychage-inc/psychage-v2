@@ -116,7 +116,7 @@ export const understandingDepressionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             If you've ever told someone you're depressed and heard 'just cheer up' or "everyone feels sad sometimes, ' you know how misunderstood this condition is. Depression isn't a choice, a character flaw, or simply feeling down after a bad day.
           </p>
           <p className="mb-6">
@@ -485,7 +485,7 @@ export const understandingDepressionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When someone says depression is "just a chemical imbalance, ' they're oversimplifying one of the most complex conditions in neuroscience. While brain chemistry is involved, the neurobiology of depression involves intricate changes across multiple brain systems, structures, and molecular pathways.
           </p>
           <p className="mb-6">
@@ -898,7 +898,7 @@ export const understandingDepressionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Everyone experiences sadness. It's a normal human emotion that serves an important function---alerting us that something matters, something is wrong, or something needs to change. But when does sadness cross the line into depression?
           </p>
           <p className="mb-6">
@@ -1352,7 +1352,7 @@ export const understandingDepressionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Is depression genetic or environmental?", "Is it caused by trauma or brain chemistry?" These either-or questions reflect a common misunderstanding: depression doesn't have a single cause. It emerges from the complex interaction of biological, psychological, and social factors---a framework called the biopsychosocial model.
           </p>
           <p className="mb-6">
@@ -1863,7 +1863,7 @@ export const understandingDepressionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Why do some people develop depression after major stress while others remain resilient? Why do certain life events trigger depression in some individuals but not others? The answer lies in risk factors---the biological, psychological, and social characteristics that make someone more vulnerable to depression.
           </p>
           <p className="mb-6">

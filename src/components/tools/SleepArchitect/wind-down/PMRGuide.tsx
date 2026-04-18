@@ -89,11 +89,11 @@ const PMRGuide: React.FC = () => {
   }, [currentStep]);
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-gray-700">
+    <div className="bg-white dark:bg-neutral-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-neutral-700">
       <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-1">
         Progressive Muscle Relaxation
       </h3>
-      <p className="text-xs text-gray-500 dark:text-gray-400 mb-6">
+      <p className="text-xs text-gray-500 dark:text-neutral-400 mb-6">
         7 muscle groups &middot; ~10 minutes
       </p>
 
@@ -110,7 +110,7 @@ const PMRGuide: React.FC = () => {
                   ? phase === 'tense'
                     ? 'bg-orange-400'
                     : 'bg-sky-400'
-                  : 'bg-gray-200 dark:bg-gray-700'
+                  : 'bg-gray-200 dark:bg-neutral-700'
             )}
           />
         ))}
@@ -119,7 +119,7 @@ const PMRGuide: React.FC = () => {
       {/* Content */}
       {phase === 'idle' && (
         <div className="text-center py-6">
-          <p className="text-sm text-gray-600 dark:text-gray-300 mb-6 max-w-sm mx-auto">
+          <p className="text-sm text-gray-600 dark:text-neutral-300 mb-6 max-w-sm mx-auto">
             Find a comfortable position. You'll tense each muscle group for 5
             seconds, then release and relax for 10 seconds.
           </p>
@@ -144,7 +144,7 @@ const PMRGuide: React.FC = () => {
           <h4 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-2">
             Session Complete
           </h4>
-          <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+          <p className="text-sm text-gray-500 dark:text-neutral-400 mb-4">
             Take a moment to notice how your body feels. Let that relaxation
             carry you into sleep.
           </p>
@@ -175,7 +175,7 @@ const PMRGuide: React.FC = () => {
           >
             {step.muscle_group} — {phase === 'tense' ? 'Tense' : 'Release'}
           </div>
-          <p className="text-sm text-gray-700 dark:text-gray-300 mb-4 max-w-sm mx-auto">
+          <p className="text-sm text-gray-700 dark:text-neutral-300 mb-4 max-w-sm mx-auto">
             {phase === 'tense'
               ? step.instruction_tense
               : step.instruction_release}
@@ -211,14 +211,14 @@ const PMRGuide: React.FC = () => {
             <button
               type="button"
               onClick={() => setIsRunning(!isRunning)}
-              className="p-2.5 border border-gray-200 dark:border-gray-600 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700"
+              className="p-2.5 border border-gray-200 dark:border-neutral-600 rounded-xl text-gray-500 dark:text-neutral-400 hover:bg-gray-50 dark:hover:bg-neutral-700"
             >
               {isRunning ? <Pause size={16} /> : <Play size={16} />}
             </button>
             <button
               type="button"
               onClick={skipStep}
-              className="p-2.5 border border-gray-200 dark:border-gray-600 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700"
+              className="p-2.5 border border-gray-200 dark:border-neutral-600 rounded-xl text-gray-500 dark:text-neutral-400 hover:bg-gray-50 dark:hover:bg-neutral-700"
               aria-label="Skip to next"
             >
               <SkipForward size={16} />
@@ -226,7 +226,7 @@ const PMRGuide: React.FC = () => {
             <button
               type="button"
               onClick={reset}
-              className="p-2.5 border border-gray-200 dark:border-gray-600 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700"
+              className="p-2.5 border border-gray-200 dark:border-neutral-600 rounded-xl text-gray-500 dark:text-neutral-400 hover:bg-gray-50 dark:hover:bg-neutral-700"
               aria-label="Reset"
             >
               <RotateCcw size={16} />

@@ -140,7 +140,7 @@ const ProviderDirectory: React.FC = () => {
                                 />
                             </div>
                             <Button
-                                className="h-12 px-8 bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-black dark:hover:bg-gray-100 md:w-auto w-full"
+                                className="h-12 px-8 bg-gray-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-black dark:hover:bg-neutral-100 md:w-auto w-full"
                                 onClick={() => setIsMobileFiltersOpen(true)}
                             >
                                 <span className="md:hidden flex items-center gap-2"><Filter size={18} /> Filters</span>

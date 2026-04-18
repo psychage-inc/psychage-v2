@@ -60,7 +60,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Children don't grieve like adults. They might play happily hours after learning of a death, ask the same questions repeatedly, or seem unaffected. This doesn't mean they're unfeeling --- they're processing loss in developmentally appropriate ways.
           </p>
           <p className="mb-6">
@@ -357,7 +357,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Discovering your teen is cutting, burning, or otherwise hurting themselves is terrifying. Your mind races to worst-case scenarios. But self-harm, while serious, is usually a coping mechanism --- not a suicide attempt.
           </p>
           <p className="mb-6">
@@ -653,7 +653,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your child comes home in tears. Again. They're being excluded, mocked, or threatened. Bullying isn't 'just kids being kids' --- it's a serious threat to mental health with lasting effects.
           </p>
           <p className="mb-6">
@@ -747,7 +747,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
           </p>
         </ArticleCallout>
 
-        <h2 id="mental-health-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-gray-300 mt-12 mb-6 scroll-mt-32">
+        <h2 id="mental-health-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-neutral-300 mt-12 mb-6 scroll-mt-32">
           Mental Health Impact
         </h2>
         <p className="mb-6">
@@ -920,7 +920,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Should I get my child therapy?" This question keeps many parents up at night. You don't want to overreact, but you don't want to miss something important. How do you know when professional help is needed?
           </p>
           <p className="mb-6">
@@ -1190,7 +1190,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Resilience isn't something children either have or don't have --- it's built through experiences, relationships, and skills. You can't prevent all hardship, but you can equip your children to bounce back from it.
           </p>
           <p className="mb-6">

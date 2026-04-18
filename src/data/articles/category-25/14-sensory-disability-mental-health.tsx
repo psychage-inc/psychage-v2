@@ -63,7 +63,7 @@ export const sensoryDisabilityMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sensory disabilities—deafness, hearing loss, blindness, low vision, and deafblindness—affect over 2 billion people globally and produce mental health challenges that are fundamentally different from those associated with mobility or cognitive disabilities. The core issue is communication and information access: when the world&apos;s primary systems for sharing information, building relationships, and accessing services are designed for people who can hear and see, those who cannot are not just inconvenienced—they are systematically excluded from the social infrastructure that supports mental health.
           </p>
         </div>
@@ -84,7 +84,7 @@ export const sensoryDisabilityMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

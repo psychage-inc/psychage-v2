@@ -14,18 +14,18 @@ const SleepDisclaimer: React.FC<SleepDisclaimerProps> = ({
     <div
       className={cn(
         'rounded-2xl p-5 flex items-start gap-3',
-        'bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700',
+        'bg-gray-50 dark:bg-neutral-800/50 border border-gray-100 dark:border-neutral-700',
         className
       )}
     >
       <Info
         size={18}
-        className="text-gray-400 dark:text-gray-500 flex-shrink-0 mt-0.5"
+        className="text-gray-400 dark:text-neutral-500 flex-shrink-0 mt-0.5"
       />
-      <div className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+      <div className="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">
         {variant === 'therapy' ? (
           <>
-            <p className="font-bold text-gray-600 dark:text-gray-300 mb-1">
+            <p className="font-bold text-gray-600 dark:text-neutral-300 mb-1">
               Educational Content
             </p>
             <p>
@@ -38,7 +38,7 @@ const SleepDisclaimer: React.FC<SleepDisclaimerProps> = ({
           </>
         ) : (
           <>
-            <p className="font-bold text-gray-600 dark:text-gray-300 mb-1">
+            <p className="font-bold text-gray-600 dark:text-neutral-300 mb-1">
               About Sleep Architect
             </p>
             <p>

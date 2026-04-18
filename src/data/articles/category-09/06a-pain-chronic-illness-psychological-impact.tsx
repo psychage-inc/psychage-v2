@@ -112,7 +112,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Chronic pain---pain lasting beyond normal healing time, typically 3+ months---affects over 50 million Americans. But here's what's surprising: the intensity of chronic pain often has little to do with tissue damage. Pain is created by the brain, and psychological factors profoundly influence how much pain you experience.
           </p>
           <p className="mb-6">
@@ -499,7 +499,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "This pain will never end.", "Something must be seriously wrong.", "I can't handle this." If these thoughts sound familiar, you may be experiencing pain catastrophizing---a pattern of magnifying pain's threat that actually makes pain worse.
           </p>
           <p className="mb-6">
@@ -872,7 +872,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Chronic illness and mental health don't just co-occur---they influence each other in complex, bidirectional ways. Depression can worsen diabetes control. Autoimmune diseases trigger anxiety. Treating mental health improves physical health outcomes, and vice versa.
           </p>
           <p className="mb-6">
@@ -1244,7 +1244,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             What if the problem isn't pain itself, but your struggle against it? Acceptance and Commitment Therapy (ACT) offers a radically different approach to chronic pain: instead of fighting to eliminate pain, you learn to live a meaningful life despite it.
           </p>
           <p className="mb-6">
@@ -1677,7 +1677,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             How do you explain to someone that showering might mean you can't cook dinner? That going to a doctor's appointment could wipe you out for the rest of the day? The Spoon Theory provides a simple, powerful metaphor for communicating the energy limitations of chronic illness.
           </p>
           <p className="mb-6">

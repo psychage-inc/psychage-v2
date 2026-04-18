@@ -65,7 +65,7 @@ export const financialPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Money is one of the most psychologically charged aspects of modern life—a source of security and anxiety, freedom and constraint, identity and shame. Research at the intersection of psychology and economics reveals that the relationship between money and mental health is far more complex than the popular assumption that more money equals more happiness.
           </p>
         </div>
@@ -111,7 +111,7 @@ export const financialPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -174,7 +174,7 @@ export const financialPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Financial decisions—what to buy, how much to save, where to invest, when to spend—are among the most consequential choices people make, yet they are systematically distorted by cognitive biases that operate outside conscious awareness. Behavioral economics, the field that integrates psychology and economics, has documented a predictable set of mental shortcuts and distortions that cause people to overspend, undersave, sell winners and hold losers, and make financial choices that their future selves will regret.
           </p>
         </div>
@@ -225,7 +225,7 @@ export const financialPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -288,7 +288,7 @@ export const financialPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Debt is not merely a financial condition—it is a psychological one. Research consistently demonstrates that the experience of owing money produces effects that extend far beyond the balance sheet: chronic anxiety, disrupted sleep, impaired cognitive function, relationship conflict, and pervasive shame that prevents the person from seeking help.
           </p>
         </div>
@@ -336,7 +336,7 @@ export const financialPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -399,7 +399,7 @@ export const financialPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Consumer spending appears to be an economic activity—the exchange of money for goods and services. But research in consumer psychology reveals that spending is fundamentally a psychological activity, driven by emotional states, identity needs, social comparison, and cognitive biases that often have little to do with the utility of what is purchased.
           </p>
         </div>
@@ -445,7 +445,7 @@ export const financialPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -508,7 +508,7 @@ export const financialPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Economic inequality is not merely a political or economic phenomenon—it is a psychological one. Research demonstrates that the degree of wealth disparity in a society affects the mental health, social trust, and psychological wellbeing of its members through mechanisms that operate independently of absolute income.
           </p>
         </div>
@@ -552,7 +552,7 @@ export const financialPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -615,7 +615,7 @@ export const financialPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Financial literacy—the knowledge and skills needed to make effective financial decisions—is widely promoted as the solution to poor financial outcomes. If people just understood compound interest, budgeting, and investment principles, the argument goes, they would make better financial choices.
           </p>
         </div>
@@ -658,7 +658,7 @@ export const financialPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -721,7 +721,7 @@ export const financialPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Generosity—the voluntary transfer of resources to benefit others—appears to be an act of self-sacrifice: the giver parts with something valuable for someone else&apos;s benefit. But research in psychology and neuroscience reveals that generosity produces substantial benefits for the giver that extend well beyond moral satisfaction.
           </p>
         </div>
@@ -769,7 +769,7 @@ export const financialPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -832,7 +832,7 @@ export const financialPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Financial risk—the possibility that a monetary outcome will differ from what was expected—is a fundamental feature of economic life. Every investment, career choice, business decision, and major purchase involves uncertainty about future outcomes.
           </p>
         </div>
@@ -880,7 +880,7 @@ export const financialPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -943,7 +943,7 @@ export const financialPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In cultures that define adults primarily by their professional roles—where &quot;What do you do?&quot; is the most common question asked of strangers—the boundary between professional identity and personal identity can become dangerously thin. Research on work identity reveals that moderate identification with one&apos;s work is associated with engagement, satisfaction, and meaning.
           </p>
         </div>
@@ -990,7 +990,7 @@ export const financialPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1053,7 +1053,7 @@ export const financialPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Economic anxiety—the chronic worry about financial security, economic stability, and one&apos;s ability to meet present and future financial needs—has become a defining psychological feature of contemporary life. Unlike financial stress, which is a response to an identifiable financial problem (a bill that cannot be paid, a debt that is growing), economic anxiety is a response to uncertainty itself: the worry that the economy might decline, that one&apos;s job might disappear, that savings might prove insufficient, that the financial ground might shift beneath one&apos;s feet.
           </p>
         </div>
@@ -1099,7 +1099,7 @@ export const financialPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

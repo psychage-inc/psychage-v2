@@ -34,14 +34,14 @@ export default function ChatSidebar({
   };
 
   return (
-    <div className="flex flex-col h-full bg-slate-50 dark:bg-slate-900">
+    <div className="flex flex-col h-full bg-slate-50 dark:bg-neutral-900">
       {/* Header */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-slate-200 dark:border-slate-800">
-        <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">MindMate</span>
+      <div className="flex items-center justify-between px-4 py-3 border-b border-slate-200 dark:border-neutral-800">
+        <span className="text-sm font-semibold text-slate-700 dark:text-neutral-300">MindMate</span>
         {isMobile && onClose && (
           <button
             onClick={onClose}
-            className="p-1.5 rounded-md text-slate-400 hover:text-slate-600 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+            className="p-1.5 rounded-md text-slate-400 hover:text-slate-600 hover:bg-slate-200 dark:hover:bg-neutral-700 transition-colors"
           >
             <X size={18} />
           </button>
@@ -52,7 +52,7 @@ export default function ChatSidebar({
       <div className="px-3 py-3">
         <button
           onClick={handleNewChat}
-          className="flex items-center gap-2 w-full px-3 py-2.5 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          className="flex items-center gap-2 w-full px-3 py-2.5 border border-slate-200 dark:border-neutral-700 rounded-lg text-sm font-medium text-slate-700 dark:text-neutral-300 hover:bg-slate-100 dark:hover:bg-neutral-800 transition-colors"
         >
           <Plus size={16} />
           New chat
@@ -68,7 +68,7 @@ export default function ChatSidebar({
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search conversations..."
-            className="w-full pl-8 pr-3 py-2 text-xs bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-100 dark:focus:ring-teal-900/30 text-slate-700 dark:text-slate-300 placeholder-slate-400 transition-all"
+            className="w-full pl-8 pr-3 py-2 text-xs bg-white dark:bg-neutral-800 border border-slate-200 dark:border-neutral-700 rounded-lg outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-100 dark:focus:ring-teal-900/30 text-slate-700 dark:text-neutral-300 placeholder-slate-400 transition-all"
           />
         </div>
       </div>
@@ -101,7 +101,7 @@ export default function ChatSidebar({
 
       {/* User info */}
       {user && (
-        <div className="border-t border-slate-200 dark:border-slate-800 px-4 py-3">
+        <div className="border-t border-slate-200 dark:border-neutral-800 px-4 py-3">
           <div className="flex items-center gap-2">
             {user.avatar_url ? (
               <img
@@ -114,7 +114,7 @@ export default function ChatSidebar({
                 {(user.display_name || user.email || '?')[0].toUpperCase()}
               </div>
             )}
-            <span className="text-sm text-slate-700 dark:text-slate-300 truncate">
+            <span className="text-sm text-slate-700 dark:text-neutral-300 truncate">
               {user.display_name || user.email}
             </span>
           </div>

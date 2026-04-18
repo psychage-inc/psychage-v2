@@ -124,7 +124,7 @@ const DailyEntryV2: React.FC = () => {
           <h1 className="font-display font-bold text-2xl md:text-3xl text-slate-900 dark:text-white tracking-tight">
             {formatDate(today)}
           </h1>
-          <p className="text-slate-500 dark:text-slate-400 mt-1 text-sm">
+          <p className="text-slate-500 dark:text-neutral-400 mt-1 text-sm">
             {todaySectionCount > 0
               ? `${todaySectionCount} section${todaySectionCount > 1 ? 's' : ''} completed today`
               : 'Start wherever feels right'}
@@ -133,7 +133,7 @@ const DailyEntryV2: React.FC = () => {
 
         {/* Progress bar */}
         <div className="mb-8">
-          <div className="h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+          <div className="h-1.5 bg-slate-200 dark:bg-neutral-800 rounded-full overflow-hidden">
             <motion.div
               className="h-full bg-teal-500 rounded-full"
               initial={{ width: 0 }}
@@ -166,12 +166,12 @@ const DailyEntryV2: React.FC = () => {
                   <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${
                     isComplete
                       ? 'bg-teal-100 dark:bg-teal-900/30'
-                      : 'bg-slate-100 dark:bg-slate-800'
+                      : 'bg-slate-100 dark:bg-neutral-800'
                   }`}>
                     {isComplete ? (
                       <Check className="w-4 h-4 text-teal-600 dark:text-teal-400" />
                     ) : (
-                      <Icon className="w-4 h-4 text-slate-500 dark:text-slate-400" strokeWidth={1.5} />
+                      <Icon className="w-4 h-4 text-slate-500 dark:text-neutral-400" strokeWidth={1.5} />
                     )}
                   </div>
                   <div className="flex-1 min-w-0">
@@ -194,7 +194,7 @@ const DailyEntryV2: React.FC = () => {
                       transition={{ duration: 0.25 }}
                       className="overflow-hidden"
                     >
-                      <div className="px-4 pb-5 pt-1 border-t border-slate-100 dark:border-slate-800">
+                      <div className="px-4 pb-5 pt-1 border-t border-slate-100 dark:border-neutral-800">
                         {section.id === 'mood' && (
                           <MoodCheckInSection
                             onSave={(checkIn) => addMoodCheckIn(today, checkIn)}

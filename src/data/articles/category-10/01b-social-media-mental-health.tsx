@@ -112,7 +112,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You have 500 Facebook friends and 1,200 Instagram followers. You see updates from dozens of people every day. But you feel lonely. This paradox---being hyper-connected yet socially isolated---defines the modern digital experience.
           </p>
           <p className="mb-6">
@@ -433,7 +433,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You post a photo. Within seconds, you're checking for likes. The first few notifications trigger a small rush of pleasure. You keep checking. This isn't weakness---it's neuroscience. Social media platforms are engineered to exploit your brain's reward system, and they're very good at it.
           </p>
           <p className="mb-6">
@@ -715,7 +715,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You scroll through Instagram and see: beach vacations, perfect meals, career wins, flawless skin, happy relationships. Meanwhile, you're in sweatpants eating cereal for dinner. Everyone else seems to have it figured out. You feel like you're falling behind. This is the highlight reel effect, and it's an optical illusion.
           </p>
           <p className="mb-6">
@@ -1068,7 +1068,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             What happens if you stop using social media for a week? A month? Multiple randomized controlled trials have now answered this question with consistent findings: taking a break improves mental health, even if you return afterward.
           </p>
           <p className="mb-6">
@@ -1378,7 +1378,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You don't have to quit social media to protect your mental health. Mindful use---intentional, boundaried, and aware---can help you get the benefits (connection, information, community) while minimizing the harms (comparison, distraction, addiction). Here's how.
           </p>
           <p className="mb-6">

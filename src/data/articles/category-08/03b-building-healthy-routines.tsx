@@ -134,7 +134,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You spent weeks building a morning routine. Then your partner got sick, your work schedule shifted, or you moved to a new city. Suddenly, the 6 AM journaling and the 7:15 yoga feel impossible. Research shows this isn't failure—it's the nature of routine disruption <Citation id="1" index={1} source="Health Psychology Review" year="2021" tier={1} />. The question isn't how to maintain rigidity during chaos. It's how to adapt without losing the core benefits of structure.
           </p>
 
@@ -628,7 +628,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             By 2 PM, most people feel the crash—focus dissolves, mood drops, decision-making quality plummets <Citation id="1" index={1} source="Chronobiology International" year="2020" tier={1} />. The typical response is another coffee, which works temporarily but worsens the cycle. Research shows the afternoon slump isn't a willpower problem—it's circadian biology. A structured midday reset can counteract it without caffeine dependence.
           </p>
 
@@ -1068,7 +1068,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You maintain a strong weekday routine—consistent wake time, exercise, healthy meals. Then Friday night hits, and you abandon it all: sleeping until noon, skipping workouts, eating whatever <Citation id="1" index={1} source="Current Biology" year="2021" tier={1} />. By Sunday evening, you feel worse than you did Friday. This pattern is common—but research shows it's not the "freedom" that causes the problem. It's the <em>whiplash</em> from structure to chaos and back.
           </p>
 
@@ -1547,7 +1547,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It's 6 AM. Your alarm goes off. Every part of you wants to skip the morning workout. Is this avoidance that requires discipline to push through—or is it your body signaling genuine need for rest <Citation id="1" index={1} source="Clinical Psychology Review" year="2021" tier={1} />? This is the central tension in routine-building: knowing when to stick to the plan and when rigidity becomes harmful. Research shows there's no universal answer—but there are frameworks for deciding in the moment.
           </p>
 
@@ -2041,7 +2041,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The routine that works perfectly in summer—early morning runs, outdoor lunches, evening walks—collapses in winter <Citation id="1" index={1} source="Depression and Anxiety" year="2020" tier={1} />. Mornings are dark, energy plummets, motivation vanishes. Most people blame themselves: "I just need more discipline." But research shows seasonal shifts aren't psychological weakness—they're <strong>biological responses to light, temperature, and circadian changes</strong>. Fighting seasonality rarely works. Adapting to it does.
           </p>
 

@@ -66,17 +66,17 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onUpdate, onCle
       {/* Reminders */}
       <div className="bg-white dark:bg-white/5 backdrop-blur-xl rounded-2xl p-5 border border-white/60 dark:border-white/10 shadow-sm space-y-4">
         <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Check-In Reminders</h3>
-        <p className="text-xs text-slate-500 dark:text-slate-400">
+        <p className="text-xs text-slate-500 dark:text-neutral-400">
           Reminders are browser-based and require notification permissions.
         </p>
 
         <label className="flex items-center justify-between gap-3 cursor-pointer">
-          <span className="text-sm text-slate-700 dark:text-slate-300">Morning reminder</span>
+          <span className="text-sm text-slate-700 dark:text-neutral-300">Morning reminder</span>
           <button
             type="button"
             onClick={() => onUpdate({ reminderMorning: !settings.reminderMorning })}
             className={`relative w-11 h-6 rounded-full transition-colors ${
-              settings.reminderMorning ? 'bg-teal-600' : 'bg-slate-300 dark:bg-slate-600'
+              settings.reminderMorning ? 'bg-teal-600' : 'bg-slate-300 dark:bg-neutral-600'
             }`}
             aria-label="Toggle morning reminder"
           >
@@ -88,23 +88,23 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onUpdate, onCle
 
         {settings.reminderMorning && (
           <div className="ml-1">
-            <label className="text-xs text-slate-500 dark:text-slate-400">Time</label>
+            <label className="text-xs text-slate-500 dark:text-neutral-400">Time</label>
             <input
               type="time"
               value={settings.reminderMorningTime}
               onChange={e => onUpdate({ reminderMorningTime: e.target.value })}
-              className="ml-2 px-2 py-1 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="ml-2 px-2 py-1 rounded-lg border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
           </div>
         )}
 
         <label className="flex items-center justify-between gap-3 cursor-pointer">
-          <span className="text-sm text-slate-700 dark:text-slate-300">Evening reminder</span>
+          <span className="text-sm text-slate-700 dark:text-neutral-300">Evening reminder</span>
           <button
             type="button"
             onClick={() => onUpdate({ reminderEvening: !settings.reminderEvening })}
             className={`relative w-11 h-6 rounded-full transition-colors ${
-              settings.reminderEvening ? 'bg-teal-600' : 'bg-slate-300 dark:bg-slate-600'
+              settings.reminderEvening ? 'bg-teal-600' : 'bg-slate-300 dark:bg-neutral-600'
             }`}
             aria-label="Toggle evening reminder"
           >
@@ -116,12 +116,12 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onUpdate, onCle
 
         {settings.reminderEvening && (
           <div className="ml-1">
-            <label className="text-xs text-slate-500 dark:text-slate-400">Time</label>
+            <label className="text-xs text-slate-500 dark:text-neutral-400">Time</label>
             <input
               type="time"
               value={settings.reminderEveningTime}
               onChange={e => onUpdate({ reminderEveningTime: e.target.value })}
-              className="ml-2 px-2 py-1 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="ml-2 px-2 py-1 rounded-lg border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
           </div>
         )}
@@ -130,13 +130,13 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onUpdate, onCle
       {/* Screener Day */}
       <div className="bg-white dark:bg-white/5 backdrop-blur-xl rounded-2xl p-5 border border-white/60 dark:border-white/10 shadow-sm space-y-3">
         <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Weekly Screener</h3>
-        <p className="text-xs text-slate-500 dark:text-slate-400">
+        <p className="text-xs text-slate-500 dark:text-neutral-400">
           Choose the day your weekly wellness screener appears.
         </p>
         <select
           value={settings.weeklyScreenerDay}
           onChange={e => onUpdate({ weeklyScreenerDay: e.target.value as JournalSettings['weeklyScreenerDay'] })}
-          className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+          className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
         >
           {DAYS.map(d => (
             <option key={d.value} value={d.value}>{d.label}</option>
@@ -149,7 +149,7 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onUpdate, onCle
         <label className="flex items-center justify-between gap-3 cursor-pointer">
           <div>
             <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Guided Prompts</h3>
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+            <p className="text-xs text-slate-500 dark:text-neutral-400 mt-0.5">
               Show a daily writing prompt in free-form entries.
             </p>
           </div>
@@ -157,7 +157,7 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onUpdate, onCle
             type="button"
             onClick={() => onUpdate({ showGuidedPrompts: !settings.showGuidedPrompts })}
             className={`relative w-11 h-6 rounded-full transition-colors shrink-0 ${
-              settings.showGuidedPrompts ? 'bg-teal-600' : 'bg-slate-300 dark:bg-slate-600'
+              settings.showGuidedPrompts ? 'bg-teal-600' : 'bg-slate-300 dark:bg-neutral-600'
             }`}
             aria-label="Toggle guided prompts"
           >
@@ -180,7 +180,7 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onUpdate, onCle
               className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
                 settings.defaultReportPeriod === days
                   ? 'bg-teal-600 text-white'
-                  : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200'
+                  : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200'
               }`}
             >
               {days} days
@@ -193,11 +193,11 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onUpdate, onCle
       <div className="bg-white dark:bg-white/5 backdrop-blur-xl rounded-2xl p-5 border border-white/60 dark:border-white/10 shadow-sm space-y-3">
         <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Storage</h3>
         <div className="space-y-2">
-          <div className="flex justify-between text-xs text-slate-500 dark:text-slate-400">
+          <div className="flex justify-between text-xs text-slate-500 dark:text-neutral-400">
             <span>{usageMB} MB used</span>
             <span>{usage.percentage.toFixed(0)}% of 5 MB</span>
           </div>
-          <div className="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+          <div className="w-full h-2 bg-slate-100 dark:bg-neutral-800 rounded-full overflow-hidden">
             <div
               className={`h-full rounded-full transition-all ${
                 usageWarning ? 'bg-amber-500' : 'bg-teal-500'
@@ -217,7 +217,7 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onUpdate, onCle
       {/* Data Management */}
       <div className="bg-white dark:bg-white/5 backdrop-blur-xl rounded-2xl p-5 border border-white/60 dark:border-white/10 shadow-sm space-y-3">
         <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Data Management</h3>
-        <p className="text-xs text-slate-500 dark:text-slate-400">
+        <p className="text-xs text-slate-500 dark:text-neutral-400">
           All journal data is stored on your device only. Nothing is sent to any server.
         </p>
 

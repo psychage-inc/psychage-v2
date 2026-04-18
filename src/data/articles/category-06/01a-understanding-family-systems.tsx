@@ -93,7 +93,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your family is more than just a group of people who share a last name. It operates as an interconnected system, where each person's behavior influences everyone else in predictable, often invisible ways.
           </p>
           <p className="mb-6">
@@ -390,7 +390,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In every family, people unconsciously adopt roles --- predictable patterns of behavior that serve the family system's need for stability. These roles feel natural because you've played them your entire life, but they may not reflect who you truly are.
           </p>
           <p className="mb-6">
@@ -693,7 +693,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In enmeshed families, love and suffocation feel identical. Boundaries between family members dissolve, individuality is sacrificed for togetherness, and saying "no" feels like betrayal.
           </p>
           <p className="mb-6">
@@ -1008,7 +1008,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             If enmeshed families suffocate with too much closeness, disengaged families leave members isolated with too much distance. Emotional connection is minimal, independence is overvalued, and asking for support feels like weakness.
           </p>
           <p className="mb-6">
@@ -1338,7 +1338,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every family has secrets --- information deliberately concealed from certain family members or the outside world. These secrets range from minor omissions to life-defining facts, and they shape family dynamics in profound, often invisible ways.
           </p>
           <p className="mb-6">

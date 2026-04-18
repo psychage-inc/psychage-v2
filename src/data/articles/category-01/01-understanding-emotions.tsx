@@ -73,7 +73,7 @@ export const understandingEmotionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You feel them every day. A tightness in your chest before a difficult conversation. A wave of warmth when someone you love walks through the door. A sudden pang of sadness at a memory you thought you had moved past. These are emotions. But what <em>are</em> they, exactly?
           </p>
           <p className="mb-6">
@@ -262,7 +262,7 @@ export const understandingEmotionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Ask someone how they feel, and you will usually get one of a handful of words: good, bad, fine, stressed, tired. But human emotional experience is far richer than these labels suggest. Your feelings do not live in neat boxes. They exist on a spectrum, shifting in intensity, blending together, and changing moment to moment.
           </p>
           <p className="mb-6">
@@ -442,7 +442,7 @@ export const understandingEmotionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             We are taught from an early age that some emotions are "good" (happiness, gratitude, calm) and others are "bad" (anger, sadness, fear, jealousy). But the science tells a more nuanced story: uncomfortable emotions are not defects. They are essential parts of a healthy emotional system.
           </p>
           <p className="mb-6">
@@ -606,7 +606,7 @@ export const understandingEmotionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A certain song comes on and your chest tightens. A coworker uses a particular tone of voice and your heart starts racing. Someone cancels plans last minute and you feel a wave of anger that seems out of proportion to the event. These are emotional triggers, and understanding how they work is one of the most powerful tools for managing your emotional life.
           </p>
           <p className="mb-6">
@@ -773,7 +773,7 @@ export const understandingEmotionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When someone asks "How are you?", most of us default to a single word: "fine," "good," "stressed," or "tired." But what if the precision with which you label your feelings had a direct impact on your ability to manage them? Research says it does, and the skill is called <strong>emotional granularity</strong>.
           </p>
           <p className="mb-6">
@@ -993,7 +993,7 @@ export const understandingEmotionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You cry at movies that others shrug off. A harsh comment stays with you for days. Crowded rooms drain you faster than they drain your friends. If this sounds familiar, you are not broken, dramatic, or "too much." You may have what researchers call <strong>high emotional sensitivity</strong>, and it is more common and more scientifically understood than most people realize.
           </p>
           <p className="mb-6">
@@ -1191,7 +1191,7 @@ export const understandingEmotionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "How are you feeling?" "What's your mood?" "What emotions are coming up?" In everyday conversation, feelings, emotions, and moods are treated as the same thing. In psychology, they describe different layers of your inner experience --- and understanding the distinction gives you more precise tools for managing each one.
           </p>
         </div>
@@ -1270,7 +1270,7 @@ export const understandingEmotionsArticles: Article[] = [
         <h2 id="how-to-get-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How to Get Started
         </h2>
-        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-neutral-300 ml-4">
           <li><strong>Track your mood</strong> once in the morning and once in the evening for a week, using a 1--10 scale. Notice patterns.</li>
           <li><strong>When a strong emotion hits</strong>, note how long it lasts. If it is gone within minutes, it was an emotion. If it lingers for hours, it has shifted into a mood.</li>
           <li><strong>Practice naming the layer</strong>: "My body just had an emotional reaction" vs. "I've been in a low mood all day" vs. "I feel sad about what happened."</li>
@@ -1339,7 +1339,7 @@ export const understandingEmotionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You walk into a room and feel uneasy before you can explain why. You meet someone and instantly distrust them --- but cannot point to anything specific they did. Your brain has already made an emotional assessment before your conscious mind has caught up. This is not a glitch. It is how your brain is designed to work.
           </p>
         </div>
@@ -1396,7 +1396,7 @@ export const understandingEmotionsArticles: Article[] = [
         <h2 id="how-to-get-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How to Get Started
         </h2>
-        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-neutral-300 ml-4">
           <li><strong>Try a body scan</strong>: spend 3 minutes noticing sensations in your body without trying to change them. This builds interoceptive awareness.</li>
           <li><strong>When you have a strong gut reaction</strong>, ask yourself: "Is this about what is happening now, or is my brain predicting based on the past?"</li>
           <li><strong>Create positive prediction errors</strong>: do one thing this week that your brain predicts will go badly. Notice what actually happens.</li>
@@ -1462,7 +1462,7 @@ export const understandingEmotionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You are proud of your child for leaving home for college --- and deeply sad that they are leaving. You feel relief when a difficult relationship ends --- and grief for what could have been. You laugh at a funeral, sharing a fond memory. Mixed emotions are not a sign that something is wrong with you. They are a sign of emotional depth.
           </p>
         </div>
@@ -1516,7 +1516,7 @@ export const understandingEmotionsArticles: Article[] = [
         <h2 id="how-to-get-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How to Get Started
         </h2>
-        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-neutral-300 ml-4">
           <li><strong>The next time you feel conflicted</strong>, try writing down all the emotions present --- not just the loudest one.</li>
           <li><strong>Use "and" instead of "but"</strong>: "I love my partner <em>and</em> this situation is frustrating" instead of "I love my partner <em>but</em> this is frustrating." The word "and" lets both emotions coexist.</li>
           <li><strong>Reflect on a meaningful memory</strong> --- a graduation, a move, a relationship ending --- and notice how multiple emotions were present simultaneously.</li>
@@ -1582,7 +1582,7 @@ export const understandingEmotionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Why do humans feel fear, anger, sadness, disgust, or jealousy? These emotions can be uncomfortable, sometimes overwhelming --- so why did evolution keep them? The answer, according to evolutionary psychology, is that every core emotion exists because it solved a critical survival or social problem for our ancestors. Understanding this can change your relationship with your feelings.
           </p>
         </div>
@@ -1663,7 +1663,7 @@ export const understandingEmotionsArticles: Article[] = [
         <h2 id="how-to-get-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How to Get Started
         </h2>
-        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-gray-300 ml-4">
+        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-neutral-300 ml-4">
           <li><strong>Pick one emotion</strong> you experienced today and ask: "What survival problem was this emotion designed to solve?"</li>
           <li><strong>Identify one instance</strong> of evolutionary mismatch in your life --- where your brain is treating a modern situation as an ancient threat.</li>
           <li><strong>Seek out one positive emotion</strong> intentionally today --- gratitude, curiosity, amusement, or awe --- and notice how it changes your perspective.</li>

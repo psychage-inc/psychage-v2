@@ -114,7 +114,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When two people have a conflict they cannot resolve, they often pull in a third person to reduce anxiety. This pattern --- called triangulation --- is one of the most common and damaging dynamics in families, yet most people caught in it have no idea what is happening.
           </p>
           <p className="mb-6">
@@ -544,7 +544,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Are firstborns really natural leaders? Are middle children actually better negotiators? Is the baby of the family spoiled? Birth order psychology has captured public imagination for over a century, but what does the science actually say about how your position in the family shapes who you become?
           </p>
           <p className="mb-6">
@@ -916,7 +916,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every family operates according to a set of rules --- some explicit and discussed, others so deeply embedded they become invisible. These rules govern everything from who can express anger to whether asking for help is acceptable, and they shape your understanding of the world more profoundly than almost any other force in childhood.
           </p>
           <p className="mb-6">
@@ -1323,7 +1323,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In every dysfunctional family system, someone becomes the "problem." This person --- called the identified patient or symptom bearer --- develops visible struggles that distract from the real issues affecting the whole family. They carry the weight of dysfunction that belongs to the entire system, not just to them.
           </p>
           <p className="mb-6">
@@ -1715,7 +1715,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Family systems can and do change --- but not in the way most people expect. Change does not happen by fixing one person, assigning blame, or implementing new household rules. It requires shifting the invisible patterns --- the communication habits, the unspoken alliances, the rigid roles --- that govern how the entire family operates beneath the surface.
           </p>
           <p className="mb-6">

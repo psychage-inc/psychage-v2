@@ -62,7 +62,7 @@ export const exerciseMovementMentalWellnessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             If exercise came in pill form, it would be the most widely prescribed medication for mental health. Research shows that regular physical activity is as effective as antidepressants for treating mild-to-moderate depression—and it works for anxiety, too <Citation id="1" index={1} source="Cochrane Database of Systematic Reviews" year="2013" tier={1} />.
           </p>
           <p className="mb-6">
@@ -300,7 +300,7 @@ export const exerciseMovementMentalWellnessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Exercise doesn't just make you feel better temporarily—it changes your brain's structure and function. Movement triggers the release of brain-derived neurotrophic factor (BDNF), grows new neurons, and strengthens neural networks involved in mood regulation.
           </p>
           <p className="mb-6">
@@ -523,7 +523,7 @@ export const exerciseMovementMentalWellnessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             All exercise helps anxiety, but different types work through distinct mechanisms. Aerobic exercise burns off stress hormones, strength training builds confidence, and yoga combines movement with mindfulness.
           </p>
           <p className="mb-6">
@@ -775,7 +775,7 @@ export const exerciseMovementMentalWellnessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you're depressed, movement feels impossible. But exercise is one of the most effective non-pharmaceutical interventions for depression—and it works regardless of intensity.
           </p>
           <p className="mb-6">
@@ -823,7 +823,7 @@ export const exerciseMovementMentalWellnessArticlesA: Article[] = [
           <p className="text-lg mb-2">
             <strong>Moderate intensity</strong> means you can talk but feel slightly challenged. You're breathing harder than normal but not gasping. It's sustainable for 20-30 minutes without stopping.
           </p>
-          <p className="text-base text-gray-600 dark:text-gray-400">
+          <p className="text-base text-gray-600 dark:text-neutral-400">
             Examples: Brisk walking, easy jogging, recreational cycling, water aerobics, gentle swimming.
           </p>
         </HighlightBox>
@@ -1025,7 +1025,7 @@ export const exerciseMovementMentalWellnessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You don't need a gym membership, special equipment, or athletic ability. Walking—the most accessible form of exercise—has robust evidence for improving mental health.
           </p>
           <p className="mb-6">

@@ -102,7 +102,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For decades, building self-esteem has been psychology's go-to solution for mental health and wellbeing. But mounting research suggests we've been focusing on the wrong construct. Self-compassion --- treating yourself with kindness --- may matter more.
           </p>
           <p className="mb-6">
@@ -541,7 +541,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You got the promotion, finished the degree, lost the weight, or achieved the goal you've been chasing. You expected to feel different --- confident, worthy, complete. Instead, the feeling fades quickly, and you're left wondering: Why doesn't success fix how I feel about myself?
           </p>
           <p className="mb-6">
@@ -938,7 +938,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             What does it mean to value yourself? The answer depends profoundly on where you grew up. Western psychology's emphasis on high self-esteem as universal mental health isn't universal at all --- it's culturally specific.
           </p>
           <p className="mb-6">
@@ -1346,7 +1346,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Gender shapes how we learn to value ourselves from the earliest ages. Boys and girls receive different messages about what makes them worthy, capable, and valuable --- messages that persist into adulthood and influence mental health in profound ways.
           </p>
           <p className="mb-6">
@@ -1734,7 +1734,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             How do you measure something as subjective as self-esteem? For decades, psychologists have developed tools to quantify self-regard in reliable, valid ways. Understanding these measures helps you assess your own self-esteem accurately and track changes over time.
           </p>
           <p className="mb-6">

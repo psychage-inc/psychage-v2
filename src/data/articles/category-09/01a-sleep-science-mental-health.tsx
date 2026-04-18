@@ -132,7 +132,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             If mental health were a house, sleep would be the foundation. Not the furniture you add later, not the paint on the walls---the actual structural base that everything else depends on.
           </p>
           <p className="mb-6">
@@ -482,7 +482,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You know the feeling: after a night of poor sleep, everything is harder. Small frustrations feel enormous. Your partner's innocent comment sparks irritation. You can't remember where you put your keys five minutes ago.
           </p>
           <p className="mb-6">
@@ -852,7 +852,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You might think of sleep as an "off switch" for your brain---a uniform state of rest that lasts until morning. In reality, sleep is a dynamic, highly organized process that cycles through distinct stages, each with its own biological purpose and brain activity pattern.
           </p>
           <p className="mb-6">
@@ -1249,7 +1249,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "How much sleep do I need?" It's one of the most common questions in sleep medicine---and the answer is both simpler and more complicated than you might expect.
           </p>
           <p className="mb-6">
@@ -1590,7 +1590,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It's the question at the heart of countless sleepless nights: Is my anxiety keeping me awake, or is my lack of sleep making me anxious? The answer is often both.
           </p>
           <p className="mb-6">

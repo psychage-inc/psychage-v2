@@ -130,7 +130,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Traditional trauma therapy asks you to talk about what happened. Somatic Experiencing (SE) asks you to feel what your body is holding. Developed by Dr. Peter Levine, SE is built on a simple observation: animals in the wild experience life-threatening events constantly but don't develop PTSD. Why? Because they complete the biological survival response---shaking, trembling, discharging the trapped energy. Humans, with our complex brains, often interrupt this process. SE helps you finish what your body started.
           </p>
           <p className="mb-6">
@@ -468,7 +468,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You sit across from your therapist, who asks you to recall the traumatic memory while following their fingers back and forth with your eyes. It sounds strange---almost too simple. But within minutes, the memory begins to shift. The terror softens. Details you couldn't remember emerge. By the end of the session, the memory that once haunted you feels distant, like something that happened to someone else, long ago. This is EMDR: Eye Movement Desensitization and Reprocessing, one of the most researched and effective treatments for trauma.
           </p>
           <p className="mb-6">
@@ -761,7 +761,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             After trauma, your body can feel like enemy territory---numb, unsafe, or disconnected. You may avoid feeling anything below your neck because sensation brings pain. Yoga, when adapted for trauma, offers a different path: not forcing you into poses, but inviting you back into your body at your own pace. It's not about flexibility or perfection. It's about reclaiming what trauma took---your sense of ownership, safety, and home within your own skin.
           </p>
           <p className="mb-6">
@@ -1087,7 +1087,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Inside your body runs a superhighway of communication between your brain and your organs. The vagus nerve---the longest nerve in your autonomic nervous system---is your body's "brake pedal, ' the pathway that says: <em>It's safe. You can rest now.</em> After trauma, this brake often stops working. Your nervous system stays in overdrive, unable to downshift into calm. Learning to activate your vagus nerve is like learning to press that brake yourself---bringing your body back to a state where healing is possible.
           </p>
           <p className="mb-6">
@@ -1356,7 +1356,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your breath is the only part of your autonomic nervous system you can control. You can't consciously slow your heart rate or tell your adrenals to stop pumping cortisol---but you <em>can</em> change your breathing. And when you do, everything else follows. Slow, deep breaths signal safety to your brain. Rapid breaths mobilize energy. Held breath mirrors freeze. Breathwork isn't just relaxation---it's a direct pathway to rewiring your trauma response.
           </p>
           <p className="mb-6">

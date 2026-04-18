@@ -33,16 +33,16 @@ const ProviderProfilePage: React.FC = () => {
       <div className="min-h-screen bg-background pt-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="animate-pulse space-y-6">
-            <div className="h-6 w-32 bg-slate-200 dark:bg-slate-700 rounded" />
+            <div className="h-6 w-32 bg-slate-200 dark:bg-neutral-700 rounded" />
             <div className="flex items-center gap-5">
-              <div className="w-20 h-20 rounded-full bg-slate-200 dark:bg-slate-700" />
+              <div className="w-20 h-20 rounded-full bg-slate-200 dark:bg-neutral-700" />
               <div className="space-y-3 flex-1">
-                <div className="h-7 w-64 bg-slate-200 dark:bg-slate-700 rounded" />
-                <div className="h-4 w-40 bg-slate-200 dark:bg-slate-700 rounded" />
+                <div className="h-7 w-64 bg-slate-200 dark:bg-neutral-700 rounded" />
+                <div className="h-4 w-40 bg-slate-200 dark:bg-neutral-700 rounded" />
               </div>
             </div>
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="h-32 bg-slate-200 dark:bg-slate-700 rounded-2xl" />
+              <div key={i} className="h-32 bg-slate-200 dark:bg-neutral-700 rounded-2xl" />
             ))}
           </div>
         </div>

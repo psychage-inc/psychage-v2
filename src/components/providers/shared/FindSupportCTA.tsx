@@ -55,7 +55,7 @@ export const FindSupportCTA: React.FC<FindSupportCTAProps> = ({
       viewport={{ once: true }}
       className="py-12"
     >
-      <div className="bg-gradient-to-br from-teal-50 to-white dark:from-teal-900/10 dark:to-gray-900 rounded-3xl border border-teal-100 dark:border-teal-800/30 p-8 md:p-10">
+      <div className="bg-gradient-to-br from-teal-50 to-white dark:from-teal-900/10 dark:to-neutral-900 rounded-3xl border border-teal-100 dark:border-teal-800/30 p-8 md:p-10">
         <div className="flex items-start gap-4 mb-6">
           <div className="w-12 h-12 rounded-2xl bg-teal-100 dark:bg-teal-900/30 flex items-center justify-center flex-shrink-0">
             <Heart className="w-6 h-6 text-teal-600 dark:text-teal-400" />

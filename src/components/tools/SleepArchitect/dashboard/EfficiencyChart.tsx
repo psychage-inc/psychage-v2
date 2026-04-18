@@ -31,7 +31,7 @@ const EfficiencyChart: React.FC<EfficiencyChartProps> = ({ entries }) => {
   });
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl p-5 border border-gray-100 dark:border-gray-700">
+    <div className="bg-white dark:bg-neutral-800 rounded-2xl p-5 border border-gray-100 dark:border-neutral-700">
       <h4 className="font-display font-bold text-sm text-gray-900 dark:text-white mb-4">
         Sleep Efficiency
       </h4>

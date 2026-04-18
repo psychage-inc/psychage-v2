@@ -132,7 +132,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Post-Traumatic Stress Disorder (PTSD) is a mental health condition that develops after experiencing or
             witnessing a traumatic event. While it\'s normal to have distressing reactions after trauma, PTSD occurs
             when those reactions persist, intensify, or interfere with daily life for an extended period. Understanding
@@ -851,7 +851,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Imagine being diagnosed with depression, then anxiety, then borderline personality disorder---cycling through
             treatments that help a little but never quite address what you\'re experiencing. This is the story of many
             people with Complex PTSD (C-PTSD), a condition that wasn\'t officially recognized until 2018, and even then,
@@ -1596,7 +1596,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You\'re going about your day when suddenly you\'re not here anymore. A smell, a sound, or nothing you can
             identify triggers it---and you\'re back there. Your heart races. You can see it, feel it, smell it as if it\'s
             happening right now. This is a flashback, and it\'s one of the most distressing symptoms of PTSD.
@@ -2131,7 +2131,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You can\'t relax. Your eyes constantly scan every room you enter, noting exits, checking faces, assessing
             threats. You startle at sudden sounds. You notice everything---every movement in your peripheral vision, every
             shift in someone\'s tone. Your nervous system is stuck in high alert, convinced danger is imminent even when
@@ -2639,7 +2639,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You feel nothing. Friends share good news and you fake a smile, knowing you should be happy but feeling... empty. Someone you love says "I love you" and the words don't land. You go through the motions---work, meals, conversations---but it's like watching your life through glass. You're here, but you're not really <em>here</em>. This is emotional numbness, and it's one of the most isolating symptoms of trauma.
           </p>
           <p className="mb-6">

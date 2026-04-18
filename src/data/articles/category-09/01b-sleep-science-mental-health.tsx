@@ -96,7 +96,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Sleep hygiene" sounds clinical, but it's simply the set of habits and environmental conditions that promote consistent, high-quality sleep. While it won't cure chronic insomnia on its own, good sleep hygiene creates the foundation for restorative rest.
           </p>
           <p className="mb-6">
@@ -532,7 +532,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Deep inside your brain, a cluster of about 20,000 neurons called the suprachiasmatic nucleus (SCN) acts as your body's master clock. This tiny structure orchestrates a 24-hour rhythm that influences nearly every cell in your body---when you feel alert, when you feel hungry, when your body temperature peaks, and when you're most vulnerable to infection.
           </p>
           <p className="mb-6">
@@ -898,7 +898,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've heard the warnings: blue light from screens destroys your sleep. But if you've tried blue-light-blocking glasses or night mode settings and still struggle with sleep, you might wonder if the science is oversold.
           </p>
           <p className="mb-6">
@@ -1233,7 +1233,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Coffee in the morning, wine in the evening---it's a daily rhythm for millions of people. But while caffeine and alcohol feel like they help you manage wakefulness and sleep, both substances disrupt the very processes they seem to support.
           </p>
           <p className="mb-6">
@@ -1640,7 +1640,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It's a familiar pattern: skimp on sleep all week to meet deadlines, then sleep until noon on Saturday to "catch up." It feels restorative in the moment---but does it actually erase the effects of weekday sleep deprivation?
           </p>
           <p className="mb-6">

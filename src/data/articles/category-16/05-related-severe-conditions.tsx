@@ -75,7 +75,7 @@ export const relatedSevereConditionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When most people think of bipolar disorder, they picture extreme mood swings ---
             highs and lows, mania and depression. What often goes undiscussed is that for
             a substantial proportion of people with bipolar I disorder, these mood extremes
@@ -89,7 +89,7 @@ export const relatedSevereConditionsArticles: Article[] = [
           </p>
         </div>
 
-        <h2 id="prevalence-and-presentation" className="text-3xl font-display font-bold text-gray-900 dark:text-gray-300 mt-12 mb-6 scroll-mt-32">
+        <h2 id="prevalence-and-presentation" className="text-3xl font-display font-bold text-gray-900 dark:text-neutral-300 mt-12 mb-6 scroll-mt-32">
           How Common Is Psychosis in Bipolar Disorder?
         </h2>
         <p className="mb-6">
@@ -260,7 +260,7 @@ export const relatedSevereConditionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Depression is isolating. Psychotic depression is isolating in a way that defies
             ordinary comprehension --- because the isolation isn't just emotional, it's
             existential. When someone with psychotic depression believes they are already
@@ -443,7 +443,7 @@ export const relatedSevereConditionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The person who smokes cannabis and develops paranoid delusions. The college student
             who takes LSD and never fully returns. The person using methamphetamine who begins
             hearing voices that persist long after the drug has cleared their system. These are
@@ -607,7 +607,7 @@ export const relatedSevereConditionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Catatonia looks like nothing else in psychiatry. A person sits frozen, eyes
             open but unseeing, limbs held in positions that should be uncomfortable but
             that they maintain for hours. Or the opposite: frenzied, purposeless movement
@@ -768,7 +768,7 @@ export const relatedSevereConditionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When schizophrenia strikes a child, it shatters not just current functioning
             but the entire developmental trajectory. A seven-year-old who hears voices
             telling them they're evil. A ten-year-old whose speech becomes increasingly

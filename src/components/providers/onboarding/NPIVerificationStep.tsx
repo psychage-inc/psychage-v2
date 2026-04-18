@@ -49,11 +49,11 @@ const NPIVerificationStep: React.FC<NPIVerificationStepProps> = ({
       <div>
         <label
           htmlFor="npi-input"
-          className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1"
+          className="block text-sm font-semibold text-gray-700 dark:text-neutral-200 mb-1"
         >
           {label}
         </label>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mb-3">
           {description}
         </p>
       </div>
@@ -90,7 +90,7 @@ const NPIVerificationStep: React.FC<NPIVerificationStepProps> = ({
       </div>
 
       {npiInput.length > 0 && npiInput.length < 10 && !result && (
-        <p className="text-xs text-gray-400 dark:text-gray-500">
+        <p className="text-xs text-gray-400 dark:text-neutral-500">
           {10 - npiInput.length} more digit{10 - npiInput.length !== 1 ? 's' : ''} needed
         </p>
       )}

@@ -123,7 +123,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A flash of unease when your partner mentions an attractive coworker. A tightness in your chest when they're texting someone you don't know. Jealousy is one of the most common---and most misunderstood---emotions in romantic relationships. Some level of jealousy is normal, even protective. But when it crosses into controlling behavior, constant suspicion, or emotional manipulation, it becomes toxic <Citation id="1" index={1} source="Psychological Bulletin" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
@@ -481,7 +481,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Long-distance relationships (LDRs) have a bad reputation. "It'll never work.", "Out of sight, out of mind.", "Long-distance is just delaying the inevitable." But research tells a more nuanced story. While LDRs face unique challenges, they don't fail at higher rates than geographically close relationships---and in some ways, they can be even more satisfying <Citation id="1" index={1} source="Personal Relationships" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
@@ -854,7 +854,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Most couples only have deep conversations about their relationship when something is wrong. By the time you're sitting down to "talk, " there's already resentment, hurt, or distance. Relationship check-ins flip this script: instead of waiting for problems to build, you create a regular space to address small issues before they become big ones <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
@@ -1199,7 +1199,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You want sex three times a week; they're happy with once a month. You need constant social interaction; they need solitude to recharge. You dream of adventure and travel; they value stability and routine. When partners have fundamentally different needs, it can feel like an impossible gap to bridge. But research shows that many couples successfully navigate these differences---while others recognize when incompatibility is too great to overcome <Citation id="2" index={2} source="Journal of Personality and Social Psychology" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
@@ -1544,7 +1544,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "We should go to couples therapy" is often said during a fight, when things are already falling apart. But waiting until a relationship is in crisis is like waiting to see a doctor until you're in the emergency room. Couples therapy is most effective when it's used proactively---not as a last resort, but as a tool for growth, communication, and preventing small problems from becoming insurmountable ones <Citation id="4" index={4} source="Journal of Family Psychology" year="2020" tier={1} />.
           </p>
           <p className="mb-6">

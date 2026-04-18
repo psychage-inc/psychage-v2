@@ -30,7 +30,7 @@ export default function ConversationItem({
         className={`flex-1 text-sm truncate transition-colors duration-200 ${
           isActive
             ? 'text-teal-900 dark:text-teal-100 font-medium'
-            : 'text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200'
+            : 'text-slate-600 dark:text-neutral-400 group-hover:text-slate-900 dark:group-hover:text-slate-200'
         }`}
       >
         {conversation.title}
@@ -42,7 +42,7 @@ export default function ConversationItem({
             e.stopPropagation();
             setShowMenu(!showMenu);
           }}
-          className="p-1 rounded-md opacity-0 group-hover:opacity-100 text-slate-400 hover:text-slate-600 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all"
+          className="p-1 rounded-md opacity-0 group-hover:opacity-100 text-slate-400 hover:text-slate-600 hover:bg-slate-200 dark:hover:bg-neutral-700 transition-all"
         >
           <MoreHorizontal size={14} />
         </button>
@@ -50,7 +50,7 @@ export default function ConversationItem({
         {showMenu && (
           <>
             <div className="fixed inset-0 z-10" onClick={() => setShowMenu(false)} />
-            <div className="absolute right-0 top-full mt-1 z-20 w-36 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-lg py-1">
+            <div className="absolute right-0 top-full mt-1 z-20 w-36 bg-white dark:bg-neutral-800 border border-slate-200 dark:border-neutral-700 rounded-lg shadow-lg py-1">
               <button
                 onClick={(e) => {
                   e.stopPropagation();

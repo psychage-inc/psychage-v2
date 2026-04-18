@@ -54,7 +54,7 @@ export const clinicalCreativeInterventionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Art therapy is a mental health profession that uses the creative process of making art to improve psychological, emotional, and social wellbeing. Unlike casual art-making, art therapy is facilitated by a trained, credentialed art therapist who understands how to use art materials, processes, and products therapeutically.
           </p>
         </div>
@@ -130,7 +130,7 @@ export const clinicalCreativeInterventionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -182,7 +182,7 @@ export const clinicalCreativeInterventionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Music therapy is the clinical use of music interventions—singing, playing instruments, listening, composing, moving to music—to accomplish therapeutic goals within a therapeutic relationship facilitated by a credentialed music therapist. Unlike casual music listening or playing for fun, music therapy is an evidence-based health profession with over 70 years of research demonstrating effectiveness for mental health conditions, neurological disorders, developmental disabilities, and medical challenges.
           </p>
         </div>
@@ -262,7 +262,7 @@ export const clinicalCreativeInterventionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -314,7 +314,7 @@ export const clinicalCreativeInterventionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Dance/movement therapy (DMT) is the psychotherapeutic use of movement and dance to support emotional, cognitive, physical, and social integration. Rooted in the understanding that body and mind are inseparable, DMT helps people access feelings stored in the body, release physical tension that mirrors psychological distress, and build new embodied patterns of being in the world.
           </p>
         </div>
@@ -393,7 +393,7 @@ export const clinicalCreativeInterventionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -445,7 +445,7 @@ export const clinicalCreativeInterventionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Writing therapy and expressive journaling use the written word to explore emotions, process experiences, and create narrative coherence from fragmented or overwhelming events. Decades of research—particularly James Pennebaker&apos;s pioneering work on expressive writing—show that structured writing about emotional experiences improves physical health, immune function, mood, and psychological wellbeing.
           </p>
         </div>
@@ -524,7 +524,7 @@ export const clinicalCreativeInterventionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -576,7 +576,7 @@ export const clinicalCreativeInterventionsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Drama therapy is the intentional use of theater processes and products—role-play, storytelling, improvisation, puppetry, mask work, and performance—to achieve therapeutic goals. Rooted in the understanding that humans naturally use dramatic play to make sense of experience, drama therapy provides a safe container to explore difficult emotions, practice new behaviors, develop empathy, and try on different ways of being before committing to them in real life.
           </p>
         </div>
@@ -655,7 +655,7 @@ export const clinicalCreativeInterventionsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

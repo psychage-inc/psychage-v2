@@ -41,14 +41,14 @@ const SleepDebtTracker: React.FC<SleepDebtTrackerProps> = ({ sleepData }) => {
 
   if (sleepData.entryCount < 3) {
     return (
-      <div className="bg-white dark:bg-gray-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-gray-700">
+      <div className="bg-white dark:bg-neutral-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-neutral-700">
         <div className="flex items-center gap-2 mb-3">
           <Clock size={20} className="text-amber-500" />
           <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white">
             Sleep Debt
           </h3>
         </div>
-        <p className="text-sm text-gray-500 dark:text-gray-400">
+        <p className="text-sm text-gray-500 dark:text-neutral-400">
           Log at least 3 nights to see your sleep debt calculation.
         </p>
       </div>
@@ -56,7 +56,7 @@ const SleepDebtTracker: React.FC<SleepDebtTrackerProps> = ({ sleepData }) => {
   }
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-gray-700">
+    <div className="bg-white dark:bg-neutral-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-neutral-700">
       <div className="flex items-center gap-2 mb-5">
         <Clock size={20} className="text-amber-500" />
         <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white">
@@ -66,14 +66,14 @@ const SleepDebtTracker: React.FC<SleepDebtTrackerProps> = ({ sleepData }) => {
 
       {/* Debt meter */}
       <div className="mb-4">
-        <div className="flex justify-between text-xs font-medium text-gray-500 dark:text-gray-400 mb-1.5">
+        <div className="flex justify-between text-xs font-medium text-gray-500 dark:text-neutral-400 mb-1.5">
           <span>0h</span>
           <span className="font-bold text-gray-900 dark:text-white">
             {formatDuration(debt.total_debt_minutes)}
           </span>
           <span>10h+</span>
         </div>
-        <div className="h-4 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+        <div className="h-4 bg-gray-100 dark:bg-neutral-700 rounded-full overflow-hidden">
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: `${debtPercent}%` }}
@@ -81,7 +81,7 @@ const SleepDebtTracker: React.FC<SleepDebtTrackerProps> = ({ sleepData }) => {
             className={cn('h-full rounded-full', debtColor(debt.total_debt_minutes))}
           />
         </div>
-        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1.5">
+        <p className="text-xs text-gray-500 dark:text-neutral-400 mt-1.5">
           {debtLabel(debt.total_debt_minutes)}
         </p>
       </div>
@@ -101,7 +101,7 @@ const SleepDebtTracker: React.FC<SleepDebtTrackerProps> = ({ sleepData }) => {
       {/* Daily deficits */}
       {debt.daily_deficits.length > 0 && (
         <div className="mt-4">
-          <h4 className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+          <h4 className="text-xs font-bold text-gray-500 dark:text-neutral-400 uppercase tracking-wider mb-2">
             Recent deficits
           </h4>
           <div className="flex gap-1">
@@ -122,7 +122,7 @@ const SleepDebtTracker: React.FC<SleepDebtTrackerProps> = ({ sleepData }) => {
                     style={{ height: `${height}px` }}
                     title={`${d.date}: ${d.deficit_minutes > 0 ? `-${formatDuration(d.deficit_minutes)}` : 'On target'}`}
                   />
-                  <span className="text-[8px] text-gray-400 dark:text-gray-500 mt-1">
+                  <span className="text-[8px] text-gray-400 dark:text-neutral-500 mt-1">
                     {new Date(d.date + 'T12:00:00').toLocaleDateString('en-US', {
                       weekday: 'narrow',
                     })}

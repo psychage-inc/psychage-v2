@@ -94,7 +94,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             After decades of structure, purpose, and professional identity, retirement can feel like stepping off a cliff into the unknown. For many, it's not the financial transition that's hardest---it's the psychological one.
           </p>
           <p className="mb-6">
@@ -362,7 +362,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Be your own boss.", "Work from anywhere.", "Choose your own hours." The promises of freelancing are seductive---but they rarely mention the mental health costs that come with independence.
           </p>
           <p className="mb-6">
@@ -683,7 +683,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're 35, sitting in a lecture hall next to 19-year-olds who seem to understand everything instantly. You have a mortgage, two kids, and a full-time job. And you're wondering: What was I thinking?
           </p>
           <p className="mb-6">
@@ -1010,7 +1010,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You wake at 3 AM with your heart racing, mind calculating: How many months until savings run out? What if layoffs hit? Can we afford rent next year? The numbers don't add up, and sleep won't come.
           </p>
           <p className="mb-6">
@@ -1313,7 +1313,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
       content: (
         <>
           <div id="introduction" className="scroll-mt-32">
-            <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
               Career transitions---whether chosen or forced---are among life's most significant stressors. The job you lose, the field you leave, the promotion that doesn't come, the career that no longer fits: each challenges your sense of competence, identity, and future.
             </p>
             <p className="mb-6">

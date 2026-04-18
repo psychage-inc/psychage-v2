@@ -65,7 +65,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Emotional intelligence—the ability to perceive, understand, manage, and use emotions effectively—has become one of the most discussed concepts in contemporary psychology, yet it is also one of the most misunderstood. Popular accounts often present emotional intelligence as a vague form of niceness, social skill, or personality trait that is more important than IQ for life success.
           </p>
         </div>
@@ -112,7 +112,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -175,7 +175,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Emotion regulation—the process by which individuals influence which emotions they have, when they have them, and how they experience and express them—is one of the most consequential psychological skills. Research consistently demonstrates that effective emotion regulation predicts mental health, physical health, relationship quality, academic performance, and professional success.
           </p>
         </div>
@@ -227,7 +227,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -290,7 +290,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Self-awareness—the capacity to clearly perceive one&apos;s own emotions, thoughts, behaviors, values, and effects on others—is widely regarded as a foundational psychological competency. It underlies emotional intelligence, effective leadership, healthy relationships, and personal growth.
           </p>
         </div>
@@ -338,7 +338,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -401,7 +401,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Stress is among the most discussed and least understood phenomena in modern psychology. Popular understanding treats stress as an inherently harmful force that must be minimized—but research reveals a far more complex picture.
           </p>
         </div>
@@ -449,7 +449,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -512,7 +512,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Anger is one of the most powerful, most misunderstood, and most culturally fraught human emotions. It is commonly viewed as a negative emotion to be suppressed or eliminated—yet research reveals that anger serves essential psychological functions: it signals boundary violations, motivates corrective action, communicates strength and seriousness, and protects against exploitation.
           </p>
         </div>
@@ -557,7 +557,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -620,7 +620,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mindfulness—the practice of paying attention to present-moment experience with openness, curiosity, and acceptance—has moved from the margins of contemplative tradition to the center of evidence-based psychology. Research over the past three decades has established that mindfulness practices produce measurable changes in brain structure and function, improve symptoms of depression, anxiety, chronic pain, and stress, and enhance cognitive abilities including attention, working memory, and emotional regulation.
           </p>
         </div>
@@ -674,7 +674,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -737,7 +737,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Self-compassion—treating oneself with the same kindness, concern, and understanding that one would offer a good friend during times of difficulty—is one of the most powerful psychological resources available for emotional wellbeing, yet it is also one of the most culturally resisted. Many people believe that self-compassion is self-indulgent, that self-criticism is necessary for motivation, and that treating oneself kindly will lead to complacency.
           </p>
         </div>
@@ -787,7 +787,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -850,7 +850,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Resilience—the capacity to recover from adversity, adapt to challenging circumstances, and maintain psychological functioning in the face of stress—is widely regarded as a key determinant of psychological health. Yet resilience is also widely misunderstood.
           </p>
         </div>
@@ -905,7 +905,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -968,7 +968,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Gratitude—the recognition and appreciation of what is valuable and meaningful in one&apos;s life—has emerged as one of the most consistently studied and most reliably beneficial practices in positive psychology. Research demonstrates that gratitude interventions—structured practices for cultivating appreciation—produce measurable improvements in psychological wellbeing, physical health, sleep quality, relationship satisfaction, and resilience to stress.
           </p>
         </div>
@@ -1015,7 +1015,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1078,7 +1078,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Emotional agility—the capacity to navigate thoughts, feelings, and experiences with flexibility, openness, and values-guided action—represents a synthesis of decades of research in clinical and positive psychology. Developed by Susan David, the concept draws on the broader psychological flexibility framework of Acceptance and Commitment Therapy (ACT), which demonstrates that psychological health depends not on the content of one&apos;s thoughts and feelings but on the relationship one has with them.
           </p>
         </div>
@@ -1126,7 +1126,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1189,7 +1189,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Shame—the painful feeling of being fundamentally flawed, defective, or unworthy as a person—is one of the most powerful and most hidden human emotions. Unlike guilt, which focuses on a specific behavior (&quot;I did something bad&quot;), shame targets the self (&quot;I am bad&quot;).
           </p>
         </div>
@@ -1236,7 +1236,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1299,7 +1299,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Patience—the capacity to tolerate delay, discomfort, or frustration without becoming agitated or abandoning a course of action—is one of the most practically important and least examined psychological capacities. While patience is often treated as a personality trait (some people are patient, others are not), research reveals it as a set of cognitive and emotional skills that can be developed: the ability to manage the discomfort of waiting, to maintain commitment to long-term goals in the face of short-term temptation, and to tolerate the frustration of circumstances that cannot be immediately changed.
           </p>
         </div>
@@ -1346,7 +1346,7 @@ export const emotionalIntelligenceSelfregulationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

@@ -95,7 +95,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You already perform dozens of habits every day without thinking: brushing your teeth, making coffee, checking your phone after you wake up. What if you could hijack these existing routines and use them as launching pads for new behaviors you want to build?
           </p>
           <p className="mb-6">
@@ -277,7 +277,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
                     <li>After I make my bed, I will put on workout clothes.</li>
                     <li>After I put on workout clothes, I will do 5 minutes of stretching.</li>
                   </ol>
-                  <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+                  <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
                     This creates a 5-behavior chain, each one triggering the next. By the end, you're dressed and stretched---ready to exercise---without making a single decision.
                   </p>
                 </div>
@@ -294,7 +294,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
                     <li>After I write priorities, I will silence my phone and put it in a drawer.</li>
                     <li>After I put my phone away, I will set a 25-minute timer and start working.</li>
                   </ol>
-                  <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+                  <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
                     This stack transitions you from scattered to focused in under 3 minutes, using each small action as the cue for the next.
                   </p>
                 </div>
@@ -312,7 +312,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
                     <li>After I dim the lights, I will brew herbal tea.</li>
                     <li>After I brew tea, I will sit and read for 15 minutes.</li>
                   </ol>
-                  <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+                  <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
                     Each behavior signals to your brain that work mode is ending and rest mode is beginning, creating a smooth transition to sleep.
                   </p>
                 </div>
@@ -515,7 +515,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You walk into your kitchen and see a bowl of fruit on the counter. Without conscious thought, you grab an apple. The next day, the fruit bowl is replaced with a jar of cookies. You grab a cookie. Same you, same intention to eat healthy, different outcome---because the environment changed.
           </p>
           <p className="mb-6">
@@ -934,7 +934,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "I just need more willpower." This is the diagnosis most people give themselves when they fail to change a behavior. If only you had more discipline, more self-control, more strength to resist temptation---then you'd succeed. But what if the problem isn't your willpower? What if you're fighting the wrong battle entirely?
           </p>
           <p className="mb-6">
@@ -1288,7 +1288,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You reach for your phone before your eyes fully open. You check it while brushing your teeth, eating breakfast, commuting to work. You pull it out in the elevator, in line at the coffee shop, during commercial breaks. You check it one last time before bed. On average, you'll touch your phone 2,617 times today.
           </p>
           <p className="mb-6">
@@ -1630,7 +1630,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Habit trackers are everywhere: apps with streak counters, bullet journals with hand-drawn grids, wall calendars with satisfying X's marked in permanent marker. The promise is simple---track your behavior, and you'll do more of it. But does the research support this? And if tracking works, why do so many people abandon their trackers after a few weeks?
           </p>
           <p className="mb-6">
@@ -1829,7 +1829,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
                     <li>Some apps overcomplicate with too many features</li>
                   </ul>
                   <p className="mb-3"><strong>Best for:</strong> Digital natives, people who always have their phone, habits tied to specific times (reminders help)</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Popular apps: Streaks, Habitica, HabitBull, Done, Productive</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">Popular apps: Streaks, Habitica, HabitBull, Done, Productive</p>
                 </div>
               ),
             },
@@ -1853,7 +1853,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
                     <li>Requires setup (printing, drawing grids)</li>
                   </ul>
                   <p className="mb-3"><strong>Best for:</strong> People who prefer analog systems, habits done at home (morning routine, bedtime), visual learners who benefit from seeing the full month at once</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Popular formats: Bullet journal, wall calendar, printable PDFs, index cards</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">Popular formats: Bullet journal, wall calendar, printable PDFs, index cards</p>
                 </div>
               ),
             },

@@ -65,7 +65,7 @@ export const environmentalJusticeAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Environmental racism—the disproportionate siting of environmental hazards such as toxic waste facilities, industrial plants, highways, and polluting infrastructure in communities of color—is one of the most well-documented and persistent forms of structural discrimination in the United States and globally. First named by civil rights leader Benjamin Chavis in 1982, environmental racism describes a pattern in which race, more than income, predicts proximity to environmental hazards—and in which the mental health consequences of this proximity have been systematically ignored by both the environmental movement and the mental health establishment.
           </p>
         </div>
@@ -114,7 +114,7 @@ export const environmentalJusticeAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -177,7 +177,7 @@ export const environmentalJusticeAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Climate change is creating a new category of human displacement: millions of people worldwide are being forced to leave their homes—temporarily or permanently—because the environments they inhabit are becoming uninhabitable through sea-level rise, desertification, extreme weather events, water scarcity, or agricultural collapse. The Internal Displacement Monitoring Centre estimated that weather-related events displaced over 30 million people in 2020 alone, and the World Bank projects that by 2050, 216 million people across six regions could be forced to move within their own countries due to climate impacts.
           </p>
         </div>
@@ -230,7 +230,7 @@ export const environmentalJusticeAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -293,7 +293,7 @@ export const environmentalJusticeAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Natural disasters—earthquakes, hurricanes, floods, wildfires, tsunamis, and volcanic eruptions—expose millions of people annually to experiences of terror, loss, displacement, and community destruction that produce significant and lasting psychological consequences. Research consistently documents elevated rates of PTSD, depression, anxiety, substance use, and complicated grief following natural disasters, with effects that can persist for years and that ripple outward from directly affected individuals to their families, communities, and first responders.
           </p>
         </div>
@@ -341,7 +341,7 @@ export const environmentalJusticeAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -404,7 +404,7 @@ export const environmentalJusticeAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Water is so fundamental to survival that its absence or unreliability produces psychological effects as predictable and as devastating as any environmental stressor—yet the mental health consequences of water insecurity remain dramatically under-researched compared to other environmental determinants of health. Approximately 2.
           </p>
         </div>
@@ -454,7 +454,7 @@ export const environmentalJusticeAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -517,7 +517,7 @@ export const environmentalJusticeAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Air pollution is the world&apos;s largest environmental health risk, responsible for an estimated 6.7 million premature deaths annually.
           </p>
         </div>
@@ -561,7 +561,7 @@ export const environmentalJusticeAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -624,7 +624,7 @@ export const environmentalJusticeAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Heat is one of the most consistent environmental influences on human behavior and mental health, yet its psychological effects remain underappreciated in clinical practice. Research spanning decades and continents has documented that elevated temperatures are associated with increased aggression, increased suicide rates, increased psychiatric emergency department visits, impaired cognitive performance, disrupted sleep, and exacerbated symptoms across virtually every category of mental illness.
           </p>
         </div>
@@ -673,7 +673,7 @@ export const environmentalJusticeAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

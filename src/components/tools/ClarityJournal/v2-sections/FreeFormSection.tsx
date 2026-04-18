@@ -75,7 +75,7 @@ const FreeFormSection: React.FC<FreeFormSectionProps> = ({ onSave, onCrisisDetec
 
       {/* Text area */}
       <div>
-        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+        <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">
           Write freely
         </label>
         <textarea
@@ -83,7 +83,7 @@ const FreeFormSection: React.FC<FreeFormSectionProps> = ({ onSave, onCrisisDetec
           onChange={e => handleContentChange(e.target.value)}
           placeholder="What's on your mind..."
           rows={6}
-          className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500 resize-y min-h-[120px]"
+          className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500 resize-y min-h-[120px]"
         />
         <p className="text-xs text-slate-400 mt-1">{content.length} characters</p>
       </div>
@@ -94,13 +94,13 @@ const FreeFormSection: React.FC<FreeFormSectionProps> = ({ onSave, onCrisisDetec
           type="button"
           onClick={() => setIncludeInReport(!includeInReport)}
           className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-all ${
-            includeInReport ? 'bg-teal-600 border-teal-600' : 'border-slate-300 dark:border-slate-600'
+            includeInReport ? 'bg-teal-600 border-teal-600' : 'border-slate-300 dark:border-neutral-600'
           }`}
           aria-label="Toggle include in therapist report"
         >
           {includeInReport && <Check className="w-3 h-3 text-white" />}
         </button>
-        <span className="text-sm text-slate-700 dark:text-slate-300">Include this in my therapist report</span>
+        <span className="text-sm text-slate-700 dark:text-neutral-300">Include this in my therapist report</span>
       </div>
 
       <Button variant="primary" onClick={handleSave} className="w-full" disabled={!content.trim() || saved}>

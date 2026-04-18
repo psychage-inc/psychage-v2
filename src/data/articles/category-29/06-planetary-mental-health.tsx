@@ -65,7 +65,7 @@ export const planetaryMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Not all nature is psychologically equal. While parks, gardens, and urban green spaces provide documented mental health benefits, research increasingly suggests that wild nature—environments that are unmanaged, biodiverse, and characterized by the absence of human control—offers psychological effects that domesticated green spaces cannot fully replicate.
           </p>
         </div>
@@ -110,7 +110,7 @@ export const planetaryMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -173,7 +173,7 @@ export const planetaryMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The degree to which a person includes nature in their sense of self—their environmental identity—is one of the most consistent predictors of both psychological wellbeing and pro-environmental behavior. Research on nature connectedness, nature relatedness, and environmental identity converges on a striking finding: people who experience themselves as part of nature rather than separate from it report greater life satisfaction, more positive affect, more meaning in life, and greater vitality.
           </p>
         </div>
@@ -220,7 +220,7 @@ export const planetaryMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -283,7 +283,7 @@ export const planetaryMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Indigenous peoples worldwide have maintained systems of ecological knowledge, practice, and relationship with the natural world that are increasingly recognized as both scientifically sophisticated and psychologically profound. These knowledge systems—developed over millennia of intimate, reciprocal engagement with specific landscapes and ecosystems—embody an understanding of human-nature relationships that Western psychology is only now arriving at through empirical research: that human wellbeing is inseparable from ecological wellbeing, that the relationship between humans and nature is one of reciprocity rather than domination, and that the health of a person cannot be understood apart from the health of the land, water, and living systems they are embedded within.
           </p>
         </div>
@@ -328,7 +328,7 @@ export const planetaryMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -391,7 +391,7 @@ export const planetaryMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The Earth is currently experiencing its sixth mass extinction event—the first caused by a single species. Current rates of species loss are estimated at 100 to 1,000 times the natural background rate, with approximately one million species threatened with extinction according to the most comprehensive global assessment ever conducted.
           </p>
         </div>
@@ -435,7 +435,7 @@ export const planetaryMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -498,7 +498,7 @@ export const planetaryMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The ocean covers 71% of the Earth&apos;s surface, regulates the planet&apos;s climate, produces half of its oxygen, and sustains the livelihoods and food security of billions of people. It also exerts a profound influence on human psychology that research is only beginning to map.
           </p>
         </div>
@@ -540,7 +540,7 @@ export const planetaryMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -603,7 +603,7 @@ export const planetaryMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Forests are not merely ecological systems that provide timber, carbon sequestration, and biodiversity habitat. They are psychological environments that the human mind has evolved to respond to with measurable reductions in stress, improvements in mood, enhanced cognitive function, and increased feelings of vitality and wellbeing.
           </p>
         </div>
@@ -649,7 +649,7 @@ export const planetaryMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -712,7 +712,7 @@ export const planetaryMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The Anthropocene—the proposed geological epoch in which human activity has become the dominant influence on the planet&apos;s climate, geology, and ecosystems—presents psychological challenges that are without precedent in human experience. For the first time in the history of any species, one organism has become aware that it is transforming the conditions for all life on Earth, including its own.
           </p>
         </div>
@@ -757,7 +757,7 @@ export const planetaryMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -820,7 +820,7 @@ export const planetaryMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Environmental justice movements—community-organized responses to the disproportionate environmental burdens borne by low-income communities and communities of color—are typically understood as political and legal endeavors. But research increasingly documents that these movements serve a parallel psychological function: they provide collective healing for the psychological wounds inflicted by environmental injustice.
           </p>
         </div>
@@ -865,7 +865,7 @@ export const planetaryMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

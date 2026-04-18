@@ -20,11 +20,11 @@ const tiers = [
     title: 'Publicly Listed',
     description: 'From the U.S. NPI public registry. Not individually reviewed. Profile information may be limited.',
     colors: {
-      bg: 'bg-white dark:bg-gray-800/30',
-      border: 'border-gray-200/60 dark:border-gray-700/40',
-      icon: 'text-gray-500 dark:text-gray-400',
-      iconBg: 'bg-gray-50 dark:bg-gray-700/30',
-      title: 'text-gray-700 dark:text-gray-300',
+      bg: 'bg-white dark:bg-neutral-800/30',
+      border: 'border-gray-200/60 dark:border-neutral-700/40',
+      icon: 'text-gray-500 dark:text-neutral-400',
+      iconBg: 'bg-gray-50 dark:bg-neutral-700/30',
+      title: 'text-gray-700 dark:text-neutral-300',
     },
   },
 ];

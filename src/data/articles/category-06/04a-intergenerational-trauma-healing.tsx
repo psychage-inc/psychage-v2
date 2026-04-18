@@ -37,7 +37,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Trauma doesn't always end with the person who experienced it. Sometimes, pain echoes through generations --- shaping how families communicate, cope, and connect long after the original event.
           </p>
           <p className="mb-6">
@@ -193,7 +193,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Can the trauma your grandmother experienced change how your genes work? It sounds like science fiction, but emerging research in epigenetics suggests the answer might be yes.
           </p>
           <p className="mb-6">
@@ -310,7 +310,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "I sound just like my mother.", "I swore I'd never do what my father did, and here I am doing it." Breaking family patterns is one of the hardest --- and most important --- things you can do.
           </p>
           <p className="mb-6">
@@ -447,7 +447,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Some trauma doesn't happen to individuals --- it happens to entire communities. Slavery, genocide, colonization, forced displacement --- these collective wounds echo through generations, affecting families and communities today.
           </p>
           <p className="mb-6">
@@ -624,7 +624,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Over 100 million people worldwide have been forcibly displaced from their homes by war, persecution, or violence. The trauma of these experiences shapes not only survivors, but their children and grandchildren.
           </p>
           <p className="mb-6">

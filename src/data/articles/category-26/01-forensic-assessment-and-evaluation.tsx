@@ -65,7 +65,7 @@ export const forensicAssessmentAndEvaluationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Forensic psychological assessment sits at the intersection of two systems with fundamentally different goals: clinical psychology, which seeks to understand and help individuals, and the legal system, which seeks to resolve disputes and determine facts. When a court needs to know whether a defendant was sane at the time of an offense, whether a parent is fit for custody, whether a convicted person is likely to reoffend, or whether a claimant&apos;s psychological injury is genuine, it turns to forensic psychologists—professionals trained to translate psychological science into answers to legal questions.
           </p>
         </div>
@@ -109,7 +109,7 @@ export const forensicAssessmentAndEvaluationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -172,7 +172,7 @@ export const forensicAssessmentAndEvaluationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Can we predict who will be violent? This question—asked by courts making bail, commitment, sentencing, and release decisions—is one of the most consequential and ethically fraught in forensic psychology. The honest answer is: imperfectly, but substantially better than chance, and far better than clinical intuition alone.
           </p>
         </div>
@@ -214,7 +214,7 @@ export const forensicAssessmentAndEvaluationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -277,7 +277,7 @@ export const forensicAssessmentAndEvaluationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Child custody evaluations are among the most emotionally charged and professionally demanding assessments in forensic psychology. When parents cannot agree on custody arrangements, courts appoint forensic evaluators—psychologists or psychiatrists—to assess parenting capacity and recommend arrangements that serve the child&apos;s best interests.
           </p>
         </div>
@@ -324,7 +324,7 @@ export const forensicAssessmentAndEvaluationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -387,7 +387,7 @@ export const forensicAssessmentAndEvaluationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Eyewitness testimony is simultaneously the most compelling evidence in a courtroom and the leading cause of wrongful convictions. When a witness points at a defendant and says &quot;that&apos;s the person who did it,&quot; juries believe them—studies show that eyewitness identification is the single most persuasive form of evidence for jurors, more persuasive than DNA, fingerprints, or confessions.
           </p>
         </div>
@@ -436,7 +436,7 @@ export const forensicAssessmentAndEvaluationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -499,7 +499,7 @@ export const forensicAssessmentAndEvaluationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The idea that an innocent person would confess to a crime they did not commit strikes most people as incomprehensible. Why would anyone do that? This incredulity is precisely what makes false confessions so dangerous—jurors find them almost impossible to believe, which means that once an innocent person confesses, conviction is virtually certain.
           </p>
         </div>
@@ -543,7 +543,7 @@ export const forensicAssessmentAndEvaluationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -606,7 +606,7 @@ export const forensicAssessmentAndEvaluationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Criminal profiling—the practice of inferring an unknown offender&apos;s characteristics from the details of a crime—occupies a unique position in forensic psychology: enormously popular with the public, prominently featured in law enforcement, and poorly supported by scientific evidence. Television shows like Criminal Minds and Mindhunter have created a public image of profilers as psychological detectives who can deduce an offender&apos;s age, occupation, relationship history, and childhood from a crime scene.
           </p>
         </div>
@@ -651,7 +651,7 @@ export const forensicAssessmentAndEvaluationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -714,7 +714,7 @@ export const forensicAssessmentAndEvaluationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Malingering—the intentional fabrication or exaggeration of physical or psychological symptoms motivated by external incentives—is one of the most important and most difficult problems in forensic psychological assessment. When a defendant&apos;s mental state determines whether they go to prison or a hospital, when a plaintiff&apos;s psychological injuries determine the size of a financial award, when a soldier&apos;s PTSD symptoms determine whether they receive disability benefits, there are powerful incentives to appear more impaired than one actually is.
           </p>
         </div>
@@ -756,7 +756,7 @@ export const forensicAssessmentAndEvaluationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -819,7 +819,7 @@ export const forensicAssessmentAndEvaluationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Forensic neuropsychology sits at the intersection of brain science and the legal system—a meeting point where questions about cognitive function, brain injury, and neural pathology become questions about legal responsibility, competency, disability, and punishment. When a defendant claims that traumatic brain injury impaired their judgment, when a plaintiff alleges that medical malpractice caused cognitive decline, when a death row inmate&apos;s lawyers argue that frontal lobe damage diminished their capacity for moral reasoning, forensic neuropsychologists provide the assessments that inform these decisions.
           </p>
         </div>
@@ -865,7 +865,7 @@ export const forensicAssessmentAndEvaluationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

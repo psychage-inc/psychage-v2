@@ -328,7 +328,7 @@ const MindMate: React.FC = () => {
                         exit={{ opacity: 0, y: 50, scale: 0.9 }}
                         className="fixed bottom-6 right-6 z-[100] w-[90vw] max-w-[22.5rem] md:w-[22.5rem] font-sans"
                     >
-                        <div className="bg-white dark:bg-slate-950 rounded-3xl shadow-2xl shadow-black/10 border border-border p-6">
+                        <div className="bg-white dark:bg-neutral-950 rounded-3xl shadow-2xl shadow-black/10 border border-border p-6">
                             <div className="flex items-center justify-between mb-5">
                                 <div className="flex items-center gap-3">
                                     <div className="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -373,7 +373,7 @@ const MindMate: React.FC = () => {
                         className="fixed bottom-6 right-6 z-[100] w-[90vw] max-w-[25rem] md:w-[25rem] h-[600px] max-h-[80vh] flex flex-col font-sans"
                     >
                         {/* Clean Container */}
-                        <div className="absolute inset-0 bg-white dark:bg-slate-950 rounded-3xl shadow-2xl shadow-black/10 border border-border" />
+                        <div className="absolute inset-0 bg-white dark:bg-neutral-950 rounded-3xl shadow-2xl shadow-black/10 border border-border" />
 
                         {/* Header — minimal */}
                         <div className="relative z-10 px-5 py-4 border-b border-border flex items-center justify-between">

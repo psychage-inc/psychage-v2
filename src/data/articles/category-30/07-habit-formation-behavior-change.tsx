@@ -65,7 +65,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Habits—automatic behavioral responses triggered by contextual cues—account for an estimated 40–45% of daily human behavior. The morning routine, the route to work, the snack after lunch, the scroll through social media before bed—these are not the products of deliberate decision-making but of automated programs that execute with minimal conscious input.
           </p>
         </div>
@@ -111,7 +111,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -174,7 +174,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Willpower—the capacity to override impulses, resist temptations, and maintain goal-directed behavior in the face of competing desires—is widely regarded as the key to personal success. Research by Moffitt and colleagues found that childhood self-control predicted adult outcomes in health, wealth, and social functioning more strongly than intelligence or socioeconomic background.
           </p>
         </div>
@@ -214,7 +214,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -277,7 +277,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The gap between knowing what to do and actually doing it is one of the most frustrating and universal features of human psychology. The smoker knows that smoking causes cancer.
           </p>
         </div>
@@ -320,7 +320,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -383,7 +383,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Addiction—the compulsive engagement in a behavior despite harmful consequences—is one of the most misunderstood phenomena in psychology. Popular culture frames addiction as a failure of willpower, a moral weakness, or a free choice that the person could reverse if they simply decided to stop.
           </p>
         </div>
@@ -423,7 +423,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -486,7 +486,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Exercise is one of the most powerful interventions available for both physical and mental health—rivaling or exceeding medication for conditions including depression, anxiety, cognitive decline, and cardiovascular disease. Yet despite overwhelming evidence of its benefits and near-universal knowledge that exercise is &quot;good for you,&quot; the majority of adults in developed nations do not meet minimum physical activity guidelines.
           </p>
         </div>
@@ -529,7 +529,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -592,7 +592,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sleep—the daily period of unconsciousness that occupies roughly one-third of human life—is increasingly recognized as foundational to psychological and physical health. Chronic sleep insufficiency is associated with impaired cognitive function, emotional dysregulation, weakened immune function, increased risk of depression and anxiety, and elevated risk of cardiovascular disease, diabetes, and mortality.
           </p>
         </div>
@@ -634,7 +634,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -697,7 +697,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The psychology of eating is one of the most complex and consequential areas of behavioral science. Eating is not simply a response to hunger—it is influenced by emotions, social context, environmental cues, cognitive patterns, cultural norms, and the neurochemistry of reward.
           </p>
         </div>
@@ -745,7 +745,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -808,7 +808,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Digital technology—smartphones, social media, streaming platforms, and the broader ecosystem of attention-capturing applications—has transformed human behavior more rapidly and more profoundly than any technological innovation since the printing press. The average adult spends over four hours per day on their smartphone, checks it approximately 96 times daily, and reports that technology use often feels compulsive rather than intentional.
           </p>
         </div>
@@ -851,7 +851,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -914,7 +914,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Initiating behavior change is difficult. Maintaining it is harder.
           </p>
         </div>
@@ -959,7 +959,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1022,7 +1022,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every decision a person makes is influenced by how the options are presented—the order in which they appear, which option is the default, how the consequences are framed, and how much effort is required to choose each alternative. This influence is not incidental; it is a fundamental feature of human cognition that can be deliberately harnessed to help people make better decisions.
           </p>
         </div>
@@ -1067,7 +1067,7 @@ export const habitFormationBehaviorChangeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

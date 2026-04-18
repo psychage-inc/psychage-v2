@@ -119,7 +119,7 @@ export const socialAnxietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Walking into a room full of people feels like walking onto a stage where everyone is a critic. Every
             word you speak, every gesture you make is being judged --- harshly. The pounding heart, the flushed face,
             the mind going blank. This isn't just shyness or introversion. This is social anxiety disorder, and it
@@ -766,7 +766,7 @@ export const socialAnxietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You walk into a party, and immediately the voice starts: <em>"You look awkward. People are noticing.
             You're going to say something stupid. They don't want you here. Why did you even come?'</em> This isn't
             how others see you --- it's your inner critic, and in social anxiety, it's relentless.
@@ -1145,7 +1145,7 @@ export const socialAnxietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The spotlight turns on. All eyes are on you. Your heart races, your hands shake, your mind goes blank.
             Whether it's a presentation at work, a final exam, a musical performance, or speaking at a wedding,
             performance anxiety can turn high-stakes moments into experiences of pure dread.
@@ -1658,7 +1658,7 @@ export const socialAnxietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Meetings where you're expected to speak. Presentations in front of colleagues. Networking events. Small
             talk in the break room. Lunch with coworkers. For people with social anxiety, the workplace can feel like
             a minefield of judgment and evaluation --- every day.
@@ -2073,7 +2073,7 @@ export const socialAnxietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You scroll through Instagram. Everyone's life looks better than yours --- more friends, more adventures,
             more success. You post something, then obsessively check for likes and comments, heart sinking when the
             response isn't what you hoped. You see others getting together without you. The anxiety builds: 'I'm

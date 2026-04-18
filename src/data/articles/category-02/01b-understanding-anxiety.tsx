@@ -128,7 +128,7 @@ export const understandingAnxietyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Why do some people develop anxiety disorders while others don't? The answer isn't simple. Anxiety
             emerges from a complex interaction between your genes, your brain chemistry, your life
             experiences, and your environment. Recent research is revealing how these factors work together.
@@ -755,7 +755,7 @@ export const understandingAnxietyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Anxiety doesn't usually appear overnight as a full-blown disorder. It typically develops
             gradually, starting with mild symptoms that worsen over time if left unaddressed. Understanding
             this progression can help you intervene early --- before anxiety becomes deeply entrenched.
@@ -1338,7 +1338,7 @@ export const understandingAnxietyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Anxiety disorders are the most common class of mental health conditions worldwide, affecting
             hundreds of millions of people. Understanding who is affected, when, and how provides crucial
             context for both individuals and healthcare systems.
@@ -1911,7 +1911,7 @@ export const understandingAnxietyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your anxiety isn't a design flaw. It's a feature --- an ancient survival system that kept your
             ancestors alive long enough to have children, who eventually had you. Understanding why anxiety
             evolved can transform it from an enemy into a misguided protector.
@@ -2542,7 +2542,7 @@ export const understandingAnxietyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Racing heart. Sweaty palms. Butterflies in your stomach. Rapid breathing. Quick thoughts. Are you
             anxious or excited? Your body can't tell the difference --- the same physiological arousal
             underlies both emotions. The difference is entirely in how your brain interprets it.

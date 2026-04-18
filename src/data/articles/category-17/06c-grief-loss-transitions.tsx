@@ -72,7 +72,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When parents age and need care, adult siblings often face a test of their relationship unlike any since childhood. The stress of caregiving decisions, unequal contributions, and resurfacing family dynamics can either strengthen bonds or create rifts that last beyond the parent's death.
           </p>
           <p className="mb-6">
@@ -310,7 +310,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Retirement is supposed to be a time of rest and security after decades of work. But for millions of older adults, it becomes a period of chronic financial stress when savings run short, expenses exceed income, and the years stretch longer than the money.
           </p>
           <p className="mb-6">
@@ -534,7 +534,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             After 38 years of marriage, Susan filed for divorce at 64. To friends and family, they seemed like a stable couple. But beneath the surface, decades of emotional distance had created two people living parallel lives under the same roof, no longer truly connected.
           </p>
           <p className="mb-6">
@@ -751,7 +751,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             As we age and contemplate mortality, a natural question arises: What did my life mean? Life review therapy offers a structured way to answer that question—not with judgment but with integration, acceptance, and peace.
           </p>
           <p className="mb-6">
@@ -912,7 +912,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Contemporary Western culture treats death as a failure to be avoided at all costs. But preparing for death—practically, emotionally, and spiritually—is one of the most important developmental tasks of later life, paradoxically enhancing the quality of whatever time remains.
           </p>
           <p className="mb-6">

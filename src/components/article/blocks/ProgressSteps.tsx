@@ -89,7 +89,7 @@ const ProgressSteps: React.FC<ProgressStepsProps> = ({
                             className="relative"
                         >
                             {/* Step dot/icon */}
-                            <div className="absolute -left-8 top-0 w-8 h-8 rounded-full bg-teal-100 dark:bg-teal-900/30 border-2 border-white dark:border-gray-900 flex items-center justify-center z-10">
+                            <div className="absolute -left-8 top-0 w-8 h-8 rounded-full bg-teal-100 dark:bg-teal-900/30 border-2 border-white dark:border-neutral-900 flex items-center justify-center z-10">
                                 {step.icon || (
                                     <span className="text-xs font-bold text-teal-600 dark:text-teal-400">
                                         {i + 1}

@@ -65,7 +65,7 @@ export const militaryFamiliesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Approximately 1.7 million children in the United States have at least one parent serving in the active-duty military, with an additional million connected to Reserve and National Guard families—a population whose developmental experiences are shaped by the unique demands of military life in ways that are both challenging and, in many cases, growth-promoting.
           </p>
         </div>
@@ -109,7 +109,7 @@ export const militaryFamiliesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

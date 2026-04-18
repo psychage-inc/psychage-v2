@@ -115,7 +115,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your fingers find your scalp automatically when you're stressed, pulling strand after strand without conscious thought. You pick at your skin while reading, leaving scabs and scars you're embarrassed to explain. You bite your nails down to the quick during meetings, hiding your hands afterward. These aren't just 'bad habits"---they're body-focused repetitive behaviors (BFRBs), and they affect millions of people.
           </p>
           <p className="mb-6">
@@ -651,7 +651,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It's 11 PM. You know you should go to bed---you have to wake up at 6:30 AM. But you've been working, running errands, and handling responsibilities all day. This is the first moment that feels like 'your time." So you scroll social media, watch YouTube videos, or binge another episode, stealing back hours that belong to sleep. This is revenge bedtime procrastination---and it's more common than you think.
           </p>
           <p className="mb-6">
@@ -1127,7 +1127,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're not an alcoholic. You don't drink every day. You're not missing work or destroying relationships. But you've noticed your drinking has crept up---two glasses of wine with dinner has become three or four. Weekend social events leave you hungover more often than you'd like. You're thinking more about alcohol than feels comfortable. You want to cut back---but you don't want to quit entirely.
           </p>
           <p className="mb-6">
@@ -1660,7 +1660,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're stressed about work, so you browse Amazon. Within an hour, you've bought three things you don't need. A package arrives, and you feel a brief rush of excitement---then guilt when you see your credit card statement. Your closet is full of clothes with tags still on. You've hidden purchases from your partner. Shopping makes you feel better temporarily, but the relief never lasts. This might be compulsive buying disorder.
           </p>
           <p className="mb-6">
@@ -2219,7 +2219,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You decide to quit biting your nails. You commit to "just stop." For a few hours---maybe even a day---you succeed through sheer willpower. But then your hand moves to your mouth automatically while you're reading, and before you realize it, you're biting again. The habit hasn't gone anywhere. It's been waiting, and the moment your attention lapses, it returns. This is why elimination rarely works.
           </p>
           <p className="mb-6">

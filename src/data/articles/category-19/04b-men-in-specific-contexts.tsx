@@ -76,7 +76,7 @@ export const menInSpecificContextsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Drive through any rural county and you will see the outward markers of resilience:
             working farms, small businesses, communities that take care of their own. What you
             will not see is the mental health crisis unfolding behind closed doors --- the farmer
@@ -488,7 +488,7 @@ export const menInSpecificContextsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             He spends four hours a day on platforms that make him feel angry, inadequate, or
             both. His feed is full of men with perfect bodies, perfect lifestyles, and confident
             opinions about everything. He knows it is not real. He scrolls anyway. And every
@@ -895,7 +895,7 @@ export const menInSpecificContextsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Military service asks something of men that no other profession does: the willingness
             to place their bodies and minds in conditions of extreme danger, sustained stress, and
             moral complexity --- and then, when the mission is over, to return to civilian life as
@@ -1321,7 +1321,7 @@ export const menInSpecificContextsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The men who build our houses, fix our roads, wire our buildings, and drive our goods
             across the country are dying by suicide at rates that should alarm everyone. Construction
             workers alone have suicide rates 3.7 times the national average --- higher than military
@@ -1723,7 +1723,7 @@ export const menInSpecificContextsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             He used to know exactly who he was. He was the provider --- the one who went to work,
             brought home a paycheck, and built stability for his family. Then the layoff came.
             Or the company closed. Or the industry shifted. And suddenly the question "what do

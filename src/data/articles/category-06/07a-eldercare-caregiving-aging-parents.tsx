@@ -61,7 +61,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your teenager needs help with college applications. Your mother just fell and broke her hip. Your boss wants the report by Friday. You're exhausted, stretched impossibly thin, and feel guilty about everything you can't do.
           </p>
           <p className="mb-6">
@@ -384,7 +384,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You haven't slept through the night in months. You snap at your family. You've stopped exercising, seeing friends, doing anything for yourself. Caring for your aging parent has consumed your life --- and you're drowning.
           </p>
           <p className="mb-6">
@@ -691,7 +691,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your father's driving is dangerous. Your mother's finances are a mess. You need to talk about end-of-life wishes. But every time you try, they shut down or get defensive. These conversations feel impossible --- but they're necessary.
           </p>
           <p className="mb-6">
@@ -1057,7 +1057,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your mother doesn't remember your name. Your father, once vibrant, sits staring blankly. They're still alive, but the person you knew is slowly disappearing. You're grieving --- but they haven't died yet.
           </p>
           <p className="mb-6">
@@ -1398,7 +1398,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Who are you?" your mother asks. You're her daughter. You've told her this five times today. She's confused, sometimes afraid, occasionally angry. The person you knew is disappearing, and it's breaking your heart.
           </p>
           <p className="mb-6">

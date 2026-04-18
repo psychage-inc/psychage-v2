@@ -65,7 +65,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             First responders—police officers, firefighters, paramedics, emergency medical technicians, and emergency dispatchers—run toward the danger that everyone else runs from. This occupational mandate exposes them to a volume and intensity of traumatic events that few other professions encounter: violent death, severe injury, child fatalities, mass casualty incidents, prolonged suffering, and threats to their own lives.
           </p>
         </div>
@@ -108,7 +108,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -171,7 +171,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Police officers operate in a unique occupational environment that combines chronic organizational stress with acute traumatic exposure—a dual burden that produces mental health consequences distinct from those experienced by other first responder populations. While public attention often focuses on the dramatic incidents of policing—shootings, pursuits, violent confrontations—research consistently shows that organizational stressors (bureaucratic demands, shift work, inadequate resources, perceived lack of support from administration, negative public perception) are equal or greater contributors to officer psychological distress than operational stressors.
           </p>
         </div>
@@ -215,7 +215,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -278,7 +278,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Firefighters occupy a unique position among first responders—they are consistently ranked among the most trusted and admired professions while simultaneously experiencing rates of PTSD, depression, substance use, and suicide that far exceed the general population. The firefighter&apos;s occupational profile combines acute traumatic exposure (structural fires, motor vehicle accidents, medical emergencies, mass casualty incidents, child fatalities) with chronic physical hazards (carcinogen exposure, cardiovascular strain, musculoskeletal injury) and systemic stressors (24-48 hour shifts, sleep disruption, interpersonal conflict in close-quarters living, organizational dysfunction).
           </p>
         </div>
@@ -321,7 +321,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -384,7 +384,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Emergency medical services (EMS) professionals—paramedics and emergency medical technicians—occupy a uniquely demanding position within the first responder ecosystem. They provide the most intimate contact with human suffering of any first responder profession: performing invasive medical procedures on strangers in chaotic environments, making life-and-death decisions with limited information and resources, and bearing witness to the full spectrum of human pain—from cardiac arrests and overdoses to traumatic injuries, child abuse, and death.
           </p>
         </div>
@@ -429,7 +429,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -492,7 +492,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Emergency dispatchers—the 911 telecommunicators who answer emergency calls, gather critical information, coordinate response resources, and provide life-saving instructions—are the first point of contact in every emergency yet remain the most overlooked population in first responder mental health research and support. Dispatchers experience trauma not through direct physical presence but through auditory immersion: they listen to victims screaming, callers dying, parents discovering dead children, and domestic violence occurring in real time—all while maintaining calm composure, extracting critical information, and coordinating emergency response.
           </p>
         </div>
@@ -535,7 +535,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -598,7 +598,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Substance use among first responders—particularly alcohol, but also prescription medications, nicotine, and other substances—is both elevated above general population rates and deeply embedded in occupational culture. Research consistently documents that first responders use alcohol at rates significantly higher than the general population, with hazardous drinking patterns reported by 25–56% of police officers, 29–58% of firefighters, and 25–40% of EMS personnel.
           </p>
         </div>
@@ -641,7 +641,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -704,7 +704,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When a first responder puts on the uniform, the entire family serves. Partners, children, and parents of police officers, firefighters, paramedics, and dispatchers live with the consequences of first responder service in ways that are profoundly felt but rarely acknowledged.
           </p>
         </div>
@@ -750,7 +750,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -813,7 +813,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Correctional officers work in one of the most psychologically toxic environments of any occupation—yet they are among the most neglected populations in first responder mental health research and support. Approximately 450,000 correctional officers in the United States operate in environments defined by constant threat of violence, chronic understaffing, mandatory overtime, exposure to human suffering and degradation, and the moral complexity of maintaining custody over a population that includes individuals with severe mental illness, substance use disorders, and histories of extreme trauma.
           </p>
         </div>
@@ -858,7 +858,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -921,7 +921,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Wildland firefighters—the hotshot crews, smokejumpers, engine crews, and support personnel who battle wildfires across millions of acres annually—occupy a unique niche within the first responder ecosystem that produces psychological demands distinct from those of structural firefighting. Wildland firefighters deploy for weeks or months to fire lines where they work 16-hour shifts in extreme heat, carry 45-pound packs through rugged terrain, sleep in spike camps and fire stations, and face an unpredictable adversary whose behavior is driven by weather, topography, and fuel conditions rather than human action.
           </p>
         </div>
@@ -961,7 +961,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1024,7 +1024,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Search and rescue (SAR) personnel—the mountain rescue teams, urban search and rescue (USAR) specialists, water rescue operators, wilderness search volunteers, and disaster response teams who locate and recover missing, injured, or deceased individuals—face a psychological burden that is both shared with and distinct from other first responder populations. SAR operations combine the physical demands of operating in hostile environments (mountains, floodwaters, collapsed structures, wilderness) with the emotional demands of searching for individuals who may be found alive, injured, or dead—and sometimes not found at all.
           </p>
         </div>
@@ -1069,7 +1069,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

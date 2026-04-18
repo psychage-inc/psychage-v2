@@ -68,7 +68,7 @@ export const digitalCultureSocietyArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A woman opens her phone on a Tuesday morning and sees a notification: &ldquo;It&rsquo;s your friend Sarah&rsquo;s birthday! Write on her timeline.&rdquo; Sarah died eight months ago. The algorithm does not know this. The notification arrives without warning, without context, and without any understanding of the grief it rekindles. This is the reality of loss in a digital world &mdash; the dead persist in our devices, appearing in our feeds, our photo memories, our suggested contacts, at times and in ways we cannot predict or control.
           </p>
           <p className="mb-6">
@@ -488,7 +488,7 @@ export const digitalCultureSocietyArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Open any social media platform, streaming service, or news aggregator, and the content you see has been selected for you by an algorithm. Not arranged randomly, not presented in the order it was created, but specifically chosen based on predictions about what will keep you engaged the longest. These recommendation systems process thousands of signals &mdash; your past behavior, your demographics, what similar users engaged with, the time of day, your location &mdash; to construct an information environment tailored to your predicted preferences. The result is that no two people see the same internet, and very few people see the internet they would choose if they were making the selections themselves.
           </p>
           <p className="mb-6">
@@ -800,7 +800,7 @@ export const digitalCultureSocietyArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In 2012, a teenager posted a series of politically charged comments on a social media platform. They were sixteen, still forming their views, writing with the confidence and carelessness that characterizes adolescence. A decade later, now a 26-year-old professional with entirely different beliefs, those posts resurfaced when a potential employer searched their name. The job offer was rescinded. The person they had become was judged by the person they had been at sixteen &mdash; and the internet had ensured that the evidence of who they were at sixteen was just as accessible as who they were today.
           </p>
           <p className="mb-6">
@@ -1151,7 +1151,7 @@ export const digitalCultureSocietyArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For many autistic people, the internet was the first environment that felt designed for them. Text-based communication removes the need to process facial expressions, tone of voice, and body language in real time. Customizable settings allow visual and auditory environments to be adjusted for sensory comfort. Asynchronous interaction provides time to process and compose responses without the pressure of immediate social feedback. None of this was intentional &mdash; digital technology was not designed with autistic users in mind &mdash; but the structural features of digital communication happen to align with many autistic cognitive strengths in ways that physical environments often do not.
           </p>
           <p className="mb-6">
@@ -1510,7 +1510,7 @@ export const digitalCultureSocietyArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There is a microphone in your kitchen that is always on. It belongs to a corporation, and it is listening for a specific word &mdash; but it hears everything else along the way. The smart speaker that plays your music, sets your timers, and answers your questions is also, by engineering necessity, continuously monitoring the audio in your home to detect when you say its activation command. This is not a conspiracy or a malfunction. It is how the technology works. And research is beginning to reveal that living in an environment that is always listening changes how people think, communicate, and feel in their own homes.
           </p>
           <p className="mb-6">

@@ -65,7 +65,7 @@ export const transitionReintegrationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The transition from military to civilian life is, at its core, an identity crisis. Military service does not merely provide a job—it provides a total identity: a clearly defined role, a community of belonging, a hierarchy that organizes relationships, a mission that provides purpose, a culture that dictates values, and a uniform that communicates to the world who you are and where you fit.
           </p>
         </div>
@@ -110,7 +110,7 @@ export const transitionReintegrationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -173,7 +173,7 @@ export const transitionReintegrationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Employment is one of the most critical determinants of successful military-to-civilian transition—and one of the most complicated. Veterans bring exceptional skills to the civilian workforce: leadership under pressure, team coordination, problem-solving in complex environments, discipline, adaptability, and the capacity to perform under conditions that would overwhelm most civilians.
           </p>
         </div>
@@ -216,7 +216,7 @@ export const transitionReintegrationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

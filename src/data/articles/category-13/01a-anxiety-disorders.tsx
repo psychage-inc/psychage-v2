@@ -132,7 +132,7 @@ export const anxietyDisordersArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Imagine waking up every day with a knot in your stomach, your mind already racing through a list of things that could go wrong. You worry about work, your health, your family, finances, and a thousand small details that others seem to brush off easily. This is the daily reality for people living with Generalized Anxiety Disorder (GAD).
           </p>
           <p className="mb-6">
@@ -548,7 +548,7 @@ export const anxietyDisordersArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Picture this: You are invited to a party, and instead of feeling excited, your stomach drops. You imagine everyone staring at you, judging you, noticing every awkward thing you say or do. So you decline the invitation. Again. This is not shyness. This is social anxiety disorder.
           </p>
           <p className="mb-6">
@@ -867,7 +867,7 @@ export const anxietyDisordersArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your heart is pounding. You cannot catch your breath. Your chest feels tight, like someone is sitting on it. You feel dizzy, nauseous, detached from reality. You are convinced you are dying. But you are not. You are having a panic attack.
           </p>
           <p className="mb-6">
@@ -1241,7 +1241,7 @@ export const anxietyDisordersArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You know your fear is irrational. A spider the size of a coin cannot hurt you. Flying is statistically the safest form of travel. Yet when you encounter the object of your phobia, logic disappears. Your heart races, your palms sweat, and all you can think about is escape.
           </p>
           <p className="mb-6">
@@ -1590,7 +1590,7 @@ export const anxietyDisordersArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             At first, you avoid the subway because you had a panic attack there once. Then you stop going to the grocery store because it feels too crowded. Soon, you cannot leave your house without intense fear. Your world has shrunk to the size of your living room. This is agoraphobia.
           </p>
           <p className="mb-6">

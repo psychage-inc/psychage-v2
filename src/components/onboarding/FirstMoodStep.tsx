@@ -87,7 +87,7 @@ const FirstMoodStep: React.FC<FirstMoodStepProps> = ({ userId, onNext, onBack })
                                 'flex flex-col items-center gap-2 p-3 sm:p-4 rounded-2xl border-2 transition-colors min-w-[60px]',
                                 isSelected
                                     ? 'border-current shadow-md'
-                                    : 'border-border hover:border-gray-300 dark:hover:border-gray-600'
+                                    : 'border-border hover:border-gray-300 dark:hover:border-neutral-600'
                             )}
                             style={isSelected ? { borderColor: option.color } : undefined}
                         >

@@ -101,7 +101,7 @@ const DashboardSummaryCards: React.FC<DashboardSummaryCardsProps> = ({
           )}
         >
           <div className="mb-2">{card.icon}</div>
-          <div className="text-xs font-medium text-gray-500 dark:text-gray-400">
+          <div className="text-xs font-medium text-gray-500 dark:text-neutral-400">
             {card.label}
           </div>
           <div className="text-xl font-bold font-display">{card.value}</div>
@@ -112,7 +112,7 @@ const DashboardSummaryCards: React.FC<DashboardSummaryCardsProps> = ({
             </div>
           )}
           {(card as any).extra && (
-            <div className="text-[10px] text-gray-400 dark:text-gray-500 mt-1">
+            <div className="text-[10px] text-gray-400 dark:text-neutral-500 mt-1">
               {(card as any).extra}
             </div>
           )}

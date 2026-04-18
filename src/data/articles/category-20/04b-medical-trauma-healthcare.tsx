@@ -79,7 +79,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For most adults, a blood draw is an inconvenience. For a four-year-old, it can be a moment
             of profound terror --- an experience where strangers hold you down, a sharp object pierces
             your skin, and the people who are supposed to protect you stand by and let it happen.
@@ -195,7 +195,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
             content: (
               <div className="space-y-3">
                 <p className="font-medium text-gray-900 dark:text-white">Common signs of medical traumatic stress in young children:</p>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                   <li>Regression to earlier behaviors --- bedwetting, thumb-sucking, baby talk</li>
                   <li>Increased separation anxiety and clinginess</li>
                   <li>Repetitive play that reenacts medical procedures</li>
@@ -211,7 +211,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
             content: (
               <div className="space-y-3">
                 <p className="font-medium text-gray-900 dark:text-white">Common signs in school-age children:</p>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                   <li>Avoidance of anything related to hospitals, doctors, or medical topics</li>
                   <li>Difficulty concentrating at school or declining academic performance</li>
                   <li>Physical complaints (stomachaches, headaches) with no medical explanation</li>
@@ -227,7 +227,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
             content: (
               <div className="space-y-3">
                 <p className="font-medium text-gray-900 dark:text-white">Common signs in adolescents:</p>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                   <li>Emotional numbness or detachment from peers and family</li>
                   <li>Risk-taking behavior or substance use as a coping mechanism</li>
                   <li>Refusal to attend medical appointments or follow treatment plans</li>
@@ -586,7 +586,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You have had the test. The blood has been drawn, the scan has been completed, the biopsy
             has been taken. And now begins what many people describe as the worst part of the entire
             medical experience --- not the procedure itself, but the waiting. The hours, days, or
@@ -1019,7 +1019,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
             </p>
           </ArticleCallout>
 
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 mt-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 mt-8 leading-relaxed">
             There is no preparation for the words "there is nothing more we can do." No amount
             of medical literacy, emotional resilience, or philosophical wisdom fully prepares a
             person for the moment when their diagnosis becomes terminal. And yet, within that
@@ -1370,7 +1370,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             On the day you receive a transplant, you are given the most extraordinary gift one
             human being can offer another --- a piece of their body, entrusted to yours, so that
             you might live. The medical narrative calls this a second chance, a miracle, a

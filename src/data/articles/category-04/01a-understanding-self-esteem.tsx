@@ -94,7 +94,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Self-esteem, self-worth, and self-confidence are often used interchangeably in everyday conversation. But in psychology, these terms represent distinct concepts with different implications for your mental health and wellbeing.
           </p>
           <p className="mb-6">
@@ -420,7 +420,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Self-esteem doesn't appear out of nowhere. It develops through years of experiences, relationships, and messages you receive about who you are and what you're worth. Understanding where your self-esteem comes from is the first step toward reshaping it.
           </p>
           <p className="mb-6">
@@ -750,7 +750,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Low self-esteem isn't just feeling bad about yourself occasionally. It's a persistent, pervasive pattern of negative self-evaluation that colors how you interpret experiences, relate to others, and navigate the world.
           </p>
           <p className="mb-6">
@@ -1156,7 +1156,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             High self-esteem isn't always healthy, and low self-esteem isn't always the problem. What matters just as much is the stability and foundation of your self-esteem --- whether it's fragile, contingent, or truly secure.
           </p>
           <p className="mb-6">
@@ -1560,7 +1560,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "I am lovable. I am successful. I am confident." Positive affirmations are everywhere --- in self-help books, therapy apps, and motivational posters. But research reveals a surprising truth: for people who need them most, they can actually make things worse.
           </p>
           <p className="mb-6">

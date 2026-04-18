@@ -19,13 +19,13 @@ const CredentialsStep: React.FC<Props> = ({ formData, updateField, filters, filt
       <h2 className="font-display font-bold text-2xl text-gray-900 dark:text-white mb-2">
         Professional Credentials
       </h2>
-      <p className="text-gray-500 dark:text-gray-400">
+      <p className="text-gray-500 dark:text-neutral-400">
         Verify your identity and professional standing.
       </p>
     </div>
 
     {/* NPI Verification (optional) */}
-    <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm">
+    <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 border border-gray-100 dark:border-neutral-800 shadow-sm">
       <NPIVerificationStep
         onVerified={(result, npiNumber) => {
           updateField('npiVerification', result);
@@ -45,7 +45,7 @@ const CredentialsStep: React.FC<Props> = ({ formData, updateField, filters, filt
     {/* License */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
-        <label htmlFor="license_number" className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">
+        <label htmlFor="license_number" className="block text-sm font-semibold text-gray-700 dark:text-neutral-200 mb-1.5">
           License Number
         </label>
         <Input
@@ -57,7 +57,7 @@ const CredentialsStep: React.FC<Props> = ({ formData, updateField, filters, filt
         />
       </div>
       <div>
-        <label htmlFor="license_state" className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">
+        <label htmlFor="license_state" className="block text-sm font-semibold text-gray-700 dark:text-neutral-200 mb-1.5">
           License State
         </label>
         <select
@@ -76,7 +76,7 @@ const CredentialsStep: React.FC<Props> = ({ formData, updateField, filters, filt
 
     {/* Provider Type */}
     <div>
-      <label htmlFor="provider_type_id" className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">
+      <label htmlFor="provider_type_id" className="block text-sm font-semibold text-gray-700 dark:text-neutral-200 mb-1.5">
         Provider Type *
       </label>
       {filtersLoading ? (
@@ -101,7 +101,7 @@ const CredentialsStep: React.FC<Props> = ({ formData, updateField, filters, filt
 
     {/* Credentials Suffix */}
     <div>
-      <label htmlFor="credentials_suffix" className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">
+      <label htmlFor="credentials_suffix" className="block text-sm font-semibold text-gray-700 dark:text-neutral-200 mb-1.5">
         Credentials Suffix *
       </label>
       <Input

@@ -85,7 +85,7 @@ export const healthyDigitalLifeArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There is a growing gap between how much time we spend connected to digital devices and
             how much time our nervous systems can actually tolerate it. The average adult now spends
             more than seven hours per day looking at screens, and for many people the boundary between
@@ -730,7 +730,7 @@ export const healthyDigitalLifeArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Raising children in the digital age presents a challenge that no previous generation of
             parents has faced: how to prepare children for a world saturated with technology while
             protecting the developmental processes that screens can disrupt. The instinct to either
@@ -1344,7 +1344,7 @@ export const healthyDigitalLifeArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Humans have organized their days around rituals for as long as we have had days to
             organize. Morning routines, shared meals, evening gatherings, bedtime practices --- these
             repeated, intentional actions have served not just practical purposes but psychological

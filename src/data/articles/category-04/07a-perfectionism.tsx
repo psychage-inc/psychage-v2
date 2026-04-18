@@ -95,7 +95,7 @@ export const perfectionismArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Perfectionism isn't about wanting to do well. It's about believing your worth depends on being flawless---and punishing yourself when you're not.
           </p>
           <p className="mb-6">
@@ -404,7 +404,7 @@ export const perfectionismArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Not all perfectionism is the same. The type you experience determines its impact on your life and the strategies that will help most.
           </p>
           <p className="mb-6">
@@ -712,7 +712,7 @@ export const perfectionismArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Perfectionism promises excellence but delivers the opposite: paralysis, exhaustion, and deep dissatisfaction.
           </p>
           <p className="mb-6">
@@ -1023,7 +1023,7 @@ export const perfectionismArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Good enough" isn't settling---it's wisdom. It's recognizing that perfection is impossible, unnecessary, and actually counterproductive.
           </p>
           <p className="mb-6">
@@ -1312,7 +1312,7 @@ export const perfectionismArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             People-pleasing looks like kindness but feels like prison. You say yes when you mean no, hide your needs, and shape yourself to what you think others want.
           </p>
           <p className="mb-6">

@@ -54,7 +54,7 @@ const ProvidersLandingPage: React.FC = () => {
           >
             <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-text-primary mb-4 tracking-tight">
               Find a Mental Health Provider{' '}
-              <span className="text-gray-400 dark:text-gray-500">You Can Trust</span>
+              <span className="text-text-tertiary">You Can Trust</span>
             </h1>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-10">
               Search over 400,000 verified therapists, psychologists, and counselors across all 50 states.
@@ -86,8 +86,8 @@ const ProvidersLandingPage: React.FC = () => {
                 transition={{ delay: i * 0.1 }}
                 className="text-center"
               >
-                <div className="w-12 h-12 rounded-2xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center mx-auto mb-3">
-                  <item.icon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
+                <div className="w-12 h-12 rounded-2xl bg-surface-hover flex items-center justify-center mx-auto mb-3">
+                  <item.icon className="w-6 h-6 text-text-tertiary" />
                 </div>
                 <h3 className="font-display font-bold text-sm text-text-primary mb-1">{item.label}</h3>
                 <p className="text-xs text-text-secondary">{item.description}</p>
@@ -173,7 +173,7 @@ const ProvidersLandingPage: React.FC = () => {
                 Grow Your Practice,{' '}
                 <span className="text-teal-400">Reach More Patients</span>
               </h2>
-              <p className="text-lg text-gray-400 mb-8 max-w-lg leading-relaxed">
+              <p className="text-lg text-text-tertiary mb-8 max-w-lg leading-relaxed">
                 Join 400,000+ providers on the largest free mental health directory. No hidden fees, no commissions — patients find and contact you directly.
               </p>
 
@@ -198,7 +198,7 @@ const ProvidersLandingPage: React.FC = () => {
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
                     <div className="text-2xl font-display font-bold text-white">{stat.value}</div>
-                    <div className="text-xs text-gray-500 font-medium">{stat.label}</div>
+                    <div className="text-xs text-text-tertiary font-medium">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -248,7 +248,7 @@ const ProvidersLandingPage: React.FC = () => {
                       <span className="text-[11px] font-bold text-teal-500 uppercase tracking-widest">Step {item.step}</span>
                     </div>
                     <h3 className="font-display font-bold text-white text-lg mb-1">{item.title}</h3>
-                    <p className="text-sm text-gray-400 leading-relaxed">{item.description}</p>
+                    <p className="text-sm text-text-tertiary leading-relaxed">{item.description}</p>
                   </div>
                 </motion.div>
               ))}

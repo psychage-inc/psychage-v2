@@ -125,11 +125,11 @@ const ProviderProfilePage: React.FC = () => {
         {/* Footer */}
         <div className="mt-12 text-center space-y-2">
           {provider.verified_at && (
-            <p className="text-xs text-gray-400 dark:text-gray-500">
+            <p className="text-xs text-text-tertiary">
               Credentials last verified: {new Date(provider.verified_at).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
             </p>
           )}
-          <p className="text-xs text-gray-400 dark:text-gray-500">
+          <p className="text-xs text-text-tertiary">
             See something wrong?{' '}
             <a
               href={`mailto:info@psychage.com?subject=Provider Profile Concern: ${provider.display_name}&body=Provider ID: ${provider.id}%0A%0APlease describe your concern:`}

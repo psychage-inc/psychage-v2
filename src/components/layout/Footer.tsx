@@ -7,6 +7,7 @@ import {
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import CrisisBanner from './CrisisBanner';
+import { useReducedMotion } from '@/hooks/useReducedMotion';
 
 // interface FooterProps { }
 
@@ -19,6 +20,7 @@ interface FooterLink {
 const Footer: React.FC = () => {
   const footerRef = useRef<HTMLDivElement>(null);
   const currentYear = new Date().getFullYear();
+  const reduced = useReducedMotion();
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -80,7 +82,7 @@ const Footer: React.FC = () => {
         {/* Footer Hero / Statement */}
         <div className="flex flex-col lg:flex-row justify-between items-start mb-24 gap-12">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={reduced ? false : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
@@ -96,7 +98,7 @@ const Footer: React.FC = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={reduced ? false : { opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
@@ -113,7 +115,7 @@ const Footer: React.FC = () => {
         </div>
 
         <motion.div
-          initial={{ scaleX: 0 }}
+          initial={reduced ? false : { scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.5, ease: "circOut" }}
@@ -130,7 +132,7 @@ const Footer: React.FC = () => {
           ].map((column, colIndex) => (
             <motion.div
               key={column.title}
-              initial={{ opacity: 0, y: 40 }}
+              initial={reduced ? false : { opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: colIndex * 0.1 }}

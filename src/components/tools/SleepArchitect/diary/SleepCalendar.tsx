@@ -62,7 +62,7 @@ const SleepCalendar: React.FC<SleepCalendarProps> = ({
         <button
           type="button"
           onClick={prevMonth}
-          className="p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-colors"
+          className="p-1.5 rounded-lg text-gray-400 dark:text-neutral-500 hover:text-gray-600 dark:hover:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-colors"
           aria-label="Previous month"
         >
           <ChevronLeft size={18} />
@@ -76,7 +76,7 @@ const SleepCalendar: React.FC<SleepCalendarProps> = ({
         <button
           type="button"
           onClick={nextMonth}
-          className="p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-colors"
+          className="p-1.5 rounded-lg text-gray-400 dark:text-neutral-500 hover:text-gray-600 dark:hover:text-neutral-200 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-colors"
           aria-label="Next month"
         >
           <ChevronRight size={18} />

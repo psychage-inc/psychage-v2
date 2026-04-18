@@ -101,7 +101,7 @@ const SleepDiary: React.FC<SleepDiaryProps> = ({ sleepData }) => {
                 'p-2 rounded-lg transition-colors',
                 view === 'calendar'
                   ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400'
-                  : 'text-gray-400 hover:text-gray-600 dark:hover:text-neutral-300'
+                  : 'text-gray-400 dark:text-neutral-500 hover:text-gray-600 dark:hover:text-neutral-300'
               )}
               aria-label="Calendar view"
             >
@@ -114,7 +114,7 @@ const SleepDiary: React.FC<SleepDiaryProps> = ({ sleepData }) => {
                 'p-2 rounded-lg transition-colors',
                 view === 'list'
                   ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400'
-                  : 'text-gray-400 hover:text-gray-600 dark:hover:text-neutral-300'
+                  : 'text-gray-400 dark:text-neutral-500 hover:text-gray-600 dark:hover:text-neutral-300'
               )}
               aria-label="List view"
             >

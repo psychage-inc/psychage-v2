@@ -121,7 +121,7 @@ export const DoseLogger: React.FC<Props> = ({ schedule, onLog }) => {
                       setNoteFor(showNote ? null : dose.scheduledISO);
                       setNoteText('');
                     }}
-                    className="p-2 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 dark:hover:bg-neutral-700 transition-colors"
+                    className="p-2 rounded-lg text-slate-400 dark:text-neutral-500 hover:text-slate-600 hover:bg-slate-100 dark:hover:bg-neutral-700 transition-colors"
                     aria-label="Add note"
                     title="Add note"
                   >
@@ -140,7 +140,7 @@ export const DoseLogger: React.FC<Props> = ({ schedule, onLog }) => {
                   onChange={(e) => setNoteText(e.target.value)}
                   placeholder="Optional note (e.g. took with food)"
                   aria-label="Dose note"
-                  className="w-full px-3 py-1.5 text-sm rounded-lg border border-slate-200 dark:border-neutral-600 bg-white dark:bg-neutral-900 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  className="w-full px-3 py-1.5 text-sm rounded-lg border border-slate-200 dark:border-neutral-600 bg-white dark:bg-neutral-900 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                   autoFocus
                 />
               </div>

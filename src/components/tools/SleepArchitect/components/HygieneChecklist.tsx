@@ -31,7 +31,7 @@ const HygieneChecklist: React.FC<HygieneChecklistProps> = ({ checked, onToggle }
         <div className="flex items-center justify-between mb-6">
           <div>
             <h3 className="font-display font-bold text-lg">Sleep Hygiene</h3>
-            <p className="text-gray-400 text-xs">Daily habits check</p>
+            <p className="text-gray-400 dark:text-neutral-500 text-xs">Daily habits check</p>
           </div>
           <div className="text-3xl font-display font-bold text-indigo-400">
             {score}%
@@ -49,7 +49,7 @@ const HygieneChecklist: React.FC<HygieneChecklistProps> = ({ checked, onToggle }
                 className={`w-full p-3 rounded-xl flex items-center gap-3 transition-all text-sm ${
                   isChecked
                     ? 'bg-indigo-600/20 border border-indigo-500/50 text-white'
-                    : 'bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10'
+                    : 'bg-white/5 border border-white/10 text-gray-400 dark:text-neutral-500 hover:bg-white/10'
                 }`}
                 role="checkbox"
                 aria-checked={isChecked}

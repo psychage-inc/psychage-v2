@@ -74,7 +74,7 @@ const SummaryCards: React.FC<SummaryCardsProps> = ({ output }) => {
             <div className={`mb-2 ${m.color.split(' ')[0]}`}>
               {m.icon}
             </div>
-            <div className="text-xs font-medium text-gray-500">{m.label}</div>
+            <div className="text-xs font-medium text-gray-500 dark:text-neutral-400">{m.label}</div>
             <div className={`text-xl font-bold font-display ${m.color.split(' ')[0]}`}>
               {m.value}
             </div>
@@ -84,7 +84,7 @@ const SummaryCards: React.FC<SummaryCardsProps> = ({ output }) => {
 
       {/* WASO if any */}
       {output.wasoMinutes > 0 && (
-        <div className="text-xs text-gray-500 bg-gray-50 rounded-xl p-3 border border-gray-100">
+        <div className="text-xs text-gray-500 dark:text-neutral-400 bg-gray-50 dark:bg-neutral-900 rounded-xl p-3 border border-gray-100 dark:border-neutral-800">
           Wake after sleep onset: <span className="font-bold">{formatDuration(output.wasoMinutes)}</span>
         </div>
       )}
@@ -92,7 +92,7 @@ const SummaryCards: React.FC<SummaryCardsProps> = ({ output }) => {
       {/* Risk flags */}
       {output.riskFlags.length > 0 && (
         <div className="space-y-2">
-          <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider">Alerts</h4>
+          <h4 className="text-xs font-bold text-gray-500 dark:text-neutral-400 uppercase tracking-wider">Alerts</h4>
           {output.riskFlags.map((flag, i) => (
             <motion.div
               key={i}
@@ -102,7 +102,7 @@ const SummaryCards: React.FC<SummaryCardsProps> = ({ output }) => {
               className={`flex items-start gap-2 text-xs p-3 rounded-xl border ${riskBg(flag)}`}
             >
               {riskIcon(flag)}
-              <span className="text-gray-700 leading-relaxed">{flag.message}</span>
+              <span className="text-gray-700 dark:text-neutral-300 leading-relaxed">{flag.message}</span>
             </motion.div>
           ))}
         </div>

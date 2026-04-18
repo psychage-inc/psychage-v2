@@ -108,7 +108,7 @@ export const MoodWizard: React.FC<MoodWizardProps> = ({ onComplete, onCancel }) 
             {/* Cancel confirmation */}
             {showCancelConfirm && (
                 <div className="fixed inset-0 z-[250] flex items-center justify-center bg-black/40">
-                    <div className="bg-white rounded-2xl p-6 mx-4 max-w-sm shadow-xl">
+                    <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 mx-4 max-w-sm shadow-xl">
                         <h3 className="text-lg font-semibold text-text-primary mb-2">Discard entry?</h3>
                         <p className="text-text-secondary text-sm mb-4">You have unsaved mood data. Are you sure you want to close?</p>
                         <div className="flex gap-3">

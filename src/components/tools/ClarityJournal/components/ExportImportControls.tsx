@@ -68,7 +68,7 @@ const ExportImportControls: React.FC<ExportImportControlsProps> = ({ onExport, o
         <p className="text-sm text-red-600">Import failed. Please check the file format.</p>
       )}
 
-      <div className="pt-4 border-t border-slate-200">
+      <div className="pt-4 border-t border-slate-200 dark:border-neutral-700">
         {!showConfirm ? (
           <button
             onClick={() => setShowConfirm(true)}

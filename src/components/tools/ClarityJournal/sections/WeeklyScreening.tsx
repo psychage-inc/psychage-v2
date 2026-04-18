@@ -63,21 +63,21 @@ const WeeklyScreening: React.FC = () => {
     const whoTotal = scoreWHO5(who1!, who2!);
 
     return (
-      <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-6">
+      <div className="min-h-screen bg-gray-50 dark:bg-neutral-900 pt-24 pb-12 px-6">
         <SEO title="Screening Results | Clarity Journal" description="Your weekly screening results." />
         <div className="container mx-auto max-w-2xl">
           <div className="mb-8"><Breadcrumbs /></div>
-          <button onClick={() => navigate('/tools/clarity-journal')} className="flex items-center gap-2 text-sm text-slate-500 hover:text-teal-600 mb-6 transition-colors">
+          <button onClick={() => navigate('/tools/clarity-journal')} className="flex items-center gap-2 text-sm text-slate-500 dark:text-neutral-400 hover:text-teal-600 mb-6 transition-colors">
             <ArrowLeft className="w-4 h-4" /> Back to Journal
           </button>
 
-          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100">
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="bg-white dark:bg-neutral-900 rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 dark:border-neutral-800">
             <div className="text-center mb-8">
               <div className="w-14 h-14 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center mx-auto mb-3">
                 <Check className="w-7 h-7" />
               </div>
-              <h2 className="font-display font-semibold text-xl text-slate-900">Your Scores This Week</h2>
-              <p className="text-sm text-slate-500 mt-1">Remember: these help you notice patterns, not diagnose anything.</p>
+              <h2 className="font-display font-semibold text-xl text-slate-900 dark:text-neutral-100">Your Scores This Week</h2>
+              <p className="text-sm text-slate-500 dark:text-neutral-400 mt-1">Remember: these help you notice patterns, not diagnose anything.</p>
             </div>
 
             <div className="space-y-3 mb-8">
@@ -105,50 +105,50 @@ const WeeklyScreening: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-6">
+    <div className="min-h-screen bg-gray-50 dark:bg-neutral-900 pt-24 pb-12 px-6">
       <SEO title="Weekly Screening | Clarity Journal" description="Brief validated screening for depression, anxiety, stress, and well-being." />
       <div className="container mx-auto max-w-2xl">
         <div className="mb-8"><Breadcrumbs /></div>
-        <button onClick={() => navigate('/tools/clarity-journal')} className="flex items-center gap-2 text-sm text-slate-500 hover:text-teal-600 mb-6 transition-colors">
+        <button onClick={() => navigate('/tools/clarity-journal')} className="flex items-center gap-2 text-sm text-slate-500 dark:text-neutral-400 hover:text-teal-600 mb-6 transition-colors">
           <ArrowLeft className="w-4 h-4" /> Back to Journal
         </button>
 
-        <h1 className="font-display font-bold text-2xl md:text-3xl text-slate-900 mb-2">Weekly Screening Snapshot</h1>
-        <p className="text-slate-500 mb-6">A quick pulse check, backed by research.</p>
+        <h1 className="font-display font-bold text-2xl md:text-3xl text-slate-900 dark:text-neutral-100 mb-2">Weekly Screening Snapshot</h1>
+        <p className="text-slate-500 dark:text-neutral-400 mb-6">A quick pulse check, backed by research.</p>
 
         <DisclaimerBanner text={SCREENING_DISCLAIMER} />
 
-        <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 space-y-8">
+        <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 dark:border-neutral-800 space-y-8">
           {/* PHQ-2 */}
           <div>
-            <h2 className="font-display font-semibold text-slate-800 mb-4">Depression Screen (PHQ-2)</h2>
+            <h2 className="font-display font-semibold text-slate-800 dark:text-neutral-200 mb-4">Depression Screen (PHQ-2)</h2>
             <ScreeningQuestion question={PHQ2_QUESTIONS[0]} options={FREQUENCY_OPTIONS} value={phq1} onChange={setPhq1} />
             <ScreeningQuestion question={PHQ2_QUESTIONS[1]} options={FREQUENCY_OPTIONS} value={phq2} onChange={setPhq2} />
           </div>
 
-          <hr className="border-slate-100" />
+          <hr className="border-slate-100 dark:border-neutral-800" />
 
           {/* GAD-2 */}
           <div>
-            <h2 className="font-display font-semibold text-slate-800 mb-4">Anxiety Screen (GAD-2)</h2>
+            <h2 className="font-display font-semibold text-slate-800 dark:text-neutral-200 mb-4">Anxiety Screen (GAD-2)</h2>
             <ScreeningQuestion question={GAD2_QUESTIONS[0]} options={FREQUENCY_OPTIONS} value={gad1} onChange={setGad1} />
             <ScreeningQuestion question={GAD2_QUESTIONS[1]} options={FREQUENCY_OPTIONS} value={gad2} onChange={setGad2} />
           </div>
 
-          <hr className="border-slate-100" />
+          <hr className="border-slate-100 dark:border-neutral-800" />
 
           {/* PSS-4 */}
           <div>
-            <h2 className="font-display font-semibold text-slate-800 mb-4">Stress Check (PSS-4)</h2>
+            <h2 className="font-display font-semibold text-slate-800 dark:text-neutral-200 mb-4">Stress Check (PSS-4)</h2>
             <ScreeningQuestion question={PSS4_QUESTIONS[0]} options={STRESS_OPTIONS} value={pss1} onChange={setPss1} />
             <ScreeningQuestion question={PSS4_QUESTIONS[1]} options={STRESS_OPTIONS} value={pss2} onChange={setPss2} />
           </div>
 
-          <hr className="border-slate-100" />
+          <hr className="border-slate-100 dark:border-neutral-800" />
 
           {/* WHO-5 */}
           <div>
-            <h2 className="font-display font-semibold text-slate-800 mb-4">Well-being Check (WHO-5)</h2>
+            <h2 className="font-display font-semibold text-slate-800 dark:text-neutral-200 mb-4">Well-being Check (WHO-5)</h2>
             <ScreeningQuestion question={WHO5_QUESTIONS[0]} options={WELLBEING_OPTIONS} value={who1} onChange={setWho1} />
             <ScreeningQuestion question={WHO5_QUESTIONS[1]} options={WELLBEING_OPTIONS} value={who2} onChange={setWho2} />
           </div>

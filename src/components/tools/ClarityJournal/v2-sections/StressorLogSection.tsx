@@ -88,7 +88,7 @@ const StressorLogSection: React.FC<StressorLogSectionProps> = ({ onSave, existin
               className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
                 category === cat.value
                   ? 'bg-teal-600 text-white'
-                  : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200'
+                  : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200 dark:hover:bg-neutral-700'
               }`}
             >
               {cat.label}
@@ -115,7 +115,7 @@ const StressorLogSection: React.FC<StressorLogSectionProps> = ({ onSave, existin
 
       <div>
         <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">
-          What did you do about it? <span className="text-slate-400 font-normal">(optional)</span>
+          What did you do about it? <span className="text-slate-400 dark:text-neutral-500 font-normal">(optional)</span>
         </label>
         <input
           type="text"

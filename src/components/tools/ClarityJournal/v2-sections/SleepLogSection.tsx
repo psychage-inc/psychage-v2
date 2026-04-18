@@ -100,7 +100,7 @@ const SleepLogSection: React.FC<SleepLogSectionProps> = ({ date, onSave, existin
       <div className="grid grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">
-            Minutes to fall asleep <span className="text-slate-400 font-normal">(opt.)</span>
+            Minutes to fall asleep <span className="text-slate-400 dark:text-neutral-500 font-normal">(opt.)</span>
           </label>
           <input
             type="number"
@@ -114,7 +114,7 @@ const SleepLogSection: React.FC<SleepLogSectionProps> = ({ date, onSave, existin
         </div>
         <div>
           <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">
-            Night wakings <span className="text-slate-400 font-normal">(opt.)</span>
+            Night wakings <span className="text-slate-400 dark:text-neutral-500 font-normal">(opt.)</span>
           </label>
           <input
             type="number"
@@ -140,7 +140,7 @@ const SleepLogSection: React.FC<SleepLogSectionProps> = ({ date, onSave, existin
               className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
                 factors.includes(f.id)
                   ? 'bg-teal-600 text-white'
-                  : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200'
+                  : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200 dark:hover:bg-neutral-700'
               }`}
             >
               {f.emoji} {f.label}
@@ -152,7 +152,7 @@ const SleepLogSection: React.FC<SleepLogSectionProps> = ({ date, onSave, existin
       {/* Note */}
       <div>
         <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">
-          Note <span className="text-slate-400 font-normal">(optional)</span>
+          Note <span className="text-slate-400 dark:text-neutral-500 font-normal">(optional)</span>
         </label>
         <input
           type="text"

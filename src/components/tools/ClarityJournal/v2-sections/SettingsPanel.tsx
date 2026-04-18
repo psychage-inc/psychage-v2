@@ -80,7 +80,7 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onUpdate, onCle
             }`}
             aria-label="Toggle morning reminder"
           >
-            <span className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white shadow transition-transform ${
+            <span className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white dark:bg-neutral-900 shadow transition-transform ${
               settings.reminderMorning ? 'translate-x-5' : ''
             }`} />
           </button>
@@ -108,7 +108,7 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onUpdate, onCle
             }`}
             aria-label="Toggle evening reminder"
           >
-            <span className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white shadow transition-transform ${
+            <span className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white dark:bg-neutral-900 shadow transition-transform ${
               settings.reminderEvening ? 'translate-x-5' : ''
             }`} />
           </button>
@@ -161,7 +161,7 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onUpdate, onCle
             }`}
             aria-label="Toggle guided prompts"
           >
-            <span className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white shadow transition-transform ${
+            <span className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white dark:bg-neutral-900 shadow transition-transform ${
               settings.showGuidedPrompts ? 'translate-x-5' : ''
             }`} />
           </button>
@@ -180,7 +180,7 @@ const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onUpdate, onCle
               className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
                 settings.defaultReportPeriod === days
                   ? 'bg-teal-600 text-white'
-                  : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200'
+                  : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200 dark:hover:bg-neutral-700'
               }`}
             >
               {days} days

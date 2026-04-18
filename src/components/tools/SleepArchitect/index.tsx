@@ -84,7 +84,7 @@ const SleepArchitect: React.FC = () => {
         <div className="flex items-center justify-between mb-8">
           <button
             onClick={() => navigate('/tools')}
-            className="flex items-center gap-2 text-gray-400 hover:text-gray-900 dark:hover:text-white font-bold text-sm uppercase tracking-wider transition-colors"
+            className="flex items-center gap-2 text-gray-400 dark:text-neutral-500 hover:text-gray-900 dark:hover:text-white font-bold text-sm uppercase tracking-wider transition-colors"
           >
             <ArrowLeft size={16} /> Back to Tools
           </button>

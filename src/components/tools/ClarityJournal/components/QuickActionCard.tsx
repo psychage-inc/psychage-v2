@@ -23,7 +23,7 @@ const QuickActionCard: React.FC<QuickActionCardProps> = ({
     ? 'bg-red-50 border-red-200 hover:border-red-300'
     : completed
       ? 'bg-teal-50 border-teal-200'
-      : 'bg-white border-slate-200 hover:border-teal-300';
+      : 'bg-white dark:bg-neutral-900 border-slate-200 dark:border-neutral-700 hover:border-teal-300';
 
   return (
     <Link
@@ -35,13 +35,13 @@ const QuickActionCard: React.FC<QuickActionCardProps> = ({
           ? 'bg-red-100 text-red-600'
           : completed
             ? 'bg-teal-100 text-teal-600'
-            : 'bg-slate-100 text-slate-600 group-hover:bg-teal-100 group-hover:text-teal-600'
+            : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 group-hover:bg-teal-100 group-hover:text-teal-600'
       } transition-colors`}>
         {completed ? <Check className="w-6 h-6" /> : <Icon className="w-6 h-6" />}
       </div>
       <div className="min-w-0">
-        <p className="font-semibold text-slate-900 text-sm">{title}</p>
-        <p className="text-xs text-slate-500 truncate">{subtitle}</p>
+        <p className="font-semibold text-slate-900 dark:text-neutral-100 text-sm">{title}</p>
+        <p className="text-xs text-slate-500 dark:text-neutral-400 truncate">{subtitle}</p>
       </div>
     </Link>
   );

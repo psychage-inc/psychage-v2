@@ -126,7 +126,7 @@ const MorningCheckIn: React.FC<MorningCheckInProps> = ({
           <button
             type="button"
             onClick={onClose}
-            className="text-gray-400 hover:text-gray-600 dark:hover:text-neutral-200 transition-colors"
+            className="text-gray-400 dark:text-neutral-500 hover:text-gray-600 dark:hover:text-neutral-200 transition-colors"
             aria-label="Close"
           >
             <X size={20} />
@@ -401,7 +401,7 @@ const MorningCheckIn: React.FC<MorningCheckInProps> = ({
                 />
                 <div>
                   <label className="text-sm font-bold text-gray-700 dark:text-neutral-300 flex items-center gap-2 mb-2">
-                    <Smartphone size={16} className="text-gray-400" />
+                    <Smartphone size={16} className="text-gray-400 dark:text-neutral-500" />
                     Screen time before bed
                   </label>
                   <input

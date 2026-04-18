@@ -49,7 +49,7 @@ export const StepValence: React.FC<StepProps> = ({ data, updateData, onNext }) =
 
                     {/* Visual Thumb */}
                     <motion.div
-                        className="absolute w-8 h-8 bg-white rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.12),inset_0_-1px_2px_rgba(0,0,0,0.04)] border border-border/80 flex items-center justify-center pointer-events-none group-hover:scale-[1.08] group-active:scale-95 group-active:shadow-sm group-hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)] transition-transform duration-300 z-10 peer-focus-visible:ring-4 peer-focus-visible:ring-teal-500/30"
+                        className="absolute w-8 h-8 bg-white dark:bg-neutral-900 rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.12),inset_0_-1px_2px_rgba(0,0,0,0.04)] border border-border/80 flex items-center justify-center pointer-events-none group-hover:scale-[1.08] group-active:scale-95 group-active:shadow-sm group-hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)] transition-transform duration-300 z-10 peer-focus-visible:ring-4 peer-focus-visible:ring-teal-500/30"
                         animate={{ left: `calc(${((data.valence - 1) / 9) * 100}% - ${((data.valence - 1) / 9) * 32}px)` }}
                         transition={{ type: "tween", duration: 0 }}
                     >

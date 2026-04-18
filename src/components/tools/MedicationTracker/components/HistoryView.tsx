@@ -70,7 +70,7 @@ export const HistoryView: React.FC<Props> = ({ data, onDeleteLog, onBack }) => {
       {/* Filters */}
       <div className="flex gap-3 mb-4 flex-wrap">
         <div className="flex items-center gap-2">
-          <Filter size={14} className="text-slate-400" />
+          <Filter size={14} className="text-slate-400 dark:text-neutral-500" />
           <select
             value={filterMed}
             onChange={(e) => setFilterMed(e.target.value)}
@@ -141,7 +141,7 @@ export const HistoryView: React.FC<Props> = ({ data, onDeleteLog, onBack }) => {
                       </span>
                       <button
                         onClick={() => onDeleteLog(log.id)}
-                        className="p-1.5 text-slate-300 hover:text-red-500 transition-colors"
+                        className="p-1.5 text-slate-300 dark:text-neutral-600 hover:text-red-500 transition-colors"
                         aria-label="Delete log"
                       >
                         <Trash2 size={14} />

@@ -8,7 +8,7 @@ interface WeekSummaryMiniProps {
 const WeekSummaryMini: React.FC<WeekSummaryMiniProps> = ({ checkIns }) => {
   if (checkIns.length === 0) {
     return (
-      <div className="bg-slate-50 rounded-xl p-4 mb-6 text-sm text-slate-400 text-center">
+      <div className="bg-slate-50 dark:bg-neutral-900 rounded-xl p-4 mb-6 text-sm text-slate-400 dark:text-neutral-500 text-center">
         No daily check-ins this week yet.
       </div>
     );
@@ -27,13 +27,13 @@ const WeekSummaryMini: React.FC<WeekSummaryMiniProps> = ({ checkIns }) => {
   ];
 
   return (
-    <div className="bg-slate-50 rounded-xl p-4 mb-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
+    <div className="bg-slate-50 dark:bg-neutral-900 rounded-xl p-4 mb-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
       {stats.map(s => (
         <div key={s.label} className="text-center">
-          <p className="text-lg font-semibold text-slate-800">
-            {s.value}{s.max && <span className="text-xs text-slate-400 font-normal">/{s.max}</span>}
+          <p className="text-lg font-semibold text-slate-800 dark:text-neutral-200">
+            {s.value}{s.max && <span className="text-xs text-slate-400 dark:text-neutral-500 font-normal">/{s.max}</span>}
           </p>
-          <p className="text-xs text-slate-500">{s.label}</p>
+          <p className="text-xs text-slate-500 dark:text-neutral-400">{s.label}</p>
         </div>
       ))}
     </div>

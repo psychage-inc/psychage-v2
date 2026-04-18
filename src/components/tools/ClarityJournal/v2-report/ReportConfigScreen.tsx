@@ -103,7 +103,7 @@ const ReportConfigScreen: React.FC = () => {
 
         <button
           onClick={() => navigate('/tools/clarity-journal')}
-          className="flex items-center gap-2 text-sm text-slate-500 hover:text-teal-600 mb-6 transition-colors"
+          className="flex items-center gap-2 text-sm text-slate-500 dark:text-neutral-400 hover:text-teal-600 mb-6 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" /> Back to Journal
         </button>
@@ -139,7 +139,7 @@ const ReportConfigScreen: React.FC = () => {
                   className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
                     !useCustom && periodDays === p.days
                       ? 'bg-teal-600 text-white'
-                      : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200'
+                      : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200 dark:hover:bg-neutral-700'
                   }`}
                 >
                   {p.label}
@@ -151,7 +151,7 @@ const ReportConfigScreen: React.FC = () => {
                 className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
                   useCustom
                     ? 'bg-teal-600 text-white'
-                    : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200'
+                    : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200 dark:hover:bg-neutral-700'
                 }`}
               >
                 Custom
@@ -161,7 +161,7 @@ const ReportConfigScreen: React.FC = () => {
             {useCustom && (
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-xs text-slate-500 mb-1">Start</label>
+                  <label className="block text-xs text-slate-500 dark:text-neutral-400 mb-1">Start</label>
                   <input
                     type="date"
                     value={customStart}
@@ -171,7 +171,7 @@ const ReportConfigScreen: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-xs text-slate-500 mb-1">End</label>
+                  <label className="block text-xs text-slate-500 dark:text-neutral-400 mb-1">End</label>
                   <input
                     type="date"
                     value={customEnd}

@@ -110,7 +110,7 @@ const DailyEntryV2: React.FC = () => {
 
         <button
           onClick={() => navigate('/tools/clarity-journal')}
-          className="flex items-center gap-2 text-sm text-slate-500 hover:text-teal-600 mb-6 transition-colors"
+          className="flex items-center gap-2 text-sm text-slate-500 dark:text-neutral-400 hover:text-teal-600 mb-6 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" /> Back to Journal
         </button>
@@ -178,9 +178,9 @@ const DailyEntryV2: React.FC = () => {
                     <p className="text-sm font-semibold text-slate-900 dark:text-white">{section.label}</p>
                   </div>
                   {isExpanded ? (
-                    <ChevronUp className="w-4 h-4 text-slate-400 shrink-0" />
+                    <ChevronUp className="w-4 h-4 text-slate-400 dark:text-neutral-500 shrink-0" />
                   ) : (
-                    <ChevronDown className="w-4 h-4 text-slate-400 shrink-0" />
+                    <ChevronDown className="w-4 h-4 text-slate-400 dark:text-neutral-500 shrink-0" />
                   )}
                 </button>
 

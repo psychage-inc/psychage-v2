@@ -135,7 +135,7 @@ const DimensionsTab: React.FC<DimensionsTabProps> = ({
           <div className="p-6 md:p-8 space-y-6">
             {/* What this measures */}
             <div className="bg-gray-50 dark:bg-neutral-800/50 rounded-xl p-4">
-              <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">
+              <h4 className="text-xs font-bold text-gray-400 dark:text-neutral-500 uppercase tracking-wider mb-2">
                 What This Measures
               </h4>
               <p className="text-sm text-gray-600 dark:text-neutral-300 leading-relaxed">
@@ -247,7 +247,7 @@ const DimensionsTab: React.FC<DimensionsTabProps> = ({
                 </span>
                 <ChevronRight
                   size={16}
-                  className="text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-200 transition-colors"
+                  className="text-gray-400 dark:text-neutral-500 group-hover:text-gray-600 dark:group-hover:text-gray-200 transition-colors"
                 />
               </Link>
             )}

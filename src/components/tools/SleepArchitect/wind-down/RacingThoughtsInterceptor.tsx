@@ -148,7 +148,7 @@ const RacingThoughtsInterceptor: React.FC = () => {
                   key={t.id}
                   className="flex items-center gap-2 bg-gray-50 dark:bg-neutral-700/50 rounded-lg p-2.5 text-xs"
                 >
-                  <span className="text-gray-400">
+                  <span className="text-gray-400 dark:text-neutral-500">
                     {CATEGORY_ICONS[
                       THOUGHT_CATEGORIES.find((c) => c.id === t.category)
                         ?.icon || 'MoreHorizontal'

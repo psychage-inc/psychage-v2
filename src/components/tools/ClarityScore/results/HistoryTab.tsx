@@ -271,7 +271,7 @@ const HistoryTab: React.FC<HistoryTabProps> = ({
                   ? 'text-emerald-600 dark:text-emerald-400'
                   : insights.totalChange < 0
                     ? 'text-red-500'
-                    : 'text-gray-500'
+                    : 'text-gray-500 dark:text-neutral-400'
               }`}
             >
               {insights.totalChange > 0 ? '+' : ''}
@@ -292,7 +292,7 @@ const HistoryTab: React.FC<HistoryTabProps> = ({
                   ? 'text-emerald-600 dark:text-emerald-400'
                   : insights.recentChange < 0
                     ? 'text-red-500'
-                    : 'text-gray-500'
+                    : 'text-gray-500 dark:text-neutral-400'
               }`}
             >
               {insights.recentChange > 0 ? '+' : ''}

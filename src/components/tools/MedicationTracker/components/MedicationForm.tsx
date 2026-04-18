@@ -103,7 +103,7 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
             className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-neutral-800 transition-colors"
             aria-label="Close"
           >
-            <X size={20} className="text-slate-500" />
+            <X size={20} className="text-slate-500 dark:text-neutral-400" />
           </button>
         </div>
 
@@ -119,7 +119,7 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
               onChange={(e) => setName(e.target.value)}
               placeholder="e.g. Sertraline"
               className={cn(
-                'w-full px-3 py-2 rounded-lg border bg-white dark:bg-neutral-800 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500',
+                'w-full px-3 py-2 rounded-lg border bg-white dark:bg-neutral-800 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500',
                 errors.name ? 'border-red-400' : 'border-slate-300 dark:border-neutral-600'
               )}
             />
@@ -140,7 +140,7 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
                 onChange={(e) => setDosage(e.target.value)}
                 placeholder="e.g. 50"
                 className={cn(
-                  'w-full px-3 py-2 rounded-lg border bg-white dark:bg-neutral-800 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500',
+                  'w-full px-3 py-2 rounded-lg border bg-white dark:bg-neutral-800 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500',
                   errors.dosage ? 'border-red-400' : 'border-slate-300 dark:border-neutral-600'
                 )}
               />
@@ -201,7 +201,7 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
                       <button
                         type="button"
                         onClick={() => removeTime(idx)}
-                        className="p-2 text-slate-400 hover:text-red-500 transition-colors"
+                        className="p-2 text-slate-400 dark:text-neutral-500 hover:text-red-500 transition-colors"
                         aria-label="Remove time"
                       >
                         <X size={16} />
@@ -259,7 +259,7 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
               value={prescriber}
               onChange={(e) => setPrescriber(e.target.value)}
               placeholder="Dr. Smith"
-              className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
             />
           </div>
 
@@ -273,7 +273,7 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
               value={pharmacy}
               onChange={(e) => setPharmacy(e.target.value)}
               placeholder="e.g. CVS Pharmacy"
-              className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
             />
           </div>
 
@@ -289,7 +289,7 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
                 value={supplyCount}
                 onChange={(e) => setSupplyCount(e.target.value)}
                 placeholder="e.g. 30"
-                className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
               />
             </div>
             <div>
@@ -340,7 +340,7 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
               onChange={(e) => setNotes(e.target.value)}
               rows={2}
               placeholder="Take with food, avoid alcohol..."
-              className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none"
+              className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none"
             />
           </div>
 

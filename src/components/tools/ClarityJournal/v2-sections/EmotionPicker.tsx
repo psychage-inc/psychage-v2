@@ -37,7 +37,7 @@ const EmotionPicker: React.FC<EmotionPickerProps> = ({
   return (
     <div>
       <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-3">
-        How are you feeling? <span className="text-slate-400 font-normal">(up to {maxSelections})</span>
+        How are you feeling? <span className="text-slate-400 dark:text-neutral-500 font-normal">(up to {maxSelections})</span>
       </label>
 
       {/* Category tabs */}

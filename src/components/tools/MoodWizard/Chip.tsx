@@ -15,7 +15,7 @@ const EMOTION_COLORS: Record<string, { bg: string; border: string; text: string 
     Relaxed: { bg: 'bg-emerald-400/20 backdrop-blur-sm', border: 'border-emerald-300/40', text: 'text-emerald-900' },
     Anxious: { bg: 'bg-yellow-400/20 backdrop-blur-sm', border: 'border-yellow-300/40', text: 'text-yellow-900' },
     Stressed: { bg: 'bg-red-400/20 backdrop-blur-sm', border: 'border-red-300/40', text: 'text-red-900' },
-    Tired: { bg: 'bg-slate-400/20 backdrop-blur-sm', border: 'border-slate-300/40', text: 'text-slate-900' },
+    Tired: { bg: 'bg-slate-400/20 backdrop-blur-sm', border: 'border-slate-300/40', text: 'text-slate-900 dark:text-neutral-100' },
     Sad: { bg: 'bg-blue-400/20 backdrop-blur-sm', border: 'border-blue-300/40', text: 'text-blue-900' },
     Angry: { bg: 'bg-rose-500/20 backdrop-blur-sm', border: 'border-rose-400/40', text: 'text-rose-900' },
     Lonely: { bg: 'bg-purple-400/20 backdrop-blur-sm', border: 'border-purple-300/40', text: 'text-purple-900' },
@@ -33,7 +33,7 @@ export const Chip: React.FC<ChipProps> = ({ label, selected, onClick }) => {
             className={`px-6 py-3 rounded-full text-base font-medium transition-all duration-200
         ${selected
                     ? `${color.bg} ${color.text} border ${color.border} shadow-lg scale-105`
-                    : 'bg-white/60 text-text-secondary hover:bg-white border border-white/40 shadow-sm hover:scale-[1.02]'
+                    : 'bg-white/60 text-text-secondary hover:bg-white dark:hover:bg-neutral-800 border border-white/40 shadow-sm hover:scale-[1.02]'
                 } focus:outline-none focus:ring-2 focus:ring-gray-900/20`}
         >
             {label}

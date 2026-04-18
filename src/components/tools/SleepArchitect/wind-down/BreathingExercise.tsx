@@ -103,7 +103,7 @@ const BreathingExercise: React.FC<BreathingExerciseProps> = ({ onClose }) => {
           <button
             type="button"
             onClick={onClose}
-            className="text-gray-400 hover:text-gray-600 dark:hover:text-neutral-200"
+            className="text-gray-400 dark:text-neutral-500 hover:text-gray-600 dark:hover:text-neutral-200"
           >
             <X size={18} />
           </button>

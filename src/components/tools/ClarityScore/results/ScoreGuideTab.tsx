@@ -143,7 +143,7 @@ const ScoreGuideTab: React.FC<ScoreGuideTabProps> = ({ currentTier }) => {
                   <span className="text-xs font-medium text-gray-700 dark:text-neutral-300">
                     {m.shortName}
                   </span>
-                  <span className="text-xs text-gray-400">0–20</span>
+                  <span className="text-xs text-gray-400 dark:text-neutral-500">0–20</span>
                 </div>
                 {i < DIMENSION_ORDER.length - 1 && (
                   <span className="text-gray-300 dark:text-neutral-600 text-lg font-light">
@@ -203,9 +203,9 @@ const ScoreGuideTab: React.FC<ScoreGuideTabProps> = ({ currentTier }) => {
                     )}
                   </div>
                   {isExpanded ? (
-                    <ChevronUp size={18} className="text-gray-400" />
+                    <ChevronUp size={18} className="text-gray-400 dark:text-neutral-500" />
                   ) : (
-                    <ChevronDown size={18} className="text-gray-400" />
+                    <ChevronDown size={18} className="text-gray-400 dark:text-neutral-500" />
                   )}
                 </button>
 

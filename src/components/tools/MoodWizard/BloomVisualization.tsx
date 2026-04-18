@@ -101,7 +101,7 @@ const FaceIcon = ({ valence }: { valence: number }) => {
     const d = `M 30 ${baseY} Q 50 ${baseY + smileAmount} 70 ${baseY}`;
 
     const getColor = () => {
-        if (valence <= 3) return 'text-slate-600';
+        if (valence <= 3) return 'text-slate-600 dark:text-neutral-400';
         if (valence <= 7) return 'text-teal-700';
         return 'text-orange-600';
     };

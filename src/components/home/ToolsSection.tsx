@@ -68,7 +68,7 @@ const ToolsSection: React.FC = () => {
     const [featuredTool, ...secondaryTools] = tools;
 
     return (
-        <section className="py-14 sm:py-16 lg:py-24 px-6 bg-slate-50 border-y border-slate-200 relative overflow-hidden">
+        <section className="py-14 sm:py-16 lg:py-24 px-6 bg-slate-50 dark:bg-neutral-900 border-y border-slate-200 dark:border-neutral-700 relative overflow-hidden">
             {/* Decorative Background */}
             <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[min(800px,100vw)] h-[min(800px,100vw)] bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -79,14 +79,14 @@ const ToolsSection: React.FC = () => {
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-teal-100 shadow-sm mb-4"
+                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-neutral-900 border border-teal-100 shadow-sm mb-4"
                         >
                             <Activity size={14} className="text-teal-600" />
                             <span className="text-xs font-bold tracking-widest uppercase text-teal-700">
                                 Interactive Tools
                             </span>
                         </motion.div>
-                        <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-4 tracking-tight">
+                        <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 dark:text-neutral-100 mb-4 tracking-tight">
                             Tools for your <span className="text-teal-600 relative">
                                 mind
                                 <svg className="absolute w-full h-3 -bottom-1 left-0 text-teal-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -94,7 +94,7 @@ const ToolsSection: React.FC = () => {
                                 </svg>
                             </span>
                         </h2>
-                        <p className="text-xl text-slate-600 max-w-xl leading-relaxed">
+                        <p className="text-xl text-slate-600 dark:text-neutral-400 max-w-xl leading-relaxed">
                             Clinically-validated exercises and trackers to help you understand and improve your well-being.
                         </p>
                     </div>
@@ -102,7 +102,7 @@ const ToolsSection: React.FC = () => {
                         variant="outline"
                         rightIcon={<ArrowRight size={18} />}
                         onClick={() => navigate('/tools')}
-                        className="shrink-0 bg-white border-slate-200 hover:bg-slate-50 text-slate-900 shadow-sm hover:shadow"
+                        className="shrink-0 bg-white dark:bg-neutral-900 border-slate-200 dark:border-neutral-700 hover:bg-slate-50 dark:hover:bg-neutral-800 text-slate-900 dark:text-neutral-100 shadow-sm hover:shadow"
                     >
                         View All Tools
                     </Button>
@@ -125,7 +125,7 @@ const ToolsSection: React.FC = () => {
                                 <InteractiveCard
                                     onClick={() => navigate(getToolLink(featuredTool.id))}
                                     spotlightColor={colors.spotlight}
-                                    className="h-full bg-white border-slate-200 shadow-lg hover:shadow-xl cursor-pointer group"
+                                    className="h-full bg-white dark:bg-neutral-900 border-slate-200 dark:border-neutral-700 shadow-lg hover:shadow-xl cursor-pointer group"
                                 >
                                     <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-teal-50/50 to-transparent rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
 
@@ -137,19 +137,19 @@ const ToolsSection: React.FC = () => {
                                             )}>
                                                 <Icon size={40} className={colors.iconColor} />
                                             </div>
-                                            <h3 className="text-4xl font-display font-bold text-slate-900 mb-6 group-hover:text-teal-700 transition-colors">
+                                            <h3 className="text-4xl font-display font-bold text-slate-900 dark:text-neutral-100 mb-6 group-hover:text-teal-700 transition-colors">
                                                 {featuredTool.name}
                                             </h3>
-                                            <p className="text-xl text-slate-600 leading-relaxed max-w-md">
+                                            <p className="text-xl text-slate-600 dark:text-neutral-400 leading-relaxed max-w-md">
                                                 {featuredTool.description}
                                             </p>
                                         </div>
 
-                                        <div className="mt-10 pt-10 border-t border-slate-100 flex items-center justify-between">
+                                        <div className="mt-10 pt-10 border-t border-slate-100 dark:border-neutral-800 flex items-center justify-between">
                                             <span className="text-teal-700 font-bold group-hover:underline decoration-2 underline-offset-4">
                                                 Start Session
                                             </span>
-                                            <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-900 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+                                            <div className="w-12 h-12 rounded-full bg-slate-100 dark:bg-neutral-800 flex items-center justify-center text-slate-900 dark:text-neutral-100 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
                                                 <ArrowRight size={20} />
                                             </div>
                                         </div>
@@ -214,21 +214,21 @@ const ToolsSection: React.FC = () => {
                                 <InteractiveCard
                                     onClick={() => navigate(getToolLink(tool.id))}
                                     spotlightColor={colors.spotlight}
-                                    className="h-full bg-white border-slate-200 shadow-sm hover:shadow-lg cursor-pointer group"
+                                    className="h-full bg-white dark:bg-neutral-900 border-slate-200 dark:border-neutral-700 shadow-sm hover:shadow-lg cursor-pointer group"
                                 >
                                     <div className="relative z-10 flex flex-col h-full p-8">
                                         <div className={cn("w-12 h-12 rounded-2xl flex items-center justify-center mb-6 shadow-sm", colors.iconBg)}>
                                             <Icon size={24} className={colors.iconColor} />
                                         </div>
-                                        <h3 className="text-xl font-bold text-slate-900 mb-3">
+                                        <h3 className="text-xl font-bold text-slate-900 dark:text-neutral-100 mb-3">
                                             {tool.name}
                                         </h3>
-                                        <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
+                                        <p className="text-slate-500 dark:text-neutral-400 text-sm leading-relaxed mb-6 flex-grow">
                                             {tool.description}
                                         </p>
 
                                         <div className="flex justify-end">
-                                            <ArrowRight size={20} className="text-slate-300 group-hover:text-teal-600 group-hover:translate-x-1 transition-all" />
+                                            <ArrowRight size={20} className="text-slate-300 dark:text-neutral-600 group-hover:text-teal-600 group-hover:translate-x-1 transition-all" />
                                         </div>
                                     </div>
                                 </InteractiveCard>

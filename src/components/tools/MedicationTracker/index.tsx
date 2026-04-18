@@ -177,7 +177,7 @@ const MedicationTracker: React.FC = () => {
         <div className="mb-10">
           <button
             onClick={() => navigate('/tools')}
-            className="flex items-center gap-1.5 text-slate-400 hover:text-slate-900 dark:hover:text-white text-xs font-semibold uppercase tracking-wider mb-6 transition-colors"
+            className="flex items-center gap-1.5 text-slate-400 dark:text-neutral-500 hover:text-slate-900 dark:hover:text-white text-xs font-semibold uppercase tracking-wider mb-6 transition-colors"
           >
             <ArrowLeft size={14} />
             Back to Tools

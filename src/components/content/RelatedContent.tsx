@@ -23,17 +23,17 @@ const RelatedContent: React.FC<RelatedContentProps> = ({ articles, title = "Rela
                     <Link
                         key={article.id}
                         to={`/learn/${article.category.slug}/${article.slug}`}
-                        className="group bg-surface p-4 rounded-xl border border-border hover:border-teal-200 hover:shadow-md transition-all flex flex-col justify-between"
+                        className="group bg-surface p-4 rounded-xl border border-border hover:border-teal-200 dark:hover:border-teal-700 hover:shadow-md transition-all flex flex-col justify-between"
                     >
                         <div>
                             <span className={`text-xs font-bold uppercase tracking-wider mb-2 block ${getCategoryClasses(article.category.slug).text} ${getCategoryClasses(article.category.slug).textDark}`}>
                                 {article.category.name}
                             </span>
-                            <h4 className="font-bold text-text-primary group-hover:text-teal-700 transition-colors mb-2 line-clamp-2">
+                            <h4 className="font-bold text-text-primary group-hover:text-teal-700 dark:group-hover:text-teal-300 transition-colors mb-2 line-clamp-2">
                                 {article.title}
                             </h4>
                         </div>
-                        <div className="flex items-center text-sm text-text-tertiary mt-4 group-hover:text-teal-600 font-medium">
+                        <div className="flex items-center text-sm text-text-tertiary mt-4 group-hover:text-teal-600 dark:group-hover:text-teal-400 font-medium">
                             Read Article <ArrowRight size={14} className="ml-1 transition-transform group-hover:translate-x-1" />
                         </div>
                     </Link>

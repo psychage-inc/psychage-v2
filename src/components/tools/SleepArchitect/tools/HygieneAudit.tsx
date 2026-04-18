@@ -127,7 +127,7 @@ const HygieneAudit: React.FC = () => {
                 <ChevronDown
                   size={16}
                   className={cn(
-                    'text-gray-400 transition-transform',
+                    'text-gray-400 dark:text-neutral-500 transition-transform',
                     isExpanded && 'rotate-180'
                   )}
                 />

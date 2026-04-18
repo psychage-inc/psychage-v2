@@ -57,16 +57,16 @@ const TriggerLog: React.FC = () => {
       : [];
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-6">
+    <div className="min-h-screen bg-gray-50 dark:bg-neutral-900 pt-24 pb-12 px-6">
       <SEO title="Trigger & Pattern Log | Clarity Journal" description="Map your personal triggers and early warning signs." />
       <div className="container mx-auto max-w-2xl">
         <div className="mb-8"><Breadcrumbs /></div>
-        <button onClick={() => navigate('/tools/clarity-journal')} className="flex items-center gap-2 text-sm text-slate-500 hover:text-teal-600 mb-6 transition-colors">
+        <button onClick={() => navigate('/tools/clarity-journal')} className="flex items-center gap-2 text-sm text-slate-500 dark:text-neutral-400 hover:text-teal-600 mb-6 transition-colors">
           <ArrowLeft className="w-4 h-4" /> Back to Journal
         </button>
 
-        <h1 className="font-display font-bold text-2xl md:text-3xl text-slate-900 mb-2">Trigger & Pattern Log</h1>
-        <p className="text-slate-500 mb-8">Map the landscape of what affects you.</p>
+        <h1 className="font-display font-bold text-2xl md:text-3xl text-slate-900 dark:text-neutral-100 mb-2">Trigger & Pattern Log</h1>
+        <p className="text-slate-500 dark:text-neutral-400 mb-8">Map the landscape of what affects you.</p>
 
         <div className="space-y-4">
           {CATEGORIES.map(cat => {
@@ -75,18 +75,18 @@ const TriggerLog: React.FC = () => {
             const isExpanded = expandedCategory === cat;
 
             return (
-              <div key={cat} className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+              <div key={cat} className="bg-white dark:bg-neutral-900 rounded-2xl shadow-sm border border-slate-100 dark:border-neutral-800 overflow-hidden">
                 <button
                   onClick={() => setExpandedCategory(isExpanded ? null : cat)}
                   className="w-full flex items-center justify-between p-5 text-left"
                 >
                   <div>
-                    <h2 className="font-display font-semibold text-slate-900">{meta.title}</h2>
-                    <p className="text-xs text-slate-500 mt-0.5">{meta.description}</p>
+                    <h2 className="font-display font-semibold text-slate-900 dark:text-neutral-100">{meta.title}</h2>
+                    <p className="text-xs text-slate-500 dark:text-neutral-400 mt-0.5">{meta.description}</p>
                   </div>
                   <div className="flex items-center gap-2 shrink-0">
-                    <span className="text-xs text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">{items.length}</span>
-                    {isExpanded ? <ChevronUp className="w-4 h-4 text-slate-400" /> : <ChevronDown className="w-4 h-4 text-slate-400" />}
+                    <span className="text-xs text-slate-400 dark:text-neutral-500 bg-slate-100 dark:bg-neutral-800 px-2 py-0.5 rounded-full">{items.length}</span>
+                    {isExpanded ? <ChevronUp className="w-4 h-4 text-slate-400" /> : <ChevronDown className="w-4 h-4 text-slate-400 dark:text-neutral-500" />}
                   </div>
                 </button>
 
@@ -101,36 +101,36 @@ const TriggerLog: React.FC = () => {
                     >
                       <div className="px-5 pb-5 space-y-2">
                         {items.map(item => (
-                          <div key={item.id} className="flex items-center gap-3 bg-slate-50 rounded-xl p-3">
+                          <div key={item.id} className="flex items-center gap-3 bg-slate-50 dark:bg-neutral-900 rounded-xl p-3">
                             <div className="flex-1 min-w-0">
-                              <p className="text-sm text-slate-700">{item.text}</p>
+                              <p className="text-sm text-slate-700 dark:text-neutral-300">{item.text}</p>
                               <div className="flex gap-2 mt-1">
                                 {item.subCategory && (
-                                  <span className="text-xs text-slate-400">{item.subCategory}</span>
+                                  <span className="text-xs text-slate-400 dark:text-neutral-500">{item.subCategory}</span>
                                 )}
                                 {item.severity !== undefined && (
-                                  <span className="text-xs text-slate-400">Severity: {item.severity}/5</span>
+                                  <span className="text-xs text-slate-400 dark:text-neutral-500">Severity: {item.severity}/5</span>
                                 )}
                                 {item.effectivenessRating !== undefined && (
-                                  <span className="text-xs text-slate-400">Effectiveness: {item.effectivenessRating}/5</span>
+                                  <span className="text-xs text-slate-400 dark:text-neutral-500">Effectiveness: {item.effectivenessRating}/5</span>
                                 )}
                               </div>
                             </div>
-                            <button onClick={() => deleteTrigger(item.id)} className="text-slate-300 hover:text-red-500 transition-colors" aria-label="Delete">
+                            <button onClick={() => deleteTrigger(item.id)} className="text-slate-300 dark:text-neutral-600 hover:text-red-500 transition-colors" aria-label="Delete">
                               <Trash2 className="w-4 h-4" />
                             </button>
                           </div>
                         ))}
 
                         {addingTo === cat ? (
-                          <div className="bg-slate-50 rounded-xl p-4 space-y-3">
+                          <div className="bg-slate-50 dark:bg-neutral-900 rounded-xl p-4 space-y-3">
                             <input
                               type="text"
                               value={newText}
                               onChange={e => setNewText(e.target.value)}
                               placeholder={`Describe the ${cat === 'triggers' ? 'trigger' : cat === 'warning_signs' ? 'warning sign' : 'item'}...`}
                               aria-label={`New ${cat === 'triggers' ? 'trigger' : cat === 'warning_signs' ? 'warning sign' : 'item'} description`}
-                              className="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                              className="w-full px-3 py-2 rounded-lg border border-slate-200 dark:border-neutral-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                               autoFocus
                             />
                             {subCategories(cat).length > 0 && (
@@ -138,7 +138,7 @@ const TriggerLog: React.FC = () => {
                                 value={newSubCategory}
                                 onChange={e => setNewSubCategory(e.target.value)}
                                 aria-label="Category"
-                                className="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                                className="w-full px-3 py-2 rounded-lg border border-slate-200 dark:border-neutral-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                               >
                                 <option value="">Category (optional)</option>
                                 {subCategories(cat).map(sc => (
@@ -148,13 +148,13 @@ const TriggerLog: React.FC = () => {
                             )}
                             {cat === 'triggers' && (
                               <div>
-                                <label className="text-xs text-slate-500">Severity: {newSeverity}/5</label>
+                                <label className="text-xs text-slate-500 dark:text-neutral-400">Severity: {newSeverity}/5</label>
                                 <input type="range" min={1} max={5} value={newSeverity} onChange={e => setNewSeverity(Number(e.target.value))} aria-label={`Severity: ${newSeverity} out of 5`} className="w-full" />
                               </div>
                             )}
                             {cat === 'what_helps' && (
                               <div>
-                                <label className="text-xs text-slate-500">Effectiveness: {newEffectiveness}/5</label>
+                                <label className="text-xs text-slate-500 dark:text-neutral-400">Effectiveness: {newEffectiveness}/5</label>
                                 <input type="range" min={1} max={5} value={newEffectiveness} onChange={e => setNewEffectiveness(Number(e.target.value))} aria-label={`Effectiveness: ${newEffectiveness} out of 5`} className="w-full" />
                               </div>
                             )}

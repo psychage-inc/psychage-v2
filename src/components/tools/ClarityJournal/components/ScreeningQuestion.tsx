@@ -22,7 +22,7 @@ const ScreeningQuestion: React.FC<ScreeningQuestionProps> = ({
 }) => {
   return (
     <fieldset className="mb-6" disabled={disabled}>
-      <legend className="text-sm font-medium text-slate-700 mb-3 leading-relaxed">
+      <legend className="text-sm font-medium text-slate-700 dark:text-neutral-300 mb-3 leading-relaxed">
         {question}
       </legend>
       <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2">
@@ -39,7 +39,7 @@ const ScreeningQuestion: React.FC<ScreeningQuestionProps> = ({
                 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-150
                 ${isSelected
                   ? 'bg-teal-600 text-white shadow-sm'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}
+                  : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200 dark:hover:bg-neutral-700'}
                 ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
               `}
             >

@@ -85,7 +85,7 @@ const FreeFormSection: React.FC<FreeFormSectionProps> = ({ onSave, onCrisisDetec
           rows={6}
           className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500 resize-y min-h-[120px]"
         />
-        <p className="text-xs text-slate-400 mt-1">{content.length} characters</p>
+        <p className="text-xs text-slate-400 dark:text-neutral-500 mt-1">{content.length} characters</p>
       </div>
 
       {/* Include in report toggle */}

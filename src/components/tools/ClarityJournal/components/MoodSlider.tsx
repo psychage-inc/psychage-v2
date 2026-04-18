@@ -21,7 +21,7 @@ const MoodSlider: React.FC<MoodSliderProps> = ({
   return (
     <div>
       {label && (
-        <label className="block text-sm font-medium text-slate-700 mb-3">{label}</label>
+        <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-3">{label}</label>
       )}
       <div className="flex items-center gap-1.5 sm:gap-2">
         {numbers.map(n => {
@@ -38,7 +38,7 @@ const MoodSlider: React.FC<MoodSliderProps> = ({
                 transition-all duration-150
                 ${isSelected
                   ? 'bg-teal-600 text-white shadow-md scale-110 ring-2 ring-teal-300'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}
+                  : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200 dark:hover:bg-neutral-700'}
               `}
             >
               <span className="text-xs leading-none mb-0.5">

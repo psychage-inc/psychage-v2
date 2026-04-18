@@ -16,7 +16,7 @@ interface SleepMoodBridgeProps {
 
 function correlationIcon(r: number): React.ReactNode {
   if (Math.abs(r) < 0.2)
-    return <Minus size={14} className="text-gray-400" />;
+    return <Minus size={14} className="text-gray-400 dark:text-neutral-500" />;
   if (r > 0)
     return <TrendingUp size={14} className="text-emerald-500" />;
   return <TrendingDown size={14} className="text-red-500" />;

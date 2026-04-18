@@ -103,14 +103,14 @@ export const MedicationCard: React.FC<Props> = ({
         <div className="flex gap-1 flex-shrink-0">
           <button
             onClick={onEdit}
-            className="p-2 rounded-lg text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors"
+            className="p-2 rounded-lg text-slate-400 dark:text-neutral-500 hover:text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors"
             aria-label={`Edit ${medication.name}`}
           >
             <Edit2 size={16} />
           </button>
           <button
             onClick={onDelete}
-            className="p-2 rounded-lg text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors"
+            className="p-2 rounded-lg text-slate-400 dark:text-neutral-500 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors"
             aria-label={`Delete ${medication.name}`}
           >
             <Trash2 size={16} />

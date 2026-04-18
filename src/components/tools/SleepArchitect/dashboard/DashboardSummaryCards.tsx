@@ -20,7 +20,7 @@ function average(vals: number[]): number {
 
 function getTrend(current: number, previous: number): { icon: React.ReactNode; text: string; color: string } {
   const diff = current - previous;
-  if (Math.abs(diff) < 0.5) return { icon: <Minus size={12} />, text: 'Steady', color: 'text-gray-400' };
+  if (Math.abs(diff) < 0.5) return { icon: <Minus size={12} />, text: 'Steady', color: 'text-gray-400 dark:text-neutral-500' };
   if (diff > 0) return { icon: <TrendingUp size={12} />, text: `+${diff.toFixed(0)}`, color: 'text-emerald-600 dark:text-emerald-400' };
   return { icon: <TrendingDown size={12} />, text: `${diff.toFixed(0)}`, color: 'text-red-600 dark:text-red-400' };
 }

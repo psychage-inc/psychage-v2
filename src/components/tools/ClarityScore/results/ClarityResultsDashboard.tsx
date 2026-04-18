@@ -173,7 +173,7 @@ const ClarityResultsDashboard: React.FC<ClarityResultsDashboardProps> = ({
               aria-controls={`panel-${tab.id}`}
               tabIndex={isActive ? 0 : -1}
               onClick={() => setActiveTab(tab.id)}
-              className={`relative flex-1 px-4 py-3 text-sm font-medium transition-colors whitespace-nowrap focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-inset focus-visible:outline-none ${
+              className={`relative flex-1 px-4 py-3 text-sm font-medium transition-colors whitespace-nowrap focus-visible:ring-2 focus-visible:ring-gray-400 dark:focus-visible:ring-neutral-500 focus-visible:ring-inset focus-visible:outline-none ${
                 isActive
                   ? 'text-gray-900 dark:text-white'
                   : 'text-gray-400 dark:text-neutral-500 hover:text-gray-600 dark:hover:text-neutral-400'

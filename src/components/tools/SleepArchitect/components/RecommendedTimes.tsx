@@ -16,7 +16,7 @@ const RecommendedTimes: React.FC<RecommendedTimesProps> = ({ wakeTimes, bedtimes
       <button
         type="button"
         onClick={() => setExpanded(!expanded)}
-        className="flex items-center justify-between w-full text-sm font-bold text-gray-700"
+        className="flex items-center justify-between w-full text-sm font-bold text-gray-700 dark:text-neutral-300"
         aria-expanded={expanded}
       >
         <span className="flex items-center gap-2">
@@ -36,7 +36,7 @@ const RecommendedTimes: React.FC<RecommendedTimesProps> = ({ wakeTimes, bedtimes
           >
             {/* Wake times */}
             <div>
-              <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+              <div className="text-xs font-bold text-gray-500 dark:text-neutral-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
                 <Sun size={12} className="text-amber-400" />
                 Wake at end of cycle
               </div>
@@ -46,8 +46,8 @@ const RecommendedTimes: React.FC<RecommendedTimesProps> = ({ wakeTimes, bedtimes
                     key={t.cycles}
                     className="bg-amber-50 rounded-xl p-3 text-center border border-amber-100"
                   >
-                    <div className="text-lg font-bold font-display text-gray-900">{t.time}</div>
-                    <div className="text-[10px] text-gray-500 font-medium">
+                    <div className="text-lg font-bold font-display text-gray-900 dark:text-neutral-100">{t.time}</div>
+                    <div className="text-[10px] text-gray-500 dark:text-neutral-400 font-medium">
                       {t.cycles} cycles &middot; {formatDuration(t.totalSleepMinutes)}
                     </div>
                     <div className="text-[10px] text-amber-600 font-bold mt-0.5">{t.label}</div>
@@ -58,7 +58,7 @@ const RecommendedTimes: React.FC<RecommendedTimesProps> = ({ wakeTimes, bedtimes
 
             {/* Bedtimes */}
             <div>
-              <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+              <div className="text-xs font-bold text-gray-500 dark:text-neutral-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
                 <Moon size={12} className="text-indigo-400" />
                 Ideal bedtimes for your wake time
               </div>
@@ -68,8 +68,8 @@ const RecommendedTimes: React.FC<RecommendedTimesProps> = ({ wakeTimes, bedtimes
                     key={t.cycles}
                     className="bg-indigo-50 rounded-xl p-3 text-center border border-indigo-100"
                   >
-                    <div className="text-lg font-bold font-display text-gray-900">{t.time}</div>
-                    <div className="text-[10px] text-gray-500 font-medium">
+                    <div className="text-lg font-bold font-display text-gray-900 dark:text-neutral-100">{t.time}</div>
+                    <div className="text-[10px] text-gray-500 dark:text-neutral-400 font-medium">
                       {t.cycles} cycles &middot; {formatDuration(t.totalSleepMinutes)}
                     </div>
                     <div className="text-[10px] text-indigo-600 font-bold mt-0.5">{t.label}</div>

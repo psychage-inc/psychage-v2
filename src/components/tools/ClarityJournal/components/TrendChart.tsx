@@ -31,7 +31,7 @@ const TrendChart: React.FC<TrendChartProps> = ({
 }) => {
   if (data.length < 2) {
     return (
-      <div className="flex items-center justify-center h-32 text-sm text-slate-400 bg-slate-50 rounded-xl">
+      <div className="flex items-center justify-center h-32 text-sm text-slate-400 dark:text-neutral-500 bg-slate-50 dark:bg-neutral-900 rounded-xl">
         Need at least 2 entries to show trends
       </div>
     );
@@ -39,7 +39,7 @@ const TrendChart: React.FC<TrendChartProps> = ({
 
   return (
     <div>
-      {label && <p className="text-sm font-medium text-slate-600 mb-2">{label}</p>}
+      {label && <p className="text-sm font-medium text-slate-600 dark:text-neutral-400 mb-2">{label}</p>}
       <ResponsiveContainer width="100%" height={height}>
         <AreaChart data={data} margin={{ top: 5, right: 5, left: -20, bottom: 0 }}>
           <defs>

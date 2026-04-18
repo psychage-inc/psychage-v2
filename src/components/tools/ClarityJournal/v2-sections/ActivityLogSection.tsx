@@ -99,9 +99,9 @@ const ActivityLogSection: React.FC<ActivityLogSectionProps> = ({ onSave, existin
             <span className="text-lg">{ACTIVITY_CATEGORIES.find(c => c.value === activity.category)?.emoji}</span>
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium text-slate-900 dark:text-white truncate">{activity.name}</p>
-              <p className="text-xs text-slate-500">{activity.duration}min · Joy {activity.enjoyment}/10 · Mastery {activity.mastery}/10</p>
+              <p className="text-xs text-slate-500 dark:text-neutral-400">{activity.duration}min · Joy {activity.enjoyment}/10 · Mastery {activity.mastery}/10</p>
             </div>
-            <button type="button" onClick={() => removeActivity(i)} className="text-slate-400 hover:text-red-500 transition-colors">
+            <button type="button" onClick={() => removeActivity(i)} className="text-slate-400 dark:text-neutral-500 hover:text-red-500 transition-colors">
               <X className="w-4 h-4" />
             </button>
           </div>
@@ -120,7 +120,7 @@ const ActivityLogSection: React.FC<ActivityLogSectionProps> = ({ onSave, existin
             />
 
             <div>
-              <p className="text-xs font-medium text-slate-500 mb-2">Category</p>
+              <p className="text-xs font-medium text-slate-500 dark:text-neutral-400 mb-2">Category</p>
               <div className="flex flex-wrap gap-1.5">
                 {ACTIVITY_CATEGORIES.map(cat => (
                   <button
@@ -140,7 +140,7 @@ const ActivityLogSection: React.FC<ActivityLogSectionProps> = ({ onSave, existin
             </div>
 
             <div>
-              <p className="text-xs font-medium text-slate-500 mb-2">Duration</p>
+              <p className="text-xs font-medium text-slate-500 dark:text-neutral-400 mb-2">Duration</p>
               <div className="flex gap-2">
                 {DURATION_PRESETS.map(dp => (
                   <button
@@ -174,16 +174,16 @@ const ActivityLogSection: React.FC<ActivityLogSectionProps> = ({ onSave, existin
       <div>
         <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">Social interactions today</label>
         <div className="flex items-center gap-3">
-          <button type="button" onClick={() => setSocialInteractions(Math.max(0, socialInteractions - 1))} className="w-9 h-9 rounded-xl bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 flex items-center justify-center text-lg font-medium hover:bg-slate-200">−</button>
+          <button type="button" onClick={() => setSocialInteractions(Math.max(0, socialInteractions - 1))} className="w-9 h-9 rounded-xl bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 flex items-center justify-center text-lg font-medium hover:bg-slate-200 dark:hover:bg-neutral-700">−</button>
           <span className="text-lg font-semibold text-slate-900 dark:text-white w-8 text-center">{socialInteractions}</span>
-          <button type="button" onClick={() => setSocialInteractions(socialInteractions + 1)} className="w-9 h-9 rounded-xl bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 flex items-center justify-center text-lg font-medium hover:bg-slate-200">+</button>
+          <button type="button" onClick={() => setSocialInteractions(socialInteractions + 1)} className="w-9 h-9 rounded-xl bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 flex items-center justify-center text-lg font-medium hover:bg-slate-200 dark:hover:bg-neutral-700">+</button>
         </div>
       </div>
 
       {/* Avoidance */}
       <div>
         <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">
-          Anything you wanted to do but avoided? <span className="text-slate-400 font-normal">(optional)</span>
+          Anything you wanted to do but avoided? <span className="text-slate-400 dark:text-neutral-500 font-normal">(optional)</span>
         </label>
         <input
           type="text"

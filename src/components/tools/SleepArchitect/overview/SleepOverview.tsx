@@ -92,7 +92,7 @@ const SleepOverview: React.FC<SleepOverviewProps> = ({
             <button
               type="button"
               onClick={() => onNavigateTab('diary')}
-              className="inline-flex items-center gap-2 bg-white text-indigo-600 font-bold text-sm px-6 py-3 rounded-xl hover:bg-indigo-50 transition-colors"
+              className="inline-flex items-center gap-2 bg-white dark:bg-neutral-900 text-indigo-600 font-bold text-sm px-6 py-3 rounded-xl hover:bg-indigo-50 transition-colors"
             >
               <PenLine size={16} />
               Log your first night

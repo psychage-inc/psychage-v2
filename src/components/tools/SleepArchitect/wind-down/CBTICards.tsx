@@ -43,9 +43,9 @@ const CBTICards: React.FC = () => {
                   </p>
                 </div>
                 {isExpanded ? (
-                  <ChevronUp size={16} className="text-gray-400 flex-shrink-0 mt-0.5" />
+                  <ChevronUp size={16} className="text-gray-400 dark:text-neutral-500 flex-shrink-0 mt-0.5" />
                 ) : (
-                  <ChevronDown size={16} className="text-gray-400 flex-shrink-0 mt-0.5" />
+                  <ChevronDown size={16} className="text-gray-400 dark:text-neutral-500 flex-shrink-0 mt-0.5" />
                 )}
               </button>
 

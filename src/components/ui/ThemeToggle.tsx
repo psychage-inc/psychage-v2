@@ -1,13 +1,13 @@
 import React from 'react';
-import { Sun, Moon, Monitor } from 'lucide-react';
+import { Sun, Moon } from 'lucide-react';
 import { useTheme } from '@/context/ThemeContext';
 import { cn } from '@/lib/utils';
 
 const ThemeToggle: React.FC<{ className?: string }> = ({ className }) => {
     const { theme, toggleTheme } = useTheme();
 
-    const Icon = theme === 'dark' ? Moon : theme === 'light' ? Sun : Monitor;
-    const label = theme === 'dark' ? 'Dark mode' : theme === 'light' ? 'Light mode' : 'System theme';
+    const Icon = theme === 'dark' ? Moon : Sun;
+    const label = theme === 'dark' ? 'Dark mode' : 'Light mode';
 
     return (
         <button

@@ -94,12 +94,12 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
 
       {/* Video Info */}
       <div className="mt-4 px-1">
-        <h3 className="mb-2 font-display text-lg font-bold leading-tight text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+        <h3 className="mb-2 font-display text-lg font-bold leading-tight text-text-primary group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
           {video.title}
         </h3>
-        <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 font-medium">
+        <div className="flex items-center text-sm text-text-tertiary font-medium">
           <span aria-label={`${formatViews(video.views)} views`}>{formatViews(video.views)} views</span>
-          <span className="mx-2 text-gray-300 dark:text-gray-600" aria-hidden="true">•</span>
+          <span className="mx-2 text-text-tertiary" aria-hidden="true">•</span>
           <span className={`${catTheme.classes.text} ${catTheme.classes.textDark}`}>{video.category}</span>
         </div>
       </div>

@@ -30,11 +30,11 @@ const NextSteps: React.FC<NextStepsProps> = ({ steps, title = "Recommended Next 
                         className="group flex items-center justify-between p-4 bg-white rounded-xl border border-teal-100/50 hover:border-teal-300 hover:shadow-md transition-all"
                     >
                         <div>
-                            <span className="font-bold text-gray-900 group-hover:text-teal-700 transition-colors">
+                            <span className="font-bold text-text-primary group-hover:text-teal-700 transition-colors">
                                 {step.label}
                             </span>
                             {step.description && (
-                                <p className="text-sm text-gray-500 mt-1">{step.description}</p>
+                                <p className="text-sm text-text-tertiary mt-1">{step.description}</p>
                             )}
                         </div>
                         <ArrowRight size={18} className="text-teal-400 group-hover:text-teal-600 group-hover:translate-x-1 transition-all" />

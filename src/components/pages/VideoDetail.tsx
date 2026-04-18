@@ -119,13 +119,13 @@ const VideoDetail: React.FC = () => {
                             </div>
 
                             <div className="flex items-center gap-2">
-                                <button aria-label="Like this video" className="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-hover text-sm font-bold text-text-secondary hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                                <button aria-label="Like this video" className="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-hover text-sm font-bold text-text-secondary hover:bg-surface-hover transition-colors">
                                     <ThumbsUp size={16} /> 12K
                                 </button>
-                                <button aria-label="Share this video" className="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-hover text-sm font-bold text-text-secondary hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                                <button aria-label="Share this video" className="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-hover text-sm font-bold text-text-secondary hover:bg-surface-hover transition-colors">
                                     <Share2 size={16} /> Share
                                 </button>
-                                <button aria-label="Save this video" className="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-hover text-sm font-bold text-text-secondary hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                                <button aria-label="Save this video" className="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-hover text-sm font-bold text-text-secondary hover:bg-surface-hover transition-colors">
                                     <Bookmark size={16} /> Save
                                 </button>
                             </div>

@@ -13,8 +13,8 @@ const RelatedContent: React.FC<RelatedContentProps> = ({ articles, title = "Rela
     if (!articles || articles.length === 0) return null;
 
     return (
-        <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
-            <h3 className="font-display font-bold text-xl text-gray-900 mb-6 flex items-center gap-2">
+        <div className="bg-surface rounded-2xl p-8 border border-border">
+            <h3 className="font-display font-bold text-xl text-text-primary mb-6 flex items-center gap-2">
                 <BookOpen size={20} className="text-teal-600" />
                 {title}
             </h3>
@@ -23,17 +23,17 @@ const RelatedContent: React.FC<RelatedContentProps> = ({ articles, title = "Rela
                     <Link
                         key={article.id}
                         to={`/learn/${article.category.slug}/${article.slug}`}
-                        className="group bg-white p-4 rounded-xl border border-gray-100 hover:border-teal-200 hover:shadow-md transition-all flex flex-col justify-between"
+                        className="group bg-surface p-4 rounded-xl border border-border hover:border-teal-200 hover:shadow-md transition-all flex flex-col justify-between"
                     >
                         <div>
                             <span className={`text-xs font-bold uppercase tracking-wider mb-2 block ${getCategoryClasses(article.category.slug).text} ${getCategoryClasses(article.category.slug).textDark}`}>
                                 {article.category.name}
                             </span>
-                            <h4 className="font-bold text-gray-900 group-hover:text-teal-700 transition-colors mb-2 line-clamp-2">
+                            <h4 className="font-bold text-text-primary group-hover:text-teal-700 transition-colors mb-2 line-clamp-2">
                                 {article.title}
                             </h4>
                         </div>
-                        <div className="flex items-center text-sm text-gray-500 mt-4 group-hover:text-teal-600 font-medium">
+                        <div className="flex items-center text-sm text-text-tertiary mt-4 group-hover:text-teal-600 font-medium">
                             Read Article <ArrowRight size={14} className="ml-1 transition-transform group-hover:translate-x-1" />
                         </div>
                     </Link>

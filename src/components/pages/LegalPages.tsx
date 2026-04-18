@@ -16,19 +16,19 @@ const LegalPage: React.FC<LegalPageProps> = ({ type }) => {
     const lastUpdated = 'January 15, 2025';
 
     return (
-        <div className="min-h-screen bg-white pt-28 pb-20 px-6">
+        <div className="min-h-screen bg-surface pt-28 pb-20 px-6">
             <SEO
                 title={`${title} - Psychage`}
                 description={`Read our ${title} to understand how we operate and protect your data.`}
             />
 
             <div className="container mx-auto max-w-3xl">
-                <div className="text-center mb-16 border-b border-gray-100 pb-12">
-                    <h1 className="font-display font-bold text-4xl text-gray-900 mb-4">{title}</h1>
-                    <p className="text-gray-500 font-medium">Last updated: {lastUpdated}</p>
+                <div className="text-center mb-16 border-b border-border pb-12">
+                    <h1 className="font-display font-bold text-4xl text-text-primary mb-4">{title}</h1>
+                    <p className="text-text-tertiary font-medium">Last updated: {lastUpdated}</p>
                 </div>
 
-                <div className="prose prose-lg prose-teal max-w-none text-gray-600">
+                <div className="prose prose-lg prose-teal max-w-none text-text-secondary">
                     {type === 'privacy' ? (
                         <>
                             <h3>1. Introduction</h3>

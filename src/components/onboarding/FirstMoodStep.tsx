@@ -60,7 +60,7 @@ const FirstMoodStep: React.FC<FirstMoodStepProps> = ({ userId, onNext, onBack })
             <motion.h2
                 initial={reduced ? {} : { opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-2xl sm:text-3xl font-display font-bold text-gray-900 dark:text-white mb-2 text-center tracking-tight"
+                className="text-2xl sm:text-3xl font-display font-bold text-text-primary mb-2 text-center tracking-tight"
             >
                 How are you feeling right now?
             </motion.h2>
@@ -68,7 +68,7 @@ const FirstMoodStep: React.FC<FirstMoodStepProps> = ({ userId, onNext, onBack })
                 initial={reduced ? {} : { opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-gray-500 dark:text-gray-400 mb-8 text-center text-sm"
+                className="text-text-tertiary mb-8 text-center text-sm"
             >
                 Your first check-in. No right or wrong answer.
             </motion.p>
@@ -87,7 +87,7 @@ const FirstMoodStep: React.FC<FirstMoodStepProps> = ({ userId, onNext, onBack })
                                 'flex flex-col items-center gap-2 p-3 sm:p-4 rounded-2xl border-2 transition-colors min-w-[60px]',
                                 isSelected
                                     ? 'border-current shadow-md'
-                                    : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
+                                    : 'border-border hover:border-gray-300 dark:hover:border-gray-600'
                             )}
                             style={isSelected ? { borderColor: option.color } : undefined}
                         >
@@ -97,7 +97,7 @@ const FirstMoodStep: React.FC<FirstMoodStepProps> = ({ userId, onNext, onBack })
                             />
                             <span className={cn(
                                 'text-xs font-medium',
-                                isSelected ? 'text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400'
+                                isSelected ? 'text-text-primary' : 'text-text-tertiary'
                             )}>
                                 {option.label}
                             </span>
@@ -119,7 +119,7 @@ const FirstMoodStep: React.FC<FirstMoodStepProps> = ({ userId, onNext, onBack })
                             placeholder="Want to add a note? (optional)"
                             value={notes}
                             onChange={e => setNotes(e.target.value)}
-                            className="w-full bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-xl p-3 text-sm text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 resize-none h-20 focus:outline-none focus:ring-2 focus:ring-teal-500/30 focus:border-teal-500/50"
+                            className="w-full bg-surface border border-border rounded-xl p-3 text-sm text-text-primary placeholder:text-text-tertiary resize-none h-20 focus:outline-none focus:ring-2 focus:ring-teal-500/30 focus:border-teal-500/50"
                             maxLength={500}
                         />
                     </motion.div>
@@ -145,7 +145,7 @@ const FirstMoodStep: React.FC<FirstMoodStepProps> = ({ userId, onNext, onBack })
 
             <button
                 onClick={handleSkip}
-                className="mt-4 text-xs text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                className="mt-4 text-xs text-text-tertiary hover:text-text-secondary transition-colors"
             >
                 Skip for now
             </button>

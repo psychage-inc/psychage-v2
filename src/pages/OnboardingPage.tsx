@@ -57,7 +57,7 @@ const OnboardingPage: React.FC = () => {
     if (checkingStatus) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-950">
-                <div className="w-8 h-8 rounded-full border-2 border-gray-200 border-t-teal-500 animate-spin" />
+                <div className="w-8 h-8 rounded-full border-2 border-border border-t-teal-500 animate-spin" />
             </div>
         );
     }

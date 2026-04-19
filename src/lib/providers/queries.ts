@@ -558,6 +558,8 @@ export async function submitProviderApplication(
 
 // =============================================================================
 // CLAIM PROVIDER (for NPI-seeded profiles)
+// DEPRECATED: use claim-provider Edge Function via supabase.functions.invoke().
+// Kept for compatibility. See Phase 0.5 Discovery #1.
 // =============================================================================
 
 export async function claimProvider(

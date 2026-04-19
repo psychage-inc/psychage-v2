@@ -17,7 +17,8 @@ import { Input } from '@/components/ui/Input';
 import Badge from '@/components/ui/Badge';
 import { useAuth } from '@/context/AuthContext';
 import { useNPIVerification } from '@/hooks/useNPIVerification';
-import { getProviderByNPI, claimProvider } from '@/lib/providers/queries';
+import { getProviderByNPI } from '@/lib/providers/queries';
+import { supabase } from '@/lib/supabaseClient';
 import type { ProviderWithDetails, NPIVerificationResult } from '@/lib/providers/types';
 import { getPrimaryLocation, formatProviderLocation } from '@/lib/providers/types';
 
@@ -67,11 +68,20 @@ const ProviderClaimForm: React.FC = () => {
     setErrorMessage('');
 
     try {
-      const result = await claimProvider(matchedProvider.id, user.id, npiInput);
-      if (result.success) {
+      const { data, error } = await supabase.functions.invoke('claim-provider', {
+        body: { npi_number: npiInput },
+      });
+
+      if (error) {
+        setErrorMessage(error.message || 'Failed to claim profile.');
+        setClaimState('error');
+        return;
+      }
+
+      if (data?.success) {
         setClaimState('claimed');
       } else {
-        setErrorMessage(result.error || 'Failed to claim profile.');
+        setErrorMessage(data?.message || 'Failed to claim profile.');
         setClaimState('error');
       }
     } catch (err) {

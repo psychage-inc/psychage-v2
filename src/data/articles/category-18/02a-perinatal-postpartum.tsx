@@ -168,7 +168,7 @@ export const articles: Article[] = [
       <>
         {/* Introduction */}
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             At 28 weeks pregnant, Maya couldn't remember the last time she felt excited about the
             baby. Everyone asked if she was "so happy," and Maya said yes---because what kind of
             person feels nothing but dread about their wanted pregnancy?
@@ -623,7 +623,7 @@ export const articles: Article[] = [
       <>
         {/* Introduction */}
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Three weeks after giving birth, Lauren sat in the dark nursery at 3 AM, baby finally
             asleep in her arms, and sobbed silently. She loved her daughter desperately---and also
             felt crushed by the weight of keeping this tiny human alive.
@@ -1082,7 +1082,7 @@ export const articles: Article[] = [
       <>
         {/* Introduction */}
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             At 36 weeks pregnant, Tessa couldn't sleep---not because of physical discomfort, but
             because her mind raced with catastrophic scenarios. What if the cord wrapped around the
             baby's neck? What if she didn't make it to the hospital in time? What if she made a
@@ -1249,7 +1249,7 @@ export const articles: Article[] = [
 
         <HighlightBox variant="stat">
           <p className="text-4xl font-bold text-gray-900 dark:text-white mb-2">90%</p>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          <p className="text-lg text-gray-600 dark:text-neutral-300">
             of new parents experience intrusive thoughts about harm to their baby---these are
             anxiety symptoms, not dangerous desires
           </p>
@@ -1480,7 +1480,7 @@ export const articles: Article[] = [
       <>
         {/* Introduction */}
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When people asked about her birth, Simone said, "It was hard, but baby is healthy"---the
             only acceptable answer. She didn't mention the 38 hours of labor, the emergency
             cesarean without adequate explanation, the feeling of being held down and cut open while
@@ -2004,7 +2004,7 @@ export const articles: Article[] = [
       <>
         {/* Introduction */}
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             On day three postpartum, Jessica's partner found her standing over the bassinet at 4
             AM, staring at their sleeping daughter. "I can hear them," Jessica whispered. "They're
             telling me she's not really ours. That we need to protect her from the demons."

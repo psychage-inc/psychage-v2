@@ -32,32 +32,32 @@ const JournalInsights: React.FC = () => {
   const hasScreeningData = phqData.length >= 2;
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-6">
+    <div className="min-h-screen bg-gray-50 dark:bg-neutral-900 pt-24 pb-12 px-6">
       <SEO title="Insights | Clarity Journal" description="Trends and patterns in your journal data." />
       <div className="container mx-auto max-w-3xl">
         <div className="mb-8"><Breadcrumbs /></div>
-        <button onClick={() => navigate('/tools/clarity-journal')} className="flex items-center gap-2 text-sm text-slate-500 hover:text-teal-600 mb-6 transition-colors">
+        <button onClick={() => navigate('/tools/clarity-journal')} className="flex items-center gap-2 text-sm text-slate-500 dark:text-neutral-400 hover:text-teal-600 mb-6 transition-colors">
           <ArrowLeft className="w-4 h-4" /> Back to Journal
         </button>
 
-        <h1 className="font-display font-bold text-2xl md:text-3xl text-slate-900 mb-2">Insights & Trends</h1>
-        <p className="text-slate-500 mb-8">Notice the trends, not the individual days.</p>
+        <h1 className="font-display font-bold text-2xl md:text-3xl text-slate-900 dark:text-neutral-100 mb-2">Insights & Trends</h1>
+        <p className="text-slate-500 dark:text-neutral-400 mb-8">Notice the trends, not the individual days.</p>
 
         {!hasCheckInData && !hasScreeningData ? (
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 text-center">
-            <p className="text-slate-400 text-sm">Complete at least 2 daily check-ins or weekly screenings to see your trends here.</p>
+          <div className="bg-white dark:bg-neutral-900 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-neutral-800 text-center">
+            <p className="text-slate-400 dark:text-neutral-500 text-sm">Complete at least 2 daily check-ins or weekly screenings to see your trends here.</p>
           </div>
         ) : (
           <div className="space-y-8">
             {hasCheckInData && (
               <>
-                <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+                <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-neutral-800">
                   <TrendChart data={moodData} color="#1A9B8C" label="Mood Over Time" yDomain={[0, 10]} />
                 </div>
-                <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+                <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-neutral-800">
                   <TrendChart data={energyData} color="#6366f1" label="Energy Over Time" yDomain={[0, 10]} />
                 </div>
-                <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+                <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-neutral-800">
                   <TrendChart data={sleepData} color="#8b5cf6" label="Sleep Hours Over Time" yDomain={[0, 12]} height={180} />
                 </div>
               </>
@@ -65,10 +65,10 @@ const JournalInsights: React.FC = () => {
 
             {hasScreeningData && (
               <>
-                <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+                <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-neutral-800">
                   <TrendChart data={phqData} color="#dc2626" label="Depression Screen (PHQ-2) Over Time" yDomain={[0, 6]} height={180} />
                 </div>
-                <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+                <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-neutral-800">
                   <TrendChart data={gadData} color="#f59e0b" label="Anxiety Screen (GAD-2) Over Time" yDomain={[0, 6]} height={180} />
                 </div>
               </>

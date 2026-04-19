@@ -148,7 +148,7 @@ export const personalityDisordersArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For individuals living with Borderline Personality Disorder (BPD), emotions do not arrive in measured doses. They arrive with the force of a wave — sudden, overwhelming, and all-consuming. Relationships swing between idealization and desperate fear of loss. A sense of self can feel fractured, shifting from one moment to the next. BPD is one of the most misunderstood conditions in mental health, yet it is also one of the most treatable when the right support is in place.
           </p>
           <p className="mb-6">
@@ -574,7 +574,7 @@ export const personalityDisordersArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The word "narcissist" has become common shorthand for anyone who seems selfish or self-absorbed. But Narcissistic Personality Disorder is a clinical condition that runs far deeper than vanity or arrogance. Beneath the surface of grandiosity lies a fragile self-structure, persistent difficulties in maintaining genuine relationships, and often, significant inner suffering that rarely matches the outward presentation.
           </p>
           <p className="mb-6">
@@ -902,7 +902,7 @@ export const personalityDisordersArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Few mental health conditions carry as much cultural baggage as Antisocial Personality Disorder. Shaped by decades of crime fiction, true crime media, and cinematic portrayals of "psychopaths" and "sociopaths," public understanding of ASPD is dominated by caricatures that bear little resemblance to clinical reality. The truth is more nuanced — and more important — than any screenplay suggests.
           </p>
           <p className="mb-6">
@@ -1296,7 +1296,7 @@ export const personalityDisordersArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There are people who spend their entire lives wanting to connect with others — craving friendship, intimacy, and belonging — yet who consistently withdraw from social opportunities out of a deep, pervasive fear of being found inadequate, embarrassing, or fundamentally unworthy of acceptance. This is the paradox at the heart of Avoidant Personality Disorder.
           </p>
           <p className="mb-6">
@@ -1713,7 +1713,7 @@ export const personalityDisordersArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Everyone relies on others to some degree — for emotional support, practical help, and shared decision-making. Healthy interdependence is a fundamental part of human life. But for individuals living with Dependent Personality Disorder, the need for care and guidance from others becomes so pervasive that it overtakes the capacity for independent functioning. Simple decisions feel impossible without reassurance. The prospect of being alone triggers profound fear. And relationships become organized around a single imperative: maintaining the attachment at any cost.
           </p>
           <p className="mb-6">

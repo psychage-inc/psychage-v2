@@ -107,7 +107,7 @@ const AdminAuditLogV2: React.FC = () => {
       cell: ({ row }) => row.original.resource_id ? (
         <code className="text-xs font-mono text-text-secondary">{row.original.resource_id.slice(0, 12)}</code>
       ) : (
-        <span className="text-gray-300">{'\u2014'}</span>
+        <span className="text-gray-300 dark:text-neutral-600">{'\u2014'}</span>
       ),
     },
     {

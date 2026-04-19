@@ -37,7 +37,7 @@ const CrisisAlert: React.FC<CrisisAlertProps> = ({ className, onDismiss }) => {
         {CRISIS_RESOURCES.resources.map((resource) => (
           <div
             key={resource.name}
-            className="flex items-center gap-3 bg-white dark:bg-gray-800 rounded-xl p-3 border border-red-100 dark:border-red-800"
+            className="flex items-center gap-3 bg-white dark:bg-neutral-800 rounded-xl p-3 border border-red-100 dark:border-red-800"
           >
             {resource.contact.startsWith('http') ? (
               <ExternalLink
@@ -57,7 +57,7 @@ const CrisisAlert: React.FC<CrisisAlertProps> = ({ className, onDismiss }) => {
               <div className="text-sm font-bold text-gray-900 dark:text-white">
                 {resource.name}
               </div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">
+              <div className="text-xs text-gray-600 dark:text-neutral-400">
                 {resource.contact} &middot; {resource.available}
               </div>
             </div>

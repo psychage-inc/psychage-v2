@@ -97,7 +97,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             We are more connected than ever before --- smartphones, social media, instant messaging. Yet rates of loneliness have doubled over the past 40 years. How did we become so disconnected in an age of connection?
           </p>
           <p className="mb-6">
@@ -437,7 +437,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're at a party, surrounded by people. Laughter fills the room. You're having conversations. And yet, you feel profoundly alone. This paradox --- feeling lonely in a crowd --- reveals a critical truth about loneliness.
           </p>
           <p className="mb-6">
@@ -831,7 +831,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Loneliness doesn't just feel bad --- it activates specific biological pathways that weaken your immune system, fragment your sleep, and accelerate aging. The body treats social disconnection as a threat, triggering physiological changes designed to protect you in the short term but harm you over time.
           </p>
           <p className="mb-6">
@@ -1222,7 +1222,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Why does loneliness hurt? Why does social rejection activate the same brain regions as physical injury? The answer lies deep in our evolutionary past, when being separated from the group meant almost certain death.
           </p>
           <p className="mb-6">
@@ -1639,7 +1639,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             How do you measure something as subjective as loneliness? For over 40 years, researchers have relied on the UCLA Loneliness Scale --- a simple, validated questionnaire that has become the gold standard for assessing perceived social isolation.
           </p>
           <p className="mb-6">

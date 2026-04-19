@@ -65,7 +65,7 @@ export const specializedForensicTopicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mass shootings—events in which four or more people are killed by gunfire in a public setting—have become a defining feature of American violence, generating intense public fear, political polarization, and a desperate search for explanations. The psychological research on mass shootings, while constrained by the relative rarity of these events, has produced important findings.
           </p>
         </div>
@@ -111,7 +111,7 @@ export const specializedForensicTopicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -174,7 +174,7 @@ export const specializedForensicTopicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The discovery that innocent people are convicted of crimes they did not commit—and may spend years or decades in prison before exoneration—represents one of the most profound failures of the justice system. The Innocence Project and the National Registry of Exonerations have documented over 3,400 exonerations in the United States since 1989, with exonerees having served an average of 8.
           </p>
         </div>
@@ -218,7 +218,7 @@ export const specializedForensicTopicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -281,7 +281,7 @@ export const specializedForensicTopicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Police officers face a constellation of occupational stressors that place them at elevated risk for a range of mental health conditions—yet the culture of law enforcement, with its emphasis on toughness, self-reliance, and emotional control, creates powerful barriers to help-seeking. Research documents that approximately 15–18% of police officers meet criteria for PTSD (compared to 6–8% in the general population), depression rates are 2–3 times higher than in the general population, and suicide rates among officers exceed the general population rate by 50–69%.
           </p>
         </div>
@@ -326,7 +326,7 @@ export const specializedForensicTopicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -389,7 +389,7 @@ export const specializedForensicTopicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Terrorism—violence intended to intimidate a population and advance political, ideological, or religious goals—achieves its psychological objective precisely by extending its impact far beyond its physical casualties. The September 11 attacks killed 2,977 people but psychologically affected millions: studies documented elevated PTSD rates not only among direct survivors and rescue workers but among television viewers nationwide who were exposed to intensive media coverage.
           </p>
         </div>
@@ -440,7 +440,7 @@ export const specializedForensicTopicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -503,7 +503,7 @@ export const specializedForensicTopicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Domestic violence courts emerged in the 1990s as a response to the criminal justice system&apos;s persistent failure to take intimate partner violence seriously—a failure manifested in dropped charges, minimal sentences, lack of offender monitoring, and the absence of victim support services. By 2020, more than 300 specialized domestic violence courts operated across the United States, built on the premise that intimate partner violence requires a distinct judicial approach that prioritizes victim safety, holds offenders accountable through structured monitoring, and coordinates the fragmented systems (criminal justice, social services, mental health, victim advocacy) that domestic violence cases inevitably involve.
           </p>
         </div>
@@ -548,7 +548,7 @@ export const specializedForensicTopicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -611,7 +611,7 @@ export const specializedForensicTopicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sex trafficking—the use of force, fraud, or coercion to compel a person into commercial sexual acts—is fundamentally a crime of psychological domination. While public imagery emphasizes physical captivity (chains, locked rooms, abductions), the reality is that most sex trafficking operates through psychological coercion: manipulation of attachment bonds, systematic destruction of self-worth, isolation from support networks, creation of dependency, exploitation of pre-existing vulnerabilities, and the calculated alternation of violence and kindness that produces traumatic bonding.
           </p>
         </div>
@@ -657,7 +657,7 @@ export const specializedForensicTopicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -720,7 +720,7 @@ export const specializedForensicTopicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Hate crimes—criminal acts motivated by bias against a person&apos;s race, ethnicity, religion, sexual orientation, gender identity, or disability—occupy a unique position in criminal law and psychology. They are simultaneously acts against an individual and acts of terrorism against an entire community.
           </p>
         </div>
@@ -769,7 +769,7 @@ export const specializedForensicTopicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -832,7 +832,7 @@ export const specializedForensicTopicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Cybercrime—criminal activity committed through digital technology—has become one of the fastest-growing categories of criminal behavior worldwide, with the FBI&apos;s Internet Crime Complaint Center receiving over 800,000 complaints annually representing billions of dollars in losses. Yet the psychology of cybercrime remains underdeveloped compared to the psychology of traditional crime.
           </p>
         </div>
@@ -879,7 +879,7 @@ export const specializedForensicTopicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -942,7 +942,7 @@ export const specializedForensicTopicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Elder abuse—the mistreatment or neglect of older adults by caregivers, family members, or trusted individuals—is one of the most prevalent yet least reported forms of interpersonal violence. The World Health Organization estimates that approximately 1 in 6 older adults worldwide experiences some form of abuse, with financial exploitation, psychological abuse, neglect, and physical abuse being the most common types.
           </p>
         </div>
@@ -990,7 +990,7 @@ export const specializedForensicTopicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1053,7 +1053,7 @@ export const specializedForensicTopicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When a child is alleged to have been a victim of abuse—sexual, physical, or emotional—the forensic interview may be the single most important piece of evidence. Unlike physical evidence, which either exists or does not, the child&apos;s account of what happened is shaped by how, when, and by whom the questions are asked.
           </p>
         </div>
@@ -1103,7 +1103,7 @@ export const specializedForensicTopicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1166,7 +1166,7 @@ export const specializedForensicTopicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sentencing—the process by which judges (and sometimes juries) determine the punishment for criminal offenses—is presented as a rational, rule-governed process guided by statutory frameworks, sentencing guidelines, and the facts of each case. The psychological reality is considerably more complex.
           </p>
         </div>
@@ -1211,7 +1211,7 @@ export const specializedForensicTopicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1274,7 +1274,7 @@ export const specializedForensicTopicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Death notification—the act of informing family members that someone they love has died—is among the most psychologically significant interactions in the criminal justice and emergency services system. The way a death is communicated can shape the trajectory of the survivor&apos;s grief for years or decades.
           </p>
         </div>
@@ -1322,7 +1322,7 @@ export const specializedForensicTopicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1385,7 +1385,7 @@ export const specializedForensicTopicsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Forensic psychology stands at a crossroads where accelerating technological and scientific advances are transforming every aspect of the field—from how risk is assessed to how evidence is gathered, from how testimony is evaluated to how rehabilitation is delivered. Artificial intelligence algorithms now assist in bail, sentencing, and parole decisions affecting millions of people—raising urgent questions about algorithmic bias, transparency, and accountability.
           </p>
         </div>
@@ -1433,7 +1433,7 @@ export const specializedForensicTopicsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

@@ -46,7 +46,7 @@ export const VerificationBadge: React.FC<VerificationBadgeProps> = ({
   ) : status === 'seeded' ? (
     <span
       className={cn(
-        'inline-flex items-center gap-1 font-medium text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800 rounded-full',
+        'inline-flex items-center gap-1 font-medium text-text-tertiary bg-surface rounded-full',
         showTooltip && 'cursor-help',
         size === 'sm' ? 'text-[10px] px-1.5 py-0.5' : 'text-xs px-2 py-0.5'
       )}

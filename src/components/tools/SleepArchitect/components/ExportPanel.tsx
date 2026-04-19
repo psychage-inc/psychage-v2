@@ -65,7 +65,7 @@ const ExportPanel: React.FC<ExportPanelProps> = ({ inputs, output }) => {
           key={action.id}
           type="button"
           onClick={action.onClick}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold border border-gray-200 text-gray-600 hover:bg-gray-50 hover:border-gray-300 transition-all"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold border border-gray-200 dark:border-neutral-700 text-gray-600 dark:text-neutral-400 hover:bg-gray-50 dark:hover:bg-neutral-800 hover:border-gray-300 transition-all"
         >
           {action.icon}
           {action.label}

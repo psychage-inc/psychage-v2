@@ -55,7 +55,7 @@ const MoodCheckInSection: React.FC<MoodCheckInSectionProps> = ({ onSave, existin
     <div className="space-y-6">
       {/* Time of day selector */}
       <div>
-        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">When</label>
+        <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">When</label>
         <div className="flex gap-2">
           {timeOptions.map(opt => (
             <button
@@ -65,7 +65,7 @@ const MoodCheckInSection: React.FC<MoodCheckInSectionProps> = ({ onSave, existin
               className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
                 timeOfDay === opt.value
                   ? 'bg-teal-600 text-white'
-                  : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200'
+                  : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200 dark:hover:bg-neutral-700'
               }`}
             >
               {opt.label}
@@ -85,8 +85,8 @@ const MoodCheckInSection: React.FC<MoodCheckInSectionProps> = ({ onSave, existin
 
       {/* Quick note */}
       <div>
-        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-          Quick note <span className="text-slate-400 font-normal">(optional)</span>
+        <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">
+          Quick note <span className="text-slate-400 dark:text-neutral-500 font-normal">(optional)</span>
         </label>
         <textarea
           value={note}
@@ -94,20 +94,20 @@ const MoodCheckInSection: React.FC<MoodCheckInSectionProps> = ({ onSave, existin
           placeholder="Anything on your mind..."
           rows={2}
           maxLength={500}
-          className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
+          className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
         />
-        <p className="text-xs text-slate-400 mt-1 text-right">{note.length}/500</p>
+        <p className="text-xs text-slate-400 dark:text-neutral-500 mt-1 text-right">{note.length}/500</p>
       </div>
 
       {/* Previous check-ins today */}
       {existingCheckIns.length > 0 && (
-        <div className="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-3">
-          <p className="text-xs font-medium text-slate-500 dark:text-slate-400 mb-2">
+        <div className="bg-slate-50 dark:bg-neutral-800/50 rounded-xl p-3">
+          <p className="text-xs font-medium text-slate-500 dark:text-neutral-400 mb-2">
             Earlier today ({existingCheckIns.length} check-in{existingCheckIns.length > 1 ? 's' : ''})
           </p>
           <div className="flex gap-2">
             {existingCheckIns.map(ci => (
-              <div key={ci.id} className="bg-white dark:bg-slate-900 rounded-lg px-3 py-1.5 text-xs text-slate-600 dark:text-slate-400 border border-slate-100 dark:border-slate-700">
+              <div key={ci.id} className="bg-white dark:bg-neutral-900 rounded-lg px-3 py-1.5 text-xs text-slate-600 dark:text-neutral-400 border border-slate-100 dark:border-neutral-700">
                 {ci.timeOfDay} — mood {ci.overallMood}/10
               </div>
             ))}

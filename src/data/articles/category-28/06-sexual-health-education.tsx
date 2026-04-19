@@ -65,7 +65,7 @@ export const sexualHealthEducationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Human sexuality is among the most complex, variable, and psychologically significant dimensions of human experience—encompassing desire, arousal, behavior, identity, orientation, fantasy, pleasure, reproduction, intimacy, and the meanings that individuals and cultures attach to all of these. Yet despite its centrality to human experience, sexuality remains one of the most poorly understood, inadequately researched, and inconsistently addressed domains in mental healthcare.
           </p>
         </div>
@@ -106,7 +106,7 @@ export const sexualHealthEducationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -169,7 +169,7 @@ export const sexualHealthEducationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sexual orientation—the enduring pattern of emotional, romantic, and/or sexual attraction to others—represents one of the most fundamental dimensions of human identity, one that has been the subject of scientific study, political controversy, cultural debate, and personal struggle for over a century. Contemporary research firmly establishes that sexual orientation exists on a spectrum, that it is not a choice, that it is influenced by a complex interaction of biological factors (genetics, prenatal hormonal exposure, neuroanatomy) and developmental experiences that are not under conscious control, and that efforts to change sexual orientation (so-called &quot;conversion therapy&quot;) are ineffective and harmful.
           </p>
         </div>
@@ -212,7 +212,7 @@ export const sexualHealthEducationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -275,7 +275,7 @@ export const sexualHealthEducationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sexual communication—the ability to discuss desires, boundaries, preferences, concerns, and fantasies with an intimate partner—is consistently identified by research as the single strongest predictor of sexual satisfaction, surpassing physical technique, frequency, novelty, or any other factor in its association with both sexual and relationship well-being. Yet sexual communication remains one of the most difficult forms of interpersonal dialogue, inhibited by shame, vulnerability, cultural scripts that discourage explicit sexual discussion, gender-role expectations that assign different communication responsibilities to men and women, and the paradoxical reality that the person with whom we are most physically intimate is often the person with whom we are least verbally open about our sexual experience.
           </p>
         </div>
@@ -317,7 +317,7 @@ export const sexualHealthEducationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -380,7 +380,7 @@ export const sexualHealthEducationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Consent—the freely given, informed, enthusiastic, and ongoing agreement to engage in sexual activity—is the ethical foundation of all healthy sexual interaction. Yet the psychology of consent is far more complex than the legal definitions suggest, involving dynamics of power, socialization, communication, emotional regulation, intoxication, trauma history, and the cultural scripts that shape how individuals interpret and express sexual willingness.
           </p>
         </div>
@@ -421,7 +421,7 @@ export const sexualHealthEducationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -484,7 +484,7 @@ export const sexualHealthEducationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Pornography is among the most consumed forms of media worldwide, with an estimated 25–30% of internet traffic directed toward sexually explicit content and approximately 70–80% of men and 30–50% of women reporting pornography use. The psychological impact of pornography consumption has become one of the most contentious topics in sexual science, with passionate advocates on both sides—those who view pornography as inherently harmful and those who view it as a normal component of sexual expression.
           </p>
         </div>
@@ -525,7 +525,7 @@ export const sexualHealthEducationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -588,7 +588,7 @@ export const sexualHealthEducationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sex education is one of the most politically contentious yet scientifically settled topics in public health. Decades of research consistently demonstrate that comprehensive sex education—programs that provide age-appropriate, medically accurate information about anatomy, contraception, sexually transmitted infections, consent, healthy relationships, and sexual diversity—produces better health outcomes than abstinence-only approaches on virtually every measure: lower rates of unintended pregnancy, later sexual debut, fewer sexual partners, increased contraception use, lower STI rates, and better understanding of consent and healthy relationships.
           </p>
         </div>
@@ -636,7 +636,7 @@ export const sexualHealthEducationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -699,7 +699,7 @@ export const sexualHealthEducationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The cultural narrative of sexuality assigns it primarily to youth—creating a pervasive, damaging, and factually inaccurate assumption that sexual desire, activity, and satisfaction decline with age and eventually disappear. Research consistently contradicts this narrative: the majority of older adults remain sexually active well into their 70s, 80s, and beyond; sexual satisfaction often increases with age as performance anxiety decreases and emotional intimacy deepens; and the physiological changes that aging produces (reduced arousal speed, hormonal shifts, changes in genital response) alter but do not eliminate the capacity for sexual pleasure and connection.
           </p>
         </div>
@@ -739,7 +739,7 @@ export const sexualHealthEducationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -802,7 +802,7 @@ export const sexualHealthEducationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Body image—the subjective perception, thoughts, and feelings about one&apos;s physical appearance—is one of the most powerful and underrecognized determinants of sexual experience. Research consistently demonstrates that body image affects every dimension of sexual functioning: individuals with positive body image report greater sexual desire, more frequent sexual activity, higher levels of arousal and orgasm, and greater overall sexual satisfaction, while those with negative body image report sexual avoidance, diminished desire, arousal difficulties, and a pattern of cognitive distraction during sex that prevents the present-moment awareness necessary for sexual pleasure.
           </p>
         </div>
@@ -844,7 +844,7 @@ export const sexualHealthEducationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -907,7 +907,7 @@ export const sexualHealthEducationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A sexually transmitted infection (STI) diagnosis is a medical event—but for the individual who receives it, it is often experienced as a psychological, relational, and identity crisis that extends far beyond the physical symptoms. The stigma surrounding STIs—deeply rooted in cultural associations between sexually transmitted diseases and moral failure, promiscuity, dirtiness, and irresponsibility—transforms a common medical condition into a source of shame, self-blame, and social isolation that can produce depression, anxiety, relationship avoidance, and sexual dysfunction that persists long after the infection itself has been treated.
           </p>
         </div>
@@ -949,7 +949,7 @@ export const sexualHealthEducationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1012,7 +1012,7 @@ export const sexualHealthEducationArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Asexuality—the experience of little to no sexual attraction toward others—is a valid sexual orientation that is estimated to describe approximately 1–4% of the population, yet it remains one of the most misunderstood, invisible, and pathologized identities within the broader spectrum of human sexuality. Asexual individuals (often self-identified as &quot;ace&quot;) do not experience the sexual attraction that is assumed to be universal—a difference that places them outside the cultural narratives, relationship expectations, and social structures built around the assumption that all people desire sex.
           </p>
         </div>
@@ -1054,7 +1054,7 @@ export const sexualHealthEducationArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

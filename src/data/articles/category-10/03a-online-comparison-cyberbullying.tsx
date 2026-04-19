@@ -122,7 +122,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Cyberbullying isn't just "mean comments online." It's systematic harassment that follows victims everywhere they go, invades their homes, and can involve hundreds or thousands of witnesses. Unlike schoolyard bullying that ends when you leave school, cyberbullying is relentless, often anonymous, and permanently documented.
           </p>
           <p className="mb-6">
@@ -542,7 +542,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You say something ill-considered online. Within hours, thousands of strangers are calling you names, digging through your old posts, contacting your employer, and celebrating your downfall. This is cancel culture in action---public shaming at internet scale. Whether you call it accountability or a digital lynch mob depends largely on whether you're participating or being targeted.
           </p>
           <p className="mb-6">
@@ -907,7 +907,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You post a photo of your new haircut. Within minutes, someone you've never met is in your comments saying you look terrible and should be ashamed. You share good news about a promotion. A stranger replies with insults. You ask a genuine question online. Multiple people mock you. Welcome to internet trolling---the phenomenon of people being gratuitously cruel to strangers for no apparent reason.
           </p>
           <p className="mb-6">
@@ -1287,7 +1287,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Intimate images you shared privately with a partner are posted online without your consent. Strangers can now see your body. Your name is attached. The images spread. This is revenge porn---more accurately called non-consensual intimate image sharing or image-based sexual abuse. It's a form of digital violence with devastating psychological consequences.
           </p>
           <p className="mb-6">
@@ -1659,7 +1659,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It starts with a YouTube video about a legitimate grievance. The algorithm recommends something slightly more extreme. Then more extreme. Six months later, you're watching content calling for violence, believing conspiracy theories, and viewing entire groups of people as enemies. This is online radicalization---the gradual process by which algorithms and extremist communities pull vulnerable people toward extreme ideologies.
           </p>
           <p className="mb-6">

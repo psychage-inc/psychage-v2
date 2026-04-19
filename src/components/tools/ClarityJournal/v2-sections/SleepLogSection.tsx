@@ -66,26 +66,26 @@ const SleepLogSection: React.FC<SleepLogSectionProps> = ({ date, onSave, existin
 
   return (
     <div className="space-y-6">
-      <p className="text-sm text-slate-500 dark:text-slate-400">Log last night's sleep</p>
+      <p className="text-sm text-slate-500 dark:text-neutral-400">Log last night's sleep</p>
 
       {/* Bedtime & Wake time */}
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Bedtime</label>
+          <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">Bedtime</label>
           <input
             type="time"
             value={bedtime}
             onChange={e => setBedtime(e.target.value)}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Wake time</label>
+          <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">Wake time</label>
           <input
             type="time"
             value={wakeTime}
             onChange={e => setWakeTime(e.target.value)}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
           />
         </div>
       </div>
@@ -99,8 +99,8 @@ const SleepLogSection: React.FC<SleepLogSectionProps> = ({ date, onSave, existin
       {/* Optional details */}
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-            Minutes to fall asleep <span className="text-slate-400 font-normal">(opt.)</span>
+          <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">
+            Minutes to fall asleep <span className="text-slate-400 dark:text-neutral-500 font-normal">(opt.)</span>
           </label>
           <input
             type="number"
@@ -109,12 +109,12 @@ const SleepLogSection: React.FC<SleepLogSectionProps> = ({ date, onSave, existin
             value={minutesToSleep}
             onChange={e => setMinutesToSleep(e.target.value)}
             placeholder="e.g., 20"
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-            Night wakings <span className="text-slate-400 font-normal">(opt.)</span>
+          <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">
+            Night wakings <span className="text-slate-400 dark:text-neutral-500 font-normal">(opt.)</span>
           </label>
           <input
             type="number"
@@ -123,14 +123,14 @@ const SleepLogSection: React.FC<SleepLogSectionProps> = ({ date, onSave, existin
             value={wakings}
             onChange={e => setWakings(e.target.value)}
             placeholder="e.g., 2"
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
           />
         </div>
       </div>
 
       {/* Contributing factors */}
       <div>
-        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Contributing factors</label>
+        <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">Contributing factors</label>
         <div className="flex flex-wrap gap-2">
           {SLEEP_FACTORS.map(f => (
             <button
@@ -140,7 +140,7 @@ const SleepLogSection: React.FC<SleepLogSectionProps> = ({ date, onSave, existin
               className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
                 factors.includes(f.id)
                   ? 'bg-teal-600 text-white'
-                  : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200'
+                  : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200 dark:hover:bg-neutral-700'
               }`}
             >
               {f.emoji} {f.label}
@@ -151,15 +151,15 @@ const SleepLogSection: React.FC<SleepLogSectionProps> = ({ date, onSave, existin
 
       {/* Note */}
       <div>
-        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-          Note <span className="text-slate-400 font-normal">(optional)</span>
+        <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">
+          Note <span className="text-slate-400 dark:text-neutral-500 font-normal">(optional)</span>
         </label>
         <input
           type="text"
           value={note}
           onChange={e => setNote(e.target.value)}
           placeholder="e.g., Vivid dreams, woke up early..."
-          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
         />
       </div>
 

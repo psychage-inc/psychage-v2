@@ -15,13 +15,13 @@ const PracticeStep: React.FC<Props> = ({ formData, updateField }) => (
       <h2 className="font-display font-bold text-2xl text-gray-900 dark:text-white mb-2">
         Practice Details
       </h2>
-      <p className="text-gray-500 dark:text-gray-400">
+      <p className="text-gray-500 dark:text-neutral-400">
         Tell us about your practice location and contact information.
       </p>
     </div>
 
     <div>
-      <label htmlFor="practice_name" className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">
+      <label htmlFor="practice_name" className="block text-sm font-semibold text-gray-700 dark:text-neutral-200 mb-1.5">
         Practice Name
       </label>
       <Input
@@ -35,7 +35,7 @@ const PracticeStep: React.FC<Props> = ({ formData, updateField }) => (
 
     {/* Address */}
     <fieldset className="space-y-4">
-      <legend className="text-sm font-semibold text-gray-700 dark:text-gray-200">
+      <legend className="text-sm font-semibold text-gray-700 dark:text-neutral-200">
         Practice Address
       </legend>
       <Input
@@ -97,7 +97,7 @@ const PracticeStep: React.FC<Props> = ({ formData, updateField }) => (
     {/* Contact */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
-        <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">
+        <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 dark:text-neutral-200 mb-1.5">
           Phone
         </label>
         <Input
@@ -110,7 +110,7 @@ const PracticeStep: React.FC<Props> = ({ formData, updateField }) => (
         />
       </div>
       <div>
-        <label htmlFor="apply_email" className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">
+        <label htmlFor="apply_email" className="block text-sm font-semibold text-gray-700 dark:text-neutral-200 mb-1.5">
           Contact Email *
         </label>
         <Input
@@ -126,7 +126,7 @@ const PracticeStep: React.FC<Props> = ({ formData, updateField }) => (
     </div>
 
     <div>
-      <label htmlFor="website_url" className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">
+      <label htmlFor="website_url" className="block text-sm font-semibold text-gray-700 dark:text-neutral-200 mb-1.5">
         Website
       </label>
       <Input

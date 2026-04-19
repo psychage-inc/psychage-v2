@@ -371,11 +371,11 @@ const AdminConditionEditor: React.FC = () => {
                   onClick={() => setIsActive(!isActive)}
                   className={cn(
                     'w-10 h-5 rounded-full transition-colors relative',
-                    isActive ? 'bg-emerald-500' : 'bg-gray-300'
+                    isActive ? 'bg-emerald-500' : 'bg-gray-300 dark:bg-neutral-600'
                   )}
                 >
                   <div className={cn(
-                    'absolute top-0.5 w-4 h-4 rounded-full bg-white shadow transition-all',
+                    'absolute top-0.5 w-4 h-4 rounded-full bg-white dark:bg-neutral-200 shadow transition-all',
                     isActive ? 'left-5' : 'left-0.5'
                   )} />
                 </button>

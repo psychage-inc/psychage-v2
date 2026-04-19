@@ -94,7 +94,7 @@ export const conflictRepairArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The silent treatment---intentionally ignoring someone for hours, days, or even weeks---is one of the most psychologically damaging behaviors in relationships. It's not the same as needing space to calm down. It's a deliberate withdrawal of communication, affection, and acknowledgment designed to punish, control, or coerce <Citation id="1" index={1} source="Journal of Social and Clinical Psychology" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
@@ -516,7 +516,7 @@ export const conflictRepairArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When conflict arises, you have a default mode---a pattern of behavior that emerges automatically, often without conscious thought. Some people fight to win. Others flee to avoid discomfort. Some give in immediately to keep the peace, while others search for middle ground. Understanding your conflict style---and your partner's---is one of the most powerful tools for improving how you navigate disagreements <Citation id="1" index={1} source="Journal of Organizational Behavior" year="2019" tier={1} />.
           </p>
           <p className="mb-6">
@@ -940,7 +940,7 @@ export const conflictRepairArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The argument is over. The yelling has stopped. But the air is still heavy with hurt, and the words said in anger echo in the silence. You're both raw, maybe regretful, maybe still defensive. The fight may have ended, but the damage hasn't been addressed. This is the critical moment---when what happens next determines whether the relationship grows stronger or the rift grows wider <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
@@ -1341,7 +1341,7 @@ export const conflictRepairArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Not all relationship conflict is created equal. There's a critical difference between disagreements that challenge you to grow and patterns of behavior designed to control, manipulate, or harm. Healthy conflict is uncomfortable but ultimately strengthens the relationship. Abuse---whether emotional, verbal, physical, or psychological---destroys safety, autonomy, and self-worth <Citation id="1" index={1} source="Journal of Family Violence" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
@@ -1695,7 +1695,7 @@ export const conflictRepairArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your kids will fight. Siblings will argue over toys. Friends will disagree on the playground. Teenagers will clash with you over boundaries and independence. Conflict is inevitable---but how children learn to handle it isn't. The skills they develop in childhood for navigating disagreements, managing big emotions, and repairing relationships will shape how they handle conflict for the rest of their lives <Citation id="1" index={1} source="Developmental Psychology" year="2020" tier={1} />.
           </p>
           <p className="mb-6">

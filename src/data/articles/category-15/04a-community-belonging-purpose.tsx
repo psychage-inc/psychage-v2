@@ -97,7 +97,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You have individual friendships, but you don't feel part of anything larger. No team, no community, no group where you're a recognized member. You're floating, untethered, watching others have their 'people' while you navigate alone. The loneliness isn't just about lacking individual connections --- it's about not belonging anywhere.
           </p>
           <p className="mb-6">
@@ -501,7 +501,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've heard that helping others is good for you, but it sounds like feel-good platitudes. The reality is far more concrete: volunteering and community involvement trigger measurable changes in brain chemistry, reduce depression and anxiety, and create social connections that buffer against loneliness.
           </p>
           <p className="mb-6">
@@ -916,7 +916,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've tried joining groups, but they don't feel like your people. The conversations stay surface-level, the activities don't excite you, and you leave feeling more alone than before. You're not antisocial --- you just haven't found your tribe yet.
           </p>
           <p className="mb-6">
@@ -1398,7 +1398,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You don't have to believe in God to recognize that religious communities provide something powerful: built-in social support, shared values, regular gathering times, and a framework for meaning and purpose. For those who find spiritual resonance there, these communities offer unique mental health benefits.
           </p>
           <p className="mb-6">
@@ -1838,7 +1838,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You can explain your struggle to friends and family, but they don't truly understand. They try to help, but their advice misses the mark because they haven't lived it. Then you walk into a support group and hear someone describe exactly what you're experiencing. For the first time, you don't feel alone.
           </p>
           <p className="mb-6">

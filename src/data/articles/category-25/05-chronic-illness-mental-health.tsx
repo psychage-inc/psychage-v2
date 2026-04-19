@@ -63,7 +63,7 @@ export const chronicIllnessMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Chronic illness—any health condition lasting longer than three months that cannot be cured and is managed rather than resolved—affects approximately 60% of adults in the United States and is the leading cause of disability worldwide. The mental health consequences of chronic illness are profound and bidirectional: chronic illness dramatically increases risk for depression, anxiety, and PTSD, while depression and anxiety worsen disease outcomes, creating a reinforcing cycle that conventional healthcare rarely addresses adequately.
           </p>
         </div>
@@ -84,7 +84,7 @@ export const chronicIllnessMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

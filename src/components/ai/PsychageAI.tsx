@@ -300,7 +300,7 @@ const PsychageAI: React.FC = () => {
                   <button
                     key={q}
                     onClick={() => setInputText(q)}
-                    className="group flex items-center gap-3 px-4 py-3 text-left bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-800/50 hover:from-teal-50 hover:to-emerald-50 dark:hover:from-teal-900/20 dark:hover:to-emerald-900/20 border border-border hover:border-teal-300 dark:hover:border-teal-700 rounded-xl transition-all duration-200 hover:shadow-md"
+                    className="group flex items-center gap-3 px-4 py-3 text-left bg-gradient-to-br from-surface to-surface-hover hover:from-teal-50 hover:to-emerald-50 dark:hover:from-teal-900/20 dark:hover:to-emerald-900/20 border border-border hover:border-teal-300 dark:hover:border-teal-700 rounded-xl transition-all duration-200 hover:shadow-md"
                   >
                     <span className="text-2xl shrink-0">{icon}</span>
                     <span className="text-sm font-medium text-text-secondary group-hover:text-teal-700 dark:group-hover:text-teal-300 transition-colors">
@@ -337,7 +337,7 @@ const PsychageAI: React.FC = () => {
                     ? 'bg-gradient-to-br from-teal-600 to-emerald-600 text-white rounded-br-sm shadow-lg shadow-teal-200/50 dark:shadow-teal-900/50'
                     : message.isCrisis
                     ? 'bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 text-red-900 dark:text-red-100 border-2 border-red-200 dark:border-red-800 rounded-bl-sm'
-                    : 'bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 text-text-primary border border-border rounded-bl-sm'
+                    : 'bg-gradient-to-br from-surface to-surface-hover text-text-primary border border-border rounded-bl-sm'
                 }`}
               >
                 <div className={`text-sm leading-relaxed whitespace-pre-wrap ${
@@ -364,7 +364,7 @@ const PsychageAI: React.FC = () => {
                     disabled={feedbackGiven.has(message.id)}
                     className={`p-1.5 rounded-lg transition-colors ${
                       feedbackGiven.has(message.id)
-                        ? 'text-gray-300 dark:text-gray-600 cursor-not-allowed'
+                        ? 'text-border cursor-not-allowed'
                         : 'text-text-tertiary hover:text-primary hover:bg-surface-hover'
                     }`}
                     title="Helpful"
@@ -376,7 +376,7 @@ const PsychageAI: React.FC = () => {
                     disabled={feedbackGiven.has(message.id)}
                     className={`p-1.5 rounded-lg transition-colors ${
                       feedbackGiven.has(message.id)
-                        ? 'text-gray-300 dark:text-gray-600 cursor-not-allowed'
+                        ? 'text-border cursor-not-allowed'
                         : 'text-text-tertiary hover:text-red-600 dark:hover:text-red-400 hover:bg-surface-hover'
                     }`}
                     title="Not helpful"
@@ -402,7 +402,7 @@ const PsychageAI: React.FC = () => {
                 <Sparkles size={18} className="text-primary animate-pulse" />
               </div>
             </div>
-            <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50 border border-border p-4 rounded-2xl rounded-bl-sm">
+            <div className="bg-gradient-to-br from-surface to-surface-hover border border-border p-4 rounded-2xl rounded-bl-sm">
               <div className="flex items-center gap-2">
                 <Loader2 size={18} className="animate-spin text-primary" />
                 <span className="text-xs text-text-tertiary">Thinking...</span>
@@ -415,7 +415,7 @@ const PsychageAI: React.FC = () => {
       </div>
 
       {/* Enhanced Input */}
-      <div className="relative p-4 border-t border-border bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-900 dark:to-gray-900">
+      <div className="relative p-4 border-t border-border bg-gradient-to-br from-surface via-surface to-surface">
         {/* Top gradient accent */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-teal-500/50 to-transparent" />
 
@@ -449,11 +449,11 @@ const PsychageAI: React.FC = () => {
         </div>
 
         <div className="flex items-center justify-center gap-2 mt-3">
-          <div className="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-600" />
+          <div className="w-1.5 h-1.5 rounded-full bg-text-tertiary" />
           <p className="text-xs text-text-tertiary text-center">
             Psychage AI is an education assistant • Not a therapist or medical professional
           </p>
-          <div className="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-600" />
+          <div className="w-1.5 h-1.5 rounded-full bg-text-tertiary" />
         </div>
       </div>
     </div>

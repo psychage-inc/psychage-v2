@@ -4,9 +4,8 @@ import { cn } from '@/lib/utils';
 // Base Skeleton Primitive
 const Skeleton: React.FC<{ className?: string }> = ({ className }) => (
     <div
-        className={cn("animate-pulse bg-gray-200 rounded-md", className)}
+        className={cn("animate-pulse bg-surface-hover rounded-md", className)}
         style={{
-            backgroundImage: 'linear-gradient(90deg, #e5e7eb 0%, #f3f4f6 50%, #e5e7eb 100%)',
             backgroundSize: '200% 100%',
             animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
         }}
@@ -17,19 +16,19 @@ export const GlobalLoading = () => (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm">
         <div className="flex flex-col items-center gap-4">
             <div className="relative">
-                <div className="w-16 h-16 rounded-full border-4 border-gray-200" />
+                <div className="w-16 h-16 rounded-full border-4 border-border" />
                 <div className="absolute inset-0 w-16 h-16 rounded-full border-4 border-teal-500 border-t-transparent animate-spin" />
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-2 h-2 bg-teal-500 rounded-full" />
                 </div>
             </div>
-            <p className="text-sm font-bold text-gray-400 uppercase tracking-widest animate-pulse">Loading</p>
+            <p className="text-sm font-bold text-text-tertiary uppercase tracking-widest animate-pulse">Loading</p>
         </div>
     </div>
 );
 
 export const SkeletonArticleCard = () => (
-    <div className="bg-white rounded-3xl border border-gray-100 p-6 h-full flex flex-col shadow-sm">
+    <div className="bg-surface rounded-3xl border border-border p-6 h-full flex flex-col shadow-sm">
         <Skeleton className="w-full aspect-video rounded-2xl mb-6" />
         <div className="space-y-3 flex-grow">
             <div className="flex gap-2 mb-4">
@@ -43,7 +42,7 @@ export const SkeletonArticleCard = () => (
                 <Skeleton className="h-4 w-2/3" />
             </div>
         </div>
-        <div className="mt-6 pt-4 border-t border-gray-50 flex items-center gap-2">
+        <div className="mt-6 pt-4 border-t border-border flex items-center gap-2">
             <Skeleton className="h-4 w-4 rounded-full" />
             <Skeleton className="h-4 w-24" />
         </div>
@@ -51,7 +50,7 @@ export const SkeletonArticleCard = () => (
 );
 
 export const SkeletonVideoCard = () => (
-    <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+    <div className="bg-surface rounded-2xl overflow-hidden border border-border shadow-sm">
         <Skeleton className="w-full aspect-video" />
         <div className="p-4">
             <Skeleton className="h-6 w-3/4 mb-2" />
@@ -65,7 +64,7 @@ export const SkeletonVideoCard = () => (
 );
 
 export const SkeletonProviderCard = () => (
-    <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm h-full">
+    <div className="bg-surface rounded-2xl p-6 border border-border shadow-sm h-full">
         <div className="flex items-start gap-4 mb-6">
             <Skeleton className="w-16 h-16 rounded-full shrink-0" />
             <div className="flex-grow">
@@ -91,7 +90,7 @@ export const SkeletonProviderCard = () => (
 );
 
 export const SkeletonArticleDetail = () => (
-    <div className="animate-pulse bg-white min-h-screen">
+    <div className="animate-pulse bg-surface min-h-screen">
         <div className="container mx-auto max-w-5xl px-6 pt-32 pb-24">
             {/* Header */}
             <div className="max-w-3xl mx-auto mb-12 text-center md:text-left">
@@ -104,7 +103,7 @@ export const SkeletonArticleDetail = () => (
                 <Skeleton className="h-12 w-3/4 mb-4 mx-auto md:mx-0" />
                 <Skeleton className="h-12 w-2/3 mb-8 mx-auto md:mx-0" />
 
-                <div className="flex flex-col md:flex-row justify-between gap-6 border-t border-b border-gray-100 py-6">
+                <div className="flex flex-col md:flex-row justify-between gap-6 border-t border-b border-border py-6">
                     <div className="flex items-center gap-4">
                         <Skeleton className="w-12 h-12 rounded-full" />
                         <div className="space-y-2">
@@ -145,9 +144,9 @@ export const SkeletonArticleDetail = () => (
 );
 
 export const SkeletonVideoDetail = () => (
-    <div className="animate-pulse min-h-screen bg-white">
+    <div className="animate-pulse min-h-screen bg-surface">
         {/* Sticky Header */}
-        <div className="border-b border-gray-100 px-6 py-4">
+        <div className="border-b border-border px-6 py-4">
             <div className="container mx-auto max-w-content flex items-center gap-4">
                 <Skeleton className="w-8 h-8 rounded-full" />
                 <Skeleton className="h-4 w-48 flex-grow" />
@@ -160,7 +159,7 @@ export const SkeletonVideoDetail = () => (
                 <div className="lg:col-span-8">
                     <Skeleton className="w-full aspect-video rounded-2xl mb-6" />
                     <Skeleton className="h-8 w-3/4 mb-4" />
-                    <div className="flex justify-between mb-6 pb-6 border-b border-gray-100">
+                    <div className="flex justify-between mb-6 pb-6 border-b border-border">
                         <div className="flex gap-4">
                             <Skeleton className="w-10 h-10 rounded-full" />
                             <div className="space-y-2">
@@ -194,7 +193,7 @@ export const SkeletonProviderProfile = () => (
         <Skeleton className="h-4 w-32 mb-8" />
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             <div className="lg:col-span-8 space-y-8">
-                <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm flex flex-col md:flex-row gap-8">
+                <div className="bg-surface rounded-3xl p-8 border border-border shadow-sm flex flex-col md:flex-row gap-8">
                     <Skeleton className="w-32 h-32 rounded-full shrink-0" />
                     <div className="space-y-4 w-full">
                         <Skeleton className="h-8 w-1/2" />
@@ -205,20 +204,20 @@ export const SkeletonProviderProfile = () => (
                         </div>
                     </div>
                 </div>
-                <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm space-y-4">
+                <div className="bg-surface rounded-3xl p-8 border border-border shadow-sm space-y-4">
                     <Skeleton className="h-6 w-32 mb-4" />
                     <Skeleton className="h-4 w-full" />
                     <Skeleton className="h-4 w-full" />
                     <Skeleton className="h-4 w-3/4" />
                 </div>
-                <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm space-y-4">
+                <div className="bg-surface rounded-3xl p-8 border border-border shadow-sm space-y-4">
                     <Skeleton className="h-6 w-48 mb-4" />
                     <Skeleton className="h-4 w-full" />
                     <Skeleton className="h-4 w-2/3" />
                 </div>
             </div>
             <div className="lg:col-span-4">
-                <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-lg space-y-6">
+                <div className="bg-surface rounded-3xl p-6 border border-border shadow-lg space-y-6">
                     <div className="flex justify-between">
                         <Skeleton className="h-4 w-20" />
                         <Skeleton className="h-4 w-20" />
@@ -258,7 +257,7 @@ export const SkeletonProviderDirectory = () => (
 // Home Page Section Skeletons
 
 export const SkeletonTopicCard = () => (
-    <div className="relative flex flex-col justify-between p-6 sm:p-8 rounded-3xl border border-gray-100 bg-gray-50 h-[200px]">
+    <div className="relative flex flex-col justify-between p-6 sm:p-8 rounded-3xl border border-border bg-surface-hover h-[200px]">
         <Skeleton className="w-12 h-12 rounded-xl mb-6" />
         <div className="mt-auto">
             <Skeleton className="h-6 w-3/4 mb-2" />
@@ -268,7 +267,7 @@ export const SkeletonTopicCard = () => (
 );
 
 export const SkeletonToolCard = ({ large = false }: { large?: boolean }) => (
-    <div className={`bg-white rounded-3xl border border-gray-200 p-8 ${large ? 'md:col-span-2 md:row-span-2' : ''}`}>
+    <div className={`bg-surface rounded-3xl border border-border p-8 ${large ? 'md:col-span-2 md:row-span-2' : ''}`}>
         <Skeleton className={`${large ? 'w-16 h-16' : 'w-12 h-12'} rounded-2xl mb-6`} />
         <Skeleton className={`h-8 ${large ? 'w-1/2' : 'w-3/4'} mb-4`} />
         <Skeleton className="h-4 w-full mb-2" />
@@ -280,7 +279,7 @@ export const SkeletonTopicHub = ({ invert = false }: { invert?: boolean }) => (
     <div className="py-20 px-6">
         <div className="container mx-auto max-w-content">
             {/* Header Skeleton */}
-            <div className={`flex flex-col md:flex-row justify-between items-end mb-12 gap-6 border-b border-gray-100 pb-8 ${invert ? "md:flex-row-reverse" : ""}`}>
+            <div className={`flex flex-col md:flex-row justify-between items-end mb-12 gap-6 border-b border-border pb-8 ${invert ? "md:flex-row-reverse" : ""}`}>
                 <div className={invert ? "items-end flex flex-col" : ""}>
                     <Skeleton className="h-3 w-20 mb-2" />
                     <Skeleton className="h-8 w-64 mb-3" />
@@ -312,7 +311,7 @@ export const SkeletonTopicHub = ({ invert = false }: { invert?: boolean }) => (
 );
 
 export const SkeletonVideoShowcase = () => (
-    <div className="py-24 bg-gray-50">
+    <div className="py-24 bg-surface-hover">
         <div className="container mx-auto px-6 md:px-12 mb-12">
             <Skeleton className="h-3 w-24 mb-2" />
             <Skeleton className="h-10 w-48 mb-4" />
@@ -332,7 +331,7 @@ export const SkeletonVideoShowcase = () => (
 );
 
 export const SkeletonQuickTopics = () => (
-    <div className="py-16 px-6 bg-white">
+    <div className="py-16 px-6 bg-surface">
         <div className="container mx-auto max-w-content">
             <div className="mb-10">
                 <Skeleton className="h-3 w-20 mb-2" />

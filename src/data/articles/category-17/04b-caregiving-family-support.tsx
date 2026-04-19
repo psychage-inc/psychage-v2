@@ -168,7 +168,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your mother has advanced dementia. She cannot bathe, dress, or toilet herself. She needs 24-hour supervision. You assume Medicare will cover a nursing home. You are wrong.
           </p>
           <p className="mb-6">
@@ -452,7 +452,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You are a 45-year-old Chinese American woman. Your mother has dementia. Your father insists she stay at home---nursing homes are for people who have no family.
           </p>
           <p className="mb-6">
@@ -733,7 +733,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It is Tuesday. You wake at 5:30 a.m. to pack your son's lunch, drive him to school, then race to your mother's apartment.
           </p>
           <p className="mb-6">
@@ -1031,7 +1031,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your mother died on a Tuesday. For five years, you cared for her: bathed her, changed her, fed her, held her hand when she cried.
           </p>
           <p className="mb-6">
@@ -1305,7 +1305,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You visit your uncle in his home. He is 82, has diabetes, lives with his adult son. Something feels wrong.
           </p>
           <p className="mb-6">

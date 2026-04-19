@@ -65,7 +65,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             &quot;The unexamined life is not worth living,&quot; Socrates declared—and psychological research largely supports his claim, though with an important caveat. Self-reflection—the deliberate examination of one&apos;s own thoughts, feelings, behaviors, and experiences—is associated with greater self-knowledge, better decision-making, improved emotional regulation, and more meaningful relationships.
           </p>
         </div>
@@ -112,7 +112,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -175,7 +175,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Wisdom—the capacity to navigate the fundamental challenges of human existence with insight, compassion, and practical effectiveness—is one of the oldest and most valued human ideals, yet it has been among the last to receive rigorous scientific attention. For most of psychology&apos;s history, wisdom was considered too philosophical, too subjective, or too culturally bound for empirical study.
           </p>
         </div>
@@ -221,7 +221,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -284,7 +284,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Gratitude—the recognition and appreciation of what is valuable and meaningful in one&apos;s life—is among the most consistently studied positive emotions in psychology, and the findings are robust: grateful people are happier, healthier, more socially connected, and more resilient than their less grateful counterparts. But the research story is more nuanced than the self-help industry suggests.
           </p>
         </div>
@@ -328,7 +328,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -391,7 +391,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Forgiveness is among the most misunderstood concepts in psychology. It is frequently confused with condoning (deciding the offense was acceptable), excusing (deciding the offender was not responsible), reconciling (restoring the relationship), or forgetting (erasing the memory of the harm).
           </p>
         </div>
@@ -441,7 +441,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -504,7 +504,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Compassion—the awareness of suffering combined with the motivation to alleviate it—is simultaneously one of humanity&apos;s most valued capacities and one of its most misunderstood. Popular understanding often conflates compassion with empathy (feeling what others feel), with sympathy (feeling sorry for others), or with self-sacrifice (putting others&apos; needs above one&apos;s own).
           </p>
         </div>
@@ -550,7 +550,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -613,7 +613,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Acceptance—the willingness to experience thoughts, feelings, and situations as they actually are rather than as one wishes they were—is one of the most counterintuitive and most powerful concepts in modern psychology. The instinct to resist, control, or eliminate unwanted experiences is deeply wired: when something hurts, the natural response is to make it stop.
           </p>
         </div>
@@ -655,7 +655,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -718,7 +718,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Resilience—the capacity to recover from adversity, adapt to challenge, and maintain or restore psychological functioning in the face of significant difficulty—is among the most studied and most misunderstood concepts in psychology. Popular accounts often portray resilience as a rare, heroic quality possessed by exceptional individuals—an inner toughness that allows some people to endure what would break others.
           </p>
         </div>
@@ -760,7 +760,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -823,7 +823,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For most of its history, psychology defined mental health as the absence of mental illness—as though a person with no diagnosable disorder were, by definition, psychologically well. Research in positive psychology and wellbeing science has fundamentally challenged this definition, demonstrating that the absence of illness and the presence of flourishing are separate dimensions: a person can be free of disorder but languishing, or managing a disorder while genuinely flourishing.
           </p>
         </div>
@@ -867,7 +867,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -930,7 +930,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             What does it mean to live a good life? Across decades of research in positive psychology, clinical psychology, developmental science, neuroscience, and philosophy, a surprisingly convergent picture has emerged—not a single answer but a set of recurring themes that appear across disciplines, cultures, and theoretical traditions. The good life is not the pleasant life (though pleasure matters), not the successful life (though achievement contributes), not the meaningful life alone (though meaning is central).
           </p>
         </div>
@@ -976,7 +976,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1041,7 +1041,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             This is article number 2,000 in the Psychage cornerstone library — the final piece in a collection that spans the full landscape of mental health, from clinical conditions and treatment approaches to the everyday psychology of relationships, creativity, resilience, and the good life. If you have read even a fraction of the articles in this library, you have encountered hundreds of researchers, thousands of findings, and a consistent message: psychological wellbeing is not a luxury, not a personality trait, and not something that happens to you.
           </p>
         </div>
@@ -1107,7 +1107,7 @@ export const integrationTheExaminedLifeArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

@@ -32,7 +32,7 @@ const VARIANT_CONFIG: Record<
     icon: StickyNote,
     bg: 'bg-surface-hover',
     border: 'border-l-gray-400 dark:border-l-slate-500',
-    iconColor: 'text-gray-500 dark:text-slate-400',
+    iconColor: 'text-gray-500 dark:text-neutral-400',
     label: 'Note',
   },
 };

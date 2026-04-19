@@ -71,7 +71,7 @@ export const griefLossArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your ex-partner dies. Your pet of 15 years passes away. You have a miscarriage at 8 weeks. A close friend ends the relationship. Your grief is profound---yet when you try to share it, you encounter dismissal: "You weren't even together anymore,", "It was just a pet,", "At least it was early,", "You'll make new friends." Your loss isn't acknowledged. Your grief isn't validated. This is disenfranchised grief.
           </p>
           <p className="mb-6">
@@ -381,7 +381,7 @@ export const griefLossArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The phone call. The knock on the door. The moment your world shatters. Someone you love died by suicide. In an instant, you're not just bereaved---you're a 'suicide survivor, ' a term that carries weight, stigma, and a unique form of suffering that those who haven't experienced it struggle to understand. The grief is compounded by trauma, guilt, anger, unanswered questions, and a silence that isolates you from normal grief support.
           </p>
           <p className="mb-6">
@@ -678,7 +678,7 @@ export const griefLossArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your dog of 14 years dies. Your heart shatters. You cry for days. You can't eat, can't sleep, can't function. Friends say, 'It was just a dog---you can get another one." Coworkers expect you back the next day. Society doesn't give you bereavement leave for a pet. Yet your grief is as profound as any you've experienced. You're not overreacting. Pet loss is real grief.
           </p>
           <p className="mb-6">
@@ -892,7 +892,7 @@ export const griefLossArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             After a profound loss, your chest feels tight. Your stomach churns. Your head pounds. You're exhausted despite sleeping 12 hours. Your arms feel heavy, as if weighted down. You wonder if you're sick---but tests come back normal. This is grief manifesting in your body. Grief isn't just an emotional experience; it's a full-body phenomenon with real physical symptoms.
           </p>
           <p className="mb-6">
@@ -1148,7 +1148,7 @@ export const griefLossArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "How long will this last?" It's one of the first questions grieving people ask. They want to know when the pain will ease, when they'll feel normal again, when they can stop crying at random moments. The truthful answer---that there's no universal timeline---feels unhelpful. But research does reveal patterns that can provide guidance without dictating a deadline.
           </p>
           <p className="mb-6">

@@ -158,7 +158,7 @@ export const onlineRelationshipsCommunityArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You open the app, swipe through a dozen profiles, match with someone, exchange a few messages, and then --- silence. They vanish without a word. You wonder if it was something you said, something about your photos, or something fundamentally wrong with you. This experience, once unthinkable, is now an almost universal part of modern dating.
           </p>
           <p className="mb-6">
@@ -587,7 +587,7 @@ export const onlineRelationshipsCommunityArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When people hear the word "cyberbullying," they typically picture teenagers on social media. But online harassment does not stop at age eighteen. Adults are bullied through workplace messaging platforms, targeted in social media pile-ons, doxed by strangers who disagree with their opinions, and subjected to sustained harassment campaigns that can last months or years. The psychological consequences are serious --- and largely invisible because adults are expected to "just ignore it."
           </p>
           <p className="mb-6">
@@ -953,7 +953,7 @@ export const onlineRelationshipsCommunityArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Imagine being diagnosed with a condition that your own doctor has seen only twice. You search your city for support groups and find nothing. You try to explain your experience to friends, but they have never heard of your diagnosis and do not know what to say. Then one night, unable to sleep, you type your condition's name into a search bar --- and find a community of 4,000 people who live with the same thing. Someone posts about the exact symptom that has been frightening you. Dozens of replies pour in. You are not alone anymore.
           </p>
           <p className="mb-6">
@@ -1345,7 +1345,7 @@ export const onlineRelationshipsCommunityArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You feel like you know them. You have watched hundreds of hours of their content. You know their humor, their values, what makes them laugh, what makes them upset. When they share good news, you feel genuinely happy. When something goes wrong in their life, you worry. You might even feel a twinge of jealousy when they mention friends you have never met. And then, occasionally, you remember: this person has no idea you exist.
           </p>
           <p className="mb-6">

@@ -37,10 +37,10 @@ export const ExportView: React.FC<Props> = ({
       <div className="flex items-center gap-3 mb-6">
         <button
           onClick={onBack}
-          className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-neutral-800 transition-colors"
           aria-label="Back to dashboard"
         >
-          <ArrowLeft size={20} className="text-slate-600 dark:text-slate-400" />
+          <ArrowLeft size={20} className="text-slate-600 dark:text-neutral-400" />
         </button>
         <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
           Export Data
@@ -49,17 +49,17 @@ export const ExportView: React.FC<Props> = ({
 
       {/* Stats summary */}
       <div className="grid grid-cols-3 gap-3 mb-6">
-        <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 text-center">
+        <div className="bg-white dark:bg-neutral-800 rounded-xl border border-slate-200 dark:border-neutral-700 p-4 text-center">
           <p className="text-2xl font-bold text-emerald-600">{activeMeds.length}</p>
-          <p className="text-xs text-slate-500 dark:text-slate-400">Active Meds</p>
+          <p className="text-xs text-slate-500 dark:text-neutral-400">Active Meds</p>
         </div>
-        <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 text-center">
+        <div className="bg-white dark:bg-neutral-800 rounded-xl border border-slate-200 dark:border-neutral-700 p-4 text-center">
           <p className="text-2xl font-bold text-emerald-600">{totalLogs}</p>
-          <p className="text-xs text-slate-500 dark:text-slate-400">Dose Logs</p>
+          <p className="text-xs text-slate-500 dark:text-neutral-400">Dose Logs</p>
         </div>
-        <div className="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-4 text-center">
+        <div className="bg-white dark:bg-neutral-800 rounded-xl border border-slate-200 dark:border-neutral-700 p-4 text-center">
           <p className="text-2xl font-bold text-emerald-600">{totalSideEffects}</p>
-          <p className="text-xs text-slate-500 dark:text-slate-400">Side Effects</p>
+          <p className="text-xs text-slate-500 dark:text-neutral-400">Side Effects</p>
         </div>
       </div>
 
@@ -67,14 +67,14 @@ export const ExportView: React.FC<Props> = ({
       <div className="space-y-3 mb-6">
         <button
           onClick={onExportJson}
-          className="w-full flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-emerald-300 dark:hover:border-emerald-700 transition-colors text-left"
+          className="w-full flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-neutral-800 border border-slate-200 dark:border-neutral-700 hover:border-emerald-300 dark:hover:border-emerald-700 transition-colors text-left"
         >
           <div className="p-2 rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
             <Download size={20} className="text-emerald-600 dark:text-emerald-400" />
           </div>
           <div>
             <p className="font-medium text-slate-900 dark:text-white text-sm">Download JSON</p>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
+            <p className="text-xs text-slate-500 dark:text-neutral-400">
               Full backup of all medications, dose logs, and side effects
             </p>
           </div>
@@ -82,7 +82,7 @@ export const ExportView: React.FC<Props> = ({
 
         <button
           onClick={handleCopy}
-          className="w-full flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-emerald-300 dark:hover:border-emerald-700 transition-colors text-left"
+          className="w-full flex items-center gap-3 p-4 rounded-xl bg-white dark:bg-neutral-800 border border-slate-200 dark:border-neutral-700 hover:border-emerald-300 dark:hover:border-emerald-700 transition-colors text-left"
         >
           <div className="p-2 rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
             {copied ? (
@@ -95,7 +95,7 @@ export const ExportView: React.FC<Props> = ({
             <p className="font-medium text-slate-900 dark:text-white text-sm">
               {copied ? 'Copied!' : 'Copy Summary to Clipboard'}
             </p>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
+            <p className="text-xs text-slate-500 dark:text-neutral-400">
               Text summary to share with your care team
             </p>
           </div>
@@ -104,16 +104,16 @@ export const ExportView: React.FC<Props> = ({
 
       {/* Preview */}
       <div>
-        <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
+        <h3 className="text-sm font-semibold text-slate-700 dark:text-neutral-300 mb-2">
           Summary Preview
         </h3>
-        <pre className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-400 overflow-x-auto whitespace-pre-wrap font-mono max-h-64 overflow-y-auto">
+        <pre className="p-4 rounded-xl bg-slate-50 dark:bg-neutral-800/50 border border-slate-200 dark:border-neutral-700 text-xs text-slate-600 dark:text-neutral-400 overflow-x-auto whitespace-pre-wrap font-mono max-h-64 overflow-y-auto">
           {summary}
         </pre>
       </div>
 
       {/* Privacy note */}
-      <p className="text-xs text-slate-400 dark:text-slate-500 mt-4 text-center">
+      <p className="text-xs text-slate-400 dark:text-neutral-500 mt-4 text-center">
         All data is stored locally on your device. Exports contain your medication data — share only with trusted care providers.
       </p>
     </div>

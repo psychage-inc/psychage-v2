@@ -120,7 +120,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Six months in. The initial excitement has faded. The behavior no longer feels new. Your
             friends have stopped commenting. You're in maintenance --- the stage where sustainable
             change either solidifies or quietly unravels.
@@ -159,11 +159,11 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           source="Health Psychology, 2000"
         />
 
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6 mt-8">
+        <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg mb-6 mt-8">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             Signs You're in Maintenance
           </h3>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li>The behavior no longer requires intense daily focus</li>
             <li>You do it even when motivation is low, without much internal debate</li>
             <li>Skipping it feels uncomfortable --- like something's missing</li>
@@ -324,12 +324,12 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
               1. Shift from Tracking Behavior to Tracking Identity
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               In the action stage, you track whether you did the behavior. In maintenance, shift to
               reinforcing identity: "I am someone who exercises" rather than "I need to exercise
               today" <Citation id="4" index={7} source="Journal of Personality and Social Psychology" year="2016" tier={1} />.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>How to do it:</strong> Regularly affirm your identity through small rituals.
               Wear the workout clothes even on rest days. Keep the meditation app visible. Maintain
               the environmental cues that reinforce who you've become.
@@ -340,12 +340,12 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
               2. Create Periodic Check-Ins
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Even automatic behaviors benefit from occasional reflection. Set quarterly or
               semi-annual check-ins to assess whether the behavior still serves you and whether
               your maintenance strategies need adjustment.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>How to do it:</strong> Calendar a 30-minute reflection every 3-6 months. Ask:
               Is this still important to me? What's changed? Are there new obstacles? Do I need to
               refresh my motivation?
@@ -356,11 +356,11 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
               3. Build Redundancy Into Your System
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Don't rely on a single trigger, environment, or support system. The more ways you've
               integrated the behavior into your life, the more resilient it is to disruption.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>Example:</strong> If your exercise habit depends solely on going to the gym
               at 6am, it's fragile. If you also have home workouts, walking routes, and exercise
               buddies, it's resilient to changes in schedule or location.
@@ -371,12 +371,12 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
               4. Practice the Behavior in Different Contexts
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               A habit tied to a single context is vulnerable when that context changes.
               Deliberately practice the behavior in varied situations to strengthen its
               transferability.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>Example:</strong> If you always meditate at home in the morning, try
               meditating at different times of day, in different locations, or while traveling.
               Each context you successfully navigate strengthens the overall habit.
@@ -387,11 +387,11 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
               5. Find New Challenges Within the Behavior
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Boredom is a maintenance killer. Keep the behavior fresh by setting new goals,
               learning advanced techniques, or teaching others.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>Examples:</strong> Train for a longer race. Try a new meditation style. Cook
               a challenging new healthy recipe. Learn the science behind the behavior. Novelty
               within consistency keeps engagement high.
@@ -418,11 +418,11 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           not starting from scratch --- you're rekindling a fire that's already burning.
         </p>
 
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6">
+        <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg mb-6">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             Motivation Refresh Strategies
           </h3>
-          <ol className="list-decimal pl-6 space-y-3 text-gray-700 dark:text-gray-300">
+          <ol className="list-decimal pl-6 space-y-3 text-gray-700 dark:text-neutral-300">
             <li>
               <strong>Revisit your "before" state:</strong> Journal about what life was like before
               you made this change. Remember what drove you to act in the first place.
@@ -462,7 +462,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
               Increased Self-Efficacy
             </h3>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               Proving to yourself that you can make lasting change builds confidence that transfers
               to other areas of life. "If I could do this, what else am I capable of?"
             </p>
@@ -472,7 +472,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
               Identity Transformation
             </h3>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               Long-term maintenance solidifies identity shifts. You're not someone "trying to
               exercise" --- you're "someone who exercises." This becomes part of who you are.
             </p>
@@ -482,7 +482,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
               Reduced Decision Fatigue
             </h3>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               Automated behaviors free up mental energy. You no longer waste cognitive resources
               debating whether to do it --- you just do it.
             </p>
@@ -492,7 +492,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
               Compounding Benefits
             </h3>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               The longer you maintain a positive behavior, the more the benefits accumulate. Small
               daily actions compound into significant life changes over years.
             </p>
@@ -646,7 +646,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You missed a day. Then another. Before you knew it, a week had passed. The habit you
             worked so hard to build feels like it's slipping away. Does this mean you've failed? Is
             all your progress lost? The answer is no --- but what you do next will determine whether
@@ -743,7 +743,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             How the AVE Works
           </h3>
-          <ol className="list-decimal pl-6 space-y-3 text-gray-700 dark:text-gray-300">
+          <ol className="list-decimal pl-6 space-y-3 text-gray-700 dark:text-neutral-300">
             <li>
               <strong>You experience a lapse</strong> (miss a workout, eat junk food, drink after
               months of sobriety, etc.)
@@ -818,7 +818,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             Early Warning Signs of Impending Relapse
           </h3>
-          <ul className="list-disc pl-6 space-y-3 text-gray-700 dark:text-gray-300">
+          <ul className="list-disc pl-6 space-y-3 text-gray-700 dark:text-neutral-300">
             <li>
               <strong>Overconfidence:</strong> "I don't need to be as careful anymore"
             </li>
@@ -956,11 +956,11 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           understand is: <strong>you're not starting from scratch</strong>.
         </p>
 
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6">
+        <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg mb-6">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             What Relapse Doesn't Erase
           </h3>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li>
               <strong>Skills you learned:</strong> You still know how to do the behavior and what
               strategies work
@@ -1012,7 +1012,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             Essential Components of a Relapse Prevention Plan
           </h3>
-          <ol className="list-decimal pl-6 space-y-4 text-gray-700 dark:text-gray-300">
+          <ol className="list-decimal pl-6 space-y-4 text-gray-700 dark:text-neutral-300">
             <li>
               <strong>Know your high-risk situations:</strong> List the top 3-5 triggers most
               likely to cause a lapse
@@ -1185,7 +1185,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You see someone you love struggling. Maybe it's their health, their drinking, their
             relationship patterns, their work habits. You want to help. You point out the problem,
             suggest solutions, share articles. But instead of changing, they become defensive. The
@@ -1470,10 +1470,10 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             A Compassionate Confrontation Template
           </h3>
-          <p className="mb-4 text-gray-700 dark:text-gray-300">
+          <p className="mb-4 text-gray-700 dark:text-neutral-300">
             If you need to address the issue directly, use this structure:
           </p>
-          <ol className="list-decimal pl-6 space-y-3 text-gray-700 dark:text-gray-300">
+          <ol className="list-decimal pl-6 space-y-3 text-gray-700 dark:text-neutral-300">
             <li>
               <strong>State your care:</strong> "I care about you deeply and that's why I want to
               talk about this."
@@ -1516,14 +1516,14 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           source="Clinical Social Work Journal, 2014"
         />
 
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6 mt-8">
+        <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg mb-6 mt-8">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             When Boundaries Become Necessary
           </h3>
-          <p className="mb-4 text-gray-700 dark:text-gray-300">
+          <p className="mb-4 text-gray-700 dark:text-neutral-300">
             Consider setting firm boundaries if:
           </p>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li>Their behavior is harming you physically, emotionally, or financially</li>
             <li>You're sacrificing your own wellbeing to protect them from consequences</li>
             <li>You've become their sole source of support and it's unsustainable</li>
@@ -1736,7 +1736,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're ready to start exercising. Your partner thinks you're fine the way you are. Or:
             you want to cut back on drinking together, but they're not convinced there's a problem.
             Or: they're deep into a new health routine, and you feel pressured to join before
@@ -1895,20 +1895,20 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
               1. Use "I" Statements, Not "You" Statements
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Frame your experience without blaming or diagnosing your partner. This is especially
               critical when you're at different stages.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-red-100 dark:bg-red-900/30 p-4 rounded">
                 <p className="font-semibold text-gray-900 dark:text-white mb-2">Don't say:</p>
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 dark:text-neutral-300">
                   `You need to start exercising with me" or "You're sabotaging my diet`
                 </p>
               </div>
               <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded">
                 <p className="font-semibold text-gray-900 dark:text-white mb-2">Instead say:</p>
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 dark:text-neutral-300">
                   "I need support as I build this habit" or "I feel tempted when we have junk food
                   in the house"
                 </p>
@@ -1920,11 +1920,11 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
               2. Ask What They Need, Don't Assume
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Different stages require different types of support. The only way to know what helps
               is to ask.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>Questions to ask:</strong> "How can I support you right now?" / "Do you want
               me to join you, cheer you on, or give you space?" / "What kind of help would actually
               feel helpful, not controlling?"
@@ -1935,11 +1935,11 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
               3. Separate "Your Change" from "Our Change"
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Clarify whether you're pursuing individual change (which requires support but not
               participation) or collaborative change (which requires mutual readiness).
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>Example conversation:</strong> "I'm working on this for me. I'm not asking
               you to change, but I do need you to respect my boundaries around [trigger].'
             </p>
@@ -1949,12 +1949,12 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
               4. Practice Autonomy Support
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Research shows that autonomy support --- respecting your partner's right to make their
               own choices --- strengthens relationships and paradoxically increases their willingness
               to change <Citation id="5" index={4} source="Journal of Personality and Social Psychology" year="2006" tier={1} />.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>What this looks like:</strong> "I support whatever you decide" / "You know
               yourself best" / "I'm here if you want my input, but this is your choice."
             </p>
@@ -2034,7 +2034,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
               Pursue Change Together When:
             </h3>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
               <li>Both partners are in preparation or action stages</li>
               <li>The change involves shared behaviors (finances, parenting, household routines)</li>
               <li>Both partners are equally motivated</li>
@@ -2047,7 +2047,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
               Pursue Change Separately When:
             </h3>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
               <li>You're at different stages (one ready, one not)</li>
               <li>The change is deeply personal (addiction recovery, career shifts)</li>
               <li>One partner feels pressured rather than motivated</li>
@@ -2078,30 +2078,30 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
         </p>
 
         <div className="space-y-6 mb-8">
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
               Health & Fitness Changes
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               <strong>Why it's hard:</strong> Food and exercise are shared activities. One
               partner's 'clean eating' can feel like judgment of the other's choices.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>Strategy:</strong> Create opt-in, not opt-out systems. "I'm cooking healthy
               meals for myself; you're welcome to join or make your own.' Don't turn shared meals
               into lectures about nutrition.
             </p>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
               Substance Use (Alcohol, Cannabis)
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               <strong>Why it's hard:</strong> Social drinking/smoking is often a shared ritual. One
               partner quitting can feel like an indictment of the other's use.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>Strategy:</strong> Have an explicit conversation: "I'm changing my
               relationship with [substance]. I'm not asking you to change yours, but I need you to
               respect that I'm not drinking/smoking anymore.' Be clear about boundaries without
@@ -2109,30 +2109,30 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             </p>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
               Financial Behavior
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               <strong>Why it's hard:</strong> Money is shared in partnerships, so one person can't
               fully change financial patterns without the other's cooperation.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>Strategy:</strong> This requires collaborative change. Both partners need to
               be at least in contemplation. Consider working with a financial counselor to mediate
               differing values and readiness levels.
             </p>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
               Time & Social Habits
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               <strong>Why it's hard:</strong> "I want to spend less time on social media" or "I
               want more quality time together" requires the other person's participation.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>Strategy:</strong> Focus on what you'll do differently, not what you want
               them to do. "I'm putting my phone away after 8pm" instead of "You're on your phone
               too much." Invite, don't demand.
@@ -2281,7 +2281,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "I'm too old to change.", "I've been this way my whole life.", "It's too late to start
             now." These beliefs are pervasive, culturally reinforced, and scientifically false. The
             idea that behavior change becomes impossible with age is one of the most damaging myths
@@ -2326,7 +2326,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             How Neuroplasticity Changes with Age
           </h3>
-          <ul className="list-disc pl-6 space-y-3 text-gray-700 dark:text-gray-300">
+          <ul className="list-disc pl-6 space-y-3 text-gray-700 dark:text-neutral-300">
             <li>
               <strong>Youth (20s-30s):</strong> High plasticity, rapid learning, but also more
               vulnerable to impulsivity and incomplete consolidation
@@ -2370,7 +2370,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div>
                 <p className="font-semibold text-gray-900 dark:text-white mb-2">Challenges:</p>
-                <ul className="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-1 text-gray-700 dark:text-neutral-300">
                   <li>High impulsivity and reward-seeking</li>
                   <li>Less developed long-term planning</li>
                   <li>Competing priorities (career, relationships)</li>
@@ -2379,7 +2379,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
               </div>
               <div>
                 <p className="font-semibold text-gray-900 dark:text-white mb-2">Advantages:</p>
-                <ul className="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-1 text-gray-700 dark:text-neutral-300">
                   <li>Peak neuroplasticity</li>
                   <li>High energy and physical capacity</li>
                   <li>Fewer established patterns to break</li>
@@ -2387,7 +2387,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
                 </ul>
               </div>
             </div>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>Strategy:</strong> Leverage your energy and plasticity. Build keystone habits
               now that will compound over decades. Use external accountability to compensate for
               impulsivity.
@@ -2401,7 +2401,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div>
                 <p className="font-semibold text-gray-900 dark:text-white mb-2">Challenges:</p>
-                <ul className="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-1 text-gray-700 dark:text-neutral-300">
                   <li>Deeply entrenched patterns</li>
                   <li>Competing demands (work, family, aging parents)</li>
                   <li>Fatigue from life responsibilities</li>
@@ -2410,7 +2410,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
               </div>
               <div>
                 <p className="font-semibold text-gray-900 dark:text-white mb-2">Advantages:</p>
-                <ul className="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-1 text-gray-700 dark:text-neutral-300">
                   <li>Self-knowledge and clarity about values</li>
                   <li>Better executive function and planning</li>
                   <li>Financial resources to support change</li>
@@ -2418,7 +2418,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
                 </ul>
               </div>
             </div>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>Strategy:</strong> Research shows midlife is a pivotal period for positive
               change --- many people report it as their most transformative decade <Citation id="3" index={4} source="Developmental Psychology" year="2016" tier={1} />. Use your
               self-knowledge to choose changes that truly matter. Don't waste energy on "shoulds."
@@ -2432,7 +2432,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div>
                 <p className="font-semibold text-gray-900 dark:text-white mb-2">Challenges:</p>
-                <ul className="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-1 text-gray-700 dark:text-neutral-300">
                   <li>Slower initial learning</li>
                   <li>Physical limitations may require adaptation</li>
                   <li>Fixed income may limit resources</li>
@@ -2441,7 +2441,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
               </div>
               <div>
                 <p className="font-semibold text-gray-900 dark:text-white mb-2">Advantages:</p>
-                <ul className="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-1 text-gray-700 dark:text-neutral-300">
                   <li>Wisdom and perspective</li>
                   <li>Freedom from career and parenting demands</li>
                   <li>High intentionality and commitment</li>
@@ -2449,7 +2449,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
                 </ul>
               </div>
             </div>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>Strategy:</strong> Research shows that older adults who successfully change
               behavior tend to be highly intentional and values-driven <Citation id="2" index={5} source="Journal of the American Geriatrics Society" year="2018" tier={1} />. Focus on
               quality of life and legacy. Be patient with the learning curve, but trust that the
@@ -2575,7 +2575,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
               Julia Child
             </h3>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               Started her culinary career at age 49, became a cultural icon, and continued learning
               new techniques into her 80s.
             </p>
@@ -2585,7 +2585,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
               Fauja Singh
             </h3>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               Took up marathon running at age 89 after a sedentary life. Completed his last marathon
               at 101.
             </p>
@@ -2595,7 +2595,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
               Research Participant Example
             </h3>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               A 72-year-old woman in a behavior change study successfully quit smoking after 50
               years, saying "I finally realized my grandkids deserved more years with me."
             </p>
@@ -2605,7 +2605,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
               Laura Ingalls Wilder
             </h3>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               Published her first novel at age 64, launching the beloved Little House series that
               defined her legacy.
             </p>
@@ -2635,7 +2635,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             Common Ageist Beliefs to Challenge
           </h3>
-          <ul className="list-disc pl-6 space-y-3 text-gray-700 dark:text-gray-300">
+          <ul className="list-disc pl-6 space-y-3 text-gray-700 dark:text-neutral-300">
             <li>
               <strong>"You can't teach an old dog new tricks"</strong> → Neuroscience proves this is
               false. Learning continues throughout life.

@@ -71,13 +71,13 @@ export const MoodWizard: React.FC<MoodWizardProps> = ({ onComplete, onCancel }) 
             {/* Header */}
             <div className="flex justify-between items-center p-6">
                 {step > 0 ? (
-                    <button onClick={handleBack} className="p-2 text-gray-500 hover:bg-black/5 rounded-full transition-colors" aria-label="Go back">
+                    <button onClick={handleBack} className="p-2 text-text-tertiary hover:bg-black/5 rounded-full transition-colors" aria-label="Go back">
                         <ArrowLeft size={24} />
                     </button>
                 ) : (
                     <div className="w-10" />
                 )}
-                <button onClick={handleCancel} className="p-2 text-gray-500 hover:bg-black/5 rounded-full transition-colors" aria-label="Cancel">
+                <button onClick={handleCancel} className="p-2 text-text-tertiary hover:bg-black/5 rounded-full transition-colors" aria-label="Cancel">
                     <X size={24} />
                 </button>
             </div>
@@ -108,13 +108,13 @@ export const MoodWizard: React.FC<MoodWizardProps> = ({ onComplete, onCancel }) 
             {/* Cancel confirmation */}
             {showCancelConfirm && (
                 <div className="fixed inset-0 z-[250] flex items-center justify-center bg-black/40">
-                    <div className="bg-white rounded-2xl p-6 mx-4 max-w-sm shadow-xl">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-2">Discard entry?</h3>
-                        <p className="text-gray-600 text-sm mb-4">You have unsaved mood data. Are you sure you want to close?</p>
+                    <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 mx-4 max-w-sm shadow-xl">
+                        <h3 className="text-lg font-semibold text-text-primary mb-2">Discard entry?</h3>
+                        <p className="text-text-secondary text-sm mb-4">You have unsaved mood data. Are you sure you want to close?</p>
                         <div className="flex gap-3">
                             <button
                                 onClick={() => setShowCancelConfirm(false)}
-                                className="flex-1 px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+                                className="flex-1 px-4 py-2 text-sm font-medium text-text-secondary bg-surface-hover rounded-lg hover:bg-surface-active transition-colors"
                             >
                                 Keep editing
                             </button>

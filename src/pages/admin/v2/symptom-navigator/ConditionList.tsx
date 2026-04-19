@@ -101,7 +101,7 @@ const AdminConditionList: React.FC = () => {
         return counts?.redFlags ? (
           <span className="text-sm text-red-500 font-medium">{counts.redFlags}</span>
         ) : (
-          <span className="text-sm text-gray-300">0</span>
+          <span className="text-sm text-gray-300 dark:text-neutral-600">0</span>
         );
       },
     },
@@ -113,11 +113,11 @@ const AdminConditionList: React.FC = () => {
           onClick={() => toggleActive.mutate(row.original)}
           className={cn(
             'w-8 h-5 rounded-full transition-colors relative',
-            row.original.is_active ? 'bg-emerald-500' : 'bg-gray-300'
+            row.original.is_active ? 'bg-emerald-500' : 'bg-gray-300 dark:bg-neutral-600'
           )}
         >
           <div className={cn(
-            'absolute top-0.5 w-4 h-4 rounded-full bg-white shadow transition-all',
+            'absolute top-0.5 w-4 h-4 rounded-full bg-white dark:bg-neutral-200 shadow transition-all',
             row.original.is_active ? 'left-3.5' : 'left-0.5'
           )} />
         </button>

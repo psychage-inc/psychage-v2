@@ -32,7 +32,7 @@ export const identityValuesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Who am I?" It's a simple question with complex answers. Your identity---your sense of self---develops throughout life, shaped by experiences, relationships, choices, and reflection. It's not fixed or discovered; it's constructed, explored, and revised as you grow.
           </p>
           <p className="mb-6">
@@ -111,7 +111,7 @@ export const identityValuesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You wake up one day and the person you thought you were feels unfamiliar. The roles that defined you---professional, parent, partner---no longer fit. Your values seem unclear, your future uncertain. This disorienting experience is an identity crisis, and it's more common than you might think.
           </p>
           <p className="mb-6">
@@ -183,7 +183,7 @@ export const identityValuesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Be yourself" sounds simple. But authenticity---aligning your actions with your true values and self-concept---is psychologically complex and socially risky. It requires knowing who you are, having the courage to express it, and accepting the consequences.
           </p>
           <p className="mb-6">
@@ -255,7 +255,7 @@ export const identityValuesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When decisions feel overwhelming, values provide clarity. When life feels directionless, values point the way. Unlike goals (which you achieve), values are ongoing commitments to what matters---the compass that guides choices throughout life.
           </p>
           <p className="mb-6">
@@ -366,7 +366,7 @@ export const identityValuesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You speak differently at work than with friends. You hide certain opinions around family. You adjust your personality to fit the room. This adaptive shape-shifting---called code-switching---can be protective strategy or chronic self-abandonment. The line between healthy flexibility and losing yourself is context, cost, and choice.
           </p>
           <p className="mb-6">

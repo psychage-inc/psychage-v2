@@ -79,7 +79,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When chronic illness enters your life, it rarely announces itself as just a medical problem.
             It reshapes how you look in the mirror, how you move through the world, and how you understand
             yourself as a physical being. Weight changes from medications, surgical scars, hair loss from
@@ -158,7 +158,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
             content: (
               <div className="space-y-3">
                 <p className="font-medium text-gray-900 dark:text-white">Common illness-related appearance changes that affect body image:</p>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                   <li>Corticosteroid-induced weight gain and facial swelling (moon face)</li>
                   <li>Hair loss from chemotherapy, autoimmune conditions, or medication side effects</li>
                   <li>Surgical scars, ostomy bags, ports, or other visible medical devices</li>
@@ -174,7 +174,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
             content: (
               <div className="space-y-3">
                 <p className="font-medium text-gray-900 dark:text-white">Functional losses that reshape body identity:</p>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                   <li>Reduced mobility requiring assistive devices (wheelchairs, canes, walkers)</li>
                   <li>Loss of sexual function from medication, surgery, or fatigue</li>
                   <li>Inability to exercise at previous levels or participate in physical activities</li>
@@ -190,7 +190,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
             content: (
               <div className="space-y-3">
                 <p className="font-medium text-gray-900 dark:text-white">How body changes affect social participation:</p>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                   <li>Avoidance of social situations where the body might be noticed or judged</li>
                   <li>Reluctance to be photographed or appear on video calls</li>
                   <li>Withdrawal from intimate relationships due to body shame</li>
@@ -349,7 +349,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
             title: 'Self-Compassion Training',
             content: (
               <div className="space-y-3">
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 dark:text-neutral-300">
                   Self-compassion interventions adapted for chronic illness focus on three core
                   components: self-kindness (treating yourself with the same care you would offer a
                   friend), common humanity (recognizing that body struggles are a shared human
@@ -365,7 +365,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
             title: 'Functional Appreciation Training',
             content: (
               <div className="space-y-3">
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 dark:text-neutral-300">
                   This approach shifts the focus from how the body looks to what it does. Research
                   shows that functional body appreciation --- valuing the body for its capabilities
                   rather than its appearance --- is a stronger predictor of psychological well-being
@@ -382,7 +382,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
             title: 'Adapted Cognitive Behavioral Therapy',
             content: (
               <div className="space-y-3">
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 dark:text-neutral-300">
                   CBT for body image in chronic illness differs from standard body image CBT because
                   it does not assume that negative body thoughts are cognitive distortions. When
                   someone thinks "my body has changed and that is hard," this is not irrational ---
@@ -398,7 +398,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
             title: 'Body Grief Work',
             content: (
               <div className="space-y-3">
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 dark:text-neutral-300">
                   Therapeutic grief work specifically addresses the loss of the pre-illness body.
                   This may involve narrative therapy (writing or telling the story of the body
                   before and after illness), ritual-based interventions (symbolic acts of mourning
@@ -586,7 +586,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Managing a chronic illness is, by itself, psychologically demanding. But managing a chronic
             illness inside a healthcare system designed for acute, episodic care --- where every specialist
             operates in a separate silo, every insurance claim requires its own negotiation, and no single
@@ -963,7 +963,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You are sitting in a consultation room, and your doctor has just presented you with two
             treatment options, each with a different risk profile, different side effects, and
             different implications for your daily life. You are in pain. You slept poorly. You are
@@ -1049,7 +1049,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
             title: 'Cognitive Overload',
             content: (
               <div className="space-y-3">
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 dark:text-neutral-300">
                   The amount of information involved in complex medical decisions often exceeds
                   working memory capacity. When a doctor explains five treatment options, each with
                   three potential side effects and different probability profiles, the total number
@@ -1065,7 +1065,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
             title: 'Decision Fatigue',
             content: (
               <div className="space-y-3">
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 dark:text-neutral-300">
                   People with chronic illness make far more health-related decisions per day than
                   healthy individuals: what to eat given dietary restrictions, whether to push
                   through fatigue or rest, when to take medications, whether symptoms warrant a
@@ -1082,7 +1082,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
             title: 'Emotional Flooding',
             content: (
               <div className="space-y-3">
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 dark:text-neutral-300">
                   Fear, grief, and anxiety activate the amygdala, which can hijack the rational
                   decision-making process. When a decision carries existential weight --- this
                   treatment could extend my life, this surgery could change my ability to work ---
@@ -1097,7 +1097,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
             title: 'Information Asymmetry',
             content: (
               <div className="space-y-3">
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-700 dark:text-neutral-300">
                   Despite the movement toward shared decision-making, a fundamental power imbalance
                   exists in medical consultations. The provider has years of training and clinical
                   experience; the patient has their lived experience and whatever they have managed
@@ -1374,7 +1374,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The medication is sitting on the counter. The person knows they should take it. Their doctor
             has explained why it matters, the pharmacy has filled it on time, and the alarm on their
             phone has gone off. But they do not take it. Or they take it for three weeks and then stop.
@@ -1566,7 +1566,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
             label: 'Effective Approaches',
             content: (
               <div className="space-y-3">
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                   <li><strong>Simplifying regimens:</strong> Reducing dose frequency, using combination pills, and synchronizing refill dates consistently improve adherence<Citation id="7" index={7} /></li>
                   <li><strong>Treating comorbid depression:</strong> Addressing depression directly improves medication adherence across all chronic conditions<Citation id="2" index={2} /></li>
                   <li><strong>Shared decision-making:</strong> Collaboratively choosing medications improves ownership and follow-through by 20-30%<Citation id="4" index={4} /></li>
@@ -1580,7 +1580,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
             label: 'Less Effective Approaches',
             content: (
               <div className="space-y-3">
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                   <li><strong>Education-only interventions:</strong> Simply telling people why medication matters has minimal impact on behavior<Citation id="9" index={9} /></li>
                   <li><strong>Scolding or shaming:</strong> Negative feedback about non-adherence damages the therapeutic relationship and worsens the problem</li>
                   <li><strong>Generic reminders alone:</strong> Pill alarms and text reminders help unintentional non-adherence but do not address intentional decisions to stop<Citation id="11" index={11} /></li>
@@ -1734,7 +1734,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             At two in the morning, when pain has stolen your sleep and the world feels unbearably
             quiet, there is a particular kind of relief in opening your phone and finding a community
             of people who understand exactly what you are going through. No explanations needed. No
@@ -2090,7 +2090,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Imagine visiting your cardiologist for a heart condition follow-up and, in the same visit,
             having a brief check-in with a behavioral health specialist who screens for the depression
             that commonly accompanies heart disease, adjusts your treatment plan based on how anxiety
@@ -2261,7 +2261,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
             label: 'Clinical Outcomes',
             content: (
               <div className="space-y-3">
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                   <li>50% improvement in depression outcomes versus usual care<Citation id="1" index={1} /></li>
                   <li>Significant reductions in anxiety, pain catastrophizing, and illness-related distress</li>
                   <li>Improved medical outcomes including better glycemic control, blood pressure management, and cardiac rehabilitation completion</li>
@@ -2275,7 +2275,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
             label: 'System Outcomes',
             content: (
               <div className="space-y-3">
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                   <li>12% reduction in total healthcare costs through prevented complications<Citation id="3" index={3} /></li>
                   <li>Reduced emergency department utilization and preventable hospitalizations</li>
                   <li>Higher patient satisfaction with both mental health and medical care</li>
@@ -2289,7 +2289,7 @@ export const psychologicalResilienceArticlesC: Article[] = [
             label: 'Patient Experience',
             content: (
               <div className="space-y-3">
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                   <li>Reduced stigma --- receiving mental health care in a medical setting normalizes the experience<Citation id="10" index={10} /></li>
                   <li>Fewer appointments, less travel, and lower logistical burden</li>
                   <li>Feeling that the whole person is being treated, not just isolated symptoms</li>

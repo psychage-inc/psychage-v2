@@ -63,7 +63,7 @@ export const agingDisabilityMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The intersection of disability and aging produces two distinct but overlapping populations with profoundly underserved mental health needs. People aging with disability (those who have lived with disability for decades and are now growing older) face unique challenges: premature aging effects, declining function in already-compromised systems, loss of hard-won independence, and a healthcare system that has no infrastructure for the &quot;old disabled&quot; as opposed to the &quot;old&quot; or the &quot;disabled&quot; separately.
           </p>
         </div>
@@ -84,7 +84,7 @@ export const agingDisabilityMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

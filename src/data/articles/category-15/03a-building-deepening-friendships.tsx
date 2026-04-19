@@ -89,7 +89,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In school, friendships happened automatically. You saw the same people every day, shared classes and lunch periods, and bonded through proximity. As an adult, there's no forced structure bringing people together. Making friends requires intention, effort, and a different approach.
           </p>
           <p className="mb-6">
@@ -489,7 +489,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             What makes some people become close friends while others remain acquaintances? The answer isn't chemistry, shared interests, or luck. Research has identified three specific ingredients that create and deepen friendships: proximity, frequency, and vulnerability.
           </p>
           <p className="mb-6">
@@ -887,7 +887,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You have plenty of acquaintances. People you chat with at the gym, colleagues you eat lunch with, neighbors you wave to. But the relationships stay stuck at small talk. You want closer friendships, but don't know how to move past the surface.
           </p>
           <p className="mb-6">
@@ -1298,7 +1298,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Being a good friend isn't about grand gestures or always being available. It's a set of learnable skills --- ways of listening, supporting, showing up, and communicating that make people feel valued and understood.
           </p>
           <p className="mb-6">
@@ -1725,7 +1725,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every close friendship eventually faces conflict. A misunderstanding, a hurtful comment, a boundary crossed, a betrayal. The question isn't whether conflict will happen --- it's whether the friendship can survive it.
           </p>
           <p className="mb-6">

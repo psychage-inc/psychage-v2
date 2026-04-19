@@ -95,7 +95,7 @@ export const perfectionismArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Most people know fight, flight, and freeze. But there's a fourth trauma response: fawn---appeasing the threat to stay safe.
           </p>
           <p className="mb-6">
@@ -414,7 +414,7 @@ export const perfectionismArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Cognitive-behavioral therapy (CBT) is the most researched and effective treatment for clinical perfectionism, with techniques you can learn and apply.
           </p>
           <p className="mb-6">
@@ -785,7 +785,7 @@ export const perfectionismArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Perfectionistic parents want the best for their children---but striving for flawless parenting often creates the opposite of what they hope for.
           </p>
           <p className="mb-6">
@@ -1078,7 +1078,7 @@ export const perfectionismArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Straight A's don't guarantee wellbeing. Academic perfectionism drives achievement at the expense of mental health, genuine learning, and sustainable success.
           </p>
           <p className="mb-6">
@@ -1391,7 +1391,7 @@ export const perfectionismArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Recovery from perfectionism doesn't mean becoming mediocre. It means building a life where your worth isn't contingent on flawless performance.
           </p>
           <p className="mb-6">

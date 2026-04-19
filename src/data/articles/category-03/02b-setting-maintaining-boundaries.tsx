@@ -117,7 +117,7 @@ export const settingBoundariesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Boundaries aren't one-size-fits-all. The limits you need around your body are different from the limits you need around your time or emotional energy. Understanding the distinct types of boundaries helps you identify exactly where your limits are being violated---and what you need to communicate.
           </p>
           <p className="mb-6">
@@ -599,7 +599,7 @@ export const settingBoundariesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Saying no is one of the most powerful acts of self-care---and one of the hardest for many people to do. The word sits in your throat. Your heart races. You imagine their disappointment. So you say yes, again, and spend the next week resenting it.
           </p>
           <p className="mb-6">
@@ -1037,7 +1037,7 @@ export const settingBoundariesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Setting boundaries with family feels like betrayal. These are the people who raised you, who share your blood, who've known you your whole life. How can you say no to them?
           </p>
           <p className="mb-6">
@@ -1361,7 +1361,7 @@ export const settingBoundariesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Work boundaries feel risky. What if saying no costs you opportunities? What if protecting your time makes you seem uncommitted? What if your boss expects 24/7 availability?
           </p>
           <p className="mb-6">
@@ -1673,7 +1673,7 @@ export const settingBoundariesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've set a clear boundary. They've ignored it. Again. Now what?
           </p>
           <p className="mb-6">
@@ -1998,7 +1998,7 @@ export const settingBoundariesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There's a fine line between protecting yourself and isolating yourself. Boundaries keep you safe while allowing connection. Walls keep everyone out, including people who could enrich your life.
           </p>
           <p className="mb-6">
@@ -2248,7 +2248,7 @@ export const settingBoundariesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your phone buzzes. You check it. An hour later, you're still scrolling. Work emails at 10 PM. Social media envy. The expectation of instant responses. Digital life has erased traditional boundaries.
           </p>
           <p className="mb-6">
@@ -2538,7 +2538,7 @@ export const settingBoundariesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Teaching children about boundaries is one of the most important things parents can do. It protects them from harm, builds self-respect, and prepares them for healthy adult relationships.
           </p>
           <p className="mb-6">

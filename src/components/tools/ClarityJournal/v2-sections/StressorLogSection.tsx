@@ -55,10 +55,10 @@ const StressorLogSection: React.FC<StressorLogSectionProps> = ({ onSave, existin
     <div className="space-y-6">
       {/* Existing stressors */}
       {existingStressors.length > 0 && (
-        <div className="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-3 space-y-2">
-          <p className="text-xs font-medium text-slate-500 dark:text-slate-400">Today's stressors ({existingStressors.length})</p>
+        <div className="bg-slate-50 dark:bg-neutral-800/50 rounded-xl p-3 space-y-2">
+          <p className="text-xs font-medium text-slate-500 dark:text-neutral-400">Today's stressors ({existingStressors.length})</p>
           {existingStressors.map(s => (
-            <div key={s.id} className="text-xs text-slate-600 dark:text-slate-400 bg-white dark:bg-slate-900 rounded-lg px-3 py-2 border border-slate-100 dark:border-slate-700">
+            <div key={s.id} className="text-xs text-slate-600 dark:text-neutral-400 bg-white dark:bg-neutral-900 rounded-lg px-3 py-2 border border-slate-100 dark:border-neutral-700">
               <span className="font-medium">{s.description}</span> — {s.category}, intensity {s.intensity}/10
             </div>
           ))}
@@ -67,18 +67,18 @@ const StressorLogSection: React.FC<StressorLogSectionProps> = ({ onSave, existin
 
       {/* New stressor */}
       <div>
-        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">What's stressing you?</label>
+        <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">What's stressing you?</label>
         <input
           type="text"
           value={description}
           onChange={e => setDescription(e.target.value)}
           placeholder="Brief description..."
-          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
         />
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Category</label>
+        <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">Category</label>
         <div className="flex flex-wrap gap-2">
           {STRESSOR_CATEGORIES.map(cat => (
             <button
@@ -88,7 +88,7 @@ const StressorLogSection: React.FC<StressorLogSectionProps> = ({ onSave, existin
               className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
                 category === cat.value
                   ? 'bg-teal-600 text-white'
-                  : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200'
+                  : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200 dark:hover:bg-neutral-700'
               }`}
             >
               {cat.label}
@@ -104,25 +104,25 @@ const StressorLogSection: React.FC<StressorLogSectionProps> = ({ onSave, existin
           type="button"
           onClick={() => setIsRecurring(!isRecurring)}
           className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-all ${
-            isRecurring ? 'bg-teal-600 border-teal-600' : 'border-slate-300 dark:border-slate-600'
+            isRecurring ? 'bg-teal-600 border-teal-600' : 'border-slate-300 dark:border-neutral-600'
           }`}
           aria-label="Toggle recurring"
         >
           {isRecurring && <Check className="w-3 h-3 text-white" />}
         </button>
-        <span className="text-sm text-slate-700 dark:text-slate-300">This is a recurring stressor</span>
+        <span className="text-sm text-slate-700 dark:text-neutral-300">This is a recurring stressor</span>
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-          What did you do about it? <span className="text-slate-400 font-normal">(optional)</span>
+        <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">
+          What did you do about it? <span className="text-slate-400 dark:text-neutral-500 font-normal">(optional)</span>
         </label>
         <input
           type="text"
           value={copingUsed}
           onChange={e => setCopingUsed(e.target.value)}
           placeholder="e.g., Talked to a friend, went for a walk..."
-          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
         />
       </div>
 

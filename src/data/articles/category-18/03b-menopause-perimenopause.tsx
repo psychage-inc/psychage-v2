@@ -161,7 +161,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When Rita's doctor suggested hormone therapy for her debilitating hot flashes and mood
             swings, Rita hesitated. Twenty years ago, headlines had screamed about HT causing cancer
             and heart attacks. But her quality of life was miserable---she couldn't sleep, couldn't
@@ -229,12 +229,12 @@ export const articles: Article[] = [
               label: 'Estrogen-Only',
               content: (
                 <div className="space-y-4">
-                  <p className="text-sm text-gray-700 dark:text-gray-300">
+                  <p className="text-sm text-gray-700 dark:text-neutral-300">
                     For those who have had a hysterectomy (uterus removed). No progesterone needed
                     since there's no uterine lining to protect. Generally lower cancer risk than
                     combined therapy.
                   </p>
-                  <ul className="list-disc pl-6 space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                  <ul className="list-disc pl-6 space-y-2 text-sm text-gray-700 dark:text-neutral-300">
                     <li>Forms: pills, patches, gels, sprays, vaginal rings</li>
                     <li>Benefits: Treats hot flashes, mood symptoms, vaginal dryness, bone loss</li>
                     <li>Risks: Stroke (small increase), blood clots (especially oral forms)</li>
@@ -247,12 +247,12 @@ export const articles: Article[] = [
               label: 'Combined (Estrogen + Progesterone)',
               content: (
                 <div className="space-y-4">
-                  <p className="text-sm text-gray-700 dark:text-gray-300">
+                  <p className="text-sm text-gray-700 dark:text-neutral-300">
                     For those with a uterus. Progesterone protects the uterine lining from estrogen's
                     proliferative effects, preventing endometrial cancer. Required for anyone taking
                     estrogen who still has a uterus.
                   </p>
-                  <ul className="list-disc pl-6 space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                  <ul className="list-disc pl-6 space-y-2 text-sm text-gray-700 dark:text-neutral-300">
                     <li>Forms: Combination pills, separate pills, patches, IUDs (progesterone component)</li>
                     <li>Benefits: Same as estrogen-only, with uterine protection</li>
                     <li>Risks: Slightly higher breast cancer risk than estrogen-only, cardiovascular risks</li>
@@ -265,12 +265,12 @@ export const articles: Article[] = [
               label: 'Local/Vaginal',
               content: (
                 <div className="space-y-4">
-                  <p className="text-sm text-gray-700 dark:text-gray-300">
+                  <p className="text-sm text-gray-700 dark:text-neutral-300">
                     Low-dose estrogen applied directly to vaginal tissues. Treats vaginal dryness,
                     painful sex, urinary symptoms. Minimal systemic absorption---doesn't treat hot
                     flashes or mood.
                   </p>
-                  <ul className="list-disc pl-6 space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                  <ul className="list-disc pl-6 space-y-2 text-sm text-gray-700 dark:text-neutral-300">
                     <li>Forms: Creams, tablets, rings</li>
                     <li>Benefits: Treats genitourinary symptoms with minimal systemic effects</li>
                     <li>Risks: Very low---can be used even by some with breast cancer history</li>
@@ -594,7 +594,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The panic attack hit while Yuki was grocery shopping. Her heart pounded, she couldn't
             catch her breath, the room tilted. She abandoned her cart and fled to her car,
             convinced she was having a heart attack. At the ER, tests were normal.
@@ -1040,7 +1040,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             At her 50th birthday party, colleagues joked about Julia being "over the hill." Later,
             a younger coworker referred to her as "one of the older employees" in a meeting. Julia felt invisible---her ideas dismissed, her appearance no
           longer drawing attention, her value seemingly tied to youth she'd lost.

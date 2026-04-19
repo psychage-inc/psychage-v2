@@ -54,7 +54,7 @@ export const foundationsOfCreativeWellbeingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Creative expression—whether through art, music, writing, movement, or other modalities—is not a luxury but a fundamental human need with profound mental health benefits. Research shows that engaging in creative activities reduces stress, improves emotional regulation, enhances self-awareness, and provides a sense of meaning and agency.
           </p>
         </div>
@@ -118,7 +118,7 @@ export const foundationsOfCreativeWellbeingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

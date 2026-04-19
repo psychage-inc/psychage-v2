@@ -30,9 +30,9 @@ const TABS: { id: SleepTab; label: string }[] = [
 
 const TabSkeleton: React.FC = () => (
   <div className="space-y-4 animate-pulse">
-    <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded-xl w-1/3" />
-    <div className="h-48 bg-gray-100 dark:bg-gray-800 rounded-2xl" />
-    <div className="h-32 bg-gray-100 dark:bg-gray-800 rounded-2xl" />
+    <div className="h-8 bg-gray-200 dark:bg-neutral-700 rounded-xl w-1/3" />
+    <div className="h-48 bg-gray-100 dark:bg-neutral-800 rounded-2xl" />
+    <div className="h-32 bg-gray-100 dark:bg-neutral-800 rounded-2xl" />
   </div>
 );
 
@@ -74,7 +74,7 @@ const SleepArchitect: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-indigo-50/30 dark:bg-gray-900 pt-24 pb-12 px-4 sm:px-6">
+    <div className="min-h-screen bg-indigo-50/30 dark:bg-neutral-900 pt-24 pb-12 px-4 sm:px-6">
       <SEO title="Sleep Architect | Psychage" description="Build better sleep habits with guided tracking, diary entries, and evidence-based insights." />
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
@@ -84,7 +84,7 @@ const SleepArchitect: React.FC = () => {
         <div className="flex items-center justify-between mb-8">
           <button
             onClick={() => navigate('/tools')}
-            className="flex items-center gap-2 text-gray-400 hover:text-gray-900 dark:hover:text-white font-bold text-sm uppercase tracking-wider transition-colors"
+            className="flex items-center gap-2 text-gray-400 dark:text-neutral-500 hover:text-gray-900 dark:hover:text-white font-bold text-sm uppercase tracking-wider transition-colors"
           >
             <ArrowLeft size={16} /> Back to Tools
           </button>
@@ -104,7 +104,7 @@ const SleepArchitect: React.FC = () => {
               <h1 className="font-display font-bold text-3xl md:text-4xl text-gray-900 dark:text-white">
                 Sleep Architect
               </h1>
-              <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
+              <p className="text-gray-500 dark:text-neutral-400 text-sm mt-1">
                 Track, understand, and improve your sleep
               </p>
             </div>
@@ -123,7 +123,7 @@ const SleepArchitect: React.FC = () => {
 
         {/* Tab Navigation */}
         <div className="mb-8 -mx-4 px-4 overflow-x-auto scrollbar-hide">
-          <div className="flex gap-1 min-w-max bg-white dark:bg-gray-800 rounded-2xl p-1.5 shadow-sm border border-gray-100 dark:border-gray-700">
+          <div className="flex gap-1 min-w-max bg-white dark:bg-neutral-800 rounded-2xl p-1.5 shadow-sm border border-gray-100 dark:border-neutral-700">
             {TABS.map((tab) => (
               <button
                 key={tab.id}
@@ -133,7 +133,7 @@ const SleepArchitect: React.FC = () => {
                   'relative px-4 py-2 rounded-xl text-sm font-bold transition-all whitespace-nowrap',
                   activeTab === tab.id
                     ? 'text-white'
-                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700/50'
+                    : 'text-gray-500 dark:text-neutral-400 hover:text-gray-700 dark:hover:text-neutral-200 hover:bg-gray-50 dark:hover:bg-neutral-700/50'
                 )}
               >
                 {activeTab === tab.id && (

@@ -18,12 +18,12 @@ export default function SuggestedFollowUps({ suggestions, onSelect }: SuggestedF
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2, delay: idx * 0.05 }}
           onClick={() => onSelect(suggestion)}
-          className="group flex items-center justify-between w-full border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-all text-left"
+          className="group flex items-center justify-between w-full border border-slate-200 dark:border-neutral-700 rounded-xl px-4 py-3 hover:bg-slate-50 dark:hover:bg-neutral-800/50 cursor-pointer transition-all text-left"
         >
-          <span className="text-sm text-slate-700 dark:text-slate-300">{suggestion}</span>
+          <span className="text-sm text-slate-700 dark:text-neutral-300">{suggestion}</span>
           <ArrowRight
             size={16}
-            className="text-slate-400 group-hover:text-teal-500 group-hover:translate-x-0.5 transition-all shrink-0 ml-3"
+            className="text-slate-400 dark:text-neutral-500 group-hover:text-teal-500 group-hover:translate-x-0.5 transition-all shrink-0 ml-3"
           />
         </motion.button>
       ))}

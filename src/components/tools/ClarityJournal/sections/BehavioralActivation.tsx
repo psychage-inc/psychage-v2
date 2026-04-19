@@ -53,18 +53,18 @@ const BehavioralActivation: React.FC = () => {
     .slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-6">
+    <div className="min-h-screen bg-gray-50 dark:bg-neutral-900 pt-24 pb-12 px-6">
       <SEO title="Behavioral Activation | Clarity Journal" description="Track activities and their mood impact." />
       <div className="container mx-auto max-w-2xl">
         <div className="mb-8"><Breadcrumbs /></div>
-        <button onClick={() => navigate('/tools/clarity-journal')} className="flex items-center gap-2 text-sm text-slate-500 hover:text-teal-600 mb-6 transition-colors">
+        <button onClick={() => navigate('/tools/clarity-journal')} className="flex items-center gap-2 text-sm text-slate-500 dark:text-neutral-400 hover:text-teal-600 mb-6 transition-colors">
           <ArrowLeft className="w-4 h-4" /> Back to Journal
         </button>
 
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="font-display font-bold text-2xl md:text-3xl text-slate-900">Behavioral Activation</h1>
-            <p className="text-slate-500 mt-1">Do more of what helps. Do less of what does not.</p>
+            <h1 className="font-display font-bold text-2xl md:text-3xl text-slate-900 dark:text-neutral-100">Behavioral Activation</h1>
+            <p className="text-slate-500 dark:text-neutral-400 mt-1">Do more of what helps. Do less of what does not.</p>
           </div>
           {!showForm && (
             <Button variant="primary" size="sm" onClick={() => setShowForm(true)}>
@@ -75,15 +75,15 @@ const BehavioralActivation: React.FC = () => {
 
         {/* Add form */}
         {showForm && (
-          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 mb-6 space-y-6">
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="bg-white dark:bg-neutral-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-neutral-800 mb-6 space-y-6">
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">What did you do?</label>
+              <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">What did you do?</label>
               <input
                 type="text"
                 value={activity}
                 onChange={e => setActivity(e.target.value)}
                 placeholder="e.g., Went for a 20-minute walk"
-                className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-neutral-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 
@@ -91,7 +91,7 @@ const BehavioralActivation: React.FC = () => {
             <MoodSlider value={actual} onChange={setActual} label="How did it actually make you feel? (actual)" />
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Type</label>
+              <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">Type</label>
               <div className="flex gap-2">
                 {ACTIVATION_TYPES.map(t => (
                   <button
@@ -99,7 +99,7 @@ const BehavioralActivation: React.FC = () => {
                     type="button"
                     onClick={() => setType(t.value)}
                     className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
-                      type === t.value ? 'bg-teal-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                      type === t.value ? 'bg-teal-600 text-white' : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200 dark:hover:bg-neutral-700'
                     }`}
                   >
                     {t.label} ({t.shortLabel})
@@ -131,25 +131,25 @@ const BehavioralActivation: React.FC = () => {
 
         {/* Entry list */}
         {entries.length === 0 ? (
-          <div className="text-center py-12 text-slate-400">
+          <div className="text-center py-12 text-slate-400 dark:text-neutral-500">
             <p className="text-sm">No entries yet. Start by tracking an activity.</p>
           </div>
         ) : (
           <div className="space-y-3">
             {entries.map(entry => (
-              <div key={entry.id} className="bg-white rounded-xl p-4 shadow-sm border border-slate-100 flex items-center gap-4">
+              <div key={entry.id} className="bg-white dark:bg-neutral-900 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-neutral-800 flex items-center gap-4">
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-slate-800 truncate">{entry.activity}</p>
+                  <p className="text-sm font-medium text-slate-800 dark:text-neutral-200 truncate">{entry.activity}</p>
                   <div className="flex items-center gap-3 mt-1">
-                    <span className="text-xs text-slate-400">{formatDate(entry.date)}</span>
-                    <span className="text-xs text-slate-400">Predicted: {entry.predictedMood} → Actual: {entry.actualMood}</span>
+                    <span className="text-xs text-slate-400 dark:text-neutral-500">{formatDate(entry.date)}</span>
+                    <span className="text-xs text-slate-400 dark:text-neutral-500">Predicted: {entry.predictedMood} → Actual: {entry.actualMood}</span>
                     <PredictionGapIndicator predicted={entry.predictedMood} actual={entry.actualMood} />
                   </div>
                 </div>
-                <span className="text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded-full shrink-0">
+                <span className="text-xs font-medium text-slate-500 dark:text-neutral-400 bg-slate-100 dark:bg-neutral-800 px-2 py-1 rounded-full shrink-0">
                   {ACTIVATION_TYPES.find(t => t.value === entry.type)?.shortLabel || entry.type}
                 </span>
-                <button onClick={() => deleteActivation(entry.id)} className="text-slate-300 hover:text-red-500 transition-colors shrink-0" aria-label="Delete entry">
+                <button onClick={() => deleteActivation(entry.id)} className="text-slate-300 dark:text-neutral-600 hover:text-red-500 transition-colors shrink-0" aria-label="Delete entry">
                   <Trash2 className="w-4 h-4" />
                 </button>
               </div>

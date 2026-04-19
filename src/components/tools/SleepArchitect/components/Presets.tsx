@@ -11,7 +11,7 @@ interface PresetsProps {
 const Presets: React.FC<PresetsProps> = ({ currentInputs, onApply }) => {
   return (
     <div className="space-y-2">
-      <label className="text-sm font-bold text-gray-700 flex items-center gap-2">
+      <label className="text-sm font-bold text-gray-700 dark:text-neutral-300 flex items-center gap-2">
         <Sparkles size={16} className="text-indigo-500" />
         Quick Presets
       </label>

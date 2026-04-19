@@ -79,7 +79,7 @@ export const mensPhysicalMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             He trains six days a week, sometimes seven. He has run marathons on stress fractures.
             He missed his daughter's birthday because he couldn't skip leg day. His friends call
             him "dedicated." His doctor calls it a problem. He calls it the only thing keeping
@@ -537,7 +537,7 @@ export const mensPhysicalMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sleep is often treated as a lifestyle variable --- something that varies by preference
             and schedule. But the science of sleep tells a more complicated story. Men and women
             sleep differently in ways that are biologically determined, hormonally modulated, and
@@ -940,7 +940,7 @@ export const mensPhysicalMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             He punched the wall after an argument with his partner. He screamed at his kid for
             spilling juice. He drove 30 miles over the speed limit after a frustrating day at
             work. Later, when the adrenaline faded, he felt ashamed. He told himself it wouldn't
@@ -1354,7 +1354,7 @@ export const mensPhysicalMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             He has not slept through the night in two years. The pain in his lower back wakes
             him between 2 and 4 AM, every night. He has stopped playing football with his sons.
             He has stopped going to social events because sitting for long periods is excruciating.
@@ -1735,7 +1735,7 @@ export const mensPhysicalMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The midlife crisis has become a punchline --- the man with the red convertible, the
             sudden divorce, the 25-year-old girlfriend. Popular culture has turned a genuine
             developmental experience into a caricature so thoroughly that most men experiencing

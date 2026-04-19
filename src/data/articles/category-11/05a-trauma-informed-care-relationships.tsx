@@ -118,7 +118,7 @@ export const traumaInformedCareArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Imagine walking into a hospital, and before anyone asks about your symptoms, they dim the harsh fluorescent lights and speak in calm tones. The intake form doesn't ask invasive questions without explanation. No one touches you without asking permission first. This isn't luxury care---it's trauma-informed care: a paradigm shift in how systems serve people, based on one fundamental understanding: <em>trauma is common, and the way we deliver services can either heal or retraumatize.</em>
           </p>
           <p className="mb-6">
@@ -554,7 +554,7 @@ export const traumaInformedCareArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your child melts down over what seems like nothing. They hoard food even though the pantry is full. They flinch when you reach to hug them. Traditional parenting advice tells you to set firm boundaries, use time-outs, or let them "cry it out." But for children who\'ve experienced trauma---abuse, neglect, foster care, adoption, domestic violence---these approaches don\'t just fail. They backfire. Because trauma-affected children don\'t need more control or consequences. They need safety, connection, and co-regulation. They need trauma-informed parenting.
           </p>
           <p className="mb-6">
@@ -942,7 +942,7 @@ export const traumaInformedCareArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You crave intimacy but recoil when someone gets too close. You test your partner to see if they\'ll leave---and when they don\'t, you push harder. You\'re hypervigilant for signs of betrayal, misreading neutral expressions as rejection. Or maybe you\'ve gone numb, staying in relationships that feel empty because at least they\'re predictable. Trauma doesn\'t just live in your body and memories---it lives in the space between you and the people you love. And until it\'s addressed, it shapes every relationship you try to build.
           </p>
           <p className="mb-6">
@@ -1275,7 +1275,7 @@ export const traumaInformedCareArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You drink to quiet the flashbacks. You use opioids because they numb the pain your body won\'t let go. You smoke weed to sleep through the nightmares. For a few hours, the substances work---they silence the hypervigilance, soften the shame, make the world feel bearable. But when they wear off, the trauma is still there. And now, so is the addiction. This isn\'t moral failure. It\'s the self-medication hypothesis: trauma survivors use substances not for fun, but for survival.
           </p>
           <p className="mb-6">
@@ -1615,7 +1615,7 @@ export const traumaInformedCareArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You watch your partner retreat into silence, jump at sudden noises, or wake screaming from nightmares. You want to help---but you don\'t know how. You try to be supportive, but sometimes you feel like you\'re walking on eggshells. You absorb their pain, accommodate their avoidance, and slowly lose yourself in the process. Loving someone with PTSD is hard. And without guidance, you risk burnout, codependency, or inadvertently reinforcing the very symptoms you\'re trying to ease.
           </p>
           <p className="mb-6">

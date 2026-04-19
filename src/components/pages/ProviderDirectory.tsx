@@ -103,44 +103,44 @@ const ProviderDirectory: React.FC = () => {
             <SEO title="Find a Therapist | Psychage" description="Connect with verified mental health providers." />
 
             {/* Header */}
-            <div className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 pb-12 pt-8 mb-8">
+            <div className="bg-surface border-b border-border pb-12 pt-8 mb-8">
                 <div className="container mx-auto max-w-admin px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="max-w-3xl"
                     >
-                        <h1 className="font-display font-bold text-4xl md:text-5xl text-gray-900 dark:text-white mb-6">
+                        <h1 className="font-display font-bold text-4xl md:text-5xl text-text-primary mb-6">
                             Find your partner in mental health.
                         </h1>
-                        <p className="text-xl text-gray-500 dark:text-gray-400 leading-relaxed mb-8">
+                        <p className="text-xl text-text-tertiary leading-relaxed mb-8">
                             Connect with verified therapists and psychiatrists who match your specific needs, insurance, and location.
                         </p>
 
                         {/* Search Bar */}
                         <div className="flex flex-col md:flex-row gap-4">
                             <div className="relative flex-grow">
-                                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+                                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-text-tertiary" size={20} />
                                 <input
                                     type="text"
                                     placeholder="Search by name, specialty, or condition..."
-                                    className="w-full h-12 pl-12 pr-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all outline-none font-medium text-gray-900 dark:text-white"
+                                    className="w-full h-12 pl-12 pr-4 rounded-xl bg-surface border border-border focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all outline-none font-medium text-text-primary"
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
                                 />
                             </div>
                             <div className="relative md:w-64">
-                                <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+                                <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-text-tertiary" size={20} />
                                 <input
                                     type="text"
                                     placeholder="City or State"
-                                    className="w-full h-12 pl-12 pr-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all outline-none font-medium text-gray-900 dark:text-white"
+                                    className="w-full h-12 pl-12 pr-4 rounded-xl bg-surface border border-border focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all outline-none font-medium text-text-primary"
                                     value={locationSearch}
                                     onChange={(e) => setLocationSearch(e.target.value)}
                                 />
                             </div>
                             <Button
-                                className="h-12 px-8 bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-black dark:hover:bg-gray-100 md:w-auto w-full"
+                                className="h-12 px-8 bg-gray-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-black dark:hover:bg-neutral-100 md:w-auto w-full"
                                 onClick={() => setIsMobileFiltersOpen(true)}
                             >
                                 <span className="md:hidden flex items-center gap-2"><Filter size={18} /> Filters</span>
@@ -155,21 +155,21 @@ const ProviderDirectory: React.FC = () => {
                 <div className="flex flex-col lg:flex-row gap-8">
 
                     {/* Sidebar Filters (Desktop & Mobile Overlay) */}
-                    <aside className={`fixed inset-0 z-50 bg-white dark:bg-gray-900 p-6 lg:static lg:bg-transparent lg:p-0 lg:block w-72 shrink-0 space-y-8 overflow-y-auto transition-transform duration-300 ${isMobileFiltersOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
+                    <aside className={`fixed inset-0 z-50 bg-surface p-6 lg:static lg:bg-transparent lg:p-0 lg:block w-72 shrink-0 space-y-8 overflow-y-auto transition-transform duration-300 ${isMobileFiltersOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
                         <div className="flex items-center justify-between lg:hidden mb-6">
-                            <h2 className="text-xl font-bold text-gray-900 dark:text-white">Filters</h2>
-                            <button onClick={() => setIsMobileFiltersOpen(false)} className="p-2 text-gray-500">
+                            <h2 className="text-xl font-bold text-text-primary">Filters</h2>
+                            <button onClick={() => setIsMobileFiltersOpen(false)} className="p-2 text-text-tertiary">
                                 <Check size={24} />
                             </button>
                         </div>
                         <div>
-                            <h3 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center justify-between">
+                            <h3 className="font-bold text-text-primary mb-4 flex items-center justify-between">
                                 Availability
                             </h3>
                             <div className="space-y-2">
                                 {['any', 'week', 'tomorrow'].map(opt => (
                                     <label key={opt} className="flex items-center gap-3 cursor-pointer group">
-                                        <div className={`w-5 h-5 rounded-full border flex items-center justify-center transition-colors ${availabilityFilter === opt ? 'border-teal-500 bg-teal-500' : 'border-gray-300 dark:border-gray-600 group-hover:border-teal-400'}`}>
+                                        <div className={`w-5 h-5 rounded-full border flex items-center justify-center transition-colors ${availabilityFilter === opt ? 'border-teal-500 bg-teal-500' : 'border-border group-hover:border-teal-400'}`}>
                                             {availabilityFilter === opt && <div className="w-2 h-2 bg-white rounded-full" />}
                                         </div>
                                         <input
@@ -179,7 +179,7 @@ const ProviderDirectory: React.FC = () => {
                                             checked={availabilityFilter === opt}
                                             onChange={() => setAvailabilityFilter(opt)}
                                         />
-                                        <span className="text-gray-600 dark:text-gray-300 capitalize text-sm">
+                                        <span className="text-text-secondary capitalize text-sm">
                                             {opt === 'any' ? 'Any time' : opt === 'week' ? 'This week' : 'Tomorrow'}
                                         </span>
                                     </label>
@@ -187,14 +187,14 @@ const ProviderDirectory: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="w-full h-px bg-gray-200 dark:bg-gray-800" />
+                        <div className="w-full h-px bg-border" />
 
                         <div>
-                            <h3 className="font-bold text-gray-900 dark:text-white mb-4">Specialties</h3>
+                            <h3 className="font-bold text-text-primary mb-4">Specialties</h3>
                             <div className="space-y-2 max-h-60 overflow-y-auto pr-2 custom-scrollbar">
                                 {allSpecialties.map(spec => (
                                     <label key={spec} className="flex items-center gap-3 cursor-pointer group">
-                                        <div className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${selectedSpecialties.includes(spec) ? 'border-teal-500 bg-teal-500 text-white' : 'border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 group-hover:border-teal-400'}`}>
+                                        <div className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${selectedSpecialties.includes(spec) ? 'border-teal-500 bg-teal-500 text-white' : 'border-border bg-surface group-hover:border-teal-400'}`}>
                                             {selectedSpecialties.includes(spec) && <Check size={12} strokeWidth={3} />}
                                         </div>
                                         <input
@@ -203,20 +203,20 @@ const ProviderDirectory: React.FC = () => {
                                             checked={selectedSpecialties.includes(spec)}
                                             onChange={() => toggleSpecialty(spec)}
                                         />
-                                        <span className="text-gray-600 dark:text-gray-300 text-sm">{spec}</span>
+                                        <span className="text-text-secondary text-sm">{spec}</span>
                                     </label>
                                 ))}
                             </div>
                         </div>
 
-                        <div className="w-full h-px bg-gray-200 dark:bg-gray-800" />
+                        <div className="w-full h-px bg-border" />
 
                         <div>
-                            <h3 className="font-bold text-gray-900 dark:text-white mb-4">Insurance</h3>
+                            <h3 className="font-bold text-text-primary mb-4">Insurance</h3>
                             <div className="space-y-2">
                                 {allInsurance.map(ins => (
                                     <label key={ins} className="flex items-center gap-3 cursor-pointer group">
-                                        <div className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${selectedInsurance.includes(ins) ? 'border-teal-500 bg-teal-500 text-white' : 'border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 group-hover:border-teal-400'}`}>
+                                        <div className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${selectedInsurance.includes(ins) ? 'border-teal-500 bg-teal-500 text-white' : 'border-border bg-surface group-hover:border-teal-400'}`}>
                                             {selectedInsurance.includes(ins) && <Check size={12} strokeWidth={3} />}
                                         </div>
                                         <input
@@ -225,7 +225,7 @@ const ProviderDirectory: React.FC = () => {
                                             checked={selectedInsurance.includes(ins)}
                                             onChange={() => toggleInsurance(ins)}
                                         />
-                                        <span className="text-gray-600 dark:text-gray-300 text-sm">{ins}</span>
+                                        <span className="text-text-secondary text-sm">{ins}</span>
                                     </label>
                                 ))}
                             </div>
@@ -235,13 +235,13 @@ const ProviderDirectory: React.FC = () => {
                     {/* Results Grid */}
                     <div className="flex-grow">
                         <div className="flex items-center justify-between mb-6">
-                            <h2 className="font-bold text-gray-900 dark:text-white">
+                            <h2 className="font-bold text-text-primary">
                                 {filteredProviders.length} Providers Found
                             </h2>
-                            <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+                            <div className="flex items-center gap-2 text-sm text-text-tertiary">
                                 <span>Sort by:</span>
                                 <select
-                                    className="bg-transparent font-medium text-gray-900 dark:text-white outline-none cursor-pointer"
+                                    className="bg-transparent font-medium text-text-primary outline-none cursor-pointer"
                                     value={sortBy}
                                     onChange={(e) => setSortBy(e.target.value as 'relevance' | 'rating' | 'experience')}
                                 >
@@ -261,12 +261,12 @@ const ProviderDirectory: React.FC = () => {
                         </div>
 
                         {filteredProviders.length === 0 && (
-                            <div className="text-center py-20 bg-white dark:bg-gray-900 rounded-3xl border border-dashed border-gray-200 dark:border-gray-800">
-                                <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 text-gray-400">
+                            <div className="text-center py-20 bg-surface rounded-3xl border border-dashed border-border">
+                                <div className="w-16 h-16 bg-surface-hover rounded-full flex items-center justify-center mx-auto mb-6 text-text-tertiary">
                                     <Filter size={32} />
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">No providers match your filters</h3>
-                                <p className="text-gray-500 dark:text-gray-400 mb-6">Try removing some filters or adjusting your search.</p>
+                                <h3 className="text-xl font-bold text-text-primary mb-2">No providers match your filters</h3>
+                                <p className="text-text-tertiary mb-6">Try removing some filters or adjusting your search.</p>
                                 <Button onClick={clearFilters} variant="outline">Clear All Filters</Button>
                             </div>
                         )}

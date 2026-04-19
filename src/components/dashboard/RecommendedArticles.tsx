@@ -85,7 +85,7 @@ const RecommendedArticles: React.FC<RecommendedArticlesProps> = ({
     }, [wellnessFocus, navigatorConditions, recentToolSlugs]);
 
     return (
-        <div className="h-full rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 shadow-sm p-5 flex flex-col">
+        <div className="h-full rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 shadow-sm p-5 flex flex-col">
             <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2.5">
                     <div className="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center">
@@ -95,7 +95,7 @@ const RecommendedArticles: React.FC<RecommendedArticlesProps> = ({
                 </div>
                 <Link
                     to="/learn"
-                    className="text-xs text-gray-400 dark:text-gray-500 hover:text-teal-600 dark:hover:text-teal-400 transition-colors flex items-center gap-1"
+                    className="text-xs text-gray-400 dark:text-neutral-500 hover:text-teal-600 dark:hover:text-teal-400 transition-colors flex items-center gap-1"
                 >
                     See All <ArrowRight size={12} />
                 </Link>
@@ -105,16 +105,16 @@ const RecommendedArticles: React.FC<RecommendedArticlesProps> = ({
                 <div className="flex gap-3 overflow-hidden">
                     {[1, 2, 3].map(i => (
                         <div key={i} className="w-36 shrink-0">
-                            <div className="w-full h-20 bg-gray-100 dark:bg-gray-800/50 rounded-lg animate-pulse mb-2" />
-                            <div className="h-3 w-24 bg-gray-100 dark:bg-gray-800/50 rounded animate-pulse mb-1" />
-                            <div className="h-2 w-16 bg-gray-100 dark:bg-gray-800/50 rounded animate-pulse" />
+                            <div className="w-full h-20 bg-gray-100 dark:bg-neutral-800/50 rounded-lg animate-pulse mb-2" />
+                            <div className="h-3 w-24 bg-gray-100 dark:bg-neutral-800/50 rounded animate-pulse mb-1" />
+                            <div className="h-2 w-16 bg-gray-100 dark:bg-neutral-800/50 rounded animate-pulse" />
                         </div>
                     ))}
                 </div>
             ) : articles.length === 0 ? (
                 <div className="flex-grow flex flex-col items-center justify-center text-center py-4">
-                    <BookOpen size={28} className="text-gray-300 dark:text-gray-600 mb-2" />
-                    <p className="text-xs text-gray-400 dark:text-gray-500 mb-2">Articles will appear here as your library grows.</p>
+                    <BookOpen size={28} className="text-gray-300 dark:text-neutral-600 mb-2" />
+                    <p className="text-xs text-gray-400 dark:text-neutral-500 mb-2">Articles will appear here as your library grows.</p>
                     <Link to="/learn" className="text-xs text-teal-600 dark:text-teal-400 font-medium hover:underline">
                         Browse the Learn library
                     </Link>
@@ -130,7 +130,7 @@ const RecommendedArticles: React.FC<RecommendedArticlesProps> = ({
                             className="w-36 shrink-0 snap-start"
                         >
                             <Link to={`/learn/${article.slug}`} className="group block">
-                                <div className="w-full h-20 bg-gray-100 dark:bg-gray-800/50 rounded-lg mb-2 overflow-hidden">
+                                <div className="w-full h-20 bg-gray-100 dark:bg-neutral-800/50 rounded-lg mb-2 overflow-hidden">
                                     {article.image && (
                                         <img
                                             src={article.image}
@@ -144,7 +144,7 @@ const RecommendedArticles: React.FC<RecommendedArticlesProps> = ({
                                     {article.title}
                                 </p>
                                 {article.readTime && (
-                                    <p className="flex items-center gap-1 text-[10px] text-gray-400 dark:text-gray-500 mt-1">
+                                    <p className="flex items-center gap-1 text-[10px] text-gray-400 dark:text-neutral-500 mt-1">
                                         <Clock size={10} />
                                         {article.readTime} min
                                     </p>

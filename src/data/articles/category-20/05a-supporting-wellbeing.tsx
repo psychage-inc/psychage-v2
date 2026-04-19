@@ -79,7 +79,7 @@ export const supportingWellbeingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You wake up feeling relatively good. The pain is manageable, the fog has lifted slightly, and
             for the first time in days there is energy available. So you do everything --- the laundry, the
             grocery shopping, the phone calls you have been putting off, the cooking, the cleaning. By
@@ -564,7 +564,7 @@ export const supportingWellbeingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A person living with lupus might see a rheumatologist every three months, a nephrologist
             twice a year, a dermatologist as needed, a primary care physician annually, and occasionally
             a cardiologist. When the anxiety that accompanies their unpredictable flares becomes
@@ -663,7 +663,7 @@ export const supportingWellbeingArticlesA: Article[] = [
                   <p className="font-medium text-gray-900 dark:text-white">
                     These providers form the foundation of chronic illness management:
                   </p>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                  <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                     <li><strong>Primary care physician (PCP):</strong> Your generalist who oversees the full picture, coordinates specialist recommendations, manages non-specialty medications, and serves as the first point of contact for new symptoms</li>
                     <li><strong>Disease-specific specialist:</strong> The rheumatologist, neurologist, gastroenterologist, or other specialist with deep expertise in your primary condition</li>
                     <li><strong>Pharmacist:</strong> An underutilized team member who can review all medications across providers for interactions, optimize timing and dosing, and flag potential problems before they become dangerous</li>
@@ -679,7 +679,7 @@ export const supportingWellbeingArticlesA: Article[] = [
                   <p className="font-medium text-gray-900 dark:text-white">
                     Psychological support is not optional --- it is medically indicated for chronic illness:
                   </p>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                  <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                     <li><strong>Health psychologist or therapist:</strong> Someone with specific expertise in the psychological impact of medical illness --- not general therapy, but chronic illness-informed mental health care</li>
                     <li><strong>Psychiatrist:</strong> If medication management is needed for depression, anxiety, or sleep disorders that accompany your condition --- ideally someone who understands how psychotropic medications interact with your disease-specific treatments</li>
                     <li><strong>Support group or peer mentor:</strong> Other people living with your condition who understand the daily reality in a way no clinician can</li>
@@ -694,7 +694,7 @@ export const supportingWellbeingArticlesA: Article[] = [
                   <p className="font-medium text-gray-900 dark:text-white">
                     These professionals address function and quality of life:
                   </p>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                  <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                     <li><strong>Occupational therapist:</strong> Specializes in energy management, adaptive strategies for daily activities, and workplace accommodations</li>
                     <li><strong>Physical therapist:</strong> Develops safe exercise programs tailored to your condition's limitations and helps maintain functional mobility</li>
                     <li><strong>Dietitian/nutritionist:</strong> Addresses the specific nutritional needs and challenges of your condition, from anti-inflammatory diets to managing medication side effects</li>
@@ -925,7 +925,7 @@ export const supportingWellbeingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In 2003, a woman named Christine Miserandino sat in a diner with a friend who asked
             her what it was really like to live with lupus. Miserandino picked up a handful of
             spoons from the table and explained that each one represented a unit of energy. Every
@@ -1176,7 +1176,7 @@ export const supportingWellbeingArticlesA: Article[] = [
               label: 'Healthy Engagement',
               content: (
                 <div className="space-y-3">
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                  <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                     <li>Set a daily time limit for illness community engagement --- 20-30 minutes is a reasonable starting point</li>
                     <li>Choose communities that balance emotional support with practical problem-solving</li>
                     <li>Maintain social connections and interests outside the illness community</li>
@@ -1191,7 +1191,7 @@ export const supportingWellbeingArticlesA: Article[] = [
               label: 'Warning Signs',
               content: (
                 <div className="space-y-3">
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                  <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                     <li>You feel worse about your condition after spending time in the community</li>
                     <li>Illness identity has begun to eclipse all other aspects of your sense of self</li>
                     <li>You find yourself competing over severity --- feeling invalidated if others seem sicker</li>
@@ -1334,7 +1334,7 @@ export const supportingWellbeingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Nobody asks how you are doing. When friends call, they ask about your partner. When
             family visits, they bring meals and sympathy --- for your partner. When you mention
             that you are tired, that you are sad, that you are overwhelmed, people remind you

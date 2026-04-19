@@ -105,7 +105,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your loneliness might not be your fault. It might be your city's fault.
           </p>
           <p className="mb-6">
@@ -302,7 +302,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There is an app for everything now. Including loneliness.
           </p>
           <p className="mb-6">
@@ -500,7 +500,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You left behind everyone you knew. Your family. Your friends. The place where you belonged. And now you are starting over in a country where you are a stranger.
           </p>
           <p className="mb-6">
@@ -720,7 +720,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Loneliness is one of the most common human experiences. And one of the hardest to admit.
           </p>
           <p className="mb-6">
@@ -951,7 +951,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
       content: (
         <>
           <div id="introduction" className="scroll-mt-32">
-            <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
               You know you need more connection. But "make more friends" is not a plan. It is a wish.
             </p>
             <p className="mb-6">

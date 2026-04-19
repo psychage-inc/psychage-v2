@@ -122,7 +122,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Why do some people change seemingly overnight while others struggle for years? The
             answer lies not in willpower, but in readiness. Understanding which stage of change
             you're in can transform frustration into compassion and confusion into clarity.
@@ -435,11 +435,11 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           another. Here are examples of how the same goal looks different across stages:
         </p>
 
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6">
+        <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg mb-6">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             Example: Starting Regular Exercise
           </h3>
-          <ul className="list-disc pl-6 space-y-3 text-gray-700 dark:text-gray-300">
+          <ul className="list-disc pl-6 space-y-3 text-gray-700 dark:text-neutral-300">
             <li>
               <strong>Pre-Contemplation:</strong> "I'm fine the way I am. My doctor keeps bringing
               it up, but I don't see why I need to exercise more."
@@ -463,11 +463,11 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           </ul>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6">
+        <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg mb-6">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             Example: Addressing Excessive Drinking
           </h3>
-          <ul className="list-disc pl-6 space-y-3 text-gray-700 dark:text-gray-300">
+          <ul className="list-disc pl-6 space-y-3 text-gray-700 dark:text-neutral-300">
             <li>
               <strong>Pre-Contemplation:</strong> "Everyone drinks. I don't have a problem—I just
               like to unwind. People are making a bigger deal out of this than it is."
@@ -510,11 +510,11 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           help you progress. Here's what research suggests for each stage:
         </p>
 
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6">
+        <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg mb-6">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             Pre-Contemplation → Contemplation
           </h3>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li>Increase awareness through self-reflection or journaling</li>
             <li>Seek information from trusted, non-judgmental sources</li>
             <li>Consider the long-term consequences of not changing</li>
@@ -522,11 +522,11 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           </ul>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6">
+        <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg mb-6">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             Contemplation → Preparation
           </h3>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li>Make a pros/cons list and revisit it regularly</li>
             <li>Connect the change to your deeper values</li>
             <li>Set a specific start date (within the next month)</li>
@@ -534,11 +534,11 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           </ul>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6">
+        <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg mb-6">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             Preparation → Action
           </h3>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li>Create a detailed, step-by-step plan</li>
             <li>Identify and prepare for obstacles</li>
             <li>Build a support system and tell them your plan</li>
@@ -546,11 +546,11 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           </ul>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6">
+        <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg mb-6">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             Action → Maintenance
           </h3>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li>Track your progress and celebrate milestones</li>
             <li>Adjust your strategies based on what's working</li>
             <li>Develop coping strategies for high-risk situations</li>
@@ -731,7 +731,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "I don't have a problem.", "Everyone does this.", "People are overreacting." If you've
             ever said --- or heard --- these phrases, you're witnessing pre-contemplation, the stage
             where change hasn't yet entered the radar. It's not stubbornness; it's where awareness
@@ -879,11 +879,11 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           source="Journal of Substance Abuse Treatment, 1994"
         />
 
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6 mt-8">
+        <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg mb-6 mt-8">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             Common Reasons People Remain Unaware
           </h3>
-          <ul className="list-disc pl-6 space-y-3 text-gray-700 dark:text-gray-300">
+          <ul className="list-disc pl-6 space-y-3 text-gray-700 dark:text-neutral-300">
             <li>
               <strong>The behavior serves an important function:</strong> It may be their primary
               stress relief, social outlet, or identity component. Giving it up feels like losing
@@ -1031,7 +1031,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             Self-Reflection Prompts
           </h3>
-          <ol className="list-decimal pl-6 space-y-3 text-gray-700 dark:text-gray-300">
+          <ol className="list-decimal pl-6 space-y-3 text-gray-700 dark:text-neutral-300">
             <li>
               <strong>What would my closest friend or family member say</strong> about this
               behavior? (Not whether they're right --- just what would they say?)
@@ -1244,7 +1244,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "I know I need to exercise more, but I'm too tired after work.", "I should probably cut
             back on drinking, but all my friends drink.", "I want to change careers, but what if I
             fail?" If you've ever felt stuck between knowing you should change and actually doing
@@ -1491,76 +1491,76 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         </p>
 
         <div className="space-y-6 mb-8">
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
               1. Complete a Decisional Balance Exercise
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Write out all four quadrants: (1) Benefits of staying the same, (2) Costs of staying
               the same, (3) Benefits of changing, (4) Costs of changing. Be brutally honest ---
               including uncomfortable truths.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>Key insight:</strong> People in contemplation tend to overestimate the costs
               of changing and underestimate the costs of staying the same. Seeing it on paper
               creates clarity.
             </p>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
               2. Connect Change to Your Values
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Ask yourself: What kind of person do I want to be? What matters most to me? How does
               my current behavior align (or conflict) with those values?
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>Example:</strong> If you value health but smoke, or value family connection
               but work 80-hour weeks, naming this discrepancy creates motivation that "should"
               never can.
             </p>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
               3. Imagine Your Future Self
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Visualize yourself five years from now if everything stays exactly the same. Then
               visualize yourself five years from now if you successfully make this change. Which
               version feels more aligned with who you want to become?
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>Key insight:</strong> Research on self-reevaluation shows that envisioning
               your future self can shift the balance by making long-term consequences feel more
               immediate <Citation id="5" index={8} source="Addictive Behaviors" year="1988" tier={1} />.
             </p>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
               4. Talk to People Who've Made the Change
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Hearing firsthand stories from people who were once where you are --- and who
               successfully changed --- can increase self-efficacy and make change feel achievable.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>Key insight:</strong> Ask them specifically about their ambivalence. How did
               they move from "thinking about it" to "doing it"? What tipped the balance?
             </p>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
               5. Set a Decision Deadline
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Chronic contemplation thrives on indefinite postponement. Give yourself a date --- not
               to start the change, but to <em>decide</em> whether you're committing.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>Example:</strong> "By [date], I will decide whether I'm going to address
               this or accept that I'm choosing not to change right now.' Sometimes clarity comes
               from naming that staying the same is also a choice.
@@ -1734,7 +1734,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've decided you're ready. You've moved past ambivalence, committed to change, and
             set a start date. This is the preparation stage --- and it's more important than you
             might think. How you prepare determines whether your action stage will be sustainable
@@ -1819,7 +1819,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
               1. Create a Detailed Action Plan
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Vague intentions ("I'll start exercising") fail far more often than specific
               implementation intentions ("I'll walk for 20 minutes every Monday, Wednesday, and
               Friday at 7am") <Citation id="2" index={4} source="Advances in Experimental Social Psychology" year="2006" tier={1} />.
@@ -1827,7 +1827,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
             <p className="mb-3 font-semibold text-gray-900 dark:text-white">
               Your action plan should answer:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
               <li><strong>What</strong> exactly will you do? (Be specific and measurable)</li>
               <li><strong>When</strong> will you do it? (Specific days and times)</li>
               <li><strong>Where</strong> will it happen? (Exact location)</li>
@@ -1840,13 +1840,13 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
               2. Identify and Address Potential Obstacles
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Mental contrasting --- vividly imagining both success <em>and</em> obstacles --- is more
               effective than positive visualization alone <Citation id="6" index={5} source="Cognitive Therapy and Research" year="2016" tier={1} />. When you
               anticipate barriers in advance, you can plan how to overcome them.
             </p>
             <p className="mb-3 font-semibold text-gray-900 dark:text-white">Complete this exercise:</p>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
               <li>List 3-5 obstacles that might derail your plan</li>
               <li>For each obstacle, create an "if-then" plan: "If [obstacle], then I will [response]"</li>
               <li>Example: "If I'm too tired after work to exercise, then I'll work out in the morning instead"</li>
@@ -1857,13 +1857,13 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
               3. Build Your Support System
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Social support is one of the strongest predictors of successful behavior change <Citation id="3" index={6} source="Health Psychology" year="2000" tier={1} />. But
               support doesn't happen automatically --- you need to actively build it during the
               preparation stage.
             </p>
             <p className="mb-3 font-semibold text-gray-900 dark:text-white">Action steps:</p>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
               <li>Tell at least 2-3 people about your plan and your start date</li>
               <li>Ask for specific types of support (encouragement, accountability, or just not sabotaging)</li>
               <li>Join a group, class, or online community related to your goal</li>
@@ -1876,14 +1876,14 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
               4. Restructure Your Environment
             </h3>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Your environment shapes behavior more powerfully than willpower. Environmental
               restructuring --- changing your physical and social surroundings to make the desired
               behavior easier and undesired behavior harder --- is one of the most effective
               preparation strategies <Citation id="7" index={7} source="American Journal of Preventive Medicine" year="2018" tier={1} />.
             </p>
             <p className="mb-3 font-semibold text-gray-900 dark:text-white">Examples:</p>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+            <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
               <li>Wanting to eat healthier? Remove junk food from your home and stock healthy options</li>
               <li>Trying to reduce screen time? Charge your phone in another room at night</li>
               <li>Building an exercise habit? Lay out your workout clothes the night before</li>
@@ -1916,11 +1916,11 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           preparation are more likely to follow through with full action <Citation id="8" index={8} source="Addictive Behaviors" year="1999" tier={1} />.
         </p>
 
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6">
+        <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg mb-6">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             Examples of Small Steps
           </h3>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-neutral-300">
             <li>Research gyms and take a trial class before joining</li>
             <li>Download a meditation app and try one 5-minute session</li>
             <li>Have one conversation with your partner about the change you want to make</li>
@@ -1928,7 +1928,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
             <li>Set up one system (like meal planning or a habit tracker)</li>
             <li>Read one book or article about the change you're pursuing</li>
           </ul>
-          <p className="mt-4 text-gray-700 dark:text-gray-300">
+          <p className="mt-4 text-gray-700 dark:text-neutral-300">
             These steps serve two purposes: they build self-efficacy ("I can do this") and they
             create psychological commitment (you've already started investing).
           </p>
@@ -2000,61 +2000,61 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-blue-600 dark:text-blue-400 mr-3 mt-1">☐</span>
-              <span className="text-gray-700 dark:text-gray-300">
+              <span className="text-gray-700 dark:text-neutral-300">
                 I have a specific start date within the next 30 days
               </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 dark:text-blue-400 mr-3 mt-1">☐</span>
-              <span className="text-gray-700 dark:text-gray-300">
+              <span className="text-gray-700 dark:text-neutral-300">
                 I've written down exactly what I'll do, when, where, and how
               </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 dark:text-blue-400 mr-3 mt-1">☐</span>
-              <span className="text-gray-700 dark:text-gray-300">
+              <span className="text-gray-700 dark:text-neutral-300">
                 I've identified at least 3 potential obstacles and created if-then plans
               </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 dark:text-blue-400 mr-3 mt-1">☐</span>
-              <span className="text-gray-700 dark:text-gray-300">
+              <span className="text-gray-700 dark:text-neutral-300">
                 I've told at least 2-3 people about my plan
               </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 dark:text-blue-400 mr-3 mt-1">☐</span>
-              <span className="text-gray-700 dark:text-gray-300">
+              <span className="text-gray-700 dark:text-neutral-300">
                 I've restructured my environment to support the change
               </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 dark:text-blue-400 mr-3 mt-1">☐</span>
-              <span className="text-gray-700 dark:text-gray-300">
+              <span className="text-gray-700 dark:text-neutral-300">
                 I've gathered all necessary resources, tools, or information
               </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 dark:text-blue-400 mr-3 mt-1">☐</span>
-              <span className="text-gray-700 dark:text-gray-300">
+              <span className="text-gray-700 dark:text-neutral-300">
                 I've taken at least one small preliminary step
               </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 dark:text-blue-400 mr-3 mt-1">☐</span>
-              <span className="text-gray-700 dark:text-gray-300">
+              <span className="text-gray-700 dark:text-neutral-300">
                 I've planned how I'll track my progress
               </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 dark:text-blue-400 mr-3 mt-1">☐</span>
-              <span className="text-gray-700 dark:text-gray-300">
+              <span className="text-gray-700 dark:text-neutral-300">
                 I know who to reach out to if I need support
               </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 dark:text-blue-400 mr-3 mt-1">☐</span>
-              <span className="text-gray-700 dark:text-gray-300">
+              <span className="text-gray-700 dark:text-neutral-300">
                 I feel more excited than anxious (or at least equally both)
               </span>
             </li>
@@ -2228,7 +2228,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've started. You're doing the thing. This is the action stage --- the most visible,
             demanding, and psychologically intense phase of behavior change. It's where motivation
             meets reality, where plans collide with obstacles, and where most people either build
@@ -2392,80 +2392,80 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         </h3>
 
         <div className="space-y-6 mb-8">
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg">
             <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
               1. Track Everything (Self-Monitoring)
             </h4>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Self-monitoring --- consistently tracking your behavior --- is one of the most powerful
               action-stage strategies. A meta-analysis of 138 studies found that people who track
               their behavior change twice as much as those who don't <Citation id="4" index={5} source="Psychological Bulletin" year="2011" tier={1} />.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>How to do it:</strong> Use a habit tracker, journal, or app. Don't just
               track whether you did the behavior --- track context (time, mood, obstacles) so you
               can identify patterns.
             </p>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg">
             <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
               2. Celebrate Small Wins
             </h4>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Your brain's reward system needs reinforcement early and often. Research shows that
               celebrating small milestones increases self-efficacy and sustains motivation through
               difficult periods <Citation id="7" index={6} source="Journal of Consumer Research" year="2018" tier={1} />.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>How to do it:</strong> Mark each successful day on a calendar. Reward
               yourself after completing a full week. Share your progress with supportive people.
               The key: celebrate <em>doing the behavior</em>, not just outcomes.
             </p>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg">
             <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
               3. Use Implementation Intentions (If-Then Plans)
             </h4>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               You planned for obstacles in preparation, but new ones will emerge. Creating
               if-then plans in real-time helps you respond automatically instead of relying on
               willpower in the moment.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>How to do it:</strong> When you encounter an obstacle, immediately create
               an if-then plan for next time. "If I'm too tired to cook dinner, then I'll have a
               healthy backup meal ready.' Write these down and review them weekly.
             </p>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg">
             <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
               4. Never Miss Twice
             </h4>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Perfection is impossible, and a single lapse doesn't erase your progress. But two
               consecutive misses can begin a relapse pattern <Citation id="6" index={7} source="Clinical Psychology Review" year="2012" tier={1} />. The
               "never miss twice" rule acknowledges that life happens while preventing lapses from
               becoming relapses.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>How to do it:</strong> If you miss a day, don't spiral into shame or
               give up. Simply ensure you get back on track the very next day, even if it's a
               scaled-down version.
             </p>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <div className="bg-gray-50 dark:bg-neutral-800 p-6 rounded-lg">
             <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
               5. Lean on Your Support System
             </h4>
-            <p className="mb-4 text-gray-700 dark:text-gray-300">
+            <p className="mb-4 text-gray-700 dark:text-neutral-300">
               Social support becomes even more important during action than during preparation <Citation id="5" index={8} source="Annals of Behavioral Medicine" year="2007" tier={1} />. When motivation flags, external
               accountability and encouragement can carry you through.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 dark:text-neutral-300">
               <strong>How to do it:</strong> Check in weekly with your accountability partner.
               Join a group or community. Share updates (even small ones) publicly or with trusted
               people. Ask for help when you're struggling --- don't wait until you've already
@@ -2546,7 +2546,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             Examples of Scaling Back
           </h3>
-          <ul className="list-disc pl-6 space-y-3 text-gray-700 dark:text-gray-300">
+          <ul className="list-disc pl-6 space-y-3 text-gray-700 dark:text-neutral-300">
             <li>
               <strong>Exercise habit:</strong> If you can't do 30 minutes, do 10. If you can't do
               10, do 5. If you can't exercise, put on your workout clothes. The goal is to keep
@@ -2562,7 +2562,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
               per day. Maintain the pattern even if you can't maintain the ideal.
             </li>
           </ul>
-          <p className="mt-4 text-gray-700 dark:text-gray-300">
+          <p className="mt-4 text-gray-700 dark:text-neutral-300">
             Research shows that maintaining the <em>frequency</em> of a behavior --- even in reduced
             form --- is more important than maintaining intensity during difficult periods. You can
             always ramp back up when life stabilizes.

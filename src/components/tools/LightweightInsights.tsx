@@ -45,12 +45,12 @@ export const LightweightInsights: React.FC<LightweightInsightsProps> = ({ entrie
     return (
         <div className="space-y-4">
             {/* Trend Card */}
-            <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+            <div className="bg-white dark:bg-neutral-900 rounded-2xl p-5 border border-gray-100 dark:border-neutral-800 shadow-sm">
                 <div className="flex items-center gap-2 mb-4">
                     <div className="w-8 h-8 rounded-xl bg-teal-50 flex items-center justify-center">
                         <TrendingUp size={16} className="text-teal-600" />
                     </div>
-                    <h3 className="font-display font-semibold text-gray-900">Mood Trend</h3>
+                    <h3 className="font-display font-semibold text-gray-900 dark:text-neutral-100">Mood Trend</h3>
                 </div>
                 <div className="h-14 w-full relative">
                     {last7.length > 1 ? (
@@ -80,19 +80,19 @@ export const LightweightInsights: React.FC<LightweightInsightsProps> = ({ entrie
                             })}
                         </svg>
                     ) : (
-                        <p className="text-xs text-gray-400 pt-4">Log more entries to see your trend</p>
+                        <p className="text-xs text-gray-400 dark:text-neutral-500 pt-4">Log more entries to see your trend</p>
                     )}
                 </div>
             </div>
 
             {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-3">
-                <div className="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+                <div className="bg-white dark:bg-neutral-900 rounded-2xl p-4 border border-gray-100 dark:border-neutral-800 shadow-sm">
                     <div className="flex items-center gap-1.5 mb-2">
-                        <Activity size={14} className="text-gray-400" />
-                        <p className="text-xs text-gray-500 font-medium">Avg Mood</p>
+                        <Activity size={14} className="text-gray-400 dark:text-neutral-500" />
+                        <p className="text-xs text-gray-500 dark:text-neutral-400 font-medium">Avg Mood</p>
                     </div>
-                    <p className="text-2xl font-bold text-gray-900">
+                    <p className="text-2xl font-bold text-gray-900 dark:text-neutral-100">
                         {entries.length ? avgMood.toFixed(1) : '-'}
                     </p>
                     {entries.length > 0 && (
@@ -100,31 +100,31 @@ export const LightweightInsights: React.FC<LightweightInsightsProps> = ({ entrie
                     )}
                 </div>
 
-                <div className="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+                <div className="bg-white dark:bg-neutral-900 rounded-2xl p-4 border border-gray-100 dark:border-neutral-800 shadow-sm">
                     <div className="flex items-center gap-1.5 mb-2">
-                        <Calendar size={14} className="text-gray-400" />
-                        <p className="text-xs text-gray-500 font-medium">Streak</p>
+                        <Calendar size={14} className="text-gray-400 dark:text-neutral-500" />
+                        <p className="text-xs text-gray-500 dark:text-neutral-400 font-medium">Streak</p>
                     </div>
-                    <p className="text-2xl font-bold text-gray-900">{streak}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{streak === 1 ? 'day' : 'days'}</p>
+                    <p className="text-2xl font-bold text-gray-900 dark:text-neutral-100">{streak}</p>
+                    <p className="text-xs text-gray-400 dark:text-neutral-500 mt-0.5">{streak === 1 ? 'day' : 'days'}</p>
                 </div>
 
-                <div className="bg-white rounded-2xl p-4 border border-gray-100 shadow-sm col-span-2">
+                <div className="bg-white dark:bg-neutral-900 rounded-2xl p-4 border border-gray-100 dark:border-neutral-800 shadow-sm col-span-2">
                     <div className="flex items-center gap-1.5 mb-2">
-                        <Hash size={14} className="text-gray-400" />
-                        <p className="text-xs text-gray-500 font-medium">Total Entries</p>
+                        <Hash size={14} className="text-gray-400 dark:text-neutral-500" />
+                        <p className="text-xs text-gray-500 dark:text-neutral-400 font-medium">Total Entries</p>
                     </div>
-                    <p className="text-2xl font-bold text-gray-900">{entries.length}</p>
+                    <p className="text-2xl font-bold text-gray-900 dark:text-neutral-100">{entries.length}</p>
                 </div>
             </div>
 
             {/* Top Emotions */}
-            <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
-                <p className="text-xs text-gray-500 font-medium uppercase tracking-wider mb-3">Top Emotions</p>
+            <div className="bg-white dark:bg-neutral-900 rounded-2xl p-5 border border-gray-100 dark:border-neutral-800 shadow-sm">
+                <p className="text-xs text-gray-500 dark:text-neutral-400 font-medium uppercase tracking-wider mb-3">Top Emotions</p>
                 <div className="flex flex-wrap gap-2">
                     {recentEmotions.length ? recentEmotions.map(e => (
-                        <span key={e} className="px-3 py-1.5 bg-gray-50 text-gray-700 text-xs font-medium rounded-full border border-gray-100">{e}</span>
-                    )) : <span className="text-xs text-gray-400">No data yet</span>}
+                        <span key={e} className="px-3 py-1.5 bg-gray-50 dark:bg-neutral-900 text-gray-700 dark:text-neutral-300 text-xs font-medium rounded-full border border-gray-100 dark:border-neutral-800">{e}</span>
+                    )) : <span className="text-xs text-gray-400 dark:text-neutral-500">No data yet</span>}
                 </div>
             </div>
         </div>

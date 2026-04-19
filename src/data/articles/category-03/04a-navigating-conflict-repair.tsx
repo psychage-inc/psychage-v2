@@ -94,7 +94,7 @@ export const conflictRepairArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When we think about healthy relationships, we often picture harmony, agreement, and smooth sailing. But research tells a different story: couples who never fight may actually be at greater risk of relationship dissolution than those who engage in constructive disagreement <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="2019" tier={1} />.
           </p>
           <p className="mb-6">
@@ -422,7 +422,7 @@ export const conflictRepairArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In the heat of an argument, there's often a moment---fleeting but critical---when a relationship can turn toward repair or spiral toward damage. Relationship researcher John Gottman calls this the "repair attempt, " and his decades of research show it's one of the most powerful predictors of relationship success <Citation id="1" index={1} source="Journal of Family Psychology" year="2002" tier={1} />.
           </p>
           <p className="mb-6">
@@ -774,7 +774,7 @@ export const conflictRepairArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every relationship has conflict. What separates thriving couples from struggling ones isn't the absence of disagreement---it's how they fight. Research consistently shows that couples who follow certain ground rules during conflict report higher relationship satisfaction, greater intimacy, and longer-lasting partnerships <Citation id="1" index={1} source="Communication Monographs" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
@@ -1156,7 +1156,7 @@ export const conflictRepairArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're mid-conversation, trying to resolve a disagreement, when your partner's face goes blank. They stop responding. They look away. They might pick up their phone, walk out of the room, or just stare into the distance. You're left talking to a wall. This is stonewalling---and it's one of the most destructive patterns in relationships <Citation id="1" index={1} source="Journal of Family Psychology" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
@@ -1556,7 +1556,7 @@ export const conflictRepairArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're both convinced you're right. Neither of you wants to budge. The argument circles back on itself---same points, same frustrations, no resolution. You're not having a conversation anymore; you're in a standoff. This is what relationship researcher John Gottman calls 'gridlock"---a conflict where both people's core values or deeply held beliefs are in opposition, and compromise feels like surrender <Citation id="1" index={1} source="Journal of Marriage and Family" year="2020" tier={1} />.
           </p>
           <p className="mb-6">

@@ -111,10 +111,10 @@ const SmartActionsHub: React.FC<SmartActionsHubProps> = (props) => {
     };
 
     return (
-        <div className="h-full rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 shadow-sm p-4">
+        <div className="h-full rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 shadow-sm p-4">
             <div className="flex items-center gap-2 mb-3">
                 <Lightbulb size={14} className="text-amber-500" />
-                <span className="text-xs font-medium text-gray-400 dark:text-gray-500 uppercase tracking-wider">Suggested</span>
+                <span className="text-xs font-medium text-gray-400 dark:text-neutral-500 uppercase tracking-wider">Suggested</span>
             </div>
             <div className="flex flex-col gap-2">
                 {actions.map((action, idx) => {
@@ -123,12 +123,12 @@ const SmartActionsHub: React.FC<SmartActionsHubProps> = (props) => {
                             initial={reduced ? {} : { opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.05 + idx * 0.04 }}
-                            className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group cursor-pointer"
+                            className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-50 dark:hover:bg-neutral-800/50 transition-colors group cursor-pointer"
                         >
                             <div className={cn('w-7 h-7 rounded-lg flex items-center justify-center shrink-0', action.color)}>
                                 {action.icon}
                             </div>
-                            <p className="text-sm text-gray-700 dark:text-gray-300 font-medium group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors leading-snug">
+                            <p className="text-sm text-gray-700 dark:text-neutral-300 font-medium group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors leading-snug">
                                 {action.label}
                             </p>
                         </motion.div>

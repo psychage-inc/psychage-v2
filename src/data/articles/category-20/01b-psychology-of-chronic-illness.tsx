@@ -79,7 +79,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The moment a doctor says "chronic," something shifts in how you inhabit your own body.
             Every twinge, every flutter, every unfamiliar ache gets filtered through a new lens:
             Is this my condition? Is it getting worse? Should I call someone? That vigilance can
@@ -459,7 +459,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You wake up and something is different. The fog has lifted. The pain has receded
             to a low hum instead of a roar. Energy --- actual, usable energy --- is flowing through
             you for the first time in days. Your brain immediately starts making a list: the
@@ -772,7 +772,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "I am so tired." When you live with chronic illness, these four words become the
             most honest sentence you know. Not the ordinary tiredness that a good night of
             sleep resolves. Not the satisfying exhaustion after a productive day. This is
@@ -1120,7 +1120,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There is a particular kind of dread that has nothing to do with symptoms, test
             results, or disease progression. It arrives in the mailbox. It appears on a screen
             after an insurance portal loads. It is the weight of a bill you cannot pay for
@@ -1433,7 +1433,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You have been living in your body for your entire life. You know what normal feels
             like. You know when something has changed. You know when the pain is different,
             when the fatigue has deepened, when something is not right. And yet, when you sit

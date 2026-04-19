@@ -120,7 +120,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Self-awareness sounds simple. Know yourself. But research reveals that while 95% of people believe they are self-aware, only about 10-15% actually meet the criteria. This gap between what we think we know about ourselves and what is actually true shapes every relationship, decision, and emotional experience we have.
           </p>
           <p className="mb-6">
@@ -383,7 +383,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "How was your day?", "Fine." This surface-level reflection is how most people journal, if they journal at all. But the kind of writing that actually builds self-awareness goes much deeper. It asks questions that make you pause, that surface emotions you did not know you were carrying, and that reveal patterns you have been living but never noticing.
           </p>
           <p className="mb-6">
@@ -675,7 +675,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Before you know you are angry, your jaw clenches. Before you consciously feel anxious, your chest tightens. Before sadness fully registers, your shoulders slump. Your body is talking to you all the time --- most of us have just forgotten how to listen.
           </p>
           <p className="mb-6">
@@ -947,7 +947,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You get a text from your friend saying "We need to talk." Instantly, your stomach drops. You feel anxious, maybe even panicked. But notice something: the text itself is neutral. It is your interpretation --- "Something is wrong. They are upset with me. I must have done something bad" --- that creates the emotional response.
           </p>
           <p className="mb-6">
@@ -1202,7 +1202,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There is a difference between being caught in a storm and watching a storm from a window. The storm is the same --- but your experience of it changes completely based on where you stand. The Observer Self is the "you" that watches from the window. It is the part of you that can notice your thoughts and feelings without being swept away by them.
           </p>
           <p className="mb-6">

@@ -65,7 +65,7 @@ const AuthorProfilePage: React.FC = () => {
               <img
                 src={author.image}
                 alt={author.name}
-                className="w-24 h-24 rounded-full object-cover border-2 border-white dark:border-gray-700 shadow-sm mx-auto mb-4"
+                className="w-24 h-24 rounded-full object-cover border-2 border-border shadow-sm mx-auto mb-4"
               />
               <h1 className="font-display font-bold text-xl text-text-primary text-center mb-1">
                 {author.name}

@@ -95,7 +95,7 @@ export const breakupsEndingsMovingForwardArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Heartbreak is not just an emotional experience --- it's a full-body alarm system responding to the loss of someone central to your identity, safety, and future. The pain is real, measurable, and universal.
           </p>
           <p className="mb-6">
@@ -155,7 +155,7 @@ export const breakupsEndingsMovingForwardArticlesA: Article[] = [
           highlightColumn={2}
         />
 
-        <h2 id="the-intrusive-thought-loop" className="text-3xl font-display font-bold text-gray-900 dark:text-gray-300 mt-12 mb-6 scroll-mt-32">
+        <h2 id="the-intrusive-thought-loop" className="text-3xl font-display font-bold text-gray-900 dark:text-neutral-300 mt-12 mb-6 scroll-mt-32">
           The Intrusive Thought Loop
         </h2>
         <p className="mb-6">
@@ -377,7 +377,7 @@ export const breakupsEndingsMovingForwardArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Breakups don't follow a neat, predictable script. You'll move through emotional stages --- sometimes in order, sometimes in chaos, sometimes cycling back to places you thought you'd left behind. This is normal.
           </p>
           <p className="mb-6">
@@ -721,7 +721,7 @@ export const breakupsEndingsMovingForwardArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Healing from a breakup isn't passive. It's an active process of tending to your wounds, restructuring your life, and intentionally building resilience. Science offers clear guidance on what actually helps --- and what keeps you stuck.
           </p>
           <p className="mb-6">
@@ -1120,7 +1120,7 @@ export const breakupsEndingsMovingForwardArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Can we still be friends?" is one of the most common post-breakup questions --- and one of the most harmful to your recovery. Research is unambiguous: sustained contact with your ex delays healing, prolongs suffering, and prevents you from building a new life.
           </p>
           <p className="mb-6">
@@ -1523,7 +1523,7 @@ export const breakupsEndingsMovingForwardArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You know you shouldn't check their Instagram. You do it anyway --- scrolling through their stories, analyzing photos for clues, dissecting captions for hidden meaning. Each check promises relief but delivers only more pain. Welcome to the digital age's cruelest post-breakup trap.
           </p>
           <p className="mb-6">

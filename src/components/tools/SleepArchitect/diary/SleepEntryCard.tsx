@@ -41,7 +41,7 @@ const SleepEntryCard: React.FC<SleepEntryCardProps> = ({
     <motion.div
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-white dark:bg-gray-800 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:border-gray-200 dark:hover:border-gray-600 transition-colors"
+      className="bg-white dark:bg-neutral-800 rounded-xl p-4 border border-gray-100 dark:border-neutral-700 hover:border-gray-200 dark:hover:border-neutral-600 transition-colors"
     >
       <div className="flex items-start justify-between mb-3">
         <div className="flex items-center gap-2">
@@ -50,7 +50,7 @@ const SleepEntryCard: React.FC<SleepEntryCardProps> = ({
             <div className="text-sm font-bold text-gray-900 dark:text-white">
               {dayLabel}
             </div>
-            <div className="text-[10px] text-gray-400 dark:text-gray-500">
+            <div className="text-[10px] text-gray-400 dark:text-neutral-500">
               {entry.bedtime} → {entry.wake_time}
             </div>
           </div>
@@ -59,7 +59,7 @@ const SleepEntryCard: React.FC<SleepEntryCardProps> = ({
           <button
             type="button"
             onClick={() => onEdit(entry)}
-            className="p-1.5 text-gray-300 dark:text-gray-600 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors"
+            className="p-1.5 text-gray-300 dark:text-neutral-600 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors"
             aria-label="Edit entry"
           >
             <Pencil size={14} />
@@ -67,7 +67,7 @@ const SleepEntryCard: React.FC<SleepEntryCardProps> = ({
           <button
             type="button"
             onClick={() => onDelete(entry.id)}
-            className="p-1.5 text-gray-300 dark:text-gray-600 hover:text-red-500 dark:hover:text-red-400 transition-colors"
+            className="p-1.5 text-gray-300 dark:text-neutral-600 hover:text-red-500 dark:hover:text-red-400 transition-colors"
             aria-label="Delete entry"
           >
             <Trash2 size={14} />
@@ -81,7 +81,7 @@ const SleepEntryCard: React.FC<SleepEntryCardProps> = ({
           <div className="text-xs font-bold text-gray-900 dark:text-white">
             {formatDuration(metrics.total_sleep_minutes)}
           </div>
-          <div className="text-[10px] text-gray-400 dark:text-gray-500">Sleep</div>
+          <div className="text-[10px] text-gray-400 dark:text-neutral-500">Sleep</div>
         </div>
         <div className="text-center">
           <Zap size={14} className="text-sky-500 mx-auto mb-0.5" />
@@ -93,7 +93,7 @@ const SleepEntryCard: React.FC<SleepEntryCardProps> = ({
           >
             {Math.round(metrics.sleep_efficiency)}%
           </div>
-          <div className="text-[10px] text-gray-400 dark:text-gray-500">
+          <div className="text-[10px] text-gray-400 dark:text-neutral-500">
             Efficiency
           </div>
         </div>
@@ -102,7 +102,7 @@ const SleepEntryCard: React.FC<SleepEntryCardProps> = ({
           <div className="text-xs font-bold text-gray-900 dark:text-white">
             {entry.sleep_onset_minutes}m
           </div>
-          <div className="text-[10px] text-gray-400 dark:text-gray-500">
+          <div className="text-[10px] text-gray-400 dark:text-neutral-500">
             Onset
           </div>
         </div>

@@ -27,7 +27,7 @@ const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
   return (
     <motion.div
       {...hoverLift}
-      className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-teal-100 dark:hover:border-teal-900 transition-all duration-300 flex flex-col h-full group"
+      className="bg-surface rounded-2xl p-6 border border-border shadow-sm hover:shadow-xl hover:border-teal-100 dark:hover:border-teal-900 transition-all duration-300 flex flex-col h-full group"
     >
       <div className="flex items-start gap-4 mb-4">
         <div className="relative">
@@ -36,14 +36,14 @@ const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
               src={provider.image}
               alt={provider.name}
               loading="lazy"
-              className="w-20 h-20 rounded-full object-cover border-2 border-white dark:border-gray-800 shadow-md"
+              className="w-20 h-20 rounded-full object-cover border-2 border-surface shadow-md"
               onError={() => setImageError(true)}
             />
           ) : (
-            <FallbackAvatar name={provider.name} className="w-20 h-20 rounded-full border-2 border-white dark:border-gray-800 shadow-md" />
+            <FallbackAvatar name={provider.name} className="w-20 h-20 rounded-full border-2 border-surface shadow-md" />
           )}
           {provider.verified && (
-            <div className="absolute -bottom-1 -right-1 bg-white dark:bg-gray-800 rounded-full p-1 shadow-sm">
+            <div className="absolute -bottom-1 -right-1 bg-surface rounded-full p-1 shadow-sm">
               <ShieldCheck size={16} className="text-teal-500 fill-teal-50 dark:fill-teal-900/30" />
             </div>
           )}
@@ -51,42 +51,42 @@ const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
 
         <div>
           <Link to={`/providers/${provider.id}`} className="hover:underline decoration-teal-500 decoration-2 underline-offset-2">
-            <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white leading-tight">
+            <h3 className="font-display font-bold text-lg text-text-primary leading-tight">
               {provider.name}
             </h3>
           </Link>
-          <p className="text-sm text-gray-500 dark:text-gray-400 font-medium mb-1">{provider.role}</p>
+          <p className="text-sm text-text-tertiary font-medium mb-1">{provider.role}</p>
         </div>
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">
         {provider.specialties.slice(0, 3).map(spec => (
-          <Badge key={spec} variant="neutral" className="bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-100 dark:border-gray-700">
+          <Badge key={spec} variant="neutral" className="bg-surface text-text-secondary border border-border">
             {spec}
           </Badge>
         ))}
         {provider.specialties.length > 3 && (
-          <Badge variant="neutral" className="bg-gray-50 dark:bg-gray-800 text-gray-500 dark:text-gray-400 border border-gray-100 dark:border-gray-700">
+          <Badge variant="neutral" className="bg-surface text-text-tertiary border border-border">
             +{provider.specialties.length - 3}
           </Badge>
         )}
       </div>
 
       <div className="space-y-3 mb-6 flex-grow">
-        <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300">
-          <MapPin size={16} className="text-gray-400 dark:text-gray-500" />
+        <div className="flex items-center gap-3 text-sm text-text-secondary">
+          <MapPin size={16} className="text-text-tertiary" />
           <span>{provider.location}</span>
         </div>
 
-        <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300">
-          <Calendar size={16} className="text-gray-400 dark:text-gray-500" />
+        <div className="flex items-center gap-3 text-sm text-text-secondary">
+          <Calendar size={16} className="text-text-tertiary" />
           <span className={provider.availability.includes('week') || provider.availability.includes('tomorrow') ? 'text-green-600 dark:text-green-400 font-semibold' : ''}>
             {provider.availability}
           </span>
         </div>
 
-        <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300">
-          <CreditCard size={16} className="text-gray-400 dark:text-gray-500" />
+        <div className="flex items-center gap-3 text-sm text-text-secondary">
+          <CreditCard size={16} className="text-text-tertiary" />
           <span className="truncate">{provider.insurance.slice(0, 2).join(", ")}{provider.insurance.length > 2 && "..."}</span>
         </div>
 

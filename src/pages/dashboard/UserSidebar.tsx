@@ -26,7 +26,7 @@ const UserSidebar: React.FC = () => {
                     <nav className="flex-grow space-y-5">
                         {patientSidebarSections.map((section) => (
                             <div key={section.title}>
-                                <p className="text-[10px] uppercase tracking-widest text-gray-400 dark:text-gray-500 px-4 mb-1.5 font-medium">
+                                <p className="text-[10px] uppercase tracking-widest text-gray-400 dark:text-neutral-500 px-4 mb-1.5 font-medium">
                                     {section.title}
                                 </p>
                                 <div className="space-y-1">
@@ -40,7 +40,7 @@ const UserSidebar: React.FC = () => {
                                                     'relative flex items-center gap-3 px-4 py-2.5 rounded-xl transition-all font-medium overflow-hidden group text-sm',
                                                     active
                                                         ? 'text-white shadow-md'
-                                                        : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+                                                        : 'text-gray-500 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white'
                                                 )}
                                             >
                                                 {active && (
@@ -72,13 +72,13 @@ const UserSidebar: React.FC = () => {
                     {/* Crisis support micro-link */}
                     <Link
                         to="/crisis"
-                        className="flex items-center gap-2 px-4 py-2 text-xs text-gray-400 dark:text-gray-500 hover:text-rose-500 dark:hover:text-rose-400 transition-colors mt-4"
+                        className="flex items-center gap-2 px-4 py-2 text-xs text-gray-400 dark:text-neutral-500 hover:text-rose-500 dark:hover:text-rose-400 transition-colors mt-4"
                     >
                         <Heart size={12} />
                         <span>Need support? Crisis resources</span>
                     </Link>
 
-                    <div className="pt-3 mt-2 border-t border-gray-200/60 dark:border-gray-700/50">
+                    <div className="pt-3 mt-2 border-t border-gray-200/60 dark:border-neutral-700/50">
                         <button
                             onClick={logout}
                             className="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-red-500 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/10 transition-all font-medium text-sm group"
@@ -91,7 +91,7 @@ const UserSidebar: React.FC = () => {
             </div>
 
             {/* Mobile bottom tab bar */}
-            <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-t border-gray-200 dark:border-gray-800 pb-[env(safe-area-inset-bottom)]">
+            <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border-t border-gray-200 dark:border-neutral-800 pb-[env(safe-area-inset-bottom)]">
                 <nav className="flex items-center justify-around px-2 py-1.5">
                     {patientMobileTabItems.map((item) => {
                         const active = isActive(item.path);
@@ -103,7 +103,7 @@ const UserSidebar: React.FC = () => {
                                     'flex flex-col items-center gap-0.5 py-1.5 px-3 rounded-lg transition-colors min-w-[48px]',
                                     active
                                         ? 'text-teal-600 dark:text-teal-400'
-                                        : 'text-gray-400 dark:text-gray-500'
+                                        : 'text-gray-400 dark:text-neutral-500'
                                 )}
                             >
                                 <item.icon size={20} />

@@ -92,7 +92,7 @@ const SleepOverview: React.FC<SleepOverviewProps> = ({
             <button
               type="button"
               onClick={() => onNavigateTab('diary')}
-              className="inline-flex items-center gap-2 bg-white text-indigo-600 font-bold text-sm px-6 py-3 rounded-xl hover:bg-indigo-50 transition-colors"
+              className="inline-flex items-center gap-2 bg-white dark:bg-neutral-900 text-indigo-600 font-bold text-sm px-6 py-3 rounded-xl hover:bg-indigo-50 transition-colors"
             >
               <PenLine size={16} />
               Log your first night
@@ -105,9 +105,9 @@ const SleepOverview: React.FC<SleepOverviewProps> = ({
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="lg:col-span-1 bg-white dark:bg-gray-800 rounded-[2rem] p-6 md:p-8 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-gray-700 text-center"
+            className="lg:col-span-1 bg-white dark:bg-neutral-800 rounded-[2rem] p-6 md:p-8 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-neutral-700 text-center"
           >
-            <div className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-4">
+            <div className="text-xs font-bold text-gray-400 dark:text-neutral-500 uppercase tracking-wider mb-4">
               Sleep Score (7 days)
             </div>
             <div
@@ -122,7 +122,7 @@ const SleepOverview: React.FC<SleepOverviewProps> = ({
               {scoreLabel(score.overall)}
             </div>
             {recentEntries.length < 3 && (
-              <div className="text-xs text-gray-400 dark:text-gray-500 mt-3">
+              <div className="text-xs text-gray-400 dark:text-neutral-500 mt-3">
                 Log {3 - recentEntries.length} more night
                 {3 - recentEntries.length !== 1 ? 's' : ''} for a more accurate
                 score
@@ -137,27 +137,27 @@ const SleepOverview: React.FC<SleepOverviewProps> = ({
             transition={{ delay: 0.1 }}
             className="lg:col-span-2 grid grid-cols-2 gap-4"
           >
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-5 border border-gray-100 dark:border-gray-700">
+            <div className="bg-white dark:bg-neutral-800 rounded-2xl p-5 border border-gray-100 dark:border-neutral-700">
               <Clock size={20} className="text-indigo-500 mb-2" />
-              <div className="text-xs font-medium text-gray-500 dark:text-gray-400">
+              <div className="text-xs font-medium text-gray-500 dark:text-neutral-400">
                 Avg Duration
               </div>
               <div className="text-xl font-bold font-display text-gray-900 dark:text-white">
                 {formatDuration(avgDuration)}
               </div>
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-5 border border-gray-100 dark:border-gray-700">
+            <div className="bg-white dark:bg-neutral-800 rounded-2xl p-5 border border-gray-100 dark:border-neutral-700">
               <BarChart3 size={20} className="text-sky-500 mb-2" />
-              <div className="text-xs font-medium text-gray-500 dark:text-gray-400">
+              <div className="text-xs font-medium text-gray-500 dark:text-neutral-400">
                 Avg Efficiency
               </div>
               <div className="text-xl font-bold font-display text-gray-900 dark:text-white">
                 {Math.round(avgEfficiency)}%
               </div>
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-5 border border-gray-100 dark:border-gray-700">
+            <div className="bg-white dark:bg-neutral-800 rounded-2xl p-5 border border-gray-100 dark:border-neutral-700">
               <Flame size={20} className="text-orange-500 mb-2" />
-              <div className="text-xs font-medium text-gray-500 dark:text-gray-400">
+              <div className="text-xs font-medium text-gray-500 dark:text-neutral-400">
                 Current Streak
               </div>
               <div className="text-xl font-bold font-display text-gray-900 dark:text-white">
@@ -165,9 +165,9 @@ const SleepOverview: React.FC<SleepOverviewProps> = ({
                 {sleepData.streak.current !== 1 ? 's' : ''}
               </div>
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-5 border border-gray-100 dark:border-gray-700">
+            <div className="bg-white dark:bg-neutral-800 rounded-2xl p-5 border border-gray-100 dark:border-neutral-700">
               <Moon size={20} className="text-violet-500 mb-2" />
-              <div className="text-xs font-medium text-gray-500 dark:text-gray-400">
+              <div className="text-xs font-medium text-gray-500 dark:text-neutral-400">
                 Nights Logged
               </div>
               <div className="text-xl font-bold font-display text-gray-900 dark:text-white">
@@ -212,7 +212,7 @@ const SleepOverview: React.FC<SleepOverviewProps> = ({
           <button
             type="button"
             onClick={() => onNavigateTab('dashboard')}
-            className="bg-white dark:bg-gray-800 rounded-2xl p-5 border border-gray-100 dark:border-gray-700 hover:border-indigo-200 dark:hover:border-indigo-700 transition-colors text-left group"
+            className="bg-white dark:bg-neutral-800 rounded-2xl p-5 border border-gray-100 dark:border-neutral-700 hover:border-indigo-200 dark:hover:border-indigo-700 transition-colors text-left group"
           >
             <BarChart3
               size={20}
@@ -221,14 +221,14 @@ const SleepOverview: React.FC<SleepOverviewProps> = ({
             <div className="font-bold text-sm text-gray-900 dark:text-white">
               View Dashboard
             </div>
-            <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+            <div className="text-xs text-gray-500 dark:text-neutral-400 mt-0.5">
               Charts, trends, and weekly digest
             </div>
           </button>
           <button
             type="button"
             onClick={() => onNavigateTab('wind-down')}
-            className="bg-white dark:bg-gray-800 rounded-2xl p-5 border border-gray-100 dark:border-gray-700 hover:border-indigo-200 dark:hover:border-indigo-700 transition-colors text-left group"
+            className="bg-white dark:bg-neutral-800 rounded-2xl p-5 border border-gray-100 dark:border-neutral-700 hover:border-indigo-200 dark:hover:border-indigo-700 transition-colors text-left group"
           >
             <Wind
               size={20}
@@ -237,14 +237,14 @@ const SleepOverview: React.FC<SleepOverviewProps> = ({
             <div className="font-bold text-sm text-gray-900 dark:text-white">
               Wind Down
             </div>
-            <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+            <div className="text-xs text-gray-500 dark:text-neutral-400 mt-0.5">
               Breathing, relaxation, and brain dump
             </div>
           </button>
           <button
             type="button"
             onClick={() => onNavigateTab('insights')}
-            className="bg-white dark:bg-gray-800 rounded-2xl p-5 border border-gray-100 dark:border-gray-700 hover:border-indigo-200 dark:hover:border-indigo-700 transition-colors text-left group"
+            className="bg-white dark:bg-neutral-800 rounded-2xl p-5 border border-gray-100 dark:border-neutral-700 hover:border-indigo-200 dark:hover:border-indigo-700 transition-colors text-left group"
           >
             <Brain
               size={20}
@@ -253,7 +253,7 @@ const SleepOverview: React.FC<SleepOverviewProps> = ({
             <div className="font-bold text-sm text-gray-900 dark:text-white">
               Sleep Insights
             </div>
-            <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+            <div className="text-xs text-gray-500 dark:text-neutral-400 mt-0.5">
               Sleep-mood patterns and correlations
             </div>
           </button>

@@ -97,7 +97,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You know the fear is irrational. You know the spider in the corner can't hurt you, that the airplane is statistically safer than your car, that the elevator won't suddenly plummet. But knowing doesn't matter. Your heart races, your palms sweat, your mind screams danger --- and you can't logic your way out of it.
           </p>
           <p className="mb-6">
@@ -322,38 +322,38 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
           Phobias manifest differently for different people. Here are concrete examples of how specific phobias impact real lives:
         </p>
 
-        <div className="mb-6 p-5 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-6 p-5 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
             Example 1: Emetophobia (Fear of Vomiting)
           </h3>
-          <p className="text-sm text-gray-700 dark:text-gray-300">
+          <p className="text-sm text-gray-700 dark:text-neutral-300">
             Rachel, 28, avoids restaurants, airplanes, and any situation where someone might get sick. She checks expiration dates obsessively, washes her hands dozens of times daily, and experiences panic attacks when she hears someone cough. She turned down a promotion requiring travel and limits social activities. The fear isn't about the discomfort of vomiting --- it's a terror so intense that her entire life revolves around prevention.
           </p>
         </div>
 
-        <div className="mb-6 p-5 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-6 p-5 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
             Example 2: Claustrophobia (Fear of Enclosed Spaces)
           </h3>
-          <p className="text-sm text-gray-700 dark:text-gray-300">
+          <p className="text-sm text-gray-700 dark:text-neutral-300">
             James, 42, can't use elevators or MRI machines. He walks up 12 flights of stairs to his office daily. When he needed an MRI for a knee injury, he postponed it for eight months, worsening the damage. He feels his heart pound and chest tighten even thinking about small spaces. He knows it's irrational --- but when the elevator doors close, logic disappears.
           </p>
         </div>
 
-        <div className="mb-6 p-5 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-6 p-5 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
             Example 3: Arachnophobia (Fear of Spiders)
           </h3>
-          <p className="text-sm text-gray-700 dark:text-gray-300">
+          <p className="text-sm text-gray-700 dark:text-neutral-300">
             Maria, 35, moved out of her apartment after seeing two spiders in one week. She checks her bed every night, won't go camping, and once abandoned a full grocery cart mid-shop when she saw a spider on a product. Her partner finds it frustrating ("Just kill it!"), but Maria's fear is so visceral that even photos of spiders trigger panic. She intellectually knows most spiders are harmless --- but her body reacts as if facing mortal danger.
           </p>
         </div>
 
-        <div className="mb-6 p-5 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+        <div className="mb-6 p-5 bg-gray-50 dark:bg-neutral-800/50 rounded-xl">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
             Example 4: Aviophobia (Fear of Flying)
           </h3>
-          <p className="text-sm text-gray-700 dark:text-gray-300">
+          <p className="text-sm text-gray-700 dark:text-neutral-300">
             Tom, 50, hasn't seen his daughter in six years because she lives overseas. He drives 14 hours instead of taking a 90-minute flight. He missed his father's funeral because flying felt impossible. He's tried alcohol, medication, and breathing exercises --- nothing touches the terror he feels at the thought of boarding a plane. He's watched the safety videos, read the statistics, talked to pilots. None of it helps when he imagines the cabin door closing.
           </p>
         </div>
@@ -536,7 +536,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Some phobias are so common they have household names: fear of heights, spiders, flying, needles. Others are less known but equally debilitating. If you live with a phobia, you're far from alone --- and understanding what makes your specific fear tick is the first step toward overcoming it.
           </p>
           <p className="mb-6">
@@ -884,7 +884,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Why does your brain turn a harmless spider into a mortal threat? How does a single bad flight transform into a lifelong fear of flying? The answer lies in one of psychology's most fundamental discoveries: classical conditioning, the process by which we learn to associate neutral things with fear.
           </p>
           <p className="mb-6">
@@ -1268,7 +1268,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The idea sounds terrifying: to overcome your fear of spiders, you have to be near spiders. To conquer your fear of flying, you have to get on a plane. It feels counterintuitive, even cruel. But exposure therapy --- systematically facing your fears in a controlled, gradual way --- is the most effective treatment for phobias, with success rates often exceeding 80%.
           </p>
           <p className="mb-6">
@@ -1641,7 +1641,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You avoid the dentist for years. You skip flu shots. You panic when bloodwork is ordered. Just the thought of a needle approaching your arm makes you lightheaded. You know it's "just a little poke, ' but your body reacts as if you're facing mortal danger --- and sometimes, you faint.
           </p>
           <p className="mb-6">

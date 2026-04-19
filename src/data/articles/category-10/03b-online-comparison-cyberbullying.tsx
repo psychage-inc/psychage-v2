@@ -116,7 +116,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've delivered a perfect service, but you're refreshing your phone anxiously, waiting to see if they'll give you five stars. Welcome to the feedback economy, where nearly everything we do can be publicly rated, reviewed, and judged by strangers.
           </p>
           <p className="mb-6">
@@ -532,7 +532,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You swipe through dozens of faces in minutes, receive matches that never message, send messages that go unanswered, and occasionally connect with someone who vanishes without explanation. For millions of people, this is modern dating --- and it's taking a psychological toll.
           </p>
           <p className="mb-6">
@@ -885,7 +885,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You watch their videos every day, follow their life updates, laugh at their jokes, and feel genuinely happy when good things happen to them. When they post something difficult, you worry about them. You feel like you know them. But they have no idea you exist.
           </p>
           <p className="mb-6">
@@ -1250,7 +1250,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For months, you've been messaging someone online. You've shared intimate details about your life. You've developed real feelings. Then you discover: the photos aren't them. The name isn't real. The person you thought you knew doesn't exist.
           </p>
           <p className="mb-6">
@@ -1654,7 +1654,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your teenager's phone buzzes with another notification. You notice them tense up, quickly swipe to dismiss it, and retreat to their room. Something's wrong, but they won't talk about it. In today's hyperconnected world, online cruelty can follow teens home, into their bedrooms, and even invade their sleep.
           </p>
           <p className="mb-6">

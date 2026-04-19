@@ -110,7 +110,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Cognitive-behavioral therapy (CBT) is the most extensively researched psychotherapy for depression, with decades of evidence showing it works as well as medication for mild to moderate depression---and its benefits last longer after treatment ends.
           </p>
           <p className="mb-6">
@@ -593,7 +593,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Antidepressant medications are among the most commonly prescribed treatments for depression---and also among the most misunderstood. They're not "happy pills, ' they don't change your personality, and they're not addictive. But they do work for many people when used appropriately.
           </p>
           <p className="mb-6">
@@ -1059,7 +1059,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you're diagnosed with depression, one of the first decisions you face is: therapy, medication, or both? It's a question with no universal answer---but decades of research provide clear guidance on what works best for different situations.
           </p>
           <p className="mb-6">
@@ -1430,7 +1430,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For people who haven't responded to traditional antidepressants and therapy, hope is arriving in the form of breakthrough treatments that work faster and differently than anything we've had before.
           </p>
           <p className="mb-6">
@@ -1789,7 +1789,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             One of the most common questions people ask when starting treatment for depression is: "How long until I feel better?" The answer isn't simple---but understanding the realistic timeline for improvement can help you stay committed during the waiting period.
           </p>
           <p className="mb-6">

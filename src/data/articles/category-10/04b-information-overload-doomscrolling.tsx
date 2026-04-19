@@ -110,7 +110,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You open TikTok to watch "just one video." Forty-five minutes later, you're still scrolling. You intended to check Instagram for five minutes. An hour has vanished. There's no 'bottom' to reach, no natural stopping point. Welcome to the infinite scroll --- the most powerful attention trap ever designed.
           </p>
           <p className="mb-6">
@@ -537,7 +537,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You want to be an informed citizen. You care about what's happening in the world. But every time you check the news, you're left feeling anxious, hopeless, or overwhelmed. Is it possible to stay informed without sacrificing your mental health? Yes --- but it requires intention and boundaries.
           </p>
           <p className="mb-6">
@@ -952,7 +952,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Everyone in your Twitter feed agrees: the world is heading toward disaster. Every post on your Facebook wall confirms your worst fears. The news your algorithm shows you proves you were right all along. But step outside your digital bubble, and you discover half the population sees a completely different reality. You're living in an echo chamber.
           </p>
           <p className="mb-6">
@@ -1359,7 +1359,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For months, every news cycle brought death tolls, overwhelmed hospitals, and uncertain futures. Breaking news alerts interrupted sleep. Social media became a constant stream of fear, anger, and grief. You couldn't escape it --- the pandemic was everywhere, all the time. And it took a toll.
           </p>
           <p className="mb-6">
@@ -1741,7 +1741,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You wouldn't eat junk food for every meal and expect to feel healthy. Yet many of us consume information with no thought to quality, quantity, or balance --- and wonder why we feel anxious, scattered, and overwhelmed. Just as your body needs nutritious food, your mind needs a healthy information diet.
           </p>
           <p className="mb-6">

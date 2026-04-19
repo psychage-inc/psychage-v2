@@ -149,7 +149,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                             role="dialog"
                             aria-modal="true"
                             aria-label={view === 'login' ? 'Sign in to Psychage' : view === 'signup' ? 'Create Psychage account' : 'Reset your password'}
-                            className="bg-white dark:bg-[#0a0a0a] w-full max-w-md rounded-[2rem] shadow-2xl overflow-hidden pointer-events-auto border border-gray-100 dark:border-gray-800 relative"
+                            className="bg-surface w-full max-w-md rounded-[2rem] shadow-2xl overflow-hidden pointer-events-auto border border-border relative"
                         >
                             {/* Decorative Elements */}
                             <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-teal-500/10 to-transparent pointer-events-none" />
@@ -159,13 +159,13 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                                 <div className="flex items-center justify-between mb-8">
                                     <div className="flex items-center gap-2">
                                         <Logo className="h-10 w-auto text-[#1A1A1A] dark:text-white" />
-                                        <h2 className="text-2xl font-display font-bold text-gray-900 dark:text-white">
+                                        <h2 className="text-2xl font-display font-bold text-text-primary">
                                             {view === 'login' ? 'Welcome back' : view === 'signup' ? 'Join the Journey' : 'Reset password'}
                                         </h2>
                                     </div>
                                     <button
                                         onClick={onClose}
-                                        className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors text-gray-500"
+                                        className="p-2 hover:bg-surface-hover rounded-full transition-colors text-text-tertiary"
                                         aria-label="Close modal"
                                     >
                                         <X size={20} />
@@ -203,16 +203,16 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                                             animate={{ opacity: 1, height: 'auto' }}
                                             exit={{ opacity: 0, height: 0 }}
                                         >
-                                            <label htmlFor="auth-name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">Full Name</label>
+                                            <label htmlFor="auth-name" className="block text-sm font-medium text-text-secondary mb-1.5">Full Name</label>
                                             <div className="relative">
-                                                <User className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+                                                <User className="absolute left-4 top-1/2 -translate-y-1/2 text-text-tertiary" size={18} />
                                                 <input
                                                     id="auth-name"
                                                     type="text"
                                                     value={displayName}
                                                     onChange={(e) => setDisplayName(e.target.value)}
                                                     autoComplete="name"
-                                                    className="w-full h-12 pl-12 pr-4 rounded-xl bg-gray-50 dark:bg-[#111] border border-gray-200 dark:border-gray-800 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all outline-none font-medium text-gray-900 dark:text-white placeholder:text-gray-400"
+                                                    className="w-full h-12 pl-12 pr-4 rounded-xl bg-surface-hover border border-border focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all outline-none font-medium text-text-primary placeholder:text-text-tertiary"
                                                     placeholder="John Doe"
                                                 />
                                             </div>
@@ -220,9 +220,9 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                                     )}
 
                                     <div>
-                                        <label htmlFor="auth-email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">Email</label>
+                                        <label htmlFor="auth-email" className="block text-sm font-medium text-text-secondary mb-1.5">Email</label>
                                         <div className="relative">
-                                            <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+                                            <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-text-tertiary" size={18} />
                                             <input
                                                 id="auth-email"
                                                 type="email"
@@ -230,7 +230,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                                                 onChange={(e) => setEmail(e.target.value)}
                                                 required
                                                 autoComplete="email"
-                                                className="w-full h-12 pl-12 pr-4 rounded-xl bg-gray-50 dark:bg-[#111] border border-gray-200 dark:border-gray-800 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all outline-none font-medium text-gray-900 dark:text-white placeholder:text-gray-400"
+                                                className="w-full h-12 pl-12 pr-4 rounded-xl bg-surface-hover border border-border focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all outline-none font-medium text-text-primary placeholder:text-text-tertiary"
                                                 placeholder="you@example.com"
                                             />
                                         </div>
@@ -238,9 +238,9 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
 
                                     {view !== 'forgot-password' && (
                                         <div>
-                                            <label htmlFor="auth-password" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">Password</label>
+                                            <label htmlFor="auth-password" className="block text-sm font-medium text-text-secondary mb-1.5">Password</label>
                                             <div className="relative">
-                                                <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+                                                <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-text-tertiary" size={18} />
                                                 <input
                                                     id="auth-password"
                                                     type="password"
@@ -248,7 +248,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                                                     onChange={(e) => setPassword(e.target.value)}
                                                     required
                                                     autoComplete={view === 'signup' ? 'new-password' : 'current-password'}
-                                                    className="w-full h-12 pl-12 pr-4 rounded-xl bg-gray-50 dark:bg-[#111] border border-gray-200 dark:border-gray-800 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all outline-none font-medium text-gray-900 dark:text-white placeholder:text-gray-400"
+                                                    className="w-full h-12 pl-12 pr-4 rounded-xl bg-surface-hover border border-border focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all outline-none font-medium text-text-primary placeholder:text-text-tertiary"
                                                     placeholder="••••••••"
                                                 />
                                             </div>
@@ -287,10 +287,10 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                                     <>
                                         <div className="relative my-8">
                                             <div className="absolute inset-0 flex items-center">
-                                                <div className="w-full border-t border-gray-200 dark:border-gray-800"></div>
+                                                <div className="w-full border-t border-border"></div>
                                             </div>
                                             <div className="relative flex justify-center text-sm">
-                                                <span className="px-2 bg-white dark:bg-[#0a0a0a] text-gray-500">Or continue with</span>
+                                                <span className="px-2 bg-surface text-text-tertiary">Or continue with</span>
                                             </div>
                                         </div>
 
@@ -298,7 +298,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                                             <button
                                                 onClick={handleGoogleSignIn}
                                                 disabled={isLoading}
-                                                className="flex items-center justify-center gap-2 h-12 rounded-xl border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-[#111] disabled:opacity-50"
+                                                className="flex items-center justify-center gap-2 h-12 rounded-xl border border-border hover:bg-surface-hover transition-colors font-medium text-text-secondary bg-surface disabled:opacity-50"
                                             >
                                                 <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
                                                     <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4" />
@@ -311,7 +311,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                                             <button
                                                 onClick={handleAppleSignIn}
                                                 disabled={isLoading}
-                                                className="flex items-center justify-center gap-2 h-12 rounded-xl border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-[#111] disabled:opacity-50"
+                                                className="flex items-center justify-center gap-2 h-12 rounded-xl border border-border hover:bg-surface-hover transition-colors font-medium text-text-secondary bg-surface disabled:opacity-50"
                                             >
                                                 <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
                                                     <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
@@ -322,7 +322,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                                     </>
                                 )}
 
-                                <div className="mt-8 text-center text-sm text-gray-500">
+                                <div className="mt-8 text-center text-sm text-text-tertiary">
                                     {view === 'login' ? (
                                         <>
                                             Don't have an account?{' '}

@@ -79,7 +79,7 @@ export const psychologyOfChronicIllnessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A chronic illness diagnosis rarely arrives gently. Whether it comes after years of mysterious
             symptoms or lands suddenly in a routine appointment, the moment a doctor says "this is something
             you will manage for the rest of your life" rewrites the script you had for your future. And the
@@ -453,7 +453,7 @@ export const psychologyOfChronicIllnessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Before chronic illness, most people carry an unexamined assumption: that they are their body,
             and their body is reliable. Identity is built on things the body makes possible --- your work,
             your hobbies, your social roles, your independence. When chronic illness disrupts that
@@ -849,7 +849,7 @@ export const psychologyOfChronicIllnessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You describe your symptoms carefully. You have rehearsed what to say, brought notes,
             waited weeks for the appointment. The doctor listens for ninety seconds, glances at
             normal lab results, and says: "Have you considered that this might be anxiety?" In
@@ -1199,7 +1199,7 @@ export const psychologyOfChronicIllnessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There is a kind of grief that arrives without a funeral. No one sends flowers. No one
             takes time off work. No one asks, months later, how you are doing with the loss. This
             is the grief of chronic illness --- the mourning of a life that did not end but changed
@@ -1563,7 +1563,7 @@ export const psychologyOfChronicIllnessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "But you look so good!" It is meant as a compliment. It lands like an erasure. For
             millions of people living with invisible illness, those five words capture the central
             paradox of their existence: the worse they feel, the harder they work to appear normal,

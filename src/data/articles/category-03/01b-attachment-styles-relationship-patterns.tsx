@@ -97,7 +97,7 @@ export const attachmentStylesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Understanding your attachment style isn't about getting a label---it's about gaining clarity on the patterns that shape how you connect with others. This self-awareness is the first step toward healthier relationships and, if needed, intentional change.
           </p>
           <p className="mb-6">
@@ -500,7 +500,7 @@ export const attachmentStylesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When we talk about attachment theory, romantic relationships dominate the conversation. But the patterns you learned in childhood don't just influence who you date---they shape every close relationship in your life, including friendships.
           </p>
           <p className="mb-6">
@@ -841,7 +841,7 @@ export const attachmentStylesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             One partner craves closeness but is met with distance. The other values independence but feels pursued relentlessly. The more one seeks connection, the more the other withdraws. The withdrawal triggers more pursuit. The pursuit triggers more withdrawal. Both are in pain, but their pain speaks different languages.
           </p>
           <p className="mb-6">
@@ -1222,7 +1222,7 @@ export const attachmentStylesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your childhood was difficult. Your early relationships taught you that people are unreliable, that closeness is dangerous, or that love is conditional. But now---through therapy, through a secure partner, through years of self-work---you've found a way to trust, to be vulnerable, to believe that you're worthy of consistent care.
           </p>
           <p className="mb-6">
@@ -1574,7 +1574,7 @@ export const attachmentStylesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your attachment style doesn't stay contained in your romantic relationships. It shows up in how you respond when your toddler cries, how you react when your teenager asks for independence, and whether you can tolerate your child's big emotions without shutting down or becoming overwhelmed.
           </p>
           <p className="mb-6">

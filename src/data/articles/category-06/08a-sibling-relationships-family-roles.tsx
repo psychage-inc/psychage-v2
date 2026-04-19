@@ -94,7 +94,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're forty-five years old, successful by any measure. But when your sister casually mentions her promotion, you feel that familiar twist in your gut---the same competitive ache you felt at eight when she won the spelling bee. Sibling rivalry doesn't end with childhood. For many, it shapes a lifetime of relationships, achievements, and self-worth.
           </p>
           <p className="mb-6">
@@ -482,7 +482,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When your sibling dies, people ask how your parents are doing. Friends offer condolences, then move on. No one recognizes that you didn't just lose a sibling---you lost the person who shared your entire childhood, who knew your family's secrets, who would have been there for the rest of your life. The grief is profound, but the support often isn't.
           </p>
           <p className="mb-6">
@@ -875,7 +875,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You haven't spoken to your sister in three years. When people ask if you have siblings, you pause---do you say yes and face questions about why you're not in contact? Say no and erase her existence? The social pressure to maintain family relationships is intense, but sometimes distance isn't dysfunction---it's self-preservation.
           </p>
           <p className="mb-6">
@@ -1294,7 +1294,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're forty years old, successful, self-aware, in therapy. But the moment you're with your siblings, you're eight again---fighting over the front seat, competing for attention, falling into patterns you thought you'd outgrown decades ago. Adult sibling relationships carry the weight of a lifetime of history, and transforming them requires intention, boundary-setting, and the courage to relate as who you are now rather than who you were then.
           </p>
           <p className="mb-6">
@@ -1686,7 +1686,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "You're an only child? That explains so much." The stereotypes are persistent: spoiled, selfish, socially awkward, unable to share. But what does research actually show about people who grow up without siblings? The reality is far more nuanced and often surprising.
           </p>
           <p className="mb-6">

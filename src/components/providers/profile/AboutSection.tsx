@@ -20,11 +20,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ provider }) => {
       : provider.bio;
 
   return (
-    <section className="rounded-2xl border border-slate-200 bg-white/70 p-6 backdrop-blur-md dark:border-slate-700 dark:bg-slate-800/70">
+    <section className="rounded-2xl border border-slate-200 bg-white/70 p-6 backdrop-blur-md dark:border-neutral-700 dark:bg-neutral-800/70">
       <h2 className="font-display mb-3 text-lg font-bold text-slate-900 dark:text-white">
         About
       </h2>
-      <p className="whitespace-pre-line text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+      <p className="whitespace-pre-line text-sm leading-relaxed text-slate-600 dark:text-neutral-300">
         {displayText}
       </p>
       {isLong && (

@@ -73,7 +73,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoUrl, videoType, title, c
 
     if (!embedUrl) {
         return (
-            <div className={`w-full h-full flex items-center justify-center bg-gray-900 text-gray-400 ${className}`}>
+            <div className={`w-full h-full flex items-center justify-center bg-gray-900 text-text-tertiary ${className}`}>
                 <p className="text-center">Video unavailable</p>
             </div>
         );

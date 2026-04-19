@@ -93,7 +93,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've noticed the signs---your friend, partner, or family member is struggling. You want to suggest therapy, but every time you bring it up, they shut down, get defensive, or pull away. How do you express concern without making them feel attacked, broken, or pushed into something they're not ready for?
           </p>
           <p className="mb-6">
@@ -411,7 +411,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             They're clearly suffering---depressed, anxious, addicted, psychotic---but they refuse to get help. You've tried everything: gentle suggestions, ultimatums, research articles, offers to find providers and pay for treatment. Nothing works. They insist they're fine, or they acknowledge the problem but won't do anything about it. And you're left watching someone you love deteriorate while feeling powerless to stop it.
           </p>
           <p className="mb-6">
@@ -665,7 +665,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your loved one is coming home from psychiatric hospitalization. Maybe you're relieved---they're safe and hopefully stabilized. Maybe you're terrified---what if it happens again? Maybe you're uncertain how to act around them now. Do you tiptoe around their emotions? Return to normal immediately? Watch them constantly?
           </p>
           <p className="mb-6">
@@ -967,7 +967,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When someone in your family has a mental health condition, everyone is affected. Dinners become tense. Plans get canceled. Conversations feel like navigating a minefield. You want to help, but you're not sure how---and you're exhausted from trying to hold everything together while your own needs go unmet.
           </p>
           <p className="mb-6">
@@ -1319,7 +1319,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you're struggling with your mental health, it can feel like you're navigating a dark forest alone. Your therapist sees you once a week. Your medication helps, but pills don't understand what you're going through. Your family tries, but they don't really get it. And your friends---well, you're not sure how much to burden them.
           </p>
           <p className="mb-6">

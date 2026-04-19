@@ -120,7 +120,7 @@ const ClarityJournal: React.FC = () => {
               <h1 className="font-display font-bold text-4xl md:text-5xl text-slate-900 dark:text-white tracking-tight leading-[1.05]">
                 Clarity Journal
               </h1>
-              <p className="text-slate-500 dark:text-slate-400 mt-2 text-lg font-light">
+              <p className="text-slate-500 dark:text-neutral-400 mt-2 text-lg font-light">
                 Your space between sessions.
               </p>
             </div>
@@ -152,15 +152,15 @@ const ClarityJournal: React.FC = () => {
                   </div>
                   <h2 className="font-display font-semibold text-xl text-slate-900 dark:text-white">Welcome to Your Journal</h2>
                 </div>
-                <p className="text-[15px] text-slate-600 dark:text-slate-300 leading-relaxed mb-2">
+                <p className="text-[15px] text-slate-600 dark:text-neutral-300 leading-relaxed mb-2">
                   Your Clarity Journal is a private space to track how you're doing between therapy sessions — or just for yourself.
                   Everything stays on your device.
                 </p>
-                <p className="text-[15px] text-slate-500 dark:text-slate-400 leading-relaxed mb-2">
+                <p className="text-[15px] text-slate-500 dark:text-neutral-400 leading-relaxed mb-2">
                   Check in with your mood, log activities, note stressors, and complete weekly check-ups.
                   When you're ready, generate a summary report to share with your therapist.
                 </p>
-                <p className="text-[15px] text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
+                <p className="text-[15px] text-slate-500 dark:text-neutral-400 leading-relaxed mb-6">
                   <Shield className="w-3.5 h-3.5 inline -mt-0.5 mr-1 text-teal-500" />
                   Everything you write stays on your device. Psychage never sees your data.
                 </p>
@@ -249,9 +249,9 @@ const ClarityJournal: React.FC = () => {
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="font-semibold text-[15px] text-slate-900 dark:text-white leading-tight">{action.title}</p>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 truncate">{action.subtitle}</p>
+                    <p className="text-xs text-slate-500 dark:text-neutral-400 mt-0.5 truncate">{action.subtitle}</p>
                   </div>
-                  <ChevronRight className="w-4 h-4 text-slate-300 dark:text-slate-600 group-hover:text-slate-400 group-hover:translate-x-0.5 transition-all shrink-0" />
+                  <ChevronRight className="w-4 h-4 text-slate-300 dark:text-neutral-600 group-hover:text-slate-400 group-hover:translate-x-0.5 transition-all shrink-0" />
                 </div>
               </Link>
             );
@@ -296,14 +296,14 @@ const ClarityJournal: React.FC = () => {
                 to={item.route}
                 className="group bg-white/80 dark:bg-white/5 backdrop-blur-xl rounded-2xl p-4 border border-white/60 dark:border-white/10 shadow-sm shadow-black/[0.03] hover:shadow-md hover:shadow-black/[0.06] transition-all duration-300 flex items-center gap-3.5"
               >
-                <div className="w-11 h-11 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0 group-hover:bg-teal-50 dark:group-hover:bg-teal-900/20 transition-colors">
-                  <Icon className="w-5 h-5 text-slate-500 dark:text-slate-400 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors" strokeWidth={1.5} />
+                <div className="w-11 h-11 rounded-2xl bg-slate-100 dark:bg-neutral-800 flex items-center justify-center shrink-0 group-hover:bg-teal-50 dark:group-hover:bg-teal-900/20 transition-colors">
+                  <Icon className="w-5 h-5 text-slate-500 dark:text-neutral-400 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors" strokeWidth={1.5} />
                 </div>
                 <div className="min-w-0 flex-1">
                   <p className="font-semibold text-[15px] text-slate-900 dark:text-white leading-tight">{item.title}</p>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{item.subtitle}</p>
+                  <p className="text-xs text-slate-500 dark:text-neutral-400 mt-0.5">{item.subtitle}</p>
                 </div>
-                <ChevronRight className="w-4 h-4 text-slate-300 dark:text-slate-600 group-hover:text-slate-400 group-hover:translate-x-0.5 transition-all shrink-0" />
+                <ChevronRight className="w-4 h-4 text-slate-300 dark:text-neutral-600 group-hover:text-slate-400 group-hover:translate-x-0.5 transition-all shrink-0" />
               </Link>
             );
           })}
@@ -339,7 +339,7 @@ const ClarityJournal: React.FC = () => {
         >
           <button
             onClick={() => setShowExport(!showExport)}
-            className="flex items-center gap-2.5 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors w-full"
+            className="flex items-center gap-2.5 text-sm font-medium text-slate-600 dark:text-neutral-400 hover:text-slate-900 dark:hover:text-neutral-200 transition-colors w-full"
           >
             <Settings2 className="w-4 h-4" strokeWidth={1.5} />
             Data Management
@@ -354,7 +354,7 @@ const ClarityJournal: React.FC = () => {
                 transition={{ duration: 0.25 }}
                 className="overflow-hidden"
               >
-                <div className="pt-5 border-t border-slate-100 dark:border-slate-800 mt-4">
+                <div className="pt-5 border-t border-slate-100 dark:border-neutral-800 mt-4">
                   <ExportImportControls
                     onExport={exportData}
                     onImport={importData}
@@ -367,7 +367,7 @@ const ClarityJournal: React.FC = () => {
         </motion.div>
 
         {/* Educational disclaimer */}
-        <p className="text-xs text-slate-400 dark:text-slate-500 text-center mt-8 max-w-md mx-auto leading-relaxed">
+        <p className="text-xs text-slate-400 dark:text-neutral-500 text-center mt-8 max-w-md mx-auto leading-relaxed">
           The Clarity Journal is an educational wellness tool, not a medical record or clinical assessment.
           All data stays on your device.
         </p>

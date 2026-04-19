@@ -243,7 +243,7 @@ function ArticleMetrics() {
                 <div className="bg-amber-500" style={{ width: `${(stats.in_review / stats.total) * 100}%` }} />
               )}
               {stats.draft > 0 && (
-                <div className="bg-gray-400" style={{ width: `${(stats.draft / stats.total) * 100}%` }} />
+                <div className="bg-gray-400 dark:bg-neutral-500" style={{ width: `${(stats.draft / stats.total) * 100}%` }} />
               )}
               {stats.rejected > 0 && (
                 <div className="bg-red-500" style={{ width: `${(stats.rejected / stats.total) * 100}%` }} />
@@ -296,7 +296,7 @@ const ActivityFeed: React.FC<{ entries: AuditEntry[]; loading: boolean }> = ({ e
       <div className="space-y-3 max-h-[400px] overflow-y-auto">
         {entries.map((entry) => (
           <div key={entry.id} className="flex items-start gap-3">
-            <div className={`w-2.5 h-2.5 rounded-full mt-1.5 flex-shrink-0 ${actionColors[entry.action] || 'bg-gray-400'}`} />
+            <div className={`w-2.5 h-2.5 rounded-full mt-1.5 flex-shrink-0 ${actionColors[entry.action] || 'bg-gray-400 dark:bg-neutral-500'}`} />
             <div className="flex-1 min-w-0">
               <p className="text-sm text-text-secondary">
                 <span className="font-medium">{entry.action}</span>

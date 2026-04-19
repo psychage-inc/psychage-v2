@@ -133,7 +133,7 @@ export const seasonalPatternsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every year, as the days shorten and winter sets in, millions of people experience a predictable shift: energy drains away, sleep becomes heavy and excessive, cravings for carbs intensify, and a low-grade depression settles in like fog. When spring arrives, the symptoms lift---almost as if someone flipped a switch.
           </p>
           <p className="mb-6">
@@ -500,7 +500,7 @@ export const seasonalPatternsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Bright light therapy is the first-line treatment for seasonal affective disorder (SAD), backed by decades of research showing it works as well as antidepressant medication---without the side effects. But not all light boxes are created equal, and timing matters more than you might think.
           </p>
           <p className="mb-6">
@@ -839,7 +839,7 @@ export const seasonalPatternsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When people hear "seasonal affective disorder," they think of winter: short days, cold weather, and the urge to hibernate. But for a smaller subset of people, the pattern is reversed. Their depression arrives with longer days, heat, and humidity---and disappears when fall returns.
           </p>
           <p className="mb-6">
@@ -1145,7 +1145,7 @@ export const seasonalPatternsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You don't need to have seasonal affective disorder to notice that your mood, energy, and motivation shift with the seasons. Most people---even those without clinical depression---experience some degree of seasonal mood variation. It's a normal human response to changing light, temperature, and environmental cues.
           </p>
           <p className="mb-6">
@@ -1178,7 +1178,7 @@ export const seasonalPatternsArticlesA: Article[] = [
 
         <HighlightBox variant="stat">
           <p className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">90%</p>
-          <p className="text-gray-700 dark:text-gray-300">
+          <p className="text-gray-700 dark:text-neutral-300">
             of the population experiences some degree of seasonal mood variation—making it more common than not having seasonal shifts <Citation id="2" index={2} source="Current Opinion in Psychiatry" year="2018" tier={1} />.
           </p>
         </HighlightBox>
@@ -1401,7 +1401,7 @@ export const seasonalPatternsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your body runs on a 24-hour internal clock that orchestrates everything from when you feel hungry to when your immune system peaks. This clock---your circadian rhythm---doesn't just regulate sleep. It profoundly influences mood, energy, cognitive function, and vulnerability to mental illness.
           </p>
           <p className="mb-6">

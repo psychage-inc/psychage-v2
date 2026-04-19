@@ -117,7 +117,7 @@ export const understandingAnxietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your heart pounds. Your palms sweat. Your mind races through worst-case scenarios. This is
             anxiety --- your body's built-in alarm system doing exactly what it was designed to do. But
             understanding why this happens, and what makes anxiety different from everyday worry, can
@@ -624,7 +624,7 @@ export const understandingAnxietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Everyone worries sometimes. You worry about money, relationships, health, your kids. But how do
             you know if your worry has crossed the line from normal to something that needs professional
             attention? The difference isn't always obvious, but it matters.
@@ -1117,7 +1117,7 @@ export const understandingAnxietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You avoid the thing that makes you anxious. Relief floods in --- temporarily. But then, the next
             time the situation arises, your anxiety is even stronger. This is the anxiety cycle, a
             self-reinforcing loop that keeps you trapped in fear. Understanding how it works is the first
@@ -1622,7 +1622,7 @@ export const understandingAnxietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your heart races. Your chest tightens. Your stomach churns. Your hands shake. Anxiety doesn't
             just live in your mind --- it commandeers your entire body. Understanding why anxiety feels so
             intensely physical can help you stop fearing the symptoms themselves.
@@ -2164,7 +2164,7 @@ export const understandingAnxietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Anxiety disorder" isn't a single condition --- it's a category that includes several distinct
             diagnoses, each with its own patterns, triggers, and treatment approaches. Understanding which
             type you might be experiencing can guide you toward the most effective help.

@@ -64,7 +64,7 @@ const AdvisoryBoardPage: React.FC = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-14 h-14 rounded-full object-cover border-2 border-white dark:border-gray-700 shadow-sm"
+                    className="w-14 h-14 rounded-full object-cover border-2 border-border shadow-sm"
                   />
                   <div>
                     <h3 className="font-bold text-lg text-text-primary group-hover:text-primary transition-colors">

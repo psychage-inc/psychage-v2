@@ -63,7 +63,7 @@ export const exerciseMovementMentalWellnessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Yoga is marketed as a cure-all for mental health---an ancient practice that promises to heal anxiety, depression, trauma, and everything in between. The reality is more nuanced. The science supports yoga for mental health, but the effects are modest, the mechanisms are well-understood, and the limitations are real. Here's what the research actually shows.
           </p>
           <p className="mb-6">
@@ -298,7 +298,7 @@ export const exerciseMovementMentalWellnessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Trauma gets stored in the body---tense muscles, shallow breathing, a startle response that won't quit. When you experience trauma, your nervous system floods with stress hormones designed to power a fight-or-flight response. But if you couldn't fight or flee---if you froze, submitted, or endured---that physiological activation never completes its cycle. It stays trapped.
           </p>
           <p className="mb-6">
@@ -569,7 +569,7 @@ export const exerciseMovementMentalWellnessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             If you struggle with sleep, you've probably tried everything: melatonin, white noise, sleep hygiene rules, weighted blankets. But one of the most effective interventions doesn't happen in the bedroom---it happens hours earlier, when you move your body.
           </p>
           <p className="mb-6">
@@ -840,7 +840,7 @@ export const exerciseMovementMentalWellnessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Exercise improves mental health---until it doesn't. There's a point where movement stops being self-care and becomes self-punishment. Where rest days trigger panic instead of relief. Where your worth hinges on miles run, calories burned, or hours logged at the gym.
           </p>
           <p className="mb-6">
@@ -1143,7 +1143,7 @@ export const exerciseMovementMentalWellnessArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Depression makes everything feel impossibly heavy. Getting out of bed is a victory. Taking a shower is an accomplishment. And the idea of exercising? It's laughable. You're exhausted even though you haven't done anything. Your body feels like lead. Every movement requires Herculean effort.
           </p>
           <p className="mb-6">

@@ -94,7 +94,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It's 9 PM. You're watching TV with your phone nearby. Slack notification. Your manager asking a 'quick question." You could ignore it until tomorrow. But your status will show "active" if you open it. They'll know you saw it. You respond. It wasn't quick. Now it's 10 PM.
           </p>
           <p className="mb-6">
@@ -456,7 +456,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Ding. Slack notification. You're in the middle of focused work. Ding. Another one. Ding. And another. Three different channels, two DMs, one @mention. You've lost your train of thought. Again.
           </p>
           <p className="mb-6">
@@ -662,7 +662,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your partner walks through your "office" (the dining room) for the fourth time today. You're on a client call. They mouth "sorry" and tiptoe through. Later, they're on a video meeting when you need to start dinner prep. The kitchen is visible in their background. You wait. Tension builds.
           </p>
           <p className="mb-6">
@@ -869,7 +869,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You delivered excellent work this quarter. Your metrics are strong. Your manager is happy. But when promotion announcements come, it goes to someone who's in the office three days a week. Someone people "see." Someone whose name comes up in casual hallway conversations you're never part of.
           </p>
           <p className="mb-6">
@@ -1072,7 +1072,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The workplace is transforming faster than at any point in human history. AI is automating tasks that seemed uniquely human months ago. Remote work went from rare perk to mainstream norm in three years. The gig economy is redefining employment itself. What does this rapid evolution mean for your mental health?
           </p>
           <p className="mb-6">

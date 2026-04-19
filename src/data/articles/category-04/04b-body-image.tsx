@@ -33,7 +33,7 @@ export const bodyImageArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Diet culture is everywhere: the belief that thinness equals health, morality, and worth. It's the voice that labels foods "good" or "bad, ' that celebrates weight loss and demonizes weight gain, that ties your value to the number on a scale. And it's profoundly damaging to mental health.
           </p>
           <p className="mb-6">
@@ -130,7 +130,7 @@ export const bodyImageArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Exercise is healthy---until it isn't. When movement becomes compulsive, driven by anxiety about weight or appearance, and causes distress if missed, it crosses into exercise addiction. What looks like dedication from the outside can be a prison of obsession and body image anxiety.
           </p>
           <p className="mb-6">
@@ -225,7 +225,7 @@ export const bodyImageArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             What's considered beautiful varies dramatically across cultures: pale skin in some contexts, tanned in others; thinness in the West, fuller figures in parts of Africa and Latin America. But regardless of the specific ideal, the psychological pattern is the same---striving for an often unattainable standard creates body dissatisfaction.
           </p>
           <p className="mb-6">
@@ -314,7 +314,7 @@ export const bodyImageArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Wrinkles appear. Skin sags. Hair grays or thins. Weight redistributes. Your body ages, and a culture obsessed with youth tells you this is a problem to fix, hide, or resist. But aging is not a failure---it's a privilege. Navigating body image as you age requires rejecting ageist beauty standards and honoring your body's evolution.
           </p>
           <p className="mb-6">
@@ -392,7 +392,7 @@ export const bodyImageArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Children as young as five express body dissatisfaction. By age six, many have internalized cultural beauty standards. Body image forms early, shaped by family messages, peer interactions, and media exposure. Parents and caregivers have profound influence---both protective and harmful---on how children learn to perceive their bodies.
           </p>
           <p className="mb-6">

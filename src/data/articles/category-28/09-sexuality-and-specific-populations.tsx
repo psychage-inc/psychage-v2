@@ -65,7 +65,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             People with disabilities have been systematically excluded from conversations about sexuality—rendered invisible by cultural assumptions that equate physical or cognitive difference with sexual absence. The desexualization of disabled people is one of the most persistent and harmful stereotypes in contemporary society, denying the sexual autonomy, pleasure, and intimate relationships of over one billion people worldwide.
           </p>
         </div>
@@ -112,7 +112,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -175,7 +175,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Cancer treatment can profoundly alter every dimension of sexual experience—desire, arousal, orgasm, body image, relationship dynamics, and the felt sense of oneself as a sexual being. Surgery may change anatomy.
           </p>
         </div>
@@ -219,7 +219,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -282,7 +282,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Older LGBTQ+ adults occupy a uniquely invisible position at the intersection of two categories that contemporary culture routinely desexualizes: aging and sexual minority identity. Estimated at 2.
           </p>
         </div>
@@ -326,7 +326,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -389,7 +389,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Neurodivergence—particularly ADHD and autism—shapes sexual experience in ways that are only beginning to receive the research attention they deserve. For individuals with ADHD, the interplay of dopamine-seeking behavior, attentional variability, impulsivity, and emotional dysregulation creates a distinctive sexual landscape characterized by intensity, distractibility, novelty-seeking, and sometimes hypersexuality or sexual risk-taking.
           </p>
         </div>
@@ -436,7 +436,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -499,7 +499,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Chronic pain affects an estimated 20% of the global population—and its impact on sexuality is among the least discussed and most profoundly felt consequences of persistent pain conditions. Pain interferes with every dimension of sexual experience: it reduces desire through the exhausting burden of constant discomfort; it inhibits arousal through neurological pathways that suppress the parasympathetic response needed for sexual engagement; it limits physical positioning and movement; it creates fear of pain exacerbation during sexual activity; and it erodes body image, self-concept, and the felt sense of oneself as a sexual being.
           </p>
         </div>
@@ -542,7 +542,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -605,7 +605,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Spinal cord injury (SCI) fundamentally alters the neurological pathways that mediate sexual sensation, arousal, and orgasm—yet it does not eliminate sexuality. An estimated 250,000–500,000 new spinal cord injuries occur worldwide each year, predominantly affecting young adults at the peak of their sexual development.
           </p>
         </div>
@@ -652,7 +652,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -715,7 +715,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For many people in recovery from substance use disorders, sexuality represents one of the most challenging and least addressed dimensions of rebuilding a sober life. Substances profoundly alter sexual experience: alcohol disinhibits and numbs; stimulants intensify sensation and prolong activity; opioids suppress desire and orgasm; and MDMA and other drugs create states of emotional and physical openness that sober experience may struggle to replicate.
           </p>
         </div>
@@ -762,7 +762,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -825,7 +825,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Body image—the internal, subjective experience of one&apos;s own body—is one of the most powerful yet underrecognized determinants of sexual function and satisfaction. Research consistently demonstrates that how a person perceives their body during sexual activity matters more for their sexual experience than how their body objectively looks.
           </p>
         </div>
@@ -872,7 +872,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -935,7 +935,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Digital technology has fundamentally reshaped how humans meet, court, communicate about sex, and experience intimacy. Dating applications have become the primary pathway to romantic connection for millions of people—Pew Research estimates that 30% of American adults have used a dating app, with the figure rising to 53% among adults under 30.
           </p>
         </div>
@@ -978,7 +978,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1041,7 +1041,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sexuality does not develop in a vacuum—it is profoundly shaped by the cultural, religious, and family systems within which a person grows up. These systems transmit messages about what is sexually acceptable, what is shameful, what roles genders should play in sexual encounters, and what consequences await those who deviate from prescribed norms.
           </p>
         </div>
@@ -1084,7 +1084,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1147,7 +1147,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Compulsive Sexual Behavior Disorder (CSBD)—recognized by the World Health Organization in the ICD-11 as an impulse control disorder—describes a pattern of persistent failure to control intense, repetitive sexual impulses or urges that results in repetitive sexual behavior over an extended period, causes marked distress or significant impairment in functioning, and is not attributable to other conditions or substance effects. The clinical and scientific understanding of this condition has been complicated by decades of debate about whether &quot;sex addiction&quot; exists, by the moralization of sexual behavior that makes clinical assessment difficult, and by the challenges of distinguishing genuinely compulsive patterns from high-but-healthy sexual desire, culturally proscribed sexual behavior, and the distress that sexual guilt produces independent of behavioral frequency.
           </p>
         </div>
@@ -1193,7 +1193,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1256,7 +1256,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The freeze response during sexual activity—a sudden, involuntary state of paralysis, disconnection, or numbness in which the person becomes unable to move, speak, or engage—is one of the most distressing and least understood manifestations of trauma-related nervous system activation. For those who experience it, the freeze is bewildering: the encounter may be consensual, the partner trusted, the situation objectively safe—yet the body responds as though under threat, shutting down in a protective response that originated in experiences sometimes decades in the past.
           </p>
         </div>
@@ -1305,7 +1305,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1367,7 +1367,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sexual health concerns are among the most common reasons people should see a healthcare provider—and among the least common reasons they actually do. Research consistently finds that the majority of individuals experiencing sexual difficulties never discuss them with a medical professional, with embarrassment, fear of judgment, and uncertainty about how to raise the topic cited as the primary barriers.
           </p>
         </div>
@@ -1425,7 +1425,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1488,7 +1488,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The pelvic floor—a hammock of muscles stretching from the pubic bone to the tailbone—is one of the most psychologically responsive areas of the human body. It contracts involuntarily during stress, clenches during anxiety, guards during perceived threat, and holds the physical imprint of emotional experiences in ways that directly affect sexual function, urinary control, and core stability.
           </p>
         </div>
@@ -1536,7 +1536,7 @@ export const sexualityAndSpecificPopulationsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

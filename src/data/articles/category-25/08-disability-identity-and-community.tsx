@@ -65,7 +65,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For decades, disability was framed exclusively as a problem to overcome—a deficit, a tragedy, a limitation to be minimized. Disability pride challenges this narrative by asserting that disability is a valid, valued dimension of human diversity, and that identifying as a disabled person can be a source of strength, community, and psychological resilience.
           </p>
         </div>
@@ -109,7 +109,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -173,7 +173,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Ableism—discrimination and social prejudice against disabled people based on the belief that typical abilities are superior—is not just an inconvenience or a political talking point. It is a chronic stressor with measurable psychological consequences.
           </p>
         </div>
@@ -219,7 +219,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -282,7 +282,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Society&apos;s default assumption about disabled people and relationships is one of absence—that disability precludes romance, that disabled people are objects of care rather than partners in love, that intimacy requires a &quot;normal&quot; body. These assumptions are wrong, and they are damaging.
           </p>
         </div>
@@ -323,7 +323,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -387,7 +387,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Work is not merely a paycheck. It provides structure, identity, social connection, purpose, and a sense of contribution—all of which are fundamental to psychological wellbeing.
           </p>
         </div>
@@ -430,7 +430,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -493,7 +493,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             An estimated 4.1 million parents in the United States have a disability, and research consistently demonstrates that they are as capable, loving, and effective as non-disabled parents.
           </p>
         </div>
@@ -540,7 +540,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -603,7 +603,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When a person acquires a disability—through accident, illness, or the progression of a degenerative condition—they face a form of grief that most people around them do not recognize. This is not the grief of bereavement, though it can be just as intense.
           </p>
         </div>
@@ -646,7 +646,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -709,7 +709,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The disability rights movement is one of the most significant civil rights movements of the 20th and 21st centuries, yet it remains among the least known. From the fight against forced institutionalization to the passage of the Americans with Disabilities Act, disabled activists have reshaped law, policy, and cultural understanding in ways that directly affect mental health.
           </p>
         </div>
@@ -749,7 +749,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -812,7 +812,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When one family member has a disability, the entire family system adapts. Parents redistribute attention and resources; siblings develop roles and identities shaped by their brother&apos;s or sister&apos;s needs; extended family members respond with varying degrees of support and discomfort.
           </p>
         </div>
@@ -854,7 +854,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -917,7 +917,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Aging is a universal process, but aging with a disability is a distinct experience that receives remarkably little attention from either geriatology or disability studies. People who have lived with disabilities for decades face compounding challenges: the body that has already been working harder begins to encounter age-related decline on top of existing impairment, support systems built over a lifetime may fracture as parents die and services change, and the psychological strategies that sustained someone through decades of disability may need reinvention.
           </p>
         </div>
@@ -959,7 +959,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1022,7 +1022,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Body image—the thoughts, feelings, and perceptions a person has about their physical appearance and function—is shaped by culture, and the dominant culture tells disabled people that their bodies are wrong. Too thin, too heavy, asymmetrical, scarred, different, dependent—the messages are relentless and start early.
           </p>
         </div>
@@ -1063,7 +1063,7 @@ export const disabilityIdentityAndCommunityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

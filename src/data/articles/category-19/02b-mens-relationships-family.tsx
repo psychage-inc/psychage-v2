@@ -76,7 +76,7 @@ export const mensRelationshipsFamilyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Think about your closest male friend. Would you call him if you were struggling
             with depression? Would you tell him if your marriage was failing? Would you admit
             to him that you're scared about your health? If the answer is no --- not because
@@ -535,7 +535,7 @@ export const mensRelationshipsFamilyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When people picture a family caregiver, they typically imagine a woman --- a daughter
             managing her aging parent's care, a wife supporting a chronically ill husband. This
             default image erases approximately 40% of the caregiving population: the men who
@@ -896,7 +896,7 @@ export const mensRelationshipsFamilyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Just tell me what you're feeling." It's the request partners make when they can see
             something is wrong but can't reach the man sitting across from them. And for many
             men, it's a request that triggers something closer to panic than openness --- not
@@ -1201,7 +1201,7 @@ export const mensRelationshipsFamilyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Ask a room full of men about their fathers and you'll hear the same words repeated
             with striking consistency: <em>provider, hard-working, disciplined, present but
             distant, loved us in his own way</em>. What you won't hear as often: <em>emotionally
@@ -1546,7 +1546,7 @@ export const mensRelationshipsFamilyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             He wants to meet someone. He opens a dating app, looks at profiles, and closes it
             without sending a message. He sees someone interesting at a coffee shop and says
             nothing. A friend suggests he join a social group and he agrees, then cancels the

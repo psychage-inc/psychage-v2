@@ -257,7 +257,7 @@ export const NavigatorProvider: React.FC<{ children: ReactNode }> = ({ children 
 
         // Initialize analytics tracker
         if (!analyticsRef.current) {
-            analyticsRef.current = new NavigatorAnalytics(state.sessionHash, state.sessionHash);
+            analyticsRef.current = new NavigatorAnalytics(state.sessionHash);
         }
 
         // Attempt to restore persisted state
@@ -312,33 +312,22 @@ export const NavigatorProvider: React.FC<{ children: ReactNode }> = ({ children 
         };
     }, [state.currentStep, state.selectedDomains, state.selectedSymptoms, state.crisisAcknowledged, state.ageGatePassed]);
 
-    // Track step transitions
-    useEffect(() => {
-        if (analyticsRef.current && state.currentStep !== 'welcome') {
-            const stepNames: Record<string, string> = {
-                domains: 'Domain Selection',
-                symptoms: 'Symptom Selection',
-                details: 'Duration & Severity',
-                processing: 'Processing',
-                results: 'Results'
-            };
-
-            const stepName = stepNames[state.currentStep];
-            if (stepName) {
-                analyticsRef.current.trackStepView(state.currentStep, stepName);
-            }
-        }
-    }, [state.currentStep]);
-
-    // Track completion
+    // Track completion when results are shown
     useEffect(() => {
         if (state.currentStep === 'results' && state.results && analyticsRef.current) {
+            const safetyFlag = state.results.safety?.highest_level as 'CRISIS' | 'URGENT' | 'WATCH' | undefined;
             analyticsRef.current.trackComplete(
+                state.selectedDomains.length,
                 state.selectedSymptoms.size,
-                state.results.results?.length || 0
+                state.results.results?.length || 0,
+                safetyFlag ?? null
             );
+            // Track crisis if safety flag present
+            if (safetyFlag) {
+                analyticsRef.current.trackCrisisTriggered(safetyFlag);
+            }
         }
-    }, [state.currentStep, state.results, state.selectedSymptoms.size]);
+    }, [state.currentStep, state.results, state.selectedDomains.length, state.selectedSymptoms.size]);
 
     const contextValue = useMemo(() => ({
         state, dispatch, announcePolite, announceAssertive, prefetchKnowledgeBase,

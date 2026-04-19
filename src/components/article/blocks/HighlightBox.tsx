@@ -11,17 +11,17 @@ interface HighlightBoxProps {
 
 const VARIANT_STYLES = {
     stat: {
-        bg: 'bg-gradient-to-br from-teal-50 to-white dark:from-teal-950/30 dark:to-gray-900/50',
+        bg: 'bg-gradient-to-br from-teal-50 to-white dark:from-teal-950/30 dark:to-neutral-900/50',
         border: 'border-teal-100 dark:border-teal-800/30',
-        text: 'text-gray-900 dark:text-white',
+        text: 'text-text-primary',
     },
     quote: {
-        bg: 'bg-gradient-to-br from-violet-50 to-white dark:from-violet-950/30 dark:to-gray-900/50',
+        bg: 'bg-gradient-to-br from-violet-50 to-white dark:from-violet-950/30 dark:to-neutral-900/50',
         border: 'border-violet-100 dark:border-violet-800/30',
         text: 'text-violet-900 dark:text-violet-100',
     },
     emphasis: {
-        bg: 'bg-gradient-to-br from-amber-50 to-white dark:from-amber-950/30 dark:to-gray-900/50',
+        bg: 'bg-gradient-to-br from-amber-50 to-white dark:from-amber-950/30 dark:to-neutral-900/50',
         border: 'border-amber-100 dark:border-amber-800/30',
         text: 'text-amber-900 dark:text-amber-100',
     },
@@ -51,7 +51,7 @@ const HighlightBox: React.FC<HighlightBoxProps> = ({
                 ${className}
             `}
         >
-            <div className="space-y-3 [&>span]:block [&>p]:text-base [&>p]:text-gray-600 [&>p]:dark:text-gray-400">
+            <div className="space-y-3 [&>span]:block [&>p]:text-base [&>p]:text-text-secondary">
                 {children}
             </div>
         </motion.div>

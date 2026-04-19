@@ -77,7 +77,7 @@ export const treatmentPsychoticArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In 1952, a French surgeon named Henri Laborit noticed that a new antihistamine called
             chlorpromazine produced a remarkable calm in his surgical patients --- a state he described
             as "artificial hibernation." When psychiatrists tried the drug on patients with acute
@@ -288,7 +288,7 @@ export const treatmentPsychoticArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For decades, conventional wisdom held that talking therapy was pointless for people
             experiencing psychosis. How could you reason with someone who hears voices that
             aren't there? How could you challenge beliefs held with delusional intensity? The
@@ -486,7 +486,7 @@ export const treatmentPsychoticArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In the landscape of psychiatric pharmacology, clozapine stands alone. It's the only
             antipsychotic with demonstrated superiority for treatment-resistant schizophrenia.
             The only one proven to reduce suicide risk. The only one that requires mandatory
@@ -683,7 +683,7 @@ export const treatmentPsychoticArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When a family member develops psychosis, the entire family system is affected. Parents
             feel guilt, siblings feel fear, partners feel helpless. In the absence of guidance,
             families often oscillate between two extremes: overprotective hovering that stifles
@@ -886,7 +886,7 @@ export const treatmentPsychoticArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every day, approximately half of all people prescribed oral antipsychotics don't take
             them as
             directed <Citation id="2" index={2} source="Schizophrenia Bulletin" year="2019" tier={1} />.

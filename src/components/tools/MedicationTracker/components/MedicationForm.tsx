@@ -92,25 +92,25 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
-      <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
+      <div className="bg-white dark:bg-neutral-900 rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-slate-200 dark:border-slate-700">
+        <div className="flex items-center justify-between p-6 border-b border-slate-200 dark:border-neutral-700">
           <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
             {initial ? 'Edit Medication' : 'Add Medication'}
           </h2>
           <button
             onClick={onCancel}
-            className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-neutral-800 transition-colors"
             aria-label="Close"
           >
-            <X size={20} className="text-slate-500" />
+            <X size={20} className="text-slate-500 dark:text-neutral-400" />
           </button>
         </div>
 
         <form onSubmit={handleSubmit} className="p-6 space-y-5">
           {/* Name */}
           <div>
-            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+            <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-1">
               Medication Name *
             </label>
             <input
@@ -119,8 +119,8 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
               onChange={(e) => setName(e.target.value)}
               placeholder="e.g. Sertraline"
               className={cn(
-                'w-full px-3 py-2 rounded-lg border bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500',
-                errors.name ? 'border-red-400' : 'border-slate-300 dark:border-slate-600'
+                'w-full px-3 py-2 rounded-lg border bg-white dark:bg-neutral-800 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500',
+                errors.name ? 'border-red-400' : 'border-slate-300 dark:border-neutral-600'
               )}
             />
             {errors.name && (
@@ -131,7 +131,7 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
           {/* Dosage + Unit */}
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-1">
                 Dosage *
               </label>
               <input
@@ -140,8 +140,8 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
                 onChange={(e) => setDosage(e.target.value)}
                 placeholder="e.g. 50"
                 className={cn(
-                  'w-full px-3 py-2 rounded-lg border bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500',
-                  errors.dosage ? 'border-red-400' : 'border-slate-300 dark:border-slate-600'
+                  'w-full px-3 py-2 rounded-lg border bg-white dark:bg-neutral-800 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500',
+                  errors.dosage ? 'border-red-400' : 'border-slate-300 dark:border-neutral-600'
                 )}
               />
               {errors.dosage && (
@@ -149,14 +149,14 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
               )}
             </div>
             <div>
-              <label htmlFor="med-unit" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+              <label htmlFor="med-unit" className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-1">
                 Unit
               </label>
               <select
                 id="med-unit"
                 value={unit}
                 onChange={(e) => setUnit(e.target.value)}
-                className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
               >
                 {DOSAGE_UNITS.map((u) => (
                   <option key={u} value={u}>{u}</option>
@@ -167,14 +167,14 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
 
           {/* Frequency */}
           <div>
-            <label htmlFor="med-frequency" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+            <label htmlFor="med-frequency" className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-1">
               Frequency
             </label>
             <select
               id="med-frequency"
               value={frequency}
               onChange={(e) => setFrequency(e.target.value as MedicationFrequency)}
-              className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
             >
               {Object.entries(FREQUENCY_LABELS).map(([key, label]) => (
                 <option key={key} value={key}>{label}</option>
@@ -185,7 +185,7 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
           {/* Times of Day */}
           {frequency !== 'as-needed' && (
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-1">
                 Times of Day
               </label>
               <div className="space-y-2">
@@ -195,13 +195,13 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
                       type="time"
                       value={time}
                       onChange={(e) => updateTime(idx, e.target.value)}
-                      className="flex-1 px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="flex-1 px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
                     />
                     {timesOfDay.length > 1 && (
                       <button
                         type="button"
                         onClick={() => removeTime(idx)}
-                        className="p-2 text-slate-400 hover:text-red-500 transition-colors"
+                        className="p-2 text-slate-400 dark:text-neutral-500 hover:text-red-500 transition-colors"
                         aria-label="Remove time"
                       >
                         <X size={16} />
@@ -226,32 +226,32 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
           {/* Start / End Date */}
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-1">
                 Start Date
               </label>
               <input
                 type="date"
                 value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
-                className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-1">
                 End Date
               </label>
               <input
                 type="date"
                 value={endDate}
                 onChange={(e) => setEndDate(e.target.value)}
-                className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
               />
             </div>
           </div>
 
           {/* Prescriber */}
           <div>
-            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+            <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-1">
               Prescriber
             </label>
             <input
@@ -259,13 +259,13 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
               value={prescriber}
               onChange={(e) => setPrescriber(e.target.value)}
               placeholder="Dr. Smith"
-              className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
             />
           </div>
 
           {/* Pharmacy */}
           <div>
-            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+            <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-1">
               Pharmacy
             </label>
             <input
@@ -273,14 +273,14 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
               value={pharmacy}
               onChange={(e) => setPharmacy(e.target.value)}
               placeholder="e.g. CVS Pharmacy"
-              className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
             />
           </div>
 
           {/* Supply / Refill */}
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-1">
                 Supply Count
               </label>
               <input
@@ -289,25 +289,25 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
                 value={supplyCount}
                 onChange={(e) => setSupplyCount(e.target.value)}
                 placeholder="e.g. 30"
-                className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+              <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-1">
                 Refill Date
               </label>
               <input
                 type="date"
                 value={refillDate}
                 onChange={(e) => setRefillDate(e.target.value)}
-                className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
               />
             </div>
           </div>
 
           {/* Color picker */}
           <div>
-            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+            <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">
               Color Label
             </label>
             <div className="flex gap-2 flex-wrap">
@@ -332,7 +332,7 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
 
           {/* Notes */}
           <div>
-            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+            <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-1">
               Notes
             </label>
             <textarea
@@ -340,7 +340,7 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
               onChange={(e) => setNotes(e.target.value)}
               rows={2}
               placeholder="Take with food, avoid alcohol..."
-              className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none"
+              className="w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none"
             />
           </div>
 
@@ -349,7 +349,7 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
             <button
               type="button"
               onClick={onCancel}
-              className="flex-1 px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors font-medium"
+              className="flex-1 px-4 py-2.5 rounded-lg border border-slate-300 dark:border-neutral-600 text-slate-700 dark:text-neutral-300 hover:bg-slate-50 dark:hover:bg-neutral-800 transition-colors font-medium"
             >
               Cancel
             </button>

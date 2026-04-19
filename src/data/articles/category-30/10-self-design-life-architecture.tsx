@@ -65,7 +65,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Most people live lives that are largely designed by other forces—cultural expectations, family traditions, economic circumstances, social norms, and the accumulated momentum of decisions made years or decades earlier. The concept of self-design proposes something radical: that the person you are becoming is not fixed by genetics, childhood, or circumstance—it is, within significant but not absolute constraints, a construction project in which you are both the architect and the building material.
           </p>
         </div>
@@ -110,7 +110,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -173,7 +173,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Values—the enduring beliefs about what is important, desirable, and worth pursuing in life—are the compass of human behavior. They guide decisions, shape priorities, and determine the subjective meaning of experiences.
           </p>
         </div>
@@ -214,7 +214,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -277,7 +277,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The question &quot;What makes life worth living?&quot; is not merely philosophical—it is psychological. Research demonstrates that the sense that one&apos;s life has meaning and purpose is one of the strongest predictors of psychological wellbeing, physical health, and even longevity.
           </p>
         </div>
@@ -321,7 +321,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -384,7 +384,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Aging is widely feared and poorly understood. Cultural narratives portray aging as a process of inevitable decline—the progressive loss of physical health, cognitive capacity, social connection, and quality of life.
           </p>
         </div>
@@ -425,7 +425,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -488,7 +488,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Solitude—the state of being alone by choice—is one of the most undervalued and most feared of human experiences. Modern culture associates being alone with loneliness, social failure, and psychological distress—an association so strong that many people fill every available moment with social contact, digital connection, or media consumption to avoid the experience of unaccompanied silence.
           </p>
         </div>
@@ -528,7 +528,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -591,7 +591,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             &quot;Be yourself&quot; is among the most frequently offered and least helpful pieces of psychological advice. It assumes that there is a stable, discoverable &quot;true self&quot; waiting beneath the surface of social performance—and that the task is simply to strip away the performance and reveal what lies beneath.
           </p>
         </div>
@@ -633,7 +633,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -696,7 +696,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Personal growth—the process of developing one&apos;s capacities, understanding, and psychological maturity over time—is a central aspiration of human life. Yet the psychology of growth is more complex than the self-help industry suggests.
           </p>
         </div>
@@ -737,7 +737,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -800,7 +800,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Life transitions—the passages between one established life structure and another—are among the most psychologically demanding experiences a person can face, yet they are also among the most universal. Every person navigates multiple major transitions: leaving home, entering the workforce, forming and dissolving relationships, becoming a parent, changing careers, retiring, grieving losses.
           </p>
         </div>
@@ -847,7 +847,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -910,7 +910,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Minimalism—the deliberate reduction of possessions, commitments, and complexity in favor of what is essential—has become a cultural movement, but its psychological foundations are older and deeper than any trend. Research in hedonic psychology, consumer behavior, and decision science converges on a counterintuitive finding: beyond a threshold of basic needs, the accumulation of more—more possessions, more options, more commitments—does not increase wellbeing and often decreases it.
           </p>
         </div>
@@ -953,7 +953,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1016,7 +1016,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The desire to leave something behind—to make a contribution that outlasts one&apos;s own existence—is among the most powerful and least discussed motivations in human psychology. The concept of legacy touches the intersection of identity, mortality, meaning, and generativity: the questions of who we are, what we have contributed, and whether our existence will have mattered after we are gone.
           </p>
         </div>
@@ -1059,7 +1059,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1122,7 +1122,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Rituals—structured, symbolic actions performed in a prescribed manner—are universal across human cultures and surprisingly powerful in their psychological effects. From the morning coffee routine to the wedding ceremony, from the pre-game warmup to the grief ritual, humans construct and maintain ritualized behaviors throughout their lives.
           </p>
         </div>
@@ -1168,7 +1168,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1231,7 +1231,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The idea that people can reinvent themselves—that a person can fundamentally change their direction, identity, or way of life and begin again—is both deeply appealing and psychologically complex. Popular culture celebrates dramatic reinventions: the executive who becomes an artist, the addict who becomes a counselor, the person who leaves everything familiar to build a new life from scratch.
           </p>
         </div>
@@ -1277,7 +1277,7 @@ export const selfdesignLifeArchitectureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

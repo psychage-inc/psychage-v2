@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Video, Users, Building2, Phone, Mail, Globe, MessageCircle } from 'lucide-react';
+import { MapPin, Video, Users, Building2, Phone, Mail, Globe, MessageCircle, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { hoverLift } from '@/lib/animations';
 import type { ProviderCardData } from '@/lib/providers/types';
 import { VerificationBadge, isProviderVerified } from '../shared/VerificationBadge';
 import { SpecialtyTag } from '../shared/SpecialtyTag';
+import { explainCredential } from '@/lib/providers/credentials';
 
 interface ProviderCardProps {
   provider: ProviderCardData;
@@ -22,6 +23,23 @@ const FallbackAvatar: React.FC<{ name: string; muted?: boolean; className?: stri
 export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
   const isVerified = isProviderVerified(provider.status, provider.verified_at);
   const isSeeded = provider.status === 'seeded' && !isVerified;
+  const [showCredentials, setShowCredentials] = useState(false);
+  const credRef = useRef<HTMLDivElement>(null);
+
+  const credentialExplanation = provider.credentials_suffix
+    ? explainCredential(provider.credentials_suffix)
+    : null;
+
+  useEffect(() => {
+    if (!showCredentials) return;
+    const handleClick = (e: MouseEvent) => {
+      if (credRef.current && !credRef.current.contains(e.target as Node)) {
+        setShowCredentials(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, [showCredentials]);
 
   const locationText = [provider.primary_city, provider.primary_state].filter(Boolean).join(', ');
 
@@ -64,10 +82,10 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
               src={provider.photo_url}
               alt={provider.display_name}
               loading="lazy"
-              className="w-16 h-16 rounded-full object-cover border-2 border-white dark:border-gray-800 shadow-sm"
+              className="w-16 h-16 rounded-full object-cover border-2 border-surface shadow-sm"
             />
           ) : (
-            <FallbackAvatar name={provider.display_name} muted={isSeeded} className="w-16 h-16 rounded-full border-2 border-white dark:border-gray-800 shadow-sm" />
+            <FallbackAvatar name={provider.display_name} muted={isSeeded} className="w-16 h-16 rounded-full border-2 border-surface shadow-sm" />
           )}
         </Link>
 
@@ -76,10 +94,33 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
             <h3 className="font-display font-bold text-lg text-text-primary leading-tight">
               {provider.display_name}
               {provider.credentials_suffix && (
-                <span className="text-text-tertiary font-medium">, {provider.credentials_suffix}</span>
+                <span
+                  className="text-text-tertiary font-medium"
+                  title={credentialExplanation || undefined}
+                >
+                  , {provider.credentials_suffix}
+                </span>
               )}
             </h3>
           </Link>
+          {credentialExplanation && (
+            <div className="relative inline-block" ref={credRef}>
+              <button
+                type="button"
+                onClick={(e) => { e.preventDefault(); setShowCredentials(!showCredentials); }}
+                className="inline-flex items-center text-text-tertiary hover:text-primary transition-colors ml-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-full"
+                aria-label="Explain credentials"
+                aria-expanded={showCredentials}
+              >
+                <HelpCircle size={13} />
+              </button>
+              {showCredentials && (
+                <div className="absolute left-0 top-full mt-1 z-30 w-56 bg-surface border border-border rounded-lg shadow-lg p-3 text-xs text-text-secondary whitespace-pre-line">
+                  {credentialExplanation}
+                </div>
+              )}
+            </div>
+          )}
           <p className="text-sm text-text-tertiary mt-0.5">
             {provider.provider_type_label || 'Provider'}
           </p>
@@ -88,6 +129,14 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
           )}
           <div className="flex items-center gap-2 mt-1.5">
             <VerificationBadge status={provider.status} verifiedAt={provider.verified_at} size="sm" />
+            {(provider.tier === 'pro' || provider.tier === 'elite') && (
+              <span
+                className="inline-flex items-center text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-800/50"
+                title="This provider has a featured subscription with Psychage."
+              >
+                Featured
+              </span>
+            )}
           </div>
         </div>
       </div>

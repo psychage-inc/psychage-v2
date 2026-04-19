@@ -67,7 +67,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Stop worrying. Think positive. Just let it go. If only it were that simple. When you try to suppress worries, they come back stronger. The harder you fight them, the more they intrude. But what if, instead of trying to stop worrying, you gave yourself permission to worry --- just not all the time?
           </p>
           <p className="mb-6">
@@ -349,7 +349,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Anxiety tells you to wait. "Wait until you feel ready. Wait until the anxiety passes. Wait until you're sure it'll go well." So you wait. And while you wait, life narrows. Opportunities slip by. The things you used to enjoy feel impossible. Anxiety wins by keeping you still.
           </p>
           <p className="mb-6">
@@ -670,7 +670,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mindfulness isn't new --- it's been a core practice in Buddhist traditions for thousands of years. But in 1979, molecular biologist Jon Kabat-Zinn did something revolutionary: he stripped mindfulness of its religious context and created a secular, evidence-based program for stress reduction that could be studied scientifically and taught in hospitals, clinics, and schools worldwide.
           </p>
           <p className="mb-6">
@@ -968,7 +968,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Wim Hof has millions of followers. Cold plunge tanks are popping up at wellness centers. Social media is full of influencers swearing that ice baths cured their anxiety. But is there real science behind cold water therapy, or is it just another wellness trend that'll fade when the next one arrives?
           </p>
           <p className="mb-6">
@@ -1264,7 +1264,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've learned about breathing techniques, grounding, cognitive restructuring, exposure, exercise, and mindfulness. You know what works --- in theory. But when anxiety hits at 2 AM, or before a presentation, or in the middle of the grocery store, which tool do you use? And how do you make these strategies stick when life gets chaotic?
           </p>
           <p className="mb-6">

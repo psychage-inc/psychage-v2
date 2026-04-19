@@ -65,7 +65,7 @@ export const climateSeasonsAndPsychologicalRhythmsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Seasonal Affective Disorder (SAD) is a recurrent major depressive disorder with a seasonal pattern—most commonly onset in autumn, deepening through winter, and remitting in spring—that affects approximately 1–6% of the population in northern latitudes, with subclinical seasonal mood changes (the &quot;winter blues&quot;) affecting up to 20%. Far from being a minor or trivial condition, SAD produces the full symptomatology of major depression—depressed mood, loss of interest, fatigue, social withdrawal, difficulty concentrating, and changes in sleep and appetite—with the distinctive seasonal features of increased sleep, increased appetite (particularly for carbohydrates), weight gain, and a heaviness in the limbs that patients describe as leaden.
           </p>
         </div>
@@ -109,7 +109,7 @@ export const climateSeasonsAndPsychologicalRhythmsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -172,7 +172,7 @@ export const climateSeasonsAndPsychologicalRhythmsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every cell in the human body contains a molecular clock—a set of genes whose expression oscillates in approximately 24-hour cycles, coordinating physiology with the rotation of the Earth. These circadian rhythms regulate not only sleep and wakefulness but virtually every aspect of human biology: hormone secretion, neurotransmitter function, immune response, metabolism, body temperature, and—critically—mood, cognition, and emotional regulation.
           </p>
         </div>
@@ -217,7 +217,7 @@ export const climateSeasonsAndPsychologicalRhythmsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -280,7 +280,7 @@ export const climateSeasonsAndPsychologicalRhythmsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             &quot;Nice weather today—must be why everyone&apos;s in a good mood.&quot; This casual observation reflects one of the most widespread folk beliefs about the relationship between environment and psychology: that weather directly and reliably affects mood.
           </p>
         </div>
@@ -327,7 +327,7 @@ export const climateSeasonsAndPsychologicalRhythmsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -390,7 +390,7 @@ export const climateSeasonsAndPsychologicalRhythmsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The belief that the moon influences human behavior—particularly that the full moon causes madness, violence, seizures, and psychological crisis—is one of the oldest and most persistent ideas in human culture. The word &quot;lunatic&quot; derives from &quot;luna&quot; (moon), embedding the belief in language itself.
           </p>
         </div>
@@ -434,7 +434,7 @@ export const climateSeasonsAndPsychologicalRhythmsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -497,7 +497,7 @@ export const climateSeasonsAndPsychologicalRhythmsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Altitude—the elevation above sea level at which a person lives—is an environmental variable that most people do not associate with mental health. Yet a growing body of research documents that altitude has measurable effects on mood, cognition, and psychiatric risk.
           </p>
         </div>
@@ -543,7 +543,7 @@ export const climateSeasonsAndPsychologicalRhythmsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -606,7 +606,7 @@ export const climateSeasonsAndPsychologicalRhythmsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The question of whether where you live affects how you feel has fascinated researchers, policymakers, and individuals contemplating relocation for decades. The World Happiness Report, published annually since 2012, consistently shows dramatic differences in life satisfaction across nations—with Nordic countries (Finland, Denmark, Iceland, Norway) persistently ranking near the top and nations experiencing conflict, poverty, or institutional instability ranking near the bottom.
           </p>
         </div>
@@ -655,7 +655,7 @@ export const climateSeasonsAndPsychologicalRhythmsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

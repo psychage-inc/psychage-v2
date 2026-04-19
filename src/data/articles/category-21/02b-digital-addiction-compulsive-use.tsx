@@ -72,7 +72,7 @@ export const digitalAddictionCompulsiveUseArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your phone buzzes. Instantly, something shifts --- a small jolt of alertness, a pull of attention,
             a faint urgency to check. Even when you resist, the thought lingers. What was that? Who needs
             something? Did I miss something important? For hundreds of millions of people, this experience
@@ -510,7 +510,7 @@ export const digitalAddictionCompulsiveUseArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In the early days of the internet, technology companies made money by selling products. Today,
             the most profitable companies in history make money by selling something far more intimate: your
             attention. Every second you spend scrolling, watching, clicking, and refreshing generates revenue
@@ -885,7 +885,7 @@ export const digitalAddictionCompulsiveUseArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The average person spends roughly four hours per day on their smartphone and touches the screen
             over 2,600 times
             <Citation id="1" index={1} />. Most of those interactions are not deliberate. They are reflexive ---
@@ -1254,7 +1254,7 @@ export const digitalAddictionCompulsiveUseArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "How much screen time is too much?" It is one of the most frequently asked questions in modern
             health discourse --- and one of the least satisfactorily answered. For children, organizations like
             the World Health Organization have issued specific time limits, even if they remain debated. For
@@ -1637,7 +1637,7 @@ export const digitalAddictionCompulsiveUseArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There was a time when gambling required a deliberate journey --- a trip to a casino, a visit to a
             betting shop, a night at the track. That friction was, unknowingly, a form of protection. The time
             it took to get there, the social visibility of walking through the doors, the finite hours of

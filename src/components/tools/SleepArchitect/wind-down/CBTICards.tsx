@@ -12,7 +12,7 @@ const CBTICards: React.FC = () => {
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-gray-700">
+    <div className="bg-white dark:bg-neutral-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-neutral-700">
       <div className="flex items-center gap-2 mb-5">
         <BookOpen size={20} className="text-teal-500" />
         <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white">
@@ -26,26 +26,26 @@ const CBTICards: React.FC = () => {
           return (
             <div
               key={card.id}
-              className="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden"
+              className="border border-gray-100 dark:border-neutral-700 rounded-xl overflow-hidden"
             >
               <button
                 type="button"
                 onClick={() => setExpandedId(isExpanded ? null : card.id)}
-                className="w-full p-4 flex items-start justify-between text-left hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
+                className="w-full p-4 flex items-start justify-between text-left hover:bg-gray-50 dark:hover:bg-neutral-700/50 transition-colors"
                 aria-expanded={isExpanded}
               >
                 <div className="pr-3">
                   <h4 className="text-sm font-bold text-gray-900 dark:text-white">
                     {card.title}
                   </h4>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5 line-clamp-2">
+                  <p className="text-xs text-gray-500 dark:text-neutral-400 mt-0.5 line-clamp-2">
                     {card.summary}
                   </p>
                 </div>
                 {isExpanded ? (
-                  <ChevronUp size={16} className="text-gray-400 flex-shrink-0 mt-0.5" />
+                  <ChevronUp size={16} className="text-gray-400 dark:text-neutral-500 flex-shrink-0 mt-0.5" />
                 ) : (
-                  <ChevronDown size={16} className="text-gray-400 flex-shrink-0 mt-0.5" />
+                  <ChevronDown size={16} className="text-gray-400 dark:text-neutral-500 flex-shrink-0 mt-0.5" />
                 )}
               </button>
 
@@ -62,11 +62,11 @@ const CBTICards: React.FC = () => {
                         <div className="text-[10px] font-bold text-teal-600 dark:text-teal-400 uppercase tracking-wider mb-1">
                           Technique
                         </div>
-                        <p className="text-xs text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p className="text-xs text-gray-700 dark:text-neutral-300 leading-relaxed">
                           {card.technique}
                         </p>
                       </div>
-                      <div className="text-[10px] text-gray-400 dark:text-gray-500">
+                      <div className="text-[10px] text-gray-400 dark:text-neutral-500">
                         Source: {card.source}
                       </div>
                     </div>

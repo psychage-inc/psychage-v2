@@ -91,7 +91,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Aging alone is not inevitable, but it's increasingly common. Spouses die. Friends pass away or move to be closer to family. Children live far away. Mobility declines. And social infrastructure for older adults is sparse. The result: profound loneliness in late life.
           </p>
           <p className="mb-6">
@@ -508,7 +508,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You looked forward to retirement for decades. No more alarm clocks, meetings, or work stress. Freedom. But a few months in, you realize: you have nothing to do, nowhere to be, and no one expects you. The loneliness is crushing.
           </p>
           <p className="mb-6">
@@ -882,7 +882,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Grief is the love you still carry for someone who's gone. Loneliness after loss is the permanent absence of the person you shared your life with. Your spouse, parent, best friend --- whoever was your "person" --- is gone. And no one can fill that specific void.
           </p>
           <p className="mb-6">
@@ -1315,7 +1315,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're surrounded by people --- family, healthcare workers, the person you're caring for. And yet you feel profoundly, achingly alone. Caregiving is one of the loneliest experiences there is, even though it's defined by being with someone constantly.
           </p>
           <p className="mb-6">
@@ -1722,7 +1722,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Growing up LGBTQ+ often means growing up feeling different, isolated, and unable to be fully yourself. Even in accepting environments, the experience of navigating a world built for straight, cisgender people creates a unique form of loneliness.
           </p>
           <p className="mb-6">

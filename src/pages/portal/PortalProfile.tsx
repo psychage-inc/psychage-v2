@@ -222,11 +222,11 @@ const PracticeTab: React.FC<TabProps> = ({ provider, onSave, saveStatus }) => {
                 onClick={() => update(toggle.field, !toggle.value)}
                 className={cn(
                   'relative w-10 h-6 rounded-full transition-colors',
-                  toggle.value ? 'bg-teal-500' : 'bg-gray-300 dark:bg-gray-600'
+                  toggle.value ? 'bg-teal-500' : 'bg-gray-300 dark:bg-neutral-600'
                 )}
               >
                 <span className={cn(
-                  'absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white transition-transform shadow-sm',
+                  'absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white dark:bg-neutral-200 transition-transform shadow-sm',
                   toggle.value && 'translate-x-4'
                 )} />
               </button>
@@ -243,7 +243,7 @@ const PracticeTab: React.FC<TabProps> = ({ provider, onSave, saveStatus }) => {
 const PlaceholderTab: React.FC<{ title: string; description: string }> = ({ title, description }) => (
   <div className="space-y-4">
     <h3 className="font-display font-semibold text-lg text-text-primary">{title}</h3>
-    <div className="bg-gray-50 dark:bg-gray-800/30 rounded-xl p-6 text-center">
+    <div className="bg-gray-50 dark:bg-neutral-800/30 rounded-xl p-6 text-center">
       <p className="text-text-secondary text-sm">{description}</p>
     </div>
   </div>
@@ -325,7 +325,7 @@ const PortalProfile: React.FC = () => {
                   'flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors whitespace-nowrap',
                   activeTab === tab.id
                     ? 'border-teal-500 text-teal-600 dark:text-teal-400'
-                    : 'border-transparent text-text-tertiary hover:text-text-primary hover:border-gray-300 dark:hover:border-gray-600'
+                    : 'border-transparent text-text-tertiary hover:text-text-primary hover:border-gray-300 dark:hover:border-neutral-600'
                 )}
               >
                 <tab.icon size={16} />

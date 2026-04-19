@@ -249,7 +249,7 @@ const ClarityScoreTool: React.FC = () => {
 
   // --- Domain color helpers ---
   const getDomainBarColor = (domainId: number): string => {
-    return DOMAINS[domainId]?.bgColor || 'bg-gray-500';
+    return DOMAINS[domainId]?.bgColor || 'bg-gray-500 dark:bg-neutral-600';
   };
 
   // --- Render ---
@@ -320,7 +320,7 @@ const ClarityScoreTool: React.FC = () => {
 
                   <a
                     href="sms:741741&body=HOME"
-                    className="flex items-center gap-4 w-full p-4 bg-surface-active hover:bg-gray-200 dark:hover:bg-gray-700 text-text-primary rounded-xl font-medium transition-colors"
+                    className="flex items-center gap-4 w-full p-4 bg-surface-active hover:bg-surface-hover text-text-primary rounded-xl font-medium transition-colors"
                   >
                     <MessageCircle size={24} className="shrink-0" />
                     <div className="flex-1">
@@ -333,7 +333,7 @@ const ClarityScoreTool: React.FC = () => {
 
                   <Link
                     to="/crisis"
-                    className="flex items-center gap-4 w-full p-4 bg-surface-active hover:bg-gray-200 dark:hover:bg-gray-700 text-text-primary rounded-xl font-medium transition-colors"
+                    className="flex items-center gap-4 w-full p-4 bg-surface-active hover:bg-surface-hover text-text-primary rounded-xl font-medium transition-colors"
                   >
                     <ExternalLink size={24} className="shrink-0" />
                     <div className="flex-1">
@@ -349,7 +349,7 @@ const ClarityScoreTool: React.FC = () => {
                   <button
                     ref={crisisContinueRef}
                     onClick={handleCrisisContinue}
-                    className="w-full py-4 text-text-tertiary hover:text-gray-600 dark:hover:text-gray-200 text-sm font-medium transition-colors rounded-xl hover:bg-surface-hover"
+                    className="w-full py-4 text-text-tertiary hover:text-text-secondary text-sm font-medium transition-colors rounded-xl hover:bg-surface-hover"
                   >
                     I'm safe right now — continue assessment
                   </button>
@@ -515,7 +515,7 @@ const ClarityScoreTool: React.FC = () => {
                 initial={{ opacity: 0, x: directionRef.current === 'forward' ? 50 : -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: directionRef.current === 'forward' ? -50 : 50 }}
-                className="bg-surface rounded-3xl p-8 md:p-12 shadow-xl shadow-gray-200/50 dark:shadow-none border border-border"
+                className="bg-surface rounded-3xl p-8 md:p-12 shadow-xl shadow-black/5 dark:shadow-none border border-border"
               >
                 {/* Progress header */}
                 <div className="mb-6 flex justify-between items-center text-sm font-medium text-text-tertiary">
@@ -585,7 +585,7 @@ const ClarityScoreTool: React.FC = () => {
                         className={`w-full text-left p-5 rounded-2xl border-2 transition-all font-medium text-lg ${
                           isSelected
                             ? `${currentDomain.bgColor} text-white border-transparent shadow-md`
-                            : 'border-border hover:border-gray-300 dark:hover:border-gray-600 hover:bg-surface-hover text-text-secondary'
+                            : 'border-border hover:border-border hover:bg-surface-hover text-text-secondary'
                         }`}
                       >
                         {option.label}

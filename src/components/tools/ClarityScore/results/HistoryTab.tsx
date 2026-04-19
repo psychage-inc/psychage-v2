@@ -271,7 +271,7 @@ const HistoryTab: React.FC<HistoryTabProps> = ({
                   ? 'text-emerald-600 dark:text-emerald-400'
                   : insights.totalChange < 0
                     ? 'text-red-500'
-                    : 'text-gray-500'
+                    : 'text-gray-500 dark:text-neutral-400'
               }`}
             >
               {insights.totalChange > 0 ? '+' : ''}
@@ -292,7 +292,7 @@ const HistoryTab: React.FC<HistoryTabProps> = ({
                   ? 'text-emerald-600 dark:text-emerald-400'
                   : insights.recentChange < 0
                     ? 'text-red-500'
-                    : 'text-gray-500'
+                    : 'text-gray-500 dark:text-neutral-400'
               }`}
             >
               {insights.recentChange > 0 ? '+' : ''}
@@ -452,7 +452,7 @@ function MilestoneRow({ milestones }: { milestones: Milestone[] }) {
                 className={`w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-2 ${
                   m.earned
                     ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400'
-                    : 'bg-gray-200 dark:bg-gray-700 text-text-tertiary'
+                    : 'bg-gray-200 dark:bg-neutral-700 text-text-tertiary'
                 }`}
               >
                 <MIcon size={18} />

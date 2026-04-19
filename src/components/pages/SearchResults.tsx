@@ -197,8 +197,8 @@ const SearchResults: React.FC = () => {
                             <button
                                 onClick={() => setSelectedCategory('all')}
                                 className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedCategory === 'all'
-                                    ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
-                                    : 'bg-surface text-text-secondary border border-border hover:border-gray-300 dark:hover:border-gray-600'
+                                    ? 'bg-text-primary text-background'
+                                    : 'bg-surface text-text-secondary border border-border hover:border-border'
                                     }`}
                             >
                                 All
@@ -208,8 +208,8 @@ const SearchResults: React.FC = () => {
                                     key={cat.id}
                                     onClick={() => setSelectedCategory(cat.id)}
                                     className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedCategory === cat.id
-                                        ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
-                                        : 'bg-surface text-text-secondary border border-border hover:border-gray-300 dark:hover:border-gray-600'
+                                        ? 'bg-text-primary text-background'
+                                        : 'bg-surface text-text-secondary border border-border hover:border-border'
                                         }`}
                                 >
                                     {cat.name}

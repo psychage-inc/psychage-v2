@@ -65,7 +65,7 @@ export const accessingMentalHealthCareWithADisabilityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Telehealth expanded rapidly during the COVID-19 pandemic, and for many disabled people, remote therapy eliminated decades-old barriers—no more inaccessible buildings, exhausting commutes, or provider shortages in rural areas. Yet telehealth has also created new forms of exclusion: platforms that screen readers cannot navigate, video interfaces that exclude Deaf users, and internet deserts that leave people behind.
           </p>
         </div>
@@ -112,7 +112,7 @@ export const accessingMentalHealthCareWithADisabilityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -176,7 +176,7 @@ export const accessingMentalHealthCareWithADisabilityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mainstream mindfulness instruction often assumes a body that can sit cross-legged on the floor, walk slowly in a garden, or perform a full body scan without encountering pain, numbness, or absence. For people with physical disabilities, these assumptions can turn a practice meant to reduce suffering into yet another reminder of what their bodies cannot do.
           </p>
         </div>
@@ -222,7 +222,7 @@ export const accessingMentalHealthCareWithADisabilityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -286,7 +286,7 @@ export const accessingMentalHealthCareWithADisabilityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mental health information is only useful if people can understand it. Yet most mental health education materials—websites, brochures, therapy handouts, psychoeducation resources—are written at a reading level that excludes millions of people with intellectual disabilities, learning disabilities, acquired brain injuries, low literacy, or cognitive differences.
           </p>
         </div>
@@ -333,7 +333,7 @@ export const accessingMentalHealthCareWithADisabilityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -398,7 +398,7 @@ export const accessingMentalHealthCareWithADisabilityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Standard mental health screening tools were designed for people with average or above-average cognitive and verbal abilities. When applied to people with intellectual disabilities, they frequently miss genuine mental health conditions or attribute psychiatric symptoms to the disability itself—a phenomenon called diagnostic overshadowing.
           </p>
         </div>
@@ -444,7 +444,7 @@ export const accessingMentalHealthCareWithADisabilityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -509,7 +509,7 @@ export const accessingMentalHealthCareWithADisabilityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Deaf and hard-of-hearing people experience mental health conditions at rates comparable to or higher than the hearing population, yet face extraordinary barriers to accessing care. Fewer than 2% of mental health professionals can communicate in sign language, and interpreter-mediated therapy introduces complications—loss of nuance, confidentiality concerns in small communities, and the fundamental problem of processing emotions through a third party.
           </p>
         </div>
@@ -555,7 +555,7 @@ export const accessingMentalHealthCareWithADisabilityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -619,7 +619,7 @@ export const accessingMentalHealthCareWithADisabilityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The link between physical activity and mental health is one of the most robust findings in behavioral science—exercise reduces depression, anxiety, and stress while improving sleep, self-esteem, and cognitive function. But most exercise recommendations assume a body that can run, jump, lift, and move freely.
           </p>
         </div>
@@ -666,7 +666,7 @@ export const accessingMentalHealthCareWithADisabilityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

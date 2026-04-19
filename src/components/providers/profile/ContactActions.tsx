@@ -60,12 +60,12 @@ export const ContactActions: React.FC<ContactActionsProps> = ({ provider, sticky
   const primaryStyle =
     'bg-teal-600 text-white shadow-sm shadow-teal-600/20 hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600';
   const outlineStyle =
-    'border-2 border-slate-200 text-slate-700 hover:border-teal-500 hover:text-teal-600 dark:border-slate-600 dark:text-slate-200 dark:hover:border-teal-400 dark:hover:text-teal-400';
+    'border-2 border-slate-200 text-slate-700 hover:border-teal-500 hover:text-teal-600 dark:border-neutral-600 dark:text-neutral-200 dark:hover:border-teal-400 dark:hover:text-teal-400';
 
   return (
     <section className={cn(
       'flex flex-wrap gap-3',
-      sticky && 'sm:static fixed bottom-0 left-0 right-0 z-30 bg-white dark:bg-gray-900 border-t border-slate-200 dark:border-slate-700 p-4 sm:p-0 sm:border-0 sm:bg-transparent sm:z-auto',
+      sticky && 'sm:static fixed bottom-0 left-0 right-0 z-30 bg-surface border-t border-border p-4 sm:p-0 sm:border-0 sm:bg-transparent sm:z-auto',
     )}>
       {actions.map((action, index) => {
         const isPrimary = index === 0;

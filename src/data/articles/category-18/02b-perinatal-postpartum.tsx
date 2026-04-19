@@ -156,7 +156,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When the ultrasound showed a heartbeat at 8 weeks, Kendra felt numb instead of joyful.
             Her previous pregnancy had ended at 10 weeks---she couldn't let herself believe this one
             would be different. Each prenatal appointment brought panic, not excitement.
@@ -642,7 +642,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every time Rachel held her newborn son, an image flashed through her mind: dropping him
             down the stairs. She would freeze in terror, then immediately put him down and check his
             body for injuries---even though she hadn't actually dropped him.
@@ -725,7 +725,7 @@ export const articles: Article[] = [
               the distinction is crucial---and reassuring for those with OCD.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-              <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <div className="p-4 bg-gray-50 dark:bg-neutral-800 rounded-lg">
                 <h4 className="font-bold mb-2">Perinatal OCD</h4>
                 <ul className="list-disc pl-5 space-y-1 text-sm">
                   <li>Thoughts are ego-dystonic (unwanted, horrifying)</li>

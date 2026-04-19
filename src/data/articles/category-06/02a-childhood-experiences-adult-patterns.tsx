@@ -64,7 +64,7 @@ export const childhoodExperiencesAdultPatternsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The person you are today — how you love, what you fear, the way you handle conflict — was profoundly shaped by experiences you may barely remember. Your earliest years did not just influence you; they built the architecture of your brain, nervous system, and emotional world.
           </p>
           <p className="mb-6">
@@ -277,7 +277,7 @@ export const childhoodExperiencesAdultPatternsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In 1998, a study of over 17,000 adults revealed something that would transform public health forever: childhood adversity does not just cause emotional pain — it predicts heart disease, cancer, addiction, depression, and early death with startling precision. The more adversity a child faces, the worse the outcomes become.
           </p>
           <p className="mb-6">
@@ -504,7 +504,7 @@ export const childhoodExperiencesAdultPatternsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Emotional neglect leaves no bruises, no police reports, no hospital records. It is the absence of something rather than the presence of harm — and that very invisibility makes it one of the most damaging and least understood forms of childhood adversity.
           </p>
           <p className="mb-6">
@@ -701,7 +701,7 @@ export const childhoodExperiencesAdultPatternsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Some children never get to be children. Instead of playing, exploring, and making age-appropriate mistakes, they are busy cooking dinner for younger siblings, mediating their parents' arguments, or serving as their mother's therapist. They grow up responsible, competent, and praised for their maturity — and they often have no idea that something precious was taken from them.
           </p>
           <p className="mb-6">
@@ -906,7 +906,7 @@ export const childhoodExperiencesAdultPatternsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Growing up with a parent who has a substance use disorder means living in a home where the rules change without warning, promises are made and broken on a daily basis, and love is tangled with chaos in ways a child cannot begin to untangle. It means learning, before you have words for it, that the people who are supposed to protect you are the source of your greatest fear.
           </p>
           <p className="mb-6">

@@ -167,7 +167,7 @@ export const socialIsolationLonelinessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You are 72 years old. Your spouse died two years ago. Your children live across the country. You go days without speaking to anyone except the grocery cashier. You watch television alone, eat meals alone, wake in the night and remember when the bed was not empty. You tell yourself you are fine. You are independent. You do not need anyone. Your body disagrees.
           </p>
           <p className="mb-6">
@@ -453,7 +453,7 @@ export const socialIsolationLonelinessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mrs. Chen lives alone. She has no family in the U.S. She sees her doctor twice a year and the mail carrier daily. By objective measures, she is socially isolated. Yet she feels content---she video calls her daughter in Taiwan weekly, volunteers at the library, attends tai chi class. She is isolated but not lonely.
           </p>
           <p className="mb-6">
@@ -737,7 +737,7 @@ export const socialIsolationLonelinessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your mother lives in Florida. You live in Oregon. Before video calls, you spoke weekly by phone---hearing her voice but not seeing her face, her home, her life. Now you FaceTime every Sunday. You see that she is wearing the same sweater three weeks running. You notice the mail piling up. You see her smile when your daughter shows her a drawing. The visual information changes everything.
           </p>
           <p className="mb-6">
@@ -996,7 +996,7 @@ export const socialIsolationLonelinessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your father sits alone in his apartment every day. He does not cook much---microwave dinners, cereal. He watches TV. He goes to bed at 8 p.m. because there is nothing else to do. You suggest the senior center. He says, "I am not old." Three months later, after your nagging, he tries it. Now he goes four days a week. He takes a tai chi class. He plays cards. He has lunch with people who remember the same music, the same wars. He is less depressed. He is eating real food. He is alive again.
           </p>
           <p className="mb-6">
@@ -1284,7 +1284,7 @@ export const socialIsolationLonelinessArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You retire after 35 years as a high school math teacher. The first month is bliss: sleep in, golf, travel. By month three, you feel lost. You are no one. You have no schedule, no purpose, no identity. Who are you if you are not "Mr. Johnson, the math teacher"? A friend suggests you tutor at the library. You resist---you just escaped teaching. But you try it. Two hours a week, you help struggling students. They call you "Mr. Johnson." You remember who you are.
           </p>
           <p className="mb-6">

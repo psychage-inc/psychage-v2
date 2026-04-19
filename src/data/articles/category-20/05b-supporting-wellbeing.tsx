@@ -79,7 +79,7 @@ export const supportingWellbeingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You have been cleared to return. The doctors have signed off, the paperwork has been
             processed, and your desk --- or a version of it --- is waiting. But something no one warned
             you about is the weight of that first morning, standing in front of your closet
@@ -259,7 +259,7 @@ export const supportingWellbeingArticlesB: Article[] = [
             content: (
               <div className="space-y-3">
                 <p className="font-medium text-gray-900 dark:text-white">What you might notice after returning:</p>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                   <li>Slower processing speed --- tasks that took 30 minutes now take an hour</li>
                   <li>Reduced working memory --- difficulty holding multiple pieces of information simultaneously</li>
                   <li>Attention fragmentation --- losing focus mid-task and struggling to regain it</li>
@@ -274,7 +274,7 @@ export const supportingWellbeingArticlesB: Article[] = [
             content: (
               <div className="space-y-3">
                 <p className="font-medium text-gray-900 dark:text-white">Evidence-supported strategies for managing cognitive fatigue at work:</p>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                   <li>Schedule demanding tasks during your peak cognitive hours (usually morning)</li>
                   <li>Break complex projects into smaller, clearly defined sub-tasks</li>
                   <li>Use external memory aids --- written checklists, digital reminders, meeting notes</li>
@@ -617,7 +617,7 @@ export const supportingWellbeingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You had plans. Maybe it was a dinner with friends, a work deadline, a walk you
             promised yourself. Then your body intervened --- a flare, a wave of fatigue so heavy
             it felt like gravity doubled, pain that rewrote the architecture of your entire
@@ -660,7 +660,7 @@ export const supportingWellbeingArticlesB: Article[] = [
           {
             title: 'Self-Kindness: Treating Yourself as You Would a Friend',
             content: (
-              <div className="space-y-3 text-gray-700 dark:text-gray-300">
+              <div className="space-y-3 text-gray-700 dark:text-neutral-300">
                 <p>
                   Self-kindness means responding to your own pain and limitation with warmth
                   rather than harsh criticism. When a friend cancels plans because of a migraine,
@@ -682,7 +682,7 @@ export const supportingWellbeingArticlesB: Article[] = [
           {
             title: 'Common Humanity: You Are Not Alone in This',
             content: (
-              <div className="space-y-3 text-gray-700 dark:text-gray-300">
+              <div className="space-y-3 text-gray-700 dark:text-neutral-300">
                 <p>
                   Chronic illness is profoundly isolating. When your body limits you in ways that
                   others cannot see or understand, it is easy to feel that you are the only person
@@ -703,7 +703,7 @@ export const supportingWellbeingArticlesB: Article[] = [
           {
             title: 'Mindfulness: Acknowledging Without Drowning',
             content: (
-              <div className="space-y-3 text-gray-700 dark:text-gray-300">
+              <div className="space-y-3 text-gray-700 dark:text-neutral-300">
                 <p>
                   Mindfulness in this context means holding your suffering in balanced
                   awareness --- neither suppressing it (&quot;I am fine, it is not that bad&quot;)
@@ -1090,7 +1090,7 @@ export const supportingWellbeingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You are already dealing with an illness or disability that limits your daily
             functioning. Then you enter the system that is supposed to help --- and discover that
             proving you deserve help is itself a full-time job. Forms that demand you describe
@@ -1258,7 +1258,7 @@ export const supportingWellbeingArticlesB: Article[] = [
             content: (
               <div className="space-y-3">
                 <p className="font-medium text-gray-900 dark:text-white">Common psychological responses during the waiting period:</p>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                   <li>Hypervigilance --- compulsively checking mail, email, and application portals</li>
                   <li>Catastrophizing --- assuming the worst outcome at every stage</li>
                   <li>Shame about financial dependence on others during the waiting period</li>
@@ -1274,7 +1274,7 @@ export const supportingWellbeingArticlesB: Article[] = [
             content: (
               <div className="space-y-3">
                 <p className="font-medium text-gray-900 dark:text-white">Evidence-informed approaches to managing the waiting period:</p>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-neutral-300">
                   <li>Designate specific check-in times rather than monitoring continuously</li>
                   <li>Separate your self-worth from the outcome --- a denial is a system failure, not a personal one</li>
                   <li>Connect with peer support groups where others understand the process firsthand</li>
@@ -1582,7 +1582,7 @@ export const supportingWellbeingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you live with a chronic condition that conventional medicine can manage but not
             cure, the temptation to look elsewhere is not irrational --- it is human. The treatment
             plan controls your symptoms to a point, but you are still tired, still in pain, still
@@ -1808,7 +1808,7 @@ export const supportingWellbeingArticlesB: Article[] = [
           {
             title: 'Cure Claims for Incurable Conditions',
             content: (
-              <div className="space-y-3 text-gray-700 dark:text-gray-300">
+              <div className="space-y-3 text-gray-700 dark:text-neutral-300">
                 <p>
                   The single biggest red flag is a claim that a therapy can cure a condition
                   that conventional medicine acknowledges has no cure. If someone tells you that
@@ -1824,7 +1824,7 @@ export const supportingWellbeingArticlesB: Article[] = [
           {
             title: 'Conspiracy Framing Against Conventional Medicine',
             content: (
-              <div className="space-y-3 text-gray-700 dark:text-gray-300">
+              <div className="space-y-3 text-gray-700 dark:text-neutral-300">
                 <p>
                   Be wary of practitioners who frame conventional medicine as a conspiracy
                   that is suppressing their treatment. Real medical breakthroughs do not stay
@@ -1839,7 +1839,7 @@ export const supportingWellbeingArticlesB: Article[] = [
           {
             title: 'Escalating Financial Commitment',
             content: (
-              <div className="space-y-3 text-gray-700 dark:text-gray-300">
+              <div className="space-y-3 text-gray-700 dark:text-neutral-300">
                 <p>
                   Some practitioners use a model where initial sessions are affordable, but
                   the &quot;full protocol&quot; requires progressively more expensive products,
@@ -1854,7 +1854,7 @@ export const supportingWellbeingArticlesB: Article[] = [
           {
             title: 'Discouraging Conventional Treatment',
             content: (
-              <div className="space-y-3 text-gray-700 dark:text-gray-300">
+              <div className="space-y-3 text-gray-700 dark:text-neutral-300">
                 <p>
                   Any practitioner who tells you to stop your prescribed medications in favor
                   of their approach is putting your health at risk. Legitimate complementary

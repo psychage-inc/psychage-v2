@@ -59,7 +59,7 @@ const ToolRecommendation: React.FC<ToolRecommendationProps> = ({
       variants={prefersReducedMotion ? undefined : staggerContainer}
       initial="hidden"
       animate="visible"
-      className={`bg-white dark:bg-gray-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-gray-700 ${className}`}
+      className={`bg-white dark:bg-neutral-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-neutral-700 ${className}`}
     >
       <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-4">
         {title}
@@ -76,7 +76,7 @@ const ToolRecommendation: React.FC<ToolRecommendationProps> = ({
             >
               <Link
                 to={rec.path}
-                className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors group"
+                className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-neutral-700/50 transition-colors group"
               >
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
@@ -94,13 +94,13 @@ const ToolRecommendation: React.FC<ToolRecommendationProps> = ({
                   <div className="text-sm font-bold text-gray-900 dark:text-white">
                     {rec.title}
                   </div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400 truncate">
+                  <div className="text-xs text-gray-500 dark:text-neutral-400 truncate">
                     {rec.relevanceReason}
                   </div>
                 </div>
                 <ChevronRight
                   size={16}
-                  className="text-gray-300 dark:text-gray-600 group-hover:text-gray-500 dark:group-hover:text-gray-400 transition-colors flex-shrink-0"
+                  className="text-gray-300 dark:text-neutral-600 group-hover:text-gray-500 dark:group-hover:text-gray-400 transition-colors flex-shrink-0"
                 />
               </Link>
             </motion.div>

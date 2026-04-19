@@ -81,7 +81,7 @@ export const selfCompassionArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Writing a compassionate letter to yourself is a powerful self-compassion practice. It externalizes kindness, creates distance from harsh self-judgment, and provides a tangible reminder you can return to when struggling.
           </p>
           <p className="mb-6">
@@ -342,7 +342,7 @@ export const selfCompassionArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Self-compassion sounds like feeling sorry for yourself." This common misconception prevents many people from practicing self-compassion. But research reveals these are fundamentally different psychological states with opposite effects on wellbeing.
           </p>
           <p className="mb-6">
@@ -686,7 +686,7 @@ export const selfCompassionArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Over two decades of research has examined how self-compassion affects mental health. The findings are remarkably consistent: self-compassion is one of the strongest protective factors against psychological distress and a significant predictor of wellbeing across cultures, age groups, and clinical populations.
           </p>
           <p className="mb-6">
@@ -1148,7 +1148,7 @@ export const selfCompassionArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Reading about self-compassion is valuable. Practicing it daily is transformative. But how do you move from understanding the concept to actually living it? The answer may surprise you: it does not require meditation retreats, journaling for an hour, or any dramatic lifestyle changes. The key is starting remarkably small and building sustainable habits over time.
           </p>
           <p className="mb-6">

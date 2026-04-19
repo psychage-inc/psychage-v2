@@ -82,15 +82,15 @@ function AnimatedNumber({ value, decimals = 1, duration = 0.8 }: { value: number
 function TrendArrow({ trend }: { trend: 'up' | 'down' | 'stable' }) {
     if (trend === 'up') return <TrendingUp size={13} className="text-emerald-500" />;
     if (trend === 'down') return <TrendingDown size={13} className="text-rose-500" />;
-    return <Minus size={13} className="text-gray-400 dark:text-gray-500" />;
+    return <Minus size={13} className="text-gray-400 dark:text-neutral-500" />;
 }
 
 // ── Empty state ──
 function EmptySnapshotState({ icon: Icon, message, linkTo, linkLabel }: { icon: React.ElementType; message: string; linkTo: string; linkLabel: string }) {
     return (
         <div className="flex flex-col items-center justify-center text-center py-4 flex-grow">
-            <Icon size={28} className="text-gray-300 dark:text-gray-600 mb-2" />
-            <p className="text-xs text-gray-400 dark:text-gray-500 mb-3 max-w-[160px]">{message}</p>
+            <Icon size={28} className="text-gray-300 dark:text-neutral-600 mb-2" />
+            <p className="text-xs text-gray-400 dark:text-neutral-500 mb-3 max-w-[160px]">{message}</p>
             <Link to={linkTo}>
                 <Button variant="ghost" size="sm" className="text-xs">
                     {linkLabel} <ArrowRight size={12} className="ml-1" />
@@ -111,7 +111,7 @@ function SnapshotShell({ children, delay, accentColor }: { children: React.React
             className="h-full"
         >
             <div className={cn(
-                'p-5 h-full rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 shadow-sm flex flex-col',
+                'p-5 h-full rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 shadow-sm flex flex-col',
                 'border-l-4',
                 accentColor
             )}>
@@ -131,7 +131,7 @@ function MoodSnapshotCard({ stats, sparkline }: { stats: MoodStats | null; spark
                 <div className="w-7 h-7 rounded-lg bg-amber-500/10 flex items-center justify-center">
                     <Smile size={14} className="text-amber-500" />
                 </div>
-                <span className="text-xs font-medium text-gray-500 dark:text-gray-400 tracking-wide uppercase">Mood</span>
+                <span className="text-xs font-medium text-gray-500 dark:text-neutral-400 tracking-wide uppercase">Mood</span>
                 {hasData && <TrendArrow trend={stats.trend} />}
             </div>
 
@@ -141,9 +141,9 @@ function MoodSnapshotCard({ stats, sparkline }: { stats: MoodStats | null; spark
                         <span className="text-2xl font-display font-bold text-gray-900 dark:text-white tabular-nums tracking-tight">
                             <AnimatedNumber value={stats.averageMood} />
                         </span>
-                        <span className="text-xs text-gray-400 dark:text-gray-500 font-medium">/ 5</span>
+                        <span className="text-xs text-gray-400 dark:text-neutral-500 font-medium">/ 5</span>
                     </div>
-                    <p className="text-xs text-gray-400 dark:text-gray-500 mb-3">
+                    <p className="text-xs text-gray-400 dark:text-neutral-500 mb-3">
                         {stats.streakDays > 0 ? `${stats.streakDays}-day streak` : `${stats.totalEntries} entries`}
                     </p>
                     {sparkline && sparkline.length >= 2 && (
@@ -174,7 +174,7 @@ function SleepSnapshotCard({ stats, sparkline, efficiency }: { stats: SleepStats
                 <div className="w-7 h-7 rounded-lg bg-indigo-500/10 flex items-center justify-center">
                     <Moon size={14} className="text-indigo-500" />
                 </div>
-                <span className="text-xs font-medium text-gray-500 dark:text-gray-400 tracking-wide uppercase">Sleep</span>
+                <span className="text-xs font-medium text-gray-500 dark:text-neutral-400 tracking-wide uppercase">Sleep</span>
                 {hasData && <TrendArrow trend={stats.trend} />}
             </div>
 
@@ -184,9 +184,9 @@ function SleepSnapshotCard({ stats, sparkline, efficiency }: { stats: SleepStats
                         <span className="text-2xl font-display font-bold text-gray-900 dark:text-white tabular-nums tracking-tight">
                             <AnimatedNumber value={stats.averageHours} />
                         </span>
-                        <span className="text-xs text-gray-400 dark:text-gray-500 font-medium">h avg</span>
+                        <span className="text-xs text-gray-400 dark:text-neutral-500 font-medium">h avg</span>
                     </div>
-                    <p className="text-xs text-gray-400 dark:text-gray-500 mb-3">
+                    <p className="text-xs text-gray-400 dark:text-neutral-500 mb-3">
                         Quality: {stats.averageQuality.toFixed(1)} / 5
                         {efficiency != null && efficiency > 0 && (
                             <span className="ml-2">&middot; Efficiency: {Math.round(efficiency)}%</span>
@@ -220,7 +220,7 @@ function ClaritySnapshotCard({ stats, sparkline }: { stats: DashboardStats | nul
                 <div className="w-7 h-7 rounded-lg bg-teal-500/10 flex items-center justify-center">
                     <BrainCircuit size={14} className="text-teal-500" />
                 </div>
-                <span className="text-xs font-medium text-gray-500 dark:text-gray-400 tracking-wide uppercase">Clarity</span>
+                <span className="text-xs font-medium text-gray-500 dark:text-neutral-400 tracking-wide uppercase">Clarity</span>
                 {hasData && stats.change !== undefined && (
                     <span className={cn(
                         'ml-auto px-2 py-0.5 rounded-full text-[11px] font-semibold font-mono border',
@@ -239,9 +239,9 @@ function ClaritySnapshotCard({ stats, sparkline }: { stats: DashboardStats | nul
                         <span className="text-2xl font-display font-bold text-gray-900 dark:text-white tabular-nums tracking-tight">
                             <AnimatedNumber value={stats.latestScore} decimals={0} />
                         </span>
-                        <span className="text-xs text-gray-400 dark:text-gray-500 font-medium">/ 100</span>
+                        <span className="text-xs text-gray-400 dark:text-neutral-500 font-medium">/ 100</span>
                     </div>
-                    <div className="w-full bg-gray-100 dark:bg-gray-800/50 h-1.5 rounded-full overflow-hidden mb-3">
+                    <div className="w-full bg-gray-100 dark:bg-neutral-800/50 h-1.5 rounded-full overflow-hidden mb-3">
                         <motion.div
                             className="bg-gradient-to-r from-teal-500 to-teal-400 h-full rounded-full"
                             initial={{ width: 0 }}

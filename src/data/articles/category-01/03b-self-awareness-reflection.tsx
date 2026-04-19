@@ -120,7 +120,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mindfulness has become a buzzword, and the hype makes it easy to dismiss. But underneath the wellness branding and meditation apps lies one of the most thoroughly researched psychological interventions of the past three decades. Thousands of peer-reviewed studies show that mindfulness practice changes your brain, your body, and your relationship with your emotions.
           </p>
           <p className="mb-6">
@@ -392,7 +392,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You might think you are angry when you are actually hurt. You might believe you are "fine" when your body is flooded with anxiety. You might not realize that the heaviness you feel every morning is grief you have never processed. These are emotional blind spots --- feelings that influence your behavior without your conscious awareness.
           </p>
           <p className="mb-6">
@@ -646,7 +646,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You cannot see your own face without a mirror. In the same way, you cannot fully see your emotional patterns without the reflection of others. The people around you notice things you miss: the way you shut down when criticized, how you deflect with humor when you are hurt, or the pattern of withdrawing when you are stressed.
           </p>
           <p className="mb-6">
@@ -928,7 +928,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Why does a cutting comment from your boss sting more than one from a stranger? Why does canceling plans with a close friend trigger guilt while skipping a work social does not? The answer lies in your values. Your emotions are not random --- they are signals about what matters most to you.
           </p>
           <p className="mb-6">
@@ -1168,7 +1168,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There is a cruel irony in self-awareness work: the more you see about yourself, the more material your inner critic has to work with. You start noticing your patterns --- your avoidance, your defensiveness, your anxiety --- and instead of growth, you feel worse. The missing ingredient is not more awareness. It is self-compassion.
           </p>
           <p className="mb-6">

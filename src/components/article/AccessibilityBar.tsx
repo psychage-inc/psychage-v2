@@ -61,7 +61,7 @@ const AccessibilityBar: React.FC<AccessibilityBarProps> = ({
     return (
         <div
             className={cn(
-                'sticky top-20 z-40 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b-2 border-primary/30 dark:border-primary/40 shadow-sm',
+                'sticky top-20 z-40 bg-surface/95 backdrop-blur-md border-b-2 border-primary/30 dark:border-primary/40 shadow-sm',
                 className,
             )}
             role="toolbar"

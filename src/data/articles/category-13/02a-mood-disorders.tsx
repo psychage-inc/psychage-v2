@@ -133,7 +133,7 @@ export const moodDisordersArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You wake up exhausted even after sleeping for ten hours. Nothing brings you joy --- not your favorite music, not time with friends, not the activities you once loved. You feel like you are moving through life in slow motion, underwater, disconnected from everything. This is what a major depressive episode feels like.
           </p>
           <p className="mb-6">
@@ -550,7 +550,7 @@ export const moodDisordersArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You cannot remember a time when you did not feel this way. The sadness, the fatigue, the low self-esteem --- these are not episodes. They are your normal. You have felt this way for so long that you wonder if this is just who you are. This is what persistent depressive disorder feels like.
           </p>
           <p className="mb-6">

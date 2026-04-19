@@ -69,7 +69,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Scientific research consistently finds associations between spirituality/religiosity and better mental health outcomes, including lower rates of depression, reduced anxiety, faster recovery from trauma, and greater life satisfaction. However, these findings come with important nuances: not all forms of spirituality are beneficial (religious struggles and spiritual bypassing can harm wellbeing), the benefits appear to operate through specific mechanisms (social support, meaning-making, coping resources), and the relationship is correlational, not necessarily causal.
           </p>
         </div>
@@ -82,7 +82,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -146,7 +146,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Prayer—defined as communicating with or directing attention toward the sacred—is practiced by approximately 55% of Americans daily and shows measurable effects on mental health. Research reveals that prayer can reduce anxiety and depression, improve emotion regulation, and provide a sense of control during uncertainty.
           </p>
         </div>
@@ -159,7 +159,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -226,7 +226,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Meditation practices exist across virtually all spiritual traditions, taking different forms—Buddhist mindfulness, Christian centering prayer, Sufi dhikr, Hindu japa, Jewish hitbodedut—but sharing common psychological mechanisms. Research shows that despite theological differences, these practices produce similar mental health benefits: reduced anxiety and depression, improved attention and emotion regulation, and increased sense of connection and peace.
           </p>
         </div>
@@ -239,7 +239,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -301,7 +301,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Religious Trauma Syndrome (RTS) is a term used by some therapists and survivors to describe psychological harm caused by involvement in authoritarian, controlling, or abusive religious environments. While not an official DSM diagnosis, RTS describes a constellation of symptoms—including anxiety, depression, difficulty with decision-making, black-and-white thinking, fear of hell, and social isolation—experienced by people who leave or question toxic religious systems.
           </p>
         </div>
@@ -314,7 +314,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -375,7 +375,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Deconversion—the process of leaving a religious belief system—is a significant psychological transition that affects millions. Research shows it&apos;s rarely a sudden event but typically unfolds over months or years, involving intellectual doubt, emotional turmoil, social disruption, and identity reconstruction.
           </p>
         </div>
@@ -388,7 +388,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -454,7 +454,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Spiritual bypassing is the use of spiritual beliefs and practices to sidestep psychological, emotional, or developmental work—avoiding pain, anger, or shadow aspects of the self by prematurely jumping to forgiveness, detachment, or &quot;higher consciousness.&quot; Psychologist John Welwood coined the term to describe how spirituality can become a defense mechanism that blocks genuine healing.
           </p>
         </div>
@@ -467,7 +467,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -529,7 +529,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The &quot;dark night of the soul&quot; is a term from Christian mysticism describing a period of spiritual desolation that paradoxically leads to deeper faith and union with the divine. In contemporary psychology, &quot;spiritual emergency&quot; refers to intense psychological and spiritual transformation that can feel destabilizing or even crisis-like but is developmentally necessary.
           </p>
         </div>
@@ -542,7 +542,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -610,7 +610,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Forgiveness is the voluntary process of releasing resentment toward someone who has harmed you, distinct from condoning the offense, forgetting it happened, or necessarily reconciling with the offender. Research shows forgiveness benefits the forgiver more than the forgiven—reducing depression, anxiety, and chronic pain while improving cardiovascular health and life satisfaction.
           </p>
         </div>
@@ -623,7 +623,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -688,7 +688,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mystical experiences—profound altered states characterized by feelings of unity, transcendence, ineffability, and encountering ultimate reality—occur across cultures, religions, and even among secular individuals. Research shows they can be triggered by meditation, prayer, psychedelics, near-death experiences, or spontaneously.
           </p>
         </div>
@@ -701,7 +701,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -761,7 +761,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Interfaith dialogue—respectful conversation and relationship-building across religious traditions—offers significant psychological benefits beyond its obvious social and political value. Research shows that engaging with people whose religious or spiritual beliefs differ from yours reduces prejudice, increases empathy, enhances cognitive flexibility, and deepens your own faith or spiritual practice.
           </p>
         </div>
@@ -774,7 +774,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -835,7 +835,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Religious coping refers to the ways people use their faith, beliefs, and spiritual practices to manage stress, loss, trauma, and illness. Research distinguishes between positive religious coping (seeking spiritual support, reframing adversity as meaningful, working collaboratively with God) and negative religious coping (spiritual struggle, viewing hardship as divine punishment, passive deferral to God without action).
           </p>
         </div>
@@ -848,7 +848,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -913,7 +913,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Gratitude is more than politeness—it&apos;s a complex emotional and cognitive state with measurable effects on the brain and mental health. Neuroscience research shows that gratitude activates brain regions involved in reward processing, social bonding, and moral cognition, while reducing activity in areas associated with stress and negative emotion.
           </p>
         </div>
@@ -926,7 +926,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -992,7 +992,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Rituals—whether religious (prayer, pilgrimage, sacraments) or secular (morning coffee, birthday traditions, memorial practices)—are structured, symbolic actions performed with intention and often repeated over time. Research shows that rituals reduce anxiety, increase sense of control, strengthen social bonds, mark transitions, and create meaning.
           </p>
         </div>
@@ -1005,7 +1005,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1068,7 +1068,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Contemplative practices—meditation, centering prayer, silent retreats, contemplative reading—involve intentional cultivation of stillness, silence, and inward attention. Research shows these practices produce significant mental health benefits: reduced anxiety and depression, improved emotional regulation, increased self-awareness, and enhanced cognitive function.
           </p>
         </div>
@@ -1081,7 +1081,7 @@ export const spiritualityAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

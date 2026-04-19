@@ -117,7 +117,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You dread going to bed. Sleep, which should be restful, has become a battleground. You wake up gasping, heart pounding, sheets soaked with sweat. The nightmare felt so real---you were back there, reliving it. This happens night after night, robbing you of rest and leaving you exhausted. PTSD doesn't respect the boundary between waking and sleeping.
           </p>
           <p className="mb-6">
@@ -515,7 +515,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             During the trauma, you weren't there. You floated above your body, watching it happen to someone else. Or everything went fuzzy and dreamlike---you were present but not really present. Time moved strangely. You remember fragments but it doesn't feel like a real memory. This is dissociation, and it's one of the most confusing and frightening experiences in trauma.
           </p>
           <p className="mb-6">
@@ -918,7 +918,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every shift, they witness humanity's worst moments. They arrive at scenes most people flee from---accidents, violence, death, suffering. They're trained to stay calm, to function, to save lives. But no training prepares you for the cumulative weight of others' worst days becoming your ordinary workday.
           </p>
           <p className="mb-6">
@@ -1284,7 +1284,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You came home, but part of you is still there. Fireworks sound like incoming rounds. Crowds feel like ambush zones. You scan rooftops and assess threats that don't exist here. Your family says you've changed, that you're distant, angry, not the person who deployed. They don't understand what you've seen, what you've done, what you carry.
           </p>
           <p className="mb-6">
@@ -1666,7 +1666,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You experienced something traumatic a week ago. You're having nightmares, feeling on edge, replaying the event in your mind. Is this PTSD? Or is it a normal response that will resolve on its own? Understanding the distinction between acute stress reactions, Acute Stress Disorder (ASD), and PTSD is crucial---because timing matters for both diagnosis and treatment.
           </p>
           <p className="mb-6">

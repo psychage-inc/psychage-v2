@@ -41,7 +41,7 @@ const LINKS = [
 
 const CrossToolLinks: React.FC = () => {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-gray-700">
+    <div className="bg-white dark:bg-neutral-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-neutral-700">
       <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-4">
         Related Tools
       </h3>
@@ -51,20 +51,20 @@ const CrossToolLinks: React.FC = () => {
           <Link
             key={link.to}
             to={link.to}
-            className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors group"
+            className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-neutral-700/50 transition-colors group"
           >
             {link.icon}
             <div className="flex-1 min-w-0">
               <div className="text-sm font-bold text-gray-900 dark:text-white">
                 {link.title}
               </div>
-              <div className="text-xs text-gray-500 dark:text-gray-400 truncate">
+              <div className="text-xs text-gray-500 dark:text-neutral-400 truncate">
                 {link.description}
               </div>
             </div>
             <ChevronRight
               size={16}
-              className="text-gray-300 dark:text-gray-600 group-hover:text-gray-500 dark:group-hover:text-gray-400 transition-colors flex-shrink-0"
+              className="text-gray-300 dark:text-neutral-600 group-hover:text-gray-500 dark:group-hover:text-gray-400 transition-colors flex-shrink-0"
             />
           </Link>
         ))}

@@ -313,7 +313,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             If parenting feels harder than it used to be, you're not imagining it—modern parenting culture has created historically unprecedented expectations that leave parents exhausted, guilty, and burned out.
           </p>
           <p className="mb-6">
@@ -573,7 +573,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You love your children deeply. And sometimes you yell at them, lose your temper, say things you regret. If this resonates, you're not alone—and you're not a bad parent.
           </p>
           <p className="mb-6">
@@ -723,7 +723,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
                     <li><strong>Discuss what you'll do differently next time:</strong> "Next time I feel that angry, I'm going to take a timeout before I say anything." Modeling the intention to change teaches accountability and growth mindset.</li>
                     <li><strong>Follow through on change:</strong> If you apologize repeatedly but never change the pattern, the apology loses meaning. Repair must be paired with genuine effort to do better.</li>
                   </ul>
-                  <p className="mt-4 text-sm text-gray-600 dark:text-gray-400"><em>Research shows that repair after conflict prevents lasting harm and actually teaches children vital lessons about accountability, emotion regulation, and relationship resilience.<Citation id="4" index={4} source="Parenting" year="2020" tier={1} /></em></p>
+                  <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400"><em>Research shows that repair after conflict prevents lasting harm and actually teaches children vital lessons about accountability, emotion regulation, and relationship resilience.<Citation id="4" index={4} source="Parenting" year="2020" tier={1} /></em></p>
                 </div>
               ),
             },
@@ -833,7 +833,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Stay-at-home parenting is one of the most meaningful roles you can choose—and one of the most isolating, undervalued, and emotionally complex.
           </p>
           <p className="mb-6">
@@ -1076,7 +1076,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             If screen time battles are the most exhausting part of your parenting day, you're not alone—and you're not doing it wrong. The conflict is often baked into how we approach screens in the first place.
           </p>
           <p className="mb-6">

@@ -106,7 +106,7 @@ export const attachmentStylesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The way you love as an adult has roots in the relationships you formed in your first years of life. This isn't about blame---it's about understanding a powerful psychological framework that explains why you seek closeness or distance, trust easily or struggle with vulnerability, and react the way you do when relationships feel uncertain.
           </p>
           <p className="mb-6">
@@ -380,7 +380,7 @@ export const attachmentStylesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You check your phone for the tenth time in an hour. Your partner hasn't responded to your text, and your mind floods with explanations: They're upset. They're losing interest. You did something wrong. The anxiety builds until you send another message---then immediately regret it.
           </p>
           <p className="mb-6">
@@ -640,7 +640,7 @@ export const attachmentStylesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your partner says "I love you," and instead of warmth, you feel trapped. They want to spend more time together, and you suddenly remember everything you need to get done alone. Vulnerability feels like weakness. Depending on someone feels dangerous. You pride yourself on not needing anyone---but deep down, the isolation aches.
           </p>
           <p className="mb-6">
@@ -929,7 +929,7 @@ export const attachmentStylesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You want to be close---desperately close. Then, the moment someone gets near, you panic and push them away. You crave connection but expect betrayal. You seek safety in relationships but feel most threatened when you find it. Your partners are confused. You're confused. Nothing feels stable, not even your own feelings.
           </p>
           <p className="mb-6">
@@ -1257,7 +1257,7 @@ export const attachmentStylesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've read about attachment styles. You recognize your pattern---maybe the anxious clinging, the avoidant distance, or the disorganized push-pull. And now you're wondering: Am I stuck like this forever? Can patterns formed in infancy really change decades later?
           </p>
           <p className="mb-6">

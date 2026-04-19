@@ -7,6 +7,7 @@ import {
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import CrisisBanner from './CrisisBanner';
+import { useReducedMotion } from '@/hooks/useReducedMotion';
 
 // interface FooterProps { }
 
@@ -19,6 +20,7 @@ interface FooterLink {
 const Footer: React.FC = () => {
   const footerRef = useRef<HTMLDivElement>(null);
   const currentYear = new Date().getFullYear();
+  const reduced = useReducedMotion();
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -80,7 +82,7 @@ const Footer: React.FC = () => {
         {/* Footer Hero / Statement */}
         <div className="flex flex-col lg:flex-row justify-between items-start mb-24 gap-12">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={reduced ? false : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
@@ -96,13 +98,13 @@ const Footer: React.FC = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={reduced ? false : { opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
             className="flex flex-col gap-8 items-start"
           >
-            <Link to="/about" className="group flex items-center gap-4 text-xl md:text-3xl font-semibold hover:text-teal-600 transition-colors">
+            <Link to="/about" className="group flex items-center gap-4 text-xl md:text-3xl font-semibold hover:text-primary transition-colors">
               Join the movement
               <span className="bg-text-primary text-background rounded-full p-2 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
                 <ArrowRight className="group-hover:-rotate-45 transition-transform duration-300" size={24} />
@@ -113,7 +115,7 @@ const Footer: React.FC = () => {
         </div>
 
         <motion.div
-          initial={{ scaleX: 0 }}
+          initial={reduced ? false : { scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.5, ease: "circOut" }}
@@ -130,7 +132,7 @@ const Footer: React.FC = () => {
           ].map((column, colIndex) => (
             <motion.div
               key={column.title}
-              initial={{ opacity: 0, y: 40 }}
+              initial={reduced ? false : { opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: colIndex * 0.1 }}
@@ -143,7 +145,7 @@ const Footer: React.FC = () => {
                       to={getPath(link.view, link.id)}
                       className="group flex items-center gap-2 text-lg text-text-secondary hover:text-text-primary transition-colors duration-300"
                     >
-                      <ArrowRight size={14} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-teal-600" />
+                      <ArrowRight size={14} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
                       <span className="group-hover:translate-x-1 transition-transform">{link.name}</span>
                     </Link>
                   </li>
@@ -159,7 +161,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-end gap-4 text-xs text-text-tertiary font-medium tracking-wide text-right">
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-2 text-text-primary hover:text-teal-600 transition-colors mb-4 text-sm font-bold uppercase tracking-widest group"
+              className="flex items-center gap-2 text-text-primary hover:text-primary transition-colors mb-4 text-sm font-bold uppercase tracking-widest group"
             >
               Back to Top <ArrowUp size={16} className="group-hover:-translate-y-1 transition-transform" />
             </button>

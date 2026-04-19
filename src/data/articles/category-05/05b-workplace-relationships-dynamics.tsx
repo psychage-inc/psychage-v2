@@ -95,7 +95,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Despite promotions, accomplishments, and external validation, many high-achieving professionals feel like frauds---convinced they've somehow fooled everyone and will eventually be exposed as incompetent. This imposter phenomenon affects up to 70% of people at some point, particularly during transitions or new challenges.
           </p>
           <p className="mb-6">
@@ -372,7 +372,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Feedback---information about performance that enables adjustment---is essential for growth. Yet both giving and receiving it triggers anxiety: fear of hurting feelings, damaging relationships, or discovering you're inadequate. These emotional barriers prevent the very learning feedback enables.
           </p>
           <p className="mb-6">
@@ -380,7 +380,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
           </p>
         </div>
 
-        <h2 id="barriers" className="text-3xl font-display font-bold text-gray-900 dark:text-gray-300 mt-12 mb-6 scroll-mt-32">
+        <h2 id="barriers" className="text-3xl font-display font-bold text-gray-900 dark:text-neutral-300 mt-12 mb-6 scroll-mt-32">
           Why Feedback Triggers Anxiety
         </h2>
         <p className="mb-6">
@@ -670,7 +670,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             We spend more waking hours with coworkers than family or friends. It's natural that friendships form---yet workplace friendships exist in ambiguous territory between professional and personal, creating both significant benefits and potential complications.
           </p>
           <p className="mb-6">
@@ -918,7 +918,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Diversity, equity, and inclusion (DEI) initiatives are often framed as business imperatives or moral obligations. Less discussed but equally important: DEI is fundamentally a mental health issue. Workplaces where people feel they don't belong, face discrimination, or must hide aspects of identity exact severe psychological costs.
           </p>
           <p className="mb-6">
@@ -1200,7 +1200,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The shift to remote and hybrid work fundamentally changes team dynamics. Without physical co-location, teams lose casual hallway conversations, spontaneous collaboration, and the non-verbal trust-building that happens through proximity. Building cohesive remote teams requires intentional strategies to replace what in-person work provided automatically.
           </p>
           <p className="mb-6">

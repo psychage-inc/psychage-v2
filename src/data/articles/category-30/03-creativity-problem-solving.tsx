@@ -65,7 +65,7 @@ export const creativityProblemsolvingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Creativity—the production of ideas or artifacts that are both novel and useful—is among the most valued and most misunderstood of human capacities. Popular mythology portrays creativity as a rare gift possessed by exceptional individuals: the artist struck by inspiration, the scientist experiencing a sudden breakthrough, the inventor who sees what others cannot.
           </p>
         </div>
@@ -116,7 +116,7 @@ export const creativityProblemsolvingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -179,7 +179,7 @@ export const creativityProblemsolvingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Problem-solving—the cognitive process of finding a path from a current state to a desired goal when the path is not immediately obvious—is perhaps the most practically important of all cognitive abilities. Every meaningful challenge in human life, from repairing a broken appliance to navigating a career crisis to managing a chronic illness, requires the identification of obstacles and the generation of strategies to overcome them.
           </p>
         </div>
@@ -223,7 +223,7 @@ export const creativityProblemsolvingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -286,7 +286,7 @@ export const creativityProblemsolvingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Curiosity—the desire to know something that is currently unknown—is one of the most powerful and most underappreciated drivers of human behavior. It motivates exploration, sustains learning, enhances memory, and promotes the kind of open engagement with the world that underlies both intellectual achievement and psychological wellbeing.
           </p>
         </div>
@@ -332,7 +332,7 @@ export const creativityProblemsolvingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -395,7 +395,7 @@ export const creativityProblemsolvingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Innovation—the successful implementation of novel ideas—is universally celebrated and widely resisted. Organizations, institutions, and societies proclaim their commitment to innovation while systematically rejecting the novel ideas that innovation requires.
           </p>
         </div>
@@ -438,7 +438,7 @@ export const creativityProblemsolvingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -501,7 +501,7 @@ export const creativityProblemsolvingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Imagination—the capacity to mentally represent situations, events, and possibilities that are not present to the senses—is among the most distinctively human cognitive abilities. While other species show rudimentary forms of future planning, the human capacity for imagination is unparalleled in its scope, flexibility, and complexity.
           </p>
         </div>
@@ -545,7 +545,7 @@ export const creativityProblemsolvingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -608,7 +608,7 @@ export const creativityProblemsolvingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Brainstorming—the group idea generation technique in which participants are encouraged to produce as many ideas as possible without criticism—is one of the most widely used creativity techniques in business, education, and organizational life. It is also one of the most extensively studied and most consistently disappointing.
           </p>
         </div>
@@ -651,7 +651,7 @@ export const creativityProblemsolvingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -714,7 +714,7 @@ export const creativityProblemsolvingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Learning—the process by which experience produces lasting changes in knowledge, skills, and behavior—is the cognitive capacity that underlies all human adaptation, growth, and achievement. Yet the popular understanding of how learning works is dominated by intuitions that research consistently contradicts.
           </p>
         </div>
@@ -762,7 +762,7 @@ export const creativityProblemsolvingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -825,7 +825,7 @@ export const creativityProblemsolvingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Expertise—the exceptional performance that distinguishes masters from novices in any domain—has fascinated psychologists for over a century. What makes an expert? Is exceptional performance the product of innate talent, accumulated practice, or some interaction between the two? Research spanning chess, music, sports, medicine, and numerous other domains has converged on a set of findings that challenge both the &quot;born genius&quot; mythology and the simplistic &quot;practice makes perfect&quot; alternative.
           </p>
         </div>
@@ -868,7 +868,7 @@ export const creativityProblemsolvingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -931,7 +931,7 @@ export const creativityProblemsolvingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Play—voluntary, intrinsically motivated activity pursued for its own sake—is universally recognized as essential for children&apos;s development. What is far less recognized is that play remains essential throughout the lifespan.
           </p>
         </div>
@@ -976,7 +976,7 @@ export const creativityProblemsolvingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1039,7 +1039,7 @@ export const creativityProblemsolvingArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Intellectual humility—the recognition that one&apos;s knowledge is limited, one&apos;s beliefs may be wrong, and one&apos;s perspective is partial—is among the most valuable and most difficult of cognitive virtues. Research demonstrates that intellectual humility enhances learning (humble learners seek information that challenges their current understanding), improves decision-making (humble decision-makers consider more alternatives and update their beliefs in response to evidence), strengthens relationships (humble communicators are more open to others&apos; perspectives and more effective at resolving disagreements), and promotes wellbeing (humble individuals experience less defensive anxiety and more openness to growth).
           </p>
         </div>
@@ -1083,7 +1083,7 @@ export const creativityProblemsolvingArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

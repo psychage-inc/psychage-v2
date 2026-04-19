@@ -70,7 +70,7 @@ export const MythVsFactBlock: React.FC<MythVsFactBlockProps> = ({
 
       {/* Source Citation */}
       {source && (
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-3 text-center italic">
+        <p className="text-sm text-text-tertiary mt-3 text-center italic">
           Source: {source}
         </p>
       )}

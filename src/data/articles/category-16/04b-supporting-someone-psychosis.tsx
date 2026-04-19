@@ -75,7 +75,7 @@ export const supportingSomeoneArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A person with cancer receives sympathy. A person with a broken leg receives
             practical help. A person with schizophrenia receives fear, avoidance, and a
             lifetime of subtle and not-so-subtle exclusion. Stigma against psychotic
@@ -266,7 +266,7 @@ export const supportingSomeoneArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When a parent has psychosis, the children are often the invisible patients. The
             clinical focus lands --- understandably --- on the person who is unwell. The
             partner or other family members become the identified caregivers. And the
@@ -455,7 +455,7 @@ export const supportingSomeoneArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             No one tells you how lonely psychosis can
             be <Citation id="4" index={4} source="Schizophrenia Bulletin" year="2020" tier={1} />.
             The voices may be constant companions, but they're poor substitutes for
@@ -634,7 +634,7 @@ export const supportingSomeoneArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Money problems aren't a side issue in psychosis --- they're a central one.
             When you can't pay rent, every other aspect of recovery is threatened. When
             an acute episode leads to impulsive spending, the financial consequences
@@ -797,7 +797,7 @@ export const supportingSomeoneArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The first psychotic crisis hits like an earthquake --- sudden, disorienting,
             and without a playbook. But subsequent episodes don't need to feel the same
             way. With approximately 80% of people who experience a first psychotic

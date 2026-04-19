@@ -31,7 +31,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
       {backLink && (
         <Link
           to={backLink.href}
-          className="flex items-center gap-2 text-gray-400 hover:text-gray-900 dark:hover:text-white font-bold text-sm uppercase tracking-wider transition-colors mb-6"
+          className="flex items-center gap-2 text-text-tertiary hover:text-text-primary font-bold text-sm uppercase tracking-wider transition-colors mb-6"
         >
           <ArrowLeft size={16} />
           {backLink.label}
@@ -46,7 +46,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-4">
             {icon && (
-              <div className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0" style={{ backgroundColor: 'color-mix(in srgb, var(--color-primary) 12%, transparent)' }}>
+              <div className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 bg-primary/10">
                 {icon}
               </div>
             )}
@@ -56,11 +56,11 @@ const PageHeader: React.FC<PageHeaderProps> = ({
                   {badge}
                 </span>
               )}
-              <h1 className="font-display font-bold text-3xl md:text-4xl text-gray-900 dark:text-white tracking-tight">
+              <h1 className="font-display font-bold text-3xl md:text-4xl text-text-primary tracking-tight">
                 {title}
               </h1>
               {subtitle && (
-                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1 max-w-xl">
+                <p className="text-text-secondary text-sm mt-1 max-w-xl">
                   {subtitle}
                 </p>
               )}

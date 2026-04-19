@@ -9,14 +9,14 @@ describe('ThemeContext', () => {
         document.documentElement.classList.remove('light', 'dark');
     });
 
-    it('should default to system theme', () => {
+    it('should default to light theme', () => {
         const { result } = renderHook(() => useTheme(), {
             wrapper: ThemeProvider,
         });
 
-        expect(result.current.theme).toBe('system');
-        // resolvedTheme depends on system preference (jsdom defaults to light)
-        expect(['light', 'dark']).toContain(result.current.resolvedTheme);
+        expect(result.current.theme).toBe('light');
+        expect(result.current.resolvedTheme).toBe('light');
+        expect(result.current.isDark).toBe(false);
     });
 
     it('should apply theme class to document root', () => {
@@ -31,13 +31,12 @@ describe('ThemeContext', () => {
         expect(hasThemeClass).toBe(true);
     });
 
-    it('should toggle between light, dark, and system', () => {
+    it('should toggle between light and dark', () => {
         const { result } = renderHook(() => useTheme(), {
             wrapper: ThemeProvider,
         });
 
-        // Default is system — toggle to light
-        act(() => result.current.setTheme('light'));
+        // Default is light
         expect(result.current.theme).toBe('light');
         expect(result.current.isDark).toBe(false);
 
@@ -46,9 +45,10 @@ describe('ThemeContext', () => {
         expect(result.current.theme).toBe('dark');
         expect(result.current.isDark).toBe(true);
 
-        // Toggle to system
+        // Toggle back to light
         act(() => result.current.toggleTheme());
-        expect(result.current.theme).toBe('system');
+        expect(result.current.theme).toBe('light');
+        expect(result.current.isDark).toBe(false);
     });
 
     it('should persist theme to localStorage', () => {

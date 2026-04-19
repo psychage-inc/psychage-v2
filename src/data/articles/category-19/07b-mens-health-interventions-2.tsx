@@ -79,7 +79,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When we talk about interventions for men's mental health, we typically think of therapy,
             medication, or support groups. Rarely does volunteering make the list. Yet a growing body
             of research suggests that service-oriented activity may be one of the most effective and
@@ -515,7 +515,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Ask a man how he feels, and if he is honest, the answer is often "angry." Not because
             anger is his only emotion, but because it may be the only one he has been taught to
             recognize. For many men, anger serves as a universal translator --- converting hurt into
@@ -922,7 +922,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When a man loses his job, something beyond employment disappears. For many men,
             work is not just what they do --- it is who they are. The provider role, deeply
             encoded in masculine identity, means that financial capacity becomes inseparable
@@ -1299,7 +1299,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There are things a man can say with a guitar that he cannot say with words. There
             are feelings that emerge on a canvas that never surface in conversation. There are
             truths written in a journal at midnight that would never be spoken aloud. Creative
@@ -1700,7 +1700,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Humor is so deeply woven into masculine social life that we rarely question it.
             Men bond through jokes. They process hardship through sarcasm. They deflect
             emotional conversations with wit. They measure social status partly by who is

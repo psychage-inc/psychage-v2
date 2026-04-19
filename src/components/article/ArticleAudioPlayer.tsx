@@ -222,7 +222,7 @@ const ArticleAudioPlayer: React.FC<ArticleAudioPlayerProps> = ({
     return (
         <div
             className={cn(
-                'flex items-center gap-3 bg-white dark:bg-gray-900/60 border border-border rounded-full px-4 py-2 shadow-sm',
+                'flex items-center gap-3 bg-surface border border-border rounded-full px-4 py-2 shadow-sm',
                 className,
             )}
             role="region"
@@ -267,7 +267,7 @@ const ArticleAudioPlayer: React.FC<ArticleAudioPlayerProps> = ({
 
             {/* Progress bar */}
             <div className="flex-1 min-w-0">
-                <div className="relative h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                <div className="relative h-1.5 bg-surface-hover rounded-full overflow-hidden">
                     <div
                         className="absolute inset-y-0 left-0 bg-primary rounded-full transition-all duration-200"
                         style={{ width: `${progress}%` }}

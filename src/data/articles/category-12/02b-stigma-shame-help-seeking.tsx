@@ -131,7 +131,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "That project is so OCD.", "My boss is bipolar.", "This weather is schizophrenic.", "I\'m so depressed about missing that concert." These casual uses of mental health language trivialize real conditions and reinforce stigma. Words matter---they shape how we think about mental illness, how people with mental health conditions see themselves, and whether people seek help.
           </p>
           <p className="mb-6">
@@ -587,7 +587,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "It\'s okay to not be okay.", "End the stigma.", "Mental health matters." For decades, campaigns have tried to change public attitudes about mental illness. Some have worked. Many have not. The difference lies not in good intentions, but in understanding the psychology of stigma and using evidence-based strategies.
           </p>
           <p className="mb-6">
@@ -1069,7 +1069,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A Gen Z college student casually mentions seeing their therapist on Instagram. Their Baby Boomer grandparent is horrified---in their generation, mental health treatment was shameful and hidden. A Millennial discusses burnout openly at work. Their Gen X manager, who learned to suffer in silence, does not know how to respond. These generational divides in mental health attitudes create misunderstanding, conflict, and missed opportunities for support.
           </p>
           <p className="mb-6">
@@ -1532,7 +1532,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When Demi Lovato disclosed bipolar disorder, searches for mental health resources spiked 500%. When Robin Williams died by suicide, suicide rates increased for weeks afterward. When Simone Biles withdrew from Olympics competition to protect her mental health, the response was both praise and backlash. Celebrity mental health disclosure is powerful---but the effects are complex and sometimes contradictory.
           </p>
           <p className="mb-6">
@@ -1938,7 +1938,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Let me know if you need anything" is well-intentioned but rarely helpful. "Have you tried yoga?" can be dismissive. "You don\'t seem depressed' invalidates invisible illness. Being a mental health ally requires more than good intentions---it requires understanding what truly helps and committing to specific, ongoing actions.
           </p>
           <p className="mb-6">

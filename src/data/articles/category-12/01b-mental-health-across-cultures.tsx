@@ -121,7 +121,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Black Americans are 20% more likely to experience serious mental health conditions than the general population, yet only one in three receives treatment <Citation id="1" index={1} source="American Journal of Psychiatry" year="2021" tier={1} />. This gap is not about need---it reflects centuries of systemic barriers, cultural mistrust of medical systems, and a mental health field that has historically pathologized Black experiences.
           </p>
           <p className="mb-6">
@@ -489,7 +489,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In many Middle Eastern communities, a young woman struggling with depression might hide her symptoms to protect her marriage prospects. A father experiencing anxiety might visit a physician for headaches rather than admit emotional distress. A family might consult an imam before---or instead of---a mental health professional. These patterns reflect cultural values where family honor, religious faith, and social reputation profoundly shape mental health experiences.
           </p>
           <p className="mb-6">
@@ -875,7 +875,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A young Indian woman earning a prestigious degree might still hide depression from her parents, fearing it will damage her marriage prospects. A Pakistani man experiencing anxiety might describe only physical symptoms to his doctor, never mentioning the emotional distress. A Bangladeshi teenager might feel torn between parental expectations and personal dreams, unable to voice the conflict without feeling disloyal.
           </p>
           <p className="mb-6">
@@ -1252,7 +1252,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             An Anishinaabe elder conducts a smudging ceremony with sage to cleanse negative energy. A Maori community gathers for a powhiri (welcoming ritual) to restore social bonds. A Navajo family seeks a traditional healing ceremony alongside psychiatric medication for a relative experiencing psychosis. These are not alternatives to mental health care---they are Indigenous approaches to wellness that Western psychiatry is finally beginning to recognize and respect.
           </p>
           <p className="mb-6">
@@ -1665,7 +1665,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For most of the 20th century, psychology claimed to study universal human nature. Yet 96% of research participants came from Western, Educated, Industrialized, Rich, Democratic (WEIRD) societies---just 12% of the world's population <Citation id="1" index={1} source="Behavioral and Brain Sciences" year="2010" tier={1} />. When cross-cultural researchers finally began studying the other 88%, they discovered something startling: many "universal" truths of psychology were culturally specific to the West.
           </p>
           <p className="mb-6">

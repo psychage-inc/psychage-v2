@@ -113,7 +113,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             If you've been prescribed medication for depression or anxiety, there's a good chance it's an SSRI. Selective Serotonin Reuptake Inhibitors are the most commonly prescribed antidepressants in the world, used by millions of people to manage depression, anxiety disorders, OCD, and other conditions <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />. But what exactly are they, and how do they work?
           </p>
           <p className="mb-6">
@@ -465,7 +465,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             SSRIs are often the first medication tried for depression or anxiety --- but they're far from the only option. If SSRIs haven't worked well for you, or if you need medication for a different type of condition, your doctor might recommend an SNRI, tricyclic antidepressant, MAOI, or one of several atypical antidepressants <Citation id="1" index={1} source="The Lancet" year="2018" tier={1} />.
           </p>
           <p className="mb-6">
@@ -842,7 +842,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             While antidepressants like SSRIs are often the first-line treatment for anxiety disorders, there are medications specifically designed to reduce anxiety symptoms more quickly. The most well-known are benzodiazepines --- fast-acting medications that can provide rapid relief but carry risks of dependence <Citation id="1" index={1} source="JAMA Psychiatry" year="2022" tier={1} />.
           </p>
           <p className="mb-6">
@@ -1202,7 +1202,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mood stabilizers are the cornerstone of bipolar disorder treatment. Unlike antidepressants that primarily target depression, mood stabilizers prevent both manic/hypomanic episodes and depressive episodes, helping maintain a stable mood baseline <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
@@ -1601,7 +1601,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Despite the name, antipsychotic medications aren't only for psychosis. They're used to treat schizophrenia, bipolar disorder, severe depression, agitation, and other conditions. Understanding how these medications work, their side effects, and who they help can reduce stigma and support informed treatment decisions <Citation id="1" index={1} source="The Lancet" year="2020" tier={1} />.
           </p>
           <p className="mb-6">

@@ -114,7 +114,7 @@ export const traumaResponsesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When your brain detects danger, it doesn't stop to think---it reacts. In milliseconds, your nervous system chooses a survival strategy: fight the threat, flee from it, freeze in place, or appease it. These aren't conscious choices. They're automatic responses hardwired into your biology, shaped by evolution and your personal history.
           </p>
           <p className="mb-6">
@@ -413,7 +413,7 @@ export const traumaResponsesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You say yes when you mean no. You apologize for things that aren't your fault. You shape-shift to match whoever you're with, losing track of your own preferences. You take responsibility for other people's emotions---and when they're unhappy, you feel like you've failed. This isn't kindness. It's the fawn response: a survival strategy born from environments where your safety depended on keeping others calm and pleased.
           </p>
           <p className="mb-6">
@@ -686,7 +686,7 @@ export const traumaResponsesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your mind goes blank. Your body won't move. You feel detached, like you're watching from outside yourself. Time slows down or speeds up. You can't speak, can't run, can't fight. This is the freeze response---your nervous system's last-resort defense when fight and flight aren't possible. It's not a failure of courage. It's ancient biology protecting you the only way it can.
           </p>
           <p className="mb-6">
@@ -942,7 +942,7 @@ export const traumaResponsesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You ask yourself the question that won't stop: <em>Why didn't I fight back?</em> Your body was there. You were conscious. But you couldn't move, couldn't scream, couldn't push them away. And now you wonder if your stillness meant consent, if your frozen body betrayed you, if it was somehow your fault. The answer is clear, and it's rooted in biology: You experienced tonic immobility---an involuntary survival response that has nothing to do with choice.
           </p>
           <p className="mb-6">
@@ -1231,7 +1231,7 @@ export const traumaResponsesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A smell. A sound. A particular shade of light. Suddenly your heart is racing, your hands are shaking, and you're back <em>there</em>---not remembering the trauma, but <em>reliving</em> it. Your rational mind knows you're safe, but your body doesn't believe it. This is a trauma trigger: a sensory or emotional cue that activates your nervous system's alarm, pulling you back into the past as if the threat is happening right now.
           </p>
           <p className="mb-6">

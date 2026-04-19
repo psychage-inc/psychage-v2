@@ -27,7 +27,7 @@ type View = 'dashboard' | 'add' | 'edit' | 'history' | 'insights' | 'export';
 
 /** Shared page shell -- clean white bg, centered content, navbar clearance */
 const PageShell: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div className="min-h-screen bg-white dark:bg-slate-950 pt-24 pb-16 px-4 sm:px-6">
+  <div className="min-h-screen bg-white dark:bg-neutral-950 pt-24 pb-16 px-4 sm:px-6">
     <div className="mx-auto w-full max-w-2xl">{children}</div>
   </div>
 );
@@ -133,16 +133,16 @@ const MedicationTracker: React.FC = () => {
         <div className="flex items-center gap-3 mb-8">
           <button
             onClick={() => setView('dashboard')}
-            className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-neutral-800 transition-colors"
             aria-label="Back to dashboard"
           >
-            <ArrowLeft size={20} className="text-slate-600 dark:text-slate-400" />
+            <ArrowLeft size={20} className="text-slate-600 dark:text-neutral-400" />
           </button>
           <h2 className="font-display text-2xl font-semibold text-slate-900 dark:text-white">
             Adherence Insights
           </h2>
         </div>
-        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+        <div className="bg-white dark:bg-neutral-900 rounded-2xl border border-slate-200 dark:border-neutral-800 p-6 shadow-sm">
           <AdherenceChart data={data} />
         </div>
       </PageShell>
@@ -169,7 +169,7 @@ const MedicationTracker: React.FC = () => {
   const completedDoses = todaySchedule.filter((d) => d.logged);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-950 pt-24 pb-16 px-4 sm:px-6">
+    <div className="min-h-screen bg-white dark:bg-neutral-950 pt-24 pb-16 px-4 sm:px-6">
       <SEO title="Medication Tracker | Psychage" description="Track your medication schedule, log doses, and monitor adherence over time." />
       <div className="mx-auto w-full max-w-2xl">
 
@@ -177,7 +177,7 @@ const MedicationTracker: React.FC = () => {
         <div className="mb-10">
           <button
             onClick={() => navigate('/tools')}
-            className="flex items-center gap-1.5 text-slate-400 hover:text-slate-900 dark:hover:text-white text-xs font-semibold uppercase tracking-wider mb-6 transition-colors"
+            className="flex items-center gap-1.5 text-slate-400 dark:text-neutral-500 hover:text-slate-900 dark:hover:text-white text-xs font-semibold uppercase tracking-wider mb-6 transition-colors"
           >
             <ArrowLeft size={14} />
             Back to Tools
@@ -194,7 +194,7 @@ const MedicationTracker: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-1.5 text-xs text-slate-400 dark:text-slate-500 mt-2 ml-[52px]">
+          <div className="flex items-center gap-1.5 text-xs text-slate-400 dark:text-neutral-500 mt-2 ml-[52px]">
             <ShieldCheck size={13} className="text-emerald-500/70" />
             <span>All data stays on your device</span>
           </div>
@@ -203,27 +203,27 @@ const MedicationTracker: React.FC = () => {
         {/* ── Stats Overview ────────────────────────────────────────── */}
         {activeMeds.length > 0 && (
           <div className="grid grid-cols-3 gap-4 mb-10">
-            <div className="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 text-center shadow-sm">
+            <div className="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-4 text-center shadow-sm">
               <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 tabular-nums">
                 {overallAdherence.percentage}%
               </p>
-              <p className="text-[11px] font-medium text-slate-500 dark:text-slate-400 mt-0.5 uppercase tracking-wide">
+              <p className="text-[11px] font-medium text-slate-500 dark:text-neutral-400 mt-0.5 uppercase tracking-wide">
                 7-day adherence
               </p>
             </div>
-            <div className="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 text-center shadow-sm">
+            <div className="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-4 text-center shadow-sm">
               <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 tabular-nums">
                 {overallAdherence.currentStreak}
               </p>
-              <p className="text-[11px] font-medium text-slate-500 dark:text-slate-400 mt-0.5 uppercase tracking-wide">
+              <p className="text-[11px] font-medium text-slate-500 dark:text-neutral-400 mt-0.5 uppercase tracking-wide">
                 Day streak
               </p>
             </div>
-            <div className="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 text-center shadow-sm">
+            <div className="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-4 text-center shadow-sm">
               <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 tabular-nums">
                 {pendingDoses.length}
               </p>
-              <p className="text-[11px] font-medium text-slate-500 dark:text-slate-400 mt-0.5 uppercase tracking-wide">
+              <p className="text-[11px] font-medium text-slate-500 dark:text-neutral-400 mt-0.5 uppercase tracking-wide">
                 Remaining
               </p>
             </div>
@@ -234,12 +234,12 @@ const MedicationTracker: React.FC = () => {
         <section className="mb-10">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
-              <CalendarDays size={16} className="text-slate-400 dark:text-slate-500" />
+              <CalendarDays size={16} className="text-slate-400 dark:text-neutral-500" />
               <h2 className="font-display text-lg font-semibold text-slate-900 dark:text-white">
                 Today&apos;s Schedule
               </h2>
             </div>
-            <span className="text-xs font-medium text-slate-400 dark:text-slate-500">
+            <span className="text-xs font-medium text-slate-400 dark:text-neutral-500">
               {new Date().toLocaleDateString(undefined, {
                 weekday: 'long',
                 month: 'short',
@@ -248,7 +248,7 @@ const MedicationTracker: React.FC = () => {
             </span>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 shadow-sm">
+          <div className="rounded-2xl border border-slate-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-4 shadow-sm">
             <DoseLogger schedule={todaySchedule} onLog={handleLogDose} />
           </div>
 
@@ -274,7 +274,7 @@ const MedicationTracker: React.FC = () => {
         <section className="mb-10">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
-              <Pill size={16} className="text-slate-400 dark:text-slate-500" />
+              <Pill size={16} className="text-slate-400 dark:text-neutral-500" />
               <h2 className="font-display text-lg font-semibold text-slate-900 dark:text-white">
                 My Medications
               </h2>
@@ -289,14 +289,14 @@ const MedicationTracker: React.FC = () => {
           </div>
 
           {data.medications.length === 0 ? (
-            <div className="text-center py-16 rounded-2xl border border-dashed border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900">
-              <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center mx-auto mb-4">
-                <Pill size={28} className="text-slate-300 dark:text-slate-600" />
+            <div className="text-center py-16 rounded-2xl border border-dashed border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900">
+              <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-neutral-800 flex items-center justify-center mx-auto mb-4">
+                <Pill size={28} className="text-slate-300 dark:text-neutral-600" />
               </div>
-              <p className="text-slate-700 dark:text-slate-300 font-medium mb-1">
+              <p className="text-slate-700 dark:text-neutral-300 font-medium mb-1">
                 No medications added yet
               </p>
-              <p className="text-slate-400 dark:text-slate-500 text-sm mb-6 max-w-xs mx-auto">
+              <p className="text-slate-400 dark:text-neutral-500 text-sm mb-6 max-w-xs mx-auto">
                 Add your first medication to start tracking doses and adherence.
               </p>
               <button
@@ -328,7 +328,7 @@ const MedicationTracker: React.FC = () => {
                       <div className="flex gap-2 flex-shrink-0">
                         <button
                           onClick={() => setConfirmDelete(null)}
-                          className="px-3 py-1.5 text-xs font-medium rounded-lg border border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                          className="px-3 py-1.5 text-xs font-medium rounded-lg border border-slate-300 dark:border-neutral-600 text-slate-600 dark:text-neutral-400 hover:bg-slate-50 dark:hover:bg-neutral-800 transition-colors"
                         >
                           Cancel
                         </button>
@@ -354,36 +354,36 @@ const MedicationTracker: React.FC = () => {
               <button
                 onClick={() => setView('history')}
                 className={cn(
-                  'flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm',
+                  'flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 shadow-sm',
                   'hover:border-emerald-300 dark:hover:border-emerald-700 hover:shadow-md transition-all'
                 )}
               >
                 <History size={20} className="text-emerald-600 dark:text-emerald-400" />
-                <span className="text-xs font-semibold text-slate-600 dark:text-slate-300">
+                <span className="text-xs font-semibold text-slate-600 dark:text-neutral-300">
                   History
                 </span>
               </button>
               <button
                 onClick={() => setView('insights')}
                 className={cn(
-                  'flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm',
+                  'flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 shadow-sm',
                   'hover:border-emerald-300 dark:hover:border-emerald-700 hover:shadow-md transition-all'
                 )}
               >
                 <BarChart3 size={20} className="text-emerald-600 dark:text-emerald-400" />
-                <span className="text-xs font-semibold text-slate-600 dark:text-slate-300">
+                <span className="text-xs font-semibold text-slate-600 dark:text-neutral-300">
                   Insights
                 </span>
               </button>
               <button
                 onClick={() => setView('export')}
                 className={cn(
-                  'flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm',
+                  'flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 shadow-sm',
                   'hover:border-emerald-300 dark:hover:border-emerald-700 hover:shadow-md transition-all'
                 )}
               >
                 <Download size={20} className="text-emerald-600 dark:text-emerald-400" />
-                <span className="text-xs font-semibold text-slate-600 dark:text-slate-300">
+                <span className="text-xs font-semibold text-slate-600 dark:text-neutral-300">
                   Export
                 </span>
               </button>

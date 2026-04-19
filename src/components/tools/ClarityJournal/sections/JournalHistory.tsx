@@ -36,7 +36,7 @@ const JournalHistory: React.FC = () => {
           <div>
             <span className="mr-2">{MOOD_EMOJIS[c.mood] || ''}</span>
             Mood: {c.mood}/10 | Energy: {c.energy}/10 | Sleep: {c.sleepHours}h ({c.sleepQuality})
-            {c.oneSentence && <p className="text-xs text-slate-500 mt-1 italic">"{c.oneSentence}"</p>}
+            {c.oneSentence && <p className="text-xs text-slate-500 dark:text-neutral-400 mt-1 italic">"{c.oneSentence}"</p>}
           </div>
         ),
       });
@@ -96,15 +96,15 @@ const JournalHistory: React.FC = () => {
   entries.sort((a, b) => b.date.localeCompare(a.date));
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-6">
+    <div className="min-h-screen bg-gray-50 dark:bg-neutral-900 pt-24 pb-12 px-6">
       <SEO title="History | Clarity Journal" description="View your complete journal history." />
       <div className="container mx-auto max-w-2xl">
         <div className="mb-8"><Breadcrumbs /></div>
-        <button onClick={() => navigate('/tools/clarity-journal')} className="flex items-center gap-2 text-sm text-slate-500 hover:text-teal-600 mb-6 transition-colors">
+        <button onClick={() => navigate('/tools/clarity-journal')} className="flex items-center gap-2 text-sm text-slate-500 dark:text-neutral-400 hover:text-teal-600 mb-6 transition-colors">
           <ArrowLeft className="w-4 h-4" /> Back to Journal
         </button>
 
-        <h1 className="font-display font-bold text-2xl md:text-3xl text-slate-900 mb-6">Journal History</h1>
+        <h1 className="font-display font-bold text-2xl md:text-3xl text-slate-900 dark:text-neutral-100 mb-6">Journal History</h1>
 
         {/* Filters */}
         <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
@@ -113,7 +113,7 @@ const JournalHistory: React.FC = () => {
               key={f.value}
               onClick={() => setFilter(f.value)}
               className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
-                filter === f.value ? 'bg-teal-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                filter === f.value ? 'bg-teal-600 text-white' : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200 dark:hover:bg-neutral-700'
               }`}
             >
               {f.label}
@@ -122,16 +122,16 @@ const JournalHistory: React.FC = () => {
         </div>
 
         {entries.length === 0 ? (
-          <div className="text-center py-12 text-slate-400 text-sm">No entries yet.</div>
+          <div className="text-center py-12 text-slate-400 dark:text-neutral-500 text-sm">No entries yet.</div>
         ) : (
           <div className="space-y-3">
             {entries.map(entry => (
-              <div key={entry.id} className="bg-white rounded-xl p-4 shadow-sm border border-slate-100">
+              <div key={entry.id} className="bg-white dark:bg-neutral-900 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-neutral-800">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-xs font-medium text-teal-600 bg-teal-50 px-2 py-0.5 rounded-full">{entry.type}</span>
-                  <span className="text-xs text-slate-400">{formatDate(entry.date)}</span>
+                  <span className="text-xs text-slate-400 dark:text-neutral-500">{formatDate(entry.date)}</span>
                 </div>
-                <div className="text-sm text-slate-700">{entry.content}</div>
+                <div className="text-sm text-slate-700 dark:text-neutral-300">{entry.content}</div>
               </div>
             ))}
           </div>

@@ -21,8 +21,8 @@ const variants = {
   secondary: "bg-surface-active text-text-primary hover:bg-surface-hover border border-border",
   outline: "border-2 border-border bg-transparent text-text-primary hover:border-primary hover:text-primary",
   ghost: "bg-transparent text-text-secondary hover:bg-surface-hover hover:text-text-primary",
-  glass: "glass text-text-primary hover:bg-white/10 border-white/10",
-  danger: "bg-error text-white hover:bg-red-600"
+  glass: "glass text-text-primary hover:bg-surface-hover border-border/30",
+  danger: "bg-error text-white hover:bg-red-700 dark:hover:bg-red-500"
 };
 
 const sizes = {

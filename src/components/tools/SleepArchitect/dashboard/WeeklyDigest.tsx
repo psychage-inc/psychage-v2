@@ -40,7 +40,7 @@ const WeeklyDigest: React.FC<WeeklyDigestProps> = ({ entries }) => {
           Weekly Summary
         </h4>
       </div>
-      <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+      <p className="text-sm text-gray-700 dark:text-neutral-300 leading-relaxed">
         {digest}
       </p>
     </div>

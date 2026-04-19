@@ -65,7 +65,7 @@ export const moodDisordersArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mood disorders are not neat boxes. They exist on a spectrum, with depression at one end, mania at the other, and many variations in between. Understanding how they relate helps clarify diagnosis and treatment.
           </p>
           <p className="mb-6">
@@ -256,7 +256,7 @@ export const moodDisordersArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Van Gogh. Hemingway. Woolf. Many creative geniuses struggled with mood disorders. But is there a real connection between creativity and bipolar disorder, or is it a dangerous myth?
           </p>
           <p className="mb-6">
@@ -464,7 +464,7 @@ export const moodDisordersArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Half of all mental health conditions begin by age 14. Mood disorders are no exception. Early detection and treatment can change the trajectory of a young person\'s life.
           </p>
           <p className="mb-6">
@@ -741,7 +741,7 @@ export const moodDisordersArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Treatment for mood disorders is evolving rapidly. New medications, digital tools, and personalized approaches offer hope for those who have not responded to traditional treatments.
           </p>
           <p className="mb-6">
@@ -959,7 +959,7 @@ export const moodDisordersArticlesC: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Living well with a mood disorder is possible. It requires ongoing attention, self-awareness, and a toolkit of strategies to maintain stability and quality of life.
           </p>
           <p className="mb-6">

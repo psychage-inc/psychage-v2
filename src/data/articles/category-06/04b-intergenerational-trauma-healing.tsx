@@ -59,7 +59,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your grandmother lost a child but never spoke about it. Your mother grew up in a house filled with unnameable sadness. Now you have anxiety you can't fully explain. This is how unprocessed grief echoes through families.
           </p>
           <p className="mb-6">
@@ -252,7 +252,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A genogram is like a family tree on steroids. It maps not just who's related to whom, but the emotional patterns, relationship dynamics, and mental health patterns that run through your family across generations.
           </p>
           <p className="mb-6">
@@ -443,7 +443,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Healing your family legacy doesn't mean erasing history or pretending pain didn't happen. It means honoring the past while consciously choosing different patterns for yourself and future generations.
           </p>
           <p className="mb-6">
@@ -643,7 +643,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "You need to forgive to move on.", "Holding onto anger only hurts you." We hear these messages constantly, especially about family. But is forgiveness truly necessary for healing? The answer is more complex than you might think.
           </p>
           <p className="mb-6">
@@ -842,7 +842,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "But it's family." These three words carry enormous weight. We're taught that family bonds are sacred, that blood is thicker than water, that you should always try to make it work. But sometimes, the healthiest choice is to step away.
           </p>
           <p className="mb-6">

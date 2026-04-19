@@ -150,7 +150,7 @@ export const ProviderFilterChips: React.FC<ProviderFilterChipsProps> = ({
       ))}
       <button
         onClick={onClearAll}
-        className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors underline underline-offset-2"
+        className="text-sm font-medium text-text-tertiary hover:text-text-secondary transition-colors underline underline-offset-2"
       >
         Clear all
       </button>

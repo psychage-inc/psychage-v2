@@ -109,7 +109,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You\'re sitting in a clinic, trying to explain how you\'re feeling. But the words don\'t translate. The therapist doesn\'t understand why you live with your extended family, why you can\'t 'just set boundaries' with your parents, or why leaving your community feels like betrayal. You\'re told to prioritize yourself---but in your culture, family comes first. No one speaks your language, literally or figuratively.
           </p>
           <p className="mb-6">
@@ -482,7 +482,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "You\'re Asian---you\'re supposed to be good at this.", "At least you don\'t face real racism.", "You\'re so lucky your culture values education and hard work." These statements, often meant as compliments, are pieces of the model minority myth---a stereotype that paints Asian Americans as universally successful, resilient, and problem-free.
           </p>
           <p className="mb-6">
@@ -803,7 +803,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "What are you?", "Where are you from---no, where are you really from?", "You don\'t look [race].", "You\'re not [race] enough." If you\'re multiracial or multicultural, you\'ve likely heard these questions and statements your entire life. You may feel too much of one identity in some spaces, not enough in others, or like you\'re constantly explaining and defending who you are.
           </p>
           <p className="mb-6">
@@ -1126,7 +1126,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You walk into class and scan the room. Once again, you\'re one of the only---or the only---person of color. Your professor mispronounces your name. A classmate asks you to speak for your entire race during a discussion on racism. You\'re expected to educate, explain, and perform gratitude for 'diversity initiatives' while navigating daily microaggressions, tokenization, and isolation.
           </p>
           <p className="mb-6">
@@ -1428,7 +1428,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Evidence-based therapies like Cognitive Behavioral Therapy (CBT), Dialectical Behavior Therapy (DBT), and trauma-focused treatments work---but they were largely developed by and for white, Western populations. When these treatments are applied without modification to people from different cultural backgrounds, they often miss the mark or feel alienating.
           </p>
           <p className="mb-6">

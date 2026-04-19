@@ -102,7 +102,7 @@ export const imposterSyndromeArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When a white man feels like an imposter despite clear competence, it's a psychological pattern. When a woman of color feels like an imposter in the same context, it's a psychological pattern operating within a system that may actually be sending her signals that she doesn't belong. This distinction is critical but often overlooked.
           </p>
           <p className="mb-6">
@@ -471,7 +471,7 @@ export const imposterSyndromeArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Should you take the job offer? End the relationship? Choose the graduate program? For most people, these are challenging decisions. For people with chronic self-doubt, they're paralyzing. The internal dialogue loops endlessly: "What if I'm wrong? What if I regret this? I can't trust my judgment." Decision-making becomes a minefield of potential mistakes, each one "proof" that you shouldn't trust yourself.
           </p>
           <p className="mb-6">
@@ -818,7 +818,7 @@ export const imposterSyndromeArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Imposter syndrome feels permanent---an unchangeable narrative about your inadequacy. But research shows it's not. While 70% of people experience imposter feelings at some point, these feelings are responsive to targeted interventions. You can reduce imposter syndrome, rebuild confidence, and develop a more accurate self-assessment.
           </p>
           <p className="mb-6">
@@ -1212,7 +1212,7 @@ export const imposterSyndromeArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Here's a paradox: the person giving the confident but uninformed opinion at the meeting may genuinely believe they're an expert, while the actual expert sits quietly, doubting their own knowledge. This pattern---novices overestimating their ability while experts underestimate theirs---reflects two mirror-image distortions of self-assessment: the Dunning-Kruger effect and imposter syndrome.
           </p>
           <p className="mb-6">
@@ -1519,7 +1519,7 @@ export const imposterSyndromeArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "I'm a fraud who's fooled everyone." This is not just a thought---it's a narrative, a story you've written about yourself. And like any story, it can be revised. Imposter syndrome isn't a fact about who you are; it's a particular way of interpreting your life. Changing it requires rewriting the narrative from fraud to competent---not through wishful thinking, but through deliberate reconstruction of how you make sense of your experience.
           </p>
           <p className="mb-6">

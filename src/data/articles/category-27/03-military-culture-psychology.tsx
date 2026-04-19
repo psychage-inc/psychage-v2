@@ -65,7 +65,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The dominant narrative of military mental health focuses—understandably—on the psychological wounds of service: PTSD, depression, moral injury, suicide. This focus is necessary and important.
           </p>
         </div>
@@ -107,7 +107,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -170,7 +170,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Military culture is one of the most powerful occupational cultures in existence—shaping identity, values, behavior, and worldview with an intensity that few civilian institutions can match. This culture produces extraordinary capabilities: the ability to function under extreme stress, to suppress fear in the face of danger, to subordinate individual needs to the mission, and to form bonds of loyalty and trust that sustain individuals through experiences that would break most civilians.
           </p>
         </div>
@@ -212,7 +212,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -275,7 +275,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The Reserve and National Guard components—approximately 800,000 service members who maintain civilian careers while serving part-time in the military—represent one of the most underserved populations in military mental health. Since 2001, Reserve and Guard members have been deployed at unprecedented rates, constituting approximately 40% of the total force deployed to Iraq and Afghanistan.
           </p>
         </div>
@@ -319,7 +319,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -382,7 +382,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Military deployment is not a single event—it is a psychological journey through distinct emotional phases that begins long before the service member leaves and continues long after they return. The deployment cycle—typically described as encompassing pre-deployment, deployment, sustainment, re-deployment, and post-deployment/reintegration phases—produces predictable psychological challenges at each stage that affect both the service member and their family.
           </p>
         </div>
@@ -428,7 +428,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -491,7 +491,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Military leadership carries a psychological burden that is qualitatively different from both the stress of combat and the stress of civilian leadership. The military leader is responsible not merely for organizational outcomes but for the lives and deaths of the people they command.
           </p>
         </div>
@@ -535,7 +535,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -598,7 +598,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Combat medics, corpsmen, flight medics, military nurses, and military surgeons occupy a uniquely demanding position in the military ecosystem—they are simultaneously warriors and healers, trained to fight and trained to save lives, expected to perform complex medical procedures under fire while also defending themselves and their patients. This dual role produces psychological demands that are distinct from both pure combat roles and pure healthcare roles.
           </p>
         </div>
@@ -641,7 +641,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -704,7 +704,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Military chaplains occupy a unique and essential position in the mental health ecosystem of the armed forces—they are the only helping professionals in the military who offer absolute confidentiality, who are present in operational environments alongside the troops they serve, and who can address the spiritual and existential dimensions of military experience that mental health professionals are often not trained to engage. Approximately 2,800 active-duty chaplains serve across all branches of the U.
           </p>
         </div>
@@ -748,7 +748,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -811,7 +811,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Special operations forces (SOF)—Navy SEALs, Army Green Berets, Rangers, Marine Raiders, Air Force Special Tactics, and their support personnel—represent the most elite tier of military service, selected through grueling assessment processes designed to identify individuals with extraordinary physical endurance, psychological resilience, cognitive flexibility, and tolerance for ambiguity. These operators conduct the most sensitive, dangerous, and morally complex missions in the military repertoire: direct action raids, hostage rescue, counterterrorism operations, unconventional warfare, and intelligence gathering in hostile environments.
           </p>
         </div>
@@ -852,7 +852,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -915,7 +915,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The emergence of remotely piloted aircraft (RPA) operations—commonly known as drone warfare—has created an entirely new category of military psychological experience that challenges fundamental assumptions about combat, distance, and the psychological cost of killing. RPA operators conduct lethal strikes from control stations thousands of miles from the battlefield, observing targets through high-resolution cameras for hours, days, or weeks before executing strikes—and then watching the aftermath in detail before driving home to have dinner with their families.
           </p>
         </div>
@@ -957,7 +957,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1020,7 +1020,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sleep disorders represent one of the most prevalent, debilitating, and undertreated health consequences of military service—affecting an estimated 50–75% of veterans who seek VA care and serving as both a consequence and a driver of nearly every other mental health condition common in military populations. The relationship between military service and sleep disruption is multifaceted: operational demands normalize sleep deprivation as a badge of toughness; deployment environments produce chronic hypervigilance that prevents restful sleep; combat trauma generates nightmares that transform the bed from a place of rest into a source of dread; blast exposure and traumatic brain injury alter the neurological architecture of sleep; and the transition to civilian life removes the structured schedule that may have partially compensated for poor sleep quality during service.
           </p>
         </div>
@@ -1064,7 +1064,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1127,7 +1127,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The military justice system—governed by the Uniform Code of Military Justice (UCMJ) and administered through a hierarchical structure of non-judicial punishment, administrative separations, and courts-martial—intersects with mental health in ways that profoundly affect service members&apos; lives both during and after military service. Service members whose behavior is influenced by untreated PTSD, traumatic brain injury, military sexual trauma, or other service-connected mental health conditions may face disciplinary action for conduct that is, in significant part, a consequence of those conditions—creating a pipeline from combat trauma to misconduct to less-than-honorable discharge that strips veterans of the very benefits designed to address service-connected conditions.
           </p>
         </div>
@@ -1170,7 +1170,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

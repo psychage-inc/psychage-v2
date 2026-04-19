@@ -57,28 +57,28 @@ const ProviderOnboarding: React.FC = () => {
                     <h1 className="font-display font-bold text-4xl text-gray-900 dark:text-white mb-4">
                         Join the Network
                     </h1>
-                    <p className="text-xl text-gray-500 dark:text-gray-400">
+                    <p className="text-xl text-gray-500 dark:text-neutral-400">
                         Expand your practice and reach patients who need your expertise.
                     </p>
                 </div>
 
                 {step < 5 && (
-                    <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-xl shadow-gray-200/50 dark:shadow-none border border-gray-100 dark:border-gray-800 overflow-hidden">
+                    <div className="bg-white dark:bg-neutral-900 rounded-3xl shadow-xl shadow-gray-200/50 dark:shadow-none border border-gray-100 dark:border-neutral-800 overflow-hidden">
                         {/* Progress Bar */}
-                        <div className="bg-gray-50 dark:bg-gray-800/50 p-6 border-b border-gray-100 dark:border-gray-800">
+                        <div className="bg-gray-50 dark:bg-neutral-800/50 p-6 border-b border-gray-100 dark:border-neutral-800">
                             <div className="flex justify-between items-center relative">
                                 {/* Line */}
-                                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-gray-200 dark:bg-gray-700 -z-10" />
+                                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-gray-200 dark:bg-neutral-700 -z-10" />
 
                                 {steps.map((s) => (
-                                    <div key={s.id} className="flex flex-col items-center gap-2 bg-gray-50 dark:bg-gray-900 px-2">
+                                    <div key={s.id} className="flex flex-col items-center gap-2 bg-gray-50 dark:bg-neutral-900 px-2">
                                         <div className={`
                                             w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm transition-colors
-                                            ${step >= s.id ? 'bg-teal-500 text-white' : 'bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-600 text-gray-400'}
+                                            ${step >= s.id ? 'bg-teal-500 text-white' : 'bg-white dark:bg-neutral-800 border-2 border-gray-200 dark:border-neutral-600 text-gray-400 dark:text-neutral-500'}
                                         `}>
                                             {step > s.id ? <CheckCircle2 size={20} /> : s.id}
                                         </div>
-                                        <span className={`text-xs font-bold uppercase tracking-wider ${step >= s.id ? 'text-teal-600 dark:text-teal-400' : 'text-gray-400'}`}>
+                                        <span className={`text-xs font-bold uppercase tracking-wider ${step >= s.id ? 'text-teal-600 dark:text-teal-400' : 'text-gray-400 dark:text-neutral-500'}`}>
                                             {s.title}
                                         </span>
                                     </div>
@@ -100,32 +100,32 @@ const ProviderOnboarding: React.FC = () => {
                                         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Basic Information</h2>
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                             <div>
-                                                <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">First Name</label>
+                                                <label className="block text-sm font-bold text-gray-700 dark:text-neutral-300 mb-2">First Name</label>
                                                 <input
                                                     name="firstName"
                                                     value={formData.firstName}
                                                     onChange={handleChange}
-                                                    className="w-full h-12 px-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all"
+                                                    className="w-full h-12 px-4 rounded-xl bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all"
                                                 />
                                             </div>
                                             <div>
-                                                <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Last Name</label>
+                                                <label className="block text-sm font-bold text-gray-700 dark:text-neutral-300 mb-2">Last Name</label>
                                                 <input
                                                     name="lastName"
                                                     value={formData.lastName}
                                                     onChange={handleChange}
-                                                    className="w-full h-12 px-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all"
+                                                    className="w-full h-12 px-4 rounded-xl bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all"
                                                 />
                                             </div>
                                         </div>
                                         <div>
-                                            <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+                                            <label className="block text-sm font-bold text-gray-700 dark:text-neutral-300 mb-2">Email Address</label>
                                             <input
                                                 name="email"
                                                 type="email"
                                                 value={formData.email}
                                                 onChange={handleChange}
-                                                className="w-full h-12 px-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all"
+                                                className="w-full h-12 px-4 rounded-xl bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all"
                                             />
                                         </div>
                                     </motion.div>
@@ -141,12 +141,12 @@ const ProviderOnboarding: React.FC = () => {
                                     >
                                         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Professional Credentials</h2>
                                         <div>
-                                            <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">License Type</label>
+                                            <label className="block text-sm font-bold text-gray-700 dark:text-neutral-300 mb-2">License Type</label>
                                             <select
                                                 name="licenseType"
                                                 value={formData.licenseType}
                                                 onChange={handleChange}
-                                                className="w-full h-12 px-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all"
+                                                className="w-full h-12 px-4 rounded-xl bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all"
                                             >
                                                 <option value="">Select License Type</option>
                                                 <option value="MD">MD / DO (Psychiatrist)</option>
@@ -157,12 +157,12 @@ const ProviderOnboarding: React.FC = () => {
                                             </select>
                                         </div>
                                         <div>
-                                            <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">License Number</label>
+                                            <label className="block text-sm font-bold text-gray-700 dark:text-neutral-300 mb-2">License Number</label>
                                             <input
                                                 name="licenseNumber"
                                                 value={formData.licenseNumber}
                                                 onChange={handleChange}
-                                                className="w-full h-12 px-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all"
+                                                className="w-full h-12 px-4 rounded-xl bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all"
                                             />
                                         </div>
                                         <div className="p-6 bg-teal-50 dark:bg-teal-900/20 rounded-xl border border-teal-100 dark:border-teal-800">
@@ -171,7 +171,7 @@ const ProviderOnboarding: React.FC = () => {
                                                 <div>
                                                     <h4 className="font-bold text-teal-900 dark:text-teal-200 mb-1">Upload License Document</h4>
                                                     <p className="text-sm text-teal-700 dark:text-teal-300 mb-3">Please upload a PDF or image of your current state license.</p>
-                                                    <button className="px-4 py-2 bg-white dark:bg-gray-800 rounded-lg text-sm font-bold text-gray-700 dark:text-gray-300 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                                    <button className="px-4 py-2 bg-white dark:bg-neutral-800 rounded-lg text-sm font-bold text-gray-700 dark:text-neutral-300 shadow-sm hover:bg-gray-50 dark:hover:bg-neutral-700 transition-colors">
                                                         Choose File
                                                     </button>
                                                 </div>
@@ -190,21 +190,21 @@ const ProviderOnboarding: React.FC = () => {
                                     >
                                         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Practice Details</h2>
                                         <div>
-                                            <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Practice Name</label>
+                                            <label className="block text-sm font-bold text-gray-700 dark:text-neutral-300 mb-2">Practice Name</label>
                                             <input
                                                 name="practiceName"
                                                 value={formData.practiceName}
                                                 onChange={handleChange}
-                                                className="w-full h-12 px-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all"
+                                                className="w-full h-12 px-4 rounded-xl bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all"
                                             />
                                         </div>
                                         <div>
-                                            <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Office Address</label>
+                                            <label className="block text-sm font-bold text-gray-700 dark:text-neutral-300 mb-2">Office Address</label>
                                             <input
                                                 name="address"
                                                 value={formData.address}
                                                 onChange={handleChange}
-                                                className="w-full h-12 px-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all"
+                                                className="w-full h-12 px-4 rounded-xl bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all"
                                             />
                                         </div>
                                     </motion.div>
@@ -219,21 +219,21 @@ const ProviderOnboarding: React.FC = () => {
                                         className="space-y-6"
                                     >
                                         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Review & Submit</h2>
-                                        <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 space-y-4">
-                                            <div className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-4">
-                                                <span className="text-gray-500 dark:text-gray-400">Name</span>
+                                        <div className="bg-gray-50 dark:bg-neutral-800 rounded-xl p-6 space-y-4">
+                                            <div className="flex justify-between border-b border-gray-200 dark:border-neutral-700 pb-4">
+                                                <span className="text-gray-500 dark:text-neutral-400">Name</span>
                                                 <span className="font-bold text-gray-900 dark:text-white">{formData.firstName} {formData.lastName}</span>
                                             </div>
-                                            <div className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-4">
-                                                <span className="text-gray-500 dark:text-gray-400">Email</span>
+                                            <div className="flex justify-between border-b border-gray-200 dark:border-neutral-700 pb-4">
+                                                <span className="text-gray-500 dark:text-neutral-400">Email</span>
                                                 <span className="font-bold text-gray-900 dark:text-white">{formData.email}</span>
                                             </div>
-                                            <div className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-4">
-                                                <span className="text-gray-500 dark:text-gray-400">License</span>
+                                            <div className="flex justify-between border-b border-gray-200 dark:border-neutral-700 pb-4">
+                                                <span className="text-gray-500 dark:text-neutral-400">License</span>
                                                 <span className="font-bold text-gray-900 dark:text-white">{formData.licenseType} - {formData.licenseNumber}</span>
                                             </div>
                                             <div className="flex justify-between">
-                                                <span className="text-gray-500 dark:text-gray-400">Practice</span>
+                                                <span className="text-gray-500 dark:text-neutral-400">Practice</span>
                                                 <span className="font-bold text-gray-900 dark:text-white">{formData.practiceName}</span>
                                             </div>
                                         </div>
@@ -245,7 +245,7 @@ const ProviderOnboarding: React.FC = () => {
                                 )}
                             </AnimatePresence>
 
-                            <div className="flex justify-between mt-10 pt-6 border-t border-gray-100 dark:border-gray-800">
+                            <div className="flex justify-between mt-10 pt-6 border-t border-gray-100 dark:border-neutral-800">
                                 {step > 1 ? (
                                     <Button variant="outline" onClick={handleBack} leftIcon={<ArrowLeft size={18} />}>
                                         Back
@@ -272,13 +272,13 @@ const ProviderOnboarding: React.FC = () => {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        className="bg-white dark:bg-gray-900 rounded-3xl p-12 text-center shadow-xl border border-gray-100 dark:border-gray-800"
+                        className="bg-white dark:bg-neutral-900 rounded-3xl p-12 text-center shadow-xl border border-gray-100 dark:border-neutral-800"
                     >
                         <div className="w-24 h-24 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center mx-auto mb-6">
                             <CheckCircle2 size={48} />
                         </div>
                         <h2 className="text-3xl font-display font-bold text-gray-900 dark:text-white mb-4">Application Received!</h2>
-                        <p className="text-xl text-gray-500 dark:text-gray-400 mb-8 max-w-lg mx-auto">
+                        <p className="text-xl text-gray-500 dark:text-neutral-400 mb-8 max-w-lg mx-auto">
                             Thank you for applying to join Psychage. Our credentialing team will review your information and contact you within 2-3 business days.
                         </p>
                         <Button onClick={() => navigate('/')} size="lg">

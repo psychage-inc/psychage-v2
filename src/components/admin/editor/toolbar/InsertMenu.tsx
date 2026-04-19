@@ -135,7 +135,7 @@ const InsertMenu: React.FC<InsertMenuProps> = ({ editor }) => {
                   onSelect={() => insertCallout('note')}
                   className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:bg-surface-hover cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
                 >
-                  <StickyNote size={14} className="text-gray-500" /> Note
+                  <StickyNote size={14} className="text-gray-500 dark:text-neutral-400" /> Note
                 </DropdownMenu.Item>
               </DropdownMenu.SubContent>
             </DropdownMenu.Portal>

@@ -33,16 +33,16 @@ const ProviderProfilePage: React.FC = () => {
       <div className="min-h-screen bg-background pt-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="animate-pulse space-y-6">
-            <div className="h-6 w-32 bg-slate-200 dark:bg-slate-700 rounded" />
+            <div className="h-6 w-32 bg-slate-200 dark:bg-neutral-700 rounded" />
             <div className="flex items-center gap-5">
-              <div className="w-20 h-20 rounded-full bg-slate-200 dark:bg-slate-700" />
+              <div className="w-20 h-20 rounded-full bg-slate-200 dark:bg-neutral-700" />
               <div className="space-y-3 flex-1">
-                <div className="h-7 w-64 bg-slate-200 dark:bg-slate-700 rounded" />
-                <div className="h-4 w-40 bg-slate-200 dark:bg-slate-700 rounded" />
+                <div className="h-7 w-64 bg-slate-200 dark:bg-neutral-700 rounded" />
+                <div className="h-4 w-40 bg-slate-200 dark:bg-neutral-700 rounded" />
               </div>
             </div>
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="h-32 bg-slate-200 dark:bg-slate-700 rounded-2xl" />
+              <div key={i} className="h-32 bg-slate-200 dark:bg-neutral-700 rounded-2xl" />
             ))}
           </div>
         </div>
@@ -87,7 +87,7 @@ const ProviderProfilePage: React.FC = () => {
         >
           <button
             onClick={() => navigate(-1)}
-            className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+            className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-teal-600 dark:hover:text-teal-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
           >
             <ArrowLeft size={16} />
             Back to results
@@ -125,11 +125,11 @@ const ProviderProfilePage: React.FC = () => {
         {/* Footer */}
         <div className="mt-12 text-center space-y-2">
           {provider.verified_at && (
-            <p className="text-xs text-gray-400 dark:text-gray-500">
+            <p className="text-xs text-text-tertiary">
               Credentials last verified: {new Date(provider.verified_at).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
             </p>
           )}
-          <p className="text-xs text-gray-400 dark:text-gray-500">
+          <p className="text-xs text-text-tertiary">
             See something wrong?{' '}
             <a
               href={`mailto:info@psychage.com?subject=Provider Profile Concern: ${provider.display_name}&body=Provider ID: ${provider.id}%0A%0APlease describe your concern:`}

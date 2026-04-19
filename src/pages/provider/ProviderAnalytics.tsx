@@ -160,7 +160,7 @@ const ProviderAnalytics: React.FC = () => {
                                     className={cn(
                                         "px-3 py-1.5 text-sm font-medium rounded-md transition-all",
                                         dateRange === option.value
-                                            ? "bg-white text-primary shadow-sm"
+                                            ? "bg-white dark:bg-neutral-900 text-primary shadow-sm"
                                             : "text-text-secondary hover:text-text-primary hover:bg-surface-hover"
                                     )}
                                 >

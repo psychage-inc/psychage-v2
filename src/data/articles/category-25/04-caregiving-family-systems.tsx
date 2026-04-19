@@ -63,7 +63,7 @@ export const caregivingFamilySystemsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Approximately 53 million Americans—one in five adults—provide unpaid care to a family member with a disability, chronic illness, or aging-related need. Caregiving is often framed as a private, voluntary act of love—but it is more accurately understood as an unpaid labor force that saves the US healthcare system an estimated $470 billion annually while producing significant psychological, physical, and financial costs for those who perform it.
           </p>
         </div>
@@ -84,7 +84,7 @@ export const caregivingFamilySystemsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

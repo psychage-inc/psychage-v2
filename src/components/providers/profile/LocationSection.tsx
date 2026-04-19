@@ -28,7 +28,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ provider }) =>
   if (!hasAnyInfo) return null;
 
   return (
-    <section className="rounded-2xl border border-slate-200 bg-white/70 p-6 backdrop-blur-md dark:border-slate-700 dark:bg-slate-800/70">
+    <section className="rounded-2xl border border-slate-200 bg-white/70 p-6 backdrop-blur-md dark:border-neutral-700 dark:bg-neutral-800/70">
       <h2 className="font-display mb-4 text-lg font-bold text-slate-900 dark:text-white">
         Location
       </h2>
@@ -59,14 +59,14 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ provider }) =>
             return (
               <div
                 key={loc.id}
-                className="flex items-start gap-3 rounded-xl border border-slate-100 bg-white/60 p-4 dark:border-slate-600 dark:bg-slate-700/40"
+                className="flex items-start gap-3 rounded-xl border border-slate-100 bg-white/60 p-4 dark:border-neutral-600 dark:bg-neutral-700/40"
               >
                 <MapPin
                   size={18}
                   className="mt-0.5 shrink-0 text-teal-600 dark:text-teal-400"
                 />
                 <div className="min-w-0 flex-1">
-                  <p className="text-sm text-slate-700 dark:text-slate-200">
+                  <p className="text-sm text-slate-700 dark:text-neutral-200">
                     {address}
                   </p>
                   {loc.is_primary && provider.locations.length > 1 && (

@@ -122,7 +122,7 @@ const ProviderApplyForm: React.FC = () => {
               <div
                 className={cn(
                   'h-0.5 w-8 sm:w-12 lg:w-16 transition-colors duration-300',
-                  isCompleted ? 'bg-teal-500' : 'bg-gray-200 dark:bg-gray-700'
+                  isCompleted ? 'bg-teal-500' : 'bg-gray-200 dark:bg-neutral-700'
                 )}
               />
             )}
@@ -131,7 +131,7 @@ const ProviderApplyForm: React.FC = () => {
               onClick={() => goToStep(index)}
               disabled={index > currentStep}
               className={cn(
-                'flex flex-col items-center gap-1.5 group transition-all',
+                'flex flex-col items-center gap-1.5 group transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-lg',
                 index > currentStep && 'cursor-not-allowed opacity-50'
               )}
               aria-label={`Step ${index + 1}: ${step.label}`}
@@ -146,7 +146,7 @@ const ProviderApplyForm: React.FC = () => {
                     'border-teal-500 bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400',
                   !isActive &&
                     !isCompleted &&
-                    'border-gray-300 dark:border-gray-600 text-gray-400 dark:text-gray-500'
+                    'border-gray-300 dark:border-neutral-600 text-gray-400 dark:text-neutral-500'
                 )}
               >
                 {isCompleted ? <Check size={18} /> : <StepIcon size={18} />}
@@ -155,8 +155,8 @@ const ProviderApplyForm: React.FC = () => {
                 className={cn(
                   'text-xs font-medium hidden sm:block',
                   isActive && 'text-teal-600 dark:text-teal-400',
-                  isCompleted && 'text-gray-600 dark:text-gray-300',
-                  !isActive && !isCompleted && 'text-gray-400 dark:text-gray-500'
+                  isCompleted && 'text-gray-600 dark:text-neutral-300',
+                  !isActive && !isCompleted && 'text-gray-400 dark:text-neutral-500'
                 )}
               >
                 {step.label}
@@ -194,7 +194,7 @@ const ProviderApplyForm: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -20 }}
           transition={{ duration: 0.25 }}
-          className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 sm:p-8"
+          className="bg-white dark:bg-neutral-900 rounded-2xl border border-gray-100 dark:border-neutral-800 shadow-sm p-6 sm:p-8"
         >
           {renderStepContent()}
         </motion.div>

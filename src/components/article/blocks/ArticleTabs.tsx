@@ -41,17 +41,17 @@ const ArticleTabs: React.FC<ArticleTabsProps> = ({
             className={`not-prose my-8 ${className}`}
         >
             <Tabs.Root defaultValue={defaultTab || resolvedTabs[0].id}>
-                <Tabs.List className="flex border-b border-gray-200 dark:border-gray-700 overflow-x-auto">
+                <Tabs.List className="flex border-b border-border overflow-x-auto">
                     {resolvedTabs.map((tab) => (
                         <Tabs.Trigger
                             key={tab.id}
                             value={tab.id}
                             className="
                                 flex items-center gap-2 px-4 py-3
-                                text-sm font-medium text-gray-500 dark:text-gray-400
+                                text-sm font-medium text-text-tertiary
                                 whitespace-nowrap
                                 border-b-2 border-transparent
-                                hover:text-gray-700 dark:hover:text-gray-300
+                                hover:text-text-secondary
                                 data-[state=active]:text-teal-600 data-[state=active]:dark:text-teal-400
                                 data-[state=active]:border-teal-500
                                 transition-colors
@@ -68,7 +68,7 @@ const ArticleTabs: React.FC<ArticleTabsProps> = ({
                     <Tabs.Content
                         key={tab.id}
                         value={tab.id}
-                        className="pt-6 text-sm text-gray-700 dark:text-gray-300 leading-relaxed focus:outline-none [&>p]:mb-3 [&>p:last-child]:mb-0"
+                        className="pt-6 text-sm text-text-secondary leading-relaxed focus:outline-none [&>p]:mb-3 [&>p:last-child]:mb-0"
                     >
                         {tab.content ?? tab.description}
                     </Tabs.Content>

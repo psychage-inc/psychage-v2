@@ -76,7 +76,7 @@ export const understandingPsychosisArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A 22-year-old smokes a high-potency cannabis edible at a party. Four hours later, he's
             convinced his friends are plotting against him, hears whispered commentary about his every
             movement, and refuses to leave the bathroom. Is this a drug reaction that will pass? Or is
@@ -284,7 +284,7 @@ export const understandingPsychosisArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A woman sits in an emergency department describing voices she hears throughout the day. The
             psychiatric resident reaches for an antipsychotic prescription pad. But a more detailed
             conversation reveals that the voices aren't external --- they're inside her head, they have
@@ -491,7 +491,7 @@ export const understandingPsychosisArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             She'd never had a psychiatric symptom in her life. Then her mother died unexpectedly, and
             within 48 hours she was hearing her mother's voice, convinced that the hospital had made a
             mistake and her mother was still alive somewhere. She stopped eating, stopped sleeping, and
@@ -715,7 +715,7 @@ export const understandingPsychosisArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Three days after giving birth to a healthy boy, a 31-year-old woman stops sleeping entirely.
             Not just disrupted sleep --- total cessation. By day five, she's pacing the house at 3 a.m.,
             convinced that the hospital swapped her baby with someone else's. By day seven, she's hearing
@@ -938,7 +938,7 @@ export const understandingPsychosisArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A 16-year-old who used to captain the debate team has stopped attending practice. Her grades
             have dropped from A's to C's. She's spending more time alone in her room, and when her parents
             ask what's wrong, she says nothing --- or deflects with irritation. They assume it's normal

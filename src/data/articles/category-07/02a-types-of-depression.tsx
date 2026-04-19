@@ -132,7 +132,7 @@ export const typesOfDepressionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When someone says they have "clinical depression, ' they're usually referring to Major Depressive Disorder (MDD)---the most common and well-studied form of depression. It's distinct from other types of depression in its severity, duration, and the specific symptoms required for diagnosis.
           </p>
           <p className="mb-6">
@@ -846,7 +846,7 @@ export const typesOfDepressionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Imagine waking up with a low-level sense of sadness, fatigue, and hopelessness---not just today, but every day for years. Not severe enough to be completely incapacitating, but persistent enough that you can barely remember what it feels like to be genuinely happy. This is persistent depressive disorder, formerly known as dysthymia.
           </p>
           <p className="mb-6">
@@ -1402,7 +1402,7 @@ export const typesOfDepressionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you're in the depths of depression, it may not matter to you whether it's bipolar or unipolar depression---both feel crushing. But the distinction is critical for treatment. Using antidepressants alone for bipolar depression can worsen outcomes, trigger mania, or destabilize mood cycles. Getting the diagnosis right is essential.
           </p>
           <p className="mb-6">
@@ -1870,7 +1870,7 @@ export const typesOfDepressionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every fall, as days shorten and darkness comes earlier, some people feel a familiar heaviness descending. Energy drains, motivation vanishes, and simple tasks feel overwhelming. Come spring, the cloud lifts as predictably as it arrived. This isn't coincidence or laziness---it's Seasonal Affective Disorder, a pattern of depression synchronized with the seasons.
           </p>
           <p className="mb-6">
@@ -2374,7 +2374,7 @@ export const typesOfDepressionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Society tells new mothers they should be glowing, grateful, blissfully bonded with their baby. So when you instead feel overwhelming sadness, anxiety, emptiness, or rage---when you can't sleep even when the baby sleeps, when you fantasize about running away, when you feel like a failure at the very thing you're 'supposed' to know how to do---the shame compounds the suffering. This is postpartum depression, and it's one of the most common complications of childbirth.
           </p>
           <p className="mb-6">

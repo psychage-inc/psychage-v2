@@ -15,7 +15,7 @@ export const DoseLogger: React.FC<Props> = ({ schedule, onLog }) => {
 
   if (schedule.length === 0) {
     return (
-      <div className="text-center py-8 text-slate-500 dark:text-slate-400">
+      <div className="text-center py-8 text-slate-500 dark:text-neutral-400">
         <Clock size={32} className="mx-auto mb-2 opacity-50" />
         <p className="text-sm">No doses scheduled for today.</p>
         <p className="text-xs mt-1">Add a medication to start tracking.</p>
@@ -53,7 +53,7 @@ export const DoseLogger: React.FC<Props> = ({ schedule, onLog }) => {
                   : dose.logged!.status === 'skipped'
                     ? 'bg-amber-50 dark:bg-amber-900/10 border-amber-200 dark:border-amber-800'
                     : 'bg-red-50 dark:bg-red-900/10 border-red-200 dark:border-red-800'
-                : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700'
+                : 'bg-white dark:bg-neutral-800 border-slate-200 dark:border-neutral-700'
             )}
           >
             <div className="flex items-center gap-3">
@@ -68,7 +68,7 @@ export const DoseLogger: React.FC<Props> = ({ schedule, onLog }) => {
                 <p className="font-medium text-slate-900 dark:text-white text-sm truncate">
                   {dose.medication.name}
                 </p>
-                <p className="text-xs text-slate-500 dark:text-slate-400">
+                <p className="text-xs text-slate-500 dark:text-neutral-400">
                   {dose.medication.dosage} {dose.medication.unit} &middot; {dose.scheduledTime}
                   {' '}&middot; {FREQUENCY_LABELS[dose.medication.frequency]}
                 </p>
@@ -121,7 +121,7 @@ export const DoseLogger: React.FC<Props> = ({ schedule, onLog }) => {
                       setNoteFor(showNote ? null : dose.scheduledISO);
                       setNoteText('');
                     }}
-                    className="p-2 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+                    className="p-2 rounded-lg text-slate-400 dark:text-neutral-500 hover:text-slate-600 hover:bg-slate-100 dark:hover:bg-neutral-700 transition-colors"
                     aria-label="Add note"
                     title="Add note"
                   >
@@ -133,14 +133,14 @@ export const DoseLogger: React.FC<Props> = ({ schedule, onLog }) => {
 
             {/* Note input */}
             {showNote && !isLogged && (
-              <div className="mt-3 pt-3 border-t border-slate-200 dark:border-slate-700">
+              <div className="mt-3 pt-3 border-t border-slate-200 dark:border-neutral-700">
                 <input
                   type="text"
                   value={noteText}
                   onChange={(e) => setNoteText(e.target.value)}
                   placeholder="Optional note (e.g. took with food)"
                   aria-label="Dose note"
-                  className="w-full px-3 py-1.5 text-sm rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-900 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  className="w-full px-3 py-1.5 text-sm rounded-lg border border-slate-200 dark:border-neutral-600 bg-white dark:bg-neutral-900 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                   autoFocus
                 />
               </div>
@@ -148,7 +148,7 @@ export const DoseLogger: React.FC<Props> = ({ schedule, onLog }) => {
 
             {/* Display logged note */}
             {isLogged && dose.logged!.notes && (
-              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2 italic">
+              <p className="text-xs text-slate-500 dark:text-neutral-400 mt-2 italic">
                 {dose.logged!.notes}
               </p>
             )}

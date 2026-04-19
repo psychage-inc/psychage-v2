@@ -113,7 +113,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             ADHD medication doesn't cure ADHD --- but for many people, it makes daily life dramatically more manageable. Tasks that once felt impossible become achievable. Attention stabilizes. Impulsivity decreases. Executive function improves <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
@@ -540,7 +540,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you take psychiatric medication, it's not "fixing" a broken brain --- it's adjusting the chemical balance of neurotransmitters, the messengers that allow brain cells to communicate <Citation id="1" index={1} source="Nature Reviews Neuroscience" year="2021" tier={1} />. But these changes don't happen instantly, and they're more complex than simply "adding more serotonin."
           </p>
           <p className="mb-6">
@@ -860,7 +860,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Side effects are the most common reason people stop taking psychiatric medication --- even when the medication is working <Citation id="5" index={5} source="American Journal of Psychiatry" year="2021" tier={1} />. But many side effects are temporary, manageable, or preventable with simple adjustments.
           </p>
           <p className="mb-6">
@@ -1269,7 +1269,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Starting psychiatric medication feels like a leap of faith. Stopping feels like you're finally free. But both require careful planning --- not sudden decisions. Abruptly stopping medication can cause withdrawal symptoms, trigger relapse, or even be dangerous <Citation id="1" index={1} source="Psychotherapy and Psychosomatics" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
@@ -1659,7 +1659,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The question isn't "medication or therapy?" --- it's "which treatment, or combination of treatments, works best for me?" For decades, research has compared medication, psychotherapy, and combined treatment. The answer is nuanced: both work, but for different people, different conditions, and with different long-term outcomes <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />.
           </p>
           <p className="mb-6">

@@ -26,6 +26,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
   const [specialtySearch, setSpecialtySearch] = useState('');
   const [showAllSpecialties, setShowAllSpecialties] = useState(false);
   const [showAllLanguages, setShowAllLanguages] = useState(false);
+  const [showAllInsurance, setShowAllInsurance] = useState(false);
 
   const toggleArrayParam = (key: keyof ProviderSearchParams, value: string) => {
     const current = (params[key] as string[] | undefined) || [];
@@ -213,7 +214,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
 
             {/* Insurance */}
             <FilterSection title="Insurance">
-              {filters.insurancePlans.slice(0, 15).map(plan => (
+              {(showAllInsurance ? filters.insurancePlans : filters.insurancePlans.slice(0, 15)).map(plan => (
                 <CheckboxItem
                   key={plan.id}
                   label={`${plan.carrier}: ${plan.name}`}
@@ -221,6 +222,15 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
                   onChange={() => toggleArrayParam('insurance_plan_ids', plan.id)}
                 />
               ))}
+              {filters.insurancePlans.length > 15 && (
+                <button
+                  onClick={() => setShowAllInsurance(!showAllInsurance)}
+                  className="text-xs font-medium text-primary hover:text-primary-hover mt-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
+                  aria-expanded={showAllInsurance}
+                >
+                  {showAllInsurance ? 'Show fewer' : `Show all ${filters.insurancePlans.length}`}
+                </button>
+              )}
             </FilterSection>
           </motion.div>
         )}
@@ -258,7 +268,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
                 {isLoading ? (
                   <div className="space-y-4">
                     {[...Array(5)].map((_, i) => (
-                      <div key={i} className="h-8 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+                      <div key={i} className="h-8 bg-gray-200 dark:bg-neutral-700 rounded animate-pulse" />
                     ))}
                   </div>
                 ) : content}
@@ -289,7 +299,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
         {isLoading ? (
           <div className="space-y-4">
             {[...Array(5)].map((_, i) => (
-              <div key={i} className="h-8 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
+              <div key={i} className="h-8 bg-gray-200 dark:bg-neutral-700 rounded animate-pulse" />
             ))}
           </div>
         ) : content}
@@ -313,7 +323,7 @@ const RadioItem: React.FC<{ label: string; checked: boolean; onChange: () => voi
       type="radio"
       checked={checked}
       onChange={onChange}
-      className="w-4 h-4 border-gray-300 dark:border-gray-600 text-primary focus:ring-primary focus:ring-offset-0"
+      className="w-4 h-4 border-gray-300 dark:border-neutral-600 text-primary focus:ring-primary focus:ring-offset-0"
     />
     <span className="text-sm text-text-secondary group-hover:text-text-primary transition-colors">
       {label}
@@ -327,7 +337,7 @@ const CheckboxItem: React.FC<{ label: string; sublabel?: string; checked: boolea
       type="checkbox"
       checked={checked}
       onChange={onChange}
-      className="w-4 h-4 rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary focus:ring-offset-0"
+      className="w-4 h-4 rounded border-gray-300 dark:border-neutral-600 text-primary focus:ring-primary focus:ring-offset-0"
     />
     <span className="text-sm text-text-secondary group-hover:text-text-primary transition-colors">
       {label}

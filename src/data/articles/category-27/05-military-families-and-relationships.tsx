@@ -65,7 +65,7 @@ export const militaryFamiliesAndRelationshipsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When a service member deploys, the entire family deploys. Military families—approximately 2.
           </p>
         </div>
@@ -108,7 +108,7 @@ export const militaryFamiliesAndRelationshipsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -171,7 +171,7 @@ export const militaryFamiliesAndRelationshipsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Military marriage exists at the intersection of two of life&apos;s most demanding commitments—a romantic partnership and military service—and the tension between them shapes every aspect of the relationship. Contrary to popular belief, military divorce rates are not dramatically higher than civilian rates—hovering at approximately 3% annually, comparable to the civilian rate after adjusting for the younger average age of military marriages.
           </p>
         </div>
@@ -214,7 +214,7 @@ export const militaryFamiliesAndRelationshipsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

@@ -76,7 +76,7 @@ export default function WelcomeState({ onSuggestionClick }: WelcomeStateProps) {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2 }}
-          className="text-base text-slate-500 dark:text-slate-400 max-w-md mx-auto mb-4"
+          className="text-base text-slate-500 dark:text-neutral-400 max-w-md mx-auto mb-4"
         >
           Ask me anything about mental health. I'm here to help you learn and understand — not to diagnose.
         </motion.p>
@@ -102,13 +102,13 @@ export default function WelcomeState({ onSuggestionClick }: WelcomeStateProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3 + idx * 0.05 }}
               onClick={() => onSuggestionClick(text)}
-              className="group flex items-start gap-3 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors text-left"
+              className="group flex items-start gap-3 border border-slate-200 dark:border-neutral-700 rounded-xl px-4 py-3 hover:bg-slate-50 dark:hover:bg-neutral-800/50 cursor-pointer transition-colors text-left"
             >
               <Icon
                 size={18}
-                className="text-slate-400 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors shrink-0 mt-0.5"
+                className="text-slate-400 dark:text-neutral-500 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors shrink-0 mt-0.5"
               />
-              <span className="text-sm text-slate-700 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-slate-100 transition-colors">
+              <span className="text-sm text-slate-700 dark:text-neutral-300 group-hover:text-slate-900 dark:group-hover:text-slate-100 transition-colors">
                 {text}
               </span>
             </motion.button>

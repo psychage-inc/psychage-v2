@@ -72,7 +72,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When Margaret turned 76, she attended five funerals in eight months. Her husband of 52 years died in February. Her college roommate passed in April. Her younger brother in June. A close neighbor in August. Her last surviving sibling in October. Between memorial services, she managed her own new diabetes diagnosis and moved from her home of 40 years into a senior community. When her daughter suggested therapy, Margaret said, "I don't even know which loss to grieve first."
           </p>
           <p className="mb-6">
@@ -310,7 +310,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Robert and Helen had been married 58 years when she died after a brief illness. For months afterward, Robert would set two places at the table, make enough coffee for two people, and turn to share observations with someone who was no longer there. "I don't know who I am without her," he told his grief counselor. "We were 'Robert-and-Helen' for so long that I forgot how to be just Robert."
           </p>
           <p className="mb-6">
@@ -521,7 +521,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Dr. Patricia Chen had been a surgeon for 38 years when she retired at 67. She looked forward to travel, reading, and time with grandchildren. Instead, she felt unmoored. "Within weeks, I didn't know what to do with myself," she recalled. "My entire identity was 'Dr. Chen, surgeon.' Without that, I felt like I'd disappeared." Six months into retirement, she was experiencing her first episode of major depression.
           </p>
           <p className="mb-6">
@@ -782,7 +782,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Joan had raised three children in her four-bedroom colonial. She'd hosted countless Thanksgivings, painted every room at least twice, planted the garden, and knew every neighbor on the street. At 78, after her husband died and her mobility declined, her children urged her to move to a senior community. The decision made practical sense, but packing up 42 years of life felt like dismantling her identity. Which memories do you keep? Which do you discard? How do you fit a lifetime into 1,200 square feet?
           </p>
           <p className="mb-6">
@@ -1023,7 +1023,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             At 81, George found himself waking at 3 AM with his heart racing, consumed by thoughts of death. He wasn't actively dying---his health was reasonably good. But each night brought the same overwhelming awareness: time was running out. The panic attacks surprised him. He'd never been particularly anxious before. But now he couldn't stop calculating years left, wondering if he'd see another grandchild born, questioning whether his life had mattered enough.
           </p>
           <p className="mb-6">

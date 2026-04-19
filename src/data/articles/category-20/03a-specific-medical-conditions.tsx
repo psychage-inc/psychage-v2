@@ -72,7 +72,7 @@ export const specificMedicalConditionsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Few words carry the weight that "cancer" does. In a single moment, a diagnosis can fracture
             assumptions about health, mortality, and the future. The medical response begins immediately ---
             scans, biopsies, staging, treatment plans --- but the psychological impact often unfolds more
@@ -530,7 +530,7 @@ export const specificMedicalConditionsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Diabetes is often described as a condition that never takes a day off. Every meal, every
             activity, every moment involves some degree of metabolic calculation --- checking blood sugar,
             adjusting insulin, anticipating the effects of stress or illness on glucose levels. For the
@@ -843,7 +843,7 @@ export const specificMedicalConditionsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The heart has always occupied a unique place in human consciousness --- not just as a pump that
             sustains life but as a symbol of emotion, courage, and vulnerability. It is no accident that we
             say we are "heartbroken" by grief, that fear makes the heart "race," or that anxiety creates a
@@ -1186,7 +1186,7 @@ export const specificMedicalConditionsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Multiple sclerosis occupies a singular place among chronic illnesses. Most conditions affect
             the body and leave the brain to cope with the consequences. MS attacks the brain and spinal
             cord directly, damaging the myelin sheath that insulates nerve fibers and disrupting the
@@ -1520,7 +1520,7 @@ export const specificMedicalConditionsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For centuries, epilepsy was understood through the lens of the supernatural --- a curse, a
             possession, a mark of divine punishment or special insight. Although modern neuroscience has
             established epilepsy as a neurological condition characterized by abnormal electrical activity
@@ -1823,7 +1823,7 @@ export const specificMedicalConditionsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The immune system is designed to protect --- to identify threats, mount defenses, and restore
             health. In autoimmune disease, this protective system turns against the body it was built to
             defend, attacking healthy tissue as though it were a foreign invader. Rheumatoid arthritis

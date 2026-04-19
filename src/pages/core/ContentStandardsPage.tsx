@@ -25,7 +25,7 @@ const TIER_BADGE: Record<number, string> = {
   2: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400',
   3: 'bg-teal-100 text-teal-800 dark:bg-teal-900/30 dark:text-teal-400',
   4: 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400',
-  5: 'bg-gray-100 text-gray-700 dark:bg-slate-700 dark:text-slate-400',
+  5: 'bg-surface-hover text-text-secondary dark:bg-neutral-700 dark:text-neutral-400',
 };
 
 const sectionAnim = (delay = 0) => ({
@@ -324,7 +324,7 @@ const ContentStandardsPage: React.FC = () => {
               {...sectionAnim(i * 0.06)}
               className="flex items-start gap-4"
             >
-              <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-gray-100 dark:bg-gray-800">
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-surface-hover">
                 <span className="text-xs font-bold text-text-tertiary">
                   {i + 1}
                 </span>

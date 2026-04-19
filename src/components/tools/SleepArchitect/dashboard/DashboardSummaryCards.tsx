@@ -20,7 +20,7 @@ function average(vals: number[]): number {
 
 function getTrend(current: number, previous: number): { icon: React.ReactNode; text: string; color: string } {
   const diff = current - previous;
-  if (Math.abs(diff) < 0.5) return { icon: <Minus size={12} />, text: 'Steady', color: 'text-gray-400' };
+  if (Math.abs(diff) < 0.5) return { icon: <Minus size={12} />, text: 'Steady', color: 'text-gray-400 dark:text-neutral-500' };
   if (diff > 0) return { icon: <TrendingUp size={12} />, text: `+${diff.toFixed(0)}`, color: 'text-emerald-600 dark:text-emerald-400' };
   return { icon: <TrendingDown size={12} />, text: `${diff.toFixed(0)}`, color: 'text-red-600 dark:text-red-400' };
 }
@@ -101,7 +101,7 @@ const DashboardSummaryCards: React.FC<DashboardSummaryCardsProps> = ({
           )}
         >
           <div className="mb-2">{card.icon}</div>
-          <div className="text-xs font-medium text-gray-500 dark:text-gray-400">
+          <div className="text-xs font-medium text-gray-500 dark:text-neutral-400">
             {card.label}
           </div>
           <div className="text-xl font-bold font-display">{card.value}</div>
@@ -112,7 +112,7 @@ const DashboardSummaryCards: React.FC<DashboardSummaryCardsProps> = ({
             </div>
           )}
           {(card as any).extra && (
-            <div className="text-[10px] text-gray-400 dark:text-gray-500 mt-1">
+            <div className="text-[10px] text-gray-400 dark:text-neutral-500 mt-1">
               {(card as any).extra}
             </div>
           )}

@@ -11,7 +11,7 @@ export const ProgressDots: React.FC<ProgressDotsProps> = ({ total, current }) =>
             {Array.from({ length: total }).map((_, i) => (
                 <div
                     key={i}
-                    className={`h-2 rounded-full transition-all duration-300 ${i === current ? 'w-6 bg-gray-900' : 'w-2 bg-gray-300'
+                    className={`h-2 rounded-full transition-all duration-300 ${i === current ? 'w-6 bg-text-primary' : 'w-2 bg-text-tertiary/40'
                         }`}
                 />
             ))}

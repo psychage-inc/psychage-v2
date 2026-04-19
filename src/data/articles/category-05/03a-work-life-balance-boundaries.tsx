@@ -95,7 +95,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Work-life balance" has become a cultural mantra. Companies promise it. Self-help books
             teach it. But most people feel like they're failing at it---because the concept itself is
             flawed.
@@ -420,7 +420,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You close your laptop. But you're still sitting at your kitchen table. The work documents
             are still visible. Your phone still buzzes with Slack messages. When your office is your
             home, how do you actually disconnect?
@@ -493,7 +493,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Setting boundaries with your boss feels risky. What if they think you're not committed?
             What if it affects your career? What if they say no?
           </p>
@@ -557,7 +557,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It's 9 PM. You're watching TV, but your phone buzzes. Work email. Do you check it? Of
             course you do. And now your brain is back in work mode, stress response activated,
             relaxation ruined.
@@ -630,7 +630,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You finally took time off. You're at the beach, or home with a book, or visiting family.
             But instead of relaxing, you feel anxious. Guilty. Like you should be doing something
             productive. What's wrong with you?

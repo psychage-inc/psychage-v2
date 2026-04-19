@@ -54,7 +54,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Creative block—the frustrating inability to access your creative capacity despite wanting and trying to create—is not a sign of lost talent or personal failure. It&apos;s a psychological state with identifiable causes: perfectionism that makes nothing good enough, fear of judgment or failure that triggers avoidance, cognitive and emotional depletion that leaves no energy for creation, and identity threats where &quot;being creative&quot; feels too vulnerable.
           </p>
         </div>
@@ -143,7 +143,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -195,7 +195,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Creative burnout is a state of emotional, physical, and creative exhaustion resulting from prolonged engagement in creative work under conditions of chronic stress, overwork, lack of autonomy, or misalignment between values and demands. Unlike temporary fatigue or creative block, burnout involves three core dimensions: exhaustion (depleted energy), cynicism (detachment from work), and reduced efficacy (feeling ineffective and unproductive).
           </p>
         </div>
@@ -281,7 +281,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -333,7 +333,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Flow is a psychological state of complete absorption in an activity, where you lose track of time, self-consciousness fades, and action feels effortless despite high skill demands. Discovered and named by psychologist Mihaly Csikszentmihalyi, flow occurs when challenge and skill are balanced at a high level, goals are clear, and feedback is immediate.
           </p>
         </div>
@@ -421,7 +421,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -473,7 +473,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The &quot;tortured artist&quot; myth—that creativity requires mental illness or that suffering fuels great art—is both harmful and scientifically inaccurate. While research shows modest associations between certain creative professions (writers, poets, visual artists) and conditions like bipolar disorder and depression, the majority of creative people are mentally healthy, and mental illness impairs creative productivity more often than it enhances it.
           </p>
         </div>
@@ -554,7 +554,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -606,7 +606,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The creative process is not random inspiration striking from nowhere—it follows identifiable stages that blend conscious effort with unconscious processing. Graham Wallas&apos;s classic four-stage model (preparation, incubation, illumination, verification) captures how creative work unfolds: intensive research and problem immersion (preparation), stepping away to allow unconscious processing (incubation), the &quot;aha&quot; moment when solutions emerge (illumination), and critical evaluation and refinement (verification).
           </p>
         </div>
@@ -688,7 +688,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -740,7 +740,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Imposter syndrome—the persistent belief that your success is undeserved, that you&apos;re a fraud who will eventually be &quot;found out&quot;—is especially common in creative fields where success is subjective, comparison is constant, and external validation is unpredictable. Research shows that 70% of people experience imposter feelings at some point, with higher rates among high achievers, women, people of color, and those in evaluative professions like the arts.
           </p>
         </div>
@@ -837,7 +837,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -889,7 +889,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Creative collaboration—making work together rather than alone—challenges the myth of the solitary genius while revealing how creative synergy emerges when minds connect. Research shows that collaborative creativity can exceed what individuals produce alone through cognitive diversity (different perspectives and expertise), shared cognitive load (distributing complex problems), social motivation (accountability and inspiration), and emergent ideas (concepts that arise from interaction, not individual thought).
           </p>
         </div>
@@ -985,7 +985,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1037,7 +1037,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Creativity and vulnerability are inseparable: to create something original is to reveal yourself, to share work is to risk judgment, to try new approaches is to accept possible failure. Researcher Brené Brown&apos;s work on vulnerability shows that creativity requires emotional exposure—putting something you made (which feels like part of yourself) into the world where it can be criticized, misunderstood, or ignored.
           </p>
         </div>
@@ -1127,7 +1127,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
           Shame is the most destructive emotion for creativity
         </ArticleCallout>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1179,7 +1179,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Counterintuitively, constraints often enhance creativity rather than limit it. Research across domains—art, design, engineering, writing—shows that well-chosen limitations force focus, reduce decision paralysis, activate problem-solving networks, and drive resourceful innovation.
           </p>
         </div>
@@ -1261,7 +1261,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1313,7 +1313,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Neurodiversity—the concept that neurological differences like ADHD, autism, dyslexia, and others are natural variations rather than deficits—reframes how we understand creativity. Research increasingly shows that neurodivergent traits can enhance creative capacity: ADHD&apos;s rapid idea generation and novelty-seeking, autism&apos;s intense focus and pattern recognition, dyslexia&apos;s spatial reasoning and holistic thinking.
           </p>
         </div>
@@ -1398,7 +1398,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1450,7 +1450,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Creative identity—seeing yourself as &quot;a creative person&quot; or &quot;an artist&quot;—is more than a label. It&apos;s a core aspect of self-concept that shapes motivation, persistence, risk-taking, and resilience in creative work.
           </p>
         </div>
@@ -1552,7 +1552,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1604,7 +1604,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Play—often dismissed as childish frivolity—is fundamental to human creativity, learning, and wellbeing across the entire lifespan. Research shows that playful adults show higher creative achievement, greater life satisfaction, more resilient coping, and stronger social connections than their more serious counterparts.
           </p>
         </div>
@@ -1689,7 +1689,7 @@ export const creativeProcessAndChallengesArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

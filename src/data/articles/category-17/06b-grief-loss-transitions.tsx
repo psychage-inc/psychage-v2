@@ -59,7 +59,7 @@ export const griefLossTransitionsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             At 76, Maria began recording her grandmother's recipes on video---not just the ingredients but the stories behind each dish, the memories of cooking with her own mother in Puerto Rico, the lessons she'd learned feeding her family for five decades. What started as a practical project to preserve family recipes became something far more profound: a way to ensure that her values---patience, care, cultural connection, feeding as love---would survive beyond her own kitchen.
           </p>
           <p className="mb-6">
@@ -216,7 +216,7 @@ export const griefLossTransitionsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When Margaret's 52-year-old son died suddenly of a heart attack, well-meaning friends told her to be grateful for the 52 years she had with him. "But I expected 30 more," she explained. "I never imagined burying my child." A year later, she still felt profoundly isolated---her peers' adult children were alive, calling weekly, visiting with grandchildren. Her chair at family gatherings stayed conspicuously empty.
           </p>
           <p className="mb-6">
@@ -395,7 +395,7 @@ export const griefLossTransitionsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             David's wife had been diagnosed with early-onset Alzheimer's at 68. By 73, she no longer recognized him. "I mourn her every single day," he told his support group, "even though she's still physically here. I miss the person she was, the conversations we had, the future we'd planned together. But then I feel terrible---like I've given up on her, like I'm wishing she'd die so this would end."
           </p>
           <p className="mb-6">
@@ -588,7 +588,7 @@ export const griefLossTransitionsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             After retiring from teaching at 68 and losing her husband at 70, Eleanor felt profoundly adrift. "I'd spent 40 years shaping young minds and 45 years as someone's partner," she explained. "Suddenly both were gone. I didn't know who I was anymore or what I was supposed to do with the rest of my life." Two years of depression followed before a friend convinced her to volunteer at a literacy program. Teaching again---even just one hour a week---began rebuilding her sense that her life still had meaning and purpose.
           </p>
           <p className="mb-6">
@@ -752,7 +752,7 @@ export const griefLossTransitionsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When the doctor said Frank couldn't drive anymore after his second minor accident, he felt like a child being grounded. At 82, he'd been driving for 66 years. "Taking away my car keys felt like taking away my manhood, my freedom, my entire identity," he said. "I've always been the one who helped others. Now I'm the one who needs help." Within weeks, he was profoundly depressed---not just about losing driving, but about what it symbolized: the beginning of the end of independence.
           </p>
           <p className="mb-6">

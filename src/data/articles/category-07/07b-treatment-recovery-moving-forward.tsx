@@ -105,7 +105,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've done the hard work of recovering from depression---symptoms have lifted, energy has returned, and life feels manageable again. But recovery doesn't end when you feel better. Without relapse prevention strategies, depression returns in 50-85% of people within two years.
           </p>
           <p className="mb-6">
@@ -632,7 +632,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Watching someone you love struggle with depression is painful. You want to help, but you're not sure what to do. Your attempts to cheer them up fall flat. They push you away or become irritable. You feel helpless, frustrated, or worried you're making things worse.
           </p>
           <p className="mb-6">
@@ -1196,7 +1196,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You pour everything into supporting your loved one with depression---taking on more household responsibilities, offering endless reassurance, sacrificing your own needs---and yet nothing seems to help. You're exhausted, resentful, and starting to feel depressed yourself. This is caregiver burnout, and it's both common and preventable.
           </p>
           <p className="mb-6">
@@ -1683,7 +1683,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've been doing well for weeks---maybe months. Therapy is working, medication has kicked in, and you're finally feeling like yourself again. Then one day you wake up and the heaviness is back. Negative thoughts flood in. You cancel plans. The panic sets in: "I'm right back where I started."
           </p>
           <p className="mb-6">
@@ -2124,7 +2124,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The depression has lifted. You're sleeping better, eating normally, and functioning again. But something still feels empty. You've recovered from depression, but you're not sure what you're recovering <em>to</em>. Where do you go from here?
           </p>
           <p className="mb-6">

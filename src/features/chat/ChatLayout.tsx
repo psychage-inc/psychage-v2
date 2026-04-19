@@ -28,10 +28,10 @@ export default function ChatLayout() {
   }, []);
 
   return (
-    <div className="h-[calc(100dvh-5rem)] flex overflow-hidden bg-white dark:bg-slate-950">
+    <div className="h-[calc(100dvh-5rem)] flex overflow-hidden bg-white dark:bg-neutral-950">
       {/* Desktop sidebar */}
       {isDesktop && (
-        <div className="w-[15rem] xl:w-[17.5rem] shrink-0 border-r border-slate-200 dark:border-slate-800">
+        <div className="w-[15rem] xl:w-[17.5rem] shrink-0 border-r border-slate-200 dark:border-neutral-800">
           <ChatSidebar
             activeConversationId={activeConversationId}
             onNewChat={startNewChat}

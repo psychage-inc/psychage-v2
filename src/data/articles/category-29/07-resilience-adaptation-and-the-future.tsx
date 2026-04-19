@@ -65,7 +65,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Psychological resilience—the capacity to maintain psychological functioning, adapt constructively, and recover from adversity—is not a fixed trait but a dynamic process that depends on the interaction between individual capacities, social resources, and environmental conditions. In the context of environmental crisis—climate change, biodiversity loss, pollution, and ecological degradation—resilience takes on particular significance because the adversity is ongoing, systemic, and without a clear endpoint.
           </p>
         </div>
@@ -117,7 +117,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -180,7 +180,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Traditional psychotherapy was developed in a world where the physical environment was assumed to be stable. The client&apos;s distress was located in their personal history, relationships, cognitive patterns, or neurochemistry—not in the planetary systems that sustained all life.
           </p>
         </div>
@@ -227,7 +227,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -290,7 +290,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Children today spend less time outdoors than any generation in human history. The average American child spends four to seven minutes per day in unstructured outdoor play—compared to seven or more hours in front of screens.
           </p>
         </div>
@@ -335,7 +335,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -398,7 +398,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The gap between climate science and public action is not a knowledge gap—it is a communication gap. Research consistently demonstrates that providing more scientific information about climate change does not, by itself, increase concern or motivate behavior change.
           </p>
         </div>
@@ -443,7 +443,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -506,7 +506,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The environmental crisis is fundamentally an intergenerational crisis. The carbon emissions produced today will affect the climate for centuries.
           </p>
         </div>
@@ -550,7 +550,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -613,7 +613,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Across human history and across cultures, natural environments have been among the most reliable triggers of spiritual experience—the sense of connection to something larger than oneself, the dissolution of ego boundaries, the feeling of awe and reverence that religious traditions call the sacred and psychology calls transcendence. Research on the psychology of awe, spiritual experience, and nature connection converges on a finding that challenges the secular assumption that spirituality and science are incompatible: natural environments reliably produce psychological states that share the characteristics of spiritual experience—self-transcendence, expanded awareness, connection to something larger, and a reorganization of priorities away from self-interest and toward service, gratitude, and care.
           </p>
         </div>
@@ -655,7 +655,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -718,7 +718,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Environmental disasters—hurricanes, floods, wildfires, earthquakes, droughts—are among the most psychologically devastating events that humans experience. They destroy not only physical infrastructure but the assumptive world: the set of beliefs about safety, predictability, and control that provide the psychological foundation for daily life.
           </p>
         </div>
@@ -766,7 +766,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -829,7 +829,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Hope is the psychological resource most tested by environmental crisis—and the one most essential for sustained engagement with it. The person who loses hope withdraws, disengages, and consigns the future to forces beyond their influence.
           </p>
         </div>
@@ -878,7 +878,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -941,7 +941,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             As environmental change accelerates, the psychological challenge facing individuals and communities shifts from &quot;how do we prevent change&quot; to &quot;how do we adapt to change already underway.&quot; Adaptation—the process of adjusting to new conditions—is a fundamental human capacity, but the scale and pace of environmental change in the current era tests this capacity in ways that human psychology has not previously encountered.
           </p>
         </div>
@@ -988,7 +988,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1051,7 +1051,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Teaching about the environmental crisis presents a psychological challenge that is unique in education: the subject matter is simultaneously urgent and overwhelming, requiring learners to confront realities that are emotionally difficult while maintaining the agency and hope necessary for constructive engagement. Research on environmental education psychology reveals that the dominant approach—information delivery about environmental problems—is insufficient and potentially counterproductive: simply telling people about the severity of the crisis can produce fear, helplessness, and disengagement rather than the informed action that education aims to produce.
           </p>
         </div>
@@ -1095,7 +1095,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1158,7 +1158,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Environmental problems are collective problems—they are caused by the aggregate behavior of billions of people, they affect communities and ecosystems that no individual controls, and they require coordinated responses that exceed the capacity of any single actor. Yet the psychological research on group decision-making reveals that groups are not automatically wiser than individuals: under certain conditions, groups amplify biases, suppress dissent, fragment into factions, and produce decisions worse than those that any individual member would have made alone.
           </p>
         </div>
@@ -1201,7 +1201,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1264,7 +1264,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Humans are not placeless beings. We do not simply occupy space—we inhabit it, attach to it, identify with it, and incorporate it into our sense of who we are.
           </p>
         </div>
@@ -1310,7 +1310,7 @@ export const resilienceAdaptationAndTheFutureArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

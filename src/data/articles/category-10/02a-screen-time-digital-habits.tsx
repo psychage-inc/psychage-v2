@@ -122,7 +122,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The average American adult spends over seven hours per day looking at screens. Kids and teens spend even more. We all sense this is too much, but what does the research actually say? Is there a safe limit, or is screen time one of those things where everyone has an opinion but nobody has answers?
           </p>
           <p className="mb-6">
@@ -440,7 +440,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You reach for your phone the moment you wake up. You check it at red lights, during conversations, in the bathroom. You feel anxious when you can't find it. Is this addiction, or are people just throwing around clinical terms for everyday behavior?
           </p>
           <p className="mb-6">
@@ -774,7 +774,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You open Instagram to check one thing. Thirty minutes later, you're still scrolling. This isn't an accident or a personal failing. It's the result of billions of dollars invested in understanding how to capture and hold your attention.
           </p>
           <p className="mb-6">
@@ -1087,7 +1087,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You don't have to move to a cabin in the woods to escape digital overload. Digital minimalism is not about rejecting technology---it's about using it intentionally. It's the difference between letting apps control your time and deciding how technology serves your life.
           </p>
           <p className="mb-6">
@@ -1410,7 +1410,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Screens are everywhere, and kids are growing up with tablets, phones, and TVs as constant companions. But young brains are still developing, and excessive screen time during critical periods can have lasting effects. The question isn't whether kids should use screens---it's how much, when, and what they should be watching.
           </p>
           <p className="mb-6">

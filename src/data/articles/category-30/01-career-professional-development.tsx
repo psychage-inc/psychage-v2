@@ -65,7 +65,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Career transitions—whether chosen (a career pivot, a new industry, entrepreneurship) or imposed (layoff, organizational restructuring, industry decline)—are among the most psychologically demanding experiences of adult life. Research demonstrates that the challenge of career transition extends far beyond the practical concerns of finding new work or acquiring new skills.
           </p>
         </div>
@@ -117,7 +117,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -180,7 +180,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Impostor syndrome—the persistent internal experience of intellectual fraudulence despite objective evidence of competence and achievement—affects an estimated 70% of people at some point in their lives. First identified by psychologists Pauline Clance and Suzanne Imes in 1978, the impostor phenomenon describes a pattern in which high-achieving individuals attribute their success to luck, timing, or the ability to deceive others about their true abilities—while simultaneously fearing that their &quot;real&quot; inadequacy will eventually be exposed.
           </p>
         </div>
@@ -231,7 +231,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -294,7 +294,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Burnout—recognized by the World Health Organization as an occupational phenomenon resulting from chronic workplace stress that has not been successfully managed—has reached epidemic proportions in modern workplaces. Research spanning four decades demonstrates that burnout is not a personal weakness, a character flaw, or a sign of insufficient resilience.
           </p>
         </div>
@@ -340,7 +340,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -403,7 +403,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Leadership—the capacity to influence others toward shared goals—has been studied more extensively than almost any other psychological construct in organizational science. Yet despite thousands of studies and hundreds of theories, the popular understanding of leadership remains dominated by myths: that leaders are born not made, that leadership requires charisma, that the best leaders are the most dominant and decisive.
           </p>
         </div>
@@ -448,7 +448,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -511,7 +511,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Feedback—the information about performance that allows people to adjust, improve, and develop—is theoretically one of the most powerful tools for professional growth. In practice, it is one of the most dreaded.
           </p>
         </div>
@@ -558,7 +558,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -621,7 +621,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Workplace relationships are not a distraction from &quot;real work&quot;—they are the infrastructure on which real work depends. Research consistently demonstrates that the quality of professional relationships is one of the strongest predictors of job satisfaction, engagement, performance, and retention.
           </p>
         </div>
@@ -666,7 +666,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -729,7 +729,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mentorship—a developmental relationship in which a more experienced individual provides guidance, support, and wisdom to a less experienced individual—is one of the most powerful and most underutilized resources for professional and personal development. Research spanning four decades demonstrates that effective mentoring relationships produce measurable benefits for mentees (accelerated career advancement, higher income, greater job satisfaction, reduced turnover intention) and for mentors (enhanced leadership skills, renewed sense of purpose, expanded professional perspective).
           </p>
         </div>
@@ -784,7 +784,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -847,7 +847,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Professional networking—the deliberate cultivation of relationships for career benefit—is one of the most recommended and most dreaded activities in professional development. Research confirms that professional networks powerfully influence career outcomes: access to information, job opportunities, mentorship, and social support all flow through network connections.
           </p>
         </div>
@@ -892,7 +892,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -955,7 +955,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Meaningful work—work that the person experiences as significant, purposeful, and connected to something larger than themselves—is one of the strongest predictors of job satisfaction, engagement, psychological wellbeing, and even physical health. Yet meaningful work is often discussed as though it were a fixed property of certain occupations: some jobs are inherently meaningful (doctor, teacher, firefighter) while others are inherently meaningless (data entry, retail, administration).
           </p>
         </div>
@@ -1002,7 +1002,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1065,7 +1065,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Remote work—the arrangement in which employees perform their duties outside a traditional centralized office—has transformed from an occasional perk into a defining feature of contemporary professional life. Research reveals that remote work produces a paradox of outcomes: it simultaneously increases autonomy, flexibility, and self-reported satisfaction while increasing isolation, boundary dissolution, and the risk of overwork.
           </p>
         </div>
@@ -1107,7 +1107,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

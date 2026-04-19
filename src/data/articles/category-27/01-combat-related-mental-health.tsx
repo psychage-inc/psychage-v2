@@ -65,7 +65,7 @@ export const combatrelatedMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Post-traumatic stress disorder in military personnel and veterans is one of the most extensively studied mental health conditions—and one of the most consequential. An estimated 11–20% of veterans who served in Operations Iraqi Freedom and Enduring Freedom develop PTSD, with rates of 12% for Gulf War veterans and approximately 15% for Vietnam veterans (measured decades after service).
           </p>
         </div>
@@ -108,7 +108,7 @@ export const combatrelatedMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -171,7 +171,7 @@ export const combatrelatedMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Not all war wounds are caused by fear. Some of the deepest psychological injuries sustained in combat come not from what was done to a person but from what a person did, failed to do, or witnessed—acts that violated their deeply held moral beliefs and expectations.
           </p>
         </div>
@@ -216,7 +216,7 @@ export const combatrelatedMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -279,7 +279,7 @@ export const combatrelatedMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Traumatic brain injury has been called the &quot;signature wound&quot; of the Iraq and Afghanistan wars—a designation that reflects both its unprecedented prevalence and its distinctive mechanisms. Unlike previous conflicts where penetrating head injuries were the primary form of brain trauma, the IED-intensive combat environments of OIF/OEF produced a wave of blast-related brain injuries, primarily mild TBI (concussion), affecting an estimated 320,000 service members.
           </p>
         </div>
@@ -325,7 +325,7 @@ export const combatrelatedMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -388,7 +388,7 @@ export const combatrelatedMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Military sexual trauma (MST)—defined by the VA as sexual assault or repeated, threatening sexual harassment experienced during military service—represents one of the most devastating and underaddressed mental health crises in the military and veteran populations. The Department of Defense estimates that approximately 20,500 service members experienced sexual assault in the most recent reporting year, with only 7,816 reports filed—meaning that approximately 62% of sexual assaults go unreported.
           </p>
         </div>
@@ -432,7 +432,7 @@ export const combatrelatedMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -495,7 +495,7 @@ export const combatrelatedMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Veteran suicide is one of the most urgent public health crises in the United States. The VA&apos;s most recent National Veteran Suicide Prevention Annual Report documented approximately 6,392 veteran suicides per year—an average of 17.
           </p>
         </div>
@@ -537,7 +537,7 @@ export const combatrelatedMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -600,7 +600,7 @@ export const combatrelatedMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Substance use in the military and veteran populations is a crisis woven into the fabric of military culture, combat experience, and the systemic failures of post-deployment care. Alcohol has been a part of military life for centuries—used to celebrate, to grieve, to bond, and to cope—and the military&apos;s relationship with alcohol remains deeply ambivalent: officially discouraging excessive use while culturally normalizing heavy drinking as a marker of belonging and toughness.
           </p>
         </div>
@@ -641,7 +641,7 @@ export const combatrelatedMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

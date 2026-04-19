@@ -92,7 +92,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When traditional talk therapy doesn't fully resolve trauma symptoms, many people find healing through Somatic Experiencing---a body-based therapy that works with how trauma affects your nervous system and physical sensations.
           </p>
           <p className="mb-6">
@@ -411,7 +411,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "The Body Keeps the Score"---Dr. Bessel van der Kolk's groundbreaking book title captures a fundamental truth about trauma: when overwhelming experiences happen, the body remembers, even when the mind tries to forget.
           </p>
           <p className="mb-6">
@@ -717,7 +717,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Headaches when stressed. Stomach pain before important meetings. Chest tightness during anxiety. Fatigue when depressed. These aren't imagined---they're somatic symptoms, physical manifestations of psychological distress.
           </p>
           <p className="mb-6">
@@ -1035,7 +1035,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You breathe about 20,000 times per day, mostly without thinking. Yet how you breathe profoundly affects your mental state, nervous system activation, and emotional regulation. Breathwork---intentional control of breathing---is one of the most accessible and powerful tools for mental health.
           </p>
           <p className="mb-6">
@@ -1364,7 +1364,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Progressive Muscle Relaxation (PMR) is a simple yet powerful technique for reducing stress and anxiety by teaching your body what deep relaxation actually feels like. Developed in the 1920s, it remains one of the most researched and effective stress-management tools.
           </p>
           <p className="mb-6">

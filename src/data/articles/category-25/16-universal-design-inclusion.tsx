@@ -63,7 +63,7 @@ export const universalDesignInclusionArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Universal design—the principle that environments, products, and services should be designed from the outset to be usable by the widest possible range of people, without requiring adaptation or specialized design—represents a fundamental shift from the traditional accommodation model. Rather than building for an imaginary &quot;average&quot; user and then retrofitting for those who don&apos;t fit, universal design starts with the full range of human variation: different bodies, different senses, different cognitive profiles, different developmental stages, and different cultural contexts.
           </p>
         </div>
@@ -84,7 +84,7 @@ export const universalDesignInclusionArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

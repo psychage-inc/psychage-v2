@@ -125,7 +125,7 @@ export const anxietyDisordersArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You cannot sleep when your partner travels for work. You call your parent multiple times a day just to make sure they are okay. The thought of your child going to college fills you with dread. You know these fears are excessive, but you cannot shake the feeling that something terrible will happen if you are separated from the people you love.
           </p>
           <p className="mb-6">
@@ -521,7 +521,7 @@ export const anxietyDisordersArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             At home, she is a chatterbox --- telling stories, singing songs, asking endless questions. But at school, she is silent. Not shy. Not quiet. Completely silent. Her teachers wonder if she can speak at all. Her parents know she can, but they cannot figure out why she will not. This is selective mutism.
           </p>
           <p className="mb-6">
@@ -915,7 +915,7 @@ export const anxietyDisordersArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You were diagnosed with panic disorder, but you also avoid social situations and worry constantly about everyday things. Are you dealing with three separate disorders, or is something deeper going on? The answer lies in understanding how anxiety disorders overlap and share common roots.
           </p>
           <p className="mb-6">
@@ -1085,32 +1085,32 @@ export const anxietyDisordersArticlesB: Article[] = [
         </p>
 
         <div className="space-y-6 mb-8">
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+          <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg">
             <h3 className="font-semibold text-lg mb-3">Sarah's Story: GAD + Social Anxiety</h3>
             <p className="mb-3">
               Sarah worries constantly about everything --- her job performance, her health, her relationships. But her anxiety intensifies dramatically in social situations. She fears being judged at work meetings and avoids social events. Her GAD provides the constant background worry, while social anxiety adds situational spikes. Both share the core feature: catastrophic thinking about evaluation and outcomes.
             </p>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-gray-600 dark:text-neutral-400">
               <strong>Common mechanism:</strong> Intolerance of uncertainty and fear of negative evaluation
             </p>
           </div>
 
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+          <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg">
             <h3 className="font-semibold text-lg mb-3">Michael's Story: Panic Disorder + Agoraphobia</h3>
             <p className="mb-3">
               Michael experienced his first panic attack on a crowded subway. The physical sensations --- racing heart, shortness of breath, dizziness --- were terrifying. He began avoiding subways, then buses, then any situation where escape might be difficult. His panic disorder triggered agoraphobia, but both stem from the same fear: the fear of panic itself (anxiety sensitivity).
             </p>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-gray-600 dark:text-neutral-400">
               <strong>Common mechanism:</strong> Anxiety sensitivity and catastrophic misinterpretation of bodily sensations
             </p>
           </div>
 
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+          <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg">
             <h3 className="font-semibold text-lg mb-3">Elena's Story: Social Anxiety + Depression</h3>
             <p className="mb-3">
               Elena\'s social anxiety led her to isolate herself, turning down invitations and avoiding workplace social events. Over time, the isolation and perceived rejection contributed to depression. She felt hopeless about ever having meaningful connections. Research shows this pattern is extremely common --- chronic anxiety often leads to depression when avoidance limits positive experiences and social support.
             </p>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-gray-600 dark:text-neutral-400">
               <strong>Common mechanism:</strong> Behavioral avoidance leading to loss of positive reinforcement and social connection
             </p>
           </div>
@@ -1248,7 +1248,7 @@ export const anxietyDisordersArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your child cries every morning before school. They complain of stomachaches with no medical cause. They refuse sleepovers, birthday parties, and anything new. You wonder: Is this just a phase, or is it something more? Understanding childhood anxiety can help you know when to intervene.
           </p>
           <p className="mb-6">
@@ -1636,7 +1636,7 @@ export const anxietyDisordersArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Why does your heart race when you think about giving a presentation? Why do you feel a knot in your stomach before a first date? The answer lies deep in your brain --- in ancient circuits designed to protect you from danger, now misfiring in response to modern stressors.
           </p>
           <p className="mb-6">
@@ -1814,7 +1814,7 @@ export const anxietyDisordersArticlesB: Article[] = [
           The neurobiology of anxiety is not about isolated brain regions or single neurotransmitters. It is about <strong>systems interacting</strong> in a complex feedback loop.
         </p>
 
-        <div className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-lg mb-8">
+        <div className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-neutral-800 dark:to-neutral-900 rounded-lg mb-8">
           <h3 className="font-semibold text-lg mb-4">The Anxiety Cascade</h3>
           <ol className="list-decimal pl-6 space-y-3">
             <li>

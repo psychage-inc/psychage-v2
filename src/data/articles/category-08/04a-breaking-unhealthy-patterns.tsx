@@ -111,7 +111,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've tried to quit scrolling social media before bed. You've resolved to stop stress-eating countless times. You've promised yourself you'd break the procrastination habit. Yet somehow, despite your best intentions, you find yourself repeating the same unwanted behaviors. This isn't a failure of character---it's neuroscience.
           </p>
           <p className="mb-6">
@@ -473,7 +473,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You reach for your phone the moment you wake up. You check Instagram while brushing your teeth. You scroll TikTok while eating breakfast. You refresh Twitter during work breaks. You're on your phone in bed until you fall asleep. By the time your head hits the pillow, you've spent 4-6 hours on social media---and you're not sure where the day went.
           </p>
           <p className="mb-6">
@@ -968,7 +968,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You had a stressful meeting, and suddenly you're standing in front of the open refrigerator even though you ate lunch an hour ago. You're feeling lonely on a Friday night, and before you know it, you've finished an entire pint of ice cream. You're anxious about an upcoming deadline, and your hand keeps reaching for the chip bag. You're not physically hungry---but you're eating anyway.
           </p>
           <p className="mb-6">
@@ -1419,7 +1419,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You know the project is due Friday. You know starting earlier would reduce stress. You know you'll regret waiting until Thursday night. Yet here you are on Monday, scrolling social media, reorganizing your desk, doing literally anything except the task you need to do. You're not lazy---you're procrastinating. And it's not a time management problem.
           </p>
           <p className="mb-6">
@@ -1929,7 +1929,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "You're such an idiot.", "Of course you messed that up.", "Nobody actually likes you.", "You'll never be good enough." If a friend spoke to you this way, you'd end the friendship. Yet you might say these exact words to yourself---multiple times a day---without question. This is negative self-talk, and it's far more damaging than most people realize.
           </p>
           <p className="mb-6">

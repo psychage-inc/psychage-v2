@@ -79,7 +79,7 @@ export const chronicPainAndTheMindArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You broke your wrist five years ago. The bone healed perfectly. But your hand still aches every
             morning, throbs during storms, and sometimes flares without any identifiable trigger. Your
             doctors tell you the tissue looks fine. So where is the pain coming from? The answer lies not
@@ -504,7 +504,7 @@ export const chronicPainAndTheMindArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Imagine turning up the volume on a radio until the music distorts --- every note blares,
             gentle passages become overwhelming, and static creeps in where silence should be. This
             is roughly what happens inside the nervous system during central sensitization. The
@@ -892,7 +892,7 @@ export const chronicPainAndTheMindArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You feel a familiar twinge in your lower back. Within seconds, your mind races: <em>Here
             it comes again. This is going to be terrible. What if it gets worse this time? What if I
             end up bedridden? I cannot keep living like this.</em> By the time the actual pain fully
@@ -1242,7 +1242,7 @@ export const chronicPainAndTheMindArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For years, the promise of chronic pain treatment has been simple: reduce the pain, and life
             will improve. But for many people with persistent pain, this promise remains unfulfilled.
             Medications provide partial relief. Surgeries sometimes help and sometimes do not. Physical
@@ -1642,7 +1642,7 @@ export const chronicPainAndTheMindArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In 1979, a young molecular biologist named Jon Kabat-Zinn opened a small clinic in the
             basement of the University of Massachusetts Medical Center. His patients were people
             the medical system had essentially given up on --- chronic pain sufferers for whom surgery,
@@ -1948,7 +1948,7 @@ export const chronicPainAndTheMindArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Chronic pain does not happen in a vacuum. It happens in the context of a person's thoughts,
             emotions, behaviors, and life circumstances. The thought "I will never get better" increases
             suffering. The decision to cancel dinner with friends because pain might worsen increases

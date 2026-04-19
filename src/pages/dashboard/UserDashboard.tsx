@@ -47,13 +47,13 @@ const DAILY_QUOTES = [
 // ── Skeleton ──
 const DashboardSkeleton: React.FC = () => (
     <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
-        <div className="md:col-span-12 bg-gray-100 dark:bg-gray-800/30 rounded-2xl h-40 animate-pulse" />
-        <div className="md:col-span-8 bg-gray-100 dark:bg-gray-800/30 rounded-2xl h-32 animate-pulse" />
-        <div className="md:col-span-4 bg-gray-100 dark:bg-gray-800/30 rounded-2xl h-32 animate-pulse" />
+        <div className="md:col-span-12 bg-gray-100 dark:bg-neutral-800/30 rounded-2xl h-40 animate-pulse" />
+        <div className="md:col-span-8 bg-gray-100 dark:bg-neutral-800/30 rounded-2xl h-32 animate-pulse" />
+        <div className="md:col-span-4 bg-gray-100 dark:bg-neutral-800/30 rounded-2xl h-32 animate-pulse" />
         {[1, 2, 3].map(i => (
-            <div key={i} className="md:col-span-4 bg-gray-100 dark:bg-gray-800/30 rounded-2xl h-36 animate-pulse" />
+            <div key={i} className="md:col-span-4 bg-gray-100 dark:bg-neutral-800/30 rounded-2xl h-36 animate-pulse" />
         ))}
-        <div className="md:col-span-12 bg-gray-100 dark:bg-gray-800/30 rounded-2xl h-72 animate-pulse" />
+        <div className="md:col-span-12 bg-gray-100 dark:bg-neutral-800/30 rounded-2xl h-72 animate-pulse" />
     </div>
 );
 
@@ -296,14 +296,14 @@ const UserDashboard: React.FC = () => {
 
     if (!onboardingChecked) {
         return (
-            <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center">
-                <div className="w-8 h-8 rounded-full border-2 border-gray-200 border-t-teal-500 animate-spin" />
+            <div className="min-h-screen bg-gray-50 dark:bg-neutral-950 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full border-2 border-gray-200 dark:border-neutral-700 border-t-teal-500 animate-spin" />
             </div>
         );
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-950 pt-24 pb-20 lg:pb-8 px-4 sm:px-6">
+        <div className="min-h-screen bg-gray-50 dark:bg-neutral-950 pt-24 pb-20 lg:pb-8 px-4 sm:px-6">
             <SEO title="Dashboard | Psychage" />
 
             <div className="max-w-7xl mx-auto">
@@ -335,27 +335,27 @@ const UserDashboard: React.FC = () => {
                             >
                                 {/* ── Row 1: Welcome Hero (col-span-12) ── */}
                                 <motion.div variants={reduced ? undefined : staggerItem} className="md:col-span-12">
-                                    <div className="bg-gradient-to-br from-teal-50 to-white dark:from-teal-950/20 dark:to-gray-900 rounded-2xl p-6 sm:p-8 border border-teal-100/60 dark:border-teal-800/30">
-                                        <p className="text-xs font-medium tracking-widest uppercase text-gray-400 dark:text-gray-500 mb-1.5">
+                                    <div className="bg-gradient-to-br from-teal-50 to-white dark:from-teal-950/20 dark:to-neutral-900 rounded-2xl p-6 sm:p-8 border border-teal-100/60 dark:border-teal-800/30">
+                                        <p className="text-xs font-medium tracking-widest uppercase text-gray-400 dark:text-neutral-500 mb-1.5">
                                             {format(new Date(), 'EEEE, MMMM d')}
                                         </p>
                                         <h1 className="text-2xl sm:text-3xl font-display font-bold text-gray-900 dark:text-white mb-2 tracking-tight">
                                             {greeting}, {firstName}
                                         </h1>
-                                        <p className="text-sm text-gray-500 dark:text-gray-400 mb-5 max-w-lg leading-relaxed italic">
+                                        <p className="text-sm text-gray-500 dark:text-neutral-400 mb-5 max-w-lg leading-relaxed italic">
                                             "{dailyQuote}"
                                         </p>
                                         <div className="flex flex-wrap items-center gap-4">
                                             {stats?.streak != null && stats.streak > 0 && (
-                                                <div className="flex items-center gap-2 bg-white/70 dark:bg-gray-800/50 px-3 py-1.5 rounded-full border border-gray-200/60 dark:border-gray-700/50">
+                                                <div className="flex items-center gap-2 bg-white/70 dark:bg-neutral-800/50 px-3 py-1.5 rounded-full border border-gray-200/60 dark:border-neutral-700/50">
                                                     <span className="text-amber-500 text-sm">🔥</span>
-                                                    <span className="text-xs font-semibold text-gray-700 dark:text-gray-300">{stats.streak}-week streak</span>
+                                                    <span className="text-xs font-semibold text-gray-700 dark:text-neutral-300">{stats.streak}-week streak</span>
                                                 </div>
                                             )}
                                             {stats?.latestScore != null && stats.latestScore > 0 && (
-                                                <div className="flex items-center gap-2 bg-white/70 dark:bg-gray-800/50 px-3 py-1.5 rounded-full border border-gray-200/60 dark:border-gray-700/50">
+                                                <div className="flex items-center gap-2 bg-white/70 dark:bg-neutral-800/50 px-3 py-1.5 rounded-full border border-gray-200/60 dark:border-neutral-700/50">
                                                     <span className="text-teal-500 text-sm">🧠</span>
-                                                    <span className="text-xs font-semibold text-gray-700 dark:text-gray-300">Clarity: {stats.latestScore}/100</span>
+                                                    <span className="text-xs font-semibold text-gray-700 dark:text-neutral-300">Clarity: {stats.latestScore}/100</span>
                                                 </div>
                                             )}
                                         </div>
@@ -389,7 +389,7 @@ const UserDashboard: React.FC = () => {
 
                                 {/* ── Section: Your Wellness ── */}
                                 <div className="md:col-span-12">
-                                    <p className="text-xs font-medium uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-3 px-1">
+                                    <p className="text-xs font-medium uppercase tracking-wider text-gray-400 dark:text-neutral-500 mb-3 px-1">
                                         Your Wellness
                                     </p>
                                 </div>
@@ -409,7 +409,7 @@ const UserDashboard: React.FC = () => {
 
                                 {/* ── Row 5: Multi-Metric Chart (12) ── */}
                                 <motion.div variants={reduced ? undefined : staggerItem} className="md:col-span-12">
-                                    <div className="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 shadow-sm p-5 sm:p-7 min-h-[280px] sm:min-h-[350px]">
+                                    <div className="rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 shadow-sm p-5 sm:p-7 min-h-[280px] sm:min-h-[350px]">
                                         <MultiMetricChart
                                             data={chartData}
                                             availableMetrics={availableMetrics}
@@ -419,7 +419,7 @@ const UserDashboard: React.FC = () => {
 
                                 {/* ── Section: Explore & Learn ── */}
                                 <div className="md:col-span-12">
-                                    <p className="text-xs font-medium uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-3 px-1">
+                                    <p className="text-xs font-medium uppercase tracking-wider text-gray-400 dark:text-neutral-500 mb-3 px-1">
                                         Explore & Learn
                                     </p>
                                 </div>
@@ -437,7 +437,7 @@ const UserDashboard: React.FC = () => {
 
                                 {/* ── Section: Your Tools ── */}
                                 <div className="md:col-span-12">
-                                    <p className="text-xs font-medium uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-3 px-1">
+                                    <p className="text-xs font-medium uppercase tracking-wider text-gray-400 dark:text-neutral-500 mb-3 px-1">
                                         Your Tools
                                     </p>
                                 </div>

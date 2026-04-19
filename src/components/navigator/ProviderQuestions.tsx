@@ -1,14 +1,24 @@
 import React from 'react';
-import { ClipboardList, Copy, CheckCircle2 } from 'lucide-react';
+import { ClipboardList, Copy, CheckCircle2, Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { Card } from '../ui/Card';
+import { CONDITION_TO_SPECIALTY } from '@/lib/providers/search';
+
+interface MatchedCondition {
+    condition_id: string;
+    name: string;
+}
 
 interface ProviderQuestionsProps {
     questions: string[];
+    /** Strong matches (high/moderate) from the Navigator — used for the Find Care CTA */
+    matchedConditions?: MatchedCondition[];
 }
 
-export const ProviderQuestions: React.FC<ProviderQuestionsProps> = ({ questions }) => {
+export const ProviderQuestions: React.FC<ProviderQuestionsProps> = ({ questions, matchedConditions }) => {
     const [copied, setCopied] = React.useState(false);
+    const navigate = useNavigate();
 
     const handleCopy = async () => {
         try {
@@ -21,7 +31,22 @@ export const ProviderQuestions: React.FC<ProviderQuestionsProps> = ({ questions 
         }
     };
 
+    const handleFindProviders = () => {
+        if (!matchedConditions?.length) return;
+        const slugs = matchedConditions
+            .map(c => CONDITION_TO_SPECIALTY[c.condition_id])
+            .filter(Boolean);
+        const uniqueSlugs = [...new Set(slugs)];
+        const params = new URLSearchParams();
+        if (uniqueSlugs.length > 0) {
+            params.set('specialty_slugs', uniqueSlugs.join(','));
+        }
+        navigate(`/providers/search?${params.toString()}`);
+    };
+
     if (!questions || questions.length === 0) return null;
+
+    const conditionNames = matchedConditions?.map(c => c.name).join(', ');
 
     return (
         <Card variant="glass" className="overflow-hidden relative group p-0">
@@ -95,6 +120,29 @@ export const ProviderQuestions: React.FC<ProviderQuestionsProps> = ({ questions 
                         </motion.li>
                     ))}
                 </ul>
+
+                {/* Find Care CTA — only shown when strong matches exist */}
+                {matchedConditions && matchedConditions.length > 0 && (
+                    <div className="mt-6 pt-5 border-t border-border space-y-3">
+                        <button
+                            onClick={handleFindProviders}
+                            className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-primary hover:bg-primary-hover text-white font-bold text-sm rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                            aria-label={`Find providers who can help with ${conditionNames}`}
+                        >
+                            <Search className="w-4 h-4" />
+                            Find providers who can help{conditionNames ? ` with ${conditionNames}` : ''}
+                        </button>
+                        <p className="text-center">
+                            <button
+                                type="button"
+                                onClick={() => {/* no-op: user stays on current screen */}}
+                                className="text-xs text-text-tertiary hover:text-text-secondary transition-colors"
+                            >
+                                Skip for now
+                            </button>
+                        </p>
+                    </div>
+                )}
             </div>
         </Card>
     );

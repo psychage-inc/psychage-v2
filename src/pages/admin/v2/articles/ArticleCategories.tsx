@@ -41,7 +41,7 @@ function getIcon(name: string | null): React.ElementType {
 
 // Stage color dots
 const stageColors: Record<string, string> = {
-  planned: 'bg-gray-400',
+  planned: 'bg-gray-400 dark:bg-neutral-500',
   researched: 'bg-purple-500',
   drafted: 'bg-blue-500',
   in_review: 'bg-amber-500',

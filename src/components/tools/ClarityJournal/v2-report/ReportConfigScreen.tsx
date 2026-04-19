@@ -103,7 +103,7 @@ const ReportConfigScreen: React.FC = () => {
 
         <button
           onClick={() => navigate('/tools/clarity-journal')}
-          className="flex items-center gap-2 text-sm text-slate-500 hover:text-teal-600 mb-6 transition-colors"
+          className="flex items-center gap-2 text-sm text-slate-500 dark:text-neutral-400 hover:text-teal-600 mb-6 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" /> Back to Journal
         </button>
@@ -115,7 +115,7 @@ const ReportConfigScreen: React.FC = () => {
               Therapist Report
             </h1>
           </div>
-          <p className="text-slate-500 dark:text-slate-400 text-sm mb-8">
+          <p className="text-slate-500 dark:text-neutral-400 text-sm mb-8">
             Generate a wellness summary to share with your therapist. You control exactly what's included.
           </p>
         </motion.div>
@@ -139,7 +139,7 @@ const ReportConfigScreen: React.FC = () => {
                   className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
                     !useCustom && periodDays === p.days
                       ? 'bg-teal-600 text-white'
-                      : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200'
+                      : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200 dark:hover:bg-neutral-700'
                   }`}
                 >
                   {p.label}
@@ -151,7 +151,7 @@ const ReportConfigScreen: React.FC = () => {
                 className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
                   useCustom
                     ? 'bg-teal-600 text-white'
-                    : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200'
+                    : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200 dark:hover:bg-neutral-700'
                 }`}
               >
                 Custom
@@ -161,23 +161,23 @@ const ReportConfigScreen: React.FC = () => {
             {useCustom && (
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-xs text-slate-500 mb-1">Start</label>
+                  <label className="block text-xs text-slate-500 dark:text-neutral-400 mb-1">Start</label>
                   <input
                     type="date"
                     value={customStart}
                     max={today}
                     onChange={e => setCustomStart(e.target.value)}
-                    className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs text-slate-500 mb-1">End</label>
+                  <label className="block text-xs text-slate-500 dark:text-neutral-400 mb-1">End</label>
                   <input
                     type="date"
                     value={customEnd}
                     max={today}
                     onChange={e => setCustomEnd(e.target.value)}
-                    className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                   />
                 </div>
               </div>
@@ -206,13 +206,13 @@ const ReportConfigScreen: React.FC = () => {
                     type="button"
                     onClick={() => toggleSection(toggle.key)}
                     className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-all shrink-0 ${
-                      sections[toggle.key] ? 'bg-teal-600 border-teal-600' : 'border-slate-300 dark:border-slate-600'
+                      sections[toggle.key] ? 'bg-teal-600 border-teal-600' : 'border-slate-300 dark:border-neutral-600'
                     }`}
                     aria-label={`Toggle ${toggle.label}`}
                   >
                     {sections[toggle.key] && <Check className="w-3 h-3 text-white" />}
                   </button>
-                  <span className="text-sm text-slate-700 dark:text-slate-300">{toggle.label}</span>
+                  <span className="text-sm text-slate-700 dark:text-neutral-300">{toggle.label}</span>
                 </label>
               ))}
             </div>
@@ -228,34 +228,34 @@ const ReportConfigScreen: React.FC = () => {
             <h2 className="font-semibold text-sm text-slate-900 dark:text-white">Optional Details</h2>
 
             <div>
-              <label className="block text-xs text-slate-500 dark:text-slate-400 mb-1">Your name (for report header)</label>
+              <label className="block text-xs text-slate-500 dark:text-neutral-400 mb-1">Your name (for report header)</label>
               <input
                 type="text"
                 value={clientName}
                 onChange={e => setClientName(e.target.value)}
                 placeholder="Defaults to 'Client'"
-                className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 
             <div>
-              <label className="block text-xs text-slate-500 dark:text-slate-400 mb-1">Therapist name</label>
+              <label className="block text-xs text-slate-500 dark:text-neutral-400 mb-1">Therapist name</label>
               <input
                 type="text"
                 value={therapistName}
                 onChange={e => setTherapistName(e.target.value)}
                 placeholder="Optional"
-                className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 
             <div>
-              <label className="block text-xs text-slate-500 dark:text-slate-400 mb-1">Next session date</label>
+              <label className="block text-xs text-slate-500 dark:text-neutral-400 mb-1">Next session date</label>
               <input
                 type="date"
                 value={nextSessionDate}
                 onChange={e => setNextSessionDate(e.target.value)}
-                className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
           </motion.div>
@@ -293,7 +293,7 @@ const ReportConfigScreen: React.FC = () => {
           </motion.div>
 
           {/* Disclaimer */}
-          <p className="text-xs text-slate-400 dark:text-slate-500 text-center leading-relaxed px-4">
+          <p className="text-xs text-slate-400 dark:text-neutral-500 text-center leading-relaxed px-4">
             This report is generated from a self-directed educational wellness tool. It is not a clinical assessment, diagnosis, or medical record. All data is processed on your device — nothing is sent to any server.
           </p>
         </div>

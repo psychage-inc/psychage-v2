@@ -134,7 +134,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Stress doesn't just feel bad. It physically damages your body. What begins as a psychological experience --- worry, overwhelm, pressure --- sets off a cascade of biological changes that, when sustained over time, increase your risk for nearly every major chronic disease.
           </p>
           <p className="mb-6">
@@ -579,7 +579,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You wake at 3 a.m., mind racing about bills. During the day, every purchase decision triggers anxiety. You avoid checking your bank account because seeing the numbers makes you feel sick. You feel ashamed when friends suggest dinner out. Financial stress has become the background noise of your life --- constant, exhausting, inescapable.
           </p>
           <p className="mb-6">
@@ -984,7 +984,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're caring for an aging parent with dementia. Or a child with a chronic illness. Or a spouse recovering from a stroke. The role found you --- you didn't choose it, but you stepped up. Now, months or years later, you're exhausted in ways that sleep can't fix. You feel guilty for resenting the very person you love. You've forgotten what it feels like to have time for yourself.
           </p>
           <p className="mb-6">
@@ -1350,7 +1350,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Imagine your body as a bank account. Each stressful experience is a withdrawal. Acute stress makes small withdrawals that you quickly replenish. But chronic stress --- the kind that doesn't relent --- creates a sustained overdraft. Over time, the cumulative deficit grows. Your biological systems become depleted, dysregulated, and damaged.
           </p>
           <p className="mb-6">
@@ -1731,7 +1731,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The first time you give a presentation, your heart races and your mind blanks. The tenth time, you're still nervous but functional. By the fiftieth time, it feels routine. This isn't just habituation --- it's stress inoculation. Your nervous system has learned that this stressor is survivable, and your stress response has been calibrated accordingly.
           </p>
           <p className="mb-6">

@@ -92,7 +92,7 @@ const ScoreGauge: React.FC<ScoreGaugeProps> = ({
           r={RADIUS}
           fill="none"
           stroke="currentColor"
-          className="text-gray-200 dark:text-gray-700"
+          className="text-gray-200 dark:text-neutral-700"
           strokeWidth={STROKE_WIDTH}
           strokeDasharray={`${CIRCUMFERENCE * ARC_SWEEP} ${emptyArc}`}
           strokeLinecap="round"
@@ -125,7 +125,7 @@ const ScoreGauge: React.FC<ScoreGaugeProps> = ({
         >
           {prefersReduced || !shouldAnimate ? score : 0}
         </span>
-        <span className="text-sm text-gray-400 dark:text-gray-500 -mt-1">
+        <span className="text-sm text-gray-400 dark:text-neutral-500 -mt-1">
           out of 100
         </span>
       </div>
@@ -134,7 +134,7 @@ const ScoreGauge: React.FC<ScoreGaugeProps> = ({
       {/* Tier badge + interpretive sentence */}
       <div className="-mt-4 flex flex-col items-center">
         <TierBadge tier={tier} label={label} size="lg" />
-        <p className="text-xs text-gray-400 dark:text-gray-500 text-center mt-2 max-w-[180px]">
+        <p className="text-xs text-gray-400 dark:text-neutral-500 text-center mt-2 max-w-[180px]">
           {TIER_SENTENCES[tier]}
         </p>
       </div>

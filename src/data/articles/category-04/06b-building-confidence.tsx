@@ -96,7 +96,7 @@ export const buildingConfidenceArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Everyone fails. The difference between people who stay confident and those who don't is how they interpret failure.
           </p>
           <p className="mb-6">
@@ -385,7 +385,7 @@ export const buildingConfidenceArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             More people fear public speaking than fear death. The good news: public speaking confidence is a learnable skill, not an innate talent.
           </p>
           <p className="mb-6">
@@ -660,7 +660,7 @@ export const buildingConfidenceArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Social confidence isn't about being the life of the party. It's about feeling comfortable in your own skin while connecting with others.
           </p>
           <p className="mb-6">
@@ -998,7 +998,7 @@ export const buildingConfidenceArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your posture does not just communicate confidence to others — it communicates it to yourself. The mind-body connection runs both ways, and learning to use your body as a confidence tool can transform how you feel in challenging moments.
           </p>
           <p className="mb-6">
@@ -1393,7 +1393,7 @@ export const buildingConfidenceArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Confidence and arrogance look similar on the surface — both involve self-assurance, assertiveness, and a willingness to take up space. But they come from opposite places psychologically and lead to very different outcomes in relationships, careers, and personal growth.
           </p>
           <p className="mb-6">

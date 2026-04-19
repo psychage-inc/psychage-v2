@@ -79,7 +79,7 @@ export const psychologicalResilienceArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you receive a medical diagnosis, the first thing that often happens is not pain or
             physical symptoms --- it is a flood of questions. What does this mean? Will it get worse?
             What did I do wrong? What happens now? The answers to those questions, and whether you
@@ -570,7 +570,7 @@ export const psychologicalResilienceArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There is a specific kind of loneliness that comes with chronic illness. It is not
             the loneliness of having no one around --- it is the loneliness of being surrounded
             by people who care about you but cannot truly understand what you are going through.
@@ -909,7 +909,7 @@ export const psychologicalResilienceArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you live with a condition that recurs --- a cancer that may return, pain that
             flares unpredictably, an autoimmune disorder that cycles between remission and
             relapse --- the fear of what comes next can become as constant as the condition
@@ -1316,7 +1316,7 @@ export const psychologicalResilienceArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For most of medical history, pain was understood as a simple input-output system:
             tissue damage sends a signal up the spinal cord to the brain, and the brain registers
             pain. This model was intuitive, elegant, and wrong. Modern neuroscience has revealed
@@ -1687,7 +1687,7 @@ export const psychologicalResilienceArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When people hear "psychologist," they typically picture a therapist's office --- a
             quiet room where someone talks about their childhood, their relationships, their
             feelings. Clinical health psychologists work in a fundamentally different context.
@@ -2086,7 +2086,7 @@ export const psychologicalResilienceArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In 1986, psychologist James Pennebaker conducted a simple experiment. He asked
             college students to write for 20 minutes a day, four days in a row, about the
             most upsetting experience of their lives. A control group wrote about neutral

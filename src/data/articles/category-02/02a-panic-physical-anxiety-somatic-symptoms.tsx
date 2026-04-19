@@ -99,7 +99,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A panic attack is one of the most terrifying experiences a person can have. Your heart pounds out
             of your chest. You can't catch your breath. The room spins. You're convinced you're dying. Then,
             as suddenly as it started, it's over. Understanding what's happening during a panic attack can
@@ -599,7 +599,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The chest pain hits. Your heart races. You're sweating, dizzy, terrified. Your first thought:
             "I'm having a heart attack." This is one of the most frightening moments in a panic attack ---
             and one of the most common reasons people with anxiety end up in emergency rooms.
@@ -1071,7 +1071,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your heart races. Your fingers tingle. Your vision narrows. You're breathing fast and can't seem to
             catch your breath --- but here's the counterintuitive truth: you're actually getting too much air, not
             too little.
@@ -1439,7 +1439,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Anxiety doesn't just live in your head --- it takes up residence in your body. Chest tightness that
             makes you fear a heart attack. Tingling fingers that feel like nerve damage. Dizziness so intense you
             grip the nearest surface. These sensations are real, frightening, and utterly convincing that
@@ -1884,7 +1884,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A headache becomes a brain tumor. A skipped heartbeat becomes cardiac arrest. A skin mark becomes
             melanoma. For people with health anxiety, normal bodily sensations transform into catastrophic medical
             diagnoses --- and no amount of reassurance from doctors makes the fear go away for long.

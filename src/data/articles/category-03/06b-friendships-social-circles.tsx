@@ -92,7 +92,7 @@ export const friendshipsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're always the one texting first. You suggest plans; they say "yes, definitely!" but never propose anything themselves. You stop reaching out to test if they'll notice---and they don't. One-sided friendships are exhausting, and recognizing the pattern is the first step toward either fixing it or freeing yourself.
           </p>
           <p className="mb-6">
@@ -482,7 +482,7 @@ export const friendshipsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You have plenty of acquaintances---people you see at events, chat with casually, enjoy spending time with---but the conversations never go beyond surface level. How do you move from pleasant small talk to genuine closeness? The answer lies in strategic vulnerability, consistent contact, and shared novel experiences.
           </p>
           <p className="mb-6">
@@ -892,7 +892,7 @@ export const friendshipsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your friendships aren't just nice to have---they're a critical component of your mental health infrastructure. Research consistently shows that the quality and quantity of your social connections predict your risk for depression, anxiety, cognitive decline, and even mortality more reliably than many physical health markers.
           </p>
           <p className="mb-6">
@@ -1246,7 +1246,7 @@ export const friendshipsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You thought cliques ended in high school. Then you joined a friend group as an adult and discovered the same dynamics: inside jokes you're not part of, plans made without you, subtle hierarchies that determine who gets attention. Group friendships are complex, and feeling on the outside---even slightly---can sting just as much as it did at fourteen.
           </p>
           <p className="mb-6">
@@ -1605,7 +1605,7 @@ export const friendshipsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've never met them in person, yet they know your struggles, celebrate your wins, and check in when you're quiet too long. Are these online friendships 'real'? The answer, according to research, is nuanced: digital connections can be deeply meaningful, but they're not identical to in-person bonds---and both have unique strengths.
           </p>
           <p className="mb-6">

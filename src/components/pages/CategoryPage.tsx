@@ -192,7 +192,7 @@ const CategoryPage: React.FC = () => {
                         ) : (
                             // Empty state
                             <div className="col-span-full text-center py-12 bg-surface-hover rounded-xl">
-                                <p className="text-gray-500">No articles found for this category.</p>
+                                <p className="text-text-tertiary">No articles found for this category.</p>
                             </div>
                         )}
                     </div>
@@ -220,7 +220,7 @@ const CategoryPage: React.FC = () => {
                         ) : (
                             // Empty state
                             <div className="col-span-full text-center py-12 bg-surface-hover rounded-xl">
-                                <p className="text-gray-500">No tools available for this category.</p>
+                                <p className="text-text-tertiary">No tools available for this category.</p>
                             </div>
                         )}
                     </div>
@@ -257,7 +257,7 @@ const CategoryPage: React.FC = () => {
                         ) : (
                             // Empty state
                             <div className="col-span-full text-center py-12 bg-surface-hover rounded-xl">
-                                <p className="text-gray-500">No videos available for this category.</p>
+                                <p className="text-text-tertiary">No videos available for this category.</p>
                             </div>
                         )}
                     </div>

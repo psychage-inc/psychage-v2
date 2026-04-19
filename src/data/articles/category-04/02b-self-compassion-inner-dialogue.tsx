@@ -133,7 +133,7 @@ export const selfCompassionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your internal dialogue --- the running commentary in your mind about yourself, others, and the world --- shapes your emotions, behaviors, and sense of self more powerfully than most external events. But not all self-talk is created equal. Some patterns support you through difficulty, build resilience, and encourage growth. Others quietly undermine your confidence, amplify anxiety, and erode your sense of worth.
           </p>
           <p className="mb-6">
@@ -397,7 +397,7 @@ export const selfCompassionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             One of the cruelest paradoxes in mental health: the people who would benefit most from self-compassion often resist it because they feel undeserving. The inner voice says, I do not deserve kindness. I deserve to suffer for what I have done or who I am. This belief is deeply painful --- and deeply common.
           </p>
           <p className="mb-6">
@@ -573,7 +573,7 @@ export const selfCompassionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you are in the middle of a difficult moment --- stressed, hurting, or overwhelmed --- complex self-compassion theories are not helpful. You need something simple, fast, and effective. The Self-Compassion Break is exactly that: a three-step, three-minute practice you can use anywhere to interrupt suffering and offer yourself the kindness you need.
           </p>
           <p className="mb-6">
@@ -978,7 +978,7 @@ export const selfCompassionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you fail, make a mistake, or feel inadequate, a painful thought often follows: I am the only one. Everyone else has it together. Something is uniquely wrong with me. This sense of isolation intensifies suffering and fuels shame, turning ordinary human difficulty into evidence of personal defectiveness.
           </p>
           <p className="mb-6">

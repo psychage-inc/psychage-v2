@@ -104,7 +104,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Before a big presentation, your stomach churns. During a stressful week, you live between the bathroom
             and the couch. When anxiety hits, your gut is often the first to know --- and the last to recover. The
             phrase "gut feeling" is more literal than you might think.
@@ -570,7 +570,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The first panic attack arrives out of nowhere --- a sudden surge of terror so intense you're convinced
             you're dying, having a heart attack, or losing your mind. But panic disorder isn't about that first
             attack. It's about what happens next: the fear of the next attack, the constant vigilance, the
@@ -1258,7 +1258,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Right now, without looking down, can you tell if your heart is beating fast or slow? Can you sense the
             subtle sensations in your stomach that signal hunger before it becomes overwhelming? This ability to
             perceive your body's internal signals is called <strong>interoception</strong> --- and it's deeply
@@ -1738,7 +1738,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It starts small: avoiding the grocery store where you once had a panic attack. Then you skip the highway
             where traffic made you feel trapped. Soon, leaving the house at all feels impossible. What began as fear
             of panic has become fear of the world itself --- a condition called <strong>agoraphobia</strong>.
@@ -2296,7 +2296,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You jolt awake at 3 AM, heart pounding, drenched in sweat, gasping for air. There was no nightmare, no
             loud noise --- just sudden, overwhelming terror that pulled you from sleep. This is nocturnal panic, and
             for people who experience it, even sleep feels unsafe.

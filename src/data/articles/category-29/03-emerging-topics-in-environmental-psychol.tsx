@@ -65,7 +65,7 @@ export const emergingTopicsInEnvironmentalPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Space missions, Antarctic expeditions, submarine deployments, and other extreme-environment assignments represent natural laboratories for understanding the fundamental relationship between humans and their environments. When the environment is stripped to its most extreme—confined spaces, social isolation, monotonous landscapes, absence of nature, disrupted circadian rhythms, and separation from the broader human community—the psychological consequences reveal what the human psyche requires from its environment and what happens when those requirements are not met.
           </p>
         </div>
@@ -109,7 +109,7 @@ export const emergingTopicsInEnvironmentalPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -172,7 +172,7 @@ export const emergingTopicsInEnvironmentalPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             As urbanization accelerates and access to natural environments becomes more constrained, the question of whether technology can substitute for nature has moved from theoretical to practical. Virtual reality nature experiences, nature soundscapes, nature videos, biophilic design elements, and digital nature simulations are increasingly proposed as interventions for populations with limited access to real natural environments—hospital patients, prisoners, office workers, residents of nature-poor urban areas, and people with mobility limitations.
           </p>
         </div>
@@ -216,7 +216,7 @@ export const emergingTopicsInEnvironmentalPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -279,7 +279,7 @@ export const emergingTopicsInEnvironmentalPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             One of the most surprising scientific developments of the twenty-first century has been the discovery that the trillions of microorganisms living in and on the human body—collectively known as the microbiome—exert profound influence on brain function, mood, behavior, and mental health. The gut-brain axis—the bidirectional communication system between the gastrointestinal tract and the central nervous system—provides a biological pathway through which gut bacteria can influence neurotransmitter production, inflammation, stress response, and emotional regulation.
           </p>
         </div>
@@ -322,7 +322,7 @@ export const emergingTopicsInEnvironmentalPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -385,7 +385,7 @@ export const emergingTopicsInEnvironmentalPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The human visual system evolved over millions of years in environments dominated by the colors, patterns, and visual textures of the natural world—the greens of vegetation, the blues of sky and water, the earth tones of soil and stone, and the complex, irregular patterns that mathematics calls fractals and that nature produces in everything from tree branches to coastlines. Research in color psychology, environmental aesthetics, and neuroaesthetics reveals that these natural visual qualities are not merely pleasant but functionally restorative: green environments reduce stress, blue environments promote calm and creativity, natural fractal patterns activate relaxation responses in the visual cortex, and the overall visual character of natural environments supports attention restoration in ways that artificial visual environments—with their straight lines, uniform surfaces, and limited color palettes—do not.
           </p>
         </div>
@@ -428,7 +428,7 @@ export const emergingTopicsInEnvironmentalPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -491,7 +491,7 @@ export const emergingTopicsInEnvironmentalPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The human-animal bond is one of the oldest and most psychologically significant relationships in human history. For at least 15,000 years, humans have lived alongside domesticated animals—dogs, cats, horses, and numerous other species—in relationships that serve not only practical functions but deep psychological needs for companionship, nurturance, sensory comfort, and connection to the living world.
           </p>
         </div>
@@ -536,7 +536,7 @@ export const emergingTopicsInEnvironmentalPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -599,7 +599,7 @@ export const emergingTopicsInEnvironmentalPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The sounds that surround us shape our psychological experience more profoundly than most people realize. Research on environmental soundscapes—the totality of sounds in a given environment—reveals that natural sounds (birdsong, flowing water, wind, rain) activate restorative psychological processes including stress reduction, attention recovery, and mood improvement, while urban noise (traffic, construction, industrial machinery) activates stress responses, disrupts cognitive function, and contributes to mental health difficulties.
           </p>
         </div>
@@ -646,7 +646,7 @@ export const emergingTopicsInEnvironmentalPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -709,7 +709,7 @@ export const emergingTopicsInEnvironmentalPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The relationship between the physical environment and psychological wellbeing becomes both more important and more constrained in older adulthood. As mobility decreases, sensory acuity declines, and the radius of daily activity contracts, older adults become increasingly dependent on the quality of their immediate environment for psychological nourishment—the home, the neighborhood, the view from the window, and the accessibility of green spaces and community resources.
           </p>
         </div>
@@ -756,7 +756,7 @@ export const emergingTopicsInEnvironmentalPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -819,7 +819,7 @@ export const emergingTopicsInEnvironmentalPsychologyArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The concept of planetary mental health represents the culmination of a paradigm shift that has been building across psychology, ecology, public health, and the environmental sciences: the recognition that human psychological wellbeing and the health of the planet&apos;s ecological systems are not separate concerns but dimensions of a single, integrated reality. Human mental health depends on clean air, clean water, stable climate, biodiverse ecosystems, functioning food systems, and the sensory richness of the natural world.
           </p>
         </div>
@@ -863,7 +863,7 @@ export const emergingTopicsInEnvironmentalPsychologyArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

@@ -118,7 +118,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Stigma kills more people with mental illness than symptoms do. Not through direct biological mechanisms, but by preventing people from seeking help, destroying relationships, costing jobs, and creating isolation. One in four adults experiences mental illness, yet two-thirds never seek treatment. The primary barrier is not cost or access---it is stigma.
           </p>
           <p className="mb-6">
@@ -544,7 +544,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A woman with depression tells herself she is weak and should be able to snap out of it. A man with anxiety avoids relationships because he believes no one would want to be with someone "damaged." A college student with bipolar disorder gives up on medical school, convinced people like her do not deserve success. These are not symptoms of mental illness---they are symptoms of self-stigma.
           </p>
           <p className="mb-6">
@@ -979,7 +979,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Men die by suicide at nearly four times the rate of women. Yet men are half as likely to seek mental health treatment. This is not because men experience less mental distress---it is because cultural norms around masculinity teach men that admitting struggle is weakness, that emotions should be suppressed, and that asking for help is failure.
           </p>
           <p className="mb-6">
@@ -1465,7 +1465,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A manager experiencing depression comes to work exhausted but tells colleagues she is "just tired." An employee having panic attacks hides in the bathroom rather than asking to work from home. A worker on psychiatric medication tells no one, fearing it will damage career prospects. These scenarios play out in workplaces across the country every day, costing both employees and employers dearly.
           </p>
           <p className="mb-6">
@@ -1900,7 +1900,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A woman with depression is told by her pastor that she needs more faith, not therapy. A man experiencing psychosis is subjected to exorcism rituals instead of psychiatric care. A teenager with anxiety is taught that mental illness is a punishment for sin. These harmful responses occur in some religious communities---but so do profound examples of compassion, healing, and support. Religion\'s relationship with mental health is complex.
           </p>
           <p className="mb-6">

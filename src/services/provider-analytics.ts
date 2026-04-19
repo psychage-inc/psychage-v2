@@ -51,14 +51,23 @@ const eventQueue: Array<{
 }> = [];
 
 let flushTimeout: ReturnType<typeof setTimeout> | null = null;
+let consecutiveFailures = 0;
+const BASE_FLUSH_INTERVAL = 2000;
+const MAX_FLUSH_INTERVAL = 300_000; // 5 minutes
+
+function getFlushInterval(): number {
+  if (consecutiveFailures === 0) return BASE_FLUSH_INTERVAL;
+  return Math.min(BASE_FLUSH_INTERVAL * Math.pow(2, consecutiveFailures), MAX_FLUSH_INTERVAL);
+}
 
 async function flushEvents() {
   if (eventQueue.length === 0) return;
 
-  const batch = eventQueue.splice(0, eventQueue.length);
+  const batchSize = eventQueue.length;
   const visitorId = getVisitorId();
 
-  const rows = batch.map(e => ({
+  // Copy the batch — do NOT splice yet
+  const rows = eventQueue.slice(0, batchSize).map(e => ({
     provider_id: e.provider_id,
     event_type: e.event_type,
     source: e.source || null,
@@ -66,7 +75,22 @@ async function flushEvents() {
     metadata: e.metadata || {},
   }));
 
-  await supabase.from('provider_analytics_events').insert(rows);
+  const { error } = await supabase.from('provider_analytics_events').insert(rows);
+
+  if (error) {
+    consecutiveFailures++;
+    console.warn(
+      `[ProviderAnalytics] Flush failed (attempt ${consecutiveFailures}, ${batchSize} events kept in queue):`,
+      error.message
+    );
+    // Events remain in queue for next flush — schedule with backoff
+    if (flushTimeout) clearTimeout(flushTimeout);
+    flushTimeout = setTimeout(flushEvents, getFlushInterval());
+  } else {
+    // Success — remove the inserted events from the queue
+    eventQueue.splice(0, batchSize);
+    consecutiveFailures = 0;
+  }
 }
 
 /**
@@ -82,7 +106,7 @@ export function trackProviderEvent(
   eventQueue.push({ provider_id: providerId, event_type: eventType, source, metadata });
 
   if (flushTimeout) clearTimeout(flushTimeout);
-  flushTimeout = setTimeout(flushEvents, 2000);
+  flushTimeout = setTimeout(flushEvents, getFlushInterval());
 }
 
 /**
@@ -106,22 +130,36 @@ export function trackContactClick(
 }
 
 // Flush remaining events when page unloads
+// Uses fetch with keepalive instead of sendBeacon so the Supabase
+// apikey header is included (sendBeacon doesn't support custom headers).
 if (typeof window !== 'undefined') {
   window.addEventListener('beforeunload', () => {
-    if (eventQueue.length > 0) {
-      // Use sendBeacon for reliable delivery during page unload
-      const visitorId = getVisitorId();
-      const rows = eventQueue.map(e => ({
-        provider_id: e.provider_id,
-        event_type: e.event_type,
-        source: e.source || null,
-        visitor_id: visitorId,
-        metadata: e.metadata || {},
-      }));
+    if (eventQueue.length === 0) return;
 
-      // sendBeacon doesn't support complex inserts, so we fire-and-forget
-      const url = `${import.meta.env.VITE_SUPABASE_URL}/rest/v1/provider_analytics_events`;
-      navigator.sendBeacon(url, JSON.stringify(rows));
-    }
+    const visitorId = getVisitorId();
+    const rows = eventQueue.map(e => ({
+      provider_id: e.provider_id,
+      event_type: e.event_type,
+      source: e.source || null,
+      visitor_id: visitorId,
+      metadata: e.metadata || {},
+    }));
+
+    const url = `${import.meta.env.VITE_SUPABASE_URL}/rest/v1/provider_analytics_events`;
+    const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': anonKey,
+        'Authorization': `Bearer ${anonKey}`,
+        'Prefer': 'return=minimal',
+      },
+      body: JSON.stringify(rows),
+      keepalive: true,
+    }).catch(() => {
+      // Best-effort on page unload — nothing more we can do
+    });
   });
 }

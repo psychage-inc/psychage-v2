@@ -95,7 +95,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Burnout" has become a catchall term for feeling tired, overworked, or unmotivated. But
             burnout is a specific occupational phenomenon with clear diagnostic criteria---and
             understanding what it actually is matters for recovery.
@@ -490,7 +490,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Burnout doesn't happen overnight. It builds gradually, often over months or years. By
             the time most people recognize it, they're already deep in crisis---exhausted, cynical,
             and depleted.
@@ -956,7 +956,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Am I burned out, or just tired?" It's a question many people ask---but struggle to
             answer. Self-awareness helps, but validated tools provide clarity.
           </p>
@@ -1423,7 +1423,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             They're the ones who consistently exceed expectations. They take on extra projects,
             work weekends, and pride themselves on excellence. They're high achievers---and they're
             burning out at alarming rates.
@@ -1900,7 +1900,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You chose a helping profession because you cared. You wanted to make a difference---to
             heal, support, or protect others. But somewhere along the way, your capacity to care
             started to fade. This is compassion fatigue.

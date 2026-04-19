@@ -96,7 +96,7 @@ export const buildingConfidenceArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Most people wait to feel confident before they act. But research shows this is backward---confidence comes from action, not before it.
           </p>
           <p className="mb-6">
@@ -343,7 +343,7 @@ export const buildingConfidenceArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In 1977, psychologist Albert Bandura proposed a revolutionary idea: your belief in your ability to succeed influences your actual success more than your objective skills.
           </p>
           <p className="mb-6">
@@ -608,7 +608,7 @@ export const buildingConfidenceArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Big goals can feel paralyzing. Small wins---minor but meaningful accomplishments---create momentum that builds confidence and sustains progress.
           </p>
           <p className="mb-6">
@@ -940,7 +940,7 @@ export const buildingConfidenceArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Everyone talks about stepping outside your comfort zone, but few people explain the science behind it. The truth is that the comfort zone is not just a motivational cliche. It is a well-documented psychological phenomenon, and understanding how it works can transform the way you approach growth, challenge, and personal development.
           </p>
           <p className="mb-6">
@@ -1358,7 +1358,7 @@ export const buildingConfidenceArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You scroll through social media and everyone seems happier, more successful, and more put-together than you. A friend gets a promotion and instead of feeling happy for them, a knot forms in your stomach. You see someone your age who has already accomplished what you are still working toward, and suddenly your own progress feels worthless. The comparison reflex is automatic, relentless, and deeply damaging to your confidence.
           </p>
           <p className="mb-6">

@@ -113,7 +113,7 @@ export const copingWithDepressionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When depression pulls you into a spiral of withdrawal and inactivity, the solution isn't to think your way out---it's to act your way out. Behavioral activation is a deceptively simple yet remarkably effective strategy backed by decades of research.
           </p>
           <p className="mb-6">
@@ -481,7 +481,7 @@ export const copingWithDepressionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For people without depression, getting out of bed in the morning is automatic. For people with depression, it can feel like the hardest thing in the world. The weight is physical. The exhaustion is real. And the shame that comes from struggling with something so basic only makes it harder.
           </p>
           <p className="mb-6">
@@ -780,7 +780,7 @@ export const copingWithDepressionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Depression isn't something you can simply decide to stop feeling. But research shows that certain daily practices---when done consistently---can reduce symptoms, improve functioning, and support recovery. This is your evidence-based toolkit.
           </p>
           <p className="mb-6">
@@ -1077,7 +1077,7 @@ export const copingWithDepressionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When depression clouds your mind with heavy thoughts and tangled emotions, getting them onto paper can create clarity, distance, and relief. Journaling for depression isn't about writing beautifully or keeping a perfect diary---it's about externalizing what's inside so it has less power over you.
           </p>
           <p className="mb-6">
@@ -1372,7 +1372,7 @@ export const copingWithDepressionArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Exercise is one of the most well-documented non-pharmaceutical treatments for depression. It's not a cure, and it's not a substitute for therapy or medication---but it's a powerful tool that literally changes your brain chemistry in ways that lift mood, improve energy, and support recovery.
           </p>
           <p className="mb-6">

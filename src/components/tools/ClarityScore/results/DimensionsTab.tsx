@@ -67,7 +67,7 @@ const DimensionsTab: React.FC<DimensionsTabProps> = ({
               className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium transition-all focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus-visible:outline-none ${
                 isActive
                   ? `${m.tailwindBgLight} ${m.tailwindText} border-2 border-current`
-                  : 'bg-white dark:bg-gray-900 text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800'
+                  : 'bg-white dark:bg-neutral-900 text-gray-500 dark:text-neutral-400 border border-gray-200 dark:border-neutral-700 hover:bg-gray-50 dark:hover:bg-neutral-800'
               }`}
               aria-pressed={isActive}
             >
@@ -94,7 +94,7 @@ const DimensionsTab: React.FC<DimensionsTabProps> = ({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -8 }}
           transition={{ duration: 0.2 }}
-          className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm overflow-hidden"
+          className="bg-white dark:bg-neutral-900 rounded-2xl border border-gray-100 dark:border-neutral-800 shadow-sm overflow-hidden"
         >
           {/* Header with dimension hex color gradient */}
           <div
@@ -108,7 +108,7 @@ const DimensionsTab: React.FC<DimensionsTabProps> = ({
             />
             <div className="relative flex items-center gap-4">
               <div
-                className={`w-14 h-14 rounded-2xl flex items-center justify-center ${meta.tailwindText} bg-white/70 dark:bg-gray-900/50`}
+                className={`w-14 h-14 rounded-2xl flex items-center justify-center ${meta.tailwindText} bg-white/70 dark:bg-neutral-900/50`}
               >
                 <Icon size={28} />
               </div>
@@ -116,14 +116,14 @@ const DimensionsTab: React.FC<DimensionsTabProps> = ({
                 <h3 className="text-xl font-display font-bold text-gray-900 dark:text-white">
                   {meta.name}
                 </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+                <p className="text-sm text-gray-500 dark:text-neutral-400">
                   {meta.instrument} — {meta.instrumentFull}
                 </p>
               </div>
               <div className="text-right">
                 <div className="text-3xl font-display font-bold text-gray-900 dark:text-white">
                   {Math.round(score)}
-                  <span className="text-base text-gray-400 dark:text-gray-500">
+                  <span className="text-base text-gray-400 dark:text-neutral-500">
                     /20
                   </span>
                 </div>
@@ -134,11 +134,11 @@ const DimensionsTab: React.FC<DimensionsTabProps> = ({
 
           <div className="p-6 md:p-8 space-y-6">
             {/* What this measures */}
-            <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4">
-              <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">
+            <div className="bg-gray-50 dark:bg-neutral-800/50 rounded-xl p-4">
+              <h4 className="text-xs font-bold text-gray-400 dark:text-neutral-500 uppercase tracking-wider mb-2">
                 What This Measures
               </h4>
-              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+              <p className="text-sm text-gray-600 dark:text-neutral-300 leading-relaxed">
                 {meta.description}
               </p>
             </div>
@@ -150,7 +150,7 @@ const DimensionsTab: React.FC<DimensionsTabProps> = ({
                   <Info size={12} />
                   Why This Matters
                 </h4>
-                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p className="text-sm text-gray-600 dark:text-neutral-300 leading-relaxed">
                   {content.context}
                 </p>
               </div>
@@ -235,26 +235,26 @@ const DimensionsTab: React.FC<DimensionsTabProps> = ({
             {content.toolLink && (
               <Link
                 to={content.toolLink.path}
-                className="flex items-center gap-3 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group"
+                className="flex items-center gap-3 p-4 bg-gray-50 dark:bg-neutral-800/50 rounded-xl hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors group"
               >
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center ${meta.tailwindBgLight} ${meta.tailwindText}`}
                 >
                   <Icon size={16} />
                 </div>
-                <span className="flex-1 text-sm font-medium text-gray-700 dark:text-gray-300">
+                <span className="flex-1 text-sm font-medium text-gray-700 dark:text-neutral-300">
                   {content.toolLink.label}
                 </span>
                 <ChevronRight
                   size={16}
-                  className="text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-200 transition-colors"
+                  className="text-gray-400 dark:text-neutral-500 group-hover:text-gray-600 dark:group-hover:text-gray-200 transition-colors"
                 />
               </Link>
             )}
 
             {/* Instrument badge */}
-            <div className="flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500 pt-2 border-t border-gray-100 dark:border-gray-800">
-              <span className="px-2 py-0.5 bg-gray-100 dark:bg-gray-800 rounded-md font-mono font-medium text-gray-500 dark:text-gray-400">
+            <div className="flex items-center gap-2 text-xs text-gray-400 dark:text-neutral-500 pt-2 border-t border-gray-100 dark:border-neutral-800">
+              <span className="px-2 py-0.5 bg-gray-100 dark:bg-neutral-800 rounded-md font-mono font-medium text-gray-500 dark:text-neutral-400">
                 {meta.instrument}
               </span>
               <span>{meta.instrumentFull}</span>

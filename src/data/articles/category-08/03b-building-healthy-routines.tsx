@@ -134,7 +134,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You spent weeks building a morning routine. Then your partner got sick, your work schedule shifted, or you moved to a new city. Suddenly, the 6 AM journaling and the 7:15 yoga feel impossible. Research shows this isn't failure—it's the nature of routine disruption <Citation id="1" index={1} source="Health Psychology Review" year="2021" tier={1} />. The question isn't how to maintain rigidity during chaos. It's how to adapt without losing the core benefits of structure.
           </p>
 
@@ -282,7 +282,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                   <p>
                     <strong>Total time commitment:</strong> 3--5 minutes
                   </p>
-                  <p className="mt-4 text-sm text-gray-600">
+                  <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
                     <em>Note:</em> This isn't "giving up." It's maintaining the <em>identity</em> of "someone who has a routine" even when the routine itself is minimal. That identity matters more than the time investment.
                   </p>
                 </>
@@ -628,7 +628,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             By 2 PM, most people feel the crash—focus dissolves, mood drops, decision-making quality plummets <Citation id="1" index={1} source="Chronobiology International" year="2020" tier={1} />. The typical response is another coffee, which works temporarily but worsens the cycle. Research shows the afternoon slump isn't a willpower problem—it's circadian biology. A structured midday reset can counteract it without caffeine dependence.
           </p>
 
@@ -683,7 +683,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     <li>Standing stretches (neck rolls, shoulder shrugs, spinal twists)</li>
                     <li>Desk-based yoga sequence</li>
                   </ul>
-                  <p className="mt-4 text-sm text-gray-600">
+                  <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
                     The goal is <em>activation without exhaustion</em>---gentle movement to increase blood flow and shift posture.
                   </p>
                 </>
@@ -704,7 +704,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     <li>Sit near a window with direct sunlight</li>
                     <li>If outdoors isn't possible: use a 10,000-lux light therapy lamp</li>
                   </ul>
-                  <p className="mt-4 text-sm text-gray-600">
+                  <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
                     Combine this with movement (walk outside) for efficiency.
                   </p>
                 </>
@@ -1068,7 +1068,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You maintain a strong weekday routine—consistent wake time, exercise, healthy meals. Then Friday night hits, and you abandon it all: sleeping until noon, skipping workouts, eating whatever <Citation id="1" index={1} source="Current Biology" year="2021" tier={1} />. By Sunday evening, you feel worse than you did Friday. This pattern is common—but research shows it's not the "freedom" that causes the problem. It's the <em>whiplash</em> from structure to chaos and back.
           </p>
 
@@ -1190,7 +1190,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     <li><strong>One meal with structure</strong> (e.g., sit-down breakfast) --- grounds the day</li>
                     <li><strong>Evening wind-down</strong> (even relaxed version) --- sleep preparation</li>
                   </ul>
-                  <p className="mt-4 text-sm text-gray-600">
+                  <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
                     These routines serve <em>physiological needs</em> (circadian health, nervous system regulation), not just productivity. Dropping them entirely feels liberating Friday but causes dysregulation by Sunday.
                   </p>
                 </>
@@ -1208,7 +1208,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     <li><strong>Formal exercise</strong> --- Gym can become a hike, bike ride, or play with kids</li>
                     <li><strong>Task completion pressure</strong> --- Weekends should allow open-ended time</li>
                   </ul>
-                  <p className="mt-4 text-sm text-gray-600">
+                  <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
                     These elements serve <em>work performance</em>, not core well-being. Releasing them is recovery, not self-sabotage.
                   </p>
                 </>
@@ -1547,7 +1547,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It's 6 AM. Your alarm goes off. Every part of you wants to skip the morning workout. Is this avoidance that requires discipline to push through—or is it your body signaling genuine need for rest <Citation id="1" index={1} source="Clinical Psychology Review" year="2021" tier={1} />? This is the central tension in routine-building: knowing when to stick to the plan and when rigidity becomes harmful. Research shows there's no universal answer—but there are frameworks for deciding in the moment.
           </p>
 
@@ -1640,7 +1640,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                       ],
                     ]}
                   />
-                  <p className="mt-4 text-sm text-gray-600">
+                  <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
                     <em>Note:</em> This distinction requires interoceptive awareness---the ability to sense internal body states. If this is hard for you, that's normal (and can be developed over time).
                   </p>
                 </>
@@ -1682,7 +1682,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     <li><strong>Fear-based:</strong> "I exercise because missing = laziness/failure" → Rigidity here serves self-punishment</li>
                     <li><strong>External pressure:</strong> "I exercise because I should" → Neither aligned nor self-driven</li>
                   </ul>
-                  <p className="mt-4 text-sm text-gray-600">
+                  <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
                     If the routine is values-aligned and cost is low, push through. If it's fear-based or cost is high, adjust without guilt.
                   </p>
                 </>
@@ -1835,7 +1835,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     <li>Use "minimum viable version" when tempted to skip</li>
                     <li>Only skip for genuine illness, crisis, or travel</li>
                   </ul>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">
                     This phase feels rigid---that's normal. You're building automaticity. Flexibility comes later.
                   </p>
                 </>
@@ -1857,7 +1857,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     <li>Practice self-compassion after skipping</li>
                     <li>Experiment with modified versions (5-minute workout instead of 30)</li>
                   </ul>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">
                     This phase builds confidence that occasional flexibility won't destroy progress.
                   </p>
                 </>
@@ -1879,7 +1879,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     <li>Skipping doesn't trigger guilt or identity crisis</li>
                     <li>You adapt routines to life changes without rigidity</li>
                   </ul>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">
                     This is the goal: routines serve you, not the other way around.
                   </p>
                 </>
@@ -2041,7 +2041,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The routine that works perfectly in summer—early morning runs, outdoor lunches, evening walks—collapses in winter <Citation id="1" index={1} source="Depression and Anxiety" year="2020" tier={1} />. Mornings are dark, energy plummets, motivation vanishes. Most people blame themselves: "I just need more discipline." But research shows seasonal shifts aren't psychological weakness—they're <strong>biological responses to light, temperature, and circadian changes</strong>. Fighting seasonality rarely works. Adapting to it does.
           </p>
 
@@ -2100,7 +2100,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     <li><strong>Earlier bedtime:</strong> Align with natural darkness---trying to stay up late fights biology</li>
                     <li><strong>Social connection intentionality:</strong> Schedule calls, video chats, or indoor gatherings weekly</li>
                   </ul>
-                  <p className="mt-4 text-sm text-gray-600">
+                  <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
                     <em>Key principle:</em> Accept lower baseline energy. The goal is maintenance, not optimization.
                   </p>
                 </>
@@ -2125,7 +2125,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     <li><strong>Adjust wake time:</strong> Gradual 15-minute shifts earlier if desired (daylight supports this)</li>
                     <li><strong>Increase social engagement:</strong> Plan activities, reconnect with friends</li>
                   </ul>
-                  <p className="mt-4 text-sm text-gray-600">
+                  <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
                     <em>Key principle:</em> Harness the natural upswing without burning out from overactivity.
                   </p>
                 </>
@@ -2150,7 +2150,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     <li><strong>Flexible structure:</strong> Summer invites spontaneity---maintain core routines (sleep anchor, movement) but release rigidity</li>
                     <li><strong>Screen time management:</strong> Long daylight can push bedtime later---use blackout curtains or blue-light blocking</li>
                   </ul>
-                  <p className="mt-4 text-sm text-gray-600">
+                  <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
                     <em>Key principle:</em> Maximize outdoor time while managing heat and maintaining sleep consistency.
                   </p>
                 </>
@@ -2175,7 +2175,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     <li><strong>Re-establish indoor routines:</strong> Transition from outdoor to indoor exercise gradually</li>
                     <li><strong>Anticipate energy dip:</strong> Reduce expectations for productivity and energy as days shorten</li>
                   </ul>
-                  <p className="mt-4 text-sm text-gray-600">
+                  <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
                     <em>Key principle:</em> Proactive preparation prevents full seasonal crash.
                   </p>
                 </>

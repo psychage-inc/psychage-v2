@@ -65,7 +65,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Why do people commit crimes? The question has driven philosophy, theology, and politics for millennia. Modern psychological science offers answers that are neither simple nor satisfying to those who seek a single explanation.
           </p>
         </div>
@@ -111,7 +111,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -174,7 +174,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             No psychological concept is more sensationalized and more misunderstood than psychopathy. In popular culture, the psychopath is a serial killer, a cold-blooded predator, a creature of pure evil lurking behind a mask of charm.
           </p>
         </div>
@@ -219,7 +219,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -282,7 +282,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Antisocial personality disorder (ASPD) is the most stigmatized diagnosis in psychiatry—the one that makes clinicians reluctant to treat, the public afraid to engage, and the person carrying the label feel defined by their worst behavior. The DSM-5 defines ASPD through a pattern of disregard for and violation of others&apos; rights, including deceitfulness, impulsivity, irritability, irresponsibility, and lack of remorse.
           </p>
         </div>
@@ -328,7 +328,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -391,7 +391,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sexual offending is among the most emotionally charged and least understood areas of forensic psychology. Public discourse oscillates between two distorted positions: the belief that all sex offenders are predatory strangers driven by uncontrollable deviant urges, and the minimizing claim that sexual violence is merely about power and has nothing to do with sexual motivation.
           </p>
         </div>
@@ -435,7 +435,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -498,7 +498,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Radicalization—the process by which individuals adopt increasingly extreme political, social, or religious ideologies and come to see violence as justified—is one of the most pressing security and mental health challenges of the twenty-first century. Yet the popular understanding of radicalization remains dominated by myths: that it is driven primarily by mental illness, that it follows a predictable linear path, that ideology alone explains violent action, or that certain religions or political orientations are inherently radicalizing.
           </p>
         </div>
@@ -542,7 +542,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -605,7 +605,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Intimate partner violence (IPV) affects one in three women and one in four men globally over their lifetime, making it one of the most common forms of violence on Earth. Yet the psychology of perpetration remains poorly understood by the public, which tends to oscillate between two unsatisfying explanations: that perpetrators are monsters who enjoy causing pain, or that they simply &quot;lose control&quot; and cannot help themselves.
           </p>
         </div>
@@ -647,7 +647,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -710,7 +710,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The relationship between substance use and criminal behavior is one of the most debated topics in forensic psychology and criminal justice policy. More than half of all incarcerated people in the United States meet criteria for a substance use disorder.
           </p>
         </div>
@@ -753,7 +753,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -816,7 +816,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Deliberate fire-setting is one of the most destructive and least understood criminal behaviors. In the United States alone, arson causes approximately 300 deaths, 1,300 injuries, and $1.
           </p>
         </div>
@@ -862,7 +862,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -925,7 +925,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Stalking—a pattern of repeated, unwanted pursuit and harassment that causes fear in the target—affects approximately 7.5 million people in the United States annually and is one of the most common precursors to lethal violence.
           </p>
         </div>
@@ -973,7 +973,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1036,7 +1036,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             White-collar crime—financially motivated, nonviolent crime committed by business and government professionals—causes more economic harm than all street crime combined, yet it receives a fraction of the public outrage, prosecutorial attention, and research investment. The FBI estimates that white-collar crime costs the United States over $300 billion annually, compared to approximately $16 billion for all property crimes.
           </p>
         </div>
@@ -1086,7 +1086,7 @@ export const psychologyOfCriminalBehaviorArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

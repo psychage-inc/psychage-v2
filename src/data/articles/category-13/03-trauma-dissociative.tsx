@@ -29,11 +29,11 @@ export const traumaDissociativeArticles: Article[] = [
     />
 
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+      <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
         Post-Traumatic Stress Disorder (PTSD) occurs after exposure to actual or threatened death, serious injury, or sexual violence. While most people experience distress after trauma, PTSD develops when these reactions persist beyond one month and significantly impair functioning. Intrusive memories, avoidance behaviors, negative cognitions, and hyperarousal characterize this debilitating condition that affects approximately 6% of the U.S. population at some point in their lives <Citation id="1" index={1} source="NIMH" year="2023" tier={2} />.
       </p>
 
-      <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+      <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
         PTSD is not a sign of weakness—it represents the brain's adaptive survival mechanisms becoming dysregulated after overwhelming experiences. The condition involves fundamental changes in how the brain processes threat, memory, and safety. Understanding PTSD as a neurobiological disorder rather than a character flaw is essential for effective treatment and recovery.
       </p>
     </div>
@@ -51,7 +51,7 @@ export const traumaDissociativeArticles: Article[] = [
 
     <h2 id="diagnostic-criteria" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Diagnostic Criteria</h2>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       The DSM-5-TR requires exposure to a traumatic event plus symptoms in four distinct clusters <Citation id="2" index={2} source="DSM-5-TR" year="2022" tier={4} />:
     </p>
 
@@ -85,7 +85,7 @@ export const traumaDissociativeArticles: Article[] = [
 
     <h2 id="neurobiology" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Neurobiology of PTSD</h2>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       PTSD involves measurable changes in brain structure and function. Neuroimaging studies consistently show three key alterations <Citation id="4" index={3} source="Nature Reviews Neuroscience" year="2021" tier={1} />:
     </p>
 
@@ -100,31 +100,31 @@ export const traumaDissociativeArticles: Article[] = [
       className="my-8"
     />
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       These neurobiological changes explain why PTSD survivors experience the trauma as present rather than past. The hyperactive amygdala sounds false alarms, the shrunken hippocampus cannot properly timestamp memories, and the underactive prefrontal cortex cannot override the fear response. Effective treatment works by normalizing these neural circuits.
     </p>
 
     <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Evidence-Based Treatments</h2>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       Three trauma-focused psychotherapies have the strongest evidence base and are recommended as first-line treatments by the VA/DOD and WHO <Citation id="8" index={4} source="VA/DOD" year="2023" tier={2} />:
     </p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Cognitive Processing Therapy (CPT)</h3>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       CPT is a 12-session structured therapy that addresses "stuck points"—maladaptive beliefs developed after trauma. Patients write detailed accounts of the trauma and systematically challenge distorted beliefs about safety, trust, control, esteem, and intimacy. Randomized controlled trials show 50-60% of participants no longer meet PTSD diagnostic criteria after treatment <Citation id="5" index={5} source="Journal of Traumatic Stress" year="2020" tier={1} />.
     </p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Eye Movement Desensitization and Reprocessing (EMDR)</h3>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       EMDR uses bilateral stimulation (eye movements, tapping, or auditory tones) while recalling trauma memories to facilitate adaptive information processing. The eight-phase protocol helps patients reprocess traumatic memories so they become less emotionally charged. Meta-analyses show EMDR produces significant symptom reduction with fewer dropouts than other therapies <Citation id="3" index={6} source="JAMA Psychiatry" year="2020" tier={1} />.
     </p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Prolonged Exposure (PE) Therapy</h3>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       PE involves repeated, prolonged imaginal exposure to the trauma memory and in vivo exposure to trauma reminders that have been avoided. Through emotional processing, the fear network is activated and modified. PE produces 60-70% reduction in PTSD symptoms and is particularly effective for single-incident traumas <Citation id="6" index={7} source="Behaviour Research and Therapy" year="2021" tier={1} />.
     </p>
 
@@ -156,7 +156,7 @@ export const traumaDissociativeArticles: Article[] = [
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Pharmacotherapy</h3>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       While psychotherapy is first-line treatment, medications can be helpful adjuncts. Sertraline and paroxetine (SSRIs) are FDA-approved for PTSD and show moderate efficacy. Prazosin helps reduce nightmares in some patients. However, medication effects are smaller than those of trauma-focused therapies and symptoms often return when medication is discontinued <Citation id="7" index={8} source="The Lancet Psychiatry" year="2020" tier={1} />.
     </p>
 
@@ -167,7 +167,7 @@ export const traumaDissociativeArticles: Article[] = [
 
     <h2 id="recovery" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Path to Recovery</h2>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       Recovery from PTSD is highly achievable with appropriate treatment. Research shows 60-70% of individuals who complete trauma-focused therapy experience significant symptom reduction, with many no longer meeting diagnostic criteria. Recovery is not about forgetting the trauma—it's about the memory no longer controlling your life.
     </p>
 
@@ -189,7 +189,7 @@ export const traumaDissociativeArticles: Article[] = [
 
     <h2 id="seeking-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When to Seek Help</h2>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       If trauma-related symptoms persist beyond one month and interfere with work, relationships, or daily functioning, professional evaluation is warranted. Look for therapists specifically trained in CPT, EMDR, or PE. The PTSD treatment provider directory at the International Society for Traumatic Stress Studies (istss.org) can help locate qualified clinicians.
     </p>
 
@@ -272,11 +272,11 @@ export const traumaDissociativeArticles: Article[] = [
     />
 
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+      <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
         Complex PTSD (C-PTSD) emerges from prolonged, repeated trauma—particularly trauma that is interpersonal, begins early in life, or involves captivity with no reasonable escape. While PTSD can develop from a single traumatic event, C-PTSD reflects cumulative damage from ongoing traumatic circumstances. The World Health Organization's ICD-11 officially recognized C-PTSD in 2022, distinguishing it from traditional PTSD by three additional symptom domains: severe emotion regulation problems, persistent negative self-beliefs, and profound interpersonal difficulties <Citation id="1" index={1} source="World Psychiatry" year="2020" tier={1} />.
       </p>
 
-      <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+      <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
         Individuals with C-PTSD experienced trauma not as isolated incidents but as ongoing life conditions. Childhood abuse lasting years, long-term domestic violence, human trafficking, prolonged captivity, or growing up in war zones can all produce C-PTSD's characteristic pattern: the core PTSD symptoms combined with fundamental disruptions to identity, self-worth, and relationship capacity.
       </p>
     </div>
@@ -294,7 +294,7 @@ export const traumaDissociativeArticles: Article[] = [
 
     <h2 id="c-ptsd-vs-ptsd" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How C-PTSD Differs from PTSD</h2>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       C-PTSD includes all core PTSD symptoms (re-experiencing, avoidance, hyperarousal) plus three additional symptom clusters that reflect damage to the developing self:
     </p>
 
@@ -340,19 +340,19 @@ export const traumaDissociativeArticles: Article[] = [
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">1. Affective Dysregulation</h3>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       Individuals with C-PTSD struggle with intense, uncontrollable emotional reactions. Small triggers produce overwhelming emotional storms. They may experience chronic emotional numbing alternating with intense reactivity, difficulty calming down once upset, and emotional responses that seem disproportionate to current situations. This reflects developmental disruption of emotion regulation capacities that typically form during childhood <Citation id="5" index={2} source="Journal of Traumatic Stress" year="2021" tier={1} />.
     </p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">2. Negative Self-Concept</h3>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       Prolonged trauma—especially when perpetrated by caregivers—produces profound beliefs about being fundamentally damaged, worthless, or deserving of bad treatment. Unlike the specific guilt or shame in standard PTSD, C-PTSD involves a global sense of being defective. Survivors internalize messages from abusers, developing core beliefs like "I am unlovable," "I don't deserve good things," or "Something is wrong with me."
     </p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">3. Relational Disturbances</h3>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       When trauma occurs in relationships—particularly attachment relationships during childhood—it disrupts the capacity for healthy connection. Individuals with C-PTSD often feel persistently distant from others, have difficulty sustaining relationships, or oscillate between desperate clinging and harsh withdrawal. Trust feels impossible. Intimacy triggers fear. Isolation becomes both a protective strategy and a source of profound loneliness <Citation id="7" index={3} source="Clinical Psychology Review" year="2021" tier={1} />.
     </p>
 
@@ -379,7 +379,7 @@ export const traumaDissociativeArticles: Article[] = [
 
     <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Phase-Based Treatment Approach</h2>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       Unlike standard PTSD where trauma-focused therapy can begin immediately, C-PTSD typically requires a sequential, phase-based approach <Citation id="2" index={5} source="European Journal of Psychotraumatology" year="2021" tier={1} />:
     </p>
 
@@ -409,11 +409,11 @@ export const traumaDissociativeArticles: Article[] = [
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Effective Therapeutic Approaches</h3>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       Several modalities show effectiveness for C-PTSD when delivered in a phased manner:
     </p>
 
-    <ul className="list-disc list-inside mb-6 space-y-3 text-lg text-gray-700 dark:text-gray-300">
+    <ul className="list-disc list-inside mb-6 space-y-3 text-lg text-gray-700 dark:text-neutral-300">
       <li><strong>Schema Therapy:</strong> Addresses maladaptive schemas formed in childhood, using limited reparenting and experiential techniques to heal developmental wounds <Citation id="6" index={6} source="Behaviour Research and Therapy" year="2020" tier={1} />.</li>
       <li><strong>Dialectical Behavior Therapy (DBT):</strong> Originally for borderline personality disorder (which has high C-PTSD overlap), DBT's emotion regulation and distress tolerance modules are highly effective for stabilization <Citation id="8" index={7} source="Journal of Clinical Psychology" year="2020" tier={1} />.</li>
       <li><strong>Internal Family Systems (IFS):</strong> Works with different "parts" of self that developed in response to trauma, promoting internal cooperation and healing.</li>
@@ -422,7 +422,7 @@ export const traumaDissociativeArticles: Article[] = [
 
     <h2 id="self-care" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Living with C-PTSD</h2>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       C-PTSD recovery is a long journey, but meaningful improvement is absolutely possible. Stabilization work—while less dramatic than trauma processing—produces noticeable quality of life improvements: fewer crises, better relationships, more emotional control, reduced self-destructive behaviors.
     </p>
 
@@ -513,7 +513,7 @@ export const traumaDissociativeArticles: Article[] = [
     />
 
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+      <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
         Acute Stress Disorder (ASD) captures the immediate psychological aftermath of trauma—the period between three days and one month after exposure to a life-threatening event. While most trauma survivors experience some distress in the days following trauma, ASD represents a more severe acute reaction that significantly impairs functioning and predicts higher risk for developing chronic PTSD <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. The condition provides a critical window for early intervention that can prevent long-term psychological damage.
       </p>
     </div>
@@ -531,7 +531,7 @@ export const traumaDissociativeArticles: Article[] = [
 
     <h2 id="symptoms" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Symptoms of ASD</h2>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       ASD involves nine or more symptoms from five categories <Citation id="1" index={2} source="DSM-5-TR" year="2022" tier={4} />:
     </p>
 
@@ -569,7 +569,7 @@ export const traumaDissociativeArticles: Article[] = [
 
     <h2 id="asd-to-ptsd" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Bridge from ASD to PTSD</h2>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       ASD essentially represents the acute phase that, if unresolved, transitions into chronic PTSD after one month. Research shows approximately 50% of individuals diagnosed with ASD go on to meet PTSD criteria one month later if untreated <Citation id="3" index={3} source="Journal of Traumatic Stress" year="2021" tier={1} />. This makes ASD diagnosis clinically valuable—it identifies those at highest risk while there's still time for preventive intervention.
       </p>
 
@@ -586,17 +586,17 @@ export const traumaDissociativeArticles: Article[] = [
 
     <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Early Intervention: Preventing PTSD</h2>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       The evidence is clear: early cognitive-behavioral therapy delivered within the first month after trauma reduces the likelihood of developing chronic PTSD by 50-60% <Citation id="2" index={4} source="Clinical Psychology Review" year="2020" tier={1} />. This makes ASD one of the few psychiatric conditions where we have strong preventive interventions.
     </p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Trauma-Focused CBT for ASD</h3>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       A brief (4-5 session) course of trauma-focused CBT typically includes:
     </p>
 
-    <ul className="list-disc list-inside mb-6 space-y-2 text-lg text-gray-700 dark:text-gray-300">
+    <ul className="list-disc list-inside mb-6 space-y-2 text-lg text-gray-700 dark:text-neutral-300">
       <li>Psychoeducation about normal vs. problematic trauma reactions</li>
       <li>Breathing retraining and progressive muscle relaxation</li>
       <li>Imaginal exposure to trauma memory (revisiting and processing what happened)</li>
@@ -604,7 +604,7 @@ export const traumaDissociativeArticles: Article[] = [
       <li>Cognitive restructuring of unhelpful thoughts ("It was my fault," "I'm permanently damaged")</li>
     </ul>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       Studies show this brief intervention produces sustained benefits—those who receive early CBT for ASD have lower PTSD rates at 6-month and 12-month follow-ups compared to those who receive only supportive counseling <Citation id="4" index={5} source="Behaviour Research and Therapy" year="2020" tier={1} />.
     </p>
 
@@ -615,11 +615,11 @@ export const traumaDissociativeArticles: Article[] = [
 
     <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When to Seek Help</h2>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       If you've experienced a traumatic event and notice these warning signs 3+ days afterward, professional evaluation is recommended:
     </p>
 
-    <ul className="list-disc list-inside mb-6 space-y-2 text-lg text-gray-700 dark:text-gray-300">
+    <ul className="list-disc list-inside mb-6 space-y-2 text-lg text-gray-700 dark:text-neutral-300">
       <li>Intrusive memories or nightmares that interfere with sleep or daily activities</li>
       <li>Feeling emotionally numb or unable to experience positive emotions</li>
       <li>Feeling detached from reality or your body</li>
@@ -712,18 +712,18 @@ export const traumaDissociativeArticles: Article[] = [
     />
 
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+      <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
         Dissociative Identity Disorder (DID), formerly called Multiple Personality Disorder, is perhaps the most misunderstood psychiatric condition. Sensationalized in media and doubted by some clinicians, DID's reality is both more complex and more comprehensible than popular portrayals suggest. At its core, DID represents the mind's attempt to compartmentalize overwhelming childhood trauma so severe that normal integration of identity, memory, and consciousness could not occur <Citation id="2" index={1} source="American Journal of Psychiatry" year="2020" tier={1} />.
       </p>
 
-      <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+      <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
         The condition involves disruption of identity characterized by two or more distinct personality states (often called "alters"). These states demonstrate discontinuous sense of self and agency, accompanied by gaps in memory beyond ordinary forgetting. DID is not schizophrenia, not psychosis, and not voluntary role-playing—it's a complex trauma disorder involving fundamental fragmentationof identity development.
       </p>
     </div>
 
     <h2 id="diagnostic-criteria" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What DID Actually Is</h2>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       DSM-5-TR criteria require <Citation id="1" index={2} source="DSM-5-TR" year="2022" tier={4} />:
     </p>
 
@@ -761,7 +761,7 @@ export const traumaDissociativeArticles: Article[] = [
 
     <h2 id="causes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Trauma Origins of DID</h2>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       DID develops from severe, repeated childhood trauma—typically before age 9. Research shows 90% of individuals with DID report documented histories of severe childhood abuse or neglect. The condition represents a developmental adaptation to trauma so overwhelming that the child's mind compartmentalizes the experience into separate states to preserve some semblance of functioning <Citation id="2" index={3} source="American Journal of Psychiatry" year="2020" tier={1} />.
     </p>
 
@@ -780,7 +780,7 @@ export const traumaDissociativeArticles: Article[] = [
 
     <h2 id="prevalence" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">More Common Than You Think</h2>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       DID is not extremely rare. Population studies suggest prevalence of 1-1.5%—similar to schizophrenia or bipolar disorder <Citation id="4" index={4} source="Journal of Trauma & Dissociation" year="2021" tier={1} />. However, it's dramatically underdiagnosed. Average time from first contact with mental health services to accurate diagnosis is 12 years. Patients typically receive an average of 3-4 misdiagnoses (commonly bipolar disorder, borderline personality disorder, schizophrenia, or major depression) before DID is recognized.
     </p>
 
@@ -797,7 +797,7 @@ export const traumaDissociativeArticles: Article[] = [
 
     <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment: Phase-Oriented Approach</h2>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       DID treatment follows a three-phase model similar to C-PTSD but with additional focus on working with different identity states <Citation id="3" index={5} source="ISSTD" year="2023" tier={3} />:
     </p>
 
@@ -822,7 +822,7 @@ export const traumaDissociativeArticles: Article[] = [
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Integration vs. Cooperation</h3>
 
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">
       Treatment goals are individualized. Full integration—where all alters blend into a unified identity—is one possible outcome but not the only valid goal. Many individuals with DID achieve excellent functioning through cooperation, where alters maintain some distinctness but work together collaboratively, sharing memories and co-managing life <Citation id="8" index={6} source="Journal of Clinical Psychology" year="2021" tier={1} />.
     </p>
 
@@ -885,13 +885,13 @@ export const traumaDissociativeArticles: Article[] = [
   ], content: <>
     <SummaryBox keyPoints={["OSDD includes dissociative presentations not meeting full DID criteria", "OSDD-1a: Identity states with less distinct amnesia", "OSDD-1b: Identity alterations without fully distinct states", "Equally impairing as DID", "Treatment follows phase-oriented approach"]} className="mb-12" />
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Other Specified Dissociative Disorder (OSDD) captures clinically significant dissociative presentations close to DID but not quite meeting full criteria. OSDD-1 involves identity fragmentation similar to DID with subtle differences in amnesia patterns or identity distinctness <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Not "DID-lite"—OSDD causes comparable distress and impairment <Citation id="3" index={2} source="European Journal of Trauma & Dissociation" year="2020" tier={1} />.</p>
+      <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">Other Specified Dissociative Disorder (OSDD) captures clinically significant dissociative presentations close to DID but not quite meeting full criteria. OSDD-1 involves identity fragmentation similar to DID with subtle differences in amnesia patterns or identity distinctness <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Not "DID-lite"—OSDD causes comparable distress and impairment <Citation id="3" index={2} source="European Journal of Trauma & Dissociation" year="2020" tier={1} />.</p>
     </div>
     <KeyFacts facts={[{label:"Prevalence",value:"~1%",context:"Similar to DID"},{label:"Trauma History",value:"85-90%",context:"Childhood abuse"},{label:"OSDD-1a",value:"Less Amnesia",context:"Identity states, emotional amnesia only"},{label:"OSDD-1b",value:"Less Distinct",context:"Identity shifts without full separation"}]} className="my-12" />
     <h2 id="subtypes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">OSDD-1 Subtypes</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300"><strong>OSDD-1a:</strong> Distinct identity states but with less clear-cut amnesia—emotional amnesia (remember events but not feelings) rather than memory blackouts. <strong>OSDD-1b:</strong> Less distinct ego states with memory gaps present. Many transition between DID and OSDD-1 diagnoses as symptoms fluctuate <Citation id="2" index={3} source="Journal of Trauma & Dissociation" year="2021" tier={1} />.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300"><strong>OSDD-1a:</strong> Distinct identity states but with less clear-cut amnesia—emotional amnesia (remember events but not feelings) rather than memory blackouts. <strong>OSDD-1b:</strong> Less distinct ego states with memory gaps present. Many transition between DID and OSDD-1 diagnoses as symptoms fluctuate <Citation id="2" index={3} source="Journal of Trauma & Dissociation" year="2021" tier={1} />.</p>
     <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Same phase-oriented approach as DID: stabilization, trauma processing, integration/cooperation <Citation id="4" index={4} source="Psychological Trauma" year="2021" tier={1} />. Parts mapping exercises help understand internal system. Therapy develops communication between parts and processes underlying trauma.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">Same phase-oriented approach as DID: stabilization, trauma processing, integration/cooperation <Citation id="4" index={4} source="Psychological Trauma" year="2021" tier={1} />. Parts mapping exercises help understand internal system. Therapy develops communication between parts and processes underlying trauma.</p>
     <RelatedToolsBlock tools={[{name:"ISSTD Guidelines",description:"Evidence-based approaches",link:"https://www.isst-d.org/guidelines/"},{name:"The Haunted Self",description:"Structural dissociation theory",link:"https://www.guilford.com/books/The-Haunted-Self/Hart-Nijenhuis-Steele/9780393704570"}]} className="my-12" />
     <ReferenceList references={[{id:'1',text:'OSDD Diagnostic Category',source:'APA DSM-5-TR',year:'2022',link:'https://doi.org/10.1176/appi.books.9780890425787',tier:4},{id:'2',text:'OSDD-1 Subtypes',source:'Journal of Trauma & Dissociation',year:'2021',link:'https://doi.org/10.1080/15299732.2021.1989351',tier:1},{id:'3',text:'Clinical Significance',source:'European Journal of Trauma & Dissociation',year:'2020',link:'https://doi.org/10.1016/j.ejtd.2020.100175',tier:1},{id:'4',text:'Treatment for OSDD',source:'Psychological Trauma',year:'2021',link:'https://doi.org/10.1037/tra0001045',tier:1},{id:'5',text:'OSDD vs DID',source:'Clinical Psychology Review',year:'2020',link:'https://doi.org/10.1016/j.cpr.2020.101897',tier:1},{id:'6',text:'ISSTD Guidelines',source:'ISSTD',year:'2023',link:'https://www.isst-d.org/',tier:3}]} className="mt-12" />
   </> },
@@ -905,12 +905,12 @@ export const traumaDissociativeArticles: Article[] = [
   ], content: <>
     <SummaryBox keyPoints={["Depersonalization: feeling detached from yourself", "Derealization: surroundings feel unreal or dreamlike", "Prevalence: 1-2% have chronic form, 50% experience transiently", "Reality testing remains intact—know feelings aren't 'real'", "CBT and grounding techniques are first-line treatment"]} className="mb-12" />
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Depersonalization/Derealization Disorder (DPDR) involves persistent or recurrent feelings of detachment from yourself (depersonalization) or experiencing surroundings as unreal, dreamlike, or distorted (derealization). Crucially, reality testing remains intact—people know these feelings aren't real, which distinguishes DPDR from psychosis <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Up to 50% of adults experience transient depersonalization/derealization after trauma or extreme stress; 1-2% have the chronic disorder <Citation id="3" index={2} source="Comprehensive Psychiatry" year="2021" tier={1} />.</p>
+      <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">Depersonalization/Derealization Disorder (DPDR) involves persistent or recurrent feelings of detachment from yourself (depersonalization) or experiencing surroundings as unreal, dreamlike, or distorted (derealization). Crucially, reality testing remains intact—people know these feelings aren't real, which distinguishes DPDR from psychosis <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Up to 50% of adults experience transient depersonalization/derealization after trauma or extreme stress; 1-2% have the chronic disorder <Citation id="3" index={2} source="Comprehensive Psychiatry" year="2021" tier={1} />.</p>
     </div>
     <h2 id="what-it-feels-like" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What DPDR Feels Like</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Depersonalization: feeling like an outside observer of your thoughts, feelings, body—"I'm watching myself from outside." Emotional numbing, feeling robotic, body feels unfamiliar. Derealization: world feels foggy, flat, artificial—people seem like actors, familiar places feel foreign. Time distortion common. Despite these experiences, people recognize they're altered perceptions, not reality.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">Depersonalization: feeling like an outside observer of your thoughts, feelings, body—"I'm watching myself from outside." Emotional numbing, feeling robotic, body feels unfamiliar. Derealization: world feels foggy, flat, artificial—people seem like actors, familiar places feel foreign. Time distortion common. Despite these experiences, people recognize they're altered perceptions, not reality.</p>
     <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Cognitive-behavioral therapy targeting underlying anxiety and avoidance patterns shows effectiveness <Citation id="4" index={3} source="Behaviour Research and Therapy" year="2020" tier={1} />. Grounding techniques (5-4-3-2-1 sensory awareness, cold water, strong sensory input) interrupt dissociative episodes <Citation id="5" index={4} source="Clinical Psychology & Psychotherapy" year="2021" tier={1} />. No FDA-approved medications, but some find SSRIs helpful for comorbid anxiety. Reducing substance use, stress management, and sleep hygiene help prevent triggers.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">Cognitive-behavioral therapy targeting underlying anxiety and avoidance patterns shows effectiveness <Citation id="4" index={3} source="Behaviour Research and Therapy" year="2020" tier={1} />. Grounding techniques (5-4-3-2-1 sensory awareness, cold water, strong sensory input) interrupt dissociative episodes <Citation id="5" index={4} source="Clinical Psychology & Psychotherapy" year="2021" tier={1} />. No FDA-approved medications, but some find SSRIs helpful for comorbid anxiety. Reducing substance use, stress management, and sleep hygiene help prevent triggers.</p>
     <PracticalExercise title="5-4-3-2-1 Grounding" description="Interrupt dissociation by engaging all five senses" duration="3-5 minutes" frequency="As needed" steps={["Name 5 things you see","Name 4 things you physically feel","Name 3 things you hear","Name 2 things you smell","Name 1 thing you taste"]} warning="For in-moment grounding, not treatment replacement" className="my-8" />
     <ReferenceList references={[{id:'1',text:'DPDR Criteria',source:'DSM-5-TR',year:'2022',link:'https://doi.org/10.1176/appi.books.9780890425787',tier:4},{id:'2',text:'Treatment of DPDR',source:'Journal of Trauma & Dissociation',year:'2020',link:'https://doi.org/10.1080/15299732.2020.1719263',tier:1},{id:'3',text:'Prevalence',source:'Comprehensive Psychiatry',year:'2021',link:'https://doi.org/10.1016/j.comppsych.2021.152256',tier:1},{id:'4',text:'CBT for DPDR',source:'Behaviour Research and Therapy',year:'2020',link:'https://doi.org/10.1016/j.brat.2020.103718',tier:1},{id:'5',text:'Grounding',source:'Clinical Psychology & Psychotherapy',year:'2021',link:'https://doi.org/10.1002/cpp.2551',tier:1}]} className="mt-12" />
   </> },
@@ -923,14 +923,14 @@ export const traumaDissociativeArticles: Article[] = [
   ], content: <>
     <SummaryBox keyPoints={["Dissociation is adaptive during trauma—'mental escape' when physical escape impossible","Becomes maladaptive when activated chronically post-trauma","Impairs emotional processing, memory integration, present-moment awareness","Common in PTSD, C-PTSD, DID, borderline personality disorder","Treatment: grounding, mindfulness, trauma processing once stabilized"]} className="mb-12" />
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Dissociation protects the psyche during overwhelming trauma by creating psychological distance from unbearable experience. When you can't physically escape, your mind escapes—detaching from emotions, body sensations, or the event itself. This is adaptive survival <Citation id="1" index={1} source="Clinical Psychology Review" year="2020" tier={1} />. The problem emerges when dissociation becomes chronic—activated in safe situations, preventing emotional processing and keeping you disconnected from present reality <Citation id="2" index={2} source="Journal of Traumatic Stress" year="2021" tier={1} />.</p>
+      <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">Dissociation protects the psyche during overwhelming trauma by creating psychological distance from unbearable experience. When you can't physically escape, your mind escapes—detaching from emotions, body sensations, or the event itself. This is adaptive survival <Citation id="1" index={1} source="Clinical Psychology Review" year="2020" tier={1} />. The problem emerges when dissociation becomes chronic—activated in safe situations, preventing emotional processing and keeping you disconnected from present reality <Citation id="2" index={2} source="Journal of Traumatic Stress" year="2021" tier={1} />.</p>
     </div>
     <h2 id="adaptive-phase" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When Dissociation Helps</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">During trauma: mental escape reduces psychological damage when overwhelmed. Allows functioning during crisis (first responders, abuse survivors). Compartmentalizes unbearable memories until person has resources to process. Peritraumatic dissociation (during trauma) predicts PTSD but also reflects adaptive coping in the moment <Citation id="3" index={3} source="Psychological Trauma" year="2020" tier={1} />.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">During trauma: mental escape reduces psychological damage when overwhelmed. Allows functioning during crisis (first responders, abuse survivors). Compartmentalizes unbearable memories until person has resources to process. Peritraumatic dissociation (during trauma) predicts PTSD but also reflects adaptive coping in the moment <Citation id="3" index={3} source="Psychological Trauma" year="2020" tier={1} />.</p>
     <h2 id="maladaptive-phase" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When Dissociation Hinders</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Post-trauma: chronic dissociation prevents integration of traumatic memories. Emotional numbing blocks processing. Depersonalization disconnects from recovery resources. Memory fragmentation impairs narrative coherence. Becomes automatic response to stress, even minor. In structural dissociation, segregated identity states can't share information or cooperate <Citation id="4" index={4} source="European Journal of Psychotraumatology" year="2021" tier={1} />.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">Post-trauma: chronic dissociation prevents integration of traumatic memories. Emotional numbing blocks processing. Depersonalization disconnects from recovery resources. Memory fragmentation impairs narrative coherence. Becomes automatic response to stress, even minor. In structural dissociation, segregated identity states can't share information or cooperate <Citation id="4" index={4} source="European Journal of Psychotraumatology" year="2021" tier={1} />.</p>
     <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Healing: Reducing Maladaptive Dissociation</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Grounding techniques increase present-moment awareness. Mindfulness training without overwhelming. Trauma processing (once stabilized) resolves triggers. Therapy helps recognize dissociation triggers. Goal: reduce automatic dissociation while preserving ability to use it adaptively if genuinely needed.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">Grounding techniques increase present-moment awareness. Mindfulness training without overwhelming. Trauma processing (once stabilized) resolves triggers. Therapy helps recognize dissociation triggers. Goal: reduce automatic dissociation while preserving ability to use it adaptively if genuinely needed.</p>
     <ReferenceList references={[{id:'1',text:'Dissociation as Defense',source:'Clinical Psychology Review',year:'2020',link:'https://doi.org/10.1016/j.cpr.2020.101836',tier:1},{id:'2',text:'Adaptive vs Maladaptive',source:'Journal of Traumatic Stress',year:'2021',link:'https://doi.org/10.1002/jts.22621',tier:1},{id:'3',text:'Peritraumatic Dissociation',source:'Psychological Trauma',year:'2020',link:'https://doi.org/10.1037/tra0000566',tier:1},{id:'4',text:'Structural Dissociation',source:'European Journal of Psychotraumatology',year:'2021',link:'https://doi.org/10.1080/20008198.2021.1863580',tier:1}]} className="mt-12" />
   </> },
 
@@ -943,12 +943,12 @@ export const traumaDissociativeArticles: Article[] = [
   ], content: <>
     <SummaryBox keyPoints={["11-20% of Iraq/Afghanistan veterans have PTSD", "Combat trauma often includes moral injury (guilt over actions/inactions)", "VA offers specialized PTSD programs: CPT, PE, EMDR", "Military sexual trauma (MST) affects 1 in 4 women, 1 in 100 men veterans", "Veterans Crisis Line: 988 press 1, available 24/7"]} className="mb-12" />
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Combat veterans face unique trauma challenges beyond civilian PTSD. Approximately 11-20% of Iraq and Afghanistan veterans have PTSD <Citation id="1" index={1} source="JAMA" year="2021" tier={1} />. Military trauma often involves moral injury—psychological distress from actions or inactions that violate deeply held values. The VA health system provides specialized PTSD treatment programs with strong evidence base <Citation id="2" index={2} source="VA/DOD" year="2023" tier={2} />.</p>
+      <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">Combat veterans face unique trauma challenges beyond civilian PTSD. Approximately 11-20% of Iraq and Afghanistan veterans have PTSD <Citation id="1" index={1} source="JAMA" year="2021" tier={1} />. Military trauma often involves moral injury—psychological distress from actions or inactions that violate deeply held values. The VA health system provides specialized PTSD treatment programs with strong evidence base <Citation id="2" index={2} source="VA/DOD" year="2023" tier={2} />.</p>
     </div>
     <h2 id="military-specific-challenges" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Military-Specific Trauma</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300"><strong>Combat exposure:</strong> Firefights, IEDs, witnessing casualties. <strong>Moral injury:</strong> Guilt over killing, failure to prevent deaths, following orders that conflict with values <Citation id="3" index={3} source="Clinical Psychology Review" year="2021" tier={1} />. <strong>Military sexual trauma (MST):</strong> Sexual assault or harassment during service affects 1 in 4 women veterans <Citation id="4" index={4} source="Psychological Trauma" year="2020" tier={1} />. <strong>Loss of military identity:</strong> Transition to civilian life compounds trauma.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300"><strong>Combat exposure:</strong> Firefights, IEDs, witnessing casualties. <strong>Moral injury:</strong> Guilt over killing, failure to prevent deaths, following orders that conflict with values <Citation id="3" index={3} source="Clinical Psychology Review" year="2021" tier={1} />. <strong>Military sexual trauma (MST):</strong> Sexual assault or harassment during service affects 1 in 4 women veterans <Citation id="4" index={4} source="Psychological Trauma" year="2020" tier={1} />. <strong>Loss of military identity:</strong> Transition to civilian life compounds trauma.</p>
     <h2 id="va-treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">VA PTSD Programs</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">VA offers evidence-based treatments: Cognitive Processing Therapy (CPT), Prolonged Exposure (PE), EMDR. Specialized tracks for MST survivors. Residential PTSD programs for severe cases. Vet Centers provide readjustment counseling. All veterans with combat service eligible regardless of discharge status <Citation id="5" index={5} source="Psychiatric Services" year="2021" tier={1} />.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">VA offers evidence-based treatments: Cognitive Processing Therapy (CPT), Prolonged Exposure (PE), EMDR. Specialized tracks for MST survivors. Residential PTSD programs for severe cases. Vet Centers provide readjustment counseling. All veterans with combat service eligible regardless of discharge status <Citation id="5" index={5} source="Psychiatric Services" year="2021" tier={1} />.</p>
     <ArticleCallout type="crisis" className="my-8"><h4 className="font-bold mb-2">Veterans Crisis Line</h4><p>Call 988 and press 1, text 838255, or chat at VeteransCrisisLine.net. Available 24/7 for veterans, service members, and families.</p></ArticleCallout>
     <RelatedToolsBlock tools={[{name:"VA PTSD Treatment Locator",description:"Find VA PTSD specialists",link:"https://www.va.gov/find-locations/"},{name:"Make the Connection",description:"Veteran stories and resources",link:"https://maketheconnection.net/"},{name:"AboutFace",description:"Veterans share PTSD recovery stories",link:"https://www.ptsd.va.gov/apps/aboutface/"}]} className="my-12" />
     <ReferenceList references={[{id:'1',text:'PTSD in Veterans',source:'JAMA',year:'2021',link:'https://doi.org/10.1001/jama.2021.5863',tier:1},{id:'2',text:'VA/DOD Guidelines',source:'U.S. Department of Veterans Affairs',year:'2023',link:'https://www.healthquality.va.gov/guidelines/MH/ptsd/',tier:2},{id:'3',text:'Moral Injury',source:'Clinical Psychology Review',year:'2021',link:'https://doi.org/10.1016/j.cpr.2021.102019',tier:1},{id:'4',text:'Military Sexual Trauma',source:'Psychological Trauma',year:'2020',link:'https://doi.org/10.1037/tra0000547',tier:1},{id:'5',text:'VA Programs',source:'Psychiatric Services',year:'2021',link:'https://doi.org/10.1176/appi.ps.202000295',tier:1}]} className="mt-12" />
@@ -962,12 +962,12 @@ export const traumaDissociativeArticles: Article[] = [
   ], content: <>
     <SummaryBox keyPoints={["30-60% with PTSD also have substance use disorder", "Self-medication: using substances to numb trauma symptoms", "Sequential treatment often fails—integrated approach needed", "Treating only SUD without trauma leads to relapse", "Evidence-based: CPT, PE, EMDR adapted for dual diagnosis"]} className="mb-12" />
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Trauma and addiction frequently co-occur: 30-60% of individuals with PTSD also meet criteria for substance use disorder <Citation id="1" index={1} source="Addiction" year="2020" tier={1} />. The self-medication hypothesis explains this link—substances temporarily reduce trauma symptoms (numbing nightmares, calming hyperarousal, suppressing intrusive memories) but ultimately worsen PTSD and create addiction <Citation id="2" index={2} source="Clinical Psychology Review" year="2021" tier={1} />. Integrated treatment addressing both conditions simultaneously produces better outcomes than sequential approaches.</p>
+      <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">Trauma and addiction frequently co-occur: 30-60% of individuals with PTSD also meet criteria for substance use disorder <Citation id="1" index={1} source="Addiction" year="2020" tier={1} />. The self-medication hypothesis explains this link—substances temporarily reduce trauma symptoms (numbing nightmares, calming hyperarousal, suppressing intrusive memories) but ultimately worsen PTSD and create addiction <Citation id="2" index={2} source="Clinical Psychology Review" year="2021" tier={1} />. Integrated treatment addressing both conditions simultaneously produces better outcomes than sequential approaches.</p>
     </div>
-    <h2 id="why-they-cooccur" className="text-3xl font-display font-bold text-gray-900 dark:text-gray-300 mt-12 mb-6 scroll-mt-32">Why Trauma and Addiction Co-Occur</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Alcohol/sedatives reduce hyperarousal and help sleep. Stimulants counter numbing/dissociation. Opioids ease emotional pain. Cannabis reduces nightmares (short-term). Problem: tolerance develops, requiring more substance. Withdrawal worsens PTSD symptoms. Substance use impairs trauma memory processing. Creates cycle: trauma → substance use → worsening trauma symptoms → increased use.</p>
+    <h2 id="why-they-cooccur" className="text-3xl font-display font-bold text-gray-900 dark:text-neutral-300 mt-12 mb-6 scroll-mt-32">Why Trauma and Addiction Co-Occur</h2>
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">Alcohol/sedatives reduce hyperarousal and help sleep. Stimulants counter numbing/dissociation. Opioids ease emotional pain. Cannabis reduces nightmares (short-term). Problem: tolerance develops, requiring more substance. Withdrawal worsens PTSD symptoms. Substance use impairs trauma memory processing. Creates cycle: trauma → substance use → worsening trauma symptoms → increased use.</p>
     <h2 id="integrated-treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Integrated Treatment</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Addressing both conditions concurrently improves outcomes <Citation id="3" index={3} source="JAMA Psychiatry" year="2020" tier={1} />. SAMHSA recommends integrated approach: simultaneous PTSD and SUD treatment by coordinated providers <Citation id="4" index={4} source="SAMHSA" year="2023" tier={2} />. Modified CPT/PE/EMDR for dual diagnosis. Harm reduction approaches accepted. Medication-assisted treatment (MAT) for opioid/alcohol use supported. Residential trauma programs for severe cases.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">Addressing both conditions concurrently improves outcomes <Citation id="3" index={3} source="JAMA Psychiatry" year="2020" tier={1} />. SAMHSA recommends integrated approach: simultaneous PTSD and SUD treatment by coordinated providers <Citation id="4" index={4} source="SAMHSA" year="2023" tier={2} />. Modified CPT/PE/EMDR for dual diagnosis. Harm reduction approaches accepted. Medication-assisted treatment (MAT) for opioid/alcohol use supported. Residential trauma programs for severe cases.</p>
     <ArticleCallout type="warning" className="my-8"><h4 className="font-bold mb-2">Abstinence Not Always Required First</h4><p>Older models required sobriety before trauma treatment. Current evidence: integrated treatment with harm reduction works better. Trauma processing can occur while actively reducing (not necessarily eliminating) substance use.</p></ArticleCallout>
     <ReferenceList references={[{id:'1',text:'PTSD-SUD Comorbidity',source:'Addiction',year:'2020',link:'https://doi.org/10.1111/add.14956',tier:1},{id:'2',text:'Self-Medication',source:'Clinical Psychology Review',year:'2021',link:'https://doi.org/10.1016/j.cpr.2021.102067',tier:1},{id:'3',text:'Integrated Treatment',source:'JAMA Psychiatry',year:'2020',link:'https://doi.org/10.1001/jamapsychiatry.2020.3650',tier:1},{id:'4',text:'SAMHSA TIP 42',source:'SAMHSA',year:'2023',link:'https://store.samhsa.gov/product/tip-42-substance-use-disorder-treatment-persons-co-occurring-disorders/pep21-02-01-002',tier:2}]} className="mt-12" />
   </> },
@@ -981,12 +981,12 @@ export const traumaDissociativeArticles: Article[] = [
   ], content: <>
     <SummaryBox keyPoints={["MDMA-assisted therapy: 67% no longer met PTSD criteria in Phase 3 trials", "Stellate ganglion block: injection reducing hyperarousal symptoms", "Neurofeedback: training brain activity patterns", "VR exposure therapy: controlled trauma-related scenarios", "Ketamine: rapid-acting treatment for severe PTSD"]} className="mb-12" />
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Beyond traditional CPT, EMDR, and PE, several innovative treatments show promise for trauma disorders. MDMA-assisted therapy produced breakthrough results in Phase 3 trials: 67% of participants no longer met PTSD diagnostic criteria after three sessions <Citation id="1" index={1} source="Nature Medicine" year="2021" tier={1} />. FDA approval anticipated in 2024. These advances offer hope for treatment-resistant PTSD and expand options beyond talk therapy alone.</p>
+      <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">Beyond traditional CPT, EMDR, and PE, several innovative treatments show promise for trauma disorders. MDMA-assisted therapy produced breakthrough results in Phase 3 trials: 67% of participants no longer met PTSD diagnostic criteria after three sessions <Citation id="1" index={1} source="Nature Medicine" year="2021" tier={1} />. FDA approval anticipated in 2024. These advances offer hope for treatment-resistant PTSD and expand options beyond talk therapy alone.</p>
     </div>
     <h2 id="emerging-treatments" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Promising Innovations</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300"><strong>MDMA-assisted psychotherapy:</strong> 3 sessions with MDMA plus therapy. Reduces fear during trauma processing. Allows deeper engagement with memories <Citation id="1" index={2} source="Nature Medicine" year="2021" tier={1} />. <strong>Stellate ganglion block (SGB):</strong> Local anesthetic injection to neck nerve bundle. Reduces physiological hyperarousal. Effect often immediate, lasts months <Citation id="2" index={3} source="JAMA Psychiatry" year="2020" tier={1} />. <strong>Neurofeedback:</strong> Real-time brain activity display. Training to normalize PTSD-related patterns <Citation id="3" index={4} source="NeuroImage: Clinical" year="2021" tier={1} />. <strong>VR exposure:</strong> Virtual reality simulations for controlled exposure <Citation id="4" index={5} source="Behaviour Research and Therapy" year="2021" tier={1} />. <strong>Ketamine:</strong> Rapid reduction in PTSD symptoms, particularly for severe cases <Citation id="5" index={6} source="American Journal of Psychiatry" year="2021" tier={1} />.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300"><strong>MDMA-assisted psychotherapy:</strong> 3 sessions with MDMA plus therapy. Reduces fear during trauma processing. Allows deeper engagement with memories <Citation id="1" index={2} source="Nature Medicine" year="2021" tier={1} />. <strong>Stellate ganglion block (SGB):</strong> Local anesthetic injection to neck nerve bundle. Reduces physiological hyperarousal. Effect often immediate, lasts months <Citation id="2" index={3} source="JAMA Psychiatry" year="2020" tier={1} />. <strong>Neurofeedback:</strong> Real-time brain activity display. Training to normalize PTSD-related patterns <Citation id="3" index={4} source="NeuroImage: Clinical" year="2021" tier={1} />. <strong>VR exposure:</strong> Virtual reality simulations for controlled exposure <Citation id="4" index={5} source="Behaviour Research and Therapy" year="2021" tier={1} />. <strong>Ketamine:</strong> Rapid reduction in PTSD symptoms, particularly for severe cases <Citation id="5" index={6} source="American Journal of Psychiatry" year="2021" tier={1} />.</p>
     <h2 id="status" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Current Status</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Most remain experimental or limited availability. MDMA-assisted therapy awaiting FDA approval. SGB available at some VA centers and private clinics. VR exposure increasingly available. Standard therapies (CPT, EMDR, PE) remain first-line with strongest evidence base. Innovations expand toolkit for treatment-resistant cases.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-neutral-300">Most remain experimental or limited availability. MDMA-assisted therapy awaiting FDA approval. SGB available at some VA centers and private clinics. VR exposure increasingly available. Standard therapies (CPT, EMDR, PE) remain first-line with strongest evidence base. Innovations expand toolkit for treatment-resistant cases.</p>
     <ReferenceList references={[{id:'1',text:'MDMA for PTSD',source:'Nature Medicine',year:'2021',link:'https://doi.org/10.1038/s41591-021-01336-3',tier:1},{id:'2',text:'Stellate Ganglion Block',source:'JAMA Psychiatry',year:'2020',link:'https://doi.org/10.1001/jamapsychiatry.2020.3474',tier:1},{id:'3',text:'Neurofeedback',source:'NeuroImage: Clinical',year:'2021',link:'https://doi.org/10.1016/j.nicl.2021.102738',tier:1},{id:'4',text:'VR Exposure',source:'Behaviour Research and Therapy',year:'2021',link:'https://doi.org/10.1016/j.brat.2021.103896',tier:1},{id:'5',text:'Ketamine',source:'American Journal of Psychiatry',year:'2021',link:'https://doi.org/10.1176/appi.ajp.2021.21010128',tier:1}]} className="mt-12" />
   </> },
 ];

@@ -76,7 +76,7 @@ export const schizophreniaArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Ask most people what schizophrenia looks like, and they'll describe hearing voices or
             believing things that aren't true. These psychotic symptoms are real and important --- but
             they tell only part of the story. Beneath them lies a set of cognitive changes that often
@@ -292,7 +292,7 @@ export const schizophreniaArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When a person with schizophrenia sits silently in a room, face expressionless, making
             no effort to initiate conversation or activity, it can look like they simply don't
             care. Family members might interpret it as stubbornness. Friends might see it as
@@ -485,7 +485,7 @@ export const schizophreniaArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Schizophrenia is universal --- but the experience of it is
             not <Citation id="7" index={7} source="World Health Organization" year="2024" tier={2} />.
             A person hearing voices in Accra may interpret them as ancestral spirits. The same
@@ -683,7 +683,7 @@ export const schizophreniaArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For decades, the textbook narrative about schizophrenia was bleak: it was described as
             a relentlessly progressive brain disease that gradually eroded a person's functioning
             until all that remained was disability and dependence. This narrative was never
@@ -895,7 +895,7 @@ export const schizophreniaArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Imagine being absolutely certain that your coworker is systematically sabotaging your
             career. You see the evidence everywhere --- a missed email, a sideways glance, a
             meeting you weren't invited to. Your conviction is total, your evidence internally

@@ -54,21 +54,21 @@ const MindMateCard: React.FC = () => {
     };
 
     return (
-        <div className="h-full rounded-2xl border border-gray-200 dark:border-gray-800 bg-gradient-to-br from-white to-teal-50/30 dark:from-gray-900/50 dark:to-teal-950/10 shadow-sm p-5 flex flex-col">
+        <div className="h-full rounded-2xl border border-gray-200 dark:border-neutral-800 bg-gradient-to-br from-white to-teal-50/30 dark:from-neutral-900/50 dark:to-teal-950/10 shadow-sm p-5 flex flex-col">
             <div className="flex items-center gap-2.5 mb-4">
                 <div className="w-8 h-8 rounded-lg bg-teal-500/10 flex items-center justify-center">
                     <Sparkles size={16} className="text-teal-500" />
                 </div>
                 <div>
                     <h3 className="font-semibold text-sm text-gray-900 dark:text-white">MindMate</h3>
-                    <p className="text-[11px] text-gray-500 dark:text-gray-400">Your AI wellness companion</p>
+                    <p className="text-[11px] text-gray-500 dark:text-neutral-400">Your AI wellness companion</p>
                 </div>
             </div>
 
             {/* Decorative input */}
             <button
                 onClick={() => navigate('/tools/mindmate')}
-                className="w-full text-left px-4 py-2.5 rounded-xl bg-gray-100/80 dark:bg-gray-800/50 border border-gray-200/60 dark:border-gray-700/50 text-sm text-gray-400 dark:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors mb-4"
+                className="w-full text-left px-4 py-2.5 rounded-xl bg-gray-100/80 dark:bg-neutral-800/50 border border-gray-200/60 dark:border-neutral-700/50 text-sm text-gray-400 dark:text-neutral-500 hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors mb-4"
             >
                 Ask me anything...
             </button>
@@ -88,11 +88,11 @@ const MindMateCard: React.FC = () => {
             </div>
 
             {/* Last chat or start CTA */}
-            <div className="mt-auto pt-3 border-t border-gray-100 dark:border-gray-800/60">
+            <div className="mt-auto pt-3 border-t border-gray-100 dark:border-neutral-800/60">
                 {lastChat ? (
                     <Link
                         to="/tools/mindmate"
-                        className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors group"
+                        className="flex items-center gap-2 text-xs text-gray-500 dark:text-neutral-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors group"
                     >
                         <MessageCircle size={12} />
                         <span className="truncate flex-grow">Last: "{lastChat}"</span>

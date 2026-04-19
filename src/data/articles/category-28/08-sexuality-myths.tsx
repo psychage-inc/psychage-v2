@@ -65,7 +65,7 @@ export const sexualityMythsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             One of the most persistent myths in sexual culture is the belief that desire should arrive unbidden—spontaneously, reliably, and with equal intensity across a lifetime. This misconception, deeply embedded in media portrayals and cultural scripts, causes significant distress for individuals and couples who interpret the absence of spontaneous desire as evidence of dysfunction, falling out of love, or personal inadequacy.
           </p>
         </div>
@@ -86,7 +86,7 @@ export const sexualityMythsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -149,7 +149,7 @@ export const sexualityMythsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The belief that love should automatically produce great sex is among the most damaging myths in relationship psychology. This assumption—that emotional connection translates seamlessly into physical compatibility without effort, communication, or learning—sets couples up for silent suffering when their sexual experiences fall short of the effortless ideal.
           </p>
         </div>
@@ -170,7 +170,7 @@ export const sexualityMythsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -233,7 +233,7 @@ export const sexualityMythsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Asexuality—characterized by a persistent lack of sexual attraction to others—has been systematically misunderstood, pathologized, and erased throughout much of psychiatric and cultural history. Despite affecting an estimated 1% of the population, asexuality was long conflated with sexual dysfunction, hormonal imbalance, or the aftermath of trauma.
           </p>
         </div>
@@ -254,7 +254,7 @@ export const sexualityMythsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -317,7 +317,7 @@ export const sexualityMythsArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The belief that men are perpetually desirous and women are inherently reluctant represents one of the most stubborn and damaging sexual stereotypes in contemporary culture. This gendered narrative—men as insatiable pursuers, women as reluctant gatekeepers—distorts the lived experience of millions of people whose desires don&apos;t conform to these rigid scripts.
           </p>
         </div>
@@ -338,7 +338,7 @@ export const sexualityMythsArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

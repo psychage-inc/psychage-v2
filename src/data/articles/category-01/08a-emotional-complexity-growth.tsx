@@ -132,7 +132,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Emotional agility isn't about controlling or suppressing emotions—it's about being flexible with them, allowing difficult feelings while choosing actions aligned with your values.
           </p>
           <p className="mb-6">
@@ -173,7 +173,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               description: (
                 <>
                   <p className="mb-2">Facing emotions rather than avoiding them. Acknowledging what you feel without judgment or immediate reaction.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">Example: James notices he feels resentful when his partner makes plans without consulting him. Instead of pushing the feeling away or lashing out, he acknowledges: "I'm feeling resentful right now."</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">Example: James notices he feels resentful when his partner makes plans without consulting him. Instead of pushing the feeling away or lashing out, he acknowledges: "I'm feeling resentful right now."</p>
                 </>
               ),
             },
@@ -182,7 +182,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               description: (
                 <>
                   <p className="mb-2">Creating distance between you and your emotions. "I'm having the thought that I'm a failure" rather than "I am a failure." You are not your emotions.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">Example: Sarah catches herself thinking "I'm terrible at my job" after a mistake. She reframes: "I'm having the thought that I'm terrible at my job"—which is just a thought, not a fact.</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">Example: Sarah catches herself thinking "I'm terrible at my job" after a mistake. She reframes: "I'm having the thought that I'm terrible at my job"—which is just a thought, not a fact.</p>
                 </>
               ),
             },
@@ -191,7 +191,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               description: (
                 <>
                   <p className="mb-2">Using values as your compass. Making choices based on what matters to you, not just how you feel in the moment.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">Example: David values health but feels exhausted after work. Instead of collapsing on the couch every night, he chooses a 20-minute walk three times a week—not because he feels like it, but because movement matters to him.</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">Example: David values health but feels exhausted after work. Instead of collapsing on the couch every night, he chooses a 20-minute walk three times a week—not because he feels like it, but because movement matters to him.</p>
                 </>
               ),
             },
@@ -200,7 +200,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               description: (
                 <>
                   <p className="mb-2">Taking small, committed actions toward what you value, even when emotions pull you elsewhere. Willingness to experience discomfort for meaningful goals.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">Example: Elena values connection but feels anxious about reaching out after a conflict. She sends the text anyway: "Can we talk?" The anxiety doesn't disappear, but she moves forward regardless.</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">Example: Elena values connection but feels anxious about reaching out after a conflict. She sends the text anyway: "Can we talk?" The anxiety doesn't disappear, but she moves forward regardless.</p>
                 </>
               ),
             },
@@ -319,7 +319,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         <h2 id="exercise-defusion" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Practical Exercise: The Leaves on a Stream Visualization
         </h2>
-        <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg mb-8">
+        <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg mb-8">
           <p className="font-semibold mb-4">This 5-minute mindfulness exercise builds defusion skills:</p>
           <ol className="list-decimal pl-5 space-y-3">
             <li>
@@ -338,7 +338,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               <strong>Continue for 5 minutes.</strong> Notice: thoughts come and go, whether you engage with them or not. You are not your thoughts—you're the observer of thoughts.
             </li>
           </ol>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">Do this daily for two weeks. Most people report thoughts feel less "sticky" over time.</p>
+          <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">Do this daily for two weeks. Most people report thoughts feel less "sticky" over time.</p>
         </div>
 
         <h2 id="values-compass" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -378,7 +378,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         <h2 id="exercise-values" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Practical Exercise: Clarifying Your Core Values
         </h2>
-        <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg mb-8">
+        <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg mb-8">
           <p className="font-semibold mb-4">Spend 15-20 minutes with pen and paper:</p>
           <ol className="list-decimal pl-5 space-y-3">
             <li>
@@ -402,7 +402,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               <strong>Identify one small action</strong> you can take this week that aligns with each value—regardless of how you feel.
             </li>
           </ol>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">Review your values monthly. They may shift as you grow—that's normal.</p>
+          <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">Review your values monthly. They may shift as you grow—that's normal.</p>
         </div>
 
         <h2 id="willing-discomfort" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -445,23 +445,23 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         <h2 id="exercise-daily-agility" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Practical Exercise: The Daily Agility Check-In
         </h2>
-        <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg mb-8">
+        <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg mb-8">
           <p className="font-semibold mb-4">Each evening, spend 5 minutes answering these three questions:</p>
           <ol className="list-decimal pl-5 space-y-4">
             <li>
               <strong>"What difficult emotion did I experience today?"</strong><br />
-              <span className="text-sm text-gray-600 dark:text-gray-400">Name it specifically: "I felt jealous when my coworker got praise" (not just "I felt bad").</span>
+              <span className="text-sm text-gray-600 dark:text-neutral-400">Name it specifically: "I felt jealous when my coworker got praise" (not just "I felt bad").</span>
             </li>
             <li>
               <strong>"How did I respond to that emotion?"</strong><br />
-              <span className="text-sm text-gray-600 dark:text-gray-400">Did you avoid, suppress, ruminate, or make space for it? No judgment—just notice.</span>
+              <span className="text-sm text-gray-600 dark:text-neutral-400">Did you avoid, suppress, ruminate, or make space for it? No judgment—just notice.</span>
             </li>
             <li>
               <strong>"If I had been emotionally agile, what would I have done differently?"</strong><br />
-              <span className="text-sm text-gray-600 dark:text-gray-400">What values-aligned action could you have taken, even with the emotion present?</span>
+              <span className="text-sm text-gray-600 dark:text-neutral-400">What values-aligned action could you have taken, even with the emotion present?</span>
             </li>
           </ol>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">The goal isn't perfection—it's building awareness. Over weeks, you'll notice patterns and gradually choose agility more often.</p>
+          <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">The goal isn't perfection—it's building awareness. Over weeks, you'll notice patterns and gradually choose agility more often.</p>
         </div>
 
         <h2 id="common-obstacles" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -617,7 +617,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Life rarely offers clean, simple emotions. Learning to hold two seemingly opposite feelings at once—joy and sadness, love and frustration, excitement and fear—is a mark of emotional maturity.
           </p>
           <p className="mb-6">
@@ -670,7 +670,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-2">Missing someone deeply while also feeling grateful for the time you had. Sadness doesn't cancel gratitude; both coexist.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">Example: After her grandmother's death, Keisha felt waves of grief AND deep gratitude for 30 years of love and guidance. She didn't need to "get over" the sadness to appreciate what she had—both feelings honored her grandmother's impact.</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">Example: After her grandmother's death, Keisha felt waves of grief AND deep gratitude for 30 years of love and guidance. She didn't need to "get over" the sadness to appreciate what she had—both feelings honored her grandmother's impact.</p>
                 </>
               ),
             },
@@ -680,7 +680,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-2">Loving your partner while feeling furious about something they did. Anger doesn't mean the love isn't real.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">Example: Jordan loves his wife deeply AND feels genuinely angry that she made a major financial decision without consulting him. The anger is valid; the love is real. Both-and thinking allows him to address the issue without catastrophizing the relationship.</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">Example: Jordan loves his wife deeply AND feels genuinely angry that she made a major financial decision without consulting him. The anger is valid; the love is real. Both-and thinking allows him to address the issue without catastrophizing the relationship.</p>
                 </>
               ),
             },
@@ -690,7 +690,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-2">Proud of what you accomplished while disappointed it didn't go further. Both feelings about the same event are valid.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">Example: Amir trained for months and finished his first marathon in 4 hours 30 minutes. He's proud he completed it AND disappointed he didn't break 4 hours like he hoped. Both feelings make sense—and neither negates the achievement.</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">Example: Amir trained for months and finished his first marathon in 4 hours 30 minutes. He's proud he completed it AND disappointed he didn't break 4 hours like he hoped. Both feelings make sense—and neither negates the achievement.</p>
                 </>
               ),
             },
@@ -700,7 +700,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-2">Starting something new brings both genuine excitement for possibility and real fear of the unknown.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">Example: Chen accepted a job offer in a new city. She's thrilled about career growth AND terrified to leave her support network. If she insisted on feeling only one, she'd miss the complexity of major life transitions.</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">Example: Chen accepted a job offer in a new city. She's thrilled about career growth AND terrified to leave her support network. If she insisted on feeling only one, she'd miss the complexity of major life transitions.</p>
                 </>
               ),
             },
@@ -710,7 +710,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-2">Accepting yourself as you are now while also working toward growth. Self-acceptance doesn't mean giving up on change.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">Example: Taylor practices radical self-acceptance of her body AND goes to the gym because movement feels good. She doesn't need to hate herself to improve—acceptance and growth coexist beautifully.</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">Example: Taylor practices radical self-acceptance of her body AND goes to the gym because movement feels good. She doesn't need to hate herself to improve—acceptance and growth coexist beautifully.</p>
                 </>
               ),
             },
@@ -748,7 +748,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               description: (
                 <>
                   <p className="mb-2">Catch yourself thinking "I'm either happy or sad," "They're either good or bad," "This is either right or wrong." These are moments to pause.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">Watch for absolutes: always, never, completely, totally. These words often signal either-or thinking.</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">Watch for absolutes: always, never, completely, totally. These words often signal either-or thinking.</p>
                 </>
               ),
             },
@@ -757,7 +757,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               description: (
                 <>
                   <p className="mb-2">Literally insert the word "and" between opposing thoughts. "I'm disappointed AND proud." "I love them AND I'm angry." Say both out loud.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">At first this will feel forced or false. That's normal. Keep practicing—the brain adapts.</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">At first this will feel forced or false. That's normal. Keep practicing—the brain adapts.</p>
                 </>
               ),
             },
@@ -766,7 +766,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               description: (
                 <>
                   <p className="mb-2">Don't rush to resolve contradictions. Sit with the discomfort of both being true. This gets easier with practice.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">The goal isn't to pick a winner or find a middle ground—it's to let both exist simultaneously.</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">The goal isn't to pick a winner or find a middle ground—it's to let both exist simultaneously.</p>
                 </>
               ),
             },
@@ -775,7 +775,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               description: (
                 <>
                   <p className="mb-2">Give each feeling its due. "Of course I'm scared—this is new. AND of course I'm excited—this is what I wanted." Both make sense.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">Validation doesn't mean agreement, just acknowledgment: "This feeling makes sense given the circumstances."</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">Validation doesn't mean agreement, just acknowledgment: "This feeling makes sense given the circumstances."</p>
                 </>
               ),
             },
@@ -785,27 +785,27 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         <h2 id="exercise-daily-dialectics" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Practical Exercise: The Daily Dialectics Journal
         </h2>
-        <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg mb-8">
+        <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg mb-8">
           <p className="font-semibold mb-4">For one week, spend 5 minutes each evening completing this reflection:</p>
           <ol className="list-decimal pl-5 space-y-3">
             <li>
               <strong>Identify an either-or thought you had today.</strong><br />
-              <span className="text-sm text-gray-600 dark:text-gray-400">Example: "My presentation was either good or terrible."</span>
+              <span className="text-sm text-gray-600 dark:text-neutral-400">Example: "My presentation was either good or terrible."</span>
             </li>
             <li>
               <strong>Reframe it as both-and.</strong><br />
-              <span className="text-sm text-gray-600 dark:text-gray-400">Example: "My presentation had strong moments (the opening, the data slides) AND awkward moments (I stumbled on a question, lost my place once)."</span>
+              <span className="text-sm text-gray-600 dark:text-neutral-400">Example: "My presentation had strong moments (the opening, the data slides) AND awkward moments (I stumbled on a question, lost my place once)."</span>
             </li>
             <li>
               <strong>Notice how the both-and version feels different.</strong><br />
-              <span className="text-sm text-gray-600 dark:text-gray-400">Usually: less extreme, more accurate, more compassionate.</span>
+              <span className="text-sm text-gray-600 dark:text-neutral-400">Usually: less extreme, more accurate, more compassionate.</span>
             </li>
             <li>
               <strong>Repeat with 2-3 examples from your day.</strong><br />
-              <span className="text-sm text-gray-600 dark:text-gray-400">Relationships, work, self-perception—dialectics show up everywhere.</span>
+              <span className="text-sm text-gray-600 dark:text-neutral-400">Relationships, work, self-perception—dialectics show up everywhere.</span>
             </li>
           </ol>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">After a week, review your entries. You'll likely notice patterns—certain either-or thoughts appear repeatedly. These are your growth edges.</p>
+          <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">After a week, review your entries. You'll likely notice patterns—certain either-or thoughts appear repeatedly. These are your growth edges.</p>
         </div>
 
         <h2 id="dbt-dialectics" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -849,12 +849,12 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         <h2 id="exercise-and-statements" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Practical Exercise: The "AND" Statement Builder
         </h2>
-        <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg mb-8">
+        <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg mb-8">
           <p className="font-semibold mb-4">Practice building both-and statements in real-time:</p>
           <ol className="list-decimal pl-5 space-y-3">
             <li>
               <strong>Think of a current emotional conflict.</strong><br />
-              <span className="text-sm text-gray-600 dark:text-gray-400">Something where you feel pulled in opposite directions.</span>
+              <span className="text-sm text-gray-600 dark:text-neutral-400">Something where you feel pulled in opposite directions.</span>
             </li>
             <li>
               <strong>Write down both sides separately:</strong>
@@ -865,19 +865,19 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
             </li>
             <li>
               <strong>Connect them with AND:</strong><br />
-              <span className="text-sm text-gray-600 dark:text-gray-400">"I feel/think/want [first part] AND I feel/think/want [second part]."</span>
+              <span className="text-sm text-gray-600 dark:text-neutral-400">"I feel/think/want [first part] AND I feel/think/want [second part]."</span>
             </li>
             <li>
               <strong>Speak it out loud.</strong><br />
-              <span className="text-sm text-gray-600 dark:text-gray-400">Hearing yourself say "both are true" reinforces the dialectic.</span>
+              <span className="text-sm text-gray-600 dark:text-neutral-400">Hearing yourself say "both are true" reinforces the dialectic.</span>
             </li>
             <li>
               <strong>Sit with it for 60 seconds.</strong><br />
-              <span className="text-sm text-gray-600 dark:text-gray-400">Notice the discomfort of not resolving—and notice that you can tolerate it.</span>
+              <span className="text-sm text-gray-600 dark:text-neutral-400">Notice the discomfort of not resolving—and notice that you can tolerate it.</span>
             </li>
           </ol>
           <p className="mt-4 text-sm font-semibold">Example in action:</p>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">"I'm furious at my friend for canceling our plans last-minute AND I understand she's overwhelmed with work right now. Both my anger and my compassion are real."</p>
+          <p className="text-sm text-gray-600 dark:text-neutral-400 mt-1">"I'm furious at my friend for canceling our plans last-minute AND I understand she's overwhelmed with work right now. Both my anger and my compassion are real."</p>
         </div>
 
         <h2 id="practice-examples" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -913,7 +913,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         <h2 id="exercise-relationship-dialectics" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Practical Exercise: Relationship Dialectics Mapping
         </h2>
-        <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg mb-8">
+        <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg mb-8">
           <p className="font-semibold mb-4">This exercise deepens understanding of important relationships:</p>
           <ol className="list-decimal pl-5 space-y-3">
             <li>
@@ -932,7 +932,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               <strong>Reflect:</strong> How does holding both change your feelings about the relationship? Does it reduce pressure to make them "all good" or "all bad"?
             </li>
           </ol>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">This exercise often reveals that either-or thinking ("Should I stay or go?") oversimplifies rich, complex relationships.</p>
+          <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">This exercise often reveals that either-or thinking ("Should I stay or go?") oversimplifies rich, complex relationships.</p>
         </div>
 
         <h2 id="obstacles" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1061,7 +1061,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Post-traumatic growth isn't about silver linings or toxic positivity---it's the documented phenomenon that profound struggle can catalyze unexpected positive changes in how people see themselves, others, and life itself.
           </p>
           <p className="mb-6">
@@ -1083,44 +1083,44 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         </p>
 
         <div className="space-y-6 mb-8">
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border-l-4 border-blue-500">
+          <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg border-l-4 border-blue-500">
             <p className="font-semibold mb-2">Jasmine - After Surviving Cancer</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-sm text-gray-600 dark:text-neutral-400 mb-3">
               "Before cancer, I worked 60-hour weeks climbing the corporate ladder. I missed my daughter's soccer games for conference calls. After treatment ended, I still have medical anxiety---every headache feels like recurrence. But I also changed careers to work part-time as a school counselor. I'm home for dinner every night now. Cancer took my health certainty. It also gave me clarity about what actually matters. Both are true."
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-500 italic">Growth domain: New Possibilities, Appreciation for Life</p>
+            <p className="text-xs text-gray-500 dark:text-neutral-500 italic">Growth domain: New Possibilities, Appreciation for Life</p>
           </div>
 
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border-l-4 border-green-500">
+          <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg border-l-4 border-green-500">
             <p className="font-semibold mb-2">Marcus - After Losing His Brother</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-sm text-gray-600 dark:text-neutral-400 mb-3">
               "My brother died in a car accident two years ago. I still cry in the shower some mornings. Grief ambushes me at random moments---a song, a smell, seeing someone who walks like he did. And also: I started a scholarship fund in his name. I call my parents every week now, not just holidays. I tell my friends I love them out loud, which I never did before. I learned I'm stronger than I thought---I survived something I was sure would destroy me. The loss doesn't get smaller. I got bigger around it."
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-500 italic">Growth domain: Greater Appreciation for Relationships, Personal Strength</p>
+            <p className="text-xs text-gray-500 dark:text-neutral-500 italic">Growth domain: Greater Appreciation for Relationships, Personal Strength</p>
           </div>
 
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border-l-4 border-purple-500">
+          <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg border-l-4 border-purple-500">
             <p className="font-semibold mb-2">Anh - After Leaving an Abusive Marriage</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-sm text-gray-600 dark:text-neutral-400 mb-3">
               "I have PTSD from my marriage. Certain tones of voice still make my heart race. But leaving was also when my real life started. I went back to school at 42. I'm learning Vietnamese---reconnecting with culture my ex ridiculed. I have friends now who actually listen when I talk. Before, I thought I needed someone to be complete. Now I know I'm already whole. The trauma was real. The freedom is also real."
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-500 italic">Growth domain: Personal Strength, New Possibilities, Spiritual/Existential Growth</p>
+            <p className="text-xs text-gray-500 dark:text-neutral-500 italic">Growth domain: Personal Strength, New Possibilities, Spiritual/Existential Growth</p>
           </div>
 
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500">
+          <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg border-l-4 border-orange-500">
             <p className="font-semibold mb-2">David - After a Workplace Accident</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-sm text-gray-600 dark:text-neutral-400 mb-3">
               "The accident left me with chronic pain and permanent disability. I had to leave construction---work I loved and was good at. I'm angry about that most days. But through rehab, I started painting to manage the pain. Turns out I'm decent at it. I sell pieces at local markets now. My relationship with my wife deepened---she saw me at my lowest and stayed. I learned to ask for help, which I couldn't do before. I wouldn't choose this. But it's not all loss."
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-500 italic">Growth domain: New Possibilities, Greater Appreciation for Relationships</p>
+            <p className="text-xs text-gray-500 dark:text-neutral-500 italic">Growth domain: New Possibilities, Greater Appreciation for Relationships</p>
           </div>
 
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border-l-4 border-red-500">
+          <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg border-l-4 border-red-500">
             <p className="font-semibold mb-2">Priya - After Her Mother's Alzheimer's Diagnosis</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-sm text-gray-600 dark:text-neutral-400 mb-3">
               "Watching my brilliant mother forget my name broke something in me. I grieve her every day even though she's still alive. But caregiving also taught me I'm capable of more patience and compassion than I knew. I started a support group for other caregivers---we meet monthly. I used to avoid anything uncomfortable; now I can sit with hard emotions without running. I appreciate the good moments more---when she smiles at a song or recognizes my voice. Small joys matter more than they used to."
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-500 italic">Growth domain: Personal Strength, Appreciation for Life, Greater Appreciation for Relationships</p>
+            <p className="text-xs text-gray-500 dark:text-neutral-500 italic">Growth domain: Personal Strength, Appreciation for Life, Greater Appreciation for Relationships</p>
           </div>
         </div>
 
@@ -1144,7 +1144,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-3">Valuing connections more deeply. Recognizing what truly matters. Increased compassion and empathy for others' struggles.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 italic">
+                  <p className="text-sm text-gray-600 dark:text-neutral-400 italic">
                     "I used to take my family for granted. Now I notice when my partner makes coffee in the morning. I tell people I care about them---out loud---instead of assuming they know."
                   </p>
                 </>
@@ -1156,7 +1156,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-3">Seeing new paths that weren't visible before. Career changes, pursuing deferred dreams, or discovering hidden strengths and interests.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 italic">
+                  <p className="text-sm text-gray-600 dark:text-neutral-400 italic">
                     "I always wanted to write but thought I was too busy. After my health scare, I realized 'someday' isn't guaranteed. I started a blog. It's small, but it's mine."
                   </p>
                 </>
@@ -1168,7 +1168,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-3">'If I survived that, I can handle this." Greater confidence in ability to cope with future challenges. Recognizing resilience you didn't know you had.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 italic">
+                  <p className="text-sm text-gray-600 dark:text-neutral-400 italic">
                     "Before, small setbacks felt catastrophic. Now I have proof I can survive hard things. That doesn't make new challenges easy, but I trust myself more."
                   </p>
                 </>
@@ -1180,7 +1180,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-3">Deeper questions about meaning, purpose, faith. Not always religious---often philosophical shifts about what matters in life.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 italic">
+                  <p className="text-sm text-gray-600 dark:text-neutral-400 italic">
                     "I'm not religious, but trauma made me think about legacy differently. What will matter when I'm gone? That question changed how I spend my time now."
                   </p>
                 </>
@@ -1192,7 +1192,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-3">Heightened awareness of beauty, gratitude for ordinary moments, shift in priorities from superficial to meaningful.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 italic">
+                  <p className="text-sm text-gray-600 dark:text-neutral-400 italic">
                     "I notice sunsets now. Genuinely notice them. I used to scroll my phone through beautiful moments. Loss taught me nothing is guaranteed---including tomorrow's sunrise."
                   </p>
                 </>
@@ -1220,7 +1220,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               description: (
                 <>
                   <p className="mb-2">The event violates core beliefs about safety, fairness, or how the world works. This creates existential crisis---painful but necessary for growth.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">"I believed good things happen to good people. Then this happened. That belief shattered, and I had to build something new."</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">"I believed good things happen to good people. Then this happened. That belief shattered, and I had to build something new."</p>
                 </>
               ),
             },
@@ -1229,7 +1229,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               description: (
                 <>
                   <p className="mb-2">Repeated attempts to make sense of what happened. Rumination initially (intrusive thoughts), then deliberate reflection (active meaning-making).</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">"At first, I couldn't stop replaying it. Eventually, I started asking different questions---not 'why me?' but 'what now?'"</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">"At first, I couldn't stop replaying it. Eventually, I started asking different questions---not 'why me?' but 'what now?'"</p>
                 </>
               ),
             },
@@ -1238,7 +1238,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               description: (
                 <>
                   <p className="mb-2">Building a new life story that integrates the trauma. 'This happened AND I am more than what happened to me." Creating coherence from chaos.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">"I had to rewrite my identity. I'm not 'before' or 'after'---I'm someone who carries this experience as part of a larger story."</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">"I had to rewrite my identity. I'm not 'before' or 'after'---I'm someone who carries this experience as part of a larger story."</p>
                 </>
               ),
             },
@@ -1247,7 +1247,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               description: (
                 <>
                   <p className="mb-2">Positive changes become apparent---not because trauma ended but because you've built new understanding, priorities, or identity from the struggle.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">"Growth didn't arrive as a flash of insight. It accumulated in small choices: showing up differently, valuing different things, becoming someone new."</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">"Growth didn't arrive as a flash of insight. It accumulated in small choices: showing up differently, valuing different things, becoming someone new."</p>
                 </>
               ),
             },
@@ -1257,7 +1257,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         <h2 id="exercise-growth-inventory" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Practical Exercise: Personal Growth Inventory
         </h2>
-        <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg mb-8">
+        <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg mb-8">
           <p className="font-semibold mb-4">This reflective exercise helps identify growth that may already be present---even if you haven't named it yet:</p>
           <ol className="list-decimal pl-5 space-y-3">
             <li>
@@ -1276,7 +1276,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               <strong>Review both columns together.</strong> Notice if you can hold both truths simultaneously: "This hurt me AND this changed me in ways I value."
             </li>
           </ol>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
             If the right column feels empty, that's okay---PTG isn't universal or required. But many people discover growth they hadn't consciously recognized when they look deliberately.
           </p>
         </div>
@@ -1324,7 +1324,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         <h2 id="exercise-both-and-statements" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Practical Exercise: Both-And Statements for Trauma
         </h2>
-        <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg mb-8">
+        <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg mb-8">
           <p className="font-semibold mb-4">This exercise practices holding complexity---acknowledging pain while recognizing growth:</p>
           <ol className="list-decimal pl-5 space-y-3">
             <li>
@@ -1343,7 +1343,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               <strong>Create 3-5 both-and statements.</strong> Practice honoring the fullness of your experience.
             </li>
           </ol>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
             Example: "Losing my job devastated my confidence and financial security AND it pushed me toward work that actually aligns with my values. Both are true."
           </p>
         </div>
@@ -1368,7 +1368,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         <h2 id="exercise-meaning-making-prompts" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Practical Exercise: Meaning-Making Reflection Prompts
         </h2>
-        <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg mb-8">
+        <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg mb-8">
           <p className="font-semibold mb-4">Use these journaling prompts to facilitate deliberate reflection (not forced positivity):</p>
           <ul className="space-y-3 pl-5 list-none">
             <li>
@@ -1393,7 +1393,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               <strong>What part of my identity feels different?</strong> (How am I not the same person I was before?)
             </li>
           </ul>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
             Don't rush these. Meaning-making isn't a one-time exercise---it's an ongoing conversation with yourself over months or years. Revisit these questions as you heal.
           </p>
         </div>
@@ -1528,7 +1528,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Positive emotions aren't just pleasant---they serve a vital evolutionary function, building the psychological and social resources that help you bounce back from adversity and thrive long-term.
           </p>
           <p className="mb-6">
@@ -1547,44 +1547,44 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         </p>
 
         <div className="space-y-6 mb-8">
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border-l-4 border-green-500">
+          <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg border-l-4 border-green-500">
             <p className="font-semibold mb-2">Sofia - Interest Led to New Career Path</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-sm text-gray-600 dark:text-neutral-400 mb-3">
               "I was working a soul-crushing corporate job when I took a weekend pottery class just for fun---pure interest, no agenda. That curiosity led me to take more classes, then to join a ceramics community, then to discover I loved teaching. Two years later, I left my job to open a studio. The positive emotion of interest broadened my thinking ('What else is possible?') and built resources: new skills, a creative community, confidence in a different path. My life trajectory changed because I followed curiosity."
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-500 italic">Resource built: Intellectual (new skills) + Social (community) + Psychological (confidence in change)</p>
+            <p className="text-xs text-gray-500 dark:text-neutral-500 italic">Resource built: Intellectual (new skills) + Social (community) + Psychological (confidence in change)</p>
           </div>
 
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border-l-4 border-blue-500">
+          <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg border-l-4 border-blue-500">
             <p className="font-semibold mb-2">James - Gratitude After Job Loss</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-sm text-gray-600 dark:text-neutral-400 mb-3">
               "Getting laid off devastated me. But a friend suggested I write one thing I was grateful for each day, even something tiny. At first it felt forced ('I'm grateful for coffee?'). But after a few weeks, I noticed I was less bitter, more open. I started seeing opportunities instead of just loss. Gratitude didn't fix my unemployment, but it shifted my mindset from closed to curious. I took a risk on freelancing---something I wouldn't have considered when I was stuck in resentment."
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-500 italic">Resource built: Psychological (optimism, openness) + Intellectual (problem-solving flexibility)</p>
+            <p className="text-xs text-gray-500 dark:text-neutral-500 italic">Resource built: Psychological (optimism, openness) + Intellectual (problem-solving flexibility)</p>
           </div>
 
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border-l-4 border-purple-500">
+          <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg border-l-4 border-purple-500">
             <p className="font-semibold mb-2">Yuki - Joy Through Caregiving Stress</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-sm text-gray-600 dark:text-neutral-400 mb-3">
               "Caring for my mom with dementia is exhausting and heartbreaking. But we still have moments of joy---dancing to old music in the kitchen, laughing at silly things. Those moments don't erase the grief, but they give me energy to keep going. Research says positive emotions speed stress recovery, and I feel it. After a joyful moment, the hard stuff feels slightly more manageable. Joy isn't escapism; it's fuel for endurance."
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-500 italic">Resource built: Physical (stress recovery) + Psychological (meaning-making, resilience)</p>
+            <p className="text-xs text-gray-500 dark:text-neutral-500 italic">Resource built: Physical (stress recovery) + Psychological (meaning-making, resilience)</p>
           </div>
 
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500">
+          <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg border-l-4 border-orange-500">
             <p className="font-semibold mb-2">Marcus - Love Expanded After Divorce</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-sm text-gray-600 dark:text-neutral-400 mb-3">
               "After my divorce, I was isolated and bitter. A coworker invited me to a weekly game night---just casual, low-stakes connection. I almost didn't go. But being around people who genuinely enjoyed each other's company reminded me what love and belonging feel like. That group became my support system when I struggled. Positive social emotions built the relationships that later helped me through depression. Connection created more connection---the upward spiral is real."
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-500 italic">Resource built: Social (supportive relationships) + Psychological (sense of belonging)</p>
+            <p className="text-xs text-gray-500 dark:text-neutral-500 italic">Resource built: Social (supportive relationships) + Psychological (sense of belonging)</p>
           </div>
 
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border-l-4 border-red-500">
+          <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg border-l-4 border-red-500">
             <p className="font-semibold mb-2">Nia - Awe in Nature After Trauma</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-sm text-gray-600 dark:text-neutral-400 mb-3">
               "I have PTSD from a car accident. Therapy helped, but so did hiking. Standing in front of a massive redwood tree or watching the ocean---awe physically changed how I felt. Research shows awe reduces inflammation and shifts perspective. For me, it reminded me there's a world bigger than my fear. Those moments of awe broadened my thinking from 'I'm broken' to 'I'm healing AND the world is vast and I'm part of it.' That shift mattered."
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-500 italic">Resource built: Psychological (perspective, meaning) + Physical (reduced stress physiology)</p>
+            <p className="text-xs text-gray-500 dark:text-neutral-500 italic">Resource built: Psychological (perspective, meaning) + Physical (reduced stress physiology)</p>
           </div>
         </div>
 
@@ -1652,7 +1652,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-2">Interest and curiosity drive learning. Broadened thinking enhances problem-solving. Creativity increases. These skills persist beyond the emotional moment.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 italic mt-2">
+                  <p className="text-sm text-gray-600 dark:text-neutral-400 italic mt-2">
                     Example: Following curiosity about gardening builds knowledge of plants, ecosystems, patience, problem-solving (why did that plant die?)---skills that transfer to other domains.
                   </p>
                 </>
@@ -1664,7 +1664,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-2">Joy motivates play and movement, building physical skills and fitness. Positive emotions improve cardiovascular health and immune function <Citation id="6" index={6} source="Emotion" year="2020" tier={1} />.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 italic mt-2">
+                  <p className="text-sm text-gray-600 dark:text-neutral-400 italic mt-2">
                     Example: Dancing for joy builds coordination, endurance, cardiovascular health. The joy motivated the movement; the movement built the resource.
                   </p>
                 </>
@@ -1676,7 +1676,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-2">Love, gratitude, and interest build relationships. Social bonds become resources during future stress. Positive emotions are contagious, creating supportive networks.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 italic mt-2">
+                  <p className="text-sm text-gray-600 dark:text-neutral-400 italic mt-2">
                     Example: Expressing gratitude to a coworker strengthens the relationship. Later, when you need help on a project, that relationship is a resource you can draw on.
                   </p>
                 </>
@@ -1688,7 +1688,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-2">Optimism, resilience, sense of meaning, and identity all grow through repeated positive emotional experiences. These become stable traits over time.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 italic mt-2">
+                  <p className="text-sm text-gray-600 dark:text-neutral-400 italic mt-2">
                     Example: Repeated experiences of overcoming challenges (with moments of pride, hope, or satisfaction) build the psychological resource of "I can handle hard things."
                   </p>
                 </>
@@ -1700,7 +1700,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         <h2 id="exercise-resource-tracker" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Practical Exercise: Positive Emotion Resource Tracker
         </h2>
-        <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg mb-8">
+        <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg mb-8">
           <p className="font-semibold mb-4">This week-long exercise helps you identify how positive emotions are already building resources in your life:</p>
           <ol className="list-decimal pl-5 space-y-3">
             <li>
@@ -1716,7 +1716,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               <strong>After 7 days, review.</strong> Look for patterns: Which emotions build which resources for you? Which resources show up repeatedly?
             </li>
           </ol>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
             Example: "Monday - felt interested in a podcast about astronomy → spent 30 minutes reading about black holes → built intellectual resource (new knowledge + curiosity habit)."
           </p>
         </div>
@@ -1785,7 +1785,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         <h2 id="exercise-positive-emotion-first-aid" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Practical Exercise: Positive Emotion First Aid Kit
         </h2>
-        <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg mb-8">
+        <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg mb-8">
           <p className="font-semibold mb-4">Create a personalized "first aid kit" for difficult days---small, accessible ways to invite positive emotions when you need them most:</p>
           <ol className="list-decimal pl-5 space-y-3">
             <li>
@@ -1808,7 +1808,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               <strong>Update regularly</strong> as you discover what works for you.
             </li>
           </ol>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
             This isn't about forcing positivity. It's about having tools ready when you have capacity to use them. Sometimes you won't. That's okay. But on days when you can reach for joy or gratitude, this list makes it easier.
           </p>
         </div>
@@ -1834,7 +1834,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         <h2 id="exercise-weekly-positive-emotion-plan" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Practical Exercise: Weekly Positive Emotion Plan
         </h2>
-        <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg mb-8">
+        <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg mb-8">
           <p className="font-semibold mb-4">Intentionally schedule positive emotions into your week (yes, schedule them---they're that important):</p>
           <ol className="list-decimal pl-5 space-y-3">
             <li>
@@ -1853,7 +1853,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               <strong>At week's end, review:</strong> Which ones worked? Which felt forced? Adjust next week's plan accordingly.
             </li>
           </ol>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
             Example week: Monday - gratitude journal (5 min), Tuesday - call friend (20 min), Wednesday - walk in park (15 min), Thursday - try new recipe (30 min), Friday - watch favorite comedy (25 min), Weekend - visit museum (1 hour).
           </p>
         </div>
@@ -1972,7 +1972,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Wisdom isn't just accumulated knowledge---it's the integration of experience, emotion, and perspective that allows you to navigate life's complexity with insight, compassion, and balance.
           </p>
           <p className="mb-6">
@@ -1994,44 +1994,44 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         </p>
 
         <div className="space-y-6 mb-8">
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border-l-4 border-blue-500">
+          <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg border-l-4 border-blue-500">
             <p className="font-semibold mb-2">Grace - After Career Failure</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-sm text-gray-600 dark:text-neutral-400 mb-3">
               "I was fired from a job I loved at 45. Devastating. But during unemployment, I had time to reflect. I realized I'd built my entire identity around career success---when that disappeared, I didn't know who I was. That was painful but clarifying. Now I have a different job, but more importantly, I have a different relationship with work. It's part of my life, not the center. Losing everything taught me what actually mattered. I'm less impressed by titles now, more impressed by kindness. That's wisdom I couldn't have learned without failure."
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-500 italic">Wisdom components: Perspective-taking (seeing beyond career identity), Emotional regulation (processing devastation), Practical wisdom (rebalancing life priorities)</p>
+            <p className="text-xs text-gray-500 dark:text-neutral-500 italic">Wisdom components: Perspective-taking (seeing beyond career identity), Emotional regulation (processing devastation), Practical wisdom (rebalancing life priorities)</p>
           </div>
 
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border-l-4 border-green-500">
+          <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg border-l-4 border-green-500">
             <p className="font-semibold mb-2">Kwame - Navigating Family Conflict</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-sm text-gray-600 dark:text-neutral-400 mb-3">
               "My brother and I didn't speak for three years after a fight. I was certain I was right, he was wrong. Eventually, I realized: we're both right AND both wrong. We experienced the same events completely differently based on our histories, triggers, and needs. That realization---that multiple truths can coexist---changed how I handle all conflict now. I ask more questions. I assume less. I hold my perspective lightly while still honoring it. That's intellectual humility in practice."
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-500 italic">Wisdom components: Intellectual humility (questioning own rightness), Perspective-taking (seeing brother's view), Tolerance for uncertainty (both can be right)</p>
+            <p className="text-xs text-gray-500 dark:text-neutral-500 italic">Wisdom components: Intellectual humility (questioning own rightness), Perspective-taking (seeing brother's view), Tolerance for uncertainty (both can be right)</p>
           </div>
 
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border-l-4 border-purple-500">
+          <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg border-l-4 border-purple-500">
             <p className="font-semibold mb-2">Lin - Parenting a Child with Addiction</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-sm text-gray-600 dark:text-neutral-400 mb-3">
               "My son's addiction taught me the limits of my control. I couldn't fix him, couldn't love him better, couldn't reason him into recovery. That helplessness was excruciating. But it also taught me when to hold on and when to let go---the most painful wisdom there is. I learned that loving someone doesn't mean saving them. That boundaries can coexist with love. That you can do everything right and still watch someone struggle. I'm a better therapist now (I work with families) because I understand what it feels like to not have answers."
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-500 italic">Wisdom components: Tolerance for uncertainty (accepting lack of control), Emotional regulation (managing helplessness), Concern for common good (using experience to help others)</p>
+            <p className="text-xs text-gray-500 dark:text-neutral-500 italic">Wisdom components: Tolerance for uncertainty (accepting lack of control), Emotional regulation (managing helplessness), Concern for common good (using experience to help others)</p>
           </div>
 
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500">
+          <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg border-l-4 border-orange-500">
             <p className="font-semibold mb-2">Jamal - After Incarceration</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-sm text-gray-600 dark:text-neutral-400 mb-3">
               "I was locked up for eight years. Plenty of time to think. I could've come out bitter---many do. But I read everything I could, talked to older guys who'd changed, reflected on the choices that got me there. I learned I'm not defined by my worst mistakes. I also learned that circumstances matter---poverty, trauma, limited options all shaped my path. Both are true: I'm accountable for my choices AND systemic factors constrained those choices. That nuance is wisdom. Now I mentor kids in my old neighborhood. I understand their reality but also push them toward different choices."
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-500 italic">Wisdom components: Practical wisdom (applying learning to help others), Perspective-taking (seeing systemic factors + personal accountability), Concern for common good (mentorship)</p>
+            <p className="text-xs text-gray-500 dark:text-neutral-500 italic">Wisdom components: Practical wisdom (applying learning to help others), Perspective-taking (seeing systemic factors + personal accountability), Concern for common good (mentorship)</p>
           </div>
 
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border-l-4 border-red-500">
+          <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg border-l-4 border-red-500">
             <p className="font-semibold mb-2">Anaya - Chronic Illness at 28</p>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-sm text-gray-600 dark:text-neutral-400 mb-3">
               "Getting diagnosed with a chronic illness in my twenties destroyed my life plans. I was angry for a long time---why me? Eventually, I realized: why NOT me? Suffering isn't distributed fairly. That's not injustice; that's randomness. Accepting that was liberating. I stopped asking 'why' and started asking 'what now?' I learned to hold joy and grief simultaneously. I can grieve lost health while also finding meaning in advocacy work. I'm wiser at 32 than I would've been at 50 without this experience. Not because illness is good---it's not. But because struggle forced me to think deeply about what matters."
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-500 italic">Wisdom components: Tolerance for uncertainty (accepting randomness), Emotional wisdom (holding joy + grief), Practical wisdom (shifting from 'why' to 'what now')</p>
+            <p className="text-xs text-gray-500 dark:text-neutral-500 italic">Wisdom components: Tolerance for uncertainty (accepting randomness), Emotional wisdom (holding joy + grief), Practical wisdom (shifting from 'why' to 'what now')</p>
           </div>
         </div>
 
@@ -2055,7 +2055,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-2">Knowing how to apply knowledge to real-life situations. Understanding context, nuance, and when rules need flexibility. Life skills that work in messy reality, not just theory.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 italic mt-2">
+                  <p className="text-sm text-gray-600 dark:text-neutral-400 italic mt-2">
                     Example: Knowing when to follow advice strictly vs when to adapt it. Understanding that parenting books provide frameworks, not scripts. Recognizing that the "right" decision depends on context.
                   </p>
                 </>
@@ -2067,7 +2067,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-2">Seeing situations from multiple viewpoints. Understanding others' motivations even when different from yours. Moving beyond egocentric thinking to recognize diverse valid perspectives.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 italic mt-2">
+                  <p className="text-sm text-gray-600 dark:text-neutral-400 italic mt-2">
                     Example: Realizing your ex wasn't "crazy"---they were responding logically to a reality shaped by their past trauma. Their behavior makes sense from their perspective even if it hurt you from yours.
                   </p>
                 </>
@@ -2079,7 +2079,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-2">Accepting that most situations don't have clear answers. Comfort with ambiguity. Understanding that many truths can coexist. Resisting the urge to force premature certainty.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 italic mt-2">
+                  <p className="text-sm text-gray-600 dark:text-neutral-400 italic mt-2">
                     Example: Being okay with "I don't know yet" or "Both options have merit" instead of forcing a decision before you have clarity. Accepting that some questions never get clean answers.
                   </p>
                 </>
@@ -2091,7 +2091,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-2">Managing emotions without suppression or being overwhelmed <Citation id="5" index={5} source="Cognition and Emotion" year="2020" tier={1} />. Responding thoughtfully rather than reactively. Finding equilibrium between emotional extremes.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 italic mt-2">
+                  <p className="text-sm text-gray-600 dark:text-neutral-400 italic mt-2">
                     Example: Feeling anger but pausing before sending the email. Acknowledging grief without letting it consume you. Experiencing joy while also holding awareness of life's fragility.
                   </p>
                 </>
@@ -2103,7 +2103,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-2">Recognizing the limits of your knowledge. Openness to being wrong. Curiosity rather than defensiveness when challenged <Citation id="7" index={7} source="Personality and Social Psychology Review" year="2020" tier={1} />.</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 italic mt-2">
+                  <p className="text-sm text-gray-600 dark:text-neutral-400 italic mt-2">
                     Example: Saying "I hadn't thought of it that way" instead of defending your position. Changing your mind when presented with new evidence. Admitting mistakes without shame.
                   </p>
                 </>
@@ -2115,7 +2115,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-2">Considering impacts beyond yourself. Balancing self-interest with community wellbeing. Prosocial orientation that asks "What serves the larger good?"</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 italic mt-2">
+                  <p className="text-sm text-gray-600 dark:text-neutral-400 italic mt-2">
                     Example: Making career choices that consider family needs, not just salary. Voting based on community benefit, not just personal gain. Using privilege or resources to help others.
                   </p>
                 </>
@@ -2139,7 +2139,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               description: (
                 <>
                   <p className="mb-2">Difficult experiences expose limitations in current understanding. Complexity reveals that simple answers don't work. Crisis creates opportunity for growth.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">"I thought I knew how I'd handle grief until my best friend died. Nothing prepared me. My neat theories crumbled. That disorientation was the beginning of real wisdom."</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">"I thought I knew how I'd handle grief until my best friend died. Nothing prepared me. My neat theories crumbled. That disorientation was the beginning of real wisdom."</p>
                 </>
               ),
             },
@@ -2148,7 +2148,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               description: (
                 <>
                   <p className="mb-2">Active meaning-making from experience. Not just going through it, but thinking about it. Journaling, therapy, conversations that process experiences---these turn suffering into learning.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">"After my divorce, I spent a year in therapy unpacking what went wrong. Not to blame anyone, but to understand. That reflection taught me more than the marriage did."</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">"After my divorce, I spent a year in therapy unpacking what went wrong. Not to blame anyone, but to understand. That reflection taught me more than the marriage did."</p>
                 </>
               ),
             },
@@ -2157,7 +2157,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               description: (
                 <>
                   <p className="mb-2">Hearing how others experienced similar situations. Reading, learning from diverse voices. Expanding beyond your own viewpoint to see the bigger picture.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">"Reading memoirs from people nothing like me showed me how differently people interpret the world. My way isn't the only valid way---that realization was humbling and freeing."</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">"Reading memoirs from people nothing like me showed me how differently people interpret the world. My way isn't the only valid way---that realization was humbling and freeing."</p>
                 </>
               ),
             },
@@ -2166,7 +2166,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               description: (
                 <>
                   <p className="mb-2">Testing new understanding in real situations. Learning what works. Revising based on outcomes. Iterative process of wisdom-building where you refine understanding over time.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-gray-400">"I tried out my new boundary-setting skills in small situations first. Some worked, some backfired. Each iteration taught me more about how to navigate relationships with both compassion and self-respect."</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">"I tried out my new boundary-setting skills in small situations first. Some worked, some backfired. Each iteration taught me more about how to navigate relationships with both compassion and self-respect."</p>
                 </>
               ),
             },
@@ -2180,7 +2180,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         <h2 id="exercise-wisdom-reflection-journal" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Practical Exercise: Wisdom Reflection Journal
         </h2>
-        <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg mb-8">
+        <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg mb-8">
           <p className="font-semibold mb-4">This structured reflection exercise helps extract wisdom from past experiences:</p>
           <ol className="list-decimal pl-5 space-y-3">
             <li>
@@ -2208,7 +2208,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               <strong>Identify the wisdom gained:</strong> Complete this sentence: "Because of this experience, I now understand that..."
             </li>
           </ol>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
             Repeat this process monthly with different experiences. Over time, you'll see patterns in the lessons life is teaching you.
           </p>
         </div>
@@ -2233,7 +2233,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         <h2 id="exercise-perspective-taking-practice" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Practical Exercise: Three Perspectives Practice
         </h2>
-        <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg mb-8">
+        <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg mb-8">
           <p className="font-semibold mb-4">This exercise builds perspective-taking capacity---a core wisdom skill:</p>
           <ol className="list-decimal pl-5 space-y-3">
             <li>
@@ -2254,7 +2254,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               <strong>Optional action:</strong> If appropriate, share your understanding of their perspective with them ("I think I'm starting to understand why you see it this way..."). This builds connection even in disagreement.
             </li>
           </ol>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
             Practice this weekly with different situations. Over time, perspective-taking becomes automatic rather than effortful.
           </p>
         </div>
@@ -2306,7 +2306,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
         <h2 id="exercise-wisdom-conversation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Practical Exercise: Wisdom Conversation Practice
         </h2>
-        <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg mb-8">
+        <div className="p-6 bg-gray-50 dark:bg-neutral-800 rounded-lg mb-8">
           <p className="font-semibold mb-4">Structured conversations with wise people accelerate your own wisdom development:</p>
           <ol className="list-decimal pl-5 space-y-3">
             <li>
@@ -2331,7 +2331,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               <strong>After the conversation, journal:</strong> What surprised you? What challenged your assumptions? What will you try applying?
             </li>
           </ol>
-          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+          <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
             Repeat quarterly with different wise people. Each conversation adds a new perspective to your growing wisdom.
           </p>
         </div>

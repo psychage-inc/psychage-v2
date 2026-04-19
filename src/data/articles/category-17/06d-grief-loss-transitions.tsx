@@ -71,7 +71,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Barbara had been the fun grandmother---the one who hosted sleepovers, taught her grandsons to garden, and showed up at every soccer game. Then her son divorced. When the court awarded primary custody to her former daughter-in-law, contact with the boys stopped abruptly. Phone calls went unreturned. Birthday gifts came back unopened. Three years later, Barbara still checks the mailbox hoping for a card, scrolls through old photos every night, and fights tears when she sees other grandparents with their grandchildren at the park.
           </p>
           <p className="mb-6">
@@ -318,7 +318,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             After losing his wife of 52 years to cancer and suffering a debilitating stroke within the same year, James's adult children braced for their father's decline. They expected depression, withdrawal, maybe even a rapid follow-up death---the so-called "broken heart syndrome" they'd read about. Instead, something remarkable happened. James began volunteering at the hospital where his wife had been treated, started attending a stroke support group, and reconnected with old friends he'd neglected during caregiving years. "He seemed more present, more grateful, more himself than he'd been in decades," his daughter recalled. At 76, despite profound losses and new physical limitations, James described himself as happier and more purposeful than he'd been at 50.
           </p>
           <p className="mb-6">
@@ -539,7 +539,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Maria had been a casual churchgoer most of her life---the kind who attended on major holidays and rarely thought about faith otherwise. After her husband died when she was 74, something shifted. "I needed answers about where he was, whether we'd meet again, why this happened," she explained. "I couldn't face those questions alone." She started attending weekly services, joined a grief support group at her church, and began daily prayer practice. Five years later, Maria volunteers with the bereavement ministry and describes her faith as deeper and more authentic than it ever was when life was easy and faith felt optional.
           </p>
           <p className="mb-6">
@@ -804,7 +804,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When Jennifer had to tell her 82-year-old father he couldn't drive anymore after his second minor accident, he looked at her with an expression she'd never seen before: hurt, anger, and something that looked like betrayal. "You don't get to make that decision for me," he said quietly. "I'm still your father." Jennifer felt the familiar childhood fear of disappointing him alongside her adult knowledge that his driving was genuinely dangerous. Later that night, she cried to her husband: "It's like our whole relationship inverted. He's treating me like the authority figure and resenting me for it, but I never wanted this power. I just want my dad back."
           </p>
           <p className="mb-6">
@@ -1078,7 +1078,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When Ruth turned 90, her family threw her a surprise party with 50 guests---neighbors, church friends, former colleagues, and three generations of family. As people shared stories of her impact on their lives, Ruth found herself crying. Not from sadness, but from revelation. "I'd been thinking of myself as just old, just waiting to die," she said later. "The party made me realize I'm still doing things that matter. I'm still here, still contributing, still growing. That deserves to be celebrated." The event fundamentally shifted her self-perception---she stopped seeing herself as only declining and began noticing what she was still accomplishing, experiencing, and creating in her tenth decade of life.
           </p>
           <p className="mb-6">

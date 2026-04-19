@@ -95,7 +95,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             ADHD affects an estimated 4-5% of working adults, yet it remains widely misunderstood in professional environments. The condition's core features---inattention, impulsivity, and executive function deficits---directly impact workplace performance in specific, predictable ways. Understanding these patterns enables targeted accommodations that dramatically improve functioning.
           </p>
           <p className="mb-6">
@@ -407,7 +407,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every decision you make---from choosing what to wear, to responding to emails, to strategic business choices---depletes a finite cognitive resource. As the day progresses and decisions accumulate, the quality of your decision-making deteriorates: you become more impulsive, more risk-averse, or simply avoid deciding altogether.
           </p>
           <p className="mb-6">
@@ -670,7 +670,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Flow---the state of complete absorption where time disappears, self-consciousness fades, and performance peaks---represents optimal human experience. Psychologist Mihaly Csikszentmihalyi spent decades studying when and why people enter this effortless immersion state, revealing predictable conditions that reliably induce flow.
           </p>
           <p className="mb-6">
@@ -943,7 +943,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You cannot multitask. What you're actually doing when you think you're multitasking is rapidly switching between tasks---and each switch carries a cognitive cost. Despite the cultural celebration of multitasking as a productivity skill, neuroscience demonstrates unequivocally that it makes you slower, less accurate, and more mentally fatigued.
           </p>
           <p className="mb-6">
@@ -1233,7 +1233,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Most productivity advice optimizes for short-term output spikes, not long-term sustainable performance. The result: people sprint until they burn out, recover, and repeat the cycle. Sustainable productivity takes a different approach: designing work systems that maintain high performance over years by integrating recovery, managing energy, and building habits that don't require constant willpower.
           </p>
           <p className="mb-6">

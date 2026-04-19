@@ -33,7 +33,7 @@ export const workLifeBalanceBoundariesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Most people eat lunch at their desk while working. It saves time, right? But research shows this "efficiency" backfires---working through lunch reduces afternoon performance and increases burnout{', '}
             <Citation id="8" index={8} source="Journal of Occupational and Environmental Medicine" year="2021" tier={1} />.
           </p>
@@ -96,7 +96,7 @@ export const workLifeBalanceBoundariesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Part-time work sounds ideal: more time for life, less stress, better balance. But research shows the reality is complicated{', '}
             <Citation id="1" index={1} source="Work, Employment and Society" year="2021" tier={1} />.
           </p>
@@ -157,7 +157,7 @@ export const workLifeBalanceBoundariesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Imagine your life as a stove with four burners: family, friends, health, and work. The theory says: to be successful, you have to turn off one burner. To be really successful, you have to turn off two.
           </p>
           <p className="mb-6">
@@ -215,7 +215,7 @@ export const workLifeBalanceBoundariesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Both partners work full-time. Who picks up the kids? Cooks dinner? Handles the broken dishwasher? In dual-income families, logistics become psychological stress.
           </p>
           <p className="mb-6">
@@ -268,7 +268,7 @@ export const workLifeBalanceBoundariesArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your partner comes home exhausted, irritable, defeated by their job. You listen, comfort, absorb the stress. Eventually, you're stressed too---even though it's not your workplace.
           </p>
           <p className="mb-6">

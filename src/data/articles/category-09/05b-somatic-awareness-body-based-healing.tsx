@@ -76,7 +76,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Body scan meditation is a cornerstone practice of Mindfulness-Based Stress Reduction (MBSR), one of the most well-researched mindfulness interventions. By systematically directing attention through the body, you cultivate present-moment awareness, release tension, and develop a more connected relationship with physical experience.
           </p>
           <p className="mb-6">
@@ -495,7 +495,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Dance/Movement Therapy (DMT) uses movement and dance as therapeutic tools to support mental, emotional, physical, and social integration. Rooted in the understanding that body and mind are interconnected, DMT helps people process emotions, trauma, and psychological issues through embodied expression.
           </p>
           <p className="mb-6">
@@ -900,7 +900,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When anxiety spikes, panic hits, or emotional overwhelm takes over, grounding techniques use your body and senses to anchor you back in the present moment. Simple, fast, and effective, these tools can interrupt crisis states and restore a sense of safety and control.
           </p>
           <p className="mb-6">
@@ -1302,7 +1302,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The vagus nerve is your body's built-in calming system---a biological superhighway running from your brainstem to your organs, constantly communicating between your body and brain. Understanding how it works unlocks powerful tools for regulating stress, anxiety, and emotional states.
           </p>
           <p className="mb-6">
@@ -1682,7 +1682,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Right now, without looking down, can you tell if your heart is beating fast or slow? Whether your stomach is empty or full? If your shoulders are tense or relaxed? Your ability to sense these internal states is called interoception---and it's fundamental to emotional health, decision-making, and self-regulation.
           </p>
           <p className="mb-6">

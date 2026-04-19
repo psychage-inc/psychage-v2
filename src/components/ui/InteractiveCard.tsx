@@ -41,7 +41,7 @@ const InteractiveCard: React.FC<InteractiveCardProps> = ({
             onPointerEnter={handlePointerEnter}
             onPointerLeave={handlePointerLeave}
             whileTap={pressable ? { scale: 0.98 } : undefined}
-            className={`relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md transition-all duration-300 ${className}`}
+            className={`relative overflow-hidden rounded-3xl border border-border/50 bg-surface/50 backdrop-blur-md transition-all duration-300 ${className}`}
             {...props}
         >
             {/* Spotlight Effect */}

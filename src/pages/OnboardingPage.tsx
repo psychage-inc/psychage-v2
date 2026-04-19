@@ -56,8 +56,8 @@ const OnboardingPage: React.FC = () => {
 
     if (checkingStatus) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-950">
-                <div className="w-8 h-8 rounded-full border-2 border-gray-200 border-t-teal-500 animate-spin" />
+            <div className="min-h-screen flex items-center justify-center bg-white dark:bg-neutral-950">
+                <div className="w-8 h-8 rounded-full border-2 border-border border-t-teal-500 animate-spin" />
             </div>
         );
     }
@@ -75,7 +75,7 @@ const OnboardingPage: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-teal-50/50 via-white to-white dark:from-gray-950 dark:via-gray-950 dark:to-gray-900 flex flex-col">
+        <div className="min-h-screen bg-gradient-to-br from-teal-50/50 via-white to-white dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-900 flex flex-col">
             <SEO title="Welcome | Psychage" />
 
             {/* Progress dots */}

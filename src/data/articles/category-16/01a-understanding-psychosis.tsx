@@ -75,7 +75,7 @@ export const understandingPsychosisArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Say the word "psychosis" and most people picture something from a thriller --- a wild-eyed figure
             on a rampage, detached from humanity, dangerous beyond reason. That picture is almost entirely wrong.
             Psychosis is a medical condition, not a horror movie trope. And the gap between what people believe
@@ -323,7 +323,7 @@ export const understandingPsychosisArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When people hear "psychosis," they tend to think of one thing: schizophrenia. But that's like
             hearing "fever" and thinking only of malaria. Psychosis is a symptom that spans a wide range
             of conditions, each with its own trajectory, prognosis, and treatment needs. Some resolve in
@@ -535,7 +535,7 @@ export const understandingPsychosisArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A mother notices her 19-year-old son has stopped returning texts from his closest friends. He's
             sleeping at odd hours, his grades have dropped from B's to incomplete assignments, and last week
             he mentioned something about a "signal" in the static of the television. She's worried. She's also
@@ -746,7 +746,7 @@ export const understandingPsychosisArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The first time psychosis happens, it's terrifying --- for the person experiencing it and for everyone
             around them. Reality fractures. The person may hear voices that feel as real as any conversation,
             hold beliefs that no amount of evidence can shake, or behave in ways that seem completely out of
@@ -946,7 +946,7 @@ export const understandingPsychosisArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For decades, the explanation for psychosis boiled down to four words: "too much dopamine."
             That explanation wasn't wrong --- but it was incomplete. Like explaining a car crash by saying
             "the brakes failed" without examining the road conditions, the tires, the driver's

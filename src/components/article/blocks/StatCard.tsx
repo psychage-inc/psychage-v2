@@ -85,18 +85,18 @@ const StatValue: React.FC<{
             className="flex flex-col items-center text-center p-6"
         >
             {item.icon && (
-                <div className="mb-3 text-teal-500">{item.icon}</div>
+                <div className="mb-3 text-primary">{item.icon}</div>
             )}
-            <div className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white tabular-nums">
+            <div className="text-4xl md:text-5xl font-bold text-text-primary tabular-nums">
                 {item.prefix}
                 {isNumeric ? count : displayValue}
                 {item.suffix}
             </div>
-            <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 max-w-[200px]">
+            <p className="mt-2 text-sm text-text-tertiary max-w-[200px]">
                 {item.label}
             </p>
             {item.description && (
-                <p className="mt-1 text-xs text-gray-400 dark:text-gray-500 max-w-[250px]">
+                <p className="mt-1 text-xs text-text-tertiary max-w-[250px]">
                     {item.description}
                 </p>
             )}
@@ -132,18 +132,18 @@ const StatCard: React.FC<StatCardProps> = (props) => {
             ref={ref}
             className={`
                 not-prose my-8 rounded-2xl
-                bg-gradient-to-br from-gray-50 to-white dark:from-gray-900/50 dark:to-gray-900/30
-                border border-gray-100 dark:border-gray-800
+                bg-gradient-to-br from-surface to-white dark:from-surface dark:to-surface
+                border border-border
                 overflow-hidden
                 ${className}
             `}
         >
             {props.title && (
                 <div className="px-6 pt-5 pb-2">
-                    <h4 className="text-base font-bold text-gray-900 dark:text-white">{props.title}</h4>
+                    <h4 className="text-base font-bold text-text-primary">{props.title}</h4>
                 </div>
             )}
-            <div className={`grid ${gridCols} divide-x divide-gray-100 dark:divide-gray-800`}>
+            <div className={`grid ${gridCols} divide-x divide-border`}>
                 {stats.map((item, i) => (
                     <StatValue
                         key={i}
@@ -155,8 +155,8 @@ const StatCard: React.FC<StatCardProps> = (props) => {
                 ))}
             </div>
             {source && (
-                <div className="px-6 py-3 border-t border-gray-100 dark:border-gray-800">
-                    <p className="text-xs text-gray-400 dark:text-gray-500 italic text-center">
+                <div className="px-6 py-3 border-t border-border">
+                    <p className="text-xs text-text-tertiary italic text-center">
                         Source: {source}
                     </p>
                 </div>

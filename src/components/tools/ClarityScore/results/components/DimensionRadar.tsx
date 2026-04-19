@@ -25,7 +25,7 @@ const CustomTooltip = ({ active, payload }: any) => {
   const tierColor = getTierHexColor(tier);
 
   return (
-    <div className="bg-white dark:bg-gray-800 shadow-lg rounded-xl px-4 py-3 border border-gray-200 dark:border-gray-700">
+    <div className="bg-white dark:bg-neutral-800 shadow-lg rounded-xl px-4 py-3 border border-gray-200 dark:border-neutral-700">
       <div className="flex items-center gap-2 mb-1">
         <span
           className="w-2.5 h-2.5 rounded-full shrink-0"
@@ -35,7 +35,7 @@ const CustomTooltip = ({ active, payload }: any) => {
           {data.fullName}
         </span>
       </div>
-      <p className="text-sm text-gray-600 dark:text-gray-300">
+      <p className="text-sm text-gray-600 dark:text-neutral-300">
         <span className="font-bold">{data.score}</span> / 20
       </p>
     </div>
@@ -107,7 +107,7 @@ const DimensionRadar: React.FC<DimensionRadarProps> = ({
         </RadarChart>
       </ResponsiveContainer>
       {onDimensionClick && (
-        <p className="text-center text-xs text-gray-400 dark:text-gray-500 mt-1 md:hidden">
+        <p className="text-center text-xs text-gray-400 dark:text-neutral-500 mt-1 md:hidden">
           Tap a point to explore that dimension
         </p>
       )}

@@ -78,7 +78,7 @@ const RacingThoughtsInterceptor: React.FC = () => {
   const currentThought = thoughts[processingIdx];
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-gray-700">
+    <div className="bg-white dark:bg-neutral-800 rounded-[2rem] p-6 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-neutral-700">
       <div className="flex items-center gap-2 mb-5">
         <Brain size={20} className="text-purple-500" />
         <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white">
@@ -89,7 +89,7 @@ const RacingThoughtsInterceptor: React.FC = () => {
       {/* Phase: Capture */}
       {phase === 'capture' && (
         <div className="space-y-4">
-          <p className="text-xs text-gray-500 dark:text-gray-400">
+          <p className="text-xs text-gray-500 dark:text-neutral-400">
             What's keeping you up right now? Capture each thought, then we'll
             process them one by one.
           </p>
@@ -109,7 +109,7 @@ const RacingThoughtsInterceptor: React.FC = () => {
                   'flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold transition-all border',
                   currentCategory === cat.id
                     ? 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-700 text-purple-700 dark:text-purple-300'
-                    : 'border-gray-200 dark:border-gray-600 text-gray-400 dark:text-gray-500 hover:border-gray-300'
+                    : 'border-gray-200 dark:border-neutral-600 text-gray-400 dark:text-neutral-500 hover:border-gray-300'
                 )}
               >
                 {CATEGORY_ICONS[cat.icon]}
@@ -128,7 +128,7 @@ const RacingThoughtsInterceptor: React.FC = () => {
                 if (e.key === 'Enter') addThought();
               }}
               placeholder="Type a thought..."
-              className="flex-1 p-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20"
+              className="flex-1 p-3 rounded-xl border border-gray-200 dark:border-neutral-600 bg-white dark:bg-neutral-700 text-gray-900 dark:text-white text-sm outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20"
             />
             <button
               type="button"
@@ -146,15 +146,15 @@ const RacingThoughtsInterceptor: React.FC = () => {
               {thoughts.map((t) => (
                 <div
                   key={t.id}
-                  className="flex items-center gap-2 bg-gray-50 dark:bg-gray-700/50 rounded-lg p-2.5 text-xs"
+                  className="flex items-center gap-2 bg-gray-50 dark:bg-neutral-700/50 rounded-lg p-2.5 text-xs"
                 >
-                  <span className="text-gray-400">
+                  <span className="text-gray-400 dark:text-neutral-500">
                     {CATEGORY_ICONS[
                       THOUGHT_CATEGORIES.find((c) => c.id === t.category)
                         ?.icon || 'MoreHorizontal'
                     ]}
                   </span>
-                  <span className="text-gray-700 dark:text-gray-300 flex-1">
+                  <span className="text-gray-700 dark:text-neutral-300 flex-1">
                     {t.text}
                   </span>
                   <button
@@ -164,7 +164,7 @@ const RacingThoughtsInterceptor: React.FC = () => {
                         prev.filter((th) => th.id !== t.id)
                       )
                     }
-                    className="text-gray-300 dark:text-gray-600 hover:text-red-500"
+                    className="text-gray-300 dark:text-neutral-600 hover:text-red-500"
                   >
                     <X size={12} />
                   </button>
@@ -208,7 +208,7 @@ const RacingThoughtsInterceptor: React.FC = () => {
               </p>
             </div>
 
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <p className="text-sm font-medium text-gray-700 dark:text-neutral-300">
               Can you do anything about this right now?
             </p>
 
@@ -223,7 +223,7 @@ const RacingThoughtsInterceptor: React.FC = () => {
                     setProcessingIdx((prev) => prev + 1);
                   }
                 }}
-                className="p-3 rounded-xl border border-gray-200 dark:border-gray-600 text-sm font-bold text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                className="p-3 rounded-xl border border-gray-200 dark:border-neutral-600 text-sm font-bold text-gray-600 dark:text-neutral-300 hover:bg-gray-50 dark:hover:bg-neutral-700 transition-colors"
               >
                 No — let it go for tonight
               </button>
@@ -249,7 +249,7 @@ const RacingThoughtsInterceptor: React.FC = () => {
                     })
                   }
                   placeholder="One next step for tomorrow..."
-                  className="w-full p-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20"
+                  className="w-full p-3 rounded-xl border border-gray-200 dark:border-neutral-600 bg-white dark:bg-neutral-700 text-gray-900 dark:text-white text-sm outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20"
                 />
                 <button
                   type="button"
@@ -281,7 +281,7 @@ const RacingThoughtsInterceptor: React.FC = () => {
           <h4 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-2">
             Thoughts acknowledged
           </h4>
-          <p className="text-sm text-gray-500 dark:text-gray-400 max-w-sm mx-auto mb-4">
+          <p className="text-sm text-gray-500 dark:text-neutral-400 max-w-sm mx-auto mb-4">
             You've acknowledged {thoughts.length} thought
             {thoughts.length !== 1 ? 's' : ''}. They're safe and waiting for
             you tomorrow. Now breathe.

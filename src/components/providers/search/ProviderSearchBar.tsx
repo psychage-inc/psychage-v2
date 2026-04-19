@@ -68,7 +68,7 @@ export const ProviderSearchBar: React.FC<ProviderSearchBarProps> = ({
             type="button"
             onClick={handleUseLocation}
             disabled={geoLoading}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-text-tertiary hover:text-primary transition-colors disabled:opacity-50"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-text-tertiary hover:text-primary transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
             title="Use my location"
             aria-label="Use my location"
           >

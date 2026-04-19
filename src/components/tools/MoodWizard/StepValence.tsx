@@ -24,8 +24,8 @@ export const StepValence: React.FC<StepProps> = ({ data, updateData, onNext }) =
 
     return (
         <div className="flex flex-col items-center w-full">
-            <h2 className="font-display text-3xl md:text-4xl font-semibold text-gray-900 text-center mb-2 mt-4">How are you feeling right now?</h2>
-            <p className="text-xl text-gray-500 mb-4">{getValenceLabel(Math.round(data.valence))}</p>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold text-text-primary text-center mb-2 mt-4">How are you feeling right now?</h2>
+            <p className="text-xl text-text-tertiary mb-4">{getValenceLabel(Math.round(data.valence))}</p>
 
             <div className="transform scale-90 md:scale-100 ease-in-out duration-300 -my-4 md:my-0">
                 <BloomVisualization valence={data.valence} />
@@ -49,7 +49,7 @@ export const StepValence: React.FC<StepProps> = ({ data, updateData, onNext }) =
 
                     {/* Visual Thumb */}
                     <motion.div
-                        className="absolute w-8 h-8 bg-white rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.12),inset_0_-1px_2px_rgba(0,0,0,0.04)] border border-gray-100/80 flex items-center justify-center pointer-events-none group-hover:scale-[1.08] group-active:scale-95 group-active:shadow-sm group-hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)] transition-transform duration-300 z-10 peer-focus-visible:ring-4 peer-focus-visible:ring-teal-500/30"
+                        className="absolute w-8 h-8 bg-white dark:bg-neutral-900 rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.12),inset_0_-1px_2px_rgba(0,0,0,0.04)] border border-border/80 flex items-center justify-center pointer-events-none group-hover:scale-[1.08] group-active:scale-95 group-active:shadow-sm group-hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)] transition-transform duration-300 z-10 peer-focus-visible:ring-4 peer-focus-visible:ring-teal-500/30"
                         animate={{ left: `calc(${((data.valence - 1) / 9) * 100}% - ${((data.valence - 1) / 9) * 32}px)` }}
                         transition={{ type: "tween", duration: 0 }}
                     >
@@ -67,7 +67,7 @@ export const StepValence: React.FC<StepProps> = ({ data, updateData, onNext }) =
                     />
                 </div>
 
-                <div className="flex justify-between text-xs text-gray-500 font-bold mt-3 px-2 uppercase tracking-widest opacity-80">
+                <div className="flex justify-between text-xs text-text-tertiary font-bold mt-3 px-2 uppercase tracking-widest opacity-80">
                     <span>Unpleasant</span>
                     <span>Pleasant</span>
                 </div>

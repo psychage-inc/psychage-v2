@@ -65,7 +65,7 @@ const ScorePositionBar: React.FC<ScorePositionBarProps> = ({
               className={`text-[10px] font-medium ${
                 zone.tier === tier
                   ? 'text-gray-900 dark:text-white font-bold'
-                  : 'text-gray-400 dark:text-gray-500'
+                  : 'text-gray-400 dark:text-neutral-500'
               }`}
             >
               {zone.label}
@@ -89,7 +89,7 @@ const ScorePositionBar: React.FC<ScorePositionBarProps> = ({
 
         {/* Position marker */}
         <div
-          className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-white dark:bg-gray-900 border-[3px] border-gray-900 dark:border-white shadow-md z-10 transition-all duration-500"
+          className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-white dark:bg-neutral-900 border-[3px] border-gray-900 dark:border-white shadow-md z-10 transition-all duration-500"
           style={{ left: `${position}%` }}
         />
       </div>
@@ -101,8 +101,8 @@ const ScorePositionBar: React.FC<ScorePositionBarProps> = ({
             <span
               className={`text-[10px] capitalize ${
                 zone.tier === tier
-                  ? 'text-gray-700 dark:text-gray-300 font-semibold'
-                  : 'text-gray-300 dark:text-gray-600'
+                  ? 'text-gray-700 dark:text-neutral-300 font-semibold'
+                  : 'text-gray-300 dark:text-neutral-600'
               }`}
             >
               {TIER_DISPLAY[zone.tier]}

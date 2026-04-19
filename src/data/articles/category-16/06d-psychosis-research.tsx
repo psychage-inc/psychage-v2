@@ -155,7 +155,7 @@ export const psychosisResearchArticlesD: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For decades, psychiatry viewed schizophrenia and psychosis through the lens of neurotransmitter imbalances—dopamine, serotonin, glutamate. But a revolution is underway. The immune system, once thought peripheral to mental disorders, now stands at center stage in psychosis research. Converging evidence from genetics, epidemiology, neuroimaging, and clinical trials reveals that inflammation and immune dysfunction are not mere side effects of psychosis—they may be driving forces behind it.
           </p>
           <p className="mb-6">
@@ -561,7 +561,7 @@ export const psychosisResearchArticlesD: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In the crowded landscape of schizophrenia symptoms—hallucinations, delusions, disorganized thinking—sleep disturbances often fade into the background. Yet they shouldn't. Sleep problems are not collateral damage from medication or stress. They are core features of the illness, affecting up to 80% of people with schizophrenia and present even in those experiencing their first episode who have never taken medication. Poor sleep doesn't just make life harder—it makes psychosis worse.
           </p>
           <p className="mb-6">
@@ -980,7 +980,7 @@ export const psychosisResearchArticlesD: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             What bonds a mother to her newborn? What allows friends to trust each other, lovers to feel connected, strangers to cooperate? The answer, in part, is oxytocin—a tiny neuropeptide with outsized effects on social bonding, empathy, and trust. In schizophrenia, this system is broken. Oxytocin levels are often lower, and its signaling pathways disrupted. The result: profound social cognitive deficits that antipsychotics cannot touch.
           </p>
           <p className="mb-6">

@@ -116,7 +116,7 @@ export const understandingTraumaArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You might have heard the phrase "the body keeps the score"---and it\'s more than a catchy title. Trauma
             doesn\'t just create psychological symptoms; it fundamentally changes how your body functions. Unprocessed
             traumatic experiences live on in your nervous system, manifesting as physical sensations, chronic tension,
@@ -734,7 +734,7 @@ export const understandingTraumaArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Have you ever noticed that sometimes you can handle a stressful situation just fine, but at other times the
             same situation completely overwhelms you? Or that certain people seem to stay calm in circumstances that
             would send you spiraling? The answer lies in something called the "window of tolerance"---a concept that
@@ -1295,7 +1295,7 @@ export const understandingTraumaArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You don\'t have to experience trauma firsthand for it to affect you. Therapists who listen to stories of
             abuse, emergency responders who witness accidents, nurses who care for suffering patients, and even friends
             who support trauma survivors can develop real trauma symptoms from indirect exposure. This phenomenon is
@@ -1914,7 +1914,7 @@ export const understandingTraumaArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There\'s a crucial distinction in the trauma field that doesn\'t get enough attention: the difference between
             experiencing a single traumatic event and living through prolonged, repeated trauma---especially in
             childhood. While both are serious, they affect people differently and require different approaches to
@@ -2518,7 +2518,7 @@ export const understandingTraumaArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             One of the most isolating aspects of trauma is the feeling that you\'re alone---that what happened to you is
             rare, that others wouldn\'t understand, that you should just be able to 'get over it." But here\'s the truth:
             traumatic experiences are strikingly common. Understanding just how prevalent trauma is can be validating,

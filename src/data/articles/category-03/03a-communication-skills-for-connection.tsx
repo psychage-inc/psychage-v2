@@ -39,7 +39,7 @@ export const communicationSkillsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Most people don't listen to understand---they listen to respond. While someone is talking, they're formulating their reply, waiting for a pause to jump in, or mentally preparing their counterargument. This isn't listening. It's waiting to talk.
           </p>
           <p className="mb-6">
@@ -365,7 +365,7 @@ export const communicationSkillsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "You never listen to me!", "You always make this about yourself!", "You're so selfish!" These statements shut down conversation faster than anything else. Nonviolent Communication (NVC) offers a different way.
           </p>
           <p className="mb-6">
@@ -436,7 +436,7 @@ export const communicationSkillsArticlesA: Article[] = [
             content: (
               <div>
                 <p className="mb-4">"You never help around the house! You just sit on your phone while I do everything. You're so lazy!"</p>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Result: Defensiveness, shutdown, or counterattack</p>
+                <p className="text-sm text-gray-600 dark:text-neutral-400">Result: Defensiveness, shutdown, or counterattack</p>
               </div>
             ),
           }}
@@ -445,7 +445,7 @@ export const communicationSkillsArticlesA: Article[] = [
             content: (
               <div>
                 <p className="mb-4">"When I see dishes in the sink and laundry piled up, I feel overwhelmed because I need partnership and shared responsibility. Would you be willing to take on the dishes each evening?"</p>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Result: Opens dialogue, reduces defensiveness</p>
+                <p className="text-sm text-gray-600 dark:text-neutral-400">Result: Opens dialogue, reduces defensiveness</p>
               </div>
             ),
           }}
@@ -652,7 +652,7 @@ export const communicationSkillsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Dr. John Gottman can predict with 90% accuracy whether a couple will divorce---by watching them argue for 15 minutes. The secret? Four specific communication patterns he calls "The Four Horsemen of the Apocalypse."
           </p>
           <p className="mb-6">
@@ -933,7 +933,7 @@ export const communicationSkillsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Many people spend years hoping others will read their minds, then feel resentful when their unspoken needs go unmet. The solution isn't telepathy---it's learning to ask.
           </p>
           <p className="mb-6">
@@ -1135,7 +1135,7 @@ export const communicationSkillsArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Someone shares something hard with you. Your instinct: fix it, minimize it, or offer perspective. "It's not that bad.", "At least you have...", "Just think positive!" These responses, though well-intentioned, are invalidating---and they shut people down.
           </p>
           <p className="mb-6">

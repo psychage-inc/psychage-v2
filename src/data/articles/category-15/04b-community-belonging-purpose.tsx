@@ -100,7 +100,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Home. Work. And... where? Where do you go when you are not at home and not at work? For many people, the answer is: nowhere. And that is a problem.
           </p>
           <p className="mb-6">
@@ -419,7 +419,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
       content: (
         <>
           <div id="introduction" className="scroll-mt-32">
-            <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
               Some people live alone and feel deeply lonely. Others live alone and feel deeply fulfilled. The difference is often not about how much social contact they have. It is about whether they have a sense of purpose.
             </p>
             <p className="mb-6">
@@ -727,7 +727,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
       content: (
         <>
           <div id="introduction" className="scroll-mt-32">
-            <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
               "Just go to a social event and meet people" is terrible advice for someone who finds socializing exhausting. What if there was a different way --- activities where connection happens naturally, without the pressure of performance?
             </p>
             <p className="mb-6">
@@ -1069,7 +1069,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
         content: (
           <>
             <div id="introduction" className="scroll-mt-32">
-              <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+              <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
                 "Touch grass" has become internet shorthand for "go outside and get offline." But for millions of people, the most meaningful communities they belong to exist entirely online.
               </p>
               <p className="mb-6">
@@ -1446,7 +1446,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
         content: (
           <>
             <div id="introduction" className="scroll-mt-32">
-              <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+              <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
                 Imagine going to your doctor for depression and leaving with a prescription --- not for medication, but for a weekly cooking class, a walking group, or a community garden.
               </p>
               <p className="mb-6">

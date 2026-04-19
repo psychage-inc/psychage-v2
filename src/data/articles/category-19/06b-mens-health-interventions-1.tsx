@@ -79,7 +79,7 @@ export const mensHealthInterventions1ArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When a baby arrives, the entire healthcare system focuses on the mother. She is
             screened for postpartum depression, offered support groups, checked on at every
             pediatric visit. Meanwhile, the father --- who may be equally overwhelmed, sleep-deprived,
@@ -521,7 +521,7 @@ export const mensHealthInterventions1ArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mention meditation to many men and you will get an eye roll, a joke, or a polite
             deflection. The word conjures images of incense, cross-legged sitting, and a kind of
             soft spirituality that feels incompatible with how many men see themselves. It feels
@@ -939,7 +939,7 @@ export const mensHealthInterventions1ArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Ask most men how many close friends they have --- people they could call at 2 a.m.
             with a genuine crisis --- and the answer is uncomfortable. Fifteen percent of American
             men report having no close friendships at all, a figure that has risen fivefold
@@ -1328,7 +1328,7 @@ export const mensHealthInterventions1ArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             There is a reason that climbing a mountain, navigating rapids, or spending three
             days in the wilderness changes people in ways that sitting in an office talking about
             their feelings often does not. The body remembers what the mind tries to forget. And
@@ -1749,7 +1749,7 @@ export const mensHealthInterventions1ArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every man carries a model of manhood inside him --- assembled from the men he watched
             growing up. A father who showed emotion or one who did not. A coach who encouraged
             vulnerability or one who punished it. An uncle who asked hard questions or one who

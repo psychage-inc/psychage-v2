@@ -65,7 +65,7 @@ export const treatmentRecoveryArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The human-animal bond has been recognized as a source of healing for centuries, but its application to veteran mental health has gained particular momentum over the past two decades as service dogs and animal-assisted therapy programs have proliferated throughout the veteran community. PTSD service dogs—trained to perform specific tasks that mitigate PTSD symptoms, such as waking veterans from nightmares, providing grounding during flashbacks, creating physical space in crowded environments, and performing room checks that reduce hypervigilance—have become one of the most visible and emotionally compelling approaches to veteran mental health.
           </p>
         </div>
@@ -109,7 +109,7 @@ export const treatmentRecoveryArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -172,7 +172,7 @@ export const treatmentRecoveryArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Peer support—the provision of emotional support, practical guidance, and shared understanding by individuals with lived experience of the same condition or circumstance—has emerged as one of the most promising and culturally appropriate approaches to veteran mental health. Veteran peer support programs operate on a fundamental insight: veterans who are reluctant to seek help from mental health professionals they perceive as unable to understand military experience may be willing to accept support from fellow veterans who have walked the same path.
           </p>
         </div>
@@ -215,7 +215,7 @@ export const treatmentRecoveryArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -278,7 +278,7 @@ export const treatmentRecoveryArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The recognition that first responder mental health is an occupational health issue—not a personal weakness—has fueled a growing movement toward proactive resilience programs that build psychological resources before traumatic exposure rather than treating damage after it occurs. This shift from reactive crisis management to preventive wellness represents one of the most significant developments in first responder mental health—paralleling the fire service&apos;s historical shift from solely fighting fires to also preventing them.
           </p>
         </div>
@@ -323,7 +323,7 @@ export const treatmentRecoveryArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -386,7 +386,7 @@ export const treatmentRecoveryArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The landscape of military and first responder mental health is undergoing a transformation driven by converging forces: the recognition that traditional treatment approaches leave many service members and veterans undertreated, the emergence of novel therapeutic modalities that show promise for treatment-resistant conditions, the application of digital technology and artificial intelligence to screening, intervention, and treatment delivery, and a growing institutional willingness to reform the cultural and structural barriers that have historically prevented effective mental health care in military and first responder populations. From MDMA-assisted psychotherapy and psilocybin treatment for treatment-resistant PTSD, to wearable biometric monitoring that can detect psychological deterioration in real time, to AI-powered chatbots that provide 24/7 crisis support without the stigma of human interaction, to genomic research that may eventually identify biological markers of resilience and vulnerability—the next decade promises to reshape how we prevent, detect, and treat the psychological consequences of military and first responder service.
           </p>
         </div>
@@ -431,7 +431,7 @@ export const treatmentRecoveryArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

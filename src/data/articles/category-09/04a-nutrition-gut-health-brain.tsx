@@ -112,7 +112,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've probably heard the phrase "gut feeling" or felt "butterflies in your stomach." These expressions aren't just metaphors---they reflect a profound biological truth about the intimate connection between your digestive system and your brain.
           </p>
           <p className="mb-6">
@@ -412,7 +412,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Food is medicine for your brain. While nutrition alone can't cure mental health conditions, what you eat profoundly influences your mood, energy, focus, and emotional resilience.
           </p>
           <p className="mb-6">
@@ -724,7 +724,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're not just human---you're a walking ecosystem. The trillions of bacteria, viruses, fungi, and other microorganisms living in your gut outnumber your human cells, and they're quietly influencing your brain in ways scientists are only beginning to understand.
           </p>
           <p className="mb-6">
@@ -1052,7 +1052,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your brain is about 60% fat by dry weight, and omega-3 fatty acids are among its most important structural components. Yet most people don't get enough of these essential fats, potentially compromising brain health, mood, and cognitive function.
           </p>
           <p className="mb-6">
@@ -1398,7 +1398,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Have you ever felt irritable, anxious, or mentally foggy when you've gone too long without eating? Or noticed mood crashes after eating sugary foods? These aren't just coincidences---they reflect powerful connections between blood sugar regulation, inflammation, and brain function.
           </p>
           <p className="mb-6">

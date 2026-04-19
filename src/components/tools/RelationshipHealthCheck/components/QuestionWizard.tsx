@@ -275,7 +275,7 @@ export const QuestionWizard: React.FC<QuestionWizardProps> = ({
                   <div className="flex items-center gap-3">
                     <div
                       className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 ${
-                        isSelected ? 'border-white bg-white' : 'border-gray-300 dark:border-gray-600'
+                        isSelected ? 'border-white bg-white dark:bg-neutral-900' : 'border-gray-300 dark:border-neutral-600'
                       }`}
                     >
                       {isSelected && (

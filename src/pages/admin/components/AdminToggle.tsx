@@ -42,7 +42,7 @@ const AdminToggle: React.FC<AdminToggleProps> = ({
       >
         <span
           className={cn(
-            'inline-block h-5 w-5 transform rounded-full bg-white shadow-sm transition-transform duration-200',
+            'inline-block h-5 w-5 transform rounded-full bg-white dark:bg-neutral-200 shadow-sm transition-transform duration-200',
             checked ? 'translate-x-[22px]' : 'translate-x-[2px]'
           )}
         />

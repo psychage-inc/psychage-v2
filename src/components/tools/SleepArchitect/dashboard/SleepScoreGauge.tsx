@@ -49,7 +49,7 @@ const SleepScoreGauge: React.FC<SleepScoreGaugeProps> = ({ score }) => {
   ];
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-[2rem] p-6 md:p-8 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-gray-700">
+    <div className="bg-white dark:bg-neutral-800 rounded-[2rem] p-6 md:p-8 shadow-xl shadow-indigo-100/50 dark:shadow-none border border-gray-100 dark:border-neutral-700">
       <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-6 text-center">
         Sleep Score
       </h3>
@@ -70,7 +70,7 @@ const SleepScoreGauge: React.FC<SleepScoreGaugeProps> = ({ score }) => {
               fill="none"
               stroke="currentColor"
               strokeWidth={STROKE_WIDTH}
-              className="text-gray-100 dark:text-gray-700"
+              className="text-gray-100 dark:text-neutral-700"
             />
             {/* Score arc */}
             <motion.circle
@@ -114,10 +114,10 @@ const SleepScoreGauge: React.FC<SleepScoreGaugeProps> = ({ score }) => {
       <div className="space-y-2">
         {dimensions.map((dim) => (
           <div key={dim.label} className="flex items-center gap-3">
-            <span className="text-xs font-medium text-gray-500 dark:text-gray-400 w-24">
+            <span className="text-xs font-medium text-gray-500 dark:text-neutral-400 w-24">
               {dim.label}
             </span>
-            <div className="flex-1 h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+            <div className="flex-1 h-2 bg-gray-100 dark:bg-neutral-700 rounded-full overflow-hidden">
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: `${dim.value}%` }}
@@ -126,7 +126,7 @@ const SleepScoreGauge: React.FC<SleepScoreGaugeProps> = ({ score }) => {
                 style={{ backgroundColor: getScoreColor(dim.value) }}
               />
             </div>
-            <span className="text-xs font-bold text-gray-700 dark:text-gray-300 w-8 text-right">
+            <span className="text-xs font-bold text-gray-700 dark:text-neutral-300 w-8 text-right">
               {dim.value}
             </span>
           </div>

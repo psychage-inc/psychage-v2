@@ -27,7 +27,7 @@ export default function MessageActions({ content, isLastAssistant, onRetry }: Me
     >
       <button
         onClick={handleCopy}
-        className="p-1.5 rounded-md text-slate-400 hover:text-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+        className="p-1.5 rounded-md text-slate-400 dark:text-neutral-500 hover:text-slate-600 dark:hover:text-neutral-400 hover:bg-slate-100 dark:hover:bg-neutral-800 transition-colors"
         title={copied ? 'Copied!' : 'Copy'}
       >
         {copied ? <Check size={16} /> : <Copy size={16} />}
@@ -36,7 +36,7 @@ export default function MessageActions({ content, isLastAssistant, onRetry }: Me
       {isLastAssistant && onRetry && (
         <button
           onClick={onRetry}
-          className="p-1.5 rounded-md text-slate-400 hover:text-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          className="p-1.5 rounded-md text-slate-400 dark:text-neutral-500 hover:text-slate-600 dark:hover:text-neutral-400 hover:bg-slate-100 dark:hover:bg-neutral-800 transition-colors"
           title="Retry"
         >
           <RotateCcw size={16} />
@@ -48,7 +48,7 @@ export default function MessageActions({ content, isLastAssistant, onRetry }: Me
         className={`p-1.5 rounded-md transition-colors ${
           feedback === 'up'
             ? 'text-teal-600 dark:text-teal-400'
-            : 'text-slate-400 hover:text-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800'
+            : 'text-slate-400 dark:text-neutral-500 hover:text-slate-600 dark:hover:text-neutral-400 hover:bg-slate-100 dark:hover:bg-neutral-800'
         }`}
         title="Helpful"
       >
@@ -60,7 +60,7 @@ export default function MessageActions({ content, isLastAssistant, onRetry }: Me
         className={`p-1.5 rounded-md transition-colors ${
           feedback === 'down'
             ? 'text-red-500 dark:text-red-400'
-            : 'text-slate-400 hover:text-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800'
+            : 'text-slate-400 dark:text-neutral-500 hover:text-slate-600 dark:hover:text-neutral-400 hover:bg-slate-100 dark:hover:bg-neutral-800'
         }`}
         title="Not helpful"
       >

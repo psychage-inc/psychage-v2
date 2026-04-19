@@ -119,7 +119,7 @@ export const understandingTraumaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The word "trauma" gets thrown around a lot these days. But what does it actually mean? Not every bad
             experience is traumatic, yet the term shows up everywhere from social media to therapy offices. If you've
             ever wondered whether your experiences count as trauma---or if you're just being dramatic---you're not alone.
@@ -550,7 +550,7 @@ export const understandingTraumaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When most people think of trauma, they picture major events: natural disasters, car accidents, violence.
             But trauma exists on a spectrum. Mental health professionals often distinguish between "Big T" trauma and
             "little t" trauma---and both can have significant, lasting effects on your well-being.
@@ -948,7 +948,7 @@ export const understandingTraumaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When people say "trauma changes the brain, ' they're not speaking metaphorically. Decades of neuroscience
             research have revealed specific, measurable changes in brain structure and function following traumatic
             experiences. Understanding what happens in your brain during and after trauma can help explain why certain
@@ -1137,7 +1137,7 @@ export const understandingTraumaArticlesA: Article[] = [
           ]}
           source="Meta-analysis, Neuroscience & Biobehavioral Reviews, 2019"
         />
-        <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 mb-6">
+        <p className="text-sm text-gray-600 dark:text-neutral-400 mt-2 mb-6">
           <em>
             Note: Values represent percentage of volume compared to non-traumatized controls (100 = baseline). Numbers
             are illustrative based on research findings.
@@ -1394,7 +1394,7 @@ export const understandingTraumaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In the mid-1990s, two researchers stumbled upon a finding that would transform our understanding of how
             childhood experiences shape lifelong health. The Adverse Childhood Experiences (ACE) Study revealed a
             stunning connection: what happens to you as a child doesn't just affect your childhood---it can influence
@@ -1868,7 +1868,7 @@ export const understandingTraumaArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Two people survive the same car accident. One develops PTSD with severe flashbacks and anxiety. The other
             processes the experience, feels shaken for a while, and gradually moves on. Why? It's one of the most
             important questions in trauma research---and the answer reveals a lot about resilience, vulnerability, and

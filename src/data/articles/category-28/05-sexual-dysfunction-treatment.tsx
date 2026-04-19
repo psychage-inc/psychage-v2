@@ -65,7 +65,7 @@ export const sexualDysfunctionTreatmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Erectile dysfunction (ED)—the persistent inability to achieve or maintain an erection sufficient for satisfactory sexual performance—affects an estimated 30 million men in the United States and over 150 million worldwide, with prevalence increasing with age from approximately 10% of men in their 40s to 50–70% of men in their 70s. While the medical understanding of ED has been transformed by the recognition of vascular, hormonal, and neurological contributors—and by the development of PDE5 inhibitors (sildenafil, tadalafil) that address these physical factors—the psychological dimensions of erectile dysfunction remain inadequately understood and undertreated.
           </p>
         </div>
@@ -106,7 +106,7 @@ export const sexualDysfunctionTreatmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -169,7 +169,7 @@ export const sexualDysfunctionTreatmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Female sexual dysfunction (FSD)—encompassing disorders of desire, arousal, orgasm, and pain—affects an estimated 40–45% of women at some point in their lives, making it one of the most prevalent yet undertreated conditions in women&apos;s health. The understanding of women&apos;s sexual function has been profoundly shaped—and distorted—by models developed from male sexual experience.
           </p>
         </div>
@@ -212,7 +212,7 @@ export const sexualDysfunctionTreatmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -275,7 +275,7 @@ export const sexualDysfunctionTreatmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Premature ejaculation (PE)—defined as ejaculation that occurs sooner than desired, either before or shortly after penetration, causing distress to one or both partners—is the most common male sexual dysfunction, affecting an estimated 20–30% of men across the lifespan. Despite its prevalence, PE remains poorly understood and undertreated, partly because men are reluctant to discuss it, partly because the definition itself is contested (how &quot;premature&quot; is premature?), and partly because the medical community has oscillated between treating PE as a purely psychological problem (anxiety, learned behavior) and a purely biological one (serotonin levels, penile sensitivity).
           </p>
         </div>
@@ -318,7 +318,7 @@ export const sexualDysfunctionTreatmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -381,7 +381,7 @@ export const sexualDysfunctionTreatmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sexual pain disorders—encompassing what the DSM-5 now classifies as Genito-Pelvic Pain/Penetration Disorder (GPPPD) and what has historically been diagnosed as vaginismus, vulvodynia, and dyspareunia—affect an estimated 7–22% of women at some point in their lives and represent one of the most undertreated and misunderstood conditions in women&apos;s health. For decades, sexual pain was dismissed as psychosomatic (&quot;it&apos;s all in your head&quot;), attributed to insufficient arousal or inadequate lubrication, or treated as a purely psychological conversion symptom.
           </p>
         </div>
@@ -422,7 +422,7 @@ export const sexualDysfunctionTreatmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -485,7 +485,7 @@ export const sexualDysfunctionTreatmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Orgasm—the peak of sexual pleasure, characterized by rhythmic contractions of the pelvic muscles, release of sexual tension, and a subjective experience of intense pleasure—is perhaps the most culturally loaded aspect of human sexuality. It is simultaneously a physiological reflex, a psychological experience, a relationship barometer, and a cultural performance standard.
           </p>
         </div>
@@ -526,7 +526,7 @@ export const sexualDysfunctionTreatmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -589,7 +589,7 @@ export const sexualDysfunctionTreatmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Sex therapy—the specialized form of psychotherapy that addresses sexual concerns, dysfunctions, and dissatisfaction through psychological and behavioral interventions—has a history spanning more than half a century, from Masters and Johnson&apos;s pioneering sensate focus technique in the 1960s through the cognitive-behavioral approaches that dominated the 1980s–2000s to the mindfulness-based and emotionally focused interventions that represent the current frontier. Despite this rich evidence base, sex therapy remains dramatically underutilized: fewer than 25% of individuals with sexual difficulties seek professional help, and among those who do, many encounter general therapists without specialized training in sexual health.
           </p>
         </div>
@@ -635,7 +635,7 @@ export const sexualDysfunctionTreatmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -698,7 +698,7 @@ export const sexualDysfunctionTreatmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Medication-induced sexual dysfunction is one of the most common, most distressing, and most under-discussed side effects of pharmacological treatment—affecting an estimated 30–70% of individuals taking SSRIs (selective serotonin reuptake inhibitors), 30–60% taking antipsychotics, 15–40% taking antihypertensives, and significant proportions taking hormonal contraceptives, opioids, anticonvulsants, and many other medication classes. The impact is not trivial: sexual side effects are the leading cause of antidepressant non-adherence, with patients frequently discontinuing medication without informing their prescriber—choosing untreated depression over medicated sexual dysfunction.
           </p>
         </div>
@@ -744,7 +744,7 @@ export const sexualDysfunctionTreatmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -807,7 +807,7 @@ export const sexualDysfunctionTreatmentArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Compulsive sexual behavior disorder (CSBD)—included in the ICD-11 as an impulse control disorder characterized by a persistent pattern of failure to control intense, repetitive sexual impulses or urges, resulting in repetitive sexual behavior that causes marked distress or significant impairment in functioning—occupies one of the most contested spaces in sexual health. The fundamental question—whether repetitive sexual behavior that causes distress represents a genuine disorder, a behavioral addiction, a symptom of other conditions (depression, anxiety, trauma), or a moral judgment about sexual behavior disguised as clinical diagnosis—has divided researchers, clinicians, and advocates for decades.
           </p>
         </div>
@@ -847,7 +847,7 @@ export const sexualDysfunctionTreatmentArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

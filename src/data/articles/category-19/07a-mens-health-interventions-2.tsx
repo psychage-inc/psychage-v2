@@ -79,7 +79,7 @@ export const mensHealthInterventions2ArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             At 6:15 a.m. on a construction site in western Sydney, forty men gather for a
             pre-start safety briefing. The foreman runs through the usual items -- crane
             movements, exclusion zones, weather forecast. Then he adds something that would
@@ -584,7 +584,7 @@ export const mensHealthInterventions2ArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Ask a room full of men how many of them keep a journal, and you will watch
             a wave of discomfort ripple across the audience. Journaling carries baggage for
             many men -- it sounds like a teenage diary, something associated with feelings
@@ -948,7 +948,7 @@ export const mensHealthInterventions2ArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When his wife died, the bereavement counselor told him to "sit with the
             feelings." He could not sit with anything. He needed to move. So he chopped wood
             -- cord after cord, day after day, until his hands bled and his back ached and
@@ -1321,7 +1321,7 @@ export const mensHealthInterventions2ArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In a community kitchen in Sydney's inner west, twelve men stand at workstations
             chopping, stirring, and arguing about the correct way to caramelize onions. They
             are retired teachers, construction workers, a recently divorced accountant, and
@@ -1714,7 +1714,7 @@ export const mensHealthInterventions2ArticlesA: Article[] = [
             </p>
           </ArticleCallout>
 
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 mt-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 mt-8 leading-relaxed">
             Every year in the United States, approximately 49,000 people die by suicide.
             Nearly four out of five of them are men. This is not a statistic -- it is a
             catastrophe hiding in plain sight, a public health emergency that has persisted

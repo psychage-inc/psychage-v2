@@ -68,7 +68,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             For decades, people living with fibromyalgia were told that their pain was imaginary, that blood tests
             looked normal, and that nothing was truly wrong. Many left medical appointments feeling dismissed,
             doubted, and deeply alone. Today, neuroscience tells a very different story --- one that validates the
@@ -455,7 +455,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A minor wrist fracture heals in six weeks. The cast comes off, the bone knits together, and life
             returns to normal. But for some people, the pain after that fracture does not fade --- it intensifies.
             The hand swells, the skin changes color, and a light breeze across the fingers produces searing,
@@ -754,7 +754,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Few topics in modern medicine carry as much complexity, emotion, and consequence as the intersection
             of opioids, chronic pain, and mental health. On one side are millions of people living with
             debilitating pain who deserve effective treatment. On the other is an epidemic that has claimed over
@@ -1117,7 +1117,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You lie awake at 2 AM, pain radiating through your lower back, every position offering temporary
             relief that fades within minutes. When morning arrives, the exhaustion from a fragmented night makes
             everything hurt more --- your pain threshold lower, your patience thinner, your body less equipped to
@@ -1413,7 +1413,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When chronic pain and depression co-occur --- and they frequently do --- each condition feeds the other
             in a cycle that can feel impossible to break. Pain saps motivation, narrows activity, and erodes hope.
             Depression lowers pain thresholds, amplifies suffering, and undermines the engagement needed for
@@ -1701,7 +1701,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Move more" is some of the most commonly given --- and most commonly resisted --- advice in chronic pain
             management. When every step sends a jolt through your back, when bending to tie a shoe triggers a
             wave of pain, the suggestion to exercise can feel not only unhelpful but insulting. Yet the evidence

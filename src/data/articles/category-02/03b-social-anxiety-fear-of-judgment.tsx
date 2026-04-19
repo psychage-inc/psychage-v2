@@ -123,7 +123,7 @@ export const socialAnxietyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The idea of a first date can feel paralyzing. What if you run out of things to say? What if they think
             you're boring? What if you can't make eye contact, or your voice shakes, or the silence becomes unbearable?
             For people with social anxiety, dating isn't just nerve-wracking --- it can feel impossible.
@@ -700,7 +700,7 @@ export const socialAnxietyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You stare at your phone screen, willing yourself to make the call. But the thought of speaking in real-time,
             with no chance to edit or delete, feels unbearable. So you text instead. You avoid eye contact because
             looking directly at someone feels too intense, too revealing. Small talk? It's meaningless chatter --- why
@@ -1336,7 +1336,7 @@ export const socialAnxietyArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You can speak at home. You can speak with close friends. But at work, in class, or with strangers, the
             words simply won't come. Your throat tightens. Your voice vanishes. It's not that you're choosing silence
             --- you're frozen, unable to produce sound despite desperately wanting to speak.

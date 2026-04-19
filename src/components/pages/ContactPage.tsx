@@ -72,7 +72,7 @@ const ContactPage: React.FC = () => {
                                 <p className="text-sm text-teal-100/80 mb-4">
                                     We do not provide emergency services through this form. If you are in crisis:
                                 </p>
-                                <a href="tel:988" className="inline-block px-4 py-2 bg-white text-teal-900 rounded-lg text-sm font-bold hover:bg-teal-50 transition-colors">
+                                <a href="tel:988" className="inline-block px-4 py-2 bg-white dark:bg-neutral-900 text-teal-900 dark:text-teal-300 rounded-lg text-sm font-bold hover:bg-teal-50 dark:hover:bg-neutral-800 transition-colors">
                                     Call 988 Now
                                 </a>
                             </div>

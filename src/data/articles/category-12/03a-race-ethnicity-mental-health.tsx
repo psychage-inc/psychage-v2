@@ -118,7 +118,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you experience racism---whether a violent assault, a microaggression at work, or watching another person who looks like you harmed on the news---your body and mind respond with a stress reaction. When these experiences accumulate over a lifetime, they can produce symptoms that look remarkably like PTSD: hypervigilance, intrusive thoughts, emotional numbness, and a persistent sense of danger.
           </p>
           <p className="mb-6">
@@ -423,7 +423,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Mental health conditions do not discriminate---depression, anxiety, PTSD, and other disorders affect people across all racial and ethnic groups. But access to quality mental health care is far from equal. People of color are less likely to receive treatment, more likely to receive lower-quality care, and more likely to face discrimination in clinical settings.
           </p>
           <p className="mb-6">
@@ -692,7 +692,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A coworker touches your hair without asking. Someone asks "where are you really from?" You\'re followed around a store. A professor assumes you\'re in the class on an athletic scholarship. Your name is mispronounced---again---and you\'re told "Can I just call you something easier?"
           </p>
           <p className="mb-6">
@@ -1009,7 +1009,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You\'re sitting across from a therapist, trying to explain what it\'s like to navigate the world in your skin. You mention racism, family expectations rooted in your culture, or spiritual beliefs that shape how you see mental health. The therapist looks uncomfortable, changes the subject, or says, "Let\'s not focus on race---let\'s talk about you as an individual."
           </p>
           <p className="mb-6">
@@ -1326,7 +1326,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In many Black families and communities, there\'s a shared script: "We don\'t do therapy.", "Prayer is enough.", "You just have to be strong." These messages come from love, from survival, from generations who endured unimaginable trauma without the luxury of professional help. But they also come at a cost.
           </p>
           <p className="mb-6">

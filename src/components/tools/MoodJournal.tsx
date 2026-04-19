@@ -131,7 +131,7 @@ const MoodJournal: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-white pt-24 pb-12 px-6">
+        <div className="min-h-screen bg-white dark:bg-neutral-900 pt-24 pb-12 px-6">
             <SEO title="Mood Journal | Psychage" description="Track your emotional patterns and discover what drives them with Psychage's mood journal." />
             {view === 'new' ? (
                 <MoodWizard onComplete={handleSaveWizard} onCancel={() => setView('history')} />
@@ -141,13 +141,13 @@ const MoodJournal: React.FC = () => {
                         <Breadcrumbs />
                     </div>
                     <div className="mb-8 flex items-center justify-between">
-                        <button onClick={() => navigate('/tools')} className="flex items-center gap-2 text-gray-400 hover:text-gray-900 font-bold text-sm uppercase tracking-wider">
+                        <button onClick={() => navigate('/tools')} className="flex items-center gap-2 text-gray-400 dark:text-neutral-500 hover:text-gray-900 font-bold text-sm uppercase tracking-wider">
                             <ArrowLeft size={16} /> Back to Tools
                         </button>
                         <div className="flex gap-2">
                             <button
                                 onClick={() => setView('new')}
-                                className="px-4 py-2 rounded-full text-sm font-bold transition-all text-gray-500 hover:bg-gray-100"
+                                className="px-4 py-2 rounded-full text-sm font-bold transition-all text-gray-500 dark:text-neutral-400 hover:bg-gray-100 dark:hover:bg-neutral-800"
                             >
                                 Check-in
                             </button>
@@ -172,39 +172,39 @@ const MoodJournal: React.FC = () => {
                                     className="space-y-4"
                                 >
                                     {isLoading ? (
-                                        <div className="bg-white rounded-3xl p-12 text-center border border-gray-100">
+                                        <div className="bg-white dark:bg-neutral-900 rounded-3xl p-12 text-center border border-gray-100 dark:border-neutral-800">
                                             <Loader2 size={32} className="animate-spin text-teal-500 mx-auto mb-4" />
-                                            <p className="text-gray-500">Loading your entries...</p>
+                                            <p className="text-gray-500 dark:text-neutral-400">Loading your entries...</p>
                                         </div>
                                     ) : entries.length === 0 ? (
-                                        <div className="bg-white rounded-3xl p-12 text-center border border-gray-100">
-                                            <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-4 text-gray-300">
+                                        <div className="bg-white dark:bg-neutral-900 rounded-3xl p-12 text-center border border-gray-100 dark:border-neutral-800">
+                                            <div className="w-16 h-16 bg-gray-50 dark:bg-neutral-900 rounded-full flex items-center justify-center mx-auto mb-4 text-gray-300 dark:text-neutral-600">
                                                 <Calendar size={24} />
                                             </div>
-                                            <h3 className="font-bold text-gray-900 mb-2">No entries yet</h3>
-                                            <p className="text-gray-500 mb-6">Start tracking your mood with the new Check-in wizard to see patterns over time.</p>
+                                            <h3 className="font-bold text-gray-900 dark:text-neutral-100 mb-2">No entries yet</h3>
+                                            <p className="text-gray-500 dark:text-neutral-400 mb-6">Start tracking your mood with the new Check-in wizard to see patterns over time.</p>
                                             <Button onClick={() => setView('new')}>Create First Entry</Button>
                                         </div>
                                     ) : (
                                         entries.map(entry => (
-                                            <div key={entry.id} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all group">
+                                            <div key={entry.id} className="bg-white dark:bg-neutral-900 rounded-2xl p-6 border border-gray-100 dark:border-neutral-800 shadow-sm hover:shadow-md transition-all group">
                                                 <div className="flex justify-between items-start mb-4">
                                                     <div className="flex items-center gap-3">
                                                         <div className={`w-12 h-12 rounded-2xl flex items-center justify-center text-white font-bold text-lg shadow-md ${getMoodColor(entry.mood)}`}>
                                                             {entry.mood}
                                                         </div>
                                                         <div>
-                                                            <div className="font-bold text-gray-900">
+                                                            <div className="font-bold text-gray-900 dark:text-neutral-100">
                                                                 {new Date(entry.date).toLocaleDateString(undefined, { weekday: 'long', month: 'short', day: 'numeric' })}
                                                             </div>
-                                                            <div className="text-xs text-gray-400">
+                                                            <div className="text-xs text-gray-400 dark:text-neutral-500">
                                                                 {new Date(entry.date).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' })}
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <button
                                                         onClick={() => deleteEntry(entry.id)}
-                                                        className="text-gray-300 hover:text-red-500 transition-colors p-2"
+                                                        className="text-gray-300 dark:text-neutral-600 hover:text-red-500 transition-colors p-2"
                                                         aria-label="Delete entry"
                                                     >
                                                         <Trash2 size={16} />
@@ -214,7 +214,7 @@ const MoodJournal: React.FC = () => {
                                                 {entry.emotions.length > 0 && (
                                                     <div className="flex flex-wrap gap-2 mb-4">
                                                         {entry.emotions.map(e => (
-                                                            <span key={e} className="px-2 py-1 rounded-md bg-gray-100 text-xs font-medium text-gray-600">
+                                                            <span key={e} className="px-2 py-1 rounded-md bg-gray-100 dark:bg-neutral-800 text-xs font-medium text-gray-600 dark:text-neutral-400">
                                                                 {e}
                                                             </span>
                                                         ))}
@@ -222,7 +222,7 @@ const MoodJournal: React.FC = () => {
                                                 )}
 
                                                 {entry.note && (
-                                                    <p className="text-gray-600 text-sm bg-gray-50 p-4 rounded-xl leading-relaxed">
+                                                    <p className="text-gray-600 dark:text-neutral-400 text-sm bg-gray-50 dark:bg-neutral-900 p-4 rounded-xl leading-relaxed">
                                                         "{entry.note}"
                                                     </p>
                                                 )}

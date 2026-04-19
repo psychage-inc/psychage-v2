@@ -37,7 +37,7 @@ const CrisisResourceBanner: React.FC = () => {
                             href={`tel:${resource.phone}`}
                             className={`flex items-center gap-4 rounded-xl p-4 border hover:shadow-md transition-all group ${
                                 isWhiteCard
-                                    ? 'bg-white text-gray-900 border-white/80 hover:border-white'
+                                    ? 'bg-surface text-text-primary border-white/80 hover:border-white'
                                     : 'bg-white/15 text-white border-white/20 hover:border-white/40'
                             }`}
                         >
@@ -49,14 +49,14 @@ const CrisisResourceBanner: React.FC = () => {
                                 {resource.type === 'hotline' ? <Phone size={18} /> : <MessageCircle size={18} />}
                             </div>
                             <div className="min-w-0">
-                                <p className={`font-bold text-sm ${isWhiteCard ? 'text-gray-900' : 'text-white'}`}>
+                                <p className={`font-bold text-sm ${isWhiteCard ? 'text-text-primary' : 'text-white'}`}>
                                     {resource.name}
                                 </p>
                                 <p className={`text-lg font-bold tracking-wide ${isWhiteCard ? 'text-red-600' : 'text-white'}`}>
                                     {resource.phone}
                                 </p>
                                 {resource.text_instruction && (
-                                    <p className={`text-xs mt-0.5 ${isWhiteCard ? 'text-gray-500' : 'text-white/70'}`}>
+                                    <p className={`text-xs mt-0.5 ${isWhiteCard ? 'text-text-tertiary' : 'text-white/70'}`}>
                                         {resource.text_instruction}
                                     </p>
                                 )}

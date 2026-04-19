@@ -17,7 +17,8 @@ import { Input } from '@/components/ui/Input';
 import Badge from '@/components/ui/Badge';
 import { useAuth } from '@/context/AuthContext';
 import { useNPIVerification } from '@/hooks/useNPIVerification';
-import { getProviderByNPI, claimProvider } from '@/lib/providers/queries';
+import { getProviderByNPI } from '@/lib/providers/queries';
+import { supabase } from '@/lib/supabaseClient';
 import type { ProviderWithDetails, NPIVerificationResult } from '@/lib/providers/types';
 import { getPrimaryLocation, formatProviderLocation } from '@/lib/providers/types';
 
@@ -67,11 +68,20 @@ const ProviderClaimForm: React.FC = () => {
     setErrorMessage('');
 
     try {
-      const result = await claimProvider(matchedProvider.id, user.id, npiInput);
-      if (result.success) {
+      const { data, error } = await supabase.functions.invoke('claim-provider', {
+        body: { npi_number: npiInput },
+      });
+
+      if (error) {
+        setErrorMessage(error.message || 'Failed to claim profile.');
+        setClaimState('error');
+        return;
+      }
+
+      if (data?.success) {
         setClaimState('claimed');
       } else {
-        setErrorMessage(result.error || 'Failed to claim profile.');
+        setErrorMessage(data?.message || 'Failed to claim profile.');
         setClaimState('error');
       }
     } catch (err) {
@@ -100,12 +110,12 @@ const ProviderClaimForm: React.FC = () => {
   // --- Auth guard ---
   if (!isAuthenticated) {
     return (
-      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-8 text-center">
-        <LogIn size={48} className="mx-auto text-gray-300 dark:text-gray-600 mb-4" />
+      <div className="bg-white dark:bg-neutral-900 rounded-2xl border border-gray-100 dark:border-neutral-800 shadow-sm p-8 text-center">
+        <LogIn size={48} className="mx-auto text-gray-300 dark:text-neutral-600 mb-4" />
         <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-2">
           Sign In Required
         </h3>
-        <p className="text-gray-500 dark:text-gray-400 mb-6 max-w-sm mx-auto">
+        <p className="text-gray-500 dark:text-neutral-400 mb-6 max-w-sm mx-auto">
           You need to be signed in to claim a provider profile. This connects
           your account to the listing.
         </p>
@@ -125,11 +135,11 @@ const ProviderClaimForm: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* NPI Input */}
-      <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 sm:p-8">
+      <div className="bg-white dark:bg-neutral-900 rounded-2xl border border-gray-100 dark:border-neutral-800 shadow-sm p-6 sm:p-8">
         <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-1">
           Find Your Profile
         </h3>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mb-5">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mb-5">
           Enter your NPI number to locate your existing listing in our directory.
         </p>
 
@@ -168,7 +178,7 @@ const ProviderClaimForm: React.FC = () => {
         </div>
 
         {npiInput.length > 0 && npiInput.length < 10 && claimState === 'input' && (
-          <p className="text-xs text-gray-400 dark:text-gray-500 mt-2">
+          <p className="text-xs text-gray-400 dark:text-neutral-500 mt-2">
             {10 - npiInput.length} more digit{10 - npiInput.length !== 1 ? 's' : ''} needed
           </p>
         )}
@@ -227,7 +237,7 @@ const ProviderClaimForm: React.FC = () => {
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
-            className="bg-white dark:bg-gray-900 rounded-2xl border-2 border-teal-200 dark:border-teal-700 shadow-md p-6"
+            className="bg-white dark:bg-neutral-900 rounded-2xl border-2 border-teal-200 dark:border-teal-700 shadow-md p-6"
           >
             <div className="flex items-center gap-2 mb-4">
               <ShieldCheck size={20} className="text-teal-600 dark:text-teal-400" />
@@ -236,7 +246,7 @@ const ProviderClaimForm: React.FC = () => {
               </h3>
             </div>
 
-            <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-5 mb-5">
+            <div className="bg-gray-50 dark:bg-neutral-800/50 rounded-xl p-5 mb-5">
               <div className="flex items-start gap-4">
                 <div className="w-14 h-14 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-bold text-lg">
@@ -247,7 +257,7 @@ const ProviderClaimForm: React.FC = () => {
                   <h4 className="font-display font-bold text-gray-900 dark:text-white">
                     {matchedProvider.display_name}
                     {matchedProvider.credentials_suffix && (
-                      <span className="text-gray-400 font-medium">, {matchedProvider.credentials_suffix}</span>
+                      <span className="text-gray-400 dark:text-neutral-500 font-medium">, {matchedProvider.credentials_suffix}</span>
                     )}
                   </h4>
                   <Badge variant="teal" className="mt-1">
@@ -255,7 +265,7 @@ const ProviderClaimForm: React.FC = () => {
                   </Badge>
 
                   {matchedProvider.locations.length > 0 && (
-                    <div className="flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400 mt-2">
+                    <div className="flex items-center gap-1.5 text-sm text-gray-500 dark:text-neutral-400 mt-2">
                       <MapPin size={14} className="flex-shrink-0" />
                       {formatProviderLocation(getPrimaryLocation(matchedProvider))}
                     </div>
@@ -267,7 +277,7 @@ const ProviderClaimForm: React.FC = () => {
                         <Badge key={spec.id} variant="neutral">{spec.label}</Badge>
                       ))}
                       {matchedProvider.specialties.length > 4 && (
-                        <span className="text-xs text-gray-400">
+                        <span className="text-xs text-gray-400 dark:text-neutral-500">
                           +{matchedProvider.specialties.length - 4} more
                         </span>
                       )}
@@ -287,7 +297,7 @@ const ProviderClaimForm: React.FC = () => {
             >
               Claim This Profile
             </Button>
-            <p className="text-xs text-gray-400 dark:text-gray-500 text-center mt-2">
+            <p className="text-xs text-gray-400 dark:text-neutral-500 text-center mt-2">
               Claiming connects this listing to your Psychage account.
             </p>
           </motion.div>
@@ -315,7 +325,7 @@ const ProviderClaimForm: React.FC = () => {
             key="claimed"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-white dark:bg-gray-900 rounded-2xl border border-emerald-200 dark:border-emerald-800 shadow-sm p-8 text-center"
+            className="bg-white dark:bg-neutral-900 rounded-2xl border border-emerald-200 dark:border-emerald-800 shadow-sm p-8 text-center"
           >
             <div className="w-16 h-16 bg-emerald-100 dark:bg-emerald-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
               <CheckCircle2 size={32} className="text-emerald-600 dark:text-emerald-400" />
@@ -323,7 +333,7 @@ const ProviderClaimForm: React.FC = () => {
             <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-2">
               Profile Claimed Successfully
             </h3>
-            <p className="text-gray-500 dark:text-gray-400 max-w-sm mx-auto mb-6">
+            <p className="text-gray-500 dark:text-neutral-400 max-w-sm mx-auto mb-6">
               Your profile has been claimed and connected to your account. You can now manage
               your listing from the provider dashboard.
             </p>
@@ -342,13 +352,13 @@ const ProviderClaimForm: React.FC = () => {
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
-            className="bg-white dark:bg-gray-900 rounded-2xl border border-amber-200 dark:border-amber-800 shadow-sm p-6 text-center"
+            className="bg-white dark:bg-neutral-900 rounded-2xl border border-amber-200 dark:border-amber-800 shadow-sm p-6 text-center"
           >
             <AlertCircle size={32} className="mx-auto text-amber-500 mb-3" />
             <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-2">
               No Existing Profile Found
             </h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-5 max-w-sm mx-auto">
+            <p className="text-sm text-gray-500 dark:text-neutral-400 mb-5 max-w-sm mx-auto">
               We could not find a listing matching NPI {npiInput} in our directory.
               You can create a new listing instead.
             </p>

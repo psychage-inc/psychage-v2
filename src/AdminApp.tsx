@@ -44,7 +44,7 @@ const AdminArticleQualityDashboard = React.lazy(() => import('./pages/admin/v2/a
 const AdminOnboarding = React.lazy(() => import('./pages/admin/AdminOnboarding'));
 
 const AdminLoadingIndicator = () => (
-  <div className="flex items-center justify-center min-h-screen bg-slate-50 dark:bg-slate-950">
+  <div className="flex items-center justify-center min-h-screen bg-slate-50 dark:bg-neutral-950">
     <div className="w-8 h-8 rounded-full border-2 border-gray-200 border-t-teal-500 animate-spin" />
   </div>
 );
@@ -54,7 +54,7 @@ const AdminApp: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-gray-900 dark:text-white font-sans">
+    <div className="min-h-screen bg-slate-50 dark:bg-neutral-950 text-gray-900 dark:text-white font-sans">
       <ErrorBoundary
         resetKeys={[location.pathname]}
         fallback={(error, reset) => (
@@ -64,7 +64,7 @@ const AdminApp: React.FC = () => {
             {error && <p className="text-xs font-mono text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 px-3 py-1.5 rounded mt-2 mb-4">{error.message}</p>}
             <div className="flex gap-3 mt-4">
               <button onClick={reset} className="px-4 py-2 text-sm font-medium bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors">Try Again</button>
-              <button onClick={() => navigate('/dashboard', { replace: true })} className="px-4 py-2 text-sm font-medium border border-gray-300 dark:border-slate-600 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors">Dashboard</button>
+              <button onClick={() => navigate('/dashboard', { replace: true })} className="px-4 py-2 text-sm font-medium border border-gray-300 dark:border-neutral-600 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800 transition-colors">Dashboard</button>
             </div>
           </div>
         )}

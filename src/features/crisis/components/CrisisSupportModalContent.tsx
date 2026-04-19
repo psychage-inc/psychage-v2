@@ -97,7 +97,7 @@ const ResourceLineCard: React.FC<{ line: CrisisLine; prominent?: boolean }> = ({
             className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-bold transition-colors ${
               prominent
                 ? 'bg-rose-600 text-white hover:bg-rose-700'
-                : 'bg-surface-active text-text-primary hover:bg-gray-200 dark:hover:bg-gray-700'
+                : 'bg-surface-active text-text-primary hover:bg-gray-200 dark:hover:bg-neutral-700'
             }`}
           >
             <Phone size={14} />
@@ -107,7 +107,7 @@ const ResourceLineCard: React.FC<{ line: CrisisLine; prominent?: boolean }> = ({
         {line.text && (
           <a
             href={`sms:${line.text.match(/\d+/)?.[0] ?? ''}&body=${line.text.match(/Text (\w+)/)?.[1] ?? 'HELLO'}`}
-            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium bg-surface-active text-text-primary hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium bg-surface-active text-text-primary hover:bg-gray-200 dark:hover:bg-neutral-700 transition-colors"
           >
             <MessageSquare size={14} />
             Text
@@ -173,7 +173,7 @@ const TrustedContactSection: React.FC<{
                 setShowConfirm(false);
                 setContact('');
               }}
-              className="px-4 py-2 rounded-lg bg-surface-active text-text-secondary text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              className="px-4 py-2 rounded-lg bg-surface-active text-text-secondary text-sm font-medium hover:bg-gray-200 dark:hover:bg-neutral-700 transition-colors"
             >
               Cancel
             </button>
@@ -273,7 +273,7 @@ const CrisisSupportModalContent: React.FC<CrisisSupportProps> = ({
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-1.5 rounded-full bg-surface-active text-text-tertiary hover:text-text-primary hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          className="absolute top-4 right-4 p-1.5 rounded-full bg-surface-active text-text-tertiary hover:text-text-primary hover:bg-gray-200 dark:hover:bg-neutral-700 transition-colors"
           aria-label="Close crisis support dialog"
         >
           <X size={18} />

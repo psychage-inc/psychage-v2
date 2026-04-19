@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { SlidersHorizontal, AlertTriangle, RefreshCw } from 'lucide-react';
+import { SlidersHorizontal, AlertTriangle, RefreshCw, Info } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { useProviderSearch } from '@/hooks/useProviderSearch';
 import { useProviderLookups } from '@/context/ProviderLookupsContext';
@@ -140,17 +140,25 @@ const ProviderSearchPage: React.FC = () => {
         {/* Results Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-4">
-            <p className="text-sm text-text-tertiary">
-              {isLoading ? 'Searching...' : (
-                totalCount > 0
-                  ? `Showing ${providers.length} of ${totalCount.toLocaleString()} providers`
-                  : hasSearched
-                    ? 'No results'
-                    : dbProviderCount
-                      ? `${dbProviderCount.toLocaleString()} NPI-verified providers`
-                      : 'Search our provider directory'
+            <div>
+              <p className="text-sm text-text-tertiary">
+                {isLoading ? 'Searching...' : (
+                  totalCount > 0
+                    ? `Showing ${providers.length} of ${totalCount.toLocaleString()} providers`
+                    : hasSearched
+                      ? 'No results'
+                      : dbProviderCount
+                        ? `${dbProviderCount.toLocaleString()} NPI-verified providers`
+                        : 'Search our provider directory'
+                )}
+              </p>
+              {(!params.sort_by || params.sort_by === 'relevance') && providers.length > 0 && !isLoading && (
+                <p className="text-xs text-text-tertiary mt-0.5 flex items-center gap-1">
+                  <Info size={12} className="flex-shrink-0" />
+                  Sorted by relevance. Verified and featured providers appear first.
+                </p>
               )}
-            </p>
+            </div>
 
             <button
                 onClick={() => setMobileFiltersOpen(true)}

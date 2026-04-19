@@ -49,7 +49,7 @@ const FocusSelectionStep: React.FC<FocusSelectionStepProps> = ({ selected, onSel
             <motion.h2
                 initial={reduced ? {} : { opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-2xl sm:text-3xl font-display font-bold text-gray-900 dark:text-white mb-2 text-center tracking-tight"
+                className="text-2xl sm:text-3xl font-display font-bold text-text-primary mb-2 text-center tracking-tight"
             >
                 What matters most to you?
             </motion.h2>
@@ -57,7 +57,7 @@ const FocusSelectionStep: React.FC<FocusSelectionStepProps> = ({ selected, onSel
                 initial={reduced ? {} : { opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-gray-500 dark:text-gray-400 mb-8 text-center text-sm"
+                className="text-text-tertiary mb-8 text-center text-sm"
             >
                 Choose at least 2 areas to personalize your dashboard.
             </motion.p>
@@ -81,15 +81,15 @@ const FocusSelectionStep: React.FC<FocusSelectionStepProps> = ({ selected, onSel
                                 'relative flex items-start gap-3.5 p-4 rounded-xl border-2 transition-all text-left',
                                 isSelected
                                     ? 'border-teal-500 bg-teal-50/60 dark:bg-teal-900/20 dark:border-teal-400'
-                                    : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 hover:border-gray-300 dark:hover:border-gray-600'
+                                    : 'border-border bg-surface hover:border-gray-300 dark:hover:border-neutral-600'
                             )}
                         >
                             <div className={cn('w-10 h-10 rounded-lg flex items-center justify-center shrink-0', option.color)}>
                                 <Icon size={20} />
                             </div>
                             <div className="flex-grow min-w-0">
-                                <p className="font-semibold text-sm text-gray-900 dark:text-white">{option.label}</p>
-                                <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{option.description}</p>
+                                <p className="font-semibold text-sm text-text-primary">{option.label}</p>
+                                <p className="text-xs text-text-tertiary mt-0.5">{option.description}</p>
                             </div>
                             {isSelected && (
                                 <motion.div
@@ -122,7 +122,7 @@ const FocusSelectionStep: React.FC<FocusSelectionStepProps> = ({ selected, onSel
                 </Button>
             </div>
             {!canProceed && (
-                <p className="text-xs text-gray-400 dark:text-gray-500 mt-3">
+                <p className="text-xs text-text-tertiary mt-3">
                     Select at least {2 - selected.length} more
                 </p>
             )}

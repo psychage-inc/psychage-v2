@@ -658,7 +658,7 @@ export const neuroscienceOfEmotionsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             After a bad night's sleep, minor annoyances feel catastrophic. Your partner's neutral comment sounds like criticism. A work email triggers panic. You snap at loved ones over nothing. This isn't weakness or poor coping---it's neuroscience. Sleep deprivation fundamentally alters how your brain processes, regulates, and responds to emotions.
           </p>
           <p className="mb-6">
@@ -891,7 +891,7 @@ export const neuroscienceOfEmotionsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Just go for a walk" sounds dismissive when you're depressed. Like telling someone with a broken leg to "just walk it off." But here's what makes exercise different: it's not a platitude---it's a biological intervention that changes your brain's chemistry, structure, and function in ways comparable to antidepressant medication. The research is overwhelming and specific.
           </p>
           <p className="mb-6">
@@ -1216,7 +1216,7 @@ export const neuroscienceOfEmotionsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You\'re driving home and suddenly realize you don\'t remember the last 10 minutes. You\'re reading a book, but your mind is replaying yesterday\'s argument. You sit down to relax, and immediately your brain starts catastrophizing about next week. This isn\'t distraction---it\'s your default mode network (DMN) at work, the brain\'s "idle" state that activates when you\'re not focused on external tasks.
           </p>
           <p className="mb-6">
@@ -1613,7 +1613,7 @@ export const neuroscienceOfEmotionsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Why do you sometimes freeze when threatened instead of fighting or fleeing? Why does connection with safe people calm you down when you\'re anxious? Why can\'t you "just relax" when your body feels wired or numb? Polyvagal theory, developed by neuroscientist Stephen Porges, provides answers: your autonomic nervous system operates in three distinct states, each with different emotional, behavioral, and social characteristics.
           </p>
           <p className="mb-6">

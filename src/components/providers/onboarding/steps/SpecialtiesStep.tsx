@@ -17,13 +17,13 @@ const SpecialtiesStep: React.FC<Props> = ({ formData, toggleArrayItem, filters, 
       <h2 className="font-display font-bold text-2xl text-gray-900 dark:text-white mb-2">
         Specialties & Languages
       </h2>
-      <p className="text-gray-500 dark:text-gray-400">
+      <p className="text-gray-500 dark:text-neutral-400">
         Select the areas you specialize in and languages you offer services in.
       </p>
     </div>
 
     {filtersLoading ? (
-      <div className="flex items-center justify-center py-12 text-gray-400">
+      <div className="flex items-center justify-center py-12 text-gray-400 dark:text-neutral-500">
         <Loader2 size={24} className="animate-spin mr-3" />
         Loading options...
       </div>

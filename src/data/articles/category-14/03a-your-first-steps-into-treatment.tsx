@@ -97,7 +97,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Most people wait too long to seek therapy. They push through, hoping things will get better on their own, unsure if their struggles "count" as serious enough <Citation id="1" index={1} source="Psychological Medicine" year="2021" tier={1} />. But mental health treatment isn't reserved for crisis --- it's a resource for anyone whose emotional well-being is suffering.
           </p>
           <p className="mb-6">
@@ -348,7 +348,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Walking into your first therapy session can feel nerve-wracking. You don't know what to say, whether you'll like the therapist, or if you're 'doing it right." The good news: there's no wrong way to show up. Therapists are trained to guide you through this first meeting, and most of the session will be them asking questions, not you having to perform <Citation id="1" index={1} source="Psychotherapy Research" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
@@ -639,7 +639,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Finding the right therapist can feel overwhelming. Where do you start? How do you know if they're good? What if you can't afford it? The process involves logistics (insurance, location, availability) and fit (style, specialty, personality). But it's worth the effort: the therapeutic relationship is one of the strongest predictors of whether therapy works <Citation id="1" index={1} source="Psychotherapy Research" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
@@ -982,7 +982,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Not all therapists are good therapists. Some are unethical, incompetent, or just the wrong fit. Many people stay with therapists who aren't helping (or are actively harming) because they don't know what healthy therapy looks like --- or they feel guilty about 'firing' their therapist <Citation id="2" index={2} source="Psychotherapy Research" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
@@ -1282,7 +1282,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The COVID-19 pandemic forced therapy online overnight --- and it stayed there. Teletherapy (therapy via video or phone) went from niche to mainstream, and the research has caught up. The verdict: online therapy works just as well as in-person therapy for most conditions and most people <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />.
           </p>
           <p className="mb-6">

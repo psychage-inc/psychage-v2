@@ -80,7 +80,7 @@ const DailyCheckIn: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 pb-12 px-6">
+    <div className="min-h-screen bg-gray-50 dark:bg-neutral-900 pt-24 pb-12 px-6">
       <SEO title="Daily Check-In | Clarity Journal" description="Track your mood, sleep, and energy daily." />
       <div className="container mx-auto max-w-2xl">
         <div className="mb-8">
@@ -89,15 +89,15 @@ const DailyCheckIn: React.FC = () => {
 
         <button
           onClick={() => navigate('/tools/clarity-journal')}
-          className="flex items-center gap-2 text-sm text-slate-500 hover:text-teal-600 mb-6 transition-colors"
+          className="flex items-center gap-2 text-sm text-slate-500 dark:text-neutral-400 hover:text-teal-600 mb-6 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" /> Back to Journal
         </button>
 
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="font-display font-bold text-2xl md:text-3xl text-slate-900">Daily Check-In</h1>
-            <p className="text-slate-500 mt-1">The weather check for your mind.</p>
+            <h1 className="font-display font-bold text-2xl md:text-3xl text-slate-900 dark:text-neutral-100">Daily Check-In</h1>
+            <p className="text-slate-500 dark:text-neutral-400 mt-1">The weather check for your mind.</p>
           </div>
           <StreakTracker streak={streak} />
         </div>
@@ -106,13 +106,13 @@ const DailyCheckIn: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 text-center"
+            className="bg-white dark:bg-neutral-900 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-neutral-800 text-center"
           >
             <div className="w-16 h-16 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center mx-auto mb-4">
               <Check className="w-8 h-8" />
             </div>
-            <h2 className="font-display font-semibold text-xl text-slate-900 mb-2">Noted.</h2>
-            <p className="text-slate-500 mb-6">
+            <h2 className="font-display font-semibold text-xl text-slate-900 dark:text-neutral-100 mb-2">Noted.</h2>
+            <p className="text-slate-500 dark:text-neutral-400 mb-6">
               {isToday(date) ? 'See you tomorrow.' : `Entry saved for ${formatDate(date)}.`}
             </p>
             <div className="flex justify-center gap-3">
@@ -128,17 +128,17 @@ const DailyCheckIn: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 space-y-8"
+            className="bg-white dark:bg-neutral-900 rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 dark:border-neutral-800 space-y-8"
           >
             {/* Date */}
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">Date</label>
+              <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">Date</label>
               <input
                 type="date"
                 value={date}
                 max={getToday()}
                 onChange={e => setDate(e.target.value)}
-                className="w-full sm:w-auto px-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full sm:w-auto px-4 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 
@@ -148,7 +148,7 @@ const DailyCheckIn: React.FC = () => {
             {/* Sleep */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Hours of sleep</label>
+                <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">Hours of sleep</label>
                 <input
                   type="number"
                   min={0}
@@ -156,12 +156,12 @@ const DailyCheckIn: React.FC = () => {
                   step={0.5}
                   value={sleepHours}
                   onChange={e => setSleepHours(Math.min(24, Math.max(0, Number(e.target.value))))}
-                  className="w-full px-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full px-4 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                   aria-label="Hours of sleep"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Sleep quality</label>
+                <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">Sleep quality</label>
                 <div className="flex gap-2">
                   {SLEEP_QUALITY_OPTIONS.map(opt => (
                     <button
@@ -172,7 +172,7 @@ const DailyCheckIn: React.FC = () => {
                       className={`px-3 py-2 rounded-xl text-sm font-medium transition-all ${
                         sleepQuality === opt.value
                           ? 'bg-teal-600 text-white'
-                          : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                          : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200 dark:hover:bg-neutral-700'
                       }`}
                     >
                       {opt.label}
@@ -187,19 +187,19 @@ const DailyCheckIn: React.FC = () => {
 
             {/* One Sentence */}
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">In one sentence, how are you today?</label>
+              <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">In one sentence, how are you today?</label>
               <input
                 type="text"
                 value={oneSentence}
                 onChange={e => setOneSentence(e.target.value)}
                 placeholder="Tired but okay. / I don't know. / Feeling hopeful."
-                className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-neutral-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 
             {/* Tags */}
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">How would you describe today? (optional)</label>
+              <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">How would you describe today? (optional)</label>
               <div className="flex flex-wrap gap-2">
                 {DAILY_TAGS.map(tag => (
                   <button
@@ -209,7 +209,7 @@ const DailyCheckIn: React.FC = () => {
                     className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
                       tags.includes(tag)
                         ? 'bg-teal-600 text-white'
-                        : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                        : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-400 hover:bg-slate-200 dark:hover:bg-neutral-700'
                     }`}
                   >
                     {tag}

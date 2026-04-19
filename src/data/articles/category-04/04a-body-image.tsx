@@ -94,7 +94,7 @@ export const bodyImageArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             When you look in the mirror, you're not seeing objective reality. You're seeing an image filtered through beliefs, comparisons, and cultural messages about what bodies 'should' look like. This perception---your body image---isn't superficial vanity. It's deeply connected to your mental health, self-worth, and overall wellbeing.
           </p>
           <p className="mb-6">
@@ -441,7 +441,7 @@ export const bodyImageArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Most people have body parts they wish looked different. But for some, perceived flaws become an obsession that dominates daily life---hours spent in the mirror, avoiding social situations, seeking cosmetic procedures that never satisfy. This is the line between normal body dissatisfaction and body dysmorphic disorder (BDD), and it's important to recognize.
           </p>
           <p className="mb-6">
@@ -737,7 +737,7 @@ export const bodyImageArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You scroll through Instagram and see flawless skin, perfect bodies, aspirational lifestyles. What you're seeing isn't reality---it's a heavily curated, edited version. Yet your brain processes these images as comparisons, and your body image suffers. Social media hasn't just changed how we communicate; it's fundamentally altered how we perceive ourselves.
           </p>
           <p className="mb-6">
@@ -801,7 +801,7 @@ export const bodyImageArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Body image issues are often framed as a women's problem. But research shows men experience significant body dissatisfaction too---it just manifests differently. While women face pressure to be thin, men face pressure to be muscular, tall, and have a full head of hair. And unlike women's body image struggles, men's are rarely discussed.
           </p>
           <p className="mb-6">
@@ -855,7 +855,7 @@ export const bodyImageArticlesA: Article[] = [
           highlightColumn={2}
         />
 
-        <h2 id="social-media" className="text-3xl font-display font-bold text-gray-900 dark:text-gray-300 mt-12 mb-6 scroll-mt-32">
+        <h2 id="social-media" className="text-3xl font-display font-bold text-gray-900 dark:text-neutral-300 mt-12 mb-6 scroll-mt-32">
           Social Media's Role
         </h2>
         <p className="mb-6">
@@ -889,7 +889,7 @@ export const bodyImageArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Love your body!" the body positivity movement declares. But what if you don't? What if forcing yourself to love your appearance feels dishonest, exhausting, or impossible? Body neutrality offers an alternative: you don't have to love or hate your body. You can simply... be okay with it existing.
           </p>
           <p className="mb-6">

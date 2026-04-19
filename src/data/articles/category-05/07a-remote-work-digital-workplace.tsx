@@ -103,7 +103,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In 2020, millions of workers were forced into a massive remote work experiment. Five years later, we finally have data to answer the question that dominated pandemic think-pieces: Is remote work good or bad for mental health?
           </p>
           <p className="mb-6">
@@ -413,7 +413,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             After a day of back-to-back video calls, you're exhausted in a way that doesn't happen after the same number of in-person meetings. Your eyes hurt. Your brain feels foggy. You're somehow both overstimulated and drained. This isn't in your head---it's a documented phenomenon researchers call 'Zoom fatigue."
           </p>
           <p className="mb-6">
@@ -742,7 +742,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've finished eight hours of video calls---talking to colleagues, presenting to clients, joining virtual meetings. You close your laptop. And you realize: you feel completely, achingly alone.
           </p>
           <p className="mb-6">
@@ -786,7 +786,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           source="Journal of Social and Clinical Psychology, 2023"
         />
 
-        <h2 id="what-we-lose" className="text-3xl font-display font-bold text-gray-900 dark:text-gray-300 mt-12 mb-6 scroll-mt-32">
+        <h2 id="what-we-lose" className="text-3xl font-display font-bold text-gray-900 dark:text-neutral-300 mt-12 mb-6 scroll-mt-32">
           What Remote Work Eliminates
         </h2>
         <p className="mb-6">
@@ -1077,7 +1077,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You wake at 8:57, log in to your computer at 9:02 in pajamas, work until you realize it's 3pm and you haven't eaten, then continue working until 8pm because there's no clear 'end' to the day. Your routine has evaporated.
           </p>
           <p className="mb-6">
@@ -1417,7 +1417,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Monday and Thursday in the office, Tuesday through Friday at home. Or is it Wednesday and Thursday? Wait, is everyone coming in tomorrow? You check Slack. Someone suggests "let's just meet in person' but half the team is remote today. The hybrid work promise was "best of both worlds." The reality often feels like the worst of both.
           </p>
           <p className="mb-6">

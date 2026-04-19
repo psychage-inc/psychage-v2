@@ -65,7 +65,7 @@ export const productivityTimeManagementArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Procrastination—the voluntary delay of an intended action despite knowing that the delay will be harmful—affects an estimated 20% of adults chronically and virtually everyone occasionally. Yet despite its prevalence, procrastination is profoundly misunderstood.
           </p>
         </div>
@@ -111,7 +111,7 @@ export const productivityTimeManagementArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -174,7 +174,7 @@ export const productivityTimeManagementArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Deep work—the ability to focus without distraction on a cognitively demanding task—has become simultaneously more valuable and more rare in the modern economy. As the nature of work shifts toward knowledge production, the capacity for sustained concentration becomes the primary determinant of professional output quality.
           </p>
         </div>
@@ -219,7 +219,7 @@ export const productivityTimeManagementArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -282,7 +282,7 @@ export const productivityTimeManagementArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Time is the most fundamental dimension of human experience, yet our perception of it is remarkably unreliable. A watched pot really does seem to take longer to boil.
           </p>
         </div>
@@ -327,7 +327,7 @@ export const productivityTimeManagementArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -390,7 +390,7 @@ export const productivityTimeManagementArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Goals are among the most powerful psychological mechanisms for directing human behavior. Research spanning five decades has established that specific, challenging goals consistently produce higher performance than vague intentions, easy goals, or the absence of goals altogether.
           </p>
         </div>
@@ -437,7 +437,7 @@ export const productivityTimeManagementArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -500,7 +500,7 @@ export const productivityTimeManagementArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Motivation—the internal force that initiates, directs, and sustains goal-directed behavior—is perhaps the most sought-after psychological state. People spend enormous resources trying to get motivated, stay motivated, and motivate others.
           </p>
         </div>
@@ -553,7 +553,7 @@ export const productivityTimeManagementArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -616,7 +616,7 @@ export const productivityTimeManagementArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Flow—the state of complete absorption in an activity where time distorts, self-consciousness dissolves, and performance peaks—represents one of the most studied and most valued psychological experiences. First systematically investigated by Mihaly Csikszentmihalyi in the 1970s, flow has since been confirmed as a universal phenomenon that occurs across cultures, activities, and age groups whenever a specific set of conditions is met: clear goals, immediate feedback, and a balance between the challenge of the task and the skill of the person.
           </p>
         </div>
@@ -667,7 +667,7 @@ export const productivityTimeManagementArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -730,7 +730,7 @@ export const productivityTimeManagementArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Multitasking—the simultaneous performance of multiple tasks—is widely regarded as a desirable skill, a mark of efficiency, and a requirement of modern life. The cognitive science of attention tells a fundamentally different story.
           </p>
         </div>
@@ -778,7 +778,7 @@ export const productivityTimeManagementArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -841,7 +841,7 @@ export const productivityTimeManagementArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Time management has been the dominant framework for personal productivity for decades, built on the assumption that if people could organize their schedules more effectively, they would accomplish more. But research in performance psychology reveals a fundamental limitation of this approach: time is a fixed resource that cannot be expanded, while energy—the capacity to do work—is a renewable resource that can be systematically managed, depleted, and restored.
           </p>
         </div>
@@ -888,7 +888,7 @@ export const productivityTimeManagementArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -951,7 +951,7 @@ export const productivityTimeManagementArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Deadlines are among the most powerful and most misunderstood forces in human productivity. They can motivate action, focus attention, and create the urgency that transforms intention into output.
           </p>
         </div>
@@ -1002,7 +1002,7 @@ export const productivityTimeManagementArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1065,7 +1065,7 @@ export const productivityTimeManagementArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Work-life balance—the aspiration to maintain a satisfying equilibrium between professional obligations and personal life—is among the most discussed and most elusive goals of contemporary life. The phrase itself implies that work and life are opposing forces that must be held in tension, like weights on a scale.
           </p>
         </div>
@@ -1111,7 +1111,7 @@ export const productivityTimeManagementArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1174,7 +1174,7 @@ export const productivityTimeManagementArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The human attention system evolved to detect and respond to novel, salient, and potentially important stimuli in the environment—a capacity that was adaptive when the environment was natural and stimuli were rare. The digital environment exploits this system by flooding it with engineered novelty: notifications, alerts, social media updates, email arrivals, and algorithmically curated content designed to capture and hold attention.
           </p>
         </div>
@@ -1218,7 +1218,7 @@ export const productivityTimeManagementArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -1281,7 +1281,7 @@ export const productivityTimeManagementArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Human beings make thousands of decisions every day, from the trivial (what to eat for breakfast) to the consequential (whether to change careers, end a relationship, or move across the country). The popular model of decision-making assumes a rational process: gather information, weigh options, calculate outcomes, and choose the best alternative.
           </p>
         </div>
@@ -1326,7 +1326,7 @@ export const productivityTimeManagementArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

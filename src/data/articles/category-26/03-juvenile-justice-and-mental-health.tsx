@@ -65,7 +65,7 @@ export const juvenileJusticeAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The juvenile justice system was founded on a simple but profound insight: children are different from adults. They are less mature, less capable of controlling impulses, more susceptible to peer influence, and more amenable to change.
           </p>
         </div>
@@ -113,7 +113,7 @@ export const juvenileJusticeAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -176,7 +176,7 @@ export const juvenileJusticeAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Youth gang involvement is a significant public health and criminal justice concern, with an estimated 850,000 gang members in the United States. Yet the public understanding of gangs—shaped by media stereotypes of irredeemable violent predators—misses the psychological reality of why young people join gangs and what might prevent them from doing so.
           </p>
         </div>
@@ -219,7 +219,7 @@ export const juvenileJusticeAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -282,7 +282,7 @@ export const juvenileJusticeAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             School shootings are among the most feared and least understood acts of violence in contemporary society. Their rarity—despite their devastating impact—makes them statistically difficult to study, and their emotional intensity makes rational analysis challenging.
           </p>
         </div>
@@ -331,7 +331,7 @@ export const juvenileJusticeAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -394,7 +394,7 @@ export const juvenileJusticeAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Juveniles account for approximately 36% of all known sexual offenses against children and a significant proportion of sexual offenses overall—a statistic that is both alarming and, when understood in developmental context, an opportunity for effective intervention. Youth who commit sexual offenses are fundamentally different from adult sex offenders in their motivations, risk profiles, and responsiveness to treatment.
           </p>
         </div>
@@ -437,7 +437,7 @@ export const juvenileJusticeAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -500,7 +500,7 @@ export const juvenileJusticeAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Youth detention facilities in the United States hold approximately 36,000 young people on any given day—and the mental health crisis among these detained youth is staggering. Research consistently finds that 65–70% of detained youth meet criteria for at least one psychiatric disorder, with substance use disorders, disruptive behavior disorders, mood disorders, and PTSD being the most prevalent.
           </p>
         </div>
@@ -543,7 +543,7 @@ export const juvenileJusticeAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -606,7 +606,7 @@ export const juvenileJusticeAndMentalHealthArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Juvenile diversion—the practice of redirecting youth away from formal justice system processing toward community-based interventions—is one of the most consequential and evidence-supported strategies in juvenile justice. The principle is straightforward: for many youth who come into contact with the justice system, formal prosecution, adjudication, and incarceration are not only unnecessary but counterproductive.
           </p>
         </div>
@@ -651,7 +651,7 @@ export const juvenileJusticeAndMentalHealthArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

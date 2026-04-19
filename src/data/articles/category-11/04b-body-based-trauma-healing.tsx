@@ -118,7 +118,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Imagine being able to watch your brain\'s activity in real time---and learn to change it. That\'s neurofeedback: a form of biofeedback that trains your brain to self-regulate by showing you live feedback on your brainwaves. For trauma survivors whose brains are stuck in patterns of hyperarousal or shutdown, neurofeedback offers a way to retrain those patterns directly---without medication, without talking about the trauma, and often with lasting results.
           </p>
           <p className="mb-6">
@@ -513,7 +513,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You sit in your therapist's office describing the trauma, but the words feel empty---disconnected from the weight in your chest, the tightness in your jaw, the numbness in your legs. Traditional talk therapy asks you to make sense of what happened with your mind. Sensorimotor Psychotherapy starts with your body. It asks: <em>What is your body holding that words can't reach?</em> And then, through mindful tracking of sensations and movements, it helps you release what's been trapped there.
           </p>
           <p className="mb-6">
@@ -907,7 +907,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             After trauma, your nervous system lives in a state of perpetual threat detection. Every sound, every sudden movement activates the alarm. But step into a forest, and something shifts. Your breathing slows. Your shoulders drop. The hypervigilance that felt permanent begins to quiet. This isn\'t just relaxation---it\'s your nervous system remembering what safety feels like. Nature isn\'t a cure for trauma, but research shows it\'s one of the most accessible, evidence-backed tools for healing.
           </p>
           <p className="mb-6">
@@ -1296,7 +1296,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             After trauma, human connection can feel dangerous. Eye contact triggers anxiety. Vulnerability feels like a threat. But place a dog in the room, and something shifts. The dog doesn\'t judge, doesn\'t require explanation, doesn\'t recoil from your pain. It simply offers presence. For many trauma survivors, animals provide what people cannot: unconditional acceptance, non-verbal attunement, and a safe entry point back into trust and connection.
           </p>
           <p className="mb-6">
@@ -1653,7 +1653,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've been in therapy for months. You can explain your trauma clearly, analyze why it happened, even reframe the maladaptive thoughts. But when you're triggered, none of that insight helps. Your body still reacts---heart pounding, breath shallow, muscles bracing---as if the danger is happening right now. You understand the trauma cognitively, but you don't <em>feel</em> healed. This is the limitation of traditional talk therapy for trauma: it speaks to your thinking brain, but trauma lives deeper---in your body, your nervous system, your subcortical structures that don't speak in words.
           </p>
           <p className="mb-6">

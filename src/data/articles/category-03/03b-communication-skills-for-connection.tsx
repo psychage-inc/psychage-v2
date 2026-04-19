@@ -35,7 +35,7 @@ export const communicationSkillsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "You never listen!", "You always make everything about you!", "You're so inconsiderate!" These accusations trigger instant defensiveness. The conversation devolves into a blame war. Nobody wins.
           </p>
           <p className="mb-6">
@@ -197,7 +197,7 @@ export const communicationSkillsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             How you communicate shapes every relationship in your life. There are four main styles: passive, aggressive, passive-aggressive, and assertive. Most people default to one---often without realizing it.
           </p>
           <p className="mb-6">
@@ -429,7 +429,7 @@ export const communicationSkillsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Giving feedback is one of the hardest communication skills. Too harsh, and they shut down. Too soft, and they don't take it seriously. Most people avoid feedback entirely---then let resentment build until they explode.
           </p>
           <p className="mb-6">
@@ -638,7 +638,7 @@ export const communicationSkillsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "I'm sorry you feel that way.", "I'm sorry, but...", "I said I'm sorry! What more do you want?" These aren't apologies. They're defenses disguised as remorse.
           </p>
           <p className="mb-6">
@@ -805,7 +805,7 @@ export const communicationSkillsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You're upset and need to talk. Your partner needs space to think. You want to process out loud; they go silent. Neither of you is wrong---you just speak different emotional languages.
           </p>
           <p className="mb-6">

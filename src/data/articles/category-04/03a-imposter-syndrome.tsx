@@ -94,7 +94,7 @@ export const imposterSyndromeArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You've earned the promotion, published the paper, or completed the project---but instead of pride, you feel like a fraud waiting to be exposed. This paradox, where external success collides with internal doubt, is imposter syndrome, and it affects an estimated 70% of people at some point in their lives.
           </p>
           <p className="mb-6">
@@ -368,7 +368,7 @@ export const imposterSyndromeArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Not all imposter syndrome looks the same. While the core experience---feeling like a fraud despite evidence of competence---is universal, the triggers, thought patterns, and behaviors vary significantly. Understanding which type you experience can help you recognize your specific vulnerabilities and develop targeted strategies.
           </p>
           <p className="mb-6">
@@ -672,7 +672,7 @@ export const imposterSyndromeArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The promotion comes through. Your project succeeds. A colleague praises your contribution. And yet, instead of satisfaction, you feel like you've gotten away with something---like you've fooled everyone and it's only a matter of time before they discover you don't belong. At work, where performance is visible and stakes feel high, imposter syndrome can turn every achievement into evidence of deception.
           </p>
           <p className="mb-6">
@@ -981,7 +981,7 @@ export const imposterSyndromeArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             In the lecture hall, research lab, and dissertation defense, imposter syndrome finds one of its most fertile environments. Among graduate students, doctoral candidates, and early-career researchers, feeling like an intellectual fraud is not an occasional experience---it's epidemic.
           </p>
           <p className="mb-6">
@@ -1306,7 +1306,7 @@ export const imposterSyndromeArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You complete a project successfully. Objectively, it meets---even exceeds---the requirements. But instead of satisfaction, you focus on minor flaws, imagined gaps, and ways it could have been better. The conclusion: it wasn't good enough, and neither are you. This is where perfectionism and imposter syndrome converge, creating a feedback loop that no amount of achievement can break.
           </p>
           <p className="mb-6">

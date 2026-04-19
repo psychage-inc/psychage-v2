@@ -26,7 +26,7 @@ const SHARE_TARGETS: ShareTarget[] = [
         ),
         getUrl: (title, url) =>
             `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${title} — Read on Psychage`)}&url=${encodeURIComponent(url)}`,
-        color: 'hover:bg-gray-900 hover:text-white dark:hover:bg-gray-100 dark:hover:text-gray-900',
+        color: 'hover:bg-gray-900 hover:text-white dark:hover:bg-neutral-100 dark:hover:text-neutral-900',
     },
     {
         name: 'Facebook',

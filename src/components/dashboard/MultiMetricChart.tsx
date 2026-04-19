@@ -56,7 +56,7 @@ const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?:
     if (!active || !payload || !payload.length) return null;
 
     return (
-        <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-md p-3 rounded-xl border border-gray-200 dark:border-gray-700 shadow-xl">
+        <div className="bg-white/95 dark:bg-neutral-800/95 backdrop-blur-md p-3 rounded-xl border border-gray-200 dark:border-neutral-700 shadow-xl">
             <p className="font-semibold text-gray-900 dark:text-white text-xs mb-1.5">{label}</p>
             {payload.map((item, idx) => {
                 const config = METRIC_CONFIG.find(m => m.dataKey === item.dataKey);
@@ -88,8 +88,8 @@ const GhostChart: React.FC = () => {
                 </ResponsiveContainer>
             </div>
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-1 font-medium">Your wellness trends will appear here</p>
-                <p className="text-xs text-gray-400 dark:text-gray-500 mb-4 max-w-xs">As you track your mood, sleep, and clarity, patterns will emerge.</p>
+                <p className="text-sm text-gray-500 dark:text-neutral-400 mb-1 font-medium">Your wellness trends will appear here</p>
+                <p className="text-xs text-gray-400 dark:text-neutral-500 mb-4 max-w-xs">As you track your mood, sleep, and clarity, patterns will emerge.</p>
                 <a href="#mood-checkin" className="text-xs text-teal-600 dark:text-teal-400 font-medium hover:underline flex items-center gap-1">
                     Start with a mood check-in <ArrowUp size={12} />
                 </a>
@@ -126,7 +126,7 @@ const MultiMetricChart: React.FC<MultiMetricChartProps> = ({ data, availableMetr
             <div className="flex items-center justify-between mb-5 flex-wrap gap-2">
                 <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white text-sm">Wellness Trends</h3>
-                    <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Last 7 days</p>
+                    <p className="text-xs text-gray-400 dark:text-neutral-500 mt-0.5">Last 7 days</p>
                 </div>
                 {/* Toggle pills */}
                 <div className="flex gap-2">
@@ -137,8 +137,8 @@ const MultiMetricChart: React.FC<MultiMetricChartProps> = ({ data, availableMetr
                             className={cn(
                                 'px-3 py-1.5 rounded-full text-xs font-medium transition-all border flex items-center gap-1.5',
                                 activeMetrics.has(metric.key)
-                                    ? 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white border-gray-300 dark:border-gray-600'
-                                    : 'bg-transparent text-gray-400 dark:text-gray-500 border-gray-200 dark:border-gray-700 hover:text-gray-600 dark:hover:text-gray-300'
+                                    ? 'bg-gray-100 dark:bg-neutral-800 text-gray-900 dark:text-white border-gray-300 dark:border-neutral-600'
+                                    : 'bg-transparent text-gray-400 dark:text-neutral-500 border-gray-200 dark:border-neutral-700 hover:text-gray-600 dark:hover:text-neutral-300'
                             )}
                         >
                             <span

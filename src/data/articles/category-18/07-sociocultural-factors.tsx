@@ -173,7 +173,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "I look in the mirror and immediately start cataloging everything wrong—thighs too big, stomach not flat,
             wrinkles forming, gray hair showing. I spend hours editing photos before posting, comparing myself to filtered
             images online, feeling like I'll never measure up. It's exhausting."
@@ -352,7 +352,7 @@ export const articles: Article[] = [
                     <li><strong>Body checking</strong> behaviors like pinching skin, mirror scrutiny</li>
                     <li><strong>Using compensatory behaviors</strong> like purging or laxative use</li>
                   </ul>
-                  <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+                  <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
                     If you recognize these patterns, reach out to a healthcare provider or eating disorder specialist.
                     Early intervention significantly improves outcomes.
                   </p>
@@ -607,7 +607,7 @@ export const articles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "I used to be someone. I had interests, ambitions, an identity that felt solid. Now I'm just Mom—and I love my
             kids desperately, but I also grieve the person I was. Is that allowed?"
           </p>

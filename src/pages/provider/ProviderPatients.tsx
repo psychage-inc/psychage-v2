@@ -138,7 +138,7 @@ const ProviderPatients: React.FC = () => {
                                         <div className="flex items-center gap-4">
                                             <span className={cn(
                                                 "px-3 py-1 rounded-full text-xs font-bold",
-                                                patient.status === 'active' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'
+                                                patient.status === 'active' ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400' : 'bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-neutral-300'
                                             )}>
                                                 {patient.status || 'Active'}
                                             </span>
@@ -154,7 +154,7 @@ const ProviderPatients: React.FC = () => {
                                                     <MoreVertical size={18} />
                                                 </Button>
                                                 {activeMenu === idx && (
-                                                    <div className="absolute right-0 top-full mt-1 w-48 bg-white rounded-lg shadow-lg border border-border py-1 z-50">
+                                                    <div className="absolute right-0 top-full mt-1 w-48 bg-white dark:bg-neutral-900 rounded-lg shadow-lg border border-border py-1 z-50">
                                                         <button
                                                             onClick={() => handleViewProfile(patient)}
                                                             className="w-full text-left px-4 py-2 text-sm text-text-primary hover:bg-surface-hover flex items-center gap-2"

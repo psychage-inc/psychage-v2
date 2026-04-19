@@ -119,7 +119,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             The elevator doors close. Your chest tightens. Your breath quickens. The walls feel like they're moving inward. You need out --- now. Or maybe it's an MRI machine, a crowded subway car, a windowless room, or even a packed concert. Anywhere you feel trapped, enclosed, unable to escape freely.
           </p>
           <p className="mb-6">
@@ -513,7 +513,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A tiny spider crosses your floor. It's harmless --- far too small to bite, let alone hurt you. Yet your heart races. You freeze. Every muscle tenses. You know the fear is irrational, but your brain screams danger anyway. Why? Because millions of years of evolution have primed you to fear certain animals, even when modern logic says you're safe.
           </p>
           <p className="mb-6">
@@ -883,7 +883,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You can't remember the last time you vomited --- because you've spent years structuring your entire life to avoid it. You scrutinize every food for freshness. You avoid alcohol, restaurants, crowds, pregnant people, children, anyone who mentions feeling unwell. Stomach bugs terrify you more than serious illness. The thought of vomiting --- or worse, seeing someone else vomit --- triggers immediate panic.
           </p>
           <p className="mb-6">
@@ -1269,7 +1269,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Most phobias make your heart race, your blood pressure spike, your body prepare to fight or flee. But blood-injection-injury (BII) phobia does something different --- something unique in the entire catalog of human fears. It makes you faint.
           </p>
           <p className="mb-6">
@@ -1696,7 +1696,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your child is terrified of dogs. Or the dark. Or thunderstorms. Or needles. The fear seems irrational to you, but to them, it's overwhelming. They avoid playgrounds where dogs might be, refuse sleepovers, panic during storms, or scream at the doctor's office. You want to help, but you're not sure how --- and you worry that pushing too hard might make things worse.
           </p>
           <p className="mb-6">

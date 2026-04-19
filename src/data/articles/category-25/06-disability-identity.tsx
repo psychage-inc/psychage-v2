@@ -63,7 +63,7 @@ export const disabilityIdentityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             How we understand disability fundamentally shapes how we approach the mental health of disabled people. The medical model defines disability as a problem located within the individual—a deficiency to be cured, fixed, or rehabilitated.
           </p>
         </div>
@@ -84,7 +84,7 @@ export const disabilityIdentityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>
@@ -145,7 +145,7 @@ export const disabilityIdentityArticles: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Ableism—the systemic belief that non-disabled bodies and minds are superior, and the structural and interpersonal discrimination that flows from this belief—is the most normalized form of oppression in contemporary society. Unlike racism or sexism, ableism is rarely recognized, routinely denied, and often disguised as concern, pity, or admiration.
           </p>
         </div>
@@ -166,7 +166,7 @@ export const disabilityIdentityArticles: Article[] = [
           , reinforcing the importance of evidence-based approaches.
         </p>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-12 italic">
+        <p className="text-sm text-gray-500 dark:text-neutral-400 mt-12 italic">
           This article is for educational purposes only and does not constitute medical or psychological advice.
         </p>
       </>

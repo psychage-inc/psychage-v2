@@ -78,7 +78,7 @@ export const socialMediaPsychologicalImpactArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You have 847 friends, 1,200 followers, and a group chat that never stops buzzing.
             You also feel deeply, persistently alone. If that contradiction sounds familiar, you
             are not experiencing a personal failure. You are experiencing one of the most
@@ -537,7 +537,7 @@ export const socialMediaPsychologicalImpactArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "Delete the apps. Take a break. Do a detox." This advice has become so common that
             it barely registers as novel. Therapists recommend it. Self-help books prescribe it.
             Even the platforms themselves have added screen time reminders, tacitly acknowledging
@@ -968,7 +968,7 @@ export const socialMediaPsychologicalImpactArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             She wakes up at 5 AM to catch the golden hour light. She applies makeup that is
             meant to look like no makeup. She arranges a breakfast she will photograph but not
             eat, because the oatmeal has been sitting for 40 minutes and is cold. She posts the
@@ -1433,7 +1433,7 @@ export const socialMediaPsychologicalImpactArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             A 60-second video tells you that if you lose your keys a lot, you probably have
             ADHD. Another claims that intrusive thoughts mean you are secretly a dangerous
             person. A third insists that medication "just numbs you" and that the real cure
@@ -1899,7 +1899,7 @@ export const socialMediaPsychologicalImpactArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It would be easy --- and not entirely inaccurate --- to conclude from the weight of
             recent research that social media is simply bad for mental health. The evidence on
             comparison, loneliness, misinformation, and addictive design is substantial and

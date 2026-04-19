@@ -265,13 +265,12 @@ export const navigationConfig: NavigationConfig = {
             ]
         } as NavMegaMenu,
 
-        // Find Providers (existing, enhanced with feature flag)
+        // Find Care — always visible (directory is live with 423K providers)
         {
             id: 'providers',
-            label: 'Find Providers',
+            label: 'Find Care',
             type: 'link',
             href: '/providers',
-            requiredFeatureFlag: 'VITE_ENABLE_PROVIDER_DIRECTORY'
         } as NavLink,
 
     ],

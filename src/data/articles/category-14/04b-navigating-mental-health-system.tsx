@@ -93,7 +93,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You know you need help, but who should you call? A psychiatrist? Psychologist? Therapist? Counselor? The alphabet soup of mental health credentials can feel overwhelming when all you want is someone who can actually help.
           </p>
           <p className="mb-6">
@@ -127,7 +127,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
             { feature: 'LMFT', values: ['MA/MS', false, 'Couples/family therapy'] },
           ]}
         />
-        <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 mt-2">
+        <p className="text-sm text-gray-600 dark:text-neutral-400 mb-6 mt-2">
           *Louisiana, New Mexico, Illinois, Iowa, and Idaho allow specially trained psychologists to prescribe <Citation id="6" index={6} source="APA" year="2024" tier={3} />.
         </p>
 
@@ -286,7 +286,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Walk into any app store, search "mental health, ' and you'll find thousands of options promising to cure your anxiety, fix your sleep, or transform your mood. But here's the uncomfortable truth: most mental health apps have zero research backing them up.
           </p>
           <p className="mb-6">
@@ -515,7 +515,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You walked into your appointment with vague symptoms and walked out with a diagnosis. Maybe you felt relief---finally, a name for what you've been experiencing. Or maybe you felt overwhelmed, reduced to a label, unsure what it means for your future.
           </p>
           <p className="mb-6">
@@ -744,7 +744,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Every time you see a therapist, psychiatrist, or mental health professional, notes go into your medical record. But what's actually written in there? Who can read it? And what rights do you have over your own mental health information?
           </p>
           <p className="mb-6">
@@ -958,7 +958,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             You sit in the therapist's office, nodding along even though the treatment plan doesn't feel right. The psychiatrist rushes through your appointment, barely making eye contact. Your insurance denies coverage, and you don't know where to turn. Sound familiar?
           </p>
           <p className="mb-6">

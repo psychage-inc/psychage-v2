@@ -122,7 +122,7 @@ export const griefLossArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Grief is love with nowhere to go. It's the price we pay for attachment, the shadow that meaningful connection casts. Every person who has loved will grieve. It's not a disorder, not something to 'get over"---it's a fundamental human experience, as universal as joy or fear.
           </p>
           <p className="mb-6">
@@ -561,7 +561,7 @@ export const griefLossArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             "You're in denial.", "You'll move to anger next.", "Once you accept it, you'll be done grieving." If you've heard these phrases after a loss, you've encountered the five stages model---and its damaging misapplication. This widely known framework has become grief's most pervasive myth, causing people to feel they're 'doing grief wrong' when they don't experience stages in order or at all.
           </p>
           <p className="mb-6">
@@ -896,7 +896,7 @@ export const griefLossArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             One moment you're sobbing over old photos, overwhelmed by loss. An hour later, you're grocery shopping, planning dinner, handling practical tasks. Then guilt hits: 'How can I be thinking about groceries when my loved one just died? Am I not grieving properly?" This oscillation---between confronting grief and engaging with life---isn't a failure of grief. It's exactly how healthy grief works.
           </p>
           <p className="mb-6">
@@ -1172,7 +1172,7 @@ export const griefLossArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             It's been two years since they died. Friends say you should be "moving on." You feel you should be feeling better by now. But the yearning hasn't eased. The disbelief that they're gone persists. You can't engage with life, can't imagine a future. Every day feels like the first day of loss. This isn't "just grief"---it may be prolonged grief disorder, a newly recognized condition that affects approximately 10% of bereaved people.
           </p>
           <p className="mb-6">
@@ -1511,7 +1511,7 @@ export const griefLossArticlesA: Article[] = [
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Your parent has terminal cancer. Your partner's Alzheimer's is progressing. You're watching someone you love fade before your eyes. They're still alive, yet you're already grieving---mourning the person they were, the future you won't have together, the inevitable loss approaching. You feel guilty for grieving someone who's still here. This is anticipatory grief, and it's a natural response to impending loss.
           </p>
           <p className="mb-6">

@@ -37,6 +37,7 @@ const Footer: React.FC = () => {
     if (view === 'terms') return '/legal/terms';
     if (view === 'learn') return '/learn';
     if (view === 'tools') return '/tools';
+    if (view === 'how-we-verify') return '/how-we-verify';
     return `/${view}`;
   };
 
@@ -53,6 +54,7 @@ const Footer: React.FC = () => {
     popular: [
       { name: 'Clarity Score™', view: 'clarity-score' },
       { name: 'Find a Provider', view: 'providers' },
+      { name: 'How We Verify', view: 'how-we-verify' },
       { name: 'Articles', view: 'learn' },
       { name: 'Tools', view: 'tools' },
     ],

@@ -94,6 +94,14 @@ const ProvidersLandingPage: React.FC = () => {
               </motion.div>
             ))}
           </div>
+          <div className="text-center mt-6">
+            <Link
+              to="/how-we-verify"
+              className="text-sm text-text-secondary hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+            >
+              Learn how we verify providers &rarr;
+            </Link>
+          </div>
         </div>
       </section>
 

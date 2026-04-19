@@ -2,7 +2,9 @@ import React from 'react';
 import { MapPin, Video, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import type { ProviderCardData } from '@/lib/providers/types';
-import { VerificationBadge } from '../shared/VerificationBadge';
+import { TrustBadge } from '../shared/TrustBadge';
+import { getTrustBadgeType } from '@/lib/providers/trust-badge';
+import { explainCredential } from '@/lib/providers/credentials';
 
 interface ProviderCardCompactProps {
   provider: ProviderCardData;
@@ -39,10 +41,18 @@ export const ProviderCardCompact: React.FC<ProviderCardCompactProps> = ({ provid
           <h4 className="font-display font-bold text-sm text-text-primary truncate">
             {provider.display_name}
             {provider.credentials_suffix && (
-              <span className="text-text-tertiary font-medium">, {provider.credentials_suffix}</span>
+              <span
+                className="text-text-tertiary font-medium"
+                title={explainCredential(provider.credentials_suffix) ?? undefined}
+              >
+                , {provider.credentials_suffix}
+              </span>
             )}
           </h4>
-          <VerificationBadge status={provider.status} verifiedAt={provider.verified_at} size="sm" />
+          {(() => {
+            const badgeType = getTrustBadgeType(provider);
+            return badgeType ? <TrustBadge type={badgeType} size="sm" /> : null;
+          })()}
         </div>
         <p className="text-xs text-text-tertiary truncate">
           {provider.specialty_tags[0]?.label || provider.provider_type_label || 'Provider'}

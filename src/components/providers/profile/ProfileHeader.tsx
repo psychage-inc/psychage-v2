@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import type { ProviderWithDetails } from '@/lib/providers/types';
-import { VerificationBadge } from '@/components/providers/shared/VerificationBadge';
+import { TrustBadge } from '@/components/providers/shared/TrustBadge';
+import { getTrustBadgeType, shouldShowFeaturedBadge } from '@/lib/providers/trust-badge';
+import { explainCredential } from '@/lib/providers/credentials';
 import Badge from '@/components/ui/Badge';
 
 interface ProfileHeaderProps {
@@ -23,6 +25,7 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({ provider }) => {
   const displayName = provider.credentials_suffix
     ? `${provider.display_name}, ${provider.credentials_suffix}`
     : provider.display_name;
+  const expandedCredentials = explainCredential(provider.credentials_suffix);
 
   return (
     <motion.div
@@ -46,16 +49,22 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({ provider }) => {
 
       {/* Info */}
       <div className="flex flex-col items-center gap-2 text-center sm:items-start sm:text-left">
-        <h1 className="font-display text-2xl font-bold text-slate-900 dark:text-white sm:text-3xl">
-          {displayName}
-        </h1>
+        <div>
+          <h1 className="font-display text-2xl font-bold text-slate-900 dark:text-white sm:text-3xl">
+            {displayName}
+          </h1>
+          {expandedCredentials && (
+            <p className="text-xs text-text-tertiary mt-1">{expandedCredentials}</p>
+          )}
+        </div>
 
         <div className="flex flex-wrap items-center justify-center gap-2 sm:justify-start">
           <Badge variant="teal">{provider.provider_type.label}</Badge>
-          <VerificationBadge
-            status={provider.status}
-            verifiedAt={provider.verified_at}
-          />
+          {(() => {
+            const badgeType = getTrustBadgeType(provider);
+            return badgeType ? <TrustBadge type={badgeType} /> : null;
+          })()}
+          {shouldShowFeaturedBadge(provider) && <TrustBadge type="featured" />}
         </div>
 
         {provider.practice_name && (

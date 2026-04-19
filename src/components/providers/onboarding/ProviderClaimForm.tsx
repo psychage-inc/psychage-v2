@@ -11,7 +11,7 @@ import {
   LogIn,
   UserCheck,
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import Button from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import Badge from '@/components/ui/Badge';
@@ -25,7 +25,9 @@ import { getPrimaryLocation, formatProviderLocation } from '@/lib/providers/type
 type ClaimState = 'input' | 'verified' | 'searching' | 'found' | 'not_found' | 'claiming' | 'claimed' | 'error';
 
 const ProviderClaimForm: React.FC = () => {
-  const [npiInput, setNpiInput] = useState('');
+  const [searchParams] = useSearchParams();
+  const preFilledNpi = searchParams.get('npi');
+  const [npiInput, setNpiInput] = useState(preFilledNpi ?? '');
   const [claimState, setClaimState] = useState<ClaimState>('input');
   const [matchedProvider, setMatchedProvider] = useState<ProviderWithDetails | null>(null);
   const [npiResult, setNpiResult] = useState<NPIVerificationResult | null>(null);

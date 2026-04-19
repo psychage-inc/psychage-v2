@@ -1,5 +1,6 @@
 import React from 'react';
 import { SearchX } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Button from '@/components/ui/Button';
 
 interface ProviderResultsEmptyProps {
@@ -30,6 +31,12 @@ export const ProviderResultsEmpty: React.FC<ProviderResultsEmptyProps> = ({
     >
       {hasFilters ? 'Clear all filters' : 'Browse all providers'}
     </Button>
+    <Link
+      to="/how-we-verify"
+      className="text-xs text-text-tertiary hover:text-teal-600 dark:hover:text-teal-400 mt-4 block transition-colors"
+    >
+      Learn how we verify providers
+    </Link>
   </div>
 );
 

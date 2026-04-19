@@ -18,7 +18,7 @@ import type {
   ProviderStatus,
   ProviderTier,
 } from './types';
-import { isProviderVerified } from '@/components/providers/shared/VerificationBadge';
+import { isProviderVerified } from '@/lib/providers/trust-badge';
 import { providers as mockProviders } from '@/data/providers';
 import type { Provider } from '@/types/models';
 

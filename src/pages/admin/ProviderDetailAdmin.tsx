@@ -11,6 +11,7 @@ import { providerService } from '@/services/providerService';
 import { Provider } from '@/types/models';
 import { useToast } from '@/context/ToastContext';
 import { api } from '@/lib/api';
+import { logAdminAction } from '@/lib/admin/auditLogger';
 import AdminLayout from './components/AdminLayout';
 import AdminErrorBanner from './components/AdminErrorBanner';
 import StatusBadge from './components/StatusBadge';
@@ -64,6 +65,12 @@ const ProviderDetailAdmin: React.FC = () => {
         setIsSavingNotes(true);
         try {
             await api.admin.saveProviderNotes(id, verificationNotes);
+            await logAdminAction({
+                action: 'save_provider_notes',
+                resourceType: 'provider',
+                resourceId: id,
+                newValue: { notes: verificationNotes },
+            });
             setNotesSaved(true);
             setTimeout(() => setNotesSaved(false), 3000);
         } catch (err) {
@@ -79,6 +86,13 @@ const ProviderDetailAdmin: React.FC = () => {
         setIsUpdating(true);
         try {
             await api.admin.updateProviderStatusWithReason(id, modalState.action, reason);
+            await logAdminAction({
+                action: modalState.action === 'active' ? 'approve_provider' : `${modalState.action}_provider`,
+                resourceType: 'provider',
+                resourceId: id,
+                previousValue: { status: provider?.status },
+                newValue: { status: modalState.action, reason },
+            });
             setModalState(s => ({ ...s, isOpen: false }));
             toast.success(`Provider ${modalState.action === 'active' ? 'approved' : modalState.action} successfully.`);
             fetchProvider();

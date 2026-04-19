@@ -6,6 +6,7 @@ import { providerService } from '@/services/providerService';
 import { Provider } from '@/types/models';
 import { useToast } from '@/context/ToastContext';
 import { api } from '@/lib/api';
+import { logAdminAction } from '@/lib/admin/auditLogger';
 import AdminLayout from './components/AdminLayout';
 import AdminFilterBar from './components/AdminFilterBar';
 import AdminDataTable from './components/AdminDataTable';
@@ -70,6 +71,12 @@ const ProviderManagement: React.FC = () => {
         setIsUpdating(true);
         try {
             await api.admin.updateProviderStatusWithReason(modalState.providerId, modalState.action, reason);
+            await logAdminAction({
+                action: modalState.action === 'active' ? 'approve_provider' : `${modalState.action}_provider`,
+                resourceType: 'provider',
+                resourceId: String(modalState.providerId),
+                newValue: { status: modalState.action, reason },
+            });
             setModalState(s => ({ ...s, isOpen: false }));
             toast.success(`Provider ${modalState.action === 'active' ? 'approved' : modalState.action} successfully.`);
             fetchProviders();

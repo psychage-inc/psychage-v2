@@ -131,7 +131,7 @@ const ProviderApplyForm: React.FC = () => {
               onClick={() => goToStep(index)}
               disabled={index > currentStep}
               className={cn(
-                'flex flex-col items-center gap-1.5 group transition-all',
+                'flex flex-col items-center gap-1.5 group transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-lg',
                 index > currentStep && 'cursor-not-allowed opacity-50'
               )}
               aria-label={`Step ${index + 1}: ${step.label}`}

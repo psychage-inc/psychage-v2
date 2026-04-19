@@ -850,7 +850,7 @@ const ForProvidersLandingPage: React.FC = () => {
                   type="button"
                   onClick={() => setBilling('monthly')}
                   className={cn(
-                    'px-5 py-2 rounded-full text-sm font-medium transition-all duration-200',
+                    'px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2',
                     billing === 'monthly'
                       ? 'bg-white dark:bg-[var(--color-surface-active)] text-[var(--color-text-primary)] shadow-sm'
                       : 'text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)]'
@@ -863,7 +863,7 @@ const ForProvidersLandingPage: React.FC = () => {
                     type="button"
                     onClick={() => setBilling('annual')}
                     className={cn(
-                      'px-5 py-2 rounded-full text-sm font-medium transition-all duration-200',
+                      'px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2',
                       billing === 'annual'
                         ? 'bg-white dark:bg-[var(--color-surface)] text-[var(--color-text-primary)] shadow-sm'
                         : 'text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)]'
@@ -1109,7 +1109,7 @@ const ForProvidersLandingPage: React.FC = () => {
                     onClick={() =>
                       setOpenFaq((prev) => (prev === index ? null : index))
                     }
-                    className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+                    className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary"
                     aria-expanded={openFaq === index}
                     aria-controls={`faq-answer-${index}`}
                   >

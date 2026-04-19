@@ -87,7 +87,7 @@ const ProviderProfilePage: React.FC = () => {
         >
           <button
             onClick={() => navigate(-1)}
-            className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+            className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-teal-600 dark:hover:text-teal-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
           >
             <ArrowLeft size={16} />
             Back to results

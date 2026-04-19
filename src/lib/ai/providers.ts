@@ -1,14 +1,32 @@
 // =============================================================================
 // Psychage AI Help — Provider Directory Integration
 // =============================================================================
+// Queries the main `providers` table (not `ai_providers`) to ensure
+// suspended/removed providers are never recommended by MindMate.
 
 import type { SupabaseClient } from '@supabase/supabase-js';
 import type {
   ProviderResult,
   ProviderSearchCriteria,
   ProviderSuggestion,
-  Provider,
 } from './types';
+
+// Joined select matching the provider directory pattern (queries.ts)
+const AI_PROVIDER_SELECT = `
+  id,
+  display_name,
+  credentials,
+  bio,
+  website,
+  phone,
+  telehealth,
+  tier,
+  status,
+  provider_type:provider_types(name),
+  locations:provider_locations(city, state, country),
+  specialties:provider_specialties(specialty:specialties(name, slug)),
+  languages:provider_languages(language:languages_lookup(name, code))
+`;
 
 // =============================================================================
 // Provider Search
@@ -23,49 +41,25 @@ export async function searchProviders(
   const offset = (page - 1) * limit;
 
   let query = supabase
-    .from('ai_providers')
-    .select('*', { count: 'exact' })
-    .eq('is_active', true)
-    .eq('is_verified', true);
+    .from('providers')
+    .select(AI_PROVIDER_SELECT, { count: 'exact' })
+    .in('status', ['active', 'seeded']);
 
-  // Filter by country (inferred from location string)
+  // Filter by location (city/state from provider_locations)
   if (criteria.location) {
     const { country, city } = parseLocation(criteria.location);
 
-    if (country) {
-      query = query.eq('location_country', country);
-    }
-
-    if (city) {
-      query = query.ilike('location_city', `%${city}%`);
+    if (country || city) {
+      // We need to filter on the joined locations — use a subquery approach
+      // For simplicity, filter after fetch for location (Supabase nested filters are limited)
     }
   }
 
-  // Filter by specialty
-  if (criteria.specialty) {
-    query = query.contains('specialties', [criteria.specialty.toLowerCase()]);
-  }
-
-  // Filter by provider type
-  if (criteria.providerType) {
-    query = query.eq('provider_type', criteria.providerType);
-  }
-
-  // Filter by telehealth
-  if (criteria.telehealth) {
-    query = query.eq('telehealth_available', true);
-  }
-
-  // Filter by language
-  if (criteria.language) {
-    query = query.contains('languages', [criteria.language.toLowerCase()]);
-  }
-
-  // Sort: verified first, then premium tier, then alphabetical
+  // Sort: tier (premium first), then alphabetical
   query = query
-    .order('listing_tier', { ascending: false }) // 'premium' > 'basic'
-    .order('name')
-    .range(offset, offset + limit - 1);
+    .order('tier', { ascending: false })
+    .order('display_name')
+    .range(offset, offset + limit * 3 - 1); // Fetch extra to allow post-filtering
 
   const { data, error, count } = await query;
 
@@ -78,29 +72,77 @@ export async function searchProviders(
     };
   }
 
-  const providers: ProviderResult[] = (data ?? []).map(
-    (p: Provider) => ({
-      id: p.id,
-      name: p.name,
-      credentials: p.credentials,
-      providerType: p.provider_type,
-      specialties: p.specialties,
-      city: p.location_city,
-      state: p.location_state,
-      country: p.location_country,
-      telehealthAvailable: p.telehealth_available,
-      languages: p.languages,
-      bio: p.bio,
-      website: p.website,
-      isVerified: p.is_verified,
-      listingTier: p.listing_tier,
-    })
-  );
+  // Map and post-filter results
+  let providers: ProviderResult[] = (data ?? []).map((row: Record<string, unknown>) => {
+    const locations = (row.locations as { city: string; state: string | null; country: string }[]) || [];
+    const primaryLocation = locations[0] || { city: '', state: null, country: '' };
+    const specialties = ((row.specialties as { specialty: { name: string; slug: string } }[]) || [])
+      .map(s => s.specialty?.name)
+      .filter(Boolean);
+    const languages = ((row.languages as { language: { name: string; code: string } }[]) || [])
+      .map(l => l.language?.name)
+      .filter(Boolean);
+    const providerType = (row.provider_type as { name: string } | null)?.name || 'therapist';
+
+    return {
+      id: row.id as string,
+      name: (row.display_name as string) || 'Provider',
+      credentials: (row.credentials as string) || '',
+      providerType: providerType as ProviderResult['providerType'],
+      specialties,
+      city: primaryLocation.city,
+      state: primaryLocation.state,
+      country: primaryLocation.country,
+      telehealthAvailable: (row.telehealth as boolean) || false,
+      languages,
+      bio: (row.bio as string) || null,
+      website: (row.website as string) || null,
+      isVerified: (row.tier as string) !== 'free',
+      listingTier: ((row.tier as string) === 'premium' ? 'premium' : 'basic') as ProviderResult['listingTier'],
+    };
+  });
+
+  // Apply post-filters that can't be done in the Supabase query
+  if (criteria.location) {
+    const { country, city } = parseLocation(criteria.location);
+    providers = providers.filter(p => {
+      if (country && p.country !== country) return false;
+      if (city && !p.city.toLowerCase().includes(city.toLowerCase())) return false;
+      return true;
+    });
+  }
+
+  if (criteria.specialty) {
+    const spec = criteria.specialty.toLowerCase();
+    providers = providers.filter(p =>
+      p.specialties.some(s => s.toLowerCase().includes(spec))
+    );
+  }
+
+  if (criteria.providerType) {
+    providers = providers.filter(p =>
+      p.providerType === criteria.providerType
+    );
+  }
+
+  if (criteria.telehealth) {
+    providers = providers.filter(p => p.telehealthAvailable);
+  }
+
+  if (criteria.language) {
+    const lang = criteria.language.toLowerCase();
+    providers = providers.filter(p =>
+      p.languages.some(l => l.toLowerCase().includes(lang))
+    );
+  }
+
+  // Trim to requested limit
+  const trimmed = providers.slice(0, limit);
 
   return {
-    providers,
+    providers: trimmed,
     searchCriteria: criteria,
-    totalMatches: count ?? providers.length,
+    totalMatches: count ?? trimmed.length,
   };
 }
 

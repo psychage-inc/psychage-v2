@@ -106,11 +106,21 @@ export const chatPersistenceService = {
                 .eq('id', conversationId);
             if (updateErr) console.error('Failed to update conversation timestamp:', updateErr);
 
-            // Increment message count via raw SQL update (RPC may not exist)
+            // Increment message count directly (no RPC needed)
             try {
-                await supabase.rpc('increment_conversation_count', { conv_id: conversationId });
+                const { data: conv } = await supabase
+                    .from('ai_conversations')
+                    .select('message_count')
+                    .eq('id', conversationId)
+                    .single();
+                if (conv) {
+                    await supabase
+                        .from('ai_conversations')
+                        .update({ message_count: (conv.message_count || 0) + 1 })
+                        .eq('id', conversationId);
+                }
             } catch {
-                // RPC may not exist yet, fallback silently
+                // Non-critical — message was already saved
             }
 
             return data as ChatMessage;

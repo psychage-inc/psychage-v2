@@ -67,9 +67,14 @@ export const BookmarkProvider: React.FC<{ children: ReactNode }> = ({ children }
       // Optimistic update with rollback on server failure
       bookmarkService.toggle(user.id, 'article', String(id)).catch(err => {
         console.error('Failed to sync bookmark to Supabase:', err);
-        // Rollback: restore previous state
-        setBookmarks(prev);
-        persistToLocalStorage(prev);
+        // Rollback: re-toggle using updater to avoid stale closure
+        setBookmarks(current => {
+          const rollback = exists
+            ? [...current, id]   // was removed, add back
+            : current.filter(b => b !== id); // was added, remove
+          persistToLocalStorage(rollback);
+          return rollback;
+        });
       });
 
       return newBookmarks;

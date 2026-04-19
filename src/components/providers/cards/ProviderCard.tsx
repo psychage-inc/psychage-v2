@@ -129,6 +129,14 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
           )}
           <div className="flex items-center gap-2 mt-1.5">
             <VerificationBadge status={provider.status} verifiedAt={provider.verified_at} size="sm" />
+            {(provider.tier === 'pro' || provider.tier === 'elite') && (
+              <span
+                className="inline-flex items-center text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-800/50"
+                title="This provider has a featured subscription with Psychage."
+              >
+                Featured
+              </span>
+            )}
           </div>
         </div>
       </div>

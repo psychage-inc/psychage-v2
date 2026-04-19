@@ -1,6 +1,6 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { MotionConfig } from 'framer-motion';
-import { Routes, Route, useLocation, useNavigate, Navigate } from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigate, Navigate, useParams } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from './lib/queryClient';
@@ -90,6 +90,12 @@ const OnboardingPage = React.lazy(() => import('./pages/OnboardingPage'));
 
 // Admin redirect — admin panel lives on a separate domain (admin.psychage.com)
 // In local dev (no VITE_ADMIN_URL), redirects to /admin.html entry point
+
+/** Legacy redirect: preserves :id param from /find-care/provider/:id → /providers/:id */
+const LegacyProviderRedirect: React.FC = () => {
+  const { id } = useParams();
+  return <Navigate to={`/providers/${id}`} replace />;
+};
 
 // Provider Dashboard (legacy — redirects to /portal/*)
 const ProviderDashboard = React.lazy(() => import('./pages/provider/ProviderDashboard'));
@@ -240,7 +246,7 @@ const App: React.FC = () => {
 
                                             {/* Legacy provider redirects */}
                                             <Route path="/find-care" element={<Navigate to="/providers" replace />} />
-                                            <Route path="/find-care/provider/:id" element={<Navigate to="/providers" replace />} />
+                                            <Route path="/find-care/provider/:id" element={<LegacyProviderRedirect />} />
                                             <Route path="/tools" element={<PageTransition><RouteErrorBoundary><ToolsPage /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/tools/mood-journal" element={<PageTransition><MoodJournal /></PageTransition>} />
                                             <Route path="/tools/sleep-architect" element={<PageTransition><SleepArchitect /></PageTransition>} />

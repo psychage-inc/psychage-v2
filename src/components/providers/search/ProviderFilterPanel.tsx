@@ -26,6 +26,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
   const [specialtySearch, setSpecialtySearch] = useState('');
   const [showAllSpecialties, setShowAllSpecialties] = useState(false);
   const [showAllLanguages, setShowAllLanguages] = useState(false);
+  const [showAllInsurance, setShowAllInsurance] = useState(false);
 
   const toggleArrayParam = (key: keyof ProviderSearchParams, value: string) => {
     const current = (params[key] as string[] | undefined) || [];
@@ -213,7 +214,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
 
             {/* Insurance */}
             <FilterSection title="Insurance">
-              {filters.insurancePlans.slice(0, 15).map(plan => (
+              {(showAllInsurance ? filters.insurancePlans : filters.insurancePlans.slice(0, 15)).map(plan => (
                 <CheckboxItem
                   key={plan.id}
                   label={`${plan.carrier}: ${plan.name}`}
@@ -221,6 +222,15 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
                   onChange={() => toggleArrayParam('insurance_plan_ids', plan.id)}
                 />
               ))}
+              {filters.insurancePlans.length > 15 && (
+                <button
+                  onClick={() => setShowAllInsurance(!showAllInsurance)}
+                  className="text-xs font-medium text-primary hover:text-primary-hover mt-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
+                  aria-expanded={showAllInsurance}
+                >
+                  {showAllInsurance ? 'Show fewer' : `Show all ${filters.insurancePlans.length}`}
+                </button>
+              )}
             </FilterSection>
           </motion.div>
         )}

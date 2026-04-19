@@ -24,6 +24,8 @@ interface SEOProps {
     type?: string;
     canonical?: string;
     article?: ArticleStructuredData;
+    structuredData?: Record<string, unknown>;
+    robots?: string;
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -33,6 +35,8 @@ const SEO: React.FC<SEOProps> = ({
     type = 'website',
     canonical,
     article,
+    structuredData,
+    robots,
 }) => {
     const isMedical = article?.isMedical !== false; // Default true for articles
     const schemaType = isMedical ? 'MedicalWebPage' : 'Article';
@@ -110,6 +114,9 @@ const SEO: React.FC<SEOProps> = ({
             <meta name="title" content={title} />
             <meta name="description" content={description} />
 
+            {/* Robots */}
+            {robots && <meta name="robots" content={robots} />}
+
             {/* Canonical */}
             {canonical && <link rel="canonical" href={canonical} />}
 
@@ -145,6 +152,9 @@ const SEO: React.FC<SEOProps> = ({
             )}
             {homepageJsonLd && (
                 <script type="application/ld+json">{homepageJsonLd}</script>
+            )}
+            {structuredData && (
+                <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
             )}
         </Helmet>
     );

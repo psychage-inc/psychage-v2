@@ -17,6 +17,7 @@ import { CulturalBadges } from '@/components/providers/profile/CulturalBadges';
 import { FindSupportCTA } from '@/components/providers/shared/FindSupportCTA';
 import { trackProfileView } from '@/services/provider-analytics';
 import { formatLastUpdated } from '@/lib/providers/lastUpdated';
+import { generateProviderJsonLd } from '@/lib/providers/jsonLd';
 import { cn } from '@/lib/utils';
 
 const ProviderProfilePage: React.FC = () => {
@@ -79,6 +80,7 @@ const ProviderProfilePage: React.FC = () => {
       <SEO
         title={`${provider.display_name}${provider.credentials_suffix ? `, ${provider.credentials_suffix}` : ''} | Psychage`}
         description={provider.bio?.slice(0, 160) || `View ${provider.display_name}'s profile on Psychage.`}
+        structuredData={generateProviderJsonLd(provider)}
       />
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-28 sm:pb-16">

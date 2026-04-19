@@ -54,9 +54,13 @@ const ProviderProfilePage: React.FC = () => {
     );
   }
 
-  if (error || !provider) {
+  if (error || !provider || provider.status === 'suspended' || provider.status === 'rejected') {
     return (
       <div className="min-h-screen bg-background pt-24">
+        <SEO
+          title="Provider Not Found | Psychage"
+          robots="noindex, nofollow"
+        />
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
           <AlertTriangle className="w-12 h-12 text-amber-500 mx-auto mb-4" />
           <h1 className="font-display font-bold text-2xl text-text-primary mb-2">
@@ -80,6 +84,7 @@ const ProviderProfilePage: React.FC = () => {
       <SEO
         title={`${provider.display_name}${provider.credentials_suffix ? `, ${provider.credentials_suffix}` : ''} | Psychage`}
         description={provider.bio?.slice(0, 160) || `View ${provider.display_name}'s profile on Psychage.`}
+        canonical={`https://psychage.com/providers/${provider.id}`}
         structuredData={generateProviderJsonLd(provider)}
       />
 

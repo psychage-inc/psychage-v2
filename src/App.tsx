@@ -36,6 +36,7 @@ const ProvidersLandingPage = React.lazy(() => import('./pages/providers/Provider
 const ProviderSearchPage = React.lazy(() => import('./pages/providers/ProviderSearchPage'));
 const ProviderProfilePage = React.lazy(() => import('./pages/providers/ProviderProfilePage'));
 const ForProvidersLandingPage = React.lazy(() => import('./pages/providers/ForProvidersLandingPage'));
+const HowWeVerifyPage = React.lazy(() => import('./pages/providers/HowWeVerifyPage'));
 const ProviderApplyPage = React.lazy(() => import('./pages/providers/ProviderApplyPage'));
 const ProviderClaimPage = React.lazy(() => import('./pages/providers/ProviderClaimPage'));
 const ToolsPage = React.lazy(() => import('./components/pages/ToolsPage'));
@@ -234,6 +235,7 @@ const App: React.FC = () => {
                                             <Route path="/providers" element={<PageTransition><ProvidersLandingPage /></PageTransition>} />
                                             <Route path="/providers/search" element={<PageTransition><RouteErrorBoundary><ProviderSearchPage /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/providers/:id" element={<PageTransition><ProviderProfilePage /></PageTransition>} />
+                                            <Route path="/how-we-verify" element={<PageTransition><HowWeVerifyPage /></PageTransition>} />
                                             <Route path="/for-providers" element={<PageTransition><ForProvidersLandingPage /></PageTransition>} />
                                             <Route path="/for-providers/apply" element={<PageTransition><ProviderApplyPage /></PageTransition>} />
                                             <Route path="/for-providers/claim" element={<PageTransition><ProviderClaimPage /></PageTransition>} />

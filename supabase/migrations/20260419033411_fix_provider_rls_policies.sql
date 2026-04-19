@@ -11,6 +11,7 @@
 -- Fix: Allow authenticated users to claim seeded providers (user_id IS NULL).
 -- =============================================================================
 
+DROP POLICY IF EXISTS "Authenticated users can claim seeded providers" ON public.providers;
 CREATE POLICY "Authenticated users can claim seeded providers"
     ON public.providers
     FOR UPDATE
@@ -27,6 +28,7 @@ CREATE POLICY "Authenticated users can claim seeded providers"
 --       the pattern established in migration 20260330000001).
 -- =============================================================================
 
+DROP POLICY IF EXISTS "Admin can update providers" ON public.providers;
 CREATE POLICY "Admin can update providers"
     ON public.providers
     FOR UPDATE
@@ -43,6 +45,7 @@ CREATE POLICY "Admin can update providers"
 -- Fix: Add the same owner-manage pattern used by sibling junction tables.
 -- =============================================================================
 
+DROP POLICY IF EXISTS "Owner manage provider_cultural_competencies" ON public.provider_cultural_competencies;
 CREATE POLICY "Owner manage provider_cultural_competencies"
     ON public.provider_cultural_competencies
     FOR ALL

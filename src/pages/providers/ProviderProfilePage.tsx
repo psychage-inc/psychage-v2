@@ -16,6 +16,8 @@ import { LanguageBadges } from '@/components/providers/profile/LanguageBadges';
 import { CulturalBadges } from '@/components/providers/profile/CulturalBadges';
 import { FindSupportCTA } from '@/components/providers/shared/FindSupportCTA';
 import { trackProfileView } from '@/services/provider-analytics';
+import { formatLastUpdated } from '@/lib/providers/lastUpdated';
+import { cn } from '@/lib/utils';
 
 const ProviderProfilePage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -176,6 +178,20 @@ const ProviderProfilePage: React.FC = () => {
               Credentials last verified: {new Date(provider.verified_at).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
             </p>
           )}
+          {provider.updated_at && (() => {
+            const { text, datetime, isStale } = formatLastUpdated(provider);
+            return (
+              <time
+                dateTime={datetime}
+                className={cn(
+                  'text-xs block',
+                  isStale ? 'text-amber-700 dark:text-amber-400' : 'text-gray-400 dark:text-gray-500'
+                )}
+              >
+                {text}
+              </time>
+            );
+          })()}
           <p className="text-xs text-gray-400 dark:text-gray-500">
             See something wrong?{' '}
             <a

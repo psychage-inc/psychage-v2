@@ -4,7 +4,8 @@ import { MapPin, Video, Users, Building2, Phone, Mail, Globe, MessageCircle } fr
 import { Link } from 'react-router-dom';
 import { hoverLift } from '@/lib/animations';
 import type { ProviderCardData } from '@/lib/providers/types';
-import { VerificationBadge, isProviderVerified } from '../shared/VerificationBadge';
+import { TrustBadge } from '../shared/TrustBadge';
+import { getTrustBadgeType, shouldShowFeaturedBadge } from '@/lib/providers/trust-badge';
 import { SpecialtyTag } from '../shared/SpecialtyTag';
 
 interface ProviderCardProps {
@@ -20,8 +21,9 @@ const FallbackAvatar: React.FC<{ name: string; muted?: boolean; className?: stri
 );
 
 export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
-  const isVerified = isProviderVerified(provider.status, provider.verified_at);
-  const isSeeded = provider.status === 'seeded' && !isVerified;
+  const trustBadgeType = getTrustBadgeType(provider);
+  const isFeatured = shouldShowFeaturedBadge(provider);
+  const isSeeded = provider.status === 'seeded';
 
   const locationText = [provider.primary_city, provider.primary_state].filter(Boolean).join(', ');
 
@@ -51,8 +53,10 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
           ? 'border-l-4 border-l-amber-400 border-t-border border-r-border border-b-border dark:border-l-amber-500 ring-1 ring-amber-100 dark:ring-amber-900/20'
           : provider.tier === 'pro'
             ? 'border-l-4 border-l-teal-500 border-t-border border-r-border border-b-border dark:border-l-teal-400 ring-1 ring-teal-100 dark:ring-teal-900/20'
-            : isVerified
+            : trustBadgeType === 'verified'
             ? 'border-l-[3px] border-l-teal-500 border-t-border border-r-border border-b-border dark:border-l-teal-400'
+            : trustBadgeType === 'claimed'
+            ? 'border-l-[3px] border-l-blue-400 border-t-border border-r-border border-b-border dark:border-l-blue-500'
             : 'border-border'
       }`}
     >
@@ -87,7 +91,8 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
             <p className="text-xs text-text-tertiary mt-0.5">{provider.practice_name}</p>
           )}
           <div className="flex items-center gap-2 mt-1.5">
-            <VerificationBadge status={provider.status} verifiedAt={provider.verified_at} size="sm" />
+            {trustBadgeType && <TrustBadge type={trustBadgeType} size="sm" />}
+            {isFeatured && <TrustBadge type="featured" size="sm" />}
           </div>
         </div>
       </div>

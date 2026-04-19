@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import type { ProviderWithDetails } from '@/lib/providers/types';
-import { VerificationBadge } from '@/components/providers/shared/VerificationBadge';
+import { TrustBadge } from '@/components/providers/shared/TrustBadge';
+import { getTrustBadgeType, shouldShowFeaturedBadge } from '@/lib/providers/trust-badge';
 import Badge from '@/components/ui/Badge';
 
 interface ProfileHeaderProps {
@@ -52,10 +53,11 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({ provider }) => {
 
         <div className="flex flex-wrap items-center justify-center gap-2 sm:justify-start">
           <Badge variant="teal">{provider.provider_type.label}</Badge>
-          <VerificationBadge
-            status={provider.status}
-            verifiedAt={provider.verified_at}
-          />
+          {(() => {
+            const badgeType = getTrustBadgeType(provider);
+            return badgeType ? <TrustBadge type={badgeType} /> : null;
+          })()}
+          {shouldShowFeaturedBadge(provider) && <TrustBadge type="featured" />}
         </div>
 
         {provider.practice_name && (

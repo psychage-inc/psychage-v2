@@ -5,6 +5,7 @@ import { getMaxBioLength } from '@/lib/provider-tier';
 import type { ProviderTier } from '@/lib/provider-tier';
 import type { ProviderWithDetails } from '@/lib/providers/types';
 import { cn } from '@/lib/utils';
+import { explainCredential } from '@/lib/providers/credentials';
 import { motion } from 'framer-motion';
 import {
   User,
@@ -121,6 +122,11 @@ const BasicInfoTab: React.FC<TabProps> = ({ provider, onSave, saveStatus, tier }
             className="w-full px-4 py-2.5 rounded-xl border border-border bg-surface text-text-primary focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 outline-none transition-all"
             placeholder="PhD, LCSW"
           />
+          {credentials && explainCredential(credentials) && (
+            <p className="text-xs text-text-tertiary mt-1">
+              {explainCredential(credentials)}
+            </p>
+          )}
         </div>
 
         <div>

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import type { ProviderCardData } from '@/lib/providers/types';
 import { TrustBadge } from '../shared/TrustBadge';
 import { getTrustBadgeType } from '@/lib/providers/trust-badge';
+import { explainCredential } from '@/lib/providers/credentials';
 
 interface ProviderCardCompactProps {
   provider: ProviderCardData;
@@ -40,7 +41,12 @@ export const ProviderCardCompact: React.FC<ProviderCardCompactProps> = ({ provid
           <h4 className="font-display font-bold text-sm text-gray-900 dark:text-white truncate">
             {provider.display_name}
             {provider.credentials_suffix && (
-              <span className="text-gray-400 font-medium">, {provider.credentials_suffix}</span>
+              <span
+                className="text-gray-400 font-medium"
+                title={explainCredential(provider.credentials_suffix) ?? undefined}
+              >
+                , {provider.credentials_suffix}
+              </span>
             )}
           </h4>
           {(() => {

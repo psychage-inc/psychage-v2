@@ -10,6 +10,7 @@ import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';
 import { VERIFICATION_TIERS } from '@/lib/admin/constants';
 import { toast } from 'sonner';
+import { explainCredential } from '@/lib/providers/credentials';
 import PageHeader from '@/components/admin/PageHeader';
 import { adminPath } from '@/hooks/useAdminNavigate';
 
@@ -329,6 +330,7 @@ const AdminProviderEditor: React.FC = () => {
     register,
     handleSubmit,
     setValue,
+    watch,
     formState: { errors },
   } = useForm<ProviderFormData>({
     resolver: zodResolver(providerSchema),
@@ -679,6 +681,13 @@ const AdminProviderEditor: React.FC = () => {
             <div>
               <label className="block text-sm font-medium text-text-secondary mb-1">Credentials</label>
               <input {...register('credentials_suffix')} className={inputCls} placeholder="MD, PhD, LCSW" />
+              {(() => {
+                const val = watch('credentials_suffix');
+                const expanded = val ? explainCredential(val) : null;
+                return expanded ? (
+                  <p className="text-xs text-text-tertiary mt-1">{expanded}</p>
+                ) : null;
+              })()}
             </div>
             <div>
               <label className="block text-sm font-medium text-text-secondary mb-1">NPI Number</label>

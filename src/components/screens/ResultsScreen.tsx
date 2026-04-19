@@ -464,7 +464,10 @@ export const ResultsScreen: React.FC = () => {
                                 Conversation Starters
                             </h3>
                         </div>
-                        <ProviderQuestions questions={questions} />
+                        <ProviderQuestions
+                            questions={questions}
+                            matchedConditions={strongMatches.map(m => ({ condition_id: m.condition_id, name: m.name }))}
+                        />
                     </motion.section>
 
                     {/* ─── Disclaimer ─── */}

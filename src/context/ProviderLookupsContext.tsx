@@ -25,6 +25,7 @@ export interface ProviderLookups {
   insurancePlans: InsurancePlan[];
   isLoading: boolean;
   error: string | null;
+  partialLoadFailures: string[];
 }
 
 const DEFAULT_LOOKUPS: ProviderLookups = {
@@ -38,6 +39,7 @@ const DEFAULT_LOOKUPS: ProviderLookups = {
   insurancePlans: [],
   isLoading: true,
   error: null,
+  partialLoadFailures: [],
 };
 
 const ProviderLookupsContext = createContext<ProviderLookups>(DEFAULT_LOOKUPS);
@@ -48,14 +50,29 @@ export const ProviderLookupsProvider: React.FC<{ children: React.ReactNode }> = 
   useEffect(() => {
     let cancelled = false;
 
-    Promise.all([
+    const lookupNames = ['providerTypes', 'specialties', 'languages', 'culturalCompetencies', 'insurancePlans'] as const;
+
+    Promise.allSettled([
       getProviderTypes(),
       getSpecialties(),
       getLanguages(),
       getCulturalCompetencies(),
       getInsurancePlans(),
-    ]).then(([types, specs, langs, comps, plans]) => {
+    ]).then((results) => {
       if (cancelled) return;
+
+      const failures: string[] = [];
+      const values = results.map((result, i) => {
+        if (result.status === 'fulfilled') return result.value;
+        console.warn(`[ProviderLookups] Failed to load ${lookupNames[i]}:`, result.reason);
+        failures.push(lookupNames[i]);
+        return [];
+      });
+
+      const [types, specs, langs, comps, plans] = values as [
+        ProviderType[], Specialty[], LanguageLookup[], CulturalCompetency[], InsurancePlan[]
+      ];
+
       setLookups({
         providerTypes: types,
         specialties: specs,
@@ -66,10 +83,9 @@ export const ProviderLookupsProvider: React.FC<{ children: React.ReactNode }> = 
         culturalCompetencies: comps,
         insurancePlans: plans,
         isLoading: false,
-        error: null,
+        error: failures.length === lookupNames.length ? 'Failed to load filter options' : null,
+        partialLoadFailures: failures,
       });
-    }).catch((err) => {
-      if (!cancelled) setLookups(prev => ({ ...prev, isLoading: false, error: err instanceof Error ? err.message : 'Failed to load filter options' }));
     });
 
     return () => { cancelled = true; };

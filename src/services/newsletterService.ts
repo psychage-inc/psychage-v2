@@ -30,6 +30,10 @@ export const newsletterService = {
                 });
 
             if (error) {
+                // Unique constraint = already subscribed (anon users can't SELECT to check)
+                if (error.code === '23505') {
+                    return { success: true, message: 'You are already subscribed!' };
+                }
                 console.error('Newsletter subscription failed:', error);
                 return { success: false, message: 'Subscription failed. Please try again later.' };
             }

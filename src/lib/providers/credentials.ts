@@ -32,9 +32,20 @@ const CREDENTIAL_GLOSSARY: Record<string, string> = {
   NP: 'Nurse Practitioner',
   RN: 'Registered Nurse',
   APRN: 'Advanced Practice Registered Nurse',
-  // Board certifications
-  'ABPP': 'American Board of Professional Psychology',
-  'BCB': 'Board Certified in Biofeedback',
+  // Board certifications & specializations
+  ABPP: 'American Board of Professional Psychology',
+  BCB: 'Board Certified in Biofeedback',
+  BCBA: 'Board Certified Behavior Analyst',
+  // Additional licensed titles (from Phase 1)
+  LICSW: 'Licensed Independent Clinical Social Worker',
+  LISW: 'Licensed Independent Social Worker',
+  'LPC-S': 'Licensed Professional Counselor — Supervisor',
+  LCMHC: 'Licensed Clinical Mental Health Counselor',
+  'PA-C': 'Physician Assistant — Certified',
+  // Addiction credentials (from Phase 1)
+  CAC: 'Certified Addiction Counselor',
+  CADC: 'Certified Alcohol and Drug Counselor',
+  CASAC: 'Credentialed Alcoholism and Substance Abuse Counselor',
   // Phase 2 additions
   'LCSW-R': 'Licensed Clinical Social Worker — Registered',
   'LPC-MHSP': 'Licensed Professional Counselor — Mental Health Service Provider',

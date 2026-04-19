@@ -8,9 +8,9 @@ The Phase 2a spec noted 3 import sites for `VerificationBadge`. During build, `q
 
 **Impact:** The AND correction (Correction 1) now also affects the direct-query fallback filter logic in `queries.ts:158`. Previously, providers with `status='active'` but `verified_at=null` would pass the filter — now they don't. This is the correct behavior per the spec.
 
-## D2: credentials.ts did not exist
+## D2: credentials.ts existed in Phase 1 but was missed during exploration
 
-The Phase 2a spec and Phase 1 audit referenced a credential glossary utility at `src/lib/providers/credentials.ts`. This file did not exist on the main branch. It was created fresh in Commit 3 with 40 credential abbreviations (31 from Phase 1 spec + 9 Phase 2 additions).
+The file `src/lib/providers/credentials.ts` was created in Phase 1 (commit `a1d14b1`) with 31 credentials using `{ full: string }` object format and an `explainCredential()` that returned `"LCSW — Licensed Clinical Social Worker"` format. Phase 2b Commit 3 overwrote it with a simplified API (plain string values, comma-separated output). This lost 9 Phase 1 credentials (LICSW, LISW, LPC-S, LCMHC, PA-C, BCBA, CAC, CADC, CASAC) and removed the HelpCircle tooltip from ProviderCard. Fixed in a follow-up commit restoring the missing credentials and the card tooltip.
 
 ## D3: Pre-commit hook rejects package.json changes without lockfile diff
 

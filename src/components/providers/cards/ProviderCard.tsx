@@ -1,11 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Video, Users, Building2, Phone, Mail, Globe, MessageCircle } from 'lucide-react';
+import { MapPin, Video, Users, Building2, Phone, Mail, Globe, MessageCircle, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { hoverLift } from '@/lib/animations';
 import type { ProviderCardData } from '@/lib/providers/types';
 import { TrustBadge } from '../shared/TrustBadge';
 import { getTrustBadgeType, shouldShowFeaturedBadge } from '@/lib/providers/trust-badge';
+import { explainCredential } from '@/lib/providers/credentials';
 import { SpecialtyTag } from '../shared/SpecialtyTag';
 
 interface ProviderCardProps {
@@ -24,6 +25,9 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
   const trustBadgeType = getTrustBadgeType(provider);
   const isFeatured = shouldShowFeaturedBadge(provider);
   const isSeeded = provider.status === 'seeded';
+  const credentialExplanation = provider.credentials_suffix
+    ? explainCredential(provider.credentials_suffix)
+    : null;
 
   const locationText = [provider.primary_city, provider.primary_state].filter(Boolean).join(', ');
 
@@ -80,10 +84,25 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
             <h3 className="font-display font-bold text-lg text-text-primary leading-tight">
               {provider.display_name}
               {provider.credentials_suffix && (
-                <span className="text-text-tertiary font-medium">, {provider.credentials_suffix}</span>
+                <span
+                  className="text-text-tertiary font-medium"
+                  title={credentialExplanation || undefined}
+                >
+                  , {provider.credentials_suffix}
+                </span>
               )}
             </h3>
           </Link>
+          {credentialExplanation && (
+            <button
+              type="button"
+              className="ml-1 inline-flex items-center text-text-tertiary hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+              title={credentialExplanation}
+              aria-label="Explain credentials"
+            >
+              <HelpCircle size={13} />
+            </button>
+          )}
           <p className="text-sm text-text-tertiary mt-0.5">
             {provider.provider_type_label || 'Provider'}
           </p>

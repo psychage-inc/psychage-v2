@@ -9,4 +9,4 @@ Disallow: /signup
 Disallow: /reset-password
 Disallow: /update-password
 
-Sitemap: https://psychage.com/sitemap.xml
+Sitemap: https://psychage.com/sitemap-index.xml

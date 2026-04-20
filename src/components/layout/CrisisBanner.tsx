@@ -59,7 +59,7 @@ const CrisisBanner: React.FC = () => {
             <div className="p-4 pr-10">
               <div className="flex items-center gap-3">
                 <div className="bg-white/15 p-2.5 rounded-xl text-white shrink-0">
-                  <HeartHandshake size={20} />
+                  <HeartHandshake size={20} aria-hidden="true" />
                 </div>
                 <div className="min-w-0">
                   <p className="text-white font-bold text-sm">

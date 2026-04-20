@@ -457,16 +457,6 @@ const LearnPage: React.FC = () => {
         return picks;
     }, [articles]);
 
-    // Reading stats
-    const readingStats = useMemo(() => {
-        if (articles.length === 0) return null;
-        const totalArticles = articles.length;
-        const totalCategories = new Set(articles.map(a => a.category.slug)).size;
-        const readTimes = articles.map(a => a.readTime ?? 5);
-        const avgReadTime = Math.round(readTimes.reduce((sum, t) => sum + t, 0) / readTimes.length);
-        return { totalArticles, totalCategories, avgReadTime };
-    }, [articles]);
-
     // Set initial active tab
     useEffect(() => {
         if (orderedCategories.length > 0 && !activeTab) {

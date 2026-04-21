@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ChevronDown } from 'lucide-react';
 
 interface ProviderSortDropdownProps {
@@ -7,25 +8,30 @@ interface ProviderSortDropdownProps {
   showDistance?: boolean;
 }
 
-const SORT_OPTIONS = [
-  { value: 'relevance', label: 'Relevance' },
-  { value: 'distance', label: 'Distance' },
-  { value: 'name', label: 'Name A-Z' },
-] as const;
+const SORT_VALUES = ['relevance', 'distance', 'name'] as const;
+const SORT_LABEL_KEYS: Record<string, string> = {
+  relevance: 'providers.sort.relevance',
+  distance: 'providers.sort.distance',
+  name: 'providers.sort.name_az',
+};
 
 export const ProviderSortDropdown: React.FC<ProviderSortDropdownProps> = ({
   value,
   onChange,
   showDistance = false,
 }) => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const ref = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const optionRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
-  const options = showDistance ? SORT_OPTIONS : SORT_OPTIONS.filter(o => o.value !== 'distance');
-  const currentLabel = options.find(o => o.value === value)?.label || 'Relevance';
+  const sortOptions = SORT_VALUES
+    .filter(v => showDistance || v !== 'distance')
+    .map(v => ({ value: v, label: t(SORT_LABEL_KEYS[v]) }));
+  const options = sortOptions;
+  const currentLabel = options.find(o => o.value === value)?.label || t('providers.sort.relevance');
 
   const close = useCallback(() => {
     setIsOpen(false);

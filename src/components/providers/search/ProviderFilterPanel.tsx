@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronDown, SlidersHorizontal, Search } from 'lucide-react';
 import { useProviderFilters } from '@/hooks/useProviderFilters';
@@ -21,6 +22,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
   isOpen = true,
   onClose,
 }) => {
+  const { t } = useTranslation();
   const { filters, isLoading } = useProviderFilters();
   const [showMore, setShowMore] = useState(false);
   const [specialtySearch, setSpecialtySearch] = useState('');
@@ -53,33 +55,33 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
   const content = (
     <div className="space-y-6">
       {/* Verification Status */}
-      <FilterSection title="Verification Status">
+      <FilterSection title={t('providers.filter.verification_status')}>
         <RadioItem
-          label="All providers"
+          label={t('providers.filter.all_providers')}
           checked={!params.verification_status}
           onChange={() => onChange({ verification_status: undefined })}
         />
         <RadioItem
-          label="Psychage Verified"
+          label={t('providers.filter.psychage_verified')}
           checked={params.verification_status === 'verified'}
           onChange={() => onChange({ verification_status: 'verified' })}
         />
         <RadioItem
-          label="Publicly Listed"
+          label={t('providers.filter.publicly_listed')}
           checked={params.verification_status === 'listed'}
           onChange={() => onChange({ verification_status: 'listed' })}
         />
       </FilterSection>
 
       {/* Location */}
-      <FilterSection title="Location">
+      <FilterSection title={t('providers.filter.location')}>
         <select
           value={params.state || ''}
           onChange={e => onChange({ state: e.target.value || undefined })}
           className="w-full px-3 py-2 text-sm bg-surface border border-border rounded-lg text-text-primary focus:ring-2 focus:ring-primary focus:border-transparent"
-          aria-label="Filter by state"
+          aria-label={t('providers.a11y.filter_by_state')}
         >
-          <option value="">All states</option>
+          <option value="">{t('providers.filter.all_states')}</option>
           {US_STATE_ABBRS_LIST.map(s => (
             <option key={s} value={s}>{s}</option>
           ))}
@@ -88,14 +90,14 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
           type="text"
           value={params.city || ''}
           onChange={e => onChange({ city: e.target.value || undefined })}
-          placeholder="City name..."
+          placeholder={t('providers.filter.city_placeholder')}
           className="w-full mt-2 px-3 py-2 text-sm bg-surface border border-border rounded-lg text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-transparent"
-          aria-label="Filter by city"
+          aria-label={t('providers.a11y.filter_by_city')}
         />
       </FilterSection>
 
       {/* Provider Type */}
-      <FilterSection title="Provider Type">
+      <FilterSection title={t('providers.filter.provider_type')}>
         {filters.providerTypes.map(type => (
           <CheckboxItem
             key={type.id}
@@ -107,19 +109,19 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
       </FilterSection>
 
       {/* Session Format */}
-      <FilterSection title="Session Format">
+      <FilterSection title={t('providers.filter.session_format')}>
         <CheckboxItem
-          label="Telehealth available"
+          label={t('providers.filter.telehealth')}
           checked={params.telehealth === true}
           onChange={() => onChange({ telehealth: params.telehealth ? undefined : true })}
         />
         <CheckboxItem
-          label="In-person available"
+          label={t('providers.filter.in_person')}
           checked={params.in_person === true}
           onChange={() => onChange({ in_person: params.in_person ? undefined : true })}
         />
         <CheckboxItem
-          label="Accepting new patients"
+          label={t('providers.filter.accepting')}
           checked={params.accepting_patients === true}
           onChange={() => onChange({ accepting_patients: params.accepting_patients ? undefined : true })}
         />
@@ -131,7 +133,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
         className="flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-hover transition-colors"
       >
         <ChevronDown size={16} className={`transition-transform ${showMore ? 'rotate-180' : ''}`} />
-        {showMore ? 'Fewer filters' : 'More filters'}
+        {showMore ? t('providers.filter.fewer_filters') : t('providers.filter.more_filters')}
       </button>
 
       <AnimatePresence>
@@ -143,16 +145,16 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
             className="space-y-6 overflow-hidden"
           >
             {/* Specialty — searchable, grouped */}
-            <FilterSection title="Specialty">
+            <FilterSection title={t('providers.filter.specialty')}>
               <div className="relative mb-2">
                 <Search size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-text-tertiary" />
                 <input
                   type="text"
                   value={specialtySearch}
                   onChange={e => setSpecialtySearch(e.target.value)}
-                  placeholder="Search specialties..."
+                  placeholder={t('providers.filter.search_specialties')}
                   className="w-full pl-8 pr-3 py-1.5 text-xs bg-surface border border-border rounded-lg text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-transparent"
-                  aria-label="Search specialties"
+                  aria-label={t('providers.a11y.search_specialties')}
                 />
               </div>
               {visibleSpecialties.map(spec => (
@@ -175,13 +177,13 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
                   onClick={() => setShowAllSpecialties(!showAllSpecialties)}
                   className="text-xs font-medium text-primary hover:text-primary-hover mt-1"
                 >
-                  {showAllSpecialties ? 'Show fewer' : `Show all ${filteredSpecialties.length}`}
+                  {showAllSpecialties ? t('providers.filter.show_fewer') : t('providers.filter.show_all', { count: filteredSpecialties.length })}
                 </button>
               )}
             </FilterSection>
 
             {/* Language */}
-            <FilterSection title="Language">
+            <FilterSection title={t('providers.filter.language')}>
               {(showAllLanguages ? filters.languages : filters.languages.slice(0, 6)).map(lang => (
                 <CheckboxItem
                   key={lang.id}
@@ -195,13 +197,13 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
                   onClick={() => setShowAllLanguages(!showAllLanguages)}
                   className="text-xs font-medium text-primary hover:text-primary-hover mt-1"
                 >
-                  {showAllLanguages ? 'Show fewer' : `Show all ${filters.languages.length}`}
+                  {showAllLanguages ? t('providers.filter.show_fewer') : t('providers.filter.show_all', { count: filters.languages.length })}
                 </button>
               )}
             </FilterSection>
 
             {/* Cultural Competency */}
-            <FilterSection title="Cultural Competency">
+            <FilterSection title={t('providers.filter.cultural_competency')}>
               {filters.culturalCompetencies.map(comp => (
                 <CheckboxItem
                   key={comp.id}
@@ -213,7 +215,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
             </FilterSection>
 
             {/* Insurance */}
-            <FilterSection title="Insurance">
+            <FilterSection title={t('providers.filter.insurance')}>
               {(showAllInsurance ? filters.insurancePlans : filters.insurancePlans.slice(0, 15)).map(plan => (
                 <CheckboxItem
                   key={plan.id}
@@ -228,7 +230,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
                   className="text-xs font-medium text-primary hover:text-primary-hover mt-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
                   aria-expanded={showAllInsurance}
                 >
-                  {showAllInsurance ? 'Show fewer' : `Show all ${filters.insurancePlans.length}`}
+                  {showAllInsurance ? t('providers.filter.show_fewer') : t('providers.filter.show_all', { count: filters.insurancePlans.length })}
                 </button>
               )}
             </FilterSection>
@@ -259,8 +261,8 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
               className="fixed bottom-0 left-0 right-0 bg-surface rounded-t-3xl z-50 max-h-[80vh] flex flex-col"
             >
               <div className="flex items-center justify-between p-6 pb-0">
-                <h3 className="font-display font-bold text-lg text-text-primary">Filters</h3>
-                <button onClick={onClose} className="p-2 hover:bg-surface-hover rounded-full" aria-label="Close filters">
+                <h3 className="font-display font-bold text-lg text-text-primary">{t('providers.search.filters')}</h3>
+                <button onClick={onClose} className="p-2 hover:bg-surface-hover rounded-full" aria-label={t('providers.filter.close')}>
                   <X size={20} aria-hidden="true" />
                 </button>
               </div>
@@ -278,7 +280,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
                   onClick={onClose}
                   className="w-full bg-primary hover:bg-primary-hover text-white font-bold"
                 >
-                  Show results
+                  {t('providers.filter.show_results')}
                 </Button>
               </div>
             </motion.div>
@@ -294,7 +296,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
       <div className="sticky top-28 bg-surface rounded-2xl border border-border p-5 max-h-[calc(100vh-8rem)] overflow-y-auto">
         <h3 className="font-display font-bold text-sm text-text-primary mb-5 flex items-center gap-2">
           <SlidersHorizontal size={16} />
-          Filters
+          {t('providers.search.filters')}
         </h3>
         {isLoading ? (
           <div className="space-y-4">

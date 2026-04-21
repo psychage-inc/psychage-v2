@@ -1,5 +1,6 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useCallback, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { useInfiniteQuery, keepPreviousData } from '@tanstack/react-query';
 import { searchProviders } from '@/lib/providers/queries';
 import type { ProviderCardData, ProviderSearchParams } from '@/lib/providers/types';
 
@@ -21,24 +22,14 @@ interface UseProviderSearchReturn {
 const DEFAULT_PER_PAGE = 20;
 
 /**
- * Manages provider search state with URL param sync, debounced queries, and pagination.
- * Auto-fetches on mount to show providers immediately.
+ * Manages provider search state with URL param sync and React Query caching.
+ * Back-navigation from provider profiles shows cached results instantly.
  */
 export function useProviderSearch(): UseProviderSearchReturn {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [providers, setProviders] = useState<ProviderCardData[]>([]);
-  const [totalCount, setTotalCount] = useState(0);
-  const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isLoadingMore, setIsLoadingMore] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [hasSearched, setHasSearched] = useState(false);
-  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const mountedRef = useRef(false);
 
   // Parse URL params into ProviderSearchParams
-  const params: ProviderSearchParams = {
+  const params: ProviderSearchParams = useMemo(() => ({
     query: searchParams.get('q') || undefined,
     specialty_slugs: searchParams.get('specialty') ? searchParams.get('specialty')!.split(',') : undefined,
     provider_type_ids: searchParams.get('type') ? searchParams.get('type')!.split(',') : undefined,
@@ -53,64 +44,56 @@ export function useProviderSearch(): UseProviderSearchReturn {
     verification_status: (searchParams.get('verified') as ProviderSearchParams['verification_status']) || undefined,
     sort_by: (searchParams.get('sort') as ProviderSearchParams['sort_by']) || 'relevance',
     per_page: DEFAULT_PER_PAGE,
-  };
+  }), [searchParams]);
 
-  // Execute search
-  const executeSearch = useCallback(async (searchPage: number, append: boolean) => {
-    if (!append) setIsLoading(true);
-    else setIsLoadingMore(true);
-    setError(null);
+  // Stable query key derived from filter state (excludes page/per_page — handled by pageParam)
+  const queryKey = useMemo(() => ['provider-search', {
+    q: params.query,
+    specialty: params.specialty_slugs,
+    type: params.provider_type_ids,
+    lang: params.language_ids,
+    comp: params.competency_ids,
+    ins: params.insurance_plan_ids,
+    state: params.state,
+    city: params.city,
+    th: params.telehealth,
+    ip: params.in_person,
+    acc: params.accepting_patients,
+    ver: params.verification_status,
+    sort: params.sort_by,
+  }], [params]);
 
-    try {
-      const result = await searchProviders({
-        ...params,
-        page: searchPage,
-      });
+  const {
+    data,
+    fetchNextPage,
+    hasNextPage,
+    isFetching,
+    isFetchingNextPage,
+    isError,
+    error: queryError,
+  } = useInfiniteQuery({
+    queryKey,
+    queryFn: ({ pageParam }) =>
+      searchProviders({ ...params, page: pageParam, per_page: DEFAULT_PER_PAGE }),
+    initialPageParam: 1,
+    getNextPageParam: (lastPage) =>
+      lastPage.has_more ? lastPage.page + 1 : undefined,
+    staleTime: 60_000,
+    gcTime: 5 * 60_000,
+    refetchOnWindowFocus: false,
+    refetchOnMount: false,
+    placeholderData: keepPreviousData,
+  });
 
-      if (append) {
-        setProviders(prev => [...prev, ...result.providers]);
-      } else {
-        setProviders(result.providers);
-      }
-      setTotalCount(result.total_count);
-      setHasMore(result.has_more);
-      setPage(searchPage);
-      setHasSearched(true);
-    } catch (err) {
-      console.error('Provider search error:', err);
-      setError('Failed to search providers. Please try again.');
-    } finally {
-      setIsLoading(false);
-      setIsLoadingMore(false);
-    }
-  }, [searchParams.toString()]); // eslint-disable-line react-hooks/exhaustive-deps
+  // Flatten pages into a single provider array
+  const providers = useMemo(
+    () => data?.pages.flatMap(p => p.providers) ?? [],
+    [data],
+  );
+  const totalCount = data?.pages[0]?.total_count ?? 0;
+  const hasSearched = data !== undefined;
 
-  // Run search on param change (debounced)
-  // Always search on mount to show providers immediately.
-  // On subsequent param changes: debounce to avoid excessive requests.
-  useEffect(() => {
-    if (!mountedRef.current) {
-      mountedRef.current = true;
-      // Always search on mount — show all providers by default
-      executeSearch(1, false);
-      return;
-    }
-
-    if (debounceRef.current) clearTimeout(debounceRef.current);
-    debounceRef.current = setTimeout(() => {
-      debounceRef.current = null;
-      executeSearch(1, false);
-    }, 300);
-
-    return () => {
-      if (debounceRef.current) {
-        clearTimeout(debounceRef.current);
-        debounceRef.current = null;
-      }
-    };
-  }, [executeSearch]);  
-
-  // Update URL params
+  // Update URL params (same logic as before)
   const setParams = useCallback((newParams: Partial<ProviderSearchParams>) => {
     const next = new URLSearchParams(searchParams);
 
@@ -171,10 +154,10 @@ export function useProviderSearch(): UseProviderSearchReturn {
   }, [searchParams, setSearchParams]);
 
   const loadMore = useCallback(() => {
-    if (!isLoadingMore && hasMore) {
-      executeSearch(page + 1, true);
+    if (hasNextPage && !isFetchingNextPage) {
+      fetchNextPage();
     }
-  }, [executeSearch, page, hasMore, isLoadingMore]);
+  }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
 
   const reset = useCallback(() => {
     setSearchParams({}, { replace: true });
@@ -183,11 +166,11 @@ export function useProviderSearch(): UseProviderSearchReturn {
   return {
     providers,
     totalCount,
-    page,
-    hasMore,
-    isLoading,
-    isLoadingMore,
-    error,
+    page: data?.pages.length ?? 0,
+    hasMore: hasNextPage ?? false,
+    isLoading: isFetching && !isFetchingNextPage,
+    isLoadingMore: isFetchingNextPage,
+    error: isError ? (queryError instanceof Error ? queryError.message : 'Failed to search providers. Please try again.') : null,
     hasSearched,
     params,
     setParams,

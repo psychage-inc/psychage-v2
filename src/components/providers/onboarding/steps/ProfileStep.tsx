@@ -33,7 +33,7 @@ const ProfileStep: React.FC<Props> = ({ formData, updateField }) => (
         onChange={(e) => updateField('display_name', e.target.value)}
         required
       />
-      <p className="text-xs text-gray-400 dark:text-neutral-500 mt-1">
+      <p className="text-xs text-gray-500 dark:text-neutral-500 mt-1">
         This is the name displayed on your provider card.
       </p>
     </div>
@@ -56,7 +56,7 @@ const ProfileStep: React.FC<Props> = ({ formData, updateField }) => (
         aria-label="Provider bio"
       />
       <div className="flex justify-between mt-1.5">
-        <p className="text-xs text-gray-400 dark:text-neutral-500">
+        <p className="text-xs text-gray-500 dark:text-neutral-500">
           Describe your experience, therapeutic approach, and areas of focus.
         </p>
         <span
@@ -64,7 +64,7 @@ const ProfileStep: React.FC<Props> = ({ formData, updateField }) => (
             'text-xs font-medium',
             formData.bio.length > BIO_MAX_LENGTH * 0.9
               ? 'text-amber-500'
-              : 'text-gray-400 dark:text-neutral-500'
+              : 'text-gray-500 dark:text-neutral-500'
           )}
         >
           {formData.bio.length}/{BIO_MAX_LENGTH}
@@ -82,7 +82,7 @@ const ProfileStep: React.FC<Props> = ({ formData, updateField }) => (
         <p className="text-sm text-gray-500 dark:text-neutral-400">
           Photo upload will be available after your application is approved.
         </p>
-        <p className="text-xs text-gray-400 dark:text-neutral-500 mt-1">
+        <p className="text-xs text-gray-500 dark:text-neutral-500 mt-1">
           Recommended: 400x400px, professional headshot
         </p>
       </div>

@@ -110,7 +110,7 @@ const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
       <div className="flex gap-3 mt-auto">
         <Button
           onClick={() => navigate(`/providers/${provider.id}`)}
-          className="flex-1 h-10 text-sm font-bold bg-teal-600 hover:bg-teal-700 text-white"
+          className="flex-1 h-10 text-sm font-bold bg-teal-700 hover:bg-teal-800 text-white"
         >
           View Profile
         </Button>

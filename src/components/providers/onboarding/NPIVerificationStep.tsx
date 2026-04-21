@@ -82,7 +82,7 @@ const NPIVerificationStep: React.FC<NPIVerificationStepProps> = ({
           disabled={!isValidFormat || isLoading}
           isLoading={isLoading}
           leftIcon={!isLoading ? <Search size={16} /> : undefined}
-          className="bg-teal-600 hover:bg-teal-700 flex-shrink-0"
+          className="bg-teal-700 hover:bg-teal-800 flex-shrink-0"
           aria-label="Verify NPI"
         >
           Verify
@@ -90,7 +90,7 @@ const NPIVerificationStep: React.FC<NPIVerificationStepProps> = ({
       </div>
 
       {npiInput.length > 0 && npiInput.length < 10 && !result && (
-        <p className="text-xs text-gray-400 dark:text-neutral-500">
+        <p className="text-xs text-gray-500 dark:text-neutral-500">
           {10 - npiInput.length} more digit{10 - npiInput.length !== 1 ? 's' : ''} needed
         </p>
       )}
@@ -104,7 +104,7 @@ const NPIVerificationStep: React.FC<NPIVerificationStepProps> = ({
             exit={{ opacity: 0, y: -8 }}
             className="flex items-center gap-3 p-4 rounded-xl bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800"
           >
-            <Loader2 size={20} className="text-teal-600 animate-spin" />
+            <Loader2 size={20} className="text-teal-700 animate-spin" />
             <span className="text-sm font-medium text-teal-700 dark:text-teal-300">
               Verifying against NPI Registry...
             </span>

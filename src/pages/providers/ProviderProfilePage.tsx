@@ -99,7 +99,7 @@ const ProviderProfilePage: React.FC = () => {
         >
           <button
             onClick={() => navigate(-1)}
-            className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-teal-600 dark:hover:text-teal-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
+            className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-teal-700 dark:hover:text-teal-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
           >
             <ArrowLeft size={16} />
             {t('providers.profile.back_to_results')}
@@ -201,12 +201,12 @@ const ProviderProfilePage: React.FC = () => {
             {t('providers.profile.see_wrong')}{' '}
             <a
               href={`mailto:info@psychage.com?subject=Provider Profile Concern: ${provider.display_name}&body=Provider ID: ${provider.id}%0A%0APlease describe your concern:`}
-              className="text-teal-600 dark:text-teal-400 hover:underline"
+              className="text-teal-700 dark:text-teal-400 hover:underline"
             >
               {t('providers.profile.report_concern')}
             </a>
             {' · '}
-            <Link to="/how-we-verify" className="text-teal-600 dark:text-teal-400 hover:underline">
+            <Link to="/how-we-verify" className="text-teal-700 dark:text-teal-400 hover:underline">
               {t('providers.profile.how_we_verify')}
             </Link>
           </p>

@@ -32,7 +32,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ provider }) => {
       {isLong && (
         <button
           onClick={() => setExpanded((prev) => !prev)}
-          className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-teal-600 transition-colors hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300"
+          className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-teal-700 transition-colors hover:text-teal-800 dark:text-teal-400 dark:hover:text-teal-300"
         >
           {expanded ? (
             <>

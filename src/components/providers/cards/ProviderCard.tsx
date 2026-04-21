@@ -98,7 +98,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
           {credentialExplanation && (
             <button
               type="button"
-              className="ml-1 inline-flex items-center text-text-tertiary hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+              className="ml-1 inline-flex items-center text-text-tertiary hover:text-teal-700 dark:hover:text-teal-400 transition-colors"
               title={credentialExplanation}
               aria-label={t('providers.card.explain_credentials')}
             >

@@ -111,7 +111,7 @@ export const ProviderResultsEmpty: React.FC<ProviderResultsEmptyProps> = ({
       </Button>
       <Link
         to="/how-we-verify"
-        className="text-xs text-text-tertiary hover:text-teal-600 dark:hover:text-teal-400 mt-4 block transition-colors"
+        className="text-xs text-text-tertiary hover:text-teal-700 dark:hover:text-teal-400 mt-4 block transition-colors"
       >
         {t('providers.empty.learn_verify')}
       </Link>

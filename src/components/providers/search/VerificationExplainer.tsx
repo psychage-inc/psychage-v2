@@ -12,7 +12,7 @@ const TIER_CONFIG = [
     colors: {
       bg: 'bg-white dark:bg-teal-950/30',
       border: 'border-teal-200/60 dark:border-teal-800/40',
-      icon: 'text-teal-600 dark:text-teal-400',
+      icon: 'text-teal-700 dark:text-teal-400',
       iconBg: 'bg-teal-50 dark:bg-teal-900/30',
       title: 'text-teal-700 dark:text-teal-300',
     },

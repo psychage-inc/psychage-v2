@@ -23,7 +23,7 @@ const SpecialtiesStep: React.FC<Props> = ({ formData, toggleArrayItem, filters, 
     </div>
 
     {filtersLoading ? (
-      <div className="flex items-center justify-center py-12 text-gray-400 dark:text-neutral-500">
+      <div className="flex items-center justify-center py-12 text-gray-500 dark:text-neutral-500">
         <Loader2 size={24} className="animate-spin mr-3" />
         Loading options...
       </div>

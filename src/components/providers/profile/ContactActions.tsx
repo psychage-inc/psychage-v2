@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Phone, Mail, Globe, Calendar } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { ProviderWithDetails } from '@/lib/providers/types';
@@ -17,11 +18,12 @@ interface ActionItem {
 }
 
 export const ContactActions: React.FC<ContactActionsProps> = ({ provider, sticky = false }) => {
+  const { t } = useTranslation();
   const actions: ActionItem[] = [];
 
   if (provider.phone) {
     actions.push({
-      label: 'Call',
+      label: t('providers.card.call'),
       href: `tel:${provider.phone}`,
       icon: <Phone size={16} />,
       trackType: 'phone_click' as const,
@@ -30,7 +32,7 @@ export const ContactActions: React.FC<ContactActionsProps> = ({ provider, sticky
 
   if (provider.email) {
     actions.push({
-      label: 'Email',
+      label: t('providers.card.email'),
       href: `mailto:${provider.email}`,
       icon: <Mail size={16} />,
       trackType: 'email_click' as const,
@@ -39,7 +41,7 @@ export const ContactActions: React.FC<ContactActionsProps> = ({ provider, sticky
 
   if (provider.website_url) {
     actions.push({
-      label: 'Website',
+      label: t('providers.card.website'),
       href: provider.website_url,
       icon: <Globe size={16} />,
       trackType: 'website_click' as const,
@@ -48,7 +50,7 @@ export const ContactActions: React.FC<ContactActionsProps> = ({ provider, sticky
 
   if (provider.appointment_url) {
     actions.push({
-      label: 'Book Appointment',
+      label: t('providers.card.book_appointment'),
       href: provider.appointment_url,
       icon: <Calendar size={16} />,
       trackType: 'website_click' as const,

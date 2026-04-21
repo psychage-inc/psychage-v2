@@ -1,11 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import {
   ShieldCheck, Search as SearchIcon,
   ArrowRight, UserCheck, MessageCircle,
-  FlaskConical, Sparkles, Check, Users, ClipboardCheck, BadgeCheck,
+  FlaskConical, Sparkles, Check, Users, ClipboardCheck, BadgeCheck, Info,
 } from 'lucide-react';
 import SEO from '@/components/SEO';
 import Button from '@/components/ui/Button';
@@ -29,6 +30,7 @@ const HOW_IT_WORKS = [
 ];
 
 const ProvidersLandingPage: React.FC = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const lookups = useProviderLookups();
 
@@ -83,6 +85,14 @@ const ProvidersLandingPage: React.FC = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* US-only indicator */}
+      <div className="flex justify-center px-4 sm:px-6 lg:px-8 -mt-8 mb-4">
+        <div className="flex items-center gap-2 text-sm text-text-secondary border border-border rounded-full px-4 py-2">
+          <Info size={16} className="flex-shrink-0" />
+          <span>{t('providers.banner.us_only')}</span>
+        </div>
+      </div>
 
       {/* Trust Indicators */}
       <section className="px-4 sm:px-6 lg:px-8">

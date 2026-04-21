@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { SlidersHorizontal, AlertTriangle, RefreshCw, Info } from 'lucide-react';
+import { SlidersHorizontal, AlertTriangle, RefreshCw, Info, Globe } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { useProviderSearch } from '@/hooks/useProviderSearch';
 import { useProviderLookups } from '@/context/ProviderLookupsContext';
@@ -106,6 +106,12 @@ const ProviderSearchPage: React.FC = () => {
             onSearch={handleSearch}
             onUseLocation={handleUseLocation}
           />
+        </div>
+
+        {/* US-only indicator */}
+        <div className="flex items-center gap-2 text-xs text-text-tertiary mb-4">
+          <Globe size={14} className="flex-shrink-0" />
+          <span>{t('providers.banner.us_only')}</span>
         </div>
 
         {/* Verification Explainer */}

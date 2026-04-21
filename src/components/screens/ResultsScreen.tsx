@@ -23,6 +23,8 @@ import { staggerContainer, staggerItem, slideUp } from '../../lib/animations';
 import { SkeletonResultCard } from '../navigator/NavigatorSkeletons';
 import ToolRecommendation from '../tools/shared/ToolRecommendation';
 import FeedbackWidget from '../ui/FeedbackWidget';
+import { CONDITION_TO_SPECIALTY } from '../../lib/providers/search';
+import { ProviderQuickMatch } from '../providers/shared/ProviderQuickMatch';
 
 /* ─────────────────────────────────────────────────────────────────────────────
  * Section label — matches homepage overline pattern
@@ -144,6 +146,18 @@ export const ResultsScreen: React.FC = () => {
     const exploratoryMatches = matchResults.filter(r => r.relevance_level === 'low' || r.relevance_level === 'minimal');
     const allWeak = matchResults.length > 0 && strongMatches.length === 0;
 
+    // Map matched conditions to provider specialty slugs for handoff
+    const matchedSpecialtySlugs = useMemo(() => {
+        const slugs = matchResults
+            .map(r => CONDITION_TO_SPECIALTY[r.condition_id])
+            .filter(Boolean);
+        return [...new Set(slugs)];
+    }, [matchResults]);
+
+    const providerSearchUrl = matchedSpecialtySlugs.length > 0
+        ? `/providers/search?specialty=${matchedSpecialtySlugs.join(',')}`
+        : '/providers/search';
+
     // Build enriched symptom list from knowledgeBase
     const symptomDetails = useMemo(() => {
         if (!selectedSymptoms || !knowledgeBase) return [];
@@ -176,9 +190,11 @@ export const ResultsScreen: React.FC = () => {
             id: 'ns2',
             type: 'professional',
             title: 'Talk to a Professional',
-            description: 'Share these insights with a therapist, counselor, or doctor. They can provide an accurate assessment based on your full history.',
+            description: matchedSpecialtySlugs.length > 0
+                ? 'We found providers who may be able to help based on your results. Browse their profiles to find the right fit.'
+                : 'Share these insights with a therapist, counselor, or doctor. They can provide an accurate assessment based on your full history.',
             actionText: 'Find a Provider',
-            onClick: () => navigate('/providers/search')
+            onClick: () => navigate(providerSearchUrl)
         },
         {
             id: 'ns3',
@@ -446,6 +462,12 @@ export const ResultsScreen: React.FC = () => {
 
                         {/* Action cards */}
                         <NextStepCards steps={nextSteps} />
+
+                        {/* Provider quick match — shows preview of matching providers */}
+                        {matchedSpecialtySlugs.length > 0 && (
+                            <ProviderQuickMatch conditionIds={matchResults.map(r => r.condition_id)} />
+                        )}
+
                         <ToolRecommendation
                             signal={{
                                 toolSlug: 'symptom-navigator',

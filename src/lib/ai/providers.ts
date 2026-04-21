@@ -12,18 +12,21 @@ import type {
 } from './types';
 
 // Joined select matching the provider directory pattern (queries.ts)
+// Aliases map schema column names to the field names consumers expect:
+//   credentials_suffix → credentials, telehealth_available → telehealth,
+//   website_url → website, state_province → state, country_code → country
 const AI_PROVIDER_SELECT = `
   id,
   display_name,
-  credentials,
+  credentials:credentials_suffix,
   bio,
-  website,
+  website:website_url,
   phone,
-  telehealth,
+  telehealth:telehealth_available,
   tier,
   status,
   provider_type:provider_types(name),
-  locations:provider_locations(city, state, country),
+  locations:provider_locations(city, state:state_province, country:country_code),
   specialties:provider_specialties(specialty:specialties(name, slug)),
   languages:provider_languages(language:languages_lookup(name, code))
 `;

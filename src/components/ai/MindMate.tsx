@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Send, Sparkles, AlertTriangle, Phone, Trash2, LogIn } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { X, Send, Sparkles, AlertTriangle, Phone, Trash2, LogIn, ChevronRight } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 import { chatPersistenceService } from '@/services/chatPersistenceService';
 import { consentService } from '@/services/consentService';
@@ -8,6 +9,7 @@ import { resolveCountry, getPrimaryCrisisLine } from '@/lib/crisis';
 import { parseSSEStream } from '@/lib/ai/streaming';
 import StreamingCursor from '@/features/chat/components/StreamingCursor';
 import AuthModal from '@/components/auth/AuthModal';
+import type { ProviderResult } from '@/lib/ai/types';
 
 interface Message {
     id: string;
@@ -16,6 +18,7 @@ interface Message {
     type?: 'text' | 'crisis' | 'suggestion';
     isStreaming?: boolean;
     suggestions?: { label: string; action: string }[];
+    providers?: ProviderResult[];
 }
 
 const STORAGE_KEY = 'psychage_ai_chat_history';
@@ -212,6 +215,7 @@ const MindMate: React.FC = () => {
                     sender: 'ai',
                     text: data.message || "I'm here for you, but I didn't catch that.",
                     type: data.isCrisis || data.safetyLevel === 'CRISIS' ? 'crisis' : 'text',
+                    providers: data.providerSuggestion?.providers,
                 };
                 setMessages(prev => [...prev, aiMsg]);
                 persistMessage('assistant', aiMsg.text);
@@ -252,6 +256,16 @@ const MindMate: React.FC = () => {
                                 ),
                             );
                         }
+                        break;
+
+                    case 'providers':
+                        setMessages(prev =>
+                            prev.map(m =>
+                                m.id === assistantMsgId
+                                    ? { ...m, providers: (event as any).providers }
+                                    : m
+                            ),
+                        );
                         break;
 
                     case 'done':
@@ -425,6 +439,37 @@ const MindMate: React.FC = () => {
                                             <a href={`tel:${crisisLine.phone.replace(/[^0-9+]/g, '')}`} className="mt-3 flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg text-xs font-bold transition-colors w-full justify-center">
                                                 <Phone size={14} /> Call {crisisLine.label} ({crisisLine.phone})
                                             </a>
+                                        )}
+
+                                        {msg.providers && msg.providers.length > 0 && (
+                                            <div className="mt-3 space-y-1.5">
+                                                <p className="text-[11px] font-bold text-text-tertiary uppercase tracking-wider mb-2">
+                                                    Suggested Providers
+                                                </p>
+                                                {msg.providers.slice(0, 5).map(p => (
+                                                    <Link
+                                                        key={p.id}
+                                                        to={`/providers/${p.id}`}
+                                                        className="flex items-center gap-3 px-3 py-2.5 bg-surface-hover hover:bg-surface-active rounded-xl transition-colors group"
+                                                    >
+                                                        <div className="w-8 h-8 rounded-lg bg-teal-500/10 flex items-center justify-center shrink-0">
+                                                            <span className="text-xs font-bold text-teal-600 dark:text-teal-400">
+                                                                {p.name.charAt(0)}
+                                                            </span>
+                                                        </div>
+                                                        <div className="flex-1 min-w-0">
+                                                            <div className="text-xs font-medium text-text-primary truncate">
+                                                                {p.name}{p.credentials ? `, ${p.credentials}` : ''}
+                                                            </div>
+                                                            <div className="text-[10px] text-text-tertiary truncate">
+                                                                {p.specialties.slice(0, 2).join(', ')}
+                                                                {p.city ? ` · ${p.city}${p.state ? `, ${p.state}` : ''}` : ''}
+                                                            </div>
+                                                        </div>
+                                                        <ChevronRight size={12} className="text-text-tertiary shrink-0 group-hover:text-teal-500 transition-colors" />
+                                                    </Link>
+                                                ))}
+                                            </div>
                                         )}
                                     </div>
                                 </motion.div>

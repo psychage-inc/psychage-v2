@@ -5,7 +5,7 @@
  * (server-side encoder) and the React client (client-side parser).
  */
 
-import type { SafetyLevel, SourceCitation } from './types';
+import type { SafetyLevel, SourceCitation, ProviderResult } from './types';
 
 // ---------------------------------------------------------------------------
 // Event Types
@@ -37,6 +37,12 @@ export interface SuggestionsEvent {
   followUps: string[];
 }
 
+export interface ProvidersEvent {
+  type: 'providers';
+  providers: ProviderResult[];
+  totalMatches: number;
+}
+
 export interface DoneEvent {
   type: 'done';
   responseTimeMs: number;
@@ -56,6 +62,7 @@ export type StreamEvent =
   | TokenEvent
   | CitationsEvent
   | SuggestionsEvent
+  | ProvidersEvent
   | DoneEvent
   | StreamErrorEvent;
 

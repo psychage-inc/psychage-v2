@@ -361,6 +361,192 @@ export async function searchProviders(params: ProviderSearchParams): Promise<Pro
 }
 
 // =============================================================================
+// FILTER BOTTLENECK ANALYSIS
+// =============================================================================
+
+export interface FilterBottleneck {
+  filterKey: string;
+  filterLabel: string;
+  filterValue: string;
+  countWithout: number;
+  removeParams: Partial<ProviderSearchParams>;
+}
+
+const FILTER_LABELS: Record<string, string> = {
+  query: 'Search text',
+  specialty_slugs: 'Specialties',
+  provider_type_ids: 'Provider type',
+  language_ids: 'Languages',
+  competency_ids: 'Cultural competencies',
+  insurance_plan_ids: 'Insurance',
+  state: 'State',
+  city: 'City',
+  telehealth: 'Telehealth',
+  in_person: 'In-person',
+  accepting_patients: 'Accepting patients',
+  verification_status: 'Verification',
+};
+
+/**
+ * When a filtered search returns 0 results, analyze which filters are the
+ * biggest bottlenecks by issuing count queries with each filter removed.
+ * Returns the top 3 filters whose removal yields the most results.
+ */
+export async function analyzeFilterBottlenecks(
+  params: ProviderSearchParams
+): Promise<FilterBottleneck[]> {
+  try {
+    // Build list of active filters and their "removed" variants
+    const candidates: {
+      key: string;
+      label: string;
+      value: string;
+      paramsWithout: ProviderSearchParams;
+      removeParams: Partial<ProviderSearchParams>;
+    }[] = [];
+
+    if (params.query) {
+      candidates.push({
+        key: 'query',
+        label: FILTER_LABELS.query,
+        value: params.query,
+        paramsWithout: { ...params, query: undefined },
+        removeParams: { query: undefined },
+      });
+    }
+    if (params.specialty_slugs?.length) {
+      candidates.push({
+        key: 'specialty_slugs',
+        label: FILTER_LABELS.specialty_slugs,
+        value: params.specialty_slugs.join(', '),
+        paramsWithout: { ...params, specialty_slugs: undefined },
+        removeParams: { specialty_slugs: undefined },
+      });
+    }
+    if (params.provider_type_ids?.length) {
+      candidates.push({
+        key: 'provider_type_ids',
+        label: FILTER_LABELS.provider_type_ids,
+        value: params.provider_type_ids.join(', '),
+        paramsWithout: { ...params, provider_type_ids: undefined },
+        removeParams: { provider_type_ids: undefined },
+      });
+    }
+    if (params.language_ids?.length) {
+      candidates.push({
+        key: 'language_ids',
+        label: FILTER_LABELS.language_ids,
+        value: params.language_ids.join(', '),
+        paramsWithout: { ...params, language_ids: undefined },
+        removeParams: { language_ids: undefined },
+      });
+    }
+    if (params.competency_ids?.length) {
+      candidates.push({
+        key: 'competency_ids',
+        label: FILTER_LABELS.competency_ids,
+        value: params.competency_ids.join(', '),
+        paramsWithout: { ...params, competency_ids: undefined },
+        removeParams: { competency_ids: undefined },
+      });
+    }
+    if (params.insurance_plan_ids?.length) {
+      candidates.push({
+        key: 'insurance_plan_ids',
+        label: FILTER_LABELS.insurance_plan_ids,
+        value: params.insurance_plan_ids.join(', '),
+        paramsWithout: { ...params, insurance_plan_ids: undefined },
+        removeParams: { insurance_plan_ids: undefined },
+      });
+    }
+    if (params.state) {
+      candidates.push({
+        key: 'state',
+        label: FILTER_LABELS.state,
+        value: params.state,
+        paramsWithout: { ...params, state: undefined },
+        removeParams: { state: undefined },
+      });
+    }
+    if (params.city) {
+      candidates.push({
+        key: 'city',
+        label: FILTER_LABELS.city,
+        value: params.city,
+        paramsWithout: { ...params, city: undefined },
+        removeParams: { city: undefined },
+      });
+    }
+    if (params.telehealth) {
+      candidates.push({
+        key: 'telehealth',
+        label: FILTER_LABELS.telehealth,
+        value: 'Yes',
+        paramsWithout: { ...params, telehealth: undefined },
+        removeParams: { telehealth: undefined },
+      });
+    }
+    if (params.in_person) {
+      candidates.push({
+        key: 'in_person',
+        label: FILTER_LABELS.in_person,
+        value: 'Yes',
+        paramsWithout: { ...params, in_person: undefined },
+        removeParams: { in_person: undefined },
+      });
+    }
+    if (params.accepting_patients) {
+      candidates.push({
+        key: 'accepting_patients',
+        label: FILTER_LABELS.accepting_patients,
+        value: 'Yes',
+        paramsWithout: { ...params, accepting_patients: undefined },
+        removeParams: { accepting_patients: undefined },
+      });
+    }
+    if (params.verification_status) {
+      candidates.push({
+        key: 'verification_status',
+        label: FILTER_LABELS.verification_status,
+        value: params.verification_status,
+        paramsWithout: { ...params, verification_status: undefined },
+        removeParams: { verification_status: undefined },
+      });
+    }
+
+    if (candidates.length === 0) return [];
+
+    // Run count queries in parallel (per_page: 1 to minimize data transfer)
+    const results = await Promise.allSettled(
+      candidates.map(c =>
+        searchProviders({ ...c.paramsWithout, per_page: 1, page: 1 })
+      )
+    );
+
+    const bottlenecks: FilterBottleneck[] = [];
+    for (let i = 0; i < candidates.length; i++) {
+      const result = results[i];
+      if (result.status === 'fulfilled' && result.value.total_count > 0) {
+        bottlenecks.push({
+          filterKey: candidates[i].key,
+          filterLabel: candidates[i].label,
+          filterValue: candidates[i].value,
+          countWithout: result.value.total_count,
+          removeParams: candidates[i].removeParams,
+        });
+      }
+    }
+
+    // Sort by count descending, return top 3
+    bottlenecks.sort((a, b) => b.countWithout - a.countWithout);
+    return bottlenecks.slice(0, 3);
+  } catch (err) {
+    console.warn('Filter bottleneck analysis failed:', err);
+    return [];
+  }
+}
+
+// =============================================================================
 // GET SINGLE PROVIDER
 // =============================================================================
 
@@ -624,4 +810,57 @@ export async function getProviderCount(): Promise<number> {
     return 0;
   }
   return count ?? 0;
+}
+
+// =============================================================================
+// FEATURED PROVIDERS (for landing page)
+// =============================================================================
+
+/**
+ * Fetches featured providers for the landing page.
+ * Selection tiers: verified → claimed → pro/elite → high-completeness seeded.
+ * Falls back to mock data if Supabase returns empty or errors.
+ */
+export async function getFeaturedProviders(limit: number = 8): Promise<ProviderCardData[]> {
+  try {
+    const { data, error } = await supabase
+      .from('providers')
+      .select(PROVIDER_SELECT)
+      .in('status', ['active', 'verified', 'claimed', 'seeded'])
+      .not('bio', 'is', null)
+      .order('tier', { ascending: false })
+      .order('display_name')
+      .limit(limit * 2);
+
+    if (error || !data || data.length === 0) {
+      // Fallback: try without bio filter
+      const { data: fallbackData, error: fallbackError } = await supabase
+        .from('providers')
+        .select(PROVIDER_SELECT)
+        .in('status', ['active', 'verified', 'claimed', 'seeded'])
+        .order('tier', { ascending: false })
+        .order('display_name')
+        .limit(limit * 2);
+
+      if (fallbackError || !fallbackData || fallbackData.length === 0) {
+        // Last resort: mock data
+        return mockProviders.slice(0, limit).map(mapMockToCardData);
+      }
+
+      const cards = fallbackData.map(row => mapToCardData(mapProviderRow(row)));
+      return cards.slice(0, limit);
+    }
+
+    const cards = data.map(row => mapToCardData(mapProviderRow(row)));
+
+    // Prefer providers with photos, then fill remaining
+    const withPhoto = cards.filter(c => c.photo_url);
+    const withoutPhoto = cards.filter(c => !c.photo_url);
+    const combined = [...withPhoto, ...withoutPhoto];
+
+    return combined.slice(0, limit);
+  } catch (err) {
+    console.warn('getFeaturedProviders failed:', err);
+    return mockProviders.slice(0, limit).map(mapMockToCardData);
+  }
 }

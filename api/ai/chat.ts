@@ -8,11 +8,13 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { createClient } from '@supabase/supabase-js';
 import { classifyInputSafety, generateCrisisResponse } from '../../src/lib/ai/safety';
+import { classifyIntent } from '../../src/lib/ai/intent';
+import { searchProviders as searchAIProviders, extractProviderCriteria, formatProviderSuggestion } from '../../src/lib/ai/providers';
 import { retrieveRelevantContent } from '../../src/lib/ai/retrieval';
 import { AnthropicProvider, OpenAIProvider, SYSTEM_PROMPT } from '../../src/lib/ai/llm';
 import { getRequiredEnv, getOptionalEnv, getAIConfig } from '../../src/lib/ai/config';
 import { encodeSSE } from '../../src/lib/ai/streaming';
-import type { Message, SafetyLevel, Citation } from '../../src/lib/ai/types';
+import type { Message, SafetyLevel, Citation, ProviderSuggestion } from '../../src/lib/ai/types';
 
 // ============================================================================
 // Rate Limiting (in-memory - use Redis/Upstash for production)
@@ -189,6 +191,29 @@ export default async function handler(
     }
 
     // ========================================================================
+    // Intent Classification + Provider Search
+    // ========================================================================
+
+    const intentResult = await classifyIntent(
+      userMessage.content,
+      messages.slice(0, -1),
+      llmProvider
+    );
+    console.log(`[MindMate] Intent: ${intentResult.primary} (confidence: ${intentResult.confidence})`);
+
+    let providerSuggestion: ProviderSuggestion | undefined;
+
+    if (intentResult.primary === 'provider_search') {
+      try {
+        const criteria = extractProviderCriteria(userMessage.content, intentResult.entities);
+        providerSuggestion = await searchAIProviders(criteria, supabase);
+        console.log(`[MindMate] Provider search: ${providerSuggestion.providers.length} results`);
+      } catch (err) {
+        console.warn('[MindMate] Provider search failed:', err);
+      }
+    }
+
+    // ========================================================================
     // RAG: Search for relevant Psychage content
     // ========================================================================
 
@@ -296,6 +321,18 @@ export default async function handler(
           res.write(encodeSSE({ type: 'citations', citations }));
         }
 
+        // Append provider results if available
+        if (providerSuggestion && providerSuggestion.providers.length > 0) {
+          const providerText = formatProviderSuggestion(providerSuggestion);
+          fullContent += '\n\n' + providerText;
+          res.write(encodeSSE({ type: 'token', content: '\n\n' + providerText }));
+          res.write(encodeSSE({
+            type: 'providers',
+            providers: providerSuggestion.providers,
+            totalMatches: providerSuggestion.totalMatches,
+          } as any));
+        }
+
         // Done event with metrics
         const usage = llmProvider.lastStreamUsage;
         res.write(encodeSSE({
@@ -331,6 +368,12 @@ export default async function handler(
 
     const citations = extractCitations(finalContent, searchResults);
 
+    // Append provider info if available
+    if (providerSuggestion && providerSuggestion.providers.length > 0) {
+      const providerText = formatProviderSuggestion(providerSuggestion);
+      finalContent += '\n\n' + providerText;
+    }
+
     return res.status(200).json({
       message: finalContent,
       citations,
@@ -338,6 +381,7 @@ export default async function handler(
       safetyLevel: safetyCheck.level,
       isCrisis: false,
       responseTimeMs: Date.now() - startTime,
+      providerSuggestion,
     });
 
   } catch (error) {

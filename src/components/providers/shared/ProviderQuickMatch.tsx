@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { ArrowRight, Stethoscope } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -17,6 +18,7 @@ export const ProviderQuickMatch: React.FC<ProviderQuickMatchProps> = ({
   conditionIds,
   maxProviders = 3,
 }) => {
+  const { t } = useTranslation();
   const [providers, setProviders] = useState<ProviderCardData[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -64,7 +66,7 @@ export const ProviderQuickMatch: React.FC<ProviderQuickMatchProps> = ({
           <Stethoscope className="w-4 h-4 text-purple-500" />
         </div>
         <h3 className="font-serif text-lg font-medium text-text-primary">
-          Providers who specialize in this area
+          {t('providers.cta.quick_match_title')}
         </h3>
       </div>
 
@@ -78,7 +80,7 @@ export const ProviderQuickMatch: React.FC<ProviderQuickMatchProps> = ({
         to={searchUrl}
         className="inline-flex items-center gap-1 text-sm font-medium text-teal-400 hover:text-teal-300 transition-colors"
       >
-        View all matching providers
+        {t('providers.cta.view_matching')}
         <ArrowRight size={14} />
       </Link>
     </motion.div>

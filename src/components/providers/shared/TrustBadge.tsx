@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, UserCheck, Info } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -67,9 +68,13 @@ export const TrustBadge: React.FC<TrustBadgeProps> = ({
   interactive = true,
   className,
 }) => {
+  const { t } = useTranslation();
   const config = BADGE_CONFIG[type];
   const Icon = config.icon;
   const iconSize = size === 'sm' ? 12 : 14;
+  const label = t(`providers.badge.${type}`);
+  const ariaLabel = t(`providers.badge.${type}_aria`);
+  const title = t(`providers.badge.${type}_title`);
 
   const badgeClasses = cn(
     'inline-flex items-center gap-1 whitespace-nowrap rounded-full leading-none font-semibold transition-colors',
@@ -84,7 +89,7 @@ export const TrustBadge: React.FC<TrustBadgeProps> = ({
   const content = (
     <>
       {Icon && <Icon size={iconSize} aria-hidden="true" />}
-      {config.label}
+      {label}
     </>
   );
 
@@ -93,8 +98,8 @@ export const TrustBadge: React.FC<TrustBadgeProps> = ({
       <Link
         to={`/how-we-verify${config.anchor}`}
         className={badgeClasses}
-        aria-label={config.ariaLabel}
-        title={config.title}
+        aria-label={ariaLabel}
+        title={title}
         role="link"
       >
         {content}
@@ -105,8 +110,8 @@ export const TrustBadge: React.FC<TrustBadgeProps> = ({
   return (
     <span
       className={badgeClasses}
-      aria-label={config.ariaLabel}
-      title={config.title}
+      aria-label={ariaLabel}
+      title={title}
       role="status"
     >
       {content}

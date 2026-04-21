@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { SearchX, Loader2, X as XIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '@/components/ui/Button';
@@ -19,6 +20,7 @@ export const ProviderResultsEmpty: React.FC<ProviderResultsEmptyProps> = ({
   params,
   onRemoveFilter,
 }) => {
+  const { t } = useTranslation();
   const [bottlenecks, setBottlenecks] = useState<FilterBottleneck[]>([]);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
 
@@ -57,26 +59,26 @@ export const ProviderResultsEmpty: React.FC<ProviderResultsEmptyProps> = ({
         <SearchX className="w-8 h-8 text-text-tertiary" />
       </div>
       <h2 className="font-display font-bold text-xl text-text-primary mb-2">
-        No providers found
+        {t('providers.empty.title')}
       </h2>
       <p className="text-text-tertiary max-w-md mb-6">
         {hasFilters
-          ? "We couldn't find any providers matching your filters. Try broadening your search or removing some filters."
-          : "We couldn't find any providers matching your search. Try different keywords or browse all providers."}
+          ? t('providers.empty.with_filters')
+          : t('providers.empty.without_filters')}
       </p>
 
       {/* Bottleneck Analysis */}
       {hasFilters && isAnalyzing && (
         <div className="flex items-center gap-2 text-sm text-text-tertiary mb-6">
           <Loader2 className="w-4 h-4 animate-spin" />
-          Analyzing your filters...
+          {t('providers.empty.analyzing')}
         </div>
       )}
 
       {hasFilters && !isAnalyzing && bottlenecks.length > 0 && (
         <div className="max-w-md w-full mb-6">
           <p className="text-sm font-medium text-text-secondary mb-3">
-            Try removing a filter:
+            {t('providers.empty.try_removing')}
           </p>
           <div className="space-y-2">
             {bottlenecks.map(b => (
@@ -90,7 +92,7 @@ export const ProviderResultsEmpty: React.FC<ProviderResultsEmptyProps> = ({
                     {b.filterLabel}
                   </span>
                   <span className="text-xs text-amber-600 dark:text-amber-400 ml-2">
-                    ~{formatCount(b.countWithout)} results without
+                    {t('providers.empty.results_without', { count: formatCount(b.countWithout) } as Record<string, unknown>)}
                   </span>
                 </div>
                 <XIcon className="w-4 h-4 text-amber-500 dark:text-amber-400 shrink-0 group-hover:text-amber-700 dark:group-hover:text-amber-300 transition-colors" />
@@ -105,13 +107,13 @@ export const ProviderResultsEmpty: React.FC<ProviderResultsEmptyProps> = ({
         onClick={onClearFilters}
         className="text-primary border-primary/20 hover:bg-primary/10"
       >
-        {hasFilters ? 'Clear all filters' : 'Browse all providers'}
+        {hasFilters ? t('providers.empty.clear_all') : t('providers.empty.browse_all')}
       </Button>
       <Link
         to="/how-we-verify"
         className="text-xs text-text-tertiary hover:text-teal-600 dark:hover:text-teal-400 mt-4 block transition-colors"
       >
-        Learn how we verify providers
+        {t('providers.empty.learn_verify')}
       </Link>
     </div>
   );

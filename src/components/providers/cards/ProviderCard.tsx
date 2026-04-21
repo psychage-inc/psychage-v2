@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { MapPin, Video, Users, Building2, Phone, Mail, Globe, MessageCircle, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -22,6 +23,7 @@ const FallbackAvatar: React.FC<{ name: string; muted?: boolean; className?: stri
 );
 
 export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
+  const { t } = useTranslation();
   const trustBadgeType = getTrustBadgeType(provider);
   const isFeatured = shouldShowFeaturedBadge(provider);
   const isSeeded = provider.status === 'seeded';
@@ -33,8 +35,8 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
 
   // Session format text
   const sessionFormats: string[] = [];
-  if (provider.telehealth_available) sessionFormats.push('Telehealth');
-  if (provider.in_person_available) sessionFormats.push('In-person');
+  if (provider.telehealth_available) sessionFormats.push(t('providers.card.telehealth'));
+  if (provider.in_person_available) sessionFormats.push(t('providers.card.in_person'));
 
   // Bio preview (150 chars)
   const bioPreview = provider.bio
@@ -98,13 +100,13 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
               type="button"
               className="ml-1 inline-flex items-center text-text-tertiary hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
               title={credentialExplanation}
-              aria-label="Explain credentials"
+              aria-label={t('providers.card.explain_credentials')}
             >
               <HelpCircle size={13} />
             </button>
           )}
           <p className="text-sm text-text-tertiary mt-0.5">
-            {provider.provider_type_label || 'Provider'}
+            {provider.provider_type_label || t('providers.card.provider')}
           </p>
           {provider.practice_name && (
             <p className="text-xs text-text-tertiary mt-0.5">{provider.practice_name}</p>
@@ -119,7 +121,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
       {/* Specialties */}
       {provider.specialty_tags.length > 0 && (
         <div className="mb-3">
-          <p className="text-[10px] font-bold text-text-tertiary uppercase tracking-wider mb-1.5">Specializes In</p>
+          <p className="text-[10px] font-bold text-text-tertiary uppercase tracking-wider mb-1.5">{t('providers.card.specializes_in')}</p>
           <div className="flex flex-wrap gap-1.5">
             {provider.specialty_tags.slice(0, 6).map(spec => (
               <SpecialtyTag key={spec.slug} specialty={spec} size="sm" />
@@ -144,7 +146,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
 
         <div className="flex items-center gap-1.5 text-text-secondary">
           {provider.telehealth_available ? <Video size={13} className="text-indigo-500 flex-shrink-0" /> : <Building2 size={13} className="text-blue-500 flex-shrink-0" />}
-          <span className="truncate text-xs">{sessionFormats.join(' & ') || 'Contact for details'}</span>
+          <span className="truncate text-xs">{sessionFormats.join(' & ') || t('providers.card.contact_for_details')}</span>
         </div>
 
         {provider.language_tags.length > 0 && (
@@ -161,12 +163,12 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
           {provider.is_accepting_patients ? (
             <span className="flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400">
               <Users size={13} />
-              Accepting patients
+              {t('providers.card.accepting')}
             </span>
           ) : (
             <span className="flex items-center gap-1 text-xs text-text-tertiary">
               <Users size={13} />
-              Not accepting
+              {t('providers.card.not_accepting')}
             </span>
           )}
         </div>
@@ -191,7 +193,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
       {/* Insurance */}
       {insuranceSummary && (
         <div className="mb-3">
-          <p className="text-[10px] font-bold text-text-tertiary uppercase tracking-wider mb-1">Insurance</p>
+          <p className="text-[10px] font-bold text-text-tertiary uppercase tracking-wider mb-1">{t('providers.card.insurance')}</p>
           <p className="text-xs text-text-secondary">{insuranceSummary}</p>
         </div>
       )}
@@ -209,7 +211,7 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
           to={`/providers/${provider.id}`}
           className="text-sm font-bold text-primary hover:text-teal-700 dark:hover:text-teal-300 transition-colors"
         >
-          View Full Profile &rarr;
+          {t('providers.card.view_profile')} &rarr;
         </Link>
 
         {!isSeeded && (
@@ -218,8 +220,8 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
               <a
                 href={`tel:${provider.phone}`}
                 className="w-8 h-8 rounded-full bg-surface-hover hover:bg-primary/10 flex items-center justify-center text-text-tertiary hover:text-primary transition-colors"
-                title="Call"
-                aria-label={`Call ${provider.display_name}`}
+                title={t('providers.card.call')}
+                aria-label={t('providers.card.call_aria', { name: provider.display_name })}
               >
                 <Phone size={14} />
               </a>
@@ -228,8 +230,8 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
               <a
                 href={`mailto:${provider.email}`}
                 className="w-8 h-8 rounded-full bg-surface-hover hover:bg-primary/10 flex items-center justify-center text-text-tertiary hover:text-primary transition-colors"
-                title="Email"
-                aria-label={`Email ${provider.display_name}`}
+                title={t('providers.card.email')}
+                aria-label={t('providers.card.email_aria', { name: provider.display_name })}
               >
                 <Mail size={14} />
               </a>
@@ -240,8 +242,8 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-surface-hover hover:bg-primary/10 flex items-center justify-center text-text-tertiary hover:text-primary transition-colors"
-                title="Website"
-                aria-label={`Visit ${provider.display_name}'s website`}
+                title={t('providers.card.website')}
+                aria-label={t('providers.card.website_aria', { name: provider.display_name })}
               >
                 <Globe size={14} />
               </a>

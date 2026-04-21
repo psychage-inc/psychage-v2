@@ -1,8 +1,9 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronDown, SlidersHorizontal, Search } from 'lucide-react';
 import { useProviderFilters } from '@/hooks/useProviderFilters';
+import { useFocusTrap } from '@/hooks/useFocusTrap';
 import { US_STATE_ABBRS_LIST } from '@/lib/providers/locationUtils';
 import type { ProviderSearchParams } from '@/lib/providers/types';
 import Button from '@/components/ui/Button';
@@ -24,6 +25,8 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
 }) => {
   const { t } = useTranslation();
   const { filters, isLoading } = useProviderFilters();
+  const drawerRef = useRef<HTMLDivElement>(null);
+  useFocusTrap(drawerRef, isMobile && isOpen, onClose);
   const [showMore, setShowMore] = useState(false);
   const [specialtySearch, setSpecialtySearch] = useState('');
   const [showAllSpecialties, setShowAllSpecialties] = useState(false);
@@ -254,6 +257,10 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
               onClick={onClose}
             />
             <motion.div
+              ref={drawerRef}
+              role="dialog"
+              aria-modal="true"
+              aria-label={t('providers.search.filters')}
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
               exit={{ y: '100%' }}

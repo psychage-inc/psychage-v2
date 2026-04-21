@@ -121,7 +121,7 @@ const ProviderSearchPage: React.FC = () => {
 
         {/* Error Banner */}
         {error && (
-          <div className="mb-6 flex items-center gap-3 p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
+          <div role="alert" className="mb-6 flex items-center gap-3 p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
             <AlertTriangle size={18} className="text-amber-600 dark:text-amber-400 flex-shrink-0" />
             <p className="text-sm text-amber-700 dark:text-amber-300 flex-1">{error}</p>
             <button
@@ -149,7 +149,7 @@ const ProviderSearchPage: React.FC = () => {
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-4">
             <div>
-              <p className="text-sm text-text-tertiary">
+              <p className="text-sm text-text-tertiary" aria-live="polite" aria-atomic="true">
                 {isLoading ? t('providers.search.searching') : (
                   totalCount > 0
                     ? t('providers.search.showing_results', { shown: providers.length, total: totalCount.toLocaleString() })

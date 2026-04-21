@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Info } from 'lucide-react';
 
 interface ProviderSortDropdownProps {
   value: string;
@@ -96,7 +96,13 @@ export const ProviderSortDropdown: React.FC<ProviderSortDropdownProps> = ({
   };
 
   return (
-    <div className="relative" ref={ref}>
+    <div className="relative flex items-center gap-1.5" ref={ref}>
+      <span
+        title={t('providers.sort.disclosure')}
+        className="text-text-tertiary cursor-help"
+      >
+        <Info size={14} />
+      </span>
       <button
         ref={triggerRef}
         onClick={() => {

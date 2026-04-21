@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { initSentry } from './lib/sentry';
 import './lib/i18n';
+
+// Initialize Sentry error monitoring (no-op without VITE_SENTRY_DSN)
+initSentry();
 import App from './App';
 import ErrorBoundary from './components/error/ErrorBoundary';
 import { BrowserRouter } from 'react-router-dom';

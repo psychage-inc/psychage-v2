@@ -200,6 +200,8 @@ const ProviderSearchPage: React.FC = () => {
               <ProviderResultsEmpty
                 onClearFilters={reset}
                 hasFilters={hasActiveFilters}
+                params={params}
+                onRemoveFilter={setParams}
               />
             ) : (
               <>

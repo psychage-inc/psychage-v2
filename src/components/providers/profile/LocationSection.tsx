@@ -63,14 +63,14 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ provider }) =>
               >
                 <MapPin
                   size={18}
-                  className="mt-0.5 shrink-0 text-teal-600 dark:text-teal-400"
+                  className="mt-0.5 shrink-0 text-teal-700 dark:text-teal-400"
                 />
                 <div className="min-w-0 flex-1">
                   <p className="text-sm text-slate-700 dark:text-neutral-200">
                     {address}
                   </p>
                   {loc.is_primary && provider.locations.length > 1 && (
-                    <span className="mt-1 inline-block text-[11px] font-semibold uppercase tracking-wider text-teal-600 dark:text-teal-400">
+                    <span className="mt-1 inline-block text-[11px] font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-400">
                       Primary
                     </span>
                   )}
@@ -78,7 +78,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ provider }) =>
                     href={buildMapsUrl(loc)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-teal-600 transition-colors hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300"
+                    className="mt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-teal-700 transition-colors hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300"
                   >
                     Get Directions <ExternalLink size={12} />
                   </a>

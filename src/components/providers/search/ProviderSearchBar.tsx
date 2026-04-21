@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Search, MapPin, Crosshair } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { useGeolocation } from '@/hooks/useGeolocation';
@@ -16,6 +17,7 @@ export const ProviderSearchBar: React.FC<ProviderSearchBarProps> = ({
   onSearch,
   onUseLocation,
 }) => {
+  const { t } = useTranslation();
   const [query, setQuery] = useState(initialQuery);
   const [location, setLocation] = useState(initialLocation);
   const { requestLocation, isLoading: geoLoading, latitude, longitude } = useGeolocation();
@@ -47,8 +49,8 @@ export const ProviderSearchBar: React.FC<ProviderSearchBarProps> = ({
             type="search"
             value={query}
             onChange={e => setQuery(e.target.value)}
-            placeholder="Search by name, specialty, or condition..."
-            aria-label="Search providers by name, specialty, or condition"
+            placeholder={t('providers.searchbar.query_placeholder')}
+            aria-label={t('providers.searchbar.query_aria')}
             className="w-full pl-11 pr-4 py-3.5 bg-surface border border-border rounded-xl text-sm font-medium text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
           />
         </div>
@@ -60,8 +62,8 @@ export const ProviderSearchBar: React.FC<ProviderSearchBarProps> = ({
             type="text"
             value={location}
             onChange={e => setLocation(e.target.value)}
-            placeholder="City, state, or zip..."
-            aria-label="Provider location — city, state, or zip code"
+            placeholder={t('providers.searchbar.location_placeholder')}
+            aria-label={t('providers.searchbar.location_aria')}
             className="w-full pl-11 pr-10 py-3.5 bg-surface border border-border rounded-xl text-sm font-medium text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
           />
           <button
@@ -69,8 +71,8 @@ export const ProviderSearchBar: React.FC<ProviderSearchBarProps> = ({
             onClick={handleUseLocation}
             disabled={geoLoading}
             className="absolute right-3 top-1/2 -translate-y-1/2 text-text-tertiary hover:text-primary transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
-            title="Use my location"
-            aria-label="Use my location"
+            title={t('providers.searchbar.use_location')}
+            aria-label={t('providers.searchbar.use_location')}
           >
             <Crosshair size={16} className={geoLoading ? 'animate-spin' : ''} />
           </button>
@@ -81,7 +83,7 @@ export const ProviderSearchBar: React.FC<ProviderSearchBarProps> = ({
           type="submit"
           className="bg-primary hover:bg-primary-hover text-white font-bold text-sm px-8 py-3.5 rounded-xl"
         >
-          Search
+          {t('providers.search.search_button')}
         </Button>
       </div>
     </form>

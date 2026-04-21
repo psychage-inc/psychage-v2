@@ -39,7 +39,7 @@ const SaveIndicator: React.FC<{ status: SaveStatus }> = ({ status }) => {
       className={cn(
         'flex items-center gap-1.5 text-xs font-medium',
         status === 'saving' && 'text-text-tertiary',
-        status === 'saved' && 'text-teal-600 dark:text-teal-400',
+        status === 'saved' && 'text-teal-700 dark:text-teal-400',
         status === 'error' && 'text-red-500'
       )}
     >
@@ -330,7 +330,7 @@ const PortalProfile: React.FC = () => {
                 className={cn(
                   'flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors whitespace-nowrap',
                   activeTab === tab.id
-                    ? 'border-teal-500 text-teal-600 dark:text-teal-400'
+                    ? 'border-teal-500 text-teal-700 dark:text-teal-400'
                     : 'border-transparent text-text-tertiary hover:text-text-primary hover:border-gray-300 dark:hover:border-neutral-600'
                 )}
               >

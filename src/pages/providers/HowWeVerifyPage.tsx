@@ -313,7 +313,7 @@ const HowWeVerifyPage: React.FC = () => {
                 <strong>Drop us a line:</strong>{' '}
                 <a
                   href="mailto:info@psychage.com?subject=Provider Profile Concern"
-                  className="text-teal-600 dark:text-teal-400 hover:underline font-medium"
+                  className="text-teal-700 dark:text-teal-400 hover:underline font-medium"
                 >
                   info@psychage.com
                 </a>
@@ -328,7 +328,7 @@ const HowWeVerifyPage: React.FC = () => {
               to{' '}
               <Link
                 to="/for-providers/claim"
-                className="text-teal-600 dark:text-teal-400 hover:underline font-medium"
+                className="text-teal-700 dark:text-teal-400 hover:underline font-medium"
               >
                 claim your profile
               </Link>{' '}

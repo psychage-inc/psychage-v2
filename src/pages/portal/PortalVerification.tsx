@@ -62,7 +62,7 @@ const PortalVerification: React.FC = () => {
                 {/* Step indicator */}
                 <div className={cn(
                   'w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0',
-                  t.status === 'completed' && 'bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400',
+                  t.status === 'completed' && 'bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-400',
                   t.status === 'available' && 'bg-gray-100 dark:bg-neutral-800 text-text-secondary',
                   t.status === 'locked' && 'bg-gray-100 dark:bg-neutral-800 text-text-tertiary'
                 )}>
@@ -75,7 +75,7 @@ const PortalVerification: React.FC = () => {
                       Tier {t.tier}: {t.title}
                     </h3>
                     {t.status === 'completed' && (
-                      <span className="text-xs font-medium text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-900/20 px-2 py-0.5 rounded-full">
+                      <span className="text-xs font-medium text-teal-700 dark:text-teal-400 bg-teal-50 dark:bg-teal-900/20 px-2 py-0.5 rounded-full">
                         Verified
                       </span>
                     )}

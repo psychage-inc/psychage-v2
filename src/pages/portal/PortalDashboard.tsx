@@ -44,7 +44,7 @@ const MetricCard: React.FC<MetricCardProps> = ({ label, value, icon, locked, tre
       {locked ? (
         <Lock size={14} className="text-text-tertiary" />
       ) : trend ? (
-        <span className="text-xs font-medium text-teal-600 dark:text-teal-400 flex items-center gap-1">
+        <span className="text-xs font-medium text-teal-700 dark:text-teal-400 flex items-center gap-1">
           <TrendingUp size={12} />{trend}
         </span>
       ) : null}
@@ -160,7 +160,7 @@ const PortalDashboard: React.FC = () => {
             </div>
             <div className="flex items-center gap-3">
               <Badge variant={getTierBadgeVariant(tier)}>{getTierLabel(tier)} Plan</Badge>
-              <Link to={`/providers/${provider.id}`} className="text-sm text-teal-600 dark:text-teal-400 hover:underline flex items-center gap-1">
+              <Link to={`/providers/${provider.id}`} className="text-sm text-teal-700 dark:text-teal-400 hover:underline flex items-center gap-1">
                 View public profile <ExternalLink size={12} />
               </Link>
             </div>
@@ -175,7 +175,7 @@ const PortalDashboard: React.FC = () => {
             {completeness < 100 && (
               <Link
                 to="/portal/profile"
-                className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-teal-600 dark:text-teal-400 hover:underline"
+                className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-teal-700 dark:text-teal-400 hover:underline"
               >
                 Complete your profile <ArrowRight size={14} />
               </Link>
@@ -259,7 +259,7 @@ const PortalDashboard: React.FC = () => {
               to="/portal/profile"
               className="bg-surface rounded-xl p-4 border border-border hover:border-teal-300 dark:hover:border-teal-700 transition-colors group"
             >
-              <p className="font-medium text-text-primary group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+              <p className="font-medium text-text-primary group-hover:text-teal-700 dark:group-hover:text-teal-400 transition-colors">
                 Update Profile
               </p>
               <p className="text-sm text-text-tertiary mt-0.5">Edit bio, photos, specialties</p>
@@ -268,7 +268,7 @@ const PortalDashboard: React.FC = () => {
               to="/portal/subscription"
               className="bg-surface rounded-xl p-4 border border-border hover:border-teal-300 dark:hover:border-teal-700 transition-colors group"
             >
-              <p className="font-medium text-text-primary group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+              <p className="font-medium text-text-primary group-hover:text-teal-700 dark:group-hover:text-teal-400 transition-colors">
                 Manage Subscription
               </p>
               <p className="text-sm text-text-tertiary mt-0.5">Upgrade plan, billing</p>
@@ -277,7 +277,7 @@ const PortalDashboard: React.FC = () => {
               to="/portal/verification"
               className="bg-surface rounded-xl p-4 border border-border hover:border-teal-300 dark:hover:border-teal-700 transition-colors group"
             >
-              <p className="font-medium text-text-primary group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+              <p className="font-medium text-text-primary group-hover:text-teal-700 dark:group-hover:text-teal-400 transition-colors">
                 Verification
               </p>
               <p className="text-sm text-text-tertiary mt-0.5">NPI, license, certification</p>

@@ -73,7 +73,7 @@ describe('SpecialtyTag', () => {
                 <SpecialtyTag specialty={treatmentSpec} />
             </MemoryRouter>
         );
-        expect(screen.getByText('CBT')).toHaveClass('text-teal-600');
+        expect(screen.getByText('CBT')).toHaveClass('text-teal-700');
     });
 
     it('should apply population styles', () => {

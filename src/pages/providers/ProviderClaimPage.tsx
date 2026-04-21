@@ -18,7 +18,7 @@ const ProviderClaimPage: React.FC = () => {
           {/* Back link */}
           <Link
             to="/for-providers"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-text-secondary hover:text-teal-600 dark:hover:text-teal-400 transition-colors mb-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-text-secondary hover:text-teal-700 dark:hover:text-teal-400 transition-colors mb-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
           >
             <ChevronLeft size={16} />
             Back to For Providers

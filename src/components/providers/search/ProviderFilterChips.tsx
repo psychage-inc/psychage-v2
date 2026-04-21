@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { X } from 'lucide-react';
 import type { ProviderSearchParams } from '@/lib/providers/types';
 import { useProviderFilters } from '@/hooks/useProviderFilters';
@@ -14,6 +15,7 @@ export const ProviderFilterChips: React.FC<ProviderFilterChipsProps> = ({
   onChange,
   onClearAll,
 }) => {
+  const { t } = useTranslation();
   const { filters } = useProviderFilters();
 
   const chips: { label: string; onRemove: () => void }[] = [];
@@ -21,7 +23,7 @@ export const ProviderFilterChips: React.FC<ProviderFilterChipsProps> = ({
   // Verification status
   if (params.verification_status) {
     chips.push({
-      label: params.verification_status === 'verified' ? 'Psychage Verified only' : 'Publicly Listed only',
+      label: params.verification_status === 'verified' ? t('providers.chips.verified_only') : t('providers.chips.listed_only'),
       onRemove: () => onChange({ verification_status: undefined }),
     });
   }
@@ -92,7 +94,7 @@ export const ProviderFilterChips: React.FC<ProviderFilterChipsProps> = ({
   // Telehealth
   if (params.telehealth) {
     chips.push({
-      label: 'Telehealth',
+      label: t('providers.chips.telehealth'),
       onRemove: () => onChange({ telehealth: undefined }),
     });
   }
@@ -100,7 +102,7 @@ export const ProviderFilterChips: React.FC<ProviderFilterChipsProps> = ({
   // In-person
   if (params.in_person) {
     chips.push({
-      label: 'In-person',
+      label: t('providers.chips.in_person'),
       onRemove: () => onChange({ in_person: undefined }),
     });
   }
@@ -108,7 +110,7 @@ export const ProviderFilterChips: React.FC<ProviderFilterChipsProps> = ({
   // Accepting patients
   if (params.accepting_patients) {
     chips.push({
-      label: 'Accepting patients',
+      label: t('providers.chips.accepting'),
       onRemove: () => onChange({ accepting_patients: undefined }),
     });
   }
@@ -142,7 +144,7 @@ export const ProviderFilterChips: React.FC<ProviderFilterChipsProps> = ({
           <button
             onClick={chip.onRemove}
             className="hover:text-teal-900 dark:hover:text-teal-100 transition-colors"
-            aria-label={`Remove ${chip.label} filter`}
+            aria-label={t('providers.chips.remove_aria', { label: chip.label })}
           >
             <X size={14} />
           </button>
@@ -152,7 +154,7 @@ export const ProviderFilterChips: React.FC<ProviderFilterChipsProps> = ({
         onClick={onClearAll}
         className="text-sm font-medium text-text-tertiary hover:text-text-secondary transition-colors underline underline-offset-2"
       >
-        Clear all
+        {t('providers.chips.clear_all')}
       </button>
     </div>
   );

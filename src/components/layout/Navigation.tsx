@@ -11,7 +11,7 @@ import { useAuth } from '../../context/AuthContext';
 import { navigationConfig } from '../../config/navigation';
 import { useNavPermissions } from '../../hooks/useNavPermissions';
 import type { NavItem } from '../../types/navigation';
-// import LanguageSwitcher from '../ui/LanguageSwitcher'; // Hidden for English-only launch
+import LanguageSwitcher from '../ui/LanguageSwitcher';
 
 const Navigation: React.FC = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -242,10 +242,9 @@ const Navigation: React.FC = () => {
                             {isSearchOpen ? <X size={20} aria-hidden="true" /> : <Search size={20} aria-hidden="true" />}
                         </button>
 
-                        {/* Language switcher hidden for English-only launch — uncomment when i18n re-enabled */}
-                        {/* <div className="hidden md:flex">
+                        <div className="hidden md:flex">
                             <LanguageSwitcher />
-                        </div> */}
+                        </div>
 
                         {/* Crisis Support Button — always visible, compact on mobile */}
                         <button

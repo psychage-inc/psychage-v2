@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import type { ProviderWithDetails } from '@/lib/providers/types';
 
@@ -9,6 +10,7 @@ interface AboutSectionProps {
 const TRUNCATE_LENGTH = 300;
 
 export const AboutSection: React.FC<AboutSectionProps> = ({ provider }) => {
+  const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
 
   if (!provider.bio) return null;
@@ -22,7 +24,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ provider }) => {
   return (
     <section className="rounded-2xl border border-slate-200 bg-white/70 p-6 backdrop-blur-md dark:border-neutral-700 dark:bg-neutral-800/70">
       <h2 className="font-display mb-3 text-lg font-bold text-slate-900 dark:text-white">
-        About
+        {t('providers.profile.about')}
       </h2>
       <p className="whitespace-pre-line text-sm leading-relaxed text-slate-600 dark:text-neutral-300">
         {displayText}
@@ -30,15 +32,15 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ provider }) => {
       {isLong && (
         <button
           onClick={() => setExpanded((prev) => !prev)}
-          className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-teal-600 transition-colors hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300"
+          className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-teal-700 transition-colors hover:text-teal-800 dark:text-teal-400 dark:hover:text-teal-300"
         >
           {expanded ? (
             <>
-              Read less <ChevronUp size={14} />
+              {t('providers.profile.read_less')} <ChevronUp size={14} />
             </>
           ) : (
             <>
-              Read more <ChevronDown size={14} />
+              {t('providers.profile.read_more')} <ChevronDown size={14} />
             </>
           )}
         </button>

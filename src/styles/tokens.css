@@ -67,8 +67,8 @@ html.light,
   /* Near Black */
   --color-text-secondary: #57534e;
   /* Stone-600 */
-  --color-text-tertiary: #78716c;
-  /* Stone-500 */
+  --color-text-tertiary: #6d6762;
+  /* Stone-500 darkened for WCAG AA (5.2:1 on #F9F7F3) */
 
   --color-border: #e7e5e4;
   /* Stone-200 */

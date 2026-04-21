@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { SlidersHorizontal, AlertTriangle, RefreshCw, Info } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { SlidersHorizontal, AlertTriangle, RefreshCw, Info, Globe } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { useProviderSearch } from '@/hooks/useProviderSearch';
 import { useProviderLookups } from '@/context/ProviderLookupsContext';
@@ -17,6 +18,7 @@ import { VerificationCTA } from '@/components/providers/search/VerificationCTA';
 import Button from '@/components/ui/Button';
 
 const ProviderSearchPage: React.FC = () => {
+  const { t } = useTranslation();
   const {
     providers,
     totalCount,
@@ -90,12 +92,12 @@ const ProviderSearchPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-background pt-28 pb-20">
       <SEO
-        title="Find a Provider | Psychage"
-        description="Search thousands of verified mental health providers. Filter by specialty, location, insurance, and more."
+        title={`${t('providers.search.title')} | Psychage`}
+        description={t('providers.search.seo_description')}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="sr-only">Find a Mental Health Provider</h1>
+        <h1 className="sr-only">{t('providers.search.title')}</h1>
         {/* Search Bar */}
         <div className="mb-6">
           <ProviderSearchBar
@@ -106,6 +108,12 @@ const ProviderSearchPage: React.FC = () => {
           />
         </div>
 
+        {/* US-only indicator */}
+        <div className="flex items-center gap-2 text-xs text-text-tertiary mb-4">
+          <Globe size={14} className="flex-shrink-0" />
+          <span>{t('providers.banner.us_only')}</span>
+        </div>
+
         {/* Verification Explainer */}
         <div className="mb-6">
           <VerificationExplainer />
@@ -113,7 +121,7 @@ const ProviderSearchPage: React.FC = () => {
 
         {/* Error Banner */}
         {error && (
-          <div className="mb-6 flex items-center gap-3 p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
+          <div role="alert" className="mb-6 flex items-center gap-3 p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
             <AlertTriangle size={18} className="text-amber-600 dark:text-amber-400 flex-shrink-0" />
             <p className="text-sm text-amber-700 dark:text-amber-300 flex-1">{error}</p>
             <button
@@ -121,7 +129,7 @@ const ProviderSearchPage: React.FC = () => {
               className="flex items-center gap-1.5 text-xs font-medium text-amber-700 dark:text-amber-300 hover:text-amber-800 dark:hover:text-amber-200 transition-colors"
             >
               <RefreshCw size={14} />
-              Retry
+              {t('providers.search.retry')}
             </button>
           </div>
         )}
@@ -141,21 +149,21 @@ const ProviderSearchPage: React.FC = () => {
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-4">
             <div>
-              <p className="text-sm text-text-tertiary">
-                {isLoading ? 'Searching...' : (
+              <p className="text-sm text-text-tertiary" aria-live="polite" aria-atomic="true">
+                {isLoading ? t('providers.search.searching') : (
                   totalCount > 0
-                    ? `Showing ${providers.length} of ${totalCount.toLocaleString()} providers`
+                    ? t('providers.search.showing_results', { shown: providers.length, total: totalCount.toLocaleString() })
                     : hasSearched
-                      ? 'No results'
+                      ? t('providers.search.no_results')
                       : dbProviderCount
-                        ? `${dbProviderCount.toLocaleString()} NPI-verified providers`
-                        : 'Search our provider directory'
+                        ? t('providers.search.npi_count', { count: dbProviderCount.toLocaleString() } as Record<string, unknown>)
+                        : t('providers.search.default_prompt')
                 )}
               </p>
               {(!params.sort_by || params.sort_by === 'relevance') && providers.length > 0 && !isLoading && (
                 <p className="text-xs text-text-tertiary mt-0.5 flex items-center gap-1">
                   <Info size={12} className="flex-shrink-0" />
-                  Sorted by relevance. Verified and featured providers appear first.
+                  {t('providers.search.sort_notice')}
                 </p>
               )}
             </div>
@@ -165,7 +173,7 @@ const ProviderSearchPage: React.FC = () => {
                 className="lg:hidden flex items-center gap-2 px-3 py-2 text-sm font-medium text-text-secondary bg-surface border border-border rounded-lg hover:bg-surface-hover"
               >
                 <SlidersHorizontal size={16} />
-                Filters
+                {t('providers.search.filters')}
                 {hasActiveFilters && (
                   <span className="w-2 h-2 rounded-full bg-primary" />
                 )}
@@ -219,7 +227,7 @@ const ProviderSearchPage: React.FC = () => {
                       isLoading={isLoadingMore}
                       className="px-8 text-primary border-primary/20 hover:bg-primary/5"
                     >
-                      Load more providers
+                      {t('providers.search.load_more')}
                     </Button>
                   </div>
                 )}

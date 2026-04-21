@@ -1,11 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import {
   ShieldCheck, Search as SearchIcon,
   ArrowRight, UserCheck, MessageCircle,
-  FlaskConical, Sparkles, Check, Users, ClipboardCheck, BadgeCheck,
+  FlaskConical, Sparkles, Check, Users, ClipboardCheck, BadgeCheck, Info,
 } from 'lucide-react';
 import SEO from '@/components/SEO';
 import Button from '@/components/ui/Button';
@@ -29,6 +30,7 @@ const HOW_IT_WORKS = [
 ];
 
 const ProvidersLandingPage: React.FC = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const lookups = useProviderLookups();
 
@@ -84,6 +86,14 @@ const ProvidersLandingPage: React.FC = () => {
         </div>
       </section>
 
+      {/* US-only indicator */}
+      <div className="flex justify-center px-4 sm:px-6 lg:px-8 -mt-8 mb-4">
+        <div className="flex items-center gap-2 text-sm text-text-secondary border border-border rounded-full px-4 py-2">
+          <Info size={16} className="flex-shrink-0" />
+          <span>{t('providers.banner.us_only')}</span>
+        </div>
+      </div>
+
       {/* Trust Indicators */}
       <section className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto border-y border-border py-10">
@@ -108,7 +118,7 @@ const ProvidersLandingPage: React.FC = () => {
           <div className="text-center mt-6">
             <Link
               to="/how-we-verify"
-              className="text-sm text-text-secondary hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+              className="text-sm text-text-secondary hover:text-teal-700 dark:hover:text-teal-400 transition-colors"
             >
               Learn how we verify providers &rarr;
             </Link>
@@ -145,7 +155,7 @@ const ProvidersLandingPage: React.FC = () => {
             <div className="text-center mt-10">
               <Link
                 to="/providers/search"
-                className="inline-flex items-center gap-2 text-sm font-medium text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-medium text-teal-700 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 transition-colors"
               >
                 See all providers <ArrowRight size={14} />
               </Link>
@@ -167,7 +177,7 @@ const ProvidersLandingPage: React.FC = () => {
                 to={`/providers/search?type=${type.id}`}
                 className="flex-shrink-0 w-56 p-5 bg-surface rounded-2xl border border-border hover:border-teal-200 dark:hover:border-teal-800 hover:shadow-sm transition-all group"
               >
-                <h3 className="font-display font-bold text-sm text-text-primary mb-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                <h3 className="font-display font-bold text-sm text-text-primary mb-2 group-hover:text-teal-700 dark:group-hover:text-teal-400 transition-colors">
                   {type.label}
                 </h3>
                 <p className="text-xs text-text-secondary line-clamp-2">
@@ -196,10 +206,10 @@ const ProvidersLandingPage: React.FC = () => {
                 transition={{ delay: item.step * 0.15 }}
                 className="relative"
               >
-                <div className="w-14 h-14 rounded-full bg-teal-600 dark:bg-teal-500 flex items-center justify-center mx-auto mb-5 shadow-lg shadow-teal-600/20 dark:shadow-teal-500/20">
+                <div className="w-14 h-14 rounded-full bg-teal-700 dark:bg-teal-500 flex items-center justify-center mx-auto mb-5 shadow-lg shadow-teal-700/20 dark:shadow-teal-500/20">
                   <span className="font-display font-bold text-xl text-white">{item.step}</span>
                 </div>
-                <div className="text-xs font-bold text-teal-600 dark:text-teal-400 uppercase tracking-widest mb-2">Step {item.step}</div>
+                <div className="text-xs font-bold text-teal-700 dark:text-teal-400 uppercase tracking-widest mb-2">Step {item.step}</div>
                 <h3 className="font-display font-bold text-lg text-text-primary mb-2">{item.title}</h3>
                 <p className="text-sm text-text-secondary">{item.description}</p>
               </motion.div>
@@ -234,7 +244,7 @@ const ProvidersLandingPage: React.FC = () => {
 
               <div className="flex flex-col sm:flex-row gap-3 mb-10">
                 <Link to="/for-providers">
-                  <Button className="bg-teal-500 hover:bg-teal-600 text-white font-bold px-8 py-3 text-base" rightIcon={<ArrowRight size={16} />}>
+                  <Button className="bg-teal-700 hover:bg-teal-800 text-white font-bold px-8 py-3 text-base" rightIcon={<ArrowRight size={16} />}>
                     List Your Practice
                   </Button>
                 </Link>

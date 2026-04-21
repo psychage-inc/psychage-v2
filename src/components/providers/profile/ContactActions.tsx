@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Phone, Mail, Globe, Calendar } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { ProviderWithDetails } from '@/lib/providers/types';
@@ -17,11 +18,12 @@ interface ActionItem {
 }
 
 export const ContactActions: React.FC<ContactActionsProps> = ({ provider, sticky = false }) => {
+  const { t } = useTranslation();
   const actions: ActionItem[] = [];
 
   if (provider.phone) {
     actions.push({
-      label: 'Call',
+      label: t('providers.card.call'),
       href: `tel:${provider.phone}`,
       icon: <Phone size={16} />,
       trackType: 'phone_click' as const,
@@ -30,7 +32,7 @@ export const ContactActions: React.FC<ContactActionsProps> = ({ provider, sticky
 
   if (provider.email) {
     actions.push({
-      label: 'Email',
+      label: t('providers.card.email'),
       href: `mailto:${provider.email}`,
       icon: <Mail size={16} />,
       trackType: 'email_click' as const,
@@ -39,7 +41,7 @@ export const ContactActions: React.FC<ContactActionsProps> = ({ provider, sticky
 
   if (provider.website_url) {
     actions.push({
-      label: 'Website',
+      label: t('providers.card.website'),
       href: provider.website_url,
       icon: <Globe size={16} />,
       trackType: 'website_click' as const,
@@ -48,7 +50,7 @@ export const ContactActions: React.FC<ContactActionsProps> = ({ provider, sticky
 
   if (provider.appointment_url) {
     actions.push({
-      label: 'Book Appointment',
+      label: t('providers.card.book_appointment'),
       href: provider.appointment_url,
       icon: <Calendar size={16} />,
       trackType: 'website_click' as const,
@@ -58,9 +60,9 @@ export const ContactActions: React.FC<ContactActionsProps> = ({ provider, sticky
   if (!actions.length) return null;
 
   const primaryStyle =
-    'bg-teal-600 text-white shadow-sm shadow-teal-600/20 hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600';
+    'bg-teal-700 text-white shadow-sm shadow-teal-700/20 hover:bg-teal-800 dark:bg-teal-500 dark:hover:bg-teal-600';
   const outlineStyle =
-    'border-2 border-slate-200 text-slate-700 hover:border-teal-500 hover:text-teal-600 dark:border-neutral-600 dark:text-neutral-200 dark:hover:border-teal-400 dark:hover:text-teal-400';
+    'border-2 border-slate-200 text-slate-700 hover:border-teal-500 hover:text-teal-700 dark:border-neutral-600 dark:text-neutral-200 dark:hover:border-teal-400 dark:hover:text-teal-400';
 
   return (
     <section className={cn(

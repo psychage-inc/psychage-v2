@@ -124,7 +124,7 @@ const ProviderClaimForm: React.FC = () => {
         <Link to="/login">
           <Button
             variant="primary"
-            className="bg-teal-600 hover:bg-teal-700"
+            className="bg-teal-700 hover:bg-teal-800"
             leftIcon={<LogIn size={16} />}
           >
             Sign In to Continue
@@ -172,7 +172,7 @@ const ProviderClaimForm: React.FC = () => {
             disabled={!isValidFormat || npiLoading || claimState === 'claimed'}
             isLoading={npiLoading}
             leftIcon={!npiLoading ? <Search size={16} /> : undefined}
-            className="bg-teal-600 hover:bg-teal-700 flex-shrink-0"
+            className="bg-teal-700 hover:bg-teal-800 flex-shrink-0"
             aria-label="Verify NPI and search"
           >
             Verify
@@ -180,7 +180,7 @@ const ProviderClaimForm: React.FC = () => {
         </div>
 
         {npiInput.length > 0 && npiInput.length < 10 && claimState === 'input' && (
-          <p className="text-xs text-gray-400 dark:text-neutral-500 mt-2">
+          <p className="text-xs text-gray-500 dark:text-neutral-500 mt-2">
             {10 - npiInput.length} more digit{10 - npiInput.length !== 1 ? 's' : ''} needed
           </p>
         )}
@@ -225,7 +225,7 @@ const ProviderClaimForm: React.FC = () => {
             exit={{ opacity: 0, y: -8 }}
             className="flex items-center gap-3 p-5 rounded-xl bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800"
           >
-            <Loader2 size={20} className="text-teal-600 animate-spin" />
+            <Loader2 size={20} className="text-teal-700 animate-spin" />
             <span className="text-sm font-medium text-teal-700 dark:text-teal-300">
               Searching for your profile in our directory...
             </span>
@@ -242,7 +242,7 @@ const ProviderClaimForm: React.FC = () => {
             className="bg-white dark:bg-neutral-900 rounded-2xl border-2 border-teal-200 dark:border-teal-700 shadow-md p-6"
           >
             <div className="flex items-center gap-2 mb-4">
-              <ShieldCheck size={20} className="text-teal-600 dark:text-teal-400" />
+              <ShieldCheck size={20} className="text-teal-700 dark:text-teal-400" />
               <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white">
                 Profile Found
               </h3>
@@ -259,7 +259,7 @@ const ProviderClaimForm: React.FC = () => {
                   <h4 className="font-display font-bold text-gray-900 dark:text-white">
                     {matchedProvider.display_name}
                     {matchedProvider.credentials_suffix && (
-                      <span className="text-gray-400 dark:text-neutral-500 font-medium">, {matchedProvider.credentials_suffix}</span>
+                      <span className="text-gray-500 dark:text-neutral-500 font-medium">, {matchedProvider.credentials_suffix}</span>
                     )}
                   </h4>
                   <Badge variant="teal" className="mt-1">
@@ -279,7 +279,7 @@ const ProviderClaimForm: React.FC = () => {
                         <Badge key={spec.id} variant="neutral">{spec.label}</Badge>
                       ))}
                       {matchedProvider.specialties.length > 4 && (
-                        <span className="text-xs text-gray-400 dark:text-neutral-500">
+                        <span className="text-xs text-gray-500 dark:text-neutral-500">
                           +{matchedProvider.specialties.length - 4} more
                         </span>
                       )}
@@ -293,13 +293,13 @@ const ProviderClaimForm: React.FC = () => {
               variant="primary"
               size="lg"
               onClick={handleClaim}
-              className="w-full bg-teal-600 hover:bg-teal-700"
+              className="w-full bg-teal-700 hover:bg-teal-800"
               leftIcon={<UserCheck size={18} />}
               aria-label="Claim this profile"
             >
               Claim This Profile
             </Button>
-            <p className="text-xs text-gray-400 dark:text-neutral-500 text-center mt-2">
+            <p className="text-xs text-gray-500 dark:text-neutral-500 text-center mt-2">
               Claiming connects this listing to your Psychage account.
             </p>
           </motion.div>
@@ -314,7 +314,7 @@ const ProviderClaimForm: React.FC = () => {
             exit={{ opacity: 0, y: -8 }}
             className="flex items-center gap-3 p-5 rounded-xl bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800"
           >
-            <Loader2 size={20} className="text-teal-600 animate-spin" />
+            <Loader2 size={20} className="text-teal-700 animate-spin" />
             <span className="text-sm font-medium text-teal-700 dark:text-teal-300">
               Claiming your profile...
             </span>
@@ -340,7 +340,7 @@ const ProviderClaimForm: React.FC = () => {
               your listing from the provider dashboard.
             </p>
             <Link to="/provider/dashboard">
-              <Button variant="primary" className="bg-teal-600 hover:bg-teal-700">
+              <Button variant="primary" className="bg-teal-700 hover:bg-teal-800">
                 Go to Provider Dashboard
               </Button>
             </Link>
@@ -366,7 +366,7 @@ const ProviderClaimForm: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link to="/for-providers/apply">
-                <Button variant="primary" className="bg-teal-600 hover:bg-teal-700">
+                <Button variant="primary" className="bg-teal-700 hover:bg-teal-800">
                   Create a Listing
                 </Button>
               </Link>

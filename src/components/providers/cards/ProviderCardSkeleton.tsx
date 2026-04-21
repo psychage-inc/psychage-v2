@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const ProviderCardSkeleton: React.FC = () => (
-  <div className="bg-surface rounded-2xl p-5 border border-border shadow-sm animate-pulse">
+  <div className="bg-surface rounded-2xl p-5 border border-border shadow-sm animate-pulse" aria-busy="true">
     {/* Header */}
     <div className="flex items-start gap-4 mb-3">
       <div className="w-16 h-16 rounded-full bg-surface-hover flex-shrink-0" />

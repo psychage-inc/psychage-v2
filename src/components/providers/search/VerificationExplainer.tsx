@@ -1,24 +1,27 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShieldCheck, Info, ChevronDown } from 'lucide-react';
 
-const tiers = [
+const TIER_CONFIG = [
   {
+    key: 'verified',
     icon: ShieldCheck,
-    title: 'Psychage Verified',
-    description: 'Credentials independently verified with complete profile — specialties, insurance, and languages.',
+    titleKey: 'providers.verification.verified_title',
+    descKey: 'providers.verification.verified_desc',
     colors: {
       bg: 'bg-white dark:bg-teal-950/30',
       border: 'border-teal-200/60 dark:border-teal-800/40',
-      icon: 'text-teal-600 dark:text-teal-400',
+      icon: 'text-teal-700 dark:text-teal-400',
       iconBg: 'bg-teal-50 dark:bg-teal-900/30',
       title: 'text-teal-700 dark:text-teal-300',
     },
   },
   {
+    key: 'listed',
     icon: Info,
-    title: 'Publicly Listed',
-    description: 'From the U.S. NPI public registry. Not individually reviewed. Profile information may be limited.',
+    titleKey: 'providers.verification.listed_title',
+    descKey: 'providers.verification.listed_desc',
     colors: {
       bg: 'bg-white dark:bg-neutral-800/30',
       border: 'border-gray-200/60 dark:border-neutral-700/40',
@@ -30,15 +33,16 @@ const tiers = [
 ];
 
 export const VerificationExplainer: React.FC = () => {
+  const { t } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const content = (
     <div className="flex flex-col sm:flex-row gap-3">
-      {tiers.map((tier) => {
+      {TIER_CONFIG.map((tier) => {
         const Icon = tier.icon;
         return (
           <div
-            key={tier.title}
+            key={tier.key}
             className={`flex-1 flex items-start gap-3 p-4 rounded-2xl border shadow-sm ${tier.colors.bg} ${tier.colors.border}`}
           >
             <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${tier.colors.iconBg}`}>
@@ -46,10 +50,10 @@ export const VerificationExplainer: React.FC = () => {
             </div>
             <div className="min-w-0">
               <h4 className={`font-semibold text-sm mb-0.5 ${tier.colors.title}`}>
-                {tier.title}
+                {t(tier.titleKey)}
               </h4>
               <p className="text-xs text-text-tertiary leading-relaxed">
-                {tier.description}
+                {t(tier.descKey)}
               </p>
             </div>
           </div>
@@ -70,7 +74,7 @@ export const VerificationExplainer: React.FC = () => {
           className="flex items-center gap-2 text-sm font-medium text-text-tertiary hover:text-text-secondary transition-colors w-full"
         >
           <ShieldCheck size={14} className="text-teal-500" />
-          About provider verification
+          {t('providers.verification.about_toggle')}
           <ChevronDown size={14} className={`ml-auto transition-transform ${mobileOpen ? 'rotate-180' : ''}`} />
         </button>
         <AnimatePresence>

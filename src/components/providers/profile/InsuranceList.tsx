@@ -31,7 +31,7 @@ export const InsuranceList: React.FC<InsuranceListProps> = ({ provider }) => {
           >
             <Shield
               size={14}
-              className="shrink-0 text-teal-600 dark:text-teal-400"
+              className="shrink-0 text-teal-700 dark:text-teal-400"
             />
             <div className="min-w-0">
               <span className="block text-sm font-medium text-slate-700 dark:text-neutral-200">
@@ -48,7 +48,7 @@ export const InsuranceList: React.FC<InsuranceListProps> = ({ provider }) => {
       {hasMore && (
         <button
           onClick={() => setExpanded((prev) => !prev)}
-          className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-teal-600 transition-colors hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300"
+          className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-teal-700 transition-colors hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300"
         >
           {expanded ? (
             <>

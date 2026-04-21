@@ -143,10 +143,10 @@ const ProviderApplyForm: React.FC = () => {
                   isActive &&
                     'border-teal-500 bg-teal-500 text-white shadow-lg shadow-teal-500/30',
                   isCompleted &&
-                    'border-teal-500 bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400',
+                    'border-teal-500 bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-400',
                   !isActive &&
                     !isCompleted &&
-                    'border-gray-300 dark:border-neutral-600 text-gray-400 dark:text-neutral-500'
+                    'border-gray-300 dark:border-neutral-600 text-gray-500 dark:text-neutral-500'
                 )}
               >
                 {isCompleted ? <Check size={18} /> : <StepIcon size={18} />}
@@ -154,9 +154,9 @@ const ProviderApplyForm: React.FC = () => {
               <span
                 className={cn(
                   'text-xs font-medium hidden sm:block',
-                  isActive && 'text-teal-600 dark:text-teal-400',
+                  isActive && 'text-teal-700 dark:text-teal-400',
                   isCompleted && 'text-gray-600 dark:text-neutral-300',
-                  !isActive && !isCompleted && 'text-gray-400 dark:text-neutral-500'
+                  !isActive && !isCompleted && 'text-gray-500 dark:text-neutral-500'
                 )}
               >
                 {step.label}
@@ -219,7 +219,7 @@ const ProviderApplyForm: React.FC = () => {
               onClick={handleSubmit}
               isLoading={isSubmitting}
               leftIcon={!isSubmitting ? <Check size={16} /> : undefined}
-              className="bg-teal-600 hover:bg-teal-700"
+              className="bg-teal-700 hover:bg-teal-800"
               aria-label="Submit application"
             >
               Submit Application
@@ -229,7 +229,7 @@ const ProviderApplyForm: React.FC = () => {
               variant="primary"
               onClick={goNext}
               rightIcon={<ChevronRight size={16} />}
-              className="bg-teal-600 hover:bg-teal-700"
+              className="bg-teal-700 hover:bg-teal-800"
               aria-label="Go to next step"
             >
               Continue

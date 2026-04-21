@@ -811,3 +811,56 @@ export async function getProviderCount(): Promise<number> {
   }
   return count ?? 0;
 }
+
+// =============================================================================
+// FEATURED PROVIDERS (for landing page)
+// =============================================================================
+
+/**
+ * Fetches featured providers for the landing page.
+ * Selection tiers: verified → claimed → pro/elite → high-completeness seeded.
+ * Falls back to mock data if Supabase returns empty or errors.
+ */
+export async function getFeaturedProviders(limit: number = 8): Promise<ProviderCardData[]> {
+  try {
+    const { data, error } = await supabase
+      .from('providers')
+      .select(PROVIDER_SELECT)
+      .in('status', ['active', 'verified', 'claimed', 'seeded'])
+      .not('bio', 'is', null)
+      .order('tier', { ascending: false })
+      .order('display_name')
+      .limit(limit * 2);
+
+    if (error || !data || data.length === 0) {
+      // Fallback: try without bio filter
+      const { data: fallbackData, error: fallbackError } = await supabase
+        .from('providers')
+        .select(PROVIDER_SELECT)
+        .in('status', ['active', 'verified', 'claimed', 'seeded'])
+        .order('tier', { ascending: false })
+        .order('display_name')
+        .limit(limit * 2);
+
+      if (fallbackError || !fallbackData || fallbackData.length === 0) {
+        // Last resort: mock data
+        return mockProviders.slice(0, limit).map(mapMockToCardData);
+      }
+
+      const cards = fallbackData.map(row => mapToCardData(mapProviderRow(row)));
+      return cards.slice(0, limit);
+    }
+
+    const cards = data.map(row => mapToCardData(mapProviderRow(row)));
+
+    // Prefer providers with photos, then fill remaining
+    const withPhoto = cards.filter(c => c.photo_url);
+    const withoutPhoto = cards.filter(c => !c.photo_url);
+    const combined = [...withPhoto, ...withoutPhoto];
+
+    return combined.slice(0, limit);
+  } catch (err) {
+    console.warn('getFeaturedProviders failed:', err);
+    return mockProviders.slice(0, limit).map(mapMockToCardData);
+  }
+}

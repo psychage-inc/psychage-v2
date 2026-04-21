@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
 import {
   ShieldCheck, Search as SearchIcon,
   ArrowRight, UserCheck, MessageCircle,
@@ -10,6 +11,9 @@ import SEO from '@/components/SEO';
 import Button from '@/components/ui/Button';
 import { ProviderSearchBar } from '@/components/providers/search/ProviderSearchBar';
 import { useProviderLookups } from '@/context/ProviderLookupsContext';
+import { getFeaturedProviders } from '@/lib/providers/queries';
+import { ProviderCard } from '@/components/providers/cards/ProviderCard';
+import { ProviderCardSkeleton } from '@/components/providers/cards/ProviderCardSkeleton';
 
 const TRUST_INDICATORS = [
   { icon: UserCheck, label: '400,000+ Providers', description: 'NPI-verified mental health professionals across the US' },
@@ -29,6 +33,13 @@ const ProvidersLandingPage: React.FC = () => {
   const lookups = useProviderLookups();
 
   const providerTypes = lookups.providerTypes;
+
+  const { data: featuredProviders, isLoading: isFeaturedLoading } = useQuery({
+    queryKey: ['featured-providers'],
+    queryFn: () => getFeaturedProviders(8),
+    staleTime: 5 * 60_000,
+    gcTime: 10 * 60_000,
+  });
 
   const handleSearch = (query: string, _location: string) => {
     const params = new URLSearchParams();
@@ -106,6 +117,42 @@ const ProvidersLandingPage: React.FC = () => {
       </section>
 
       {/* Browse by Specialty — hidden per design review, code preserved */}
+
+      {/* Featured Providers */}
+      {(isFeaturedLoading || (featuredProviders && featuredProviders.length > 0)) && (
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="font-display font-bold text-3xl text-text-primary mb-2">
+                Meet Some of Our Providers
+              </h2>
+              <p className="text-text-secondary mb-10">
+                Browse featured mental health professionals in our directory.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              {isFeaturedLoading
+                ? Array.from({ length: 8 }).map((_, i) => <ProviderCardSkeleton key={i} />)
+                : featuredProviders!.map(p => <ProviderCard key={p.id} provider={p} />)
+              }
+            </div>
+
+            <div className="text-center mt-10">
+              <Link
+                to="/providers/search"
+                className="inline-flex items-center gap-2 text-sm font-medium text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 transition-colors"
+              >
+                See all providers <ArrowRight size={14} />
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Browse by Provider Type */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">

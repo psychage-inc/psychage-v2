@@ -85,8 +85,9 @@ const SignUpPage = () => {
 
                 navigate('/login', {
                     state: {
-                        message: `Account created successfully! Please log in as a ${userType}.`,
-                        email: formData.email
+                        message: `Account created successfully! Please log in to continue.`,
+                        email: formData.email,
+                        userType,
                     }
                 });
             } else {

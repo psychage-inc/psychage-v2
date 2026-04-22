@@ -174,8 +174,21 @@ const UserDashboard: React.FC = () => {
         const sevenDaysAgo = subDays(new Date(), 7).toISOString().split('T')[0];
 
         try {
-            let failures = 0;
-            const track = <T,>(fallback: T) => (err: unknown) => { failures++; console.warn('Dashboard fetch failed:', err); return fallback; };
+            // Only "core" fetches (Clarity Score stats + user activity + history) count toward
+            // the partial-failure banner. Optional signals (mood/sleep/navigator/bookmarks)
+            // commonly reject with benign "no data yet" states on fresh accounts and must not
+            // trigger a warning. The banner only shows when ≥2 core fetches fail.
+            let coreFailures = 0;
+            const trackCore = <T,>(fallback: T) => (err: unknown) => {
+                coreFailures++;
+                console.warn('Dashboard core fetch failed:', err);
+                return fallback;
+            };
+            const trackOptional = <T,>(fallback: T) => (err: unknown) => {
+                // Silently swallow — this is expected on fresh accounts with no entries yet.
+                console.debug('Dashboard optional fetch unavailable:', err);
+                return fallback;
+            };
 
             const [
                 statsRes, activityRes, historyRes,
@@ -184,15 +197,15 @@ const UserDashboard: React.FC = () => {
                 moodRangeRes, sleepRangeRes,
                 navigatorRes, bookmarksRes
             ] = await Promise.all([
-                api.clarityScore.getStats().catch(track({ success: false, data: null })),
-                api.user.getActivity().catch(track({ success: false, data: [] })),
-                api.clarityScore.getHistory().catch(track({ success: false, data: [] })),
-                moodService.getStats(user.id).catch(track(null)),
-                sleepService.getStats(user.id).catch(track(null)),
-                moodService.getEntries(user.id, 1).catch(track([])),
-                sleepService.getEntries(user.id, 1).catch(track([])),
-                moodService.getEntriesByDateRange(user.id, sevenDaysAgo, new Date().toISOString()).catch(track([])),
-                sleepService.getEntriesByDateRange(user.id, sevenDaysAgo, new Date().toISOString()).catch(track([])),
+                api.clarityScore.getStats().catch(trackCore({ success: false, data: null })),
+                api.user.getActivity().catch(trackCore({ success: false, data: [] })),
+                api.clarityScore.getHistory().catch(trackCore({ success: false, data: [] })),
+                moodService.getStats(user.id).catch(trackOptional(null)),
+                sleepService.getStats(user.id).catch(trackOptional(null)),
+                moodService.getEntries(user.id, 1).catch(trackOptional([])),
+                sleepService.getEntries(user.id, 1).catch(trackOptional([])),
+                moodService.getEntriesByDateRange(user.id, sevenDaysAgo, new Date().toISOString()).catch(trackOptional([])),
+                sleepService.getEntriesByDateRange(user.id, sevenDaysAgo, new Date().toISOString()).catch(trackOptional([])),
                 (async () => {
                     try {
                         const res = await supabase
@@ -203,15 +216,14 @@ const UserDashboard: React.FC = () => {
                             .limit(1);
                         return { count: res.count ?? 0, latest: res.data?.[0]?.created_at ?? null };
                     } catch (err) {
-                        failures++;
-                        console.warn('Dashboard fetch failed:', err);
+                        console.debug('Navigator lookup unavailable:', err);
                         return { count: 0, latest: null };
                     }
                 })(),
-                bookmarkService.getAll(user.id).then(b => b.length).catch(track(0)),
+                bookmarkService.getAll(user.id).then(b => b.length).catch(trackOptional(0)),
             ]);
 
-            setPartialFailures(failures);
+            setPartialFailures(coreFailures);
 
             if (statsRes.success) setStats(statsRes.data);
             if (activityRes.success) setActivity(activityRes.data || []);
@@ -317,8 +329,8 @@ const UserDashboard: React.FC = () => {
 
                         {!isLoading && error && <DashboardError message={error} onRetry={fetchData} />}
 
-                        {/* Partial failure warning */}
-                        {!isLoading && !error && partialFailures > 0 && (
+                        {/* Partial failure warning — only when multiple core fetches fail */}
+                        {!isLoading && !error && partialFailures >= 2 && (
                             <div className="bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-800/40 rounded-xl px-5 py-3 flex items-center gap-3 mb-4">
                                 <AlertCircle size={16} className="text-amber-500 dark:text-amber-400 shrink-0" />
                                 <p className="text-sm text-amber-600 dark:text-amber-400/90 flex-grow">Some data couldn't be loaded. Displayed values may be incomplete.</p>

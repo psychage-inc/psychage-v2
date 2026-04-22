@@ -32,8 +32,9 @@ interface MorningCheckInProps {
 
 const STEPS = [
   { label: 'Sleep Times', icon: Moon },
-  { label: 'Sleep Quality', icon: Clock },
-  { label: 'Rating', icon: Sparkles },
+  { label: 'Sleep Onset', icon: Clock },
+  { label: 'Sleep Quality', icon: Sparkles },
+  { label: 'Morning Mood', icon: Sun },
   { label: 'Habits', icon: Coffee },
   { label: 'Notes', icon: Sun },
 ];
@@ -300,67 +301,92 @@ const MorningCheckIn: React.FC<MorningCheckInProps> = ({
               </div>
             )}
 
-            {/* Step 2: Quality & Mood Rating */}
+            {/* Step 2: Sleep Quality */}
             {step === 2 && (
-              <div className="space-y-6">
+              <div className="flex flex-col items-center justify-center text-center space-y-6 py-4">
                 <div>
-                  <label className="text-sm font-bold text-gray-700 dark:text-neutral-300 block mb-3">
+                  <h4 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-1.5">
                     How did you sleep?
-                  </label>
-                  <div className="flex justify-center gap-3">
-                    {QUALITY_EMOJIS.map((emoji, i) => {
-                      const val = (i + 1) as 1 | 2 | 3 | 4 | 5;
-                      return (
-                        <button
-                          key={val}
-                          type="button"
-                          onClick={() => setQuality(val)}
-                          className={cn(
-                            'w-14 h-14 rounded-2xl text-2xl flex items-center justify-center transition-all border-2',
-                            quality === val
-                              ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900/30 scale-110'
-                              : 'border-gray-200 dark:border-neutral-600 hover:border-gray-300 dark:hover:border-neutral-500'
-                          )}
-                          aria-label={`Quality ${val} of 5`}
-                        >
-                          {emoji}
-                        </button>
-                      );
-                    })}
-                  </div>
+                  </h4>
+                  <p className="text-sm text-gray-500 dark:text-neutral-400">
+                    Rate the quality of your sleep overall
+                  </p>
                 </div>
-
-                <div>
-                  <label className="text-sm font-bold text-gray-700 dark:text-neutral-300 block mb-3">
-                    How do you feel this morning?
-                  </label>
-                  <div className="flex justify-center gap-3">
-                    {MOOD_EMOJIS.map((emoji, i) => {
-                      const val = (i + 1) as 1 | 2 | 3 | 4 | 5;
-                      return (
-                        <button
-                          key={val}
-                          type="button"
-                          onClick={() => setMood(val)}
-                          className={cn(
-                            'w-14 h-14 rounded-2xl text-2xl flex items-center justify-center transition-all border-2',
-                            mood === val
-                              ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900/30 scale-110'
-                              : 'border-gray-200 dark:border-neutral-600 hover:border-gray-300 dark:hover:border-neutral-500'
-                          )}
-                          aria-label={`Mood ${val} of 5`}
-                        >
-                          {emoji}
-                        </button>
-                      );
-                    })}
-                  </div>
+                <div className="flex justify-center gap-3">
+                  {QUALITY_EMOJIS.map((emoji, i) => {
+                    const val = (i + 1) as 1 | 2 | 3 | 4 | 5;
+                    return (
+                      <button
+                        key={val}
+                        type="button"
+                        onClick={() => setQuality(val)}
+                        className={cn(
+                          'w-16 h-16 rounded-2xl text-3xl flex items-center justify-center transition-all border-2',
+                          quality === val
+                            ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900/30 scale-110 ring-4 ring-indigo-500/20'
+                            : 'border-gray-200 dark:border-neutral-600 hover:border-gray-300 dark:hover:border-neutral-500 hover:scale-105'
+                        )}
+                        aria-label={`Quality ${val} of 5`}
+                      >
+                        {emoji}
+                      </button>
+                    );
+                  })}
                 </div>
+                <p className="text-xs text-gray-400 dark:text-neutral-500 italic">
+                  {quality === 1 && 'Very restless'}
+                  {quality === 2 && 'Somewhat poor'}
+                  {quality === 3 && 'Okay'}
+                  {quality === 4 && 'Good'}
+                  {quality === 5 && 'Deeply restful'}
+                </p>
               </div>
             )}
 
-            {/* Step 3: Substances & Habits */}
+            {/* Step 3: Morning Mood */}
             {step === 3 && (
+              <div className="flex flex-col items-center justify-center text-center space-y-6 py-4">
+                <div>
+                  <h4 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-1.5">
+                    How do you feel this morning?
+                  </h4>
+                  <p className="text-sm text-gray-500 dark:text-neutral-400">
+                    Your mood right after waking up
+                  </p>
+                </div>
+                <div className="flex justify-center gap-3">
+                  {MOOD_EMOJIS.map((emoji, i) => {
+                    const val = (i + 1) as 1 | 2 | 3 | 4 | 5;
+                    return (
+                      <button
+                        key={val}
+                        type="button"
+                        onClick={() => setMood(val)}
+                        className={cn(
+                          'w-16 h-16 rounded-2xl text-3xl flex items-center justify-center transition-all border-2',
+                          mood === val
+                            ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900/30 scale-110 ring-4 ring-indigo-500/20'
+                            : 'border-gray-200 dark:border-neutral-600 hover:border-gray-300 dark:hover:border-neutral-500 hover:scale-105'
+                        )}
+                        aria-label={`Mood ${val} of 5`}
+                      >
+                        {emoji}
+                      </button>
+                    );
+                  })}
+                </div>
+                <p className="text-xs text-gray-400 dark:text-neutral-500 italic">
+                  {mood === 1 && 'Exhausted'}
+                  {mood === 2 && 'Groggy'}
+                  {mood === 3 && 'Neutral'}
+                  {mood === 4 && 'Refreshed'}
+                  {mood === 5 && 'Energized'}
+                </p>
+              </div>
+            )}
+
+            {/* Step 4: Substances & Habits */}
+            {step === 4 && (
               <div className="space-y-3">
                 <ToggleItem
                   icon={<Coffee size={16} />}
@@ -425,8 +451,8 @@ const MorningCheckIn: React.FC<MorningCheckInProps> = ({
               </div>
             )}
 
-            {/* Step 4: Notes */}
-            {step === 4 && (
+            {/* Step 5: Notes */}
+            {step === 5 && (
               <div className="space-y-4">
                 <div>
                   <label className="text-sm font-bold text-gray-700 dark:text-neutral-300 block mb-1.5">

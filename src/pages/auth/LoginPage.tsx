@@ -29,6 +29,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
     const [searchParams] = useSearchParams();
     const [oauthLoading, setOauthLoading] = useState<'google' | 'apple' | null>(null);
     const [infoMessage, setInfoMessage] = useState<string | null>(null);
+    const [signupRole, setSignupRole] = useState<'patient' | 'provider' | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const isDev = import.meta.env.DEV;
 
@@ -39,12 +40,13 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
     // Display messages passed via navigation state (e.g., from signup or password reset)
     useEffect(() => {
         const msg = location.state?.message;
-        if (msg) {
-            setInfoMessage(msg);
-            // Clear navigation state so message doesn't persist on reload
+        const userType = location.state?.userType as 'patient' | 'provider' | undefined;
+        if (msg) setInfoMessage(msg);
+        if (userType === 'patient' || userType === 'provider') setSignupRole(userType);
+        if (msg || userType) {
             window.history.replaceState({}, '');
         }
-    }, [location.state?.message]);
+    }, [location.state?.message, location.state?.userType]);
 
     const handleGoogleSignIn = async () => {
         setOauthLoading('google');
@@ -212,10 +214,10 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                         initial={{ y: -20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.1, duration: 0.5 }}
-                        className="flex justify-center mb-6"
+                        className="flex justify-center mb-10"
                     >
-                        <Link to="/">
-                            <LogoIcon className="h-20 w-auto drop-shadow-lg" />
+                        <Link to="/" className="inline-block py-2">
+                            <LogoIcon className="h-28 w-auto drop-shadow-lg" />
                         </Link>
                     </motion.div>
                     <motion.div
@@ -256,10 +258,19 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
 
                     <form onSubmit={handleSubmit} className="space-y-6">
                         {infoMessage && (
-                            <Alert className="animate-in slide-in-from-top-2 border-emerald-500/30 bg-emerald-500/10">
-                                <CheckCircle2 className="h-4 w-4 text-emerald-500" />
-                                <AlertDescription className="text-emerald-400">{infoMessage}</AlertDescription>
+                            <Alert className="animate-in slide-in-from-top-2 border-emerald-700 bg-emerald-600 text-white [&>svg]:text-white pl-11">
+                                <CheckCircle2 className="h-4 w-4" />
+                                <AlertDescription className="text-white font-medium">{infoMessage}</AlertDescription>
                             </Alert>
+                        )}
+
+                        {signupRole && (
+                            <div className="flex items-center justify-center">
+                                <span className="inline-flex items-center gap-2 rounded-full bg-teal-50 dark:bg-teal-500/15 text-teal-700 dark:text-teal-300 px-3 py-1 text-xs font-medium border border-teal-200 dark:border-teal-500/30">
+                                    <span className="h-1.5 w-1.5 rounded-full bg-teal-500" />
+                                    Signing in as {signupRole === 'patient' ? 'Patient' : 'Provider'}
+                                </span>
+                            </div>
                         )}
 
                         {error && (

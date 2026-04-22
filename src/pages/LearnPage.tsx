@@ -369,7 +369,7 @@ const LearnPage: React.FC = () => {
         const picks: Article[] = [];
         const usedCategories = new Set<string>();
         const priorityArticles = articles.filter(
-            a => PRIORITY_CATEGORY_SLUGS.includes(a.category.slug)
+            a => a.image && PRIORITY_CATEGORY_SLUGS.includes(a.category.slug)
         );
         for (const a of priorityArticles) {
             if (picks.length >= 7) break;

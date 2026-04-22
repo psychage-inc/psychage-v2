@@ -40,11 +40,21 @@ export const VerificationExplainer: React.FC = () => {
     <div className="flex flex-col sm:flex-row gap-3">
       {TIER_CONFIG.map((tier) => {
         const Icon = tier.icon;
+        const isRecommended = tier.key === 'verified';
         return (
           <div
             key={tier.key}
-            className={`flex-1 flex items-start gap-3 p-4 rounded-2xl border shadow-sm ${tier.colors.bg} ${tier.colors.border}`}
+            className={`relative flex-1 flex items-start gap-3 p-4 rounded-2xl border ${tier.colors.bg} ${tier.colors.border} ${
+              isRecommended
+                ? 'ring-2 ring-teal-500/40 dark:ring-teal-400/30 shadow-md'
+                : 'shadow-sm'
+            }`}
           >
+            {isRecommended && (
+              <span className="absolute -top-2.5 left-4 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-teal-700 dark:bg-teal-500 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm">
+                Recommended
+              </span>
+            )}
             <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${tier.colors.iconBg}`}>
               <Icon size={16} className={tier.colors.icon} />
             </div>

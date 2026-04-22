@@ -34,6 +34,18 @@ const PROVIDER_SELECT = `
 `;
 
 /**
+ * Strip leading/trailing junk punctuation from raw NPI-sourced display names
+ * (e.g. "/STALBURN VANSLUYTMAN, L.C.S.W" → "STALBURN VANSLUYTMAN, L.C.S.W").
+ */
+function cleanDisplayName(name: string | null | undefined): string {
+  if (!name) return '';
+  return name
+    .replace(/^[\s/:.\-]+|[\s/:.\-]+$/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/**
  * Maps raw Supabase joined row to ProviderWithDetails.
  */
 function mapProviderRow(row: Record<string, unknown>): ProviderWithDetails {
@@ -63,7 +75,7 @@ function mapToCardData(p: ProviderWithDetails): ProviderCardData {
   const loc = p.locations.find(l => l.is_primary) || p.locations[0] || null;
   return {
     id: p.id,
-    display_name: p.display_name,
+    display_name: cleanDisplayName(p.display_name) || p.display_name,
     credentials_suffix: p.credentials_suffix,
     bio: p.bio,
     photo_url: p.photo_url,
@@ -230,7 +242,7 @@ async function searchViaRPC(params: ProviderSearchParams, page: number, perPage:
 
   const providers: ProviderCardData[] = rows.map(row => ({
     id: row.id,
-    display_name: row.display_name,
+    display_name: cleanDisplayName(row.display_name) || row.display_name,
     credentials_suffix: row.credentials_suffix,
     bio: row.bio,
     photo_url: row.photo_url,
@@ -588,6 +600,10 @@ export async function getProviderByNPI(npi: string): Promise<ProviderWithDetails
 // LOOKUP TABLE FETCHERS
 // =============================================================================
 
+const HIDDEN_PROVIDER_TYPE_IDS: ReadonlySet<string> = new Set([
+  'e3e49ec2-4ab6-45e0-87f5-40bc9f3931fe', // Crisis Service — surfaced via /crisis, not in directory browse
+]);
+
 export async function getProviderTypes(): Promise<ProviderType[]> {
   const { data, error } = await supabase
     .from('provider_types')
@@ -598,7 +614,7 @@ export async function getProviderTypes(): Promise<ProviderType[]> {
     console.error('Error fetching provider types:', error);
     return [];
   }
-  return data || [];
+  return (data || []).filter(t => !HIDDEN_PROVIDER_TYPE_IDS.has(t.id));
 }
 
 export async function getSpecialties(): Promise<Specialty[]> {

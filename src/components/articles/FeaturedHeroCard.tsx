@@ -15,9 +15,26 @@ interface FeaturedHeroCardProps {
 }
 
 const FeaturedHeroCard: React.FC<FeaturedHeroCardProps> = ({ article, onClick }) => {
+    const [imgError, setImgError] = React.useState(false);
+
+    // Guard against malformed rows — without both slugs, getArticleUrl would
+    // produce /learn/undefined/undefined and the click would dead-end. Skip
+    // render rather than show a broken card.
+    if (!article.slug || !article.category?.slug) {
+        if (import.meta.env.DEV) {
+            // eslint-disable-next-line no-console
+            console.warn('[FeaturedHeroCard] skipping article with missing slug', {
+                id: article.id,
+                title: article.title,
+                slug: article.slug,
+                categorySlug: article.category?.slug,
+            });
+        }
+        return null;
+    }
+
     const theme = getCategoryTheme(article.category.slug);
     const FallbackIcon = theme.icon;
-    const [imgError, setImgError] = React.useState(false);
 
     return (
         <button onClick={onClick} className="group text-left w-full">

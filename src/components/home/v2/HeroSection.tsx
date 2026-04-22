@@ -132,7 +132,7 @@ const HeroSection: React.FC = () => {
           <div className="w-full lg:w-[48%] text-center lg:text-left">
             <motion.p
               {...textAnim(0)}
-              className="uppercase tracking-[0.18em] text-[11px] sm:text-xs text-[var(--color-primary)]/55 font-sans font-medium mb-5"
+              className="uppercase tracking-[0.18em] text-[11px] sm:text-xs text-[var(--color-primary)]/55 dark:text-neutral-400 font-sans font-medium mb-5"
             >
               Free mental health education platform
             </motion.p>

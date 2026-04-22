@@ -27,11 +27,11 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
   const { filters, isLoading } = useProviderFilters();
   const drawerRef = useRef<HTMLDivElement>(null);
   useFocusTrap(drawerRef, isMobile && isOpen, onClose);
-  const [showMore, setShowMore] = useState(false);
+  const [showMore, setShowMore] = useState(true);
   const [specialtySearch, setSpecialtySearch] = useState('');
-  const [showAllSpecialties, setShowAllSpecialties] = useState(false);
-  const [showAllLanguages, setShowAllLanguages] = useState(false);
-  const [showAllInsurance, setShowAllInsurance] = useState(false);
+  const [showAllSpecialties, setShowAllSpecialties] = useState(true);
+  const [showAllLanguages, setShowAllLanguages] = useState(true);
+  const [showAllInsurance, setShowAllInsurance] = useState(true);
 
   const toggleArrayParam = (key: keyof ProviderSearchParams, value: string) => {
     const current = (params[key] as string[] | undefined) || [];

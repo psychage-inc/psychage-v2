@@ -145,7 +145,7 @@ const ToolsEcosystem: React.FC = () => {
             to={featured.href}
             className={cn(
               'group block rounded-3xl overflow-hidden',
-              'bg-white/70 dark:bg-[var(--color-surface)]/70',
+              'bg-white/70 dark:bg-neutral-900',
               'border border-[var(--color-primary)]/20',
               'shadow-[0_4px_24px_-6px_rgba(0,0,0,0.08)]',
               'dark:shadow-[0_4px_24px_-6px_rgba(0,0,0,0.25)]',
@@ -220,10 +220,10 @@ const ToolsEcosystem: React.FC = () => {
                   to={tool.href}
                   className={cn(
                     'group block rounded-2xl p-5 h-full',
-                    'bg-white/50 dark:bg-[var(--color-surface)]/50',
+                    'bg-white/50 dark:bg-neutral-900',
                     'border border-[var(--color-border)]/50',
                     'hover:border-[var(--color-primary)]/40',
-                    'hover:bg-white/80 dark:hover:bg-[var(--color-surface)]/80',
+                    'hover:bg-white/80 dark:hover:bg-neutral-800',
                     'shadow-[0_1px_4px_rgba(0,0,0,0.04)]',
                     'hover:shadow-[0_4px_16px_-4px_rgba(0,0,0,0.08)]',
                     'dark:shadow-[0_1px_4px_rgba(0,0,0,0.15)]',

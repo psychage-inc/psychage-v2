@@ -30,15 +30,12 @@ const ContentWorld: React.FC = () => {
   const { isBookmarked, toggleBookmark } = useBookmarks();
   const [showAuthModal, setShowAuthModal] = useState(false);
 
-  // Fetch 11 diversified articles: 1 hero + 4 trending + 6 grid.
-  const { articles, isLoading } = useHomepageArticles(11);
-
-  // Prefer an image-bearing article for the hero slot — the fallback theme
-  // icon looks weak at hero scale. Trending and grid cards degrade gracefully.
-  const heroArticle = articles.find(a => a.image) ?? articles[0];
-  const remainingArticles = articles.filter(a => a !== heroArticle);
-  const trendingArticles = remainingArticles.slice(0, 4);
-  const gridArticles = remainingArticles.slice(4, 10);
+  // Hero is editorially chosen from the featured-article pool (cornerstone
+  // clinical topics); rest is 10 category-diversified articles for the
+  // trending list (4) and the grid (6).
+  const { hero: heroArticle, rest, isLoading } = useHomepageArticles(10);
+  const trendingArticles = rest.slice(0, 4);
+  const gridArticles = rest.slice(4, 10);
 
   const handleArticleClick = useCallback(
     (article: Article) => {

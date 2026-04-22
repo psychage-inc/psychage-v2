@@ -22,7 +22,7 @@ const FallbackAvatar: React.FC<{ name: string; muted?: boolean; className?: stri
   </div>
 );
 
-export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
+const ProviderCardComponent: React.FC<ProviderCardProps> = ({ provider }) => {
   const { t } = useTranslation();
   const trustBadgeType = getTrustBadgeType(provider);
   const isFeatured = shouldShowFeaturedBadge(provider);
@@ -254,5 +254,15 @@ export const ProviderCard: React.FC<ProviderCardProps> = ({ provider }) => {
     </motion.div>
   );
 };
+
+export const ProviderCard = React.memo(
+  ProviderCardComponent,
+  (prev, next) =>
+    prev.provider.id === next.provider.id &&
+    prev.provider.tier === next.provider.tier &&
+    prev.provider.status === next.provider.status &&
+    prev.provider.verified_at === next.provider.verified_at &&
+    prev.provider.is_accepting_patients === next.provider.is_accepting_patients
+);
 
 export default ProviderCard;

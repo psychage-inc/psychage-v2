@@ -50,6 +50,17 @@
  *   - Send notifications. Manual follow-up for any demoted user is
  *     documented in docs/audits/auth-hotfix-followup-dashboard.md.
  *   - Clean up orphaned admin_roles rows (separate cleanup task).
+ *
+ * DEPENDENCIES (must be deployed BEFORE running this script):
+ *   - 20260423000001_harden_admin_role_checks.sql (migrate_admin_role RPC)
+ *   - 20260423000003_auth_001_diagnostic_rpc.sql (auth_001_diagnostic_admin_states RPC)
+ *   - 20260423000004_sync_admin_roles_to_app_metadata.sql (trigger that
+ *     syncs admin_roles writes to auth.users.raw_app_meta_data so the
+ *     client — which reads role from app_metadata — sees changes without
+ *     a separate write path here)
+ *
+ *   If the diagnostic RPC is not present, this script ABORTS rather than
+ *   falling back to a degraded view that would miss State B users.
  */
 
 import { createClient } from '@supabase/supabase-js';
@@ -99,39 +110,53 @@ type DiagnosticRow = {
     granular_role: string | null;
 };
 
-const DIAGNOSTIC_SQL = `
-WITH
-  metadata_admins AS (
-    SELECT id AS user_id
-    FROM auth.users
-    WHERE raw_user_meta_data ->> 'role' = 'admin'
-  ),
-  profile_admins AS (
-    SELECT id AS user_id FROM public.profiles WHERE role = 'admin'
-  ),
-  role_table_admins AS (
-    SELECT user_id, role AS granular_role FROM public.admin_roles
-  )
-SELECT
-  CASE
-    WHEN ra.user_id IS NOT NULL AND ma.user_id IS NULL AND pa.user_id IS NULL
-      THEN 'A'
-    WHEN ra.user_id IS NULL AND ma.user_id IS NOT NULL
-      THEN 'B'
-    WHEN ra.user_id IS NOT NULL AND ma.user_id IS NOT NULL
-      THEN 'C'
-    ELSE 'D'
-  END AS state,
-  COALESCE(ra.user_id, ma.user_id, pa.user_id) AS user_id,
-  ra.granular_role,
-  (ma.user_id IS NOT NULL) AS has_user_metadata,
-  (pa.user_id IS NOT NULL) AS has_profile_role,
-  (ra.user_id IS NOT NULL) AS has_admin_roles_row
-FROM role_table_admins ra
-FULL OUTER JOIN metadata_admins ma USING (user_id)
-FULL OUTER JOIN profile_admins pa USING (user_id)
-ORDER BY state, user_id;
-`;
+// Shape returned by the auth_001_diagnostic_admin_states() RPC in
+// supabase/migrations/20260423000003_auth_001_diagnostic_rpc.sql.
+type RpcDiagnosticRow = {
+    state:
+        | 'A_admin_roles_only'
+        | 'B_user_metadata_only'
+        | 'C_both_sources'
+        | 'D_metadata_role_non_admin';
+    user_count: number;
+    user_ids: string[];
+};
+
+export class DiagnosticRpcMissingError extends Error {
+    constructor(cause: unknown) {
+        super(
+            'Diagnostic RPC auth_001_diagnostic_admin_states() is not available. ' +
+                'Apply supabase/migrations/20260423000003_auth_001_diagnostic_rpc.sql ' +
+                'before running this script. Original error: ' +
+                (cause instanceof Error ? cause.message : String(cause)),
+        );
+        this.name = 'DiagnosticRpcMissingError';
+    }
+}
+
+/**
+ * Decide whether a given Supabase RPC error indicates the diagnostic
+ * function is missing (as opposed to, e.g., a network failure or a
+ * permission error that the caller should see raw).
+ *
+ * PostgREST returns PGRST202 for "function not in schema cache" and
+ * Postgres 42883 for "function ... does not exist". Permission errors
+ * (42501) are NOT missing-function errors and must propagate.
+ */
+export function isMissingRpcError(err: unknown): boolean {
+    if (!err || typeof err !== 'object') return false;
+    const code = (err as { code?: unknown }).code;
+    if (code === 'PGRST202' || code === '42883') return true;
+    const message = (err as { message?: unknown }).message;
+    if (typeof message !== 'string') return false;
+    const lower = message.toLowerCase();
+    return (
+        lower.includes('function') &&
+        (lower.includes('does not exist') ||
+            lower.includes('not found') ||
+            lower.includes('could not find'))
+    );
+}
 
 async function main(): Promise<void> {
     const args = parseArgs(process.argv.slice(2));
@@ -151,27 +176,45 @@ async function main(): Promise<void> {
     console.log('Querying State A/B/C/D distribution...\n');
 
     // The diagnostic query reads from auth.users which requires service-role
-    // privileges. Use a SQL RPC or direct rest call. supabase-js does not
-    // expose arbitrary SQL — wrap via a SECURITY DEFINER function or use
-    // postgres-meta. For simplicity here, we expect a deployed RPC named
-    // `auth_001_diagnostic_admin_states()` returning the SELECT shape above.
+    // privileges. supabase-js does not expose arbitrary SQL, so we depend on
+    // the deployed RPC `auth_001_diagnostic_admin_states()` from
+    // supabase/migrations/20260423000003_auth_001_diagnostic_rpc.sql.
     //
-    // If the RPC is not present, fall back to per-source counts via
-    // supabase.from() calls (less detailed but workable).
+    // If the RPC is missing, we refuse to continue: the fallback (counting
+    // only admin_roles rows) cannot see State B users — the entire population
+    // this migration exists to find — so proceeding would silently skip the
+    // escalation-risk fix. This is a hard abort, not a soft warning.
+    //
+    // Note: on INSERT, the sync trigger from 20260423000004_sync_admin_roles_
+    // to_app_metadata.sql automatically populates auth.users.raw_app_meta_data
+    // for every row written to admin_roles. The script itself takes no app_meta
+    // action — the trigger handles it.
     let rows: DiagnosticRow[];
-    try {
-        const { data, error } = await supabase.rpc('auth_001_diagnostic_admin_states');
-        if (error) throw error;
-        rows = data as DiagnosticRow[];
-    } catch (err) {
-        console.warn(
-            '[warn] auth_001_diagnostic_admin_states RPC not found; ' +
-                'falling back to per-source counts. To get per-user detail, ' +
-                'create the RPC (one-line wrapper around the SQL below):',
-        );
-        console.warn(DIAGNOSTIC_SQL);
-        rows = await fallbackDiagnostic(supabase);
+    const { data, error } = await supabase.rpc('auth_001_diagnostic_admin_states');
+    if (error) {
+        if (isMissingRpcError(error)) {
+            const missingErr = new DiagnosticRpcMissingError(error);
+            console.error(
+                '\n================================================================\n' +
+                    'FATAL: DIAGNOSTIC RPC UNAVAILABLE\n' +
+                    '================================================================\n' +
+                    'scripts/migrate-admin-roles.ts requires ' +
+                    'auth_001_diagnostic_admin_states() to enumerate State B users\n' +
+                    '(user_metadata.role=admin WITHOUT admin_roles row).\n\n' +
+                    'Without it, the script cannot see the escalation-risk population\n' +
+                    'that AUTH-001 remediation targets, so it would auto-demote nobody\n' +
+                    'and silently skip the fix.\n\n' +
+                    'Apply this migration before re-running:\n' +
+                    '  supabase/migrations/20260423000003_auth_001_diagnostic_rpc.sql\n' +
+                    '\nABORTING.\n' +
+                    '================================================================\n',
+            );
+            throw missingErr;
+        }
+        throw error;
     }
+    const rpcRows = (data ?? []) as RpcDiagnosticRow[];
+    rows = expandRpcRows(rpcRows);
 
     const byState = rows.reduce(
         (acc, r) => {
@@ -250,24 +293,40 @@ async function main(): Promise<void> {
     console.log('Audit trail written to admin_audit_log under action=AUTH-001-migration.');
 }
 
-async function fallbackDiagnostic(
-    supabase: ReturnType<typeof createClient>,
-): Promise<DiagnosticRow[]> {
-    // Without a deployed SECURITY DEFINER function exposing auth.users, the
-    // most we can do via the JS client is count admin_roles rows. State B
-    // detection requires server-side SQL access. Caller is warned above.
-    const { data, error } = await supabase
-        .from('admin_roles')
-        .select('user_id, role');
-    if (error) throw error;
-    return (data ?? []).map((r) => ({
-        state: 'A',
-        user_id: r.user_id as string,
-        granular_role: r.role as string | null,
-        has_user_metadata: false,
-        has_profile_role: false,
-        has_admin_roles_row: true,
-    }));
+/**
+ * Flatten the RPC's four aggregate rows (state, user_count, user_ids[])
+ * into one DiagnosticRow per user — the shape the downstream code
+ * expects. Derives per-state boolean flags from the state label.
+ */
+export function expandRpcRows(rpcRows: RpcDiagnosticRow[]): DiagnosticRow[] {
+    const out: DiagnosticRow[] = [];
+    for (const r of rpcRows) {
+        const state = rpcStateToLetter(r.state);
+        for (const uid of r.user_ids) {
+            out.push({
+                state,
+                user_id: uid,
+                has_user_metadata: state === 'B' || state === 'C' || state === 'D',
+                has_profile_role: false,
+                has_admin_roles_row: state === 'A' || state === 'C',
+                granular_role: null,
+            });
+        }
+    }
+    return out;
+}
+
+function rpcStateToLetter(state: RpcDiagnosticRow['state']): DiagnosticRow['state'] {
+    switch (state) {
+        case 'A_admin_roles_only':
+            return 'A';
+        case 'B_user_metadata_only':
+            return 'B';
+        case 'C_both_sources':
+            return 'C';
+        case 'D_metadata_role_non_admin':
+            return 'D';
+    }
 }
 
 // Only invoke main when run as a script, not when imported under test.

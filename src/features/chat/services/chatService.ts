@@ -1,3 +1,4 @@
+import * as Sentry from '@sentry/react';
 import { parseSSEStream } from '@/lib/ai/streaming';
 import type {
   ChatResponseMeta,
@@ -5,6 +6,13 @@ import type {
   Conversation,
   ConversationListItem,
 } from '../types/chat.types';
+import {
+  MindMateUnavailableError,
+  SafetyReplacementError,
+} from './errors';
+
+// Re-export so existing consumers (e.g. useChat.ts) keep their import surface.
+export { SafetyReplacementError } from './errors';
 
 // ============================================================
 // API TYPES
@@ -54,20 +62,6 @@ function normalizeSafetyLevel(
 }
 
 // ============================================================
-// ERRORS
-// ============================================================
-
-/** Thrown when server-side output validation replaces the streamed content. */
-export class SafetyReplacementError extends Error {
-  readonly replacementText: string;
-  constructor(replacementText: string) {
-    super('Response replaced by safety filter');
-    this.name = 'SafetyReplacementError';
-    this.replacementText = replacementText;
-  }
-}
-
-// ============================================================
 // PUBLIC API
 // ============================================================
 
@@ -85,9 +79,46 @@ export async function* sendMessage(
   });
 
   if (!response.ok) {
-    const errorData = await response.json().catch(() => ({}));
-    throw new Error(
-      errorData.error || `Chat API error: ${response.status}`,
+    // Read the body exactly once as text. Parsing defensively afterward lets
+    // us distinguish handler-returned errors (structured JSON with `.error`)
+    // from platform-level failures (cold-start crash, hard timeout, HTML
+    // error page from a proxy), which are never parseable JSON.
+    const bodyText = await response.text().catch(() => '');
+
+    let parsedError: string | null = null;
+    try {
+      const parsed = JSON.parse(bodyText);
+      if (parsed && typeof parsed.error === 'string') {
+        parsedError = parsed.error;
+      }
+    } catch {
+      // Body wasn't JSON — fall through to the typed platform-failure path.
+    }
+
+    if (parsedError) {
+      throw new Error(parsedError);
+    }
+
+    Sentry.captureException(new Error('MindMate API non-JSON error response'), {
+      level: 'error',
+      tags: {
+        component: 'mindmate',
+        endpoint: '/api/ai/chat',
+        consumer: 'chatService',
+      },
+      extra: {
+        status: response.status,
+        statusText: response.statusText,
+        bodyPreview: bodyText.slice(0, 500),
+        sessionId,
+        requestId: response.headers.get('x-vercel-id'),
+        contentType: response.headers.get('content-type'),
+      },
+    });
+
+    throw new MindMateUnavailableError(
+      `MindMate unavailable (status ${response.status})`,
+      { cause: new Error(bodyText.slice(0, 200)) },
     );
   }
 

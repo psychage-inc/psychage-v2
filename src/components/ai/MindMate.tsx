@@ -2,12 +2,15 @@ import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { X, Send, Sparkles, AlertTriangle, Phone, Trash2, LogIn, ChevronRight } from 'lucide-react';
+import * as Sentry from '@sentry/react';
 import { useAuth } from '@/context/AuthContext';
 import { chatPersistenceService } from '@/services/chatPersistenceService';
 import { consentService } from '@/services/consentService';
 import { resolveCountry, getPrimaryCrisisLine } from '@/lib/crisis';
 import { parseSSEStream } from '@/lib/ai/streaming';
 import StreamingCursor from '@/features/chat/components/StreamingCursor';
+import MindMateUnavailableCard from '@/features/chat/components/MindMateUnavailableCard';
+import { MindMateUnavailableError } from '@/features/chat/services/errors';
 import AuthModal from '@/components/auth/AuthModal';
 import type { ProviderResult } from '@/lib/ai/types';
 
@@ -15,7 +18,7 @@ interface Message {
     id: string;
     sender: 'user' | 'ai';
     text: string;
-    type?: 'text' | 'crisis' | 'suggestion';
+    type?: 'text' | 'crisis' | 'suggestion' | 'unavailable';
     isStreaming?: boolean;
     suggestions?: { label: string; action: string }[];
     providers?: ProviderResult[];
@@ -201,8 +204,47 @@ const MindMate: React.FC = () => {
             });
 
             if (!res.ok) {
-                const errorData = await res.json().catch(() => ({}));
-                throw new Error(errorData.error || `Chat API error: ${res.status}`);
+                // Read the body exactly once as text. Parsing defensively lets us
+                // distinguish handler-returned errors (structured JSON with `.error`)
+                // from platform-level failures (cold-start crash, hard timeout, HTML
+                // error page from a proxy), which are never parseable JSON.
+                const bodyText = await res.text().catch(() => '');
+
+                let parsedError: string | null = null;
+                try {
+                    const parsed = JSON.parse(bodyText);
+                    if (parsed && typeof parsed.error === 'string') {
+                        parsedError = parsed.error;
+                    }
+                } catch {
+                    // Fall through to the typed platform-failure path.
+                }
+
+                if (parsedError) {
+                    throw new Error(parsedError);
+                }
+
+                Sentry.captureException(new Error('MindMate API non-JSON error response'), {
+                    level: 'error',
+                    tags: {
+                        component: 'mindmate',
+                        endpoint: '/api/ai/chat',
+                        consumer: 'floatingWidget',
+                    },
+                    extra: {
+                        status: res.status,
+                        statusText: res.statusText,
+                        bodyPreview: bodyText.slice(0, 500),
+                        sessionId: getOrCreateSessionId(),
+                        requestId: res.headers.get('x-vercel-id'),
+                        contentType: res.headers.get('content-type'),
+                    },
+                });
+
+                throw new MindMateUnavailableError(
+                    `MindMate unavailable (status ${res.status})`,
+                    { cause: new Error(bodyText.slice(0, 200)) },
+                );
             }
 
             const contentType = res.headers.get('Content-Type') ?? '';
@@ -291,6 +333,28 @@ const MindMate: React.FC = () => {
         } catch (error) {
             // Abort is not an error
             if (error instanceof DOMException && error.name === 'AbortError') return;
+
+            // Platform-level failure: swap in the graceful card instead of raw
+            // error text. `name` fallback guards against bundler-level class
+            // identity mismatches across chunks.
+            const isUnavailable =
+                error instanceof MindMateUnavailableError ||
+                (error instanceof Error && error.name === 'MindMateUnavailableError');
+
+            if (isUnavailable) {
+                console.error('AI Error (platform unavailable):', error);
+                setLastFailedInput(currentInput);
+                setMessages(prev => {
+                    const filtered = prev.filter(m => m.id !== assistantMsgId);
+                    return [...filtered, {
+                        id: 'error-msg',
+                        sender: 'ai' as const,
+                        text: '',
+                        type: 'unavailable' as const,
+                    }];
+                });
+                return;
+            }
 
             const errorMsg = error instanceof Error ? error.message : 'Unknown error';
             console.error("AI Error:", errorMsg, error);
@@ -416,11 +480,14 @@ const MindMate: React.FC = () => {
                                     key={msg.id}
                                     className={`flex gap-3 ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                                 >
-                                    {msg.sender === 'ai' && (
+                                    {msg.sender === 'ai' && msg.type !== 'unavailable' && (
                                         <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
                                             <Sparkles size={12} className="text-primary" />
                                         </div>
                                     )}
+                                    {msg.type === 'unavailable' ? (
+                                        <MindMateUnavailableCard className="flex-1" />
+                                    ) : (
                                     <div className={`max-w-[80%] text-sm leading-relaxed ${msg.sender === 'user'
                                             ? 'bg-surface-active text-text-primary px-4 py-3 rounded-2xl rounded-br-md'
                                             : msg.type === 'crisis'
@@ -472,6 +539,7 @@ const MindMate: React.FC = () => {
                                             </div>
                                         )}
                                     </div>
+                                    )}
                                 </motion.div>
                             ))}
                             {isTyping && !messages.some(m => m.isStreaming && m.text) && (

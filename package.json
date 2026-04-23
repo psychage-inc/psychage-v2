@@ -13,7 +13,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && pnpm run verify:routes && vite build",
+    "build": "tsc && pnpm run verify:routes && pnpm run build:api && vite build",
+    "build:api": "tsx scripts/build-api.ts",
     "preview": "vite preview",
     "lint": "ESLINT_USE_FLAT_CONFIG=false eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write .",
@@ -139,6 +140,7 @@
     "@vitest/coverage-v8": "^4.0.15",
     "autoprefixer": "^10.4.19",
     "axe-core": "^4.10.2",
+    "esbuild": "^0.28.0",
     "eslint": "^9.39.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",

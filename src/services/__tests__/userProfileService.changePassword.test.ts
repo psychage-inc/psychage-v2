@@ -1,12 +1,18 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 
 /**
- * Coverage for AUTH-028: changePassword must invoke the
+ * Coverage for AUTH-028 + hotfix B-5: changePassword must invoke the
  * password-change-notification edge function after a successful update.
  *
  * The dispatch is fire-and-forget: failures do not propagate to the
  * caller, but the invocation itself must happen so that — when SMTP /
  * Resend is configured — the user gets the notification.
+ *
+ * Hotfix B-5 note: the payload no longer includes user_id. The edge
+ * function derives user_id and email from the caller's JWT, so any
+ * client-supplied user_id would be ignored anyway. Passing {} makes
+ * the intent explicit and prevents a future regression that re-adds
+ * the spoofable field.
  */
 
 const updateUserMock = vi.fn();
@@ -44,13 +50,20 @@ describe('userProfileService.changePassword — AUTH-028', () => {
         invokeMock.mockResolvedValue({ data: { ok: true }, error: null });
     });
 
-    it('invokes password-change-notification on success', async () => {
+    it('invokes password-change-notification on success with an empty body (B-5)', async () => {
         const result = await userProfileService.changePassword('oldpw', 'newpw1234');
 
         expect(result.success).toBe(true);
         expect(invokeMock).toHaveBeenCalledWith('password-change-notification', {
-            body: { user_id: 'user-123' },
+            body: {},
         });
+    });
+
+    it('never passes user_id in the payload (B-5 spoof prevention)', async () => {
+        await userProfileService.changePassword('oldpw', 'newpw1234');
+        expect(invokeMock).toHaveBeenCalledTimes(1);
+        const [, options] = invokeMock.mock.calls[0] as [string, { body: unknown }];
+        expect(options.body).not.toHaveProperty('user_id');
     });
 
     it('does not invoke when password update fails', async () => {

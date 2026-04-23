@@ -170,12 +170,11 @@ const UpdatePasswordPage = () => {
                 // succeeded; email failure must not block the UX. Run
                 // BEFORE the global signOut so the user's own session can
                 // still call functions.invoke on their own behalf.
-                const { data: userData } = await supabase.auth.getUser();
-                if (userData?.user?.id) {
-                    void supabase.functions
-                        .invoke('password-change-notification', { body: { user_id: userData.user.id } })
-                        .catch((err) => console.warn('password-change-notification dispatch failed:', err));
-                }
+                // Hotfix B-5: no body payload — the edge function derives
+                // user_id and email from the caller's verified JWT.
+                void supabase.functions
+                    .invoke('password-change-notification', { body: {} })
+                    .catch((err) => console.warn('password-change-notification dispatch failed:', err));
                 // Sign out of all sessions globally — if the password reset
                 // was triggered to recover from a lost device or session
                 // hijack, kill any attacker tokens too. (AUTH-009.)

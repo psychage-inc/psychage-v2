@@ -185,8 +185,10 @@ export const userProfileService = {
             // email. Fire-and-forget — the password change has already
             // succeeded, the email is informational. Failures (no SMTP
             // configured, transport error) do NOT block the response.
+            // Hotfix B-5: no body payload — the edge function derives
+            // user_id and email from the caller's verified JWT.
             void supabase.functions
-                .invoke('password-change-notification', { body: { user_id: user.id } })
+                .invoke('password-change-notification', { body: {} })
                 .catch((err) => {
                     console.warn('password-change-notification dispatch failed:', err);
                 });

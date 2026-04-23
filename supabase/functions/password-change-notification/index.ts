@@ -7,20 +7,45 @@
  * Invoked fire-and-forget by the client immediately after a successful
  * supabase.auth.updateUser({ password }) — see AUTH-028.
  *
- * The email goes to the user's registered email and includes a "this
- * wasn't me" CTA that links to the password-reset flow. If the user
- * recognizes the change as their own, they ignore the email.
+ * AUTH CONTRACT (hotfix B-5):
+ *   - Request MUST include Authorization: Bearer <user_jwt>.
+ *   - The function authenticates the caller via getUser(jwt) and
+ *     derives both user_id and email from the verified session.
+ *   - The request BODY is ignored. An earlier (pre-B-5) version read
+ *     user_id from the body; that created a spam-amplification vector
+ *     where any authenticated caller could send a password-change
+ *     notification to any user. The body is now discarded — callers
+ *     may pass {} or omit it entirely.
  *
- * Email delivery itself depends on the Supabase project's SMTP
- * configuration. This function attempts the send via Supabase's GoTrue
- * admin API (which uses the configured SMTP transport) and logs failures
- * — the password-change UX must NOT depend on the email actually
- * arriving. Dashboard checklist documents the SMTP requirement.
+ * Email delivery itself depends on a configured transactional provider
+ * (Resend via RESEND_API_KEY today; see renderEmail for the template).
+ * If no transport is configured we log a warning instead of failing —
+ * the password-change UX must NOT depend on the email actually arriving.
+ * The dashboard checklist documents the SMTP / Resend requirement.
+ *
+ * Rate limit: per-user, 10-second sliding window, in-memory Map. This
+ * is per-instance only; under heavy scale-out the same user could
+ * still hit separate instances, but the common single-user abuse case
+ * (a script loop from one browser session) is covered. Durable
+ * rate-limiting would require a Postgres-backed counter; accepted as
+ * out-of-scope per the planning decision for this patch-up.
  */
 
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.3';
 import { handleCorsPreflightRequest, createCorsResponse } from '../_shared/cors.ts';
+
+const RATE_LIMIT_WINDOW_MS = 10_000;
+const lastInvocationByUser = new Map<string, number>();
+
+function checkRateLimit(userId: string, nowMs: number): boolean {
+    const last = lastInvocationByUser.get(userId);
+    if (last !== undefined && nowMs - last < RATE_LIMIT_WINDOW_MS) {
+        return false;
+    }
+    lastInvocationByUser.set(userId, nowMs);
+    return true;
+}
 
 serve(async (req) => {
     if (req.method === 'OPTIONS') {
@@ -35,53 +60,60 @@ serve(async (req) => {
 
     try {
         const supabaseUrl = Deno.env.get('SUPABASE_URL');
-        const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
-        if (!supabaseUrl || !supabaseServiceKey) {
+        const supabaseAnonKey = Deno.env.get('SUPABASE_ANON_KEY');
+        if (!supabaseUrl || !supabaseAnonKey) {
             return createCorsResponse(
                 JSON.stringify({ error: 'Server misconfigured: missing Supabase credentials' }),
                 { status: 500 },
             );
         }
 
-        const body = await req.json().catch(() => null);
-        const userId: string | undefined = body?.user_id;
-        if (!userId || typeof userId !== 'string') {
+        // AUTH CHECK — require a bearer token and verify it against
+        // Supabase. We create a client bound to the caller's JWT (NOT
+        // the service role) so auth.getUser() validates the token and
+        // returns the authenticated user or null.
+        const authHeader = req.headers.get('Authorization') ?? req.headers.get('authorization');
+        if (!authHeader || !authHeader.toLowerCase().startsWith('bearer ')) {
             return createCorsResponse(
-                JSON.stringify({ error: 'user_id is required' }),
-                { status: 400 },
+                JSON.stringify({ error: 'Unauthorized' }),
+                { status: 401 },
+            );
+        }
+        const jwt = authHeader.slice('Bearer '.length).trim();
+        if (!jwt) {
+            return createCorsResponse(
+                JSON.stringify({ error: 'Unauthorized' }),
+                { status: 401 },
             );
         }
 
-        const serviceClient = createClient(supabaseUrl, supabaseServiceKey);
+        const userClient = createClient(supabaseUrl, supabaseAnonKey, {
+            global: { headers: { Authorization: `Bearer ${jwt}` } },
+        });
 
-        // Look up the user's email server-side. The client can't be
-        // trusted to supply it (an attacker could redirect the
-        // notification away from the legitimate owner).
-        const { data: userResp, error: userErr } = await serviceClient.auth.admin.getUserById(userId);
-        if (userErr || !userResp?.user?.email) {
-            console.error('password-change-notification: user lookup failed', userErr);
+        const { data: { user }, error: authError } = await userClient.auth.getUser();
+        if (authError || !user?.id || !user.email) {
             return createCorsResponse(
-                JSON.stringify({ error: 'User not found' }),
-                { status: 404 },
+                JSON.stringify({ error: 'Unauthorized' }),
+                { status: 401 },
             );
         }
 
-        const email = userResp.user.email;
+        // Authenticated from here on. Derive identity from the session —
+        // never from the request body.
+        const targetUserId = user.id;
+        const targetEmail = user.email;
+
+        // Per-user rate limit. Gate happens AFTER auth so unauthenticated
+        // callers can't probe which user_ids have been seen recently.
+        if (!checkRateLimit(targetUserId, Date.now())) {
+            return createCorsResponse(
+                JSON.stringify({ error: 'Rate limited. Please wait before retrying.' }),
+                { status: 429 },
+            );
+        }
+
         const timestamp = new Date().toISOString();
-
-        // We send via a templated transactional email. Two options here:
-        //   (a) Supabase's built-in templates (limited customization)
-        //   (b) Direct SMTP / third-party (Resend, Postmark) — preferred
-        //       for branded mail and deliverability tracking
-        //
-        // The dashboard checklist (docs/audits/auth-hotfix-followup-
-        // dashboard.md) covers provider selection. This function uses
-        // the Supabase admin recovery-email path as a placeholder
-        // delivery channel: the recovery-link email does include the
-        // "this wasn't me" affordance via the reset link itself.
-        //
-        // If a dedicated transport (Resend, etc.) is configured, swap
-        // the body of the if-else below to invoke it.
 
         const resendApiKey = Deno.env.get('RESEND_API_KEY');
         if (resendApiKey) {
@@ -94,9 +126,9 @@ serve(async (req) => {
                 },
                 body: JSON.stringify({
                     from: fromAddress,
-                    to: email,
+                    to: targetEmail,
                     subject: 'Your Psychage password was just changed',
-                    html: renderEmail(email, timestamp),
+                    html: renderEmail(targetEmail, timestamp),
                 }),
             });
             if (!resp.ok) {
@@ -111,9 +143,20 @@ serve(async (req) => {
             // SMTP/Resend before this is production-meaningful.
             console.warn(
                 'password-change-notification: no RESEND_API_KEY configured; ' +
-                    'notification not delivered to ' + email,
+                    'notification not delivered to ' + targetEmail,
             );
         }
+
+        // Invocation breadcrumb for operational visibility. user_id
+        // only — email is intentionally not logged (PII minimization
+        // in structured logs).
+        console.log(
+            JSON.stringify({
+                event: 'password-change-notification.invoked',
+                user_id: targetUserId,
+                timestamp,
+            }),
+        );
 
         return createCorsResponse(
             JSON.stringify({ ok: true, sent_at: timestamp }),
@@ -128,8 +171,14 @@ serve(async (req) => {
     }
 });
 
+// Exported for testing only. Not used outside the test harness.
+export const __testing__ = {
+    checkRateLimit,
+    lastInvocationByUser,
+    RATE_LIMIT_WINDOW_MS,
+};
+
 function renderEmail(email: string, timestamp: string): string {
-    // Inline-styled, dependency-free. Branded but minimal.
     return `<!doctype html>
 <html>
   <body style="margin:0;padding:0;font-family:'Inter',system-ui,sans-serif;background:#f5f7f7;">

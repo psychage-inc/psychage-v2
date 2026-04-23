@@ -140,4 +140,28 @@ describe('UpdatePasswordPage — AUTH-009', () => {
         await waitFor(() => expect(updateUserMock).toHaveBeenCalled());
         await waitFor(() => expect(signOutMock).toHaveBeenCalledWith({ scope: 'global' }));
     });
+
+    it('dispatches password-change-notification without user_id in the payload (B-5)', async () => {
+        getSessionMock.mockResolvedValue({ data: { session: null } });
+
+        renderPage();
+
+        await waitFor(() => expect(listenerCb).not.toBeNull());
+
+        await act(async () => {
+            listenerCb!('PASSWORD_RECOVERY', { user: { id: 'u-recovery' } });
+        });
+
+        const passwordInput = await screen.findByLabelText('New Password');
+        const confirmInput = screen.getByLabelText('Confirm New Password');
+        fireEvent.change(passwordInput, { target: { value: 'newpass1234' } });
+        fireEvent.change(confirmInput, { target: { value: 'newpass1234' } });
+        fireEvent.submit(passwordInput.closest('form')!);
+
+        await waitFor(() => expect(invokeMock).toHaveBeenCalled());
+        const [fnName, options] = invokeMock.mock.calls[0] as [string, { body: unknown }];
+        expect(fnName).toBe('password-change-notification');
+        expect(options.body).toEqual({});
+        expect(options.body).not.toHaveProperty('user_id');
+    });
 });

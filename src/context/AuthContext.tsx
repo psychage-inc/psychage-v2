@@ -3,6 +3,25 @@ import { AuthContext, AuthState, AuthContextType } from './AuthContextDefinition
 import { supabase } from '../lib/supabaseClient';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
 
+// AUTH-010: signup extraMetadata is restricted to a known allowlist.
+// Anything outside this set is dropped (with a console.warn) before the
+// payload reaches Supabase. See docs/audits/auth-audit-2026-04-23.md.
+export type SignupExtraMetadata = {
+  age_verified?: boolean;
+  consent_version?: string;
+  country?: string;
+  age?: number;
+  referral_source?: string;
+};
+
+const ALLOWED_EXTRA_KEYS = [
+  'age_verified',
+  'consent_version',
+  'country',
+  'age',
+  'referral_source',
+] as const;
+
 // Map Supabase user to our User type.
 //
 // Role is resolved from app_metadata, not user_metadata. user_metadata is
@@ -117,8 +136,25 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  const signup = useCallback(async (email: string, password: string, displayName?: string, role: 'patient' | 'provider' = 'patient', extraMetadata?: Record<string, unknown>) => {
+  const signup = useCallback(async (email: string, password: string, displayName?: string, role: 'patient' | 'provider' = 'patient', extraMetadata?: SignupExtraMetadata) => {
     try {
+      // AUTH-010: never blind-spread extraMetadata. The previous shape
+      // `Record<string, unknown>` let any caller inject arbitrary keys —
+      // including `role: 'admin'`, which combined with AUTH-001 was a
+      // signup-time escalation path. Filter to the named allowlist.
+      const sanitizedExtras: Record<string, unknown> = {};
+      if (extraMetadata) {
+        for (const key of ALLOWED_EXTRA_KEYS) {
+          const value = (extraMetadata as Record<string, unknown>)[key];
+          if (value !== undefined) sanitizedExtras[key] = value;
+        }
+        for (const key of Object.keys(extraMetadata)) {
+          if (!(ALLOWED_EXTRA_KEYS as readonly string[]).includes(key)) {
+            console.warn(`[signup] Dropping disallowed extraMetadata key: ${key}`);
+          }
+        }
+      }
+
       const { data, error } = await supabase.auth.signUp({
         email,
         password,
@@ -127,7 +163,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             display_name: displayName,
             full_name: displayName,
             role,
-            ...extraMetadata,
+            ...sanitizedExtras,
           },
         },
       });

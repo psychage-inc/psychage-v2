@@ -1,5 +1,5 @@
 /**
- * Pre-bundles each api/**\/*.ts serverless function into a self-contained .js
+ * Pre-bundles each api/**\/*.ts serverless function into a self-contained ESM
  * file so Vercel's Node runtime can cold-start under "type": "module" without
  * ESM extensionless-import resolution failures.
  *
@@ -8,10 +8,26 @@
  * Under ESM, Node strictly requires `.js` extensions, and the function
  * process exits with ERR_MODULE_NOT_FOUND at cold start. Bundling inlines
  * every dependency so there are no runtime import resolutions at all.
+ *
+ * Output strategy:
+ * - Local (VERCEL unset): writes side-by-side `.js` for inspection, leaves
+ *   `.ts` source untouched so dev tooling and editors continue to work.
+ * - Vercel build (VERCEL=1): overwrites the `.ts` source in place with the
+ *   bundled ESM content. The file remains named `.ts` so vercel.json's
+ *   `functions` pattern matches both pre-build (validation) and post-build
+ *   (deployment). The file content is plain ESM JS, which is valid TS by
+ *   superset, so Vercel's TS-to-JS step is effectively a no-op.
+ *
+ * Why not separate `.js` files in Vercel: Vercel validates the `functions`
+ * pattern against source-tree paths BOTH before any user command runs AND
+ * after the build finishes. A `.js` pattern fails pre-build (no `.js` source
+ * exists). A `.ts` pattern with deletion-after-build fails post-build
+ * ("File not found"). In-place overwrite is the only approach that satisfies
+ * both validation passes.
  */
 
 import { build, type BuildOptions } from 'esbuild';
-import { readdir, rm, stat } from 'node:fs/promises';
+import { readdir, rename, stat } from 'node:fs/promises';
 import { resolve, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -21,6 +37,8 @@ const apiDir = resolve(root, 'api');
 const isVercelBuild = process.env.VERCEL === '1';
 
 const MAX_BYTES = 45 * 1024 * 1024; // 45 MB, leaves 10% margin on Vercel's 50 MB limit
+
+const ESM_BANNER = 'import { createRequire as __createRequire } from "node:module"; const require = __createRequire(import.meta.url);';
 
 async function findEntryPoints(): Promise<string[]> {
   const entries = await readdir(apiDir, { recursive: true, withFileTypes: true });
@@ -38,23 +56,34 @@ async function findEntryPoints(): Promise<string[]> {
 }
 
 async function bundleOne(entry: string): Promise<{ outPath: string; sizeBytes: number }> {
-  const outPath = entry.replace(/\.ts$/, '.js');
+  // In Vercel: bundle to a temp file, then atomically replace the .ts source.
+  // esbuild can read+write the same path with allowOverwrite, but a temp+rename
+  // is safer (no risk of a half-written file if esbuild crashes mid-write).
+  // Locally: side-by-side .js for inspection, leave .ts alone.
+  const outPath = isVercelBuild ? entry : entry.replace(/\.ts$/, '.js');
+  const tempPath = isVercelBuild ? `${entry}.bundled.tmp` : outPath;
+
   const options: BuildOptions = {
     entryPoints: [entry],
     bundle: true,
     platform: 'node',
     format: 'esm',
     target: 'node20',
-    outfile: outPath,
-    sourcemap: true,
+    outfile: tempPath,
+    // Sourcemaps in Vercel mode would land at .ts.map (confusing) and inflate
+    // the function bundle. Skip in Vercel; keep locally for debugging.
+    sourcemap: !isVercelBuild,
     logLevel: 'warning',
-    banner: {
-      js: 'import { createRequire as __createRequire } from "node:module"; const require = __createRequire(import.meta.url);',
-    },
+    banner: { js: ESM_BANNER },
     mainFields: ['module', 'main'],
     conditions: ['node', 'import', 'module', 'default'],
   };
   await build(options);
+
+  if (isVercelBuild) {
+    await rename(tempPath, outPath);
+  }
+
   const s = await stat(outPath);
   return { outPath, sizeBytes: s.size };
 }
@@ -67,7 +96,13 @@ async function main() {
   }
 
   console.log(`[build-api] bundling ${entries.length} function(s)...`);
-  console.log(`[build-api] VERCEL=${process.env.VERCEL ?? '(unset)'} — ${isVercelBuild ? 'will remove .ts sources after bundling' : 'keeping .ts sources for local dev'}`);
+  console.log(
+    `[build-api] VERCEL=${process.env.VERCEL ?? '(unset)'} — ${
+      isVercelBuild
+        ? 'overwriting .ts sources in place with self-contained ESM bundles'
+        : 'writing side-by-side .js for local inspection (.ts left untouched)'
+    }`,
+  );
 
   for (const entry of entries) {
     const { outPath, sizeBytes } = await bundleOne(entry);
@@ -80,13 +115,6 @@ async function main() {
           `Consider externalizing heavy deps (anthropic, supabase, openai) and using includeFiles.`,
       );
     }
-  }
-
-  if (isVercelBuild) {
-    for (const entry of entries) {
-      await rm(entry);
-    }
-    console.log(`[build-api] removed ${entries.length} .ts source(s) so Vercel picks up only .js bundles.`);
   }
 
   console.log('[build-api] done.');

@@ -12,6 +12,7 @@ import InteractiveCard from '@/components/ui/InteractiveCard';
 import { LogoIcon } from '@/components/ui/LogoIcon';
 import { supabase } from '@/lib/supabaseClient';
 import { adminUrl, mainUrl } from '@/lib/urls';
+import { safeRedirectPath } from '@/lib/auth/validateRedirect';
 import SEO from '@/components/SEO';
 
 interface LoginPageProps {
@@ -33,9 +34,12 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const isDev = import.meta.env.DEV;
 
-    // Get the page they were trying to visit, or default to appropriate dashboard
-    // Prefer state (set by ProtectedRoute), fall back to query param (survives refresh)
-    const from = location.state?.from?.pathname || searchParams.get('redirectTo') || null;
+    // Get the page they were trying to visit, or default to appropriate dashboard.
+    // Prefer state (set by ProtectedRoute), fall back to query param (survives refresh).
+    // AUTH-030: validate against the allowlist at the read site so every
+    // downstream consumer (navigate, adminUrl) gets an already-safe value.
+    const fromRaw = location.state?.from?.pathname || searchParams.get('redirectTo') || null;
+    const from = fromRaw ? safeRedirectPath(fromRaw) : null;
 
     // Display messages passed via navigation state (e.g., from signup or password reset)
     useEffect(() => {

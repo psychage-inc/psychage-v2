@@ -18,7 +18,7 @@ export const sleepDisordersCommonProblemsArticlesB: Article[] = [
   {
     id: catId(16),
     slug: 'night-terrors-nightmares-when-to-seek-help',
-    status: 'draft',
+    status: 'published',
     title: 'Night Terrors and Nightmares: What They Mean and When to Seek Help',
     description: 'Night terrors and nightmares disrupt sleep differently. Learn to distinguish them, understand their causes, and know when professional help is needed.',
     image: "/images/articles/cat09/cover-016.svg",
@@ -81,7 +81,7 @@ export const sleepDisordersCommonProblemsArticlesB: Article[] = [
   {
     id: catId(17),
     slug: 'sleepwalking-sleep-talking-parasomnias-explained',
-    status: 'draft',
+    status: 'published',
     title: 'Sleepwalking, Sleep Talking, and Other Parasomnias Explained',
     description: 'Parasomnias---unusual behaviors during sleep---range from harmless sleep talking to dangerous sleepwalking. Learn what causes them and how to stay safe.',
     image: "/images/articles/cat09/cover-017.svg",
@@ -142,7 +142,7 @@ export const sleepDisordersCommonProblemsArticlesB: Article[] = [
   {
     id: catId(18),
     slug: 'shift-work-sleep-disorder-irregular-schedule-mental-health',
-    status: 'draft',
+    status: 'published',
     title: 'Shift Work Sleep Disorder: Managing Mental Health on an Irregular Schedule',
     description: 'Night shifts and rotating schedules disrupt circadian rhythms, increasing risk of insomnia, depression, and health problems. Learn coping strategies.',
     image: "/images/articles/cat09/cover-018.svg",
@@ -204,7 +204,7 @@ export const sleepDisordersCommonProblemsArticlesB: Article[] = [
   {
     id: catId(19),
     slug: 'sleep-anxiety-fear-not-sleeping-keeps-you-awake',
-    status: 'draft',
+    status: 'published',
     title: 'Sleep Anxiety: When the Fear of Not Sleeping Keeps You Awake',
     description: 'Worrying about sleep creates a vicious cycle of insomnia. Learn how sleep anxiety develops and evidence-based strategies to break free.',
     image: "/images/articles/cat09/cover-019.svg",
@@ -266,7 +266,7 @@ export const sleepDisordersCommonProblemsArticlesB: Article[] = [
   {
     id: catId(20),
     slug: 'when-to-see-sleep-specialist-signs-more-than-bad-night',
-    status: 'draft',
+    status: 'published',
     title: "When to See a Sleep Specialist: Signs It's More Than Just a Bad Night",
     description: "Not all sleep problems require medical intervention, but some do. Learn when to seek professional help and what to expect from a sleep evaluation.",
     image: "/images/articles/cat09/cover-020.svg",

@@ -1043,7 +1043,7 @@ export const articles: Article[] = [
   {
     id: catId(18),
     slug: 'tokophobia-understanding-and-treating-fear-of-childbirth',
-    status: 'draft',
+    status: 'published',
     title: `Tokophobia: Understanding and Treating Fear of Childbirth`,
     description: `Explore tokophobia (pathological fear of childbirth), distinguish it from normal birth anxiety, and learn about therapeutic interventions that reduce fear and support birth decision-making.`,
     image: '/images/articles/cat18/cover-018.svg',
@@ -1284,7 +1284,7 @@ export const articles: Article[] = [
   {
     id: catId(19),
     slug: 'postpartum-rage-understanding-anger-and-irritability-after-birth',
-    status: 'draft',
+    status: 'published',
     title: `Postpartum Rage: Understanding Anger and Irritability After Birth`,
     description: `Explore postpartum rage as a symptom of perinatal mood disorders, understand its triggers, and learn strategies for managing intense anger while protecting relationships.`,
     image: '/images/articles/cat18/cover-019.svg',
@@ -1519,7 +1519,7 @@ export const articles: Article[] = [
   {
     id: catId(20),
     slug: 'partner-perinatal-mental-health-supporting-non-birthing-parents',
-    status: 'draft',
+    status: 'published',
     title: `Partner Perinatal Mental Health: Supporting Non-Birthing Parents`,
     description: `Understand mental health challenges facing partners during pregnancy and postpartum, including paternal/partner depression, anxiety, and the unique barriers to seeking support.`,
     image: '/images/articles/cat18/cover-020.svg',

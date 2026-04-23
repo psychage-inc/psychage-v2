@@ -18,7 +18,7 @@ export const psychosisResearchArticlesD: Article[] = [
   {
     id: catId(61),
     slug: 'inflammation-and-immune-dysfunction-in-psychosis-a-paradigm-shift',
-    status: 'draft',
+    status: 'published',
     title: 'Inflammation and Immune Dysfunction in Psychosis: A Paradigm Shift',
     description:
       'Explore the growing evidence that immune system dysregulation and neuroinflammation play central roles in psychosis--opening doors to anti-inflammatory treatments and personalized immunopsychiatry.',
@@ -419,7 +419,7 @@ export const psychosisResearchArticlesD: Article[] = [
   {
     id: catId(62),
     slug: 'sleep-disturbances-and-circadian-rhythm-in-schizophrenia-beyond-insomnia',
-    status: 'draft',
+    status: 'published',
     title: 'Sleep Disturbances and Circadian Rhythm in Schizophrenia: Beyond Insomnia',
     description:
       'Discover how profound sleep and circadian disruptions in schizophrenia worsen symptoms, cognition, and health--and how sleep-focused interventions offer underutilized therapeutic potential.',
@@ -843,7 +843,7 @@ export const psychosisResearchArticlesD: Article[] = [
   {
     id: catId(63),
     slug: 'oxytocin-and-social-cognition-in-schizophrenia-the-bonding-hormone',
-    status: 'draft',
+    status: 'published',
     title: 'Oxytocin and Social Cognition in Schizophrenia: The Bonding Hormone',
     description:
       'Explore how oxytocin, the hormone of social bonding, is disrupted in schizophrenia--and how oxytocin-based therapies may improve social cognition, trust, and negative symptoms.',
@@ -1238,7 +1238,7 @@ export const psychosisResearchArticlesD: Article[] = [
   {
     id: catId(64),
     slug: 'technology-assisted-monitoring-and-intervention-in-psychosis-digital-mental-health',
-    status: 'draft',
+    status: 'published',
     title: 'Technology-Assisted Monitoring and Intervention in Psychosis: Digital Mental Health',
     description:
       'Discover how smartphones, wearables, and AI-driven apps are transforming psychosis care--enabling early relapse detection, remote monitoring, and just-in-time interventions.',
@@ -1652,7 +1652,7 @@ export const psychosisResearchArticlesD: Article[] = [
   {
     id: catId(65),
     slug: 'building-research-participation-and-community-engagement-in-psychosis-science',
-    status: 'draft',
+    status: 'published',
     title: 'Building Research Participation and Community Engagement in Psychosis Science',
     description:
       'Explore how people with lived experience of psychosis are becoming partners in research--shaping questions, methods, and priorities to make science more relevant and equitable.',

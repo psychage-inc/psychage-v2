@@ -19,7 +19,7 @@ export const attachmentStylesArticlesA: Article[] = [
   {
     id: catId(1),
     slug: 'four-attachment-styles-how-early-bonds-shape-adult-love',
-    status: 'draft',
+    status: 'published',
     title: 'The Four Attachment Styles: How Early Bonds Shape Adult Love',
     description: 'Discover how your childhood relationships with caregivers influence your adult romantic patterns through the lens of attachment theory.',
     image: "/images/articles/cat03/cover-001.svg",
@@ -293,7 +293,7 @@ export const attachmentStylesArticlesA: Article[] = [
   {
     id: catId(2),
     slug: 'anxious-attachment-when-fear-of-abandonment-drives-relationships',
-    status: 'draft',
+    status: 'published',
     title: 'Anxious Attachment: When Fear of Abandonment Drives Your Relationships',
     description: 'Explore the patterns of anxious attachment---chronic worry about rejection, emotional intensity, and the constant need for reassurance in relationships.',
     image: "/images/articles/cat03/cover-002.svg",
@@ -553,7 +553,7 @@ export const attachmentStylesArticlesA: Article[] = [
   {
     id: catId(3),
     slug: 'avoidant-attachment-when-closeness-feels-like-a-threat',
-    status: 'draft',
+    status: 'published',
     title: 'Avoidant Attachment: When Closeness Feels Like a Threat',
     description: 'Understand the patterns of avoidant attachment---emotional distance, discomfort with vulnerability, and the prioritization of independence over intimacy.',
     image: "/images/articles/cat03/cover-003.svg",

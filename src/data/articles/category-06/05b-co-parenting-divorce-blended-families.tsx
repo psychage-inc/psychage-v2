@@ -18,7 +18,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
   {
     id: catId(46),
     slug: 'co-parenting-communication-tools-reducing-conflict',
-    status: 'draft',
+    status: 'published',
     title: 'Co-Parenting Communication: Tools and Strategies for Reducing Conflict',
     description: "Master practical communication techniques and tools that reduce conflict and keep co-parenting focused on children's needs.",
     image: '/images/articles/cat06/cover-046.svg',
@@ -288,7 +288,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
   {
     id: catId(47),
     slug: 'parent-speaks-negatively-other-impact-children',
-    status: 'draft',
+    status: 'published',
     title: 'When a Parent Speaks Negatively About the Other: The Impact on Children',
     description: 'Understand how parental bad-mouthing harms children and learn how to protect your child when an ex speaks negatively about you.',
     image: "/images/articles/cat06/cover-047.svg",
@@ -532,7 +532,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
   {
     id: catId(48),
     slug: 'shared-custody-attachment-transitions-young-children',
-    status: 'draft',
+    status: 'published',
     title: 'Shared Custody and Attachment: How Transitions Affect Young Children',
     description: 'Learn how frequent transitions between parents affect attachment security in young children and strategies to minimize disruption.',
     image: "/images/articles/cat06/cover-048.svg",
@@ -745,7 +745,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
   {
     id: catId(49),
     slug: 'dating-again-single-parent-managing-emotions',
-    status: 'draft',
+    status: 'published',
     title: "Dating Again as a Single Parent: Managing Your Own and Your Children's Emotions",
     description: "Navigate the challenges of dating after divorce or separation while protecting your children and managing complex emotions.",
     image: "/images/articles/cat06/cover-049.svg",
@@ -961,7 +961,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
   {
     id: catId(50),
     slug: 'long-term-mental-health-outcomes-children-divorce',
-    status: 'draft',
+    status: 'published',
     title: 'The Long-Term Mental Health Outcomes of Children of Divorce',
     description: "Explore what research reveals about how divorce affects children's mental health into adulthood, and the protective factors that support resilience.",
     image: '/images/articles/cat06/cover-050.svg',

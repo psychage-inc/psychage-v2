@@ -1955,7 +1955,7 @@ export const settingBoundariesArticlesB: Article[] = [
   {
     id: catId(18),
     slug: 'boundaries-vs-walls-protect-yourself-without-shutting-people-out',
-    status: 'draft',
+    status: 'published',
     title: 'Boundaries vs. Walls: How to Protect Yourself Without Shutting People Out',
     description: 'Understand the critical difference between protective boundaries and isolating walls---and how to build the former without creating the latter.',
     image: "/images/articles/cat03/cover-018.svg",
@@ -2205,7 +2205,7 @@ export const settingBoundariesArticlesB: Article[] = [
   {
     id: catId(19),
     slug: 'digital-boundaries-managing-availability-social-media-screen-time',
-    status: 'draft',
+    status: 'published',
     title: 'Digital Boundaries: Managing Availability, Social Media, and Screen Time',
     description: 'Set healthy limits around technology, social media, and constant connectivity to protect your attention and mental health.',
     image: "/images/articles/cat03/cover-019.svg",

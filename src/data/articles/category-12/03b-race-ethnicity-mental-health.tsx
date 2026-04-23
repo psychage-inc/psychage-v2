@@ -391,7 +391,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
   {
     id: catId(27),
     slug: 'asian-american-mental-health-model-minority-myth-consequences',
-    status: 'draft',
+    status: 'published',
     title: 'Asian American Mental Health: The Model Minority Myth and Its Consequences',
     description: 'How the model minority stereotype harms Asian American mental health, and why seeking help requires breaking cultural and systemic barriers.',
     image: "/images/articles/cat12/cover-027.svg",
@@ -720,7 +720,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
   {
     id: catId(28),
     slug: 'mental-health-multiracial-multicultural-navigating-multiple-identities',
-    status: 'draft',
+    status: 'published',
     title: 'Mental Health in Multiracial and Multicultural Individuals: Navigating Multiple Identities',
     description: 'Explore the unique mental health challenges of having multiple racial or cultural identities, from belonging nowhere to integrating complexity.',
     image: "/images/articles/cat12/cover-028.svg",
@@ -1043,7 +1043,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
   {
     id: catId(29),
     slug: 'addressing-mental-health-predominantly-white-institutions',
-    status: 'draft',
+    status: 'published',
     title: 'Addressing Mental Health in Predominantly White Institutions',
     description: 'Navigate the mental health challenges of being a student or employee of color in predominantly white spaces, and find strategies for survival and thriving.',
     image: "/images/articles/cat12/cover-029.svg",
@@ -1329,7 +1329,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
   {
     id: catId(30),
     slug: 'culturally-adapted-therapies-treatment-work-across-racial-groups',
-    status: 'draft',
+    status: 'published',
     title: 'Culturally Adapted Therapies: What Makes Treatment Work Across Racial Groups',
     description: 'Learn how evidence-based therapies can be adapted to honor cultural values, and what to look for in treatment that respects your full identity.',
     image: "/images/articles/cat12/cover-030.svg",

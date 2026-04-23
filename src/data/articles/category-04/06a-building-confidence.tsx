@@ -17,7 +17,7 @@ export const buildingConfidenceArticlesA: Article[] = [
   {
     id: catId(51),
     slug: 'confidence-gap-act-confident',
-    status: 'draft',
+    status: 'published',
     title: "The Confidence Gap: Why You Don't Need to Feel Confident to Act Confident",
     description: "Discover why waiting to feel confident keeps you stuck, and how action creates confidence rather than the other way around.",
     image: "/images/articles/cat04/cover-051.svg",
@@ -256,7 +256,7 @@ export const buildingConfidenceArticlesA: Article[] = [
   {
     id: catId(52),
     slug: 'self-efficacy-believing-makes-possible',
-    status: 'draft',
+    status: 'published',
     title: 'Self-Efficacy: How Believing You Can Do Something Makes It Possible',
     description: "Albert Bandura's landmark research shows that belief in your capability to succeed is a stronger predictor of performance than actual ability.",
     image: '/images/articles/cat04/cover-052.svg',
@@ -529,7 +529,7 @@ export const buildingConfidenceArticlesA: Article[] = [
   {
     id: catId(53),
     slug: 'small-wins-build-major-confidence',
-    status: 'draft',
+    status: 'published',
     title: 'Small Wins: How Minor Accomplishments Build Major Confidence',
     description: 'Research shows that accumulating small victories creates momentum and self-efficacy more effectively than pursuing big, distant goals.',
     image: "/images/articles/cat04/cover-053.svg",

@@ -20,7 +20,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
   {
     id: catId(1),
     slug: 'what-is-loneliness-difference-between-alone-and-feeling-alone',
-    status: 'draft',
+    status: 'published',
     title: 'What Is Loneliness? The Difference Between Being Alone and Feeling Alone',
     description: 'Loneliness is not the same as being physically alone. Understand the psychological experience of loneliness and why it affects so many people.',
     image: "/images/articles/cat15/cover-001.svg",
@@ -265,7 +265,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
   {
     id: catId(2),
     slug: 'neuroscience-of-social-connection-why-brain-needs-other-people',
-    status: 'draft',
+    status: 'published',
     title: 'The Neuroscience of Social Connection: Why Your Brain Needs Other People',
     description: 'Discover how social connection shapes brain structure, chemistry, and function --- and why isolation triggers the same threat response as physical danger.',
     image: "/images/articles/cat15/cover-002.svg",
@@ -638,7 +638,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
   {
     id: catId(3),
     slug: 'health-impacts-of-loneliness-why-isolation-dangerous-as-smoking',
-    status: 'draft',
+    status: 'published',
     title: 'The Health Impacts of Loneliness: Why Isolation Is as Dangerous as Smoking',
     description: "Loneliness is not just an emotional experience --- it's a major public health crisis that increases mortality risk, weakens immunity, and accelerates aging.",
     image: '/images/articles/cat15/cover-003.svg',
@@ -1020,7 +1020,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
   {
     id: catId(4),
     slug: 'surgeon-general-advisory-on-loneliness-what-it-says-why-it-matters',
-    status: 'draft',
+    status: 'published',
     title: "The Surgeon General's Advisory on Loneliness: What It Says and Why It Matters",
     description: "In 2023, the U.S. Surgeon General declared loneliness a public health epidemic. Here's what the advisory says and what it means for policy and practice.",
     image: "/images/articles/cat15/cover-004.svg",
@@ -1433,7 +1433,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
   {
     id: catId(5),
     slug: 'loneliness-vs-solitude-how-alone-time-healing-or-harmful',
-    status: 'draft',
+    status: 'published',
     title: 'Loneliness vs. Solitude: How Alone Time Can Be Healing or Harmful',
     description: 'Being alone is not the same as loneliness. Understand when solitude supports well-being and when isolation becomes harmful.',
     image: "/images/articles/cat15/cover-005.svg",

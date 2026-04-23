@@ -27,7 +27,7 @@ export const treatmentPsychoticArticlesB: Article[] = [
   {
     id: catId(26),
     slug: 'early-intervention-for-psychosis-why-timing-changes-everything',
-    status: 'draft',
+    status: 'published',
     title: 'Early Intervention for Psychosis: Why Timing Changes Everything',
     description: 'How early intervention programs for first-episode psychosis transform outcomes --- the critical period hypothesis, coordinated specialty care, and why every week of untreated psychosis matters.',
     image: '/images/articles/cat16/cover-026.svg',
@@ -219,7 +219,7 @@ export const treatmentPsychoticArticlesB: Article[] = [
   {
     id: catId(27),
     slug: 'art-music-therapy-creative-approaches-psychosis-treatment',
-    status: 'draft',
+    status: 'published',
     title: 'Art Therapy, Music Therapy, and Creative Approaches to Psychosis Treatment',
     description: 'How creative arts therapies complement traditional treatment for psychosis --- the evidence for art therapy, music therapy, and drama therapy in improving engagement, expression, and recovery.',
     image: '/images/articles/cat16/cover-027.svg',
@@ -469,7 +469,7 @@ export const treatmentPsychoticArticlesB: Article[] = [
   {
     id: catId(28),
     slug: 'supported-employment-vocational-rehabilitation-psychosis',
-    status: 'draft',
+    status: 'published',
     title: 'Supported Employment and Vocational Rehabilitation for People With Psychosis',
     description: 'How the Individual Placement and Support model is transforming employment outcomes for people with psychosis --- and why work itself is a form of treatment.',
     image: '/images/articles/cat16/cover-028.svg',
@@ -701,7 +701,7 @@ export const treatmentPsychoticArticlesB: Article[] = [
   {
     id: catId(29),
     slug: 'exercise-physical-health-psychotic-conditions',
-    status: 'draft',
+    status: 'published',
     title: 'Exercise and Physical Health in Psychotic Conditions',
     description: 'The evidence for exercise as a treatment for psychosis symptoms --- how physical activity improves cognition, mood, and physical health in people with schizophrenia and related conditions.',
     image: '/images/articles/cat16/cover-029.svg',
@@ -947,7 +947,7 @@ export const treatmentPsychoticArticlesB: Article[] = [
   {
     id: catId(30),
     slug: 'navigating-mental-health-system-psychosis-practical-guide',
-    status: 'draft',
+    status: 'published',
     title: 'Navigating the Mental Health System With Psychosis: A Practical Guide',
     description: 'A practical guide to navigating psychiatric services, understanding your rights, communicating with treatment teams, and advocating for comprehensive care when living with psychosis.',
     image: '/images/articles/cat16/cover-030.svg',

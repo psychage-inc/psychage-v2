@@ -18,7 +18,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
   {
     id: catId(61),
     slug: 'sandwich-generation-caring-children-aging-parents',
-    status: 'draft',
+    status: 'published',
     title: 'The Sandwich Generation: Caring for Children and Aging Parents Simultaneously',
     description: 'Navigate the unique challenges of caring for both young children and aging parents at the same time.',
     image: "/images/articles/cat06/cover-061.svg",
@@ -341,7 +341,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
   {
     id: catId(62),
     slug: 'caregiver-burnout-aging-parent-mental-health',
-    status: 'draft',
+    status: 'published',
     title: 'Caregiver Burnout: When Looking After an Aging Parent Depletes Your Own Health',
     description: 'Recognize the signs of caregiver burnout and learn strategies to protect your mental and physical health while caring for an aging parent.',
     image: "/images/articles/cat06/cover-062.svg",
@@ -1014,7 +1014,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
   {
     id: catId(64),
     slug: 'watching-parent-decline-grief-before-loss',
-    status: 'draft',
+    status: 'published',
     title: 'Watching a Parent Decline: The Grief That Starts Before Loss',
     description: `Understand anticipatory grief and how to cope with watching a parent's cognitive or physical decline.`,
     image: '/images/articles/cat06/cover-064.svg',
@@ -1355,7 +1355,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
   {
     id: catId(65),
     slug: 'dementia-family-mental-health-caring-someone-forgetting',
-    status: 'draft',
+    status: 'published',
     title: `Dementia and Family Mental Health: Caring for Someone Who's Forgetting You`,
     description: "Navigate the unique emotional challenges of caring for a family member with dementia and protect your own mental health in the process.",
     image: "/images/articles/cat06/cover-065.svg",

@@ -16,7 +16,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
   {
     id: catId(6),
     slug: 'interpersonal-therapy-ipt-healing-through-relationship-patterns',
-    status: 'draft',
+    status: 'published',
     title: 'Interpersonal Therapy (IPT): Healing Through Relationship Patterns',
     description: 'Discover how IPT addresses depression and other conditions by improving your relationships and communication, grounded in attachment theory and research.',
     image: "/images/articles/cat14/cover-006.svg",
@@ -340,7 +340,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
   {
     id: catId(7),
     slug: 'humanistic-person-centered-therapy-unconditional-positive-regard',
-    status: 'draft',
+    status: 'published',
     title: 'Humanistic and Person-Centered Therapy: The Power of Unconditional Positive Regard',
     description: 'Learn how person-centered therapy creates a safe, non-judgmental space where you can explore your authentic self and find your own path to healing.',
     image: "/images/articles/cat14/cover-007.svg",
@@ -657,7 +657,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
   {
     id: catId(8),
     slug: 'family-systems-therapy-whole-family-needs-to-heal',
-    status: 'draft',
+    status: 'published',
     title: 'Family Systems Therapy: When the Whole Family Needs to Heal',
     description: 'Explore family therapy approaches that treat the family as an interconnected system, addressing patterns, roles, and dynamics that affect everyone.',
     image: "/images/articles/cat14/cover-008.svg",
@@ -1059,7 +1059,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
   {
     id: catId(9),
     slug: 'group-therapy-healing-in-community-works',
-    status: 'draft',
+    status: 'published',
     title: 'Group Therapy: Why Healing in Community Works for Many People',
     description: 'Learn how group therapy harnesses the power of shared experience, peer support, and interpersonal learning to create lasting change.',
     image: "/images/articles/cat14/cover-009.svg",
@@ -1458,7 +1458,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
   {
     id: catId(10),
     slug: 'integrative-therapy-therapists-combine-approaches-individual-needs',
-    status: 'draft',
+    status: 'published',
     title: 'Integrative Therapy: How Therapists Combine Approaches for Individual Needs',
     description: 'Discover how integrative therapy draws from multiple evidence-based approaches to create personalized treatment tailored to your unique situation.',
     image: "/images/articles/cat14/cover-010.svg",

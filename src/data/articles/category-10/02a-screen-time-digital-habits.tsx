@@ -341,7 +341,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
   {
     id: catId(12),
     slug: 'smartphone-addiction-real-or-bad-habit',
-    status: 'draft',
+    status: 'published',
     title: 'Smartphone Addiction: Is It Real or Just a Bad Habit?',
     description: 'Examining the science of phone addiction, what distinguishes compulsion from habit, and when screen use becomes a clinical problem.',
     image: "/images/articles/cat10/cover-012.svg",
@@ -996,7 +996,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
   {
     id: catId(14),
     slug: 'digital-minimalism-reduce-tech-footprint',
-    status: 'draft',
+    status: 'published',
     title: 'Digital Minimalism: Reducing Your Tech Footprint Without Going Off-Grid',
     description: 'A practical guide to using technology intentionally, cutting digital clutter, and building a healthier relationship with your devices.',
     image: "/images/articles/cat10/cover-014.svg",

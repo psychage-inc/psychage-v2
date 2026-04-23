@@ -18,7 +18,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
   {
     id: catId(16),
     slug: 'ptsd-nightmares-why-trauma-disrupts-sleep',
-    status: 'draft',
+    status: 'published',
     title: 'PTSD and Nightmares: Why Trauma Disrupts Your Sleep',
     description: 'PTSD nightmares are more than bad dreams. Learn why trauma invades your sleep, the neuroscience behind nightmares, and evidence-based strategies to improve sleep.',
     image: "/images/articles/cat11/cover-016.svg",
@@ -415,7 +415,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
   {
     id: catId(17),
     slug: 'trauma-dissociation-mind-disconnects-survive',
-    status: 'draft',
+    status: 'published',
     title: 'Trauma and Dissociation: When Your Mind Disconnects to Survive',
     description: 'Dissociation is a protective mechanism where your mind separates from overwhelming experiences. Learn about dissociation in trauma and paths to reconnection.',
     image: "/images/articles/cat11/cover-017.svg",
@@ -819,7 +819,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
   {
     id: catId(18),
     slug: 'ptsd-first-responders-cost-witnessing-crisis',
-    status: 'draft',
+    status: 'published',
     title: 'PTSD in First Responders: The Cost of Witnessing Crisis',
     description: 'First responders face cumulative trauma exposure. Learn about PTSD in police, firefighters, paramedics, and why occupational trauma requires targeted support.',
     image: "/images/articles/cat11/cover-018.svg",
@@ -1185,7 +1185,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
   {
     id: catId(19),
     slug: 'military-ptsd-combat-trauma-challenges-coming-home',
-    status: 'draft',
+    status: 'published',
     title: 'Military PTSD: Combat Trauma and the Challenges of Coming Home',
     description: 'Combat PTSD affects 11-20% of veterans. Learn about military trauma, the transition home, barriers to care, and VA treatment options.',
     image: "/images/articles/cat11/cover-019.svg",
@@ -1567,7 +1567,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
   {
     id: catId(20),
     slug: 'ptsd-vs-acute-stress-disorder-understanding-timeline',
-    status: 'draft',
+    status: 'published',
     title: 'PTSD vs. Acute Stress Disorder: Understanding the Timeline',
     description: 'Not all trauma reactions become PTSD. Learn the difference between Acute Stress Disorder, normal trauma response, and PTSD---and why timing matters for treatment.',
     image: "/images/articles/cat11/cover-020.svg",

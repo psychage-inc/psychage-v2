@@ -16,7 +16,7 @@ export const articles: Article[] = [
   {
     id: catId(6),
     slug: 'abortion-and-mental-health-emotional-responses-and-recovery',
-    status: 'draft',
+    status: 'published',
     title: `Abortion and Mental Health: Emotional Responses and Recovery`,
     description: `Explore the diverse emotional experiences following abortion, evidence on mental health outcomes, and how to support psychological well-being during this personal decision.`,
     image: '/images/articles/cat18/cover-006.svg',
@@ -294,7 +294,7 @@ export const articles: Article[] = [
   {
     id: catId(7),
     slug: 'pcos-and-mental-health-beyond-physical-symptoms',
-    status: 'draft',
+    status: 'published',
     title: `PCOS and Mental Health: Beyond Physical Symptoms`,
     description: `Understand the profound psychological impact of polycystic ovary syndrome (PCOS), including depression, anxiety, body image concerns, and strategies for holistic well-being.`,
     image: '/images/articles/cat18/cover-007.svg',
@@ -604,7 +604,7 @@ export const articles: Article[] = [
   {
     id: catId(8),
     slug: 'endometriosis-and-mental-health-chronic-pain-and-psychological-impact',
-    status: 'draft',
+    status: 'published',
     title: `Endometriosis and Mental Health: Chronic Pain and Psychological Impact`,
     description: `Examine the mental health consequences of living with endometriosis, including the effects of chronic pain, diagnostic delays, fertility concerns, and strategies for psychological resilience.`,
     image: '/images/articles/cat18/cover-008.svg',
@@ -891,7 +891,7 @@ export const articles: Article[] = [
   {
     id: catId(9),
     slug: 'reproductive-coercion-recognizing-and-recovering-from-control',
-    status: 'draft',
+    status: 'published',
     title: `Reproductive Coercion: Recognizing and Recovering from Control`,
     description: `Understand reproductive coercion as a form of intimate partner abuse, including birth control sabotage, pregnancy pressure, and abortion coercion, plus paths to safety and psychological recovery.`,
     image: '/images/articles/cat18/cover-009.svg',
@@ -1183,7 +1183,7 @@ export const articles: Article[] = [
   {
     id: catId(10),
     slug: 'body-image-and-reproductive-health-pregnancy-weight-and-self-worth',
-    status: 'draft',
+    status: 'published',
     title: `Body Image and Reproductive Health: Pregnancy, Weight, and Self-Worth`,
     description: `Explore the complex relationship between body image and reproductive health, including pregnancy body changes, postpartum recovery pressures, and cultivating body respect through reproductive experiences.`,
     image: '/images/articles/cat18/cover-010.svg',

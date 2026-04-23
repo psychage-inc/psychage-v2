@@ -18,7 +18,7 @@ export const selfCompassionArticlesC: Article[] = [
   {
     id: catId(17),
     slug: 'writing-self-compassion-letter-guided-exercise',
-    status: 'draft',
+    status: 'published',
     title: 'Writing a Self-Compassion Letter: A Guided Exercise',
     description: 'Follow a step-by-step process to write yourself a compassionate letter that offers kindness, understanding, and perspective during difficult times.',
     image: "/images/articles/cat04/cover-017.svg",
@@ -279,7 +279,7 @@ export const selfCompassionArticlesC: Article[] = [
   {
     id: catId(18),
     slug: 'self-compassion-vs-self-pity-critical-difference',
-    status: 'draft',
+    status: 'published',
     title: 'Self-Compassion vs. Self-Pity: Understanding the Critical Difference',
     description: 'Learn how self-compassion differs from self-pity and why this distinction matters for mental health and personal growth.',
     image: "/images/articles/cat04/cover-018.svg",

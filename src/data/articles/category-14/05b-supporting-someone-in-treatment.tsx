@@ -14,7 +14,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
   {
     id: catId(46),
     slug: 'talk-to-someone-about-getting-help-without-pushing-away',
-    status: 'draft',
+    status: 'published',
     title: 'How to Talk to Someone About Getting Help Without Pushing Them Away',
     description: 'Learn the communication techniques that encourage treatment-seeking without defensiveness, resistance, or damaged relationships.',
     image: "/images/articles/cat14/cover-046.svg",
@@ -332,7 +332,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
   {
     id: catId(47),
     slug: 'what-to-do-when-someone-refuses-treatment',
-    status: 'draft',
+    status: 'published',
     title: 'What to Do When Someone Refuses Treatment',
     description: "Your loved one refuses help. Learn how to cope, set boundaries, and know when you've done all you can.",
     image: '/images/articles/cat14/cover-047.svg',
@@ -586,7 +586,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
   {
     id: catId(48),
     slug: 'supporting-someone-after-psychiatric-hospitalization',
-    status: 'draft',
+    status: 'published',
     title: 'Supporting Someone After a Psychiatric Hospitalization',
     description: 'Your loved one is coming home from inpatient psychiatric care. Learn how to support their recovery, prevent relapse, and take care of yourself.',
     image: "/images/articles/cat14/cover-048.svg",
@@ -859,7 +859,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
   {
     id: catId(49),
     slug: 'family-role-mental-health-recovery-boundaries-support-self-care',
-    status: 'draft',
+    status: 'published',
     title: "The Family's Role in Mental Health Recovery: Boundaries, Support, and Self-Care",
     description: "How families can support recovery without enabling, lose themselves in caregiving, or burning out. A balanced approach.",
     image: "/images/articles/cat14/cover-049.svg",
@@ -1211,7 +1211,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
   {
     id: catId(50),
     slug: 'building-support-network-mental-health',
-    status: 'draft',
+    status: 'published',
     title: 'Building a Support Network: Because No One Should Navigate Mental Health Alone',
     description: 'How to build, maintain, and benefit from a diverse support network for mental health---because community is part of healing.',
     image: "/images/articles/cat14/cover-050.svg",

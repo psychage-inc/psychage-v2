@@ -19,7 +19,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
   {
     id: catId(16),
     slug: 'power-of-naming-emotions-affect-labeling',
-    status: 'draft',
+    status: 'published',
     title: 'The Power of Naming Your Emotions: Why Labeling Feelings Calms the Brain',
     description: 'Discover the neuroscience behind affect labeling --- how simply naming your emotions reduces amygdala activation and helps you regain emotional control.',
     image: "/images/articles/cat01/cover-016.svg",
@@ -267,7 +267,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
   {
     id: catId(17),
     slug: 'emotional-first-aid-first-five-minutes',
-    status: 'draft',
+    status: 'published',
     title: 'Emotional First Aid: What to Do in the First 5 Minutes of a Strong Emotion',
     description: 'Learn a five-minute emotional first aid protocol for the critical window when intense feelings first hit. Evidence-based steps to stabilize before emotions spiral.',
     image: "/images/articles/cat01/cover-017.svg",
@@ -486,7 +486,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
   {
     id: catId(18),
     slug: 'sit-with-uncomfortable-emotions-without-numbing',
-    status: 'draft',
+    status: 'published',
     title: 'How to Sit with Uncomfortable Emotions Without Numbing or Avoiding',
     description: 'Learn to tolerate difficult feelings without suppressing, avoiding, or numbing them. Evidence-based approaches from ACT, DBT, and mindfulness research.',
     image: "/images/articles/cat01/cover-018.svg",
@@ -707,7 +707,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
   {
     id: catId(19),
     slug: 'using-movement-to-regulate-nervous-system',
-    status: 'draft',
+    status: 'published',
     title: 'Using Movement to Regulate Your Nervous System',
     description: 'Learn how physical movement --- from walking to shaking to yoga --- directly regulates your nervous system and transforms emotional states, backed by neuroscience research.',
     image: "/images/articles/cat01/cover-019.svg",
@@ -943,7 +943,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
   {
     id: catId(20),
     slug: 'building-emotional-regulation-toolkit',
-    status: 'draft',
+    status: 'published',
     title: 'Building an Emotional Regulation Toolkit: Your Personalized Plan',
     description: 'Create a personalized emotional regulation toolkit tailored to your unique triggers, strengths, and lifestyle. A practical guide to assembling strategies that actually work for you.',
     image: "/images/articles/cat01/cover-020.svg",

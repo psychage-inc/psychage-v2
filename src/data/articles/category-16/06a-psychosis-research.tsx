@@ -14,7 +14,7 @@ export const psychosisResearchArticlesA: Article[] = [
   {
     id: catId(46),
     slug: 'neurobiology-psychosis-what-happens-in-the-brain',
-    status: 'draft',
+    status: 'published',
     title: 'The Neurobiology of Psychosis: What Happens in the Brain',
     description:
       'Explore the brain changes, neurotransmitter systems, and neural circuits involved in psychotic experiences, based on decades of neuroscience research.',
@@ -385,7 +385,7 @@ export const psychosisResearchArticlesA: Article[] = [
   {
     id: catId(47),
     slug: 'genetics-psychosis-what-research-tells-us-about-heredity-and-risk',
-    status: 'draft',
+    status: 'published',
     title: 'Genetics and Psychosis: What Research Tells Us About Heredity and Risk',
     description:
       'Learn how genetic research has reshaped our understanding of psychosis risk, from family studies to genome-wide association studies revealing hundreds of risk variants.',
@@ -730,7 +730,7 @@ export const psychosisResearchArticlesA: Article[] = [
   {
     id: catId(48),
     slug: 'brain-imaging-psychosis-what-scans-reveal-about-the-mind',
-    status: 'draft',
+    status: 'published',
     title: 'Brain Imaging and Psychosis: What Scans Reveal About the Mind',
     description:
       'Discover how MRI, fMRI, PET, and other imaging technologies have revolutionized our understanding of brain structure and function in psychotic disorders.',
@@ -1092,7 +1092,7 @@ export const psychosisResearchArticlesA: Article[] = [
   {
     id: catId(49),
     slug: 'early-detection-psychosis-predicting-and-preventing-first-episodes',
-    status: 'draft',
+    status: 'published',
     title: 'Early Detection of Psychosis: Predicting and Preventing First Episodes',
     description:
       'Learn how researchers and clinicians identify people at high risk for psychosis before symptoms fully emerge, and what interventions may delay or prevent onset.',
@@ -1469,7 +1469,7 @@ export const psychosisResearchArticlesA: Article[] = [
   {
     id: catId(50),
     slug: 'novel-antipsychotic-treatments-beyond-dopamine-blockers',
-    status: 'draft',
+    status: 'published',
     title: 'Novel Antipsychotic Treatments: Beyond Dopamine Blockers',
     description:
       'Explore emerging antipsychotic drugs and treatment approaches that target glutamate, serotonin, inflammation, and other systems beyond traditional dopamine blockade.',

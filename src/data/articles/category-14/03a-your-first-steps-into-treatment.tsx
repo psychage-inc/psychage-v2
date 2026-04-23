@@ -18,7 +18,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
   {
     id: catId(21),
     slug: 'how-to-know-when-its-time-to-see-therapist',
-    status: 'draft',
+    status: 'published',
     title: "How to Know When It's Time to See a Therapist",
     description: "Recognize the signs that professional help could benefit you, and learn when self-help strategies aren't enough.",
     image: "/images/articles/cat14/cover-021.svg",
@@ -285,7 +285,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
   {
     id: catId(22),
     slug: 'your-first-therapy-session-what-actually-happens',
-    status: 'draft',
+    status: 'published',
     title: 'Your First Therapy Session: What Actually Happens',
     description: 'Demystify your first therapy session with a step-by-step walkthrough of what to expect, what questions to ask, and how to prepare.',
     image: "/images/articles/cat14/cover-022.svg",
@@ -568,7 +568,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
   {
     id: catId(23),
     slug: 'how-to-find-right-therapist-practical-step-by-step-guide',
-    status: 'draft',
+    status: 'published',
     title: 'How to Find the Right Therapist: A Practical, Step-by-Step Guide',
     description: 'Navigate the process of finding a therapist who matches your needs, insurance, and preferences with this actionable guide.',
     image: "/images/articles/cat14/cover-023.svg",
@@ -919,7 +919,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
   {
     id: catId(24),
     slug: 'therapist-red-flags-signs-provider-not-right-fit',
-    status: 'draft',
+    status: 'published',
     title: "Therapist Red Flags: Signs Your Provider Isn't the Right Fit",
     description: "Learn to recognize warning signs of poor therapy, boundary violations, and when to switch therapists.",
     image: "/images/articles/cat14/cover-024.svg",
@@ -1203,7 +1203,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
   {
     id: catId(25),
     slug: 'online-therapy-vs-in-person-research-effectiveness',
-    status: 'draft',
+    status: 'published',
     title: 'Online Therapy vs. In-Person: What the Research Says About Effectiveness',
     description: 'Evidence-based comparison of teletherapy and in-person therapy for depression, anxiety, and other mental health conditions.',
     image: "/images/articles/cat14/cover-025.svg",

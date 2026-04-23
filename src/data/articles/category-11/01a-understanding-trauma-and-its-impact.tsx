@@ -451,7 +451,7 @@ export const understandingTraumaArticlesA: Article[] = [
   {
     id: catId(2),
     slug: 'big-t-little-t-spectrum-traumatic-experiences',
-    status: 'draft',
+    status: 'published',
     title: 'Big T and Little t: The Spectrum of Traumatic Experiences',
     description: 'Not all trauma is the same. Learn about the spectrum from "Big T" to "little t" trauma, why both matter, and how cumulative stress can have serious impacts.',
     image: "/images/articles/cat11/cover-002.svg",
@@ -833,7 +833,7 @@ export const understandingTraumaArticlesA: Article[] = [
   {
     id: catId(3),
     slug: 'how-trauma-changes-brain-neuroscience',
-    status: 'draft',
+    status: 'published',
     title: 'How Trauma Changes the Brain: Neuroscience in Plain Language',
     description: 'Discover what happens in your brain during and after trauma. Learn about the amygdala, hippocampus, and prefrontal cortex in simple terms and why healing is possible.',
     image: "/images/articles/cat11/cover-003.svg",
@@ -1279,7 +1279,7 @@ export const understandingTraumaArticlesA: Article[] = [
   {
     id: catId(4),
     slug: 'ace-study-childhood-adversity-adult-health',
-    status: 'draft',
+    status: 'published',
     title: 'The ACE Study: How Childhood Adversity Predicts Adult Health',
     description: 'Learn about the landmark ACE Study that revealed how childhood trauma affects health decades later. Discover the 10 types of ACEs and why early experiences matter.',
     image: "/images/articles/cat11/cover-004.svg",

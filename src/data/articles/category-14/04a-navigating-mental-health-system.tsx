@@ -15,7 +15,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
   {
     id: catId(31),
     slug: 'understanding-mental-health-insurance-coverage-what-included-not',
-    status: 'draft',
+    status: 'published',
     title: `Understanding Mental Health Insurance Coverage: What's Included and What's Not`,
     description: `Decode your insurance benefits for therapy, psychiatry, and mental health treatment --- what's covered, what's not, and how to maximize your benefits.`,
     image: '/images/articles/cat14/cover-031.svg',
@@ -375,7 +375,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
   {
     id: catId(32),
     slug: 'sliding-scale-therapy-how-to-find-affordable-mental-health-care',
-    status: 'draft',
+    status: 'published',
     title: 'Sliding Scale Therapy: How to Find Affordable Mental Health Care',
     description: 'Practical strategies for finding low-cost therapy, sliding scale providers, and free mental health resources.',
     image: "/images/articles/cat14/cover-032.svg",
@@ -653,7 +653,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
   {
     id: catId(33),
     slug: 'community-mental-health-centers-free-low-cost-treatment-options',
-    status: 'draft',
+    status: 'published',
     title: 'Community Mental Health Centers: Free and Low-Cost Treatment Options',
     description: 'How federally funded community mental health centers provide free or sliding-scale therapy, psychiatry, and crisis services.',
     image: "/images/articles/cat14/cover-033.svg",
@@ -954,7 +954,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
   {
     id: catId(34),
     slug: 'crisis-services-what-happens-call-988-go-to-er',
-    status: 'draft',
+    status: 'published',
     title: 'Crisis Services: What Happens When You Call 988 or Go to the ER',
     description: 'Understand your options during a mental health crisis, including what to expect from 988, crisis teams, and emergency rooms.',
     image: "/images/articles/cat14/cover-034.svg",
@@ -1209,7 +1209,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
   {
     id: catId(35),
     slug: 'psychiatric-hospitalization-what-to-expect-admitted',
-    status: 'draft',
+    status: 'published',
     title: 'Psychiatric Hospitalization: What to Expect If You or Someone You Love Is Admitted',
     description: 'Demystify inpatient psychiatric care with this guide to what happens during hospitalization, your rights, and how to prepare.',
     image: "/images/articles/cat14/cover-035.svg",

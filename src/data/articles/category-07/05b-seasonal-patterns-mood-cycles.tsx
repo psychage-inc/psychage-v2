@@ -15,7 +15,7 @@ export const seasonalPatternsArticlesB: Article[] = [
   {
     id: catId(46),
     slug: 'holiday-depression-most-wonderful-time-doesnt-feel-wonderful',
-    status: 'draft',
+    status: 'published',
     title: `Holiday Depression: Why the "Most Wonderful Time" Doesn't Feel Wonderful`,
     description: "The pressure to feel joyful during holidays can make depression worse. Here's why holidays are hard for many people and how to navigate them.",
     image: '/images/articles/cat07/cover-046.svg',
@@ -268,7 +268,7 @@ export const seasonalPatternsArticlesB: Article[] = [
   {
     id: catId(47),
     slug: 'anniversary-reactions-dates-trigger-emotional-waves',
-    status: 'draft',
+    status: 'published',
     title: 'Anniversary Reactions: Why Certain Dates Trigger Emotional Waves',
     description: "Calendar dates can trigger powerful emotional reactions, even years after a traumatic or significant event. Here's why anniversary reactions happen and how to navigate them.",
     image: '/images/articles/cat07/cover-047.svg',
@@ -524,7 +524,7 @@ export const seasonalPatternsArticlesB: Article[] = [
   {
     id: catId(48),
     slug: 'cyclothymia-chronic-mood-swings-without-bipolar',
-    status: 'draft',
+    status: 'published',
     title: "Cyclothymia: Living with Chronic Mood Swings That Don't Meet Bipolar Criteria",
     description: "Cyclothymia is a lesser-known mood disorder characterized by persistent mood fluctuations that are less severe than bipolar but still impactful.",
     image: "/images/articles/cat07/cover-048.svg",
@@ -810,7 +810,7 @@ export const seasonalPatternsArticlesB: Article[] = [
   {
     id: catId(49),
     slug: 'tracking-your-mood-tools-techniques-pattern-recognition',
-    status: 'draft',
+    status: 'published',
     title: 'Tracking Your Mood: Tools and Techniques for Pattern Recognition',
     description: 'Mood tracking is a powerful self-awareness tool that helps you identify triggers, patterns, and early warning signs of mood shifts.',
     image: "/images/articles/cat07/cover-049.svg",
@@ -1091,7 +1091,7 @@ export const seasonalPatternsArticlesB: Article[] = [
   {
     id: catId(50),
     slug: 'light-vitamin-d-mental-health-science-hype',
-    status: 'draft',
+    status: 'published',
     title: 'Light, Vitamin D, and Mental Health: Separating Science from Hype',
     description: 'The internet is full of claims about vitamin D curing depression. What does the science actually show about light exposure, vitamin D, and mental health?',
     image: "/images/articles/cat07/cover-050.svg",

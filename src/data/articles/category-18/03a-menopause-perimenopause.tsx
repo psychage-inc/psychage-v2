@@ -476,7 +476,7 @@ export const articles: Article[] = [
   {
     id: catId(22),
     slug: 'menopause-and-depression-hormonal-shifts-and-mood-disorders',
-    status: 'draft',
+    status: 'published',
     title: `Menopause and Depression: Hormonal Shifts and Mood Disorders`,
     description: `Understand the relationship between menopause and depression, including risk factors, symptoms unique to menopausal depression, and evidence-based treatments.`,
     image: '/images/articles/cat18/cover-022.svg',

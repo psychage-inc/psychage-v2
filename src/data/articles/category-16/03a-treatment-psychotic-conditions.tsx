@@ -25,7 +25,7 @@ export const treatmentPsychoticArticlesA: Article[] = [
   {
     id: catId(21),
     slug: 'antipsychotic-medications-explained-how-they-work-what-to-expect',
-    status: 'draft',
+    status: 'published',
     title: 'Antipsychotic Medications Explained: How They Work and What to Expect',
     description: 'A comprehensive guide to antipsychotic medications --- how they work in the brain, what the differences between first- and second-generation drugs are, and what to expect during treatment.',
     image: '/images/articles/cat16/cover-021.svg',
@@ -237,7 +237,7 @@ export const treatmentPsychoticArticlesA: Article[] = [
   {
     id: catId(22),
     slug: 'cbt-for-psychosis-how-talking-therapy-helps-manage-voices-and-beliefs',
-    status: 'draft',
+    status: 'published',
     title: 'CBT for Psychosis: How Talking Therapy Helps Manage Voices and Beliefs',
     description: 'How cognitive behavioral therapy has been adapted for psychosis --- what it involves, how it differs from standard CBT, and what the evidence says about its effectiveness.',
     image: '/images/articles/cat16/cover-022.svg',
@@ -435,7 +435,7 @@ export const treatmentPsychoticArticlesA: Article[] = [
   {
     id: catId(23),
     slug: 'clozapine-gold-standard-treatment-resistant-schizophrenia',
-    status: 'draft',
+    status: 'published',
     title: 'Clozapine: The Gold Standard for Treatment-Resistant Schizophrenia',
     description: 'Why clozapine remains the most effective antipsychotic for treatment-resistant schizophrenia --- its unique pharmacology, required monitoring, and the controversy over its persistent underuse.',
     image: '/images/articles/cat16/cover-023.svg',
@@ -632,7 +632,7 @@ export const treatmentPsychoticArticlesA: Article[] = [
   {
     id: catId(24),
     slug: 'family-psychoeducation-how-families-can-support-recovery-from-psychosis',
-    status: 'draft',
+    status: 'published',
     title: 'Family Psychoeducation: How Families Can Support Recovery From Psychosis',
     description: 'The evidence behind family psychoeducation for psychosis --- how structured family intervention reduces relapse, improves outcomes, and transforms family relationships.',
     image: '/images/articles/cat16/cover-024.svg',
@@ -836,7 +836,7 @@ export const treatmentPsychoticArticlesA: Article[] = [
   {
     id: catId(25),
     slug: 'long-acting-injectable-antipsychotics-how-they-work-who-benefits',
-    status: 'draft',
+    status: 'published',
     title: 'Long-Acting Injectable Antipsychotics: How They Work and Who Benefits',
     description: 'How long-acting injectable antipsychotics eliminate daily pill-taking, reduce relapse risk, and are emerging as a first-line option --- not just a last resort.',
     image: '/images/articles/cat16/cover-025.svg',

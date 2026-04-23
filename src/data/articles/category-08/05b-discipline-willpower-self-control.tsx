@@ -16,7 +16,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
   {
     id: catId(46),
     slug: 'how-sleep-affects-willpower-self-control',
-    status: 'draft',
+    status: 'published',
     title: 'How Sleep Affects Willpower and Self-Control',
     description: 'Understand the neuroscience linking sleep deprivation to impaired impulse control, and why protecting sleep is foundational to discipline.',
     image: "/images/articles/cat08/cover-046.svg",

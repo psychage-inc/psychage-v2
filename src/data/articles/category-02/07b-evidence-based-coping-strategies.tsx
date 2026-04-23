@@ -20,7 +20,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
   {
     id: catId(66),
     slug: 'worry-time-the-counterintuitive-strategy-that-reduces-anxious-thinking',
-    status: 'draft',
+    status: 'published',
     title: 'Worry Time: The Counterintuitive Strategy That Reduces Anxious Thinking',
     description: 'Discover how scheduling dedicated "worry time" paradoxically reduces chronic worrying by containing anxious thoughts to a specific window each day.',
     image: "/images/articles/cat02/cover-066.svg",
@@ -302,7 +302,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
   {
     id: catId(67),
     slug: 'behavioral-activation-why-doing-something-anything-helps-when-anxiety-paralyzes',
-    status: 'draft',
+    status: 'published',
     title: 'Behavioral Activation: Why Doing Something (Anything) Helps When Anxiety Paralyzes',
     description: 'Learn how behavioral activation breaks the anxiety-avoidance cycle by prioritizing action over motivation, helping you regain momentum when anxiety freezes you.',
     image: "/images/articles/cat02/cover-067.svg",
@@ -615,7 +615,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
   {
     id: catId(68),
     slug: 'mindfulness-based-stress-reduction-what-the-evidence-shows',
-    status: 'draft',
+    status: 'published',
     title: 'Mindfulness-Based Stress Reduction: What the Evidence Shows',
     description: 'Explore Mindfulness-Based Stress Reduction (MBSR), an 8-week evidence-based program that teaches mindfulness meditation to reduce anxiety and stress.',
     image: "/images/articles/cat02/cover-068.svg",
@@ -905,7 +905,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
   {
     id: catId(69),
     slug: 'cold-water-therapy-and-the-dive-reflex-does-it-really-help-anxiety',
-    status: 'draft',
+    status: 'published',
     title: 'Cold Water Therapy and the Dive Reflex: Does It Really Help Anxiety?',
     description: 'Examine the science behind cold water therapy for anxiety, including the dive reflex, vagal activation, and whether ice baths and cold showers actually reduce stress.',
     image: "/images/articles/cat02/cover-069.svg",
@@ -1217,7 +1217,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
   {
     id: catId(70),
     slug: 'building-your-anxiety-management-plan-a-personalized-approach',
-    status: 'draft',
+    status: 'published',
     title: 'Building Your Anxiety Management Plan: A Personalized Approach',
     description: 'Create a comprehensive, personalized anxiety management plan by combining evidence-based strategies tailored to your specific triggers, symptoms, and lifestyle.',
     image: "/images/articles/cat02/cover-070.svg",

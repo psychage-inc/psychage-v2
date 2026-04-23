@@ -16,7 +16,7 @@ export const articles: Article[] = [
   {
     id: catId(31),
     slug: 'gender-based-violence-and-mental-health-understanding-the-impact',
-    status: 'draft',
+    status: 'published',
     title: `Gender-Based Violence and Mental Health: Understanding the Impact`,
     description: `Explore the profound mental health consequences of gender-based violence, including intimate partner violence, sexual assault, and systemic violence against women.`,
     image: '/images/articles/cat18/cover-031.svg',
@@ -270,7 +270,7 @@ export const articles: Article[] = [
   {
     id: catId(32),
     slug: 'sexual-assault-and-mental-health-recovery-healing-from-trauma',
-    status: 'draft',
+    status: 'published',
     title: `Sexual Assault and Mental Health Recovery: Healing from Trauma`,
     description: `Understand the mental health impact of sexual assault, navigate the aftermath, and learn about trauma-focused treatments that support recovery and reclaiming of self.`,
     image: '/images/articles/cat18/cover-032.svg',

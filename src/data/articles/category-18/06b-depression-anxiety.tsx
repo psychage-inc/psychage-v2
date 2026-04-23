@@ -275,7 +275,7 @@ export const articles: Article[] = [
   {
     id: catId(57),
     slug: 'social-cultural-factors-womens-depression',
-    status: 'draft',
+    status: 'published',
     title: 'Social and Cultural Factors in Women\'s Depression',
     description:
       'How gender roles, discrimination, caregiving burden, and cultural expectations contribute to depression in women.',
@@ -539,7 +539,7 @@ export const articles: Article[] = [
   {
     id: catId(58),
     slug: 'trauma-ptsd-depression-women',
-    status: 'draft',
+    status: 'published',
     title: 'The Connection Between Trauma, PTSD, and Depression in Women',
     description:
       'Understanding how trauma exposure contributes to depression and the importance of trauma-informed treatment.',
@@ -805,7 +805,7 @@ export const articles: Article[] = [
   {
     id: catId(59),
     slug: 'comorbid-depression-anxiety-women',
-    status: 'draft',
+    status: 'published',
     title: 'When Depression and Anxiety Co-occur: Understanding Comorbidity',
     description:
       'Navigating the challenges when depression and anxiety disorders occur together and finding effective treatment.',

@@ -18,7 +18,7 @@ export const depressionAnxietyOlderAdultsArticlesA: Article[] = [
   {
     id: catId(16),
     slug: 'medication-management-for-late-life-depression-and-anxiety',
-    status: 'draft',
+    status: 'published',
     title: 'Medication Management for Late-Life Depression and Anxiety',
     description:
       'Navigate the complexities of psychiatric medications in older adults--from SSRIs to drug interactions, side effects, and deprescribing.',
@@ -375,7 +375,7 @@ export const depressionAnxietyOlderAdultsArticlesA: Article[] = [
   {
     id: catId(17),
     slug: 'psychotherapy-for-late-life-depression-and-anxiety',
-    status: 'draft',
+    status: 'published',
     title: 'Psychotherapy for Late-Life Depression and Anxiety',
     description:
       'Evidence-based talk therapies for older adults--from CBT and problem-solving therapy to life review and interpersonal therapy.',
@@ -710,7 +710,7 @@ export const depressionAnxietyOlderAdultsArticlesA: Article[] = [
   {
     id: catId(18),
     slug: 'depression-and-chronic-illness-in-older-adults',
-    status: 'draft',
+    status: 'published',
     title: 'Depression and Chronic Illness in Older Adults',
     description:
       'Understand the bidirectional relationship between depression and medical conditions--from heart disease to diabetes to cancer.',

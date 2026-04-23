@@ -18,7 +18,7 @@ export const dementiaAlzheimersArticlesA: Article[] = [
   {
     id: catId(11),
     slug: 'what-is-dementia-types-causes-and-progression',
-    status: 'draft',
+    status: 'published',
     title: 'What Is Dementia? Types, Causes, and Progression',
     description:
       'Understand dementia as an umbrella term for cognitive decline--from Alzheimer disease to vascular dementia to Lewy body disease.',
@@ -308,7 +308,7 @@ export const dementiaAlzheimersArticlesA: Article[] = [
   {
     id: catId(12),
     slug: 'alzheimer-disease-brain-changes-symptoms-and-stages',
-    status: 'draft',
+    status: 'published',
     title: 'Alzheimer Disease: Brain Changes, Symptoms, and Stages',
     description:
       'Deep dive into the biology of Alzheimer--from amyloid plaques and tau tangles to symptom progression and diagnostic advances.',
@@ -610,7 +610,7 @@ export const dementiaAlzheimersArticlesA: Article[] = [
   {
     id: catId(13),
     slug: 'treatment-and-management-of-alzheimer-disease',
-    status: 'draft',
+    status: 'published',
     title: 'Treatment and Management of Alzheimer Disease',
     description:
       'Review current medications, emerging therapies, and comprehensive care strategies for Alzheimer--from cholinesterase inhibitors to lifestyle interventions.',
@@ -931,7 +931,7 @@ export const dementiaAlzheimersArticlesA: Article[] = [
   {
     id: catId(14),
     slug: 'vascular-dementia-lewy-body-and-other-types',
-    status: 'draft',
+    status: 'published',
     title: 'Vascular Dementia, Lewy Body, and Other Types',
     description:
       'Explore non-Alzheimer dementias--from vascular dementia caused by strokes to Lewy body dementia with hallucinations and frontotemporal dementia.',
@@ -1279,7 +1279,7 @@ export const dementiaAlzheimersArticlesA: Article[] = [
   {
     id: catId(15),
     slug: 'risk-factors-and-prevention-of-dementia',
-    status: 'draft',
+    status: 'published',
     title: 'Risk Factors and Prevention of Dementia',
     description:
       'Identify modifiable risk factors for dementia and evidence-based strategies to reduce risk--from cardiovascular health to cognitive reserve.',

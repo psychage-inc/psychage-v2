@@ -1203,7 +1203,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
   {
     id: catId(49),
     slug: 'vagus-nerve-mental-health-calm-down-system',
-    status: 'draft',
+    status: 'published',
     title: "The Vagus Nerve and Mental Health: Your Body\'s Calm-Down System",
     description: 'Understand how the vagus nerve regulates stress responses and mental states, and learn practical ways to activate this powerful mind-body pathway for better mental health.',
     image: "/images/articles/cat09/cover-049.svg",

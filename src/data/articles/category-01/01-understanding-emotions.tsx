@@ -396,7 +396,7 @@ export const understandingEmotionsArticles: Article[] = [
   {
     id: catId(3),
     slug: 'negative-emotions-not-bad',
-    status: 'draft',
+    status: 'published',
     title: "Why \"Negative\" Emotions Aren't Actually Bad for You",
     description:
       'Anger, sadness, fear, and guilt all serve important purposes. Learn why suppressing uncomfortable emotions can backfire and how accepting them leads to better mental health.',
@@ -727,7 +727,7 @@ export const understandingEmotionsArticles: Article[] = [
   {
     id: catId(5),
     slug: 'emotional-granularity-naming-feelings',
-    status: 'draft',
+    status: 'published',
     title: 'Emotional Granularity: How Naming Your Feelings More Precisely Changes Everything',
     description:
       'People who distinguish between fine-grained emotional states manage stress better, make clearer decisions, and have stronger relationships. Learn how to build this skill.',
@@ -947,7 +947,7 @@ export const understandingEmotionsArticles: Article[] = [
   {
     id: catId(6),
     slug: 'why-you-feel-everything-deeply',
-    status: 'draft',
+    status: 'published',
     title: 'Why You Feel Everything So Deeply: Understanding Emotional Sensitivity',
     description:
       'If your emotions seem more intense than other people\'s, you may have high emotional sensitivity. Learn what causes it, why it is not a weakness, and how to work with it rather than against it.',
@@ -1147,7 +1147,7 @@ export const understandingEmotionsArticles: Article[] = [
   {
     id: catId(7),
     slug: 'feelings-emotions-moods-difference',
-    status: 'draft',
+    status: 'published',
     title: "The Difference Between Feelings, Emotions, and Moods --- And Why It Matters",
     description:
       'These three terms are used interchangeably, but they describe different things. Understanding the distinction helps you respond more effectively to your inner experience.',
@@ -1295,7 +1295,7 @@ export const understandingEmotionsArticles: Article[] = [
   {
     id: catId(8),
     slug: 'brain-decides-what-you-feel',
-    status: 'draft',
+    status: 'published',
     title: 'How Your Brain Decides What You Feel Before You Even Know It',
     description:
       'Your brain constructs emotions unconsciously before you become aware of them. Learn how prediction, memory, and body signals shape your emotional experience --- and how to use this knowledge.',
@@ -1418,7 +1418,7 @@ export const understandingEmotionsArticles: Article[] = [
   {
     id: catId(9),
     slug: 'mixed-emotions-contradictory-feelings',
-    status: 'draft',
+    status: 'published',
     title: 'Mixed Emotions: Why You Can Feel Two Contradictory Things at Once',
     description:
       'Feeling happy and sad at the same time is not confusion --- it is a sign of emotional complexity. Learn why mixed emotions are normal, healthy, and even beneficial.',
@@ -1538,7 +1538,7 @@ export const understandingEmotionsArticles: Article[] = [
   {
     id: catId(10),
     slug: 'purpose-of-emotions-evolutionary-psychology',
-    status: 'draft',
+    status: 'published',
     title: 'The Purpose of Emotions: What Evolutionary Psychology Tells Us About Why We Feel',
     description:
       'Every core emotion exists because it solved a survival problem for our ancestors. Understanding the evolutionary function of your feelings can transform how you relate to them.',

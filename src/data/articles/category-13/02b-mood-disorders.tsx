@@ -18,7 +18,7 @@ export const moodDisordersArticlesB: Article[] = [
   {
     id: catId(13),
     slug: 'bipolar-i-disorder-understanding-mania-depression-cycles',
-    status: 'draft',
+    status: 'published',
     title: 'Bipolar I Disorder: Understanding Mania and Depression Cycles',
     description: 'Bipolar I involves extreme mood swings from manic episodes to depression. Learn the signs, causes, and treatments for this complex mood disorder.',
     image: "/images/articles/cat13/cover-013.svg",
@@ -343,7 +343,7 @@ export const moodDisordersArticlesB: Article[] = [
   {
     id: catId(14),
     slug: 'bipolar-ii-disorder-hypomania-depression-diagnostic-challenge',
-    status: 'draft',
+    status: 'published',
     title: 'Bipolar II Disorder: Hypomania, Depression, and the Diagnostic Challenge',
     description: 'Bipolar II features hypomanic episodes and major depression. Often misdiagnosed, learn how it differs from Bipolar I and why accurate diagnosis matters.',
     image: "/images/articles/cat13/cover-014.svg",
@@ -588,7 +588,7 @@ export const moodDisordersArticlesB: Article[] = [
   {
     id: catId(15),
     slug: 'cyclothymic-disorder-chronic-mood-fluctuation-below-bipolar-threshold',
-    status: 'draft',
+    status: 'published',
     title: 'Cyclothymic Disorder: Chronic Mood Fluctuation Below the Bipolar Threshold',
     description: 'Cyclothymia involves chronic mood instability with hypomanic and depressive symptoms that never reach full episode criteria. Learn about this often-overlooked mood disorder.',
     image: "/images/articles/cat13/cover-015.svg",

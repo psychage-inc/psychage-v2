@@ -25,7 +25,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
   {
     id: catId(16),
     slug: 'the-nervous-stomach-why-anxiety-targets-your-gut',
-    status: 'draft',
+    status: 'published',
     title: 'The Nervous Stomach: Why Anxiety Targets Your Gut',
     description: 'Understand the gut-brain axis, why anxiety causes nausea, diarrhea, and stomach pain, and evidence-based strategies to calm digestive symptoms of anxiety.',
     image: "/images/articles/cat02/cover-016.svg",
@@ -1179,7 +1179,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
   {
     id: catId(18),
     slug: 'interoception-and-anxiety-how-body-awareness-can-help-or-hurt',
-    status: 'draft',
+    status: 'published',
     title: 'Interoception and Anxiety: How Body Awareness Can Help or Hurt',
     description: 'Explore interoception --- your ability to sense internal body states --- and learn how it can amplify anxiety or become a powerful tool for emotional regulation.',
     image: "/images/articles/cat02/cover-018.svg",

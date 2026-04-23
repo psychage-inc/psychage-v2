@@ -314,7 +314,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
   {
     id: catId(27),
     slug: 'cultural-considerations-in-elder-care-family-expectations',
-    status: 'draft',
+    status: 'published',
     title: 'Cultural Considerations in Elder Care: Family Expectations and Tradition',
     description: `Explore how culture shapes elder care expectations, from multigenerational households to nursing home taboos, and navigate conflicts between tradition and capacity.`,
     image: '/images/articles/cat17/cover-027.svg',
@@ -1163,7 +1163,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
   {
     id: catId(30),
     slug: 'recognizing-elder-abuse-and-neglect-warning-signs-reporting',
-    status: 'draft',
+    status: 'published',
     title: 'Recognizing Elder Abuse and Neglect: Warning Signs and Reporting',
     description: `Identify signs of elder abuse (physical, financial, emotional, neglect) and understand mandatory reporting, investigation processes, and protective interventions.`,
     image: '/images/articles/cat17/cover-030.svg',

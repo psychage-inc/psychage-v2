@@ -20,7 +20,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
   {
     id: catId(46),
     slug: 'parental-burnout-when-raising-children-depletes-your-capacity',
-    status: 'draft',
+    status: 'published',
     title: 'Parental Burnout: When Raising Children Depletes Your Capacity',
     description: 'Understand the unique phenomenon of parental burnout, its causes, warning signs, and evidence-based strategies to protect your wellbeing while caring for your children.',
     image: "/images/articles/cat02/cover-046.svg",
@@ -366,7 +366,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
   {
     id: catId(47),
     slug: 'recovery-from-burnout-what-science-says-about-how-long-it-actually-takes',
-    status: 'draft',
+    status: 'published',
     title: 'Recovery from Burnout: What Science Says About How Long It Actually Takes',
     description: "Learn what research reveals about burnout recovery timelines, effective interventions, and why quick fixes don't work for a condition that took months or years to develop.",
     image: '/images/articles/cat02/cover-047.svg',
@@ -748,7 +748,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
   {
     id: catId(48),
     slug: 'burnout-and-cynicism-when-exhaustion-changes-how-you-see-the-world',
-    status: 'draft',
+    status: 'published',
     title: 'Burnout and Cynicism: When Exhaustion Changes How You See the World',
     description: 'Understand how chronic burnout reshapes your worldview into cynicism and detachment, and what it takes to reconnect with meaning and hope.',
     image: "/images/articles/cat02/cover-048.svg",

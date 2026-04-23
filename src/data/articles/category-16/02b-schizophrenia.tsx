@@ -25,7 +25,7 @@ export const schizophreniaArticlesB: Article[] = [
   {
     id: catId(16),
     slug: 'cognitive-symptoms-schizophrenia-memory-attention-executive-function',
-    status: 'draft',
+    status: 'published',
     title: 'Cognitive Symptoms of Schizophrenia: Memory, Attention, and Executive Function',
     description: 'Explore the often-overlooked cognitive symptoms of schizophrenia --- how memory, attention, and executive function are affected and what can be done to support cognitive health.',
     image: '/images/articles/cat16/cover-016.svg',
@@ -241,7 +241,7 @@ export const schizophreniaArticlesB: Article[] = [
   {
     id: catId(17),
     slug: 'negative-symptoms-flat-affect-avolition-social-withdrawal',
-    status: 'draft',
+    status: 'published',
     title: 'Negative Symptoms: Understanding Flat Affect, Avolition, and Social Withdrawal',
     description: 'An in-depth look at the negative symptoms of schizophrenia --- what flat affect, avolition, alogia, anhedonia, and social withdrawal actually are, why they matter, and what helps.',
     image: '/images/articles/cat16/cover-017.svg',
@@ -434,7 +434,7 @@ export const schizophreniaArticlesB: Article[] = [
   {
     id: catId(18),
     slug: 'schizophrenia-across-cultures-societies-understand-psychotic-experience',
-    status: 'draft',
+    status: 'published',
     title: 'Schizophrenia Across Cultures: How Different Societies Understand Psychotic Experience',
     description: 'How cultural context shapes the experience, interpretation, and outcomes of schizophrenia --- from voice-hearing traditions to the surprising international differences in recovery.',
     image: '/images/articles/cat16/cover-018.svg',
@@ -631,7 +631,7 @@ export const schizophreniaArticlesB: Article[] = [
   {
     id: catId(19),
     slug: 'living-well-with-schizophrenia-recovery-stories-evidence-based-hope',
-    status: 'draft',
+    status: 'published',
     title: 'Living Well With Schizophrenia: Recovery Stories and Evidence-Based Hope',
     description: 'Evidence-based perspectives on recovery from schizophrenia --- what long-term outcome studies reveal, what recovery actually means, and the factors that predict meaningful improvement.',
     image: '/images/articles/cat16/cover-019.svg',
@@ -843,7 +843,7 @@ export const schizophreniaArticlesB: Article[] = [
   {
     id: catId(20),
     slug: 'delusional-disorder-when-fixed-beliefs-dont-match-reality',
-    status: 'draft',
+    status: 'published',
     title: 'Delusional Disorder: When Fixed Beliefs Don\'t Match Reality',
     description: 'A comprehensive overview of delusional disorder --- how it differs from schizophrenia, the types of delusions it involves, and the unique treatment challenges it presents.',
     image: '/images/articles/cat16/cover-020.svg',

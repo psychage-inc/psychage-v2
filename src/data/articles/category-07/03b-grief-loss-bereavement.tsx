@@ -16,7 +16,7 @@ export const griefLossArticlesB: Article[] = [
   {
     id: catId(26),
     slug: 'disenfranchised-grief',
-    status: 'draft',
+    status: 'published',
     title: "Disenfranchised Grief: When Your Loss Isn't Acknowledged by Others",
     description: "Disenfranchised grief is loss that society doesn't recognize or validate---miscarriage, pet death, non-traditional relationships. Learn why validation matters.",
     image: "/images/articles/cat07/cover-026.svg",
@@ -631,7 +631,7 @@ export const griefLossArticlesB: Article[] = [
   {
     id: catId(28),
     slug: 'pet-loss-grief',
-    status: 'draft',
+    status: 'published',
     title: 'Pet Loss: Why the Death of an Animal Companion Hurts So Deeply',
     description: 'Pet loss grief is real, profound, and often disenfranchised. Learn why losing a pet hurts so much, how to cope, and how to support others.',
     image: "/images/articles/cat07/cover-028.svg",
@@ -845,7 +845,7 @@ export const griefLossArticlesB: Article[] = [
   {
     id: catId(29),
     slug: 'grief-and-the-body',
-    status: 'draft',
+    status: 'published',
     title: 'Grief and the Body: How Loss Manifests Physically',
     description: `Grief isn't just emotional---it's physical. Learn how grief affects the body, why "broken heart syndrome" is real, and how to care for yourself.`,
     image: '/images/articles/cat07/cover-029.svg',
@@ -1093,7 +1093,7 @@ export const griefLossArticlesB: Article[] = [
   {
     id: catId(30),
     slug: 'how-long-does-grief-last',
-    status: 'draft',
+    status: 'published',
     title: 'How Long Does Grief Last? What the Research Says About Timelines',
     description: "There's no universal grief timeline, but research reveals patterns. Learn what's typical, when grief becomes prolonged, and why timelines don't determine legitimacy.",
     image: '/images/articles/cat07/cover-030.svg',

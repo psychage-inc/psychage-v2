@@ -344,7 +344,7 @@ export const griefLossTransitionsArticlesB: Article[] = [
   {
     id: catId(53),
     slug: 'anticipatory-grief-preparing-emotionally-for-expected-loss',
-    status: 'draft',
+    status: 'published',
     title: `Anticipatory Grief: Preparing Emotionally for Expected Loss`,
     description: `Navigate the complex emotions of grieving before death occurs and learn strategies for managing anticipatory loss in later life.`,
     image: '/images/articles/cat17/cover-053.svg',
@@ -536,7 +536,7 @@ export const griefLossTransitionsArticlesB: Article[] = [
   {
     id: catId(54),
     slug: 'finding-new-purpose-after-major-life-transitions-in-later-life',
-    status: 'draft',
+    status: 'published',
     title: `Finding New Purpose After Major Life Transitions in Later Life`,
     description: `Discover strategies for rebuilding meaning and identity after significant late-life changes like retirement, loss, relocation, or health decline.`,
     image: '/images/articles/cat17/cover-054.svg',

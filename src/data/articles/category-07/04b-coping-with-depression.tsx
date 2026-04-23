@@ -1274,7 +1274,7 @@ export const copingWithDepressionArticlesB: Article[] = [
   {
     id: catId(40),
     slug: 'mindfulness-based-cognitive-therapy-preventing-depression-relapse',
-    status: 'draft',
+    status: 'published',
     title: 'Mindfulness-Based Cognitive Therapy: Preventing Depression Relapse',
     description: 'An evidence-based treatment combining mindfulness meditation with cognitive therapy techniques to prevent depression from returning.',
     image: "/images/articles/cat07/cover-040.svg",

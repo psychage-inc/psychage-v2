@@ -256,7 +256,7 @@ export const childhoodExperiencesAdultPatternsArticlesB: Article[] = [
   {
     id: catId(17),
     slug: 'overprotective-parenting-when-keeping-kids-safe-prevents-them-from-growing',
-    status: 'draft',
+    status: 'published',
     title: 'Overprotective Parenting: When Keeping Kids Safe Prevents Them from Growing',
     description: 'Explore how well-intentioned overprotective parenting can hinder development and create anxiety in adulthood.',
     image: "/images/articles/cat06/cover-017.svg",

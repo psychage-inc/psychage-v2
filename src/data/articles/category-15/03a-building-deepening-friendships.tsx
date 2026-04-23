@@ -18,7 +18,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
   {
     id: catId(21),
     slug: 'how-to-make-friends-as-adult-research-backed-guide',
-    status: 'draft',
+    status: 'published',
     title: 'How to Make Friends as an Adult: A Research-Backed Guide',
     description: "Adult friendships don't form like they did in school. Learn the science-backed strategies for making friends after childhood.",
     image: '/images/articles/cat15/cover-021.svg',
@@ -398,7 +398,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
   {
     id: catId(22),
     slug: 'three-ingredients-of-friendship-proximity-frequency-vulnerability',
-    status: 'draft',
+    status: 'published',
     title: 'The Three Ingredients of Friendship: Proximity, Frequency, and Vulnerability',
     description: 'Research reveals the essential elements that create friendships. Understand what you need to cultivate lasting connections.',
     image: "/images/articles/cat15/cover-022.svg",
@@ -788,7 +788,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
   {
     id: catId(23),
     slug: 'from-acquaintance-to-close-friend-deepen-connections',
-    status: 'draft',
+    status: 'published',
     title: 'From Acquaintance to Close Friend: How to Deepen Surface-Level Connections',
     description: 'Learn practical strategies for moving friendships beyond small talk and into meaningful closeness.',
     image: "/images/articles/cat15/cover-023.svg",
@@ -1199,7 +1199,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
   {
     id: catId(24),
     slug: 'how-to-be-better-friend-strengthen-relationships',
-    status: 'draft',
+    status: 'published',
     title: 'How to Be a Better Friend: Skills That Strengthen Your Relationships',
     description: 'Practical skills for being a supportive, reliable, and valued friend. Learn what makes people good at friendship.',
     image: "/images/articles/cat15/cover-024.svg",
@@ -1626,7 +1626,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
   {
     id: catId(25),
     slug: 'friendship-after-conflict-repair-rebuild',
-    status: 'draft',
+    status: 'published',
     title: 'Friendship After Conflict: How to Repair and Rebuild',
     description: 'Learn how to navigate conflict, apologize effectively, and repair friendships after hurt or misunderstanding.',
     image: "/images/articles/cat15/cover-025.svg",

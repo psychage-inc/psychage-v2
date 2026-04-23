@@ -16,7 +16,7 @@ export const psychosisResearchArticlesB: Article[] = [
   {
     id: catId(51),
     slug: 'digital-mental-health-interventions-for-psychosis-apps-and-telehealth',
-    status: 'draft',
+    status: 'published',
     title: 'Digital Mental Health Interventions for Psychosis: Apps and Telehealth',
     description:
       'Explore how smartphone apps, wearable sensors, virtual reality, and telehealth are transforming psychosis care through real-time monitoring, accessible therapy, and data-driven insights.',
@@ -396,7 +396,7 @@ export const psychosisResearchArticlesB: Article[] = [
   {
     id: catId(52),
     slug: 'peer-support-and-lived-experience-in-psychosis-recovery',
-    status: 'draft',
+    status: 'published',
     title: 'Peer Support and Lived Experience in Psychosis Recovery',
     description:
       'Learn how peer support specialists--people with personal experience of psychosis--are transforming mental health services through hope, shared understanding, and recovery role modeling.',
@@ -739,7 +739,7 @@ export const psychosisResearchArticlesB: Article[] = [
   {
     id: catId(53),
     slug: 'recovery-oriented-care-beyond-symptom-reduction',
-    status: 'draft',
+    status: 'published',
     title: 'Recovery-Oriented Care: Beyond Symptom Reduction',
     description:
       'Discover how recovery-oriented practices prioritize personal growth, meaningful life, and self-determination over symptom elimination--reshaping mental health services around hope and possibility.',
@@ -1116,7 +1116,7 @@ export const psychosisResearchArticlesB: Article[] = [
   {
     id: catId(54),
     slug: 'cognitive-remediation-therapy-retraining-the-mind',
-    status: 'draft',
+    status: 'published',
     title: 'Cognitive Remediation Therapy: Retraining the Mind',
     description:
       'Learn how cognitive remediation uses targeted exercises and compensatory strategies to improve attention, memory, and executive function in psychosis.',
@@ -1507,7 +1507,7 @@ export const psychosisResearchArticlesB: Article[] = [
   {
     id: catId(55),
     slug: 'psychosocial-interventions-family-therapy-social-skills-and-beyond',
-    status: 'draft',
+    status: 'published',
     title: 'Psychosocial Interventions: Family Therapy, Social Skills, and Beyond',
     description:
       'Discover evidence-based psychosocial treatments that address relationships, social functioning, and life skills in psychosis--complementing medication for holistic recovery.',

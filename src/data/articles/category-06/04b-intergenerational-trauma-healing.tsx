@@ -16,7 +16,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
   {
     id: catId(36),
     slug: 'unprocessed-grief-anxiety-next-generation',
-    status: 'draft',
+    status: 'published',
     title: 'How Unprocessed Grief in One Generation Becomes Anxiety in the Next',
     description: 'Learn how unexpressed grief from one generation can manifest as anxiety disorders in descendants who never directly experienced the loss.',
     image: "/images/articles/cat06/cover-036.svg",
@@ -209,7 +209,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
   {
     id: catId(37),
     slug: 'genogram-mapping-family-emotional-history',
-    status: 'draft',
+    status: 'published',
     title: "The Genogram: Mapping Your Family's Emotional History",
     description: "Learn how to create a genogram --- a powerful tool that maps family relationships, patterns, and emotional legacies across generations.",
     image: "/images/articles/cat06/cover-037.svg",
@@ -400,7 +400,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
   {
     id: catId(38),
     slug: 'healing-family-legacy-where-to-start',
-    status: 'draft',
+    status: 'published',
     title: 'Healing Your Family Legacy: Where to Start',
     description: 'A practical guide to beginning the work of healing intergenerational trauma and creating healthier patterns for your family line.',
     image: "/images/articles/cat06/cover-038.svg",
@@ -600,7 +600,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
   {
     id: catId(39),
     slug: 'forgiveness-family-trauma-necessary-for-healing',
-    status: 'draft',
+    status: 'published',
     title: 'Forgiveness and Family Trauma: Is It Necessary for Healing?',
     description: 'Explore the complex role of forgiveness in healing from family trauma and why forgiveness is not always required for recovery.',
     image: "/images/articles/cat06/cover-039.svg",
@@ -799,7 +799,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
   {
     id: catId(40),
     slug: 'when-healing-means-separating-estrangement-last-resort',
-    status: 'draft',
+    status: 'published',
     title: 'When Healing Means Separating: Estrangement as a Last Resort',
     description: 'Understand when family estrangement becomes necessary for mental health, how to navigate the decision, and how to cope with the grief it brings.',
     image: "/images/articles/cat06/cover-040.svg",

@@ -18,7 +18,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
   {
     id: catId(46),
     slug: 'architecture-urban-design-affect-social-connection',
-    status: 'draft',
+    status: 'published',
     title: 'How Architecture and Urban Design Affect Social Connection',
     description: 'The way we design cities and buildings shapes whether people connect or stay isolated. Learn how urban planning affects mental health.',
     image: "/images/articles/cat15/cover-046.svg",
@@ -223,7 +223,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
   {
     id: catId(47),
     slug: 'loneliness-technology-apps-fix-connection-crisis',
-    status: 'draft',
+    status: 'published',
     title: 'Loneliness and Technology: Can Apps Fix the Connection Crisis?',
     description: 'New apps promise to cure loneliness. But can technology solve a problem it helped create? What the research says about digital solutions to isolation.',
     image: "/images/articles/cat15/cover-047.svg",
@@ -421,7 +421,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
   {
     id: catId(48),
     slug: 'loneliness-immigration-building-social-life-new-country',
-    status: 'draft',
+    status: 'published',
     title: 'The Loneliness of Immigration: Building a Social Life in a New Country',
     description: 'Immigration often brings profound isolation. Learn how to rebuild community when you are far from home.',
     image: "/images/articles/cat15/cover-048.svg",
@@ -641,7 +641,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
   {
     id: catId(49),
     slug: 'overcoming-shame-loneliness-admitting-lonely-first-step',
-    status: 'draft',
+    status: 'published',
     title: "Overcoming the Shame of Loneliness: Why Admitting You're Lonely Is the First Step",
     description: "Loneliness carries stigma that keeps people silent. Learn why sharing your loneliness is brave, not weak.",
     image: "/images/articles/cat15/cover-049.svg",
@@ -872,7 +872,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
     {
       id: catId(50),
       slug: 'social-connection-plan-personalized-guide-building-relationships',
-      status: 'draft',
+      status: 'published',
       title: 'Your Social Connection Plan: A Personalized Guide to Building the Relationships You Need',
       description: 'Create a practical, personalized plan for building and maintaining social connection based on your unique needs and circumstances.',
       image: "/images/articles/cat15/cover-050.svg",

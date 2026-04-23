@@ -14,7 +14,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
   {
     id: catId(36),
     slug: 'psychiatrist-psychologist-counselor-social-worker-differences',
-    status: 'draft',
+    status: 'published',
     title: 'The Difference Between Psychiatrists, Psychologists, Counselors, and Social Workers',
     description: 'Confused about mental health provider types? Learn the key differences in training, scope, and when to see each professional.',
     image: "/images/articles/cat14/cover-036.svg",
@@ -179,7 +179,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
   {
     id: catId(37),
     slug: 'evidence-based-mental-health-apps',
-    status: 'draft',
+    status: 'published',
     title: 'Mental Health Apps: Which Ones Are Evidence-Based and Actually Help',
     description: 'Not all mental health apps are created equal. Learn which apps have real research behind them and how to spot effective digital tools.',
     image: "/images/articles/cat14/cover-037.svg",
@@ -416,7 +416,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
   {
     id: catId(38),
     slug: 'navigating-mental-health-diagnosis',
-    status: 'draft',
+    status: 'published',
     title: 'Navigating a Mental Health Diagnosis: What It Means and What to Do Next',
     description: 'Just received a mental health diagnosis? Learn what it actually means, how diagnoses work, and the practical next steps for moving forward.',
     image: "/images/articles/cat14/cover-038.svg",
@@ -645,7 +645,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
   {
     id: catId(39),
     slug: 'mental-health-records-privacy-patient-rights',
-    status: 'draft',
+    status: 'published',
     title: 'Mental Health Records, Privacy, and Your Rights as a Patient',
     description: "What's in your mental health records, who can see them, and how to protect your privacy while getting the care you need.",
     image: '/images/articles/cat14/cover-039.svg',
@@ -851,7 +851,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
   {
     id: catId(40),
     slug: 'advocating-for-yourself-mental-health-system',
-    status: 'draft',
+    status: 'published',
     title: "Advocating for Yourself in the Mental Health System: A Patient's Guide",
     description: "Learn how to speak up for your needs, navigate power dynamics, and get better care by becoming your own best advocate.",
     image: "/images/articles/cat14/cover-040.svg",

@@ -15,7 +15,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
   {
     id: catId(1),
     slug: 'cognitive-behavioral-therapy-cbt-most-studied-treatment',
-    status: 'draft',
+    status: 'published',
     title: 'Cognitive Behavioral Therapy (CBT): The Most-Studied Treatment in Psychology',
     description: 'Learn how CBT works, what conditions it treats, and why it has become the gold standard for evidence-based psychotherapy worldwide.',
     image: "/images/articles/cat14/cover-001.svg",
@@ -325,7 +325,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
   {
     id: catId(2),
     slug: 'dialectical-behavior-therapy-dbt-emotion-regulation-distress-tolerance',
-    status: 'draft',
+    status: 'published',
     title: 'Dialectical Behavior Therapy (DBT): Skills for Emotion Regulation and Distress Tolerance',
     description: 'Discover how DBT combines acceptance and change, offering practical skills to manage intense emotions, improve relationships, and build a life worth living.',
     image: "/images/articles/cat14/cover-002.svg",
@@ -666,7 +666,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
   {
     id: catId(3),
     slug: 'emdr-eye-movement-therapy-processes-trauma',
-    status: 'draft',
+    status: 'published',
     title: 'EMDR: How Eye Movement Therapy Processes Trauma',
     description: 'Understand EMDR therapy, the evidence-based treatment that uses bilateral stimulation to help your brain reprocess traumatic memories and reduce distress.',
     image: "/images/articles/cat14/cover-003.svg",
@@ -1020,7 +1020,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
   {
     id: catId(4),
     slug: 'psychodynamic-therapy-unconscious-patterns-shape-your-life',
-    status: 'draft',
+    status: 'published',
     title: 'Psychodynamic Therapy: Understanding the Unconscious Patterns That Shape Your Life',
     description: 'Explore psychodynamic therapy, a depth-oriented approach that examines how past experiences and unconscious processes influence your relationships and sense of self.',
     image: "/images/articles/cat14/cover-004.svg",
@@ -1388,7 +1388,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
   {
     id: catId(5),
     slug: 'acceptance-commitment-therapy-act-building-psychological-flexibility',
-    status: 'draft',
+    status: 'published',
     title: 'Acceptance and Commitment Therapy (ACT): Building Psychological Flexibility',
     description: 'Learn how ACT helps you accept difficult thoughts and feelings while committing to actions aligned with your values, creating a rich and meaningful life.',
     image: "/images/articles/cat14/cover-005.svg",

@@ -18,7 +18,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
   {
     id: catId(6),
     slug: 'loneliness-epidemic-how-modern-life-disconnected-us',
-    status: 'draft',
+    status: 'published',
     title: 'The Loneliness Epidemic: How Modern Life Disconnected Us',
     description: 'Loneliness rates have doubled in recent decades. Explore the social, technological, and cultural forces that created our epidemic of disconnection.',
     image: "/images/articles/cat15/cover-006.svg",
@@ -366,7 +366,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
   {
     id: catId(7),
     slug: 'social-isolation-vs-perceived-isolation-lonely-in-crowd',
-    status: 'draft',
+    status: 'published',
     title: 'Social Isolation vs. Perceived Isolation: Why You Can Feel Lonely in a Crowd',
     description: 'Loneliness is not the same as being physically alone. Understand the difference between objective isolation and perceived loneliness.',
     image: "/images/articles/cat15/cover-007.svg",
@@ -736,7 +736,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
   {
     id: catId(8),
     slug: 'how-loneliness-affects-immune-system-sleep-physical-health',
-    status: 'draft',
+    status: 'published',
     title: 'How Loneliness Affects Your Immune System, Sleep, and Physical Health',
     description: 'Loneliness triggers measurable changes in immune function, sleep architecture, and physiological stress. Understand the biological pathways of isolation.',
     image: "/images/articles/cat15/cover-008.svg",
@@ -1143,7 +1143,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
   {
     id: catId(9),
     slug: 'evolutionary-roots-of-loneliness-why-social-pain-exists',
-    status: 'draft',
+    status: 'published',
     title: 'The Evolutionary Roots of Loneliness: Why Social Pain Exists',
     description: "Loneliness is not a design flaw --- it's an evolved signal that kept our ancestors alive. Understand the evolutionary psychology of social pain.",
     image: '/images/articles/cat15/cover-009.svg',
@@ -1568,7 +1568,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
   {
     id: catId(10),
     slug: 'measuring-loneliness-ucla-scale-what-your-score-means',
-    status: 'draft',
+    status: 'published',
     title: 'Measuring Loneliness: The UCLA Scale and What Your Score Means',
     description: 'The UCLA Loneliness Scale is the gold-standard tool for assessing loneliness. Learn how it works, what your score means, and how to interpret results.',
     image: "/images/articles/cat15/cover-010.svg",

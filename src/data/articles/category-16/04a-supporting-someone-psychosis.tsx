@@ -26,7 +26,7 @@ export const supportingSomeoneArticlesA: Article[] = [
   {
     id: catId(31),
     slug: 'how-to-talk-to-someone-experiencing-psychosis',
-    status: 'draft',
+    status: 'published',
     title: 'How to Talk to Someone Experiencing Psychosis: A Communication Guide',
     description: 'Practical communication strategies for talking to someone who is hearing voices, experiencing delusions, or otherwise disconnected from shared reality --- what helps, what hurts, and why.',
     image: '/images/articles/cat16/cover-031.svg',
@@ -222,7 +222,7 @@ export const supportingSomeoneArticlesA: Article[] = [
   {
     id: catId(32),
     slug: 'caregiver-burnout-psychosis-recognizing-preventing-recovering',
-    status: 'draft',
+    status: 'published',
     title: 'Caregiver Burnout in Psychosis: Recognizing, Preventing, and Recovering',
     description: 'How caring for someone with psychosis affects caregiver mental and physical health --- the signs of burnout, evidence-based coping strategies, and why self-care isn\'t selfish.',
     image: '/images/articles/cat16/cover-032.svg',
@@ -530,7 +530,7 @@ export const supportingSomeoneArticlesA: Article[] = [
   {
     id: catId(33),
     slug: 'when-someone-refuses-treatment-psychosis-what-families-can-do',
-    status: 'draft',
+    status: 'published',
     title: 'When Someone Refuses Treatment for Psychosis: What Families Can Do',
     description: 'Navigating the agonizing situation when someone with psychosis refuses treatment --- understanding anosognosia, legal options, therapeutic engagement strategies, and when to seek involuntary evaluation.',
     image: '/images/articles/cat16/cover-033.svg',
@@ -782,7 +782,7 @@ export const supportingSomeoneArticlesA: Article[] = [
   {
     id: catId(34),
     slug: 'housing-independent-living-psychosis-options-support',
-    status: 'draft',
+    status: 'published',
     title: 'Housing and Independent Living With Psychosis: Options and Support',
     description: 'A practical guide to housing options for people with psychotic conditions --- from supported housing to independent living, including how to access services and maintain stable accommodation.',
     image: '/images/articles/cat16/cover-034.svg',
@@ -1011,7 +1011,7 @@ export const supportingSomeoneArticlesA: Article[] = [
   {
     id: catId(35),
     slug: 'psychosis-criminal-justice-system-rights-diversion-support',
-    status: 'draft',
+    status: 'published',
     title: 'Psychosis and the Criminal Justice System: Rights, Diversion, and Support',
     description: 'How people with psychosis interact with the criminal justice system --- the overrepresentation problem, diversion programs, legal rights, and what families need to know.',
     image: '/images/articles/cat16/cover-035.svg',

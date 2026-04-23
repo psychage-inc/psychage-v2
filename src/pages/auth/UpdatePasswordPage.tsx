@@ -12,6 +12,23 @@ import { cn } from '@/lib/utils';
 import InteractiveCard from '@/components/ui/InteractiveCard';
 import SEO from '@/components/SEO';
 
+/**
+ * AUTH-009: this page must only allow password updates for users
+ * arriving via a password-reset email — NOT logged-in users with an
+ * existing session. Otherwise, anyone with access to a live session
+ * (unlocked shared device) can navigate to /update-password and change
+ * the password without the current-password proof that AccountSettings
+ * requires.
+ *
+ * Authorization rule:
+ *   allowed = recoveryEventReceived
+ *             OR (no session existed on mount AND a session is now present)
+ *
+ * The second branch covers the legitimate "reset link arrived, no
+ * prior session" path — the PASSWORD_RECOVERY event may be consumed by
+ * the global AuthContext listener before this page mounts, leaving us
+ * with only a SIGNED_IN event. Detecting "no prior session" disambiguates.
+ */
 const UpdatePasswordPage = () => {
     const navigate = useNavigate();
 
@@ -22,13 +39,14 @@ const UpdatePasswordPage = () => {
     const [isSuccess, setIsSuccess] = useState(false);
     const [isReady, setIsReady] = useState(false);
     const [isCheckingSession, setIsCheckingSession] = useState(true);
+    const [refusedExistingSession, setRefusedExistingSession] = useState(false);
 
     useEffect(() => {
         let mounted = true;
         let pollTimer: ReturnType<typeof setInterval> | null = null;
+        let hadExistingSessionOnMount: boolean | null = null; // null = unknown
+        let recoveryEventReceived = false;
 
-        // Check if the URL contains recovery indicators (hash fragment from
-        // Supabase implicit flow, or code param from PKCE flow).
         const hash = window.location.hash;
         const search = window.location.search;
         const hasRecoveryParams =
@@ -44,58 +62,75 @@ const UpdatePasswordPage = () => {
             if (pollTimer) clearInterval(pollTimer);
         };
 
-        // Listen for auth state changes. The PASSWORD_RECOVERY event fires when
-        // Supabase processes the recovery token, but depending on timing it may
-        // arrive as SIGNED_IN instead (the global AuthContext listener may
-        // consume the event first). Accept both.
+        const refuseExistingSession = () => {
+            if (!mounted) return;
+            setRefusedExistingSession(true);
+            setIsCheckingSession(false);
+            if (pollTimer) clearInterval(pollTimer);
+        };
+
+        const decideAllowed = (sessionPresent: boolean) => {
+            if (recoveryEventReceived) {
+                markReady();
+                return;
+            }
+            if (sessionPresent && hadExistingSessionOnMount === false) {
+                // No session on mount + session now present = recovery flow
+                // succeeded (event was likely consumed by another listener).
+                markReady();
+                return;
+            }
+            if (sessionPresent && hadExistingSessionOnMount === true) {
+                // Logged-in user navigated directly to /update-password —
+                // refuse, point them at AccountSettings.
+                refuseExistingSession();
+            }
+        };
+
         const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
             if (!mounted) return;
-            if ((event === 'PASSWORD_RECOVERY' || event === 'SIGNED_IN') && session) {
-                markReady();
+            if (event === 'PASSWORD_RECOVERY') {
+                recoveryEventReceived = true;
+                if (session) markReady();
+                return;
+            }
+            if (event === 'SIGNED_IN' && session) {
+                decideAllowed(true);
             }
         });
 
-        // The PASSWORD_RECOVERY event may have fired before this listener
-        // registered (Supabase processes hash/code during client init). Poll
-        // getSession() to catch that case. Use 500ms intervals up to 5s.
-        const checkSession = async () => {
-            const { data: { session } } = await supabase.auth.getSession();
+        // Establish the on-mount session baseline first, then act.
+        supabase.auth.getSession().then(({ data: { session } }) => {
+            if (!mounted) return;
+            hadExistingSessionOnMount = !!session;
+
             if (session) {
-                markReady();
-                return true;
-            }
-            return false;
-        };
-
-        // Immediate check
-        checkSession().then((found) => {
-            if (found || !mounted) return;
-
-            if (!hasRecoveryParams) {
-                // No recovery indicators in URL — user navigated here directly
-                if (mounted) {
-                    setError('Invalid or expired reset link. Please request a new password reset.');
-                    setIsCheckingSession(false);
-                }
+                decideAllowed(true);
                 return;
             }
 
-            // Recovery params present — poll while Supabase exchanges them
+            // No session yet. Need recovery params to proceed.
+            if (!hasRecoveryParams) {
+                setError('Invalid or expired reset link. Please request a new password reset.');
+                setIsCheckingSession(false);
+                return;
+            }
+
+            // Poll while Supabase exchanges the hash/code params.
             let attempts = 0;
-            const MAX_ATTEMPTS = 10; // 10 × 500ms = 5 seconds
+            const MAX_ATTEMPTS = 10; // 10 × 500ms = 5s
             pollTimer = setInterval(async () => {
                 attempts++;
-                const found = await checkSession();
-                if (found || !mounted) {
-                    if (pollTimer) clearInterval(pollTimer);
+                const { data } = await supabase.auth.getSession();
+                if (!mounted) return;
+                if (data.session) {
+                    decideAllowed(true);
                     return;
                 }
                 if (attempts >= MAX_ATTEMPTS) {
                     if (pollTimer) clearInterval(pollTimer);
-                    if (mounted) {
-                        setError('Invalid or expired reset link. Please request a new password reset.');
-                        setIsCheckingSession(false);
-                    }
+                    setError('Invalid or expired reset link. Please request a new password reset.');
+                    setIsCheckingSession(false);
                 }
             }, 500);
         });
@@ -130,8 +165,10 @@ const UpdatePasswordPage = () => {
                 setError(updateError.message);
             } else {
                 setIsSuccess(true);
-                // Sign out so the user logs in fresh with the new password
-                await supabase.auth.signOut();
+                // Sign out of all sessions globally — if the password reset
+                // was triggered to recover from a lost device or session
+                // hijack, kill any attacker tokens too. (AUTH-009.)
+                await supabase.auth.signOut({ scope: 'global' });
                 setTimeout(
                     () => navigate('/login', { state: { message: 'Password updated successfully. Please log in.' } }),
                     3000,
@@ -155,6 +192,40 @@ const UpdatePasswordPage = () => {
                 <div className="text-center relative z-10 space-y-4">
                     <Loader2 className="w-10 h-10 mx-auto text-primary animate-spin" />
                     <Text className="text-text-secondary">Verifying your reset link...</Text>
+                </div>
+            </div>
+        );
+    }
+
+    // AUTH-009: caller is logged in but did not arrive via a recovery email.
+    // Refuse to render the form. Point them at the in-session change flow
+    // which requires the current password.
+    if (refusedExistingSession) {
+        return (
+            <div
+                role="alert"
+                data-testid="update-password-refused-existing-session"
+                className="min-h-screen flex items-center justify-center px-4 py-12 bg-background relative overflow-hidden"
+            >
+                <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px] pointer-events-none" />
+                <div className="w-full max-w-md relative z-10">
+                    <InteractiveCard
+                        spotlightColor="rgba(20, 184, 166, 0.1)"
+                        className="p-8 border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl text-center"
+                    >
+                        <h3 className="text-xl font-semibold text-text-primary mb-3">
+                            This page is for password resets via email
+                        </h3>
+                        <p className="text-text-secondary mb-6">
+                            To change your password while signed in, go to Account Settings — you will be asked for your current password.
+                        </p>
+                        <Link
+                            to="/dashboard/account-settings"
+                            className="inline-block px-5 py-2.5 rounded-lg bg-primary text-white font-semibold hover:bg-primary-hover transition-colors"
+                        >
+                            Go to Account Settings
+                        </Link>
+                    </InteractiveCard>
                 </div>
             </div>
         );

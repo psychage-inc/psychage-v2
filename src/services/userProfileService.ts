@@ -181,6 +181,16 @@ export const userProfileService = {
                 return { success: false, error: updateError.message };
             }
 
+            // AUTH-028: send a security notification to the registered
+            // email. Fire-and-forget — the password change has already
+            // succeeded, the email is informational. Failures (no SMTP
+            // configured, transport error) do NOT block the response.
+            void supabase.functions
+                .invoke('password-change-notification', { body: { user_id: user.id } })
+                .catch((err) => {
+                    console.warn('password-change-notification dispatch failed:', err);
+                });
+
             return { success: true };
         } catch (error) {
             console.error('Failed to change password:', error);

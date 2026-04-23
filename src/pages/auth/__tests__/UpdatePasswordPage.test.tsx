@@ -17,6 +17,8 @@ const getSessionMock = vi.fn();
 const onAuthStateChangeMock = vi.fn();
 const updateUserMock = vi.fn();
 const signOutMock = vi.fn();
+const getUserMock = vi.fn();
+const invokeMock = vi.fn();
 
 vi.mock('@/lib/supabaseClient', () => ({
     supabase: {
@@ -25,6 +27,10 @@ vi.mock('@/lib/supabaseClient', () => ({
             onAuthStateChange: (cb: unknown) => onAuthStateChangeMock(cb),
             updateUser: (...args: unknown[]) => updateUserMock(...args),
             signOut: (...args: unknown[]) => signOutMock(...args),
+            getUser: () => getUserMock(),
+        },
+        functions: {
+            invoke: (...args: unknown[]) => invokeMock(...args),
         },
     },
 }));
@@ -51,12 +57,17 @@ describe('UpdatePasswordPage — AUTH-009', () => {
         signOutMock.mockReset();
         listenerCb = null;
 
+        getUserMock.mockReset();
+        invokeMock.mockReset();
+
         onAuthStateChangeMock.mockImplementation((cb) => {
             listenerCb = cb as (event: string, session: unknown) => void;
             return { data: { subscription: { unsubscribe: vi.fn() } } };
         });
         updateUserMock.mockResolvedValue({ error: null });
         signOutMock.mockResolvedValue({ error: null });
+        getUserMock.mockResolvedValue({ data: { user: { id: 'u-recovery', email: 'a@b.com' } } });
+        invokeMock.mockResolvedValue({ data: { ok: true }, error: null });
 
         // Reset the URL hash/search between tests
         window.history.replaceState({}, '', '/update-password');

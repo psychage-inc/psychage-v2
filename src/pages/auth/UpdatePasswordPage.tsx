@@ -165,6 +165,17 @@ const UpdatePasswordPage = () => {
                 setError(updateError.message);
             } else {
                 setIsSuccess(true);
+                // AUTH-028: notify the registered email that the password
+                // changed. Fire-and-forget — the recovery flow has already
+                // succeeded; email failure must not block the UX. Run
+                // BEFORE the global signOut so the user's own session can
+                // still call functions.invoke on their own behalf.
+                const { data: userData } = await supabase.auth.getUser();
+                if (userData?.user?.id) {
+                    void supabase.functions
+                        .invoke('password-change-notification', { body: { user_id: userData.user.id } })
+                        .catch((err) => console.warn('password-change-notification dispatch failed:', err));
+                }
                 // Sign out of all sessions globally — if the password reset
                 // was triggered to recover from a lost device or session
                 // hijack, kill any attacker tokens too. (AUTH-009.)

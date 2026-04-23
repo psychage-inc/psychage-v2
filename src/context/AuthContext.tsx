@@ -3,14 +3,25 @@ import { AuthContext, AuthState, AuthContextType } from './AuthContextDefinition
 import { supabase } from '../lib/supabaseClient';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
 
-// Map Supabase user to our User type
+// Map Supabase user to our User type.
+//
+// Role is resolved from app_metadata, not user_metadata. user_metadata is
+// user-writable via supabase.auth.updateUser({ data: ... }) — trusting it
+// for role resolution is the vulnerability fixed in AUTH-001. See
+// docs/audits/auth-audit-2026-04-23.md.
 function mapSupabaseUser(supabaseUser: SupabaseUser | null) {
   if (!supabaseUser) return null;
+
+  const appRole = (supabaseUser.app_metadata as { role?: unknown } | undefined)?.role;
+  const role: 'patient' | 'provider' | 'admin' =
+    appRole === 'admin' || appRole === 'provider' || appRole === 'patient'
+      ? appRole
+      : 'patient';
 
   return {
     id: supabaseUser.id,
     email: supabaseUser.email || '',
-    role: (supabaseUser.user_metadata?.role || 'patient') as 'patient' | 'provider' | 'admin',
+    role,
     display_name: supabaseUser.user_metadata?.display_name || supabaseUser.user_metadata?.full_name || '',
     avatar_url: supabaseUser.user_metadata?.avatar_url || '',
   };

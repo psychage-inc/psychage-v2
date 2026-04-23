@@ -100,9 +100,11 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
             const result = await login(email, password);
 
             if (result.success) {
-                // Check if admin needs onboarding
+                // Check if admin needs onboarding.
+                // Read role from app_metadata only — user_metadata is user-writable
+                // (AUTH-001). The server is the source of truth for role claims.
                 const { data: { user: authUser } } = await supabase.auth.getUser();
-                const role = authUser?.user_metadata?.role;
+                const role = (authUser?.app_metadata as { role?: string } | undefined)?.role;
 
                 if (role === 'admin') {
                     // Try to check onboarding status (fail-open if column doesn't exist)

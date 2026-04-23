@@ -48,6 +48,13 @@ export const userProfileService = {
                 .eq('id', user.id)
                 .maybeSingle();
 
+            // Resolve role from app_metadata (server-controlled), then fall back
+            // to profiles.role (also server-controlled via DB trigger). Never
+            // read user_metadata.role — see AUTH-001.
+            const appRole = (user.app_metadata as { role?: unknown } | undefined)?.role;
+            const resolveRole = (raw: unknown): 'patient' | 'provider' | 'admin' =>
+                raw === 'admin' || raw === 'provider' || raw === 'patient' ? raw : 'patient';
+
             // If profile table exists and has data, merge with auth user
             if (!profileError && profileData) {
                 return {
@@ -57,7 +64,7 @@ export const userProfileService = {
                     full_name: profileData.full_name || user.user_metadata?.full_name || '',
                     avatar_url: profileData.avatar_url || user.user_metadata?.avatar_url || '',
                     location: profileData.location,
-                    role: (profileData.role || user.user_metadata?.role || 'patient') as 'patient' | 'provider' | 'admin',
+                    role: resolveRole(appRole ?? profileData.role),
                     created_at: user.created_at,
                     updated_at: profileData.updated_at,
                 };
@@ -71,7 +78,7 @@ export const userProfileService = {
                 full_name: user.user_metadata?.full_name || '',
                 avatar_url: user.user_metadata?.avatar_url || '',
                 location: user.user_metadata?.location,
-                role: (user.user_metadata?.role || 'patient') as 'patient' | 'provider' | 'admin',
+                role: resolveRole(appRole),
                 created_at: user.created_at,
             };
         } catch (error) {

@@ -81,9 +81,13 @@ export const userProfileService = {
     },
 
     /**
-     * Update user profile
+     * Update user profile.
+     *
+     * `role` is intentionally excluded from the accepted update shape: roles
+     * must be set server-side via admin tooling, never from a client-trusted
+     * call. See AUTH-001 in docs/audits/auth-audit-2026-04-23.md.
      */
-    updateProfile: async (updates: Partial<Omit<UserProfile, 'id' | 'email' | 'created_at'>>): Promise<UserProfile | null> => {
+    updateProfile: async (updates: Partial<Omit<UserProfile, 'id' | 'email' | 'created_at' | 'role'>>): Promise<UserProfile | null> => {
         try {
             const { data: { user }, error: authError } = await supabase.auth.getUser();
 
@@ -92,13 +96,12 @@ export const userProfileService = {
                 return null;
             }
 
-            // Update auth user metadata
+            // Update auth user metadata (display fields only — never role)
             const metadataUpdates: Record<string, unknown> = {};
             if (updates.display_name !== undefined) metadataUpdates.display_name = updates.display_name;
             if (updates.full_name !== undefined) metadataUpdates.full_name = updates.full_name;
             if (updates.avatar_url !== undefined) metadataUpdates.avatar_url = updates.avatar_url;
             if (updates.location !== undefined) metadataUpdates.location = updates.location;
-            if (updates.role !== undefined) metadataUpdates.role = updates.role;
 
             const { error: updateError } = await supabase.auth.updateUser({
                 data: metadataUpdates,
@@ -117,7 +120,6 @@ export const userProfileService = {
                 if (updates.full_name !== undefined) profileUpdates.full_name = updates.full_name;
                 if (updates.avatar_url !== undefined) profileUpdates.avatar_url = updates.avatar_url;
                 if (updates.location !== undefined) profileUpdates.location = updates.location;
-                if (updates.role !== undefined) profileUpdates.role = updates.role;
 
                 // Upsert to user_profiles table
                 await supabase

@@ -45,6 +45,9 @@ test-results
 # Parallel rewrite coordination (lock files)
 .rewrite/
 
+# /bridge annotation workflow output (local scratch: logs + phase analysis)
+.ux/
+
 # Data pipeline (large downloaded/generated files)
 data-pipeline/data/
 data-pipeline/output_data/
@@ -67,7 +70,8 @@ screenshots/
 # Backup files
 *.bak
 *.backup
-*" 2."*
+# macOS Finder "foo 2.ext" duplicates (prior pattern had stray quotes and matched nothing)
+* 2.*
 
 # Temporary scripts
 scripts/analyze-original-1000.ts

@@ -136,7 +136,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  const signup = useCallback(async (email: string, password: string, displayName?: string, role: 'patient' | 'provider' = 'patient', extraMetadata?: SignupExtraMetadata) => {
+  const signup = useCallback(async (email: string, password: string, displayName?: string, role: 'patient' | 'provider' = 'patient', extraMetadata?: SignupExtraMetadata, captchaToken?: string) => {
     try {
       // AUTH-010: never blind-spread extraMetadata. The previous shape
       // `Record<string, unknown>` let any caller inject arbitrary keys —
@@ -165,6 +165,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             role,
             ...sanitizedExtras,
           },
+          // AUTH-029: forward Turnstile token. Supabase server enforces
+          // when Captcha Protection is enabled in dashboard.
+          ...(captchaToken ? { captchaToken } : {}),
         },
       });
 
@@ -219,10 +222,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  const requestPasswordReset = useCallback(async (email: string) => {
+  const requestPasswordReset = useCallback(async (email: string, captchaToken?: string) => {
     try {
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
         redirectTo: `${window.location.origin}/update-password`,
+        // AUTH-029: forward Turnstile token. Supabase enforces only
+        // when Captcha Protection is enabled in dashboard settings.
+        ...(captchaToken ? { captchaToken } : {}),
       });
 
       if (error) {

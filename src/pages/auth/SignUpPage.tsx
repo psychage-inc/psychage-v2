@@ -14,6 +14,7 @@ import { LogoIcon } from '@/components/ui/LogoIcon';
 import ConsentCheckboxes, { ConsentState, defaultConsentState, isConsentValid } from '@/components/privacy/ConsentCheckboxes';
 import { consentService } from '@/services/consentService';
 import SEO from '@/components/SEO';
+import { useTurnstile } from '@/lib/auth/useTurnstile';
 
 const SignUpPage = () => {
     const [userType, setUserType] = useState<'patient' | 'provider'>('patient');
@@ -33,6 +34,8 @@ const SignUpPage = () => {
 
     const { signup, isLoading } = useAuth();
     const navigate = useNavigate();
+    // AUTH-029: gate signup on Turnstile token (no-op when site key unset).
+    const { widget: turnstileWidget, token: captchaToken, reset: resetCaptcha } = useTurnstile();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         setFormData(prev => ({ ...prev, [e.target.id]: e.target.value }));
@@ -57,6 +60,11 @@ const SignUpPage = () => {
             return;
         }
 
+        if (!captchaToken) {
+            setError('Please complete the verification challenge.');
+            return;
+        }
+
         setIsSubmitting(true);
         try {
             const result = await signup(
@@ -70,7 +78,8 @@ const SignUpPage = () => {
                     country: formData.country || undefined,
                     age: formData.age ? parseInt(formData.age, 10) : undefined,
                     referral_source: formData.referralSource || undefined,
-                }
+                },
+                captchaToken,
             );
 
             if (result.success) {
@@ -92,11 +101,13 @@ const SignUpPage = () => {
                 });
             } else {
                 setError(result.error || 'Signup failed. Please try again.');
+                resetCaptcha();
             }
         } catch (err) {
             // Registration error handled by AuthContext
             console.error('Signup error:', err);
             setError('An unexpected error occurred. Please try again.');
+            resetCaptcha();
         } finally {
             setIsSubmitting(false);
         }
@@ -350,12 +361,16 @@ const SignUpPage = () => {
                             <ConsentCheckboxes consent={consent} onChange={setConsent} />
                         </div>
 
+                        {turnstileWidget && (
+                            <div className="flex justify-center">{turnstileWidget}</div>
+                        )}
+
                         <Button
                             type="submit"
                             className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300"
                             size="lg"
                             isLoading={isSubmitting}
-                            disabled={isSubmitting || isLoading}
+                            disabled={isSubmitting || isLoading || !captchaToken}
                         >
                             {userType === 'provider' ? 'Create Provider Account' : 'Create Account'}
                         </Button>

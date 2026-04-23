@@ -19,10 +19,10 @@ export interface AuthState {
 
 export interface AuthContextType extends AuthState {
     login: (email: string, password: string) => Promise<{ success: boolean; error?: string }>;
-    signup: (email: string, password: string, displayName?: string, role?: 'patient' | 'provider', extraMetadata?: SignupExtraMetadataLike) => Promise<{ success: boolean; error?: string }>;
+    signup: (email: string, password: string, displayName?: string, role?: 'patient' | 'provider', extraMetadata?: SignupExtraMetadataLike, captchaToken?: string) => Promise<{ success: boolean; error?: string }>;
     logout: () => Promise<void>;
     refreshUser: () => Promise<void>;
-    requestPasswordReset: (email: string) => Promise<{ success: boolean; error?: string }>;
+    requestPasswordReset: (email: string, captchaToken?: string) => Promise<{ success: boolean; error?: string }>;
     signInWithGoogle: () => Promise<{ success: boolean; error?: string }>;
     signInWithApple: () => Promise<{ success: boolean; error?: string }>;
     deleteAccount: () => Promise<{ success: boolean; error?: string }>;

@@ -27,24 +27,24 @@ export const SafetyAlert: React.FC<SafetyAlertProps> = ({
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
-            className="bg-surface rounded-2xl max-w-md w-full p-8 shadow-2xl border border-border"
+            className="bg-surface rounded-2xl max-w-md w-full p-6 shadow-2xl border border-border max-h-[85vh] overflow-y-auto"
           >
-            <h2 className="font-display font-bold text-xl text-text-primary mb-3">
+            <h2 className="font-display font-bold text-lg text-text-primary mb-2">
               You're not alone
             </h2>
-            <p className="text-text-secondary text-sm leading-relaxed mb-6">
+            <p className="text-text-secondary text-sm leading-relaxed mb-4">
               Some of your responses suggest you may be experiencing difficulty in your
               relationship. Whatever you're going through, support is available -- and
               reaching out is a sign of strength.
             </p>
 
-            <div className="space-y-3 mb-6">
+            <div className="space-y-2 mb-4">
               <a
                 href="tel:18007997233"
-                className="flex items-center gap-3 p-4 rounded-xl bg-surface-hover border border-border hover:bg-surface-active transition-colors"
+                className="flex items-center gap-3 p-3 rounded-xl bg-surface-hover border border-border hover:bg-surface-active transition-colors"
               >
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                  <Phone size={18} className="text-primary" />
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <Phone size={16} className="text-primary" />
                 </div>
                 <div>
                   <p className="font-semibold text-sm text-text-primary">
@@ -58,10 +58,10 @@ export const SafetyAlert: React.FC<SafetyAlertProps> = ({
 
               <a
                 href="sms:88788?body=START"
-                className="flex items-center gap-3 p-4 rounded-xl bg-surface-hover border border-border hover:bg-surface-active transition-colors"
+                className="flex items-center gap-3 p-3 rounded-xl bg-surface-hover border border-border hover:bg-surface-active transition-colors"
               >
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                  <MessageCircle size={18} className="text-primary" />
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <MessageCircle size={16} className="text-primary" />
                 </div>
                 <div>
                   <p className="font-semibold text-sm text-text-primary">Text Support</p>
@@ -73,10 +73,10 @@ export const SafetyAlert: React.FC<SafetyAlertProps> = ({
 
               <Link
                 to="/crisis"
-                className="flex items-center gap-3 p-4 rounded-xl bg-surface-hover border border-border hover:bg-surface-active transition-colors"
+                className="flex items-center gap-3 p-3 rounded-xl bg-surface-hover border border-border hover:bg-surface-active transition-colors"
               >
-                <div className="w-10 h-10 rounded-full bg-surface-active flex items-center justify-center shrink-0">
-                  <ExternalLink size={18} className="text-text-secondary" />
+                <div className="w-8 h-8 rounded-full bg-surface-active flex items-center justify-center shrink-0">
+                  <ExternalLink size={16} className="text-text-secondary" />
                 </div>
                 <div>
                   <p className="font-semibold text-sm text-text-primary">

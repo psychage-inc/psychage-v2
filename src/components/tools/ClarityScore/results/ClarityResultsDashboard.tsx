@@ -11,6 +11,7 @@ import type {
 } from '@/lib/clarity/types';
 import { getScoreTierColor } from '@/lib/clarity/scoring';
 import TierBadge from './components/TierBadge';
+import CrisisUrgentBanner from './components/CrisisUrgentBanner';
 import OverviewTab from './OverviewTab';
 import DimensionsTab from './DimensionsTab';
 import ScoreGuideTab from './ScoreGuideTab';
@@ -127,9 +128,9 @@ const ClarityResultsDashboard: React.FC<ClarityResultsDashboardProps> = ({
                 </div>
               </div>
               <div className="hidden md:block w-px h-14 bg-gray-200 dark:bg-neutral-700 mx-2" />
-              <div className="hidden md:flex flex-col gap-1.5 pb-2">
+              <div className="hidden md:flex flex-col pb-2">
                 <TierBadge tier={results.tier} label={results.label} size="lg" />
-                <p className="text-xs text-gray-400 dark:text-neutral-500">
+                <p className="text-xs text-gray-400 dark:text-neutral-500 mt-1">
                   Assessment complete
                 </p>
               </div>
@@ -150,6 +151,8 @@ const ClarityResultsDashboard: React.FC<ClarityResultsDashboardProps> = ({
           <div className="mt-4 md:hidden">
             <TierBadge tier={results.tier} label={results.label} size="md" />
           </div>
+
+          {results.tier === 'crisis' && <CrisisUrgentBanner />}
         </div>
       </div>
 

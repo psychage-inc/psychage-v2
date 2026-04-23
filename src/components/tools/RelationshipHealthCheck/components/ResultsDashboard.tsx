@@ -25,6 +25,7 @@ import { ClinicalInsights } from './ClinicalInsights';
 import { RelationshipBlueprint } from './RelationshipBlueprint';
 import { ActionPlanV2 } from './ActionPlanV2';
 import { ScienceSection } from './ScienceSection';
+import { NextStepsBlock } from './NextStepsBlock';
 import ToolRecommendation from '../../shared/ToolRecommendation';
 
 interface ResultsDashboardProps {
@@ -264,6 +265,15 @@ export const ResultsDashboard: React.FC<ResultsDashboardProps> = ({
         {/* Spacer between header block and content */}
         <div className="h-8" />
 
+        {/* ── Next Steps Block (protocol-backed, top-of-results guidance) ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.12 }}
+        >
+          <NextStepsBlock tier={result.tier} compositeScore={result.compositeScore} />
+        </motion.div>
+
         {/* ── Section 2: Isolation Alert ──────────────────────────── */}
         {result.isolationAlert.triggered && (
           <motion.div
@@ -309,10 +319,11 @@ export const ResultsDashboard: React.FC<ResultsDashboardProps> = ({
 
         {/* ── Section 3: Clinical Insights ────────────────────────── */}
         <motion.div
+          id="clinical-insights"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="mb-8"
+          className="mb-8 scroll-mt-24"
         >
           <ClinicalInsights
             fourHorsemen={result.fourHorsemen}
@@ -387,10 +398,11 @@ export const ResultsDashboard: React.FC<ResultsDashboardProps> = ({
 
         {/* ── Section 7: Evidence-Based Action Plan ──────────────── */}
         <motion.div
+          id="action-plan"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="mb-8"
+          className="mb-8 scroll-mt-24"
         >
           <ActionPlanV2 patterns={result.patterns} />
         </motion.div>

@@ -16,12 +16,19 @@ interface ConsultationGuidanceProps {
   flags?: string[];
 }
 
+interface GuidanceLink {
+  label: string;
+  to: string;
+  primary?: boolean;
+  external?: boolean;
+}
+
 interface GuidanceConfig {
   icon: React.ElementType;
   title: string;
   description: string;
   whatYouCanDo: string[];
-  links?: Array<{ label: string; to: string; primary?: boolean }>;
+  links?: GuidanceLink[];
 }
 
 function getGuidance(_tier: ScoreTier, score: number): GuidanceConfig {
@@ -59,20 +66,40 @@ function getGuidance(_tier: ScoreTier, score: number): GuidanceConfig {
     };
   }
 
+  if (score >= 20) {
+    return {
+      icon: AlertTriangle,
+      title: 'Professional Consultation Recommended',
+      description:
+        'Your responses suggest you may be experiencing significant challenges. This is not a failure — reaching out for professional support is the clearest and most effective path to feeling better. You deserve help, and it is available.',
+      whatYouCanDo: [
+        'Connect with a mental health professional soon',
+        'Reach out to a trusted person in your life',
+        'Focus on basic self-care: sleep, nutrition, hydration',
+        'Know that seeking help is a sign of strength, not weakness',
+      ],
+      links: [
+        { label: 'Find a Provider', to: '/providers', primary: true },
+        { label: 'Crisis Resources', to: '/crisis' },
+      ],
+    };
+  }
+
   return {
     icon: AlertTriangle,
-    title: 'Professional Consultation Recommended',
+    title: 'Urgent: please reach out today',
     description:
-      'Your responses suggest you may be experiencing significant challenges. This is not a failure — reaching out for professional support is the clearest and most effective path to feeling better. You deserve help, and it is available.',
+      'Your responses suggest you may need immediate support. This is not a diagnosis — it is a signal that talking to someone right now could genuinely help. You do not need to sort anything out first; just reach out.',
     whatYouCanDo: [
-      'Connect with a mental health professional',
-      'Reach out to a trusted person in your life',
-      'Focus on basic self-care: sleep, nutrition, hydration',
-      'Know that seeking help is a sign of strength, not weakness',
+      'Call 988 — the Suicide & Crisis Lifeline is free, 24/7, and confidential',
+      'Text HOME to 741741 to reach the Crisis Text Line',
+      'If you or someone else is in immediate danger, call 911 or go to your nearest ER',
+      'Tell one person you trust what you are going through today',
     ],
     links: [
-      { label: 'Find a Provider', to: '/providers', primary: true },
+      { label: 'Call 988', to: 'tel:988', primary: true, external: true },
       { label: 'Crisis Resources', to: '/crisis' },
+      { label: 'Find a Provider', to: '/providers' },
     ],
   };
 }
@@ -146,23 +173,29 @@ const ConsultationGuidance: React.FC<ConsultationGuidanceProps> = ({
         {/* Action buttons */}
         {config.links && config.links.length > 0 && (
           <div className="flex flex-wrap gap-3 pt-2">
-            {config.links.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={`inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl transition-colors ${
-                  link.primary
-                    ? 'text-white hover:opacity-90'
-                    : 'text-gray-700 dark:text-neutral-300 bg-gray-100 dark:bg-neutral-800 hover:bg-gray-200 dark:hover:bg-neutral-700'
-                }`}
-                style={
-                  link.primary ? { backgroundColor: tierColor } : undefined
-                }
-              >
-                {link.label}
-                <ArrowRight size={14} />
-              </Link>
-            ))}
+            {config.links.map((link) => {
+              const className = `inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl transition-colors ${
+                link.primary
+                  ? 'text-white hover:opacity-90'
+                  : 'text-gray-700 dark:text-neutral-300 bg-gray-100 dark:bg-neutral-800 hover:bg-gray-200 dark:hover:bg-neutral-700'
+              }`;
+              const style = link.primary ? { backgroundColor: tierColor } : undefined;
+
+              if (link.external) {
+                return (
+                  <a key={link.to} href={link.to} className={className} style={style}>
+                    {link.label}
+                    <ArrowRight size={14} />
+                  </a>
+                );
+              }
+              return (
+                <Link key={link.to} to={link.to} className={className} style={style}>
+                  {link.label}
+                  <ArrowRight size={14} />
+                </Link>
+              );
+            })}
           </div>
         )}
       </div>

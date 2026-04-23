@@ -74,7 +74,7 @@ const CrisisBanner: React.FC = () => {
               <div className="flex items-center gap-2 mt-3">
                 <a
                   href={callHref}
-                  className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-white hover:bg-white/90 text-red-600 rounded-lg text-xs font-bold transition-colors"
+                  className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-white hover:bg-white/90 text-red-600 rounded-lg text-xs font-bold transition-colors whitespace-nowrap"
                 >
                   <Phone size={12} />
                   Call Now

@@ -2,7 +2,6 @@ import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Clock,
-  LayoutGrid,
   HelpCircle,
   History,
   ChevronDown,
@@ -228,20 +227,70 @@ const RelationshipHealthCheck: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Partner selection */}
+        {/* Assessment roadmap — 3 step chips */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.15 }}
-          className="mb-12"
+          transition={{ delay: 0.12 }}
+          className="mb-6"
+          aria-label="Assessment roadmap"
         >
-          <p className="text-center text-sm font-semibold text-text-secondary mb-4">
-            Are you currently in a romantic relationship?
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+            {[
+              { n: '1', label: 'Pick your context' },
+              { n: '2', label: 'Answer 24–34 questions' },
+              { n: '3', label: 'Get your results' },
+            ].map((step, i) => (
+              <div
+                key={step.n}
+                className={`flex items-center gap-2.5 bg-surface border border-border rounded-xl px-3 py-2.5 ${
+                  i === 0 ? 'ring-1 ring-primary/20' : ''
+                }`}
+              >
+                <span
+                  className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${
+                    i === 0
+                      ? 'bg-primary text-white'
+                      : 'bg-surface-active text-text-tertiary'
+                  }`}
+                >
+                  {step.n}
+                </span>
+                <span className="text-xs font-medium text-text-secondary">{step.label}</span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Partner selection — wrapped in a "Begin Here" stepped container */}
+        <motion.section
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15 }}
+          className="mb-12 rounded-2xl bg-primary/5 border-2 border-primary/20 p-6 sm:p-7"
+          aria-labelledby="begin-assessment-heading"
+        >
+          <div className="flex items-center gap-2 mb-2">
+            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-primary text-white">
+              Begin Here
+            </span>
+            <span className="text-[11px] uppercase tracking-wider font-semibold text-text-tertiary">
+              Step 1 of 2
+            </span>
+          </div>
+          <h2
+            id="begin-assessment-heading"
+            className="font-display font-bold text-xl text-text-primary mb-1"
+          >
+            Choose your path to start
+          </h2>
+          <p className="text-sm text-text-secondary mb-5 leading-relaxed">
+            This determines which relationship domains you'll be rated on.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <button
               onClick={() => handleStartAssessment(false)}
-              className="bg-surface rounded-2xl p-5 border-2 border-border hover:border-primary/40 transition-all text-left group"
+              className="bg-surface rounded-xl p-5 border-2 border-border hover:border-primary transition-all text-left group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >
               <p className="font-semibold text-text-primary group-hover:text-primary transition-colors">
                 Yes, I have a partner
@@ -250,7 +299,7 @@ const RelationshipHealthCheck: React.FC = () => {
             </button>
             <button
               onClick={() => handleStartAssessment(true)}
-              className="bg-surface rounded-2xl p-5 border-2 border-border hover:border-primary/40 transition-all text-left group"
+              className="bg-surface rounded-xl p-5 border-2 border-border hover:border-primary transition-all text-left group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >
               <p className="font-semibold text-text-primary group-hover:text-primary transition-colors">
                 No, not currently
@@ -258,7 +307,7 @@ const RelationshipHealthCheck: React.FC = () => {
               <p className="text-sm text-text-tertiary mt-1">24 questions across 3 domains</p>
             </button>
           </div>
-        </motion.div>
+        </motion.section>
 
         {/* Science expandable */}
         <motion.div

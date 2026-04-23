@@ -71,10 +71,10 @@ const DimensionRadar: React.FC<DimensionRadarProps> = ({
     <div
       role="img"
       aria-label={`Dimension radar chart. ${textAlt}`}
-      className="w-full"
+      className="w-full max-w-sm mx-auto"
     >
       <ResponsiveContainer width="100%" height={280}>
-        <RadarChart data={data} cx="50%" cy="50%" outerRadius="75%">
+        <RadarChart data={data} cx="50%" cy="50%" outerRadius="72%">
           <PolarGrid stroke="#e5e7eb" strokeDasharray="3 3" />
           <PolarAngleAxis
             dataKey="dimension"

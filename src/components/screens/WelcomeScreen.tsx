@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigator } from '../../context/NavigatorContext';
 import { NavigatorButton } from '../navigator/NavigatorButton';
 import { DisclaimerCard } from '../navigator/DisclaimerCard';
-import { Loader2, AlertCircle, Compass } from 'lucide-react';
+import { Loader2, AlertCircle, ClipboardList } from 'lucide-react';
 
 export const WelcomeScreen: React.FC = () => {
     const { dispatch, state } = useNavigator();
@@ -20,8 +20,8 @@ export const WelcomeScreen: React.FC = () => {
 
     return (
         <div className="max-w-2xl mx-auto py-12 px-4 sm:px-6 flex flex-col items-center text-center">
-            <div className="w-20 h-20 bg-teal-100 dark:bg-teal-900/30 rounded-2xl flex items-center justify-center mb-8 transform -rotate-3 border border-teal-200 dark:border-teal-500/30 shadow-[0_0_30px_rgba(20,184,166,0.15)]">
-                <Compass className="w-10 h-10 text-teal-600 dark:text-teal-400 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]" strokeWidth={1.5} />
+            <div className="w-20 h-20 bg-teal-50 dark:bg-teal-900/20 rounded-2xl flex items-center justify-center mb-8 border border-teal-200/70 dark:border-teal-500/20">
+                <ClipboardList className="w-10 h-10 text-teal-600 dark:text-teal-400" strokeWidth={1.5} />
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6 tracking-tight">

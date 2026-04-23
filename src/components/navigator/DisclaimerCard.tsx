@@ -29,7 +29,7 @@ export const DisclaimerCard: React.FC<DisclaimerCardProps> = ({ className }) => 
                     </p>
                     <p className="text-sm text-text-secondary leading-relaxed">
                         If you are in immediate danger or experiencing a medical emergency, please call{' '}
-                        <a href="tel:911" className="underline font-semibold text-text-primary">911</a>{' '}
+                        <a href="tel:911" className="underline font-semibold text-red-600 dark:text-red-400">911</a>{' '}
                         (or your local emergency number) immediately.
                     </p>
                 </div>

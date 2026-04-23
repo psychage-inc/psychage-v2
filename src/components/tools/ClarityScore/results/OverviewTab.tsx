@@ -11,12 +11,12 @@ import type {
   Recommendation,
   DomainKey,
 } from '@/lib/clarity/types';
-import { getStrengthsAndGrowthDetailed } from '@/lib/clarity/scoring';
-import Button from '@/components/ui/Button';
+import { getStrengthsAndGrowthDetailed, getTierHexColor } from '@/lib/clarity/scoring';
 import ScoreGauge from './components/ScoreGauge';
 import DimensionRadar from './components/DimensionRadar';
 import DimensionBar from './components/DimensionBar';
 import ConsultationGuidance from './components/ConsultationGuidance';
+import PhaseNextSteps from './components/PhaseNextSteps';
 import { DIMENSION_ORDER } from '../data/dimensions';
 import { DIMENSION_META } from '../data/dimensions';
 import { TIER_DESCRIPTIONS } from '../data/results-content';
@@ -88,14 +88,16 @@ const OverviewTab: React.FC<OverviewTabProps> = ({
             )}
           </div>
         </div>
-        <div className="bg-white dark:bg-neutral-900 rounded-2xl border border-gray-200 dark:border-neutral-800 p-6">
+        <div className="bg-white dark:bg-neutral-900 rounded-2xl border border-gray-200 dark:border-neutral-800 p-6 flex flex-col min-h-full">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">
             Dimension Profile
           </h3>
-          <DimensionRadar
-            domainScores={results.domainScores}
-            onDimensionClick={onNavigateToDimension}
-          />
+          <div className="flex-1 flex items-center justify-center">
+            <DimensionRadar
+              domainScores={results.domainScores}
+              onDimensionClick={onNavigateToDimension}
+            />
+          </div>
         </div>
       </div>
 
@@ -199,62 +201,18 @@ const OverviewTab: React.FC<OverviewTabProps> = ({
         </div>
       </div>
 
-      {/* ─── Next Steps ─── */}
-      <div className="bg-white dark:bg-neutral-900 rounded-2xl border border-gray-200 dark:border-neutral-800 p-6 md:p-8">
-        <h3 className="font-semibold text-gray-900 dark:text-white mb-6">
-          Next Steps
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="rounded-xl border border-gray-200 dark:border-neutral-700 p-5 hover:border-gray-300 dark:hover:border-neutral-600 transition-colors">
-            <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 dark:text-neutral-500 mb-2">
-              Monitor
-            </p>
-            <h4 className="font-medium text-gray-900 dark:text-white text-sm mb-1">
-              Track Over Time
-            </h4>
-            <p className="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">
-              Retake in 2 weeks to see how your wellness changes
-            </p>
-          </div>
+      {/* ─── Phase Next Steps (protocol-backed, replaces generic Next Steps) ─── */}
+      <PhaseNextSteps tier={results.tier} />
 
-          <Link
-            to="/learn"
-            className="rounded-xl border border-gray-200 dark:border-neutral-700 p-5 hover:border-gray-300 dark:hover:border-neutral-600 transition-colors group"
-          >
-            <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 dark:text-neutral-500 mb-2">
-              Learn
-            </p>
-            <h4 className="font-medium text-gray-900 dark:text-white text-sm mb-1 group-hover:text-gray-700 dark:group-hover:text-gray-200">
-              Explore Articles
-            </h4>
-            <p className="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">
-              Content matched to your growth areas
-            </p>
-          </Link>
-
-          <Link
-            to="/providers"
-            className="rounded-xl border border-gray-200 dark:border-neutral-700 p-5 hover:border-gray-300 dark:hover:border-neutral-600 transition-colors group"
-          >
-            <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 dark:text-neutral-500 mb-2">
-              Connect
-            </p>
-            <h4 className="font-medium text-gray-900 dark:text-white text-sm mb-1 group-hover:text-gray-700 dark:group-hover:text-gray-200">
-              Find a Provider
-            </h4>
-            <p className="text-xs text-gray-500 dark:text-neutral-400 leading-relaxed">
-              Directory by location and specialty
-            </p>
-          </Link>
-        </div>
-      </div>
-
-      {/* ─── Recommendations ─── */}
+      {/* ─── Personalized Recommendations (per growth area) ─── */}
       {recommendations.length > 0 && (
         <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 md:p-8 border border-gray-200 dark:border-neutral-800">
-          <h3 className="font-semibold text-gray-900 dark:text-white mb-5">
-            Recommended Actions
+          <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
+            Personalized for Your Growth Areas
           </h3>
+          <p className="text-sm text-gray-500 dark:text-neutral-400 mb-5">
+            Actions tailored to the dimensions that need the most attention.
+          </p>
           <div className="space-y-3">
             {recommendations.map((rec, i) => (
               <div
@@ -262,20 +220,23 @@ const OverviewTab: React.FC<OverviewTabProps> = ({
                 className="rounded-xl p-5 border border-gray-100 dark:border-neutral-800 bg-gray-50/50 dark:bg-neutral-800/30 flex items-start justify-between gap-4"
               >
                 <div className="flex items-start gap-3 min-w-0">
-                  <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-gray-200 dark:bg-neutral-700 text-gray-500 dark:text-neutral-400 flex items-center justify-center text-xs font-medium">
+                  <span
+                    className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold"
+                    style={{ backgroundColor: getTierHexColor(results.tier), color: '#fff' }}
+                    aria-hidden="true"
+                  >
                     {i + 1}
                   </span>
                   <p className="text-sm text-gray-700 dark:text-neutral-300 leading-relaxed">
                     {rec.text}
                   </p>
                 </div>
-                <Link to={rec.link} className="flex-shrink-0">
-                  <Button
-                    size="sm"
-                    className="bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-neutral-100 text-white dark:text-neutral-900 border-none text-xs"
-                  >
-                    {rec.linkLabel}
-                  </Button>
+                <Link
+                  to={rec.link}
+                  className="flex-shrink-0 inline-flex items-center gap-1.5 px-4 h-9 rounded-lg text-xs font-semibold transition-all hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+                  style={{ backgroundColor: getTierHexColor(results.tier), color: '#fff' }}
+                >
+                  {rec.linkLabel}
                 </Link>
               </div>
             ))}

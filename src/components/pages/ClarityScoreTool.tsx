@@ -566,9 +566,9 @@ const ClarityScoreTool: React.FC = () => {
 
                 {/* Question text with integrated time-period context */}
                 <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-10 leading-tight">
-                  <span className="inline-flex items-center gap-2 text-sm font-bold text-text-primary mb-4 px-3.5 py-2 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800/40">
-                    <Calendar size={16} className="shrink-0 text-amber-600 dark:text-amber-400" />
-                    <span className="text-amber-700 dark:text-amber-300">{currentDomain.citation}</span>
+                  <span className="inline-flex items-center gap-2 text-sm font-medium text-text-secondary mb-4 px-3.5 py-2 rounded-lg bg-surface-hover border border-border">
+                    <Calendar size={16} className="shrink-0 text-text-tertiary" />
+                    <span className="text-text-secondary">{currentDomain.citation}</span>
                   </span>
                   {currentQuestion.text}
                 </h2>

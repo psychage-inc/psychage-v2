@@ -215,3 +215,61 @@ follow-up prompts; they're flagged in
 `scripts/migrate-admin-roles.ts` is **not** executed as part of this
 branch. Reviewer runs it post-merge against production after taking a
 backup. See `auth-hotfix-followup-dashboard.md` §2.
+
+---
+
+## 8. Patch-up commits (B-1 through B-6)
+
+Post-review, six blocking concerns were raised and closed as additive
+commits on this branch. No existing commit was amended or reverted.
+
+| Item | Commit | Files touched | Test coverage |
+|---|---|---|---|
+| B-1 | `28b71d2` | `supabase/migrations/20260423000003_auth_001_diagnostic_rpc.sql`, `scripts/migrate-admin-roles.ts` | `supabase/tests/hotfix-b1-diagnostic-rpc.test.md` (5 SQL scenarios), `scripts/__tests__/migrate-admin-roles.test.ts` (+11 Vitest tests = 19 total) |
+| B-2 | docs-only in `G` | (no code change — REVOKEs already in 20260423000001) | `supabase/tests/hotfix-b2-migrate-admin-role-lockdown.test.md` (4 SQL scenarios + `information_schema` audit) |
+| B-3 | `f451023` | `supabase/migrations/20260423000004_sync_admin_roles_to_app_metadata.sql` | `supabase/tests/hotfix-b3-admin-sync.test.md` (6 SQL scenarios) |
+| B-4 | `9b17aed` | `docs/audits/auth-hotfix-b4-verification.md`, `supabase/tests/hotfix-b4-strip-trigger-safety.test.md` | 7 SQL paths + inspection-based evidence + staging UI smoke checklist |
+| B-5 | `e995165` | `supabase/functions/password-change-notification/index.ts`, callsites in `src/services/userProfileService.ts` + `src/pages/auth/UpdatePasswordPage.tsx` | `src/services/__tests__/userProfileService.changePassword.test.ts` (+1 test = 4 total), `src/pages/auth/__tests__/UpdatePasswordPage.test.tsx` (+1 test = 5 total), `supabase/functions/password-change-notification/__tests__/index.test.ts` (Deno), `supabase/tests/hotfix-b5-edge-function.test.md` (6 integration scenarios) |
+| B-6 | `c38879a` | `docs/audits/auth-hotfix-b6-verification.md` | baseline-vs-hotfix diff (empty — 83 failures match) |
+
+### What the reviewer must run that is new
+
+The migration-apply order (updated §1 of
+`auth-hotfix-followup-dashboard.md`):
+
+```
+20260423000001_harden_admin_role_checks.sql   (existing)
+20260423000002_fix_articles_rls.sql           (existing)
+20260423000003_auth_001_diagnostic_rpc.sql    (B-1)
+20260423000004_sync_admin_roles_to_app_metadata.sql  (B-3)
+```
+
+The timestamp gap (no `000005` / `000006`) is intentional: B-2
+needed no migration (REVOKEs already present), and B-4 inspection
+concluded the strip trigger is safe as-is. If the staging UI sweep
+in B-4 surfaces a failure, the fallback replacement migration would
+land at `000005` as a separate follow-up.
+
+### New reviewer-facing items
+
+- **Post-migration admin-session refresh (§2.5 of dashboard):**
+  after 20260423000004 runs, existing admins must log out/in (or
+  call `refreshSession()`) within ~1h to pick up
+  `app_metadata.role`. New logins are unaffected.
+- **B-1 + B-2 information_schema audit queries** (§1 of dashboard)
+  are now mandatory post-apply verifications.
+- **B-5 spoof + unauthenticated tests** (§4 of dashboard) — two new
+  curl-based smoke tests against the edge function.
+
+### Test count delta
+
+| Suite | Before patch-up | After patch-up |
+|---|---|---|
+| `scripts/__tests__/migrate-admin-roles.test.ts` | 9 | 19 (+10) |
+| `src/services/__tests__/userProfileService.changePassword.test.ts` | 3 | 4 (+1) |
+| `src/pages/auth/__tests__/UpdatePasswordPage.test.tsx` | 4 | 5 (+1) |
+| **Hotfix-added Vitest total** | 43 | 55 (+12) |
+| Full `pnpm test` failure count | 83 (baseline = 83, no regressions) | 83 (baseline = 83, no regressions) |
+
+Full B-6 verification in
+[`auth-hotfix-b6-verification.md`](./auth-hotfix-b6-verification.md).

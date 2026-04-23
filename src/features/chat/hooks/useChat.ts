@@ -2,6 +2,7 @@ import { useState, useCallback, useRef } from 'react';
 import type { ChatMessage, ChatResponseMeta, StreamingState } from '../types/chat.types';
 import * as chatService from '../services/chatService';
 import { SafetyReplacementError } from '../services/chatService';
+import { MindMateUnavailableError } from '../services/errors';
 
 interface UseChatReturn {
   messages: ChatMessage[];
@@ -121,6 +122,31 @@ export function useChat(): UseChatReturn {
           return;
         }
 
+        // Platform-level failure: render the graceful unavailable card instead
+        // of raw error text. `name` fallback guards against bundler-level
+        // class identity mismatches across chunks.
+        const isUnavailable =
+          err instanceof MindMateUnavailableError ||
+          (err instanceof Error && err.name === 'MindMateUnavailableError');
+
+        if (isUnavailable) {
+          console.error('Chat error (platform unavailable):', err);
+          setMessages((prev) =>
+            prev.map((m) =>
+              m.id === assistantId
+                ? {
+                    ...m,
+                    content: '',
+                    variant: 'unavailable',
+                    isStreaming: false,
+                  }
+                : m,
+            ),
+          );
+          setStreamingState('error');
+          return;
+        }
+
         const errorMsg = err instanceof Error ? err.message : 'Unknown error';
         console.error('Chat error:', errorMsg, err);
         setError(errorMsg);
@@ -131,7 +157,7 @@ export function useChat(): UseChatReturn {
             m.id === assistantId
               ? {
                   ...m,
-                  content: `Something went wrong: ${errorMsg}\n\nPlease try again. If this keeps happening, check the browser console for details.`,
+                  content: `Something went wrong: ${errorMsg}`,
                   isStreaming: false,
                 }
               : m,

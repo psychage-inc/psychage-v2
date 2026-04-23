@@ -16,6 +16,10 @@ export interface ChatMessage {
   suggestedFollowUps?: string[];
   safetyLevel?: 'SAFE' | 'WATCH' | 'URGENT' | 'CRISIS';
   thinkingContent?: string;
+  /** When set to 'unavailable', the assistant row renders MindMateUnavailableCard
+   *  instead of the standard message body. Set by useChat's catch block when
+   *  the API returns a non-JSON platform-level failure. */
+  variant?: 'unavailable';
 }
 
 export interface CitationSource {

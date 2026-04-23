@@ -8,6 +8,7 @@ import SourceCitations from './SourceCitations';
 import ActionCards from './ActionCard';
 import SuggestedFollowUps from './SuggestedFollowUps';
 import MessageActions from './MessageActions';
+import MindMateUnavailableCard from './MindMateUnavailableCard';
 
 interface AssistantMessageProps {
   message: ChatMessage;
@@ -23,6 +24,19 @@ export default function AssistantMessage({
   onFollowUp,
 }: AssistantMessageProps) {
   const showExtras = !message.isStreaming;
+
+  if (message.variant === 'unavailable') {
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.15, ease: 'easeOut' }}
+        className="mb-6"
+      >
+        <MindMateUnavailableCard />
+      </motion.div>
+    );
+  }
 
   return (
     <motion.div

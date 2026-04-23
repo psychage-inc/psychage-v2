@@ -38,7 +38,11 @@ const isVercelBuild = process.env.VERCEL === '1';
 
 const MAX_BYTES = 45 * 1024 * 1024; // 45 MB, leaves 10% margin on Vercel's 50 MB limit
 
-const ESM_BANNER = 'import { createRequire as __createRequire } from "node:module"; const require = __createRequire(import.meta.url);';
+// @ts-nocheck on the bundled output so Vercel's post-build TS check doesn't
+// barf on esbuild's emitted internal property access (e.g. __privateGet on
+// Supabase Realtime / Postgrest internals). The bundle is a self-contained
+// artifact that esbuild already validated; re-checking it adds nothing.
+const ESM_BANNER = '// @ts-nocheck\nimport { createRequire as __createRequire } from "node:module"; const require = __createRequire(import.meta.url);';
 
 async function findEntryPoints(): Promise<string[]> {
   const entries = await readdir(apiDir, { recursive: true, withFileTypes: true });

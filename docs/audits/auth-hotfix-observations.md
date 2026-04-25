@@ -239,3 +239,100 @@ Not 000005 as originally planned — B-2 consumed no migration slot, so
 B-3 slides up to collapse the gap. If B-4's staging sweep ever
 produces a replacement trigger migration, it lands at `000005`; the
 sequence then stays contiguous from 000001 through 000005.
+
+---
+
+## Patch-up observations (B-7 round)
+
+### B-7 root cause — trigger scope discipline
+
+The strip trigger from `20260423000001` was authored under the
+assumption that *every* `role` value in `user_metadata` was an
+escalation attempt. That was correct for the AUTH-001 threat model
+in isolation, but the codebase had a second writer of the same JSONB
+key — the `claim-provider` edge function writes
+`user_metadata.role='provider'`. The B-4 inspection sweep verified
+the trigger was safe with respect to Supabase internals (does not
+break SDK signup, password reset, etc.) but did not enumerate
+*application-layer* writers of the key. The provider claim flow was
+the missed case.
+
+Lesson for future trigger work on shared columns: enumerate every
+write-site of the column before authoring a strip/normalize trigger.
+A grep for the column name across `src/`, `scripts/`,
+`supabase/functions/`, and previous migrations is cheap insurance.
+
+### Pre-B-7 exposure window
+
+The window from hotfix deploy to `20260423000007` apply was the
+period during which provider users could lose their role. The exact
+duration is recorded in `auth-hotfix-b7-incident.md` Timeline. The
+P-D count from the diagnostic is the lower bound on the user count
+that triggered an `auth.users` UPDATE during that window without
+keeping a profiles.role signal.
+
+### Other write-sites of `user_metadata.role` discovered during B-7
+
+Grep across the repo found these writers, with their post-B-7 state:
+
+| Write-site | Value | Post-B-7 behavior |
+|---|---|---|
+| `supabase/functions/claim-provider/index.ts:184-186` | `'provider'` | Now ALSO writes `profiles.role='provider'` (Phase F). user_metadata write retained as a write-side trace, not an auth signal. |
+| `src/context/AuthContext.tsx:165` (signup `options.data.role`) | `'patient'`/`'provider'` | Already correct — `handle_new_user` AFTER INSERT trigger copies into `profiles.role` before any UPDATE/strip can fire. |
+| `scripts/seed-admin.mjs` | (none — fixed in 6108ecf) | Safe. |
+| `scripts/create-demo-admin.ts:52,70` | `'admin'` | Stripped by the narrowed trigger on next UPDATE. The script also INSERTs into `admin_roles` (line 105), which is the source of truth. Net result is correct admin elevation; the user_metadata write is wasted but not harmful. **Optional cleanup:** remove the `user_metadata: { role: 'admin' }` lines for clarity. Out of B-7 scope. |
+
+### `AuthCallback.tsx` still reads `user_metadata.role`
+
+`src/pages/auth/AuthCallback.tsx:30` resolves the post-OAuth route
+target from `user_metadata?.role`. With the narrowed strip trigger
+this no longer breaks for providers (the `'provider'` value
+survives), so the regression is closed. But the read is *still*
+inconsistent with the AuthContext convention — every other role
+resolution path reads `app_metadata.role` exclusively. A future
+tightening of the strip trigger (e.g., to also strip `'provider'`
+during a planned migration) would re-break this path silently.
+
+**Recommended follow-up:** change the line to read
+`session.user?.app_metadata?.role`. One-line change. Out of B-7
+scope; this regression is only theoretical post-Phase C.
+
+### Phase D reconciliation strategy — single bulk UPDATE
+
+The original B-7 prompt suggested a chunked DO block with explicit
+COMMITs for the one-time reconciliation. A `DO` block in Postgres
+runs as one implicit transaction — no inter-iteration commits are
+possible without procedures (`CREATE OR REPLACE PROCEDURE` with
+transaction control), so per-row iteration would hold the same locks
+as a bulk UPDATE while being much slower. The migration uses a
+single bulk `UPDATE auth.users` with a correlated subquery for the
+effective role. Idempotent on rerun.
+
+If `auth.users` ever exceeds ~100k rows, switch to a chunked CALL
+of a procedure with explicit COMMITs.
+
+### Backfill RPC scope decision — script-runs-RPC, not RPC-self-discovers
+
+`backfill_provider_role(uuid[])` takes an explicit user_id array
+rather than querying the diagnostic itself. Two reasons:
+
+1. The script is the authorization boundary — it gates the dry-run
+   and the typed YES confirmation. An RPC that auto-discovers and
+   writes would defeat that gating.
+2. Idempotency is easier to reason about with an explicit input: the
+   reviewer can re-call the RPC with a known set of user_ids if the
+   audit trail needs a re-run for any reason.
+
+### Vitest already scans `scripts/**` (B-1 holdover)
+
+The B-1 patch-up extended `vitest.config.ts` `include` to also pick
+up `scripts/**/*.{test,spec}.ts` so `migrate-admin-roles.test.ts`
+runs under `pnpm test`. B-7 inherits this — the new
+`scripts/__tests__/b7-backfill-provider-roles.test.ts` is picked up
+by the same glob.
+
+### B-7 timestamp continuity
+
+B-7 lands at `20260423000005..000008` — contiguous with B-1/B-3 at
+`000003/000004`. The 04-23 group now spans 000001..000008. If a
+follow-up patch-up arrives, the next slot is `20260423000009`.

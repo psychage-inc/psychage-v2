@@ -18,6 +18,10 @@ Apply the full chain in timestamp order:
 - [ ] `supabase/migrations/20260423000002_fix_articles_rls.sql`
 - [ ] `supabase/migrations/20260423000003_auth_001_diagnostic_rpc.sql` (patch-up B-1)
 - [ ] `supabase/migrations/20260423000004_sync_admin_roles_to_app_metadata.sql` (patch-up B-3)
+- [ ] `supabase/migrations/20260423000005_b7_provider_regression_diagnostic.sql` (B-7 Phase A)
+- [ ] `supabase/migrations/20260423000006_b7_diagnostic_correction.sql` (B-7 refinement)
+- [ ] `supabase/migrations/20260423000007_b7_narrow_strip_trigger.sql` (B-7 Phase C — closes the regression damage window)
+- [ ] `supabase/migrations/20260423000008_b7_extend_role_sync.sql` (B-7 Phase D)
 
 Then verify:
 
@@ -135,6 +139,97 @@ them as admin.
       `supabase.auth.getSession().data.session?.user?.app_metadata?.role`
       returns the expected value (`super_admin` / `clinical_admin`
       / `viewer`)
+
+## 2.7 B-7 provider role regression — diagnostic, backfill, comms
+
+**Reviewer runs this. The B-7 migrations close the damage window
+automatically; the script restores already-affected providers.**
+
+Pre-conditions (must be true before this section starts):
+- B-7 Phase C migration (20260423000007) is applied — narrowed strip
+  trigger is in place (verify via §1 final query below).
+- B-7 Phase D migration (20260423000008) is applied — sync extended
+  to read profiles.role.
+- B-7 Phase F edge function deployed:
+  `supabase functions deploy claim-provider`.
+
+Steps:
+
+- [ ] Verify Phase C narrowed body landed:
+
+  ```sql
+  SELECT pg_get_functiondef('public.strip_user_metadata_role()'::regprocedure);
+  -- Body must contain: NEW.raw_user_meta_data ->> 'role' = 'admin'
+  ```
+
+- [ ] Verify Phase D drift = 0 (auth.users <-> admin_roles/profiles
+      reconciliation is clean):
+
+  ```sql
+  SELECT count(*) AS sync_drift
+    FROM auth.users u
+    LEFT JOIN public.admin_roles ar ON ar.user_id = u.id
+    LEFT JOIN public.profiles    p  ON p.id       = u.id
+   WHERE COALESCE(ar.role, p.role, 'patient')
+     IS DISTINCT FROM (u.raw_app_meta_data ->> 'role');
+  -- Expected: 0
+  ```
+
+- [ ] Run the diagnostic and capture into
+      `auth-hotfix-b7-incident.md` §1:
+
+  ```sql
+  SELECT * FROM public.b7_provider_regression_diagnostic();
+  ```
+
+- [ ] Take a fresh Supabase database backup
+      (Dashboard → Database → Backups).
+
+- [ ] Run the backfill in dry-run mode:
+
+  ```
+  SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=... \
+    pnpm tsx scripts/b7-backfill-provider-roles.ts --dry-run
+  ```
+
+- [ ] Inspect the affected list (P-B + P-D users). If the count is
+      greater than 50, halt and notify stakeholders before
+      executing — that's the §5 escalation threshold from the
+      incident record.
+
+- [ ] Execute the backfill:
+
+  ```
+  NODE_ENV=production SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=... \
+    pnpm tsx scripts/b7-backfill-provider-roles.ts \
+      --execute --i-know-what-im-doing
+  ```
+
+- [ ] Confirm the script's post-execute diagnostic shows
+      P-B / P-C / P-D = 0. Capture in incident doc §4.
+
+- [ ] Spot-check the audit trail:
+
+  ```sql
+  SELECT count(*), max(created_at)
+    FROM public.admin_audit_log
+   WHERE action = 'B-7-backfill';
+  -- count must match script's reported affected_count
+  ```
+
+- [ ] Personalize and send communications using
+      `auth-hotfix-b7-comms-template.md`. Recipients are the P-C +
+      P-D `user_ids` from incident doc §1. Log sends in incident
+      doc §5.
+
+- [ ] Start the 7-day monitoring window.
+      Run `auth-hotfix-b7-monitoring.md` Q1–Q3 daily for 7 days.
+      Any non-zero result is a red flag.
+
+- [ ] After 7 clean days, mark incident closed in
+      `auth-hotfix-b7-incident.md` §6.
+
+---
 
 ## 3. Cloudflare Turnstile (AUTH-029)
 

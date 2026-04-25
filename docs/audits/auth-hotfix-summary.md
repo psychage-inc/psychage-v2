@@ -273,3 +273,123 @@ land at `000005` as a separate follow-up.
 
 Full B-6 verification in
 [`auth-hotfix-b6-verification.md`](./auth-hotfix-b6-verification.md).
+
+---
+
+## 9. B-7 Post-Patch-Up (Provider Role Regression)
+
+A live production regression was identified after the patch-up
+deployed: the `strip_user_metadata_role` trigger from
+`20260423000001` was over-broad and stripped the entire `role` key
+from `auth.users.raw_user_meta_data` on every UPDATE. The
+claim-provider edge function had only ever written
+`user_metadata.role='provider'` (never `profiles.role`), so any
+provider whose `auth.users` row was UPDATE'd post-deploy lost their
+provider signal. The client (which reads `app_metadata.role`)
+defaulted to `'patient'`, and `RoleGuard(['provider','admin'])`
+denied `/portal/*`.
+
+The fix establishes `profiles.role` as the non-admin source of
+truth, alongside `admin_roles` for admins. The strip trigger is
+narrowed to only strip the `'admin'` value (preserving `'provider'`
+and other values), the role sync from B-3 is extended to read both
+sources, and the claim-provider edge function is updated to write
+`profiles.role` ahead of the legacy `user_metadata` trace.
+
+Full incident record at
+[`auth-hotfix-b7-incident.md`](./auth-hotfix-b7-incident.md).
+
+### Commits introduced
+
+| Item | Commit | Files touched | Test coverage |
+|---|---|---|---|
+| B-7 Phase A | `e3b4adf` | `supabase/migrations/20260423000005_b7_provider_regression_diagnostic.sql`, `docs/audits/auth-hotfix-b7-incident.md` | Operator-run diagnostic SELECT (read-only) |
+| B-7 refinement | `dc3ab23` | `supabase/migrations/20260423000006_b7_diagnostic_correction.sql` | (refinement of the above) |
+| B-7 Phase C | `f04ab20` | `supabase/migrations/20260423000007_b7_narrow_strip_trigger.sql` | `supabase/tests/hotfix-b7-narrow-strip.test.md` (8 SQL scenarios) |
+| B-7 Phase D | `be326b2` | `supabase/migrations/20260423000008_b7_extend_role_sync.sql` | `supabase/tests/hotfix-b7-role-sync.test.md` (11 SQL scenarios) |
+| B-7 Phase F | `3194eb4` | `supabase/functions/claim-provider/index.ts` | `supabase/tests/hotfix-b7-claim-provider-write.test.md` (3 staging scenarios) |
+| B-7 Phase E | `f1a1129` | `scripts/b7-backfill-provider-roles.ts` | `scripts/__tests__/b7-backfill-provider-roles.test.ts` (20 Vitest tests) |
+| B-7 Phase G | `315685e` | `docs/audits/auth-hotfix-b7-monitoring.md` | (operator-run; 4 monitoring queries) |
+| B-7 Phase H | `b5cb872` | `docs/audits/auth-hotfix-b7-comms-template.md` | (drafts; operator personalizes and sends) |
+| B-7 Phase I | (this commit) | `docs/audits/auth-hotfix-summary.md`, `docs/audits/auth-hotfix-followup-dashboard.md`, `docs/audits/auth-hotfix-observations.md` | (docs only) |
+
+### Migrations introduced (apply in this order, after B-1..B-6)
+
+1. `20260423000005_b7_provider_regression_diagnostic.sql`
+   - Adds `b7_provider_regression_diagnostic()` (service-role only,
+     read-only). Returns one row per regression state with user_ids
+     and emails.
+2. `20260423000006_b7_diagnostic_correction.sql`
+   - `CREATE OR REPLACE` of the diagnostic function that adds the
+     `status <> 'seeded'` filter.
+3. `20260423000007_b7_narrow_strip_trigger.sql`
+   - `ALTER TABLE auth.users DISABLE TRIGGER` →
+     `CREATE OR REPLACE FUNCTION` →
+     `ALTER TABLE auth.users ENABLE TRIGGER` in one transaction.
+   - Narrowed body strips only `role='admin'`. Closes the live
+     damage window.
+4. `20260423000008_b7_extend_role_sync.sql`
+   - Adds `sync_user_role_to_app_metadata(uuid)` —
+     admin_roles > profiles.role > 'patient' calculator.
+   - Refactors B-3's admin_roles trigger function to delegate.
+   - New `sync_profile_role_to_app_metadata_trg` on profiles.
+   - Adds `backfill_provider_role(uuid[])` (service-role only).
+   - Bulk one-time UPDATE reconciles every `auth.users` row.
+
+All four have rollback SQL in trailing comments.
+
+### Manual reviewer verification (post-merge)
+
+- [ ] Apply 20260423000005..000008 in order.
+- [ ] Deploy claim-provider: `supabase functions deploy claim-provider`.
+- [ ] Verify Phase C narrowed body:
+      `SELECT pg_get_functiondef('public.strip_user_metadata_role()'::regprocedure);`
+      — body must contain `NEW.raw_user_meta_data ->> 'role' = 'admin'`.
+- [ ] Verify Phase D drift = 0:
+      see Q2 of `auth-hotfix-b7-monitoring.md`.
+- [ ] Run the diagnostic and capture in incident doc §1:
+      `SELECT * FROM public.b7_provider_regression_diagnostic();`
+- [ ] Take Supabase database backup.
+- [ ] Run backfill dry-run:
+      `pnpm tsx scripts/b7-backfill-provider-roles.ts --dry-run`
+- [ ] Inspect affected list. If P-B + P-D > 50, halt and notify
+      stakeholders before executing.
+- [ ] Execute backfill:
+      `NODE_ENV=production SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=... \`
+      `pnpm tsx scripts/b7-backfill-provider-roles.ts --execute --i-know-what-im-doing`
+- [ ] Run monitoring queries Q1–Q4 (see `auth-hotfix-b7-monitoring.md`)
+      and record results in the daily log.
+- [ ] Personalize and send communications using
+      `auth-hotfix-b7-comms-template.md`.
+- [ ] Continue monitoring daily for 7 days; close incident in
+      `auth-hotfix-b7-incident.md` §6 when clean.
+
+### Per-change rollback plan
+
+| Commit | How to revert |
+|---|---|
+| `e3b4adf` (Phase A) + `dc3ab23` (refinement) | Apply rollback SQL in 20260423000005/000006 (drops the diagnostic function). Safe at any time — read-only. |
+| `f04ab20` (Phase C) | Apply rollback SQL in 20260423000007 — restores broad strip body. **WARNING:** re-introduces the regression. |
+| `be326b2` (Phase D) | Apply rollback SQL in 20260423000008 — drops new triggers/functions, restores B-3 admin-only sync. Existing `profiles.role` data unaffected. |
+| `3194eb4` (Phase F) | `git revert 3194eb4` and re-deploy `claim-provider`. New claims revert to user_metadata-only writes. |
+| `f1a1129` (Phase E script) | `git revert f1a1129`. Pure tooling; no on-disk DB state. |
+| `315685e`, `b5cb872`, this commit | Pure docs; `git revert <sha>` is safe. |
+
+### Test status (post B-7)
+
+| Suite | Before B-7 | After B-7 |
+|---|---|---|
+| `scripts/__tests__/migrate-admin-roles.test.ts` | 19 | 19 |
+| `scripts/__tests__/b7-backfill-provider-roles.test.ts` | 0 | 20 (+20) |
+| **Hotfix-added Vitest total** | 55 | 75 (+20) |
+| New SQL test scenario docs | 0 | 22 across 3 files (Phase C: 8, Phase D: 11, Phase F: 3) |
+| Full `pnpm test` failure count | 83 baseline | unchanged target (baseline pre-existing failures) |
+
+### Reminder
+
+`scripts/b7-backfill-provider-roles.ts` is **not** executed by this
+branch. Reviewer runs it post-merge, after taking a backup, after
+the diagnostic has been captured. The damage window is already
+closed by Phase C (committed at `f04ab20`); the script restores
+already-affected providers but is not time-critical the way Phase C
+was.

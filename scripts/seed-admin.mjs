@@ -6,8 +6,9 @@
  * Uses the Supabase Admin API (service_role key) to create a user
  * with email_confirm = true, bypassing email verification and rate limits.
  *
- * The `handle_new_user()` trigger reads `raw_user_meta_data.role`
- * and writes it into the profiles table automatically.
+ * Admin elevation is granted by INSERTing into admin_roles — never via
+ * user_metadata.role, which is user-writable and would create a State B
+ * user per addendum §H.2 of the auth audit. See AUTH-001.
  *
  * Usage:
  *   node scripts/seed-admin.mjs
@@ -47,13 +48,14 @@ const supabase = createClient(apiUrl, serviceKey, {
 
 console.log('Creating test admin account...\n');
 
-// Use admin API — bypasses email verification & rate limits
+// Use admin API — bypasses email verification & rate limits.
+// IMPORTANT: do NOT set user_metadata.role — admin elevation goes
+// through admin_roles only (see AUTH-001 / addendum §H.2).
 const { data, error } = await supabase.auth.admin.createUser({
     email: TEST_EMAIL,
     password: TEST_PASSWORD,
     email_confirm: true,
     user_metadata: {
-        role: 'admin',
         display_name: TEST_DISPLAY_NAME,
     },
 });
@@ -92,10 +94,19 @@ if (error) {
     process.exit(1);
 }
 
+// Insert into admin_roles — the new authoritative source after AUTH-001.
+const { error: roleError } = await supabase
+    .from('admin_roles')
+    .upsert({ user_id: data.user.id, role: 'super_admin' }, { onConflict: 'user_id' });
+
+if (roleError) {
+    console.error('User created but admin_roles insert failed:', roleError.message);
+    process.exit(1);
+}
+
 console.log('Account created successfully!\n');
-printCredentials(data.user?.id, 'admin');
-console.log('\nThe handle_new_user() trigger has created a');
-console.log('profiles row with role = \'admin\'.\n');
+printCredentials(data.user?.id, 'super_admin (via admin_roles)');
+console.log('\nadmin_roles row inserted with role = \'super_admin\'.\n');
 console.log('Login at: http://localhost:5173/login');
 
 function printCredentials(userId, role) {

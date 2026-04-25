@@ -180,7 +180,21 @@ Deno.serve(async (req: Request) => {
         verified_at: new Date().toISOString(),
       });
 
-    // --- Update user role to provider if needed ---
+    // --- Set provider role on the canonical source of truth ---
+    // B-7: profiles.role is the non-admin source of truth. The
+    // sync trigger from 20260423000008 propagates profiles.role
+    // into auth.users.raw_app_meta_data.role, which the client
+    // reads via mapSupabaseUser. user_metadata.role is a write-side
+    // trace only — kept for observability (signal that this user
+    // went through the claim flow), never read for authorization.
+    // See docs/audits/auth-hotfix-b7-incident.md.
+    await adminClient
+      .from('profiles')
+      .upsert(
+        { id: user.id, role: 'provider' },
+        { onConflict: 'id' }
+      );
+
     await adminClient.auth.admin.updateUserById(user.id, {
       user_metadata: { ...user.user_metadata, role: 'provider' },
     });

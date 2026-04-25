@@ -4,7 +4,14 @@
  * When VITE_MAIN_URL and VITE_ADMIN_URL are unset (local dev),
  * admin is at /admin/* on the same origin. adminUrl() returns
  * paths like "/admin/dashboard" so Vite middleware serves admin.html.
+ *
+ * AUTH-030: paths passed to mainUrl/adminUrl are validated against the
+ * redirect allowlist before concatenation. Defense in depth — even if
+ * a future caller forgets to validate at the call site, the host
+ * concatenation cannot land an attacker-controlled path here.
  */
+
+import { safeRedirectPath } from './auth/validateRedirect';
 
 export const MAIN_URL = import.meta.env.VITE_MAIN_URL || window.location.origin;
 export const ADMIN_URL = import.meta.env.VITE_ADMIN_URL || window.location.origin;
@@ -13,17 +20,19 @@ const _sameOrigin = ADMIN_URL === MAIN_URL;
 
 /** Build a full URL on the main site */
 export function mainUrl(path: string): string {
-  return `${MAIN_URL}${path}`;
+  const safePath = safeRedirectPath(path);
+  return `${MAIN_URL}${safePath}`;
 }
 
 /** Build a full URL on the admin site */
 export function adminUrl(path: string): string {
+  const safePath = safeRedirectPath(path);
   if (_sameOrigin) {
     // Local dev: admin lives at /admin/* on the same origin
-    const normalized = path.replace(/^\/admin/, '');
+    const normalized = safePath.replace(/^\/admin/, '');
     return `/admin${normalized || '/'}`;
   }
-  return `${ADMIN_URL}${path}`;
+  return `${ADMIN_URL}${safePath}`;
 }
 
 /** Check if we are currently running on the admin domain (production only — used for basename) */

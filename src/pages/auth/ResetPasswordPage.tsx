@@ -10,27 +10,38 @@ import { Alert, AlertDescription } from '@/components/ui/Alert';
 import { useAuth } from '../../context/AuthContext';
 import InteractiveCard from '@/components/ui/InteractiveCard';
 import SEO from '@/components/SEO';
+import { useTurnstile } from '@/lib/auth/useTurnstile';
 
 const ResetPasswordPage = () => {
     const [email, setEmail] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const { requestPasswordReset, isLoading } = useAuth();
+    // AUTH-029: gate submit on Turnstile token (no-op in dev when
+    // VITE_TURNSTILE_SITE_KEY is unset).
+    const { widget: turnstileWidget, token: captchaToken, reset: resetCaptcha } = useTurnstile();
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setError(null);
 
+        if (!captchaToken) {
+            setError('Please complete the verification challenge.');
+            return;
+        }
+
         try {
-            const result = await requestPasswordReset(email);
+            const result = await requestPasswordReset(email, captchaToken);
 
             if (result.success) {
                 setIsSubmitted(true);
             } else {
                 setError(result.error || 'Failed to send reset instructions. Please try again.');
+                resetCaptcha();
             }
         } catch {
             setError('An unexpected error occurred. Please try again.');
+            resetCaptcha();
         }
     };
 
@@ -138,11 +149,16 @@ const ResetPasswordPage = () => {
                                 </div>
                             </div>
 
+                            {turnstileWidget && (
+                                <div className="flex justify-center">{turnstileWidget}</div>
+                            )}
+
                             <Button
                                 type="submit"
                                 className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300"
                                 size="lg"
                                 isLoading={isLoading}
+                                disabled={isLoading || !captchaToken}
                             >
                                 Send Reset Instructions
                             </Button>

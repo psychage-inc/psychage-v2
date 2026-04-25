@@ -48,6 +48,13 @@ export const userProfileService = {
                 .eq('id', user.id)
                 .maybeSingle();
 
+            // Resolve role from app_metadata (server-controlled), then fall back
+            // to profiles.role (also server-controlled via DB trigger). Never
+            // read user_metadata.role — see AUTH-001.
+            const appRole = (user.app_metadata as { role?: unknown } | undefined)?.role;
+            const resolveRole = (raw: unknown): 'patient' | 'provider' | 'admin' =>
+                raw === 'admin' || raw === 'provider' || raw === 'patient' ? raw : 'patient';
+
             // If profile table exists and has data, merge with auth user
             if (!profileError && profileData) {
                 return {
@@ -57,7 +64,7 @@ export const userProfileService = {
                     full_name: profileData.full_name || user.user_metadata?.full_name || '',
                     avatar_url: profileData.avatar_url || user.user_metadata?.avatar_url || '',
                     location: profileData.location,
-                    role: (profileData.role || user.user_metadata?.role || 'patient') as 'patient' | 'provider' | 'admin',
+                    role: resolveRole(appRole ?? profileData.role),
                     created_at: user.created_at,
                     updated_at: profileData.updated_at,
                 };
@@ -71,7 +78,7 @@ export const userProfileService = {
                 full_name: user.user_metadata?.full_name || '',
                 avatar_url: user.user_metadata?.avatar_url || '',
                 location: user.user_metadata?.location,
-                role: (user.user_metadata?.role || 'patient') as 'patient' | 'provider' | 'admin',
+                role: resolveRole(appRole),
                 created_at: user.created_at,
             };
         } catch (error) {
@@ -81,9 +88,13 @@ export const userProfileService = {
     },
 
     /**
-     * Update user profile
+     * Update user profile.
+     *
+     * `role` is intentionally excluded from the accepted update shape: roles
+     * must be set server-side via admin tooling, never from a client-trusted
+     * call. See AUTH-001 in docs/audits/auth-audit-2026-04-23.md.
      */
-    updateProfile: async (updates: Partial<Omit<UserProfile, 'id' | 'email' | 'created_at'>>): Promise<UserProfile | null> => {
+    updateProfile: async (updates: Partial<Omit<UserProfile, 'id' | 'email' | 'created_at' | 'role'>>): Promise<UserProfile | null> => {
         try {
             const { data: { user }, error: authError } = await supabase.auth.getUser();
 
@@ -92,13 +103,12 @@ export const userProfileService = {
                 return null;
             }
 
-            // Update auth user metadata
+            // Update auth user metadata (display fields only — never role)
             const metadataUpdates: Record<string, unknown> = {};
             if (updates.display_name !== undefined) metadataUpdates.display_name = updates.display_name;
             if (updates.full_name !== undefined) metadataUpdates.full_name = updates.full_name;
             if (updates.avatar_url !== undefined) metadataUpdates.avatar_url = updates.avatar_url;
             if (updates.location !== undefined) metadataUpdates.location = updates.location;
-            if (updates.role !== undefined) metadataUpdates.role = updates.role;
 
             const { error: updateError } = await supabase.auth.updateUser({
                 data: metadataUpdates,
@@ -117,7 +127,6 @@ export const userProfileService = {
                 if (updates.full_name !== undefined) profileUpdates.full_name = updates.full_name;
                 if (updates.avatar_url !== undefined) profileUpdates.avatar_url = updates.avatar_url;
                 if (updates.location !== undefined) profileUpdates.location = updates.location;
-                if (updates.role !== undefined) profileUpdates.role = updates.role;
 
                 // Upsert to user_profiles table
                 await supabase
@@ -171,6 +180,18 @@ export const userProfileService = {
             if (updateError) {
                 return { success: false, error: updateError.message };
             }
+
+            // AUTH-028: send a security notification to the registered
+            // email. Fire-and-forget — the password change has already
+            // succeeded, the email is informational. Failures (no SMTP
+            // configured, transport error) do NOT block the response.
+            // Hotfix B-5: no body payload — the edge function derives
+            // user_id and email from the caller's verified JWT.
+            void supabase.functions
+                .invoke('password-change-notification', { body: {} })
+                .catch((err) => {
+                    console.warn('password-change-notification dispatch failed:', err);
+                });
 
             return { success: true };
         } catch (error) {

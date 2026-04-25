@@ -96,9 +96,10 @@ const Navigation: React.FC = () => {
     };
 
     const handleLogout = async () => {
-        await logout();
-        navigate('/');
+        // AUTH-022: logout owns the post-logout navigation. Pass '/' to
+        // preserve the prior homepage redirect (default would be /login).
         setIsUserMenuOpen(false);
+        await logout('/');
     };
 
     const handleSearchSubmit = (e?: React.FormEvent) => {

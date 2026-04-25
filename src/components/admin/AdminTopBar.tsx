@@ -112,7 +112,7 @@ const AdminTopBar: React.FC<AdminTopBarProps> = ({ adminUser, sidebarCollapsed, 
           </div>
 
           <button
-            onClick={logout}
+            onClick={() => logout()}
             title="Sign out"
             className="p-2 text-text-tertiary hover:text-error transition-colors"
           >

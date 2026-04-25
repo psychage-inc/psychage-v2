@@ -40,7 +40,7 @@ const AdminSidebar: React.FC = () => {
 
                 <div className="pt-4 mt-4 border-t border-border">
                     <button
-                        onClick={logout}
+                        onClick={() => logout()}
                         className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-red-500 hover:bg-red-50 transition-all font-medium"
                     >
                         <LogOut size={18} />

@@ -1,4 +1,6 @@
 import React, { useContext, useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useQueryClient } from '@tanstack/react-query';
 import { AuthContext, AuthState, AuthContextType } from './AuthContextDefinition';
 import { supabase } from '../lib/supabaseClient';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
@@ -28,6 +30,10 @@ const ALLOWED_EXTRA_KEYS = [
 // user-writable via supabase.auth.updateUser({ data: ... }) — trusting it
 // for role resolution is the vulnerability fixed in AUTH-001. See
 // docs/audits/auth-audit-2026-04-23.md.
+//
+// Note on the 'admin' branch: post-AUTH-006 cleanup, profiles.role is
+// constrained to 'patient' | 'provider'. Admin recognition flows from
+// app_metadata.role, populated by the B-3 sync trigger from admin_roles.
 function mapSupabaseUser(supabaseUser: SupabaseUser | null) {
   if (!supabaseUser) return null;
 
@@ -61,12 +67,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     isAuthenticated: false,
   });
   const userRef = useRef<ReturnType<typeof mapSupabaseUser>>(null);
+  const queryClient = useQueryClient();
+  const navigate = useNavigate();
 
-  // Check for existing session on mount and set up auth state listener
+  // AUTH-012: onAuthStateChange is the SOLE updater of auth state at runtime.
+  // login / signup / logout / deleteAccount never call setState directly —
+  // they invoke Supabase, return success/failure, and rely on the listener
+  // below to propagate state. This eliminates the dual-setState race that
+  // previously caused observable flicker on login.
+  //
+  // The getSession() initial-load path below is a separate concern (boot
+  // hydration before the listener is wired) and is allowed to setState once.
   useEffect(() => {
     let isCancelled = false;
 
-    // Get initial session
+    // Initial session hydration (boot only).
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (isCancelled) return;
       const mapped = mapSupabaseUser(session?.user ?? null);
@@ -81,11 +96,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       });
     });
 
-    // Listen for auth state changes
+    // Runtime auth state listener — sole runtime updater per AUTH-012.
     const {
       data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
+    } = supabase.auth.onAuthStateChange((event, session) => {
       if (isCancelled) return;
+
+      // AUTH-011 defensive: a SIGNED_OUT event can fire from another tab
+      // (Supabase broadcasts auth state across tabs). Clear the cache here
+      // so cross-tab logout doesn't leak the previous user's data into the
+      // current tab. The same-tab logout() also clears synchronously below
+      // — belt and braces.
+      if (event === 'SIGNED_OUT') {
+        queryClient.clear();
+      }
+
       const mapped = mapSupabaseUser(session?.user ?? null);
       const stableUser = usersEqual(mapped, userRef.current) ? userRef.current : mapped;
       userRef.current = stableUser;
@@ -102,11 +127,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       isCancelled = true;
       subscription.unsubscribe();
     };
-  }, []);
+  }, [queryClient]);
 
+  // AUTH-012: login does NOT call setState. The onAuthStateChange listener
+  // above receives SIGNED_IN and updates state. This eliminates the
+  // double-fire that previously caused a flash of stale state.
   const login = useCallback(async (email: string, password: string) => {
     try {
-      const { data, error } = await supabase.auth.signInWithPassword({
+      const { error } = await supabase.auth.signInWithPassword({
         email,
         password,
       });
@@ -115,19 +143,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         return { success: false, error: error.message };
       }
 
-      if (data.user) {
-        const mapped = mapSupabaseUser(data.user);
-        const stableUser = usersEqual(mapped, userRef.current) ? userRef.current : mapped;
-        userRef.current = stableUser;
-        setState({
-          user: stableUser,
-          isLoading: false,
-          isAuthenticated: true,
-        });
-        return { success: true };
-      }
-
-      return { success: false, error: 'Login failed' };
+      return { success: true };
     } catch (error) {
       const message = error instanceof Error
         ? error.message
@@ -190,19 +206,23 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  const logout = useCallback(async () => {
+  // AUTH-011 + AUTH-022 + AUTH-012:
+  //   - Clear TanStack Query cache before signOut so any in-flight queries
+  //     don't race a half-logged-out session and leak data into the next
+  //     user's session.
+  //   - Always navigate to `redirect` (default /login). Eliminates the
+  //     inconsistent caller pattern where some sites navigated and others
+  //     relied on ProtectedRoute fallback.
+  //   - Do not call setState — the SIGNED_OUT listener above handles that.
+  const logout = useCallback(async (redirect: string = '/login') => {
+    queryClient.clear();
     try {
       await supabase.auth.signOut();
     } catch (error) {
       console.error('Logout error:', error);
-    } finally {
-      setState({
-        user: null,
-        isLoading: false,
-        isAuthenticated: false,
-      });
     }
-  }, []);
+    navigate(redirect, { replace: true });
+  }, [queryClient, navigate]);
 
   const refreshUser = useCallback(async () => {
     try {
@@ -278,6 +298,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
+  // AUTH-012 / AUTH-011: same architectural treatment as logout — clear
+  // cache, sign out, let the listener finalize state, navigate.
   const deleteAccount = useCallback(async () => {
     try {
       const { privacyService } = await import('../services/privacyService');
@@ -285,15 +307,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (!result.success) {
         return { success: false, error: 'Failed to schedule account deletion' };
       }
-      // Sign out after scheduling deletion
-      await supabase.auth.signOut();
-      setState({ user: null, isLoading: false, isAuthenticated: false });
+      queryClient.clear();
+      try {
+        await supabase.auth.signOut();
+      } catch (error) {
+        console.error('Sign-out after deletion error:', error);
+      }
+      navigate('/login', { replace: true });
       return { success: true };
     } catch (error) {
       const message = error instanceof Error ? error.message : 'Failed to delete account';
       return { success: false, error: message };
     }
-  }, []);
+  }, [queryClient, navigate]);
 
   const value = useMemo<AuthContextType>(() => ({
     ...state,

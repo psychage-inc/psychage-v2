@@ -1,9 +1,15 @@
+import type React from 'react';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, waitFor } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 /**
  * Coverage for AUTH-010: signup must drop unknown extraMetadata keys
  * (especially `role`) instead of blind-spreading them into options.data.
+ *
+ * Post-refactor (data-layer branch): AuthProvider depends on a Router and
+ * a QueryClient. Test setup wraps both.
  */
 
 const getSessionMock = vi.fn();
@@ -35,6 +41,17 @@ function CaptureSignup() {
     return null;
 }
 
+function renderWithProviders(node: React.ReactNode) {
+    const queryClient = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+    return render(
+        <QueryClientProvider client={queryClient}>
+            <MemoryRouter>
+                <AuthProvider>{node}</AuthProvider>
+            </MemoryRouter>
+        </QueryClientProvider>,
+    );
+}
+
 describe('AuthContext.signup — AUTH-010', () => {
     beforeEach(() => {
         getSessionMock.mockReset();
@@ -49,11 +66,7 @@ describe('AuthContext.signup — AUTH-010', () => {
     });
 
     it('keeps allowed extraMetadata keys and drops unknown ones', async () => {
-        render(
-            <AuthProvider>
-                <CaptureSignup />
-            </AuthProvider>,
-        );
+        renderWithProviders(<CaptureSignup />);
 
         await waitFor(() => expect(signupFn).not.toBeNull());
 
@@ -83,11 +96,7 @@ describe('AuthContext.signup — AUTH-010', () => {
     it('warns once per dropped key', async () => {
         const warnSpy = vi.spyOn(console, 'warn');
 
-        render(
-            <AuthProvider>
-                <CaptureSignup />
-            </AuthProvider>,
-        );
+        renderWithProviders(<CaptureSignup />);
 
         await waitFor(() => expect(signupFn).not.toBeNull());
 
@@ -106,11 +115,7 @@ describe('AuthContext.signup — AUTH-010', () => {
     });
 
     it('handles missing extraMetadata cleanly', async () => {
-        render(
-            <AuthProvider>
-                <CaptureSignup />
-            </AuthProvider>,
-        );
+        renderWithProviders(<CaptureSignup />);
 
         await waitFor(() => expect(signupFn).not.toBeNull());
 

@@ -13,6 +13,18 @@ export interface UserProfile {
     full_name?: string;
     avatar_url?: string;
     location?: string;
+    /**
+     * Effective user role.
+     *
+     * Source priority (per AUTH-006):
+     *   1. auth.users.raw_app_meta_data.role  (admin_roles → synced by B-3 trigger)
+     *   2. public.profiles.role               (patient | provider only)
+     *   3. fallback 'patient'
+     *
+     * The 'admin' branch ONLY originates from app_metadata.role. Post-AUTH-006
+     * the public.profiles.role CHECK constraint forbids 'admin'; admin status
+     * lives in public.admin_roles and is replicated into app_metadata.
+     */
     role: 'patient' | 'provider' | 'admin';
     created_at?: string;
     updated_at?: string;
@@ -148,37 +160,59 @@ export const userProfileService = {
     },
 
     /**
-     * Change user password
+     * Change user password.
+     *
+     * Verification path (AUTH-005): the previous implementation called
+     * supabase.auth.signInWithPassword from the client to confirm the
+     * current password. That had unwanted side effects — counted toward
+     * the sign-in rate limit, fired SIGNED_IN on the client (which
+     * post-AUTH-012 re-triggers the listener), and rotated tokens. The
+     * verification now goes through the verify-current-password edge
+     * function, which performs the same check on a fresh isolated client
+     * server-side and returns only { verified: boolean }.
+     *
+     * Session regeneration (AUTH-015): after a successful password update
+     * we sign out other devices via scope: 'others' so a stolen-device
+     * scenario kicks the attacker's session. The current session is
+     * preserved — the user has just authenticated by typing their old
+     * password and shouldn't be forced to log in again.
      */
     changePassword: async (currentPassword: string, newPassword: string): Promise<{ success: boolean; error?: string }> => {
         try {
-            // Validate new password
             if (newPassword.length < 8) {
                 return { success: false, error: 'Password must be at least 8 characters long' };
             }
 
-            // Verify current password by attempting to sign in
             const { data: { user } } = await supabase.auth.getUser();
             if (!user?.email) {
                 return { success: false, error: 'No authenticated user found' };
             }
 
-            const { error: signInError } = await supabase.auth.signInWithPassword({
-                email: user.email,
-                password: currentPassword,
-            });
-
-            if (signInError) {
+            // AUTH-005: server-side verification via edge function.
+            const { data: verifyData, error: verifyError } = await supabase.functions
+                .invoke('verify-current-password', { body: { password: currentPassword } });
+            if (verifyError || !verifyData?.verified) {
                 return { success: false, error: 'Current password is incorrect' };
             }
 
-            // Update password
             const { error: updateError } = await supabase.auth.updateUser({
                 password: newPassword,
             });
 
             if (updateError) {
                 return { success: false, error: updateError.message };
+            }
+
+            // AUTH-015: invalidate other-device sessions. scope:'others'
+            // preserves the current session (the user just verified their
+            // old password) while killing anything else — the lost-device
+            // / hijacked-session recovery path.
+            try {
+                await supabase.auth.signOut({ scope: 'others' });
+            } catch (otherSignOutError) {
+                // Non-fatal: the password has already been rotated, which
+                // is the security-critical step. Log and continue.
+                console.warn('signOut(scope:others) after password change failed:', otherSignOutError);
             }
 
             // AUTH-028: send a security notification to the registered

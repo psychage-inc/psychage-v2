@@ -44,9 +44,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   };
 
   const handleLogout = async () => {
-    await logout();
+    // AUTH-022: logout owns post-logout navigation. Pass '/' to preserve
+    // the prior homepage redirect (default would be /login).
     onClose();
-    navigate('/');
+    await logout('/');
   };
 
   const toggleSection = (section: string) => {

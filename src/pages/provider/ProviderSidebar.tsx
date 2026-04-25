@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { LogOut } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Card } from '@/components/ui/Card';
@@ -9,11 +9,10 @@ import { providerSidebarItems } from '@/config/sidebars';
 
 const ProviderSidebar: React.FC = () => {
     const { user, logout } = useAuth();
-    const navigate = useNavigate();
 
     const handleLogout = async () => {
-        await logout();
-        navigate('/');
+        // AUTH-022: logout owns post-logout navigation; pass '/' for homepage.
+        await logout('/');
     };
 
     // Get initials from display name or email

@@ -6,6 +6,7 @@ import { useAuth } from '../../context/AuthContext';
 import { Logo } from '../ui/Logo';
 import ConsentCheckboxes, { ConsentState, defaultConsentState, isConsentValid } from '../privacy/ConsentCheckboxes';
 import { consentService } from '../../services/consentService';
+import { useTurnstile } from '../../lib/auth/useTurnstile';
 
 interface AuthModalProps {
     isOpen: boolean;
@@ -27,6 +28,10 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
     const [consent, setConsent] = useState<ConsentState>(defaultConsentState);
 
     const { login, signup, requestPasswordReset, signInWithGoogle, signInWithApple } = useAuth();
+    // AUTH-029 carryover: gate signup on Turnstile token. The hook is a
+    // no-op shape when VITE_TURNSTILE_SITE_KEY is unset (dev), returning
+    // a non-null sentinel token so the button stays usable.
+    const { widget: turnstileWidget, token: captchaToken, reset: resetCaptcha } = useTurnstile();
 
     if (!isOpen) return null;
 
@@ -65,10 +70,22 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                     setIsLoading(false);
                     return;
                 }
-                const result = await signup(email, password, displayName || undefined, 'patient', {
-                    age_verified: consent.ageVerified,
-                    consent_version: 'v1.0',
-                });
+                if (!captchaToken) {
+                    setError('Please complete the verification challenge.');
+                    setIsLoading(false);
+                    return;
+                }
+                const result = await signup(
+                    email,
+                    password,
+                    displayName || undefined,
+                    'patient',
+                    {
+                        age_verified: consent.ageVerified,
+                        consent_version: 'v1.0',
+                    },
+                    captchaToken,
+                );
                 if (result.success) {
                     await consentService.logBulkConsent([
                         { type: 'terms_of_service', granted: true },
@@ -80,6 +97,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                     setSuccessMessage('Account created! Please check your email to verify your account.');
                 } else {
                     setError(result.error || 'Failed to create account. Please try again.');
+                    resetCaptcha();
                 }
             } else if (view === 'forgot-password') {
                 const result = await requestPasswordReset(email);
@@ -91,6 +109,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
             }
         } catch {
             setError('An unexpected error occurred. Please try again.');
+            if (view === 'signup') resetCaptcha();
         } finally {
             setIsLoading(false);
         }
@@ -273,10 +292,15 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                                         </div>
                                     )}
 
+                                    {view === 'signup' && turnstileWidget && (
+                                        <div className="flex justify-center">{turnstileWidget}</div>
+                                    )}
+
                                     <Button
                                         type="submit"
                                         className="w-full h-12 text-lg font-bold shadow-lg shadow-teal-500/20"
                                         isLoading={isLoading}
+                                        disabled={view === 'signup' && !captchaToken}
                                         rightIcon={view !== 'forgot-password' ? <ArrowRight size={18} /> : undefined}
                                     >
                                         {view === 'login' ? 'Sign In' : view === 'signup' ? 'Create Account' : 'Send Reset Link'}

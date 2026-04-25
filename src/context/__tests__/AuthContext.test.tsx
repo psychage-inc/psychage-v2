@@ -1,5 +1,8 @@
+import type React from 'react';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, screen, waitFor } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 /**
  * Coverage for AUTH-001: role resolution from app_metadata.
@@ -11,6 +14,9 @@ import { render, screen, waitFor } from '@testing-library/react';
  * AUTH-010 signup-allowlist coverage lives in
  * src/context/__tests__/AuthContext.signup.test.tsx (added in the AUTH-010
  * commit so this file stays single-purpose).
+ *
+ * Post-refactor (data-layer branch): AuthProvider depends on a Router
+ * (useNavigate) and a QueryClient (useQueryClient). Test setup wraps both.
  */
 
 const getSessionMock = vi.fn();
@@ -43,6 +49,17 @@ function makeSessionResponse(user: Record<string, unknown> | null) {
     return Promise.resolve({ data: { session: user ? { user } : null } });
 }
 
+function renderWithProviders(node: React.ReactNode) {
+    const queryClient = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+    return render(
+        <QueryClientProvider client={queryClient}>
+            <MemoryRouter>
+                <AuthProvider>{node}</AuthProvider>
+            </MemoryRouter>
+        </QueryClientProvider>,
+    );
+}
+
 describe('AuthContext.mapSupabaseUser — AUTH-001', () => {
     beforeEach(() => {
         getSessionMock.mockReset();
@@ -60,11 +77,7 @@ describe('AuthContext.mapSupabaseUser — AUTH-001', () => {
             }),
         );
 
-        render(
-            <AuthProvider>
-                <RoleProbe />
-            </AuthProvider>,
-        );
+        renderWithProviders(<RoleProbe />);
 
         await waitFor(() => expect(screen.getByTestId('role')).toBeInTheDocument());
         expect(screen.getByTestId('role').textContent).toBe('patient');
@@ -80,11 +93,7 @@ describe('AuthContext.mapSupabaseUser — AUTH-001', () => {
             }),
         );
 
-        render(
-            <AuthProvider>
-                <RoleProbe />
-            </AuthProvider>,
-        );
+        renderWithProviders(<RoleProbe />);
 
         await waitFor(() => expect(screen.getByTestId('role').textContent).toBe('admin'));
     });
@@ -99,11 +108,7 @@ describe('AuthContext.mapSupabaseUser — AUTH-001', () => {
             }),
         );
 
-        render(
-            <AuthProvider>
-                <RoleProbe />
-            </AuthProvider>,
-        );
+        renderWithProviders(<RoleProbe />);
 
         await waitFor(() => expect(screen.getByTestId('role').textContent).toBe('provider'));
     });

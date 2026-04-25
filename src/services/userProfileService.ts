@@ -13,6 +13,18 @@ export interface UserProfile {
     full_name?: string;
     avatar_url?: string;
     location?: string;
+    /**
+     * Effective user role.
+     *
+     * Source priority (per AUTH-006):
+     *   1. auth.users.raw_app_meta_data.role  (admin_roles → synced by B-3 trigger)
+     *   2. public.profiles.role               (patient | provider only)
+     *   3. fallback 'patient'
+     *
+     * The 'admin' branch ONLY originates from app_metadata.role. Post-AUTH-006
+     * the public.profiles.role CHECK constraint forbids 'admin'; admin status
+     * lives in public.admin_roles and is replicated into app_metadata.
+     */
     role: 'patient' | 'provider' | 'admin';
     created_at?: string;
     updated_at?: string;

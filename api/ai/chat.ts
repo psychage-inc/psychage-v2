@@ -8,13 +8,11 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { createClient } from '@supabase/supabase-js';
 import { classifyInputSafety, generateCrisisResponse } from '../../src/lib/ai/safety';
-import { classifyIntent } from '../../src/lib/ai/intent';
-import { searchProviders as searchAIProviders, extractProviderCriteria, formatProviderSuggestion } from '../../src/lib/ai/providers';
 import { retrieveRelevantContent } from '../../src/lib/ai/retrieval';
 import { AnthropicProvider, OpenAIProvider, SYSTEM_PROMPT } from '../../src/lib/ai/llm';
 import { getRequiredEnv, getOptionalEnv, getAIConfig } from '../../src/lib/ai/config';
 import { encodeSSE } from '../../src/lib/ai/streaming';
-import type { Message, SafetyLevel, Citation, ProviderSuggestion } from '../../src/lib/ai/types';
+import type { Message, SafetyLevel, Citation } from '../../src/lib/ai/types';
 
 // ============================================================================
 // Rate Limiting (in-memory - use Redis/Upstash for production)
@@ -91,22 +89,6 @@ export default async function handler(
   const startTime = Date.now();
 
   try {
-    // ========================================================================
-    // Preflight: Check required environment variables
-    // ========================================================================
-
-    const missingEnvVars: string[] = [];
-    if (!process.env.ANTHROPIC_API_KEY) missingEnvVars.push('ANTHROPIC_API_KEY');
-    if (!process.env.VITE_SUPABASE_URL) missingEnvVars.push('VITE_SUPABASE_URL');
-    if (!process.env.SUPABASE_SERVICE_ROLE_KEY) missingEnvVars.push('SUPABASE_SERVICE_ROLE_KEY');
-
-    if (missingEnvVars.length > 0) {
-      console.error(`[MindMate] Missing env vars: ${missingEnvVars.join(', ')}`);
-      return res.status(500).json({
-        error: `Server configuration error: missing ${missingEnvVars.join(', ')}. Add these to your Vercel environment variables.`,
-      });
-    }
-
     // Parse request
     const { messages, sessionId: providedSessionId, stream: requestStream } = req.body as {
       messages: Message[];
@@ -139,7 +121,6 @@ export default async function handler(
     }
 
     // Initialize clients
-    console.log('[MindMate] Initializing clients...');
     const supabase = createClient(
       getRequiredEnv('VITE_SUPABASE_URL'),
       getRequiredEnv('SUPABASE_SERVICE_ROLE_KEY')
@@ -152,13 +133,11 @@ export default async function handler(
     // LAYER 1: Input Safety Check
     // ========================================================================
 
-    console.log('[MindMate] Running safety check...');
     const safetyCheck = await classifyInputSafety(
       userMessage.content,
       messages.slice(0, -1),
       llmProvider
     );
-    console.log(`[MindMate] Safety: ${safetyCheck.level} (confidence: ${safetyCheck.confidence})`);
 
     // ========================================================================
     // Crisis Bypass - Never invoke LLM for crisis
@@ -188,29 +167,6 @@ export default async function handler(
         safetyLevel: 'HARMFUL_REQUEST' as SafetyLevel,
         isCrisis: false,
       });
-    }
-
-    // ========================================================================
-    // Intent Classification + Provider Search
-    // ========================================================================
-
-    const intentResult = await classifyIntent(
-      userMessage.content,
-      messages.slice(0, -1),
-      llmProvider
-    );
-    console.log(`[MindMate] Intent: ${intentResult.primary} (confidence: ${intentResult.confidence})`);
-
-    let providerSuggestion: ProviderSuggestion | undefined;
-
-    if (intentResult.primary === 'provider_search') {
-      try {
-        const criteria = extractProviderCriteria(userMessage.content, intentResult.entities);
-        providerSuggestion = await searchAIProviders(criteria, supabase);
-        console.log(`[MindMate] Provider search: ${providerSuggestion.providers.length} results`);
-      } catch (err) {
-        console.warn('[MindMate] Provider search failed:', err);
-      }
     }
 
     // ========================================================================
@@ -276,7 +232,6 @@ export default async function handler(
     // ========================================================================
 
     if (requestStream) {
-      console.log(`[MindMate] Starting stream (model: ${llmOptions.model}, RAG chunks: ${searchResults.length})`);
       res.writeHead(200, {
         'Content-Type': 'text/event-stream',
         'Cache-Control': 'no-cache, no-transform',
@@ -321,18 +276,6 @@ export default async function handler(
           res.write(encodeSSE({ type: 'citations', citations }));
         }
 
-        // Append provider results if available
-        if (providerSuggestion && providerSuggestion.providers.length > 0) {
-          const providerText = formatProviderSuggestion(providerSuggestion);
-          fullContent += '\n\n' + providerText;
-          res.write(encodeSSE({ type: 'token', content: '\n\n' + providerText }));
-          res.write(encodeSSE({
-            type: 'providers',
-            providers: providerSuggestion.providers,
-            totalMatches: providerSuggestion.totalMatches,
-          } as any));
-        }
-
         // Done event with metrics
         const usage = llmProvider.lastStreamUsage;
         res.write(encodeSSE({
@@ -368,12 +311,6 @@ export default async function handler(
 
     const citations = extractCitations(finalContent, searchResults);
 
-    // Append provider info if available
-    if (providerSuggestion && providerSuggestion.providers.length > 0) {
-      const providerText = formatProviderSuggestion(providerSuggestion);
-      finalContent += '\n\n' + providerText;
-    }
-
     return res.status(200).json({
       message: finalContent,
       citations,
@@ -381,14 +318,13 @@ export default async function handler(
       safetyLevel: safetyCheck.level,
       isCrisis: false,
       responseTimeMs: Date.now() - startTime,
-      providerSuggestion,
     });
 
   } catch (error) {
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-    console.error('[MindMate] Chat API error:', errorMessage, error);
+    console.error('Chat API error:', error);
     return res.status(500).json({
-      error: errorMessage,
+      error: 'Internal server error',
+      message: error instanceof Error ? error.message : 'Unknown error',
     });
   }
 }

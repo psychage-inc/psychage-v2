@@ -65,3 +65,31 @@ Likely a typo or merge-artifact dupe. Not touched. Worth a 30-second cleanup PR.
 ## 13. The `_meta._translation_status` key may emit i18next dev warnings
 
 i18next sometimes warns about non-leaf keys. The `_meta` block is a dict, not a leaf string. If warnings are noisy, consider moving the marker to a sibling JSON file or a comment in the locale file. Not blocking.
+
+---
+
+## Pre-merge verification observations (added 2026-04-25)
+
+### V-1: rate-limit-before-existence-check enables cache poisoning
+
+`suspicious-activity-notification` enforces the per-email rate limit BEFORE the `profiles` existence check (lines 95-105 then 118-128). The response is constant 200 regardless of which path executes, so this does NOT leak email existence to the caller — V-1's pass criteria (OR clause: "keyed on something that doesn't leak existence") is satisfied.
+
+But there's a minor abuse vector: an unauthenticated attacker can POST `{ email: "<arbitrary-address>" }` and pollute the in-memory `lastInvocationByEmail` map. If the legitimate user later signs up with that email and triggers a real lockout, their notification gets silently dropped (rate-limited) for up to 1 hour after the attacker's last poke. Not security-critical (the function is a courtesy signal, not a gating control), and the in-memory map is per-instance so the impact scales inversely with deployment fleet size.
+
+**Suggested follow-up (NOT in this branch):** flip the order — existence check first, rate-limit second, gated on emails that actually correspond to users. Existence-check timing doesn't leak in either order (DB query takes similar time for hit vs miss), so no new leak is introduced. Defer to a separate small PR if/when abuse is observed.
+
+### V-2a: migration-comment header doesn't enumerate the partial-index failure mode
+
+The verification spec asked for the migration's header to document: "If migration fails on the anonymous-email partial index, run `SELECT email, COUNT(*) FROM newsletter_subscribers WHERE user_id IS NULL GROUP BY email HAVING COUNT(*) > 1` to find duplicates and resolve before re-running."
+
+Operationally the failure mode is hypothetical: the OLD schema enforced `UNIQUE(email)`, so all existing rows are guaranteed unique by email; after `ADD COLUMN user_id` (default NULL) every existing row has `user_id IS NULL`, the partial index `WHERE user_id IS NULL` covers the same set the old constraint covered, so no duplicates can exist at create time.
+
+The documentation gap is real but the prompt's hard constraint forbids modifying already-committed migrations. A separate forward migration just to add a SQL comment would be ceremony with no semantic effect. Captured here so the operator can decide whether to add the note to `auth-ux-i18n-followup-dashboard.md` instead, or accept the risk.
+
+### V-2b: addressed in commit (see follow-up section in summary)
+
+Pre-fix, the authenticated path returned "already subscribed" without refreshing the email when the user was already `status='active'`. Apple Private Relay rotation case: user re-subscribes from a new relay address, but the old (now-defunct) address stays as the contact email and future newsletters bounce. Fixed in `[POLISH FOLLOWUP V-2]` — see commit log.
+
+### V-3: passes; no copy changes
+
+Audited every string under `auth.lockout.*`, `auth.errors.*`, `auth.deletion.*`, plus the hardcoded edge-function subject + body. All clear the tone bar (calm, factual, person-first, action-oriented; no diagnostic language; no "ALERT" / "WARNING" / "DANGER" panic). The suspicious-activity email body acknowledges the legitimate-user case ("If this was you, no action is needed") before offering the reset path — exactly the calibration the prompt asked for.

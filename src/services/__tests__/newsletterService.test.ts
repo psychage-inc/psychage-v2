@@ -123,7 +123,10 @@ describe('newsletterService', () => {
         });
 
         it('keys lookup on user_id when authenticated', async () => {
-            mockMaybeSingle.mockResolvedValue({ data: { id: '1', status: 'active' }, error: null });
+            mockMaybeSingle.mockResolvedValue({
+                data: { id: '1', status: 'active', email: 'any@email.com' },
+                error: null,
+            });
 
             const result = await newsletterService.subscribe('any@email.com');
             expect(result.success).toBe(true);
@@ -140,6 +143,44 @@ describe('newsletterService', () => {
             const insertedRow = mockInsert.mock.calls[0][0];
             expect(insertedRow.user_id).toBe('user-uuid-aaa');
             expect(insertedRow.email).toBe('relay-1@privaterelay.appleid.com');
+        });
+
+        it('refreshes email on Apple Private Relay rotation when already-active user re-subscribes (V-2b)', async () => {
+            // Existing active subscription with old relay address
+            mockMaybeSingle.mockResolvedValue({
+                data: {
+                    id: 'sub-1',
+                    status: 'active',
+                    email: 'old-relay@privaterelay.appleid.com',
+                },
+                error: null,
+            });
+
+            const result = await newsletterService.subscribe('new-relay@privaterelay.appleid.com');
+            expect(result.success).toBe(true);
+
+            // The chain.update mock returns a chain with .eq() — confirm
+            // update was called with the new email (it'll have been called
+            // exactly once: the email-refresh UPDATE).
+            const updateCalls = (chain.update as ReturnType<typeof vi.fn>).mock.calls;
+            expect(updateCalls.length).toBe(1);
+            expect(updateCalls[0][0]).toEqual({ email: 'new-relay@privaterelay.appleid.com' });
+        });
+
+        it('does NOT update when active user re-subscribes with the SAME email (no-op)', async () => {
+            mockMaybeSingle.mockResolvedValue({
+                data: {
+                    id: 'sub-1',
+                    status: 'active',
+                    email: 'same@example.com',
+                },
+                error: null,
+            });
+
+            await newsletterService.subscribe('same@example.com');
+
+            const updateCalls = (chain.update as ReturnType<typeof vi.fn>).mock.calls;
+            expect(updateCalls.length).toBe(0);
         });
     });
 

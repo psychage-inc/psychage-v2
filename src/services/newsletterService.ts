@@ -25,13 +25,14 @@ export const newsletterService = {
                 // Authenticated path — dedup on user_id.
                 const { data: existing } = await supabase
                     .from('newsletter_subscribers')
-                    .select('id, status')
+                    .select('id, status, email')
                     .eq('user_id', userId)
                     .maybeSingle();
 
                 if (existing) {
-                    // Re-activate if previously unsubscribed; otherwise idempotent success.
-                    if ((existing as { status?: string }).status !== 'active') {
+                    const existingRow = existing as { id: string; status?: string; email?: string };
+                    // Re-activate if previously unsubscribed.
+                    if (existingRow.status !== 'active') {
                         await supabase
                             .from('newsletter_subscribers')
                             .update({
@@ -40,8 +41,21 @@ export const newsletterService = {
                                 subscribed_at: new Date().toISOString(),
                                 unsubscribed_at: null,
                             })
-                            .eq('id', (existing as { id: string }).id);
+                            .eq('id', existingRow.id);
                         return { success: true, message: 'Welcome back!' };
+                    }
+                    // AUTH-032 (V-2b follow-up): even on idempotent
+                    // re-subscribe of an already-active user, refresh
+                    // the email if the caller passed a different one.
+                    // This is the Apple Private Relay rotation path —
+                    // the user re-subscribes from a new relay address
+                    // and the previous one is now defunct, so future
+                    // sends MUST target the new address.
+                    if (existingRow.email !== normalized) {
+                        await supabase
+                            .from('newsletter_subscribers')
+                            .update({ email: normalized })
+                            .eq('id', existingRow.id);
                     }
                     return { success: true, message: 'You are already subscribed!' };
                 }

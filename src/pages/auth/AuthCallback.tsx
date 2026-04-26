@@ -1,15 +1,29 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/lib/supabaseClient';
 import { adminUrl, mainUrl, isAdminDomain } from '@/lib/urls';
 import { Loader2 } from 'lucide-react';
+import { useAuthErrorFocus } from '@/lib/auth/useAuthErrorFocus';
+import { mapSupabaseAuthError } from '@/lib/auth/supabaseErrorMessages';
+import { useTranslation } from 'react-i18next';
 
 const AuthCallback: React.FC = () => {
     const navigate = useNavigate();
     const [error, setError] = useState<string | null>(null);
+    const errorAlertRef = useAuthErrorFocus<HTMLDivElement>(error);
+    const { t } = useTranslation();
+    // AUTH-018: collect every timer id we schedule so the cleanup can
+    // cancel them. The earlier `isCancelled` guard only skipped state
+    // updates — the pending navigate() call still ran on a stale
+    // unmounted component.
+    const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
     useEffect(() => {
         let isCancelled = false;
+        const scheduleNavigate = (path: string, state?: Record<string, unknown>, ms = 3000) => {
+            const id = setTimeout(() => navigate(path, state ? { state } : undefined), ms);
+            timersRef.current.push(id);
+        };
 
         const handleCallback = async () => {
             try {
@@ -20,8 +34,9 @@ const AuthCallback: React.FC = () => {
 
                 if (error) {
                     console.error('Auth callback error:', error);
-                    setError(error.message);
-                    setTimeout(() => navigate('/login', { state: { error: error.message } }), 3000);
+                    const key = mapSupabaseAuthError(error);
+                    setError(t(key));
+                    scheduleNavigate('/login', { error: error.message });
                     return;
                 }
 
@@ -92,13 +107,18 @@ const AuthCallback: React.FC = () => {
             } catch (err) {
                 if (isCancelled) return;
                 console.error('Callback processing error:', err);
-                setError('Failed to complete authentication');
-                setTimeout(() => navigate('/login'), 3000);
+                setError(t('auth.callback.errorGeneric'));
+                scheduleNavigate('/login');
             }
         };
 
         handleCallback();
-        return () => { isCancelled = true; };
+        return () => {
+            isCancelled = true;
+            // Cancel any pending redirect timers — see AUTH-018.
+            timersRef.current.forEach(clearTimeout);
+            timersRef.current = [];
+        };
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -106,7 +126,7 @@ const AuthCallback: React.FC = () => {
         <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
                         <div className="text-center relative z-10">
                 {error ? (
-                    <div className="space-y-4">
+                    <div ref={errorAlertRef} role="alert" tabIndex={-1} className="space-y-4 focus:outline-none">
                         <div className="w-16 h-16 mx-auto rounded-full bg-red-500/10 flex items-center justify-center">
                             <span className="text-red-500 text-2xl">!</span>
                         </div>
@@ -115,7 +135,7 @@ const AuthCallback: React.FC = () => {
                         <p className="text-sm text-text-tertiary">Redirecting to login...</p>
                     </div>
                 ) : (
-                    <div className="space-y-4">
+                    <div className="space-y-4" aria-live="polite">
                         <Loader2 className="w-12 h-12 mx-auto text-primary animate-spin" />
                         <h2 className="text-xl font-bold text-text-primary">Completing sign in...</h2>
                         <p className="text-text-secondary">Please wait while we verify your credentials.</p>

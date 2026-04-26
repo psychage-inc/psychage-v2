@@ -7,6 +7,7 @@ import { Logo } from '../ui/Logo';
 import ConsentCheckboxes, { ConsentState, defaultConsentState, isConsentValid } from '../privacy/ConsentCheckboxes';
 import { consentService } from '../../services/consentService';
 import { useTurnstile } from '../../lib/auth/useTurnstile';
+import { useAuthErrorFocus } from '../../lib/auth/useAuthErrorFocus';
 
 interface AuthModalProps {
     isOpen: boolean;
@@ -32,6 +33,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
     // no-op shape when VITE_TURNSTILE_SITE_KEY is unset (dev), returning
     // a non-null sentinel token so the button stays usable.
     const { widget: turnstileWidget, token: captchaToken, reset: resetCaptcha } = useTurnstile();
+    const errorAlertRef = useAuthErrorFocus<HTMLDivElement>(error);
 
     if (!isOpen) return null;
 
@@ -194,9 +196,12 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                                 {/* Error Message */}
                                 {error && (
                                     <motion.div
+                                        ref={errorAlertRef}
+                                        role="alert"
+                                        tabIndex={-1}
                                         initial={{ opacity: 0, y: -10 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        className="mb-4 p-3 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 flex items-start gap-2"
+                                        className="mb-4 p-3 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 flex items-start gap-2 focus:outline-none"
                                     >
                                         <AlertCircle className="text-red-500 shrink-0 mt-0.5" size={18} />
                                         <p className="text-sm text-red-700 dark:text-red-300">{error}</p>
@@ -206,6 +211,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                                 {/* Success Message */}
                                 {successMessage && (
                                     <motion.div
+                                        aria-live="polite"
                                         initial={{ opacity: 0, y: -10 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         className="mb-4 p-3 rounded-xl bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 flex items-start gap-2"
@@ -249,6 +255,9 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                                                 onChange={(e) => setEmail(e.target.value)}
                                                 required
                                                 autoComplete="email"
+                                                inputMode="email"
+                                                autoCapitalize="off"
+                                                spellCheck={false}
                                                 className="w-full h-12 pl-12 pr-4 rounded-xl bg-surface-hover border border-border focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all outline-none font-medium text-text-primary placeholder:text-text-tertiary"
                                                 placeholder="you@example.com"
                                             />

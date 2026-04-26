@@ -11,15 +11,20 @@ import { useAuth } from '../../context/AuthContext';
 import InteractiveCard from '@/components/ui/InteractiveCard';
 import SEO from '@/components/SEO';
 import { useTurnstile } from '@/lib/auth/useTurnstile';
+import { useAuthErrorFocus } from '@/lib/auth/useAuthErrorFocus';
+import { mapSupabaseAuthError } from '@/lib/auth/supabaseErrorMessages';
+import { useTranslation } from 'react-i18next';
 
 const ResetPasswordPage = () => {
     const [email, setEmail] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const { requestPasswordReset, isLoading } = useAuth();
+    const { t } = useTranslation();
     // AUTH-029: gate submit on Turnstile token (no-op in dev when
     // VITE_TURNSTILE_SITE_KEY is unset).
     const { widget: turnstileWidget, token: captchaToken, reset: resetCaptcha } = useTurnstile();
+    const errorAlertRef = useAuthErrorFocus<HTMLDivElement>(error);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -33,14 +38,34 @@ const ResetPasswordPage = () => {
         try {
             const result = await requestPasswordReset(email, captchaToken);
 
+            // AUTH-031 / non-disclosure: ALWAYS render the success state
+            // regardless of whether the email actually exists in the
+            // system. We only fall through to the error state when the
+            // request itself failed for non-account reasons (rate limit,
+            // network, captcha rejected). Even those are surfaced through
+            // the central mapper so the copy stays consistent.
             if (result.success) {
                 setIsSubmitted(true);
             } else {
-                setError(result.error || 'Failed to send reset instructions. Please try again.');
-                resetCaptcha();
+                const errMsg = result.error || 'Failed to send reset instructions';
+                const lower = errMsg.toLowerCase();
+                // If Supabase happened to leak existence ("user not
+                // found"), still show the success state — the
+                // legitimate "we sent it" copy is non-disclosing.
+                if (
+                    lower.includes('not found') ||
+                    lower.includes('no user') ||
+                    lower.includes('does not exist')
+                ) {
+                    setIsSubmitted(true);
+                } else {
+                    const key = mapSupabaseAuthError(new Error(errMsg));
+                    setError(t(key));
+                    resetCaptcha();
+                }
             }
         } catch {
-            setError('An unexpected error occurred. Please try again.');
+            setError(t('auth.errors.unexpected'));
             resetCaptcha();
         }
     };
@@ -111,9 +136,9 @@ const ResetPasswordPage = () => {
                             >
                                 <CheckCircle2 className="w-8 h-8" />
                             </motion.div>
-                            <h3 className="text-xl font-semibold text-text-primary mb-2">Check your email</h3>
+                            <h3 className="text-xl font-semibold text-text-primary mb-2">{t('auth.resetPassword.successTitle')}</h3>
                             <p className="text-text-secondary mb-8">
-                                We've sent password reset instructions to <span className="font-medium text-text-primary block mt-1">{email}</span>
+                                {t('auth.resetPassword.successBody')} <span className="font-medium text-text-primary block mt-1">{email}</span>
                             </p>
                             <Button
                                 variant="outline"
@@ -126,10 +151,12 @@ const ResetPasswordPage = () => {
                     ) : (
                         <form onSubmit={handleSubmit} className="space-y-6">
                             {error && (
-                                <Alert variant="destructive" className="animate-in slide-in-from-top-2">
-                                    <AlertCircle className="h-4 w-4" />
-                                    <AlertDescription>{error}</AlertDescription>
-                                </Alert>
+                                <div ref={errorAlertRef} role="alert" tabIndex={-1} className="focus:outline-none">
+                                    <Alert variant="destructive" className="animate-in slide-in-from-top-2">
+                                        <AlertCircle className="h-4 w-4" />
+                                        <AlertDescription>{error}</AlertDescription>
+                                    </Alert>
+                                </div>
                             )}
 
                             <div className="space-y-2">
@@ -140,6 +167,10 @@ const ResetPasswordPage = () => {
                                         type="email"
                                         placeholder="name@example.com"
                                         required
+                                        autoComplete="email"
+                                        inputMode="email"
+                                        autoCapitalize="off"
+                                        spellCheck={false}
                                         className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}

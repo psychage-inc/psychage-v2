@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Lock, ArrowLeft, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
@@ -11,6 +11,9 @@ import { supabase } from '@/lib/supabaseClient';
 import { cn } from '@/lib/utils';
 import InteractiveCard from '@/components/ui/InteractiveCard';
 import SEO from '@/components/SEO';
+import { useAuthErrorFocus } from '@/lib/auth/useAuthErrorFocus';
+import { mapSupabaseAuthError } from '@/lib/auth/supabaseErrorMessages';
+import { useTranslation } from 'react-i18next';
 
 /**
  * AUTH-009: this page must only allow password updates for users
@@ -40,6 +43,19 @@ const UpdatePasswordPage = () => {
     const [isReady, setIsReady] = useState(false);
     const [isCheckingSession, setIsCheckingSession] = useState(true);
     const [refusedExistingSession, setRefusedExistingSession] = useState(false);
+    const errorAlertRef = useAuthErrorFocus<HTMLDivElement>(error);
+    const { t } = useTranslation();
+    // AUTH-018: track the success-redirect timer so unmounting cancels it.
+    const redirectTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+    useEffect(() => {
+        return () => {
+            if (redirectTimerRef.current) {
+                clearTimeout(redirectTimerRef.current);
+                redirectTimerRef.current = null;
+            }
+        };
+    }, []);
 
     useEffect(() => {
         let mounted = true;
@@ -162,7 +178,11 @@ const UpdatePasswordPage = () => {
             const { error: updateError } = await supabase.auth.updateUser({ password });
 
             if (updateError) {
-                setError(updateError.message);
+                // AUTH-019: route through the central mapper so the
+                // user gets a consistent message rather than raw
+                // Supabase wording (e.g. "AuthApiError: ...").
+                const key = mapSupabaseAuthError(updateError);
+                setError(t(key));
             } else {
                 setIsSuccess(true);
                 // AUTH-028: notify the registered email that the password
@@ -179,13 +199,14 @@ const UpdatePasswordPage = () => {
                 // was triggered to recover from a lost device or session
                 // hijack, kill any attacker tokens too. (AUTH-009.)
                 await supabase.auth.signOut({ scope: 'global' });
-                setTimeout(
-                    () => navigate('/login', { state: { message: 'Password updated successfully. Please log in.' } }),
+                redirectTimerRef.current = setTimeout(
+                    () => navigate('/login', { state: { message: t('auth.updatePassword.successFlashMessage') } }),
                     3000,
                 );
             }
         } catch (err) {
-            setError(err instanceof Error ? err.message : 'An unexpected error occurred');
+            const key = mapSupabaseAuthError(err instanceof Error ? err : new Error('unknown'));
+            setError(t(key));
         } finally {
             setIsLoading(false);
         }
@@ -326,17 +347,19 @@ const UpdatePasswordPage = () => {
                 >
                     <form onSubmit={handleSubmit} className="space-y-6">
                         {error && (
-                            <Alert variant="destructive" className="animate-in slide-in-from-top-2">
-                                <AlertCircle className="h-4 w-4" />
-                                <AlertDescription>
-                                    {error}
-                                    {!isReady && (
-                                        <Link to="/reset-password" className="block mt-2 underline text-sm">
-                                            Request a new reset link
-                                        </Link>
-                                    )}
-                                </AlertDescription>
-                            </Alert>
+                            <div ref={errorAlertRef} role="alert" tabIndex={-1} className="focus:outline-none">
+                                <Alert variant="destructive" className="animate-in slide-in-from-top-2">
+                                    <AlertCircle className="h-4 w-4" />
+                                    <AlertDescription>
+                                        {error}
+                                        {!isReady && (
+                                            <Link to="/reset-password" className="block mt-2 underline text-sm">
+                                                Request a new reset link
+                                            </Link>
+                                        )}
+                                    </AlertDescription>
+                                </Alert>
+                            </div>
                         )}
 
                         <div className="space-y-2">
@@ -346,6 +369,7 @@ const UpdatePasswordPage = () => {
                                     id="password"
                                     type="password"
                                     required
+                                    autoComplete="new-password"
                                     className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
@@ -380,6 +404,7 @@ const UpdatePasswordPage = () => {
                                     id="confirmPassword"
                                     type="password"
                                     required
+                                    autoComplete="new-password"
                                     className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={confirmPassword}
                                     onChange={(e) => setConfirmPassword(e.target.value)}

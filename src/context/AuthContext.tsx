@@ -4,6 +4,7 @@ import { useQueryClient } from '@tanstack/react-query';
 import { AuthContext, AuthState, AuthContextType } from './AuthContextDefinition';
 import { supabase } from '../lib/supabaseClient';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
+import { logAuthEvent, classifyAuthError } from '../lib/auth/authTelemetry';
 
 // AUTH-010: signup extraMetadata is restricted to a known allowlist.
 // Anything outside this set is dropped (with a console.warn) before the
@@ -140,11 +141,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       });
 
       if (error) {
+        const outcome = classifyAuthError(error);
+        logAuthEvent('login', outcome, { code: (error as { code?: string }).code });
         return { success: false, error: error.message };
       }
 
+      logAuthEvent('login', 'success');
       return { success: true };
     } catch (error) {
+      logAuthEvent('login', 'platform_error', { thrown: true });
       const message = error instanceof Error
         ? error.message
         : 'An unexpected error occurred';
@@ -188,17 +193,22 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       });
 
       if (error) {
+        const outcome = classifyAuthError(error);
+        logAuthEvent('signup', outcome, { code: (error as { code?: string }).code });
         return { success: false, error: error.message };
       }
 
       if (data.user) {
         // Supabase may require email confirmation before allowing sign in
         // For now, we consider signup successful
+        logAuthEvent('signup', 'success');
         return { success: true };
       }
 
+      logAuthEvent('signup', 'platform_error', { reason: 'no_user_returned' });
       return { success: false, error: 'Signup failed' };
     } catch (error) {
+      logAuthEvent('signup', 'platform_error', { thrown: true });
       const message = error instanceof Error
         ? error.message
         : 'An unexpected error occurred';
@@ -218,8 +228,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     queryClient.clear();
     try {
       await supabase.auth.signOut();
+      logAuthEvent('logout', 'success');
     } catch (error) {
       console.error('Logout error:', error);
+      logAuthEvent('logout', 'platform_error', { thrown: true });
     }
     navigate(redirect, { replace: true });
   }, [queryClient, navigate]);
@@ -252,11 +264,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       });
 
       if (error) {
+        const outcome = classifyAuthError(error);
+        logAuthEvent('resetPassword', outcome, { code: (error as { code?: string }).code });
         return { success: false, error: error.message };
       }
 
+      logAuthEvent('resetPassword', 'success');
       return { success: true };
     } catch (error) {
+      logAuthEvent('resetPassword', 'platform_error', { thrown: true });
       const message = error instanceof Error
         ? error.message
         : 'An unexpected error occurred';
@@ -273,10 +289,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         },
       });
       if (error) {
+        const outcome = classifyAuthError(error);
+        logAuthEvent('oauthGoogle', outcome, { code: (error as { code?: string }).code });
         return { success: false, error: error.message };
       }
+      logAuthEvent('oauthGoogle', 'success');
       return { success: true };
     } catch {
+      logAuthEvent('oauthGoogle', 'platform_error', { thrown: true });
       return { success: false, error: 'Failed to sign in with Google' };
     }
   }, []);
@@ -290,10 +310,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         },
       });
       if (error) {
+        const outcome = classifyAuthError(error);
+        logAuthEvent('oauthApple', outcome, { code: (error as { code?: string }).code });
         return { success: false, error: error.message };
       }
+      logAuthEvent('oauthApple', 'success');
       return { success: true };
     } catch {
+      logAuthEvent('oauthApple', 'platform_error', { thrown: true });
       return { success: false, error: 'Failed to sign in with Apple' };
     }
   }, []);

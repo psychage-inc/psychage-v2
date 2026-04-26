@@ -1,5 +1,5 @@
- 
-import React from 'react';
+
+import React, { useEffect, useState } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { GlobalLoading } from '../ui/Skeletons';
@@ -12,13 +12,30 @@ interface RoleGuardProps {
     allowedRoles: UserRole[];
 }
 
+// AUTH-020 mirror: defer the loading spinner by 200ms to avoid the
+// flash of GlobalLoading on every guarded-route navigation.
+const LOADING_DEFER_MS = 200;
+
 const RoleGuard: React.FC<RoleGuardProps> = ({ children, allowedRoles }) => {
     const { user, isAuthenticated, isLoading } = useAuth();
     const location = useLocation();
     const onAdminDomain = isInAdminApp();
+    const [showLoading, setShowLoading] = useState(false);
 
-    if (isLoading) {
+    useEffect(() => {
+        if (!isLoading) {
+            setShowLoading(false);
+            return;
+        }
+        const timer = setTimeout(() => setShowLoading(true), LOADING_DEFER_MS);
+        return () => clearTimeout(timer);
+    }, [isLoading]);
+
+    if (isLoading && showLoading) {
         return <GlobalLoading />;
+    }
+    if (isLoading) {
+        return null;
     }
 
     if (!isAuthenticated) {

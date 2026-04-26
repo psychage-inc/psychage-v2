@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate, useLocation, useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Lock, AlertCircle, ArrowRight, CheckCircle2, Eye, EyeOff } from 'lucide-react';
@@ -13,7 +13,15 @@ import { LogoIcon } from '@/components/ui/LogoIcon';
 import { supabase } from '@/lib/supabaseClient';
 import { adminUrl, mainUrl } from '@/lib/urls';
 import { safeRedirectPath } from '@/lib/auth/validateRedirect';
+import { useAuthErrorFocus } from '@/lib/auth/useAuthErrorFocus';
+import { mapSupabaseAuthError } from '@/lib/auth/supabaseErrorMessages';
 import SEO from '@/components/SEO';
+import { useTranslation } from 'react-i18next';
+
+// AUTH-034 — failed-attempt lockout signal thresholds
+const LOCKOUT_SOFT_THRESHOLD = 3;
+const LOCKOUT_HARD_THRESHOLD = 5;
+const LOCKOUT_HARD_DURATION_MS = 30_000;
 
 interface LoginPageProps {
     variant?: 'main' | 'admin';
@@ -33,6 +41,29 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
     const [signupRole, setSignupRole] = useState<'patient' | 'provider' | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const isDev = import.meta.env.DEV;
+    const { t } = useTranslation();
+    const errorAlertRef = useAuthErrorFocus<HTMLDivElement>(error);
+    // AUTH-034: track failed login attempts per email within this tab
+    // to surface a soft warning after 3 fails and a hard 30s lockout
+    // after 5 fails. Resets on email change.
+    const [failedAttempts, setFailedAttempts] = useState(0);
+    const [lockoutUntil, setLockoutUntil] = useState<number | null>(null);
+    const failuresByEmailRef = useRef<Map<string, number>>(new Map());
+    const notifiedEmailsRef = useRef<Set<string>>(new Set());
+    // Drive a re-render every second while the hard lockout is active
+    // so the displayed countdown ticks down. Stops on its own once the
+    // window expires.
+    const [, setLockoutTick] = useState(0);
+    useEffect(() => {
+        if (lockoutUntil === null || Date.now() >= lockoutUntil) return;
+        const interval = setInterval(() => {
+            setLockoutTick((n) => n + 1);
+            if (Date.now() >= lockoutUntil) {
+                setLockoutUntil(null);
+            }
+        }, 500);
+        return () => clearInterval(interval);
+    }, [lockoutUntil]);
 
     // Get the page they were trying to visit, or default to appropriate dashboard.
     // Prefer state (set by ProtectedRoute), fall back to query param (survives refresh).
@@ -45,12 +76,28 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
     useEffect(() => {
         const msg = location.state?.message;
         const userType = location.state?.userType as 'patient' | 'provider' | undefined;
+        // AUTH-003: pick up errors handed back by AuthCallback (OAuth
+        // failures land at /login with state.error or ?error=...). Localize
+        // via the central mapper.
+        const stateError = location.state?.error as string | undefined;
+        const queryError = searchParams.get('error') ?? undefined;
+        const incomingError = stateError ?? queryError;
         if (msg) setInfoMessage(msg);
         if (userType === 'patient' || userType === 'provider') setSignupRole(userType);
-        if (msg || userType) {
-            window.history.replaceState({}, '');
+        if (incomingError) {
+            const key = mapSupabaseAuthError(new Error(incomingError));
+            setError(t(key));
         }
-    }, [location.state?.message, location.state?.userType]);
+        if (msg || userType || stateError) {
+            // AUTH-024: clear React Router's location.state so navigating
+            // back doesn't re-show the message/error. The legacy
+            // window.history.replaceState({}, '') only cleared the URL —
+            // location.state survived. Using navigate({ replace: true,
+            // state: null }) is the React Router idiom.
+            navigate(location.pathname + location.search, { replace: true, state: null });
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [location.state?.message, location.state?.userType, location.state?.error]);
 
     const handleGoogleSignIn = async () => {
         setOauthLoading('google');
@@ -58,11 +105,14 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
         try {
             const result = await signInWithGoogle();
             if (!result.success) {
-                setError(result.error || 'Failed to sign in with Google');
+                const key = result.error
+                    ? mapSupabaseAuthError(new Error(result.error))
+                    : 'auth.errors.googleFailed';
+                setError(t(key === 'auth.errors.unknown' ? 'auth.errors.googleFailed' : key));
             }
             // On success, user will be redirected by Supabase OAuth
         } catch {
-            setError('Failed to sign in with Google');
+            setError(t('auth.errors.googleFailed'));
         } finally {
             setOauthLoading(null);
         }
@@ -74,11 +124,14 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
         try {
             const result = await signInWithApple();
             if (!result.success) {
-                setError(result.error || 'Failed to sign in with Apple');
+                const key = result.error
+                    ? mapSupabaseAuthError(new Error(result.error))
+                    : 'auth.errors.appleFailed';
+                setError(t(key === 'auth.errors.unknown' ? 'auth.errors.appleFailed' : key));
             }
             // On success, user will be redirected by Supabase OAuth
         } catch {
-            setError('Failed to sign in with Apple');
+            setError(t('auth.errors.appleFailed'));
         } finally {
             setOauthLoading(null);
         }
@@ -172,32 +225,41 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
 
                 navigate(from || '/dashboard', { replace: true });
             } else {
-                // Handle specific error types
+                // AUTH-019 + AUTH-031: route every login error through the
+                // central mapper. The mapper deliberately has no
+                // "user not found" branch (email-enumeration defense).
                 const errorMessage = result.error || 'Login failed';
-                const lowerError = errorMessage.toLowerCase();
-
                 if (import.meta.env.DEV) {
                     console.warn('[Auth Debug] Supabase login error:', errorMessage);
                 }
+                const key = mapSupabaseAuthError(new Error(errorMessage));
+                setError(t(key));
 
-                if (lowerError.includes('email not confirmed') || lowerError.includes('not confirmed')) {
-                    setError('Your email address has not been confirmed. Please check your inbox for a confirmation link.');
-                } else if (lowerError.includes('invalid') || lowerError.includes('credentials') || lowerError.includes('password')) {
-                    setError('Invalid email or password. Please check your credentials and try again.');
-                } else if (lowerError.includes('not found') || lowerError.includes('no user') || lowerError.includes('does not exist')) {
-                    setError('No account found with this email. Would you like to sign up?');
-                } else if (lowerError.includes('too many') || lowerError.includes('rate limit')) {
-                    setError('Too many login attempts. Please wait a few minutes and try again.');
-                } else if (lowerError.includes('network') || lowerError.includes('connection') || lowerError.includes('fetch')) {
-                    setError('Unable to connect. Please check your internet connection and try again.');
-                } else if (lowerError.includes('disabled') || lowerError.includes('blocked')) {
-                    setError('This account has been disabled. Please contact support for assistance.');
-                } else {
-                    setError(errorMessage);
+                // AUTH-034: bump per-email failure count. Hit the hard
+                // threshold → start a 30s countdown + fire the
+                // suspicious-activity edge function (idempotent per
+                // email per session via notifiedEmailsRef).
+                const emailKey = email.trim().toLowerCase();
+                if (emailKey) {
+                    const prev = failuresByEmailRef.current.get(emailKey) ?? 0;
+                    const next = prev + 1;
+                    failuresByEmailRef.current.set(emailKey, next);
+                    setFailedAttempts(next);
+
+                    if (next >= LOCKOUT_HARD_THRESHOLD) {
+                        setLockoutUntil(Date.now() + LOCKOUT_HARD_DURATION_MS);
+                        if (!notifiedEmailsRef.current.has(emailKey)) {
+                            notifiedEmailsRef.current.add(emailKey);
+                            // Fire-and-forget; UX must not depend on it.
+                            void supabase.functions
+                                .invoke('suspicious-activity-notification', { body: { email: emailKey } })
+                                .catch((err) => console.warn('suspicious-activity dispatch failed:', err));
+                        }
+                    }
                 }
             }
         } catch {
-            setError('An unexpected error occurred. Please try again or contact support if the issue persists.');
+            setError(t('auth.errors.unexpected'));
         } finally {
             setIsSubmitting(false);
         }
@@ -280,10 +342,12 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                         )}
 
                         {error && (
-                            <Alert variant="destructive" className="animate-in slide-in-from-top-2">
-                                <AlertCircle className="h-4 w-4" />
-                                <AlertDescription>{error}</AlertDescription>
-                            </Alert>
+                            <div ref={errorAlertRef} role="alert" tabIndex={-1} className="focus:outline-none">
+                                <Alert variant="destructive" className="animate-in slide-in-from-top-2">
+                                    <AlertCircle className="h-4 w-4" />
+                                    <AlertDescription>{error}</AlertDescription>
+                                </Alert>
+                            </div>
                         )}
 
                         <div className="space-y-2">
@@ -294,6 +358,10 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                                     type="email"
                                     placeholder="name@example.com"
                                     required
+                                    autoComplete="email"
+                                    inputMode="email"
+                                    autoCapitalize="off"
+                                    spellCheck={false}
                                     className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
@@ -310,6 +378,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                                     id="password"
                                     type={showPassword ? "text" : "password"}
                                     required
+                                    autoComplete="current-password"
                                     className="pl-11 pr-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={password}
                                     placeholder="••••••••"
@@ -345,14 +414,38 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                             </Link>
                         </div>
 
+                        {/* AUTH-034: soft warning at 3+ fails — promote
+                            "reset your password" without naming the count
+                            (the user knows; surfacing it adds nothing). */}
+                        {failedAttempts >= LOCKOUT_SOFT_THRESHOLD && failedAttempts < LOCKOUT_HARD_THRESHOLD && (
+                            <div className="text-sm text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/30 rounded-md px-3 py-2 flex items-center gap-2">
+                                <AlertCircle className="h-4 w-4 shrink-0" aria-hidden="true" />
+                                <span>{t('auth.lockout.softWarning')}</span>
+                                <Link
+                                    to="/reset-password"
+                                    className="font-semibold underline hover:no-underline ml-auto"
+                                >
+                                    {t('auth.lockout.resetCta')}
+                                </Link>
+                            </div>
+                        )}
+
                         <Button
                             type="submit"
                             className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300"
                             size="lg"
                             isLoading={isSubmitting}
-                            disabled={isSubmitting || isLoading}
+                            disabled={
+                                isSubmitting ||
+                                isLoading ||
+                                (lockoutUntil !== null && Date.now() < lockoutUntil)
+                            }
                         >
-                            Sign In
+                            {lockoutUntil !== null && Date.now() < lockoutUntil
+                                ? t('auth.lockout.hardCountdown', {
+                                      seconds: Math.ceil((lockoutUntil - Date.now()) / 1000),
+                                  })
+                                : 'Sign In'}
                         </Button>
                     </form>
 

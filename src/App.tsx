@@ -17,6 +17,7 @@ import SEO from './components/SEO';
 import SkipLink from './components/ui/SkipLink';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import RoleGuard from './components/auth/RoleGuard';
+import DeletionScheduledBanner from './components/account/DeletionScheduledBanner';
 import { adminUrl } from './lib/urls';
 import { notificationService } from './lib/notifications/notificationService';
 import { analytics } from './lib/analytics';
@@ -206,6 +207,9 @@ const App: React.FC = () => {
                     {/* App content always renders — Preloader is a fixed overlay (z-9999) that fades out */}
                     <div className="min-h-[100dvh] bg-background font-sans text-gray-900 overflow-x-hidden flex flex-col transition-colors duration-300">
                             <Navigation />
+                            {/* AUTH-021: app-wide pending-deletion banner. Renders nothing
+                                when no deletion is scheduled. */}
+                            <DeletionScheduledBanner />
 
                             <main id="main-content" className={`flex-grow w-full outline-none min-h-[100dvh] ${location.pathname === '/tools/mindmate' ? '' : 'pb-24'} ${location.pathname !== '/' ? 'pt-20' : ''}`} tabIndex={-1}>
                                 <ErrorBoundary

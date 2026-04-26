@@ -6,31 +6,89 @@ export interface NewsletterSubscribeResponse {
     message?: string;
 }
 
+/**
+ * AUTH-032: when an authenticated user subscribes, identity is keyed on
+ * user_id (the auth.users row). Email is recorded as a contact attribute
+ * but uniqueness is per-user, not per-email — Apple Private Relay rotates
+ * relay addresses so the same user can re-subscribe with a different
+ * email after a revoke/re-grant. Anonymous subscribers fall back to
+ * email-based dedup.
+ */
 export const newsletterService = {
     subscribe: async (email: string): Promise<NewsletterSubscribeResponse> => {
         try {
-            // Check if email already exists
+            const normalized = email.toLowerCase().trim();
+            const { data: { user } } = await supabase.auth.getUser();
+            const userId = user?.id ?? null;
+
+            if (userId) {
+                // Authenticated path — dedup on user_id.
+                const { data: existing } = await supabase
+                    .from('newsletter_subscribers')
+                    .select('id, status')
+                    .eq('user_id', userId)
+                    .maybeSingle();
+
+                if (existing) {
+                    // Re-activate if previously unsubscribed; otherwise idempotent success.
+                    if ((existing as { status?: string }).status !== 'active') {
+                        await supabase
+                            .from('newsletter_subscribers')
+                            .update({
+                                status: 'active',
+                                email: normalized,
+                                subscribed_at: new Date().toISOString(),
+                                unsubscribed_at: null,
+                            })
+                            .eq('id', (existing as { id: string }).id);
+                        return { success: true, message: 'Welcome back!' };
+                    }
+                    return { success: true, message: 'You are already subscribed!' };
+                }
+
+                const { error } = await supabase
+                    .from('newsletter_subscribers')
+                    .insert({
+                        email: normalized,
+                        user_id: userId,
+                        subscribed_at: new Date().toISOString(),
+                        status: 'active',
+                    });
+
+                if (error) {
+                    if (error.code === '23505') {
+                        // Race: subscription was created between the SELECT
+                        // and INSERT. Treat as success.
+                        return { success: true, message: 'You are already subscribed!' };
+                    }
+                    console.error('Newsletter subscription failed:', error);
+                    return { success: false, message: 'Subscription failed. Please try again later.' };
+                }
+
+                return { success: true, message: 'Successfully subscribed!' };
+            }
+
+            // Anonymous path — dedup on email.
             const { data: existing } = await supabase
                 .from('newsletter_subscribers')
                 .select('id')
-                .eq('email', email.toLowerCase())
+                .is('user_id', null)
+                .eq('email', normalized)
                 .maybeSingle();
 
             if (existing) {
                 return { success: true, message: 'You are already subscribed!' };
             }
 
-            // Insert new subscriber
             const { error } = await supabase
                 .from('newsletter_subscribers')
                 .insert({
-                    email: email.toLowerCase(),
+                    email: normalized,
                     subscribed_at: new Date().toISOString(),
-                    status: 'active'
+                    status: 'active',
                 });
 
             if (error) {
-                // Unique constraint = already subscribed (anon users can't SELECT to check)
                 if (error.code === '23505') {
                     return { success: true, message: 'You are already subscribed!' };
                 }

@@ -518,6 +518,13 @@ const AdminProviderEditor: React.FC = () => {
           .single();
         if (error) throw error;
         providerId = inserted.id;
+        // AUTH-033: audit provider creation.
+        await logAdminAction({
+          action: 'create',
+          resourceType: 'provider',
+          resourceId: providerId,
+          newValue: { display_name: providerPayload.display_name, status: providerPayload.status },
+        });
       } else {
         // Update provider
         const { error } = await supabase
@@ -525,6 +532,15 @@ const AdminProviderEditor: React.FC = () => {
           .update(providerPayload)
           .eq('id', id);
         if (error) throw error;
+        // AUTH-033: audit provider edit. The DB trigger added in
+        // 20260425000003 catches status-change skipped here as
+        // defense-in-depth.
+        await logAdminAction({
+          action: 'update',
+          resourceType: 'provider',
+          resourceId: id,
+          newValue: { status: providerPayload.status, verification_tier: providerPayload.verification_tier },
+        });
       }
 
       if (!providerId) throw new Error('No provider ID');

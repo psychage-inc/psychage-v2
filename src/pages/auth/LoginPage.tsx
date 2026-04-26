@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate, useLocation, useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Lock, AlertCircle, ArrowRight, CheckCircle2, Eye, EyeOff } from 'lucide-react';
@@ -17,6 +17,11 @@ import { useAuthErrorFocus } from '@/lib/auth/useAuthErrorFocus';
 import { mapSupabaseAuthError } from '@/lib/auth/supabaseErrorMessages';
 import SEO from '@/components/SEO';
 import { useTranslation } from 'react-i18next';
+
+// AUTH-034 — failed-attempt lockout signal thresholds
+const LOCKOUT_SOFT_THRESHOLD = 3;
+const LOCKOUT_HARD_THRESHOLD = 5;
+const LOCKOUT_HARD_DURATION_MS = 30_000;
 
 interface LoginPageProps {
     variant?: 'main' | 'admin';
@@ -38,6 +43,27 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
     const isDev = import.meta.env.DEV;
     const { t } = useTranslation();
     const errorAlertRef = useAuthErrorFocus<HTMLDivElement>(error);
+    // AUTH-034: track failed login attempts per email within this tab
+    // to surface a soft warning after 3 fails and a hard 30s lockout
+    // after 5 fails. Resets on email change.
+    const [failedAttempts, setFailedAttempts] = useState(0);
+    const [lockoutUntil, setLockoutUntil] = useState<number | null>(null);
+    const failuresByEmailRef = useRef<Map<string, number>>(new Map());
+    const notifiedEmailsRef = useRef<Set<string>>(new Set());
+    // Drive a re-render every second while the hard lockout is active
+    // so the displayed countdown ticks down. Stops on its own once the
+    // window expires.
+    const [, setLockoutTick] = useState(0);
+    useEffect(() => {
+        if (lockoutUntil === null || Date.now() >= lockoutUntil) return;
+        const interval = setInterval(() => {
+            setLockoutTick((n) => n + 1);
+            if (Date.now() >= lockoutUntil) {
+                setLockoutUntil(null);
+            }
+        }, 500);
+        return () => clearInterval(interval);
+    }, [lockoutUntil]);
 
     // Get the page they were trying to visit, or default to appropriate dashboard.
     // Prefer state (set by ProtectedRoute), fall back to query param (survives refresh).
@@ -208,6 +234,29 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                 }
                 const key = mapSupabaseAuthError(new Error(errorMessage));
                 setError(t(key));
+
+                // AUTH-034: bump per-email failure count. Hit the hard
+                // threshold → start a 30s countdown + fire the
+                // suspicious-activity edge function (idempotent per
+                // email per session via notifiedEmailsRef).
+                const emailKey = email.trim().toLowerCase();
+                if (emailKey) {
+                    const prev = failuresByEmailRef.current.get(emailKey) ?? 0;
+                    const next = prev + 1;
+                    failuresByEmailRef.current.set(emailKey, next);
+                    setFailedAttempts(next);
+
+                    if (next >= LOCKOUT_HARD_THRESHOLD) {
+                        setLockoutUntil(Date.now() + LOCKOUT_HARD_DURATION_MS);
+                        if (!notifiedEmailsRef.current.has(emailKey)) {
+                            notifiedEmailsRef.current.add(emailKey);
+                            // Fire-and-forget; UX must not depend on it.
+                            void supabase.functions
+                                .invoke('suspicious-activity-notification', { body: { email: emailKey } })
+                                .catch((err) => console.warn('suspicious-activity dispatch failed:', err));
+                        }
+                    }
+                }
             }
         } catch {
             setError(t('auth.errors.unexpected'));
@@ -365,14 +414,38 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                             </Link>
                         </div>
 
+                        {/* AUTH-034: soft warning at 3+ fails — promote
+                            "reset your password" without naming the count
+                            (the user knows; surfacing it adds nothing). */}
+                        {failedAttempts >= LOCKOUT_SOFT_THRESHOLD && failedAttempts < LOCKOUT_HARD_THRESHOLD && (
+                            <div className="text-sm text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/30 rounded-md px-3 py-2 flex items-center gap-2">
+                                <AlertCircle className="h-4 w-4 shrink-0" aria-hidden="true" />
+                                <span>{t('auth.lockout.softWarning')}</span>
+                                <Link
+                                    to="/reset-password"
+                                    className="font-semibold underline hover:no-underline ml-auto"
+                                >
+                                    {t('auth.lockout.resetCta')}
+                                </Link>
+                            </div>
+                        )}
+
                         <Button
                             type="submit"
                             className="w-full h-12 text-base font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300"
                             size="lg"
                             isLoading={isSubmitting}
-                            disabled={isSubmitting || isLoading}
+                            disabled={
+                                isSubmitting ||
+                                isLoading ||
+                                (lockoutUntil !== null && Date.now() < lockoutUntil)
+                            }
                         >
-                            Sign In
+                            {lockoutUntil !== null && Date.now() < lockoutUntil
+                                ? t('auth.lockout.hardCountdown', {
+                                      seconds: Math.ceil((lockoutUntil - Date.now()) / 1000),
+                                  })
+                                : 'Sign In'}
                         </Button>
                     </form>
 

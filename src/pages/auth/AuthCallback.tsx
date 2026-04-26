@@ -4,11 +4,14 @@ import { supabase } from '@/lib/supabaseClient';
 import { adminUrl, mainUrl, isAdminDomain } from '@/lib/urls';
 import { Loader2 } from 'lucide-react';
 import { useAuthErrorFocus } from '@/lib/auth/useAuthErrorFocus';
+import { mapSupabaseAuthError } from '@/lib/auth/supabaseErrorMessages';
+import { useTranslation } from 'react-i18next';
 
 const AuthCallback: React.FC = () => {
     const navigate = useNavigate();
     const [error, setError] = useState<string | null>(null);
     const errorAlertRef = useAuthErrorFocus<HTMLDivElement>(error);
+    const { t } = useTranslation();
 
     useEffect(() => {
         let isCancelled = false;
@@ -22,7 +25,10 @@ const AuthCallback: React.FC = () => {
 
                 if (error) {
                     console.error('Auth callback error:', error);
-                    setError(error.message);
+                    const key = mapSupabaseAuthError(error);
+                    setError(t(key));
+                    // AUTH-018 cleanup of these timers happens in the
+                    // wrapping useEffect added in commit 5.
                     setTimeout(() => navigate('/login', { state: { error: error.message } }), 3000);
                     return;
                 }
@@ -94,7 +100,7 @@ const AuthCallback: React.FC = () => {
             } catch (err) {
                 if (isCancelled) return;
                 console.error('Callback processing error:', err);
-                setError('Failed to complete authentication');
+                setError(t('auth.callback.errorGeneric'));
                 setTimeout(() => navigate('/login'), 3000);
             }
         };

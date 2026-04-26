@@ -12,6 +12,8 @@ import { cn } from '@/lib/utils';
 import InteractiveCard from '@/components/ui/InteractiveCard';
 import SEO from '@/components/SEO';
 import { useAuthErrorFocus } from '@/lib/auth/useAuthErrorFocus';
+import { mapSupabaseAuthError } from '@/lib/auth/supabaseErrorMessages';
+import { useTranslation } from 'react-i18next';
 
 /**
  * AUTH-009: this page must only allow password updates for users
@@ -42,6 +44,7 @@ const UpdatePasswordPage = () => {
     const [isCheckingSession, setIsCheckingSession] = useState(true);
     const [refusedExistingSession, setRefusedExistingSession] = useState(false);
     const errorAlertRef = useAuthErrorFocus<HTMLDivElement>(error);
+    const { t } = useTranslation();
 
     useEffect(() => {
         let mounted = true;
@@ -164,7 +167,11 @@ const UpdatePasswordPage = () => {
             const { error: updateError } = await supabase.auth.updateUser({ password });
 
             if (updateError) {
-                setError(updateError.message);
+                // AUTH-019: route through the central mapper so the
+                // user gets a consistent message rather than raw
+                // Supabase wording (e.g. "AuthApiError: ...").
+                const key = mapSupabaseAuthError(updateError);
+                setError(t(key));
             } else {
                 setIsSuccess(true);
                 // AUTH-028: notify the registered email that the password
@@ -187,7 +194,8 @@ const UpdatePasswordPage = () => {
                 );
             }
         } catch (err) {
-            setError(err instanceof Error ? err.message : 'An unexpected error occurred');
+            const key = mapSupabaseAuthError(err instanceof Error ? err : new Error('unknown'));
+            setError(t(key));
         } finally {
             setIsLoading(false);
         }

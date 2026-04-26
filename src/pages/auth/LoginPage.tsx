@@ -14,7 +14,9 @@ import { supabase } from '@/lib/supabaseClient';
 import { adminUrl, mainUrl } from '@/lib/urls';
 import { safeRedirectPath } from '@/lib/auth/validateRedirect';
 import { useAuthErrorFocus } from '@/lib/auth/useAuthErrorFocus';
+import { mapSupabaseAuthError } from '@/lib/auth/supabaseErrorMessages';
 import SEO from '@/components/SEO';
+import { useTranslation } from 'react-i18next';
 
 interface LoginPageProps {
     variant?: 'main' | 'admin';
@@ -34,6 +36,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
     const [signupRole, setSignupRole] = useState<'patient' | 'provider' | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const isDev = import.meta.env.DEV;
+    const { t } = useTranslation();
     const errorAlertRef = useAuthErrorFocus<HTMLDivElement>(error);
 
     // Get the page they were trying to visit, or default to appropriate dashboard.
@@ -47,18 +50,28 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
     useEffect(() => {
         const msg = location.state?.message;
         const userType = location.state?.userType as 'patient' | 'provider' | undefined;
+        // AUTH-003: pick up errors handed back by AuthCallback (OAuth
+        // failures land at /login with state.error or ?error=...). Localize
+        // via the central mapper.
+        const stateError = location.state?.error as string | undefined;
+        const queryError = searchParams.get('error') ?? undefined;
+        const incomingError = stateError ?? queryError;
         if (msg) setInfoMessage(msg);
         if (userType === 'patient' || userType === 'provider') setSignupRole(userType);
-        if (msg || userType) {
+        if (incomingError) {
+            const key = mapSupabaseAuthError(new Error(incomingError));
+            setError(t(key));
+        }
+        if (msg || userType || stateError) {
             // AUTH-024: clear React Router's location.state so navigating
-            // back doesn't re-show the message. The legacy
+            // back doesn't re-show the message/error. The legacy
             // window.history.replaceState({}, '') only cleared the URL —
             // location.state survived. Using navigate({ replace: true,
             // state: null }) is the React Router idiom.
             navigate(location.pathname + location.search, { replace: true, state: null });
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [location.state?.message, location.state?.userType]);
+    }, [location.state?.message, location.state?.userType, location.state?.error]);
 
     const handleGoogleSignIn = async () => {
         setOauthLoading('google');
@@ -66,11 +79,14 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
         try {
             const result = await signInWithGoogle();
             if (!result.success) {
-                setError(result.error || 'Failed to sign in with Google');
+                const key = result.error
+                    ? mapSupabaseAuthError(new Error(result.error))
+                    : 'auth.errors.googleFailed';
+                setError(t(key === 'auth.errors.unknown' ? 'auth.errors.googleFailed' : key));
             }
             // On success, user will be redirected by Supabase OAuth
         } catch {
-            setError('Failed to sign in with Google');
+            setError(t('auth.errors.googleFailed'));
         } finally {
             setOauthLoading(null);
         }
@@ -82,11 +98,14 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
         try {
             const result = await signInWithApple();
             if (!result.success) {
-                setError(result.error || 'Failed to sign in with Apple');
+                const key = result.error
+                    ? mapSupabaseAuthError(new Error(result.error))
+                    : 'auth.errors.appleFailed';
+                setError(t(key === 'auth.errors.unknown' ? 'auth.errors.appleFailed' : key));
             }
             // On success, user will be redirected by Supabase OAuth
         } catch {
-            setError('Failed to sign in with Apple');
+            setError(t('auth.errors.appleFailed'));
         } finally {
             setOauthLoading(null);
         }
@@ -180,32 +199,18 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
 
                 navigate(from || '/dashboard', { replace: true });
             } else {
-                // Handle specific error types
+                // AUTH-019 + AUTH-031: route every login error through the
+                // central mapper. The mapper deliberately has no
+                // "user not found" branch (email-enumeration defense).
                 const errorMessage = result.error || 'Login failed';
-                const lowerError = errorMessage.toLowerCase();
-
                 if (import.meta.env.DEV) {
                     console.warn('[Auth Debug] Supabase login error:', errorMessage);
                 }
-
-                if (lowerError.includes('email not confirmed') || lowerError.includes('not confirmed')) {
-                    setError('Your email address has not been confirmed. Please check your inbox for a confirmation link.');
-                } else if (lowerError.includes('invalid') || lowerError.includes('credentials') || lowerError.includes('password')) {
-                    setError('Invalid email or password. Please check your credentials and try again.');
-                } else if (lowerError.includes('not found') || lowerError.includes('no user') || lowerError.includes('does not exist')) {
-                    setError('No account found with this email. Would you like to sign up?');
-                } else if (lowerError.includes('too many') || lowerError.includes('rate limit')) {
-                    setError('Too many login attempts. Please wait a few minutes and try again.');
-                } else if (lowerError.includes('network') || lowerError.includes('connection') || lowerError.includes('fetch')) {
-                    setError('Unable to connect. Please check your internet connection and try again.');
-                } else if (lowerError.includes('disabled') || lowerError.includes('blocked')) {
-                    setError('This account has been disabled. Please contact support for assistance.');
-                } else {
-                    setError(errorMessage);
-                }
+                const key = mapSupabaseAuthError(new Error(errorMessage));
+                setError(t(key));
             }
         } catch {
-            setError('An unexpected error occurred. Please try again or contact support if the issue persists.');
+            setError(t('auth.errors.unexpected'));
         } finally {
             setIsSubmitting(false);
         }

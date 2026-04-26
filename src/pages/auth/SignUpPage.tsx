@@ -16,6 +16,8 @@ import { consentService } from '@/services/consentService';
 import SEO from '@/components/SEO';
 import { useTurnstile } from '@/lib/auth/useTurnstile';
 import { useAuthErrorFocus } from '@/lib/auth/useAuthErrorFocus';
+import { mapSupabaseAuthError } from '@/lib/auth/supabaseErrorMessages';
+import { useTranslation } from 'react-i18next';
 
 const SignUpPage = () => {
     const [userType, setUserType] = useState<'patient' | 'provider'>('patient');
@@ -35,6 +37,7 @@ const SignUpPage = () => {
 
     const { signup, isLoading } = useAuth();
     const navigate = useNavigate();
+    const { t } = useTranslation();
     // AUTH-029: gate signup on Turnstile token (no-op when site key unset).
     const { widget: turnstileWidget, token: captchaToken, reset: resetCaptcha } = useTurnstile();
     const errorAlertRef = useAuthErrorFocus<HTMLDivElement>(error);
@@ -102,13 +105,17 @@ const SignUpPage = () => {
                     }
                 });
             } else {
-                setError(result.error || 'Signup failed. Please try again.');
+                // AUTH-019: route signup error through the central mapper.
+                // user_already_exists IS surfaced to the user (signup
+                // expects this disclosure — they need to know).
+                const errMsg = result.error || 'Signup failed';
+                const key = mapSupabaseAuthError(new Error(errMsg));
+                setError(t(key));
                 resetCaptcha();
             }
         } catch (err) {
-            // Registration error handled by AuthContext
             console.error('Signup error:', err);
-            setError('An unexpected error occurred. Please try again.');
+            setError(t('auth.errors.unexpected'));
             resetCaptcha();
         } finally {
             setIsSubmitting(false);

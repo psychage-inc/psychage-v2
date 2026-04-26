@@ -3,10 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/lib/supabaseClient';
 import { adminUrl, mainUrl, isAdminDomain } from '@/lib/urls';
 import { Loader2 } from 'lucide-react';
+import { useAuthErrorFocus } from '@/lib/auth/useAuthErrorFocus';
 
 const AuthCallback: React.FC = () => {
     const navigate = useNavigate();
     const [error, setError] = useState<string | null>(null);
+    const errorAlertRef = useAuthErrorFocus<HTMLDivElement>(error);
 
     useEffect(() => {
         let isCancelled = false;
@@ -106,7 +108,7 @@ const AuthCallback: React.FC = () => {
         <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
                         <div className="text-center relative z-10">
                 {error ? (
-                    <div className="space-y-4">
+                    <div ref={errorAlertRef} role="alert" tabIndex={-1} className="space-y-4 focus:outline-none">
                         <div className="w-16 h-16 mx-auto rounded-full bg-red-500/10 flex items-center justify-center">
                             <span className="text-red-500 text-2xl">!</span>
                         </div>
@@ -115,7 +117,7 @@ const AuthCallback: React.FC = () => {
                         <p className="text-sm text-text-tertiary">Redirecting to login...</p>
                     </div>
                 ) : (
-                    <div className="space-y-4">
+                    <div className="space-y-4" aria-live="polite">
                         <Loader2 className="w-12 h-12 mx-auto text-primary animate-spin" />
                         <h2 className="text-xl font-bold text-text-primary">Completing sign in...</h2>
                         <p className="text-text-secondary">Please wait while we verify your credentials.</p>

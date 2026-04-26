@@ -13,6 +13,7 @@ import { LogoIcon } from '@/components/ui/LogoIcon';
 import { supabase } from '@/lib/supabaseClient';
 import { adminUrl, mainUrl } from '@/lib/urls';
 import { safeRedirectPath } from '@/lib/auth/validateRedirect';
+import { useAuthErrorFocus } from '@/lib/auth/useAuthErrorFocus';
 import SEO from '@/components/SEO';
 
 interface LoginPageProps {
@@ -33,6 +34,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
     const [signupRole, setSignupRole] = useState<'patient' | 'provider' | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const isDev = import.meta.env.DEV;
+    const errorAlertRef = useAuthErrorFocus<HTMLDivElement>(error);
 
     // Get the page they were trying to visit, or default to appropriate dashboard.
     // Prefer state (set by ProtectedRoute), fall back to query param (survives refresh).
@@ -48,8 +50,14 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
         if (msg) setInfoMessage(msg);
         if (userType === 'patient' || userType === 'provider') setSignupRole(userType);
         if (msg || userType) {
-            window.history.replaceState({}, '');
+            // AUTH-024: clear React Router's location.state so navigating
+            // back doesn't re-show the message. The legacy
+            // window.history.replaceState({}, '') only cleared the URL —
+            // location.state survived. Using navigate({ replace: true,
+            // state: null }) is the React Router idiom.
+            navigate(location.pathname + location.search, { replace: true, state: null });
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [location.state?.message, location.state?.userType]);
 
     const handleGoogleSignIn = async () => {
@@ -280,10 +288,12 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                         )}
 
                         {error && (
-                            <Alert variant="destructive" className="animate-in slide-in-from-top-2">
-                                <AlertCircle className="h-4 w-4" />
-                                <AlertDescription>{error}</AlertDescription>
-                            </Alert>
+                            <div ref={errorAlertRef} role="alert" tabIndex={-1} className="focus:outline-none">
+                                <Alert variant="destructive" className="animate-in slide-in-from-top-2">
+                                    <AlertCircle className="h-4 w-4" />
+                                    <AlertDescription>{error}</AlertDescription>
+                                </Alert>
+                            </div>
                         )}
 
                         <div className="space-y-2">
@@ -294,6 +304,10 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                                     type="email"
                                     placeholder="name@example.com"
                                     required
+                                    autoComplete="email"
+                                    inputMode="email"
+                                    autoCapitalize="off"
+                                    spellCheck={false}
                                     className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
@@ -310,6 +324,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                                     id="password"
                                     type={showPassword ? "text" : "password"}
                                     required
+                                    autoComplete="current-password"
                                     className="pl-11 pr-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={password}
                                     placeholder="••••••••"

@@ -11,6 +11,7 @@ import { supabase } from '@/lib/supabaseClient';
 import { cn } from '@/lib/utils';
 import InteractiveCard from '@/components/ui/InteractiveCard';
 import SEO from '@/components/SEO';
+import { useAuthErrorFocus } from '@/lib/auth/useAuthErrorFocus';
 
 /**
  * AUTH-009: this page must only allow password updates for users
@@ -40,6 +41,7 @@ const UpdatePasswordPage = () => {
     const [isReady, setIsReady] = useState(false);
     const [isCheckingSession, setIsCheckingSession] = useState(true);
     const [refusedExistingSession, setRefusedExistingSession] = useState(false);
+    const errorAlertRef = useAuthErrorFocus<HTMLDivElement>(error);
 
     useEffect(() => {
         let mounted = true;
@@ -326,17 +328,19 @@ const UpdatePasswordPage = () => {
                 >
                     <form onSubmit={handleSubmit} className="space-y-6">
                         {error && (
-                            <Alert variant="destructive" className="animate-in slide-in-from-top-2">
-                                <AlertCircle className="h-4 w-4" />
-                                <AlertDescription>
-                                    {error}
-                                    {!isReady && (
-                                        <Link to="/reset-password" className="block mt-2 underline text-sm">
-                                            Request a new reset link
-                                        </Link>
-                                    )}
-                                </AlertDescription>
-                            </Alert>
+                            <div ref={errorAlertRef} role="alert" tabIndex={-1} className="focus:outline-none">
+                                <Alert variant="destructive" className="animate-in slide-in-from-top-2">
+                                    <AlertCircle className="h-4 w-4" />
+                                    <AlertDescription>
+                                        {error}
+                                        {!isReady && (
+                                            <Link to="/reset-password" className="block mt-2 underline text-sm">
+                                                Request a new reset link
+                                            </Link>
+                                        )}
+                                    </AlertDescription>
+                                </Alert>
+                            </div>
                         )}
 
                         <div className="space-y-2">
@@ -346,6 +350,7 @@ const UpdatePasswordPage = () => {
                                     id="password"
                                     type="password"
                                     required
+                                    autoComplete="new-password"
                                     className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
@@ -380,6 +385,7 @@ const UpdatePasswordPage = () => {
                                     id="confirmPassword"
                                     type="password"
                                     required
+                                    autoComplete="new-password"
                                     className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={confirmPassword}
                                     onChange={(e) => setConfirmPassword(e.target.value)}

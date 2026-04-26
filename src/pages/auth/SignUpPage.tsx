@@ -15,6 +15,7 @@ import ConsentCheckboxes, { ConsentState, defaultConsentState, isConsentValid } 
 import { consentService } from '@/services/consentService';
 import SEO from '@/components/SEO';
 import { useTurnstile } from '@/lib/auth/useTurnstile';
+import { useAuthErrorFocus } from '@/lib/auth/useAuthErrorFocus';
 
 const SignUpPage = () => {
     const [userType, setUserType] = useState<'patient' | 'provider'>('patient');
@@ -36,6 +37,7 @@ const SignUpPage = () => {
     const navigate = useNavigate();
     // AUTH-029: gate signup on Turnstile token (no-op when site key unset).
     const { widget: turnstileWidget, token: captchaToken, reset: resetCaptcha } = useTurnstile();
+    const errorAlertRef = useAuthErrorFocus<HTMLDivElement>(error);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         setFormData(prev => ({ ...prev, [e.target.id]: e.target.value }));
@@ -189,10 +191,12 @@ const SignUpPage = () => {
 
                     <form onSubmit={handleSubmit} className="space-y-6">
                         {error && (
-                            <Alert variant="destructive" className="animate-in slide-in-from-top-2">
-                                <AlertCircle className="h-4 w-4" />
-                                <AlertDescription>{error}</AlertDescription>
-                            </Alert>
+                            <div ref={errorAlertRef} role="alert" tabIndex={-1} className="focus:outline-none">
+                                <Alert variant="destructive" className="animate-in slide-in-from-top-2">
+                                    <AlertCircle className="h-4 w-4" />
+                                    <AlertDescription>{error}</AlertDescription>
+                                </Alert>
+                            </div>
                         )}
                         <div className="grid md:grid-cols-2 gap-5">
                             <div className="space-y-2">
@@ -202,6 +206,8 @@ const SignUpPage = () => {
                                         id="displayName"
                                         placeholder="John Doe"
                                         required
+                                        autoComplete="name"
+                                        autoCapitalize="words"
                                         className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                         value={formData.displayName}
                                         onChange={handleChange}
@@ -217,6 +223,10 @@ const SignUpPage = () => {
                                         type="email"
                                         placeholder="name@example.com"
                                         required
+                                        autoComplete="email"
+                                        inputMode="email"
+                                        autoCapitalize="off"
+                                        spellCheck={false}
                                         className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                         value={formData.email}
                                         onChange={handleChange}
@@ -302,6 +312,7 @@ const SignUpPage = () => {
                                     id="password"
                                     type="password"
                                     required
+                                    autoComplete="new-password"
                                     className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={formData.password}
                                     onChange={handleChange}
@@ -349,6 +360,7 @@ const SignUpPage = () => {
                                     id="confirmPassword"
                                     type="password"
                                     required
+                                    autoComplete="new-password"
                                     className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={formData.confirmPassword}
                                     onChange={handleChange}

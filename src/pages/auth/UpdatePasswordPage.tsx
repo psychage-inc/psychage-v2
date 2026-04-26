@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Lock, ArrowLeft, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
@@ -45,6 +45,17 @@ const UpdatePasswordPage = () => {
     const [refusedExistingSession, setRefusedExistingSession] = useState(false);
     const errorAlertRef = useAuthErrorFocus<HTMLDivElement>(error);
     const { t } = useTranslation();
+    // AUTH-018: track the success-redirect timer so unmounting cancels it.
+    const redirectTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+    useEffect(() => {
+        return () => {
+            if (redirectTimerRef.current) {
+                clearTimeout(redirectTimerRef.current);
+                redirectTimerRef.current = null;
+            }
+        };
+    }, []);
 
     useEffect(() => {
         let mounted = true;
@@ -188,8 +199,8 @@ const UpdatePasswordPage = () => {
                 // was triggered to recover from a lost device or session
                 // hijack, kill any attacker tokens too. (AUTH-009.)
                 await supabase.auth.signOut({ scope: 'global' });
-                setTimeout(
-                    () => navigate('/login', { state: { message: 'Password updated successfully. Please log in.' } }),
+                redirectTimerRef.current = setTimeout(
+                    () => navigate('/login', { state: { message: t('auth.updatePassword.successFlashMessage') } }),
                     3000,
                 );
             }

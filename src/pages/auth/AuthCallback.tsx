@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/lib/supabaseClient';
 import { adminUrl, mainUrl, isAdminDomain } from '@/lib/urls';
@@ -12,9 +12,18 @@ const AuthCallback: React.FC = () => {
     const [error, setError] = useState<string | null>(null);
     const errorAlertRef = useAuthErrorFocus<HTMLDivElement>(error);
     const { t } = useTranslation();
+    // AUTH-018: collect every timer id we schedule so the cleanup can
+    // cancel them. The earlier `isCancelled` guard only skipped state
+    // updates — the pending navigate() call still ran on a stale
+    // unmounted component.
+    const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
     useEffect(() => {
         let isCancelled = false;
+        const scheduleNavigate = (path: string, state?: Record<string, unknown>, ms = 3000) => {
+            const id = setTimeout(() => navigate(path, state ? { state } : undefined), ms);
+            timersRef.current.push(id);
+        };
 
         const handleCallback = async () => {
             try {
@@ -27,9 +36,7 @@ const AuthCallback: React.FC = () => {
                     console.error('Auth callback error:', error);
                     const key = mapSupabaseAuthError(error);
                     setError(t(key));
-                    // AUTH-018 cleanup of these timers happens in the
-                    // wrapping useEffect added in commit 5.
-                    setTimeout(() => navigate('/login', { state: { error: error.message } }), 3000);
+                    scheduleNavigate('/login', { error: error.message });
                     return;
                 }
 
@@ -101,12 +108,17 @@ const AuthCallback: React.FC = () => {
                 if (isCancelled) return;
                 console.error('Callback processing error:', err);
                 setError(t('auth.callback.errorGeneric'));
-                setTimeout(() => navigate('/login'), 3000);
+                scheduleNavigate('/login');
             }
         };
 
         handleCallback();
-        return () => { isCancelled = true; };
+        return () => {
+            isCancelled = true;
+            // Cancel any pending redirect timers — see AUTH-018.
+            timersRef.current.forEach(clearTimeout);
+            timersRef.current = [];
+        };
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 

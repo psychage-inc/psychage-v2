@@ -77,17 +77,15 @@
 - **Why blocker:** `unsafe-inline` script-src allows XSS payloads. `frame-ancestors` not enforceable from meta. Clickjacking protection only via X-Frame-Options. Security review will flag this.
 - **Fix shape:** Move CSP to HTTP header in `vercel.json` (Report-Only initially while validating). Tighten script-src or pair with nonce/hash strategy. Hard enforcement deferred to operator.
 
-### LB-011 — User-public images missing alt text (verification needed)
+### LB-011 — User-public images missing alt text (RESOLVED — not a blocker)
 - **Category:** a11y
-- **Evidence:** Phase 1 audit found ~33 of ~56 `<img>` instances without alt across the codebase. Most missing-alt are admin/dashboard/provider (out of scope), but public surfaces need explicit verification.
-- **Why blocker:** ADA + WCAG 1.1.1. Sighted-only experience for screen-reader users. Legal exposure in some jurisdictions.
-- **Fix shape:** Sweep public-page components only (HomePage, AboutPage, AdvisoryBoardPage, AuthorProfilePage, LearnPage, ArticlePage, ProvidersLandingPage, ProviderProfilePage, HowWeVerifyPage, ForProvidersLandingPage). Add meaningful alt or `alt=""` for decorative.
+- **Evidence:** Verification sweep across `src/pages/{home,core,learn,providers}` and `src/components/{home,article,pages,screens,landing}` found every `<img>` already has `alt`, including correct decorative `alt="" aria-hidden="true"` (e.g., `ToolsEcosystem.tsx:272`). The 33 missing-alt instances flagged in Phase 1 are all admin/dashboard/provider/portal — out of scope.
+- **Outcome:** Reclassified as observation OB-007.
 
-### LB-012 — LearnPage outline-none without focus-visible replacement
+### LB-012 — LearnPage outline-none without focus-visible replacement (RESOLVED — not a blocker)
 - **Category:** a11y
-- **Evidence:** `src/pages/LearnPage.tsx:224, 592` apply `outline-none` without paired `focus-visible:ring-*`. Global `*:focus-visible` rule in `src/styles/globals.css:57` may cover but verification needed.
-- **Why blocker:** Keyboard users lose focus indicator. WCAG 2.4.7.
-- **Fix shape:** Verify global rule renders. If not, add explicit `focus-visible:ring-2 focus-visible:ring-primary` to the affected elements.
+- **Evidence:** `src/styles/globals.css:55-60` applies `*:focus-visible { outline: none; @apply ring-2 ring-primary ring-offset-2 ring-offset-background; }` globally. The two LearnPage instances at `224, 592` use `focus:outline-none` (focus pseudo-class), and the global rule supplies the keyboard-focus ring via `:focus-visible`. Pattern is correct: mouse focus suppresses ring, keyboard focus shows it.
+- **Outcome:** Reclassified as observation OB-008.
 
 ---
 
@@ -99,6 +97,8 @@
 - **OB-004** — Lighthouse Performance / chunk size policing — out of blocker bar at launch.
 - **OB-005** — Centralized test-utils factory only being created for smoke test scope. Wider adoption is a refactor for post-launch.
 - **OB-006** — `lang="en"` on `<html>` — i18next switches client-side but `<html lang>` does not update. Acceptable for launch; revisit for hreflang strategy.
+- **OB-007** — Image alt coverage on user-public surfaces is complete (verification result of LB-011). Missing-alt instances exist only in admin/dashboard/provider/portal (out of scope for this sweep). Operator should plan a follow-up sweep for those surfaces before they go public.
+- **OB-008** — Global `*:focus-visible` rule in `src/styles/globals.css:55-60` provides keyboard-focus rings for every focusable element via Tailwind `ring-2 ring-primary ring-offset-2`. The 330 `outline-none` patterns across the codebase are correctly paired with this global rule (verification result of LB-012).
 
 ---
 

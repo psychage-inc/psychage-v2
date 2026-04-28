@@ -104,6 +104,11 @@ Each entry: **what** to do, **how to verify**, **likely owner**.
 - **What:** The HTTP-header CSP and the meta CSP both ship `'unsafe-inline'` for script-src. Long term, replace with nonce-based or hash-based allowance, especially once hard CSP enforcement is on (OP-001).
 - **Owner:** Platform lead.
 
+### OP-019 — Restrict VITE_GEMINI_API_KEY by HTTP referrer
+- **What:** Phase I bundle audit confirmed `VITE_GEMINI_API_KEY` is shipped in the client bundle (intentional per Vite `VITE_*` convention; Gemini SDK is invoked from the browser). The key value `AIzaSy...` is therefore visible to anyone inspecting the bundle. Mitigate by restricting the API key in Google Cloud Console to HTTP referrer `https://psychage.com/*` (and any preview-deploy domain). Without this, the key can be lifted and abused against your quota.
+- **How to verify:** In Google Cloud Console → APIs & Services → Credentials → the key in question → Application restrictions → HTTP referrers → confirm allowlist matches production + preview origins only.
+- **Owner:** Platform lead.
+
 ---
 
 ## Out of scope (handled elsewhere or already tracked)

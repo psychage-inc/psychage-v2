@@ -95,11 +95,13 @@ No new dependencies. No build-script changes. No env vars added.
 
 ---
 
-## Test results (post-Phase G)
+## Test results (Phase I — final verification)
 
 - `pnpm vitest run src/tests/launch/public-routes.smoke.test.tsx`: **41/41 pass**
 - `pnpm tsc --noEmit`: **clean**
-- Full Vitest suite: see Phase I final summary in conversation log.
+- Full Vitest suite: **1622 passed / 79 failed / 4 skipped** of 1714 total. Failure count matches the documented baseline (79); no regression introduced by this branch. The +41 in passing count corresponds to the new launch smoke test cases.
+- `pnpm build`: **clean**, `✓ built in 17.82s`. The pre-existing 36MB `all-articles-*.js` chunk warning is out of scope.
+- Bundle secret scan: `grep -rE 'service_role|SUPABASE_SERVICE_ROLE_KEY|ANTHROPIC_API_KEY' dist` — **0 matches** ✅. `VITE_GEMINI_API_KEY` is in the bundle by Vite convention (intentional client-side use); operator must restrict by HTTP referrer in Google Cloud Console — see OP-019.
 
 ---
 

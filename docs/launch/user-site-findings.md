@@ -99,20 +99,19 @@
 - **OB-006** — `lang="en"` on `<html>` — i18next switches client-side but `<html lang>` does not update. Acceptable for launch; revisit for hreflang strategy.
 - **OB-007** — Image alt coverage on user-public surfaces is complete (verification result of LB-011). Missing-alt instances exist only in admin/dashboard/provider/portal (out of scope for this sweep). Operator should plan a follow-up sweep for those surfaces before they go public.
 - **OB-008** — Global `*:focus-visible` rule in `src/styles/globals.css:55-60` provides keyboard-focus rings for every focusable element via Tailwind `ring-2 ring-primary ring-offset-2`. The 330 `outline-none` patterns across the codebase are correctly paired with this global rule (verification result of LB-012).
+- **OB-009** — Mobile / responsive sanity (Phase G): no `maximum-scale` or `user-scalable=no` in viewport meta. `viewport-fit=cover` set. `safe-area`/`env(safe-area-inset-*)` handling present in `App.tsx`, `CrisisStickyBanner.tsx`, navigator screens, and sidebars. Hero / featured imagery uses `loading="lazy"` except above-the-fold listener fig (eager, intentional). No fixes required this phase. Real-device testing deferred to operator (see blockers-remaining).
 
 ---
 
 ## Phase plan
 
-| Commit | Title | Findings addressed |
-|---|---|---|
-| 1 | `[LAUNCH] User site readiness audit findings` | (this doc) |
-| 2 | `[LAUNCH] Build + runtime: smoke test for public routes` | LB-007 |
-| 3 | `[LAUNCH] SEO + discoverability: manifest, icons, sitemap, robots` | LB-002, LB-003, LB-004, LB-005, LB-006 |
-| 4 | `[LAUNCH] A11y floor: alts + focus rings` | LB-011, LB-012 |
-| 5 | `[LAUNCH] Client-side security: vercel.json headers + CSP` | LB-001, LB-010 |
-| 6 | `[LAUNCH] Legal surface: footer links + accessibility page` | LB-008, LB-009 |
-| 7 | `[LAUNCH] Mobile + responsive sanity` | (verification only) |
-| 8 | `[LAUNCH] Reviewer deliverables` | summary + blockers-remaining |
-
-Final commit SHAs filled in at Phase H.
+| Commit | SHA | Title | Findings addressed |
+|---|---|---|---|
+| A | `2c0f2ce` | `[LAUNCH] User site readiness audit findings` | (this doc) |
+| B | `e1d50c1` | `[LAUNCH] Build + runtime: public routes smoke test` | LB-007 |
+| C | `2895c4f` | `[LAUNCH] SEO + discoverability: manifest, icons, sitemap, robots` | LB-002, LB-003, LB-004, LB-005, LB-006 |
+| D | `62b91f9` | `[LAUNCH] A11y floor: verification only, no fixes` | LB-011, LB-012 (reclassified to OB-007, OB-008) |
+| E | `201c446` | `[LAUNCH] Client-side security: vercel.json headers + CSP-Report-Only` | LB-001, LB-010 |
+| F | `06f7e05` | `[LAUNCH] Legal surface: cookies, accessibility statement, footer links` | LB-008, LB-009 |
+| G | (rolled into H) | Mobile / responsive sanity | (verification only — see OB-009) |
+| H | (this commit) | `[LAUNCH] Reviewer deliverables` | summary + blockers-remaining |

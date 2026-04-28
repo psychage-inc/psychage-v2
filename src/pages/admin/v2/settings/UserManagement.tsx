@@ -18,6 +18,7 @@ const AdminUserManagementV2: React.FC = () => {
   const [inviteRole, setInviteRole] = useState<AdminRole>('viewer');
   const [showInvite, setShowInvite] = useState(false);
   const [removeTarget, setRemoveTarget] = useState<AdminRoleRecord | null>(null);
+  const [roleChangeTarget, setRoleChangeTarget] = useState<{ record: AdminRoleRecord; newRole: AdminRole } | null>(null);
 
   const { data: adminUsers, isLoading } = useQuery({
     queryKey: ['admin', 'admin-users'],
@@ -32,12 +33,21 @@ const AdminUserManagementV2: React.FC = () => {
   });
 
   const changeRoleMutation = useMutation({
-    mutationFn: async ({ id, newRole }: { id: string; newRole: AdminRole }) => {
+    mutationFn: async ({ id, newRole, previousRole }: { id: string; newRole: AdminRole; previousRole: AdminRole }) => {
       const { error } = await supabase.from('admin_roles').update({ role: newRole }).eq('id', id);
       if (error) throw error;
-      await logAdminAction({ action: 'update', resourceType: 'admin_role', resourceId: id, newValue: { role: newRole } });
+      await logAdminAction({
+        action: 'update',
+        resourceType: 'admin_role',
+        resourceId: id,
+        previousValue: { role: previousRole },
+        newValue: { role: newRole },
+      });
     },
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['admin', 'admin-users'] }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['admin', 'admin-users'] });
+      setRoleChangeTarget(null);
+    },
   });
 
   const removeMutation = useMutation({
@@ -92,7 +102,11 @@ const AdminUserManagementV2: React.FC = () => {
         return (
           <select
             value={row.original.role}
-            onChange={(e) => changeRoleMutation.mutate({ id: row.original.id, newRole: e.target.value as AdminRole })}
+            onChange={(e) => {
+              const newRole = e.target.value as AdminRole;
+              if (newRole === row.original.role) return;
+              setRoleChangeTarget({ record: row.original, newRole });
+            }}
             className="text-sm border border-border rounded-lg px-2 py-1 bg-surface outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="super_admin">Super Admin</option>
@@ -220,6 +234,35 @@ const AdminUserManagementV2: React.FC = () => {
         confirmLabel="Remove"
         destructive
         onConfirm={() => removeTarget && removeMutation.mutate(removeTarget.id)}
+      />
+
+      <ConfirmDialog
+        open={!!roleChangeTarget}
+        onOpenChange={(open) => !open && setRoleChangeTarget(null)}
+        title="Change Admin Role"
+        description={
+          roleChangeTarget ? (
+            <span>
+              Change role from <strong>{roleChangeTarget.record.role}</strong> to{' '}
+              <strong>{roleChangeTarget.newRole}</strong>? This will take effect immediately.
+              {roleChangeTarget.record.user_id === adminUser?.id && (
+                <span className="block mt-2 text-amber-600 dark:text-amber-400">
+                  Warning: you are changing your own role. If you demote yourself from super_admin you may lose access to manage other admin users.
+                </span>
+              )}
+            </span>
+          ) : ''
+        }
+        confirmLabel="Change Role"
+        destructive
+        onConfirm={() =>
+          roleChangeTarget &&
+          changeRoleMutation.mutate({
+            id: roleChangeTarget.record.id,
+            newRole: roleChangeTarget.newRole,
+            previousRole: roleChangeTarget.record.role,
+          })
+        }
       />
     </div>
   );

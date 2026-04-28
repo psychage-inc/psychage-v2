@@ -20,6 +20,11 @@
   ],
   "rewrites": [
     {
+      "source": "/robots.txt",
+      "destination": "/robots-admin.txt",
+      "has": [{ "type": "host", "value": "admin.psychage.com" }]
+    },
+    {
       "source": "/(.*)",
       "destination": "/admin.html",
       "has": [{ "type": "host", "value": "admin.psychage.com" }]

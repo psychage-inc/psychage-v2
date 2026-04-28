@@ -287,6 +287,7 @@ const App: React.FC = () => {
                                             <Route path="/authors/:slug" element={<PageTransition><AuthorProfilePage /></PageTransition>} />
                                             <Route path="/legal/privacy" element={<PageTransition><LegalPage type="privacy" /></PageTransition>} />
                                             <Route path="/legal/terms" element={<PageTransition><LegalPage type="terms" /></PageTransition>} />
+                                            <Route path="/legal/accessibility" element={<PageTransition><LegalPage type="accessibility" /></PageTransition>} />
                                             <Route path="/crisis" element={<PageTransition><CrisisPage /></PageTransition>} />
                                             <Route path="/sitemap" element={<PageTransition><SitemapPage /></PageTransition>} />
                                             {/* Redirect legacy /navigator routes to /tools/symptom-navigator */}

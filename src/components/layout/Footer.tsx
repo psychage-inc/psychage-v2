@@ -170,6 +170,8 @@ const Footer: React.FC = () => {
             <div className="flex flex-wrap gap-x-6 gap-y-2 justify-end">
               <Link to="/legal/privacy" className="hover:text-text-primary transition-colors">Privacy</Link>
               <Link to="/legal/terms" className="hover:text-text-primary transition-colors">Terms</Link>
+              <Link to="/legal/privacy#cookies" className="hover:text-text-primary transition-colors">Cookies</Link>
+              <Link to="/legal/accessibility" className="hover:text-text-primary transition-colors">Accessibility</Link>
               <Link to="/sitemap" className="hover:text-text-primary transition-colors">Sitemap</Link>
             </div>
             <p className="max-w-xs md:max-w-md md:text-right text-text-tertiary">Psychage is an educational tool and does not provide medical advice, diagnosis, or treatment.</p>

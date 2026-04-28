@@ -58,6 +58,7 @@ const PUBLIC_ROUTES: PublicRouteFixture[] = [
     // Legal / regulatory
     { path: '/legal/privacy', label: 'LegalPage', load: () => import('../../components/pages/LegalPages') },
     { path: '/legal/terms', label: 'LegalPage', load: () => import('../../components/pages/LegalPages') },
+    { path: '/legal/accessibility', label: 'LegalPage', load: () => import('../../components/pages/LegalPages') },
 
     // Crisis surfaces — sacred-rule public
     { path: '/crisis', label: 'CrisisPage', load: () => import('../../components/pages/CrisisPage') },

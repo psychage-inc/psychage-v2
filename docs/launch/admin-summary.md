@@ -68,10 +68,12 @@ To roll back the entire branch: `git revert 91d47db 2f219d5 9e0fcc1 8ab07d2` (in
 
 ## Verification snapshot at branch HEAD
 
-- `pnpm build` — green
-- `npx tsc --noEmit` — clean
-- `npx vitest run src/tests/launch/admin-routes.smoke.test.tsx` — 38/38 pass
-- `npx vitest run src/pages/admin/v2/settings/__tests__/UserManagement.roleChange.test.tsx` — 2/2 pass
-- Bundle scan: zero occurrences of `service_role` / `SUPABASE_SERVICE_ROLE_KEY` in `dist/assets/main-*.js` and `dist/assets/admin-*.js`
+Run on the post-Phase-G commit (`6ee0e4f`):
 
-Full vitest run results captured in the final commit (Phase G).
+- `pnpm build` — green, `✓ built in 18.11s`. Both `index.html` (user) and `admin.html` (admin) bundles produce. Pre-existing >600 KB chunk warnings (`all-articles-*.js` at 36 MB, `main-*.js` at 465 KB) unchanged from main; out of scope.
+- `npx tsc --noEmit` — exit 0, no errors.
+- Full Vitest suite — **1662 passed / 79 failed / 4 skipped** of 1745 total. The 79 failures match the documented baseline from prompt 1 (`docs/launch/user-site-summary.md`). The +40 passing count over baseline corresponds to:
+  - `src/tests/launch/admin-routes.smoke.test.tsx` — 38/38 pass
+  - `src/pages/admin/v2/settings/__tests__/UserManagement.roleChange.test.tsx` — 2/2 pass
+  No regression introduced by this branch.
+- Bundle secret scan: `grep -rE 'SERVICE_ROLE_KEY|service_role' dist/` returns 0 matches across both `dist/assets/main-*.js` and `dist/assets/admin-*.js`.

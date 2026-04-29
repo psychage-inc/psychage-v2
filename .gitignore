@@ -121,3 +121,6 @@ supabase/.temp/
 api/**/*.js
 api/**/*.js.map
 .vercel
+
+# graphify knowledge-graph output (generated)
+graphify-out/

@@ -590,19 +590,61 @@ Status: 🟡 WAITING (operator runs against production-snapshot DB)
 
 ### 6.1 Rollback rehearsal
 
-_Filled in Phase G._
+Documented procedure per surface; rehearsal pending operator action.
+
+- [ ] **Frontend deploy rollback (Vercel)**
+  - Procedure: Vercel dashboard → Deployments → previous successful → "Promote to Production"
+  - Rollback time: < 30 seconds (instant)
+  - Pre-launch rehearsal: 🟡 WAITING (operator runs once against staging)
+
+- [ ] **Database migration rollback**
+  - Procedure: per-migration rollback SQL exists in trailing `-- ROLLBACK:` comments
+  - Verification: 🟡 WAITING — operator must walk last 5 migrations and confirm each has rollback comment AND that comment is exec-safe
+  - Risk: data-altering migrations (`migrate-admin-roles.ts`, `b7-backfill-provider-roles.ts`) are not trivially reversible — backup-restore is the real fallback
+
+- [ ] **Edge function rollback**
+  - Procedure: redeploy previous git SHA: `git checkout <sha> && supabase functions deploy <name>`
+  - Pre-launch rehearsal: 🟡 WAITING
+
+- [ ] **Sentry-monitored rollback dry-run against staging**
+  - Status: 🟡 WAITING (combined with rollback rehearsal — push a known-broken commit, observe Sentry alert, rollback, observe alert clear)
 
 ### 6.2 On-call & escalation
 
-_Filled in Phase G._
+- [x] **Sole on-call defined** — 🟢 (in this sweep)
+  - Primary on-call: **Ryan (operator)** for the first 30 days post-launch
+  - Coverage: best-effort 24/7; Sentry alerts route to email + push
+  - Escalation paths to fill in by operator before launch:
+    - Infrastructure / Vercel / Supabase: <name + contact>
+    - Content / clinical-tone issues: <name + contact>
+    - Legal / regulatory: <outside-counsel contact>
+    - Security incidents: <named responder + contact>
+
+- [ ] **All four escalation slots above filled in launch-day** — 🟡 WAITING
 
 ### 6.3 Status page
 
-_Filled in Phase G._
+- [ ] **Public status page exists and reachable**
+  - Status: 🟡 WAITING (no SDK installed; operator picks Statuspage / BetterStack / static page at status.psychage.com)
+  - Linked from footer or `status.psychage.com`
+  - Auto-update from uptime monitor where supported
+  - Acceptable timeline: post-launch, before week-1 ends
 
 ### 6.4 Communication templates
 
-_Filled in Phase G._
+- [x] **Templates drafted** — 🟢
+  - Six scenarios covered in [docs/launch/incident-templates.md](incident-templates.md):
+    1. Auth incident (sign-in / signup / password reset)
+    2. Data incident (article reader, dashboard, tools)
+    3. Provider directory incident
+    4. Email delivery incident
+    5. Security incident (data accessed) — lawyer-gated before publish
+    6. Crisis content unavailable — Sev 0, hotlines surfaced inline
+  - Each has INVESTIGATING / IDENTIFIED / RESOLVED states and tone rules
+
+- [ ] **Operator pre-fills `<name>`, `<contact>`, `status.psychage.com` placeholders** — 🟡 WAITING
+
+- [ ] **Templates reviewed for sacred-rule compliance** — 🟡 WAITING (operator: spot-check on each before publish-day)
 
 ---
 

@@ -292,19 +292,69 @@ Each row needs an explicit operator check pre-launch.
 
 ### 2.1 Headers as deployed
 
-_Filled in Phase C._
+- [ ] **vercel.json headers actually serve in production**
+  - Status: 🟡 WAITING (post-deploy operator verification)
+  - Run from operator shell after staging deploy:
+
+  ```bash
+  curl -sI https://psychage.com/ | grep -iE '(strict-transport-security|x-content-type|x-frame|content-security-policy|referrer-policy|permissions-policy|cross-origin-opener)'
+  curl -sI https://admin.psychage.com/ | grep -iE '(strict-transport-security|x-content-type|x-frame|content-security-policy|referrer-policy|permissions-policy|cross-origin-opener)'
+  ```
+
+  - Expected (both hosts):
+    - `strict-transport-security: max-age=63072000; includeSubDomains; preload`
+    - `x-content-type-options: nosniff`
+    - `x-frame-options: SAMEORIGIN` (admin should be `DENY` once 1.3 host-scoped block is added)
+    - `referrer-policy: strict-origin-when-cross-origin`
+    - `permissions-policy: camera=(), microphone=(), geolocation=(self), payment=()` (or whatever vercel.json sets)
+    - `content-security-policy-report-only: ...` (until enforced; see 1.3 cutover item)
+    - `cross-origin-opener-policy: same-origin-allow-popups`
+  - Owner: operator
 
 ### 2.2 Bundle secrets check
 
-_Filled in Phase C._
+Static check; results recorded post-build in Phase J.
+
+```bash
+npm run build
+grep -rE 'service_role|SERVICE_ROLE|SUPABASE_SERVICE_ROLE_KEY' dist/ || echo "no-service-role-refs-in-bundle"
+grep -rE 'RESEND_API_KEY|ANTHROPIC_API_KEY|OPENAI_API_KEY|SANITY_WEBHOOK_SECRET|ACCOUNT_DELETION_ADMIN_SECRET' dist/ || echo "no-server-secrets-in-bundle"
+```
+
+If any match → 🔴 BLOCKING; fix the leak before launch. Status filled by Phase J verification.
 
 ### 2.3 Security scanner results
 
-_Filled in Phase C._
+- [ ] **Mozilla Observatory grade ≥ B+**
+  - Status: 🟡 WAITING (post-deploy operator step)
+  - Run: https://observatory.mozilla.org/analyze/psychage.com and the same for admin.psychage.com
+  - Source: [user-site-blockers-remaining.md OP-009](user-site-blockers-remaining.md), [admin-blockers-remaining.md OP-A07](admin-blockers-remaining.md)
+
+- [ ] **securityheaders.com grade ≥ A-**
+  - Status: 🟡 WAITING
+  - Run: https://securityheaders.com/?q=psychage.com&followRedirects=on (and admin host)
+
+- [ ] **SSL Labs grade ≥ A**
+  - Status: 🟡 WAITING
+  - Run: https://www.ssllabs.com/ssltest/analyze.html?d=psychage.com (and admin host)
 
 ### 2.4 OAuth provider production posture
 
-_Filled in Phase C._
+- [ ] **Google OAuth: consent screen Production, branding + privacy + ToS URLs filled, scopes minimal**
+  - Status: 🟡 WAITING
+  - Verification: Google Cloud Console → APIs & Services → OAuth consent screen → Status = "In production"
+
+- [ ] **Apple OAuth: domain verification file served, Services ID matches Supabase config**
+  - Status: 🟡 WAITING (only if Apple OAuth enabled)
+  - Verification: `curl https://psychage.com/.well-known/apple-developer-domain-association` returns plaintext
+
+- [ ] **Both providers' redirect URIs include `<project>.supabase.co/auth/v1/callback`**
+  - Status: 🟡 WAITING
+
+- [ ] **Live OAuth flow test against production URIs**
+  - Source: [user-site-blockers-remaining.md OP-008](user-site-blockers-remaining.md)
+  - Status: 🟡 WAITING
+  - Verification: complete sign-in via Google + Apple; session persists; profile row created; redirect lands on expected post-login route
 
 ---
 

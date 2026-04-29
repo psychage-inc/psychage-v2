@@ -527,19 +527,62 @@ Status: 🟡 WAITING (operator runs against production-snapshot DB)
 
 ### 5.1 Sentry capture
 
-_Filled in Phase F._
+- [x] **`@sentry/react@10.49.0` installed** — 🟢 (`package.json`)
+
+- [x] **`initSentry()` called from user-site entrypoint** — 🟢
+  - Verified: [src/index.tsx:3,7](../../src/index.tsx#L3) imports + invokes from [src/lib/sentry.ts](../../src/lib/sentry.ts)
+  - DSN read from `VITE_SENTRY_DSN`; no-op when unset or in dev
+
+- [ ] **`initSentry()` NOT called from admin entrypoint** — 🔴 **BLOCKING**
+  - Verified gap: [src/admin-index.tsx](../../src/admin-index.tsx) does not import or call `initSentry`. Admin errors are uncaptured.
+  - Why launch-impact: marketing-driven launch with zero error visibility on the admin surface is unacceptable. Admin actions are highest-value (provider approvals, article edits, role grants) — silent failures here cause data integrity drift with no signal.
+  - Fix: add `import { initSentry } from './lib/sentry';` and `initSentry();` to [src/admin-index.tsx](../../src/admin-index.tsx) before `createRoot`. PHI scrubbing in [src/lib/sentry.ts](../../src/lib/sentry.ts) `beforeSend` already covers admin payloads.
+  - Out of scope for this sweep (admin surface settled per prompts 1+2). Operator must wire pre-launch.
+  - Logged in [cross-cutting-observations.md](cross-cutting-observations.md)
+
+- [x] **PHI stripping enabled** — 🟢 (`beforeSend` in [src/lib/sentry.ts](../../src/lib/sentry.ts) removes user email, username, query params `q`/`query`/`specialty`, search/message breadcrumbs)
+
+- [x] **`VITE_SENTRY_DSN` documented in `.env.example`** — 🟢 (added in this sweep alongside `VITE_GIT_SHA`)
+
+- [ ] **DSN configured in Vercel production env** — 🟡 WAITING (operator)
+
+- [ ] **Source maps uploaded as part of build (Sentry can resolve stack traces)**
+  - Status: 🟡 WAITING
+  - Verification: trigger a known error in staging; Sentry issue shows symbolicated stack with file/line, not minified
+
+- [ ] **Sample rate configured** — 🟡 WAITING (currently 1.0 for errors / 0.1 traces; operator confirms appropriate for traffic volume)
 
 ### 5.2 Alerts & paging
 
-_Filled in Phase F._
+- [ ] **Sentry alerts configured for: new errors, error rate spikes, performance regressions**
+  - Status: 🟡 WAITING (operator dashboard step)
+  - Source: [auth-ux-i18n-followup-dashboard.md §4](../refactors/auth-ux-i18n-followup-dashboard.md) (auth_operation tag routing)
+
+- [ ] **Auth telemetry tags routing verified**
+  - Status: 🟡 WAITING
+  - What: `auth_operation` tag — `user_error` (breadcrumb-only) vs `platform_error` (alert-enabled) routing per AUTH-013 design
+  - Verification: synthetic platform_error fires page; user_error does not
+
+- [ ] **Alerts route to a human-monitored channel (Slack / email / PagerDuty)**
+  - Status: 🟡 WAITING
+
+- [ ] **On-call rotation defined** — see §6.2
 
 ### 5.3 Error budgets
 
-_Filled in Phase F._
+- [x] **Error budgets defined** — 🟢
+  - Acceptable error rate: < 0.5% of requests (Sentry "issues per session")
+  - Acceptable downtime: 99.9% (≈ 43 min/month allowance)
+  - Acceptable performance regression: p95 latency increase > 25% triggers investigation
+  - Crisis-content / `/crisis` route: 99.99% target (≤ 4 min/month) — Sacred Rule, must always reach users
 
 ### 5.4 Uptime monitoring
 
-_Filled in Phase F._
+- [ ] **External uptime monitor (UptimeRobot / BetterStack / Pingdom) configured**
+  - Status: 🟡 WAITING (no SDK installed; operator picks provider)
+  - Probes: homepage, `/crisis` (highest priority), `/login`, `admin.psychage.com/login`
+  - Frequency: 1–5 minutes
+  - Alert: 2 consecutive failures → page on-call
 
 ---
 

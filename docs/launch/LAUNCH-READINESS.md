@@ -313,15 +313,18 @@ Each row needs an explicit operator check pre-launch.
 
 ### 2.2 Bundle secrets check
 
-Static check; results recorded post-build in Phase J.
+Static check.
 
 ```bash
 npm run build
-grep -rE 'service_role|SERVICE_ROLE|SUPABASE_SERVICE_ROLE_KEY' dist/ || echo "no-service-role-refs-in-bundle"
-grep -rE 'RESEND_API_KEY|ANTHROPIC_API_KEY|OPENAI_API_KEY|SANITY_WEBHOOK_SECRET|ACCOUNT_DELETION_ADMIN_SECRET' dist/ || echo "no-server-secrets-in-bundle"
+grep -rE 'service_role|SERVICE_ROLE|SUPABASE_SERVICE_ROLE_KEY' dist/
+grep -rE 'RESEND_API_KEY|ANTHROPIC_API_KEY|OPENAI_API_KEY|SANITY_WEBHOOK_SECRET|ACCOUNT_DELETION_ADMIN_SECRET' dist/
 ```
 
-If any match → 🔴 BLOCKING; fix the leak before launch. Status filled by Phase J verification.
+- [x] **No service-role / server-secret references in `dist/`**
+  - Status: 🟢 READY
+  - Verified: 2026-04-29 against `launch/cross-cutting-readiness` build (both greps returned zero matches)
+  - Re-run before final deploy: 🟡 (operator should re-grep against the actual production build artifact)
 
 ### 2.3 Security scanner results
 
@@ -362,23 +365,79 @@ If any match → 🔴 BLOCKING; fix the leak before launch. Status filled by Pha
 
 ### 3.1 Required public pages
 
-_Filled in Phase D._
+Content audit confirmed real (not placeholder) for all pages below; lawyer-review flag remains 🟡 until external counsel signs off. See [user-site-findings.md](user-site-findings.md) and [LegalPages.tsx](../../src/components/pages/LegalPages.tsx).
+
+- [ ] **Privacy Policy** at `/legal/privacy` — 🟢 content complete; 🟡 lawyer review (per [user-site-blockers-remaining.md OP-005](user-site-blockers-remaining.md))
+  - Covers data collection, storage (Supabase, Sanity), third parties, user rights, contact
+  - Health-data clauses must pass HIPAA + WA My Health My Data Act review
+
+- [ ] **Terms of Service** at `/legal/terms` — 🟢 content complete; 🟡 lawyer review
+  - Acceptable use, account termination, liability limits, governing law, embedded medical disclaimer
+
+- [ ] **Cookie Policy** in `/legal/privacy#cookies` — 🟢 (linked from banner; see 3.2)
+
+- [ ] **Medical Disclaimer** — 🟢 prominent in Terms section 2 (highlighted callout); footer also references "does not provide medical advice, diagnosis, or treatment"
+
+- [ ] **Crisis Resources** at `/crisis` — 🟢 ([CrisisPage.tsx](../../src/components/pages/CrisisPage.tsx), country geo-detection, 30+ resources, US 988 + international); publicly reachable without auth
+
+- [ ] **Accessibility Statement** at `/legal/accessibility` — 🟢 (WCAG 2.1 AA target, 7 implementation areas, known limitations, contact `accessibility@psychage.com`); 🟡 lawyer / a11y consultant review optional
+
+- [ ] **Contact / Support** at `/contact` — 🟢 ([ContactPage.tsx](../../src/pages/core/ContactPage.tsx)); operator must monitor delivery channel
+
+- [ ] **Lawyer review pass on Privacy + Terms + Accessibility**
+  - Source: [user-site-blockers-remaining.md OP-005](user-site-blockers-remaining.md)
+  - Status: 🟡 WAITING
+  - Why: Health data platform; ADA + EAA + GDPR + CCPA + WA-MHMDA all apply
+  - Owner: outside counsel
 
 ### 3.2 Cookie & consent
 
-_Filled in Phase D._
+- [ ] **Cookie banner appears on first visit before non-essential cookies fire**
+  - Status: 🟢 ([CookieConsent.tsx](../../src/components/ui/CookieConsent.tsx) — 1s show delay, GPC-aware auto-reject of non-essential)
+
+- [ ] **Banner has accept/decline (not just "OK"); decline actually blocks non-essential**
+  - Status: 🟢 (3-toggle UI: essential required, analytics + marketing user-toggleable; gated via `consentService.logConsent()`)
+
+- [ ] **Settings persist across sessions (localStorage `psychage_cookie_consent`)** — 🟢
+
+- [ ] **Authenticated users sync consent to profile via `privacyService.updateCookieConsent()`** — 🟢
+
+- [ ] **Consent records auditable (timestamp, choice)** — 🟢 (logged via `consentService`)
 
 ### 3.3 Mental-health-platform copy compliance
 
-_Filled in Phase D._
+Sacred Rule. Spot-check 5 prominent pages for: no diagnostic language ("you have anxiety," "diagnosis confirmed"), no medical advice ("take this medication if…"), person-first language, crisis content one tap away.
+
+- [ ] **Homepage `/`** — 🟡 WAITING (operator manual review pre-launch)
+- [ ] **`/about`** — 🟡 WAITING
+- [ ] **`/tools`** — 🟡 WAITING
+- [ ] **`/providers`** — 🟡 WAITING
+- [ ] **One sample article reader page** — 🟡 WAITING
+
+Any violation = 🔴 BLOCKING. No diagnostic tooling claims its results are diagnostic; navigator must consistently route to /crisis on safety triggers (already enforced in code per Symptom Navigator memory).
 
 ### 3.4 Accessibility statement
 
-_Filled in Phase D._
+- [ ] **Linked from footer** — 🟢 ([Footer.tsx](../../src/components/layout/Footer.tsx) line 174)
+- [ ] **States WCAG 2.1 AA target** — 🟢
+- [ ] **Provides contact for accessibility issues** — 🟢 (`accessibility@psychage.com`)
+- [ ] **Acknowledges known gaps with timeline** — 🟢
 
 ### 3.5 GDPR / CCPA basics
 
-_Filled in Phase D._
+- [ ] **Data export available**
+  - Status: 🟢 in code ([supabase/functions/data-export/](../../supabase/functions/data-export/)); 🟡 WAITING on production deploy + smoke test
+  - Verification: authenticated user requests export; receives JSON bundle within SLA
+
+- [ ] **Account deletion available**
+  - Status: 🟢 in code ([supabase/functions/account-deletion/](../../supabase/functions/account-deletion/) — 3-action lifecycle: request → 30-day countdown → execute); 🟡 WAITING on production deploy
+  - Verification: request deletion; cancellation works within 30 days; execute hard-deletes after grace period
+
+- [ ] **"Do not sell my data" disclosure for CCPA**
+  - Status: 🟡 WAITING (Privacy Policy must explicitly state Psychage does not sell; verify in lawyer-review pass)
+
+- [ ] **GPC honored for non-essential cookies**
+  - Status: 🟢 ([CookieConsent.tsx:46](../../src/components/ui/CookieConsent.tsx#L46) auto-rejects non-essential when `navigator.globalPrivacyControl === true`)
 
 ---
 

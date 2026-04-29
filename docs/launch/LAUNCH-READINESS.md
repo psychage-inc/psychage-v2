@@ -445,19 +445,81 @@ Any violation = 🔴 BLOCKING. No diagnostic tooling claims its results are diag
 
 ### 4.1 Lighthouse scores
 
-_Filled in Phase E._
+Targets for hard launch (mobile + desktop, against staging environment):
+
+- Performance: 75+ (90+ ideal)
+- Accessibility: 95+ (high bar — a11y is a Sacred Rule for this audience)
+- Best Practices: 95+
+- SEO: 95+ (user site only; admin excluded since `noindex`)
+
+```bash
+# Operator runs after staging deploy
+npx lighthouse https://staging.psychage.com/ --view
+npx lighthouse https://staging.psychage.com/ --preset=desktop --view
+npx lighthouse https://staging.psychage.com/learn/depression-anxiety-mood/managing-your-mental-health-when-loneliness-hits --view
+npx lighthouse https://staging.psychage.com/tools/symptom-navigator --view
+npx lighthouse https://staging.psychage.com/crisis --view
+```
+
+- [ ] Homepage scores recorded — 🟡 WAITING
+- [ ] Article reader scores recorded — 🟡 WAITING
+- [ ] Symptom Navigator scores recorded — 🟡 WAITING
+- [ ] Crisis page scores recorded — 🟡 WAITING
+
+Source: [user-site-blockers-remaining.md OP-010](user-site-blockers-remaining.md) (Lighthouse CI setup is post-launch).
 
 ### 4.2 Bundle size budget
 
-_Filled in Phase E._
+Budget: no single chunk > 500KB gzipped; total initial-load < 1.5MB gzipped.
+
+**Local build measured 2026-04-29 against `launch/cross-cutting-readiness`:**
+
+| Chunk | Raw | Gzipped | Budget |
+|---|---|---|---|
+| `all-articles-*.js` | 35.7 MB | **9.4 MB** | 🔴 **OVER** (18× budget) |
+| `main-*.js` | 455 KB | 115 KB | 🟢 |
+| `jspdf.es.min-*.js` | 381 KB | 124 KB | 🟢 |
+| `generateCategoricalChart-*.js` | 280 KB | 75 KB | 🟢 |
+| `globals-*.js` | 263 KB | 83 KB | 🟢 |
+| `vendor-editor-*.js` | 244 KB | 75 KB | 🟢 |
+| `TiptapEditor-*.js` | 237 KB | 72 KB | 🟢 |
+| `html2canvas.esm-*.js` | 197 KB | 46 KB | 🟢 |
+| `vendor-supabase-*.js` | 168 KB | 43 KB | 🟢 |
+| `index.es-*.js` | 147 KB | 50 KB | 🟢 |
+
+- [ ] **`all-articles-*.js` chunk = 9.4 MB gzipped — 🔴 BLOCKING for hard launch**
+  - Source: bundle scan during this sweep
+  - Why: lazy-loaded via [`await import('../data/articles/all-articles')`](../../src/services/articleService.ts) — but the import fires on the first article request, dropping a 9.4 MB payload on the user. On 3G this is ≥ 60 seconds; on 4G mobile ≥ 12 seconds; will fail Lighthouse Performance audit and cause article-reader bounce.
+  - Fix path (operator decision; out of scope for this sweep — no surface code edits allowed):
+    1. Split `src/data/articles/all-articles.ts` per category (16 chunks instead of 1)
+    2. Service `articleService.ts` dynamically-imports only the relevant category by article ID prefix (CAT01, CAT02 …)
+    3. Each category chunk targets < 1 MB gzipped
+  - Logged in [cross-cutting-observations.md](cross-cutting-observations.md) for action
+
+- [x] All other chunks within 500 KB gzipped budget — 🟢
+- [x] Total initial-load (main + supabase + globals + vendor-*) ≈ 400 KB gzipped — 🟢 (well under 1.5 MB initial budget)
 
 ### 4.3 Slow-network simulation
 
-_Filled in Phase E._
+- [ ] **DevTools throttle "Slow 3G", load homepage → article**
+  - Status: 🟡 WAITING (operator manual)
+  - Target: usable within 5 seconds on homepage
+  - Note: with 4.2 unresolved, article-reader test will fail; do this AFTER chunk split lands
 
 ### 4.4 Database query baselines
 
-_Filled in Phase E._
+Walk top-traffic queries; verify no sequential scans on large tables; no queries > 100ms p95.
+
+Queries to `EXPLAIN ANALYZE` against production-scale data:
+
+- [ ] `search_providers_v2` RPC (per Provider Directory memory: 423,404 rows; pg_trgm GIN indexes; 15s statement timeout)
+- [ ] Article list with filters (categories + tags)
+- [ ] Provider search with city + specialty filter
+- [ ] Mood-journal entries by user_id + date range
+- [ ] Sleep tracker entries by user_id + week
+- [ ] Navigator `condition_symptom_mappings` join (Tier 4-6 conditions; ~448 mappings)
+
+Status: 🟡 WAITING (operator runs against production-snapshot DB)
 
 ---
 

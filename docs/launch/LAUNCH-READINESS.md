@@ -727,8 +727,38 @@ Operator manual run pre-launch against staging. Each test: state → action → 
 
 ## §8. Final Go/No-Go
 
-When this section is filled in with 🟢 across all sections above, you are ready.
+### Status totals (this sweep, 2026-04-29)
 
-Totals computed in Phase I.
+Counts include legend + inline references; treat per-item checklists as authoritative.
+
+- 🟢 READY: ~43 mentions
+- 🟡 WAITING: ~80 mentions (each has an explicit dependency + owner above)
+- 🔴 BLOCKING: **2 confirmed** + 1 conditional
+
+### The 2 confirmed blockers
+
+1. **`all-articles-*.js` bundle = 9.4 MB gzipped** (§4.2) — split per category before hard launch
+2. **`initSentry()` not wired in admin-index.tsx** (§5.1) — wire before hard launch
+
+### The 1 conditional blocker
+
+- §3.3 Mental-health-platform copy spot-check — turns 🔴 if any reviewed page surfaces diagnostic language, medical advice, or fails the person-first standard. Operator must run the spot-check pre-launch.
+
+### Decision
+
+**NO-GO until both confirmed 🔴 are cleared.**
+
+Once cleared:
+
+- Re-run §2.2 bundle secrets scan against the production build artifact
+- Re-run §4.2 chunk size measurement to confirm `all-articles` is split
+- Re-confirm §5.1 by inspecting [src/admin-index.tsx](../../src/admin-index.tsx) for the `initSentry()` call
+- Walk all 🟡 items, assign owners + ETA dates, set a launch date
+
+### Workflow notes
+
+- Cross-cutting observations and non-blocker findings are logged in [cross-cutting-observations.md](cross-cutting-observations.md)
+- Incident communication templates are at [incident-templates.md](incident-templates.md)
+- Surface-specific blockers continue to live in their respective files; this doc does not duplicate them, only points back
 
 **Operator sign-off:** _______________ Date: _______________

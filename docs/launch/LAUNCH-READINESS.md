@@ -650,17 +650,78 @@ Documented procedure per surface; rehearsal pending operator action.
 
 ## §7. Critical Path Smoke Tests
 
+Operator manual run pre-launch against staging. Each test: state → action → expected → record (screenshot or note). All marked 🟡 WAITING.
+
 ### 7.1 User-site critical paths
 
-_Filled in Phase H._
+- [ ] **Homepage loads in incognito, no console errors**
+  - Action: open `https://staging.psychage.com/` in fresh incognito window
+  - Expected: hero renders within 5s; no errors in DevTools console; no failed network requests except known third parties under graceful fallback
+
+- [ ] **Sign up with email/password → confirmation email arrives → confirm → dashboard**
+  - Action: signup form, complete Turnstile, submit
+  - Expected: confirmation email arrives at test inbox within 60s; click link redirects to `/dashboard`; profile row created
+
+- [ ] **Sign up with Google OAuth → consent → dashboard**
+  - Expected: Google consent screen shows production branding (NOT "unverified app" warning); session persists; profile row created
+
+- [ ] **Sign up with Apple OAuth → consent → dashboard**
+  - Expected: Apple Sign in works against production Services ID; session persists; profile row created
+
+- [ ] **Forgot password → email arrives → reset link works → sign in with new password**
+  - Expected: email within 60s; reset form does not pre-disclose whether the address exists (AUTH-013 non-disclosure); new password works
+
+- [ ] **Symptom Navigator: complete a flow end-to-end, see results, no crisis-content gating**
+  - Action: navigate to `/tools/symptom-navigator`; pick mood symptoms; complete tier-1 flow
+  - Expected: results page shows confidence-capped condition matches (cap = 0.75 per memory); no diagnostic language; "Read more" routes to article; crisis triggers route to `/crisis`
+
+- [ ] **Article reader: open an article, navigate to a related article, all images load**
+  - Action: `/learn` → click any article → click related-article link
+  - Expected: both load within 8s on broadband; images all 200 (no broken refs); citations render with tier badges (PEAF)
+  - Note: until 4.2 chunk-split lands, expect 9.4 MB chunk download on first article view — record load time as baseline
+
+- [ ] **Provider directory search: search "anxiety", see results, view a provider**
+  - Action: `/providers` → search "anxiety", filter state=NY → click result
+  - Expected: results in < 15s (matches `search_providers_v2` statement_timeout); provider detail shows real seeded data
+
+- [ ] **`/crisis` page: load in incognito (no auth), all hotlines visible, all links work**
+  - Action: open `https://staging.psychage.com/crisis` in fresh incognito
+  - Expected: 100% reachable without auth; tap-to-call links work on mobile; all hotline numbers correct; geo-detection works
 
 ### 7.2 Admin critical paths
 
-_Filled in Phase H._
+- [ ] **Sign in with admin credentials → admin dashboard**
+  - Action: `https://admin.staging.psychage.com/login` with admin role granted via `migrate-admin-roles.ts`
+  - Expected: lands on admin dashboard; role read from `admin_roles` table (not JWT metadata)
+
+- [ ] **Sign in with non-admin credentials → redirected to user site**
+  - Action: same admin host, but credentials with no admin role
+  - Expected: RoleGuard rejects; redirects to user site or admin-login with explicit "no admin access" message
+
+- [ ] **Approve a test provider → audit log entry created**
+  - Action: admin approves a pending provider record
+  - Expected: provider status flips to `active`; audit-trigger row appears (per migration `20260425000003`); display picks up change in user-site provider directory
+
+- [ ] **Edit an article → save → see in user-site article view**
+  - Action: admin edits any seeded article
+  - Expected: save succeeds; user-site reload shows the change
+
+- [ ] **Sign out → redirected**
+  - Expected: clean session termination; back-button does not show stale admin UI
 
 ### 7.3 Cross-domain flows
 
-_Filled in Phase H._
+- [ ] **On `psychage.com`, sign in as admin → manually navigate to `admin.psychage.com` → admin sees admin UI; non-admin sees no flash**
+  - Expected: admin role recognized across hosts (Supabase shared session); RoleGuard blocks non-admin without rendering protected content
+
+- [ ] **On `admin.psychage.com`, sign out → redirect**
+  - Expected: redirect to user-site or admin-login (operator decides product behavior); not a stale admin UI
+
+- [ ] **Email verification link sent to a user who started on `psychage.com` lands them back on `psychage.com` (not admin)**
+  - Verification: complete email-verification flow; final URL is `psychage.com/auth/callback?...`, not admin
+
+- [ ] **Cookie consent state shared appropriately across hosts**
+  - Note: localStorage is host-scoped; consent on `psychage.com` will NOT propagate to `admin.psychage.com`. Document expected behavior; admin host has its own banner OR is exempt as essential-only host.
 
 ---
 

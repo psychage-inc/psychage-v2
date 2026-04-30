@@ -24,7 +24,7 @@ const MindMateCard: React.FC = () => {
             try {
                 const { data } = await (await import('@/lib/supabaseClient')).supabase
                     .from('ai_conversations')
-                    .select('id, created_at')
+                    .select('id, last_message_at')
                     .eq('user_id', user.id)
                     .order('last_message_at', { ascending: false })
                     .limit(1);

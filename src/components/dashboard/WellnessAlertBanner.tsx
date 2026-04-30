@@ -53,7 +53,7 @@ const WellnessAlertBanner: React.FC = () => {
     if (visibleAlerts.length === 0) return null;
 
     return (
-        <div className="space-y-3">
+        <div className="space-y-3 md:col-span-12">
             <AnimatePresence>
                 {visibleAlerts.map(alert => (
                     <motion.div

@@ -79,18 +79,18 @@ const GhostChart: React.FC = () => {
     }));
 
     return (
-        <div className="relative w-full min-h-[280px] sm:min-h-[320px]">
-            <div className="opacity-[0.08] w-full h-full">
-                <ResponsiveContainer width="100%" height={280}>
+        <div className="relative w-full min-h-[140px] sm:min-h-[160px]">
+            <div className="opacity-[0.08] w-full h-full pointer-events-none absolute inset-0">
+                <ResponsiveContainer width="100%" height="100%">
                     <AreaChart data={ghostData}>
                         <Area type="monotone" dataKey="value" stroke="#9CA3AF" strokeWidth={2} fill="#9CA3AF" fillOpacity={0.1} />
                     </AreaChart>
                 </ResponsiveContainer>
             </div>
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+            <div className="relative flex flex-col items-center justify-center text-center px-6 py-6">
                 <p className="text-sm text-gray-500 dark:text-neutral-400 mb-1 font-medium">Your wellness trends will appear here</p>
-                <p className="text-xs text-gray-400 dark:text-neutral-500 mb-4 max-w-xs">As you track your mood, sleep, and clarity, patterns will emerge.</p>
-                <a href="#mood-checkin" className="text-xs text-teal-600 dark:text-teal-400 font-medium hover:underline flex items-center gap-1">
+                <p className="text-xs text-gray-400 dark:text-neutral-500 mb-3 max-w-xs">As you track your mood, sleep, and clarity, patterns will emerge.</p>
+                <a href="#mood-checkin" className="text-xs text-teal-600 dark:text-teal-400 font-medium hover:underline inline-flex items-center gap-1">
                     Start with a mood check-in <ArrowUp size={12} />
                 </a>
             </div>

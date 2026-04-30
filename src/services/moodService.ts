@@ -58,7 +58,7 @@ export const moodService = {
             return (data || []).map(entry => ({
                 id: entry.id,
                 user_id: entry.user_id,
-                value: entry.mood_rating || entry.value, // Support both column names
+                value: entry.value, // Support both column names
                 notes: entry.notes,
                 tags: entry.tags || [],
                 created_at: entry.created_at,
@@ -84,8 +84,7 @@ export const moodService = {
                 .from('mood_entries')
                 .insert({
                     user_id: userId,
-                    mood_rating: value,
-                    value: value, // Include both for compatibility
+                    value,
                     notes,
                     tags: tags || [],
                     created_at: new Date().toISOString(),
@@ -101,7 +100,7 @@ export const moodService = {
             return {
                 id: data.id,
                 user_id: data.user_id,
-                value: data.mood_rating || data.value,
+                value: data.value,
                 notes: data.notes,
                 tags: data.tags || [],
                 created_at: data.created_at,
@@ -124,7 +123,6 @@ export const moodService = {
                     console.error('Mood rating must be between 1 and 5');
                     return null;
                 }
-                updateData.mood_rating = updates.value;
                 updateData.value = updates.value;
             }
             if (updates.notes !== undefined) updateData.notes = updates.notes;
@@ -145,7 +143,7 @@ export const moodService = {
             return {
                 id: data.id,
                 user_id: data.user_id,
-                value: data.mood_rating || data.value,
+                value: data.value,
                 notes: data.notes,
                 tags: data.tags || [],
                 created_at: data.created_at,
@@ -196,7 +194,7 @@ export const moodService = {
             // Fetch all entries for the user
             const { data: entries, error } = await supabase
                 .from('mood_entries')
-                .select('mood_rating, value, created_at')
+                .select('value, created_at')
                 .eq('user_id', targetUserId)
                 .order('created_at', { ascending: false });
 
@@ -205,14 +203,14 @@ export const moodService = {
             }
 
             // Calculate average mood
-            const total = entries.reduce((sum, entry) => sum + (entry.mood_rating || entry.value || 0), 0);
+            const total = entries.reduce((sum, entry) => sum + (entry.value || 0), 0);
             const averageMood = total / entries.length;
 
             // Calculate trend (compare recent vs older entries)
             let trend: 'up' | 'down' | 'stable' = 'stable';
             if (entries.length >= 6) {
-                const recentAvg = entries.slice(0, 3).reduce((sum, e) => sum + (e.mood_rating || e.value || 0), 0) / 3;
-                const olderAvg = entries.slice(3, 6).reduce((sum, e) => sum + (e.mood_rating || e.value || 0), 0) / 3;
+                const recentAvg = entries.slice(0, 3).reduce((sum, e) => sum + (e.value || 0), 0) / 3;
+                const olderAvg = entries.slice(3, 6).reduce((sum, e) => sum + (e.value || 0), 0) / 3;
                 const diff = recentAvg - olderAvg;
                 if (diff > 0.3) trend = 'up';
                 else if (diff < -0.3) trend = 'down';
@@ -264,7 +262,7 @@ export const moodService = {
             return (data || []).map(entry => ({
                 id: entry.id,
                 user_id: entry.user_id,
-                value: entry.mood_rating || entry.value,
+                value: entry.value,
                 notes: entry.notes,
                 tags: entry.tags || [],
                 created_at: entry.created_at,

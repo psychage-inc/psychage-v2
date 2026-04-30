@@ -18,6 +18,7 @@ import { sleepDiaryService, type SleepV2DashboardStats } from '@/services/sleepD
 import { bookmarkService } from '@/services/bookmarkService';
 import { supabase } from '@/lib/supabaseClient';
 import { AppError } from '@/utils/errorHandling';
+import { cn } from '@/lib/utils';
 
 // Dashboard components
 import WellnessAlertBanner from '@/components/dashboard/WellnessAlertBanner';
@@ -299,7 +300,9 @@ const UserDashboard: React.FC = () => {
         }
     };
 
-    const firstName = user?.display_name?.split(' ')[0] || 'there';
+    const firstName = user?.display_name?.split(' ')[0]
+        || user?.email?.split('@')[0]?.replace(/[._-]/g, ' ')
+        || 'friend';
     const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000);
     const dailyQuote = DAILY_QUOTES[dayOfYear % DAILY_QUOTES.length];
 
@@ -360,7 +363,7 @@ const UserDashboard: React.FC = () => {
                             <motion.div
                                 variants={reduced ? undefined : staggerContainer}
                                 initial={reduced ? undefined : 'hidden'}
-                                animate={reduced ? undefined : 'show'}
+                                animate={reduced ? undefined : 'visible'}
                                 className="grid grid-cols-1 md:grid-cols-12 gap-5"
                             >
                                 {/* ── Row 1: Welcome Hero (col-span-12) ── */}
@@ -392,10 +395,8 @@ const UserDashboard: React.FC = () => {
                                     </div>
                                 </motion.div>
 
-                                {/* ── Row 2: Wellness Alert Banner (conditional) ── */}
-                                <motion.div variants={reduced ? undefined : staggerItem} className="md:col-span-12">
-                                    <WellnessAlertBanner />
-                                </motion.div>
+                                {/* ── Row 2: Wellness Alert Banner (only renders if alerts exist) ── */}
+                                <WellnessAlertBanner />
 
                                 {/* ── Row 3: Mood Check-In (8) + Smart Actions (4) ── */}
                                 <motion.div variants={reduced ? undefined : staggerItem} className="md:col-span-8">
@@ -439,7 +440,12 @@ const UserDashboard: React.FC = () => {
 
                                 {/* ── Row 5: Multi-Metric Chart (12) ── */}
                                 <motion.div variants={reduced ? undefined : staggerItem} className="md:col-span-12">
-                                    <div className="rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 shadow-sm p-5 sm:p-7 min-h-[280px] sm:min-h-[350px]">
+                                    <div className={cn(
+                                        'rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 shadow-sm p-5 sm:p-7',
+                                        chartData.length === 0
+                                            ? 'min-h-[180px] sm:min-h-[200px]'
+                                            : 'min-h-[280px] sm:min-h-[350px]',
+                                    )}>
                                         <MultiMetricChart
                                             data={chartData}
                                             availableMetrics={availableMetrics}

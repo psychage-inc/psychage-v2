@@ -38,6 +38,7 @@ import * as cat28 from './category-28';
 import * as cat29 from './category-29';
 import * as cat30 from './category-30';
 import * as cat31 from './category-31';
+import * as eatingBody from './eating-body';
 
 /**
  * Flatten a category module into an array of articles
@@ -87,4 +88,5 @@ export const allArticles: Article[] = [
   ...flattenCategoryModule(cat29),
   ...flattenCategoryModule(cat30),
   ...flattenCategoryModule(cat31),
+  ...flattenCategoryModule(eatingBody),
 ];

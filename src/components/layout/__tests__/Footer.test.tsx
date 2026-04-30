@@ -82,7 +82,8 @@ describe('Footer', () => {
     it('should render copyright with current year', () => {
         renderFooter();
         const year = new Date().getFullYear();
-        expect(screen.getByText(`© ${year} Psychage Health, Inc.`)).toBeInTheDocument();
+        expect(screen.getByText(`© ${year} Psychage, Inc.`)).toBeInTheDocument();
+        expect(screen.getByText(/Fully compliant with HIPAA and GDPR/i)).toBeInTheDocument();
     });
 
     it('should render legal links', () => {

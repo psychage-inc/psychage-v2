@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import CrisisBanner from './CrisisBanner';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
+import SocialIcons from '@/components/ui/SocialIcons';
 
 // interface FooterProps { }
 
@@ -158,9 +159,11 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Socials & Legal */}
-        <div className="bg-background border-t border-border pt-16 pb-8 mt-24 mb-12 flex flex-col md:flex-row items-end justify-end gap-8">
+        <div className="bg-background border-t border-border pt-16 pb-8 mt-24 mb-12 flex flex-col md:flex-row items-start md:items-end justify-between gap-8">
 
-          <div className="flex flex-col items-end gap-4 text-xs text-text-tertiary font-medium tracking-wide text-right">
+          <SocialIcons />
+
+          <div className="flex flex-col items-start md:items-end gap-4 text-xs text-text-tertiary font-medium tracking-wide text-left md:text-right">
             <button
               onClick={scrollToTop}
               className="flex items-center gap-2 text-text-primary hover:text-primary transition-colors mb-4 text-sm font-bold uppercase tracking-widest group"
@@ -175,7 +178,8 @@ const Footer: React.FC = () => {
               <Link to="/sitemap" className="hover:text-text-primary transition-colors">Sitemap</Link>
             </div>
             <p className="max-w-xs md:max-w-md md:text-right text-text-tertiary">Psychage is an educational tool and does not provide medical advice, diagnosis, or treatment.</p>
-            <p>© {currentYear} Psychage Health, Inc.</p>
+            <p className="max-w-xs md:max-w-md md:text-right text-text-tertiary">Fully compliant with HIPAA and GDPR standards.</p>
+            <p>© {currentYear} Psychage, Inc.</p>
           </div>
         </div>
       </div>

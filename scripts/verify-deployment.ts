@@ -105,7 +105,8 @@ function checkEnvironmentVariables(): CheckResult[] {
   // Optional but recommended
   const optionalVars = [
     { name: 'VITE_API_URL', purpose: 'Backend API connection' },
-    { name: 'VITE_GEMINI_API_KEY', purpose: 'MindMate AI chatbot' }
+    { name: 'ANTHROPIC_API_KEY', purpose: 'MindMate AI chatbot (server-side)' },
+    { name: 'SUPABASE_SERVICE_ROLE_KEY', purpose: 'MindMate RAG search (server-side)' }
   ];
 
   for (const { name, purpose } of optionalVars) {

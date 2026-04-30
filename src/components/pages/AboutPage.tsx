@@ -15,7 +15,7 @@ const AboutPage: React.FC = () => {
     const stats = [
         { label: "Languages Supported", value: "5" },
         { label: "Articles Published", value: "2,000+" },
-        { label: "Verified Providers", value: "5,600+" },
+        { label: "Verified Providers", value: "495,000+" },
         { label: "Crisis Resources", value: "24/7" },
     ];
 
@@ -52,7 +52,7 @@ const AboutPage: React.FC = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-50 dark:bg-teal-900/20 border border-teal-100 dark:border-teal-800/50 text-teal-800 dark:text-teal-300 font-bold text-xs uppercase tracking-widest mb-8">
-                        Since 2024
+                        Since 2022
                     </div>
                     <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-7xl text-text-primary mb-8 tracking-tight leading-[1.1]">
                         Democratizing access to <br />
@@ -126,7 +126,8 @@ const AboutPage: React.FC = () => {
                                     className="w-12 h-12 object-contain"
                                 />
                                 <div>
-                                    <div className="font-bold text-text-primary">Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology</div>
+                                    <div className="font-bold text-text-primary">Dr. Lena Dobson</div>
+                                    <div className="text-text-primary">Ph.D. in Clinical Neuropsychology</div>
                                     <div className="text-sm text-text-secondary">Founder</div>
                                 </div>
                             </div>

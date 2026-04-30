@@ -6,7 +6,7 @@ import UserSidebar from './UserSidebar';
 import Button from '@/components/ui/Button';
 import SEO from '@/components/SEO';
 import { useAuth } from '@/context/AuthContext';
-import { api } from '@/lib/api';
+import { clarityScoreService } from '@/services/clarityScoreService';
 import { format, subDays } from 'date-fns';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { useTimeOfDay } from '@/hooks/useTimeOfDay';
@@ -17,6 +17,7 @@ import { sleepService, type SleepEntry, type SleepStats } from '@/services/sleep
 import { sleepDiaryService, type SleepV2DashboardStats } from '@/services/sleepDiaryService';
 import { bookmarkService } from '@/services/bookmarkService';
 import { supabase } from '@/lib/supabaseClient';
+import { AppError } from '@/utils/errorHandling';
 
 // Dashboard components
 import WellnessAlertBanner from '@/components/dashboard/WellnessAlertBanner';
@@ -133,6 +134,7 @@ const UserDashboard: React.FC = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [partialFailures, setPartialFailures] = useState(0);
+    const [failedFetches, setFailedFetches] = useState<string[]>([]);
 
     const [moodStats, setMoodStats] = useState<MoodStats | null>(null);
     const [sleepStats, setSleepStats] = useState<SleepStats | null>(null);
@@ -178,10 +180,16 @@ const UserDashboard: React.FC = () => {
             // the partial-failure banner. Optional signals (mood/sleep/navigator/bookmarks)
             // commonly reject with benign "no data yet" states on fresh accounts and must not
             // trigger a warning. The banner only shows when ≥2 core fetches fail.
-            let coreFailures = 0;
-            const trackCore = <T,>(fallback: T) => (err: unknown) => {
-                coreFailures++;
-                console.warn('Dashboard core fetch failed:', err);
+            const failures: { name: string; error: AppError }[] = [];
+            const trackCore = <T,>(name: string, fallback: T) => (err: unknown) => {
+                const appErr = AppError.fromUnknown(err);
+                failures.push({ name, error: appErr });
+                console.error(`[dashboard] core fetch "${name}" failed:`, {
+                    code: appErr.code,
+                    status: appErr.statusCode,
+                    message: appErr.message,
+                    apiUrl: import.meta.env.VITE_API_URL,
+                });
                 return fallback;
             };
             const trackOptional = <T,>(fallback: T) => (err: unknown) => {
@@ -197,9 +205,9 @@ const UserDashboard: React.FC = () => {
                 moodRangeRes, sleepRangeRes,
                 navigatorRes, bookmarksRes
             ] = await Promise.all([
-                api.clarityScore.getStats().catch(trackCore({ success: false, data: null })),
-                api.user.getActivity().catch(trackCore({ success: false, data: [] })),
-                api.clarityScore.getHistory().catch(trackCore({ success: false, data: [] })),
+                clarityScoreService.getDashboardStats().catch(trackCore('clarity-stats', null)),
+                clarityScoreService.getRecentActivity().catch(trackCore('user-activity', [] as { type: 'assessment'; title: string; date: string }[])),
+                clarityScoreService.getHistory(7).catch(trackCore('clarity-history', [] as Awaited<ReturnType<typeof clarityScoreService.getHistory>>)),
                 moodService.getStats(user.id).catch(trackOptional(null)),
                 sleepService.getStats(user.id).catch(trackOptional(null)),
                 moodService.getEntries(user.id, 1).catch(trackOptional([])),
@@ -223,16 +231,17 @@ const UserDashboard: React.FC = () => {
                 bookmarkService.getAll(user.id).then(b => b.length).catch(trackOptional(0)),
             ]);
 
-            setPartialFailures(coreFailures);
+            setPartialFailures(failures.length);
+            setFailedFetches(failures.map(f => f.name));
 
-            if (statsRes.success) setStats(statsRes.data);
-            if (activityRes.success) setActivity(activityRes.data || []);
-            if (historyRes.success && Array.isArray(historyRes.data)) {
+            if (statsRes) setStats(statsRes);
+            if (Array.isArray(activityRes)) setActivity(activityRes);
+            if (Array.isArray(historyRes)) {
                 setClarityHistory(
-                    historyRes.data.map((item: { created_at?: string; date?: string; score?: number }) => ({
-                        date: format(new Date(item.created_at || item.date || new Date()), 'MMM d'),
-                        score: item.score || 0,
-                    })).reverse().slice(0, 7).reverse()
+                    historyRes.slice(0, 7).reverse().map(item => ({
+                        date: format(new Date(item.date), 'MMM d'),
+                        score: item.score,
+                    }))
                 );
             }
 
@@ -331,9 +340,18 @@ const UserDashboard: React.FC = () => {
 
                         {/* Partial failure warning — only when multiple core fetches fail */}
                         {!isLoading && !error && partialFailures >= 2 && (
-                            <div className="bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-800/40 rounded-xl px-5 py-3 flex items-center gap-3 mb-4">
-                                <AlertCircle size={16} className="text-amber-500 dark:text-amber-400 shrink-0" />
-                                <p className="text-sm text-amber-600 dark:text-amber-400/90 flex-grow">Some data couldn't be loaded. Displayed values may be incomplete.</p>
+                            <div className="bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-800/40 rounded-xl px-5 py-3 flex items-start gap-3 mb-4">
+                                <AlertCircle size={16} className="text-amber-500 dark:text-amber-400 shrink-0 mt-0.5" />
+                                <div className="flex-grow">
+                                    <p className="text-sm text-amber-600 dark:text-amber-400/90">
+                                        Couldn't load: {failedFetches.join(', ')}. Showing what we have.
+                                    </p>
+                                    {import.meta.env.DEV && (
+                                        <p className="text-xs text-amber-500/70 dark:text-amber-400/60 mt-1">
+                                            Check VITE_API_URL ({import.meta.env.VITE_API_URL || 'unset'}) and backend health.
+                                        </p>
+                                    )}
+                                </div>
                                 <button onClick={fetchData} className="text-xs font-medium text-amber-600 dark:text-amber-400 hover:underline shrink-0">Retry</button>
                             </div>
                         )}

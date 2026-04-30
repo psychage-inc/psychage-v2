@@ -123,6 +123,59 @@ export const clarityScoreService = {
         const history = await clarityScoreService.getHistory(1);
         return history[0] ?? null;
     },
+
+    /**
+     * Compute dashboard summary stats (streak, latest score, change vs prior).
+     */
+    getDashboardStats: async (): Promise<{
+        streak: number;
+        latestScore: number;
+        lastAssessed: string;
+        change: number;
+    } | null> => {
+        const history = await clarityScoreService.getHistory(30);
+        if (history.length === 0) return null;
+
+        const latest = history[0];
+        const previous = history[1];
+        const change = previous ? latest.score - previous.score : 0;
+
+        const dates = new Set(history.map(h => h.date.split('T')[0]));
+        let streak = 0;
+        const cursor = new Date();
+        for (let i = 0; i < 30; i++) {
+            const key = cursor.toISOString().split('T')[0];
+            if (dates.has(key)) {
+                streak++;
+                cursor.setDate(cursor.getDate() - 1);
+            } else {
+                if (i === 0) {
+                    cursor.setDate(cursor.getDate() - 1);
+                    continue;
+                }
+                break;
+            }
+        }
+
+        return {
+            streak,
+            latestScore: latest.score,
+            lastAssessed: latest.date,
+            change,
+        };
+    },
+
+    /**
+     * Map recent assessments into dashboard activity items.
+     */
+    getRecentActivity: async (): Promise<{ type: 'assessment'; title: string; date: string }[]> => {
+        const history = await clarityScoreService.getHistory(10);
+        return history.map(h => ({
+            type: 'assessment' as const,
+            title: `Clarity Score: ${h.score}${h.label ? ` — ${h.label}` : ''}`,
+            date: h.date,
+        }));
+    },
 };
 
 // ============================================================================

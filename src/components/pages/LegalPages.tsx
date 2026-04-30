@@ -45,6 +45,8 @@ const LegalPage: React.FC<LegalPageProps> = ({ type }) => {
                 <div className="prose prose-lg prose-teal max-w-none text-text-secondary">
                     {type === 'privacy' && (
                         <>
+                            <p><strong>Fully compliant with HIPAA and GDPR standards.</strong></p>
+
                             <h3>1. Introduction</h3>
                             <p>
                                 At Psychage, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website including any other media form, media channel, mobile website, or mobile application related or connected thereto.
@@ -95,7 +97,7 @@ const LegalPage: React.FC<LegalPageProps> = ({ type }) => {
                         <>
                             <h3>1. Agreement to Terms</h3>
                             <p>
-                                These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of an entity (&ldquo;you&rdquo;) and Psychage Health, Inc. (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), concerning your access to and use of the Psychage website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the &ldquo;Site&rdquo;).
+                                These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of an entity (&ldquo;you&rdquo;) and Psychage, Inc. (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), concerning your access to and use of the Psychage website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the &ldquo;Site&rdquo;).
                             </p>
 
                             <h3>2. Medical Disclaimer</h3>

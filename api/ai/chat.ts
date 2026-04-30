@@ -86,6 +86,18 @@ export default async function handler(
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  // Env preflight — fail fast with a named-var error instead of throwing mid-request
+  const requiredEnv = ['ANTHROPIC_API_KEY', 'SUPABASE_SERVICE_ROLE_KEY', 'VITE_SUPABASE_URL'];
+  const missingEnv = requiredEnv.filter((k) => !process.env[k]);
+  if (missingEnv.length > 0) {
+    console.error('[mindmate] missing env vars:', missingEnv);
+    return res.status(503).json({
+      error: `MindMate misconfigured: missing env ${missingEnv.join(', ')}`,
+      code: 'ENV_MISSING',
+      missing: missingEnv,
+    });
+  }
+
   const startTime = Date.now();
 
   try {
@@ -321,10 +333,12 @@ export default async function handler(
     });
 
   } catch (error) {
-    console.error('Chat API error:', error);
+    const errMsg = error instanceof Error ? error.message : 'Unknown error';
+    console.error('[mindmate] chat handler error:', errMsg, error);
+    // Surface the underlying cause via `error` so chatService can display it
     return res.status(500).json({
-      error: 'Internal server error',
-      message: error instanceof Error ? error.message : 'Unknown error',
+      error: `MindMate request failed: ${errMsg}`,
+      code: 'HANDLER_ERROR',
     });
   }
 }

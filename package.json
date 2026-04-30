@@ -13,6 +13,8 @@
   },
   "scripts": {
     "dev": "vite",
+    "dev:api": "vercel dev --listen 3000",
+    "dev:all": "concurrently -n vite,api -c green,cyan \"pnpm run dev\" \"pnpm run dev:api\"",
     "build": "tsc && pnpm run verify:routes && pnpm run build:api && vite build",
     "build:api": "tsx scripts/build-api.ts",
     "preview": "vite preview",
@@ -141,6 +143,7 @@
     "@vitest/coverage-v8": "^4.0.15",
     "autoprefixer": "^10.4.19",
     "axe-core": "^4.10.2",
+    "concurrently": "^9.2.1",
     "esbuild": "^0.28.0",
     "eslint": "^9.39.1",
     "eslint-plugin-react": "^7.37.5",

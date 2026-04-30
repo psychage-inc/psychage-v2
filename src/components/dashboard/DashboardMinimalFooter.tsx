@@ -10,7 +10,7 @@ const DashboardMinimalFooter: React.FC = () => (
             <span aria-hidden="true">·</span>
             <Link to="/crisis" className="hover:text-gray-600 dark:hover:text-neutral-300 transition-colors">Crisis Support</Link>
             <span aria-hidden="true">·</span>
-            <span>&copy; {new Date().getFullYear()} Psychage Health, Inc.</span>
+            <span>&copy; {new Date().getFullYear()} Psychage, Inc.</span>
         </div>
     </footer>
 );

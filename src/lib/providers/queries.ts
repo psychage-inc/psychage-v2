@@ -159,7 +159,7 @@ function filterProviderCards(cards: ProviderCardData[], params: ProviderSearchPa
       const slugs = p.specialty_tags.map(s => s.slug);
       if (!params.specialty_slugs.some(s => slugs.includes(s))) return false;
     }
-    if (params.state && !p.primary_state?.toUpperCase().includes(params.state.toUpperCase())) return false;
+    if (params.state && p.primary_state?.toUpperCase() !== params.state.toUpperCase()) return false;
     if (params.city && !p.primary_city?.toLowerCase().includes(params.city.toLowerCase())) return false;
     if (params.telehealth && !p.telehealth_available) return false;
     if (params.in_person && !p.in_person_available) return false;
@@ -214,7 +214,7 @@ const PAGE_SIZE = 20;
 async function searchViaRPC(params: ProviderSearchParams, page: number, perPage: number): Promise<ProviderCardSearchResult | null> {
   const offset = (page - 1) * perPage;
 
-  const { data, error } = await supabase.rpc('search_providers_v2', {
+  const { data, error } = await supabase.rpc('search_providers_v3', {
     p_query: params.query || null,
     p_provider_type_ids: params.provider_type_ids?.length ? params.provider_type_ids : null,
     p_specialty_slugs: params.specialty_slugs?.length ? params.specialty_slugs : null,
@@ -230,10 +230,13 @@ async function searchViaRPC(params: ProviderSearchParams, page: number, perPage:
     p_sort: params.sort_by === 'name' ? 'name' : 'relevance',
     p_limit: perPage,
     p_offset: offset,
+    p_latitude: params.latitude ?? null,
+    p_longitude: params.longitude ?? null,
+    p_radius_miles: params.radius_miles ?? null,
   });
 
   if (error) {
-    console.warn('RPC search_providers_v2 failed, will try fallback:', error.message);
+    console.warn('RPC search_providers_v3 failed, will try fallback:', error.message);
     return null;
   }
 
@@ -351,6 +354,7 @@ function searchViaMockData(params: ProviderSearchParams, page: number, perPage: 
 export async function searchProviders(params: ProviderSearchParams): Promise<ProviderCardSearchResult> {
   const page = params.page || 1;
   const perPage = params.per_page || PAGE_SIZE;
+  const hasLocationIntent = !!(params.state || params.city || params.latitude);
 
   // Try 1: RPC
   try {
@@ -368,7 +372,12 @@ export async function searchProviders(params: ProviderSearchParams): Promise<Pro
     console.warn('Direct query threw:', err);
   }
 
-  // Try 3: Mock data (always succeeds)
+  // Try 3: Mock data — but never silently widen when caller specified a location.
+  // Mock providers are a tiny hand-curated set; returning them for a state/city/geo
+  // query would surface providers from unrelated areas.
+  if (hasLocationIntent) {
+    return { providers: [], total_count: 0, page, per_page: perPage, has_more: false };
+  }
   return searchViaMockData(params, page, perPage);
 }
 

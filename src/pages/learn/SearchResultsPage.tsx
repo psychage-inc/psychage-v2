@@ -39,7 +39,7 @@ const SearchResultsPage: React.FC = () => {
             searchService.saveLocalSearch(q);
         } catch (error) {
             console.error("Search failed:", error);
-            setResults({ articles: [], providers: [], tools: [], total: 0 });
+            setResults({ articles: [], providers: [], tools: [], videos: [], categories: [], total: 0 });
         } finally {
             setIsLoading(false);
         }
@@ -285,10 +285,10 @@ const SearchResultsPage: React.FC = () => {
                                                 className="bg-surface rounded-2xl p-6 border border-border hover:border-primary/50 cursor-pointer transition-all group"
                                             >
                                                 <div className="flex items-start gap-4">
-                                                    {provider.image ? (
+                                                    {provider.photo_url ? (
                                                         <img
-                                                            src={provider.image}
-                                                            alt={provider.name}
+                                                            src={provider.photo_url}
+                                                            alt={provider.display_name}
                                                             className="w-16 h-16 rounded-full object-cover"
                                                         />
                                                     ) : (
@@ -298,19 +298,19 @@ const SearchResultsPage: React.FC = () => {
                                                     )}
                                                     <div className="flex-1 min-w-0">
                                                         <h3 className="font-bold text-text-primary group-hover:text-primary transition-colors">
-                                                            {provider.name}
+                                                            {provider.display_name}
                                                         </h3>
-                                                        {provider.role && (
-                                                            <p className="text-sm text-text-secondary">{provider.role}</p>
+                                                        {provider.provider_type_label && (
+                                                            <p className="text-sm text-text-secondary">{provider.provider_type_label}</p>
                                                         )}
-                                                        {provider.specialties && provider.specialties.length > 0 && (
+                                                        {provider.specialty_tags && provider.specialty_tags.length > 0 && (
                                                             <div className="flex flex-wrap gap-1 mt-2">
-                                                                {provider.specialties.slice(0, 3).map((spec, i) => (
+                                                                {provider.specialty_tags.slice(0, 3).map((spec) => (
                                                                     <span
-                                                                        key={i}
+                                                                        key={spec.slug}
                                                                         className="px-2 py-0.5 bg-surface-hover rounded-full text-xs text-text-secondary"
                                                                     >
-                                                                        {spec}
+                                                                        {spec.label}
                                                                     </span>
                                                                 ))}
                                                             </div>
@@ -338,7 +338,7 @@ const SearchResultsPage: React.FC = () => {
                                         {results.tools.map((tool) => (
                                             <div
                                                 key={tool.id}
-                                                onClick={() => navigate(tool.href || `/tools/${tool.id}`)}
+                                                onClick={() => navigate(`/tools/${tool.id}`)}
                                                 className="bg-surface rounded-2xl p-6 border border-border hover:border-primary/50 cursor-pointer transition-all group"
                                             >
                                                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">

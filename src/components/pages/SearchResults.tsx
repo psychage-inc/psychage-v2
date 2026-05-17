@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Search, PenTool, FileText, Video, ChevronDown, Loader2, AlertCircle } from 'lucide-react';
-import { useSearchParams, useNavigate } from 'react-router-dom';
-import { api } from '../../lib/api';
-import { ArticleWithContent } from '../../services/articleService';
-import { videoService } from '../../services/videoService';
-import { toolService } from '../../services/toolService';
+import { ArrowLeft, Search, PenTool, FileText, Video, ChevronDown, Loader2, AlertCircle, Compass, Users } from 'lucide-react';
+import { useSearchParams, useNavigate, Link } from 'react-router-dom';
+import { searchService, SearchResult } from '../../services/searchService';
+import { Category } from '../../types/models';
 import { categoryService } from '../../services/categoryService';
-import { Category, Video as VideoType, Tool as ToolType } from '../../types/models';
 import SEO from '../SEO';
 import ArticleCard from '../article/ArticleCard';
 import VideoCard from '../video/VideoCard';
 import ToolCard from '../tool/ToolCard';
+import { ProviderCard } from '../providers/cards/ProviderCard';
 import SearchAutocomplete from '../search/SearchAutocomplete';
 import { getArticleUrl } from '../../lib/articleUrl';
 
@@ -22,143 +20,87 @@ const SearchResults: React.FC = () => {
     const query = searchParams.get('q') || '';
     const navigate = useNavigate();
 
-    // State
-    const [matchedArticles, setMatchedArticles] = useState<ArticleWithContent[]>([]);
-    const [matchedVideos, setMatchedVideos] = useState<VideoType[]>([]);
-    const [matchedTools, setMatchedTools] = useState<ToolType[]>([]);
-    const [categories, setCategories] = useState<Category[]>([]);
+    const [results, setResults] = useState<SearchResult | null>(null);
+    const [chipCategories, setChipCategories] = useState<Category[]>([]);
     const [selectedCategory, setSelectedCategory] = useState<string>('all');
     const [sortBy, setSortBy] = useState<SortOption>('relevance');
     const [isSortOpen, setIsSortOpen] = useState(false);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
-    // Load categories on mount
+    // Category chips (used to filter articles only)
     useEffect(() => {
-        const loadCategories = async () => {
-            try {
-                const cats = await categoryService.getAll();
-                setCategories(cats);
-            } catch (err) {
-                console.error('Failed to load categories:', err);
-            }
-        };
-        loadCategories();
+        categoryService.getAll().then(setChipCategories).catch(() => setChipCategories([]));
     }, []);
 
-    // Search function
-    const performSearch = async () => {
+    const performSearch = useCallback(async () => {
         if (!query.trim()) {
-            setMatchedArticles([]);
-            setMatchedVideos([]);
-            setMatchedTools([]);
+            setResults(null);
             setLoading(false);
             return;
         }
-
         setLoading(true);
         setError(null);
-
         try {
-            // Try unified search API first
-            const response = await api.search.all({
-                query: query.trim(),
-                limit: 50
-            });
-
-            if (response.success && response.data) {
-                const data = response.data as { articles?: unknown[]; videos?: unknown[]; tools?: unknown[]; providers?: unknown[]; total?: number };
-                setMatchedArticles((data.articles || []) as ArticleWithContent[]);
-                setMatchedVideos((data.videos || []) as VideoType[]);
-                setMatchedTools((data.tools || []) as ToolType[]);
-            } else {
-                throw new Error('Search API returned no data');
-            }
+            const r = await searchService.search(query.trim(), { type: 'all' });
+            setResults(r);
+            searchService.saveLocalSearch(query.trim());
+            searchService.saveSearchHistory(query.trim());
         } catch (err) {
-            console.warn('Unified search failed, falling back to individual searches:', err);
-
-            // Fallback: search each service individually
-            try {
-                const [articles, videos, tools] = await Promise.all([
-                    api.search.articles(query.trim(), 20).then(r => r.success ? r.data : []).catch(() => []),
-                    videoService.getAll().then(all => all.filter(v =>
-                        v.title.toLowerCase().includes(query.toLowerCase())
-                    )).catch(() => []),
-                    toolService.getAll().then(all => all.filter(t =>
-                        t.name.toLowerCase().includes(query.toLowerCase()) ||
-                        t.description.toLowerCase().includes(query.toLowerCase())
-                    )).catch(() => [])
-                ]);
-
-                setMatchedArticles((articles || []) as ArticleWithContent[]);
-                setMatchedVideos(videos || []);
-                setMatchedTools(tools || []);
-            } catch (fallbackErr) {
-                console.error('All search methods failed:', fallbackErr);
-                setError('Unable to complete search. Please try again.');
-            }
+            console.error('Search failed:', err);
+            setError('Unable to complete search. Please try again.');
+            setResults(null);
         } finally {
             setLoading(false);
         }
-    };
+    }, [query]);
 
     useEffect(() => {
         window.scrollTo(0, 0);
         performSearch();
-    }, [query]);
+    }, [performSearch]);
 
-    // Apply client-side filtering and sorting
+    // Filter articles by selected category chip (slug-based to avoid id/slug mismatch
+    // between Supabase rows, mock data, and the chip source).
     const filteredArticles = React.useMemo(() => {
-        let filtered = [...matchedArticles];
-
-        // Category filter
+        const articles = results?.articles ?? [];
+        let filtered = articles;
         if (selectedCategory !== 'all') {
-            filtered = filtered.filter(a => a.category.id === selectedCategory || a.category.slug === selectedCategory);
+            filtered = filtered.filter(a =>
+                a.category?.slug === selectedCategory || a.category?.id === selectedCategory
+            );
         }
-
-        // Sort
         if (sortBy === 'date') {
-            filtered.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+            filtered = [...filtered].sort((a, b) =>
+                new Date(b.publishedAt || 0).getTime() - new Date(a.publishedAt || 0).getTime()
+            );
         } else if (sortBy === 'title') {
-            filtered.sort((a, b) => a.title.localeCompare(b.title));
+            filtered = [...filtered].sort((a, b) => a.title.localeCompare(b.title));
         }
-
+        // 'relevance' preserves searchService order.
         return filtered;
-    }, [matchedArticles, selectedCategory, sortBy]);
+    }, [results, selectedCategory, sortBy]);
 
-    const filteredVideos = React.useMemo(() => {
-        let filtered = [...matchedVideos];
+    // Tools/videos/providers/categories are not filtered by the category chip —
+    // their `category` field is a freeform string with a different taxonomy.
+    const sortedTools = React.useMemo(() => {
+        const tools = results?.tools ?? [];
+        if (sortBy === 'title') return [...tools].sort((a, b) => a.name.localeCompare(b.name));
+        return tools;
+    }, [results, sortBy]);
 
-        // Category filter - videos category is a string
-        if (selectedCategory !== 'all') {
-            filtered = filtered.filter(v => v.category.toLowerCase() === selectedCategory.toLowerCase());
-        }
+    const sortedVideos = React.useMemo(() => {
+        const videos = results?.videos ?? [];
+        if (sortBy === 'title') return [...videos].sort((a, b) => a.title.localeCompare(b.title));
+        return videos;
+    }, [results, sortBy]);
 
-        // Sort
-        if (sortBy === 'title') {
-            filtered.sort((a, b) => a.title.localeCompare(b.title));
-        }
-
-        return filtered;
-    }, [matchedVideos, selectedCategory, sortBy]);
-
-    const filteredTools = React.useMemo(() => {
-        let filtered = [...matchedTools];
-
-        // Category filter - tools category is a string
-        if (selectedCategory !== 'all') {
-            filtered = filtered.filter(t => t.category.toLowerCase() === selectedCategory.toLowerCase());
-        }
-
-        // Sort
-        if (sortBy === 'title') {
-            filtered.sort((a, b) => a.name.localeCompare(b.name));
-        }
-
-        return filtered;
-    }, [matchedTools, selectedCategory, sortBy]);
-
-    const totalResults = filteredArticles.length + filteredVideos.length + filteredTools.length;
+    const totalResults =
+        filteredArticles.length +
+        sortedTools.length +
+        sortedVideos.length +
+        (results?.categories.length ?? 0) +
+        (results?.providers.length ?? 0);
 
     const handleSearch = (newQuery: string) => {
         setSearchParams({ q: newQuery });
@@ -192,7 +134,7 @@ const SearchResults: React.FC = () => {
                     {/* Filters & Sort */}
                     <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between pb-6 border-b border-border">
 
-                        {/* Category Chips */}
+                        {/* Category Chips (filter Articles section only) */}
                         <div className="flex flex-wrap gap-2">
                             <button
                                 onClick={() => setSelectedCategory('all')}
@@ -203,11 +145,11 @@ const SearchResults: React.FC = () => {
                             >
                                 All
                             </button>
-                            {categories.map(cat => (
+                            {chipCategories.map(cat => (
                                 <button
                                     key={cat.id}
-                                    onClick={() => setSelectedCategory(cat.id)}
-                                    className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedCategory === cat.id
+                                    onClick={() => setSelectedCategory(cat.slug || cat.id)}
+                                    className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${selectedCategory === (cat.slug || cat.id)
                                         ? 'bg-text-primary text-background'
                                         : 'bg-surface text-text-secondary border border-border hover:border-border'
                                         }`}
@@ -294,17 +236,47 @@ const SearchResults: React.FC = () => {
                 )}
 
                 {/* Results Sections */}
-                {!loading && !error && (
+                {!loading && !error && results && (
                     <div className="space-y-16">
 
-                        {filteredTools.length > 0 && (
+                        {/* Categories (topic landing pages) */}
+                        {results.categories.length > 0 && (
+                            <section>
+                                <div className="flex items-center gap-3 mb-6">
+                                    <div className="p-2 bg-violet-100 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400 rounded-lg"><Compass size={20} /></div>
+                                    <h2 className="font-bold text-2xl text-text-primary">Topics ({results.categories.length})</h2>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    {results.categories.map((cat, idx) => (
+                                        <motion.div
+                                            key={cat.id}
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: idx * 0.04 }}
+                                        >
+                                            <Link
+                                                to={`/category/${cat.slug}`}
+                                                className="block bg-surface p-5 rounded-xl border border-border hover:border-primary/40 transition-colors group"
+                                            >
+                                                <h3 className="font-bold text-text-primary group-hover:text-primary transition-colors mb-1">
+                                                    {cat.name}
+                                                </h3>
+                                                <p className="text-sm text-text-secondary line-clamp-2">{cat.description}</p>
+                                            </Link>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </section>
+                        )}
+
+                        {sortedTools.length > 0 && (
                             <section>
                                 <div className="flex items-center gap-3 mb-6">
                                     <div className="p-2 bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-lg"><PenTool size={20} /></div>
-                                    <h2 className="font-bold text-2xl text-text-primary">Tools ({filteredTools.length})</h2>
+                                    <h2 className="font-bold text-2xl text-text-primary">Tools ({sortedTools.length})</h2>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                    {filteredTools.map((tool, idx) => (
+                                    {sortedTools.map((tool, idx) => (
                                         <motion.div
                                             key={tool.id}
                                             initial={{ opacity: 0, y: 20 }}
@@ -341,14 +313,43 @@ const SearchResults: React.FC = () => {
                             </section>
                         )}
 
-                        {filteredVideos.length > 0 && (
+                        {results.providers.length > 0 && (
+                            <section>
+                                <div className="flex items-center gap-3 mb-6">
+                                    <div className="p-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-lg"><Users size={20} /></div>
+                                    <h2 className="font-bold text-2xl text-text-primary">Providers ({results.providers.length})</h2>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    {results.providers.map((provider, idx) => (
+                                        <motion.div
+                                            key={provider.id}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: idx * 0.05 }}
+                                        >
+                                            <ProviderCard provider={provider} />
+                                        </motion.div>
+                                    ))}
+                                </div>
+                                <div className="mt-6 text-center">
+                                    <Link
+                                        to={`/providers/search?q=${encodeURIComponent(query)}`}
+                                        className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-hover"
+                                    >
+                                        See all providers matching "{query}" →
+                                    </Link>
+                                </div>
+                            </section>
+                        )}
+
+                        {sortedVideos.length > 0 && (
                             <section>
                                 <div className="flex items-center gap-3 mb-6">
                                     <div className="p-2 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-lg"><Video size={20} /></div>
-                                    <h2 className="font-bold text-2xl text-text-primary">Videos ({filteredVideos.length})</h2>
+                                    <h2 className="font-bold text-2xl text-text-primary">Videos ({sortedVideos.length})</h2>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                    {filteredVideos.map((video, idx) => (
+                                    {sortedVideos.map((video, idx) => (
                                         <motion.div
                                             key={video.id}
                                             initial={{ opacity: 0, y: 20 }}

@@ -1,43 +1,40 @@
 /**
  * Search Service
  *
- * Unified search service with cascading data sources:
- * 1. Backend API (primary - server-side search)
- * 2. Client-side filtering (fallback - local data)
+ * Client-side unified search across articles, tools, videos, categories, providers.
+ * No backend dependency — uses existing service cascades (Supabase → mock) and
+ * the provider RPC for live provider matching.
  */
 
-import { api } from '../lib/api';
-import { Article, Provider } from '../types/models';
-
 import { useMemo, useCallback, useState } from 'react';
-import { articleService } from './articleService';
-import { providerService } from './providerService';
+import { Article, Category, Tool, Video } from '../types/models';
+import { articleService, ArticleWithContent } from './articleService';
+import { toolService } from './toolService';
+import { videoService } from './videoService';
+import { categories as staticCategories } from '../data/categories';
+import { searchProviders as searchProvidersRPC } from '@/lib/providers/queries';
+import type { ProviderCardData } from '@/lib/providers/types';
+import { api } from '../lib/api';
 
 // ============================================================================
 // Types
 // ============================================================================
 
 export interface SearchResult {
-    articles: Article[];
-    providers: Provider[];
+    articles: ArticleWithContent[];
     tools: Tool[];
+    videos: Video[];
+    categories: Category[];
+    providers: ProviderCardData[];
     total: number;
 }
 
-export interface Tool {
-    id: string | number;
-    name: string;
-    description: string;
-    icon?: string;
-    category?: string;
-    href?: string;
-}
-
 export interface SearchFilters {
-    type?: 'articles' | 'providers' | 'tools' | 'all';
+    type?: 'articles' | 'tools' | 'videos' | 'categories' | 'providers' | 'all';
     category?: string;
     dateRange?: 'week' | 'month' | 'year' | 'all';
     sortBy?: 'relevance' | 'date' | 'popularity';
+    limit?: number;
 }
 
 export interface SearchSuggestion {
@@ -46,40 +43,187 @@ export interface SearchSuggestion {
 }
 
 // ============================================================================
-// Local Search Helpers
+// Tokeniser + scoring helpers
 // ============================================================================
 
-/**
- * Perform client-side search on articles
- */
-function searchArticlesLocally(articles: Article[], query: string): Article[] {
-    const lowerQuery = query.toLowerCase();
-    return articles.filter(article =>
-        article.title.toLowerCase().includes(lowerQuery) ||
-        article.description.toLowerCase().includes(lowerQuery) ||
-        article.category?.name.toLowerCase().includes(lowerQuery) ||
-        article.tags?.some(tag => tag.toLowerCase().includes(lowerQuery))
-    ).sort((a, b) => {
-        // Prioritize title matches
-        const aInTitle = a.title.toLowerCase().includes(lowerQuery);
-        const bInTitle = b.title.toLowerCase().includes(lowerQuery);
-        if (aInTitle && !bInTitle) return -1;
-        if (!aInTitle && bInTitle) return 1;
-        return 0;
-    });
+const STOPWORDS = new Set([
+    'a', 'an', 'and', 'are', 'as', 'at', 'be', 'but', 'by', 'for', 'if', 'in',
+    'into', 'is', 'it', 'no', 'not', 'of', 'on', 'or', 'such', 'that', 'the',
+    'their', 'then', 'there', 'these', 'they', 'this', 'to', 'was', 'will',
+    'with', 'about', 'i', 'me', 'my', 'you', 'your',
+]);
+
+function tokenize(query: string): string[] {
+    return query
+        .toLowerCase()
+        .split(/[\s\-_,./]+/)
+        .map(t => t.trim())
+        .filter(t => t.length > 0 && !STOPWORDS.has(t));
 }
 
 /**
- * Perform client-side search on providers
+ * Count how many tokens hit a haystack string. Returns 0 if haystack falsy.
+ * A token "matches" if it appears as a substring of any whitespace-separated
+ * word in the haystack (case-insensitive). Short tokens (1 char) require a
+ * word-start match to avoid noise.
  */
-function searchProvidersLocally(providers: Provider[], query: string): Provider[] {
-    const lowerQuery = query.toLowerCase();
-    return providers.filter(provider =>
-        provider.name.toLowerCase().includes(lowerQuery) ||
-        provider.specialties?.some(s => s.toLowerCase().includes(lowerQuery)) ||
-        provider.bio?.toLowerCase().includes(lowerQuery) ||
-        provider.location?.toLowerCase().includes(lowerQuery)
-    );
+function tokenHits(haystack: string | undefined | null, tokens: string[]): number {
+    if (!haystack) return 0;
+    const lower = haystack.toLowerCase();
+    let hits = 0;
+    for (const t of tokens) {
+        if (t.length === 1) {
+            // Word-boundary for single-char tokens
+            if (new RegExp(`\\b${t}`, 'i').test(lower)) hits++;
+        } else if (lower.includes(t)) {
+            hits++;
+        }
+    }
+    return hits;
+}
+
+function fullPhraseHit(haystack: string | undefined | null, phrase: string): boolean {
+    if (!haystack || !phrase) return false;
+    return haystack.toLowerCase().includes(phrase.toLowerCase());
+}
+
+// ============================================================================
+// Article search
+// ============================================================================
+
+interface ScoredArticle {
+    article: ArticleWithContent;
+    score: number;
+}
+
+function scoreArticle(article: ArticleWithContent, tokens: string[], phrase: string): number {
+    let score = 0;
+    score += tokenHits(article.title, tokens) * 10;
+    score += tokenHits(article.subtitle, tokens) * 6;
+    if (article.tags?.length) {
+        score += tokenHits(article.tags.join(' '), tokens) * 5;
+    }
+    score += tokenHits(article.category?.name, tokens) * 4;
+    score += tokenHits(article.category?.slug, tokens) * 3;
+    score += tokenHits(article.description, tokens) * 2;
+    score += tokenHits(article.summary, tokens) * 2;
+    // Only score string content (skip JSX)
+    if (typeof article.content === 'string') {
+        score += tokenHits(article.content, tokens) * 1;
+    }
+    // Phrase bonus
+    if (fullPhraseHit(article.title, phrase)) score += 20;
+    return score;
+}
+
+async function searchArticlesLocal(query: string, limit?: number): Promise<ArticleWithContent[]> {
+    const tokens = tokenize(query);
+    if (tokens.length === 0) return [];
+    const phrase = query.trim();
+
+    const all = await articleService.getAll();
+    const scored: ScoredArticle[] = [];
+    for (const article of all) {
+        const score = scoreArticle(article, tokens, phrase);
+        if (score > 0) scored.push({ article, score });
+    }
+    scored.sort((a, b) => b.score - a.score);
+    const ranked = scored.map(s => s.article);
+    return limit ? ranked.slice(0, limit) : ranked;
+}
+
+// ============================================================================
+// Tool / Video / Category search
+// ============================================================================
+
+function scoreTool(tool: Tool, tokens: string[], phrase: string): number {
+    let score = 0;
+    score += tokenHits(tool.name, tokens) * 10;
+    score += tokenHits(tool.description, tokens) * 3;
+    score += tokenHits(tool.category, tokens) * 4;
+    if (tool.features?.length) {
+        score += tokenHits(tool.features.join(' '), tokens) * 2;
+    }
+    if (fullPhraseHit(tool.name, phrase)) score += 15;
+    return score;
+}
+
+async function searchToolsLocal(query: string, limit?: number): Promise<Tool[]> {
+    const tokens = tokenize(query);
+    if (tokens.length === 0) return [];
+    const phrase = query.trim();
+    const all = await toolService.getAll();
+    const scored = all
+        .map(tool => ({ tool, score: scoreTool(tool, tokens, phrase) }))
+        .filter(s => s.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .map(s => s.tool);
+    return limit ? scored.slice(0, limit) : scored;
+}
+
+function scoreVideo(video: Video, tokens: string[], phrase: string): number {
+    let score = 0;
+    score += tokenHits(video.title, tokens) * 10;
+    score += tokenHits(video.description, tokens) * 3;
+    score += tokenHits(video.category, tokens) * 4;
+    if (fullPhraseHit(video.title, phrase)) score += 15;
+    return score;
+}
+
+async function searchVideosLocal(query: string, limit?: number): Promise<Video[]> {
+    const tokens = tokenize(query);
+    if (tokens.length === 0) return [];
+    const phrase = query.trim();
+    let all: Video[] = [];
+    try {
+        all = await videoService.getAll();
+    } catch {
+        return [];
+    }
+    const scored = all
+        .map(video => ({ video, score: scoreVideo(video, tokens, phrase) }))
+        .filter(s => s.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .map(s => s.video);
+    return limit ? scored.slice(0, limit) : scored;
+}
+
+function scoreCategory(cat: Category, tokens: string[], phrase: string): number {
+    let score = 0;
+    score += tokenHits(cat.name, tokens) * 10;
+    score += tokenHits(cat.slug, tokens) * 8;
+    score += tokenHits(cat.description, tokens) * 3;
+    if (cat.subTopics?.length) {
+        score += tokenHits(cat.subTopics.join(' '), tokens) * 2;
+    }
+    if (fullPhraseHit(cat.name, phrase)) score += 15;
+    return score;
+}
+
+function searchCategoriesLocal(query: string, limit?: number): Category[] {
+    const tokens = tokenize(query);
+    if (tokens.length === 0) return [];
+    const phrase = query.trim();
+    const scored = staticCategories
+        .map(cat => ({ cat, score: scoreCategory(cat, tokens, phrase) }))
+        .filter(s => s.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .map(s => s.cat);
+    return limit ? scored.slice(0, limit) : scored;
+}
+
+// ============================================================================
+// Provider search — hits Supabase RPC directly
+// ============================================================================
+
+async function searchProvidersLocal(query: string, limit = 8): Promise<ProviderCardData[]> {
+    if (!query.trim()) return [];
+    try {
+        const result = await searchProvidersRPC({ query, sort_by: 'relevance' });
+        return result.providers.slice(0, limit);
+    } catch {
+        return [];
+    }
 }
 
 // ============================================================================
@@ -88,233 +232,131 @@ function searchProvidersLocally(providers: Provider[], query: string): Provider[
 
 export const searchService = {
     /**
-     * Unified search across all content types
+     * Unified search. Runs all enabled lookups in parallel.
      */
     search: async (query: string, filters?: SearchFilters): Promise<SearchResult> => {
-        if (!query.trim()) {
-            return { articles: [], providers: [], tools: [], total: 0 };
-        }
+        const empty: SearchResult = { articles: [], tools: [], videos: [], categories: [], providers: [], total: 0 };
+        if (!query.trim()) return empty;
 
-        // Try backend API first
-        try {
-            const response = await api.search.all({
-                query,
-                type: filters?.type,
-                limit: 20
-            });
+        const type = filters?.type ?? 'all';
+        const wants = (t: SearchFilters['type']) => type === 'all' || type === t;
 
-            if (response.success && response.data) {
-                return {
-                    articles: response.data.articles as Article[],
-                    providers: response.data.providers as Provider[],
-                    tools: response.data.tools as Tool[],
-                    total: response.data.total
-                };
-            }
-        } catch {
-            // API not available, fall through to local search
-        }
+        const [articles, tools, videos, providers] = await Promise.all([
+            wants('articles') ? searchArticlesLocal(query, filters?.limit) : Promise.resolve([] as ArticleWithContent[]),
+            wants('tools') ? searchToolsLocal(query) : Promise.resolve([] as Tool[]),
+            wants('videos') ? searchVideosLocal(query) : Promise.resolve([] as Video[]),
+            wants('providers') ? searchProvidersLocal(query, 8) : Promise.resolve([] as ProviderCardData[]),
+        ]);
+        const categories = wants('categories') ? searchCategoriesLocal(query, 6) : [];
 
-        // Fallback to client-side search
-        const results: SearchResult = {
-            articles: [],
-            providers: [],
-            tools: [],
-            total: 0
+        return {
+            articles,
+            tools,
+            videos,
+            categories,
+            providers,
+            total: articles.length + tools.length + videos.length + categories.length + providers.length,
         };
-
-        try {
-            // Search articles locally
-            if (!filters?.type || filters.type === 'all' || filters.type === 'articles') {
-                const allArticles = await articleService.getAll();
-                results.articles = searchArticlesLocally(allArticles, query);
-            }
-
-            // Search providers locally
-            if (!filters?.type || filters.type === 'all' || filters.type === 'providers') {
-                const allProviders = await providerService.getAll();
-                results.providers = searchProvidersLocally(allProviders, query);
-            }
-
-            // Tools would need to be searched from toolService
-            // For now, we'll leave tools empty in fallback mode
-
-            results.total = results.articles.length + results.providers.length + results.tools.length;
-        } catch (error) {
-            console.error('[SearchService] Local search failed:', error);
-        }
-
-        return results;
     },
 
     /**
-     * Search only articles
+     * Search articles only.
      */
-    searchArticles: async (query: string, limit?: number): Promise<Article[]> => {
-        if (!query.trim()) return [];
-
-        try {
-            const response = await api.search.articles(query, limit);
-            if (response.success && response.data) {
-                return response.data as Article[];
-            }
-        } catch {
-            // Backend article search unavailable, fall through to local search
-        }
-
-        // Fallback to local search
-        const allArticles = await articleService.getAll();
-        const results = searchArticlesLocally(allArticles, query);
-        return limit ? results.slice(0, limit) : results;
+    searchArticles: async (query: string, limit?: number): Promise<ArticleWithContent[]> => {
+        return searchArticlesLocal(query, limit);
     },
 
     /**
-     * Search only providers
+     * Search providers only.
      */
-    searchProviders: async (query: string, limit?: number): Promise<Provider[]> => {
-        if (!query.trim()) return [];
-
-        try {
-            const response = await api.search.providers(query, limit);
-            if (response.success && response.data) {
-                return response.data as Provider[];
-            }
-        } catch {
-            // Backend provider search unavailable, fall through to local search
-        }
-
-        // Fallback to local search
-        const allProviders = await providerService.getAll();
-        const results = searchProvidersLocally(allProviders, query);
-        return limit ? results.slice(0, limit) : results;
+    searchProviders: async (query: string, limit = 20): Promise<ProviderCardData[]> => {
+        return searchProvidersLocal(query, limit);
     },
 
     /**
-     * Get search suggestions (autocomplete)
+     * Autocomplete suggestions: surface matching article titles, tool names, and category names.
      */
-    getSuggestions: async (query: string): Promise<SearchSuggestion[]> => {
+    getSuggestions: async (query: string, limit = 8): Promise<SearchSuggestion[]> => {
         if (!query.trim() || query.length < 2) return [];
 
-        try {
-            const response = await api.search.suggestions(query);
-            if (response.success && response.data) {
-                const suggestions: SearchSuggestion[] = [
-                    ...(response.data.recentSearches || []).map(text => ({
-                        text,
-                        type: 'recent' as const
-                    })),
-                    ...(response.data.suggestions || []).map(text => ({
-                        text,
-                        type: 'suggestion' as const
-                    }))
-                ];
-                return suggestions;
-            }
-        } catch {
-            // API not available, generate local suggestions
-        }
+        const [articles, tools] = await Promise.all([
+            searchArticlesLocal(query, 5),
+            searchToolsLocal(query, 3),
+        ]);
+        const cats = searchCategoriesLocal(query, 3);
 
-        // Fallback: generate suggestions from local data
-        try {
-            const allArticles = await articleService.getAll();
-            const matchingTitles = allArticles
-                .filter(a => a.title.toLowerCase().includes(query.toLowerCase()))
-                .slice(0, 5)
-                .map(a => ({ text: a.title, type: 'suggestion' as const }));
-
-            const matchingCategories = [...new Set(
-                allArticles
-                    .filter(a => a.category?.name.toLowerCase().includes(query.toLowerCase()))
-                    .map(a => a.category?.name || '')
-            )]
-                .slice(0, 3)
-                .map(name => ({ text: name, type: 'suggestion' as const }));
-
-            return [...matchingTitles, ...matchingCategories];
-        } catch {
-            return [];
-        }
+        const out: SearchSuggestion[] = [];
+        const seen = new Set<string>();
+        const push = (text: string) => {
+            const key = text.toLowerCase();
+            if (seen.has(key)) return;
+            seen.add(key);
+            out.push({ text, type: 'suggestion' });
+        };
+        articles.forEach(a => push(a.title));
+        tools.forEach(t => push(t.name));
+        cats.forEach(c => push(c.name));
+        return out.slice(0, limit);
     },
 
     /**
-     * Save search to history (for logged-in users)
+     * Save search to activity log (best-effort, server-side).
      */
     saveSearchHistory: async (query: string): Promise<void> => {
         if (!query.trim()) return;
-
         try {
             await api.activity.log('search', 'search', undefined, { query });
-        } catch (error) {
-            // Silently fail - search history is not critical
-            console.debug('[SearchService] Failed to save search history:', error);
+        } catch {
+            // Silent — server logging is non-critical.
         }
     },
 
     /**
-     * Get recent searches for user
+     * Get recent searches: prefer server activity log, fall back to localStorage.
      */
     getRecentSearches: async (limit = 5): Promise<string[]> => {
         try {
             const response = await api.activity.getByType('search', limit);
             if (response.success && response.data) {
-                return (response.data as Array<{ metadata?: { query?: string } }>)
-                    .map(activity => activity.metadata?.query)
+                const queries = (response.data as Array<{ metadata?: { query?: string } }>)
+                    .map(a => a.metadata?.query)
                     .filter((q): q is string => !!q);
+                if (queries.length) return queries;
             }
         } catch {
-            // Not logged in or API unavailable
+            // Fall through to localStorage.
         }
-
-        // Return from localStorage as fallback
         try {
             const stored = localStorage.getItem('psychage_recent_searches');
-            if (stored) {
-                return JSON.parse(stored).slice(0, limit);
-            }
+            if (stored) return JSON.parse(stored).slice(0, limit);
         } catch {
-            // Invalid stored data
+            // Ignore — corrupted storage.
         }
-
         return [];
     },
 
-    /**
-     * Save search to local storage (for non-logged-in users)
-     */
     saveLocalSearch: (query: string): void => {
         if (!query.trim()) return;
-
         try {
             const stored = localStorage.getItem('psychage_recent_searches');
             const searches: string[] = stored ? JSON.parse(stored) : [];
-
-            // Remove duplicate and add to front
             const filtered = searches.filter(s => s !== query);
             filtered.unshift(query);
-
-            // Keep only last 10 searches
             localStorage.setItem('psychage_recent_searches', JSON.stringify(filtered.slice(0, 10)));
         } catch {
-            // Storage full or unavailable
+            // Storage unavailable.
         }
     },
 
-    /**
-     * Clear search history
-     */
     clearSearchHistory: async (): Promise<void> => {
         localStorage.removeItem('psychage_recent_searches');
-        // Also clear from server if logged in (not implemented yet)
-    }
+    },
 };
 
 // ============================================================================
 // Hooks
 // ============================================================================
 
-/**
- * Hook for search functionality
- */
 export function useSearch() {
     const [isSearching, setIsSearching] = useState(false);
     const [results, setResults] = useState<SearchResult | null>(null);
@@ -325,15 +367,11 @@ export function useSearch() {
             setResults(null);
             return;
         }
-
         setIsSearching(true);
         setError(null);
-
         try {
-            const searchResults = await searchService.search(query, filters);
-            setResults(searchResults);
-
-            // Save to history
+            const r = await searchService.search(query, filters);
+            setResults(r);
             searchService.saveLocalSearch(query);
             searchService.saveSearchHistory(query);
         } catch (err) {
@@ -349,18 +387,9 @@ export function useSearch() {
         setError(null);
     }, []);
 
-    return {
-        search,
-        clear,
-        isSearching,
-        results,
-        error
-    };
+    return { search, clear, isSearching, results, error };
 }
 
-/**
- * Hook for search suggestions
- */
 export function useSearchSuggestions() {
     const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -370,11 +399,9 @@ export function useSearchSuggestions() {
             setSuggestions([]);
             return;
         }
-
         setIsLoading(true);
         try {
-            const results = await searchService.getSuggestions(query);
-            setSuggestions(results);
+            setSuggestions(await searchService.getSuggestions(query));
         } catch {
             setSuggestions([]);
         } finally {
@@ -382,18 +409,14 @@ export function useSearchSuggestions() {
         }
     }, []);
 
-    const clear = useCallback(() => {
-        setSuggestions([]);
-    }, []);
+    const clear = useCallback(() => setSuggestions([]), []);
 
-    return {
-        suggestions,
-        isLoading,
-        fetchSuggestions,
-        clear
-    };
+    return { suggestions, isLoading, fetchSuggestions, clear };
 }
 
 export function useSearchService() {
     return useMemo(() => searchService, []);
 }
+
+// Re-export legacy type names for any external imports.
+export type { Article };

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Search, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { api } from '../../lib/api';
+import { searchService } from '../../services/searchService';
 import { ArticleWithContent } from '../../services/articleService';
 import { getArticleUrl } from '../../lib/articleUrl';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -44,15 +44,9 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
 
         setLoading(true);
         try {
-            // Use article search API for suggestions
-            const response = await api.search.articles(searchQuery, 5);
-            if (response.success && response.data) {
-                setSuggestions(response.data as ArticleWithContent[]);
-                setIsOpen(response.data.length > 0);
-            } else {
-                setSuggestions([]);
-                setIsOpen(false);
-            }
+            const articles = await searchService.searchArticles(searchQuery, 5);
+            setSuggestions(articles);
+            setIsOpen(articles.length > 0);
         } catch (error) {
             console.error('Failed to fetch search suggestions:', error);
             setSuggestions([]);

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { ease } from '@/lib/animations';
 import { SCENES, SCENE_ALT, OBJECTS, OBJECT_ALT } from './homeImages';
+import Picture from '@/components/ui/Picture';
 import { cn } from '@/lib/utils';
 
 const softEdgeMask =
@@ -45,8 +46,8 @@ const NavigatorShowcase: React.FC = () => {
               to="/tools/symptom-navigator"
               className="block hover:opacity-90 transition-opacity duration-300"
             >
-              <img
-                src={SCENES.turning}
+              <Picture
+                image={SCENES.turning}
                 alt={SCENE_ALT.turning}
                 className={cn(
                   'w-full object-contain rounded-3xl',
@@ -59,22 +60,30 @@ const NavigatorShowcase: React.FC = () => {
             </Link>
 
             {/* Symbolic objects — bleed the clay world into the page */}
-            <motion.img
+            <motion.div
               {...fadeAnim(0.5)}
-              src={OBJECTS.thinArc}
-              alt={OBJECT_ALT.thinArc}
-              className="absolute -top-6 -left-5 h-[30px] lg:h-[40px] w-auto object-contain opacity-20 hidden lg:block"
+              className="absolute -top-6 -left-5 h-[30px] lg:h-[40px] w-auto opacity-20 hidden lg:block"
               style={{ maskImage: softEdgeMask, WebkitMaskImage: softEdgeMask }}
-              loading="lazy"
-            />
-            <motion.img
+            >
+              <Picture
+                image={OBJECTS.thinArc}
+                alt={OBJECT_ALT.thinArc}
+                className="h-full w-auto object-contain"
+                loading="lazy"
+              />
+            </motion.div>
+            <motion.div
               {...fadeAnim(0.5)}
-              src={OBJECTS.tinyPyramid}
-              alt={OBJECT_ALT.tinyPyramid}
-              className="absolute -bottom-5 -right-4 h-[35px] lg:h-[48px] w-auto object-contain opacity-18 hidden lg:block"
+              className="absolute -bottom-5 -right-4 h-[35px] lg:h-[48px] w-auto opacity-[0.18] hidden lg:block"
               style={{ maskImage: softEdgeMask, WebkitMaskImage: softEdgeMask }}
-              loading="lazy"
-            />
+            >
+              <Picture
+                image={OBJECTS.tinyPyramid}
+                alt={OBJECT_ALT.tinyPyramid}
+                className="h-full w-auto object-contain"
+                loading="lazy"
+              />
+            </motion.div>
           </motion.div>
 
           {/* Right — Text Content */}

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { ease } from '@/lib/animations';
 import { FIGURES, OBJECTS, FIGURE_ALT, OBJECT_ALT } from './homeImages';
+import Picture from '@/components/ui/Picture';
 import { cn } from '@/lib/utils';
 
 // Soft radial mask that fades image edges into the page background
@@ -225,28 +226,31 @@ const HeroSection: React.FC = () => {
                   {...figureAnim(fig.delay, fig.floatDuration)}
                   className={fig.className}
                 >
-                  <img
-                    src={fig.src}
+                  <Picture
+                    image={fig.src}
                     alt={fig.alt}
                     className={fig.imgClassName}
                     style={{ maskImage: fig.mask, WebkitMaskImage: fig.mask }}
                     loading={fig.id === 'listener' ? 'eager' : 'lazy'}
-                    // fetchPriority only works as attribute if using custom typings or modern react, but usually fine.
                   />
                 </motion.div>
               ))}
 
               {/* Array-driven Symbolic Objects */}
               {ambientObjects.map((obj) => (
-                <motion.img
+                <motion.div
                   key={obj.id}
                   {...objectAnim}
-                  src={obj.src}
-                  alt={obj.alt}
                   className={obj.className}
                   style={{ maskImage: softEdgeMask, WebkitMaskImage: softEdgeMask }}
-                  loading="lazy"
-                />
+                >
+                  <Picture
+                    image={obj.src}
+                    alt={obj.alt}
+                    className="w-full h-full object-contain"
+                    loading="lazy"
+                  />
+                </motion.div>
               ))}
             </div>
           </div>

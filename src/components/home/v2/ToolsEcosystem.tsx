@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { staggerContainer, staggerItem } from '@/lib/animations';
-import { SCENES, SCENE_ALT } from './homeImages';
+import { SCENES, SCENE_ALT, type ImageBundle } from './homeImages';
+import Picture from '@/components/ui/Picture';
 import { cn } from '@/lib/utils';
 import {
   Gauge,
@@ -22,7 +23,7 @@ import type { LucideIcon } from 'lucide-react';
 interface FeaturedTool {
   name: string;
   description: string;
-  image: string;
+  image: ImageBundle;
   alt: string;
   href: string;
   stat: string;
@@ -31,7 +32,7 @@ interface FeaturedTool {
 interface CompactTool {
   name: string;
   description: string;
-  image: string;
+  image: ImageBundle;
   alt: string;
   href: string;
   icon: LucideIcon;
@@ -157,8 +158,8 @@ const ToolsEcosystem: React.FC = () => {
           >
             {/* Image — single img, mask changes via CSS */}
             <div className="w-full lg:w-[48%] overflow-hidden flex items-center justify-center bg-[var(--color-surface-hover)]">
-              <img
-                src={featured.image}
+              <Picture
+                image={featured.image}
                 alt={featured.alt}
                 className={cn(
                   'w-full h-auto max-h-[340px] object-contain',
@@ -267,8 +268,8 @@ const ToolsEcosystem: React.FC = () => {
                       transition={{ duration: 0.2, ease: 'easeOut' }}
                       className="absolute -top-[135px] left-1/2 -translate-x-1/2 w-[200px] h-[130px] rounded-xl overflow-hidden shadow-xl pointer-events-none z-10 hidden lg:block"
                     >
-                      <img
-                        src={tool.image}
+                      <Picture
+                        image={tool.image}
                         alt=""
                         aria-hidden="true"
                         loading="lazy"

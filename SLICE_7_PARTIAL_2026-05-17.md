@@ -1,42 +1,77 @@
-# Slice 7 — Partial Completion
+# Slice 7 — Completed (Follow-up resolved)
 
 **Date**: 2026-05-17
 **Slice**: Image asset optimization
-**Status**: PARTIAL — code-side complete, binary re-encoding deferred
+**Status**: DONE — initial pass + follow-up encoding both landed
 
-## What was completed
+## Phase A — Initial pass (committed in 8e8c52a)
 
-Audited every `<img>` tag rendered by the homepage tree (`src/components/home/v2/*.tsx`, `src/pages/providers/ForProvidersLandingPage.tsx`). All 27 image consumers already carry `loading="lazy"` (or `loading="eager"` for confirmed above-fold tiles). One previously-missing case was patched:
+Audited every `<img>` tag rendered by the homepage tree (`src/components/home/v2/*.tsx`, `src/pages/providers/ForProvidersLandingPage.tsx`). All 27 image consumers carry `loading="lazy"` (or `loading="eager"` for confirmed above-fold). One previously-missing case patched:
 
-- `src/components/home/v2/ToolsEcosystem.tsx:270` — hover-tooltip thumbnail (200×130, behind `hidden lg:block`, mounted only on hover via `AnimatePresence`). Added `loading="lazy"` + `decoding="async"`. Was definitely below-fold + non-critical.
+- `src/components/home/v2/ToolsEcosystem.tsx` hover-tooltip thumbnail — added `loading="lazy"` + `decoding="async"`.
 
-`tsc --noEmit` clean post-edit.
+Binary re-encoding deferred because `brew install webp libavif` was sandbox-denied.
 
-## What was deferred
+## Phase B — Follow-up (this commit)
 
-Binary re-encoding of 27 images at `src/assets/images/homepage/` (14 MB total, 358K–700K each) requires `cwebp` (WebP) and `avifenc` (AVIF) encoders. Neither is installed; `brew install webp libavif` is gated by the sandbox and was not granted during this session. `sips` is available but cannot emit WebP or AVIF, only quality-recompress JPEG in place — which would destroy original source quality irreversibly without delivering the format-tier wins (~80–90% size reduction) that the plan targeted.
+User ran `brew install webp libavif` manually. Resumed deferred work:
 
-`<picture>` markup with AVIF/WebP/JPEG siblings is therefore also deferred — there are no siblings to reference.
+1. **Encoded AVIF + WebP siblings for all 27 JPEGs** using cwebp 1.6.0 + avifenc 1.4.1:
+   ```bash
+   for f in $(find src/assets/images/homepage -type f -name "*.jpeg"); do
+     cwebp -q 75 -m 6 -mt -quiet "$f" -o "${f%.jpeg}.webp"
+     avifenc -q 60 -s 6 -j 4 "$f" "${f%.jpeg}.avif"
+   done
+   ```
 
-## Remaining work for follow-up session
+   Result: 27 × `.avif` + 27 × `.webp` sibling files alongside originals.
 
-Prereqs: `brew install webp libavif`.
+2. **Refactored `src/components/home/v2/homeImages.ts`** — each FIGURES/OBJECTS/SCENES entry now an `ImageBundle = { avif, webp, jpeg }` triple. Exported `ImageBundle` type.
 
-1. Encode AVIF: `for f in src/assets/images/homepage/**/*.jpeg; do avifenc -q 60 -s 6 "$f" "${f%.jpeg}.avif"; done`.
-2. Encode WebP: `for f in src/assets/images/homepage/**/*.jpeg; do cwebp -q 75 -m 6 "$f" -o "${f%.jpeg}.webp"; done`.
-3. Update `src/components/home/v2/homeImages.ts` to export sibling URLs (`{ avif, webp, jpeg }` triple per image).
-4. Wrap every `<img>` consumer in `<picture><source type="image/avif" srcSet={avif} /><source type="image/webp" srcSet={webp} /><img src={jpeg} … /></picture>` — 11 call sites in 6 files (already catalogued in this session's grep).
-5. Rebuild and confirm `dist/assets/` payload drops from current ~14 MB raw image bytes to ~2–3 MB.
+3. **Created `src/components/ui/Picture.tsx`** — wraps `<picture>` with `<source type="image/avif">` + `<source type="image/webp">` + `<img src={jpeg}>` fallback. Forwards standard img props (className, loading, decoding, alt, style, aria-hidden). Defaults to `loading="lazy"` + `decoding="async"`.
 
-## Dead files identified but not deleted
+4. **Swapped all 11 `<img>` consumers** to `<Picture>`:
+   - `src/components/home/v2/HeroSection.tsx` — 4 figures + 3 ambient objects (motion-wrapped)
+   - `src/components/home/v2/ClosingSection.tsx` — 1 figure
+   - `src/components/home/v2/NavigatorShowcase.tsx` — 1 scene + 2 motion-wrapped objects (converted motion.img → motion.div + Picture)
+   - `src/components/home/v2/ProviderHighlight.tsx` — 1 scene
+   - `src/components/home/v2/ToolsEcosystem.tsx` — 1 featured scene + 5 hover thumbnails (via tools.map)
+   - `src/pages/providers/ForProvidersLandingPage.tsx` — 3 sites (hero scene, deep-dive images via DEEP_DIVES.map, closing figure) + 1 ambient object
 
-`public/images/homepage/{figures,objects,scenes}/*.jpeg` (34 files) are a duplicate copy with different naming (`A-01-listener.jpeg` vs `A-1.jpeg`). Zero references from source code, CSS, or HTML. Per session constraints, pre-existing dead code is not removed unless requested. Flagged for deletion in a future cleanup pass.
+5. **Updated `ToolsEcosystem.tsx` interfaces** — `FeaturedTool.image` and `CompactTool.image` retyped from `string` → `ImageBundle`.
 
-## Files modified this slice
+## Size impact
 
-- `src/components/home/v2/ToolsEcosystem.tsx` — one `<img>` tag gained `loading="lazy"` and `decoding="async"`.
+| Format | Total | Per-image avg |
+|--------|-------|---------------|
+| JPEG (existing) | 14 MB | ~520 KB |
+| WebP (new) | 480 KB | ~18 KB |
+| AVIF (new) | 596 KB | ~22 KB |
+
+Browsers negotiate the smallest supported format. AVIF-capable browsers (Chrome 85+, Firefox 93+, Safari 16+) get ~96% size reduction; WebP-capable older browsers get ~96% reduction too; JPEG remains as universal fallback.
 
 ## Verification
 
-- `npx tsc --noEmit` → exit 0.
-- `grep` for `<img` across `src/components/home`, `src/pages/home` — every block contains `loading=` (eager or lazy, explicitly chosen per fold position).
+- `npx tsc --noEmit` → exit 0
+- `pnpm run build` → 17.04s, clean. Vite emitted 27 × `.avif` + 27 × `.webp` + 27 × `.jpeg` chunks into `dist/assets/`.
+
+## Still deferred (not in this slice)
+
+- **`public/images/homepage/{figures,objects,scenes}/*.jpeg`** (34 files, ~14 MB duplicate copy with different naming). Zero references. Pre-existing dead — flagged for separate cleanup pass.
+- **TOOL_VIGNETTES export** in homeImages.ts now carries triples but has no consumers. Left exported (matches pre-existing state).
+
+## Files changed this follow-up
+
+```
+src/components/home/v2/homeImages.ts                    (rewritten — triple imports)
+src/components/home/v2/HeroSection.tsx                  (img → Picture)
+src/components/home/v2/ClosingSection.tsx               (img → Picture)
+src/components/home/v2/NavigatorShowcase.tsx            (img → Picture + motion.img → motion.div+Picture)
+src/components/home/v2/ProviderHighlight.tsx            (img → Picture)
+src/components/home/v2/ToolsEcosystem.tsx               (img → Picture, image: string → ImageBundle)
+src/pages/providers/ForProvidersLandingPage.tsx         (4 img → Picture)
+src/components/ui/Picture.tsx                           (NEW — helper)
+src/assets/images/homepage/figures/*.{avif,webp}        (16 NEW)
+src/assets/images/homepage/objects/*.{avif,webp}        (24 NEW)
+src/assets/images/homepage/scenes/*.{avif,webp}         (14 NEW)
+```

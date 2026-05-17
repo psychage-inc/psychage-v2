@@ -7,6 +7,7 @@ import { useNewsletterService } from '@/services/newsletterService';
 import { consentService } from '@/services/consentService';
 import { ease } from '@/lib/animations';
 import { FIGURES, FIGURE_ALT } from './homeImages';
+import Picture from '@/components/ui/Picture';
 import { cn } from '@/lib/utils';
 
 type SubscriptionStatus = 'idle' | 'loading' | 'success' | 'error';
@@ -54,8 +55,8 @@ const ClosingSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Figure image */}
           <motion.div {...sectionAnim(0)} className="flex justify-center lg:justify-end">
-            <img
-              src={FIGURES.open}
+            <Picture
+              image={FIGURES.open}
               alt={FIGURE_ALT.open}
               className="h-48 md:h-64 lg:h-72 w-auto object-contain rounded-3xl border border-[var(--color-border)]/60 shadow-[0_8px_28px_-10px_rgba(0,0,0,0.12)] dark:shadow-[0_8px_28px_-10px_rgba(0,0,0,0.35)]"
               loading="lazy"

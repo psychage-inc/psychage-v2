@@ -5,6 +5,7 @@ import { MapPin, Shield, Search, ArrowRight } from 'lucide-react';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { ease } from '@/lib/animations';
 import { SCENES, SCENE_ALT } from './homeImages';
+import Picture from '@/components/ui/Picture';
 import { cn } from '@/lib/utils';
 
 const highlights = [
@@ -36,8 +37,8 @@ const ProviderHighlight: React.FC = () => {
           {/* Image — prominent, clean presentation */}
           <motion.div {...anim(0)} className="relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/30">
-              <img
-                src={SCENES.map}
+              <Picture
+                image={SCENES.map}
                 alt={SCENE_ALT.map}
                 className="w-full h-[320px] md:h-[400px] object-cover brightness-[1.02] dark:brightness-[0.9]"
                 loading="lazy"

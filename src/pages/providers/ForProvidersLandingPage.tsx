@@ -32,6 +32,7 @@ import {
   SCENE_ALT,
   OBJECTS,
 } from '@/components/home/v2/homeImages';
+import Picture from '@/components/ui/Picture';
 import { cn } from '@/lib/utils';
 import SEO from '@/components/SEO';
 
@@ -466,8 +467,8 @@ const ForProvidersLandingPage: React.FC = () => {
                 className="w-full lg:w-[52%] relative"
               >
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/10 dark:shadow-black/30">
-                  <img
-                    src={SCENES.map}
+                  <Picture
+                    image={SCENES.map}
                     alt={SCENE_ALT.map}
                     className="w-full h-[280px] sm:h-[360px] lg:h-[440px] object-cover brightness-[1.02] dark:brightness-[0.9]"
                     loading="eager"
@@ -497,11 +498,12 @@ const ForProvidersLandingPage: React.FC = () => {
                   </p>
                 </motion.div>
                 {/* Ambient object */}
-                <img
-                  src={OBJECTS.pairedPebbles}
+                <Picture
+                  image={OBJECTS.pairedPebbles}
                   alt=""
                   aria-hidden="true"
-                  className="absolute -top-6 -left-6 h-[40px] lg:h-[55px] w-auto object-contain opacity-20 hidden sm:block rounded-full"
+                  pictureClassName="absolute -top-6 -left-6 h-[40px] lg:h-[55px] w-auto opacity-20 hidden sm:block"
+                  className="h-full w-auto object-contain rounded-full"
                   loading="lazy"
                 />
               </motion.div>
@@ -724,8 +726,8 @@ const ForProvidersLandingPage: React.FC = () => {
                         'shadow-2xl shadow-black/10 dark:shadow-black/30'
                     )}
                   >
-                    <img
-                      src={dive.image}
+                    <Picture
+                      image={dive.image}
                       alt={dive.imageAlt}
                       className={cn(
                         'w-full object-cover dark:brightness-[0.9]',
@@ -1165,8 +1167,8 @@ const ForProvidersLandingPage: React.FC = () => {
                 {...sectionAnim(0)}
                 className="flex justify-center lg:justify-end"
               >
-                <img
-                  src={FIGURES.holder}
+                <Picture
+                  image={FIGURES.holder}
                   alt={FIGURE_ALT.holder}
                   className="h-48 md:h-64 lg:h-72 w-auto object-contain rounded-3xl border border-[var(--color-border)]/60 shadow-[0_8px_28px_-10px_rgba(0,0,0,0.12)] dark:shadow-[0_8px_28px_-10px_rgba(0,0,0,0.35)]"
                   loading="lazy"

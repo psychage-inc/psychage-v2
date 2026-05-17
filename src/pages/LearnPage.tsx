@@ -25,9 +25,9 @@ import { saveRecentlyRead, getRecentlyReadIds } from '../components/articles/rec
 const PRIORITY_CATEGORY_SLUGS = [
     'emotional-regulation',
     'anxiety-stress',
-    'relationships-social',
-    'self-esteem-identity',
-    'workplace-academic',
+    'relationships-communication',
+    'self-worth-identity',
+    'work-productivity',
     'mens-mental-health',
     'chronic-illness-pain',
 ];
@@ -489,16 +489,10 @@ const LearnPage: React.FC = () => {
 
     const handleSearchSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        if (searchQuery.trim()) {
-            searchService.saveLocalSearch(searchQuery.trim());
-            // Refresh recent searches
-            try {
-                const stored = localStorage.getItem('psychage_recent_searches');
-                if (stored) setRecentSearches(JSON.parse(stored).slice(0, 5));
-            } catch {
-                // ignore
-            }
-        }
+        const trimmed = searchQuery.trim();
+        if (!trimmed) return;
+        searchService.saveLocalSearch(trimmed);
+        navigate(`/search?q=${encodeURIComponent(trimmed)}`);
     };
 
     const handleClearRecentSearches = () => {
@@ -538,7 +532,7 @@ const LearnPage: React.FC = () => {
 
             {/* ── 1. Hero: Editor's Picks ──────────────────────────── */}
             <h1 className="sr-only">Learn — Mental Health Education</h1>
-            {featuredArticles.length > 0 && (
+            {!isSearching && featuredArticles.length > 0 && (
                 <section className="pt-20 pb-16 px-6">
                     <div className="container mx-auto max-w-content">
                         <p className="text-xs text-text-tertiary font-semibold uppercase tracking-wider mb-2">

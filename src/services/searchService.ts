@@ -11,7 +11,7 @@ import { Article, Category, Tool, Video } from '../types/models';
 import { articleService, ArticleWithContent } from './articleService';
 import { toolService } from './toolService';
 import { videoService } from './videoService';
-import { categories as staticCategories } from '../data/categories';
+import { categoryService } from './categoryService';
 import { searchProviders as searchProvidersRPC } from '@/lib/providers/queries';
 import type { ProviderCardData } from '@/lib/providers/types';
 import { api } from '../lib/api';
@@ -200,11 +200,26 @@ function scoreCategory(cat: Category, tokens: string[], phrase: string): number 
     return score;
 }
 
-function searchCategoriesLocal(query: string, limit?: number): Category[] {
+let categoriesCache: Category[] | null = null;
+let categoriesPromise: Promise<Category[]> | null = null;
+
+async function getCategories(): Promise<Category[]> {
+    if (categoriesCache) return categoriesCache;
+    if (!categoriesPromise) {
+        categoriesPromise = categoryService.getAll().then(cats => {
+            categoriesCache = cats;
+            return cats;
+        });
+    }
+    return categoriesPromise;
+}
+
+async function searchCategoriesLocal(query: string, limit?: number): Promise<Category[]> {
     const tokens = tokenize(query);
     if (tokens.length === 0) return [];
     const phrase = query.trim();
-    const scored = staticCategories
+    const all = await getCategories();
+    const scored = all
         .map(cat => ({ cat, score: scoreCategory(cat, tokens, phrase) }))
         .filter(s => s.score > 0)
         .sort((a, b) => b.score - a.score)
@@ -241,13 +256,13 @@ export const searchService = {
         const type = filters?.type ?? 'all';
         const wants = (t: SearchFilters['type']) => type === 'all' || type === t;
 
-        const [articles, tools, videos, providers] = await Promise.all([
+        const [articles, tools, videos, providers, categories] = await Promise.all([
             wants('articles') ? searchArticlesLocal(query, filters?.limit) : Promise.resolve([] as ArticleWithContent[]),
             wants('tools') ? searchToolsLocal(query) : Promise.resolve([] as Tool[]),
             wants('videos') ? searchVideosLocal(query) : Promise.resolve([] as Video[]),
             wants('providers') ? searchProvidersLocal(query, 8) : Promise.resolve([] as ProviderCardData[]),
+            wants('categories') ? searchCategoriesLocal(query, 6) : Promise.resolve([] as Category[]),
         ]);
-        const categories = wants('categories') ? searchCategoriesLocal(query, 6) : [];
 
         return {
             articles,
@@ -279,11 +294,11 @@ export const searchService = {
     getSuggestions: async (query: string, limit = 8): Promise<SearchSuggestion[]> => {
         if (!query.trim() || query.length < 2) return [];
 
-        const [articles, tools] = await Promise.all([
+        const [articles, tools, cats] = await Promise.all([
             searchArticlesLocal(query, 5),
             searchToolsLocal(query, 3),
+            searchCategoriesLocal(query, 3),
         ]);
-        const cats = searchCategoriesLocal(query, 3);
 
         const out: SearchSuggestion[] = [];
         const seen = new Set<string>();

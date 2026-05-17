@@ -286,12 +286,39 @@ async function searchViaRPC(params: ProviderSearchParams, page: number, perPage:
  * then client-side filtering for the rest.
  */
 async function searchViaDirectQuery(params: ProviderSearchParams, page: number, perPage: number): Promise<ProviderCardSearchResult | null> {
+  // When state/city filters are active, pre-scope by provider_locations so the
+  // 1000-row cap on the providers query doesn't drop matches from a 423k-row table.
+  let providerIdScope: string[] | null = null;
+  if (params.state || params.city) {
+    let locQuery = supabase
+      .from('provider_locations')
+      .select('provider_id')
+      .eq('is_primary', true)
+      .limit(5000);
+    if (params.state) locQuery = locQuery.eq('state_province', params.state.toUpperCase());
+    if (params.city) locQuery = locQuery.ilike('city', `%${params.city}%`);
+
+    const { data: locs, error: locErr } = await locQuery;
+    if (locErr) {
+      console.warn('Location scope query failed:', locErr.message);
+      return null;
+    }
+    providerIdScope = (locs || []).map((l: { provider_id: string }) => l.provider_id);
+    if (providerIdScope.length === 0) {
+      return { providers: [], total_count: 0, page, per_page: perPage, has_more: false };
+    }
+  }
+
   let query = supabase
     .from('providers')
     .select(PROVIDER_SELECT)
     .in('status', ['active', 'seeded'])
     .order('display_name')
     .limit(1000);
+
+  if (providerIdScope) {
+    query = query.in('id', providerIdScope);
+  }
 
   // Apply server-side filters where Supabase query builder supports them
   if (params.query) {

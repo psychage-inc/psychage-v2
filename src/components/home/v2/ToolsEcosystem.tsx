@@ -271,6 +271,8 @@ const ToolsEcosystem: React.FC = () => {
                         src={tool.image}
                         alt=""
                         aria-hidden="true"
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover dark:brightness-[0.9]"
                         style={{
                           maskImage:

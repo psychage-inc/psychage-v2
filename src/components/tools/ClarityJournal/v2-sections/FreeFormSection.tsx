@@ -58,7 +58,7 @@ const FreeFormSection: React.FC<FreeFormSectionProps> = ({ onSave, onCrisisDetec
         <div className="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800 rounded-xl p-4">
           <div className="flex items-start justify-between gap-3">
             <div>
-              <p className="text-xs font-medium text-teal-600 dark:text-teal-400 mb-1 uppercase tracking-wide">{prompt.category}</p>
+              <p className="text-xs font-medium text-brand-accessible dark:text-teal-400 mb-1 uppercase tracking-wide">{prompt.category}</p>
               <p className="text-sm text-teal-800 dark:text-teal-200 font-medium">{prompt.text}</p>
             </div>
             <button

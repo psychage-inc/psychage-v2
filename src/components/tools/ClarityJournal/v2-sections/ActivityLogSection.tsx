@@ -84,7 +84,7 @@ const ActivityLogSection: React.FC<ActivityLogSectionProps> = ({ onSave, existin
           <button
             type="button"
             onClick={() => setShowAdd(true)}
-            className="flex items-center gap-1 text-xs font-medium text-teal-600 hover:text-teal-700 transition-colors"
+            className="flex items-center gap-1 text-xs font-medium text-brand-accessible hover:text-teal-900 transition-colors"
           >
             <Plus className="w-3.5 h-3.5" /> Add
           </button>

@@ -101,7 +101,7 @@ const MindMateCard: React.FC = () => {
                 ) : (
                     <Link
                         to="/tools/mindmate"
-                        className="flex items-center gap-2 text-xs text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 transition-colors font-medium"
+                        className="flex items-center gap-2 text-xs text-brand-accessible dark:text-teal-400 hover:text-teal-900 dark:hover:text-teal-300 transition-colors font-medium"
                     >
                         Start your first conversation
                         <ArrowRight size={12} />

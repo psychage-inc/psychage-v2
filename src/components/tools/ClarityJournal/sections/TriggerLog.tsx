@@ -166,7 +166,7 @@ const TriggerLog: React.FC = () => {
                         ) : (
                           <button
                             onClick={() => setAddingTo(cat)}
-                            className="flex items-center gap-1.5 text-sm text-teal-600 hover:text-teal-700 transition-colors py-2"
+                            className="flex items-center gap-1.5 text-sm text-brand-accessible hover:text-teal-900 transition-colors py-2"
                           >
                             <Plus className="w-4 h-4" /> Add
                           </button>

@@ -90,7 +90,7 @@ const GhostChart: React.FC = () => {
             <div className="relative flex flex-col items-center justify-center text-center px-6 py-6">
                 <p className="text-sm text-gray-500 dark:text-neutral-400 mb-1 font-medium">Your wellness trends will appear here</p>
                 <p className="text-xs text-gray-400 dark:text-neutral-500 mb-3 max-w-xs">As you track your mood, sleep, and clarity, patterns will emerge.</p>
-                <a href="#mood-checkin" className="text-xs text-teal-600 dark:text-teal-400 font-medium hover:underline inline-flex items-center gap-1">
+                <a href="#mood-checkin" className="text-xs text-brand-accessible dark:text-teal-400 font-medium hover:underline inline-flex items-center gap-1">
                     Start with a mood check-in <ArrowUp size={12} />
                 </a>
             </div>

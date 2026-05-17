@@ -27,7 +27,7 @@
  */
 
 import { build, type BuildOptions } from 'esbuild';
-import { readdir, rename, stat } from 'node:fs/promises';
+import { readdir, rename, stat, unlink } from 'node:fs/promises';
 import { resolve, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -57,6 +57,21 @@ async function findEntryPoints(): Promise<string[]> {
     results.push(full);
   }
   return results.sort();
+}
+
+// Removes any leftover .js / .js.map siblings under api/ before rebuild so
+// orphaned artifacts (e.g. from renamed/deleted .ts entries, or Finder-rename
+// collisions like `chat 2.js`) cannot persist into a fresh build.
+async function cleanStaleArtifacts(): Promise<void> {
+  const entries = await readdir(apiDir, { recursive: true, withFileTypes: true });
+  for (const e of entries) {
+    if (!e.isFile()) continue;
+    const parent = (e as { parentPath?: string; path?: string }).parentPath ?? e.path ?? apiDir;
+    const full = resolve(parent, e.name);
+    if (full.endsWith('.js') || full.endsWith('.js.map')) {
+      await unlink(full).catch(() => undefined);
+    }
+  }
 }
 
 async function bundleOne(entry: string): Promise<{ outPath: string; sizeBytes: number }> {
@@ -93,6 +108,8 @@ async function bundleOne(entry: string): Promise<{ outPath: string; sizeBytes: n
 }
 
 async function main() {
+  await cleanStaleArtifacts();
+
   const entries = await findEntryPoints();
   if (entries.length === 0) {
     console.warn('[build-api] no api/**/*.ts entries found; nothing to bundle.');

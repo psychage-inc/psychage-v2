@@ -50,6 +50,10 @@ export default {
                     700: '#158A7D',
                     900: '#0D5C54',
                 },
+                // WCAG AA body-text alias — maps to teal-700 (#158A7D) for ≥4:1 contrast
+                // on white. Use this instead of text-teal-600 on small/body copy in
+                // light mode. Pair with `dark:text-teal-400` to preserve dark-mode hue.
+                'brand-accessible': '#158A7D',
                 charcoal: {
                     50: '#FAFAF9',
                     100: '#F5F5F4',

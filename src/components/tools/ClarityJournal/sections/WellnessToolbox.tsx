@@ -152,7 +152,7 @@ const WellnessToolbox: React.FC = () => {
                               <Button variant="outline" size="sm" onClick={() => setAddingToCat(null)}>Cancel</Button>
                             </div>
                           ) : (
-                            <button onClick={() => setAddingToCat(cat.id)} className="flex items-center gap-1.5 text-sm text-teal-600 hover:text-teal-700 py-2">
+                            <button onClick={() => setAddingToCat(cat.id)} className="flex items-center gap-1.5 text-sm text-brand-accessible hover:text-teal-900 py-2">
                               <Plus className="w-4 h-4" /> Add
                             </button>
                           )}
@@ -212,7 +212,7 @@ const WellnessToolbox: React.FC = () => {
                         </div>
                       </div>
                     ) : (
-                      <button onClick={() => setAddingToSection(section.number)} className="flex items-center gap-1.5 text-sm text-teal-600 hover:text-teal-700 py-1">
+                      <button onClick={() => setAddingToSection(section.number)} className="flex items-center gap-1.5 text-sm text-brand-accessible hover:text-teal-900 py-1">
                         <Plus className="w-4 h-4" /> Add
                       </button>
                     )}

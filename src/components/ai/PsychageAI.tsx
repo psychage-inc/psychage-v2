@@ -15,6 +15,7 @@ import { Send, Loader2, Sparkles, ThumbsUp, ThumbsDown } from 'lucide-react';
 import CitationCard from './CitationCard';
 import SafetyBanner from './SafetyBanner';
 import AIDisclosure from './AIDisclosure';
+import { supabase } from '@/lib/supabaseClient';
 import type { Citation } from '@/lib/ai/types';
 
 // ============================================================================
@@ -127,9 +128,17 @@ const PsychageAI: React.FC = () => {
     setIsLoading(true);
 
     try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session?.access_token) {
+        throw new Error('Sign in required to chat with MindMate.');
+      }
+
       const response = await fetch('/api/ai/chat', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${session.access_token}`,
+        },
         body: JSON.stringify({
           messages: [...messages, userMessage].map(m => ({
             role: m.role,
@@ -187,9 +196,15 @@ const PsychageAI: React.FC = () => {
     if (feedbackGiven.has(messageId)) return;
 
     try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session?.access_token) return;
+
       await fetch('/api/ai/feedback', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${session.access_token}`,
+        },
         body: JSON.stringify({ sessionId, messageId, feedback }),
       });
 

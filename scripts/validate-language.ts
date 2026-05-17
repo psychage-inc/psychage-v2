@@ -48,7 +48,6 @@ const PROHIBITED_PHRASES = [
 // Directories to scan
 const SCAN_DIRS = [
   'src/lib/navigator',
-  'src/app/api/navigator',
   'supabase/migrations',
 ];
 

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { X, Send, Sparkles, AlertTriangle, Phone, Trash2, LogIn, ChevronRight } from 'lucide-react';
 import * as Sentry from '@sentry/react';
 import { useAuth } from '@/context/AuthContext';
+import { supabase } from '@/lib/supabaseClient';
 import { chatPersistenceService } from '@/services/chatPersistenceService';
 import { consentService } from '@/services/consentService';
 import { resolveCountry, getPrimaryCrisisLine } from '@/lib/crisis';
@@ -192,9 +193,17 @@ const MindMate: React.FC = () => {
                 }));
             chatHistory.push({ role: 'user', content: currentInput });
 
+            const { data: { session } } = await supabase.auth.getSession();
+            if (!session?.access_token) {
+                throw new MindMateUnavailableError('Sign in required to chat with MindMate.');
+            }
+
             const res = await fetch('/api/ai/chat', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${session.access_token}`,
+                },
                 body: JSON.stringify({
                     messages: chatHistory,
                     sessionId: getOrCreateSessionId(),

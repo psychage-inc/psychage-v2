@@ -115,7 +115,7 @@ const RecommendedArticles: React.FC<RecommendedArticlesProps> = ({
                 <div className="flex-grow flex flex-col items-center justify-center text-center py-4">
                     <BookOpen size={28} className="text-gray-300 dark:text-neutral-600 mb-2" />
                     <p className="text-xs text-gray-400 dark:text-neutral-500 mb-2">Articles will appear here as your library grows.</p>
-                    <Link to="/learn" className="text-xs text-teal-600 dark:text-teal-400 font-medium hover:underline">
+                    <Link to="/learn" className="text-xs text-brand-accessible dark:text-teal-400 font-medium hover:underline">
                         Browse the Learn library
                     </Link>
                 </div>

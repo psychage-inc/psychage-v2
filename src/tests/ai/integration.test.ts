@@ -12,7 +12,7 @@ import { classifyInputSafety, validateOutputSafety } from '@/lib/ai/safety';
 import { classifyIntent } from '@/lib/ai/intent';
 import { getAIConfig } from '@/lib/ai/config';
 import { SYSTEM_PROMPT, assembleMessages } from '@/lib/ai/llm';
-import { handleSuggestedQuestions } from '@/app/api/ai/suggested-questions/route';
+import { handleSuggestedQuestions } from '@/lib/ai/suggested-questions';
 
 // =============================================================================
 // Full Pipeline Flow Tests

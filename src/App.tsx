@@ -280,6 +280,9 @@ const App: React.FC = () => {
                                             <Route path="/category/:category" element={<PageTransition><CategoryPage /></PageTransition>} />
                                             <Route path="/search" element={<PageTransition><SearchResults /></PageTransition>} />
                                             <Route path="/clarity-score" element={<PageTransition><RouteErrorBoundary><ClarityScoreTool /></RouteErrorBoundary></PageTransition>} />
+                                            {/* Legacy alias — older copy / breadcrumbs reference /tools/clarity-score */}
+                                            <Route path="/tools/clarity-score" element={<Navigate to="/clarity-score" replace />} />
+                                            <Route path="/tools/clarity-score/*" element={<Navigate to="/clarity-score" replace />} />
                                             <Route path="/about" element={<PageTransition><AboutPage /></PageTransition>} />
                                             <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
                                             <Route path="/content-standards" element={<PageTransition><ContentStandardsPage /></PageTransition>} />
@@ -370,6 +373,7 @@ const App: React.FC = () => {
 
                                             {/* Legacy provider dashboard — redirect to portal */}
                                             <Route path="/provider" element={<Navigate to="/portal" replace />} />
+                                            <Route path="/provider/dashboard" element={<Navigate to="/portal" replace />} />
                                             <Route path="/provider/profile" element={<Navigate to="/portal/profile" replace />} />
                                             <Route path="/provider/analytics" element={<Navigate to="/portal/analytics" replace />} />
                                             <Route path="/provider/patients" element={<Navigate to="/portal" replace />} />

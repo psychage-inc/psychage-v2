@@ -117,26 +117,39 @@ export default async function handler(
       return res.status(400).json({ error: 'Last message must be from user' });
     }
 
+    // Initialize Supabase admin client (auth validation + RAG retrieval)
+    const supabase = createClient(
+      getRequiredEnv('VITE_SUPABASE_URL'),
+      getRequiredEnv('SUPABASE_SERVICE_ROLE_KEY')
+    );
+
+    // Auth gate — require a valid Supabase JWT
+    const authHeader = req.headers.authorization;
+    const token = typeof authHeader === 'string' && authHeader.startsWith('Bearer ')
+      ? authHeader.slice(7).trim()
+      : null;
+
+    if (!token) {
+      return res.status(401).json({ error: 'Authentication required', code: 'NO_TOKEN' });
+    }
+
+    const { data: authData, error: authError } = await supabase.auth.getUser(token);
+    if (authError || !authData?.user) {
+      return res.status(401).json({ error: 'Invalid or expired session', code: 'INVALID_TOKEN' });
+    }
+    const user = authData.user;
+
     // Generate or use provided session ID
     const sessionId = providedSessionId || generateSessionId();
 
-    // Rate limit check
-    const clientIp = req.headers['x-forwarded-for'] || req.headers['x-real-ip'] || 'unknown';
-    const identifier = Array.isArray(clientIp) ? clientIp[0] : clientIp;
-
-    const rateLimit = checkRateLimit(identifier as string);
+    // Rate limit check (per-user)
+    const rateLimit = checkRateLimit(user.id);
     if (!rateLimit.allowed) {
       return res.status(429).json({
         error: 'Rate limit exceeded',
         retryAfter: rateLimit.retryAfter,
       });
     }
-
-    // Initialize clients
-    const supabase = createClient(
-      getRequiredEnv('VITE_SUPABASE_URL'),
-      getRequiredEnv('SUPABASE_SERVICE_ROLE_KEY')
-    );
 
     const config = getAIConfig();
     const llmProvider = new AnthropicProvider(getRequiredEnv('ANTHROPIC_API_KEY'));

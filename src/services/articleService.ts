@@ -17,8 +17,9 @@ let _cachedMockArticles: Article[] | null = null;
 
 async function getMockArticles(): Promise<Article[]> {
     if (_cachedMockArticles) return _cachedMockArticles;
-    const { allArticles } = await import('../data/articles/all-articles');
-    _cachedMockArticles = allArticles.filter(a => !a.status || a.status === 'published');
+    const { loadAllArticles } = await import('../data/articles/all-articles');
+    const articles = await loadAllArticles();
+    _cachedMockArticles = articles.filter(a => !a.status || a.status === 'published');
     return _cachedMockArticles;
 }
 

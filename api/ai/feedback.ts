@@ -33,11 +33,26 @@ export default async function handler(
       return res.status(400).json({ error: 'Invalid feedback value' });
     }
 
-    // Initialize Supabase
+    // Initialize Supabase admin client (auth + insert)
     const supabase = createClient(
       getRequiredEnv('VITE_SUPABASE_URL'),
       getRequiredEnv('SUPABASE_SERVICE_ROLE_KEY')
     );
+
+    // Auth gate — require a valid Supabase JWT
+    const authHeader = req.headers.authorization;
+    const token = typeof authHeader === 'string' && authHeader.startsWith('Bearer ')
+      ? authHeader.slice(7).trim()
+      : null;
+
+    if (!token) {
+      return res.status(401).json({ error: 'Authentication required', code: 'NO_TOKEN' });
+    }
+
+    const { data: authData, error: authError } = await supabase.auth.getUser(token);
+    if (authError || !authData?.user) {
+      return res.status(401).json({ error: 'Invalid or expired session', code: 'INVALID_TOKEN' });
+    }
 
     // Log feedback event (anonymized)
     const { error } = await supabase

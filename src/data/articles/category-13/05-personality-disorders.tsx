@@ -1516,8 +1516,8 @@ export const personalityDisordersArticles: Article[] = [
 
         <QuoteBlock
           quote="The deepest human need is to be seen and accepted for who we truly are. For people with avoidant personality disorder, the journey of recovery is ultimately a journey toward allowing themselves to be seen."
-          attribution="Dr. Lena Dobson, PsyD"
-          role="Clinical Psychologist, Personality Disorders Specialist"
+          attribution="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          role="Clinical Neuropsychology"
         />
 
         <h2 id="living-with-avpd" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

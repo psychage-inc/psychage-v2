@@ -1,5 +1,5 @@
 // =============================================================================
-// GET /api/ai/suggested-questions — Contextual starter questions
+// Suggested Questions — Contextual starter questions for MindMate
 // =============================================================================
 
 import type { SuggestedQuestionsResponse, SuggestedQuestion } from '@/lib/ai/types';
@@ -107,7 +107,6 @@ export function handleSuggestedQuestions(
 ): SuggestedQuestionsResponse {
   let pool: SuggestedQuestion[];
 
-  // Select pool based on time of day
   const hour = getHourFromTimeOfDay(timeOfDay);
 
   if (hour !== null) {
@@ -122,7 +121,6 @@ export function handleSuggestedQuestions(
     pool = QUESTION_POOLS.general;
   }
 
-  // Shuffle and pick 4
   const shuffled = pool.sort(() => Math.random() - 0.5);
   const selected = shuffled.slice(0, 4);
 
@@ -132,7 +130,6 @@ export function handleSuggestedQuestions(
 function getHourFromTimeOfDay(timeOfDay?: string): number | null {
   if (!timeOfDay) return null;
 
-  // Accept "morning", "afternoon", "evening", or an ISO timestamp
   switch (timeOfDay.toLowerCase()) {
     case 'morning':
       return 8;
@@ -141,7 +138,6 @@ function getHourFromTimeOfDay(timeOfDay?: string): number | null {
     case 'evening':
       return 21;
     default: {
-      // Try parsing as ISO date
       const date = new Date(timeOfDay);
       if (!isNaN(date.getTime())) {
         return date.getHours();

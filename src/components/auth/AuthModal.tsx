@@ -288,7 +288,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                                             <button
                                                 type="button"
                                                 onClick={() => handleViewChange('forgot-password')}
-                                                className="text-sm font-medium text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300"
+                                                className="text-sm font-medium text-brand-accessible hover:text-teal-900 dark:text-teal-400 dark:hover:text-teal-300"
                                             >
                                                 Forgot password?
                                             </button>

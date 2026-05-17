@@ -183,7 +183,7 @@ const ReportConfigScreen: React.FC = () => {
               </div>
             )}
 
-            <p className="text-xs text-teal-600 dark:text-teal-400 mt-2">
+            <p className="text-xs text-brand-accessible dark:text-teal-400 mt-2">
               {formatDateRange(periodStart, periodEnd)}
             </p>
           </motion.div>

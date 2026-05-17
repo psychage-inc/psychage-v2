@@ -9,17 +9,16 @@ export const Logo: React.FC<LogoProps> = ({ className = "h-12 w-auto text-[#1A1A
         <defs>
             <style>
                 {`
-          @import url('https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap');
-          .futura-text {
-            font-family: 'Jost', sans-serif;
-            font-weight: 700;
+          .psychage-wordmark {
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            font-weight: 800;
             font-size: 60px;
             letter-spacing: 2px;
           }
         `}
             </style>
         </defs>
-        <text x="50%" y="70" textAnchor="middle" className="futura-text">
+        <text x="50%" y="70" textAnchor="middle" className="psychage-wordmark">
             <tspan fill="#1A9B8C">PSY</tspan>
             <tspan fill="currentColor">CHAGE</tspan>
         </text>

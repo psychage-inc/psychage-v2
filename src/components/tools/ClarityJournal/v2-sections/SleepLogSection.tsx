@@ -89,7 +89,7 @@ const SleepLogSection: React.FC<SleepLogSectionProps> = ({ date, onSave, existin
           />
         </div>
       </div>
-      <p className="text-xs text-teal-600 dark:text-teal-400 font-medium -mt-3">
+      <p className="text-xs text-brand-accessible dark:text-teal-400 font-medium -mt-3">
         Duration: {calcDuration()}
       </p>
 

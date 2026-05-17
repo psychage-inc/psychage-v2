@@ -1,5 +1,6 @@
 import * as Sentry from '@sentry/react';
 import { parseSSEStream } from '@/lib/ai/streaming';
+import { supabase } from '@/lib/supabaseClient';
 import type {
   ChatResponseMeta,
   CitationSource,
@@ -71,9 +72,17 @@ export async function* sendMessage(
   onMeta?: (meta: ChatResponseMeta) => void,
   signal?: AbortSignal,
 ): AsyncGenerator<string> {
+  const { data: { session } } = await supabase.auth.getSession();
+  if (!session?.access_token) {
+    throw new MindMateUnavailableError('Sign in required to chat with MindMate.');
+  }
+
   const response = await fetch('/api/ai/chat', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${session.access_token}`,
+    },
     body: JSON.stringify({ messages, sessionId, stream: true }),
     signal,
   });

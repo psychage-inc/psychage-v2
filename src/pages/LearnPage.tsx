@@ -612,30 +612,6 @@ const LearnPage: React.FC = () => {
                         )}
                     </div>
 
-                    <div className="flex flex-wrap gap-2.5 mt-6">
-                        {orderedCategories.map(cat => (
-                            <button
-                                key={cat.slug}
-                                onClick={() => {
-                                    setSearchQuery('');
-                                    setActiveTab(cat.slug);
-                                    // Scroll to the category content section
-                                    setTimeout(() => {
-                                        const tabMenu = document.querySelector('[role="tablist"]');
-                                        tabMenu?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                    }, 50);
-                                }}
-                                aria-pressed={activeTab === cat.slug}
-                                className={`rounded-full px-4 py-1.5 border text-sm transition-colors ${
-                                    activeTab === cat.slug
-                                        ? 'border-primary bg-primary/5 text-primary font-semibold'
-                                        : 'border-border text-text-secondary hover:bg-surface-hover hover:text-text-primary'
-                                }`}
-                            >
-                                {cat.name}
-                            </button>
-                        ))}
-                    </div>
                 </div>
             </section>
 

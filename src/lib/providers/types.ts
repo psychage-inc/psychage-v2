@@ -165,6 +165,8 @@ export interface ProviderCardSearchResult {
   page: number;
   per_page: number;
   has_more: boolean;
+  /** Filter keys auto-removed by recovery (e.g. ['state'] when city+state had 0 hits). */
+  dropped_filters?: string[];
 }
 
 // --- Search Types ---

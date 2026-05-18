@@ -302,14 +302,20 @@ const LearnPage: React.FC = () => {
         }
     }, []);
 
-    // Filter articles by search query
-    const filteredArticles = useMemo(() => {
-        if (!searchQuery) return articles;
-        const query = searchQuery.toLowerCase();
-        return articles.filter(a =>
-            a.title.toLowerCase().includes(query) ||
-            (a.description ?? '').toLowerCase().includes(query)
-        );
+    // Filter articles by search query via shared searchService for parity with /search.
+    const [filteredArticles, setFilteredArticles] = useState<Article[]>(articles);
+    useEffect(() => {
+        if (!searchQuery.trim()) {
+            setFilteredArticles(articles);
+            return;
+        }
+        let cancelled = false;
+        searchService.searchArticles(searchQuery).then(res => {
+            if (cancelled) return;
+            const matchedSlugs = new Set(res.items.map(a => a.slug));
+            setFilteredArticles(articles.filter(a => matchedSlugs.has(a.slug)));
+        });
+        return () => { cancelled = true; };
     }, [articles, searchQuery]);
 
     // Group articles by category slug

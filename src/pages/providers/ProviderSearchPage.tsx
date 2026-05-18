@@ -5,7 +5,7 @@ import SEO from '@/components/SEO';
 import { useProviderSearch } from '@/hooks/useProviderSearch';
 import { useProviderLookups } from '@/context/ProviderLookupsContext';
 import { parseLocation } from '@/lib/providers/locationUtils';
-import { resolveSpecialtySlugs } from '@/lib/providers/specialtyResolver';
+import { resolveSpecialtyQuery } from '@/lib/providers/specialtyResolver';
 import { getProviderCount } from '@/lib/providers/queries';
 import { ProviderSearchBar } from '@/components/providers/search/ProviderSearchBar';
 import { ProviderFilterPanel } from '@/components/providers/search/ProviderFilterPanel';
@@ -31,6 +31,7 @@ const ProviderSearchPage: React.FC = () => {
     setParams,
     loadMore,
     reset,
+    droppedFilters,
   } = useProviderSearch();
   const { specialties } = useProviderLookups();
 
@@ -61,27 +62,22 @@ const ProviderSearchPage: React.FC = () => {
   );
 
   const handleSearch = (query: string, location: string) => {
-    // Parse location into structured city/state fields
-    const { city, state } = (location && location !== 'Near me')
+    // Each new search REPLACES location + specialty filters. Passing '' / []
+    // clears the URL param (setParams treats falsy-but-defined as delete),
+    // so typing "Denver" alone wipes any stale state from a previous query.
+    const parsed = (location && location !== 'Near me')
       ? parseLocation(location)
-      : { city: undefined, state: undefined };
+      : {};
 
-    // Resolve query against specialty labels (cached, no DB call)
-    const matchedSlugs = query ? resolveSpecialtySlugs(query, specialties) : [];
+    const { slugs: matchedSlugs, residual } = query
+      ? resolveSpecialtyQuery(query, specialties)
+      : { slugs: [], residual: '' };
 
-    // Merge with any existing specialty_slugs from the filter panel
-    const existingSlugs = params.specialty_slugs || [];
-    const mergedSlugs = matchedSlugs.length > 0
-      ? [...new Set([...existingSlugs, ...matchedSlugs])]
-      : existingSlugs.length > 0 ? existingSlugs : undefined;
-
-    // If query matches specialties, use specialty_slugs only (not p_query)
-    // to avoid the RPC's AND between text search and specialty filter
     setParams({
-      query: matchedSlugs.length > 0 ? undefined : (query || undefined),
-      city,
-      state,
-      specialty_slugs: mergedSlugs?.length ? mergedSlugs : undefined,
+      query: residual || (matchedSlugs.length === 0 ? (query || '') : ''),
+      city: parsed.city ?? '',
+      state: parsed.state ?? '',
+      specialty_slugs: matchedSlugs.length > 0 ? matchedSlugs : [],
     });
   };
 
@@ -102,7 +98,7 @@ const ProviderSearchPage: React.FC = () => {
         <div className="mb-6">
           <ProviderSearchBar
             initialQuery={params.query || ''}
-            initialLocation={params.city || params.state || ''}
+            initialLocation={[params.city, params.state].filter(Boolean).join(', ')}
             onSearch={handleSearch}
             onUseLocation={handleUseLocation}
           />
@@ -164,6 +160,12 @@ const ProviderSearchPage: React.FC = () => {
                 <p className="text-xs text-text-tertiary mt-0.5 flex items-center gap-1">
                   <Info size={12} className="flex-shrink-0" />
                   {t('providers.search.sort_notice')}
+                </p>
+              )}
+              {droppedFilters?.includes('state') && params.city && params.state && !isLoading && (
+                <p className="text-xs text-amber-700 dark:text-amber-400 mt-0.5 flex items-center gap-1">
+                  <Info size={12} className="flex-shrink-0" />
+                  No matches for "{params.city}" in {params.state}. Showing all "{params.city}" providers.
                 </p>
               )}
             </div>

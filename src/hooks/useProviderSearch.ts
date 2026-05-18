@@ -17,6 +17,7 @@ interface UseProviderSearchReturn {
   setParams: (params: Partial<ProviderSearchParams>) => void;
   loadMore: () => void;
   reset: () => void;
+  droppedFilters: string[] | undefined;
 }
 
 const DEFAULT_PER_PAGE = 20;
@@ -91,6 +92,7 @@ export function useProviderSearch(): UseProviderSearchReturn {
     [data],
   );
   const totalCount = data?.pages[0]?.total_count ?? 0;
+  const droppedFilters = data?.pages[0]?.dropped_filters;
   const hasSearched = data !== undefined;
 
   // Update URL params (same logic as before)
@@ -176,5 +178,6 @@ export function useProviderSearch(): UseProviderSearchReturn {
     setParams,
     loadMore,
     reset,
+    droppedFilters,
   };
 }

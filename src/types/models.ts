@@ -109,6 +109,8 @@ export interface Category {
     image?: string;
     subTopics?: string[];
     group?: 'condition' | 'wellness' | 'life' | 'therapy' | 'identity' | 'family';
+    /** Content-architecture facet: 'clinical' | 'specialized' | 'extended' */
+    architectureGroup?: string;
 }
 
 export interface KeyFact {

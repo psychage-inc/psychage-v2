@@ -20,6 +20,7 @@ interface DBCategory {
     display_order: number;
     article_target: number;
     color: string | null;
+    architecture_group?: string | null;
 }
 
 /**
@@ -41,7 +42,8 @@ function mapToCategory(data: DBCategory): Category {
         image: '',
         color: theme.classes.bg,
         icon: React.createElement(theme.icon, { size: 24 }),
-        subTopics: []
+        subTopics: [],
+        architectureGroup: data.architecture_group ?? undefined,
     };
 }
 

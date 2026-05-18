@@ -375,10 +375,9 @@ function searchViaMockData(params: ProviderSearchParams, page: number, perPage: 
 }
 
 /**
- * Main search entry point — cascades: RPC → direct query → mock data.
- * Always returns results (never silently fails).
+ * Run the cascade once: RPC → direct query → mock data.
  */
-export async function searchProviders(params: ProviderSearchParams): Promise<ProviderCardSearchResult> {
+async function runSearchCascade(params: ProviderSearchParams): Promise<ProviderCardSearchResult> {
   const page = params.page || 1;
   const perPage = params.per_page || PAGE_SIZE;
   const hasLocationIntent = !!(params.state || params.city || params.latitude);
@@ -406,6 +405,29 @@ export async function searchProviders(params: ProviderSearchParams): Promise<Pro
     return { providers: [], total_count: 0, page, per_page: perPage, has_more: false };
   }
   return searchViaMockData(params, page, perPage);
+}
+
+/**
+ * Main search entry point. Always returns results (never silently fails).
+ * If city+state combo yields zero, auto-drops state and retries with city only —
+ * surfaces `dropped_filters: ['state']` so UI can show the recovery.
+ */
+export async function searchProviders(params: ProviderSearchParams): Promise<ProviderCardSearchResult> {
+  const result = await runSearchCascade(params);
+
+  if (
+    params.city &&
+    params.state &&
+    result.total_count === 0 &&
+    params.latitude == null
+  ) {
+    const retry = await runSearchCascade({ ...params, state: undefined });
+    if (retry.total_count > 0) {
+      return { ...retry, dropped_filters: ['state'] };
+    }
+  }
+
+  return result;
 }
 
 // =============================================================================

@@ -219,6 +219,21 @@ export const articleService = {
     },
 
     /**
+     * Metadata-only projection for client-side search indexing.
+     * Drops the JSX `content` and `citations` payload so the cache stays small
+     * even when the article corpus grows past a few thousand entries.
+     */
+    getAllIndexable: async (params?: { category?: string; featured?: boolean }): Promise<ArticleWithContent[]> => {
+        const all = await articleService.getAll(params);
+        return all.map(a => ({
+            ...a,
+            content: null,
+            citations: [],
+            relatedArticles: [],
+        }));
+    },
+
+    /**
      * Fetch article by ID
      */
     getById: async (id: number | string): Promise<ArticleWithContent | undefined> => {

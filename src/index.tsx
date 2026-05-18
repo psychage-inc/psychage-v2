@@ -5,6 +5,17 @@ import './lib/i18n';
 
 // Initialize Sentry error monitoring (no-op without VITE_SENTRY_DSN)
 initSentry();
+
+// Auto-recover from stale chunk imports after a new deploy.
+// Browser cached an old index.html that references a chunk hash that no longer exists.
+window.addEventListener('vite:preloadError', () => {
+  const KEY = 'psychage:chunk-reload-at';
+  const last = Number(sessionStorage.getItem(KEY) || 0);
+  if (Date.now() - last > 10_000) {
+    sessionStorage.setItem(KEY, String(Date.now()));
+    window.location.reload();
+  }
+});
 import App from './App';
 import ErrorBoundary from './components/error/ErrorBoundary';
 import { BrowserRouter } from 'react-router-dom';

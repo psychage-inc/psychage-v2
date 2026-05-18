@@ -612,6 +612,29 @@ const LearnPage: React.FC = () => {
                         )}
                     </div>
 
+                    <div className="flex flex-wrap gap-2.5 mt-6">
+                        {orderedCategories.map(cat => (
+                            <button
+                                key={cat.slug}
+                                onClick={() => {
+                                    setSearchQuery('');
+                                    setActiveTab(cat.slug);
+                                    requestAnimationFrame(() => {
+                                        const target = document.getElementById(`cat-section-${cat.slug}`);
+                                        target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                    });
+                                }}
+                                aria-pressed={activeTab === cat.slug}
+                                className={`rounded-full px-4 py-1.5 border text-sm transition-colors ${
+                                    activeTab === cat.slug
+                                        ? 'border-primary bg-primary/5 text-primary font-semibold'
+                                        : 'border-border text-text-secondary hover:bg-surface-hover hover:text-text-primary'
+                                }`}
+                            >
+                                {cat.name}
+                            </button>
+                        ))}
+                    </div>
                 </div>
             </section>
 
@@ -855,7 +878,11 @@ const LearnPage: React.FC = () => {
                             if (categoryArticles.length === 0) return null;
 
                             return (
-                                <section key={category.slug} className="space-y-8">
+                                <section
+                                    key={category.slug}
+                                    id={`cat-section-${category.slug}`}
+                                    className="space-y-8 scroll-mt-32"
+                                >
                                     <div className="flex items-start justify-between gap-4 mt-12 mb-8">
                                         <div className="flex-1">
                                             <h2 className="text-2xl md:text-3xl font-display font-bold text-text-primary tracking-tight">

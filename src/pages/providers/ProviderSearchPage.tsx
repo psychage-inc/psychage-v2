@@ -6,6 +6,7 @@ import { useProviderSearch } from '@/hooks/useProviderSearch';
 import { useProviderLookups } from '@/context/ProviderLookupsContext';
 import { parseLocation } from '@/lib/providers/locationUtils';
 import { resolveSpecialtyQuery } from '@/lib/providers/specialtyResolver';
+import { resolveProviderTypeQuery } from '@/lib/providers/providerTypeResolver';
 import { getProviderCount } from '@/lib/providers/queries';
 import { ProviderSearchBar } from '@/components/providers/search/ProviderSearchBar';
 import { ProviderFilterPanel } from '@/components/providers/search/ProviderFilterPanel';
@@ -33,7 +34,7 @@ const ProviderSearchPage: React.FC = () => {
     reset,
     droppedFilters,
   } = useProviderSearch();
-  const { specialties } = useProviderLookups();
+  const { specialties, providerTypes } = useProviderLookups();
 
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [dbProviderCount, setDbProviderCount] = useState<number | null>(null);
@@ -62,22 +63,29 @@ const ProviderSearchPage: React.FC = () => {
   );
 
   const handleSearch = (query: string, location: string) => {
-    // Each new search REPLACES location + specialty filters. Passing '' / []
-    // clears the URL param (setParams treats falsy-but-defined as delete),
-    // so typing "Denver" alone wipes any stale state from a previous query.
+    // Each new search REPLACES location, specialty, and provider-type filters.
+    // Passing '' / [] clears the URL param (setParams treats falsy-but-defined
+    // as delete), so typing "Denver" alone wipes any stale state.
     const parsed = (location && location !== 'Near me')
       ? parseLocation(location)
       : {};
 
-    const { slugs: matchedSlugs, residual } = query
-      ? resolveSpecialtyQuery(query, specialties)
+    // Resolve profession keywords first ("psychologist" → provider_type_id),
+    // then specialty keywords on the residual ("anxiety" → specialty slug).
+    const { typeIds, residual: afterTypes } = query
+      ? resolveProviderTypeQuery(query, providerTypes)
+      : { typeIds: [], residual: '' };
+
+    const { slugs: matchedSlugs, residual: afterSpecialties } = afterTypes
+      ? resolveSpecialtyQuery(afterTypes, specialties)
       : { slugs: [], residual: '' };
 
     setParams({
-      query: residual || (matchedSlugs.length === 0 ? (query || '') : ''),
+      query: afterSpecialties.trim(),
       city: parsed.city ?? '',
       state: parsed.state ?? '',
       specialty_slugs: matchedSlugs.length > 0 ? matchedSlugs : [],
+      provider_type_ids: typeIds.length > 0 ? typeIds : [],
     });
   };
 

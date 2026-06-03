@@ -1,132 +1,87 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Shield, ArrowRight } from 'lucide-react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { ArrowRight } from 'lucide-react';
 import SEO from '@/components/SEO';
-import { getAdvisoryBoard } from '@/data/authors';
-
-const sectionAnim = (delay = 0) => ({
-  initial: { opacity: 0, y: 14 } as const,
-  whileInView: { opacity: 1, y: 0 } as const,
-  transition: { duration: 0.6, ease: [0, 0, 0.2, 1], delay },
-  viewport: { once: true, amount: 0.2 } as const,
-});
 
 const AdvisoryBoardPage: React.FC = () => {
-  const board = getAdvisoryBoard();
+  const { t } = useTranslation();
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const heroMotion = prefersReducedMotion
+    ? {}
+    : {
+        initial: { opacity: 0, y: 20 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.8, ease: [0, 0, 0.2, 1] as const },
+      };
+
   return (
-    <div className="min-h-screen bg-background pt-28 pb-20">
-      <SEO
-        title="Medical Advisory Board | Psychage"
-        description="Meet the clinical experts and researchers who review Psychage content for medical accuracy, inclusive language, and evidence-based standards."
-      />
+    <div className="min-h-screen bg-background">
+      <SEO title={t('advisoryBoard.seo.title')} description={t('advisoryBoard.seo.description')} />
 
-      {/* Hero — copy About hero pattern */}
-      <div className="container mx-auto px-6 max-w-5xl mb-24 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary font-bold text-xs uppercase tracking-widest mb-8">
-            <Shield size={14} />
-            Clinical Oversight
-          </div>
-          <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-text-primary mb-8 tracking-tight leading-[1.1]">
-            Our advisory{' '}
-            <span className="text-primary">board.</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed font-light">
-            Every piece of content on Psychage is reviewed by real clinicians
-            with real credentials. Meet the people behind our quality standards.
-          </p>
-        </motion.div>
-      </div>
-
-      {/* Board Members — copy About values grid (light bg variant) */}
-      <div className="container mx-auto px-6 max-w-5xl mb-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {board.map((member, i) => (
-            <motion.div
-              key={member.id}
-              {...sectionAnim(i * 0.06)}
-            >
-              <Link
-                to={`/authors/${member.slug}`}
-                className="block bg-surface border border-border p-8 rounded-3xl hover:bg-surface-hover hover:border-primary/40 transition-all duration-300 group h-full"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-14 h-14 rounded-full object-cover border-2 border-border shadow-sm"
-                  />
-                  <div>
-                    <h3 className="font-bold text-lg text-text-primary group-hover:text-primary transition-colors">
-                      {member.name}
-                    </h3>
-                    <p className="text-xs text-text-tertiary font-medium">
-                      {member.role}
-                    </p>
-                  </div>
-                </div>
-
-                {member.credentials && (
-                  <p className="text-sm font-medium text-primary mb-3">
-                    {member.credentials}
-                  </p>
-                )}
-
-                {member.specialties && member.specialties.length > 0 && (
-                  <div className="flex flex-wrap gap-1.5 mb-4">
-                    {member.specialties.map((s) => (
-                      <span
-                        key={s}
-                        className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-surface-hover text-text-tertiary"
-                      >
-                        {s}
-                      </span>
-                    ))}
-                  </div>
-                )}
-
-                <p className="text-sm text-text-secondary leading-relaxed line-clamp-3">
-                  {member.bio}
-                </p>
-
-                <div className="mt-4 flex items-center text-sm font-semibold text-primary">
-                  <span>View profile</span>
-                  <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </Link>
-            </motion.div>
-          ))}
+      {/* Hero — fixed navy poster */}
+      <section className="bg-[#1A1A2E] pt-36 pb-24">
+        <div className="container mx-auto px-6 max-w-3xl text-center">
+          <motion.div {...heroMotion}>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/60 mb-6">
+              {t('advisoryBoard.eyebrow')}
+            </p>
+            <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-6 tracking-tight leading-[1.1]">
+              {t('advisoryBoard.headline')}
+            </h1>
+            <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
+              {t('advisoryBoard.subline')}
+            </p>
+          </motion.div>
         </div>
-      </div>
+      </section>
 
-      {/* CTA */}
-      <div className="container mx-auto px-6 max-w-5xl text-center">
-        <motion.div {...sectionAnim()}>
-          <h2 className="font-display font-bold text-2xl md:text-3xl text-text-primary mb-4 tracking-tight">
-            Explore our content standards
-          </h2>
-          <p className="text-text-secondary mb-8 max-w-lg mx-auto">
-            Our advisory board works within a rigorous evidence-based framework.
-          </p>
-          <Link
-            to="/content-standards"
-            className="inline-flex items-center gap-2 bg-[var(--color-primary)] text-white font-semibold text-[15px] py-3.5 px-7 rounded-2xl hover:bg-[var(--color-primary-hover)] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-6px_rgba(26,155,140,0.3)] transition-all duration-300 ease-out"
+      {/* Body — theme-aware canvas */}
+      <section className="container mx-auto px-6 max-w-2xl py-20 md:py-24">
+        {/* Status badge — teal accent only */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary font-bold text-xs uppercase tracking-widest mb-10">
+          <span className="w-2 h-2 rounded-full bg-primary" aria-hidden="true" />
+          {t('advisoryBoard.status')}
+        </div>
+
+        <h2 className="font-display font-bold text-2xl md:text-3xl text-text-primary mb-8 tracking-tight">
+          {t('advisoryBoard.bodyHeading')}
+        </h2>
+
+        <div className="space-y-6 text-text-secondary leading-relaxed text-base md:text-lg">
+          <p>{t('advisoryBoard.body.p1')}</p>
+          <p>{t('advisoryBoard.body.p2')}</p>
+          <p>{t('advisoryBoard.body.p3')}</p>
+        </div>
+
+        {/* Contact — secondary action */}
+        <p className="mt-10 text-text-secondary">
+          {t('advisoryBoard.contactPrompt')}{' '}
+          <a
+            href="mailto:psychageinc@gmail.com"
+            className="font-semibold text-primary hover:underline"
           >
-            Content Standards
+            {t('advisoryBoard.contactCta')}
+          </a>
+        </p>
+
+        {/* Primary action — single button */}
+        <div className="mt-12 pt-10 border-t border-border">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 bg-[#157F73] text-white font-semibold text-[15px] py-3.5 px-7 rounded-2xl hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-6px_rgba(21,127,115,0.35)] transition-all duration-300 ease-out"
+          >
+            {t('advisoryBoard.back')}
             <ArrowRight size={16} />
           </Link>
-        </motion.div>
-      </div>
+        </div>
+      </section>
     </div>
   );
 };

@@ -198,7 +198,7 @@ function hashEmail(email: string): string {
 function renderEmail(email: string, timestamp: string): string {
     return `<!doctype html>
 <html>
-  <body style="margin:0;padding:0;font-family:'Inter',system-ui,sans-serif;background:#f5f7f7;">
+  <body style="margin:0;padding:0;font-family:'Satoshi',system-ui,sans-serif;background:#f5f7f7;">
     <table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f7f7;padding:32px 0;">
       <tr><td align="center">
         <table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.05);">

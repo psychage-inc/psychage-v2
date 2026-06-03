@@ -19,6 +19,7 @@ import CrisisResourceBanner from '@/components/article/CrisisResourceBanner';
 import ShareButtons from '@/components/article/ShareButtons';
 import AccessibilityBar from '@/components/article/AccessibilityBar';
 import AuthModal from '@/components/auth/AuthModal';
+import NotFoundPage from '@/components/pages/NotFoundPage';
 
 import SEO from '@/components/SEO';
 import Button from '@/components/ui/Button';
@@ -167,15 +168,7 @@ const ArticlePage: React.FC = () => {
     }
 
     if (!article) {
-        return (
-            <div className="min-h-screen flex items-center justify-center bg-background text-text-primary relative">
-                <MeshGradient className="opacity-20" />
-                <div className="text-center z-10">
-                    <h2 className="text-3xl font-display font-bold mb-4">Article not found</h2>
-                    <Button onClick={() => navigate('/learn')}>Back to Learn Hub</Button>
-                </div>
-            </div>
-        );
+        return <NotFoundPage />;
     }
 
     const bookmarked = isBookmarked(article.id);

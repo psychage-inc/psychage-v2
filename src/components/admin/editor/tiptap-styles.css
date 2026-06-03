@@ -26,7 +26,7 @@
 .prose-medium h2,
 .prose-medium h3,
 .prose-medium h4 {
-  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  font-family: 'Satoshi', system-ui, sans-serif;
   letter-spacing: -0.02em;
   color: #111827;
 }
@@ -122,7 +122,7 @@
   color: #6b7280;
   margin-top: 0.75rem;
   font-style: italic;
-  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  font-family: 'Satoshi', system-ui, sans-serif;
 }
 
 /* Links */

@@ -23,7 +23,7 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary
       alignItems: 'center',
       justifyContent: 'center',
       padding: '1.5rem',
-      fontFamily: "'Inter', system-ui, -apple-system, sans-serif",
+      fontFamily: "'Satoshi', system-ui, -apple-system, sans-serif",
       backgroundColor: '#f8fafc',
       color: '#0f172a',
     }}>

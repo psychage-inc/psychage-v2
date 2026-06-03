@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 import { MapPin, Video, Users, Building2, Phone, Mail, Globe, MessageCircle, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { hoverLift } from '@/lib/animations';
@@ -24,6 +25,7 @@ const FallbackAvatar: React.FC<{ name: string; muted?: boolean; className?: stri
 
 const ProviderCardComponent: React.FC<ProviderCardProps> = ({ provider }) => {
   const { t } = useTranslation();
+  const [credOpen, setCredOpen] = useState(false);
   const trustBadgeType = getTrustBadgeType(provider);
   const isFeatured = shouldShowFeaturedBadge(provider);
   const isSeeded = provider.status === 'seeded';
@@ -96,14 +98,36 @@ const ProviderCardComponent: React.FC<ProviderCardProps> = ({ provider }) => {
             </h3>
           </Link>
           {credentialExplanation && (
-            <button
-              type="button"
-              className="ml-1 inline-flex items-center text-text-tertiary hover:text-teal-700 dark:hover:text-teal-400 transition-colors"
-              title={credentialExplanation}
-              aria-label={t('providers.card.explain_credentials')}
-            >
-              <HelpCircle size={13} />
-            </button>
+            <TooltipPrimitive.Provider delayDuration={200}>
+              <TooltipPrimitive.Root open={credOpen} onOpenChange={setCredOpen}>
+                <TooltipPrimitive.Trigger asChild>
+                  <button
+                    type="button"
+                    className="ml-1 inline-flex items-center text-text-tertiary hover:text-teal-700 dark:hover:text-teal-400 transition-colors cursor-help"
+                    onClick={() => setCredOpen(o => !o)}
+                    aria-label={t('providers.card.explain_credentials')}
+                  >
+                    <HelpCircle size={13} />
+                  </button>
+                </TooltipPrimitive.Trigger>
+                <TooltipPrimitive.Portal>
+                  <TooltipPrimitive.Content
+                    side="bottom"
+                    sideOffset={6}
+                    className={
+                      'z-[150] max-w-xs px-4 py-3 rounded-xl shadow-xl ' +
+                      'bg-gray-900/95 backdrop-blur-sm text-white text-xs leading-relaxed ' +
+                      'border border-white/10 ' +
+                      'data-[state=delayed-open]:animate-in data-[state=delayed-open]:fade-in-0 ' +
+                      'data-[state=closed]:animate-out data-[state=closed]:fade-out-0'
+                    }
+                  >
+                    {credentialExplanation}
+                    <TooltipPrimitive.Arrow className="fill-gray-900/95" />
+                  </TooltipPrimitive.Content>
+                </TooltipPrimitive.Portal>
+              </TooltipPrimitive.Root>
+            </TooltipPrimitive.Provider>
           )}
           <p className="text-sm text-text-tertiary mt-0.5">
             {provider.provider_type_label || t('providers.card.provider')}

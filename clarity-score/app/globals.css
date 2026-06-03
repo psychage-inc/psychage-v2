@@ -24,8 +24,8 @@
   --color-flag-moderate: #F59E0B;
   --color-flag-positive: #10B981;
 
-  --font-heading: var(--font-playfair);
-  --font-body: var(--font-dm-sans);
+  --font-heading: var(--font-satoshi);
+  --font-body: var(--font-satoshi);
 }
 
 :root {

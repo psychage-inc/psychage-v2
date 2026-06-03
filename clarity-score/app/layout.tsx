@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { Playfair_Display, DM_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import Providers from "@/components/Providers";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-});
-
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
+const satoshi = localFont({
+  src: [
+    { path: "./fonts/Satoshi-Variable.woff2", weight: "300 900", style: "normal" },
+    { path: "./fonts/Satoshi-VariableItalic.woff2", weight: "300 900", style: "italic" },
+  ],
+  variable: "--font-satoshi",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} ${dmSans.variable} antialiased font-body bg-bg-primary text-text-primary`}>
+      <body className={`${satoshi.variable} antialiased font-body bg-bg-primary text-text-primary`}>
         <Providers>
           <div className="noise-overlay"></div>
           {children}

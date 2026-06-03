@@ -10,7 +10,7 @@ export const Logo: React.FC<LogoProps> = ({ className = "h-12 w-auto text-[#1A1A
             <style>
                 {`
           .psychage-wordmark {
-            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            font-family: 'Satoshi', system-ui, -apple-system, sans-serif;
             font-weight: 800;
             font-size: 60px;
             letter-spacing: 2px;

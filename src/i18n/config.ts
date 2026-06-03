@@ -20,14 +20,12 @@ i18n
             es: { translation: es },
         },
         fallbackLng: 'en',
-        supportedLngs: ['en', 'pt', 'es', 'sv', 'fr'],
         interpolation: {
             escapeValue: false, // not needed for react as it escapes by default
         },
         detection: {
             order: ['localStorage', 'navigator'],
             caches: ['localStorage'],
-            lookupLocalStorage: 'psychage_lang_v2',
         },
     });
 

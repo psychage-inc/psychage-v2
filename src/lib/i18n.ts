@@ -23,12 +23,14 @@ i18n
     .init({
         resources,
         fallbackLng: 'en',
+        supportedLngs: ['en', 'pt', 'es', 'sv', 'fr'],
         interpolation: {
             escapeValue: false, // React already escapes
         },
         detection: {
             order: ['localStorage', 'navigator'],
             caches: ['localStorage'],
+            lookupLocalStorage: 'psychage_lang_v2',
         },
     });
 

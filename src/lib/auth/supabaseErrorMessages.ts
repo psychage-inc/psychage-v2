@@ -13,7 +13,9 @@ import type { AuthError } from '@supabase/supabase-js';
  * ones (email enumeration). Unrecognized errors fall through to the
  * generic invalid-credentials response.
  */
-export function mapSupabaseAuthError(error: AuthError | Error | null | undefined): string {
+export function mapSupabaseAuthError(
+  error: AuthError | Error | { code?: string; message?: string } | null | undefined,
+): string {
   if (!error) return 'auth.errors.unknown';
 
   if ('code' in error && typeof error.code === 'string') {

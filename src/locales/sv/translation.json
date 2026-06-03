@@ -316,6 +316,7 @@
       "validationConsentRequired": "Please accept all required consents to create your account.",
       "validationCaptchaRequired": "Please complete the verification challenge.",
       "successMessage": "Account created successfully! Please log in to continue.",
+      "confirmEmailMessage": "Account created! Check your email to confirm your address before logging in.",
       "seoTitle": "Create Account | Psychage",
       "seoDescription": "Create your free Psychage account to access mental health tools, articles, and provider directory."
     },

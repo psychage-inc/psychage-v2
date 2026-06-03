@@ -136,14 +136,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const login = useCallback(async (email: string, password: string) => {
     try {
       const { error } = await supabase.auth.signInWithPassword({
-        email,
+        email: email.trim().toLowerCase(),
         password,
       });
 
       if (error) {
         const outcome = classifyAuthError(error);
-        logAuthEvent('login', outcome, { code: (error as { code?: string }).code });
-        return { success: false, error: error.message };
+        const code = (error as { code?: string }).code;
+        logAuthEvent('login', outcome, { code });
+        return { success: false, error: error.message, code };
       }
 
       logAuthEvent('login', 'success');
@@ -177,9 +178,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
 
       const { data, error } = await supabase.auth.signUp({
-        email,
+        email: email.trim().toLowerCase(),
         password,
         options: {
+          // Confirmation links land on the auth-callback route, which
+          // exchanges the session. Origin-relative so it works across
+          // psychage.com, *.vercel.app, and localhost (each origin must
+          // be in the Supabase Redirect-URLs allowlist).
+          emailRedirectTo: `${window.location.origin}/auth/callback`,
           data: {
             display_name: displayName,
             full_name: displayName,
@@ -192,17 +198,37 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         },
       });
 
+      // Branch on the real signUp outcome — a returned user is NOT proof of
+      // success. Order matters.
       if (error) {
         const outcome = classifyAuthError(error);
-        logAuthEvent('signup', outcome, { code: (error as { code?: string }).code });
-        return { success: false, error: error.message };
+        const code = (error as { code?: string }).code;
+        logAuthEvent('signup', outcome, { code });
+        return { success: false, error: error.message, code };
       }
 
+      // Already-registered obfuscation: when Confirm-email is ON and the
+      // email already exists, GoTrue returns a fake user with an EMPTY
+      // identities array, no session, no error (anti-enumeration). This must
+      // never be reported as "account created".
+      const identities = data.user?.identities;
+      if (data.user && Array.isArray(identities) && identities.length === 0) {
+        logAuthEvent('signup', 'user_error', { reason: 'already_registered' });
+        return { success: false, status: 'already_registered' as const };
+      }
+
+      // Session issued → Confirm-email is OFF and this is a new account; the
+      // user is already logged in (onAuthStateChange propagates state).
+      if (data.session) {
+        logAuthEvent('signup', 'success', { status: 'active' });
+        return { success: true, status: 'active' as const };
+      }
+
+      // User, no session, non-empty identities → genuinely new account that
+      // must confirm its email before signing in (Confirm-email ON).
       if (data.user) {
-        // Supabase may require email confirmation before allowing sign in
-        // For now, we consider signup successful
-        logAuthEvent('signup', 'success');
-        return { success: true };
+        logAuthEvent('signup', 'success', { status: 'confirm_email' });
+        return { success: true, status: 'confirm_email' as const };
       }
 
       logAuthEvent('signup', 'platform_error', { reason: 'no_user_returned' });
@@ -256,7 +282,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const requestPasswordReset = useCallback(async (email: string, captchaToken?: string) => {
     try {
-      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      const { error } = await supabase.auth.resetPasswordForEmail(email.trim().toLowerCase(), {
         redirectTo: `${window.location.origin}/update-password`,
         // AUTH-029: forward Turnstile token. Supabase enforces only
         // when Captcha Protection is enabled in dashboard settings.
@@ -265,8 +291,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
       if (error) {
         const outcome = classifyAuthError(error);
-        logAuthEvent('resetPassword', outcome, { code: (error as { code?: string }).code });
-        return { success: false, error: error.message };
+        const code = (error as { code?: string }).code;
+        logAuthEvent('resetPassword', outcome, { code });
+        return { success: false, error: error.message, code };
       }
 
       logAuthEvent('resetPassword', 'success');

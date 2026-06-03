@@ -59,7 +59,7 @@ const ResetPasswordPage = () => {
                 ) {
                     setIsSubmitted(true);
                 } else {
-                    const key = mapSupabaseAuthError(new Error(errMsg));
+                    const key = mapSupabaseAuthError({ code: result.code, message: errMsg });
                     setError(t(key));
                     resetCaptcha();
                 }

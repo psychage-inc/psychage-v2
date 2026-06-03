@@ -232,7 +232,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                 if (import.meta.env.DEV) {
                     console.warn('[Auth Debug] Supabase login error:', errorMessage);
                 }
-                const key = mapSupabaseAuthError(new Error(errorMessage));
+                const key = mapSupabaseAuthError({ code: result.code, message: errorMessage });
                 setError(t(key));
 
                 // AUTH-034: bump per-email failure count. Hit the hard

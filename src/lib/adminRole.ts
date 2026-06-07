@@ -19,9 +19,15 @@ import type { AdminRole } from './admin/types';
 
 const ADMIN_ROLES: readonly AdminRole[] = ['super_admin', 'clinical_admin', 'viewer'];
 
-/** True if the value is one of the three granular admin roles. */
+// Admin-capable values. The three granular tiers PLUS the legacy coarse
+// 'admin' — honored for backward-compat (pre-granular / manually-granted
+// claims) and so this same predicate works on the app's own coarsened
+// user.role (which is 'admin'). getAdminTier stays granular-only.
+const ADMIN_ROLE_VALUES: readonly string[] = [...ADMIN_ROLES, 'admin'];
+
+/** True if the value is admin-capable (a granular tier or the legacy coarse 'admin'). */
 export function isAdminRole(value: unknown): boolean {
-  return typeof value === 'string' && (ADMIN_ROLES as readonly string[]).includes(value);
+  return typeof value === 'string' && ADMIN_ROLE_VALUES.includes(value);
 }
 
 /** Returns the granular admin tier, or null if the value is not an admin role. */

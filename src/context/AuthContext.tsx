@@ -5,7 +5,7 @@ import { AuthContext, AuthState, AuthContextType } from './AuthContextDefinition
 import { supabase } from '../lib/supabaseClient';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
 import { logAuthEvent, classifyAuthError } from '../lib/auth/authTelemetry';
-import { getAdminTier } from '../lib/adminRole';
+import { getAdminTier, isAdminRole } from '../lib/adminRole';
 
 // AUTH-010: signup extraMetadata is restricted to a known allowlist.
 // Anything outside this set is dropped (with a console.warn) before the
@@ -37,15 +37,16 @@ const ALLOWED_EXTRA_KEYS = [
 // constrained to 'patient' | 'provider'. Admin recognition flows from
 // app_metadata.role, populated by the B-3 sync trigger from admin_roles —
 // which writes the GRANULAR role (super_admin | clinical_admin | viewer).
-// getAdminTier (src/lib/adminRole.ts) is the single decision point that
-// recognizes those values as admin; `role` is coarsened to 'admin' for
-// binary gating while `adminRole` preserves the tier.
+// src/lib/adminRole.ts is the single decision point: isAdminRole recognizes
+// those values (plus the legacy coarse 'admin') as admin, `role` is coarsened
+// to 'admin' for binary gating, and getAdminTier preserves the granular tier
+// on `adminRole`.
 function mapSupabaseUser(supabaseUser: SupabaseUser | null) {
   if (!supabaseUser) return null;
 
   const appRole = (supabaseUser.app_metadata as { role?: unknown } | undefined)?.role;
   const adminTier = getAdminTier(appRole);
-  const role: 'patient' | 'provider' | 'admin' = adminTier
+  const role: 'patient' | 'provider' | 'admin' = isAdminRole(appRole)
     ? 'admin'
     : appRole === 'provider' || appRole === 'patient'
       ? appRole

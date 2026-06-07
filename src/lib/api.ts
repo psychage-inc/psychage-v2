@@ -22,6 +22,10 @@ export interface User {
   id: string;
   email: string;
   role: 'patient' | 'provider' | 'admin';
+  // Granular admin tier (super_admin | clinical_admin | viewer) when role
+  // is 'admin'; null otherwise. Coarse `role` drives binary gating; this
+  // preserves the tier for display/audit without collapsing it.
+  adminRole?: import('./admin/types').AdminRole | null;
   display_name?: string;
   avatar_url?: string;
 }

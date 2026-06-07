@@ -5,6 +5,7 @@ import { AuthContext, AuthState, AuthContextType } from './AuthContextDefinition
 import { supabase } from '../lib/supabaseClient';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
 import { logAuthEvent, classifyAuthError } from '../lib/auth/authTelemetry';
+import { getAdminTier } from '../lib/adminRole';
 
 // AUTH-010: signup extraMetadata is restricted to a known allowlist.
 // Anything outside this set is dropped (with a console.warn) before the
@@ -34,13 +35,19 @@ const ALLOWED_EXTRA_KEYS = [
 //
 // Note on the 'admin' branch: post-AUTH-006 cleanup, profiles.role is
 // constrained to 'patient' | 'provider'. Admin recognition flows from
-// app_metadata.role, populated by the B-3 sync trigger from admin_roles.
+// app_metadata.role, populated by the B-3 sync trigger from admin_roles —
+// which writes the GRANULAR role (super_admin | clinical_admin | viewer).
+// getAdminTier (src/lib/adminRole.ts) is the single decision point that
+// recognizes those values as admin; `role` is coarsened to 'admin' for
+// binary gating while `adminRole` preserves the tier.
 function mapSupabaseUser(supabaseUser: SupabaseUser | null) {
   if (!supabaseUser) return null;
 
   const appRole = (supabaseUser.app_metadata as { role?: unknown } | undefined)?.role;
-  const role: 'patient' | 'provider' | 'admin' =
-    appRole === 'admin' || appRole === 'provider' || appRole === 'patient'
+  const adminTier = getAdminTier(appRole);
+  const role: 'patient' | 'provider' | 'admin' = adminTier
+    ? 'admin'
+    : appRole === 'provider' || appRole === 'patient'
       ? appRole
       : 'patient';
 
@@ -48,6 +55,7 @@ function mapSupabaseUser(supabaseUser: SupabaseUser | null) {
     id: supabaseUser.id,
     email: supabaseUser.email || '',
     role,
+    adminRole: adminTier,
     display_name: supabaseUser.user_metadata?.display_name || supabaseUser.user_metadata?.full_name || '',
     avatar_url: supabaseUser.user_metadata?.avatar_url || '',
   };
@@ -58,6 +66,7 @@ function usersEqual(a: ReturnType<typeof mapSupabaseUser>, b: ReturnType<typeof 
   if (a === b) return true;
   if (!a || !b) return false;
   return a.id === b.id && a.email === b.email && a.role === b.role
+    && a.adminRole === b.adminRole
     && a.display_name === b.display_name && a.avatar_url === b.avatar_url;
 }
 

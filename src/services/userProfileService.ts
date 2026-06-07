@@ -5,6 +5,7 @@
  */
 
 import { supabase } from '../lib/supabaseClient';
+import { isAdminRole } from '../lib/adminRole';
 
 export interface UserProfile {
     id: string;
@@ -63,9 +64,13 @@ export const userProfileService = {
             // Resolve role from app_metadata (server-controlled), then fall back
             // to profiles.role (also server-controlled via DB trigger). Never
             // read user_metadata.role — see AUTH-001.
+            // app_metadata.role carries the GRANULAR admin tier
+            // (super_admin | clinical_admin | viewer); isAdminRole
+            // (src/lib/adminRole.ts) is the single decision point that
+            // coarsens it to 'admin'.
             const appRole = (user.app_metadata as { role?: unknown } | undefined)?.role;
             const resolveRole = (raw: unknown): 'patient' | 'provider' | 'admin' =>
-                raw === 'admin' || raw === 'provider' || raw === 'patient' ? raw : 'patient';
+                isAdminRole(raw) ? 'admin' : raw === 'provider' || raw === 'patient' ? raw : 'patient';
 
             // If profile table exists and has data, merge with auth user
             if (!profileError && profileData) {

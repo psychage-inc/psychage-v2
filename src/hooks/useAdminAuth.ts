@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/lib/supabaseClient';
+import { getAdminTier } from '@/lib/adminRole';
 import type { AdminRole, AdminUser } from '@/lib/admin/types';
 
 const isDev = import.meta.env.DEV;
@@ -58,7 +59,16 @@ export function useAdminAuth(requiredRoles?: AdminRole[]) {
           return;
         }
 
-        const role = roleData.role as AdminRole;
+        // Normalize the table value through the single decision point. A row
+        // whose role isn't a recognized admin tier is treated as not-admin.
+        const role = getAdminTier(roleData.role);
+        if (!role) {
+          if (!cancelled) {
+            setDenied(true);
+            setLoading(false);
+          }
+          return;
+        }
 
         if (requiredRoles && !requiredRoles.includes(role)) {
           // Wrong admin sub-role — stay in admin app, go to dashboard

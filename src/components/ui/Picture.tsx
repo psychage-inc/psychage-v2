@@ -24,6 +24,8 @@ const Picture: React.FC<PictureProps> = ({
     <img
       src={image.jpeg}
       alt={alt}
+      width={image.w}
+      height={image.h}
       loading={loading}
       decoding={decoding}
       className={className}

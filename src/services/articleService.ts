@@ -15,11 +15,30 @@ import { getCategoryTheme } from '../config/categoryThemes';
 // This avoids pulling ~30MB of article TSX into the main bundle at load time.
 let _cachedMockArticles: Article[] | null = null;
 
+function isShownStatus(a: Article): boolean {
+    const s = (a as { status?: string }).status;
+    return !s || s === 'published';
+}
+
 async function getMockArticles(): Promise<Article[]> {
     if (_cachedMockArticles) return _cachedMockArticles;
     const { loadAllArticles } = await import('../data/articles/all-articles');
     const articles = await loadAllArticles();
-    _cachedMockArticles = articles.filter(a => !a.status || a.status === 'published');
+    // Dedupe by slug, preferring a shown (published/un-statused) version. An
+    // archived article only survives when no shown version of that slug exists,
+    // so unique archived content still appears while archived duplicates and
+    // repeated slugs stay collapsed to a single entry.
+    const bySlug = new Map<string, Article>();
+    for (const a of articles) {
+        if (!a.slug) continue;
+        const existing = bySlug.get(a.slug);
+        if (!existing) {
+            bySlug.set(a.slug, a);
+        } else if (isShownStatus(a) && !isShownStatus(existing)) {
+            bySlug.set(a.slug, a);
+        }
+    }
+    _cachedMockArticles = [...bySlug.values()];
     return _cachedMockArticles;
 }
 
@@ -109,7 +128,7 @@ function mapSupabaseToArticle(data: DBArticle): ArticleWithContent {
         id: data.id,
         slug: data.slug,
         title: data.title,
-        description: data.description || data.seo_description || '',
+        description: data.seo_description || data.description || '',
         image: resolveImageUrl(data.image || data.hero_image_url),
         category: {
             id: data.category?.id || '',
@@ -121,7 +140,7 @@ function mapSupabaseToArticle(data: DBArticle): ArticleWithContent {
         } as Category,
         readTime: data.read_time || 5,
         publishedAt: data.created_at,
-        content: data.content || data.description,
+        content: data.content || data.seo_description || data.description,
         tags: data.tags || [],
         featured: data.featured || false,
         status: data.status,
@@ -162,30 +181,43 @@ export const articleService = {
         // Try Supabase first — OPTIMIZED: Only fetch fields needed for list view
         try {
             const listFields = 'id, slug, title, seo_description, hero_image_url, category_id, read_time, status, created_at, featured, tags';
-            let selectString = `${listFields}, category:article_categories!category_id(id, name, slug, description)`;
+            const selectString = params?.category
+                ? `${listFields}, category:article_categories!category_id!inner(id, name, slug, description)`
+                : `${listFields}, category:article_categories!category_id(id, name, slug, description)`;
 
-            if (params?.category) {
-                selectString = `${listFields}, category:article_categories!category_id!inner(id, name, slug, description)`;
+            // Supabase caps a single response at 1000 rows, so paginate to fetch the
+            // full renderable corpus. Exclude rows with no body — those would render an
+            // empty article page; they surface only via the "Articles Coming Soon"
+            // state and are never linked from the listing.
+            const PAGE_SIZE = 1000;
+            const MAX_PAGES = 6; // safety ceiling
+            const rows: DBArticle[] = [];
+            for (let page = 0; page < MAX_PAGES; page++) {
+                let query = supabase.from('articles').select(selectString)
+                    .eq('status', 'published')
+                    .not('content', 'is', null)
+                    .neq('content', '')
+                    .order('created_at', { ascending: false })
+                    .order('id', { ascending: true }) // stable tiebreaker across pages
+                    .range(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE - 1);
+
+                if (params?.featured) {
+                    query = query.eq('featured', true);
+                }
+                if (params?.category) {
+                    query = query.eq('category.slug', params.category);
+                }
+
+                const { data, error } = await query;
+
+                if (error) throw error;
+                if (!data || data.length === 0) break;
+                rows.push(...(data as unknown as DBArticle[]));
+                if (data.length < PAGE_SIZE) break;
             }
 
-            let query = supabase.from('articles').select(selectString)
-                .eq('status', 'published')
-                .order('created_at', { ascending: false })
-                .limit(1500);
-
-            if (params?.featured) {
-                query = query.eq('featured', true);
-            }
-            if (params?.category) {
-                query = query.eq('category.slug', params.category);
-            }
-
-            const { data, error } = await query;
-
-            if (error) throw error;
-
-            if (data && data.length > 0) {
-                supabaseArticles = (data as unknown as DBArticle[]).map(mapSupabaseToArticle);
+            if (rows.length > 0) {
+                supabaseArticles = rows.map(mapSupabaseToArticle);
             }
         } catch (error) {
             // Supabase fetch failed — fall through to mock data

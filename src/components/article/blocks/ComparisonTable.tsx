@@ -2,7 +2,7 @@ import React from 'react';
 import { Check, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from './shared/useScrollAnimation';
-import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { useMediaQuery, MOBILE_NARROW_QUERY } from '@/hooks/useMediaQuery';
 
 interface ComparisonItem {
     feature?: string;
@@ -57,7 +57,7 @@ function extractColumnLabels(columns: ColumnDef[]): string[] {
 const ComparisonTable: React.FC<ComparisonTableProps> = (props) => {
     const { title, highlightColumn, className = '' } = props;
     const { ref, isInView } = useScrollAnimation();
-    const isMobile = useMediaQuery('(max-width: 639px)');
+    const isMobile = useMediaQuery(MOBILE_NARROW_QUERY);
 
     // Normalize columns
     let resolvedColumns: string[];

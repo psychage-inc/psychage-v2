@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { useChat } from './hooks/useChat';
 import ChatSidebar from './ChatSidebar';
 import ChatMain from './ChatMain';
@@ -17,15 +18,7 @@ export default function ChatLayout() {
   } = useChat();
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  // Track screen size
-  useEffect(() => {
-    const check = () => setIsDesktop(window.innerWidth >= 1024);
-    check();
-    window.addEventListener('resize', check);
-    return () => window.removeEventListener('resize', check);
-  }, []);
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
 
   return (
     <div className="h-[calc(100dvh-5rem)] flex overflow-hidden bg-white dark:bg-neutral-950">

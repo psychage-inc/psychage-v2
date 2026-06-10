@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { Headphones, Minus, Plus, Type, BookOpen, Settings2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { useMediaQuery, MOBILE_NARROW_QUERY } from '@/hooks/useMediaQuery';
 import ArticleAudioPlayer from './ArticleAudioPlayer';
 
 interface AccessibilityBarProps {
@@ -27,7 +27,7 @@ const AccessibilityBar: React.FC<AccessibilityBarProps> = ({
     const [showPlayer, setShowPlayer] = useState(false);
     const [fontSizeIndex, setFontSizeIndex] = useState(1); // Default: M (matches article-prose.css base)
     const [mobileExpanded, setMobileExpanded] = useState(false);
-    const isMobile = useMediaQuery('(max-width: 639px)');
+    const isMobile = useMediaQuery(MOBILE_NARROW_QUERY);
 
     const adjustFontSize = useCallback(
         (direction: 'up' | 'down') => {

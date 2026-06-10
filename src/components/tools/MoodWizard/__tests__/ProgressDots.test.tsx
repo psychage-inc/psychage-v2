@@ -36,7 +36,7 @@ describe('ProgressDots', () => {
     it('should highlight current dot with darker color', () => {
         const { container } = render(<ProgressDots total={3} current={1} />);
         const dots = container.querySelectorAll('.rounded-full');
-        expect(dots[1]).toHaveClass('bg-gray-900');
-        expect(dots[0]).toHaveClass('bg-gray-300');
+        expect(dots[1]).toHaveClass('bg-text-primary');
+        expect(dots[0]).toHaveClass('bg-text-tertiary/40');
     });
 });

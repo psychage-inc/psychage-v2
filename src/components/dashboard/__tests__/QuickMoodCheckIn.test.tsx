@@ -49,7 +49,7 @@ describe('QuickMoodCheckIn', () => {
             <QuickMoodCheckIn userId="u1" todayEntry={null} onMoodLogged={vi.fn()} />
         );
         expect(screen.getByText('Awful')).toBeInTheDocument();
-        expect(screen.getByText('Bad')).toBeInTheDocument();
+        expect(screen.getByText('Low')).toBeInTheDocument();
         expect(screen.getByText('Okay')).toBeInTheDocument();
         expect(screen.getByText('Good')).toBeInTheDocument();
         expect(screen.getByText('Great')).toBeInTheDocument();
@@ -60,8 +60,8 @@ describe('QuickMoodCheckIn', () => {
             <QuickMoodCheckIn userId="u1" todayEntry={null} onMoodLogged={vi.fn()} />
         );
         fireEvent.click(screen.getByText('Good'));
-        expect(screen.getByPlaceholderText('Add a note (optional)')).toBeInTheDocument();
-        expect(screen.getByText('Log Mood')).toBeInTheDocument();
+        expect(screen.getByPlaceholderText('Want to add a note? (optional)')).toBeInTheDocument();
+        expect(screen.getByText('Save')).toBeInTheDocument();
         expect(screen.getByText('Cancel')).toBeInTheDocument();
     });
 
@@ -70,9 +70,9 @@ describe('QuickMoodCheckIn', () => {
             <QuickMoodCheckIn userId="u1" todayEntry={null} onMoodLogged={vi.fn()} />
         );
         fireEvent.click(screen.getByText('Good'));
-        expect(screen.getByPlaceholderText('Add a note (optional)')).toBeInTheDocument();
+        expect(screen.getByPlaceholderText('Want to add a note? (optional)')).toBeInTheDocument();
         fireEvent.click(screen.getByText('Cancel'));
-        expect(screen.queryByPlaceholderText('Add a note (optional)')).not.toBeInTheDocument();
+        expect(screen.queryByPlaceholderText('Want to add a note? (optional)')).not.toBeInTheDocument();
     });
 
     it('should show "Logged today" badge when entry exists', () => {

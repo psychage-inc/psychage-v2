@@ -6,6 +6,7 @@
 
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import { NavigatorProvider } from '../../context/NavigatorContext';
 import { SymptomSelectionScreen } from '../../components/screens/SymptomSelectionScreen';
@@ -104,9 +105,11 @@ describe('Navigator Accessibility Tests', () => {
     describe('ResultsScreen', () => {
         it('should not have accessibility violations', async () => {
             const { container } = render(
-                <NavigatorProvider>
-                    <ResultsScreen />
-                </NavigatorProvider>
+                <MemoryRouter>
+                    <NavigatorProvider>
+                        <ResultsScreen />
+                    </NavigatorProvider>
+                </MemoryRouter>
             );
 
             // Allow async data loading

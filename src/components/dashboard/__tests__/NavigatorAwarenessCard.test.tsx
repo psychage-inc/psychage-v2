@@ -25,12 +25,12 @@ const renderWithRouter = (ui: React.ReactElement) =>
 describe('NavigatorAwarenessCard', () => {
     it('should render Navigator label', () => {
         renderWithRouter(<NavigatorAwarenessCard totalExplorations={0} lastExplorationDate={null} />);
-        expect(screen.getByText('Navigator')).toBeInTheDocument();
+        expect(screen.getByText('Symptom Navigator')).toBeInTheDocument();
     });
 
     it('should show empty state when no explorations', () => {
         renderWithRouter(<NavigatorAwarenessCard totalExplorations={0} lastExplorationDate={null} />);
-        expect(screen.getByText('No explorations yet')).toBeInTheDocument();
+        expect(screen.getByText(/Understand your patterns/i)).toBeInTheDocument();
         expect(screen.getByText('Get Started')).toBeInTheDocument();
     });
 

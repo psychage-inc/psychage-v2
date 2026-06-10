@@ -58,7 +58,7 @@ describe('moodService', () => {
     describe('getEntries', () => {
         it('should return mapped entries for a given userId', async () => {
             const dbEntries = [
-                { id: '1', user_id: 'u1', mood_rating: 4, notes: 'good', tags: ['happy'], created_at: '2026-01-01' },
+                { id: '1', user_id: 'u1', value: 4, notes: 'good', tags: ['happy'], created_at: '2026-01-01' },
             ];
             mockQueryResult.mockResolvedValue({ data: dbEntries, error: null });
 
@@ -93,7 +93,7 @@ describe('moodService', () => {
 
     describe('createEntry', () => {
         it('should create and return a mood entry', async () => {
-            const created = { id: '1', user_id: 'u1', mood_rating: 3, notes: null, tags: [], created_at: '2026-01-01' };
+            const created = { id: '1', user_id: 'u1', value: 3, notes: null, tags: [], created_at: '2026-01-01' };
             mockSingle.mockResolvedValue({ data: created, error: null });
 
             const result = await moodService.createEntry('u1', 3);
@@ -121,7 +121,7 @@ describe('moodService', () => {
 
     describe('updateEntry', () => {
         it('should update and return entry', async () => {
-            const updated = { id: '1', user_id: 'u1', mood_rating: 5, notes: 'great', tags: ['joy'], created_at: '2026-01-01' };
+            const updated = { id: '1', user_id: 'u1', value: 5, notes: 'great', tags: ['joy'], created_at: '2026-01-01' };
             mockSingle.mockResolvedValue({ data: updated, error: null });
 
             const result = await moodService.updateEntry('1', { value: 5, notes: 'great' });
@@ -224,7 +224,7 @@ describe('moodService', () => {
     describe('getEntriesByDateRange', () => {
         it('should return mapped entries within date range', async () => {
             const entries = [
-                { id: '1', user_id: 'u1', mood_rating: 3, notes: null, tags: [], created_at: '2026-03-03' },
+                { id: '1', user_id: 'u1', value: 3, notes: null, tags: [], created_at: '2026-03-03' },
             ];
             mockQueryResult.mockResolvedValue({ data: entries, error: null });
 

@@ -9,10 +9,14 @@ vi.mock('framer-motion', () => {
     const { forwardRef } = require('react');
     return {
         motion: {
+            div: forwardRef(({ children, ...props }: any, ref: any) => (
+                <div ref={ref} {...props}>{children}</div>
+            )),
             button: forwardRef(({ children, ...props }: any, ref: any) => (
                 <button ref={ref} {...props}>{children}</button>
             )),
         },
+        AnimatePresence: ({ children }: any) => <>{children}</>,
     };
 });
 

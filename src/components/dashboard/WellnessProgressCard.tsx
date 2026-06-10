@@ -70,7 +70,7 @@ const WellnessProgressCard: React.FC = () => {
                 >
                   {stat.value}
                 </motion.span>
-                <p className="text-[10px] text-gray-400 dark:text-neutral-500 leading-tight">
+                <p className="text-xs text-gray-400 dark:text-neutral-500 leading-tight">
                   {stat.label}
                 </p>
               </div>
@@ -80,14 +80,14 @@ const WellnessProgressCard: React.FC = () => {
 
         {progress.toolsUsed.length > 0 && (
           <div className="mt-4 pt-3 border-t border-gray-100 dark:border-neutral-800">
-            <p className="text-[10px] text-gray-400 dark:text-neutral-500 mb-1.5">
+            <p className="text-xs text-gray-400 dark:text-neutral-500 mb-1.5">
               Tools you've used
             </p>
             <div className="flex flex-wrap gap-1">
               {progress.toolsUsed.map((tool) => (
                 <span
                   key={tool}
-                  className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-surface-hover text-text-secondary"
+                  className="text-xs font-medium px-2 py-0.5 rounded-full bg-surface-hover text-text-secondary"
                 >
                   {tool}
                 </span>

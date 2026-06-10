@@ -60,7 +60,7 @@ export const ActionPlanV2: React.FC<ActionPlanV2Props> = ({ patterns }) => {
                       <h4 className="font-semibold text-sm text-text-primary">
                         {intervention.title}
                       </h4>
-                      <span className={`text-[10px] font-semibold px-2.5 py-0.5 rounded-full ${difficulty.color}`}>
+                      <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${difficulty.color}`}>
                         {difficulty.label}
                       </span>
                     </div>
@@ -89,7 +89,7 @@ export const ActionPlanV2: React.FC<ActionPlanV2Props> = ({ patterns }) => {
                   >
                     <div className="px-4 pb-4 pt-0 ml-10">
                       {/* Meta badges */}
-                      <div className="flex flex-wrap items-center gap-3 mb-3 text-[11px] text-text-tertiary">
+                      <div className="flex flex-wrap items-center gap-3 mb-3 text-xs text-text-tertiary">
                         <span className="inline-flex items-center gap-1">
                           <Clock size={11} />
                           {intervention.timeEstimate}
@@ -119,7 +119,7 @@ export const ActionPlanV2: React.FC<ActionPlanV2Props> = ({ patterns }) => {
                       </ol>
 
                       {/* Citation */}
-                      <p className="text-[10px] text-text-tertiary italic leading-relaxed">
+                      <p className="text-xs text-text-tertiary italic leading-relaxed">
                         {intervention.citation}
                       </p>
                     </div>

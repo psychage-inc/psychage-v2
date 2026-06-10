@@ -51,7 +51,7 @@ export const VerificationExplainer: React.FC = () => {
             }`}
           >
             {isRecommended && (
-              <span className="absolute -top-2.5 left-4 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-teal-700 dark:bg-teal-500 text-[10px] font-bold uppercase tracking-wider text-white shadow-sm">
+              <span className="absolute -top-2.5 left-4 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-teal-700 dark:bg-teal-500 text-xs font-bold uppercase tracking-wider text-white shadow-sm">
                 Recommended
               </span>
             )}

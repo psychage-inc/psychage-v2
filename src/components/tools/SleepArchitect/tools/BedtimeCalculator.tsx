@@ -70,7 +70,7 @@ const BedtimeCalculator: React.FC<BedtimeCalculatorProps> = ({
       </div>
 
       {averageOnset > 0 && (
-        <p className="text-[10px] text-gray-400 dark:text-neutral-500 mb-4">
+        <p className="text-xs text-gray-400 dark:text-neutral-500 mb-4">
           Based on your average sleep onset of {averageOnset} minutes
         </p>
       )}
@@ -98,14 +98,14 @@ const BedtimeCalculator: React.FC<BedtimeCalculatorProps> = ({
                 <div className="font-display font-bold text-lg text-gray-900 dark:text-white">
                   {s.bedtime}
                 </div>
-                <div className="text-[10px] text-gray-500 dark:text-neutral-400">
+                <div className="text-xs text-gray-500 dark:text-neutral-400">
                   {s.cycles} cycles &middot;{' '}
                   {formatDuration(s.sleep_duration_minutes)} of sleep
                 </div>
               </div>
             </div>
             {s.recommended && (
-              <span className="text-[10px] font-bold text-teal-600 dark:text-teal-400 bg-teal-100 dark:bg-teal-900/40 px-2 py-0.5 rounded-full">
+              <span className="text-xs font-bold text-teal-600 dark:text-teal-400 bg-teal-100 dark:bg-teal-900/40 px-2 py-0.5 rounded-full">
                 Recommended
               </span>
             )}

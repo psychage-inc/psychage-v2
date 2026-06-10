@@ -59,7 +59,7 @@ const ProviderHighlight: React.FC = () => {
           <div>
             <motion.p
               {...anim(0.05)}
-              className="uppercase tracking-[0.18em] text-[11px] text-[var(--color-primary)]/55 font-sans font-medium mb-4"
+              className="uppercase tracking-[0.18em] text-xs text-[var(--color-primary)]/55 font-sans font-medium mb-4"
             >
               Provider Directory
             </motion.p>

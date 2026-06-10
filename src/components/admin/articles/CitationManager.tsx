@@ -93,7 +93,7 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
             className={`w-2 h-2 rounded-full bg-${tierInfo.color}-500`}
             style={{ backgroundColor: `var(--color-${tierInfo.color}-500, #6b7280)` }}
           />
-          <span className="text-[10px] text-text-secondary">
+          <span className="text-xs text-text-secondary">
             Tier {tier} — {tierInfo.label}
           </span>
         </div>
@@ -144,7 +144,7 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
             }`}
           />
           {isOld && (
-            <p className="text-[10px] text-amber-600 dark:text-amber-400 mt-0.5 flex items-center gap-1">
+            <p className="text-xs text-amber-600 dark:text-amber-400 mt-0.5 flex items-center gap-1">
               <AlertTriangle size={10} />
               Older than 10 years
             </p>
@@ -192,7 +192,7 @@ const CitationForm: React.FC<CitationFormProps> = ({ initial, onSave, onCancel }
             }`}
           />
           {isBlockedUrl && (
-            <p className="text-[10px] text-red-600 dark:text-red-400 mt-0.5 flex items-center gap-1">
+            <p className="text-xs text-red-600 dark:text-red-400 mt-0.5 flex items-center gap-1">
               <AlertTriangle size={10} />
               This domain is blocked — not an acceptable source
             </p>
@@ -266,11 +266,11 @@ const CitationRow: React.FC<CitationRowProps> = ({ citation, index, onEdit, onDe
 
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 flex-wrap">
-          <span className={`text-[10px] font-semibold uppercase px-1.5 py-0.5 rounded ${TIER_COLORS[citation.tier]}`}>
+          <span className={`text-xs font-semibold uppercase px-1.5 py-0.5 rounded ${TIER_COLORS[citation.tier]}`}>
             T{citation.tier}
           </span>
           {isOld && (
-            <span className="text-[10px] px-1.5 py-0.5 rounded bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 flex items-center gap-0.5">
+            <span className="text-xs px-1.5 py-0.5 rounded bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 flex items-center gap-0.5">
               <AlertTriangle size={8} />
               Old
             </span>
@@ -283,7 +283,7 @@ const CitationRow: React.FC<CitationRowProps> = ({ citation, index, onEdit, onDe
           {citation.journalName ? ` — ${citation.journalName}` : ''}
         </p>
         {citation.doi && (
-          <p className="text-[10px] text-text-tertiary mt-0.5">
+          <p className="text-xs text-text-tertiary mt-0.5">
             DOI: {citation.doi}
           </p>
         )}

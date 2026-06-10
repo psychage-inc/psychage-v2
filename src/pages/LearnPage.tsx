@@ -238,7 +238,7 @@ const InlineNewsletterCTA: React.FC = () => {
                             </button>
                         </form>
                     )}
-                    <p className="text-[11px] text-text-tertiary mt-3">
+                    <p className="text-xs text-text-tertiary mt-3">
                         By subscribing you consent to receiving emails from Psychage.
                     </p>
                 </div>

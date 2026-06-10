@@ -106,13 +106,13 @@ const DashboardSummaryCards: React.FC<DashboardSummaryCardsProps> = ({
           </div>
           <div className="text-xl font-bold font-display">{card.value}</div>
           {card.trend && (
-            <div className={cn('flex items-center gap-1 text-[10px] font-bold mt-1', card.trend.color)}>
+            <div className={cn('flex items-center gap-1 text-xs font-bold mt-1', card.trend.color)}>
               {card.trend.icon}
               <span>{card.trend.text} vs last week</span>
             </div>
           )}
           {(card as any).extra && (
-            <div className="text-[10px] text-gray-400 dark:text-neutral-500 mt-1">
+            <div className="text-xs text-gray-400 dark:text-neutral-500 mt-1">
               {(card as any).extra}
             </div>
           )}

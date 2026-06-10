@@ -33,7 +33,7 @@ describe('VerificationBadge', () => {
     it('should support sm size', () => {
         render(<VerificationBadge status="verified" verifiedAt="2026-01-01" size="sm" />);
         const badge = screen.getByText('Psychage Verified').closest('span');
-        expect(badge).toHaveClass('text-[10px]');
+        expect(badge).toHaveClass('text-xs');
     });
 
     it('should support md size by default', () => {

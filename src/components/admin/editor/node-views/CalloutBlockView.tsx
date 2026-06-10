@@ -52,7 +52,7 @@ const CalloutBlockView: React.FC<NodeViewProps> = ({ node, updateAttributes }) =
           <select
             value={variant}
             onChange={(e) => updateAttributes({ variant: e.target.value })}
-            className="text-[10px] bg-transparent border border-border-hover rounded px-1 py-0.5 text-text-secondary cursor-pointer"
+            className="text-xs bg-transparent border border-border-hover rounded px-1 py-0.5 text-text-secondary cursor-pointer"
           >
             <option value="info">Info</option>
             <option value="warning">Warning</option>

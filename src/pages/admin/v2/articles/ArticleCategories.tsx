@@ -148,7 +148,7 @@ function CategoryCard({ dist }: { dist: CategoryArticleDistribution }) {
             return (
               <span
                 key={stage.value}
-                className="inline-flex items-center gap-1 text-[11px] text-text-secondary"
+                className="inline-flex items-center gap-1 text-xs text-text-secondary"
               >
                 <span className={cn('w-2 h-2 rounded-full', stageColors[stage.value])} />
                 {count} {stage.label.toLowerCase()}

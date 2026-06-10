@@ -218,7 +218,7 @@ const RelationshipHealthCheck: React.FC = () => {
                   <span className="text-sm font-medium text-text-primary">
                     {d.name}
                   </span>
-                  <span className="text-[11px] text-text-tertiary leading-snug">
+                  <span className="text-xs text-text-tertiary leading-snug">
                     {d.description}
                   </span>
                 </div>
@@ -271,10 +271,10 @@ const RelationshipHealthCheck: React.FC = () => {
           aria-labelledby="begin-assessment-heading"
         >
           <div className="flex items-center gap-2 mb-2">
-            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-primary text-white">
+            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-primary text-white">
               Begin Here
             </span>
-            <span className="text-[11px] uppercase tracking-wider font-semibold text-text-tertiary">
+            <span className="text-xs uppercase tracking-wider font-semibold text-text-tertiary">
               Step 1 of 2
             </span>
           </div>

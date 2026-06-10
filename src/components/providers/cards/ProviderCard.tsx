@@ -145,13 +145,13 @@ const ProviderCardComponent: React.FC<ProviderCardProps> = ({ provider }) => {
       {/* Specialties */}
       {provider.specialty_tags.length > 0 && (
         <div className="mb-3">
-          <p className="text-[10px] font-bold text-text-tertiary uppercase tracking-wider mb-1.5">{t('providers.card.specializes_in')}</p>
+          <p className="text-xs font-bold text-text-tertiary uppercase tracking-wider mb-1.5">{t('providers.card.specializes_in')}</p>
           <div className="flex flex-wrap gap-1.5">
             {provider.specialty_tags.slice(0, 6).map(spec => (
               <SpecialtyTag key={spec.slug} specialty={spec} size="sm" />
             ))}
             {provider.specialty_tags.length > 6 && (
-              <span className="inline-flex items-center px-2 py-0.5 text-[10px] font-medium text-text-tertiary bg-surface-hover rounded-full border border-border">
+              <span className="inline-flex items-center px-2 py-0.5 text-xs font-medium text-text-tertiary bg-surface-hover rounded-full border border-border">
                 +{provider.specialty_tags.length - 6}
               </span>
             )}
@@ -203,12 +203,12 @@ const ProviderCardComponent: React.FC<ProviderCardProps> = ({ provider }) => {
         <div className="mb-3">
           <div className="flex flex-wrap gap-1">
             {provider.competency_tags.slice(0, 3).map(comp => (
-              <span key={comp.slug} className="inline-flex items-center text-[10px] font-medium text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/20 px-1.5 py-0.5 rounded-full">
+              <span key={comp.slug} className="inline-flex items-center text-xs font-medium text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/20 px-1.5 py-0.5 rounded-full">
                 {comp.label}
               </span>
             ))}
             {provider.competency_tags.length > 3 && (
-              <span className="text-[10px] text-text-tertiary">+{provider.competency_tags.length - 3}</span>
+              <span className="text-xs text-text-tertiary">+{provider.competency_tags.length - 3}</span>
             )}
           </div>
         </div>
@@ -217,7 +217,7 @@ const ProviderCardComponent: React.FC<ProviderCardProps> = ({ provider }) => {
       {/* Insurance */}
       {insuranceSummary && (
         <div className="mb-3">
-          <p className="text-[10px] font-bold text-text-tertiary uppercase tracking-wider mb-1">{t('providers.card.insurance')}</p>
+          <p className="text-xs font-bold text-text-tertiary uppercase tracking-wider mb-1">{t('providers.card.insurance')}</p>
           <p className="text-xs text-text-secondary">{insuranceSummary}</p>
         </div>
       )}

@@ -438,7 +438,7 @@ const ClarityScoreTool: React.FC = () => {
                           <span className="text-sm font-medium text-text-primary">
                             {dim.name}
                           </span>
-                          <span className="hidden sm:block text-[11px] text-text-tertiary">
+                          <span className="hidden sm:block text-xs text-text-tertiary">
                             {dim.instrument}
                           </span>
                         </div>
@@ -470,7 +470,7 @@ const ClarityScoreTool: React.FC = () => {
                         >
                           {entry.score}
                         </div>
-                        <span className="text-[10px] text-text-tertiary">
+                        <span className="text-xs text-text-tertiary">
                           {entry.label || entry.date}
                         </span>
                       </div>

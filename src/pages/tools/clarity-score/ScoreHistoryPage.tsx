@@ -154,7 +154,7 @@ const ScoreHistoryPage: React.FC = () => {
                                                 transition={{ delay: 1 + (i * 0.1) }}
                                             >
                                                 <circle cx={p.x} cy={p.y} r="6" className="fill-surface stroke-primary stroke-2" />
-                                                <text x={p.x} y={p.y - 15} textAnchor="middle" className="fill-text-primary text-[10px] font-bold">
+                                                <text x={p.x} y={p.y - 15} textAnchor="middle" className="fill-text-primary text-xs font-bold">
                                                     {p.val}
                                                 </text>
                                             </motion.g>

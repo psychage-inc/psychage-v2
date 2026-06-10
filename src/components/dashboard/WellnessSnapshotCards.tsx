@@ -223,7 +223,7 @@ function ClaritySnapshotCard({ stats, sparkline }: { stats: DashboardStats | nul
                 <span className="text-xs font-medium text-gray-500 dark:text-neutral-400 tracking-wide uppercase">Clarity</span>
                 {hasData && stats.change !== undefined && (
                     <span className={cn(
-                        'ml-auto px-2 py-0.5 rounded-full text-[11px] font-semibold font-mono border',
+                        'ml-auto px-2 py-0.5 rounded-full text-xs font-semibold font-mono border',
                         stats.change >= 0
                             ? 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 border-emerald-200/60 dark:border-emerald-800/40'
                             : 'bg-rose-50 dark:bg-rose-900/20 text-rose-600 dark:text-rose-400 border-rose-200/60 dark:border-rose-800/40'

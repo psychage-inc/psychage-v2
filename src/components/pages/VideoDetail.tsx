@@ -177,7 +177,7 @@ const VideoDetail: React.FC = () => {
                                 >
                                     <div className="relative w-40 aspect-video rounded-lg overflow-hidden bg-surface-hover shrink-0">
                                         <img src={rel.thumbnail} alt={rel.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                                        <div className="absolute bottom-1 right-1 px-1 py-0.5 bg-black/80 rounded text-[10px] font-bold text-white">
+                                        <div className="absolute bottom-1 right-1 px-1 py-0.5 bg-black/80 rounded text-xs font-bold text-white">
                                             {Math.floor(rel.duration / 60)}:{(rel.duration % 60).toString().padStart(2, '0')}
                                         </div>
                                     </div>

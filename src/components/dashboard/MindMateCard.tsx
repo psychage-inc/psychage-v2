@@ -61,7 +61,7 @@ const MindMateCard: React.FC = () => {
                 </div>
                 <div>
                     <h3 className="font-semibold text-sm text-gray-900 dark:text-white">MindMate</h3>
-                    <p className="text-[11px] text-gray-500 dark:text-neutral-400">Your AI wellness companion</p>
+                    <p className="text-xs text-gray-500 dark:text-neutral-400">Your AI wellness companion</p>
                 </div>
             </div>
 

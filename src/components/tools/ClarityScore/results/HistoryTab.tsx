@@ -466,7 +466,7 @@ function MilestoneRow({ milestones }: { milestones: Milestone[] }) {
               >
                 {m.label}
               </p>
-              <p className="text-[10px] text-text-tertiary mt-0.5">
+              <p className="text-xs text-text-tertiary mt-0.5">
                 {m.description}
               </p>
             </div>

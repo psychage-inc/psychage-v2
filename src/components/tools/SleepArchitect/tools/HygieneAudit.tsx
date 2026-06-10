@@ -85,7 +85,7 @@ const HygieneAudit: React.FC = () => {
           >
             {overallScore}%
           </div>
-          <div className="text-[10px] text-gray-400 dark:text-neutral-500">
+          <div className="text-xs text-gray-400 dark:text-neutral-500">
             {totalChecked}/{totalItems}
           </div>
         </div>
@@ -120,7 +120,7 @@ const HygieneAudit: React.FC = () => {
                   <span className="text-sm font-bold text-gray-900 dark:text-white">
                     {cat.title}
                   </span>
-                  <span className="text-[10px] font-medium text-gray-400 dark:text-neutral-500">
+                  <span className="text-xs font-medium text-gray-400 dark:text-neutral-500">
                     {catChecked}/{cat.items.length}
                   </span>
                 </div>

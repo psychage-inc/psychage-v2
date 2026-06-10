@@ -263,7 +263,7 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ open, onClose }) => {
               placeholder="Search commands..."
               className="flex-1 text-sm bg-transparent text-text-primary placeholder:text-text-tertiary outline-none focus-visible:ring-2 focus-visible:ring-primary/50 rounded"
             />
-            <kbd className="hidden sm:inline-flex items-center gap-1 px-1.5 py-0.5 text-[10px] font-mono text-text-tertiary bg-surface-hover rounded">
+            <kbd className="hidden sm:inline-flex items-center gap-1 px-1.5 py-0.5 text-xs font-mono text-text-tertiary bg-surface-hover rounded">
               ESC
             </kbd>
           </div>
@@ -278,7 +278,7 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ open, onClose }) => {
 
             {Array.from(grouped.entries()).map(([section, items]) => (
               <div key={section}>
-                <div className="px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-text-tertiary">
+                <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-text-tertiary">
                   {section}
                 </div>
                 {items.map((item) => {
@@ -316,13 +316,13 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ open, onClose }) => {
           </div>
 
           {/* Footer */}
-          <div className="px-4 py-2 border-t border-border flex items-center gap-4 text-[11px] text-text-tertiary">
+          <div className="px-4 py-2 border-t border-border flex items-center gap-4 text-xs text-text-tertiary">
             <span className="flex items-center gap-1">
-              <kbd className="px-1 py-0.5 bg-surface-hover rounded text-[10px] font-mono">↑↓</kbd>
+              <kbd className="px-1 py-0.5 bg-surface-hover rounded text-xs font-mono">↑↓</kbd>
               Navigate
             </span>
             <span className="flex items-center gap-1">
-              <kbd className="px-1 py-0.5 bg-surface-hover rounded text-[10px] font-mono">↵</kbd>
+              <kbd className="px-1 py-0.5 bg-surface-hover rounded text-xs font-mono">↵</kbd>
               Select
             </span>
             <span className="flex items-center gap-1 ml-auto">

@@ -365,7 +365,7 @@ const ForProvidersLandingPage: React.FC = () => {
               <div className="w-full lg:w-[48%] text-center lg:text-left">
                 <motion.p
                   {...textAnim(0)}
-                  className="uppercase tracking-[0.18em] text-[11px] sm:text-xs text-[var(--color-primary)]/55 font-sans font-medium mb-5"
+                  className="uppercase tracking-[0.18em] text-xs text-[var(--color-primary)]/55 font-sans font-medium mb-5"
                 >
                   For mental health providers
                 </motion.p>
@@ -562,7 +562,7 @@ const ForProvidersLandingPage: React.FC = () => {
         <section className="py-20 md:py-28 lg:py-32">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <motion.div {...sectionAnim()} className="text-center mb-12 md:mb-16">
-              <p className="uppercase tracking-[0.18em] text-[11px] text-[var(--color-primary)]/55 font-sans font-medium mb-4">
+              <p className="uppercase tracking-[0.18em] text-xs text-[var(--color-primary)]/55 font-sans font-medium mb-4">
                 Platform Features
               </p>
               <h2
@@ -638,7 +638,7 @@ const ForProvidersLandingPage: React.FC = () => {
         <section className="py-20 md:py-28 bg-white dark:bg-[var(--color-surface)]">
           <div className="max-w-4xl mx-auto px-6 md:px-8">
             <motion.div {...sectionAnim()} className="text-center mb-14">
-              <p className="uppercase tracking-[0.18em] text-[11px] text-[var(--color-primary)]/55 font-sans font-medium mb-4">
+              <p className="uppercase tracking-[0.18em] text-xs text-[var(--color-primary)]/55 font-sans font-medium mb-4">
                 How It Works
               </p>
               <h2
@@ -756,7 +756,7 @@ const ForProvidersLandingPage: React.FC = () => {
                   {...slideAnim(dive.reverse ? -30 : 30, 0.1)}
                   className={cn(dive.reverse && 'lg:order-1')}
                 >
-                  <p className="uppercase tracking-[0.18em] text-[11px] text-[var(--color-primary)]/55 font-sans font-medium mb-4">
+                  <p className="uppercase tracking-[0.18em] text-xs text-[var(--color-primary)]/55 font-sans font-medium mb-4">
                     {dive.sectionLabel}
                   </p>
                   <h2
@@ -829,7 +829,7 @@ const ForProvidersLandingPage: React.FC = () => {
         >
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <motion.div {...sectionAnim()} className="text-center mb-12">
-              <p className="uppercase tracking-[0.18em] text-[11px] text-[var(--color-primary)]/55 font-sans font-medium mb-4">
+              <p className="uppercase tracking-[0.18em] text-xs text-[var(--color-primary)]/55 font-sans font-medium mb-4">
                 Pricing
               </p>
               <h2
@@ -1004,7 +1004,7 @@ const ForProvidersLandingPage: React.FC = () => {
         <section className="py-20 md:py-28 bg-[var(--color-homepage-bg)]">
           <div className="max-w-6xl mx-auto px-6 md:px-8">
             <motion.div {...sectionAnim()} className="text-center mb-12">
-              <p className="uppercase tracking-[0.18em] text-[11px] text-[var(--color-primary)]/55 font-sans font-medium mb-4">
+              <p className="uppercase tracking-[0.18em] text-xs text-[var(--color-primary)]/55 font-sans font-medium mb-4">
                 Provider Stories
               </p>
               <h2
@@ -1081,7 +1081,7 @@ const ForProvidersLandingPage: React.FC = () => {
         <section className="py-20 md:py-28 bg-white dark:bg-[var(--color-surface)]">
           <div className="max-w-3xl mx-auto px-6 md:px-8">
             <motion.div {...sectionAnim()} className="text-center mb-12">
-              <p className="uppercase tracking-[0.18em] text-[11px] text-[var(--color-primary)]/55 font-sans font-medium mb-4">
+              <p className="uppercase tracking-[0.18em] text-xs text-[var(--color-primary)]/55 font-sans font-medium mb-4">
                 FAQ
               </p>
               <h2

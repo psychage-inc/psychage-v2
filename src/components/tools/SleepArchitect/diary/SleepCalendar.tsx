@@ -88,7 +88,7 @@ const SleepCalendar: React.FC<SleepCalendarProps> = ({
         {DAYS.map((d) => (
           <div
             key={d}
-            className="text-center text-[10px] font-bold text-gray-400 dark:text-neutral-500 uppercase"
+            className="text-center text-xs font-bold text-gray-400 dark:text-neutral-500 uppercase"
           >
             {d}
           </div>
@@ -152,7 +152,7 @@ const SleepCalendar: React.FC<SleepCalendarProps> = ({
       </div>
 
       {/* Legend */}
-      <div className="flex items-center justify-center gap-3 mt-4 text-[10px] text-gray-400 dark:text-neutral-500">
+      <div className="flex items-center justify-center gap-3 mt-4 text-xs text-gray-400 dark:text-neutral-500">
         <div className="flex items-center gap-1">
           <div className="w-2.5 h-2.5 rounded-sm bg-red-400" />
           <span>Poor</span>

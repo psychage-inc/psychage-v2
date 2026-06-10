@@ -207,7 +207,7 @@ const MedicationTracker: React.FC = () => {
               <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 tabular-nums">
                 {overallAdherence.percentage}%
               </p>
-              <p className="text-[11px] font-medium text-slate-500 dark:text-neutral-400 mt-0.5 uppercase tracking-wide">
+              <p className="text-xs font-medium text-slate-500 dark:text-neutral-400 mt-0.5 uppercase tracking-wide">
                 7-day adherence
               </p>
             </div>
@@ -215,7 +215,7 @@ const MedicationTracker: React.FC = () => {
               <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 tabular-nums">
                 {overallAdherence.currentStreak}
               </p>
-              <p className="text-[11px] font-medium text-slate-500 dark:text-neutral-400 mt-0.5 uppercase tracking-wide">
+              <p className="text-xs font-medium text-slate-500 dark:text-neutral-400 mt-0.5 uppercase tracking-wide">
                 Day streak
               </p>
             </div>
@@ -223,7 +223,7 @@ const MedicationTracker: React.FC = () => {
               <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 tabular-nums">
                 {pendingDoses.length}
               </p>
-              <p className="text-[11px] font-medium text-slate-500 dark:text-neutral-400 mt-0.5 uppercase tracking-wide">
+              <p className="text-xs font-medium text-slate-500 dark:text-neutral-400 mt-0.5 uppercase tracking-wide">
                 Remaining
               </p>
             </div>

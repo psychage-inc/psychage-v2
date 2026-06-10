@@ -26,7 +26,7 @@ const UserSidebar: React.FC = () => {
                     <nav className="flex-grow space-y-5">
                         {patientSidebarSections.map((section) => (
                             <div key={section.title}>
-                                <p className="text-[10px] uppercase tracking-widest text-gray-400 dark:text-neutral-500 px-4 mb-1.5 font-medium">
+                                <p className="text-xs uppercase tracking-widest text-gray-400 dark:text-neutral-500 px-4 mb-1.5 font-medium">
                                     {section.title}
                                 </p>
                                 <div className="space-y-1">
@@ -107,7 +107,7 @@ const UserSidebar: React.FC = () => {
                                 )}
                             >
                                 <item.icon size={20} />
-                                <span className="text-[10px] font-medium leading-tight">{item.label.split(' ')[0]}</span>
+                                <span className="text-xs font-medium leading-tight">{item.label.split(' ')[0]}</span>
                             </Link>
                         );
                     })}

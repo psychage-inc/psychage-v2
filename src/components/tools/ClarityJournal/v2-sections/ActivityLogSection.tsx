@@ -115,7 +115,7 @@ const ActivityLogSection: React.FC<ActivityLogSectionProps> = ({ onSave, existin
               value={newName}
               onChange={e => setNewName(e.target.value)}
               placeholder="What did you do?"
-              className="w-full px-3 py-2 rounded-lg border border-slate-200 dark:border-neutral-700 bg-slate-50 dark:bg-neutral-800 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full px-3 py-2 rounded-lg border border-slate-200 dark:border-neutral-700 bg-slate-50 dark:bg-neutral-800 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
               autoFocus
             />
 
@@ -190,7 +190,7 @@ const ActivityLogSection: React.FC<ActivityLogSectionProps> = ({ onSave, existin
           value={avoidance}
           onChange={e => setAvoidance(e.target.value)}
           placeholder="e.g., Going to the gym, calling a friend..."
-          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
         />
       </div>
 

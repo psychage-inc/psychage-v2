@@ -174,7 +174,7 @@ const BookmarksPage: React.FC = () => {
                                                     <div key={item.id} className="flex flex-col md:flex-row md:items-center justify-between p-5 bg-white/5 rounded-2xl border border-white/5 group hover:border-primary/40 hover:bg-white/10 transition-all duration-300">
                                                         <div className="mb-4 md:mb-0">
                                                             <div className="flex items-center gap-2 mb-2">
-                                                                <span className="text-[10px] uppercase font-bold text-primary tracking-wider flex items-center gap-1 bg-primary/10 px-2 py-0.5 rounded-full">
+                                                                <span className="text-xs uppercase font-bold text-primary tracking-wider flex items-center gap-1 bg-primary/10 px-2 py-0.5 rounded-full">
                                                                     <GraduationCap size={10} />
                                                                     Article
                                                                 </span>

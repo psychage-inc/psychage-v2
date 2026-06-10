@@ -271,7 +271,7 @@ const ProvidersLandingPage: React.FC = () => {
                   </div>
                   <div>
                     <div className="flex items-center gap-3 mb-1">
-                      <span className="text-[11px] font-bold text-teal-500 uppercase tracking-widest">Step {item.step}</span>
+                      <span className="text-xs font-bold text-teal-500 uppercase tracking-widest">Step {item.step}</span>
                     </div>
                     <h3 className="font-display font-bold text-white text-lg mb-1">{item.title}</h3>
                     <p className="text-sm text-text-tertiary leading-relaxed">{item.description}</p>

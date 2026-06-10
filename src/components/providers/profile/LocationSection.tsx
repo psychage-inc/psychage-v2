@@ -70,7 +70,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ provider }) =>
                     {address}
                   </p>
                   {loc.is_primary && provider.locations.length > 1 && (
-                    <span className="mt-1 inline-block text-[11px] font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-400">
+                    <span className="mt-1 inline-block text-xs font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-400">
                       Primary
                     </span>
                   )}

@@ -35,7 +35,7 @@ export const VerificationBadge: React.FC<VerificationBadgeProps> = ({
       className={cn(
         'inline-flex items-center gap-1 font-semibold text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-900/20 rounded-full',
         showTooltip && 'cursor-help',
-        size === 'sm' ? 'text-[10px] px-1.5 py-0.5' : 'text-xs px-2 py-0.5'
+        size === 'sm' ? 'text-xs px-1.5 py-0.5' : 'text-xs px-2 py-0.5'
       )}
       role="status"
       aria-label="Psychage Verified provider"
@@ -48,7 +48,7 @@ export const VerificationBadge: React.FC<VerificationBadgeProps> = ({
       className={cn(
         'inline-flex items-center gap-1 font-medium text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800 rounded-full',
         showTooltip && 'cursor-help',
-        size === 'sm' ? 'text-[10px] px-1.5 py-0.5' : 'text-xs px-2 py-0.5'
+        size === 'sm' ? 'text-xs px-1.5 py-0.5' : 'text-xs px-2 py-0.5'
       )}
       role="status"
       aria-label="Publicly Listed provider"
@@ -80,7 +80,7 @@ export const VerificationBadge: React.FC<VerificationBadgeProps> = ({
               'data-[state=closed]:animate-out data-[state=closed]:fade-out-0'
             )}
           >
-            <p className="font-semibold mb-1 text-[11px]">{tooltipTitle}</p>
+            <p className="font-semibold mb-1 text-xs">{tooltipTitle}</p>
             <p>{tooltipText}</p>
             <TooltipPrimitive.Arrow className="fill-gray-900/95" />
           </TooltipPrimitive.Content>

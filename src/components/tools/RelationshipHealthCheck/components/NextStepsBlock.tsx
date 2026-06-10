@@ -215,12 +215,12 @@ export const NextStepsBlock: React.FC<NextStepsBlockProps> = ({ tier, compositeS
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2 mb-1">
             <span
-              className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold uppercase tracking-wider"
+              className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider"
               style={{ backgroundColor: guidance.colorHex, color: '#fff' }}
             >
               {guidance.urgencyLabel}
             </span>
-            <span className="text-[11px] uppercase tracking-wider text-text-tertiary font-medium">
+            <span className="text-xs uppercase tracking-wider text-text-tertiary font-medium">
               What to do next · Score {compositeScore}/100
             </span>
           </div>
@@ -293,7 +293,7 @@ export const NextStepsBlock: React.FC<NextStepsBlockProps> = ({ tier, compositeS
           </button>
           {showWhy && (
             <div className="mt-3 rounded-xl p-4 border border-border bg-surface-hover space-y-2">
-              <p className="text-[11px] font-semibold uppercase tracking-wider text-text-tertiary">
+              <p className="text-xs font-semibold uppercase tracking-wider text-text-tertiary">
                 Source
               </p>
               <p className="text-sm font-semibold text-text-primary">

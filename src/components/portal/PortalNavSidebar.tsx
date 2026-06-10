@@ -51,7 +51,7 @@ const PortalNavSidebar: React.FC<PortalNavSidebarProps> = ({
           <nav className="flex-grow space-y-5">
             {portalSidebarSections.map((section) => (
               <div key={section.title}>
-                <p className="text-[10px] uppercase tracking-widest text-gray-400 dark:text-neutral-500 px-4 mb-1.5 font-medium">
+                <p className="text-xs uppercase tracking-widest text-gray-400 dark:text-neutral-500 px-4 mb-1.5 font-medium">
                   {section.title}
                 </p>
                 <div className="space-y-1">
@@ -129,7 +129,7 @@ const PortalNavSidebar: React.FC<PortalNavSidebarProps> = ({
                 )}
               >
                 <item.icon size={20} />
-                <span className="text-[10px] font-medium leading-tight">{item.label.split(' ')[0]}</span>
+                <span className="text-xs font-medium leading-tight">{item.label.split(' ')[0]}</span>
               </Link>
             );
           })}

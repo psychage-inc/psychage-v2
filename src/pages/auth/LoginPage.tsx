@@ -311,7 +311,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                             <div className="mb-6 p-4 rounded-lg border border-amber-300/50 bg-amber-50/80 dark:bg-amber-900/20 dark:border-amber-500/30">
                                 <p className="text-sm font-semibold text-amber-800 dark:text-amber-300 mb-2">Dev Mode — Admin Credentials</p>
                                 <p className="text-xs text-amber-700 dark:text-amber-400 mb-3">
-                                    First run: <code className="bg-amber-100 dark:bg-amber-900/40 px-1.5 py-0.5 rounded text-[11px]">npx tsx scripts/create-demo-admin.ts</code>
+                                    First run: <code className="bg-amber-100 dark:bg-amber-900/40 px-1.5 py-0.5 rounded text-xs">npx tsx scripts/create-demo-admin.ts</code>
                                 </p>
                                 <button
                                     type="button"

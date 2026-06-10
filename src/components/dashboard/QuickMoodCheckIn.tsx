@@ -85,7 +85,7 @@ const QuickMoodCheckIn: React.FC<QuickMoodCheckInProps> = ({ userId, todayEntry,
                         </h3>
                     </div>
                     {todayEntry && !showSuccess && (
-                        <span className="text-[10px] text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 px-2 py-0.5 rounded-full border border-emerald-200/60 dark:border-emerald-800/40 font-medium">
+                        <span className="text-xs text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 px-2 py-0.5 rounded-full border border-emerald-200/60 dark:border-emerald-800/40 font-medium">
                             Logged today
                         </span>
                     )}
@@ -122,11 +122,11 @@ const QuickMoodCheckIn: React.FC<QuickMoodCheckInProps> = ({ userId, todayEntry,
                                 <p className="text-sm font-medium text-gray-900 dark:text-white">
                                     {todayOption?.label || 'Logged'}
                                 </p>
-                                <p className="text-[11px] text-gray-400 dark:text-neutral-500">
+                                <p className="text-xs text-gray-400 dark:text-neutral-500">
                                     {format(new Date(todayEntry.created_at), 'h:mm a')}
                                 </p>
                             </div>
-                            <Link to="/tools/mood-journal" className="ml-auto text-[11px] text-teal-600 dark:text-teal-400 hover:underline flex items-center gap-1">
+                            <Link to="/tools/mood-journal" className="ml-auto text-xs text-teal-600 dark:text-teal-400 hover:underline flex items-center gap-1">
                                 View Journal <ArrowRight size={11} />
                             </Link>
                         </motion.div>
@@ -159,7 +159,7 @@ const QuickMoodCheckIn: React.FC<QuickMoodCheckInProps> = ({ userId, todayEntry,
                                                 style={{ backgroundColor: isSelected ? option.color : `${option.color}30` }}
                                             />
                                             <span className={cn(
-                                                'text-[10px] sm:text-xs font-medium transition-colors',
+                                                'text-xs font-medium transition-colors',
                                                 isSelected ? 'text-gray-900 dark:text-white' : 'text-gray-400 dark:text-neutral-500'
                                             )}>
                                                 {option.label}

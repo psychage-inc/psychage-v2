@@ -79,7 +79,7 @@ const AdminTopBar: React.FC<AdminTopBarProps> = ({ adminUser, sidebarCollapsed, 
         >
           <Search size={14} />
           <span className="hidden sm:inline">Search...</span>
-          <kbd className="hidden sm:inline-flex text-[10px] font-mono px-1.5 py-0.5 bg-surface rounded border border-border">
+          <kbd className="hidden sm:inline-flex text-xs font-mono px-1.5 py-0.5 bg-surface rounded border border-border">
             ⌘K
           </kbd>
         </button>

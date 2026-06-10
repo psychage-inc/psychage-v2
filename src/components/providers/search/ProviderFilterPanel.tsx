@@ -351,7 +351,7 @@ const CheckboxItem: React.FC<{ label: string; sublabel?: string; checked: boolea
     <span className="text-sm text-text-secondary group-hover:text-text-primary transition-colors">
       {label}
       {sublabel && (
-        <span className="text-[10px] text-text-tertiary ml-1">({sublabel})</span>
+        <span className="text-xs text-text-tertiary ml-1">({sublabel})</span>
       )}
     </span>
   </label>

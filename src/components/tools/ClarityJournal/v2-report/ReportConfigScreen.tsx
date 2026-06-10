@@ -167,7 +167,7 @@ const ReportConfigScreen: React.FC = () => {
                     value={customStart}
                     max={today}
                     onChange={e => setCustomStart(e.target.value)}
-                    className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
                   />
                 </div>
                 <div>
@@ -177,7 +177,7 @@ const ReportConfigScreen: React.FC = () => {
                     value={customEnd}
                     max={today}
                     onChange={e => setCustomEnd(e.target.value)}
-                    className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
                   />
                 </div>
               </div>
@@ -236,7 +236,7 @@ const ReportConfigScreen: React.FC = () => {
                 value={clientName}
                 onChange={e => setClientName(e.target.value)}
                 placeholder="Defaults to 'Client'"
-                className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 
@@ -247,7 +247,7 @@ const ReportConfigScreen: React.FC = () => {
                 value={therapistName}
                 onChange={e => setTherapistName(e.target.value)}
                 placeholder="Optional"
-                className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 
@@ -257,7 +257,7 @@ const ReportConfigScreen: React.FC = () => {
                 type="date"
                 value={nextSessionDate}
                 onChange={e => setNextSessionDate(e.target.value)}
-                className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
           </motion.div>

@@ -239,3 +239,26 @@
         }
     }
 }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Floating-layer collision contract — MR-002 / MR-003 / MR-005
+   The cookie card, crisis card, and MindMate FAB all live under <body>, so
+   :has() coordinates them with no shared React state. Each card's
+   [data-floating] element only exists in the DOM while it is "on" (gated by
+   `visible` / `!dismissed`), so element presence is the entire signal — the
+   FAB reacts with zero coupling code.
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* While the cookie-consent card is visible, hide the FAB entirely
+   (consent is a transient first-visit state — an offset dance is overkill). */
+body:has([data-floating='cookie-consent']) [data-floating='mindmate-fab'] {
+    display: none;
+}
+
+/* While the crisis card is visible, lift the FAB above it with an 8px
+   (--space-2) gap so the two never overlap. Base is --space-6 (24px =
+   bottom-6); the middle term is the crisis card's rendered height, measured at
+   320 and 390 after the 44px button bump (single fixed offset clears both). */
+body:has([data-floating='crisis-card']) [data-floating='mindmate-fab'] {
+    bottom: calc(var(--space-6) + 142px + var(--space-2));
+}

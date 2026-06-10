@@ -51,7 +51,7 @@ export const ProviderSearchBar: React.FC<ProviderSearchBarProps> = ({
             onChange={e => setQuery(e.target.value)}
             placeholder={t('providers.searchbar.query_placeholder')}
             aria-label={t('providers.searchbar.query_aria')}
-            className="w-full pl-11 pr-4 py-3.5 bg-surface border border-border rounded-xl text-sm font-medium text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+            className="w-full pl-11 pr-4 py-3.5 bg-surface border border-border rounded-xl text-base font-medium text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
           />
         </div>
 
@@ -64,7 +64,7 @@ export const ProviderSearchBar: React.FC<ProviderSearchBarProps> = ({
             onChange={e => setLocation(e.target.value)}
             placeholder={t('providers.searchbar.location_placeholder')}
             aria-label={t('providers.searchbar.location_aria')}
-            className="w-full pl-11 pr-10 py-3.5 bg-surface border border-border rounded-xl text-sm font-medium text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+            className="w-full pl-11 pr-10 py-3.5 bg-surface border border-border rounded-xl text-base font-medium text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
           />
           <button
             type="button"

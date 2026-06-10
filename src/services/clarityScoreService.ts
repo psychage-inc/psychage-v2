@@ -15,23 +15,20 @@ interface ClarityScoreRow {
     user_id: string;
     total_score: number;
     label: string;
-    tier: string;
     domain_scores: Record<string, number>;
-    sub_scores: Record<string, number>;
-    flags: string[];
-    strengths: string[];
-    growth_areas: string[];
-    raw_answers: Record<string, number>;
     created_at: string;
 }
 
 export const clarityScoreService = {
     /**
      * Save a Clarity Score result to Supabase and localStorage.
+     *
+     * Persists DERIVED scores only — the dashboard read path uses
+     * total_score / label / domain_scores. Item-level answers, sub-scores,
+     * and clinical flags are intentionally NOT persisted.
      */
     saveResult: async (
-        result: ClarityScoreResult,
-        answers: Record<string, number>
+        result: ClarityScoreResult
     ): Promise<{ success: boolean; id?: string }> => {
         try {
             const { data: { user } } = await supabase.auth.getUser();
@@ -43,13 +40,7 @@ export const clarityScoreService = {
                     user_id: user.id,
                     total_score: result.totalScore,
                     label: result.label,
-                    tier: result.tier,
                     domain_scores: result.domainScores,
-                    sub_scores: result.subScores,
-                    flags: result.flags,
-                    strengths: result.strengths,
-                    growth_areas: result.growthAreas,
-                    raw_answers: answers,
                 })
                 .select('id')
                 .single();

@@ -5,6 +5,7 @@ import {
   CheckCircle2,
   TrendingUp,
   AlertTriangle,
+  Compass,
 } from 'lucide-react';
 import type {
   ClarityScoreResult,
@@ -122,43 +123,62 @@ const OverviewTab: React.FC<OverviewTabProps> = ({
 
       {/* ─── Strengths & Growth Areas ─── */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Strengths */}
+        {/* Strengths — gated on a real floor (≥12/20). When nothing clears it,
+            show neutral supportive copy instead of false affirmation. */}
         <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 border border-gray-200 dark:border-neutral-800">
-          <div className="flex items-center gap-2.5 mb-5">
-            <div className="w-7 h-7 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
-              <CheckCircle2 size={15} />
-            </div>
-            <h3 className="font-semibold text-gray-900 dark:text-white">
-              Core Strengths
-            </h3>
-          </div>
-          <div className="space-y-3">
-            {detailedInsights.strengths.map((s) => {
-              const DimIcon = DIMENSION_META[s.key].icon;
-              return (
-                <div
-                  key={s.key}
-                  className="rounded-xl p-4 border border-gray-100 dark:border-neutral-800 bg-gray-50/50 dark:bg-neutral-800/30"
-                >
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <DimIcon
-                      size={14}
-                      className={DIMENSION_META[s.key].tailwindText}
-                    />
-                    <span className="text-sm font-medium text-gray-900 dark:text-white">
-                      {s.name}
-                    </span>
-                    <span className="ml-auto text-xs font-semibold text-gray-500 dark:text-neutral-400">
-                      {Math.round(s.score)}/20
-                    </span>
-                  </div>
-                  <p className="text-sm text-gray-500 dark:text-neutral-400 leading-relaxed">
-                    {s.insight}
-                  </p>
+          {detailedInsights.strengths.length > 0 ? (
+            <>
+              <div className="flex items-center gap-2.5 mb-5">
+                <div className="w-7 h-7 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+                  <CheckCircle2 size={15} />
                 </div>
-              );
-            })}
-          </div>
+                <h3 className="font-semibold text-gray-900 dark:text-white">
+                  Core Strengths
+                </h3>
+              </div>
+              <div className="space-y-3">
+                {detailedInsights.strengths.map((s) => {
+                  const DimIcon = DIMENSION_META[s.key].icon;
+                  return (
+                    <div
+                      key={s.key}
+                      className="rounded-xl p-4 border border-gray-100 dark:border-neutral-800 bg-gray-50/50 dark:bg-neutral-800/30"
+                    >
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <DimIcon
+                          size={14}
+                          className={DIMENSION_META[s.key].tailwindText}
+                        />
+                        <span className="text-sm font-medium text-gray-900 dark:text-white">
+                          {s.name}
+                        </span>
+                        <span className="ml-auto text-xs font-semibold text-gray-500 dark:text-neutral-400">
+                          {Math.round(s.score)}/20
+                        </span>
+                      </div>
+                      <p className="text-sm text-gray-500 dark:text-neutral-400 leading-relaxed">
+                        {s.insight}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="flex items-center gap-2.5 mb-5">
+                <div className="w-7 h-7 rounded-lg bg-sky-50 dark:bg-sky-900/20 flex items-center justify-center text-sky-600 dark:text-sky-400">
+                  <Compass size={15} />
+                </div>
+                <h3 className="font-semibold text-gray-900 dark:text-white">
+                  Areas to Support
+                </h3>
+              </div>
+              <p className="text-sm text-gray-500 dark:text-neutral-400 leading-relaxed">
+                Every dimension has room to grow right now — that&apos;s common, and it&apos;s a workable place to start. The growth areas here show where small, focused steps can help most.
+              </p>
+            </>
+          )}
         </div>
 
         {/* Growth Areas */}

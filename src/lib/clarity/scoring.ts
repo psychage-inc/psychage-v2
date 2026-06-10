@@ -31,7 +31,7 @@ export function calculateClarityScore(
   const phq4Raw = phq2 + gad2; // max 12
   const emotionalDomain = Math.max(0, 20 - (phq4Raw / 12) * 20);
 
-  // --- Cognitive Clarity (WHO-5) ---
+  // --- Overall Wellbeing (WHO-5) ---
   // Stored under key 'vitality' for historical DB compatibility.
   // Options are symptom-scaled: 0 = best mental state, 5 = worst
   const who5SymptomRaw =
@@ -51,7 +51,7 @@ export function calculateClarityScore(
   const normalizedUcla = uclaRaw - 3; // 0 to 6
   const socialDomain = Math.max(0, 20 - (normalizedUcla / 6) * 20);
 
-  // --- Physical Vitality (PSS-4) ---
+  // --- Stress Load (PSS-4) ---
   // Stored under key 'cognitive' for historical DB compatibility.
   // q13 & q16 are direct (higher = more stress = worse)
   // q14 & q15 are positive items, reverse-scored: 4 - value
@@ -82,8 +82,8 @@ export function calculateClarityScore(
 
   // --- Domain scores object ---
   // Key mapping (preserved for historical DB compatibility):
-  //   'vitality'  → Cognitive Clarity (WHO-5)
-  //   'cognitive'  → Physical Vitality (PSS-4)
+  //   'vitality'  → Overall Wellbeing (WHO-5)
+  //   'cognitive'  → Stress Load (PSS-4)
   const domainScores: ClarityDomainScores = {
     emotional: Math.round(emotionalDomain * 10) / 10,
     vitality: Math.round(who5Domain * 10) / 10,
@@ -220,8 +220,8 @@ export function getRecommendations(
 
   if (domainScores.vitality <= 10) {
     recs.push({
-      dimension: 'Cognitive Clarity',
-      text: 'Your cognitive clarity is low. Mindfulness tools and structured routines may help.',
+      dimension: 'Overall Wellbeing',
+      text: 'Your overall wellbeing score is low. Mindfulness tools and restorative routines may help.',
       link: '/tools',
       linkLabel: 'Explore Wellness Tools',
     });
@@ -238,7 +238,7 @@ export function getRecommendations(
 
   if (domainScores.cognitive <= 10) {
     recs.push({
-      dimension: 'Physical Vitality',
+      dimension: 'Stress Load',
       text: 'Stress levels are elevated. Sleep quality and physical activity tools may help.',
       link: '/tools/sleep-architect',
       linkLabel: 'Try Sleep Architect',
@@ -316,11 +316,19 @@ export function getStrengthsAndGrowthDetailed(
   }));
   entries.sort((a, b) => b.score - a.score);
 
+  // Only call a dimension a "strength" when it actually clears a real floor
+  // (≥12/20 = 60%). Below that, surfacing it as a strength would be false
+  // affirmation. May yield 0, 1, or 2 strengths.
+  const STRENGTH_FLOOR = 12;
+
   return {
-    strengths: entries.slice(0, 2).map((e) => ({
-      ...e,
-      insight: insights[e.key].strength,
-    })),
+    strengths: entries
+      .slice(0, 2)
+      .filter((e) => e.score >= STRENGTH_FLOOR)
+      .map((e) => ({
+        ...e,
+        insight: insights[e.key].strength,
+      })),
     growthAreas: entries.slice(-2).reverse().map((e) => ({
       ...e,
       insight: insights[e.key].growth,

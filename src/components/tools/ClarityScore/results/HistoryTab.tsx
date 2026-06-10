@@ -164,11 +164,11 @@ const HistoryTab: React.FC<HistoryTabProps> = ({
           Track Your Clarity Over Time
         </h3>
         <p className="text-text-tertiary max-w-md mx-auto mb-2">
-          Your first result has been saved. Retake in 2 weeks to start seeing
-          trends in your wellness journey.
+          Results stay on your device unless you choose to save them to your
+          dashboard.
         </p>
         <p className="text-xs text-text-tertiary">
-          Your data stays on your device.
+          Retake in 2 weeks to start seeing trends.
         </p>
       </motion.div>
     );

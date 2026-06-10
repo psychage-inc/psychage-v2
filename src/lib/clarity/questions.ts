@@ -2,8 +2,8 @@ import type { ClarityQuestion, ClarityDomain, ScaleOption } from './types';
 
 /**
  * Domain key↔name mapping (preserved for historical DB compatibility):
- *   key 'vitality'  → "Cognitive Clarity" (WHO-5 Well-Being Index)
- *   key 'cognitive'  → "Physical Vitality" (PSS-4 Perceived Stress)
+ *   key 'vitality'  → "Overall Wellbeing" (WHO-5 Well-Being Index)
+ *   key 'cognitive'  → "Stress Load" (PSS-4 Perceived Stress)
  * See also: dimensions.ts DIMENSION_META for the results dashboard mapping.
  */
 export const DOMAINS: ClarityDomain[] = [
@@ -18,7 +18,7 @@ export const DOMAINS: ClarityDomain[] = [
   },
   {
     id: 1,
-    name: 'Cognitive Clarity',
+    name: 'Overall Wellbeing',
     key: 'vitality',
     description: 'WHO-5',
     citation: 'Over the last 2 weeks...',
@@ -36,7 +36,7 @@ export const DOMAINS: ClarityDomain[] = [
   },
   {
     id: 3,
-    name: 'Physical Vitality',
+    name: 'Stress Load',
     key: 'cognitive',
     description: 'PSS-4',
     citation: 'In the last month...',
@@ -99,7 +99,7 @@ export const QUESTIONS: ClarityQuestion[] = [
   { id: 'q3', domainId: 0, text: 'Little interest or pleasure in doing things', options: phqOptions },
   { id: 'q4', domainId: 0, text: 'Feeling down, depressed, or hopeless', options: phqOptions },
 
-  // WHO-5 → Cognitive Clarity (domain 1)
+  // WHO-5 → Overall Wellbeing (domain 1)
   { id: 'q5', domainId: 1, text: 'I have felt cheerful and in good spirits', options: who5Options },
   { id: 'q6', domainId: 1, text: 'I have felt calm and relaxed', options: who5Options },
   { id: 'q7', domainId: 1, text: 'I have felt active and vigorous', options: who5Options },
@@ -111,7 +111,7 @@ export const QUESTIONS: ClarityQuestion[] = [
   { id: 'q11', domainId: 2, text: 'How often do you feel left out?', options: uclaOptions },
   { id: 'q12', domainId: 2, text: 'How often do you feel isolated from others?', options: uclaOptions },
 
-  // PSS-4 → Physical Vitality (domain 3)
+  // PSS-4 → Stress Load (domain 3)
   { id: 'q13', domainId: 3, text: 'How often have you felt that you were unable to control the important things in your life?', options: pssOptions },
   { id: 'q14', domainId: 3, text: 'How often have you felt confident about your ability to handle your personal problems?', options: pssOptions },
   { id: 'q15', domainId: 3, text: 'How often have you felt that things were going your way?', options: pssOptions },

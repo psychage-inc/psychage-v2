@@ -37,7 +37,7 @@ const INSTRUMENTS = [
     badge: 'WHO-5',
     name: 'World Health Organization Well-Being Index',
     measures: 'Measures general subjective well-being across five items: cheerfulness, calm, energy, rest quality, and daily interest.',
-    dimension: 'Cognitive Clarity',
+    dimension: 'Overall Wellbeing',
     dimensionKey: 'vitality' as const,
   },
   {
@@ -51,7 +51,7 @@ const INSTRUMENTS = [
     badge: 'PSS-4',
     name: 'Perceived Stress Scale (4-Item)',
     measures: 'Evaluates perceived stress levels, sense of control, confidence in problem-solving, and whether difficulties feel manageable.',
-    dimension: 'Physical Vitality',
+    dimension: 'Stress Load',
     dimensionKey: 'cognitive' as const,
   },
 ];
@@ -318,8 +318,9 @@ const ScoreGuideTab: React.FC<ScoreGuideTabProps> = ({ currentTier }) => {
         </div>
 
         <p className="text-xs text-gray-400 dark:text-neutral-500 mt-6 leading-relaxed">
-          All instrument selection and scoring methodology reviewed and approved
-          by Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology.
+          This tool is built on published, validated screening instruments — the
+          PHQ-4, WHO-5, UCLA-3, and PSS-4 — each widely used in research and
+          clinical practice. It offers educational insight, not a diagnosis.
         </p>
       </div>
 

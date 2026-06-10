@@ -99,12 +99,6 @@ const LegacyProviderRedirect: React.FC = () => {
   return <Navigate to={`/providers/${id}`} replace />;
 };
 
-// Provider Dashboard (legacy — redirects to /portal/*)
-const ProviderDashboard = React.lazy(() => import('./pages/provider/ProviderDashboard'));
-const ProviderProfileEditor = React.lazy(() => import('./pages/provider/ProviderProfileEditor'));
-const ProviderAnalytics = React.lazy(() => import('./pages/provider/ProviderAnalytics'));
-const ProviderPatients = React.lazy(() => import('./pages/provider/ProviderPatients'));
-
 // Provider Portal V2
 const PortalLayout = React.lazy(() => import('./components/portal/PortalLayout'));
 const PortalDashboard = React.lazy(() => import('./pages/portal/PortalDashboard'));

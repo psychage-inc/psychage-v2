@@ -284,16 +284,6 @@ export const api = {
     getBookmarks: () => api.get<unknown[]>('/api/articles/bookmarks'),
   },
 
-  // Clarity Score endpoints
-  clarityScore: {
-    save: (answers: Record<string, number>) =>
-      api.post<{ score: number; breakdown: unknown }>('/api/clarity-score', { answers }),
-
-    getHistory: () => api.get<unknown[]>('/api/clarity-score'),
-
-    getStats: () => api.get<unknown>('/api/clarity-score/stats'),
-  },
-
   // Assessment endpoints
   assessment: {
     getQuestions: () => api.get<unknown[]>('/api/assessment/questions'),

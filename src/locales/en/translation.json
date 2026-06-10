@@ -181,6 +181,8 @@
             "find_support_desc": "Many people with similar experiences find it helpful to talk with a professional.",
             "view_all": "View all providers",
             "quick_match_title": "Providers who specialize in this area",
+            "quick_match_desc": "If you'd like, you can look for providers who work in these areas. Nothing is searched until you choose to.",
+            "find_button": "Find providers near you",
             "view_matching": "View all matching providers"
         },
         "profile": {

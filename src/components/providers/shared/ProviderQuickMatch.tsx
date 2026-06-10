@@ -1,8 +1,7 @@
-/* eslint-disable react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { ArrowRight, Stethoscope } from 'lucide-react';
+import { ArrowRight, Stethoscope, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { searchProviders } from '@/lib/providers/queries';
 import { CONDITION_TO_SPECIALTY } from '@/lib/providers/search';
@@ -14,6 +13,11 @@ interface ProviderQuickMatchProps {
   maxProviders?: number;
 }
 
+/**
+ * Provider suggestions for navigator results. The provider search is
+ * USER-INITIATED — no network call fires on render (audit C-4). Condition-derived
+ * specialty data only leaves the device after the user clicks "Find providers".
+ */
 export const ProviderQuickMatch: React.FC<ProviderQuickMatchProps> = ({
   conditionIds,
   maxProviders = 3,
@@ -21,15 +25,24 @@ export const ProviderQuickMatch: React.FC<ProviderQuickMatchProps> = ({
   const { t } = useTranslation();
   const [providers, setProviders] = useState<ProviderCardData[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [hasSearched, setHasSearched] = useState(false);
+  const mountedRef = useRef(true);
 
-  // Map condition IDs to specialty slugs
-  const specialtySlugs = conditionIds
-    .map(id => CONDITION_TO_SPECIALTY[id])
-    .filter(Boolean);
+  useEffect(() => () => { mountedRef.current = false; }, []);
 
-  useEffect(() => {
-    if (specialtySlugs.length === 0) return;
-    let cancelled = false;
+  // Map condition IDs to specialty slugs (no side effects).
+  const specialtySlugs = useMemo(
+    () => conditionIds.map(id => CONDITION_TO_SPECIALTY[id]).filter(Boolean),
+    [conditionIds]
+  );
+
+  // No specialty mapping → nothing to match against.
+  if (specialtySlugs.length === 0) return null;
+
+  const searchUrl = `/providers/search?specialty=${specialtySlugs.join(',')}`;
+
+  const handleFind = () => {
+    if (isLoading || hasSearched) return;
     setIsLoading(true);
 
     searchProviders({
@@ -38,21 +51,16 @@ export const ProviderQuickMatch: React.FC<ProviderQuickMatchProps> = ({
       accepting_patients: true,
     })
       .then(result => {
-        if (!cancelled) setProviders(result.providers.slice(0, maxProviders));
+        if (mountedRef.current) setProviders(result.providers.slice(0, maxProviders));
       })
       .catch(() => {})
       .finally(() => {
-        if (!cancelled) setIsLoading(false);
+        if (mountedRef.current) {
+          setIsLoading(false);
+          setHasSearched(true);
+        }
       });
-
-    return () => { cancelled = true; };
-  }, [specialtySlugs.join(','), maxProviders]);  
-
-  if (isLoading || providers.length === 0) return null;
-
-  const searchUrl = specialtySlugs.length > 0
-    ? `/providers/search?specialty=${specialtySlugs.join(',')}`
-    : '/providers/search';
+  };
 
   return (
     <motion.div
@@ -70,19 +78,47 @@ export const ProviderQuickMatch: React.FC<ProviderQuickMatchProps> = ({
         </h3>
       </div>
 
-      <div className="space-y-3 mb-4">
-        {providers.map(provider => (
-          <ProviderCardCompact key={provider.id} provider={provider} />
-        ))}
-      </div>
-
-      <Link
-        to={searchUrl}
-        className="inline-flex items-center gap-1 text-sm font-medium text-teal-400 hover:text-teal-300 transition-colors"
-      >
-        {t('providers.cta.view_matching')}
-        <ArrowRight size={14} />
-      </Link>
+      {!hasSearched ? (
+        <>
+          <p className="text-sm text-text-secondary mb-4">
+            {t('providers.cta.quick_match_desc')}
+          </p>
+          <button
+            type="button"
+            onClick={handleFind}
+            disabled={isLoading}
+            className="inline-flex items-center gap-2 px-5 py-3 min-h-[44px] rounded-xl bg-primary text-white text-sm font-semibold hover:bg-primary-hover transition-colors disabled:opacity-60"
+          >
+            {isLoading
+              ? <Loader2 className="w-4 h-4 animate-spin" aria-hidden="true" />
+              : <Stethoscope className="w-4 h-4" aria-hidden="true" />}
+            {t('providers.cta.find_button')}
+          </button>
+        </>
+      ) : providers.length > 0 ? (
+        <>
+          <div className="space-y-3 mb-4">
+            {providers.map(provider => (
+              <ProviderCardCompact key={provider.id} provider={provider} />
+            ))}
+          </div>
+          <Link
+            to={searchUrl}
+            className="inline-flex items-center gap-1 text-sm font-medium text-teal-400 hover:text-teal-300 transition-colors"
+          >
+            {t('providers.cta.view_matching')}
+            <ArrowRight size={14} />
+          </Link>
+        </>
+      ) : (
+        <Link
+          to={searchUrl}
+          className="inline-flex items-center gap-1 text-sm font-medium text-teal-400 hover:text-teal-300 transition-colors"
+        >
+          {t('providers.cta.view_matching')}
+          <ArrowRight size={14} />
+        </Link>
+      )}
     </motion.div>
   );
 };

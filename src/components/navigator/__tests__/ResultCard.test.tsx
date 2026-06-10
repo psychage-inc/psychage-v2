@@ -10,7 +10,7 @@ const mockResult: NavigatorResultItem = {
     name: 'Test Condition',
     full_name: 'Test Condition Full Name',
     description_for_user: 'This is a test condition description.',
-    relevance_score: 0.85,
+    relevance_score: 0.6,
     relevance_level: 'high',
     relevance_label: 'High Relevance',
     relevance_color: 'text-rose-600',
@@ -112,6 +112,22 @@ describe('ResultCard', () => {
         // No expand button should be present
         expect(screen.queryByRole('button', { name: /show all/i })).not.toBeInTheDocument();
         expect(screen.queryByText(/more/i)).not.toBeInTheDocument();
+    });
+
+    it('displays the true relevance percentage (no /0.75 rescale)', () => {
+        render(<ResultCard result={mockResult} />);
+        // 0.6 -> 60%, not the old 0.6/0.75 = 80%
+        expect(screen.getByText('60%')).toBeInTheDocument();
+    });
+
+    it('clamps the displayed relevance to the 75% cap (P0-3 regression)', () => {
+        const capped: NavigatorResultItem = { ...mockResult, relevance_score: 0.75 };
+        render(<ResultCard result={capped} />);
+
+        // The 0.75 engine cap must render as 75%, never the rescaled 100%/113%.
+        expect(screen.getByText('75%')).toBeInTheDocument();
+        expect(screen.queryByText('100%')).not.toBeInTheDocument();
+        expect(screen.queryByText('113%')).not.toBeInTheDocument();
     });
 
     it('calls onClick when card is clicked', async () => {

@@ -35,7 +35,7 @@ export const PHASE_PROTOCOLS: Record<ScoreTier, PhaseProtocol> = {
       'The WHO mhGAP self-harm module and SAMHSA SAFE-T protocol both prioritize immediate contact with a trained responder, reducing access to means of self-harm, and telling one trusted person within the same day.',
     primaryAction: { label: 'Call 988 now', href: 'tel:988', external: true },
     supportingActions: [
-      { label: 'Text HOME to 741741', href: 'sms:741741?&body=HOME', external: true },
+      { label: 'Text HOME to 741741', href: 'sms:741741?body=HOME', external: true },
       { label: 'Crisis resources', href: '/crisis' },
     ],
     recommendedSteps: [

@@ -2,6 +2,18 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+
+// Crisis copy is region-resolved via lib/crisis; mock it for a deterministic country.
+vi.mock('../../../lib/crisis', () => ({
+    resolveCountry: () => 'US',
+    getResourcesForCountry: () => ({
+        all_resources: [
+            { name: 'Test Crisis Line', type: 'hotline', phone: '988', text_instruction: null, web_url: null, chat_url: null, hours: '24/7', languages: ['English'], source_name: 'Test', source_priority: 1, verification_status: 'verified', last_verified_at: '2026-01-01', confidence_level: 'high', notes: null },
+        ],
+        emergency_number: '911',
+    }),
+}));
+
 import { AgeGateScreen, UnderageNoticeScreen } from '../AgeGateScreen';
 
 describe('AgeGateScreen', () => {
@@ -61,11 +73,13 @@ describe('UnderageNoticeScreen', () => {
         expect(screen.getByText(/this tool may not be appropriate for your age/i)).toBeInTheDocument();
     });
 
-    it('shows crisis resources', () => {
+    it('shows region-resolved crisis resources', () => {
         render(<UnderageNoticeScreen onBack={vi.fn()} />);
 
-        expect(screen.getByText(/988/i)).toBeInTheDocument(); // Suicide & Crisis Lifeline
-        expect(screen.getByText(/741741/i)).toBeInTheDocument(); // Crisis Text Line
+        // Resolved hotline (name + phone), plus the international directory fallback.
+        expect(screen.getByText(/Test Crisis Line/i)).toBeInTheDocument();
+        expect(screen.getByText(/988/)).toBeInTheDocument();
+        expect(screen.getByText(/findahelpline\.com/i)).toBeInTheDocument();
     });
 
     it('calls onBack when Go Back is clicked', async () => {

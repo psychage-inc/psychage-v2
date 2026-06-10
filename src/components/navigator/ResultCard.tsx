@@ -62,12 +62,12 @@ export const ResultCard: React.FC<ResultCardProps> = ({ result, onClick }) => {
                                     : "bg-gradient-to-r from-teal-500 to-teal-400"
                             )}
                             initial={{ width: 0 }}
-                            animate={{ width: `${Math.max(8, Math.round((result.relevance_score / 0.75) * 100))}%` }}
+                            animate={{ width: `${Math.min(75, Math.max(8, Math.round(result.relevance_score * 100)))}%` }}
                             transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
                         />
                     </div>
                     <span className="text-xs font-mono text-text-tertiary tabular-nums">
-                        {Math.max(1, Math.round((result.relevance_score / 0.75) * 100))}%
+                        {Math.min(75, Math.max(1, Math.round(result.relevance_score * 100)))}%
                     </span>
                 </div>
 

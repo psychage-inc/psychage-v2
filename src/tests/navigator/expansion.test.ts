@@ -12,7 +12,7 @@
  * - Category diversity with new condition families
  */
 
-import { describe, it, expect, beforeAll, vi } from 'vitest';
+import { describe, it, expect, beforeAll } from 'vitest';
 import { runSymptomNavigator } from '@/lib/navigator/engine';
 import { normalizeSymptoms } from '@/lib/navigator/utils';
 import { screenRedFlags } from '@/lib/navigator/safety';
@@ -34,11 +34,8 @@ describe('Expansion — New Condition Matching', () => {
   let hasExpansion: boolean;
 
   beforeAll(() => {
-    // Enable all tiers for expansion tests
-    vi.stubEnv('VITE_NAV_TIER1_ENABLED', 'true');
-    vi.stubEnv('VITE_NAV_TIER2_ENABLED', 'true');
-    vi.stubEnv('VITE_NAV_TIER3_ENABLED', 'true');
-
+    // Per-tier feature flags were removed — the full KB ships unconditionally,
+    // so no env stubbing is needed to surface expansion conditions.
     kb = createTestKnowledgeBase();
     // Guard: check if expansion conditions exist in the test KB
     hasExpansion = kb.conditions.some((c) => c.id === 'SCZ');

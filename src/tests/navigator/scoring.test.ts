@@ -153,6 +153,32 @@ describe('Scoring Engine — Condition Matching', () => {
         expect(score.capped_score).toBeLessThanOrEqual(0.75);
       }
     });
+
+    it('Frozen literal wins: a config.confidence_cap above 0.75 is still clamped to 0.75', () => {
+      // Simulate a future "load config from DB/env" path handing in an
+      // inflated cap. The frozen SACRED_RELEVANCE_CAP must override it.
+      const inflatedConfig: ScoringConfig = {
+        confidence_cap: 0.9,
+        below_minimum_penalty: kb.matchingConfig.below_minimum_penalty,
+        severity_modifiers: kb.matchingConfig.severity_modifiers,
+        frequency_modifiers: kb.matchingConfig.frequency_modifiers,
+        duration_modifiers: kb.matchingConfig.duration_modifiers,
+      };
+
+      for (const condition of kb.conditions) {
+        const inputs: UserSymptomInput[] = condition.symptom_mappings.map((m) => ({
+          symptom_id: m.symptom_id,
+          severity: 10,
+          duration: 'more_than_1_year' as const,
+          frequency: 'always' as const,
+        }));
+
+        const normalized = normalizeSymptoms(inputs, kb.symptoms);
+        const score = calculateConditionScore(normalized, condition, inflatedConfig);
+
+        expect(score.capped_score).toBeLessThanOrEqual(0.75);
+      }
+    });
   });
 
   // ─── Result Count Bounds ─────────────────────────────────────────────────

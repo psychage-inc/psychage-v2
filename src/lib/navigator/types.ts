@@ -51,10 +51,10 @@ export type RelevanceLevel = 'high' | 'moderate' | 'low' | 'minimal';
 
 export type CrisisResourceType = 'hotline' | 'text' | 'directory';
 
+// Minimized per audit C-1/B2-6: no crisis/safety inference is ever emitted.
 export type AnalyticsEventType =
   | 'started'
   | 'completed'
-  | 'crisis_triggered'
   | 'result_clicked'
   | 'provider_clicked';
 
@@ -338,8 +338,6 @@ export interface AnalyticsEvent {
   symptoms_selected?: number;
   time_to_complete_seconds?: number;
   results_shown?: number;
-  safety_flag_level?: RedFlagLevel | null;
-  feedback_helpful?: boolean;
 }
 
 // ─── Saved Results ───────────────────────────────────────────────────────────

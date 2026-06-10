@@ -196,7 +196,7 @@ export const SymptomSelectionScreen: React.FC = () => {
                                 No symptoms match "{searchQuery}"
                             </p>
                             <p className="text-text-secondary text-sm leading-relaxed">
-                                Try using fewer words, a different term, or check your spelling. This tool includes {knowledgeBase?.symptoms.length || 82} symptoms across 12 categories.
+                                Try using fewer words, a different term, or check your spelling. This tool includes {knowledgeBase?.symptoms.length ?? 0} symptoms across {knowledgeBase ? new Set(knowledgeBase.symptoms.map((s) => s.category)).size : 0} categories.
                             </p>
                         </div>
                         <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">

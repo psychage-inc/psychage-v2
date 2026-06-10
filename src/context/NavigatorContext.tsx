@@ -237,6 +237,7 @@ export const NavigatorProvider: React.FC<{ children: ReactNode }> = ({ children 
     const saveTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const restoredRef = useRef(false);
     const corruptedRef = useRef(false);
+    const completedRef = useRef(false);
 
     const announcePolite = useCallback((message: string) => dispatch({ type: 'ANNOUNCE', payload: { message, mode: 'polite' } }), []);
     const announceAssertive = useCallback((message: string) => dispatch({ type: 'ANNOUNCE', payload: { message, mode: 'assertive' } }), []);
@@ -312,20 +313,22 @@ export const NavigatorProvider: React.FC<{ children: ReactNode }> = ({ children 
         };
     }, [state.currentStep, state.selectedDomains, state.selectedSymptoms, state.crisisAcknowledged, state.ageGatePassed]);
 
-    // Track completion when results are shown
+    // Track completion when results are shown — exactly once per session.
+    // No safety/crisis inference is emitted (privacy: derived mental-health
+    // state must never leave the device).
     useEffect(() => {
-        if (state.currentStep === 'results' && state.results && analyticsRef.current) {
-            const safetyFlag = state.results.safety?.highest_level as 'CRISIS' | 'URGENT' | 'WATCH' | undefined;
+        if (
+            state.currentStep === 'results' &&
+            state.results &&
+            analyticsRef.current &&
+            !completedRef.current
+        ) {
+            completedRef.current = true;
             analyticsRef.current.trackComplete(
                 state.selectedDomains.length,
                 state.selectedSymptoms.size,
-                state.results.results?.length || 0,
-                safetyFlag ?? null
+                state.results.results?.length || 0
             );
-            // Track crisis if safety flag present
-            if (safetyFlag) {
-                analyticsRef.current.trackCrisisTriggered(safetyFlag);
-            }
         }
     }, [state.currentStep, state.results, state.selectedDomains.length, state.selectedSymptoms.size]);
 

@@ -26,6 +26,14 @@ import {
 } from './utils';
 
 /**
+ * SACRED INVARIANT — frozen literal. No relevance score may EVER exceed this,
+ * regardless of any config or data-driven `confidence_cap` value. The 75% cap
+ * exists to prevent the appearance of diagnostic certainty; it is immutable and
+ * must not be made configurable. Enforced as the final clamp below.
+ */
+const SACRED_RELEVANCE_CAP = 0.75;
+
+/**
  * Score a single condition against the user's symptoms.
  *
  * Algorithm:
@@ -38,7 +46,7 @@ import {
  *    - Multiply weight by combined modifier
  * 2. Sum all matched symptom scores → raw_score
  * 3. Normalize: raw_score / max_possible_score
- * 4. Apply count cap: min(1.0, matched_count / 5)
+ * 4. Apply count cap: min(1.0, matched_count / 3)
  * 5. Apply confidence cap: min(result, 0.75)
  * 6. If below minimum symptom count: multiply by penalty (0.3)
  */
@@ -132,6 +140,11 @@ export function calculateConditionScore(
 
   // SAFETY: Absolute cap enforcement — this must NEVER be removed
   capped = Math.min(capped, config.confidence_cap);
+
+  // SACRED: final clamp against the frozen literal. Even if config.confidence_cap
+  // were ever loaded from a DB/env and set above 0.75, this line guarantees the
+  // displayed relevance can never imply diagnostic certainty.
+  capped = Math.min(capped, SACRED_RELEVANCE_CAP);
 
   return {
     condition_id: condition.id,

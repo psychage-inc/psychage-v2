@@ -110,6 +110,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       // — belt and braces.
       if (event === 'SIGNED_OUT') {
         queryClient.clear();
+        // Wipe the MindMate chat-history cache so the next user of a shared
+        // device can't read the previous user's conversation (audit B3-6).
+        // Covers same-tab logout() and cross-tab/expiry SIGNED_OUT alike.
+        localStorage.removeItem('psychage_ai_chat_history');
       }
 
       const mapped = mapSupabaseUser(session?.user ?? null);

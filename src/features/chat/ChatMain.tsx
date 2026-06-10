@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Menu, Plus } from 'lucide-react';
 import type { ChatMessage } from './types/chat.types';
 import WelcomeState from './components/WelcomeState';
@@ -28,7 +28,22 @@ export default function ChatMain({
   showMobileMenu,
 }: ChatMainProps) {
   const [showCrisis, setShowCrisis] = useState(false);
+  const lastHandledCrisisId = useRef<string | null>(null);
   const hasMessages = messages.length > 0;
+
+  // Auto-open the crisis overlay when the assistant flags CRISIS — parity with
+  // the floating widget (audit B3-12). The message-id guard means dismissing the
+  // overlay doesn't immediately reopen it on the next render.
+  useEffect(() => {
+    const lastAssistant = [...messages].reverse().find((m) => m.role === 'assistant');
+    if (
+      lastAssistant?.safetyLevel === 'CRISIS' &&
+      lastHandledCrisisId.current !== lastAssistant.id
+    ) {
+      lastHandledCrisisId.current = lastAssistant.id;
+      setShowCrisis(true);
+    }
+  }, [messages]);
 
   return (
     <div className="flex-1 flex flex-col h-full overflow-hidden bg-white dark:bg-neutral-950">

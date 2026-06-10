@@ -7,12 +7,15 @@
 
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { createClient } from '@supabase/supabase-js';
-import { classifyInputSafety, generateCrisisResponse } from '../../src/lib/ai/safety';
+import { classifyInputSafety, generateCrisisResponse, validateOutputSafety } from '../../src/lib/ai/safety';
+import { sanitizeClientMessages } from '../../src/lib/ai/sanitizeMessages';
+import { splitAtSentenceBoundary } from '../../src/lib/ai/streamSafety';
 import { retrieveRelevantContent } from '../../src/lib/ai/retrieval';
 import { AnthropicProvider, OpenAIProvider, SYSTEM_PROMPT } from '../../src/lib/ai/llm';
 import { getRequiredEnv, getOptionalEnv, getAIConfig } from '../../src/lib/ai/config';
 import { encodeSSE } from '../../src/lib/ai/streaming';
-import type { Message, SafetyLevel, Citation } from '../../src/lib/ai/types';
+import { getCountryEntry } from '../../src/lib/crisis';
+import type { Message, SafetyLevel, Citation, RetrievalResult } from '../../src/lib/ai/types';
 
 // ============================================================================
 // Rate Limiting (in-memory - use Redis/Upstash for production)
@@ -56,17 +59,29 @@ function generateSessionId(): string {
 // Helper: Extract Citations from LLM Response
 // ============================================================================
 
-function extractCitations(content: string, _searchResults: unknown[]): Citation[] {
+function extractCitations(content: string, searchResults: RetrievalResult[]): Citation[] {
   const citations: Citation[] = [];
+  const seen = new Set<string>();
   const citationRegex = /\[SOURCE:\s*([^|]+?)\s*\|\s*([^\]]+)\]/g;
 
   let match;
   while ((match = citationRegex.exec(content)) !== null) {
-    const [, title, url] = match;
+    const [, rawTitle, rawUrl] = match;
+    const title = rawTitle.trim();
+    const url = rawUrl.trim();
+
+    // Only emit citations that map to actually-retrieved content — drop any
+    // [SOURCE: …] the model hallucinated so invented links never render (B3-9).
+    const source = searchResults.find(
+      (r) => r.documentTitle === title || r.documentUrlPath === url
+    );
+    if (!source || seen.has(source.documentId)) continue;
+    seen.add(source.documentId);
+
     citations.push({
-      document_id: crypto.randomUUID(),
-      title: title.trim(),
-      url_path: url.trim(),
+      document_id: source.documentId,
+      title: source.documentTitle,
+      url_path: source.documentUrlPath,
     });
   }
 
@@ -102,10 +117,11 @@ export default async function handler(
 
   try {
     // Parse request
-    const { messages, sessionId: providedSessionId, stream: requestStream } = req.body as {
+    const { messages, sessionId: providedSessionId, stream: requestStream, region: clientRegion } = req.body as {
       messages: Message[];
       sessionId?: string;
       stream?: boolean;
+      region?: string;
     };
 
     if (!messages || !Array.isArray(messages) || messages.length === 0) {
@@ -116,6 +132,10 @@ export default async function handler(
     if (!userMessage || userMessage.role !== 'user') {
       return res.status(400).json({ error: 'Last message must be from user' });
     }
+
+    // Role allow-list — never forward a client-supplied `system` (or unknown)
+    // role to the model; the server prompt is the only system message (B3-1).
+    const safeMessages = sanitizeClientMessages(messages);
 
     // Initialize Supabase admin client (auth validation + RAG retrieval)
     const supabase = createClient(
@@ -160,7 +180,7 @@ export default async function handler(
 
     const safetyCheck = await classifyInputSafety(
       userMessage.content,
-      messages.slice(0, -1),
+      safeMessages.slice(0, -1),
       llmProvider
     );
 
@@ -169,7 +189,15 @@ export default async function handler(
     // ========================================================================
 
     if (safetyCheck.level === 'CRISIS') {
-      const crisisContent = generateCrisisResponse('US', 'en');
+      // Resolve the user's region for crisis resources: a validated client-supplied
+      // region wins, else the Vercel geo header, else the international set — never
+      // a silent US default (B3/C-2).
+      const headerCountry = req.headers['x-vercel-ip-country'];
+      const crisisRegion =
+        [clientRegion, typeof headerCountry === 'string' ? headerCountry : undefined]
+          .map((c) => (typeof c === 'string' ? c.toUpperCase() : undefined))
+          .find((c) => c && getCountryEntry(c)) ?? 'XX';
+      const crisisContent = generateCrisisResponse(crisisRegion, 'en');
 
       return res.status(200).json({
         message: crisisContent,
@@ -234,7 +262,7 @@ export default async function handler(
 
     const llmMessages = [
       { role: 'system' as const, content: augmentedPrompt },
-      ...messages.map(m => ({ role: m.role, content: m.content })),
+      ...safeMessages.map(m => ({ role: m.role, content: m.content })),
     ];
 
     const llmOptions = {
@@ -243,13 +271,8 @@ export default async function handler(
       temperature: 0.7,
     };
 
-    // Output validation helper
-    const diagnosticPatterns = [
-      /you have (depression|anxiety|bipolar|schizophrenia|ptsd|ocd)/i,
-      /this is (depression|anxiety|bipolar|schizophrenia|ptsd|ocd)/i,
-      /you are (depressed|anxious|bipolar|schizophrenic)/i,
-    ];
-
+    // Output validation fallback — sent in place of any response that trips
+    // validateOutputSafety (diagnostic/therapeutic/dismissive/certainty language).
     const DIAGNOSTIC_FALLBACK = "I want to make sure I give you accurate information on this topic. For questions like this, I'd recommend checking Psychage's articles directly at psychage.com, or speaking with a licensed mental health professional who can give you personalized guidance.";
 
     // ========================================================================
@@ -272,8 +295,12 @@ export default async function handler(
       res.write(encodeSSE({ type: 'metadata', sessionId }));
       res.write(encodeSSE({ type: 'safety', level: safetyCheck.level as SafetyLevel }));
 
-      let fullContent = '';
+      // safeContent: validated + already flushed to client.
+      // pending: buffered tokens not yet at a sentence boundary / not yet validated.
+      let safeContent = '';
+      let pending = '';
       let firstTokenTime: number | null = null;
+      let safetyViolation = false;
 
       try {
         for await (const chunk of llmProvider.streamCompletion(llmMessages, llmOptions)) {
@@ -283,15 +310,36 @@ export default async function handler(
             firstTokenTime = Date.now();
           }
 
-          fullContent += chunk.content;
-          res.write(encodeSSE({ type: 'token', content: chunk.content }));
+          pending += chunk.content;
+          const { ready, rest } = splitAtSentenceBoundary(pending);
+          if (!ready) continue;
+
+          // Validate completed sentence(s) BEFORE flushing them to the client.
+          if (!validateOutputSafety(safeContent + ready).safe) {
+            safetyViolation = true;
+            break;
+          }
+          safeContent += ready;
+          pending = rest;
+          res.write(encodeSSE({ type: 'token', content: ready }));
         }
 
-        // Output validation on accumulated content
-        const hasDiagnostic = diagnosticPatterns.some(p => p.test(fullContent));
-        if (hasDiagnostic) {
+        // Flush + validate any trailing partial sentence (no boundary at EOS).
+        if (!safetyViolation && pending) {
+          if (!validateOutputSafety(safeContent + pending).safe) {
+            safetyViolation = true;
+          } else {
+            safeContent += pending;
+            res.write(encodeSSE({ type: 'token', content: pending }));
+            pending = '';
+          }
+        }
+
+        let fullContent = safeContent;
+        if (safetyViolation) {
+          // Withhold the offending content; replace the whole message. The
+          // client treats SAFETY_VIOLATION as the final replacement text.
           fullContent = DIAGNOSTIC_FALLBACK;
-          // Send a replacement — client should use this as the final text
           res.write(encodeSSE({ type: 'error', message: fullContent, code: 'SAFETY_VIOLATION' }));
         }
 
@@ -329,8 +377,7 @@ export default async function handler(
     const response = await llmProvider.generateCompletion(llmMessages, llmOptions);
 
     let finalContent = response.content;
-    const hasDiagnostic = diagnosticPatterns.some(pattern => pattern.test(finalContent));
-    if (hasDiagnostic) {
+    if (!validateOutputSafety(finalContent).safe) {
       finalContent = DIAGNOSTIC_FALLBACK;
     }
 

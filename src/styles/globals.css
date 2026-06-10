@@ -87,6 +87,14 @@
 
 @layer utilities {
 
+    /* Fraunces display axis posture — augments Tailwind's .font-display (family).
+       opsz tracks size; wght omitted so font-bold/semibold still drive weight. */
+    .font-display {
+        font-optical-sizing: auto;
+        /* Tunable axes — WONK normalized off, SOFT at default. Adjust to taste. */
+        font-variation-settings: 'WONK' 0, 'SOFT' 0;
+    }
+
     /* Hide scrollbar but keep scrolling */
     .scrollbar-hide::-webkit-scrollbar {
         display: none;

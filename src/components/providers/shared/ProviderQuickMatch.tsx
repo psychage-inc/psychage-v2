@@ -65,7 +65,7 @@ export const ProviderQuickMatch: React.FC<ProviderQuickMatchProps> = ({
         <div className="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center">
           <Stethoscope className="w-4 h-4 text-purple-500" />
         </div>
-        <h3 className="font-serif text-lg font-medium text-text-primary">
+        <h3 className="font-display text-lg font-medium text-text-primary">
           {t('providers.cta.quick_match_title')}
         </h3>
       </div>

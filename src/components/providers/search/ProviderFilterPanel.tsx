@@ -327,7 +327,7 @@ const FilterSection: React.FC<{ title: string; children: React.ReactNode }> = ({
 );
 
 const RadioItem: React.FC<{ label: string; checked: boolean; onChange: () => void }> = ({ label, checked, onChange }) => (
-  <label className="flex items-center gap-2.5 cursor-pointer group">
+  <label className="flex items-center gap-2.5 cursor-pointer group min-h-touch">
     <input
       type="radio"
       checked={checked}
@@ -341,7 +341,7 @@ const RadioItem: React.FC<{ label: string; checked: boolean; onChange: () => voi
 );
 
 const CheckboxItem: React.FC<{ label: string; sublabel?: string; checked: boolean; onChange: () => void }> = ({ label, sublabel, checked, onChange }) => (
-  <label className="flex items-center gap-2.5 cursor-pointer group">
+  <label className="flex items-center gap-2.5 cursor-pointer group min-h-touch">
     <input
       type="checkbox"
       checked={checked}

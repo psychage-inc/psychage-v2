@@ -45,7 +45,7 @@ const JournalInsights: React.FC = () => {
 
         {!hasCheckInData && !hasScreeningData ? (
           <div className="bg-white dark:bg-neutral-900 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-neutral-800 text-center">
-            <p className="text-slate-400 dark:text-neutral-500 text-sm">Complete at least 2 daily check-ins or weekly screenings to see your trends here.</p>
+            <p className="text-charcoal-600 dark:text-neutral-500 text-sm">Complete at least 2 daily check-ins or weekly screenings to see your trends here.</p>
           </div>
         ) : (
           <div className="space-y-8">

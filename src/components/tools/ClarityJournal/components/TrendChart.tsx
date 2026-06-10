@@ -31,7 +31,7 @@ const TrendChart: React.FC<TrendChartProps> = ({
 }) => {
   if (data.length < 2) {
     return (
-      <div className="flex items-center justify-center h-32 text-sm text-slate-400 dark:text-neutral-500 bg-slate-50 dark:bg-neutral-900 rounded-xl">
+      <div className="flex items-center justify-center h-32 text-sm text-charcoal-600 dark:text-neutral-500 bg-slate-50 dark:bg-neutral-900 rounded-xl">
         Need at least 2 entries to show trends
       </div>
     );

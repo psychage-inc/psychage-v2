@@ -50,7 +50,7 @@ const CrisisBanner: React.FC = () => {
             {/* Dismiss button */}
             <button
               onClick={handleDismiss}
-              className="absolute top-3 right-3 p-1 rounded-full text-white/60 hover:text-white hover:bg-white/10 transition-colors z-10"
+              className="absolute top-3 right-3 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full text-white/60 hover:text-white hover:bg-white/10 transition-colors z-10"
               aria-label="Dismiss crisis support notification"
             >
               <X size={16} />

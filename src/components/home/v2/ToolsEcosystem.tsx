@@ -145,7 +145,7 @@ const ToolsEcosystem: React.FC = () => {
           <Link
             to={featured.href}
             className={cn(
-              'group block rounded-3xl overflow-hidden',
+              'group block rounded-xl overflow-hidden',
               'bg-white/70 dark:bg-neutral-900',
               'border border-[var(--color-primary)]/20',
               'shadow-[0_4px_24px_-6px_rgba(0,0,0,0.08)]',

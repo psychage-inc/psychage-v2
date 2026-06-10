@@ -50,7 +50,7 @@ export const CheckboxGroup: React.FC<CheckboxGroupProps> = ({ title, items, sele
           <label
             key={item.id}
             className={cn(
-              'flex items-center gap-2.5 px-3 py-2.5 rounded-lg border cursor-pointer transition-all text-sm',
+              'flex items-center gap-2.5 px-3 py-2.5 rounded-lg border cursor-pointer transition-all text-sm min-h-touch',
               isChecked
                 ? 'border-teal-500 bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300'
                 : 'border-gray-200 dark:border-neutral-700 hover:border-gray-300 dark:hover:border-neutral-600 text-gray-700 dark:text-neutral-300'

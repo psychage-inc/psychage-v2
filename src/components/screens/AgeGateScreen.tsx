@@ -29,7 +29,7 @@ export const AgeGateScreen: React.FC<AgeGateScreenProps> = ({ onContinue, onUnde
                 </div>
 
                 {/* Title */}
-                <h2 className="text-3xl sm:text-4xl font-serif font-medium text-white mb-4 text-center">
+                <h2 className="text-3xl sm:text-4xl font-display font-medium text-white mb-4 text-center">
                     Age Confirmation
                 </h2>
 
@@ -96,7 +96,7 @@ export const UnderageNoticeScreen: React.FC<{ onBack: () => void }> = ({ onBack 
                     </div>
                 </div>
 
-                <h2 className="text-3xl sm:text-4xl font-serif font-medium text-white mb-4">
+                <h2 className="text-3xl sm:text-4xl font-display font-medium text-white mb-4">
                     Talk to a Trusted Adult
                 </h2>
 

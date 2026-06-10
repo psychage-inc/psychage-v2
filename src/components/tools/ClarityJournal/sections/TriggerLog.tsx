@@ -85,7 +85,7 @@ const TriggerLog: React.FC = () => {
                     <p className="text-xs text-slate-500 dark:text-neutral-400 mt-0.5">{meta.description}</p>
                   </div>
                   <div className="flex items-center gap-2 shrink-0">
-                    <span className="text-xs text-slate-400 dark:text-neutral-500 bg-slate-100 dark:bg-neutral-800 px-2 py-0.5 rounded-full">{items.length}</span>
+                    <span className="text-xs text-charcoal-600 dark:text-neutral-500 bg-slate-100 dark:bg-neutral-800 px-2 py-0.5 rounded-full">{items.length}</span>
                     {isExpanded ? <ChevronUp className="w-4 h-4 text-slate-400" /> : <ChevronDown className="w-4 h-4 text-slate-400 dark:text-neutral-500" />}
                   </div>
                 </button>
@@ -106,13 +106,13 @@ const TriggerLog: React.FC = () => {
                               <p className="text-sm text-slate-700 dark:text-neutral-300">{item.text}</p>
                               <div className="flex gap-2 mt-1">
                                 {item.subCategory && (
-                                  <span className="text-xs text-slate-400 dark:text-neutral-500">{item.subCategory}</span>
+                                  <span className="text-xs text-charcoal-600 dark:text-neutral-500">{item.subCategory}</span>
                                 )}
                                 {item.severity !== undefined && (
-                                  <span className="text-xs text-slate-400 dark:text-neutral-500">Severity: {item.severity}/5</span>
+                                  <span className="text-xs text-charcoal-600 dark:text-neutral-500">Severity: {item.severity}/5</span>
                                 )}
                                 {item.effectivenessRating !== undefined && (
-                                  <span className="text-xs text-slate-400 dark:text-neutral-500">Effectiveness: {item.effectivenessRating}/5</span>
+                                  <span className="text-xs text-charcoal-600 dark:text-neutral-500">Effectiveness: {item.effectivenessRating}/5</span>
                                 )}
                               </div>
                             </div>

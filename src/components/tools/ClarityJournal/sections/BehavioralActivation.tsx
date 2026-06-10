@@ -131,7 +131,7 @@ const BehavioralActivation: React.FC = () => {
 
         {/* Entry list */}
         {entries.length === 0 ? (
-          <div className="text-center py-12 text-slate-400 dark:text-neutral-500">
+          <div className="text-center py-12 text-charcoal-600 dark:text-neutral-500">
             <p className="text-sm">No entries yet. Start by tracking an activity.</p>
           </div>
         ) : (
@@ -141,8 +141,8 @@ const BehavioralActivation: React.FC = () => {
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-medium text-slate-800 dark:text-neutral-200 truncate">{entry.activity}</p>
                   <div className="flex items-center gap-3 mt-1">
-                    <span className="text-xs text-slate-400 dark:text-neutral-500">{formatDate(entry.date)}</span>
-                    <span className="text-xs text-slate-400 dark:text-neutral-500">Predicted: {entry.predictedMood} → Actual: {entry.actualMood}</span>
+                    <span className="text-xs text-charcoal-600 dark:text-neutral-500">{formatDate(entry.date)}</span>
+                    <span className="text-xs text-charcoal-600 dark:text-neutral-500">Predicted: {entry.predictedMood} → Actual: {entry.actualMood}</span>
                     <PredictionGapIndicator predicted={entry.predictedMood} actual={entry.actualMood} />
                   </div>
                 </div>

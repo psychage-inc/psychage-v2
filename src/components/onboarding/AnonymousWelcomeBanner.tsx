@@ -31,7 +31,7 @@ const AnonymousWelcomeBanner: React.FC = () => {
         >
           <button
             onClick={dismiss}
-            className="absolute top-4 right-4 p-1.5 rounded-full hover:bg-surface-hover transition-colors text-text-tertiary"
+            className="absolute top-4 right-4 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full hover:bg-surface-hover transition-colors text-text-tertiary"
             aria-label="Dismiss"
           >
             <X size={14} />

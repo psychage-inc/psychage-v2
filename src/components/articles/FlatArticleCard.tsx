@@ -68,7 +68,7 @@ const FlatArticleCard: React.FC<FlatArticleCardProps> = ({
                     </span>
                     <button
                         onClick={onToggleBookmark}
-                        className="p-1.5 rounded-full hover:bg-surface-hover transition-colors"
+                        className="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full hover:bg-surface-hover transition-colors"
                         aria-label={bookmarked ? 'Remove bookmark' : 'Save for later'}
                     >
                         <Bookmark

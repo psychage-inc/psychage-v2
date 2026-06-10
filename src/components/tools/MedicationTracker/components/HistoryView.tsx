@@ -131,7 +131,7 @@ export const HistoryView: React.FC<Props> = ({ data, onDeleteLog, onBack }) => {
                           {log.takenAt && ` · Taken: ${new Date(log.takenAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`}
                         </p>
                         {log.notes && (
-                          <p className="text-xs text-slate-400 dark:text-neutral-500 italic mt-0.5">
+                          <p className="text-xs text-charcoal-600 dark:text-neutral-500 italic mt-0.5">
                             {log.notes}
                           </p>
                         )}

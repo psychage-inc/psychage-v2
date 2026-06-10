@@ -175,7 +175,7 @@ const Navigation: React.FC = () => {
                                                     setActiveTab(navItem.label);
                                                 }
                                             }}
-                                            className={`relative px-4 py-2 rounded-full text-sm font-bold transition-colors duration-200 flex items-center gap-1.5 z-10 ${activeTab === navItem.label || hoveredLink === navItem.label
+                                            className={`relative px-4 py-3 rounded-full text-sm font-bold transition-colors duration-200 flex items-center gap-2 z-10 ${activeTab === navItem.label || hoveredLink === navItem.label
                                                 ? 'text-text-primary'
                                                 : 'text-text-secondary'
                                                 }`}
@@ -203,7 +203,7 @@ const Navigation: React.FC = () => {
                                         >
                                             <button
                                                 onClick={() => navigate(navItem.type === 'link' ? navItem.href : '/')}
-                                                className={`relative px-4 py-2 rounded-full text-sm font-bold transition-colors duration-200 z-10 ${hoveredLink === navItem.label ? 'text-text-primary' : 'text-text-secondary'}`}
+                                                className={`relative px-4 py-3 rounded-full text-sm font-bold transition-colors duration-200 z-10 ${hoveredLink === navItem.label ? 'text-text-primary' : 'text-text-secondary'}`}
                                             >
                                                 {hoveredLink === navItem.label && (
                                                     <motion.div
@@ -232,7 +232,7 @@ const Navigation: React.FC = () => {
                         <button
                             onClick={() => setIsSearchOpen(!isSearchOpen)}
                             onMouseEnter={() => handleMouseEnter('')}
-                            className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 ${isSearchOpen
+                            className={`w-11 h-11 rounded-full flex items-center justify-center transition-all duration-200 ${isSearchOpen
                                 ? 'bg-surface-hover text-text-primary'
                                 : 'text-text-tertiary hover:bg-surface-hover hover:text-text-primary'
                                 }`}
@@ -246,7 +246,7 @@ const Navigation: React.FC = () => {
                         <button
                             onClick={() => navigate('/crisis')}
                             onMouseEnter={() => handleMouseEnter('')}
-                            className="flex items-center justify-center h-10 rounded-full text-sm font-bold text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors border border-red-100 dark:border-red-800/50 px-2.5 md:px-4"
+                            className="flex items-center justify-center h-11 rounded-full text-sm font-bold text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors border border-red-100 dark:border-red-800/50 px-2.5 md:px-4"
                             aria-label="Crisis support - get immediate help"
                         >
                             <Phone size={16} className="md:hidden" aria-hidden="true" />
@@ -332,7 +332,7 @@ const Navigation: React.FC = () => {
                                             key={authItem.id}
                                             onClick={() => navigate(authItem.href)}
                                             onMouseEnter={() => handleMouseEnter('')}
-                                            className="hidden md:flex px-4 py-2 rounded-full text-sm font-bold text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-all"
+                                            className="hidden md:flex px-4 py-3 rounded-full text-sm font-bold text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-all"
                                         >
                                             {authItem.label}
                                         </button>
@@ -343,7 +343,7 @@ const Navigation: React.FC = () => {
 
                         {/* Mobile Menu Button */}
                         <button
-                            className="md:hidden w-10 h-10 rounded-full flex items-center justify-center text-text-primary hover:bg-surface-hover"
+                            className="md:hidden w-11 h-11 rounded-full flex items-center justify-center text-text-primary hover:bg-surface-hover"
                             onClick={() => setIsMobileMenuOpen(true)}
                             aria-label="Open navigation menu"
                             aria-expanded={isMobileMenuOpen}

@@ -60,7 +60,7 @@ const WeeklyReflection: React.FC = () => {
 
         <h1 className="font-display font-bold text-2xl md:text-3xl text-slate-900 dark:text-neutral-100 mb-1">Weekly Reflection</h1>
         <p className="text-slate-500 dark:text-neutral-400 mb-2">Step back. See the bigger picture.</p>
-        <p className="text-sm text-slate-400 dark:text-neutral-500 mb-6">{formatDateRange(weekStart, weekEnd)}</p>
+        <p className="text-sm text-charcoal-600 dark:text-neutral-500 mb-6">{formatDateRange(weekStart, weekEnd)}</p>
 
         {/* Week summary */}
         <WeekSummaryMini checkIns={weekCheckIns} />

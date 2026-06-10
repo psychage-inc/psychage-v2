@@ -367,7 +367,7 @@ const ClarityJournal: React.FC = () => {
         </motion.div>
 
         {/* Educational disclaimer */}
-        <p className="text-xs text-slate-400 dark:text-neutral-500 text-center mt-8 max-w-md mx-auto leading-relaxed">
+        <p className="text-xs text-charcoal-600 dark:text-neutral-500 text-center mt-8 max-w-md mx-auto leading-relaxed">
           The Clarity Journal is an educational wellness tool, not a medical record or clinical assessment.
           All data stays on your device.
         </p>

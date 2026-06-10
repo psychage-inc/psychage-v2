@@ -85,7 +85,7 @@ const FreeFormSection: React.FC<FreeFormSectionProps> = ({ onSave, onCrisisDetec
           rows={6}
           className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500 resize-y min-h-[120px]"
         />
-        <p className="text-xs text-slate-400 dark:text-neutral-500 mt-1">{content.length} characters</p>
+        <p className="text-xs text-charcoal-600 dark:text-neutral-500 mt-1">{content.length} characters</p>
       </div>
 
       {/* Include in report toggle */}
@@ -93,12 +93,14 @@ const FreeFormSection: React.FC<FreeFormSectionProps> = ({ onSave, onCrisisDetec
         <button
           type="button"
           onClick={() => setIncludeInReport(!includeInReport)}
-          className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-all ${
-            includeInReport ? 'bg-teal-600 border-teal-600' : 'border-slate-300 dark:border-neutral-600'
-          }`}
+          className="min-h-[44px] min-w-[44px] flex items-center justify-center"
           aria-label="Toggle include in therapist report"
         >
-          {includeInReport && <Check className="w-3 h-3 text-white" />}
+          <span className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-all ${
+            includeInReport ? 'bg-teal-600 border-teal-600' : 'border-slate-300 dark:border-neutral-600'
+          }`}>
+            {includeInReport && <Check className="w-3 h-3 text-white" />}
+          </span>
         </button>
         <span className="text-sm text-slate-700 dark:text-neutral-300">Include this in my therapist report</span>
       </div>

@@ -37,7 +37,7 @@ export const CrisisResourcesScreen: React.FC = () => {
                         <div className="w-16 h-16 rounded-full bg-crisis-red/10 flex items-center justify-center mb-6">
                             <ShieldAlert className="w-8 h-8 text-crisis-red" />
                         </div>
-                        <h1 className="text-3xl sm:text-4xl font-serif font-bold text-charcoal-900 dark:text-white mb-4">
+                        <h1 className="text-3xl sm:text-4xl font-display font-bold text-charcoal-900 dark:text-white mb-4">
                             Crisis & Emergency Support
                         </h1>
                         <p className="text-lg text-charcoal-600 dark:text-charcoal-300 max-w-xl">

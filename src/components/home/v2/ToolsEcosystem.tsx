@@ -290,20 +290,6 @@ const ToolsEcosystem: React.FC = () => {
           })}
         </motion.div>
       </div>
-
-      {/* Scoped style for hero image mask — mobile vs desktop */}
-      <style>{`
-        .tools-hero-img {
-          mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
-          -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
-        }
-        @media (min-width: 1024px) {
-          .tools-hero-img {
-            mask-image: linear-gradient(to right, black 70%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%);
-          }
-        }
-      `}</style>
     </section>
   );
 };

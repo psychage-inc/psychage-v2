@@ -124,7 +124,7 @@ export const DIMENSION_CONTENT: Record<
         path: '/tools/clarity-journal',
       },
       context:
-        'Your PHQ-4 scores are in the mild range. Occasional emotional dips are normal, but monitoring patterns helps catch early signals.',
+        'Your PHQ-4 scores are in the mild range. Occasional emotional dips are common — tracking the pattern over time helps you catch early signals.',
     },
     struggling: {
       strengths: ['Awareness that emotions are difficult right now is a strength'],
@@ -264,7 +264,7 @@ export const DIMENSION_CONTENT: Record<
         'Deepen existing friendships by reaching out more intentionally',
       ],
       context:
-        'Some loneliness is normal and temporary. Your UCLA-3 scores suggest adequate connection with room to deepen relationships.',
+        'Some loneliness is common and usually passes. Your UCLA-3 scores suggest steady connection, with room to deepen the relationships that matter.',
     },
     struggling: {
       strengths: ['Awareness of social needs is an important first step'],
@@ -338,7 +338,7 @@ export const DIMENSION_CONTENT: Record<
         path: '/tools/sleep-architect',
       },
       context:
-        'Moderate stress is normal and can be motivating. Your PSS-4 suggests manageable levels with occasional overwhelm.',
+        'Moderate stress is common, and in smaller doses it can even be motivating. Your PSS-4 suggests levels that feel manageable, with occasional overwhelm.',
     },
     struggling: {
       strengths: ['Still managing core responsibilities despite stress'],
@@ -412,7 +412,7 @@ export const DIMENSION_CONTENT: Record<
         path: '/tools/clarity-journal',
       },
       context:
-        'Some functional variability is normal. Tracking harder days can reveal whether specific dimensions are driving the difficulty.',
+        'Having harder days now and then is common. Tracking them can reveal whether a specific area is driving the difficulty.',
     },
     struggling: {
       strengths: ['Still showing up despite functional challenges'],

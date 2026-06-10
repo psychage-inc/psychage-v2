@@ -91,7 +91,7 @@ const ActivityLogSection: React.FC<ActivityLogSectionProps> = ({ onSave, existin
         </div>
 
         {activities.length === 0 && !showAdd && (
-          <p className="text-sm text-slate-400 dark:text-neutral-500 italic">No activities logged yet</p>
+          <p className="text-sm text-charcoal-600 dark:text-neutral-500 italic">No activities logged yet</p>
         )}
 
         {activities.map((activity, i) => (
@@ -183,7 +183,7 @@ const ActivityLogSection: React.FC<ActivityLogSectionProps> = ({ onSave, existin
       {/* Avoidance */}
       <div>
         <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">
-          Anything you wanted to do but avoided? <span className="text-slate-400 dark:text-neutral-500 font-normal">(optional)</span>
+          Anything you wanted to do but avoided? <span className="text-charcoal-600 dark:text-neutral-500 font-normal">(optional)</span>
         </label>
         <input
           type="text"

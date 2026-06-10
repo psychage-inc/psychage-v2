@@ -121,8 +121,10 @@ const AboutPage: React.FC = () => {
                         <div className="mt-8 pt-8 border-t border-border">
                             <div className="flex items-center gap-4">
                                 <img
-                                    src="/images/logo.png"
+                                    src="/images/logo-96.png"
                                     alt="Psychage logo"
+                                    width={48}
+                                    height={48}
                                     className="w-12 h-12 object-contain"
                                 />
                                 <div>

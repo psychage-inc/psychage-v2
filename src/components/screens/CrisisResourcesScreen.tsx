@@ -1,25 +1,48 @@
-import React, { useEffect, useState } from 'react';
-import { ShieldAlert, ArrowLeft } from 'lucide-react';
+import React, { useState } from 'react';
+import { ShieldAlert, ArrowLeft, Globe, ExternalLink } from 'lucide-react';
 import { CrisisResourceCard } from '../navigator/CrisisResourceCard';
-import { CrisisResource } from '../../lib/navigator/types';
+import { CrisisResource, CrisisResourceType } from '../../lib/navigator/types';
+import { resolveCountry, getResourcesForCountry, type CrisisResource as GeoCrisisResource } from '../../lib/crisis';
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 
-export const CrisisResourcesScreen: React.FC = () => {
-    const [resources, setResources] = useState<CrisisResource[]>([]);
-    const [loading, setLoading] = useState(true);
+const FIND_A_HELPLINE_URL = 'https://findahelpline.com';
 
-    useEffect(() => {
-        // In a real app we'd fetch directly from /api/navigator/knowledge-base
-        // For now, load from mock
-        import('../../data/mock_knowledge_base').then((module) => {
-            const kb = module.mockKnowledgeBase;
-            // Assuming US for standard distinct page, or try detecting
-            const data = kb.crisisResources['US'] || kb.crisisResources['INT'] || [];
-            setResources(data);
-            setLoading(false);
-        });
-    }, []);
+// lib/crisis exposes a richer resource shape than the navigator CrisisResourceCard renders;
+// map the handful of fields the card actually uses.
+function toNavigatorResource(r: GeoCrisisResource, i: number): CrisisResource {
+    const type: CrisisResourceType =
+        r.type === 'hotline' ? 'hotline' : r.type === 'text' ? 'text' : 'directory';
+    return {
+        id: `${r.source_name}-${i}`,
+        region_code: '',
+        name: r.name,
+        type,
+        phone: r.phone,
+        text_instruction: r.text_instruction,
+        url: r.web_url ?? r.chat_url,
+        email: null,
+        description: r.notes ?? r.hours,
+        hours: r.hours,
+        languages: r.languages,
+        priority: r.source_priority,
+        condition_specific: null,
+        is_active: true,
+        last_verified: r.last_verified_at,
+    };
+}
+
+export const CrisisResourcesScreen: React.FC = () => {
+    // lib/crisis is synchronous bundled data with a country -> regional -> global fallback
+    // (cannot fail closed), so there is no async chunk to spin on. Resolve once for the
+    // user's detected country; the global fallback already includes findahelpline.com.
+    const [resources] = useState<CrisisResource[]>(() => {
+        try {
+            return getResourcesForCountry(resolveCountry()).all_resources.map(toNavigatorResource);
+        } catch {
+            return [];
+        }
+    });
 
     return (
         <div className="min-h-screen bg-charcoal-50 dark:bg-charcoal-900 pt-24 pb-12">
@@ -37,7 +60,7 @@ export const CrisisResourcesScreen: React.FC = () => {
                         <div className="w-16 h-16 rounded-full bg-crisis-red/10 flex items-center justify-center mb-6">
                             <ShieldAlert className="w-8 h-8 text-crisis-red" />
                         </div>
-                        <h1 className="text-3xl sm:text-4xl font-serif font-bold text-charcoal-900 dark:text-white mb-4">
+                        <h1 className="text-3xl sm:text-4xl font-display font-bold text-charcoal-900 dark:text-white mb-4">
                             Crisis & Emergency Support
                         </h1>
                         <p className="text-lg text-charcoal-600 dark:text-charcoal-300 max-w-xl">
@@ -45,17 +68,31 @@ export const CrisisResourcesScreen: React.FC = () => {
                         </p>
                     </div>
 
-                    {loading ? (
-                        <div className="flex justify-center p-12">
-                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-crisis-red"></div>
-                        </div>
-                    ) : (
-                        <div className="space-y-4">
-                            {resources.map((resource) => (
-                                <CrisisResourceCard key={resource.id} resource={resource} />
-                            ))}
-                        </div>
-                    )}
+                    <div className="space-y-4">
+                        {resources.map((resource) => (
+                            <CrisisResourceCard key={resource.id} resource={resource} />
+                        ))}
+
+                        {/* Fail-safe: if resolution returned nothing, always offer the
+                            international directory rather than an empty screen. */}
+                        {resources.length === 0 && (
+                            <a
+                                href={FIND_A_HELPLINE_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 p-4 rounded-xl bg-charcoal-50 dark:bg-charcoal-700/40 border border-charcoal-200 dark:border-charcoal-700 hover:bg-charcoal-100 dark:hover:bg-charcoal-700 transition-colors group"
+                            >
+                                <div className="w-10 h-10 rounded-full bg-teal-500/10 flex items-center justify-center shrink-0">
+                                    <Globe className="w-5 h-5 text-teal-500" />
+                                </div>
+                                <div className="flex-1 text-left">
+                                    <p className="text-sm font-semibold text-charcoal-900 dark:text-white">Find A Helpline</p>
+                                    <p className="text-xs text-charcoal-500 dark:text-charcoal-400">Search crisis helplines in any country worldwide</p>
+                                </div>
+                                <ExternalLink className="w-4 h-4 text-charcoal-400 group-hover:text-teal-500 transition-colors shrink-0" />
+                            </a>
+                        )}
+                    </div>
 
                     <div className="mt-12 pt-8 border-t border-charcoal-200 dark:border-charcoal-700 text-center">
                         <p className="text-charcoal-500 dark:text-charcoal-400 text-sm">

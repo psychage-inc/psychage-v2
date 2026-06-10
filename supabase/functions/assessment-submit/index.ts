@@ -112,10 +112,12 @@ serve(async (req) => {
     if (crisisResult.detected) {
       const crisisLogData = prepareCrisisLogData(crisisResult);
       console.log(JSON.stringify({
+        // Spread first so the explicit framing keys below win the ordering
+        // (crisisLogData also carries a timestamp); avoids TS2783/2785.
+        ...crisisLogData,
         timestamp: new Date().toISOString(),
         function: 'assessment-submit',
         action: 'crisis_detected',
-        ...crisisLogData,
         // NEVER log user_id or assessment_id for crisis events
       }));
     }

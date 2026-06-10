@@ -320,11 +320,17 @@ async function searchViaDirectQuery(params: ProviderSearchParams, page: number, 
     query = query.in('id', providerIdScope);
   }
 
-  // Apply server-side filters where Supabase query builder supports them
+  // Apply server-side filters where Supabase query builder supports them.
+  // Strip PostgREST wildcard/operator chars before interpolating into .or() so
+  // user input can't inject extra filter conditions (B3-8; matches the legacy
+  // sanitization in providerService.getAll).
   if (params.query) {
-    query = query.or(
-      `display_name.ilike.%${params.query}%,practice_name.ilike.%${params.query}%,credentials_suffix.ilike.%${params.query}%`
-    );
+    const sanitized = params.query.replace(/[%_.*,()\\]/g, '');
+    if (sanitized) {
+      query = query.or(
+        `display_name.ilike.%${sanitized}%,practice_name.ilike.%${sanitized}%,credentials_suffix.ilike.%${sanitized}%`
+      );
+    }
   }
   if (params.telehealth) query = query.eq('telehealth_available', true);
   if (params.in_person) query = query.eq('in_person_available', true);

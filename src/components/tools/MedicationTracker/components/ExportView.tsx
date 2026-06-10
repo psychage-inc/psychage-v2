@@ -113,7 +113,7 @@ export const ExportView: React.FC<Props> = ({
       </div>
 
       {/* Privacy note */}
-      <p className="text-xs text-slate-400 dark:text-neutral-500 mt-4 text-center">
+      <p className="text-xs text-charcoal-600 dark:text-neutral-500 mt-4 text-center">
         All data is stored locally on your device. Exports contain your medication data — share only with trusted care providers.
       </p>
     </div>

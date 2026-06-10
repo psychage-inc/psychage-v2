@@ -93,7 +93,7 @@ const SafetyBanner: React.FC<SafetyBannerProps> = ({ onDismiss }) => {
 
               {/* Crisis Text Line */}
               <a
-                href="sms:741741&body=HOME"
+                href="sms:741741?body=HOME"
                 className="flex items-center gap-3 p-4 bg-white dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-lg hover:shadow-md transition-all group"
               >
                 <div className="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center shrink-0">

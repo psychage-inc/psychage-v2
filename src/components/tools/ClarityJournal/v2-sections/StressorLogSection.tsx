@@ -103,19 +103,21 @@ const StressorLogSection: React.FC<StressorLogSectionProps> = ({ onSave, existin
         <button
           type="button"
           onClick={() => setIsRecurring(!isRecurring)}
-          className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-all ${
-            isRecurring ? 'bg-teal-600 border-teal-600' : 'border-slate-300 dark:border-neutral-600'
-          }`}
+          className="min-h-[44px] min-w-[44px] flex items-center justify-center"
           aria-label="Toggle recurring"
         >
-          {isRecurring && <Check className="w-3 h-3 text-white" />}
+          <span className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-all ${
+            isRecurring ? 'bg-teal-600 border-teal-600' : 'border-slate-300 dark:border-neutral-600'
+          }`}>
+            {isRecurring && <Check className="w-3 h-3 text-white" />}
+          </span>
         </button>
         <span className="text-sm text-slate-700 dark:text-neutral-300">This is a recurring stressor</span>
       </div>
 
       <div>
         <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">
-          What did you do about it? <span className="text-slate-400 dark:text-neutral-500 font-normal">(optional)</span>
+          What did you do about it? <span className="text-charcoal-600 dark:text-neutral-500 font-normal">(optional)</span>
         </label>
         <input
           type="text"

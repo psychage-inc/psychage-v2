@@ -91,7 +91,7 @@ export const MedicationCard: React.FC<Props> = ({
                 {pct}% adherence
               </span>
               {adherence.currentStreak > 0 && (
-                <span className="text-slate-400 dark:text-neutral-500">
+                <span className="text-charcoal-600 dark:text-neutral-500">
                   &middot; {adherence.currentStreak}-day streak
                 </span>
               )}
@@ -120,7 +120,7 @@ export const MedicationCard: React.FC<Props> = ({
 
       {/* Prescriber / refill warnings */}
       {medication.prescriber && (
-        <p className="text-xs text-slate-400 dark:text-neutral-500 mt-2">
+        <p className="text-xs text-charcoal-600 dark:text-neutral-500 mt-2">
           Prescribed by {medication.prescriber}
         </p>
       )}

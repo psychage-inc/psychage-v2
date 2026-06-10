@@ -156,7 +156,7 @@ const CookieConsent: React.FC = () => {
                         <div className="mt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3">
                             <button
                                 onClick={() => setExpanded(!expanded)}
-                                className="flex items-center justify-center gap-1.5 px-4 py-2.5 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors rounded-xl hover:bg-white/5"
+                                className="flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors rounded-xl hover:bg-white/5"
                                 aria-expanded={expanded}
                             >
                                 Customize
@@ -168,7 +168,7 @@ const CookieConsent: React.FC = () => {
                             {expanded ? (
                                 <button
                                     onClick={handleSaveCustom}
-                                    className="px-5 py-2.5 text-sm font-semibold rounded-xl bg-primary text-white hover:bg-primary-hover transition-colors shadow-md shadow-primary/20"
+                                    className="px-6 py-3 text-sm font-semibold rounded-xl bg-primary text-white hover:bg-primary-hover transition-colors shadow-md shadow-primary/20"
                                 >
                                     Save Preferences
                                 </button>
@@ -176,13 +176,13 @@ const CookieConsent: React.FC = () => {
                                 <>
                                     <button
                                         onClick={handleEssentialOnly}
-                                        className="px-5 py-2.5 text-sm font-medium rounded-xl border border-border/50 text-text-secondary hover:text-text-primary hover:bg-white/5 transition-colors"
+                                        className="px-6 py-3 text-sm font-medium rounded-xl border border-border/50 text-text-secondary hover:text-text-primary hover:bg-white/5 transition-colors"
                                     >
                                         Essential Only
                                     </button>
                                     <button
                                         onClick={handleAcceptAll}
-                                        className="px-5 py-2.5 text-sm font-semibold rounded-xl bg-primary text-white hover:bg-primary-hover transition-colors shadow-md shadow-primary/20"
+                                        className="px-6 py-3 text-sm font-semibold rounded-xl bg-primary text-white hover:bg-primary-hover transition-colors shadow-md shadow-primary/20"
                                     >
                                         Accept All
                                     </button>

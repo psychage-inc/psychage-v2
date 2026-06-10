@@ -6,7 +6,6 @@ import {
   ChevronLeft,
   ShieldAlert,
   ExternalLink,
-  MessageCircle,
   Save,
   CheckCircle2,
   Calendar,
@@ -36,6 +35,7 @@ import AuthGate from '../auth/AuthGate';
 import { useAuth } from '@/context/AuthContext';
 import { useToast } from '@/context/ToastContext';
 import { clarityScoreService } from '@/services/clarityScoreService';
+import { resolveCountry, getResourcesForCountry } from '@/lib/crisis';
 
 /** Map domain index → DomainKey for icon lookup */
 const DOMAIN_INDEX_TO_KEY: DomainKey[] = ['emotional', 'vitality', 'social', 'cognitive', 'functioning'];
@@ -46,6 +46,12 @@ const HISTORY_KEY = 'psychage_clarity_history';
 const ClarityScoreTool: React.FC = () => {
   const { isAuthenticated } = useAuth();
   const { addToast } = useToast();
+
+  // Region-resolved crisis line for the crisis modal (no hardcoded US numbers).
+  const crisisResolved = getResourcesForCountry(resolveCountry());
+  const crisisHotline = crisisResolved.all_resources.find((r) => r.phone);
+  const crisisPhone = crisisHotline?.phone ?? crisisResolved.emergency_number;
+  const crisisName = crisisHotline?.name ?? 'Emergency services';
 
   // --- State ---
   const [saving, setSaving] = useState(false);
@@ -121,7 +127,7 @@ const ClarityScoreTool: React.FC = () => {
     if (!results || saving || saved) return;
     setSaving(true);
     try {
-      const { success } = await clarityScoreService.saveResult(results, answers);
+      const { success } = await clarityScoreService.saveResult(results);
       if (success) {
         setSaved(true);
         addToast('success', 'Clarity Score saved to your dashboard!');
@@ -133,7 +139,7 @@ const ClarityScoreTool: React.FC = () => {
     } finally {
       setSaving(false);
     }
-  }, [results, answers, saving, saved, addToast]);
+  }, [results, saving, saved, addToast]);
 
   // --- Persist progress ---
   useEffect(() => {
@@ -305,30 +311,17 @@ const ClarityScoreTool: React.FC = () => {
 
                 <div className="space-y-3">
                   <a
-                    href="tel:988"
+                    href={`tel:${crisisPhone.replace(/\s/g, '')}`}
                     className="flex items-center gap-4 w-full p-4 bg-red-600 hover:bg-red-700 text-white rounded-xl font-medium transition-colors shadow-lg shadow-red-600/20"
                   >
                     <Phone size={24} className="shrink-0" />
                     <div className="flex-1">
-                      <div className="text-lg font-bold">Call or Text 988</div>
+                      <div className="text-lg font-bold">Call {crisisName}</div>
                       <div className="text-sm text-red-100">
-                        Free, confidential, 24/7 crisis support
+                        {crisisPhone} — free, confidential, 24/7 crisis support
                       </div>
                     </div>
                     <ExternalLink size={20} className="text-red-200" />
-                  </a>
-
-                  <a
-                    href="sms:741741&body=HOME"
-                    className="flex items-center gap-4 w-full p-4 bg-surface-active hover:bg-surface-hover text-text-primary rounded-xl font-medium transition-colors"
-                  >
-                    <MessageCircle size={24} className="shrink-0" />
-                    <div className="flex-1">
-                      <div className="font-bold">Text HOME to 741741</div>
-                      <div className="text-sm text-text-tertiary">
-                        Crisis Text Line — 24/7
-                      </div>
-                    </div>
                   </a>
 
                   <Link

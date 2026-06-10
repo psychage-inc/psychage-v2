@@ -112,9 +112,11 @@ const MindMate: React.FC = () => {
         hydrate().catch(console.error);
     }, [isAuthenticated, user]);
 
-    // Persist chat to localStorage (strip transient streaming state)
+    // Persist chat to localStorage only with explicit consent (strip transient
+    // streaming state). chatConsentRef is false for anonymous/unconsented sessions,
+    // so history never lands on disk for the next user of a shared device (B3-6).
     useEffect(() => {
-        if (messages.length > 0) {
+        if (chatConsentRef.current && messages.length > 0) {
             const toSave = messages.map(({ isStreaming: _, ...rest }) => rest);
             localStorage.setItem(STORAGE_KEY, JSON.stringify(toSave));
         }
@@ -395,6 +397,7 @@ const MindMate: React.FC = () => {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         onClick={() => setIsOpen(true)}
+                        data-floating="mindmate-fab"
                         className="fixed bottom-6 right-6 z-[100] group"
                         aria-label="Open Psychage AI chat"
                     >

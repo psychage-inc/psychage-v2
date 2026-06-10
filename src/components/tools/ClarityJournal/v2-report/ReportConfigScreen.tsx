@@ -205,12 +205,14 @@ const ReportConfigScreen: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => toggleSection(toggle.key)}
-                    className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-all shrink-0 ${
-                      sections[toggle.key] ? 'bg-teal-600 border-teal-600' : 'border-slate-300 dark:border-neutral-600'
-                    }`}
+                    className="min-h-[44px] min-w-[44px] flex items-center justify-center shrink-0"
                     aria-label={`Toggle ${toggle.label}`}
                   >
-                    {sections[toggle.key] && <Check className="w-3 h-3 text-white" />}
+                    <span className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-all ${
+                      sections[toggle.key] ? 'bg-teal-600 border-teal-600' : 'border-slate-300 dark:border-neutral-600'
+                    }`}>
+                      {sections[toggle.key] && <Check className="w-3 h-3 text-white" />}
+                    </span>
                   </button>
                   <span className="text-sm text-slate-700 dark:text-neutral-300">{toggle.label}</span>
                 </label>
@@ -293,7 +295,7 @@ const ReportConfigScreen: React.FC = () => {
           </motion.div>
 
           {/* Disclaimer */}
-          <p className="text-xs text-slate-400 dark:text-neutral-500 text-center leading-relaxed px-4">
+          <p className="text-xs text-charcoal-600 dark:text-neutral-500 text-center leading-relaxed px-4">
             This report is generated from a self-directed educational wellness tool. It is not a clinical assessment, diagnosis, or medical record. All data is processed on your device — nothing is sent to any server.
           </p>
         </div>

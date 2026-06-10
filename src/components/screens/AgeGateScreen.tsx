@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ShieldCheck, AlertCircle } from 'lucide-react';
 import { NavigatorButton } from '../navigator/NavigatorButton';
 import { navigatorConfig } from '../../lib/navigator/config';
+import { resolveCountry, getResourcesForCountry } from '../../lib/crisis';
 
 interface AgeGateScreenProps {
     onContinue: () => void;
@@ -29,7 +30,7 @@ export const AgeGateScreen: React.FC<AgeGateScreenProps> = ({ onContinue, onUnde
                 </div>
 
                 {/* Title */}
-                <h2 className="text-3xl sm:text-4xl font-serif font-medium text-white mb-4 text-center">
+                <h2 className="text-3xl sm:text-4xl font-display font-medium text-white mb-4 text-center">
                     Age Confirmation
                 </h2>
 
@@ -81,6 +82,12 @@ export const AgeGateScreen: React.FC<AgeGateScreenProps> = ({ onContinue, onUnde
 
 // Underage notice screen
 export const UnderageNoticeScreen: React.FC<{ onBack: () => void }> = ({ onBack }) => {
+    // Resolve a region-correct crisis line instead of hardcoding US numbers.
+    const crisis = getResourcesForCountry(resolveCountry());
+    const hotline = crisis.all_resources.find((r) => r.phone);
+    const callPhone = hotline?.phone ?? crisis.emergency_number;
+    const callName = hotline?.name ?? 'Emergency services';
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -96,7 +103,7 @@ export const UnderageNoticeScreen: React.FC<{ onBack: () => void }> = ({ onBack 
                     </div>
                 </div>
 
-                <h2 className="text-3xl sm:text-4xl font-serif font-medium text-white mb-4">
+                <h2 className="text-3xl sm:text-4xl font-display font-medium text-white mb-4">
                     Talk to a Trusted Adult
                 </h2>
 
@@ -108,8 +115,8 @@ export const UnderageNoticeScreen: React.FC<{ onBack: () => void }> = ({ onBack 
                 <div className="bg-charcoal-900/50 border border-white/10 rounded-2xl p-6 mb-8 text-left">
                     <h3 className="font-semibold text-white mb-3">If you need help right now:</h3>
                     <ul className="space-y-2 text-charcoal-300">
-                        <li>• Call 988 (Suicide & Crisis Lifeline) - Available 24/7</li>
-                        <li>• Text HOME to 741741 (Crisis Text Line)</li>
+                        <li>• Call {callName}: {callPhone} — available 24/7</li>
+                        <li>• Find a helpline in your country: findahelpline.com</li>
                         <li>• Talk to a parent, guardian, or school counselor</li>
                         <li>• Visit your school nurse or guidance office</li>
                     </ul>

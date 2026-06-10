@@ -46,7 +46,7 @@ const CrisisOverlay: React.FC<CrisisOverlayProps> = ({ isOpen, onClose }) => {
           </a>
 
           <a
-            href="sms:741741&body=HOME"
+            href="sms:741741?body=HOME"
             className="flex items-center gap-4 p-4 bg-blue-50 dark:bg-blue-900/10 rounded-xl border border-blue-200 dark:border-blue-800 hover:bg-blue-100 dark:hover:bg-blue-900/20 transition-colors group"
           >
             <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center shrink-0">

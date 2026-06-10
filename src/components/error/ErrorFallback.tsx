@@ -110,6 +110,30 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary
             Return Home
           </button>
         </div>
+
+        {/* Crisis access — must survive an app-level crash, so it is plain HTML with
+            no dependency on lib/crisis, hooks, or icon libraries (SR-2). */}
+        <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid #e2e8f0' }}>
+          <a
+            href="/crisis"
+            style={{
+              display: 'inline-block',
+              fontSize: '0.875rem',
+              fontWeight: 600,
+              color: '#b91c1c',
+              textDecoration: 'underline',
+            }}
+          >
+            In crisis? Get immediate support
+          </a>
+          <p style={{ fontSize: '0.75rem', color: '#64748b', marginTop: '0.5rem', lineHeight: 1.5 }}>
+            Find a crisis helpline in any country at{' '}
+            <a href="https://findahelpline.com" style={{ color: '#b91c1c' }}>
+              findahelpline.com
+            </a>
+            .
+          </p>
+        </div>
       </div>
     </div>
   );

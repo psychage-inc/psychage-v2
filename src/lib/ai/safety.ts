@@ -188,11 +188,14 @@ export async function classifyInputSafety(
 
     return buildClassification(level, confidence, trigger);
   } catch {
-    // If LLM fails, rely on keyword result or default to SAFE
+    // If LLM fails, rely on keyword result, else fail CLOSED to WATCH.
+    // WATCH proceeds (buildAction → PROCEED) but surfaces the soft crisis nudge
+    // so nuanced distress that missed the keyword layer isn't silently passed as
+    // SAFE when the classifier errors/times out (audit B3-3).
     if (keywordResult) {
       return buildClassification(keywordResult, 0.8, message);
     }
-    return buildClassification('SAFE', 0.5, null);
+    return buildClassification('WATCH', 0.5, null);
   }
 }
 

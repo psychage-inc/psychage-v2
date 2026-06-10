@@ -157,3 +157,52 @@ describe('CrisisOverlay Accessibility & Focus Trap', () => {
         expect(container.querySelector('[role="alertdialog"]')).toBeTruthy();
     });
 });
+
+describe('CrisisOverlay region resolution (P0-1 regression)', () => {
+    // KB keys mirror mock_knowledge_base.ts: US, UK, CA, AU, DEFAULT.
+    const kb = {
+        crisisResources: {
+            US: [{ id: 'us', name: 'US Lifeline', type: 'hotline', phone: '988', hours: '24/7' }],
+            UK: [{ id: 'uk', name: 'UK Samaritans', type: 'hotline', phone: '116123', hours: '24/7' }],
+            CA: [{ id: 'ca', name: 'CA Talk Suicide', type: 'hotline', phone: '988', hours: '24/7' }],
+            AU: [{ id: 'au', name: 'AU Lifeline', type: 'hotline', phone: '131114', hours: '24/7' }],
+            DEFAULT: [{ id: 'def', name: 'International Helpline', type: 'directory', url: 'https://findahelpline.com', hours: '24/7' }],
+        },
+    };
+
+    const renderWithRegion = (detectedRegion: string | null) => {
+        vi.spyOn(NavigatorContextModule, 'useNavigator').mockReturnValue({
+            state: { crisisTriggered: true, crisisAcknowledged: false, detectedRegion, knowledgeBase: kb } as any,
+            dispatch: vi.fn(),
+            announceAssertive: vi.fn(),
+            announcePolite: vi.fn(),
+            prefetchKnowledgeBase: vi.fn(),
+        });
+        return render(<CrisisOverlay />);
+    };
+
+    beforeEach(() => vi.clearAllMocks());
+    afterEach(() => cleanup());
+
+    it("maps 'GB' to the KB's 'UK' resources (never the empty 'INT' miss)", () => {
+        renderWithRegion('GB');
+        expect(screen.getByText('UK Samaritans')).toBeInTheDocument();
+        expect(screen.queryByText('International Helpline')).not.toBeInTheDocument();
+    });
+
+    it("falls back to DEFAULT for a region with no KB entry ('NZ')", () => {
+        renderWithRegion('NZ');
+        expect(screen.getByText('International Helpline')).toBeInTheDocument();
+        expect(screen.queryByText('UK Samaritans')).not.toBeInTheDocument();
+    });
+
+    it("renders the matching list for a directly-keyed region ('US')", () => {
+        renderWithRegion('US');
+        expect(screen.getByText('US Lifeline')).toBeInTheDocument();
+    });
+
+    it("falls back to DEFAULT for an unknown region ('ZZ') — never an empty list", () => {
+        renderWithRegion('ZZ');
+        expect(screen.getByText('International Helpline')).toBeInTheDocument();
+    });
+});

@@ -2,8 +2,10 @@
  * MindMate 2.0 - Health Check
  * GET /api/ai/health
  *
- * Verifies that all required environment variables are set
- * and the Anthropic API key is valid.
+ * Reports whether the required environment variables are configured.
+ * Deliberately does NOT call the Anthropic API — this endpoint is
+ * unauthenticated and un-rate-limited, so a live completion per hit was a
+ * token-burn / cost-amplification vector (audit B3-4).
  */
 
 import type { VercelRequest, VercelResponse } from '@vercel/node';
@@ -39,39 +41,11 @@ export default async function handler(
     checks.VITE_SUPABASE_URL.set &&
     checks.SUPABASE_SERVICE_ROLE_KEY.set;
 
-  // If API key is set, do a quick validation call
-  let apiKeyValid = false;
-  if (checks.ANTHROPIC_API_KEY.set) {
-    try {
-      const response = await fetch('https://api.anthropic.com/v1/messages', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-api-key': process.env.ANTHROPIC_API_KEY!,
-          'anthropic-version': '2023-06-01',
-        },
-        body: JSON.stringify({
-          model: 'claude-haiku-4-5-20251001',
-          max_tokens: 10,
-          messages: [{ role: 'user', content: 'ping' }],
-        }),
-      });
-      apiKeyValid = response.ok;
-      if (!response.ok) {
-        const err = await response.text();
-        console.error('[MindMate Health] API key validation failed:', response.status, err);
-      }
-    } catch (err) {
-      console.error('[MindMate Health] API key validation error:', err);
-    }
-  }
-
-  const status = allRequired && apiKeyValid ? 'healthy' : 'unhealthy';
+  const status = allRequired ? 'healthy' : 'unhealthy';
 
   return res.status(status === 'healthy' ? 200 : 503).json({
     status,
     checks,
-    apiKeyValid,
     timestamp: new Date().toISOString(),
   });
 }

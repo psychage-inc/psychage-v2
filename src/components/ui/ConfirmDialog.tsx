@@ -70,7 +70,7 @@ export const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
                                     )}
                                 </div>
                                 <div className="flex-1">
-                                    <AlertDialogPrimitive.Title className="text-xl font-serif font-semibold text-white mb-2">
+                                    <AlertDialogPrimitive.Title className="text-xl font-display font-semibold text-white mb-2">
                                         {title}
                                     </AlertDialogPrimitive.Title>
                                     <AlertDialogPrimitive.Description className="text-charcoal-200 leading-relaxed">

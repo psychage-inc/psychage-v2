@@ -194,7 +194,7 @@ const MedicationTracker: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-1.5 text-xs text-slate-400 dark:text-neutral-500 mt-2 ml-[52px]">
+          <div className="flex items-center gap-1.5 text-xs text-charcoal-600 dark:text-neutral-500 mt-2 ml-[52px]">
             <ShieldCheck size={13} className="text-emerald-500/70" />
             <span>All data stays on your device</span>
           </div>
@@ -239,7 +239,7 @@ const MedicationTracker: React.FC = () => {
                 Today&apos;s Schedule
               </h2>
             </div>
-            <span className="text-xs font-medium text-slate-400 dark:text-neutral-500">
+            <span className="text-xs font-medium text-charcoal-600 dark:text-neutral-500">
               {new Date().toLocaleDateString(undefined, {
                 weekday: 'long',
                 month: 'short',
@@ -296,7 +296,7 @@ const MedicationTracker: React.FC = () => {
               <p className="text-slate-700 dark:text-neutral-300 font-medium mb-1">
                 No medications added yet
               </p>
-              <p className="text-slate-400 dark:text-neutral-500 text-sm mb-6 max-w-xs mx-auto">
+              <p className="text-charcoal-600 dark:text-neutral-500 text-sm mb-6 max-w-xs mx-auto">
                 Add your first medication to start tracking doses and adherence.
               </p>
               <button

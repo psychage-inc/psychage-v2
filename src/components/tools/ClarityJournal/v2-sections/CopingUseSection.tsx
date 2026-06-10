@@ -61,7 +61,7 @@ const CopingUseSection: React.FC<CopingUseSectionProps> = ({ onSave, existingUse
             return (
               <div key={u.id} className="text-xs text-slate-600 dark:text-neutral-400 bg-white dark:bg-neutral-900 rounded-lg px-3 py-2 border border-slate-100 dark:border-neutral-700 flex items-center justify-between">
                 <span>{t?.emoji} {t?.label || u.tool}</span>
-                <span className={reduction > 0 ? 'text-green-600' : 'text-slate-400 dark:text-neutral-500'}>
+                <span className={reduction > 0 ? 'text-green-600' : 'text-charcoal-600 dark:text-neutral-500'}>
                   {reduction > 0 ? `↓${reduction}` : '→0'} distress
                 </span>
               </div>
@@ -121,7 +121,7 @@ const CopingUseSection: React.FC<CopingUseSectionProps> = ({ onSave, existingUse
 
       <div>
         <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">
-          Note <span className="text-slate-400 dark:text-neutral-500 font-normal">(optional)</span>
+          Note <span className="text-charcoal-600 dark:text-neutral-500 font-normal">(optional)</span>
         </label>
         <input
           type="text"

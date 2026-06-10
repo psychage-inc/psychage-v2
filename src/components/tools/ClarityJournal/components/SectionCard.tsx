@@ -29,7 +29,7 @@ const SectionCard: React.FC<SectionCardProps> = ({ section, lastEntry }) => {
       </div>
       <h3 className="font-display font-semibold text-slate-900 dark:text-neutral-100 mb-1">{section.title}</h3>
       <p className="text-xs text-slate-500 dark:text-neutral-400 mb-3 line-clamp-2">{section.description}</p>
-      <div className="flex items-center justify-between text-xs text-slate-400 dark:text-neutral-500">
+      <div className="flex items-center justify-between text-xs text-charcoal-600 dark:text-neutral-500">
         <span>{section.frequency}</span>
         <span>{lastEntry || 'Not started'}</span>
       </div>

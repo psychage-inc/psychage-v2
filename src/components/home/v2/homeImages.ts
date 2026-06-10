@@ -89,9 +89,18 @@ export interface ImageBundle {
   avif: string;
   webp: string;
   jpeg: string;
+  w: number;
+  h: number;
 }
 
-const bundle = (avif: string, webp: string, jpeg: string): ImageBundle => ({ avif, webp, jpeg });
+// Intrinsic dimensions default to 1024² (the clay-art tile size); only wide scenes override.
+const bundle = (
+  avif: string,
+  webp: string,
+  jpeg: string,
+  w = 1024,
+  h = 1024
+): ImageBundle => ({ avif, webp, jpeg, w, h });
 
 export const FIGURES = {
   listener: bundle(listener_avif, listener_webp, listener_jpeg),
@@ -120,7 +129,7 @@ export const OBJECTS = {
 } as const;
 
 export const SCENES = {
-  turning: bundle(turning_avif, turning_webp, turning_jpeg),
+  turning: bundle(turning_avif, turning_webp, turning_jpeg, 1376, 768),
   score: bundle(score_avif, score_webp, score_jpeg),
   companion: bundle(companion_avif, companion_webp, companion_jpeg),
   rhythm: bundle(rhythm_avif, rhythm_webp, rhythm_jpeg),

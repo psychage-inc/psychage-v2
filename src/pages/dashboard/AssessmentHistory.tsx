@@ -5,7 +5,7 @@ import { BrainCircuit, ArrowRight, Activity, Calendar, TrendingUp, X, Brain, Moo
 import Button from '@/components/ui/Button';
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
-import { api } from '@/lib/api';
+import { clarityScoreService } from '@/services/clarityScoreService';
 import { format } from 'date-fns';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -31,10 +31,8 @@ const UserAssessmentHistory: React.FC = () => {
     useEffect(() => {
         const fetchHistory = async () => {
             try {
-                const response = await api.clarityScore.getHistory();
-                if (response.success && response.data) {
-                    setHistory(response.data as unknown as AssessmentHistoryItem[]);
-                }
+                const data = await clarityScoreService.getHistory();
+                setHistory(data as unknown as AssessmentHistoryItem[]);
             } catch {
                 // Failed to fetch history — show empty state
             } finally {

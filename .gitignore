@@ -124,3 +124,12 @@ api/**/*.js.map
 
 # graphify knowledge-graph output (generated)
 graphify-out/
+
+# Tool scratch dirs (local, not for VCS)
+.exec/
+.playwright-mcp/
+.postfix/
+
+# Audit artifacts are heavy (~77MB of screenshots) — reports live at repo root;
+# only lightweight evidence is force-added (capture.mjs + raw/results.jsonl)
+audit-artifacts/

@@ -4,10 +4,9 @@
  * Orchestrates the complete navigation flow:
  * 1. Normalize user inputs
  * 2. Screen for red flags (SAFETY FIRST)
- * 3. Filter conditions by feature flags (phased rollout)
- * 4. Score all conditions
- * 5. Rank, cap, and diversify results
- * 6. Generate safe, non-diagnostic output
+ * 3. Score all conditions
+ * 4. Rank, cap, and diversify results
+ * 5. Generate safe, non-diagnostic output
  *
  * This module runs ENTIRELY client-side. No symptom data is
  * transmitted to any server in the default (anonymous) flow.
@@ -21,7 +20,6 @@ import type {
   SafetyResult,
   UserSymptomInput,
 } from './types';
-import { filterByFeatureFlags } from './featureFlags';
 import { screenRedFlags } from './safety';
 import { rankAndDiversify, scoreAllConditions } from './scoring';
 import {
@@ -63,11 +61,9 @@ export function runSymptomNavigator(
     return generateSafeResults([], normalized, safetyResult, config);
   }
 
-  // Step 3: Filter conditions by feature flags (phased rollout)
-  const enabledConditions = filterByFeatureFlags(knowledgeBase.conditions);
-
-  // Step 4: Score each condition
-  const rawScores = scoreAllConditions(normalized, enabledConditions, {
+  // Step 3: Score each condition. The full bundled KB ships unconditionally —
+  // there is no phased-rollout / per-tier env gating anymore.
+  const rawScores = scoreAllConditions(normalized, knowledgeBase.conditions, {
     confidence_cap: config.confidence_cap,
     below_minimum_penalty: config.below_minimum_penalty,
     severity_modifiers: config.severity_modifiers,
@@ -75,10 +71,10 @@ export function runSymptomNavigator(
     duration_modifiers: config.duration_modifiers,
   });
 
-  // Step 5: Rank, cap confidence, diversify
+  // Step 4: Rank, cap confidence, diversify
   const ranked = rankAndDiversify(rawScores, config);
 
-  // Step 6: Generate safe, non-diagnostic results
+  // Step 5: Generate safe, non-diagnostic results
   return generateSafeResults(ranked, normalized, safetyResult, config);
 }
 

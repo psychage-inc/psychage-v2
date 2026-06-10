@@ -21,8 +21,8 @@ export interface DimensionMeta {
  *
  * IMPORTANT: The domain key mapping is inherited from the scoring engine
  * and MUST be preserved exactly:
- *   key 'vitality'  → "Cognitive Clarity" (WHO-5)
- *   key 'cognitive'  → "Physical Vitality" (PSS-4)
+ *   key 'vitality'  → "Overall Wellbeing" (WHO-5)
+ *   key 'cognitive'  → "Stress Load" (PSS-4)
  */
 export const DIMENSION_META: Record<DomainKey, DimensionMeta> = {
   emotional: {
@@ -41,8 +41,8 @@ export const DIMENSION_META: Record<DomainKey, DimensionMeta> = {
   },
   vitality: {
     key: 'vitality',
-    name: 'Cognitive Clarity',
-    shortName: 'Cognitive',
+    name: 'Overall Wellbeing',
+    shortName: 'Wellbeing',
     icon: Brain,
     hexColor: '#6366f1',
     tailwindBg: 'bg-indigo-500',
@@ -69,8 +69,8 @@ export const DIMENSION_META: Record<DomainKey, DimensionMeta> = {
   },
   cognitive: {
     key: 'cognitive',
-    name: 'Physical Vitality',
-    shortName: 'Physical',
+    name: 'Stress Load',
+    shortName: 'Stress',
     icon: Zap,
     hexColor: '#f59e0b',
     tailwindBg: 'bg-amber-500',

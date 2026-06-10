@@ -60,7 +60,7 @@ const NotificationPrompt: React.FC = () => {
       </div>
       <button
         onClick={handleDismiss}
-        className="p-1.5 rounded-full hover:bg-surface-hover transition-colors text-text-tertiary"
+        className="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full hover:bg-surface-hover transition-colors text-text-tertiary"
         aria-label="Dismiss"
       >
         <X size={14} />

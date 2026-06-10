@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Phone, MessageSquare, Globe, ArrowLeft } from 'lucide-react';
+import { Phone, Globe, ArrowLeft } from 'lucide-react';
+import { resolveCountry, getResourcesForCountry } from '../../../lib/crisis';
 
 interface CrisisOverlayProps {
   isAutoTriggered?: boolean;
@@ -7,6 +8,12 @@ interface CrisisOverlayProps {
 }
 
 export default function CrisisOverlay({ isAutoTriggered, onClose }: CrisisOverlayProps) {
+  // Resolve a region-correct crisis line instead of hardcoding US numbers.
+  const crisis = getResourcesForCountry(resolveCountry());
+  const hotline = crisis.all_resources.find((r) => r.phone);
+  const callPhone = hotline?.phone ?? crisis.emergency_number;
+  const callName = hotline?.name ?? 'Emergency services';
+
   return (
     <motion.div
       initial={isAutoTriggered ? false : { opacity: 0 }}
@@ -24,29 +31,15 @@ export default function CrisisOverlay({ isAutoTriggered, onClose }: CrisisOverla
         </p>
 
         <div className="space-y-3">
-          {/* 988 Lifeline */}
+          {/* Region-resolved crisis line */}
           <a
-            href="tel:988"
+            href={`tel:${callPhone.replace(/\s/g, '')}`}
             className="flex items-center gap-3 w-full px-5 py-4 bg-teal-600 hover:bg-teal-700 text-white rounded-xl transition-colors text-left"
           >
             <Phone size={20} />
             <div>
-              <p className="font-semibold text-sm">Call 988 Suicide & Crisis Lifeline</p>
-              <p className="text-teal-100 text-xs mt-0.5">Available 24/7, free and confidential</p>
-            </div>
-          </a>
-
-          {/* Crisis Text Line */}
-          <a
-            href="sms:741741&body=HOME"
-            className="flex items-center gap-3 w-full px-5 py-4 bg-slate-100 dark:bg-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-700 text-slate-900 dark:text-white rounded-xl transition-colors text-left"
-          >
-            <MessageSquare size={20} />
-            <div>
-              <p className="font-semibold text-sm">Text HOME to 741741</p>
-              <p className="text-slate-500 dark:text-neutral-400 text-xs mt-0.5">
-                Crisis Text Line — free, 24/7 support
-              </p>
+              <p className="font-semibold text-sm">Call {callName}</p>
+              <p className="text-teal-100 text-xs mt-0.5">{callPhone} · available 24/7</p>
             </div>
           </a>
 

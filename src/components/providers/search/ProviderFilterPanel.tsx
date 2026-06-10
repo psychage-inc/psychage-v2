@@ -282,7 +282,7 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
                   </div>
                 ) : content}
               </div>
-              <div className="p-4 border-t border-border">
+              <div className="p-4 pb-[calc(1rem+env(safe-area-inset-bottom))] border-t border-border">
                 <Button
                   onClick={onClose}
                   className="w-full bg-primary hover:bg-primary-hover text-white font-bold"

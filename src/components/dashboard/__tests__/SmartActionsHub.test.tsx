@@ -34,35 +34,35 @@ const recentClarity = new Date().toISOString();
 describe('SmartActionsHub', () => {
     it('should show log mood action when no todayMood', () => {
         renderWithRouter(
-            <SmartActionsHub todayMood={null} todaySleep={mockSleep} lastClarityDate={recentClarity} navigatorCount={5} bookmarkCount={0} maxActions={5} />
+            <SmartActionsHub todayMood={null} todaySleep={mockSleep} lastClarityDate={recentClarity} navigatorCount={5} maxActions={5} />
         );
         expect(screen.getByText('Check in with how you feel')).toBeInTheDocument();
     });
 
     it('should show log sleep action when no todaySleep (morning)', () => {
         renderWithRouter(
-            <SmartActionsHub todayMood={mockMood} todaySleep={null} lastClarityDate={recentClarity} navigatorCount={5} bookmarkCount={0} maxActions={5} />
+            <SmartActionsHub todayMood={mockMood} todaySleep={null} lastClarityDate={recentClarity} navigatorCount={5} maxActions={5} />
         );
         expect(screen.getByText('Log how you slept last night')).toBeInTheDocument();
     });
 
     it('should show clarity check-in when never assessed', () => {
         renderWithRouter(
-            <SmartActionsHub todayMood={mockMood} todaySleep={mockSleep} lastClarityDate={null} navigatorCount={5} bookmarkCount={0} maxActions={5} />
+            <SmartActionsHub todayMood={mockMood} todaySleep={mockSleep} lastClarityDate={null} navigatorCount={5} maxActions={5} />
         );
         expect(screen.getByText('Take your first clarity check-in')).toBeInTheDocument();
     });
 
     it('should show navigator action when navigatorCount is 0', () => {
         renderWithRouter(
-            <SmartActionsHub todayMood={mockMood} todaySleep={mockSleep} lastClarityDate={recentClarity} navigatorCount={0} bookmarkCount={0} maxActions={5} />
+            <SmartActionsHub todayMood={mockMood} todaySleep={mockSleep} lastClarityDate={recentClarity} navigatorCount={0} maxActions={5} />
         );
         expect(screen.getByText('Explore the Symptom Navigator')).toBeInTheDocument();
     });
 
     it('should respect maxActions limit', () => {
         renderWithRouter(
-            <SmartActionsHub todayMood={null} todaySleep={null} lastClarityDate={null} navigatorCount={0} bookmarkCount={5} maxActions={2} />
+            <SmartActionsHub todayMood={null} todaySleep={null} lastClarityDate={null} navigatorCount={0} maxActions={2} />
         );
         // maxActions=2 keeps the two highest-priority morning actions: sleep + mood.
         expect(screen.getByText('Log how you slept last night')).toBeInTheDocument();
@@ -81,21 +81,8 @@ describe('SmartActionsHub', () => {
                 todaySleep={mockSleep}
                 lastClarityDate={recentClarity}
                 navigatorCount={5}
-                bookmarkCount={0}
             />
         );
         expect(screen.getByText('Explore new articles')).toBeInTheDocument();
-    });
-
-    // (c) Known product gap — see SLICE-2 report. UserDashboard computes and passes
-    // `bookmarkCount`, but SmartActionsHub never renders a bookmarks action ("Check
-    // saved articles" exists nowhere in src). Re-enable once the component either
-    // renders a bookmarks suggestion or the dead prop is removed (production change).
-    it.skip('should show bookmarks action when bookmarkCount > 0', () => {
-        renderWithRouter(
-            <SmartActionsHub todayMood={null} todaySleep={null} lastClarityDate={null} navigatorCount={5} bookmarkCount={3} maxActions={5} />
-        );
-        expect(screen.getByText('Check saved articles')).toBeInTheDocument();
-        expect(screen.getByText('3 saved items')).toBeInTheDocument();
     });
 });

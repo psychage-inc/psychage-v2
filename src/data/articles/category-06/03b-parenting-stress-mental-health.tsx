@@ -43,7 +43,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
           { citationId: '1', fact: 'Children of parents with mental illness show resilience and positive outcomes when parents engage in treatment, maintain emotional warmth, and provide stable caregiving' },
           { citationId: '2', fact: "Age-appropriate disclosure about parental mental illness reduces children's confusion and self-blame while increasing family cohesion and trust" },
           { citationId: '3', fact: 'Treatment adherence improves parenting capacity: parents who consistently manage their mental health condition report greater patience, emotional availability, and enjoyment of parenting' },
-          { citationId: '4', fact: 'Modeling help-seeking behavior teaches children that mental health struggles are normal, treatable, and nothing to be ashamed of' },
+          { citationId: '4', fact: 'Modeling help-seeking behavior teaches children that mental health struggles are common, treatable, and nothing to be ashamed of' },
           { citationId: "8", fact: "Good enough parenting---meeting children's core needs for safety, love, and consistency---is entirely compatible with managing mental illness" },
         ]} />
 
@@ -169,7 +169,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
         <h3>4. Model Help-Seeking and Self-Care</h3>
 
         <p>
-          When you openly (and age-appropriately) share that you're getting help for your mental health, you teach your children powerful lessons: Mental health struggles are normal. Asking for help is strength, not weakness. Treatment works. There's no shame in therapy or medication.<Citation id="4" />
+          When you openly (and age-appropriately) share that you're getting help for your mental health, you teach your children powerful lessons: Mental health struggles are common. Asking for help is strength, not weakness. Treatment works. There's no shame in therapy or medication.<Citation id="4" />
         </p>
 
         <p>
@@ -580,7 +580,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
             Parental anger is one of the most common and least discussed struggles in parenting. Most parents lose their temper sometimes. Many yell more often than they'd like to admit. The shame around parental anger runs deep, making it hard to seek help or even acknowledge the pattern. But understanding why you lose your temper—and learning strategies to change the cycle—can transform both your parenting and your children's wellbeing.<Citation id="1" index={1} source="Journal of Family Psychology" year="2021" tier={1} />
           </p>
           <p className="mb-6">
-            This isn't about becoming a perfect parent who never feels angry. Anger is a normal human emotion, and children benefit from seeing you experience and manage the full range of feelings. This is about recognizing when anger becomes harmful—chronic yelling, rage that frightens children, verbal harshness that damages their sense of safety—and developing the skills to respond differently.
+            This isn't about becoming a perfect parent who never feels angry. Anger is a common human emotion, and children benefit from seeing you experience and manage the full range of feelings. This is about recognizing when anger becomes harmful—chronic yelling, rage that frightens children, verbal harshness that damages their sense of safety—and developing the skills to respond differently.
           </p>
         </div>
 

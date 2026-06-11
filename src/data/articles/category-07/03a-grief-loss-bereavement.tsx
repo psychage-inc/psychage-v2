@@ -312,16 +312,16 @@ export const griefLossArticlesA: Article[] = [
         />
 
         <h2 id="normal-reactions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Normal Grief Reactions That Worry People
+          Common Grief Reactions That Worry People
         </h2>
         <p className="mb-6">
-          Many grief reactions are normal but frightening when you experience them. These don't mean you're "losing it"---they're common responses to profound loss:
+          Many grief reactions are common but frightening when you experience them. These don't mean you're "losing it"---they're common responses to profound loss:
         </p>
 
         <div className="space-y-4 my-8">
           <ArticleCallout variant="info">
             <p className="mb-2"><strong>Sensing the deceased's presence:</strong></p>
-            <p>Up to 80% of bereaved people report feeling, seeing, hearing, or smelling the deceased. This is normal, not a hallucination or mental illness. It's your brain's attachment system searching for the person who's gone.</p>
+            <p>Up to 80% of bereaved people report feeling, seeing, hearing, or smelling the deceased. This is common, not a hallucination or mental illness. It's your brain's attachment system searching for the person who's gone.</p>
           </ArticleCallout>
 
           <ArticleCallout variant="info">
@@ -336,7 +336,7 @@ export const griefLossArticlesA: Article[] = [
 
           <ArticleCallout variant="info">
             <p className="mb-2"><strong>Anger at the deceased:</strong></p>
-            <p>Angry they left you, angry about unfinished business, angry they died the way they did. Anger is a normal grief emotion, not betrayal of love.</p>
+            <p>Angry they left you, angry about unfinished business, angry they died the way they did. Anger is a common grief emotion, not betrayal of love.</p>
           </ArticleCallout>
 
           <ArticleCallout variant="info">
@@ -376,7 +376,7 @@ export const griefLossArticlesA: Article[] = [
           <li><strong>Maintaining connections:</strong> To the lost person/thing (through memory, ritual, internalized values) and to the living (social support, relationships).</li>
           <li><strong>Adapting identity and life:</strong> Discovering who you are now, what matters now, how to live now without what was lost.</li>
           <li><strong>Seeking support when needed:</strong> Not suffering in isolation if support would help. Asking for help is strength, not weakness.</li>
-          <li><strong>Being patient with yourself:</strong> Grief has no timeline. Some days will be harder than others, sometimes years later. That's normal.</li>
+          <li><strong>Being patient with yourself:</strong> Grief has no timeline. Some days will be harder than others, sometimes years later. That's common.</li>
           <li><strong>Honoring your unique process:</strong> Your grief doesn't have to look like anyone else's. Trust your own path through it.</li>
         </ul>
 
@@ -668,7 +668,7 @@ export const griefLossArticlesA: Article[] = [
                 <div>
                   <p className="mb-4">Challenges the idea that you must "let go" to heal <Citation id="6" index={6} source="Death Studies" year="2019" tier={1} />:</p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>Maintaining connections to deceased (memories, rituals, internalized values) is healthy and normal</li>
+                    <li>Maintaining connections to deceased (memories, rituals, internalized values) is healthy and common</li>
                     <li>You don't "get over" profound losses---you learn to carry them while still engaging with life</li>
                     <li>Grief transforms but doesn't disappear</li>
                   </ul>
@@ -750,7 +750,7 @@ export const griefLossArticlesA: Article[] = [
               id: 'waves',
               title: 'Grief comes in waves',
               content: (
-                <p>One moment you're fine, functioning, even laughing. The next, a song or smell triggers crushing sadness. This isn't regression---this is the normal wave-like pattern of grief.</p>
+                <p>One moment you're fine, functioning, even laughing. The next, a song or smell triggers crushing sadness. This isn't regression---this is the common wave-like pattern of grief.</p>
               ),
             },
             {
@@ -1057,7 +1057,7 @@ export const griefLossArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Normalize your experience:</strong> Laughing at a funeral isn't disrespectful; crying while doing laundry isn't 'falling apart." Both are normal oscillations.</li>
+          <li><strong>Normalize your experience:</strong> Laughing at a funeral isn't disrespectful; crying while doing laundry isn't 'falling apart." Both are common oscillations.</li>
           <li><strong>Stop judging yourself:</strong> "I should be more upset" or "I should be over this by now" both misunderstand grief. You're exactly where you need to be.</li>
           <li><strong>Permit both orientations:</strong> Give yourself permission to grieve <em>and</em> to take breaks from grieving.</li>
           <li><strong>Recognize when you're stuck:</strong> If you can't access one orientation, that's a sign you may need support or deliberate practice shifting.</li>
@@ -1623,7 +1623,7 @@ export const griefLossArticlesA: Article[] = [
             <li><strong>"I'm already planning life after they're gone."</strong> Necessary for survival but feels premature.</li>
             <li><strong>"I resent them sometimes."</strong> Anger at the burden, the lost freedom, the changed relationship---then shame for feeling it.</li>
           </ul>
-          <p className="mt-4"><strong>These feelings are normal.</strong> They don't mean you don't love the person. They mean you're human, facing an impossible situation with limited resources and profound loss.</p>
+          <p className="mt-4"><strong>These feelings are common.</strong> They don't mean you don't love the person. They mean you're human, facing an impossible situation with limited resources and profound loss.</p>
         </ArticleCallout>
 
         <h2 id="does-it-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1738,7 +1738,7 @@ export const griefLossArticlesA: Article[] = [
         </p>
 
         <p className="mb-6">
-          All of this is normal. Anticipatory grief doesn't prevent post-death grief---you grieve both. What anticipatory grief may provide is some psychological preparation, resolution of unfinished business, and the knowledge that you did what you could while they were still here. Honor both griefs. Both are expressions of love.
+          All of this is common. Anticipatory grief doesn't prevent post-death grief---you grieve both. What anticipatory grief may provide is some psychological preparation, resolution of unfinished business, and the knowledge that you did what you could while they were still here. Honor both griefs. Both are expressions of love.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Remember">
@@ -1746,7 +1746,7 @@ export const griefLossArticlesA: Article[] = [
             <li>Anticipatory grief is real grief deserving of recognition and support.</li>
             <li>Grieving someone still alive isn't disloyal---it's a natural response to impending loss.</li>
             <li>Caregiving + grief creates profound exhaustion. Self-care isn't selfish; it's necessary.</li>
-            <li>Complex emotions (love, anger, relief, guilt) are all normal. You're human, not a saint.</li>
+            <li>Complex emotions (love, anger, relief, guilt) are all common. You're human, not a saint.</li>
             <li>Hospice and palliative care teams support families too <Citation id="7" index={7} source="American Journal of Hospice & Palliative Medicine" year="2021" tier={2} />. Use those resources.</li>
             <li>This time, while painful, can hold meaning, connection, and completion impossible after sudden loss.</li>
           </ul>

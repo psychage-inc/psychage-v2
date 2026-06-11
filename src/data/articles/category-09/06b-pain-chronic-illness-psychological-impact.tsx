@@ -239,7 +239,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="clinical-note" title="When Distress Requires Professional Support">
-          <p className="mb-3">Not all emotional distress during cancer requires formal mental health treatment---some is a normal response to an abnormal situation. However, seek professional psychological support if you experience:</p>
+          <p className="mb-3">Not all emotional distress during cancer requires formal mental health treatment---some is a common response to an abnormal situation. However, seek professional psychological support if you experience:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>Persistent thoughts of death or suicide</li>
             <li>Inability to care for yourself or make decisions</li>
@@ -443,7 +443,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="did-you-know" title="The End-of-Treatment Anxiety Spike">
-          <p>Many cancer survivors report that their highest anxiety occurs not during treatment but in the months immediately after. During treatment, there's a clear plan and frequent medical monitoring. Post-treatment, you transition to less frequent follow-up while fear of recurrence peaks. This is a normal, well-documented pattern---not a sign that something is wrong with you.</p>
+          <p>Many cancer survivors report that their highest anxiety occurs not during treatment but in the months immediately after. During treatment, there's a clear plan and frequent medical monitoring. Post-treatment, you transition to less frequent follow-up while fear of recurrence peaks. This is a common, well-documented pattern---not a sign that something is wrong with you.</p>
         </ArticleCallout>
 
         <p className="mb-6">
@@ -515,7 +515,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          While some emotional distress is normal during cancer, professional mental health support is appropriate when:
+          While some emotional distress is common during cancer, professional mental health support is appropriate when:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Emotional distress interferes with treatment adherence or decision-making</li>

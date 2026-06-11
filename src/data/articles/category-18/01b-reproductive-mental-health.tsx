@@ -27,7 +27,7 @@ export const articles: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Abortion', 'Reproductive Rights', 'Grief', 'Decision-Making'],
 
-    summary: `Research shows that the most common emotional response after abortion is relief, with over 95% of people reporting they made the right decision years later. Mental health outcomes are influenced more by pre-existing conditions, quality of social support, and abortion access than by the procedure itself. Some experience grief or ambivalence alongside relief---these complex emotions are normal and valid. Evidence-based mental health support focuses on honoring individual experiences without imposing judgment or assumptions about "correct" feelings.`,
+    summary: `Research shows that the most common emotional response after abortion is relief, with over 95% of people reporting they made the right decision years later. Mental health outcomes are influenced more by pre-existing conditions, quality of social support, and abortion access than by the procedure itself. Some experience grief or ambivalence alongside relief---these complex emotions are common and valid. Evidence-based mental health support focuses on honoring individual experiences without imposing judgment or assumptions about "correct" feelings.`,
 
     keyFacts: [
       {
@@ -189,7 +189,7 @@ export const articles: Article[] = [
             medical organizations including the American Psychological Association and the American
             Psychiatric Association have found no scientific evidence for a specific trauma
             syndrome caused by abortion. This does not invalidate individual experiences of grief
-            or sadness---it means those emotions are not a pathological syndrome but rather normal
+            or sadness---it means those emotions are not a pathological syndrome but rather common
             human responses to complex life circumstances.
           </p>
         </ArticleCallout>
@@ -1467,7 +1467,7 @@ export const articles: Article[] = [
         <p className="mb-6">
           <Citation index={4} /> Pregnancy permanently changes bodies in ways that may not resolve:
           wider hips and ribcage, softer abdomen, stretch marks, changed breast tissue, different
-          fat distribution. These changes are normal and don't indicate failure. The timeline for
+          fat distribution. These changes are common and don't indicate failure. The timeline for
           postpartum body stabilization is 6-18 months, not the 6 weeks often suggested by "bounce
           back" culture.
         </p>

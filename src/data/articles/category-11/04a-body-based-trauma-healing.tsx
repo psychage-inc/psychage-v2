@@ -596,7 +596,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
           <li><strong>You're in control:</strong> You can stop at any time. You don't have to disclose details you're not ready to share.</li>
           <li><strong>It's not hypnosis:</strong> You're fully conscious and aware. The bilateral stimulation doesn't 'make' you do anything---it just creates conditions for processing.</li>
           <li><strong>You may feel tired afterward:</strong> Memory reprocessing is neurologically demanding. Rest, hydrate, and be gentle with yourself.</li>
-          <li><strong>Between-session processing:</strong> Dreams, memories, or insights may emerge between sessions. This is normal and means the work is continuing.</li>
+          <li><strong>Between-session processing:</strong> Dreams, memories, or insights may emerge between sessions. This is common and means the work is continuing.</li>
         </ul>
 
         <ArticleCallout variant="tip">

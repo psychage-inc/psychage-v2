@@ -461,7 +461,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           Depression in LGBTQ+ communities is not inevitable---it is a response to minority stress and discrimination that can be addressed through affirming care, supportive relationships, and structural changes that promote equality and acceptance. Research demonstrates that when LGBTQ+ individuals live in affirming environments with family acceptance, community support, and legal protections, their mental health outcomes improve dramatically <Citation id="3" index={3} source="The Trevor Project" year="2023" tier={3} />.
         </p>
         <p className="mb-6">
-          Healing from depression as an LGBTQ+ person often involves not just treating symptoms, but also building pride in your identity, connecting with community, and creating a life where you can live authentically. This process takes time, and setbacks are normal. What matters is that you deserve support, acceptance, and the opportunity to thrive as your full self.
+          Healing from depression as an LGBTQ+ person often involves not just treating symptoms, but also building pride in your identity, connecting with community, and creating a life where you can live authentically. This process takes time, and setbacks are common. What matters is that you deserve support, acceptance, and the opportunity to thrive as your full self.
         </p>
         <p className="mb-6">
           The path forward includes both individual healing and collective action. Supporting LGBTQ+ youth, advocating for anti-discrimination protections, promoting affirming healthcare access, and challenging stigma in all its forms creates the conditions where LGBTQ+ people can flourish. You are not alone, and recovery is possible.

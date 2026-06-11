@@ -40,7 +40,7 @@ export const transitionAndReintegrationArticles: Article[] = [
     practicalExercise: {
       title: 'Allow yourself to grieve.',
       steps: [
-        { title: 'Allow yourself to grieve.', description: 'Leaving the military is a significant loss. The emotions you experience—sadness, anger, purposelessness, nostalgia—are normal grief responses, not signs of weakness.' },
+        { title: 'Allow yourself to grieve.', description: 'Leaving the military is a significant loss. The emotions you experience—sadness, anger, purposelessness, nostalgia—are common grief responses, not signs of weakness.' },
         { title: 'Build new community intentionally.', description: 'Veteran service organizations, peer support groups, and community activities provide the social connection that military service provided. Do not wait for community to find you—seek it.' },
         { title: 'Pursue purpose, not just employment.', description: 'A job that provides purpose and engagement will serve your mental health better than a job that simply provides income. Explore careers that match your values and skills, not just your financial needs.' },
         { title: 'Include your family.', description: 'Transition affects the entire family. Communicate openly about the challenges, attend family programs, and consider couples or family therapy if reintegration is producing conflict.' },

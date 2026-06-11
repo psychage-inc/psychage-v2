@@ -346,7 +346,7 @@ export const understandingAnxietyArticlesA: Article[] = [
           When Does Anxiety Become a Problem?
         </h2>
         <p className="mb-6">
-          Some anxiety is normal and even helpful. Anxiety before a job interview motivates you to prepare.
+          Some anxiety is common and even helpful. Anxiety before a job interview motivates you to prepare.
           Anxiety about a deadline helps you stay focused. The question isn't whether you have anxiety ---
           most people do --- but whether your anxiety is proportionate to the situation and manageable.
         </p>
@@ -507,7 +507,7 @@ export const understandingAnxietyArticlesA: Article[] = [
               Anxiety differs from fear in its future orientation and lack of specific, immediate threat
             </li>
             <li>
-              Some anxiety is normal and adaptive; it becomes problematic when it's persistent,
+              Some anxiety is common and adaptive; it becomes problematic when it's persistent,
               disproportionate, or interferes with daily life
             </li>
             <li>
@@ -1695,7 +1695,7 @@ export const understandingAnxietyArticlesA: Article[] = [
                   </p>
                   <p className="mb-4">
                     <strong>Why it happens:</strong> Your heart rate increases to pump more oxygen-rich blood
-                    to your muscles. Blood pressure rises. Chest muscles tense. These are normal responses to
+                    to your muscles. Blood pressure rises. Chest muscles tense. These are common responses to
                     adrenaline, not signs of heart disease in most cases.
                   </p>
                   <p>

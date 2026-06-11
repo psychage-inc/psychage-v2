@@ -53,7 +53,7 @@ export const sleepDisordersCommonProblemsArticlesB: Article[] = [
         <h2 id="nightmares" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Nightmares: When Dreams Turn Frightening
         </h2>
-        <p className="mb-6"><strong>Occasional nightmares are normal</strong> (most people have them occasionally). <strong>Nightmare disorder</strong> is diagnosed when they occur frequently (1+ per week), cause significant distress, or impair daily functioning.</p>
+        <p className="mb-6"><strong>Occasional nightmares are common</strong> (most people have them occasionally). <strong>Nightmare disorder</strong> is diagnosed when they occur frequently (1+ per week), cause significant distress, or impair daily functioning.</p>
         <p className="mb-6"><strong>Common triggers:</strong> Stress, trauma, anxiety, depression, PTSD, certain medications (beta-blockers, antidepressants), sleep deprivation, substance withdrawal.</p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Treatment for Nightmares</h3>

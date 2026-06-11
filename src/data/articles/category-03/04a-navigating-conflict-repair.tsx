@@ -126,7 +126,7 @@ export const conflictRepairArticlesA: Article[] = [
               title: 'Myth: Conflict means the relationship is failing',
               content: (
                 <p>
-                  <strong>Reality:</strong> Conflict is a normal part of intimacy. As relationships deepen, partners inevitably encounter differences in values, preferences, and needs. These differences create friction---but that friction can polish rough edges rather than wear the relationship down.
+                  <strong>Reality:</strong> Conflict is a common part of intimacy. As relationships deepen, partners inevitably encounter differences in values, preferences, and needs. These differences create friction---but that friction can polish rough edges rather than wear the relationship down.
                 </p>
               ),
             },
@@ -254,7 +254,7 @@ export const conflictRepairArticlesA: Article[] = [
           When Conflict Becomes Concerning
         </h2>
         <p className="mb-6">
-          While conflict is normal, certain patterns signal deeper problems that need attention. The American Psychological Association identifies warning signs that conflict has crossed into unhealthy territory <Citation id="8" index={8} source="American Psychological Association" year="2021" tier={2} />.
+          While conflict is common, certain patterns signal deeper problems that need attention. The American Psychological Association identifies warning signs that conflict has crossed into unhealthy territory <Citation id="8" index={8} source="American Psychological Association" year="2021" tier={2} />.
         </p>
 
         <ArticleCallout variant="warning" title="Red Flags in Conflict">
@@ -283,7 +283,7 @@ export const conflictRepairArticlesA: Article[] = [
           variant="vertical"
           steps={[
             {
-              title: 'Acknowledge that conflict is normal',
+              title: 'Acknowledge that conflict is common',
               description: (
                 <p>
                   Stop treating disagreements as failures. They're opportunities to understand each other better and to practice working through hard things together.

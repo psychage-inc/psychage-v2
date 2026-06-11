@@ -442,7 +442,7 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
           Extinction doesn't erase the original fear memory--it creates a new, competing memory that says "this is safe." That's why fears can sometimes return (called spontaneous recovery) if you avoid the situation for a long time. Consistent, repeated exposure strengthens the extinction circuit.
         </p>
         <p className="mb-6">
-          This distinction between erasure and inhibition has important clinical implications. It means that even after successful therapy, old fears can resurface under stress, in new environments, or after long periods without exposure. This is not a sign of failure--it reflects how the brain stores emotional memories. The extinction memory simply needs reinforcement. Understanding this helps people who experience fear relapse to view it as a normal part of the process rather than a setback.
+          This distinction between erasure and inhibition has important clinical implications. It means that even after successful therapy, old fears can resurface under stress, in new environments, or after long periods without exposure. This is not a sign of failure--it reflects how the brain stores emotional memories. The extinction memory simply needs reinforcement. Understanding this helps people who experience fear relapse to view it as a common part of the process rather than a setback.
         </p>
         <p className="mb-6">
           Context also matters for extinction learning. Research shows that extinction tends to be context-specific--you may feel calm about public speaking at your therapist's office but anxious again in a new setting. To build more robust extinction, therapists often recommend practicing in multiple contexts, which helps the new "safe" memory generalize across different environments and situations.
@@ -676,7 +676,7 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
           These timelines may seem long, but consider the context: you spent years or decades building your current emotional patterns. Rewiring them in weeks to months is remarkably fast by comparison. The critical factor is consistency, not intensity. Thirty minutes of daily mindfulness practice for eight weeks produces more neuroplastic change than an occasional weekend meditation retreat. Small, regular efforts compound over time, just as compound interest builds wealth.
         </p>
         <p className="mb-6">
-          It's also worth noting that neuroplastic change is not always comfortable. During the transition period, when old patterns are weakening but new ones haven't yet solidified, you may feel increased emotional turbulence. This is normal and expected--it reflects the neural competition between the old circuit and the new one. Persisting through this discomfort is what ultimately tips the balance toward the new pattern.
+          It's also worth noting that neuroplastic change is not always comfortable. During the transition period, when old patterns are weakening but new ones haven't yet solidified, you may feel increased emotional turbulence. This is common and expected--it reflects the neural competition between the old circuit and the new one. Persisting through this discomfort is what ultimately tips the balance toward the new pattern.
         </p>
 
         <h2 id="myths-facts" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

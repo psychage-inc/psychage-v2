@@ -895,7 +895,7 @@ export const copingWithDepressionArticlesB: Article[] = [
           When Progress Feels Slow
         </h2>
         <p className="mb-6">
-          Therapy is rarely linear. Some weeks you'll feel momentum; others you'll feel stuck or even worse. This is normal <Citation id="6" index={6} source="Journal of Affective Disorders" year="2020" tier={1} />.
+          Therapy is rarely linear. Some weeks you'll feel momentum; others you'll feel stuck or even worse. This is common <Citation id="6" index={6} source="Journal of Affective Disorders" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           Between-session work helps create small, incremental changes that compound over time. Even if you don't feel dramatically better week to week, you may notice shifts when you look back over months.
@@ -1553,7 +1553,7 @@ export const copingWithDepressionArticlesB: Article[] = [
           MBCT is not a quick fix. It requires sustained practice and patience. Many people don't notice dramatic changes during the 8 weeks---the benefits often emerge over months and years as you integrate the skills into your life <Citation id="3" index={3} source="Clinical Psychology Review" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          Some people find meditation challenging or uncomfortable at first. That's normal. The practice is about learning to sit with discomfort, not to eliminate it.
+          Some people find meditation challenging or uncomfortable at first. That's common. The practice is about learning to sit with discomfort, not to eliminate it.
         </p>
 
         <h2 id="long-term-maintenance" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

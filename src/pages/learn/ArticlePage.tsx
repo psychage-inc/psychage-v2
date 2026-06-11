@@ -152,7 +152,7 @@ const ArticlePage: React.FC = () => {
     }, [article]);
 
     // Reviewer info (kept for SEO structured data, removed from visible UI)
-    const reviewerName = article?.reviewedBy?.name || 'Dr. Lena Dobson, Ph.D.';
+    const reviewerName = article?.reviewedBy?.name || 'Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology';
     const reviewerRole = article?.reviewedBy?.role || 'Clinical Neuropsychology';
 
     if (loading) {

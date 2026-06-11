@@ -182,7 +182,7 @@ When you meditate, you're not just sitting quietly—you're sculpting your brain
 
 **2. Focus on the breath.** The simplest practice: sit comfortably, close your eyes, and pay attention to the sensation of breathing (nostrils, chest, belly). When your mind wanders, notice it without judgment and gently return attention to the breath. The noticing-and-returning is the practice—it's the "rep" that strengthens attention circuits.
 
-**3. Be patient with yourself.** Your mind will wander constantly—especially at first. This is normal and expected. Every time you notice the wandering and return, you're training the brain.
+**3. Be patient with yourself.** Your mind will wander constantly—especially at first. This is common and expected. Every time you notice the wandering and return, you're training the brain.
 
 **4. Practice consistently.** Daily practice, even brief, builds brain changes over time. Consistency matters more than duration. Set a time (morning or evening) and stick with it.
 

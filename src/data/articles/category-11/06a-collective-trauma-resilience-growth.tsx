@@ -2183,7 +2183,7 @@ export const collectiveTraumaArticlesA: Article[] = [
           <li>Acknowledges both suffering and growth---doesn't deny pain</li>
           <li>Doesn't blame the victim or justify the trauma</li>
           <li>Creates personal meaning (not imposed by others)</li>
-          <li>Allows for ambivalence---mixed feelings are normal</li>
+          <li>Allows for ambivalence---mixed feelings are common</li>
         </ul>
 
         <h2 id="practices" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

@@ -1270,7 +1270,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
           <strong>It is not detachment or dissociation.</strong> Detachment involves disconnecting from experience altogether. The Observer Self is the opposite: it is a deeper form of connection. You are more present to your experience, not less. You notice the texture, intensity, and location of feelings rather than being overwhelmed by them. If practicing observer skills makes you feel numb or disconnected rather than more aware, you may be dissociating rather than observing, and should adjust your approach or seek professional guidance.
         </p>
         <p className="mb-6">
-          <strong>It is not a permanent state.</strong> Nobody lives in observer mode all the time. You will get fused with your thoughts many times a day, and that is completely normal. The goal is not to never get caught up in thoughts or emotions. The goal is to recover more quickly, to notice that you have been fused, and to gently return to the observing stance when you choose to.
+          <strong>It is not a permanent state.</strong> Nobody lives in observer mode all the time. You will get fused with your thoughts many times a day, and that is common. The goal is not to never get caught up in thoughts or emotions. The goal is to recover more quickly, to notice that you have been fused, and to gently return to the observing stance when you choose to.
         </p>
 
         <h2 id="practices" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

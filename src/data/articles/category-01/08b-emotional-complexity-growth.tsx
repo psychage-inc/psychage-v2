@@ -1010,7 +1010,7 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
             <li><strong>Set a phone reminder every 2 hours labeled: "Am I fighting reality?"</strong></li>
             <li><strong>When it goes off, pause.</strong> Ask yourself: "What am I resisting right now?"</li>
             <li><strong>Turn your mind.</strong> Mentally (or physically) turn your head to the right, symbolizing turning toward acceptance.</li>
-            <li><strong>Say: "I choose to accept what is."</strong> You may need to do this 20 times in one day. That's normal. Each time is practice.</li>
+            <li><strong>Say: "I choose to accept what is."</strong> You may need to do this 20 times in one day. That's common. Each time is practice.</li>
             <li><strong>Track it.</strong> Note how many times you had to "turn your mind." Over weeks, you'll likely need to do it less often.</li>
           </ol>
         </ArticleCallout>
@@ -1268,7 +1268,7 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
 
         <p className="mb-6"><strong>Example 3: The Resilient Parent</strong></p>
         <p className="mb-6">
-          Jasmine's toddler is having a meltdown in the grocery store. She feels embarrassment, frustration, and overwhelm. Instead of suppressing ("I shouldn't feel this way; I'm a bad mom"), she practices mastery: "I'm feeling overwhelmed. That's normal. My child is dysregulated, not misbehaving. I can handle this." She takes a breath, kneels down to her child's level, and uses a calm voice. Her emotions informed her response without dictating it.
+          Jasmine's toddler is having a meltdown in the grocery store. She feels embarrassment, frustration, and overwhelm. Instead of suppressing ("I shouldn't feel this way; I'm a bad mom"), she practices mastery: "I'm feeling overwhelmed. That's common. My child is dysregulated, not misbehaving. I can handle this." She takes a breath, kneels down to her child's level, and uses a calm voice. Her emotions informed her response without dictating it.
         </p>
 
         <h2 id="key-differences" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1741,7 +1741,7 @@ export const emotionalComplexityGrowthArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Make it non-negotiable:</strong> Like brushing your teeth--daily emotional practice becomes routine.</li>
-          <li><strong>Expect plateaus:</strong> Growth isn't linear. Plateaus are normal; don't quit during them.</li>
+          <li><strong>Expect plateaus:</strong> Growth isn't linear. Plateaus are common; don't quit during them.</li>
           <li><strong>Revisit fundamentals:</strong> Even experts return to basics (breath awareness, body scans, labeling emotions).</li>
           <li><strong>Stay curious:</strong> Emotional growth is infinite. There's always deeper awareness to cultivate.</li>
           <li><strong>Connect with community:</strong> Shared practice (therapy groups, meditation sanghas, book clubs) sustains motivation.</li>

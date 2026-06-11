@@ -1115,7 +1115,7 @@ export const socialAnxietyArticlesB: Article[] = [
               feature: 'Eye Contact',
               values: [
                 "I need to maintain constant eye contact or I'll seem rude",
-                "Natural eye contact is intermittent--50% while speaking, 70% while listening. Breaking gaze to think is normal.",
+                "Natural eye contact is intermittent--50% while speaking, 70% while listening. Breaking gaze to think is common.",
               ],
             },
             {

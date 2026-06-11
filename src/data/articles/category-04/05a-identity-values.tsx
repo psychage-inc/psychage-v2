@@ -149,7 +149,7 @@ export const identityValuesArticlesA: Article[] = [
         <ProgressSteps
           variant="vertical"
           steps={[
-            { title: 'Accept the Uncertainty', description: <p>Resist the urge to force clarity. Identity reconstruction takes time. Uncertainty is uncomfortable but normal.</p> },
+            { title: 'Accept the Uncertainty', description: <p>Resist the urge to force clarity. Identity reconstruction takes time. Uncertainty is uncomfortable but common.</p> },
             { title: 'Explore Without Committing', description: <p>Try new activities, roles, communities. Exploration without immediate commitment reduces pressure.</p> },
             { title: 'Reflect on Values', description: <p>What matters to you? Values provide compass when roles change. Clarifying core values guides decisions.</p> },
             { title: 'Seek Support', description: <p>Talk to trusted friends, therapist, or mentor. Articulating confusion helps clarify it <Citation id="3" index={3} source="Journal of Personality" year="2021" tier={1} />.</p> },
@@ -456,7 +456,7 @@ export const identityValuesArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Adapting to different contexts is normal and sometimes necessary. But chronic masking---hiding core aspects of self across all contexts---erodes identity and mental health. Healthy code-switching involves choice, strategy, and spaces where you can drop the mask. The goal isn't rigid consistency, but ensuring you never lose sight of who you actually are.</p>
+          <p>Adapting to different contexts is common and sometimes necessary. But chronic masking---hiding core aspects of self across all contexts---erodes identity and mental health. Healthy code-switching involves choice, strategy, and spaces where you can drop the mask. The goal isn't rigid consistency, but ensuring you never lose sight of who you actually are.</p>
         </ArticleCallout>
       </>
     ),

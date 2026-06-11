@@ -376,7 +376,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           the old patterns reassert themselves --- when a new symptom triggers an immediate
           spiral, when the reassurance from your last appointment feels impossibly distant,
           when your body does something unfamiliar and your brain defaults to catastrophe.
-          These setbacks are not evidence of failure. They are a normal part of rewiring a
+          These setbacks are not evidence of failure. They are a common part of rewiring a
           nervous system that has been shaped by real and repeated medical stress. Each time
           you notice the spiral, name it, and choose a different response --- even imperfectly ---
           you are strengthening the neural pathways that will eventually make balanced monitoring

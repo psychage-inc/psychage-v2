@@ -399,7 +399,7 @@ export const articles: Article[] = [
             <li><strong>Create rituals or memorials.</strong> Plant a tree, light candles on due dates, name the baby, write letters, make donations, create art---these acts honor what was lost and validate the relationship.</li>
             <li><strong>Connect with others who understand.</strong> Pregnancy loss support groups (online like r/Miscarriage or in-person through hospitals) provide validation unavailable in general social circles where loss is minimized.</li>
             <li><strong>Consider specialized therapy.</strong> Therapists trained in perinatal loss and trauma can help process complicated grief, PTSD symptoms from traumatic diagnosis or delivery, and anxiety about future pregnancies.</li>
-            <li><strong>Allow grief to be nonlinear.</strong> Healing isn't a straight path. Grief waves may hit intensely on due dates, pregnancy announcement from friends, or random triggers---this is normal, not regression.</li>
+            <li><strong>Allow grief to be nonlinear.</strong> Healing isn't a straight path. Grief waves may hit intensely on due dates, pregnancy announcement from friends, or random triggers---this is common, not regression.</li>
           </ul>
         </div>
 

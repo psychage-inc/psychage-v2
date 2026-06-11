@@ -458,7 +458,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
               id: 'what-if-cry',
               title: 'What if I cry?',
               content: (
-                <p>Crying in therapy is completely normal and expected. Therapists are used to it. They'll have tissues and will give you space. Crying isn't a sign of weakness --- it's often a sign you're finally in a safe space to feel what you've been holding in.</p>
+                <p>Crying in therapy is common and expected. Therapists are used to it. They'll have tissues and will give you space. Crying isn't a sign of weakness --- it's often a sign you're finally in a safe space to feel what you've been holding in.</p>
               ),
             },
             {
@@ -520,14 +520,14 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
           After Your First Session
         </h2>
         <p className="mb-6">
-          You might feel relieved, exhausted, emotional, or uncertain. All of these are normal. First sessions can be draining because you're talking about difficult things and processing a lot.
+          You might feel relieved, exhausted, emotional, or uncertain. All of these are common. First sessions can be draining because you're talking about difficult things and processing a lot.
         </p>
 
         <ComparisonTable
           title="What You Might Feel vs. What It Means"
           columns={['Feeling', 'What It Means']}
           items={[
-            { feature: 'Emotionally drained', values: ['Normal --- you opened up about hard things'] },
+            { feature: 'Emotionally drained', values: ['Common --- you opened up about hard things'] },
             { feature: 'Relieved', values: ['Good sign --- you felt heard and understood'] },
             { feature: 'Uncertain', values: ["Common --- one session isn't enough to know if it's the right fit"] },
             { feature: 'Uncomfortable', values: ["Could mean the therapist isn't a good match, or you're just adjusting"] },

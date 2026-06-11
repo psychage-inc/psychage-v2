@@ -43,7 +43,7 @@ Caregiving is not a straightforward transaction—it's a relationship, and like 
 
 ### The Caregiver's Psychology
 
-**Ambivalence is normal**: Most caregivers simultaneously love the person they care for and resent the demands of care. They feel committed to caregiving and trapped by it. They find meaning in the role and mourn the life they'd have without it. This ambivalence is not a character flaw—it's the predictable psychological response to a situation that demands sustained self-sacrifice without adequate support, recognition, or compensation.
+**Ambivalence is common**: Most caregivers simultaneously love the person they care for and resent the demands of care. They feel committed to caregiving and trapped by it. They find meaning in the role and mourn the life they'd have without it. This ambivalence is not a character flaw—it's the predictable psychological response to a situation that demands sustained self-sacrifice without adequate support, recognition, or compensation.
 
 **Anticipatory grief**: Many caregivers experience grief before the care recipient dies—grieving the relationship as it was, the future as it was imagined, and the person as they were before illness or disability changed them. This anticipatory grief is particularly intense in dementia caregiving, where the person is physically present but progressively psychologically absent.
 

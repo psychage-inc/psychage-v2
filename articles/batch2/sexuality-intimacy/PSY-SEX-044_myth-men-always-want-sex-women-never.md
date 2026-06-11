@@ -75,7 +75,7 @@ Researcher Wednesday Martin (2018), synthesizing multiple lines of evidence, arg
 
 The "men always want it" myth causes particular harm to men whose desire doesn't match the stereotype. Murray and colleagues (2017) documented that men who experience low desire face intense shame and stigma, often interpreting their experience as a failure of masculinity. These men are less likely to seek clinical help than women with low desire—partly because the cultural script provides no framework for male desire difficulties and partly because admitting to low desire feels like admitting to a fundamental failure of manhood.
 
-Research on male desire has identified numerous factors that can reduce it: stress, depression, relationship conflict, performance anxiety, medications (particularly SSRIs), sleep deprivation, hormonal changes with aging, and chronic illness. Yet the cultural insistence that men should always be ready means that these normal, expected fluctuations are experienced as shameful secrets rather than manageable challenges.
+Research on male desire has identified numerous factors that can reduce it: stress, depression, relationship conflict, performance anxiety, medications (particularly SSRIs), sleep deprivation, hormonal changes with aging, and chronic illness. Yet the cultural insistence that men should always be ready means that these common, expected fluctuations are experienced as shameful secrets rather than manageable challenges.
 
 ### Desire Discrepancy Beyond Gender Scripts
 

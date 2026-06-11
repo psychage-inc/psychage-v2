@@ -895,7 +895,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            Hypnic jerks---those sudden muscle twitches that sometimes startle you awake just as you're drifting off---are completely normal. They're thought to be a vestigial reflex from our evolutionary past, when our ancestors slept in trees and needed to wake quickly if they started to fall.
+            Hypnic jerks---those sudden muscle twitches that sometimes startle you awake just as you're drifting off---are common. They're thought to be a vestigial reflex from our evolutionary past, when our ancestors slept in trees and needed to wake quickly if they started to fall.
           </p>
         </ArticleCallout>
 

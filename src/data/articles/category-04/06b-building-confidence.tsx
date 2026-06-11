@@ -707,7 +707,7 @@ export const buildingConfidenceArticlesB: Article[] = [
               title: 'Social Perfectionism',
               content: (
                 <p>
-                  Believing you must be witty, interesting, and flawless creates paralysis. Normal human interaction includes awkwardness, pauses, and imperfection.
+                  Believing you must be witty, interesting, and flawless creates paralysis. Common human interaction includes awkwardness, pauses, and imperfection.
                 </p>
               ),
             },
@@ -815,7 +815,7 @@ export const buildingConfidenceArticlesB: Article[] = [
         />
 
         <h2 id="reframing-awkwardness" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Embracing Normal Social Awkwardness
+          Embracing Common Social Awkwardness
         </h2>
 
         <ArticleCallout variant="did-you-know">

@@ -1354,7 +1354,7 @@ export const selfCompassionArticlesC: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">
-                    <strong>Solution:</strong> This is the most common barrier and it is completely normal. Your brain has not yet formed the habit pathway. Set phone reminders for the first two weeks, place sticky notes in visible spots (mirror, desk, dashboard), or use environmental cues like a bracelet you move from one wrist to the other when you practice.
+                    <strong>Solution:</strong> This is the most common barrier and it is completely understandable. Your brain has not yet formed the habit pathway. Set phone reminders for the first two weeks, place sticky notes in visible spots (mirror, desk, dashboard), or use environmental cues like a bracelet you move from one wrist to the other when you practice.
                   </p>
                   <p>The goal is not to remember through willpower but to create external triggers until the behavior becomes automatic.</p>
                 </div>
@@ -1459,7 +1459,7 @@ export const selfCompassionArticlesC: Article[] = [
             <li>Consistency matters more than duration --- 30 seconds daily beats 30 minutes monthly</li>
             <li>Use implementation intentions (&quot;When I finish X, I will do Y&quot;) to increase follow-through by 200-300%</li>
             <li>Track your practice compassionately --- focus on what you did, not what you missed</li>
-            <li>Expect obstacles (forgetting, awkwardness, resistance) --- they are normal parts of building any new habit</li>
+            <li>Expect obstacles (forgetting, awkwardness, resistance) --- they are common parts of building any new habit</li>
             <li>Gradually expand over weeks and months, maintaining your floor practice throughout</li>
           </ul>
         </ArticleCallout>

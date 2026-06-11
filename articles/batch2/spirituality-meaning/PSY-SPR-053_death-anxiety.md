@@ -118,7 +118,7 @@ This suggests terror management strategies are shaped by cultural values—we de
 
 ## When Death Anxiety Becomes Clinical
 
-While some death anxiety is normal and perhaps even motivating, severe death anxiety can be debilitating.
+While some death anxiety is common and perhaps even motivating, severe death anxiety can be debilitating.
 
 ### Thanatophobia: Clinical Death Anxiety
 
@@ -203,7 +203,7 @@ Paradoxically, accepting rather than avoiding mortality thoughts reduces death a
 
 Acceptance and Commitment Therapy (ACT) approaches to death anxiety emphasize:
 - Open acknowledgment of mortality (vs. suppression)
-- Acceptance of anxiety as normal (vs. secondary anxiety about anxiety)
+- Acceptance of anxiety as common (vs. secondary anxiety about anxiety)
 - Values-based living (what matters given time is finite)
 - Defusion from death thoughts (observing thoughts without fusion)
 
@@ -426,7 +426,7 @@ Therapists trained in existential therapy, ACT, or CBT for anxiety can provide s
 
 ## Medical Disclaimer
 
-This article is for educational purposes only and is not a substitute for professional mental health advice, diagnosis, or treatment. While some death anxiety is normal, severe or debilitating death anxiety may indicate thanatophobia or underlying anxiety disorders requiring professional intervention. If death-related thoughts or fears significantly impair your functioning, cause panic attacks, or accompany suicidal ideation, seek immediate professional help. Contact a licensed mental health professional for assessment and evidence-based treatment tailored to your needs. If you're experiencing thoughts of harming yourself, contact emergency services or the National Suicide Prevention Lifeline (988) immediately.
+This article is for educational purposes only and is not a substitute for professional mental health advice, diagnosis, or treatment. While some death anxiety is common, severe or debilitating death anxiety may indicate thanatophobia or underlying anxiety disorders requiring professional intervention. If death-related thoughts or fears significantly impair your functioning, cause panic attacks, or accompany suicidal ideation, seek immediate professional help. Contact a licensed mental health professional for assessment and evidence-based treatment tailored to your needs. If you're experiencing thoughts of harming yourself, contact emergency services or the National Suicide Prevention Lifeline (988) immediately.
 
 ## Crisis Resources
 

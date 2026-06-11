@@ -841,7 +841,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
           items={[
             {
               id: 'initial-worsening',
-              title: 'My sleep got worse in the first week. Is that normal?',
+              title: 'My sleep got worse in the first week. Is that common?',
               content: (
                 <p>
                   Yes. Sleep restriction creates short-term sleep deprivation, which can feel uncomfortable. This is temporary---most people see improvement by week 2-3. Stick with the program.

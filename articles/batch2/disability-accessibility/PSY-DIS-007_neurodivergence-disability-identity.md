@@ -41,7 +41,7 @@ The neurodiversity conversation is often presented as a binary: either neurodive
 
 ### The Neurodiversity Paradigm: What It Actually Says
 
-**Natural variation, not pathology**: Just as left-handedness was once "corrected" through forced right-hand training, neurodivergent conditions have been treated as pathology requiring correction. The neurodiversity paradigm argues that neurological differences are part of normal human variation—brains come in different configurations, and those configurations have different strengths, different challenges, and different optimal environments.
+**Natural variation, not pathology**: Just as left-handedness was once "corrected" through forced right-hand training, neurodivergent conditions have been treated as pathology requiring correction. The neurodiversity paradigm argues that neurological differences are part of common human variation—brains come in different configurations, and those configurations have different strengths, different challenges, and different optimal environments.
 
 **Accommodation, not cure**: The goal is not to make neurodivergent people neurotypical—it's to create environments that allow different kinds of brains to thrive. This means accommodations in education (extended time, sensory breaks, alternative assessment formats), employment (flexible scheduling, quiet workspaces, written instructions), and social settings (explicit communication, reduced sensory demands, acceptance of different social styles).
 

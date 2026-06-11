@@ -1129,7 +1129,7 @@ export const mentalHealthLaterLifeArticlesB: Article[] = [
       steps: [
         {
           title: 'Allow the Waves',
-          description: 'Grief comes in waves--intense one moment, calmer the next. Do not fight the waves. Feel them, then let them recede. This is normal.',
+          description: 'Grief comes in waves--intense one moment, calmer the next. Do not fight the waves. Feel them, then let them recede. This is common.',
         },
         {
           title: 'Maintain Routines',

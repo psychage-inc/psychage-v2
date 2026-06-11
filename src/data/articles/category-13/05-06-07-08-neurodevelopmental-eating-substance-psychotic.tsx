@@ -288,7 +288,7 @@ export const eatingDisordersArticles: Article[] = [
       <ul className="list-disc pl-5 space-y-2">
         <li><strong>Recovery is possible.</strong> Many people achieve full recovery, though it often takes years and requires patience and persistence.</li>
         <li><strong>Weight restoration alone isn't recovery.</strong> True recovery involves normalizing eating patterns, resolving body image disturbance, and addressing underlying psychological factors.</li>
-        <li><strong>Motivation fluctuates.</strong> Ambivalence about recovery is normal. Treatment can help even when someone isn't fully ready to change.</li>
+        <li><strong>Motivation fluctuates.</strong> Ambivalence about recovery is common. Treatment can help even when someone isn't fully ready to change.</li>
         <li><strong>Relapse is part of the process for many.</strong> Setbacks don't mean failure--they're opportunities to learn and strengthen recovery skills.</li>
         <li><strong>Early intervention matters.</strong> The sooner treatment begins, the better the outcomes. Don't wait until things are "bad enough."</li>
       </ul>
@@ -673,7 +673,7 @@ export const eatingDisordersArticles: Article[] = [
       <li><strong>Find a therapist specializing in eating disorders:</strong> Look through the National Alliance for Eating Disorders provider directory or BEDA (Binge Eating Disorder Association) resources</li>
       <li><strong>Call the National Alliance for Eating Disorders Helpline:</strong> 1-866-662-1235 for information, support, and treatment referrals</li>
       <li><strong>Consider support groups:</strong> BEDA, Overeaters Anonymous, and the National Alliance for Eating Disorders offer peer support options</li>
-      <li><strong>Be patient with yourself:</strong> Recovery isn't linear. Setbacks are normal. What matters is continuing to move forward.</li>
+      <li><strong>Be patient with yourself:</strong> Recovery isn't linear. Setbacks are common. What matters is continuing to move forward.</li>
     </ul>
   </> },
   { id: catId(54), slug: 'arfid', status: 'published', title: 'ARFID: When Food Avoidance Goes Beyond Picky Eating', description: 'ARFID involves restricted eating not driven by weight concerns.', image: "/images/articles/cat13/cover-054.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["ARFID", 'Eating Disorders'],
@@ -691,7 +691,7 @@ export const eatingDisordersArticles: Article[] = [
     steps: [
       { title: 'Identify a Safe Food', description: 'Start with a food you already eat comfortably--something with minimal anxiety or aversion.' },
       { title: 'Find a Similar Option', description: 'Choose a new food that\'s similar in one way (same color, texture, or brand) but different in another. Example: if you eat chicken nuggets from Brand A, try Brand B.' },
-      { title: 'Practice Gradual Exposure', description: 'Start by having the new food on your plate. Then touch it. Then smell it. Then lick it. Finally, take a small bite. Move at your own pace--days or weeks per step is normal.' },
+      { title: 'Practice Gradual Exposure', description: 'Start by having the new food on your plate. Then touch it. Then smell it. Then lick it. Finally, take a small bite. Move at your own pace--days or weeks per step is common.' },
       { title: 'Celebrate Small Wins', description: 'Each step forward is progress, even if it\'s just tolerating the food\'s presence. Recovery from ARFID is gradual.' },
     ],
     toolLink: '/tools/mood-journal',
@@ -1467,7 +1467,7 @@ export const eatingDisordersArticles: Article[] = [
     { text: 'Recovery typically takes 5-7 years for anorexia and 3-5 years for bulimia—patience and persistence are essential', citationIndex: 1 },
     { text: 'Early intervention dramatically improves recovery outcomes and reduces chronic illness risk', citationIndex: 2 },
     { text: 'Full recovery includes both behavioral changes (normalized eating) and psychological recovery (no longer defining self-worth through weight)', citationIndex: 1 },
-    { text: 'Setbacks are normal and expected—recovery is rarely linear, requiring self-compassion and continued support', citationIndex: 2 },
+    { text: 'Setbacks are common and expected—recovery is rarely linear, requiring self-compassion and continued support', citationIndex: 2 },
   ], sparkMoment: 'Recovery isn\'t returning to who you were before the eating disorder—it\'s discovering who you can become without it defining you.', practicalExercise: {
     title: 'Recovery Progress Check-In',
     steps: [
@@ -1490,7 +1490,7 @@ export const eatingDisordersArticles: Article[] = [
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
       <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">After seven years living with anorexia, Emma couldn't imagine life without the eating disorder. It had become her identity, her safety, her control. Recovery seemed impossible—until it wasn't. Five years into treatment, she realized she'd gone an entire week without thinking obsessively about food. She'd eaten breakfast with friends without calculating calories. She'd felt sad without immediately restricting. Recovery wasn't a destination she'd arrived at; it was gradual accumulation of moments when the eating disorder no longer ran her life.</p>
-      <p className="mb-6">Full recovery from eating disorders is possible. Long-term studies show 50-70% of individuals achieve full recovery, 20-30% show partial recovery, and 10-20% develop chronic illness <Citation id="1" index={1} source="International Journal of Eating Disorders" year="2021" tier={1} />. Recovery typically takes years, not months—averaging 5-7 years for anorexia, 3-5 years for bulimia. Early intervention significantly improves outcomes, reducing both duration and chronic illness risk. Recovery isn't linear; setbacks are normal and expected. The path forward includes steps backward—what matters is the overall trajectory, not perfection.</p>
+      <p className="mb-6">Full recovery from eating disorders is possible. Long-term studies show 50-70% of individuals achieve full recovery, 20-30% show partial recovery, and 10-20% develop chronic illness <Citation id="1" index={1} source="International Journal of Eating Disorders" year="2021" tier={1} />. Recovery typically takes years, not months—averaging 5-7 years for anorexia, 3-5 years for bulimia. Early intervention significantly improves outcomes, reducing both duration and chronic illness risk. Recovery isn't linear; setbacks are common and expected. The path forward includes steps backward—what matters is the overall trajectory, not perfection.</p>
       <p className="mb-6">Full recovery means more than normalized eating patterns. It includes behavioral recovery: regular eating, absence of compensatory behaviors (purging, excessive exercise), weight restoration if applicable. But crucially, it requires psychological recovery: no longer defining self-worth through weight or shape, ability to cope with distress without eating disorder behaviors, decreased preoccupation with food and body, improved quality of life and functioning <Citation id="3" index={3} source="International Journal of Eating Disorders" year="2020" tier={1} />. You can be eating normally but still battling intense distorted thoughts—that's partial recovery, an important milestone but not the finish line.</p>
     </div>
 
@@ -1540,7 +1540,7 @@ export const eatingDisordersArticles: Article[] = [
     <p className="mb-6"><strong>Addressing comorbid conditions:</strong> Treating underlying anxiety, depression, trauma, or OCD is essential. The eating disorder often serves as maladaptive coping for these conditions—removing the eating disorder without addressing what it was managing leaves vulnerability for relapse.</p>
 
     <HighlightBox variant="emphasis">
-      <p className="mb-4">Psychological recovery often lags behind behavioral recovery by months or years. You may be eating normally, maintaining healthy weight, no longer engaging in compensatory behaviors—but still battling intense body dissatisfaction, fear of weight gain, or preoccupation with food. This gap is normal. Be patient. Behavioral recovery creates the foundation; psychological healing builds on it gradually <Citation id="2" index={2} source="European Eating Disorders Review" year="2020" tier={1} />.</p>
+      <p className="mb-4">Psychological recovery often lags behind behavioral recovery by months or years. You may be eating normally, maintaining healthy weight, no longer engaging in compensatory behaviors—but still battling intense body dissatisfaction, fear of weight gain, or preoccupation with food. This gap is common. Be patient. Behavioral recovery creates the foundation; psychological healing builds on it gradually <Citation id="2" index={2} source="European Eating Disorders Review" year="2020" tier={1} />.</p>
     </HighlightBox>
 
     <h2 id="relapse" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Understanding and Preventing Relapse</h2>
@@ -1639,7 +1639,7 @@ export const eatingDisordersArticles: Article[] = [
     <p className="mb-6">Effective support requires understanding what helps versus what hinders recovery. Well-intentioned actions often backfire when they increase shame, resistance, or the person's sense of being controlled.</p>
     <p className="mb-6"><strong>Express concern about behaviors and emotions, not weight or appearance.</strong> "I've noticed you seem stressed around meals and I'm worried about you" works better than "You're too thin" or "You need to eat more." Comments about appearance—even intended as compliments—trigger eating disorder thoughts <Citation id="3" index={3} source="Eating Disorders" year="2020" tier={1} />. Focus on observable behaviors (avoiding meals, exercising excessively, seeming distressed) and your emotional concern rather than body commentary.</p>
     <p className="mb-6"><strong>Encourage professional help without forcing it.</strong> Offer to help find providers, attend appointments with them if they want company, or research treatment options together. For adolescents or those in medical danger, you may need to insist on evaluation—but for adults, pushing too hard can increase resistance. Balance between expressing urgency and respecting their agency.</p>
-    <p className="mb-6"><strong>Educate yourself.</strong> Read about eating disorders, attend family therapy or support groups, talk to their treatment team (with permission). Understanding that eating disorders are mental illnesses with biological components—not choices—reduces frustration and shame. Learning about typical recovery timelines (years, not months) and non-linear progress (setbacks are normal) calibrates expectations.</p>
+    <p className="mb-6"><strong>Educate yourself.</strong> Read about eating disorders, attend family therapy or support groups, talk to their treatment team (with permission). Understanding that eating disorders are mental illnesses with biological components—not choices—reduces frustration and shame. Learning about typical recovery timelines (years, not months) and non-linear progress (setbacks are common) calibrates expectations.</p>
     <p className="mb-6"><strong>Don't police eating or comment on food choices.</strong> Monitoring food intake, commenting on portion sizes, or praising/criticizing food choices increases shame and resistance. If they're in treatment, trust the treatment team to address nutritional rehabilitation. Your role is emotional support, not food police. During family meals, maintain normal conversation and don't make food the focus.</p>
     <p className="mb-6"><strong>Avoid triggering topics.</strong> Weight, appearance, food amounts, calories, exercise, body comparisons—all can trigger eating disorder thoughts even in seemingly casual conversation. Also avoid "positive" comments like "You look healthier" (translates to "You look fatter") or "Good job eating that" (makes eating transactional rather than normal).</p>
 
@@ -2164,7 +2164,7 @@ export const substanceSleepSomaticArticles: Article[] = [
     />
 
     <h2 id="understanding" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Is Insomnia Disorder?</h2>
-    <p className="mb-6">Not all sleep problems are insomnia. Occasional sleepless nights before important events are normal. Insomnia becomes a disorder when:</p>
+    <p className="mb-6">Not all sleep problems are insomnia. Occasional sleepless nights before important events are common. Insomnia becomes a disorder when:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Frequency:</strong> Sleep difficulty occurs at least 3 nights per week</li>
       <li><strong>Duration:</strong> The problem persists for 3+ months (chronic) vs. short-term (acute) insomnia lasting days or weeks</li>
@@ -4831,7 +4831,7 @@ export const psychoticPersonalityArticles: Article[] = [
     { text: 'Recovery doesn\'t mean personality transformation, but reducing symptom severity and building a life worth living', citationIndex: 2 },
     { text: 'Evidence-based treatments like DBT, MBT, and schema therapy produce significant improvement in most cases', citationIndex: 3 },
     { text: 'Peer support from others with lived experience of PDs is uniquely valuable and reduces isolation', citationIndex: 4 },
-    { text: 'Recovery is nonlinear--setbacks are normal and don\'t indicate failure, but information for adjusting treatment', citationIndex: 2 },
+    { text: 'Recovery is nonlinear--setbacks are common and don\'t indicate failure, but information for adjusting treatment', citationIndex: 2 },
   ],
   sparkMoment: 'You are not your diagnosis. Personality patterns were learned in response to circumstances--they can be unlearned.',
   practicalExercise: {
@@ -4892,7 +4892,7 @@ export const psychoticPersonalityArticles: Article[] = [
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Later Phase: Generalization and Relapse Prevention</h3>
     <p className="mb-6">Emphasis shifts to applying skills across life contexts, building identity beyond the disorder, and preparing for future challenges. Therapy frequency often decreases. The work becomes about sustaining gains and knowing what to do when old patterns resurface.</p>
 
-    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Setbacks Are Normal</h3>
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Setbacks Are Common</h3>
     <p className="mb-6">Recovery isn't linear. You'll have good months followed by terrible weeks. A breakup, job loss, or other stressor can temporarily bring back symptoms you thought were behind you. <strong>This doesn't mean failure.</strong> Setbacks provide information about what skills need strengthening, what triggers remain potent, and what support is needed. Each setback navigated strengthens resilience for the next one.</p>
 
     <h2 id="what-helps" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Helps: Building Your Support Network</h2>
@@ -5008,7 +5008,7 @@ export const psychoticPersonalityArticles: Article[] = [
         <li>Evidence-based treatments (DBT, MBT, schema therapy, TFP) produce significant improvement in most cases</li>
         <li>Peer support from others with lived PD experience is uniquely valuable for hope and practical strategies</li>
         <li>Self-compassion predicts better recovery outcomes; self-blame intensifies symptoms</li>
-        <li>Recovery is gradual and nonlinear--setbacks are normal and provide information, not evidence of failure</li>
+        <li>Recovery is gradual and nonlinear--setbacks are common and provide information, not evidence of failure</li>
         <li>You are not your diagnosis. Personality patterns were learned and can be unlearned through sustained therapeutic work</li>
       </ul>
     </ArticleCallout>

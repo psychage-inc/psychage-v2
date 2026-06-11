@@ -385,7 +385,7 @@ Stop searching for your voice like it's lost. It's not hiding. It's forming, rig
 
 **Write what only you can write (paint what only you can paint)**: Identify experiences, questions, perspectives unique to your life. Create from those. Notice: Does personal specificity feel more authentic than trying to be universally "original"?
 
-**Accept derivative phase**: Make a list: "I sound/look like [Influence 1], [Influence 2], [Influence 3]." Say it out loud: "My work is derivative right now. That's normal. I'll synthesize over time." Notice: Does naming it reduce shame?
+**Accept derivative phase**: Make a list: "I sound/look like [Influence 1], [Influence 2], [Influence 3]." Say it out loud: "My work is derivative right now. That's common. I'll synthesize over time." Notice: Does naming it reduce shame?
 
 **Track evolution**: Save everything—early derivative work, experimental failures, evolving style. Revisit yearly. Notice: Can you see voice gradually emerging? Does recognizing progression reduce impatience?
 

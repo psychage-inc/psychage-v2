@@ -1048,7 +1048,7 @@ export const seasonalPatternsArticlesA: Article[] = [
     id: catId(44),
     slug: 'how-seasons-affect-everyones-mood-without-sad',
     title: "How the Seasons Affect Everyone's Mood (Even Without SAD)",
-    description: "Seasonal mood changes are normal, even if you don't have SAD. Learn why your mood shifts with the seasons and how to work with these natural rhythms.",
+    description: "Seasonal mood changes are common, even if you don't have SAD. Learn why your mood shifts with the seasons and how to work with these natural rhythms.",
     image: "/images/articles/cat07/cover-044.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
     readTime: 8,
@@ -1058,7 +1058,7 @@ export const seasonalPatternsArticlesA: Article[] = [
     tags: ['Seasonal Mood', 'Circadian Rhythms', 'Mental Health', 'Self-Care'],
     summary: 'Up to 90% of people experience some seasonal mood variation—feeling more energetic in warmer months and more withdrawn in winter—without meeting criteria for SAD. Understanding and working with these natural rhythms, rather than fighting them, supports better mental health throughout the year.',
     keyFacts: [
-      { text: 'Up to 90% of people report some seasonal mood variation, making it a normal human response to environmental changes', citationIndex: 2 },
+      { text: 'Up to 90% of people report some seasonal mood variation, making it a common human response to environmental changes', citationIndex: 2 },
       { text: 'Evolutionary biology wired us to conserve energy in winter when food was scarce and maximize activity in summer when resources were abundant', citationIndex: 2 },
       { text: 'Light exposure regulates circadian rhythms, serotonin production, and melatonin release—all critical for mood regulation', citationIndex: 3 },
       { text: 'Decreased physical activity in winter contributes to lower baseline mood, as exercise is a mood stabilizer', citationIndex: 5 },
@@ -1146,7 +1146,7 @@ export const seasonalPatternsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
-            You don't need to have seasonal affective disorder to notice that your mood, energy, and motivation shift with the seasons. Most people---even those without clinical depression---experience some degree of seasonal mood variation. It's a normal human response to changing light, temperature, and environmental cues.
+            You don't need to have seasonal affective disorder to notice that your mood, energy, and motivation shift with the seasons. Most people---even those without clinical depression---experience some degree of seasonal mood variation. It's a common human response to changing light, temperature, and environmental cues.
           </p>
           <p className="mb-6">
             This article explores why seasonal mood changes happen in the general population and how to work with (not against) your body's natural rhythms <Citation id="1" index={1} source="Psychiatry Research" year="2016" tier={1} />.
@@ -1154,7 +1154,7 @@ export const seasonalPatternsArticlesA: Article[] = [
         </div>
 
         <h2 id="seasonal-variation-is-normal" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Seasonal Variation in Mood Is Normal
+          Seasonal Variation in Mood Is Common
         </h2>
         <p className="mb-6">
           Studies show that up to 90% of people report some seasonal mood variation---feeling more energetic in spring and summer, more withdrawn or sluggish in fall and winter <Citation id="2" index={2} source="Current Opinion in Psychiatry" year="2018" tier={2} />. For most people, these shifts are mild and don't interfere with daily functioning.

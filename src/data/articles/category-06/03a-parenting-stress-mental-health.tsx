@@ -199,7 +199,7 @@ export const parentingStressMentalHealthArticlesA: Article[] = [
             {
               title: 'Acknowledge the Reality',
               description: (
-                <p>The first step is recognizing that what you're experiencing is real, has a name, and is not your fault. Burnout is a normal response to abnormal circumstances. Millions of parents face it. You're not weak, lazy, or ungrateful.</p>
+                <p>The first step is recognizing that what you're experiencing is real, has a name, and is not your fault. Burnout is a common response to abnormal circumstances. Millions of parents face it. You're not weak, lazy, or ungrateful.</p>
               )
             },
             {
@@ -744,7 +744,7 @@ export const parentingStressMentalHealthArticlesA: Article[] = [
         <div className="space-y-4 my-8">
           <MythVsFactBlock
             myth="Good parents never feel resentful, frustrated, or wish for a break from their children."
-            fact="All parents have ambivalent feelings at times. Research shows that experiencing negative emotions about parenting is normal and doesn't predict worse outcomes for children. What matters is how you manage and repair from those moments."
+            fact="All parents have ambivalent feelings at times. Research shows that experiencing negative emotions about parenting is common and doesn't predict worse outcomes for children. What matters is how you manage and repair from those moments."
           />
           <MythVsFactBlock
             myth="If you're doing it right, parenting should feel natural and joyful most of the time."
@@ -795,7 +795,7 @@ export const parentingStressMentalHealthArticlesA: Article[] = [
           Children benefit from seeing their parents as imperfect humans who make mistakes, apologize, and keep trying. This teaches them:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Mistakes are normal and survivable</li>
+          <li>Mistakes are common and survivable</li>
           <li>Relationships can withstand rupture and repair</li>
           <li>Perfection isn't the goal; growth is</li>
           <li>Self-compassion in the face of failure</li>

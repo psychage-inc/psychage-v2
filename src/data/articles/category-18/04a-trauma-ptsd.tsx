@@ -218,7 +218,7 @@ export const articles: Article[] = [
           to reclaim personal story and challenge narratives of worthlessness or culpability.
           Therapists must understand power and control dynamics, validate rather than pathologize
           responses to violence, support autonomy rather than directing choices, and recognize that
-          healing is not linear---there will be setbacks and that's normal.
+          healing is not linear---there will be setbacks and that's common.
         </p>
 
         <p>
@@ -311,7 +311,7 @@ export const articles: Article[] = [
         },
         {
           title: `Allow all reactions`,
-          description: `There's no "correct" way to react. Shock, numbness, crying, anger, wanting to shower, not wanting to talk---all are normal. Don't judge your responses.`,
+          description: `There's no "correct" way to react. Shock, numbness, crying, anger, wanting to shower, not wanting to talk---all are common. Don't judge your responses.`,
         },
         {
           title: `Access specialized support`,
@@ -363,7 +363,7 @@ export const articles: Article[] = [
           unexpectedly. Her friends said she should "move on"---the assault was months ago. But
           Jasmine felt stuck, unable to move forward or back. When she finally called a sexual
           assault crisis line, the counselor said something that made her cry: "There's no
-          timeline for healing. Your reactions are normal responses to abnormal trauma."
+          timeline for healing. Your reactions are common responses to abnormal trauma."
         </p>
 
         <StatCard
@@ -390,7 +390,7 @@ export const articles: Article[] = [
           automatically), intense fear or panic, anger or rage, crying or emotional volatility,
           need to shower or clean (understandable but complicates evidence collection if planning
           to report), wanting to be alone or not wanting to be left alone, difficulty remembering
-          details (trauma affects memory---this is normal, not lying), and self-blame or shame.
+          details (trauma affects memory---this is common, not lying), and self-blame or shame.
         </p>
 
         <ArticleCallout
@@ -511,7 +511,7 @@ export const articles: Article[] = [
         <ArticleCallout
           type="tip"
           title="Finding Appropriate Support"
-          content="Seek therapists with specific training in sexual trauma (not just general trauma). Organizations like RAINN (rainn.org) provide therapist directories. Sexual assault crisis centers offer free/low-cost counseling. Support groups with other survivors reduce isolation. Avoid therapists who: minimize your experience, suggest assault was partly your fault, push you to forgive or confront perpetrator, rush you through healing, or don't understand that freezing is normal trauma response."
+          content="Seek therapists with specific training in sexual trauma (not just general trauma). Organizations like RAINN (rainn.org) provide therapist directories. Sexual assault crisis centers offer free/low-cost counseling. Support groups with other survivors reduce isolation. Avoid therapists who: minimize your experience, suggest assault was partly your fault, push you to forgive or confront perpetrator, rush you through healing, or don't understand that freezing is common trauma response."
         />
       </>
     ),

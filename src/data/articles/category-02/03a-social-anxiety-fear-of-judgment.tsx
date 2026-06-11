@@ -239,7 +239,7 @@ export const socialAnxietyArticlesA: Article[] = [
           Shyness vs. Social Anxiety Disorder: What's the Difference?
         </h2>
         <p className="mb-6">
-          It's normal to feel nervous in some social situations. Social anxiety disorder crosses into clinical
+          It's common to feel nervous in some social situations. Social anxiety disorder crosses into clinical
           territory when the fear becomes severe, persistent, and life-limiting.
         </p>
 
@@ -1428,7 +1428,7 @@ export const socialAnxietyArticlesA: Article[] = [
                 <li>"My racing heart means I'm energized and ready"</li>
                 <li>"This arousal will help me perform at my best"</li>
                 <li>"I'm excited about this opportunity"</li>
-                <li>"Feeling energized is normal before performance"</li>
+                <li>"Feeling energized is common before performance"</li>
               </ul>
             ),
           }}
@@ -1908,7 +1908,7 @@ export const socialAnxietyArticlesA: Article[] = [
               feature: 'Presentations',
               values: [
                 "If I look nervous, I'll lose all credibility",
-                "Nervousness during presentations is normal and doesn't negate expertise. Content matters more than delivery.",
+                "Nervousness during presentations is common and doesn't negate expertise. Content matters more than delivery.",
               ],
             },
             {

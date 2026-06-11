@@ -21,7 +21,7 @@ source_categories_represented: 5
 crisis_content: true
 ---
 
-> **Summary**: Criminal victimization is among the most psychologically destabilizing experiences a person can undergo. It shatters assumptions about personal safety, the predictability of the world, and one's own capacity to protect oneself—what Ronnie Janoff-Bulman called the "assumptive world." Approximately 25% of violent crime victims develop PTSD, with rates varying dramatically by crime type: 49% of rape victims, 32% of assault victims, and 15% of robbery victims meet full PTSD criteria within months of the offense. But PTSD is only part of the picture. Crime victims commonly experience depression, anxiety, substance use, relationship disruption, financial hardship, loss of trust, and profound changes in their sense of self. The criminal justice system—ostensibly designed to serve victims' interests—frequently compounds psychological harm through secondary victimization: the re-traumatization that occurs when victims interact with institutions that fail to believe them, protect them, or treat them with dignity. Recovery from victimization is possible and well-documented, but it requires understanding that victim reactions are normal responses to abnormal events, that recovery is not linear, and that both psychological treatment and social support play essential roles.
+> **Summary**: Criminal victimization is among the most psychologically destabilizing experiences a person can undergo. It shatters assumptions about personal safety, the predictability of the world, and one's own capacity to protect oneself—what Ronnie Janoff-Bulman called the "assumptive world." Approximately 25% of violent crime victims develop PTSD, with rates varying dramatically by crime type: 49% of rape victims, 32% of assault victims, and 15% of robbery victims meet full PTSD criteria within months of the offense. But PTSD is only part of the picture. Crime victims commonly experience depression, anxiety, substance use, relationship disruption, financial hardship, loss of trust, and profound changes in their sense of self. The criminal justice system—ostensibly designed to serve victims' interests—frequently compounds psychological harm through secondary victimization: the re-traumatization that occurs when victims interact with institutions that fail to believe them, protect them, or treat them with dignity. Recovery from victimization is possible and well-documented, but it requires understanding that victim reactions are common responses to abnormal events, that recovery is not linear, and that both psychological treatment and social support play essential roles.
 
 ## Key Facts
 
@@ -53,7 +53,7 @@ The rebuilding of these assumptions is the central psychological task of recover
 
 The psychological impact of victimization extends far beyond PTSD. Research has documented a wide range of reactions that vary by crime type, victim characteristics, and social context:
 
-**Acute stress reactions.** In the immediate aftermath of victimization, most people experience fear, shock, disbelief, confusion, and autonomic arousal (racing heart, hyperventilation, trembling). These reactions are normal—they represent the nervous system's evolved response to life-threatening danger. They typically resolve within days to weeks but may persist or develop into PTSD if the victim lacks adequate support or experiences additional stressors.
+**Acute stress reactions.** In the immediate aftermath of victimization, most people experience fear, shock, disbelief, confusion, and autonomic arousal (racing heart, hyperventilation, trembling). These reactions are common—they represent the nervous system's evolved response to life-threatening danger. They typically resolve within days to weeks but may persist or develop into PTSD if the victim lacks adequate support or experiences additional stressors.
 
 **PTSD.** The hallmark post-victimization disorder involves re-experiencing the event (flashbacks, nightmares, intrusive memories), avoidance of trauma-related stimuli (people, places, and situations that remind the victim of the crime), negative changes in cognition and mood (self-blame, distrust, emotional numbing), and hyperarousal (exaggerated startle, hypervigilance, sleep disturbance). Kilpatrick and colleagues (2003) found that crime-related PTSD affected approximately 25% of violent crime victims, with sexual assault carrying the highest risk.
 
@@ -91,7 +91,7 @@ Victimization does not affect all people equally. Pre-existing mental health con
 
 ## What You Can Try
 
-- **If you have been the victim of a crime**, know that your reactions—whatever they are—are normal responses to an abnormal event. Seek support from a victim advocate, a trauma-informed therapist, or a trusted person in your life.
+- **If you have been the victim of a crime**, know that your reactions—whatever they are—are common responses to an abnormal event. Seek support from a victim advocate, a trauma-informed therapist, or a trusted person in your life.
 
 - **If someone tells you they have been victimized**, believe them, do not blame them, and ask what they need. The single most powerful thing you can do is be present without judgment.
 

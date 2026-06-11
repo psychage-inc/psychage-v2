@@ -63,7 +63,7 @@ Given the clear connection between sexual wellbeing and mental health, one might
 
 This silence communicates its own message: your sexuality is not important enough to discuss. For a person who is already questioning whether they are entitled to a sexual self, the absence of professional attention to sexuality confirms the cultural narrative of desexualization.
 
-The PLISSIT model (Annon, 1976)—Permission, Limited Information, Specific Suggestions, Intensive Therapy—provides a framework for addressing sexuality in clinical settings that does not require specialized sexual therapy training. At the most basic level, simply giving a disabled person permission to be sexual—acknowledging that sexuality is a normal, important part of life, and that disability does not cancel it—can be therapeutic. This permission-giving costs nothing and requires no special expertise, yet it is absent from the vast majority of clinical encounters.
+The PLISSIT model (Annon, 1976)—Permission, Limited Information, Specific Suggestions, Intensive Therapy—provides a framework for addressing sexuality in clinical settings that does not require specialized sexual therapy training. At the most basic level, simply giving a disabled person permission to be sexual—acknowledging that sexuality is a common, important part of life, and that disability does not cancel it—can be therapeutic. This permission-giving costs nothing and requires no special expertise, yet it is absent from the vast majority of clinical encounters.
 
 ### Sex Education and Disability
 

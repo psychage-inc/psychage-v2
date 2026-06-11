@@ -951,10 +951,10 @@ export const mensPhysicalMentalHealthArticlesA: Article[] = [
             vascular, hormonal, and emotional systems. A single disruption in any of these
             systems --- a moment of distraction, a spike of anxiety, a glass too many of
             alcohol, fatigue from a poor night's sleep --- can interrupt the process. In a
-            culture that allowed men to experience this normal variation without shame, most
+            culture that allowed men to experience this common variation without shame, most
             episodes of erectile difficulty would resolve on their own. In a culture that
             equates erections with masculinity, a single episode can initiate a self-reinforcing
-            anxiety cycle that transforms a normal experience into a chronic condition.
+            anxiety cycle that transforms a common experience into a chronic condition.
           </p>
         </div>
 
@@ -996,7 +996,7 @@ export const mensPhysicalMentalHealthArticlesA: Article[] = [
                   <p>
                     Within weeks or months, a man who had perfectly normal erectile function can
                     develop chronic, disabling ED --- not because anything changed in his vascular
-                    system, but because his psychological response to a normal variation has
+                    system, but because his psychological response to a common variation has
                     created a neurobiological trap.
                   </p>
                 </div>
@@ -1169,7 +1169,7 @@ export const mensPhysicalMentalHealthArticlesA: Article[] = [
         <ProgressSteps
           steps={[
             { title: 'Medical evaluation and treatment', description: 'Comprehensive assessment including cardiovascular risk, hormonal panel, medication review, and --- when indicated --- PDE5 inhibitors or other pharmacological interventions. Medical treatment works best when combined with psychological support.' },
-            { title: 'Cognitive behavioral therapy for sexual dysfunction', description: 'CBT targets the thought patterns, performance anxiety, and avoidance behaviors that maintain ED. It reframes unrealistic expectations, reduces self-monitoring during sex, and builds tolerance for normal variation in sexual response.' },
+            { title: 'Cognitive behavioral therapy for sexual dysfunction', description: 'CBT targets the thought patterns, performance anxiety, and avoidance behaviors that maintain ED. It reframes unrealistic expectations, reduces self-monitoring during sex, and builds tolerance for common variation in sexual response.' },
             { title: 'Sensate focus and gradual exposure', description: 'Originally developed by Masters and Johnson, sensate focus exercises reduce performance pressure by temporarily removing intercourse as a goal and rebuilding physical intimacy through non-demand touching, pleasure focus, and gradual re-introduction of sexual activity.' },
             { title: 'Couples therapy when indicated', description: 'When ED occurs in the context of relationship distress --- or creates it --- couples therapy addresses communication, emotional intimacy, and the partner dynamic that can either support or undermine recovery.' },
           ]}

@@ -223,7 +223,7 @@ Adults have advantages:
 - **Self-teaching**: Books, online resources, experimentation
 
 **Managing Frustration**:
-- Progress is non-linear (plateaus are normal)
+- Progress is non-linear (plateaus are common)
 - Adult learners are self-critical—practice self-compassion
 - Focus on joy, not perfection
 - Play what you enjoy, not just exercises

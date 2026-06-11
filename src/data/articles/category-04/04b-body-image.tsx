@@ -333,7 +333,7 @@ export const bodyImageArticlesB: Article[] = [
           <li><strong>Mobility:</strong> Joint stiffness, reduced flexibility</li>
         </ul>
         <p className="mb-6">
-          These changes are normal, universal, and not inherently problematic. The distress comes from cultural narratives that frame aging as decline, failure, or loss of value.
+          These changes are common, universal, and not inherently problematic. The distress comes from cultural narratives that frame aging as decline, failure, or loss of value.
         </p>
 
         <h2 id="ageism-body-image" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

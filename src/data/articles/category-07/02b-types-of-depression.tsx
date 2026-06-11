@@ -827,7 +827,7 @@ export const typesOfDepressionArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          These are normal responses to prolonged suffering and repeated disappointment. If you feel this way, you're not broken or weak---you're responding reasonably to an unreasonable situation. The demoralization is part of the illness, not evidence that you're beyond help.
+          These are common responses to prolonged suffering and repeated disappointment. If you feel this way, you're not broken or weak---you're responding reasonably to an unreasonable situation. The demoralization is part of the illness, not evidence that you're beyond help.
         </p>
 
         <QuoteBlock

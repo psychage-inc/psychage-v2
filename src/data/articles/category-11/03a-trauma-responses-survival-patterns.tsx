@@ -560,7 +560,7 @@ export const traumaResponsesArticlesA: Article[] = [
             { title: "Notice when you're fawning", description: <p>Observe the physical cues: that tight feeling in your chest when you want to say no but can't, the compulsion to fix someone's mood, the automatic "I'm sorry."</p> },
             { title: 'Practice pausing before saying yes', description: <p>When asked for something, buy time: 'Let me check my schedule and get back to you." This interrupts the automatic compliance.</p> },
             { title: `Start with low-stakes "no`, description: <p>Decline small requests from safe people: "No thanks, I don't want dessert." Notice that they don't abandon you.</p> },
-            { title: 'Identify your actual preferences', description: <p>Ask yourself: 'What do <em>I</em> want?" You may not know at first. That's normal. Keep asking.</p> },
+            { title: 'Identify your actual preferences', description: <p>Ask yourself: 'What do <em>I</em> want?" You may not know at first. That's common. Keep asking.</p> },
             { title: "Tolerate others' disappointment", description: <p>The hardest part: let people be unhappy with your boundary. Their feelings are not your responsibility to fix.</p> },
             { title: "Find your authentic 'yes'", description: <p>Notice when you help because you genuinely want to. Learn what that feels like, so you can distinguish it from fawning.</p> },
           ]}

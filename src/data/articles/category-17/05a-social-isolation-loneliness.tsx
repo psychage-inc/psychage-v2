@@ -1124,7 +1124,7 @@ export const socialIsolationLonelinessArticlesA: Article[] = [
           Do not just tour the center---visit during an activity. Attend a class, have lunch, participate in a game. See if the environment feels welcoming. Talk to participants. Ask what they like and do not like. Most people will be honest: "The food is mediocre but the company is great," or "The yoga instructor is tough but effective." <Citation index={8} />
         </p>
         <p className="mb-6">
-          Commit to trying it for at least four weeks before deciding. Many people feel awkward or out of place initially---this is normal. Friendships take time. Routine takes time. Give it a fair trial. If after a month it still does not feel right, try a different center or different activities within the same center. Not every center is a good fit for every person.
+          Commit to trying it for at least four weeks before deciding. Many people feel awkward or out of place initially---this is common. Friendships take time. Routine takes time. Give it a fair trial. If after a month it still does not feel right, try a different center or different activities within the same center. Not every center is a good fit for every person.
         </p>
 
         <h2 id="cost-and-accessibility" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

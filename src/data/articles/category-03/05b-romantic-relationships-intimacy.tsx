@@ -124,7 +124,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
-            A flash of unease when your partner mentions an attractive coworker. A tightness in your chest when they're texting someone you don't know. Jealousy is one of the most common---and most misunderstood---emotions in romantic relationships. Some level of jealousy is normal, even protective. But when it crosses into controlling behavior, constant suspicion, or emotional manipulation, it becomes toxic <Citation id="1" index={1} source="Psychological Bulletin" year="2020" tier={1} />.
+            A flash of unease when your partner mentions an attractive coworker. A tightness in your chest when they're texting someone you don't know. Jealousy is one of the most common---and most misunderstood---emotions in romantic relationships. Some level of jealousy is common, even protective. But when it crosses into controlling behavior, constant suspicion, or emotional manipulation, it becomes toxic <Citation id="1" index={1} source="Psychological Bulletin" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
             Understanding the difference between healthy jealousy and unhealthy jealousy---and learning to manage it constructively---can mean the difference between a relationship built on trust and one suffocated by insecurity <Citation id="3" index={3} source="Journal of Couple & Relationship Therapy" year="2019" tier={1} />.
@@ -1434,7 +1434,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaways">
           <ul className="list-disc pl-5 space-y-2">
-            <li>Different needs are normal in every relationship---what matters is how you navigate them together</li>
+            <li>Different needs are common in every relationship---what matters is how you navigate them together</li>
             <li>Distinguish between preferences (negotiable) and core values or life goals (often non-negotiable)</li>
             <li>Sixty-nine percent of relationship conflicts are perpetual and require ongoing dialogue, not resolution</li>
             <li>If compromise consistently requires one person to abandon something essential to who they are, it may be a true incompatibility rather than a negotiable difference</li>

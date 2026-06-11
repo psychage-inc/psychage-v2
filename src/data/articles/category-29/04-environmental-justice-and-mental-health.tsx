@@ -268,7 +268,7 @@ export const environmentalJusticeAndMentalHealthArticles: Article[] = [
     practicalExercise: {
       title: 'If you have recently experienced a natural disaster',
       steps: [
-        { title: 'If you have recently experienced a natural disaster', description: ', know that distress is normal and expected. Most people recover naturally with time, social support, and the restoration of safety and routine. If symptoms persist beyond a month or significantly impair your functioning, seek professional support.' },
+        { title: 'If you have recently experienced a natural disaster', description: ', know that distress is common and expected. Most people recover naturally with time, social support, and the restoration of safety and routine. If symptoms persist beyond a month or significantly impair your functioning, seek professional support.' },
         { title: 'Stay connected.', description: 'Social isolation amplifies post-disaster distress. Maintain contact with friends, family, and community members. Accept offered help. Participate in community recovery activities.' },
         { title: 'Re-establish routines.', description: 'Restoring predictable daily routines—regular meals, sleep schedules, physical activity, and social activities—provides the structure and normalcy that the nervous system needs to transition from crisis mode to recovery mode.' },
         { title: 'Limit media exposure.', description: 'Repeated viewing of disaster coverage—including one\'s own disaster—has been shown to increase distress without providing useful information. Set limits on media consumption and focus on practical, actionable information rather than dramatic coverage.' },

@@ -1792,7 +1792,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>You are not obligated to disclose just because celebrities do</li>
-          <li>Your recovery path will differ from theirs---that is normal</li>
+          <li>Your recovery path will differ from theirs---that is common</li>
           <li>Do not compare your progress to theirs (different circumstances)</li>
           <li>Seek support from peers and professionals, not just celebrity role models</li>
         </ul>

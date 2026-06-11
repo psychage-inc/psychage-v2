@@ -433,7 +433,7 @@ export const articles: Article[] = [
             title: 'Trauma-Informed Care (Supportive)',
             points: [
               'Acknowledging loss history at every appointment',
-              'Validating fear as normal given past experience',
+              'Validating fear as common given past experience',
               'Offering extra ultrasounds or monitoring when appropriate',
               'Flexible appointment scheduling (e.g., weekly in early pregnancy)',
               'Providing clear information without false reassurance',

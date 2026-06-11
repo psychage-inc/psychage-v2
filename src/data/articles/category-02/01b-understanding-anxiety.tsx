@@ -984,7 +984,7 @@ export const understandingAnxietyArticlesB: Article[] = [
           </li>
         </ul>
         <p className="mb-6">
-          This pattern can be frustrating --- feeling better only to relapse --- but it's actually normal for
+          This pattern can be frustrating --- feeling better only to relapse --- but it's actually common for
           untreated anxiety disorders. Treatment significantly reduces this cycling and promotes sustained
           recovery.
         </p>
@@ -1179,7 +1179,7 @@ export const understandingAnxietyArticlesB: Article[] = [
           </li>
           <li>
             <strong>Gradual progression:</strong> Full recovery is gradual, often taking 6-12 months or
-            longer for chronic anxiety. This isn't failure - it's the normal timeline for rewiring neural
+            longer for chronic anxiety. This isn't failure - it's the common timeline for rewiring neural
             pathways
           </li>
           <li>

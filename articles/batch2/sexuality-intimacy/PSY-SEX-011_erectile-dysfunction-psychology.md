@@ -79,7 +79,7 @@ The optimal treatment of ED integrates medical and psychological interventions�
 
 **Sex therapy** addresses the broader sexual and relational context—expanding the definition of satisfying sex beyond penile-vaginal intercourse, improving communication about sexual preferences and concerns, addressing the partner's response and experience, and rebuilding the emotional intimacy that supports sexual connection.
 
-> 💡 **Spark:** The erection is not a measure of masculinity, love, attraction, or worth. It is a physiological response governed by blood flow, nerve function, and psychological state—and like all physiological responses, it is variable, context-dependent, and influenced by factors far beyond willpower. The man who judges himself by his erection has confused a reflex with an identity. And the culture that equates erectile function with manhood has created a generation of men who experience a normal physiological variation as a personal catastrophe.
+> 💡 **Spark:** The erection is not a measure of masculinity, love, attraction, or worth. It is a physiological response governed by blood flow, nerve function, and psychological state—and like all physiological responses, it is variable, context-dependent, and influenced by factors far beyond willpower. The man who judges himself by his erection has confused a reflex with an identity. And the culture that equates erectile function with manhood has created a generation of men who experience a common physiological variation as a personal catastrophe.
 
 ## What You Can Try
 

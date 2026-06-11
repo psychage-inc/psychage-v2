@@ -55,7 +55,7 @@ The implication is clear: death notification is not merely an administrative tas
 
 The psychological response to death notification follows a broadly predictable pattern, though individual variation is significant. Understanding the typical trajectory helps notifiers anticipate and respond to the reactions they will encounter.
 
-**Shock and disbelief** are almost universal initial responses. The mind's protective mechanism against overwhelming emotional pain is temporary suspension of full cognitive processing—the survivor may appear calm, confused, or emotionally flat. They may repeat "no" or "that can't be right." They may appear to not understand what they have been told. This is not a cognitive deficit—it is a normal protective response to information that exceeds the mind's capacity for immediate processing. Notifiers who mistake shock for acceptance may leave prematurely, depriving the survivor of support during the period when the reality of the news begins to penetrate.
+**Shock and disbelief** are almost universal initial responses. The mind's protective mechanism against overwhelming emotional pain is temporary suspension of full cognitive processing—the survivor may appear calm, confused, or emotionally flat. They may repeat "no" or "that can't be right." They may appear to not understand what they have been told. This is not a cognitive deficit—it is a common protective response to information that exceeds the mind's capacity for immediate processing. Notifiers who mistake shock for acceptance may leave prematurely, depriving the survivor of support during the period when the reality of the news begins to penetrate.
 
 **Acute emotional expression** typically follows as shock begins to resolve. This may include crying, screaming, physical collapse, anger, bargaining, or hyperventilation. Some survivors direct anger at the notifier—not because the notifier has done something wrong but because the notifier is the available target for rage that has no appropriate object. Others may become physically agitated—attempting to leave (to go to the scene, to the hospital, to see the body), striking objects, or experiencing physiological reactions (nausea, chest pain, fainting) that may require medical attention.
 
@@ -99,7 +99,7 @@ The reality is that professional detachment is neither achievable nor desirable.
 
 - **If you must deliver a death notification**, prepare yourself emotionally, deliver the news in person and in private, use clear and direct language, provide factual information, allow emotional expression without judgment, and offer practical assistance.
 
-- **If you receive a death notification**, know that your immediate reactions—shock, disbelief, anger, numbness—are normal. Allow yourself to feel whatever you feel. Accept help from others. Do not drive or make major decisions in the immediate aftermath.
+- **If you receive a death notification**, know that your immediate reactions—shock, disbelief, anger, numbness—are common. Allow yourself to feel whatever you feel. Accept help from others. Do not drive or make major decisions in the immediate aftermath.
 
 - **If you are a first responder**, advocate for training in death notification procedures. Seek support after difficult notifications without shame. Your emotional response to witnessing suffering is not weakness—it is humanity.
 

@@ -862,7 +862,7 @@ export const settingBoundariesArticlesB: Article[] = [
           Managing the Guilt
         </h2>
         <p className="mb-6">
-          Guilt after saying no is normal, especially at first <Citation id="5" index={5} source="Cognitive Therapy and Research" year="2020" tier={1} />. It's a learned emotional response, not a moral compass. Here's how to work through it:
+          Guilt after saying no is common, especially at first <Citation id="5" index={5} source="Cognitive Therapy and Research" year="2020" tier={1} />. It's a learned emotional response, not a moral compass. Here's how to work through it:
         </p>
 
         <ol className="list-decimal pl-6 mb-6 space-y-2">
@@ -961,7 +961,7 @@ export const settingBoundariesArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Progress isn't linear. Some days saying no will feel easy; other days it will be just as hard as when you started. That's normal. What matters is the overall trend, not individual instances.
+          Progress isn't linear. Some days saying no will feel easy; other days it will be just as hard as when you started. That's common. What matters is the overall trend, not individual instances.
         </p>
 
         <ArticleCallout variant="action-plan" title="Your No-Saying Action Plan">
@@ -1874,7 +1874,7 @@ export const settingBoundariesArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          All of these feelings can exist simultaneously. It's normal to miss someone and know you can't have them in your life. It's normal to love someone and need distance from them. The complexity of your emotions doesn't mean your boundary is wrong.
+          All of these feelings can exist simultaneously. It's common to miss someone and know you can't have them in your life. It's common to love someone and need distance from them. The complexity of your emotions doesn't mean your boundary is wrong.
         </p>
 
         <ArticleCallout variant="did-you-know">
@@ -1894,7 +1894,7 @@ export const settingBoundariesArticlesB: Article[] = [
           <li><strong>Relief:</strong> The peace that comes with distance</li>
         </ul>
         <p className="mb-6">
-          All of these feelings are normal. Get support <Citation id="8" index={8} source="Psychotherapy" year="2020" tier={1} />:
+          All of these feelings are common. Get support <Citation id="8" index={8} source="Psychotherapy" year="2020" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Talk to a therapist who understands boundaries and toxic relationships</li>
@@ -2733,7 +2733,7 @@ export const settingBoundariesArticlesB: Article[] = [
           Balance is key: Teach children to protect themselves WITHOUT making them afraid of the world.
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Normalize boundaries:</strong> Present them as normal, healthy parts of life---not scary warnings</li>
+          <li><strong>Normalize boundaries:</strong> Present them as common, healthy parts of life---not scary warnings</li>
           <li><strong>Empower, don't terrify:</strong> "You have the power to say no and protect yourself" (not "Bad things will happen if you don't")</li>
           <li><strong>Create open communication:</strong> "You can tell me anything. I won't be mad." Make this true.</li>
           <li><strong>Trust their instincts:</strong> "If something feels wrong, it probably is. Listen to that feeling."</li>

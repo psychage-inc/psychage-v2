@@ -488,7 +488,7 @@ export const anxietyInRelationshipsWorkDailyLifeArticlesB: Article[] = [
                                 transition-all duration-150
                                 align-super
                                 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
-                            " aria-label="Citation 4 — click to view reference">4</button> Common fears include:</p><ul className="list-disc pl-6 mb-6 space-y-2"><li>I'll do it wrong and be judged</li><li>It won't be perfect</li><li>I'll be overwhelmed and not know what to do</li><li>The outcome will be negative (bad news, rejection, failure)</li><li>I won't be able to handle the stress of doing it</li></ul><p className="mb-6">Once you name the fear, you can address it directly instead of just avoiding the task. When Maya identified that her core fear was "the client will think I'm untalented," she could challenge that belief: "I've successfully completed 30+ projects. One person's opinion doesn't define my talent. And even if they dislike this design, I can revise it—that's normal in creative work."</p><h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">2. Use the "5-Minute Start" Rule</h3><p className="mb-6">The biggest barrier is starting. Once you start, momentum often carries you forward. Commit to working on the task for just 5 minutes—no pressure to finish, no expectation of perfection, just 5 minutes <button type="button" id="citation-ref-4" className="
+                            " aria-label="Citation 4 — click to view reference">4</button> Common fears include:</p><ul className="list-disc pl-6 mb-6 space-y-2"><li>I'll do it wrong and be judged</li><li>It won't be perfect</li><li>I'll be overwhelmed and not know what to do</li><li>The outcome will be negative (bad news, rejection, failure)</li><li>I won't be able to handle the stress of doing it</li></ul><p className="mb-6">Once you name the fear, you can address it directly instead of just avoiding the task. When Maya identified that her core fear was "the client will think I'm untalented," she could challenge that belief: "I've successfully completed 30+ projects. One person's opinion doesn't define my talent. And even if they dislike this design, I can revise it—that's common in creative work."</p><h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">2. Use the "5-Minute Start" Rule</h3><p className="mb-6">The biggest barrier is starting. Once you start, momentum often carries you forward. Commit to working on the task for just 5 minutes—no pressure to finish, no expectation of perfection, just 5 minutes <button type="button" id="citation-ref-4" className="
                                 inline-flex items-center justify-center
                                 w-[18px] h-[18px] ml-0.5 -mt-2
                                 text-[10px] font-bold text-teal-600 dark:text-teal-400
@@ -1261,7 +1261,7 @@ export const anxietyInRelationshipsWorkDailyLifeArticlesB: Article[] = [
     tags: ['Recovery', 'Long-Term Management', 'Resilience', 'Acceptance'],
     summary: 'Living well with anxiety means building a life rich in meaning despite occasional anxiety—not achieving a permanent anxiety-free state. Recovery is redefined: developing psychological flexibility, practicing daily maintenance (not just crisis management), recognizing early warning signs, building values-based living, and treating setbacks with self-compassion.',
     keyFacts: [
-      { text: '30-50% of people experience occasional anxiety recurrence after successful treatment—this is normal, not failure', citationIndex: 4 },
+      { text: '30-50% of people experience occasional anxiety recurrence after successful treatment—this is common, not failure', citationIndex: 4 },
       { text: '78% of individuals with sustained recovery prioritize consistent sleep and exercise habits', citationIndex: 5 },
       { text: '65% report values-aligned living as the key factor in long-term wellbeing with anxiety', citationIndex: 8 },
       { text: 'Psychological flexibility is one of the strongest predictors of long-term wellbeing with anxiety', citationIndex: 3 },
@@ -1611,7 +1611,7 @@ export const anxietyInRelationshipsWorkDailyLifeArticlesB: Article[] = [
           <strong>You might always have a tendency toward anxiety.</strong> That's okay. Some people are wired with more sensitive threat-detection systems. This doesn't mean you're broken.
         </p>
         <p className="mb-6">
-          <strong>Stress, transitions, and life challenges will trigger anxiety.</strong> This is normal. The goal isn't to become immune—it's to have tools and support to navigate these periods.
+          <strong>Stress, transitions, and life challenges will trigger anxiety.</strong> This is common. The goal isn't to become immune—it's to have tools and support to navigate these periods.
         </p>
         <p className="mb-6">
           <strong>You'll have days, weeks, or even months where anxiety is louder.</strong> This isn't failure or regression. It's part of the human experience with an anxiety disorder.

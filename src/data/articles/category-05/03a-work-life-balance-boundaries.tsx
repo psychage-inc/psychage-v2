@@ -333,7 +333,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
               description: (
                 <p>
                   Some phases of life are work-heavy (career launches, promotions). Others are
-                  family-heavy (new baby, aging parent). This is normal. Balance across years, not
+                  family-heavy (new baby, aging parent). This is common. Balance across years, not
                   days.
                 </p>
               ),

@@ -138,7 +138,7 @@ export const imposterSyndromeArticlesB: Article[] = [
             },
             {
               feature: 'Mistakes amplified',
-              values: ['Catastrophizing normal errors', 'Mistakes actually are noticed/judged more harshly'],
+              values: ['Catastrophizing common errors', 'Mistakes actually are noticed/judged more harshly'],
             },
           ]}
           highlightColumn={2}
@@ -902,7 +902,7 @@ export const imposterSyndromeArticlesB: Article[] = [
             },
             {
               feature: 'Failure/mistake',
-              values: ['Proof of incompetence', 'Normal part of learning, limited to specific context'],
+              values: ['Proof of incompetence', 'Common part of learning, limited to specific context'],
             },
             {
               feature: 'Praise',
@@ -1722,7 +1722,7 @@ export const imposterSyndromeArticlesB: Article[] = [
               feature: 'Noting gaps',
               values: [
                 "I don't know enough yet, I'm inadequate",
-                "I'm still learning, and that's normal for this stage",
+                "I'm still learning, and that's common for this stage",
               ],
             },
             {

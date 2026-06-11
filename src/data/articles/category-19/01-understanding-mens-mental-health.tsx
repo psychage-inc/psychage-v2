@@ -434,7 +434,7 @@ export const understandingMensMentalHealthArticles: Article[] = [
         <p className="mb-6">
           The process is often uncomfortable at first. You may find that naming emotions brings
           them into sharper focus, making them temporarily more intense rather than less. This is
-          normal and expected. A man who has spent years compressing all negative emotional
+          common and expected. A man who has spent years compressing all negative emotional
           states into the single category of "stressed" may discover, when he begins to
           differentiate, that underneath the stress lives grief, resentment, loneliness, and
           fear. That discovery can be unsettling. But it is also the beginning of being able
@@ -2010,7 +2010,7 @@ export const understandingMensMentalHealthArticles: Article[] = [
             on. The cultural message, transmitted through silence rather than words, is clear:
             your time to grieve is over. The man who continues to struggle does so alone, often
             believing that his inability to "get over it" represents a personal failure rather
-            than a normal response to profound loss.
+            than a common response to profound loss.
           </p>
         </div>
 

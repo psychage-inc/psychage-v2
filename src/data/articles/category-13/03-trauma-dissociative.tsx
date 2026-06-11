@@ -564,7 +564,7 @@ export const traumaDissociativeArticles: Article[] = [
 
     <ArticleCallout type="info" className="my-8">
       <h4 className="font-bold mb-2">Why the 3-Day Minimum?</h4>
-      <p>Immediate distress in the first 1-2 days after trauma is normal and expected. The 3-day minimum ensures we're identifying reactions that persist beyond the acute shock phase. Before 3 days, it's simply an acute stress reaction—not yet a disorder requiring intervention.</p>
+      <p>Immediate distress in the first 1-2 days after trauma is common and expected. The 3-day minimum ensures we're identifying reactions that persist beyond the acute shock phase. Before 3 days, it's simply an acute stress reaction—not yet a disorder requiring intervention.</p>
     </ArticleCallout>
 
     <h2 id="asd-to-ptsd" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Bridge from ASD to PTSD</h2>

@@ -1040,7 +1040,7 @@ export const digitalAddictionCompulsiveUseArticlesB: Article[] = [
           {
             title: 'Week 1: The Void',
             description: (
-              <p>The first week without optional technology is often the hardest. You will notice restless impulses to check your phone, a sense of boredom that feels uncomfortable, and possibly anxiety about what you might be missing. These feelings are normal and expected. Use your journal to document them. The discomfort itself is informative --- it reveals how deeply habitual your digital engagement had become.</p>
+              <p>The first week without optional technology is often the hardest. You will notice restless impulses to check your phone, a sense of boredom that feels uncomfortable, and possibly anxiety about what you might be missing. These feelings are common and expected. Use your journal to document them. The discomfort itself is informative --- it reveals how deeply habitual your digital engagement had become.</p>
             ),
           },
           {

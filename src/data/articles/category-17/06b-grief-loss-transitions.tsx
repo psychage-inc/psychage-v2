@@ -496,7 +496,7 @@ export const griefLossTransitionsArticlesB: Article[] = [
           <li><strong>Grief and relief:</strong> You grieve losses while also feeling relief when difficult phases end or death finally comes.</li>
         </ul>
         <p className="mb-6">
-          These contradictory feelings are entirely expected and normal---not signs of inadequate love or bad caregiving. The prolonged stress of watching someone decline while providing demanding care creates emotional complexity that most people have never encountered.
+          These contradictory feelings are entirely expected and common---not signs of inadequate love or bad caregiving. The prolonged stress of watching someone decline while providing demanding care creates emotional complexity that most people have never encountered.
         </p>
 
         <h2 id="healthy-processing" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Processing Anticipatory Grief Healthily</h2>
@@ -523,7 +523,7 @@ export const griefLossTransitionsArticlesB: Article[] = [
           <ul className="list-disc pl-5 space-y-2">
             <li>Anticipatory grief affects 70-80% of caregivers for terminally ill or declining loved ones</li>
             <li>Grieving before death doesn't mean giving up---it's honest recognition of ongoing loss</li>
-            <li>Contradictory emotions (love/resentment, hope/wish for death) are normal responses to impossible situations</li>
+            <li>Contradictory emotions (love/resentment, hope/wish for death) are common responses to impossible situations</li>
             <li>Processing anticipatory grief during illness reduces complicated grief risk by 30% after death</li>
             <li>Caregiver support groups significantly reduce grief intensity and isolation</li>
             <li>You can grieve who they were while loving who they still are</li>

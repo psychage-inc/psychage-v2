@@ -1232,7 +1232,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
           <li>Consult with their medical team about care needs</li>
           <li>Explore financial options (Medicaid, VA benefits, long-term care insurance)</li>
           <li>Tour facilities and ask about staffing ratios, activities, and specialized care</li>
-          <li>Prepare for guilt --- it's normal, even when placement is the right choice</li>
+          <li>Prepare for guilt --- it's common, even when placement is the right choice</li>
           <li>Remember: you can still be an advocate and loving presence without being the hands-on caregiver</li>
         </ul>
 

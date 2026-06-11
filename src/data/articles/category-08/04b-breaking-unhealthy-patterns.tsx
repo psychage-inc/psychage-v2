@@ -2502,7 +2502,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: '5. Expect Imperfection',
               description: (
                 <p>
-                  You won't execute the replacement perfectly every time. That's normal. Success is using the replacement 60% of the time instead of 0%. Progress, not perfection.
+                  You won't execute the replacement perfectly every time. That's common. Success is using the replacement 60% of the time instead of 0%. Progress, not perfection.
                 </p>
               ),
             },

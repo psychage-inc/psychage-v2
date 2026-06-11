@@ -504,7 +504,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
           <li>Graduated return when possible (part-time increasing to full-time)</li>
           <li>Don't make big deal publicly---normal welcome back</li>
           <li>Regular check-ins in first weeks without being intrusive</li>
-          <li>Be prepared for non-linear recovery---setbacks are normal</li>
+          <li>Be prepared for non-linear recovery---setbacks are common</li>
         </ul>
 
         <h2 id="manager-wellbeing" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

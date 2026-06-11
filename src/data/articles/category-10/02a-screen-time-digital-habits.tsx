@@ -1272,7 +1272,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
             { feature: 'FOMO', values: ['Fear of missing important info', 'Test it: What did you actually miss after 30 days?'] },
             { feature: 'Work requirements', values: ['Employer expects availability', 'Set communication hours, use do-not-disturb'] },
             { feature: 'Boredom', values: ['What do I do with free time?', 'Prepare a list of meaningful alternatives'] },
-            { feature: 'Relapse', values: ['I downloaded the app again', 'Normal. Delete again. It gets easier with practice'] },
+            { feature: 'Relapse', values: ['I downloaded the app again', 'Common. Delete again. It gets easier with practice'] },
           ]}
           highlightColumn={1}
         />

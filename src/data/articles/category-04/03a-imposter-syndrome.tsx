@@ -134,7 +134,7 @@ export const imposterSyndromeArticlesA: Article[] = [
             { feature: 'Receives promotion', values: ['Recognition of demonstrated skills', 'They made a mistake selecting me'] },
             { feature: 'Positive peer feedback', values: ['Validation of contribution', "They're just being polite"] },
             { feature: 'Completes challenging project', values: ['Evidence of competence', 'I just got lucky this time'] },
-            { feature: 'Makes a small mistake', values: ['Normal part of learning', "Proof I'm a fraud"] },
+            { feature: 'Makes a small mistake', values: ['Common part of learning', "Proof I'm a fraud"] },
           ]}
           highlightColumn={2}
         />
@@ -444,7 +444,7 @@ export const imposterSyndromeArticlesA: Article[] = [
           title="Natural Genius vs. Growth Mindset"
           columns={['Belief System', 'Natural Genius (Fixed)', 'Growth Mindset']}
           items={[
-            { feature: 'Struggling with new skill', values: ['Means I lack talent', 'Normal part of learning'] },
+            { feature: 'Struggling with new skill', values: ['Means I lack talent', 'Common part of learning'] },
             { feature: 'Needing multiple attempts', values: ["Proof I'm not naturally good", 'Evidence of progress'] },
             { feature: 'Others seem effortless', values: ['They have innate ability I lack', "They've likely practiced more"] },
             { feature: 'Effort required', values: ['Sign of inadequacy', 'Investment in mastery'] },
@@ -758,7 +758,7 @@ export const imposterSyndromeArticlesA: Article[] = [
             },
             {
               feature: 'Make a mistake',
-              values: ['Normal part of learning', "Proof I'm not qualified", 'Catastrophize, ruminate excessively'],
+              values: ['Common part of learning', "Proof I'm not qualified", 'Catastrophize, ruminate excessively'],
             },
           ]}
           highlightColumn={2}
@@ -1008,7 +1008,7 @@ export const imposterSyndromeArticlesA: Article[] = [
                     Academia values specialization and deep knowledge. Students transition from being "good at school" to studying subjects at the frontier of human knowledge, often taught by world experts. The gap between undergraduate confidence and graduate-level expectations can feel unbridgeable.
                   </p>
                   <p>
-                    <strong>The fraud trigger:</strong> "Everyone here seems to know so much more than me" becomes proof of not belonging, even though feeling behind is a normal part of entering specialized study.
+                    <strong>The fraud trigger:</strong> "Everyone here seems to know so much more than me" becomes proof of not belonging, even though feeling behind is a common part of entering specialized study.
                   </p>
                 </div>
               ),
@@ -1219,7 +1219,7 @@ export const imposterSyndromeArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Academia creates conditions where imposter syndrome thrives: ambiguous standards, public evaluation, peer comparison, and intellectual identity at stake. The majority of students in competitive programs experience it. This is not because they lack ability---it's because the academic environment intensifies normal self-doubt. Recognizing the pattern and its prevalence is the first step toward reclaiming your sense of competence.
+            Academia creates conditions where imposter syndrome thrives: ambiguous standards, public evaluation, peer comparison, and intellectual identity at stake. The majority of students in competitive programs experience it. This is not because they lack ability---it's because the academic environment intensifies common self-doubt. Recognizing the pattern and its prevalence is the first step toward reclaiming your sense of competence.
           </p>
         </ArticleCallout>
       </>

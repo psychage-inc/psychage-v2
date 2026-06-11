@@ -396,7 +396,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
             <strong>Find a therapist.</strong> Use directories like Psychology Today, Open Path Collective, or your insurance provider's list. Look for someone who specializes in working with men or uses CBT/behavioral approaches.
           </li>
           <li>
-            <strong>Give it time.</strong> The first therapist might not be the right fit—that's normal. Don't give up after one session.
+            <strong>Give it time.</strong> The first therapist might not be the right fit—that's common. Don't give up after one session.
           </li>
           <li>
             <strong>Tell someone you trust.</strong> Let a partner, friend, or family member know you're struggling. Just saying it out loud reduces the weight of carrying it alone.

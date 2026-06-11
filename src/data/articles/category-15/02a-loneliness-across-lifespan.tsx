@@ -949,7 +949,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Research shows that people naturally narrow their social networks as they age <Citation id="3" index={3} source="Developmental Psychology" year="2018" tier={1} />. This is developmentally normal --- not a problem.
+                    Research shows that people naturally narrow their social networks as they age <Citation id="3" index={3} source="Developmental Psychology" year="2018" tier={1} />. This is developmentally common --- not a problem.
                   </p>
                   <p className="mb-4">
                     <strong>Why this happens:</strong> You become more selective about who deserves your limited time and energy. You prioritize depth over breadth.
@@ -1075,7 +1075,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          This decline is normal. The question is whether you maintain a few high-quality connections as your network shrinks.
+          This decline is common. The question is whether you maintain a few high-quality connections as your network shrinks.
         </p>
 
         <h2 id="strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1439,7 +1439,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
             {
               title: 'Name the Loneliness',
               description: (
-                <p>Acknowledge that you feel lonely. This is not failure, ingratitude, or a sign you don't love your baby. It's a normal response to a major life transition.</p>
+                <p>Acknowledge that you feel lonely. This is not failure, ingratitude, or a sign you don't love your baby. It's a common response to a major life transition.</p>
               ),
             },
             {

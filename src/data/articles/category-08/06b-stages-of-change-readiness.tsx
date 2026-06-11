@@ -548,7 +548,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
     id: catId(57),
     slug: 'relapse-why-setbacks-are-normal-and-how-to-get-back-on-track',
     status: 'archived',
-    title: 'Relapse: Why Setbacks Are Normal and How to Get Back on Track',
+    title: 'Relapse: Why Setbacks Are Common and How to Get Back on Track',
     description: 'Understand the difference between a lapse and relapse, explore why setbacks happen, and learn evidence-based strategies to recover without shame or giving up.',
     image: "/images/articles/cat08/cover-057.svg",
     category: CATEGORY_HABITS_MOTIVATION,

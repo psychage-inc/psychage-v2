@@ -91,7 +91,7 @@ The extended duration of disaster response operations—often lasting days to we
 
 ## What You Can Try
 
-- **If you are a SAR volunteer experiencing psychological distress**, recognize that your reactions are normal responses to abnormal experiences. Contact the Crisis Text Line (text HOME to 741741), the 988 Suicide & Crisis Lifeline, or a mental health provider experienced with first responder populations.
+- **If you are a SAR volunteer experiencing psychological distress**, recognize that your reactions are common responses to abnormal experiences. Contact the Crisis Text Line (text HOME to 741741), the 988 Suicide & Crisis Lifeline, or a mental health provider experienced with first responder populations.
 
 - **Debrief after significant operations.** Even informal group debriefing—sharing experiences, normalizing reactions, checking on each other—can buffer the psychological impact of traumatic events.
 

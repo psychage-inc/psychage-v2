@@ -795,7 +795,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           Any honest guide to changing technology habits must acknowledge that setbacks are
-          a normal and expected part of the process. You will have days when you fall back
+          a common and expected part of the process. You will have days when you fall back
           into old patterns --- scrolling for an hour without noticing, checking email
           compulsively during a stressful period, or abandoning a boundary that you had
           maintained for weeks. These moments do not represent failure. They represent the
@@ -2197,7 +2197,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
         <p className="mb-6">
           It is important to approach these exercises with realistic expectations about the
           pace of change. You will not remember to use them consistently at first --- this is
-          normal and expected. The goal is not perfection but gradual increase in the
+          common and expected. The goal is not perfection but gradual increase in the
           percentage of device interactions that involve some degree of conscious awareness.
           If you currently have near-zero awareness of your phone pickups, catching even
           five per day represents a meaningful shift. Over weeks and months, the percentage

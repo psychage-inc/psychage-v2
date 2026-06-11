@@ -147,7 +147,7 @@ export const supportingWellbeingArticlesB: Article[] = [
           in a place you once knew intimately.
         </p>
         <p className="mb-6">
-          Understanding that these are normal, documented responses --- not signs that you are
+          Understanding that these are common, documented responses --- not signs that you are
           failing --- is critical. A 2023 longitudinal study found that people who accepted the
           identity shift and actively worked to construct a "new professional self" rather than
           trying to replicate their old one reported significantly better psychological
@@ -1017,7 +1017,7 @@ export const supportingWellbeingArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           Start where you are. If self-compassion feels uncomfortable or even fraudulent at
-          first, that is normal --- years of self-criticism have built strong neural pathways
+          first, that is common --- years of self-criticism have built strong neural pathways
           that will not reroute overnight. But the research is consistent: the more you
           practice, the more natural it becomes, and the more your body responds to that
           kindness in measurable, physiological ways<Citation id="4" index={4} />. You
@@ -1199,7 +1199,7 @@ export const supportingWellbeingArticlesB: Article[] = [
             If you are experiencing thoughts of self-harm or suicide during the disability
             application process, please reach out to the 988 Suicide and Crisis Lifeline
             (call or text 988) or the Crisis Text Line (text HOME to 741741). Your distress
-            is a normal response to an extraordinarily stressful process --- not evidence of
+            is a common response to an extraordinarily stressful process --- not evidence of
             weakness. You deserve support right now.
           </p>
         </ArticleCallout>
@@ -1424,8 +1424,8 @@ export const supportingWellbeingArticlesB: Article[] = [
               <span>Bring a support person if permitted. Do not try to present your "best
               self" --- describe your honest, average, and worst functioning. Take notes
               immediately afterward while the experience is fresh. Schedule recovery time.
-              Know that feeling shaken afterward is completely
-              normal<Citation id="10" index={10} />.</span>
+              Know that feeling shaken afterward is
+              common<Citation id="10" index={10} />.</span>
             ),
           },
           {

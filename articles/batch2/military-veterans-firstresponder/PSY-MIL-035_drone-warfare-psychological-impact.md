@@ -85,7 +85,7 @@ Litz and colleagues (2009) described moral injury as damage to one's moral consc
 
 ## What You Can Try
 
-- **If you are an RPA operator experiencing psychological distress**, recognize that your experience is valid and your reactions are normal responses to extraordinary demands. Physical safety does not prevent psychological injury. Contact your unit's embedded mental health provider or the Military OneSource helpline (1-800-342-9647).
+- **If you are an RPA operator experiencing psychological distress**, recognize that your experience is valid and your reactions are common responses to extraordinary demands. Physical safety does not prevent psychological injury. Contact your unit's embedded mental health provider or the Military OneSource helpline (1-800-342-9647).
 
 - **Address the commute between worlds.** Develop deliberate transition rituals between your operational shift and your home life—a drive-time decompression routine, a physical activity that marks the shift from one world to another, or a brief mindfulness practice that creates the psychological boundary that geographic separation does not provide.
 

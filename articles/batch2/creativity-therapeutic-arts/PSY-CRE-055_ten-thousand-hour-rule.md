@@ -201,7 +201,7 @@ Pushing too hard causes:
 - Rest days (not practicing every day)
 - Play alongside practice (enjoyable, non-evaluative creating)
 - Variation (not monotonous grinding)
-- Self-compassion (progress isn't linear—setbacks normal)
+- Self-compassion (progress isn't linear—setbacks common)
 
 **Warning signs**:
 - Dreading practice
@@ -286,7 +286,7 @@ Feedback makes practice deliberate—without it, you're guessing.
 
 **Variation**: Different creative activities prevent monotony.
 
-**Self-compassion**: Progress isn't linear—plateaus, setbacks normal.
+**Self-compassion**: Progress isn't linear—plateaus, setbacks common.
 
 **6. Enjoy the Process**:
 

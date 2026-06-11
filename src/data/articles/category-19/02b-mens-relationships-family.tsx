@@ -1792,7 +1792,7 @@ export const mensRelationshipsFamilyArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           Not all dating anxiety requires professional intervention. Some degree of
-          nervousness in romantic contexts is normal and may even be adaptive --- it signals
+          nervousness in romantic contexts is common and may even be adaptive --- it signals
           that something matters to you. The line between normal nervousness and clinical
           anxiety is defined by impact: when the anxiety prevents you from pursuing
           connection, causes significant distress, or leads to patterns of avoidance that

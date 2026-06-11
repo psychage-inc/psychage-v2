@@ -1143,7 +1143,7 @@ export const buildingConfidenceArticlesA: Article[] = [
           columns={['Situation', 'Fixed Mindset Response', 'Growth Mindset Response']}
           items={[
             { feature: 'Feeling challenged', values: ['Threat to innate ability', 'Opportunity to develop new skills'] },
-            { feature: 'Making mistakes', values: ['Evidence of permanent failure', 'Normal part of the learning process'] },
+            { feature: 'Making mistakes', values: ['Evidence of permanent failure', 'Common part of the learning process'] },
             { feature: 'Experiencing discomfort', values: ['Signal to quit immediately', 'Signal of productive growth'] },
             { feature: 'Seeing others succeed', values: ['Threatening to self-worth', 'Inspiring and informative'] },
             { feature: 'Receiving criticism', values: ['Personal attack', 'Useful feedback to incorporate'] },
@@ -1595,7 +1595,7 @@ export const buildingConfidenceArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaways">
           <ul className="list-disc pl-5 space-y-2">
-            <li>Social comparison is a normal human tendency, not a character flaw, but chronic upward comparison systematically erodes well-being</li>
+            <li>Social comparison is a common human tendency, not a character flaw, but chronic upward comparison systematically erodes well-being</li>
             <li>Social media amplifies comparison by exposing you to curated highlights from millions of people simultaneously</li>
             <li>The four main comparison traps are the highlight reel effect, composite comparison, moving goalposts, and the asymmetric lens</li>
             <li>Mindfulness, self-compassion, gratitude, and self-referenced standards are the most effective evidence-based strategies</li>

@@ -287,7 +287,7 @@ export const understandingEmotionsArticles: Article[] = [
             { feature: 'Number of emotions', values: ['6 discrete categories', 'Infinite points on two dimensions'] },
             { feature: 'How emotions relate', values: ['Separate and distinct', 'Blend and overlap'] },
             { feature: 'Intensity', values: ['On or off', 'Gradual, from subtle to intense'] },
-            { feature: 'Mixed feelings', values: ['Hard to explain', 'Expected and normal'] },
+            { feature: 'Mixed feelings', values: ['Hard to explain', 'Expected and common'] },
             { feature: 'Cultural variation', values: ['Claims universality', 'Accounts for cultural differences'] },
           ]}
           highlightColumn={2}
@@ -327,7 +327,7 @@ export const understandingEmotionsArticles: Article[] = [
           The spectrum model is not just more scientifically accurate. It is more practically useful. When you think of emotions as existing on a spectrum, three things change:
         </p>
         <p className="mb-6">
-          <strong>First, mixed feelings make sense.</strong> You can feel excited and nervous about a job interview at the same time. You can feel relief and sadness when a difficult chapter of your life ends. These blends are normal, and naming both parts gives you a fuller picture <Citation id="7" index={7} source="Annual Review of Psychology" year="2021" tier={1} />.
+          <strong>First, mixed feelings make sense.</strong> You can feel excited and nervous about a job interview at the same time. You can feel relief and sadness when a difficult chapter of your life ends. These blends are common, and naming both parts gives you a fuller picture <Citation id="7" index={7} source="Annual Review of Psychology" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>Second, you catch emotions earlier.</strong> On the box model, you might not notice anger until it reaches full intensity. On the spectrum model, you can detect the mild irritation at a 2 out of 10 before it escalates to the 8 that makes you say something you regret.
@@ -367,7 +367,7 @@ export const understandingEmotionsArticles: Article[] = [
 
         <BeforeAfter
           before={{ title: 'Box Model Thinking', content: <ul className="list-disc pl-5 space-y-2"><li>"I feel bad" (vague, unhelpful)</li><li>"I shouldn't feel this way" (self-judgment)</li><li>Mixed feelings seem confusing</li><li>Emotions feel like on/off switches</li></ul> }}
-          after={{ title: 'Spectrum Thinking', content: <ul className="list-disc pl-5 space-y-2"><li>"I feel disappointed and a little relieved" (precise, useful)</li><li>"This is where I am on the map right now" (acceptance)</li><li>Mixed feelings are expected and normal</li><li>Emotions shift gradually, giving you time to respond</li></ul> }}
+          after={{ title: 'Spectrum Thinking', content: <ul className="list-disc pl-5 space-y-2"><li>"I feel disappointed and a little relieved" (precise, useful)</li><li>"This is where I am on the map right now" (acceptance)</li><li>Mixed feelings are expected and common</li><li>Emotions shift gradually, giving you time to respond</li></ul> }}
         />
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1112,7 +1112,7 @@ export const understandingEmotionsArticles: Article[] = [
           type="multiple"
           items={[
             { id: 'challenge1', title: 'I feel guilty for needing more downtime than others', content: <p>This is a misalignment between your temperament and cultural expectations, not a personal failing. Your nervous system processes information more thoroughly, which requires more recovery time. That is a neurological reality, not a weakness. Frame it as you would any other biological need: you would not feel guilty for needing sleep.</p> },
-            { id: 'challenge2', title: 'People call me "too sensitive" or tell me to toughen up', content: <p>This reflects their lack of understanding about temperament diversity, not a deficit in you. You can educate them ("Research shows about 20% of people process information more deeply — it is a normal variation") or decide the relationship is not worth the energy. Not everyone needs to understand you.</p> },
+            { id: 'challenge2', title: 'People call me "too sensitive" or tell me to toughen up', content: <p>This reflects their lack of understanding about temperament diversity, not a deficit in you. You can educate them ("Research shows about 20% of people process information more deeply — it is a common variation") or decide the relationship is not worth the energy. Not everyone needs to understand you.</p> },
             { id: 'challenge3', title: 'I absorb other people\'s emotions and it drains me', content: <p>This is high empathy combined with permeable boundaries. Practice distinguishing between your emotions and theirs. Ask: "Is this feeling mine, or am I picking it up from someone else?" Build in transition rituals (washing hands, changing clothes, brief meditation) after emotionally intense interactions.</p> },
             { id: 'challenge4', title: 'I avoid situations because I know they will overwhelm me', content: <p>Avoidance protects you short-term but shrinks your life long-term. The goal is not to eliminate overstimulation but to manage it. Exposure with recovery time (attending the event but leaving after an hour, bringing noise-canceling headphones) builds tolerance without forcing yourself into prolonged overwhelm.</p> },
           ]}
@@ -1421,7 +1421,7 @@ export const understandingEmotionsArticles: Article[] = [
     status: 'published',
     title: 'Mixed Emotions: Why You Can Feel Two Contradictory Things at Once',
     description:
-      'Feeling happy and sad at the same time is not confusion --- it is a sign of emotional complexity. Learn why mixed emotions are normal, healthy, and even beneficial.',
+      'Feeling happy and sad at the same time is not confusion --- it is a sign of emotional complexity. Learn why mixed emotions are common, healthy, and even beneficial.',
     image: '/images/articles/cat01/cover-009.svg',
     category: CATEGORY_EMOTIONAL_REGULATION,
     readTime: 6,
@@ -1474,7 +1474,7 @@ export const understandingEmotionsArticles: Article[] = [
           For years, psychologists debated whether people could feel positive and negative emotions simultaneously. Research by Jeff Larsen and colleagues settled the question: yes, they can. In studies using moment-to-moment emotional tracking, participants regularly reported feeling happy and sad at the same time, particularly during meaningful life events <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="2001" tier={1} />.
         </p>
         <p className="mb-6">
-          Mixed emotions are not confusion. They are what researchers call <strong>emotional complexity</strong> --- the capacity to hold multiple, even contradictory, emotional states simultaneously. And the research suggests this capacity is not just normal --- it may be beneficial <Citation id="3" index={3} source="Psychological Bulletin" year="2021" tier={1} />.
+          Mixed emotions are not confusion. They are what researchers call <strong>emotional complexity</strong> --- the capacity to hold multiple, even contradictory, emotional states simultaneously. And the research suggests this capacity is not just common --- it may be beneficial <Citation id="3" index={3} source="Psychological Bulletin" year="2021" tier={1} />.
         </p>
 
         <h2 id="evidence-based-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1526,7 +1526,7 @@ export const understandingEmotionsArticles: Article[] = [
           When Self-Help Isn't Enough
         </h2>
         <p className="mb-6">
-          Mixed emotions are normal. But if you feel chronically torn, unable to make decisions because of competing emotions, or emotionally paralyzed by ambivalence, this may indicate deeper unresolved conflicts that a therapist can help you work through <Citation id="8" index={8} source="APA" year="2023" tier={3} />.
+          Mixed emotions are common. But if you feel chronically torn, unable to make decisions because of competing emotions, or emotionally paralyzed by ambivalence, this may indicate deeper unresolved conflicts that a therapist can help you work through <Citation id="8" index={8} source="APA" year="2023" tier={3} />.
         </p>
       </>
     ),

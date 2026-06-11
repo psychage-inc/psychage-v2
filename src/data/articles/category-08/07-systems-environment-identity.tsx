@@ -420,7 +420,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    When you first claim a new identity, it feels fake. "I'm a runner" sounds absurd when you've only jogged twice. This is normal—your current self-concept hasn't caught up to your desired identity yet.
+                    When you first claim a new identity, it feels fake. "I'm a runner" sounds absurd when you've only jogged twice. This is common—your current self-concept hasn't caught up to your desired identity yet.
                   </p>
                   <p className="mb-4">
                     <strong>Strategy:</strong> Start with "I'm becoming..." language. "I'm becoming someone who prioritizes movement" feels more honest than "I am an athlete" when you're just starting. As evidence accumulates, the language can shift. The key is to claim the identity direction, not the end state <Citation id="7" index={7} source="Journal of Experimental Psychology: General" year="2021" tier={1} />.
@@ -459,7 +459,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           ]}
         />
 
-        <h2 id="identity-change-is-messy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Identity Change Is Messy (And That's Normal)</h2>
+        <h2 id="identity-change-is-messy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Identity Change Is Messy (And That's Common)</h2>
         <p className="mb-6">
           You won't wake up transformed. Some days you'll act in alignment with your desired identity;
           other days you won't. That's not failure—that's the process. What matters is the
@@ -2406,7 +2406,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
             {
               title: 'Trust the Plateau',
               content:
-                "Months 1-6 will feel like nothing is happening. That's normal. Your job is to show up anyway. The compounding phase will arrive --- but only if you persist through the valley.",
+                "Months 1-6 will feel like nothing is happening. That's common. Your job is to show up anyway. The compounding phase will arrive --- but only if you persist through the valley.",
             },
             {
               title: 'Stack Wins Over Time',

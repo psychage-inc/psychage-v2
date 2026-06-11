@@ -112,7 +112,7 @@ export const specificMedicalConditionsArticlesA: Article[] = [
         <p className="mb-6">
           The moment of diagnosis is often described as a psychological fracture. Time seems to split into
           "before" and "after." Many people report feeling disconnected from their surroundings, unable to
-          process information, or consumed by a sense of unreality. These acute stress responses are normal
+          process information, or consumed by a sense of unreality. These acute stress responses are common
           neurobiological reactions --- the brain's threat-detection systems are responding to what registers
           as a profound danger to survival.
         </p>

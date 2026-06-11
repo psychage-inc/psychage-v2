@@ -1329,7 +1329,7 @@ export const specificMedicalConditionsArticlesB: Article[] = [
         <p className="mb-6">
           Managing the psychological impact of chronic respiratory disease requires acknowledging a
           fundamental reality: breathlessness is frightening, and the fear it produces is not irrational.
-          It is a normal, neurobiologically driven response to a threat signal. The goal is not to eliminate
+          It is a common, neurobiologically driven response to a threat signal. The goal is not to eliminate
           that response but to modulate it --- to create enough psychological distance between the sensation
           of breathlessness and the interpretation of catastrophe that a person can function, engage, and
           live meaningfully despite impaired lung function.

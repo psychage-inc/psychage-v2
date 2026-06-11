@@ -803,7 +803,7 @@ export const mensHealthInterventions1ArticlesB: Article[] = [
         <p className="mb-6">
           The most important thing about starting a meditation practice is keeping expectations
           realistic. You are not going to feel transformed after one session. You might feel bored,
-          restless, or frustrated --- and that is completely normal. The benefit comes from consistency
+          restless, or frustrated --- and that is common. The benefit comes from consistency
           over weeks and months, not from any single session.
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-3">
@@ -1225,7 +1225,7 @@ export const mensHealthInterventions1ArticlesB: Article[] = [
             { title: 'Search existing groups', description: 'Visit mkp.org for ManKind Project chapters, evryman.com for EVRYMAN groups, or search "[your city] men\'s support group" for local options. Ask at community centers, houses of worship, or therapy practices. Many therapists know of local groups even if they do not run them.' },
             { title: 'Try virtual first if needed', description: 'If in-person feels like too much, both MKP and EVRYMAN offer virtual groups. Online groups provide real connection with less vulnerability than sitting in a room with strangers. Many men start online and transition to in-person once they are comfortable with the format.' },
             { title: 'Consider starting your own', description: 'If nothing exists in your area, invite three to five men to meet monthly. Set simple ground rules: confidentiality, no advice unless asked, equal time to share. You do not need training to create a space for honesty. Books like "Becoming a Man" by P. Patrick Horrigan or resources from MKP can provide structure.' },
-            { title: 'Be patient with the process', description: 'Authentic connection takes time. The first few meetings may feel awkward, superficial, or forced. That is normal. Trust builds through consistent presence. Commit to at least four sessions before evaluating whether a group is right for you.' },
+            { title: 'Be patient with the process', description: 'Authentic connection takes time. The first few meetings may feel awkward, superficial, or forced. That is common. Trust builds through consistent presence. Commit to at least four sessions before evaluating whether a group is right for you.' },
           ]}
         />
 
@@ -2045,7 +2045,7 @@ export const mensHealthInterventions1ArticlesB: Article[] = [
             { title: 'If you are seeking a mentor', description: 'Look first at men who are already in your life --- a colleague, a community leader, a family friend --- who embody qualities you want to develop. Reach out with a specific, genuine request. Most people are honored to be asked for guidance. If formal programs feel more comfortable, contact Big Brothers Big Sisters, your local VA, or professional associations in your field.' },
             { title: 'If you want to become a mentor', description: 'You do not need to be perfect. You need to be present, honest, and further along the path than the person you are mentoring. Contact Big Brothers Big Sisters (bbbs.org) for youth mentoring, or look for opportunities in your workplace, community, or house of worship. Even informal mentoring --- regularly investing time in a younger person who looks up to you --- creates measurable impact.' },
             { title: 'Commit to consistency', description: 'The single strongest predictor of mentoring effectiveness is duration and consistency. A mentor who shows up reliably for one hour per week for a year creates more impact than one who is intensely present for a month and then disappears. Building trust takes time, and trust is the foundation of everything mentorship offers.' },
-            { title: 'Model what matters most', description: 'The most transformative thing a male mentor can do is demonstrate emotional honesty. Talk about your failures, not just your successes. Admit when you do not know something. Show that asking for help is normal. The mentee is not just learning from your words --- he is learning from your example of what a man looks like.' },
+            { title: 'Model what matters most', description: 'The most transformative thing a male mentor can do is demonstrate emotional honesty. Talk about your failures, not just your successes. Admit when you do not know something. Show that asking for help is common. The mentee is not just learning from your words --- he is learning from your example of what a man looks like.' },
           ]}
         />
 

@@ -6,7 +6,7 @@ slug: flow-creativity
 category: "Creativity, Expression & Therapeutic Arts"
 subcategory: "Creative Process and Challenges"
 author: "Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
-clinical_reviewer: "Dr. Lena: Dobson, Ph.D. in Clinical Neuropsychology"
+clinical_reviewer: "Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
 date_published: "2026-03-30"
 keywords: ["flow state", "creative flow", "Csikszentmihalyi", "optimal experience", "deep work", "creative immersion", "peak performance", "flow psychology", "creative concentration", "absorption"]
 reading_time: "13 minutes"

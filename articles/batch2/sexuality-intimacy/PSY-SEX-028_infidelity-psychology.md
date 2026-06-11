@@ -79,7 +79,7 @@ The therapeutic framework for infidelity recovery typically follows three phases
 
 ## What You Can Try
 
-- **If you have been betrayed**, allow yourself to experience the full range of your emotional response. The pain, rage, grief, and confusion are normal responses to a genuine trauma. Seek individual therapy to process the trauma alongside any couples work.
+- **If you have been betrayed**, allow yourself to experience the full range of your emotional response. The pain, rage, grief, and confusion are common responses to a genuine trauma. Seek individual therapy to process the trauma alongside any couples work.
 
 - **If you have been unfaithful**, take full responsibility. End the affair completely. Be willing to answer questions honestly. Understand that your partner's distress is not an overreaction—it is the appropriate response to what happened.
 

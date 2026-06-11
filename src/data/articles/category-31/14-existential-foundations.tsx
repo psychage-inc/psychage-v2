@@ -837,7 +837,7 @@ export const existentialFoundationsArticles: Article[] = [
           self-esteem <Citation id="8" index={8} source="Journal of Consumer Psychology" year="2017" tier={1} />.
         </p>
         <p className="mb-6">
-          These defenses are not inherently pathological. They are normal human responses to an abnormal
+          These defenses are not inherently pathological. They are common human responses to an abnormal
           situation --- being the only species on Earth that knows it's going to die. Problems arise when
           the defenses become rigid, excessive, or unconscious. The person who works 80-hour weeks to build
           a legacy may be managing death anxiety they've never named. The person who responds with rage to
@@ -1103,7 +1103,7 @@ export const existentialFoundationsArticles: Article[] = [
           loneliness who is prescribed more social activity may feel increasingly alienated --- surrounded
           by people, attending events, and still feeling the same deep separateness. They may conclude
           that something is fundamentally wrong with them, when in fact what they're experiencing is a
-          normal feature of consciousness that requires a different kind of response: not more company,
+          common feature of consciousness that requires a different kind of response: not more company,
           but a different relationship with being alone.
         </p>
 

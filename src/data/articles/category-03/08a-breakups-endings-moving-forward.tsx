@@ -264,7 +264,7 @@ export const breakupsEndingsMovingForwardArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          While heartbreak is a normal grief process, certain signs indicate the need for professional support <Citation id="8" index={8} source="NIMH" year="2021" tier={2} />:
+          While heartbreak is a common grief process, certain signs indicate the need for professional support <Citation id="8" index={8} source="NIMH" year="2021" tier={2} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Persistent depression lasting beyond 6 months</li>
@@ -378,7 +378,7 @@ export const breakupsEndingsMovingForwardArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
-            Breakups don't follow a neat, predictable script. You'll move through emotional stages --- sometimes in order, sometimes in chaos, sometimes cycling back to places you thought you'd left behind. This is normal.
+            Breakups don't follow a neat, predictable script. You'll move through emotional stages --- sometimes in order, sometimes in chaos, sometimes cycling back to places you thought you'd left behind. This is common.
           </p>
           <p className="mb-6">
             While grief models suggest stages like denial, anger, bargaining, depression, and acceptance <Citation id="1" index={1} source="Death Studies" year="2019" tier={1} />, real-life breakup recovery is messier. Research shows wide variation in how people experience and sequence these emotions <Citation id="2" index={2} source="Journal of Social and Personal Relationships" year="2013" tier={1} />.
@@ -527,7 +527,7 @@ export const breakupsEndingsMovingForwardArticlesA: Article[] = [
               title: 'Why does loneliness feel worse at certain times?',
               content: (
                 <p>
-                  Loneliness peaks during times you'd normally be together: weekends, evenings, holidays, or during routines you shared. Environmental triggers reactivate memories. This is normal and will lessen as you build new routines and associations.
+                  Loneliness peaks during times you'd normally be together: weekends, evenings, holidays, or during routines you shared. Environmental triggers reactivate memories. This is common and will lessen as you build new routines and associations.
                 </p>
               ),
             },
@@ -627,7 +627,7 @@ export const breakupsEndingsMovingForwardArticlesA: Article[] = [
           <li>You feel stuck in anger or bargaining for extended periods</li>
         </ul>
         <p className="mb-6">
-          Grief is normal --- but you don't have to navigate it alone. Professional support can accelerate healing and prevent complications like chronic depression or unhealthy coping patterns.
+          Grief is common --- but you don't have to navigate it alone. Professional support can accelerate healing and prevent complications like chronic depression or unhealthy coping patterns.
         </p>
       </>
     ),

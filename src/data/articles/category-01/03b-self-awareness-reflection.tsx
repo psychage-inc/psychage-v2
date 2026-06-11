@@ -243,7 +243,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
           Almost everyone who tries mindfulness hits the same roadblocks. Knowing about them in advance takes the surprise away and keeps you from quitting too early.
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>"My mind won't stop racing."</strong> That is normal. The goal is not to stop thoughts. Every time you notice your mind has wandered and bring attention back, you have just completed one repetition of the exercise. A busy mind gives you more practice, not less.</li>
+          <li><strong>"My mind won't stop racing."</strong> That is common. The goal is not to stop thoughts. Every time you notice your mind has wandered and bring attention back, you have just completed one repetition of the exercise. A busy mind gives you more practice, not less.</li>
           <li><strong>"I feel more anxious, not less."</strong> For some people, slowing down initially surfaces feelings that were masked by busyness. This is not a sign of failure --- it is the beginning of awareness. If the anxiety feels manageable, stay with it. If it feels overwhelming, shorten the sessions or try eyes-open practice.</li>
           <li><strong>"I keep forgetting to practice."</strong> Habit stacking works better than willpower. Attach your mindfulness practice to something you already do every day: right after brushing your teeth, during your morning coffee, or in the car before you start the engine.</li>
           <li><strong>"I fall asleep."</strong> This happens often, especially with evening practice. Try sitting upright rather than lying down, or practice at a time when you are more alert. If you consistently fall asleep, your body may be telling you it needs rest more than meditation.</li>
@@ -532,7 +532,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaways">
           <ul className="list-disc pl-5 space-y-2">
-            <li>Emotional blind spots are feelings that influence you without your conscious awareness --- they are normal, not shameful.</li>
+            <li>Emotional blind spots are feelings that influence you without your conscious awareness --- they are common, not shameful.</li>
             <li>Blind spots develop through childhood conditioning, defense mechanisms, cultural norms, habit, and trauma.</li>
             <li>Hidden emotions live in your body as tension, pain, fatigue, and restlessness --- learning to read physical signals helps detect them.</li>
             <li>Overreactions, avoidance patterns, and recurring relationship conflicts are reliable clues to what you are not seeing.</li>
@@ -1094,7 +1094,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
         { title: 'Notice Self-Criticism', description: 'This week, when you catch yourself being harsh or critical ("What\'s wrong with me?", "I\'m so stupid", "I always mess this up"), pause and recognize that you\'re in self-criticism mode.' },
         { title: 'Use the Self-Compassion Break', description: 'Say to yourself: "This is a moment of suffering. Suffering is part of being human. May I be kind to myself right now." Place your hand on your chest as you say it. Feel the warmth and pressure.' },
         { title: 'Try the "Good Friend" Test', description: 'Ask yourself: "Would I say this to a close friend in the same situation?" If not, rewrite the internal message with the same care you would offer them. Write it down.' },
-        { title: 'Practice Three Times', description: 'Use the self-compassion break at least three times this week. It will feel awkward at first--that\'s normal. Self-compassion is a skill that strengthens with practice.' },
+        { title: 'Practice Three Times', description: 'Use the self-compassion break at least three times this week. It will feel awkward at first--that\'s common. Self-compassion is a skill that strengthens with practice.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Track Your Self-Compassion Practice',
@@ -1304,7 +1304,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
           Start with the self-compassion break because it is brief, portable, and does not require any special materials. Practice it three times this week when you notice self-critical thoughts. Common trigger moments include making a mistake at work, comparing yourself to others on social media, noticing a personal flaw in the mirror, or remembering something embarrassing.
         </p>
         <p className="mb-6">
-          It will feel awkward and possibly even wrong at first --- that is completely normal. If you have spent years in self-criticism mode, kindness toward yourself activates unfamiliar neural pathways. The discomfort is a sign that you are building something new, not a sign that you are doing it wrong. Self-compassion is a skill, not a feeling, and it strengthens with practice <Citation id="8" index={8} source="Handbook of Mindfulness and Self-Regulation" year="2015" tier={1} />.
+          It will feel awkward and possibly even wrong at first --- that is common. If you have spent years in self-criticism mode, kindness toward yourself activates unfamiliar neural pathways. The discomfort is a sign that you are building something new, not a sign that you are doing it wrong. Self-compassion is a skill, not a feeling, and it strengthens with practice <Citation id="8" index={8} source="Handbook of Mindfulness and Self-Regulation" year="2015" tier={1} />.
         </p>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1323,7 +1323,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
             <li>Self-criticism activates your threat system (cortisol, rigid thinking); self-compassion activates your care system (oxytocin, resilience).</li>
             <li>The three components of self-compassion are self-kindness, common humanity, and mindfulness.</li>
             <li>Self-compassion is not self-pity, self-indulgence, or lowering your standards --- it is treating yourself with the same care you offer others.</li>
-            <li>Start with the self-compassion break three times this week --- awkwardness is normal and fades with practice.</li>
+            <li>Start with the self-compassion break three times this week --- awkwardness is common and fades with practice.</li>
           </ul>
         </ArticleCallout>
       </>

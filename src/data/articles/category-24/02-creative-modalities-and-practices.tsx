@@ -841,7 +841,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
         <p className="mb-6">Adults have advantages: - More self-discipline and practice consistency - Clearer intrinsic motivation (not parent-forced) - Life experience informing emotional expression</p>
         <p className="mb-6"><strong>Beginner-Friendly Instruments</strong>: - <strong>Ukulele</strong>: Small, affordable, easy chords, forgiving sound - <strong>Piano/keyboard</strong>: Visual layout aids learning, immediate feedback - <strong>Drums/percussion</strong>: Rhythmic, physical, less pitch-dependent - <strong>Harmonica</strong>: Portable, cheap, blues and folk accessible - <strong>Voice</strong>: Free, immediate, always available</p>
         <p className="mb-6"><strong>Learning Approaches</strong>: - <strong>Apps</strong>: Simply Piano, Yousician, Flowkey (gamified learning) - <strong>YouTube tutorials</strong>: Free, specific songs, technique lessons - <strong>Community classes</strong>: Social learning, group support - <strong>Private lessons</strong>: Personalized instruction, accountability - <strong>Self-teaching</strong>: Books, online resources, experimentation</p>
-        <p className="mb-6"><strong>Managing Frustration</strong>: - Progress is non-linear (plateaus are normal) - Adult learners are self-critical—practice self-compassion - Focus on joy, not perfection - Play what you enjoy, not just exercises - Celebrate small milestones</p>
+        <p className="mb-6"><strong>Managing Frustration</strong>: - Progress is non-linear (plateaus are common) - Adult learners are self-critical—practice self-compassion - Focus on joy, not perfection - Play what you enjoy, not just exercises - Celebrate small milestones</p>
         <h3 id="music-making-as-emotional-expression" className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-10 mb-4 scroll-mt-32">Music-Making as Emotional Expression</h3>
         <p className="mb-6"><strong>Sound as Feeling</strong>:</p>
         <p className="mb-6">Music expresses emotions words can't capture: - Melancholy through minor keys and slow tempos - Joy through major keys and fast rhythms - Anger through loud, dissonant sounds - Peace through soft, flowing melodies</p>
@@ -1974,7 +1974,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['creative failure', 'creative resilience', 'rejection resilience', 'creative setbacks', 'failure learning'],
 
-    summary: 'Creative work guarantees failure—repeatedly. Writers collect rejection letters (J.K. Rowling\'s Harry Potter rejected 12 times; Stephen King\'s Carrie rejected 30 times). Painters create hundreds of pieces they discard. Musicians write songs that don\'t work. Entrepreneurs launch businesses that fold. This isn\'t exceptional—it\'s normal creative experience. Yet cultural narratives hide failure: we see success stories (bestselling book!) not the rejection journey (years of "no" before "yes"). This creates distorted expectation that successful creators don\'t fail, leading beginners to interpret their inevitable failures as evidence they lack talent or should quit. Research shows creative resilience—continuing despite setbacks—predicts long-term creative achievement more than initial talent. Resilience requires: reframing failure as data (not personal indictment), separating self-worth from creative outcomes, developing growth mindset (failures are learning, not fixed limits), building support systems that normalize struggle, and distinguishing between "this didn\'t work" and "I can\'t do this." Mental health dimension: Creative work makes failure highly personal—you made this thing; if it fails, doesn\'t that mean you failed? Learning to weather creative failure builds psychological resilience that generalizes beyond creativity: you discover you can survive disappointment, handle criticism, try again after setbacks, and persist despite uncertainty. These are life skills disguised as creative practice.',
+    summary: 'Creative work guarantees failure—repeatedly. Writers collect rejection letters (J.K. Rowling\'s Harry Potter rejected 12 times; Stephen King\'s Carrie rejected 30 times). Painters create hundreds of pieces they discard. Musicians write songs that don\'t work. Entrepreneurs launch businesses that fold. This isn\'t exceptional—it\'s a common creative experience. Yet cultural narratives hide failure: we see success stories (bestselling book!) not the rejection journey (years of "no" before "yes"). This creates distorted expectation that successful creators don\'t fail, leading beginners to interpret their inevitable failures as evidence they lack talent or should quit. Research shows creative resilience—continuing despite setbacks—predicts long-term creative achievement more than initial talent. Resilience requires: reframing failure as data (not personal indictment), separating self-worth from creative outcomes, developing growth mindset (failures are learning, not fixed limits), building support systems that normalize struggle, and distinguishing between "this didn\'t work" and "I can\'t do this." Mental health dimension: Creative work makes failure highly personal—you made this thing; if it fails, doesn\'t that mean you failed? Learning to weather creative failure builds psychological resilience that generalizes beyond creativity: you discover you can survive disappointment, handle criticism, try again after setbacks, and persist despite uncertainty. These are life skills disguised as creative practice.',
 
     keyFacts: [
       { text: 'Creative professionals experience far more rejection and failure than success', citationIndex: 1 },
@@ -4127,7 +4127,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
         <p className="mb-6"><strong>Coping with RSD</strong>:</p>
         <p className="mb-6"><strong>1. Recognize RSD is neurological, not character flaw</strong>: Your brain processes rejection differently—not weakness.</p>
         <p className="mb-6"><strong>2. Delay decisions</strong>: Don't quit creating or make major decisions during RSD episode. Wait 48-72 hours for emotions to regulate.</p>
-        <p className="mb-6"><strong>3. Ground in facts</strong>: "I received one rejection. That's statistically normal. It doesn't mean I'll never succeed."</p>
+        <p className="mb-6"><strong>3. Ground in facts</strong>: "I received one rejection. That's statistically common. It doesn't mean I'll never succeed."</p>
         <p className="mb-6"><strong>4. Use distraction intentionally</strong>: During acute RSD, engage in absorbing activity (not ruminating). Return to processing when calm.</p>
         <p className="mb-6"><strong>5. Consider medication</strong>: Some people find ADHD medications (if RSD is ADHD-related) reduce RSD intensity. Discuss with prescriber.</p>
         <p className="mb-6"><strong>6. Therapy</strong>: DBT skills (emotion regulation, distress tolerance) help manage RSD reactions.</p>
@@ -5650,7 +5650,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
         <p className="mb-6"><strong>Not relaxing hobby</strong>—deliberate practice requires: - Intense concentration (cognitively draining) - Frustration tolerance (working on weaknesses uncomfortable) - Ego management (confronting inadequacy repeatedly) - Delayed gratification (progress slow, effortful)</p>
         <p className="mb-6"><strong>Burnout Risk</strong> (Stambulova et al., 2009):</p>
         <p className="mb-6">Pushing too hard causes: - <strong>Physical injury</strong>: Overuse injuries (musicians' focal dystonia, athletes' stress fractures) - <strong>Psychological exhaustion</strong>: Emotional depletion, loss of motivation - <strong>Creative abandonment</strong>: Quitting entirely due to burnout</p>
-        <p className="mb-6"><strong>Sustainable practice requires</strong>: - Rest days (not practicing every day) - Play alongside practice (enjoyable, non-evaluative creating) - Variation (not monotonous grinding) - Self-compassion (progress isn't linear—setbacks normal)</p>
+        <p className="mb-6"><strong>Sustainable practice requires</strong>: - Rest days (not practicing every day) - Play alongside practice (enjoyable, non-evaluative creating) - Variation (not monotonous grinding) - Self-compassion (progress isn't linear—setbacks common)</p>
         <p className="mb-6"><strong>Warning signs</strong>: - Dreading practice - Physical pain (ignoring injuries) - Sleep problems - Irritability, depression - Performance decline despite practice increase</p>
         <p className="mb-6">If experiencing these—reduce intensity, seek support, prioritize wellbeing over "grinding."</p>
         <h3 id="myths-harming-creatives" className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-10 mb-4 scroll-mt-32">Myths Harming Creatives</h3>
@@ -5686,7 +5686,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
         <p className="mb-6"><strong>Rest days</strong>: No practice—physical and cognitive recovery.</p>
         <p className="mb-6"><strong>Sleep</strong>: 7-9 hours—skill consolidation happens during sleep.</p>
         <p className="mb-6"><strong>Variation</strong>: Different creative activities prevent monotony.</p>
-        <p className="mb-6"><strong>Self-compassion</strong>: Progress isn't linear—plateaus, setbacks normal.</p>
+        <p className="mb-6"><strong>Self-compassion</strong>: Progress isn't linear—plateaus, setbacks common.</p>
         <p className="mb-6"><strong>6. Enjoy the Process</strong>:</p>
         <p className="mb-6"><strong>If practice becomes purely joyless grinding</strong>—motivation collapses long-term.</p>
         <p className="mb-6"><strong>Maintain intrinsic satisfaction</strong>: - Celebrate small wins - Notice growth over time - Find beauty in practice itself - Remember why you started</p>
@@ -6090,7 +6090,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
         <p className="mb-6">Regular meditation: - Improves sustained attention - Reduces rumination - Enhances awareness</p>
         <p className="mb-6">Creates conditions for flow.</p>
         <p className="mb-6"><strong>7. Accept When Flow Doesn't Come</strong>:</p>
-        <p className="mb-6"><strong>Not every session will flow</strong>—that's normal.</p>
+        <p className="mb-6"><strong>Not every session will flow</strong>—that's common.</p>
         <p className="mb-6">Sometimes you work through resistance, grind, push.</p>
         <p className="mb-6">Sometimes you rest instead.</p>
         <p className="mb-6">Flow isn't requirement—it's gift when it arrives.</p>
@@ -6249,7 +6249,7 @@ export const creativeModalitiesAndPracticesArticles: Article[] = [
         <p className="mb-6"><strong>3. Transform what you take</strong>:</p>
         <p className="mb-6">Ask: "What would this be like if I added my experience, perspective, context?"</p>
         <p className="mb-6"><strong>4. Accept that early work is derivative</strong>:</p>
-        <p className="mb-6">First novel sounds like favorite authors. First paintings copy admired styles. That's normal—keep going.</p>
+        <p className="mb-6">First novel sounds like favorite authors. First paintings copy admired styles. That's common—keep going.</p>
         <p className="mb-6"><strong>5. Focus on what only you can add</strong>:</p>
         <p className="mb-6">Your life experience, cultural context, personal obsessions—these can't be copied. Infuse work with these.</p>
         <h3 id="copying-as-respect-vs-theft" className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-10 mb-4 scroll-mt-32">Copying as Respect vs. Theft</h3>

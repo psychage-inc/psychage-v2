@@ -389,7 +389,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
         <ArticleCallout variant="key-takeaway" title="The Bottom Line">
           <p className="mb-4">Making friends as an adult is challenging for everyone. It requires deliberate effort, significant time investment (50-200+ hours), and resilience through inevitable rejection.</p>
           <p className="mb-4">The research is clear: proximity, similarity, and reciprocity create friendships. Join structured groups that meet regularly, initiate contact yourself, and let disclosure deepen gradually over time.</p>
-          <p>You're not failing if it's hard. You're experiencing normal adult friendship dynamics. Stay consistent, keep showing up, and the hours will eventually accumulate into meaningful connection.</p>
+          <p>You're not failing if it's hard. You're experiencing common adult friendship dynamics. Stay consistent, keep showing up, and the hours will eventually accumulate into meaningful connection.</p>
         </ArticleCallout>
       </>
     ),
@@ -2069,7 +2069,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Conflict in friendships is normal. What matters is how you handle it: with accountability, empathy, honest communication, and patience. Some friendships will end, and that's okay. The ones that survive conflict often become the deepest, most meaningful relationships in your life.</p>
+          <p>Conflict in friendships is common. What matters is how you handle it: with accountability, empathy, honest communication, and patience. Some friendships will end, and that's okay. The ones that survive conflict often become the deepest, most meaningful relationships in your life.</p>
         </ArticleCallout>
       </>
     ),

@@ -829,7 +829,7 @@ export const socialMediaPsychologicalImpactArticlesA: Article[] = [
 
         <ArticleCallout type="warning" title="When Doomscrolling Signals Something Deeper">
           <p>
-            Occasional difficulty pulling away from negative news is a normal human response to threatening events. However, if you find that you cannot stop consuming news even when it is clearly causing distress, if news consumption is interfering with sleep, work, or relationships on a regular basis, or if you feel a persistent sense of dread that does not lift, these may be signs of generalized anxiety that could benefit from professional support. The American Psychological Association recommends seeking help if news-related stress becomes unmanageable <Citation id="8" index={8} />.
+            Occasional difficulty pulling away from negative news is a common human response to threatening events. However, if you find that you cannot stop consuming news even when it is clearly causing distress, if news consumption is interfering with sleep, work, or relationships on a regular basis, or if you feel a persistent sense of dread that does not lift, these may be signs of generalized anxiety that could benefit from professional support. The American Psychological Association recommends seeking help if news-related stress becomes unmanageable <Citation id="8" index={8} />.
           </p>
         </ArticleCallout>
 

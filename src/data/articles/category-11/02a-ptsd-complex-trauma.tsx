@@ -35,7 +35,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
       { text: 'Evidence-based psychotherapies (CPT, PE, EMDR) have extensive research support and are first-line treatments recommended by WHO and APA', citationIndex: 5 },
       { text: 'About 70% of people with PTSD also experience sleep disorders, and 48% have co-occurring major depression', citationIndex: 7 },
     ],
-    sparkMoment: 'PTSD is not a sign of weakness—it\'s a normal response of a nervous system that experienced something abnormal, and with evidence-based treatment, healing is not just possible, it\'s expected.',
+    sparkMoment: 'PTSD is not a sign of weakness—it\'s a common response of a nervous system that experienced something abnormal, and with evidence-based treatment, healing is not just possible, it\'s expected.',
     practicalExercise: {
       title: 'Grounding Technique for Trauma Triggers',
       steps: [
@@ -134,7 +134,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
             Post-Traumatic Stress Disorder (PTSD) is a mental health condition that develops after experiencing or
-            witnessing a traumatic event. While it\'s normal to have distressing reactions after trauma, PTSD occurs
+            witnessing a traumatic event. While it\'s common to have distressing reactions after trauma, PTSD occurs
             when those reactions persist, intensify, or interfere with daily life for an extended period. Understanding
             PTSD is the first step toward recognizing it and getting effective treatment.
           </p>
@@ -159,7 +159,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         </p>
         <p className="mb-6">
           The key word is "disorder"---PTSD is not just the immediate shock or distress following trauma (which is
-          normal). It\'s a pattern of symptoms that persist for more than a month and significantly impair functioning.
+          common). It\'s a pattern of symptoms that persist for more than a month and significantly impair functioning.
         </p>
 
         <StatCard
@@ -727,7 +727,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         </p>
         <p className="mb-6">Look for a mental health professional who specializes in trauma and uses evidence-based treatments like CPT, PE, or EMDR. Don't be discouraged if the first therapist or treatment approach isn't the right fit---finding the right match is part of the process.</p>
         <p className="mb-6">
-          PTSD is not a sign of weakness. It\'s a normal response of a nervous system that experienced something
+          PTSD is not a sign of weakness. It\'s a common response of a nervous system that experienced something
           abnormal. With the right support, healing is not just possible---it\'s expected.
         </p>
       </>
@@ -2471,7 +2471,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          While some degree of vigilance is normal, seek help if hypervigilance:
+          While some degree of vigilance is common, seek help if hypervigilance:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">

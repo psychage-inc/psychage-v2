@@ -113,7 +113,7 @@ export const attachmentStylesArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="info">
-          <p>Most people don't fit perfectly into one category. You might be primarily secure but show anxious tendencies in romantic relationships, or lean avoidant except with very close friends. This is normal.</p>
+          <p>Most people don't fit perfectly into one category. You might be primarily secure but show anxious tendencies in romantic relationships, or lean avoidant except with very close friends. This is common.</p>
         </ArticleCallout>
 
         <h2 id="core-questions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1404,7 +1404,7 @@ export const attachmentStylesArticlesB: Article[] = [
           Moving toward earned security involves setbacks. Stressful life events (job loss, illness, breakups) can temporarily reactivate old patterns. You might regress to anxious clinging or avoidant withdrawal even after months of progress.
         </p>
         <p className="mb-6">
-          This is normal. The difference is that earned-secure individuals:
+          This is common. The difference is that earned-secure individuals:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Notice the regression faster</li>
@@ -1847,7 +1847,7 @@ export const attachmentStylesArticlesB: Article[] = [
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Respect growing autonomy while staying connected</li>
-          <li>Don't take rejection or distancing personally (it's developmentally normal)</li>
+          <li>Don't take rejection or distancing personally (it's developmentally common)</li>
           <li>Remain a safe haven even when they seem not to need you</li>
           <li>Model that adults can apologize and repair when they mess up</li>
         </ul>

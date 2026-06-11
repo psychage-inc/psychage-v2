@@ -6,7 +6,7 @@ slug: creative-copying-imitation
 category: "Creativity, Expression & Therapeutic Arts"
 subcategory: "Creative Modalities and Practices"
 author: "Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
-clinical_reviewer: "Dr. Lena Dobson, Ph.D. in Clinical Neuropsych ology"
+clinical_reviewer: "Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
 date_published: "2026-03-30"
 keywords: ["creative copying", "imitation learning", "artistic influence", "creative apprenticeship", "copying in art", "originality", "creative imitation", "learning through copying", "creative theft", "influence vs plagiarism"]
 reading_time: "16 minutes"
@@ -269,7 +269,7 @@ Ask: "What would this be like if I added my experience, perspective, context?"
 
 **4. Accept that early work is derivative**:
 
-First novel sounds like favorite authors. First paintings copy admired styles. That's normal—keep going.
+First novel sounds like favorite authors. First paintings copy admired styles. That's common—keep going.
 
 **5. Focus on what only you can add**:
 

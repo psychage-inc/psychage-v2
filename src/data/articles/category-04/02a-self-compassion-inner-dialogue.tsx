@@ -450,7 +450,7 @@ export const selfCompassionArticlesA: Article[] = [
               title: "'It feels uncomfortable or unfamiliar",
               content: (
                 <p>
-                  If you're used to harsh self-criticism, kindness feels strange. This discomfort is normal and temporary. With practice, self-compassion becomes more natural.
+                  If you're used to harsh self-criticism, kindness feels strange. This discomfort is common and temporary. With practice, self-compassion becomes more natural.
                 </p>
               ),
             },

@@ -647,7 +647,7 @@ export const friendshipsArticlesA: Article[] = [
           Maintaining Perspective
         </h2>
         <p className="mb-6">
-          It's normal for adult friendship formation to feel slow and effortful. The challenge isn't a reflection of your likability---it's a structural reality of adult life <Citation id="6" index={6} source="Journal of Clinical Psychology" year="2021" tier={1} />.
+          It's common for adult friendship formation to feel slow and effortful. The challenge isn't a reflection of your likability---it's a structural reality of adult life <Citation id="6" index={6} source="Journal of Clinical Psychology" year="2021" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway">

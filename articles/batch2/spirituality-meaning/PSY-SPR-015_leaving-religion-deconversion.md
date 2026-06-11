@@ -69,7 +69,7 @@ While everyone's journey is unique, research identifies common psychological pha
 
 Leaving religion is psychologically taxing. Here are the most common challenges, backed by research:
 
-**Grief and loss.** Deconversion involves multiple losses: your community (people you worshiped with for years), your identity (if you were "the Christian," who are you now?), your worldview (the story that made sense of everything), and sometimes your family (if they reject you for leaving). Research compares this to bereavement—it's the death of a former self and former world [5]. Grief is normal, and it takes time.
+**Grief and loss.** Deconversion involves multiple losses: your community (people you worshiped with for years), your identity (if you were "the Christian," who are you now?), your worldview (the story that made sense of everything), and sometimes your family (if they reject you for leaving). Research compares this to bereavement—it's the death of a former self and former world [5]. Grief is common, and it takes time.
 
 **Existential anxiety and uncertainty.** If you believed in heaven, divine purpose, and cosmic justice, losing those beliefs creates existential vertigo. What happens when we die? Does anything matter? Is there objective morality? Research on existential anxiety shows these questions can be paralyzing [11]. The transition from certainty to uncertainty is uncomfortable, even if the certainty was false.
 
@@ -93,7 +93,7 @@ Not everyone who deconverts experiences severe distress. Research identifies pro
 
 **New sources of meaning.** You don't have to replace religion with another religion, but you do need *something* that provides purpose, community, and moral framework. Research shows that people who develop new sources of meaning (secular ethics, social justice, creative work, relationships, nature) recover faster than those who feel adrift [3].
 
-**Patience with the process.** Deconversion takes time. Studies show the average journey from initial doubt to settled post-religious identity is 3-7 years [2]. Knowing this is normal—that you don't have to have it figured out immediately—reduces pressure and allows organic development.
+**Patience with the process.** Deconversion takes time. Studies show the average journey from initial doubt to settled post-religious identity is 3-7 years [2]. Knowing this is common—that you don't have to have it figured out immediately—reduces pressure and allows organic development.
 
 ## When Ex-Religious People Thrive
 

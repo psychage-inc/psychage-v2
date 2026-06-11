@@ -764,7 +764,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
               title: 'Honor your grief timeline',
               description: (
                 <p>
-                  Ignore social pressure to 'move on' after arbitrary timelines. Acute grief may last months or years. Changed-but-ongoing grief may last a lifetime. Both are normal. You get to decide what your grief journey looks like.
+                  Ignore social pressure to 'move on' after arbitrary timelines. Acute grief may last months or years. Changed-but-ongoing grief may last a lifetime. Both are common. You get to decide what your grief journey looks like.
                 </p>
               ),
             },

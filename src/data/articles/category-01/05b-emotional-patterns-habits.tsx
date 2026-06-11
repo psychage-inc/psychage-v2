@@ -896,7 +896,7 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
     summary: 'Emotional perfectionism is the unrealistic belief that you should only feel pleasant emotions. This creates secondary suffering--pain about your pain--and blocks authentic emotional processing. Radical acceptance and self-compassion are the antidotes to this toxic pattern.',
     keyFacts: [
       { text: 'Emotional perfectionism leads to chronic emotional suppression, which is linked to increased anxiety, depression, and physical health problems', citationIndex: 1 },
-      { text: 'Toxic positivity invalidates genuine struggle and creates shame around normal human emotions, making people less likely to seek help', citationIndex: 2 },
+      { text: 'Toxic positivity invalidates genuine struggle and creates shame around common human emotions, making people less likely to seek help', citationIndex: 2 },
       { text: 'Every emotion serves an adaptive function: sadness signals loss, anger signals boundary violations, fear signals threat', citationIndex: 4 },
       { text: 'Radical acceptance in DBT teaches that accepting emotions doesn\'t mean approving of them--it means stopping the exhausting fight against reality', citationIndex: 3 },
       { text: 'People who practice emotional acceptance report lower distress and better psychological flexibility than those who suppress emotions', citationIndex: 1 },
@@ -987,7 +987,7 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
           The Problem with Toxic Positivity
         </h2>
         <p className="mb-6">
-          Toxic positivity is the excessive and ineffective overgeneralization of a happy, optimistic state across all situations <Citation id="2" index={2} source="Journal of Humanistic Psychology" year="2020" tier={1} />. It invalidates genuine struggle and creates shame around normal human emotions.
+          Toxic positivity is the excessive and ineffective overgeneralization of a happy, optimistic state across all situations <Citation id="2" index={2} source="Journal of Humanistic Psychology" year="2020" tier={1} />. It invalidates genuine struggle and creates shame around common human emotions.
         </p>
         <p className="mb-6">
           Examples:
@@ -1418,7 +1418,7 @@ export const emotionalPatternsHabitsArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="info">
-          <p>The old pattern will still activate sometimes, even after the new one is established. That's normal. The goal isn't perfection---it's having a choice. You went from 100% autopilot to 70%, then 50%, then 30%. That's massive progress, even if it doesn't feel like it.</p>
+          <p>The old pattern will still activate sometimes, even after the new one is established. That's common. The goal isn't perfection---it's having a choice. You went from 100% autopilot to 70%, then 50%, then 30%. That's massive progress, even if it doesn't feel like it.</p>
         </ArticleCallout>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

@@ -202,7 +202,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
               ),
             },
             {
-              title: "Is it normal to feel relieved or even grateful after some losses?",
+              title: "Is it common to feel relieved or even grateful after some losses?",
               content: (
                 <p>Yes, absolutely. Relief is a common and healthy grief response, especially after a loved one's long illness or suffering. You might feel grateful they're no longer in pain, relieved that caregiving demands have ended, or thankful the uncertainty is over. These feelings don't mean you didn't love them or aren't grieving---they coexist with sadness and loss. Complex, mixed emotions are the norm in grief, not a sign of inadequate mourning.</p>
               ),
@@ -243,7 +243,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaways">
           <ul className="list-disc pl-6 space-y-3">
-            <li>Cumulative losses are a normal part of later life but create unique grief challenges that differ from single bereavements</li>
+            <li>Cumulative losses are a common part of later life but create unique grief challenges that differ from single bereavements</li>
             <li>Bereavement overload occurs when losses accumulate faster than they can be processed, depleting emotional reserves</li>
             <li>Older adults face higher rates of complicated grief due to multiple simultaneous losses, shrinking support networks, and physical health vulnerabilities</li>
             <li>Healthy grieving involves honoring each loss individually while maintaining connection to life and remaining relationships</li>
@@ -436,7 +436,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
           Adjusting to widowhood isn't about "moving on" or "getting over" your spouse's death---it's about learning to carry your love and memories forward while also rebuilding a life that works for you as a single person. This dual process takes time, typically 18-24 months before the intense acute grief softens into something more manageable.
         </p>
         <p className="mb-6">
-          <strong>Allow time for both grieving and practical learning.</strong> The first year involves intense grief while simultaneously learning new skills and taking over responsibilities your spouse handled. This is exhausting and overwhelming---and that's normal. Don't expect to master everything immediately. It's okay to hire help for things your spouse did (home repairs, tax preparation, yard work) rather than forcing yourself to learn everything alone.
+          <strong>Allow time for both grieving and practical learning.</strong> The first year involves intense grief while simultaneously learning new skills and taking over responsibilities your spouse handled. This is exhausting and overwhelming---and that's common. Don't expect to master everything immediately. It's okay to hire help for things your spouse did (home repairs, tax preparation, yard work) rather than forcing yourself to learn everything alone.
         </p>
         <p className="mb-6">
           <strong>Seek widowhood-specific support.</strong> General grief support is helpful, but groups specifically for widowed older adults provide understanding from people navigating the same identity reconstruction. Members know what it's like to make dinner for one, to attend events alone, to face holidays without their person. This peer support significantly improves adjustment outcomes <Citation id="5" index={5} source="The Gerontologist" year="2022" tier={1} />.
@@ -615,7 +615,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
           The element of <strong>control</strong> matters immensely. When you choose to retire, you can plan the transition, prepare psychologically, build alternative sources of identity and purpose before leaving work. When retirement is forced upon you---especially suddenly---you're thrust into this new life stage without preparation. The loss feels more like a rejection or failure than a chosen transition.
         </p>
         <p className="mb-6">
-          Those forced to retire due to health often face a double burden: managing both declining health and identity loss simultaneously. Those laid off or pushed out may carry anger, resentment, and grief for the career that ended before they were ready. These additional emotional challenges compound the normal difficulties of retirement adjustment.
+          Those forced to retire due to health often face a double burden: managing both declining health and identity loss simultaneously. Those laid off or pushed out may carry anger, resentment, and grief for the career that ended before they were ready. These additional emotional challenges compound the common difficulties of retirement adjustment.
         </p>
 
         <ArticleTabs
@@ -1155,7 +1155,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
             {
               title: "Is death anxiety a sign I haven't lived well or prepared properly?",
               content: (
-                <p>Not at all. Death anxiety is a common, normal response to mortality awareness---not a character failing or sign of inadequate preparation. Even people who've lived fulfilling lives, maintained strong relationships, completed advance planning, and hold comforting spiritual beliefs can still experience death anxiety. It's a human response to contemplating non-existence. What distinguishes adaptive from maladaptive responses isn't whether anxiety exists but whether it motivates purposeful action (addressing regrets, strengthening relationships, clarifying values) or leads to paralysis and avoidance. Some anxiety is normal; overwhelming anxiety that prevents living fully warrants support.</p>
+                <p>Not at all. Death anxiety is a common response to mortality awareness---not a character failing or sign of inadequate preparation. Even people who've lived fulfilling lives, maintained strong relationships, completed advance planning, and hold comforting spiritual beliefs can still experience death anxiety. It's a human response to contemplating non-existence. What distinguishes adaptive from maladaptive responses isn't whether anxiety exists but whether it motivates purposeful action (addressing regrets, strengthening relationships, clarifying values) or leads to paralysis and avoidance. Some anxiety is common; overwhelming anxiety that prevents living fully warrants support.</p>
               ),
             },
           ]}

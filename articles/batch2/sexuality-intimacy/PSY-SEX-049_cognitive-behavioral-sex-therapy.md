@@ -55,7 +55,7 @@ Barlow's work also revealed a paradox about anxiety's role in sexual response. F
 
 Nobre and Pinto-Gouveia (2006) systematically mapped the cognitive distortions most commonly associated with sexual dysfunction. Their research identified several characteristic patterns:
 
-**Catastrophizing.** "If I can't perform tonight, my partner will leave me." "If I don't orgasm, my partner will think I'm not attracted to them." Catastrophizing transforms ordinary sexual variability—a normal fluctuation in arousal, a night when orgasm doesn't happen—into evidence of catastrophic failure.
+**Catastrophizing.** "If I can't perform tonight, my partner will leave me." "If I don't orgasm, my partner will think I'm not attracted to them." Catastrophizing transforms ordinary sexual variability—a common fluctuation in arousal, a night when orgasm doesn't happen—into evidence of catastrophic failure.
 
 **All-or-nothing thinking.** "Either sex is perfect or it's a disaster." "If I lose my erection for even a moment, the whole encounter is ruined." This binary framework eliminates the middle ground where most real sexual experiences actually occur—imperfect, variable, sometimes awkward, and still satisfying.
 
@@ -85,7 +85,7 @@ The restructuring is not about replacing negative thoughts with unrealistically 
 
 McCarthy and Metz's (2007) "Good Enough Sex" (GES) model represents a cognitive behavioral intervention at the level of sexual beliefs rather than moment-to-moment cognitions. The GES model targets the perfectionist sexual expectations that maintain dysfunction by reframing realistic expectations:
 
-In the GES framework, satisfying sex doesn't require perfect performance; 85% of sexual encounters involve some degree of imperfection (a lost erection, a moment of distraction, an orgasm that doesn't happen), and this is normal. Sexual satisfaction comes from the overall quality of the couple's sexual life—not from any individual encounter's technical performance. Pleasure and connection are valued above performance metrics.
+In the GES framework, satisfying sex doesn't require perfect performance; 85% of sexual encounters involve some degree of imperfection (a lost erection, a moment of distraction, an orgasm that doesn't happen), and this is common. Sexual satisfaction comes from the overall quality of the couple's sexual life—not from any individual encounter's technical performance. Pleasure and connection are valued above performance metrics.
 
 Research on the GES model found that couples who adopted this framework reported significant reductions in performance anxiety, increased sexual frequency, and higher sexual satisfaction—suggesting that changing the meta-cognitive framework surrounding sex is at least as important as addressing specific encounter-level cognitions (McCarthy & Metz, 2012).
 

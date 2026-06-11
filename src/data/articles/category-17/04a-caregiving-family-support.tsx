@@ -283,7 +283,7 @@ export const caregivingFamilySupportArticlesA: Article[] = [
             title: 'With Support Groups',
             points: [
               'Connection: "Others get it--I am not alone."',
-              'Validation: "My feelings are normal, not personal failure."',
+              'Validation: "My feelings are common, not personal failure."',
               'Practical strategies: Learn what worked for others--behavior management, respite options, communication techniques.',
               'Emotional outlet: Safe space to express grief, anger, frustration without judgment.',
               'Resource sharing: Members share information about services, doctors, benefits, legal planning.',

@@ -736,7 +736,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           <li><strong>Pain diary</strong>: Track pain intensity alongside catastrophizing. You may notice pain decreases as catastrophizing reduces</li>
         </ul>
         <p className="mb-6">
-          Progress isn't linear. Some days you'll catch every catastrophic thought; other days they'll slip by unnoticed. That's normal. The goal isn't perfection---it's building awareness and practicing alternative responses.
+          Progress isn't linear. Some days you'll catch every catastrophic thought; other days they'll slip by unnoticed. That's common. The goal isn't perfection---it's building awareness and practicing alternative responses.
         </p>
 
         <h2 id="professional-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1498,7 +1498,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           "I Try to Accept Pain, But I Still Want It Gone"
         </h3>
         <p className="mb-6">
-          This is normal. Acceptance doesn't mean you like pain or stop wanting relief. It means you stop making pain relief a prerequisite for living. You can simultaneously accept pain's presence AND hope it improves AND seek appropriate treatment. These aren't contradictory.
+          This is common. Acceptance doesn't mean you like pain or stop wanting relief. It means you stop making pain relief a prerequisite for living. You can simultaneously accept pain's presence AND hope it improves AND seek appropriate treatment. These aren't contradictory.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">

@@ -726,7 +726,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
           Step 6: Expect and Manage Withdrawal
         </h2>
         <p className="mb-6">
-          The first 3-7 days after significantly reducing social media use can feel uncomfortable. This is normal withdrawal from a behavioral pattern your brain has come to expect. Common experiences include:
+          The first 3-7 days after significantly reducing social media use can feel uncomfortable. This is common withdrawal from a behavioral pattern your brain has come to expect. Common experiences include:
         </p>
 
         <StatCard
@@ -803,7 +803,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
         />
 
         <h2 id="relapse-prevention" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Step 7: Plan for Setbacks (They're Normal)
+          Step 7: Plan for Setbacks (They're Common)
         </h2>
         <p className="mb-6">
           You will have days where you slip back into old patterns. This doesn't mean failure---it means you're human. The key is how you respond to setbacks:
@@ -839,7 +839,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
               title: 'Self-Compassion Over Self-Criticism',
               content: (
                 <p>
-                  Research shows that self-criticism after setbacks predicts worse long-term outcomes. Practice self-compassion: "I slipped up. That's normal. What can I learn from this?" This approach increases persistence and ultimate success.
+                  Research shows that self-criticism after setbacks predicts worse long-term outcomes. Practice self-compassion: "I slipped up. That's common. What can I learn from this?" This approach increases persistence and ultimate success.
                 </p>
               ),
             },

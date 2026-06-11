@@ -87,7 +87,7 @@ Research and communication expertise suggest several principles for making small
 
 **Use the environment.** The physical environment provides a natural source of shared experience that can anchor small talk: the setting, the event, the weather, the food, the music. Comments about shared experience feel less forced than abstract questions because both parties have direct access to the referent.
 
-**Accept the discomfort.** Small talk will feel awkward sometimes, especially for people who are out of practice. The discomfort is not a sign of failure—it is a normal part of social interaction that diminishes with practice. The person who can tolerate the initial awkwardness of a small talk exchange long enough for the conversation to find its rhythm will often be surprised by how naturally the interaction develops.
+**Accept the discomfort.** Small talk will feel awkward sometimes, especially for people who are out of practice. The discomfort is not a sign of failure—it is a common part of social interaction that diminishes with practice. The person who can tolerate the initial awkwardness of a small talk exchange long enough for the conversation to find its rhythm will often be surprised by how naturally the interaction develops.
 
 > 💡 **Spark:** The deepest relationships in your life did not begin with deep conversation. They began with small talk. A comment about the weather. A question about the weekend. An observation about the coffee. These moments—these tiny, seemingly meaningless exchanges—are the threads from which the fabric of social life is woven. Every friend you have was once a stranger with whom you shared a trivial exchange that somehow continued. Do not dismiss small talk as beneath you. It is the door through which connection enters.
 

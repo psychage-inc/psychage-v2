@@ -1053,7 +1053,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
 
         <ArticleCallout variant="tip">
           <p>
-            <strong>First-timers:</strong> You might not feel much the first few times. That's normal. PMR is a skill. With practice (ideally daily for 2-3 weeks), you'll become more sensitive to tension and more skilled at releasing it.
+            <strong>First-timers:</strong> You might not feel much the first few times. That's common. PMR is a skill. With practice (ideally daily for 2-3 weeks), you'll become more sensitive to tension and more skilled at releasing it.
           </p>
         </ArticleCallout>
 
@@ -1886,7 +1886,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Forcing positivity</strong>: The goal isn't "Everything will be perfect!" It's "What's realistic?"</li>
           <li><strong>Dismissing feelings</strong>: Restructuring changes thoughts, not dismisses emotions. Your feelings are valid even if your thoughts are distorted.</li>
-          <li><strong>Expecting instant relief</strong>: It takes practice. The first few times feel mechanical. That's normal.</li>
+          <li><strong>Expecting instant relief</strong>: It takes practice. The first few times feel mechanical. That's common.</li>
           <li><strong>Only doing it during crisis</strong>: Practice on low-anxiety situations first to build the skill.</li>
           <li><strong>Arguing with yourself</strong>: Don't debate. Observe, evaluate evidence, adjust. Like a scientist, not a lawyer.</li>
         </ul>

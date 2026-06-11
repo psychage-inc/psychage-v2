@@ -390,7 +390,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
               title: 'Tolerate the anxiety',
               description: (
                 <p>
-                  Triangles exist to manage anxiety. When you refuse to participate, anxiety increases temporarily. This is normal and will decrease as new, healthier patterns establish.
+                  Triangles exist to manage anxiety. When you refuse to participate, anxiety increases temporarily. This is common and will decrease as new, healthier patterns establish.
                 </p>
               ),
             },
@@ -1624,7 +1624,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
       { text: 'For issues involving children and adolescents, family therapy is often more effective than individual therapy alone because it addresses the context in which symptoms develop and are maintained', citationIndex: 4 },
       { text: 'Five major evidence-based approaches to family therapy exist: Structural, Bowen, Emotionally Focused, Strategic, and Narrative --- each targeting different aspects of family dysfunction', citationIndex: 2 },
       { text: 'The therapeutic alliance with all family members --- not just the identified patient --- is one of the strongest predictors of successful family therapy outcomes', citationIndex: 8 },
-      { text: 'Family resistance to change is a normal part of the therapeutic process, not a sign of failure, and skilled therapists work with this resistance rather than against it', citationIndex: 5 },
+      { text: 'Family resistance to change is a common part of the therapeutic process, not a sign of failure, and skilled therapists work with this resistance rather than against it', citationIndex: 5 },
     ],
     sparkMoment: 'Family therapy does not ask "what is wrong with this person?" --- it asks "what is happening between these people?" and that shift in question changes everything about how healing unfolds.',
     practicalExercise: {
@@ -2050,7 +2050,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
           <ul className="list-disc pl-5 space-y-2">
             <li>Family therapy addresses patterns between people rather than symptoms within one person, making it uniquely effective for relational problems</li>
             <li>Multiple evidence-based approaches exist, including Structural, Bowen, Emotionally Focused, Strategic, and Narrative family therapy</li>
-            <li>Resistance to change is normal and expected --- skilled therapists work with it as valuable clinical information</li>
+            <li>Resistance to change is common and expected --- skilled therapists work with it as valuable clinical information</li>
             <li>The therapeutic alliance with all family members is one of the strongest predictors of successful outcomes</li>
             <li>Family therapy and individual therapy can work together synergistically when coordinated between providers</li>
           </ul>

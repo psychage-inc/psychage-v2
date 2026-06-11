@@ -1034,7 +1034,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
           items={[
             { feature: 'Primary goal', values: ['Reduce/eliminate anxious thoughts and symptoms', 'Live according to values regardless of anxiety level'] },
             { feature: 'Approach to thoughts', values: ['Challenge and change anxious thoughts', 'Accept thoughts as mental events, not facts'] },
-            { feature: 'Relationship to anxiety', values: ['Anxiety is the problem to solve', 'Struggle with anxiety is the problem; anxiety itself is normal'] },
+            { feature: 'Relationship to anxiety', values: ['Anxiety is the problem to solve', 'Struggle with anxiety is the problem; anxiety itself is common'] },
             { feature: 'Success metric', values: ['Symptom reduction scores', 'Values-aligned living, psychological flexibility'] },
             { feature: 'Core techniques', values: ['Cognitive restructuring, exposure, behavioral activation', 'Defusion, acceptance, mindfulness, values clarification, committed action'] },
           ]}
@@ -1796,7 +1796,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    Short-term anxiety in response to stressors (exams, job changes, relationship issues) is normal. But if you've been experiencing persistent, excessive worry or fear for 6+ weeks with no clear end in sight, professional evaluation is warranted.
+                    Short-term anxiety in response to stressors (exams, job changes, relationship issues) is common. But if you've been experiencing persistent, excessive worry or fear for 6+ weeks with no clear end in sight, professional evaluation is warranted.
                   </p>
                   <p>
                     <strong>Key question:</strong> Is this situation-specific anxiety that will resolve when the stressor ends, or is it generalized and ongoing regardless of external circumstances?

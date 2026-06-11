@@ -138,7 +138,7 @@ const DailyCheckIn: React.FC = () => {
                 value={date}
                 max={getToday()}
                 onChange={e => setDate(e.target.value)}
-                className="w-full sm:w-auto px-4 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full sm:w-auto px-4 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 
@@ -156,7 +156,7 @@ const DailyCheckIn: React.FC = () => {
                   step={0.5}
                   value={sleepHours}
                   onChange={e => setSleepHours(Math.min(24, Math.max(0, Number(e.target.value))))}
-                  className="w-full px-4 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full px-4 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
                   aria-label="Hours of sleep"
                 />
               </div>
@@ -193,7 +193,7 @@ const DailyCheckIn: React.FC = () => {
                 value={oneSentence}
                 onChange={e => setOneSentence(e.target.value)}
                 placeholder="Tired but okay. / I don't know. / Feeling hopeful."
-                className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-neutral-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-neutral-700 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 

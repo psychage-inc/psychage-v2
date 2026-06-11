@@ -91,6 +91,6 @@ describe('SpecialtyTag', () => {
                 <SpecialtyTag specialty={conditionSpec} size="sm" />
             </MemoryRouter>
         );
-        expect(screen.getByText('Anxiety')).toHaveClass('text-[11px]');
+        expect(screen.getByText('Anxiety')).toHaveClass('text-xs');
     });
 });

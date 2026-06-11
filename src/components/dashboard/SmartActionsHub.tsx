@@ -22,7 +22,6 @@ interface SmartActionsHubProps {
     todaySleep: SleepEntry | null;
     lastClarityDate: string | null;
     navigatorCount: number;
-    bookmarkCount: number;
     maxActions?: number;
 }
 

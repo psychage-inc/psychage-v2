@@ -2385,7 +2385,7 @@ export const psychologicalResilienceArticlesA: Article[] = [
           <p>
             If you find that writing about your illness consistently makes you feel worse rather
             than better --- not just during the writing (temporary distress during writing is
-            normal and expected) but in the hours and days afterward --- this is a signal that
+            common and expected) but in the hours and days afterward --- this is a signal that
             the material may be too activating to process on your own. Consider working with
             a therapist who can provide the containment and support needed for deeper emotional
             processing. Expressive writing is a complement to professional care, not a
@@ -2396,7 +2396,7 @@ export const psychologicalResilienceArticlesA: Article[] = [
         <p className="mb-6">
           It is also worth noting that the research shows a temporary dip in mood immediately
           after writing sessions --- people often feel somewhat worse right after writing about
-          painful experiences. This is normal and expected, similar to how exercise temporarily
+          painful experiences. This is common and expected, similar to how exercise temporarily
           increases fatigue before improving energy. The benefits emerge over the following days
           and weeks, not in the moment of writing itself<Citation id="1" index={1} />.
         </p>

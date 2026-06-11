@@ -102,7 +102,7 @@ export const FourHorsemenCard: React.FC<FourHorsemenCardProps> = ({ fourHorsemen
                   {meta.name}
                 </span>
                 {data.present && (
-                  <span className="text-[10px] font-semibold bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 px-2 py-0.5 rounded-full">
+                  <span className="text-xs font-semibold bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 px-2 py-0.5 rounded-full">
                     Detected
                   </span>
                 )}
@@ -118,8 +118,8 @@ export const FourHorsemenCard: React.FC<FourHorsemenCardProps> = ({ fourHorsemen
                 />
               </div>
 
-              <p className="text-[11px] text-text-tertiary leading-relaxed mb-1.5">{meta.description}</p>
-              <p className="text-[11px] font-medium text-primary">
+              <p className="text-xs text-text-tertiary leading-relaxed mb-1.5">{meta.description}</p>
+              <p className="text-xs font-medium text-primary">
                 Antidote: {meta.antidote}
               </p>
             </motion.div>
@@ -128,7 +128,7 @@ export const FourHorsemenCard: React.FC<FourHorsemenCardProps> = ({ fourHorsemen
       </div>
 
       <div className="mt-4 pt-3 border-t border-border">
-        <p className="text-[11px] text-text-tertiary leading-relaxed">
+        <p className="text-xs text-text-tertiary leading-relaxed">
           Based on the Sound Relationship House theory by John Gottman & Robert Levenson (2000).
           Scores are derived from your conflict quality and appreciation responses.
         </p>

@@ -51,8 +51,8 @@ describe('Footer', () => {
 
     it('should render tagline', () => {
         renderFooter();
-        expect(screen.getByText(/mental health/i)).toBeInTheDocument();
-        expect(screen.getByText(/is just health/i)).toBeInTheDocument();
+        expect(screen.getByText(/Good information/i)).toBeInTheDocument();
+        expect(screen.getByText(/start of good care/i)).toBeInTheDocument();
     });
 
     it('should render footer link columns', () => {
@@ -65,7 +65,7 @@ describe('Footer', () => {
 
     it('should render navigation links', () => {
         renderFooter();
-        expect(screen.getByText('Anxiety & Panic')).toBeInTheDocument();
+        expect(screen.getByText('Anxiety & Stress')).toBeInTheDocument();
         expect(screen.getByText('Clarity Score™')).toBeInTheDocument();
         expect(screen.getByText('About Us')).toBeInTheDocument();
         expect(screen.getByText('Crisis Resources')).toBeInTheDocument();

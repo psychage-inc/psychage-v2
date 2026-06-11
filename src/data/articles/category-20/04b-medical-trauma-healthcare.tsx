@@ -926,7 +926,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           that others may need more, or guilt toward friends or family members whose test results
           were not as favorable. Some people experience a period of emotional flatness after the
           waiting ends, as though the sustained hyperarousal has temporarily depleted their
-          capacity to feel anything at all. Understanding that these reactions are normal and
+          capacity to feel anything at all. Understanding that these reactions are common and
           temporary can help people be patient with themselves as their nervous systems gradually
           recalibrate to a baseline that is no longer organized around an unresolved threat.
         </p>

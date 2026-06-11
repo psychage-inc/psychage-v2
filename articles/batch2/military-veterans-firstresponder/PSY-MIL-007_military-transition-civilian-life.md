@@ -87,7 +87,7 @@ Successful employment transition requires not just job placement but career deve
 
 ## What You Can Try
 
-- **Allow yourself to grieve.** Leaving the military is a significant loss. The emotions you experience—sadness, anger, purposelessness, nostalgia—are normal grief responses, not signs of weakness.
+- **Allow yourself to grieve.** Leaving the military is a significant loss. The emotions you experience—sadness, anger, purposelessness, nostalgia—are common grief responses, not signs of weakness.
 
 - **Build new community intentionally.** Veteran service organizations, peer support groups, and community activities provide the social connection that military service provided. Do not wait for community to find you—seek it.
 

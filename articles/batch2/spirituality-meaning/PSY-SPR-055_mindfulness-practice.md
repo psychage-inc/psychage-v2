@@ -342,7 +342,7 @@ Quick mindfulness reset during daily activities:[^40]
 
 ### Challenge: Physical Discomfort During Meditation
 
-**Reality**: Sitting still often surfaces discomfort (back pain, restlessness, itching). This is normal, not wrong.
+**Reality**: Sitting still often surfaces discomfort (back pain, restlessness, itching). This is common, not wrong.
 
 **Skillful approach**: Start with shorter periods, use supportive cushions/chairs, try walking or lying meditation, investigate discomfort with curiosity rather than immediately changing position.[^44]
 

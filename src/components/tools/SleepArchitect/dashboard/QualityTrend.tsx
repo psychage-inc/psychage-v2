@@ -87,7 +87,7 @@ const QualityTrend: React.FC<QualityTrendProps> = ({ entries }) => {
           />
         </LineChart>
       </ResponsiveContainer>
-      <div className="flex items-center justify-center gap-4 mt-2 text-[10px] text-gray-400 dark:text-neutral-500">
+      <div className="flex items-center justify-center gap-4 mt-2 text-xs text-gray-400 dark:text-neutral-500">
         <div className="flex items-center gap-1.5">
           <div className="w-3 h-0.5 bg-violet-500 rounded" />
           Sleep Quality

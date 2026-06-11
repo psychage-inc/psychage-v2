@@ -205,7 +205,7 @@ const MobileTOC: React.FC<{ articleSelector?: string }> = ({ articleSelector = '
                                     <X size={18} className="text-text-tertiary" />
                                 </button>
                             </div>
-                            <div className="px-5 py-4">
+                            <div className="px-5 py-4 pb-[calc(1rem+env(safe-area-inset-bottom))]">
                                 <TOCList sections={sections} activeId={activeId} onNavigate={() => setOpen(false)} />
                             </div>
                         </motion.div>

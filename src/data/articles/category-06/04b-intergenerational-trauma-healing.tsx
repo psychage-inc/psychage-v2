@@ -541,7 +541,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
           Step 4: Practice Radical Self-Compassion
         </h2>
         <p className="mb-6">
-          You will slip into old patterns. You'll hear your parent's words in your mouth. You'll react in ways you swore you wouldn't. This is normal <Citation id="5" index={5} source="Mindfulness" year="2019" tier={1} />.
+          You will slip into old patterns. You'll hear your parent's words in your mouth. You'll react in ways you swore you wouldn't. This is common <Citation id="5" index={5} source="Mindfulness" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
           Self-compassion isn't self-indulgence --- it's acknowledging that you're doing hard work while carrying generations of pain. Treat yourself with the kindness you'd offer a friend facing the same challenges.

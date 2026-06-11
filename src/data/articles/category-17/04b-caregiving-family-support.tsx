@@ -795,7 +795,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
           />
           <MythVsFactBlock
             myth="Good caregivers never resent their loved ones or complain about caregiving."
-            fact="Resentment, anger, and exhaustion are normal human responses to chronic stress and inequity. Feeling these emotions does not mean you do not love your family. It means you are human and overburdened."
+            fact="Resentment, anger, and exhaustion are common human responses to chronic stress and inequity. Feeling these emotions does not mean you do not love your family. It means you are human and overburdened."
           />
         </div>
 
@@ -1038,7 +1038,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
             You quit your job, lost friends, gained weight, developed high blood pressure. And now she is gone. The hospice nurse says, "You were a wonderful daughter." You nod. You feel nothing. Then, hours later: relief. The phone will not ring at 2 a.m. You are free. Then, immediately: crushing guilt. What kind of person feels relieved? <Citation index={1} />
           </p>
           <p className="mb-6">
-            Grief after long-term caregiving is complicated. It mixes sorrow with liberation, guilt with exhaustion, and the disorienting task of rebuilding an identity consumed by caregiving. Seventy-two percent of bereaved caregivers feel relief---followed immediately by guilt for feeling relieved. This is normal. This is grief. <Citation index={1} />
+            Grief after long-term caregiving is complicated. It mixes sorrow with liberation, guilt with exhaustion, and the disorienting task of rebuilding an identity consumed by caregiving. Seventy-two percent of bereaved caregivers feel relief---followed immediately by guilt for feeling relieved. This is common. This is grief. <Citation index={1} />
           </p>
         </div>
 
@@ -1077,7 +1077,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
         </p>
 
         <HighlightBox variant="emphasis">
-          <p className="mb-4"><strong>Relief is not betrayal.</strong> It is a normal human response to the end of chronic stress. You are allowed to feel relieved that:</p>
+          <p className="mb-4"><strong>Relief is not betrayal.</strong> It is a common human response to the end of chronic stress. You are allowed to feel relieved that:</p>
           <ul className="list-disc pl-5 space-y-2 mb-4">
             <li>Your loved one is no longer suffering</li>
             <li>The crisis calls and hospitalizations have ended</li>
@@ -1107,7 +1107,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
             {
               title: 'Acknowledge All Feelings (Weeks 1-4)',
               description: (
-                <p>Write down every emotion you feel---sadness, relief, guilt, anger, numbness, peace, confusion. All are valid. Do not judge yourself for feeling relief or for not feeling sad enough. Complicated emotions are normal after caregiving ends.</p>
+                <p>Write down every emotion you feel---sadness, relief, guilt, anger, numbness, peace, confusion. All are valid. Do not judge yourself for feeling relief or for not feeling sad enough. Complicated emotions are common after caregiving ends.</p>
               ),
             },
             {

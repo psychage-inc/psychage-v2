@@ -90,7 +90,7 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
                     onChange={handleQueryChange}
                     placeholder={placeholder}
                     aria-label="Search articles, providers, tools, conditions, crisis resources"
-                    className="w-full pl-10 pr-4 py-2.5 bg-surface border border-border rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all text-sm text-text-primary placeholder-gray-400 dark:placeholder-neutral-500"
+                    className="w-full pl-10 pr-4 py-2.5 bg-surface border border-border rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all text-base text-text-primary placeholder-gray-400 dark:placeholder-neutral-500"
                 />
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-neutral-500" size={18} />
                 {query && (

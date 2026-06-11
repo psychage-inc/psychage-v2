@@ -402,7 +402,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               <strong>Identify one small action</strong> you can take this week that aligns with each value—regardless of how you feel.
             </li>
           </ol>
-          <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">Review your values monthly. They may shift as you grow—that's normal.</p>
+          <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">Review your values monthly. They may shift as you grow—that's common.</p>
         </div>
 
         <h2 id="willing-discomfort" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -757,7 +757,7 @@ export const emotionalComplexityGrowthArticlesA: Article[] = [
               description: (
                 <>
                   <p className="mb-2">Literally insert the word "and" between opposing thoughts. "I'm disappointed AND proud." "I love them AND I'm angry." Say both out loud.</p>
-                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">At first this will feel forced or false. That's normal. Keep practicing—the brain adapts.</p>
+                  <p className="text-sm italic text-gray-600 dark:text-neutral-400">At first this will feel forced or false. That's common. Keep practicing—the brain adapts.</p>
                 </>
               ),
             },

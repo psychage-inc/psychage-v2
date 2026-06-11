@@ -163,7 +163,7 @@ export const mensRelationshipsFamilyArticlesA: Article[] = [
                     happening while they're still inside the building.
                   </p>
                   <p className="mb-4">
-                    This reorganization is normal and necessary --- but it's rarely discussed
+                    This reorganization is common and necessary --- but it's rarely discussed
                     in prenatal education, which focuses almost exclusively on the mother's
                     experience and the baby's needs.
                   </p>
@@ -2108,7 +2108,7 @@ export const mensRelationshipsFamilyArticlesA: Article[] = [
           These are small acts, but research shows their effects are measurable and
           cumulative. Each adult who responds to a boy's emotions with validation rather
           than suppression is laying down a different neural pathway --- one that says
-          emotional experience is normal, human, and safe. The boy who receives these
+          emotional experience is common, human, and safe. The boy who receives these
           messages consistently from even one or two significant adults develops measurably
           different emotional capacities than the boy who receives only restrictive
           messaging.

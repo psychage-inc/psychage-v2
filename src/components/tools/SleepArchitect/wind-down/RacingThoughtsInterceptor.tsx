@@ -106,7 +106,7 @@ const RacingThoughtsInterceptor: React.FC = () => {
                 type="button"
                 onClick={() => setCurrentCategory(cat.id)}
                 className={cn(
-                  'flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold transition-all border',
+                  'flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold transition-all border',
                   currentCategory === cat.id
                     ? 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-700 text-purple-700 dark:text-purple-300'
                     : 'border-gray-200 dark:border-neutral-600 text-gray-400 dark:text-neutral-500 hover:border-gray-300'

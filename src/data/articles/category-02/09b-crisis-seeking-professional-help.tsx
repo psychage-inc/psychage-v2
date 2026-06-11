@@ -1093,7 +1093,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
               feature: 'Setback (temporary spike)',
               values: [
                 'Brief return of symptoms (days-weeks) in response to stress. Symptoms don\'t reach previous severity.',
-                'Use your coping skills, increase self-care, wait it out. Normal and expected.',
+                'Use your coping skills, increase self-care, wait it out. Common and expected.',
               ],
             },
             {
@@ -1396,7 +1396,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
             Week 4 of therapy, you feel amazing. The anxiety that ruled your life for years suddenly feels manageable. You think: "I'm cured! This is it!" Then week 6 hits. A bad day becomes a bad week. The old thoughts return. Panic creeps back. You spiral: "I thought I was getting better. What went wrong? Did I fail? Is this whole treatment pointless?" This is the painful misconception at the heart of anxiety recovery---the belief that healing is a straight line from sick to well.
           </p>
           <p className="mb-6">
-            Recovery from anxiety doesn't follow a linear trajectory. Research tracking people through treatment shows that symptom reduction looks more like a jagged mountain range than a smooth downward slope <Citation id="1" index={1} source="Journal of Affective Disorders" year="2021" tier={1} />. There are good weeks and bad weeks. Days when you feel "cured" and days when you're sure nothing has changed. This isn't failure---it's the normal pattern of recovery. And understanding this can make all the difference in whether you persist or give up.
+            Recovery from anxiety doesn't follow a linear trajectory. Research tracking people through treatment shows that symptom reduction looks more like a jagged mountain range than a smooth downward slope <Citation id="1" index={1} source="Journal of Affective Disorders" year="2021" tier={1} />. There are good weeks and bad weeks. Days when you feel "cured" and days when you're sure nothing has changed. This isn't failure---it's the common pattern of recovery. And understanding this can make all the difference in whether you persist or give up.
           </p>
         </div>
 
@@ -1430,7 +1430,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Overall trend downward:</strong> Despite fluctuations, the general direction is improvement</li>
-          <li><strong>Regular spikes:</strong> Every few weeks, symptoms temporarily worsen---this is normal</li>
+          <li><strong>Regular spikes:</strong> Every few weeks, symptoms temporarily worsen---this is common</li>
           <li><strong>Good weeks don't last forever:</strong> And that's okay---they're not supposed to</li>
           <li><strong>Bad weeks don't erase progress:</strong> Even when symptoms spike, they typically don't return to baseline severity</li>
           <li><strong>The timeline is months, not weeks:</strong> Meaningful, sustained improvement takes 3-6+ months</li>
@@ -1471,7 +1471,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
           4. Skill Development Is Gradual
         </h3>
         <p className="mb-6">
-          Learning to identify, challenge, and respond differently to anxious thoughts isn't like flipping a switch. Some days you remember your skills and use them effectively. Other days you forget, or they don't work as well. This is normal learning---two steps forward, one step back.
+          Learning to identify, challenge, and respond differently to anxious thoughts isn't like flipping a switch. Some days you remember your skills and use them effectively. Other days you forget, or they don't work as well. This is common learning---two steps forward, one step back.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1618,7 +1618,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Non-linear recovery with overall downward trend is normal. But if you see these patterns, it may be time to adjust treatment:
+          Non-linear recovery with overall downward trend is common. But if you see these patterns, it may be time to adjust treatment:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1634,7 +1634,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-3">
-            <strong>Key Takeaway:</strong> Recovery from anxiety is not linear. Research shows that 80-85% of people experience fluctuating symptoms throughout treatment---good weeks followed by difficult ones, progress followed by temporary setbacks. This is normal, not failure.
+            <strong>Key Takeaway:</strong> Recovery from anxiety is not linear. Research shows that 80-85% of people experience fluctuating symptoms throughout treatment---good weeks followed by difficult ones, progress followed by temporary setbacks. This is common, not failure.
           </p>
           <p className="mb-3">
             The pattern: overall downward trend in symptoms and functional impairment, but with regular spikes and valleys. Causes: ongoing life stress, gradual brain changes, extinction bursts during exposure, skill-building taking time, and expectation violations. Redefine recovery: Not as permanent symptom elimination, but as living according to values despite occasional anxiety, having resilience to bounce back from setbacks, and building a meaningful life where anxiety exists but doesn't dominate.

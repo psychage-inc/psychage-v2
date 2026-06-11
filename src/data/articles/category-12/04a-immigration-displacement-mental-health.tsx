@@ -201,7 +201,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
           1. Grief and Loss
         </h3>
         <p className="mb-6">
-          Immigration involves profound loss---of home, culture, language, relationships, professional identity, and a sense of belonging. This is called "ambiguous loss" because what you\'ve lost still exists, but you\'re separated from it. Grieving this loss is normal and necessary.
+          Immigration involves profound loss---of home, culture, language, relationships, professional identity, and a sense of belonging. This is called "ambiguous loss" because what you\'ve lost still exists, but you\'re separated from it. Grieving this loss is common and necessary.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -763,7 +763,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
       { text: 'Family separation at borders causes toxic stress that disrupts children\'s brain development and creates lasting attachment trauma', citationIndex: 3 },
       { text: 'Average asylum case resolution time in the U.S. is 3+ years (2023), creating chronic anxiety and preventing healing', citationIndex: 4 },
     ],
-    sparkMoment: 'What you\'re enduring is inhumane. Your distress is not weakness—it\'s a normal response to abnormal cruelty. You deserve safety, dignity, and healing.',
+    sparkMoment: 'What you\'re enduring is inhumane. Your distress is not weakness—it\'s a common response to abnormal cruelty. You deserve safety, dignity, and healing.',
     practicalExercise: {
       title: 'Navigate the Asylum Process with Support',
       steps: [
@@ -1043,7 +1043,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          What you\'re enduring is inhumane. Your distress is not weakness---it\'s a normal response to abnormal cruelty. You deserve safety, dignity, and healing. Support exists, even within a system designed to harm you. Reach out.
+          What you\'re enduring is inhumane. Your distress is not weakness---it\'s a common response to abnormal cruelty. You deserve safety, dignity, and healing. Support exists, even within a system designed to harm you. Reach out.
         </p>
       </>
     ),
@@ -1145,7 +1145,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
             You don\'t speak the language well enough. Your accent marks you as foreign. The customs are confusing---when to make eye contact, how close to stand, what\'s polite and what\'s rude. Your qualifications from home aren\'t recognized. You miss your food, your community, the way life used to make sense. But when you try to hold onto your culture, people tell you: "You\'re in America now. You need to assimilate."
           </p>
           <p className="mb-6">
-            Acculturation stress is the psychological strain of adapting to a new culture <Citation id="1" index={1} source="American Psychologist" year="2018" tier={1} />. It's normal---nearly everyone who immigrates experiences it. But when the pressure to change is relentless, when you're told your culture is inferior, or when you feel like you're losing yourself, acculturation stress can lead to anxiety, depression, and identity confusion.
+            Acculturation stress is the psychological strain of adapting to a new culture <Citation id="1" index={1} source="American Psychologist" year="2018" tier={1} />. It's common---nearly everyone who immigrates experiences it. But when the pressure to change is relentless, when you're told your culture is inferior, or when you feel like you're losing yourself, acculturation stress can lead to anxiety, depression, and identity confusion.
           </p>
         </div>
 

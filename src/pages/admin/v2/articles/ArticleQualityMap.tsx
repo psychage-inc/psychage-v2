@@ -92,7 +92,7 @@ function CategoryRow({
         </div>
         <div className="min-w-0">
           <p className="text-sm font-medium text-text-primary truncate">{category.name}</p>
-          <p className="text-[11px] text-text-tertiary">{articles.length} articles</p>
+          <p className="text-xs text-text-tertiary">{articles.length} articles</p>
         </div>
       </div>
 

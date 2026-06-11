@@ -64,7 +64,7 @@
   margin-top: 0.05em;
   font-weight: 700;
   color: var(--color-primary);
-  font-family: Georgia, serif;
+  font-family: var(--font-display);
 }
 @media (min-width: 768px) {
   .article-prose > p:first-of-type::first-letter {
@@ -75,7 +75,7 @@
 /* Blockquotes — pull quote style */
 .article-prose blockquote {
   border-left: 4px solid var(--color-primary);
-  background: rgba(13, 148, 136, 0.04);
+  background: rgba(26, 155, 140, 0.04);
   padding: 1.5rem 2rem;
   margin: 2.5rem 0;
   border-radius: 0 0.75rem 0.75rem 0;
@@ -86,7 +86,7 @@
   line-height: 1.6;
 }
 .dark .article-prose blockquote {
-  background: rgba(13, 148, 136, 0.08);
+  background: rgba(26, 155, 140, 0.08);
 }
 
 /* Images */

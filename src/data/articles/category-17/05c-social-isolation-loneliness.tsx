@@ -370,7 +370,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
             <li>Moving proactively (while still healthy) leads to better adjustment than crisis moves (post-fall, post-hospitalization).</li>
             <li>The decision involves trade-offs: connection vs. independence, safety vs. autonomy, community vs. privacy.</li>
             <li>Financial costs are substantial ($2,000-7,000/month); long-term care insurance and Medicaid planning are critical.</li>
-            <li>Grief is normal. Moving is loss---but isolation is also loss. The question is which loss is more tolerable.</li>
+            <li>Grief is common. Moving is loss---but isolation is also loss. The question is which loss is more tolerable.</li>
           </ul>
         </ArticleCallout>
 
@@ -1342,7 +1342,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
           If someone you love is still isolated post-pandemic, you cannot force them to re-engage---but you can facilitate, encourage, and support. Avoid shaming ("You need to get out more") or minimizing ("COVID is over, stop worrying"). Instead, try collaborative problem-solving. <Citation id="5" index={5} source="The Journals of Gerontology Series B" year="2021" tier={1} />
         </p>
         <p className="mb-6">
-          Strategies: Offer to accompany them to an activity the first time (reduces anxiety about going alone). Research options together (find senior centers, classes, groups in their area). Normalize discomfort ("It will feel weird at first---that is normal after years inside"). Set low-pressure goals ("Just try it once, then decide"). Celebrate small wins ("You went to the senior center! That took courage"). Acknowledge barriers without enabling avoidance ("I know you are worried about infection---let us talk about ways to reduce risk while still participating").
+          Strategies: Offer to accompany them to an activity the first time (reduces anxiety about going alone). Research options together (find senior centers, classes, groups in their area). Normalize discomfort ("It will feel weird at first---that is common after years inside"). Set low-pressure goals ("Just try it once, then decide"). Celebrate small wins ("You went to the senior center! That took courage"). Acknowledge barriers without enabling avoidance ("I know you are worried about infection---let us talk about ways to reduce risk while still participating").
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaways">

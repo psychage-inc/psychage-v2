@@ -72,7 +72,7 @@ export const articles: Article[] = [
         {
           title: 'Prepare for Long-Term Recovery',
           description:
-            'Recovery typically takes years, not months. Expect setbacks, which are normal and don\'t mean failure. Sustained support and treatment are essential.',
+            'Recovery typically takes years, not months. Expect setbacks, which are common and don\'t mean failure. Sustained support and treatment are essential.',
         },
       ],
       toolLink: '/find-care',

@@ -421,7 +421,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
           Common Obstacles and Solutions
         </h2>
         <p className="mb-6">
-          Expect these challenges. They're normal, not signs you're doing it wrong.
+          Expect these challenges. They're common, not signs you're doing it wrong.
         </p>
 
         <ArticleAccordion
@@ -1465,7 +1465,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
           When Does It Cross Into a Problem?
         </h2>
         <p className="mb-6">
-          Occasional emotional eating, retail therapy, or mindless scrolling is normal. It becomes problematic when:
+          Healthy and necessary: occasional emotional eating, retail therapy, or mindless scrolling. It becomes problematic when:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -2024,7 +2024,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
             <strong>"The habit runs too fast---I can't catch it":</strong> Start by noticing the <em>aftermath</em> (body sensations, fatigue, regret). Work backwards from there. Over time, you'll catch it earlier in the sequence.
           </li>
           <li>
-            <strong>"I know the pattern but I can't stop it":</strong> That's normal. Knowing isn't enough---you need repetition. The new pathway is weak; the old one is a highway. Keep practicing. It will get easier.
+            <strong>"I know the pattern but I can't stop it":</strong> That's common. Knowing isn't enough---you need repetition. The new pathway is weak; the old one is a highway. Keep practicing. It will get easier.
           </li>
           <li>
             <strong>"The old habit keeps winning":</strong> Check if your replacement behavior provides the same reward. If not, your brain won't adopt it. Also, lower the bar---start with pausing for 5 seconds, not a complete behavior overhaul.

@@ -377,7 +377,7 @@ export const identityValuesArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Sexual Orientation', 'LGBTQ+', 'Self-Acceptance', 'Mental Health'],
-    summary: 'Sexual orientation is a normal variation of human sexuality, yet LGB individuals face elevated mental health risks due to minority stress. This article examines the coming out process, internalized stigma, the role of chosen family, and evidence-based paths to self-acceptance.',
+    summary: 'Sexual orientation is a common variation of human sexuality, yet LGB individuals face elevated mental health risks due to minority stress. This article examines the coming out process, internalized stigma, the role of chosen family, and evidence-based paths to self-acceptance.',
     keyFacts: [
       { text: 'LGB individuals are 2.5 times more likely to experience depression and anxiety than heterosexual peers', citationIndex: 1 },
       { text: 'Minority stress -- not sexual orientation itself -- accounts for mental health disparities', citationIndex: 2 },
@@ -390,7 +390,7 @@ export const identityValuesArticlesB: Article[] = [
       title: 'Self-Acceptance Reflection Practice',
       steps: [
         { title: 'Name the Internalized Messages', description: 'Write down any negative beliefs you hold about your sexual orientation. For each one, identify where you learned it -- family, religion, media, peers.' },
-        { title: 'Challenge Each Belief', description: 'Next to each negative belief, write the evidence-based truth. For example: "Being gay is a normal variation of human sexuality supported by every major psychological organization."' },
+        { title: 'Challenge Each Belief', description: 'Next to each negative belief, write the evidence-based truth. For example: "Being gay is a common variation of human sexuality supported by every major psychological organization."' },
         { title: 'Identify Your Affirming Spaces', description: 'List the people, places, and communities where your sexual orientation is fully accepted. If this list is short, identify one new affirming space to explore this month.' },
         { title: 'Write a Letter to Yourself', description: 'Write a compassionate letter to your younger self about sexual orientation. What would you want them to know? This exercise builds self-compassion and processes internalized shame.' },
       ],
@@ -427,7 +427,7 @@ export const identityValuesArticlesB: Article[] = [
           Understanding Sexual Orientation
         </h2>
         <p className="mb-6">
-          Sexual orientation refers to the enduring pattern of emotional, romantic, and sexual attraction to other people. It exists on a spectrum that includes heterosexuality, homosexuality, bisexuality, and other orientations such as asexuality and pansexuality. Every major medical and psychological organization recognizes sexual orientation as a normal and natural aspect of human diversity <Citation id="10" index={10} source="American Psychological Association" year="2022" tier={2} />.
+          Sexual orientation refers to the enduring pattern of emotional, romantic, and sexual attraction to other people. It exists on a spectrum that includes heterosexuality, homosexuality, bisexuality, and other orientations such as asexuality and pansexuality. Every major medical and psychological organization recognizes sexual orientation as a common and natural aspect of human diversity <Citation id="10" index={10} source="American Psychological Association" year="2022" tier={2} />.
         </p>
         <p className="mb-6">
           Sexual orientation is distinct from sexual behavior and sexual identity. A person may experience same-sex attraction without acting on it, or may engage in same-sex behavior without identifying as LGB. The development of sexual orientation identity -- the integration of one's orientation into a coherent sense of self -- is a process that unfolds over time and at different paces for different individuals <Citation id="4" index={4} source="Journal of Sex Research" year="2021" tier={1} />.
@@ -453,7 +453,7 @@ export const identityValuesArticlesB: Article[] = [
           variant="vertical"
           steps={[
             { title: 'Awareness', description: <p>Recognizing that your pattern of attraction does not align with heterosexual assumptions. This awareness can emerge at any age -- for some in childhood, for others not until adulthood <Citation id="4" index={4} source="Journal of Sex Research" year="2021" tier={1} />.</p> },
-            { title: 'Exploration', description: <p>Actively seeking information, testing feelings, and questioning assumptions. This stage is characterized by uncertainty and confusion, which is entirely normal. Give yourself permission to question without demanding immediate answers.</p> },
+            { title: 'Exploration', description: <p>Actively seeking information, testing feelings, and questioning assumptions. This stage is characterized by uncertainty and confusion, which is entirely common. Give yourself permission to question without demanding immediate answers.</p> },
             { title: 'Self-Acceptance', description: <p>Integrating your sexual orientation into your identity without shame. This requires actively confronting and dismantling internalized homophobia or biphobia <Citation id="5" index={5} source="Health Psychology" year="2020" tier={1} />. Self-acceptance is a gradual process of growing comfort with who you are.</p> },
             { title: 'Disclosure', description: <p>Coming out to others is ongoing and strategic. Research shows it improves psychological wellbeing when met with acceptance <Citation id="3" index={3} source="Journal of Gay & Lesbian Mental Health" year="2020" tier={1} />. Prioritizing safety is wise, not cowardly.</p> },
             { title: 'Integration', description: <p>Sexual orientation becomes a natural, settled part of your overall identity. It is present but not preoccupying. Your relationship with your orientation is characterized by acceptance rather than distress.</p> },
@@ -496,7 +496,7 @@ export const identityValuesArticlesB: Article[] = [
         <ArticleAccordion
           type="multiple"
           items={[
-            { id: 'internalized', title: 'Challenging Internalized Stigma', content: <div><p className="mb-4">Recognize that negative beliefs about your sexual orientation were learned from external sources and are not inherent truths. Every major psychological organization affirms sexual orientation as a normal variation <Citation id="10" index={10} source="American Psychological Association" year="2022" tier={2} />.</p><p>When you notice a self-critical thought, identify where you learned it, evaluate it against evidence, and replace it with a more accurate belief.</p></div> },
+            { id: 'internalized', title: 'Challenging Internalized Stigma', content: <div><p className="mb-4">Recognize that negative beliefs about your sexual orientation were learned from external sources and are not inherent truths. Every major psychological organization affirms sexual orientation as a common variation <Citation id="10" index={10} source="American Psychological Association" year="2022" tier={2} />.</p><p>When you notice a self-critical thought, identify where you learned it, evaluate it against evidence, and replace it with a more accurate belief.</p></div> },
             { id: 'community', title: 'Finding Affirming Community', content: <div><p className="mb-4">Connection with other LGB individuals is one of the most powerful protective factors for mental health <Citation id="9" index={9} source="National Institute of Mental Health" year="2023" tier={2} />. Community provides something allies cannot: the experience of being understood by someone who shares your lived reality.</p><p>Community can take many forms: organizations, social groups, online communities, affirming congregations, or professional networks.</p></div> },
             { id: 'chosen-family', title: 'Building Chosen Family', content: <div><p className="mb-4">The concept of chosen family -- intentionally building a support network of people who fully accept you -- is a powerful resilience strategy <Citation id="7" index={7} source="Journal of Family Psychology" year="2022" tier={1} />.</p><p>Chosen family does not replace biological family but supplements it, creating unconditional support that buffers against rejection in other areas.</p></div> },
             { id: 'disclosure', title: 'Strategic Disclosure', content: <div><p>Coming out is a personal decision. Strategic disclosure means evaluating each situation: Is it safe? What is the potential cost versus concealment? Is this person likely to respond with acceptance? Prioritizing safety and wellbeing is always valid.</p></div> },
@@ -523,7 +523,7 @@ export const identityValuesArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaways">
           <ul className="list-disc pl-5 space-y-2">
-            <li>Sexual orientation is a normal variation of human sexuality affirmed by every major psychological organization</li>
+            <li>Sexual orientation is a common variation of human sexuality affirmed by every major psychological organization</li>
             <li>Mental health challenges among LGB individuals stem from minority stress -- not orientation itself</li>
             <li>Internalized stigma is the strongest predictor of depression and can be systematically challenged</li>
             <li>Coming out is an ongoing, strategic process associated with improved wellbeing when met with acceptance</li>
@@ -1053,7 +1053,7 @@ export const identityValuesArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaways">
           <ul className="list-disc pl-5 space-y-2">
-            <li>Major life transitions dismantle core identity anchors and require active reconstruction -- this is normal, not pathological</li>
+            <li>Major life transitions dismantle core identity anchors and require active reconstruction -- this is common, not pathological</li>
             <li>Identity reinvention follows three predictable stages: disintegration, liminality, and reintegration, typically spanning 6 months to 3 years</li>
             <li>The most critical factor for successful reinvention is tolerating the liminal stage without rushing into a premature new identity</li>
             <li>Redemptive narratives -- stories where suffering leads to growth -- predict better mental health outcomes than contamination narratives</li>

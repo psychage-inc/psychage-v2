@@ -128,7 +128,7 @@ const CopingUseSection: React.FC<CopingUseSectionProps> = ({ onSave, existingUse
           value={note}
           onChange={e => setNote(e.target.value)}
           placeholder="Any reflections..."
-          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
         />
       </div>
 

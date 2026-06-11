@@ -63,7 +63,7 @@ const NavMenu: React.FC<NavMenuProps> = ({ activeMenuItem, onMouseLeave, onNavig
         {/* LEFT PANEL: MAIN GRID */}
         <div className="flex-grow">
           <div className="flex items-center justify-between mb-6">
-            <span className="text-[11px] font-bold text-text-tertiary uppercase tracking-widest flex items-center gap-2">
+            <span className="text-xs font-bold text-text-tertiary uppercase tracking-widest flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse" />
               {menu.label} Module
             </span>
@@ -113,7 +113,7 @@ const NavMenu: React.FC<NavMenuProps> = ({ activeMenuItem, onMouseLeave, onNavig
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.1 }}
           >
-            <h4 className="text-[11px] font-bold text-text-primary uppercase tracking-widest mb-4 opacity-40">
+            <h4 className="text-xs font-bold text-text-primary uppercase tracking-widest mb-4 opacity-40">
               Quick Actions
             </h4>
             <ul className="space-y-1">

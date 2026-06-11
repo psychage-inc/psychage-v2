@@ -808,7 +808,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
             {
               id: 'venting',
               title: 'Venting About Work',
-              content: <p>Some venting to work friends is normal stress relief. Excessive complaining becomes toxic and creates perception you're disengaged. Balance: acknowledge frustrations but don't let negativity dominate conversations. Never vent about the friend's direct manager or people they're close to---puts them in awkward position.</p>,
+              content: <p>Some venting to work friends is common stress relief. Excessive complaining becomes toxic and creates perception you're disengaged. Balance: acknowledge frustrations but don't let negativity dominate conversations. Never vent about the friend's direct manager or people they're close to---puts them in awkward position.</p>,
             },
             {
               id: 'socializing',

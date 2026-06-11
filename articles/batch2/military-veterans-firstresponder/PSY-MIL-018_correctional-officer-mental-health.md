@@ -91,7 +91,7 @@ Addressing correctional officer mental health requires both individual intervent
 
 ## What You Can Try
 
-- **If you are a correctional officer experiencing psychological distress**, recognize that your symptoms are a normal response to an extraordinary work environment. Contact Safe Call Now (1-206-459-3020), the Desert Waters Correctional Outreach Foundation, or a mental health provider who understands corrections.
+- **If you are a correctional officer experiencing psychological distress**, recognize that your symptoms are a common response to an extraordinary work environment. Contact Safe Call Now (1-206-459-3020), the Desert Waters Correctional Outreach Foundation, or a mental health provider who understands corrections.
 
 - **Monitor for corrections fatigue.** Cynicism, emotional numbness, irritability, hypervigilance off duty, sleep problems, and loss of meaning in the work are signals that your psychological resources need replenishment.
 

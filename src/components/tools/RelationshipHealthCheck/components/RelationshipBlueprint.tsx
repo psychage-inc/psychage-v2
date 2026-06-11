@@ -61,7 +61,7 @@ export const RelationshipBlueprint: React.FC<RelationshipBlueprintProps> = ({
                   ))}
                 </div>
               </div>
-              <p className="text-[11px] text-text-tertiary mt-3 text-center">
+              <p className="text-xs text-text-tertiary mt-3 text-center">
                 Generated from your responses using evidence-based relationship science frameworks
               </p>
             </div>

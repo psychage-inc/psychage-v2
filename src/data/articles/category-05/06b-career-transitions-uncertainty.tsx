@@ -264,7 +264,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          Some level of anxiety and adjustment difficulty is normal during retirement transitions. However, seek support from a therapist if you experience:
+          Some level of anxiety and adjustment difficulty is common during retirement transitions. However, seek support from a therapist if you experience:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Persistent depression lasting more than a few weeks after retirement</li>
@@ -793,7 +793,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
               id: 'tech-anxiety',
               title: 'What if I struggle with learning management systems and technology?',
               content: (
-                <p>Most schools have technology support specifically for adult learners. Use it without shame---it's normal and expected. Many younger students also struggle with new platforms; they just grew up hiding confusion better. Take advantage of tutorials, orientation sessions, and student support. The first few weeks are hardest; technology becomes routine quickly.</p>
+                <p>Most schools have technology support specifically for adult learners. Use it without shame---it's common and expected. Many younger students also struggle with new platforms; they just grew up hiding confusion better. Take advantage of tutorials, orientation sessions, and student support. The first few weeks are hardest; technology becomes routine quickly.</p>
               ),
             },
             {

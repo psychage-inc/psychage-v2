@@ -91,7 +91,7 @@ Importantly, meaning-making is not the same as "everything happens for a reason.
 
 - **Expect the triggers.** Anniversaries, milestones (your child's first steps, a friend's promotion to a job you can no longer do), seasonal changes (the arrival of hiking weather when you can no longer hike), and encounters with your former self (old photos, videos, memories) are common triggers. Anticipating them does not prevent the grief but reduces the shock.
 
-- **Seek out a therapist who understands disability grief.** Not all therapists do. Look for someone who does not push you toward "acceptance" on their timeline, who validates ongoing grief as normal, and who understands the difference between depression and chronic sorrow.
+- **Seek out a therapist who understands disability grief.** Not all therapists do. Look for someone who does not push you toward "acceptance" on their timeline, who validates ongoing grief as common, and who understands the difference between depression and chronic sorrow.
 
 - **Build rituals for honoring what was lost.** Some people write letters to their former selves. Others create art that represents both who they were and who they are. Rituals provide a container for grief that might otherwise feel shapeless and overwhelming.
 

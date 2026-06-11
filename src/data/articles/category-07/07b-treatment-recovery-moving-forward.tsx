@@ -1618,7 +1618,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Recovery', 'Setbacks', 'Progress', 'Resilience', 'Depression'],
-    summary: 'Depression recovery follows an irregular upward trajectory with inevitable setbacks—and that\'s completely normal. Research shows that how you respond to setbacks (with self-compassion versus self-criticism) predicts long-term outcomes. This guide explains the difference between setbacks and relapses, common triggers, and strategies for navigating rough patches without losing hope.',
+    summary: 'Depression recovery follows an irregular upward trajectory with inevitable setbacks—and that\'s common. Research shows that how you respond to setbacks (with self-compassion versus self-criticism) predicts long-term outcomes. This guide explains the difference between setbacks and relapses, common triggers, and strategies for navigating rough patches without losing hope.',
     keyFacts: [
       { text: 'Most people experience multiple setbacks during depression recovery—these temporary dips don\'t erase progress made', citationIndex: 1 },
       { text: 'How you respond to setbacks matters more than whether they occur—self-compassion predicts better long-term recovery than self-criticism', citationIndex: 4 },
@@ -1690,7 +1690,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
             But you're not. A rough day, week, or even month doesn't erase the progress you've made. Recovery from depression is not a straight line from sick to well---it's a winding path with ups and downs, setbacks and breakthroughs <Citation id="1" index={1} source="Journal of Affective Disorders" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
-            Understanding that setbacks are normal, learning to distinguish a temporary dip from true relapse, and developing resilience to navigate rough patches are essential skills for sustained recovery.
+            Understanding that setbacks are common, learning to distinguish a temporary dip from true relapse, and developing resilience to navigate rough patches are essential skills for sustained recovery.
           </p>
         </div>
 
@@ -1725,7 +1725,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            <strong>Setbacks are temporary dips within overall upward trajectory.</strong> Relapses are sustained return to depression requiring professional intervention. Most rough patches are setbacks, not relapses---and they're a normal part of recovery <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />.
+            <strong>Setbacks are temporary dips within overall upward trajectory.</strong> Relapses are sustained return to depression requiring professional intervention. Most rough patches are setbacks, not relapses---and they're a common part of recovery <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -1902,7 +1902,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
                 <li>"This is a temporary setback. What can I learn from it?"</li>
                 <li>"Recovery takes time. I'm building skills."</li>
                 <li>"Bad days don't erase my progress."</li>
-                <li>"Setbacks are normal. I know how to get through this."</li>
+                <li>"Setbacks are common. I know how to get through this."</li>
                 <li>Increase use of coping strategies during difficult periods</li>
               </ul>
             ),
@@ -2023,7 +2023,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaways">
           <ul className="list-disc pl-5 space-y-2">
-            <li>Setbacks are normal during depression recovery—they don't erase your progress or mean treatment failed</li>
+            <li>Setbacks are common during depression recovery—they don't erase your progress or mean treatment failed</li>
             <li>How you respond to setbacks (self-compassion vs. self-criticism) matters more than whether they occur</li>
             <li>Most setbacks have identifiable triggers: stress, sleep disruption, abandoning wellness practices, or biological factors</li>
             <li>Distinguish between setbacks (temporary dips responding to self-care) and relapses (sustained worsening requiring professional help)</li>
@@ -2403,7 +2403,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
                     Many people recovering from depression feel anxious when they start feeling good. "What if it doesn't last?" "What if I jinx it?" "I don't trust this feeling."
                   </p>
                   <p className="mb-4">
-                    <strong>This is normal.</strong> Depression taught you that good feelings are temporary and collapse is inevitable. Relearning to trust positive emotions takes time.
+                    <strong>This is common.</strong> Depression taught you that good feelings are temporary and collapse is inevitable. Relearning to trust positive emotions takes time.
                   </p>
                   <p>
                     <strong>What helps:</strong> Allow yourself to feel good while acknowledging uncertainty. "I feel happy right now. I don't know what tomorrow brings, but I can experience today."

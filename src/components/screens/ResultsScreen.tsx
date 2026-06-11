@@ -34,7 +34,7 @@ const SectionLabel: React.FC<{
     label: string;
 }> = ({ number, label }) => (
     <div className="flex items-center gap-3 mb-3">
-        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 dark:bg-white/[0.06] text-[11px] font-bold text-gray-500 dark:text-neutral-400 border border-gray-200 dark:border-white/10">
+        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 dark:bg-white/[0.06] text-xs font-bold text-gray-500 dark:text-neutral-400 border border-gray-200 dark:border-white/10">
             {number}
         </span>
         <span className="text-xs font-semibold uppercase tracking-wider text-text-tertiary">

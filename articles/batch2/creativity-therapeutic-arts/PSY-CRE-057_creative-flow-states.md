@@ -376,7 +376,7 @@ Creates conditions for flow.
 
 **7. Accept When Flow Doesn't Come**:
 
-**Not every session will flow**—that's normal.
+**Not every session will flow**—that's common.
 
 Sometimes you work through resistance, grind, push.
 

@@ -1251,7 +1251,7 @@ export const typesOfDepressionArticlesA: Article[] = [
             <li>Improvement is often gradual, not sudden</li>
             <li>You may notice small shifts before major changes</li>
             <li>Treatment duration is typically longer than for episodic depression</li>
-            <li>Setbacks are normal; recovery is not linear</li>
+            <li>Setbacks are common; recovery is not linear</li>
             <li>The goal isn't just symptom reduction but reclaiming a life worth living</li>
           </ul>
         </ArticleCallout>

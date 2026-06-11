@@ -110,7 +110,7 @@ Infants and young children are appropriately egocentric—they're establishing a
 
 ### Adolescence and Young Adulthood: Identity Consolidation
 
-Adolescents and young adults intensify self-focus—"Who am I?" becomes the central question. Identity exploration, career establishment, relationship formation all center on the self. This too is developmentally normal.[^15]
+Adolescents and young adults intensify self-focus—"Who am I?" becomes the central question. Identity exploration, career establishment, relationship formation all center on the self. This too is developmentally common.[^15]
 
 ### Midlife: The Generativity Shift
 

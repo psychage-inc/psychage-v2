@@ -1685,7 +1685,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
     tags: ['Letting Go', 'Friendship', 'Boundaries', 'Life Transitions'],
     summary: 'Not all friendships last forever, and recognizing when a connection has run its course is an important life skill. This guide explores the natural lifecycle of friendships, signs that a friendship may no longer serve you, how to let go gracefully, and navigating the grief of friendship loss.',
     keyFacts: [
-      { text: '70% of friendships formed in specific contexts (school, work) naturally fade when that context ends --- this is normal, not failure', citationIndex: 4 },
+      { text: '70% of friendships formed in specific contexts (school, work) naturally fade when that context ends --- this is common, not failure', citationIndex: 4 },
       { text: 'Most adults maintain only 3-5 close friendships compared to 10+ in college, reflecting natural relationship pruning over time', citationIndex: 5 },
       { text: 'Values divergence is one of the most common and legitimate reasons for friendship endings, especially during major life transitions', citationIndex: 3 },
       { text: 'Friendship loss can trigger genuine grief similar to romantic breakups, including sadness, anger, and rumination', citationIndex: 6 },
@@ -1793,7 +1793,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
         </ArticleCallout>
 
         <h2 id="natural-endings" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Natural Friendship Endings Are Normal
+          Natural Friendship Endings Are Common
         </h2>
         <p className="mb-6">
           Research on friendship across the lifespan reveals that most friendships are situational and time-limited <Citation id="4" index={4} source="Developmental Psychology" year="2019" tier={1} />. Friendships form in specific contexts (school, work, neighborhood, shared activity) and often don't outlast those contexts. This doesn't mean they were less valuable or that you failed --- it means they served their purpose for that chapter of your life.

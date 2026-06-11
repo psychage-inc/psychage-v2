@@ -242,7 +242,7 @@ export const CATEGORY_08: CategoryPlan = {
         { id: planId(8, 54), title: 'Preparation: Setting Yourself Up for Successful Change', type: 'self_help' },
         { id: planId(8, 55), title: 'Action: The First 90 Days of Building New Behavior', type: 'self_help' },
         { id: planId(8, 56), title: 'Maintenance: How to Keep Going When the Novelty Wears Off', type: 'self_help' },
-        { id: planId(8, 57), title: 'Relapse: Why Setbacks Are Normal and How to Get Back on Track', type: 'self_help' },
+        { id: planId(8, 57), title: 'Relapse: Why Setbacks Are Common and How to Get Back on Track', type: 'self_help' },
         { id: planId(8, 58), title: "How to Support Someone Who Isn't Ready to Change", type: 'self_help' },
         { id: planId(8, 59), title: 'Behavior Change in Couples: When Partners Are at Different Stages', type: 'self_help' },
         { id: planId(8, 60), title: "Change at Every Age: Why It's Never Too Late to Build New Patterns", type: 'self_help' },

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, MessageSquare, ExternalLink } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { CrisisResource } from '../../lib/navigator/types';
 import { Card } from '../ui/Card';
 
@@ -8,6 +9,7 @@ interface CrisisResourceCardProps {
 }
 
 export const CrisisResourceCard: React.FC<CrisisResourceCardProps> = ({ resource }) => {
+    const { t } = useTranslation();
     const getIcon = () => {
         switch (resource.type) {
             case 'hotline':
@@ -36,13 +38,13 @@ export const CrisisResourceCard: React.FC<CrisisResourceCardProps> = ({ resource
     const getActionText = () => {
         switch (resource.type) {
             case 'hotline':
-                return 'Call Now';
+                return t('crisis.common.call_now');
             case 'text':
-                return 'Text Now';
+                return t('crisis.resourceCard.text_now');
             case 'directory':
-                return 'Visit Website';
+                return t('crisis.resourceCard.visit_website');
             default:
-                return 'Contact';
+                return t('crisis.resourceCard.contact');
         }
     };
 
@@ -58,7 +60,7 @@ export const CrisisResourceCard: React.FC<CrisisResourceCardProps> = ({ resource
                         </h3>
                         {resource.hours.toLowerCase().includes('24/7') && (
                             <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-crisis-red/20 text-red-300 border border-crisis-red/30 backdrop-blur-sm">
-                                24/7
+                                {t('crisis.resourceCard.badge_247')}
                             </span>
                         )}
                     </div>

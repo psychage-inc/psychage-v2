@@ -596,7 +596,7 @@ export const understandingTraumaArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           This process takes time, and it\'s rarely linear. You might experience periods of progress followed by setbacks.
-          You might have days when your nervous system feels regulated and days when it doesn\'t. This is normal. The
+          You might have days when your nervous system feels regulated and days when it doesn\'t. This is common. The
           nervous system doesn\'t heal on a straight trajectory---it heals in spirals, revisiting old patterns at deeper
           levels until they finally release.
         </p>
@@ -1614,7 +1614,7 @@ export const understandingTraumaArticlesB: Article[] = [
         <ArticleCallout variant="clinical-note" title="Important">
           <p>
             Secondary trauma is <strong>not</strong> a sign that you're weak, unsuited for your work, or "not cut out for
-            it." It\'s a normal human response to abnormal exposure. The most empathic, dedicated helpers are often most
+            it." It\'s a common human response to abnormal exposure. The most empathic, dedicated helpers are often most
             at risk.
           </p>
         </ArticleCallout>
@@ -2696,7 +2696,7 @@ export const understandingTraumaArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           The majority of people who experience trauma show remarkable resilience. They may have acute stress reactions
-          immediately following the event—which is normal and adaptive—but these symptoms naturally resolve over the
+          immediately following the event—which is common and adaptive—but these symptoms naturally resolve over the
           following weeks and months without developing into chronic PTSD. This natural recovery process highlights the
           human capacity for adaptation and healing, even after profoundly difficult experiences.
         </p>

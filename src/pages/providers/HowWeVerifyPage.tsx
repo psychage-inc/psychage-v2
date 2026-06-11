@@ -51,7 +51,7 @@ const HowWeVerifyPage: React.FC = () => {
               providers. We&rsquo;ve taken the mental health section and made it searchable,
               filterable, and more useful.
             </p>
-            <p className="bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-800/50 rounded-xl p-4 text-sm text-amber-800 dark:text-amber-300">
+            <p className="max-w-[65ch] bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-800/50 rounded-xl p-4 text-sm text-amber-800 dark:text-amber-300">
               <strong>One important thing to know:</strong> Having an NPI means a
               provider registered with the federal government — it doesn&rsquo;t tell you
               whether their state license is current right now, or whether they&rsquo;ve had
@@ -98,7 +98,7 @@ const HowWeVerifyPage: React.FC = () => {
               registry, not from the provider themselves. It&rsquo;s real data from a
               legitimate source — just not the complete picture.
             </p>
-            <p className="bg-teal-50 dark:bg-teal-900/10 border border-teal-200 dark:border-teal-800/50 rounded-xl p-4 text-sm text-teal-800 dark:text-teal-300">
+            <p className="max-w-[65ch] bg-teal-50 dark:bg-teal-900/10 border border-teal-200 dark:border-teal-800/50 rounded-xl p-4 text-sm text-teal-800 dark:text-teal-300">
               <strong>Are you this provider?</strong> If you see your listing and want
               to add your specialties, insurance, and a personal bio, you can{' '}
               <Link to="/for-providers/claim" className="underline font-medium">
@@ -181,7 +181,7 @@ const HowWeVerifyPage: React.FC = () => {
               directory. They&rsquo;ve gone through our review process, and their information
               has been independently confirmed.
             </p>
-            <p className="bg-surface border border-border rounded-xl p-4 text-sm">
+            <p className="max-w-[65ch] bg-surface border border-border rounded-xl p-4 text-sm">
               <strong>A note on timing:</strong> We verify information as of the review
               date (shown on each provider&rsquo;s profile). We don&rsquo;t monitor every license
               across all 50 states in real time — if something changes for a provider
@@ -242,7 +242,7 @@ const HowWeVerifyPage: React.FC = () => {
               transparent about this: when you see &ldquo;Featured,&rdquo; you know there&rsquo;s a
               commercial relationship involved.
             </p>
-            <p className="bg-surface border border-border rounded-xl p-4 text-sm">
+            <p className="max-w-[65ch] bg-surface border border-border rounded-xl p-4 text-sm">
               <strong>Want to see results without premium sorting?</strong> Switch to
               &ldquo;Name (A-Z)&rdquo; in the sort dropdown to remove the Featured boost.
             </p>

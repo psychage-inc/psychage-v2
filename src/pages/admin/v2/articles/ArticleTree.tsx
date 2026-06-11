@@ -40,7 +40,7 @@ function DerivativeRow({ d }: { d: ArticleDerivativeRecord }) {
         {d.title || 'Untitled'}
       </span>
       {d.platform && (
-        <span className="text-[11px] text-text-tertiary">{d.platform}</span>
+        <span className="text-xs text-text-tertiary">{d.platform}</span>
       )}
       <AdminStatusBadge status={d.status} />
     </div>
@@ -110,7 +110,7 @@ function TreeNode({ article }: { article: ArticleRecord }) {
         <AdminStatusBadge status={article.review_stage || 'planned'} />
 
         {expanded && totalDerivatives > 0 && (
-          <span className="text-[11px] text-text-tertiary flex-shrink-0">
+          <span className="text-xs text-text-tertiary flex-shrink-0">
             {publishedCount}/{totalDerivatives}
           </span>
         )}
@@ -138,14 +138,14 @@ function TreeNode({ article }: { article: ArticleRecord }) {
                     key={dt.value}
                     onClick={() => createMutation.mutate(dt.value)}
                     disabled={createMutation.isPending}
-                    className="text-[11px] px-2 py-1 rounded bg-surface-hover text-text-secondary hover:bg-primary/15 hover:text-primary transition-colors disabled:opacity-50"
+                    className="text-xs px-2 py-1 rounded bg-surface-hover text-text-secondary hover:bg-primary/15 hover:text-primary transition-colors disabled:opacity-50"
                   >
                     {dt.label}
                   </button>
                 ))}
                 <button
                   onClick={() => setShowAddForm(false)}
-                  className="text-[11px] px-2 py-1 text-text-tertiary hover:text-text-secondary transition-colors"
+                  className="text-xs px-2 py-1 text-text-tertiary hover:text-text-secondary transition-colors"
                 >
                   Cancel
                 </button>

@@ -44,6 +44,7 @@ export const BloomVisualization: React.FC<BloomProps> = ({ valence }) => {
                 </defs>
                 <motion.ellipse
                     cx="100" cy="100"
+                    initial={{ rx: 70 * scale, ry: 60 * scale }}
                     animate={{
                         rx: [70 * scale, 80 * scale, 70 * scale],
                         ry: [60 * scale, 65 * scale, 60 * scale],
@@ -62,6 +63,7 @@ export const BloomVisualization: React.FC<BloomProps> = ({ valence }) => {
             >
                 <motion.ellipse
                     cx="100" cy="100"
+                    initial={{ rx: 55 * scale, ry: 70 * scale }}
                     animate={{
                         rx: [55 * scale, 65 * scale, 55 * scale],
                         ry: [70 * scale, 75 * scale, 70 * scale],

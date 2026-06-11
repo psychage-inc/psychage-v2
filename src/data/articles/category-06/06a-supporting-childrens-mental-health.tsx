@@ -39,7 +39,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
       steps: [
         { title: 'Observe for One Week', description: 'Keep a simple daily log noting your child\'s mood, behavior, sleep, appetite, and any physical complaints.' },
         { title: 'Apply the Four-Factor Test', description: 'For each concern, assess: How intense? How long has it lasted? How often does it happen? How much does it interfere with daily life?' },
-        { title: 'Check for Patterns', description: 'Look for consistency across days and settings (home, school, activities). Random bad days are normal; persistent patterns warrant attention.' },
+        { title: 'Check for Patterns', description: 'Look for consistency across days and settings (home, school, activities). Random bad days are common; persistent patterns warrant attention.' },
         { title: 'Decide on Next Steps', description: 'If patterns emerge that concern you, schedule a consultation with your pediatrician or a child mental health professional. Bring your observations.' },
       ],
       toolLink: '/tools/symptom-navigator',
@@ -410,7 +410,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
             Open, age-appropriate conversations about mental health normalize emotions, reduce stigma, and teach children that help-seeking is a strength <Citation id="1" index={1} source="Journal of Family Psychology" year="2020" tier={1} />. Whether your child is struggling now or you want to build a foundation for future conversations, the strategies in this guide will help you approach these talks with confidence.
           </p>
           <p className="mb-6">
-            Many parents avoid mental health conversations because they fear saying the wrong thing, making their child anxious, or not having the "right" answers. The truth is that imperfect conversations are better than silence. Children pick up on emotional cues — when adults avoid discussing feelings, kids learn that emotions are dangerous or shameful. When adults talk openly about mental health, kids learn it's a normal part of being human.
+            Many parents avoid mental health conversations because they fear saying the wrong thing, making their child anxious, or not having the "right" answers. The truth is that imperfect conversations are better than silence. Children pick up on emotional cues — when adults avoid discussing feelings, kids learn that emotions are dangerous or shameful. When adults talk openly about mental health, kids learn it's a common part of being human.
           </p>
         </div>
 
@@ -422,7 +422,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Develop emotional literacy --- can name and understand feelings</li>
-          <li>See mental health as normal, not shameful</li>
+          <li>See mental health as common, not shameful</li>
           <li>Know that struggling is okay and help is available</li>
           <li>Are more likely to seek support when needed</li>
           <li>Feel less alone when they experience difficult emotions</li>
@@ -1035,10 +1035,10 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Weeks 1-3:</strong> Learning phase. Child practices coping skills, may not show much behavior change yet.</li>
-          <li><strong>Weeks 4-8:</strong> Gradual exposure begins. Anxiety may temporarily increase before it decreases — this is normal and means exposure is working.</li>
+          <li><strong>Weeks 4-8:</strong> Gradual exposure begins. Anxiety may temporarily increase before it decreases — this is common and means exposure is working.</li>
           <li><strong>Weeks 8-12:</strong> Noticeable progress. Child faces some feared situations with support. Avoidance decreases.</li>
           <li><strong>3-6 months:</strong> Significant improvement. Child has internalized skills, can face most feared situations independently.</li>
-          <li><strong>Beyond 6 months:</strong> Occasional setbacks during stress are normal. Return to basics: coping skills + gradual re-exposure.</li>
+          <li><strong>Beyond 6 months:</strong> Occasional setbacks during stress are common. Return to basics: coping skills + gradual re-exposure.</li>
         </ul>
         <p className="mb-6">
           Celebrate small victories. Your child attending a birthday party for 30 minutes instead of avoiding it entirely is progress, even if they didn't stay the whole time.

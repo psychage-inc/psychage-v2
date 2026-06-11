@@ -73,7 +73,7 @@ const StressorLogSection: React.FC<StressorLogSectionProps> = ({ onSave, existin
           value={description}
           onChange={e => setDescription(e.target.value)}
           placeholder="Brief description..."
-          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
         />
       </div>
 
@@ -124,7 +124,7 @@ const StressorLogSection: React.FC<StressorLogSectionProps> = ({ onSave, existin
           value={copingUsed}
           onChange={e => setCopingUsed(e.target.value)}
           placeholder="e.g., Talked to a friend, went for a walk..."
-          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
         />
       </div>
 

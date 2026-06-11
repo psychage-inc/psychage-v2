@@ -1176,7 +1176,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          If you're a first responder struggling with trauma symptoms, know this: what you're experiencing is a normal response to abnormal, repeated exposure. You've spent your career helping others---it's time to let others help you. Your service matters, and so does your well-being.
+          If you're a first responder struggling with trauma symptoms, know this: what you're experiencing is a common response to abnormal, repeated exposure. You've spent your career helping others---it's time to let others help you. Your service matters, and so does your well-being.
         </p>
       </>
     ),
@@ -1558,7 +1558,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          If you're a veteran struggling with combat trauma, know this: what you're experiencing is a normal response to abnormal experiences. You served your country. Now it's time to let others serve you. Treatment works. Recovery is possible. You don't have to carry this alone.
+          If you're a veteran struggling with combat trauma, know this: what you're experiencing is a common response to abnormal experiences. You served your country. Now it's time to let others serve you. Treatment works. Recovery is possible. You don't have to carry this alone.
         </p>
       </>
     ),
@@ -1699,7 +1699,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
                     <li>Physical symptoms (shaking, rapid heartbeat)</li>
                   </ul>
                   <p className="mt-3">
-                    <em>This is normal. These reactions don't require formal diagnosis or treatment---supportive care and safety are the priorities{', '}
+                    <em>This is common. These reactions don't require formal diagnosis or treatment---supportive care and safety are the priorities{', '}
                     <Citation id="6" index={6} source="National Center for PTSD" year="2023" tier={2} />.</em>
                   </p>
                 </div>
@@ -1963,7 +1963,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          If you're in the early days or weeks after trauma, be patient with yourself. Your reactions are normal. Many people recover naturally with time, support, and self-care. But if symptoms are severe or persistent, early professional help can make a significant difference in preventing long-term PTSD.
+          If you're in the early days or weeks after trauma, be patient with yourself. Your reactions are common. Many people recover naturally with time, support, and self-care. But if symptoms are severe or persistent, early professional help can make a significant difference in preventing long-term PTSD.
         </p>
       </>
     ),

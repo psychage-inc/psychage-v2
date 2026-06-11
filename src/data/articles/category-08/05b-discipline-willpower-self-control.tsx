@@ -1324,7 +1324,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
         />
 
         <p>
-          Notice that self-compassion acknowledges the struggle without catastrophizing it. It treats failure as a normal part of learning, not a character indictment. <Citation ids={['1', '3']} />
+          Notice that self-compassion acknowledges the struggle without catastrophizing it. It treats failure as a common part of learning, not a character indictment. <Citation ids={['1', '3']} />
         </p>
 
         <h2>How Self-Compassion Improves Discipline</h2>
@@ -1397,7 +1397,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
 
         <h2>When Self-Compassion Feels Unnatural</h2>
         <p>
-          If you've spent years using harsh self-criticism, self-compassion can feel foreign or even 'wrong"---like you're letting yourself off the hook. This discomfort is normal. Self-compassion is a skill that develops with practice, just like physical flexibility. Start small:
+          If you've spent years using harsh self-criticism, self-compassion can feel foreign or even 'wrong"---like you're letting yourself off the hook. This discomfort is common. Self-compassion is a skill that develops with practice, just like physical flexibility. Start small:
         </p>
 
         <ul>

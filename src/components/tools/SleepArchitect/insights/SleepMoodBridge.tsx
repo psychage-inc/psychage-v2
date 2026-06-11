@@ -129,7 +129,7 @@ const SleepMoodBridge: React.FC<SleepMoodBridgeProps> = ({
                 </div>
                 <span
                   className={cn(
-                    'text-[10px] font-bold px-2 py-0.5 rounded-full',
+                    'text-xs font-bold px-2 py-0.5 rounded-full',
                     significanceColor(c.significance)
                   )}
                 >
@@ -139,7 +139,7 @@ const SleepMoodBridge: React.FC<SleepMoodBridgeProps> = ({
               <p className="text-xs text-gray-600 dark:text-neutral-400 leading-relaxed">
                 {c.insight}
               </p>
-              <div className="text-[10px] text-gray-400 dark:text-neutral-500 mt-1">
+              <div className="text-xs text-gray-400 dark:text-neutral-500 mt-1">
                 Based on {c.sample_size} matched days
               </div>
             </motion.div>

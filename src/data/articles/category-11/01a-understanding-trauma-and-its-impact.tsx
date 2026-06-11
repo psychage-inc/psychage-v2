@@ -30,7 +30,7 @@ export const understandingTraumaArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Trauma Basics', 'Mental Health', 'Psychology', 'Recovery'],
-    summary: `Psychological trauma is more than just a difficult experience—it's a response that overwhelms your coping abilities and leaves lasting effects on your mental and physical health. Understanding what trauma actually means, how it differs from stress, and why your reactions are normal responses to abnormal events is the crucial first step toward healing.`,
+    summary: `Psychological trauma is more than just a difficult experience—it's a response that overwhelms your coping abilities and leaves lasting effects on your mental and physical health. Understanding what trauma actually means, how it differs from stress, and why your reactions are common responses to abnormal events is the crucial first step toward healing.`,
     keyFacts: [
       { text: '60% of men and 50% of women experience at least one traumatic event in their lifetime', citationIndex: 8 },
       { text: 'Trauma is defined by your response to an event, not the event itself', citationIndex: 3 },
@@ -219,7 +219,7 @@ export const understandingTraumaArticlesA: Article[] = [
           How Trauma Differs from Stress
         </h2>
         <p className="mb-6">
-          Stress and trauma are often confused, but they're not the same thing. Stress is a normal response to
+          Stress and trauma are often confused, but they're not the same thing. Stress is a common response to
           challenges and demands. It can be uncomfortable, but it's usually manageable and temporary. Trauma, on the
           other hand, exceeds your capacity to cope and leaves a more permanent mark{', '}
           <Citation id="4" index={4} source="American Psychological Association" year="2021" tier={1} />.
@@ -347,7 +347,7 @@ export const understandingTraumaArticlesA: Article[] = [
 
         <ArticleCallout variant="clinical-note" title="Note">
           <p>
-            These symptoms are normal responses to abnormal events. They're your nervous system's attempt to keep you
+            These symptoms are common responses to abnormal events. They're your nervous system's attempt to keep you
             safe. Healing involves teaching your body and mind that the danger has passed{', '}
             <Citation id="7" index={7} source="SAMHSA" year="2014" tier={2} />.
           </p>

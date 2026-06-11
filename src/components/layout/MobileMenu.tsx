@@ -1,8 +1,9 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, ChevronRight, LogOut, User, ChevronDown, HeartHandshake } from 'lucide-react';
 import { Logo } from '../ui/Logo';
 import ThemeToggle from '../ui/ThemeToggle';
+import { useFocusTrap } from '../../hooks/useFocusTrap';
 import { useAuth } from '../../context/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
 import { navigationConfig } from '../../config/navigation';
@@ -15,14 +16,31 @@ interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
   onNavigateGeneric?: (view: string) => void;
+  triggerRef?: React.RefObject<HTMLButtonElement | null>;
 }
 
-const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
+const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, triggerRef }) => {
   const { user, isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
   const { getDashboardConfig } = useNavigation();
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const { filterNavItems, filterMegaMenu } = useNavPermissions();
+
+  const drawerRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+  // Reuse the repo's focus-trap: Tab cycle + Escape-to-close + focus restore to hamburger.
+  // Signature: (containerRef, isActive, onClose, restoreFocusRef, initialFocusRef, escapeToClose)
+  useFocusTrap(drawerRef, isOpen, onClose, triggerRef, closeButtonRef);
+
+  // Lock body scroll while the drawer is open (matches CrisisOverlay / ProviderFilterPanel).
+  useEffect(() => {
+    if (!isOpen) return;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
 
   const dashboardConfig = getDashboardConfig();
 
@@ -69,6 +87,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
 
           {/* Slide-out Menu */}
           <motion.div
+            ref={drawerRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Navigation menu"
+            tabIndex={-1}
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
@@ -88,8 +111,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               <div className="flex items-center gap-2">
                 <ThemeToggle />
                 <button
+                  ref={closeButtonRef}
                   onClick={onClose}
-                  className="p-2 text-text-tertiary hover:text-text-primary hover:bg-surface-hover rounded-full transition-colors"
+                  className="min-h-[44px] min-w-[44px] flex items-center justify-center text-text-tertiary hover:text-text-primary hover:bg-surface-hover rounded-full transition-colors"
                   aria-label="Close navigation menu"
                 >
                   <X size={24} aria-hidden="true" />

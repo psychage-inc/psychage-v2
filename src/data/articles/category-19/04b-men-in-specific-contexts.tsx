@@ -547,7 +547,7 @@ export const menInSpecificContextsArticlesB: Article[] = [
             },
             {
               title: 'Sexual and romantic success',
-              content: 'Content that frames romantic success as a competition --- with clear "winners" and "losers" --- creates anxiety in men who do not match the idealized narrative. This comparison is particularly damaging because it ties self-worth to external validation in a domain where rejection is normal and inevitable.',
+              content: 'Content that frames romantic success as a competition --- with clear "winners" and "losers" --- creates anxiety in men who do not match the idealized narrative. This comparison is particularly damaging because it ties self-worth to external validation in a domain where rejection is common and inevitable.',
             },
             {
               title: 'Social status and influence',
@@ -574,7 +574,7 @@ export const menInSpecificContextsArticlesB: Article[] = [
 
         <ProgressSteps
           steps={[
-            { title: 'Entry point: legitimate content', description: 'A young man searches for fitness advice, dating tips, or self-improvement content. These are normal, healthy interests.' },
+            { title: 'Entry point: legitimate content', description: 'A young man searches for fitness advice, dating tips, or self-improvement content. These are common, healthy interests.' },
             { title: 'Algorithmic escalation', description: 'The recommendation engine learns that emotionally charged content gets more engagement. It begins serving increasingly extreme versions of the original interest --- from fitness to "alpha male" content, from dating advice to misogynistic commentary, from self-improvement to dominance hierarchies.' },
             { title: 'Echo chamber formation', description: 'As the user engages with more extreme content, the algorithm narrows the feed. Moderate voices disappear. The user\'s online world becomes populated almost exclusively by content that reinforces a single, increasingly radical worldview.' },
             { title: 'Identity adoption', description: 'Sustained exposure to extreme content begins to shape identity, beliefs, and behavior. Research shows that young men exposed to "manosphere" content show increased hostile sexism, lower empathy, and higher endorsement of violence over time.' },

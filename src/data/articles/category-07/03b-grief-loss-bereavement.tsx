@@ -464,7 +464,7 @@ export const griefLossArticlesB: Article[] = [
             {
               title: 'Relief and Guilt About Relief',
               description: (
-                <p>If the person struggled with mental illness for years, there may be relief that their suffering ended---followed by crushing guilt for feeling relieved. Both emotions are normal and can coexist.</p>
+                <p>If the person struggled with mental illness for years, there may be relief that their suffering ended---followed by crushing guilt for feeling relieved. Both emotions are common and can coexist.</p>
               ),
             },
           ]}
@@ -1084,7 +1084,7 @@ export const griefLossArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Grief affects the body, but your body also needs care to process grief. The two are intertwined. Be patient with yourself. Rest. Eat. Move gently. Breathe. Your body knows how to heal---give it what it needs to do so. And remember: physical symptoms of grief are normal, but they're not something you have to suffer through alone. Reach out for support when you need it.
+          Grief affects the body, but your body also needs care to process grief. The two are intertwined. Be patient with yourself. Rest. Eat. Move gently. Breathe. Your body knows how to heal---give it what it needs to do so. And remember: physical symptoms of grief are common, but they're not something you have to suffer through alone. Reach out for support when you need it.
         </p>
       </>
     ),
@@ -1265,7 +1265,7 @@ export const griefLossArticlesB: Article[] = [
           <li>Yearning peaks around 4-6 months post-loss (when shock wears off and reality sets in)</li>
           <li>For most, yearning gradually decreases over 12-24 months</li>
           <li>Yearning that remains intense beyond 12 months is a key marker of prolonged grief disorder</li>
-          <li>Low-level yearning can persist indefinitely---this is normal, not pathological</li>
+          <li>Low-level yearning can persist indefinitely---this is common, not pathological</li>
         </ul>
 
         <QuoteBlock
@@ -1381,7 +1381,7 @@ export const griefLossArticlesB: Article[] = [
                 <li>Acute grief typically eases in 6-24 months for most people</li>
                 <li>Some level of grief may persist indefinitely</li>
                 <li>Timeline doesn't reflect love---resilience and grief intensity aren't inversely related</li>
-                <li>Both quick adaptation and prolonged grief can be normal</li>
+                <li>Both quick adaptation and prolonged grief can be common</li>
               </ul>
             ),
           }}

@@ -359,7 +359,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
     practicalExercise: {
       title: 'If you are an EMS professional experiencing compassion fatigue or burnout',
       steps: [
-        { title: 'If you are an EMS professional experiencing compassion fatigue or burnout', description: ', recognize that your symptoms are a normal response to an abnormal workload. Contact your agency\'s peer support program, the Code Green Campaign, or a mental health professional who understands first responder culture.' },
+        { title: 'If you are an EMS professional experiencing compassion fatigue or burnout', description: ', recognize that your symptoms are a common response to an abnormal workload. Contact your agency\'s peer support program, the Code Green Campaign, or a mental health professional who understands first responder culture.' },
         { title: 'Monitor your empathic capacity.', description: 'When you notice yourself becoming emotionally numb to patients, treating calls as interruptions rather than opportunities to help, or losing the sense of meaning that drew you to EMS—these are signals of compassion fatigue, not character defects.' },
         { title: 'Protect your recovery time.', description: 'Off-duty time is not a luxury—it is the period during which your psychological resources regenerate. Resist the pressure (internal and external) to fill every available hour with overtime.' },
         { title: 'Advocate for systemic change.', description: 'Better compensation, adequate staffing, reasonable scheduling, and accessible mental health support are not just workforce issues—they are patient safety issues, because compassion-fatigued providers cannot deliver the quality of care that patients deserve.' },
@@ -467,7 +467,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
     practicalExercise: {
       title: 'If you are a dispatcher experiencing psychological distress',
       steps: [
-        { title: 'If you are a dispatcher experiencing psychological distress', description: ', your symptoms are a normal response to an extraordinary workload. Contact your agency\'s peer support team, the 911 Wellness Foundation, or a mental health provider who understands first responder trauma.' },
+        { title: 'If you are a dispatcher experiencing psychological distress', description: ', your symptoms are a common response to an extraordinary workload. Contact your agency\'s peer support team, the 911 Wellness Foundation, or a mental health provider who understands first responder trauma.' },
         { title: 'Advocate for first responder classification.', description: 'Support legislative efforts in your state to classify dispatchers as first responders with access to the mental health benefits and protections that classification provides.' },
         { title: 'Request outcome information.', description: 'Ask field responders about the outcomes of calls that affected you. Closure—even when the outcome is negative—reduces the burden of uncertainty.' },
         { title: 'Build decompression into your routine.', description: 'After particularly difficult calls, take what time you can to acknowledge the emotional impact before moving to the next call. Even brief processing reduces the accumulation of unprocessed stress.' },
@@ -788,7 +788,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
     practicalExercise: {
       title: 'If you are a correctional officer experiencing psychological distress',
       steps: [
-        { title: 'If you are a correctional officer experiencing psychological distress', description: ', recognize that your symptoms are a normal response to an extraordinary work environment. Contact Safe Call Now (1-206-459-3020), the Desert Waters Correctional Outreach Foundation, or a mental health provider who understands corrections.' },
+        { title: 'If you are a correctional officer experiencing psychological distress', description: ', recognize that your symptoms are a common response to an extraordinary work environment. Contact Safe Call Now (1-206-459-3020), the Desert Waters Correctional Outreach Foundation, or a mental health provider who understands corrections.' },
         { title: 'Monitor for corrections fatigue.', description: 'Cynicism, emotional numbness, irritability, hypervigilance off duty, sleep problems, and loss of meaning in the work are signals that your psychological resources need replenishment.' },
         { title: 'Build connections outside of corrections.', description: 'Relationships, activities, and identities that exist beyond the walls help maintain the perspective and emotional balance that sustained correctional work requires.' },
         { title: 'Advocate for systemic change.', description: 'Adequate staffing, reasonable overtime policies, accessible mental health services, and first responder classification are not just officer welfare issues—they are institutional safety issues.' },
@@ -999,7 +999,7 @@ export const firstResponderMentalHealthArticles: Article[] = [
     practicalExercise: {
       title: 'If you are a SAR volunteer experiencing psychological distress',
       steps: [
-        { title: 'If you are a SAR volunteer experiencing psychological distress', description: ', recognize that your reactions are normal responses to abnormal experiences. Contact the Crisis Text Line (text HOME to 741741), the 988 Suicide & Crisis Lifeline, or a mental health provider experienced with first responder populations.' },
+        { title: 'If you are a SAR volunteer experiencing psychological distress', description: ', recognize that your reactions are common responses to abnormal experiences. Contact the Crisis Text Line (text HOME to 741741), the 988 Suicide & Crisis Lifeline, or a mental health provider experienced with first responder populations.' },
         { title: 'Debrief after significant operations.', description: 'Even informal group debriefing—sharing experiences, normalizing reactions, checking on each other—can buffer the psychological impact of traumatic events.' },
         { title: 'Establish mental health support for your team.', description: 'If your SAR team lacks formal psychological support, advocate for partnerships with local mental health providers, peer support training, and critical incident stress management protocols.' },
         { title: 'Monitor your cumulative exposure.', description: 'Body recovery, failed searches, and pediatric cases produce cumulative psychological burden. Track your exposure and seek support before symptoms become entrenched.' },

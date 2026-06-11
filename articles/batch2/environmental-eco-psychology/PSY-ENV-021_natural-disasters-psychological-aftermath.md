@@ -97,7 +97,7 @@ The mental health infrastructure for disaster response—already inadequate for 
 
 ## What You Can Try
 
-- **If you have recently experienced a natural disaster**, know that distress is normal and expected. Most people recover naturally with time, social support, and the restoration of safety and routine. If symptoms persist beyond a month or significantly impair your functioning, seek professional support.
+- **If you have recently experienced a natural disaster**, know that distress is common and expected. Most people recover naturally with time, social support, and the restoration of safety and routine. If symptoms persist beyond a month or significantly impair your functioning, seek professional support.
 
 - **Stay connected.** Social isolation amplifies post-disaster distress. Maintain contact with friends, family, and community members. Accept offered help. Participate in community recovery activities.
 

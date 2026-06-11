@@ -18,6 +18,11 @@ vi.mock('framer-motion', () => {
                 <button ref={ref} {...props}>{children}</button>
             )),
         },
+        // AnimatedNumber counts up via animate(); jump straight to the target value.
+        animate: (_from: number, to: number, opts: any) => {
+            opts?.onUpdate?.(to);
+            return { stop: () => {} };
+        },
     };
 });
 

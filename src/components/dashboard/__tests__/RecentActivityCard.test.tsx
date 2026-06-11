@@ -30,12 +30,12 @@ const mockActivity = [
 describe('RecentActivityCard', () => {
     it('should render Activity label', () => {
         renderWithRouter(<RecentActivityCard activity={[]} />);
-        expect(screen.getByText('Activity')).toBeInTheDocument();
+        expect(screen.getByText('Recent Activity')).toBeInTheDocument();
     });
 
     it('should show empty state when no activity', () => {
         renderWithRouter(<RecentActivityCard activity={[]} />);
-        expect(screen.getByText('No recent activity')).toBeInTheDocument();
+        expect(screen.getByText(/your activity will show up here/i)).toBeInTheDocument();
     });
 
     it('should display activity items', () => {
@@ -44,14 +44,16 @@ describe('RecentActivityCard', () => {
         expect(screen.getByText('Dr. Smith Visit')).toBeInTheDocument();
     });
 
-    it('should limit to 3 items', () => {
-        const fourItems = [
+    it('should limit to 5 items', () => {
+        const sixItems = [
             ...mockActivity,
             { type: 'assessment' as const, title: 'Item 3', date: '2026-03-03T12:00:00Z' },
             { type: 'assessment' as const, title: 'Item 4', date: '2026-03-02T12:00:00Z' },
+            { type: 'assessment' as const, title: 'Item 5', date: '2026-03-01T12:00:00Z' },
+            { type: 'assessment' as const, title: 'Item 6', date: '2026-02-28T12:00:00Z' },
         ];
-        renderWithRouter(<RecentActivityCard activity={fourItems} />);
-        expect(screen.queryByText('Item 4')).not.toBeInTheDocument();
+        renderWithRouter(<RecentActivityCard activity={sixItems} />);
+        expect(screen.queryByText('Item 6')).not.toBeInTheDocument();
     });
 
     it('should display View All link to history', () => {

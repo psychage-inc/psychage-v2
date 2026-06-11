@@ -292,7 +292,7 @@ const ArticleAudioPlayer: React.FC<ArticleAudioPlayerProps> = ({
 
             {/* TTS notice */}
             {isTTS && (
-                <span className="hidden lg:inline text-[10px] text-text-tertiary whitespace-nowrap">
+                <span className="hidden lg:inline text-xs text-text-tertiary whitespace-nowrap">
                     Device TTS
                 </span>
             )}

@@ -762,7 +762,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
               id: 'impression',
               title: 'Impression management',
               content: (
-                <p>We all want to be seen positively. Research shows that people strategically share content that presents them in a favorable light---successful, attractive, popular, happy <Citation id="2" index={2} source="Personality and Individual Differences" year="2014" tier={1} />. This is normal self-presentation, just amplified by the public nature of social media.</p>
+                <p>We all want to be seen positively. Research shows that people strategically share content that presents them in a favorable light---successful, attractive, popular, happy <Citation id="2" index={2} source="Personality and Individual Differences" year="2014" tier={1} />. This is common self-presentation, just amplified by the public nature of social media.</p>
               ),
             },
             {
@@ -1173,7 +1173,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
               id: 'days-1-3',
               title: 'Days 1-3: Discomfort and urges',
               content: (
-                <p>The first few days are hardest. You reach for your phone out of habit. You feel anxious about missing out. You wonder what people are posting. This is normal withdrawal from a learned dopamine loop. It gets easier after day 3.</p>
+                <p>The first few days are hardest. You reach for your phone out of habit. You feel anxious about missing out. You wonder what people are posting. This is common withdrawal from a learned dopamine loop. It gets easier after day 3.</p>
               ),
             },
             {

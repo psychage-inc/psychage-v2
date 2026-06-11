@@ -70,7 +70,7 @@ const NavigatorAwarenessCard: React.FC<NavigatorAwarenessCardProps> = ({ totalEx
                     </div>
                 )}
 
-                <p className="text-[10px] text-gray-400 dark:text-neutral-500 mt-auto pt-3 border-t border-gray-100 dark:border-neutral-800/60">
+                <p className="text-xs text-gray-400 dark:text-neutral-500 mt-auto pt-3 border-t border-gray-100 dark:border-neutral-800/60">
                     Educational tool — not a medical diagnosis
                 </p>
             </div>

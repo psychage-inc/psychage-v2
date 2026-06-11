@@ -212,7 +212,7 @@ export const QuestionWizard: React.FC<QuestionWizardProps> = ({
               {domainMeta.name}
             </span>
             {currentSubDimMeta && (
-              <span className="text-[11px] text-text-tertiary font-medium">
+              <span className="text-xs text-text-tertiary font-medium">
                 {currentSubDimMeta.name}
               </span>
             )}

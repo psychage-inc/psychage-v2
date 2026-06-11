@@ -90,7 +90,7 @@ const ContentStandardsPage: React.FC = () => {
             >
               <div className="flex items-center gap-3 mb-3">
                 <span
-                  className={`inline-block text-[9px] font-semibold uppercase px-2 py-0.5 rounded-full ${TIER_BADGE[card.tier]}`}
+                  className={`inline-block text-xs font-semibold uppercase px-2 py-0.5 rounded-full ${TIER_BADGE[card.tier]}`}
                 >
                   Tier {card.tier}
                 </span>
@@ -139,7 +139,7 @@ const ContentStandardsPage: React.FC = () => {
                       {check.name}
                     </span>
                     {check.blocking && (
-                      <span className="ml-2 text-[9px] font-semibold uppercase px-1.5 py-0.5 rounded-full bg-primary/10 text-primary">
+                      <span className="ml-2 text-xs font-semibold uppercase px-1.5 py-0.5 rounded-full bg-primary/10 text-primary">
                         Required
                       </span>
                     )}

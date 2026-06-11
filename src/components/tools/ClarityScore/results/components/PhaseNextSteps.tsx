@@ -85,12 +85,12 @@ const PhaseNextSteps: React.FC<PhaseNextStepsProps> = ({ tier }) => {
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2 mb-1">
             <span
-              className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold uppercase tracking-wider"
+              className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider"
               style={{ backgroundColor: tierColor, color: '#fff' }}
             >
               {protocol.urgencyLabel}
             </span>
-            <span className="text-[11px] uppercase tracking-wider text-gray-400 dark:text-neutral-500 font-medium">
+            <span className="text-xs uppercase tracking-wider text-gray-400 dark:text-neutral-500 font-medium">
               Next Steps
             </span>
           </div>
@@ -171,7 +171,7 @@ const PhaseNextSteps: React.FC<PhaseNextStepsProps> = ({ tier }) => {
         {/* What's working / Watch for — surfaces unrendered TIER_DESCRIPTIONS (Task 3) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="rounded-xl p-4 border border-emerald-100 dark:border-emerald-900/40 bg-emerald-50/60 dark:bg-emerald-900/10">
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 mb-1.5">
+            <p className="text-xs font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 mb-1.5">
               What's working
             </p>
             <p className="text-sm text-gray-700 dark:text-neutral-200 leading-relaxed">
@@ -179,7 +179,7 @@ const PhaseNextSteps: React.FC<PhaseNextStepsProps> = ({ tier }) => {
             </p>
           </div>
           <div className="rounded-xl p-4 border border-amber-100 dark:border-amber-900/40 bg-amber-50/60 dark:bg-amber-900/10">
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-400 mb-1.5">
+            <p className="text-xs font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-400 mb-1.5">
               Watch for
             </p>
             <p className="text-sm text-gray-700 dark:text-neutral-200 leading-relaxed">
@@ -205,7 +205,7 @@ const PhaseNextSteps: React.FC<PhaseNextStepsProps> = ({ tier }) => {
           </button>
           {showWhy && (
             <div className="mt-3 rounded-xl p-4 border border-gray-100 dark:border-neutral-800 bg-gray-50/70 dark:bg-neutral-800/30 space-y-2">
-              <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-500 dark:text-neutral-400">
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-neutral-400">
                 Source
               </p>
               <p className="text-sm font-semibold text-gray-900 dark:text-white">

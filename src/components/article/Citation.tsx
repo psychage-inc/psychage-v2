@@ -62,7 +62,7 @@ const SingleCitation: React.FC<{ id: string; index: number; source?: string; yea
                     className="
                         inline-flex items-center justify-center
                         w-[18px] h-[18px] ml-0.5 -mt-2
-                        text-[10px] font-bold text-primary
+                        text-xs font-bold text-primary
                         bg-primary/10
                         rounded-full cursor-pointer
                         hover:bg-teal-100 dark:hover:bg-teal-900/50
@@ -110,7 +110,7 @@ const SingleCitation: React.FC<{ id: string; index: number; source?: string; yea
                         </div>
                         {tier && (
                             <span
-                                className={`inline-block text-[9px] font-semibold uppercase px-2 py-0.5 rounded-full ${TIER_BADGE_COLORS[tier]}`}
+                                className={`inline-block text-xs font-semibold uppercase px-2 py-0.5 rounded-full ${TIER_BADGE_COLORS[tier]}`}
                             >
                                 T{tier}: {SOURCE_TIERS[tier]?.label ?? ''}
                             </span>

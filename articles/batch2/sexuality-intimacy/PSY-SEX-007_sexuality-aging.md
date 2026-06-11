@@ -81,7 +81,7 @@ The reasons for this clinical gap are multiple. Providers may lack training in a
 
 ## What You Can Try
 
-- **Reject ageist sexual myths.** Sexual desire, activity, and satisfaction are normal at every age. If you are experiencing sexual changes, they are worth addressing—not accepting as inevitable decline.
+- **Reject ageist sexual myths.** Sexual desire, activity, and satisfaction are common at every age. If you are experiencing sexual changes, they are worth addressing—not accepting as inevitable decline.
 
 - **Talk to your healthcare provider.** If your provider does not ask about sexual health, bring it up yourself. Ask about the sexual side effects of your medications and discuss treatment options for sexual concerns.
 

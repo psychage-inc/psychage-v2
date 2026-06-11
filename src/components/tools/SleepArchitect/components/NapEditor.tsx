@@ -68,7 +68,7 @@ const NapEditor: React.FC<NapEditorProps> = ({ naps, napAnalysis, onAdd, onRemov
               <div className="flex items-center gap-2 mb-2">
                 <div className="flex-1 grid grid-cols-2 gap-2">
                   <div>
-                    <label htmlFor={`nap-time-${nap.id}`} className="text-[10px] font-medium text-gray-500 dark:text-neutral-400 block mb-0.5">
+                    <label htmlFor={`nap-time-${nap.id}`} className="text-xs font-medium text-gray-500 dark:text-neutral-400 block mb-0.5">
                       Start Time
                     </label>
                     <input
@@ -80,7 +80,7 @@ const NapEditor: React.FC<NapEditorProps> = ({ naps, napAnalysis, onAdd, onRemov
                     />
                   </div>
                   <div>
-                    <label htmlFor={`nap-dur-${nap.id}`} className="text-[10px] font-medium text-gray-500 dark:text-neutral-400 block mb-0.5">
+                    <label htmlFor={`nap-dur-${nap.id}`} className="text-xs font-medium text-gray-500 dark:text-neutral-400 block mb-0.5">
                       Duration (min)
                     </label>
                     <input
@@ -106,16 +106,16 @@ const NapEditor: React.FC<NapEditorProps> = ({ naps, napAnalysis, onAdd, onRemov
 
               {analysis && (
                 <div className="flex items-center gap-2 flex-wrap">
-                  <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${classColor(analysis.classification)}`}>
+                  <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${classColor(analysis.classification)}`}>
                     {analysis.label}
                   </span>
                   {analysis.inertiaRisk && (
-                    <span className="text-[10px] font-medium text-amber-600 flex items-center gap-0.5">
+                    <span className="text-xs font-medium text-amber-600 flex items-center gap-0.5">
                       <AlertTriangle size={10} /> Sleep inertia risk
                     </span>
                   )}
                   {analysis.tooCloseToSleep && (
-                    <span className="text-[10px] font-medium text-red-500 flex items-center gap-0.5">
+                    <span className="text-xs font-medium text-red-500 flex items-center gap-0.5">
                       <AlertTriangle size={10} /> Too close to bedtime
                     </span>
                   )}

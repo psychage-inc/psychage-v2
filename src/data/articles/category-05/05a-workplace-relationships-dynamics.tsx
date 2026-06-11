@@ -852,7 +852,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
           <li><strong>Seek professional support</strong> --- therapy, particularly trauma-focused approaches, helps process the experience</li>
           <li><strong>Rebuild self-perception</strong> --- recognize bullying reflects the bully's dysfunction, not your inadequacy</li>
           <li><strong>Reconnect socially</strong> --- bullying often creates isolation; rebuilding connections aids recovery</li>
-          <li><strong>Give it time</strong> --- symptoms may persist for months after bullying ends; this is normal, not weakness</li>
+          <li><strong>Give it time</strong> --- symptoms may persist for months after bullying ends; this is common, not weakness</li>
         </ul>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

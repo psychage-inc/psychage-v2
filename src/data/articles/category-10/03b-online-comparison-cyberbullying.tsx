@@ -415,7 +415,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           <ul className="list-disc pl-5 space-y-2">
             <li>Rating systems are designed to reduce complex human interactions to numbers—they are inherently reductive and imperfect</li>
             <li>Your worth as a person is not determined by a numerical score, even if your income temporarily depends on it</li>
-            <li>Anxiety about ratings is a normal response to an abnormal system—you're not overreacting</li>
+            <li>Anxiety about ratings is a common response to an abnormal system—you're not overreacting</li>
             <li>Setting boundaries on checking and separating self-worth from ratings are evidence-based strategies that work</li>
             <li>If rating anxiety is interfering with your life, professional support can help you build healthier coping mechanisms</li>
           </ul>
@@ -571,7 +571,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           The Unique Pain of Ghosting
         </h2>
         <p className="mb-6">
-          Ghosting --- when someone you've been communicating with suddenly stops responding and disappears without explanation --- is now a normal part of online dating. Research shows it creates a specific type of psychological distress <Citation id="3" index={3} source="Journal of Social and Personal Relationships" year="2023" tier={1} />:
+          Ghosting --- when someone you've been communicating with suddenly stops responding and disappears without explanation --- is now a common part of online dating. Research shows it creates a specific type of psychological distress <Citation id="3" index={3} source="Journal of Social and Personal Relationships" year="2023" tier={1} />:
         </p>
 
         <ComparisonTable
@@ -889,7 +889,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
             You watch their videos every day, follow their life updates, laugh at their jokes, and feel genuinely happy when good things happen to them. When they post something difficult, you worry about them. You feel like you know them. But they have no idea you exist.
           </p>
           <p className="mb-6">
-            This is a parasocial relationship --- a one-sided emotional connection where you feel intimately connected to someone (a celebrity, influencer, streamer, podcaster, or content creator) who doesn't know you <Citation id="1" index={1} source="Media Psychology" year="2023" tier={1} />. While the term sounds clinical, parasocial relationships are completely normal and increasingly common in our digital age. But understanding when they're healthy versus when they become problematic is important for mental health <Citation id="2" index={2} source="Journal of Computer-Mediated Communication" year="2022" tier={1} />.
+            This is a parasocial relationship --- a one-sided emotional connection where you feel intimately connected to someone (a celebrity, influencer, streamer, podcaster, or content creator) who doesn't know you <Citation id="1" index={1} source="Media Psychology" year="2023" tier={1} />. While the term sounds clinical, parasocial relationships are common and increasingly so in our digital age. But understanding when they're healthy versus when they become problematic is important for mental health <Citation id="2" index={2} source="Journal of Computer-Mediated Communication" year="2022" tier={1} />.
           </p>
         </div>
 
@@ -961,7 +961,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
                     <li>Help you feel less alone during difficult times</li>
                     <li>Motivate you to pursue interests or goals</li>
                   </ul>
-                  <p className="mt-4">Many people find comfort in parasocial relationships, especially during periods of transition, loneliness, or stress. This is normal and not inherently problematic.</p>
+                  <p className="mt-4">Many people find comfort in parasocial relationships, especially during periods of transition, loneliness, or stress. This is common and not inherently problematic.</p>
                 </div>
               ),
             },
@@ -1021,7 +1021,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>If you feel sad, angry, or lost when a parasocial relationship ends, that's normal. The relationship was emotionally real to you, even if it wasn't reciprocal. Give yourself permission to grieve.</p>
+          <p>If you feel sad, angry, or lost when a parasocial relationship ends, that's common. The relationship was emotionally real to you, even if it wasn't reciprocal. Give yourself permission to grieve.</p>
         </ArticleCallout>
 
         <h2 id="managing-parasocial" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1139,11 +1139,11 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway" title="The Bottom Line">
           <ul className="list-disc pl-5 space-y-2">
-            <li>Parasocial relationships are a normal part of digital life—you're not weird for feeling connected to creators</li>
+            <li>Parasocial relationships are a common part of digital life—you're not weird for feeling connected to creators</li>
             <li>The intimacy is real to you even if it's engineered by the creator—both things can be true</li>
             <li>Healthy parasocial relationships complement real friendships; unhealthy ones replace them</li>
             <li>If you feel distressed when a creator doesn't post or goes silent, that's a sign to examine the role they play in your life</li>
-            <li>Grieving when a parasocial relationship ends is normal and valid—don't let anyone tell you it "doesn't count"</li>
+            <li>Grieving when a parasocial relationship ends is common and valid—don't let anyone tell you it "doesn't count"</li>
           </ul>
         </ArticleCallout>
       </>
@@ -1442,7 +1442,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
             {
               title: 'Rebuild Trust Gradually',
               description: (
-                <p>It's normal to be wary after being catfished, but try not to let it close you off entirely. Rebuild trust slowly, starting with lower-stakes connections. Not everyone online is deceptive <Citation id="6" index={6} source="New Media & Society" year="2023" tier={1} />.</p>
+                <p>It's common to be wary after being catfished, but try not to let it close you off entirely. Rebuild trust slowly, starting with lower-stakes connections. Not everyone online is deceptive <Citation id="6" index={6} source="New Media & Society" year="2023" tier={1} />.</p>
               ),
             },
             {
@@ -1916,7 +1916,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           After a cyberbullying incident, healing takes time <Citation id="6" index={6} source="School Psychology Review" year="2022" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Validate their feelings:</strong> Let them know it's normal to feel hurt, angry, or confused</li>
+          <li><strong>Validate their feelings:</strong> Let them know it's common to feel hurt, angry, or confused</li>
           <li><strong>Rebuild their sense of safety:</strong> Work together to create boundaries that feel protective without isolating</li>
           <li><strong>Focus on strengths:</strong> Remind them of their positive qualities and things they're good at</li>
           <li><strong>Encourage offline connection:</strong> Help them maintain or rebuild in-person friendships</li>

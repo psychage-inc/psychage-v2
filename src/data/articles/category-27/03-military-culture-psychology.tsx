@@ -250,7 +250,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
     practicalExercise: {
       title: 'If you are a Reserve or Guard member experiencing post-deployment difficulties',
       steps: [
-        { title: 'If you are a Reserve or Guard member experiencing post-deployment difficulties', description: ', know that you are eligible for VA healthcare and that your symptoms are normal responses to combat. Contact the VA at 1-800-827-1000 or your local Vet Center.' },
+        { title: 'If you are a Reserve or Guard member experiencing post-deployment difficulties', description: ', know that you are eligible for VA healthcare and that your symptoms are common responses to combat. Contact the VA at 1-800-827-1000 or your local Vet Center.' },
         { title: 'Maintain unit connections after demobilization.', description: 'Stay in contact with the colleagues who shared your deployment. These relationships are your primary support network—do not let geographic distance dissolve them.' },
         { title: 'Understand your healthcare options.', description: 'TRICARE coverage extends for 180 days after demobilization. VA healthcare is available to combat veterans for 5 years post-separation. Explore these options before your current coverage ends.' },
         { title: 'If you are an employer', description: ', support your Reserve and Guard employees during reintegration. Provide flexibility for mental health appointments, be patient with adjustment difficulties, and recognize that the employee who returns from combat may need time and support to readjust.' },
@@ -890,7 +890,7 @@ export const militaryCulturePsychologyArticles: Article[] = [
     practicalExercise: {
       title: 'If you are an RPA operator experiencing psychological distress',
       steps: [
-        { title: 'If you are an RPA operator experiencing psychological distress', description: ', recognize that your experience is valid and your reactions are normal responses to extraordinary demands. Physical safety does not prevent psychological injury. Contact your unit\'s embedded mental health provider or the Military OneSource helpline (1-800-342-9647).' },
+        { title: 'If you are an RPA operator experiencing psychological distress', description: ', recognize that your experience is valid and your reactions are common responses to extraordinary demands. Physical safety does not prevent psychological injury. Contact your unit\'s embedded mental health provider or the Military OneSource helpline (1-800-342-9647).' },
         { title: 'Address the commute between worlds.', description: 'Develop deliberate transition rituals between your operational shift and your home life—a drive-time decompression routine, a physical activity that marks the shift from one world to another, or a brief mindfulness practice that creates the psychological boundary that geographic separation does not provide.' },
         { title: 'Connect with peers who understand.', description: 'The RPA community\'s shared experience provides a foundation for mutual support that outsiders cannot replicate. Peer support programs within the RPA community can validate experiences that the broader military culture may not fully recognize.' },
         { title: 'Seek moral injury-specific treatment.', description: 'If your distress involves guilt, shame, or moral questioning about your operational actions, consider Adaptive Disclosure or other moral injury-specific approaches rather than standard fear-based PTSD treatment.' },

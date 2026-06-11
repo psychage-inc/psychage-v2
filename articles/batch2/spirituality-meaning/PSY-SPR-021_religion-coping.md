@@ -145,7 +145,7 @@ Religious coping crosses into problematic territory when:
 
 **It isolates you from support.** If your religious coping involves withdrawing from community, refusing help ("God will provide"), or staying in harmful situations because "suffering is God's will," it's harmful.
 
-**It never resolves spiritual struggles.** Some spiritual struggle during crisis is normal and can even deepen faith. But chronic, unresolved spiritual struggle—years of feeling abandoned by God without resolution—predicts declining mental health [9].
+**It never resolves spiritual struggles.** Some spiritual struggle during crisis is common and can even deepen faith. But chronic, unresolved spiritual struggle—years of feeling abandoned by God without resolution—predicts declining mental health [9].
 
 > 💡 **Spark:** Faith isn't supposed to make you smaller, more afraid, more passive. If your religious coping leaves you feeling guilty, helpless, or isolated—that's not faith failing you. That's a version of faith that needs examination. The sacred doesn't demand you suffer alone. It invites you to bring your whole self—including your questions, your anger, your need for help—into the relationship.
 

@@ -1185,7 +1185,7 @@ export const healthyDigitalLifeArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           It is also important to help children understand that the emotions triggered by
-          social media --- envy, inadequacy, exclusion, pressure to perform --- are normal responses
+          social media --- envy, inadequacy, exclusion, pressure to perform --- are common responses
           to environments specifically designed to provoke those feelings. When children
           understand that these platforms are engineered to create emotional engagement (including
           negative emotions, which drive more browsing), they are better able to recognize and

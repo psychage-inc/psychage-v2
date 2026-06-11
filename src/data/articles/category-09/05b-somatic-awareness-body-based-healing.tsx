@@ -268,7 +268,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
               label: 'Mind Wandering',
               content: (
                 <div>
-                  <p className="mb-4">The mind will wander---constantly. This is normal, not failure.</p>
+                  <p className="mb-4">The mind will wander---constantly. This is common, not failure.</p>
                   <p className="mb-4">Each time you notice wandering, gently bring attention back to the current body part. This moment of noticing and returning IS the practice.</p>
                   <p>You might bring attention back 100 times in one session---that's 100 successful moments of mindfulness.</p>
                 </div>

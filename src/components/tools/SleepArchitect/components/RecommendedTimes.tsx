@@ -47,10 +47,10 @@ const RecommendedTimes: React.FC<RecommendedTimesProps> = ({ wakeTimes, bedtimes
                     className="bg-amber-50 rounded-xl p-3 text-center border border-amber-100"
                   >
                     <div className="text-lg font-bold font-display text-gray-900 dark:text-neutral-100">{t.time}</div>
-                    <div className="text-[10px] text-gray-500 dark:text-neutral-400 font-medium">
+                    <div className="text-xs text-gray-500 dark:text-neutral-400 font-medium">
                       {t.cycles} cycles &middot; {formatDuration(t.totalSleepMinutes)}
                     </div>
-                    <div className="text-[10px] text-amber-600 font-bold mt-0.5">{t.label}</div>
+                    <div className="text-xs text-amber-600 font-bold mt-0.5">{t.label}</div>
                   </div>
                 ))}
               </div>
@@ -69,10 +69,10 @@ const RecommendedTimes: React.FC<RecommendedTimesProps> = ({ wakeTimes, bedtimes
                     className="bg-indigo-50 rounded-xl p-3 text-center border border-indigo-100"
                   >
                     <div className="text-lg font-bold font-display text-gray-900 dark:text-neutral-100">{t.time}</div>
-                    <div className="text-[10px] text-gray-500 dark:text-neutral-400 font-medium">
+                    <div className="text-xs text-gray-500 dark:text-neutral-400 font-medium">
                       {t.cycles} cycles &middot; {formatDuration(t.totalSleepMinutes)}
                     </div>
-                    <div className="text-[10px] text-indigo-600 font-bold mt-0.5">{t.label}</div>
+                    <div className="text-xs text-indigo-600 font-bold mt-0.5">{t.label}</div>
                   </div>
                 ))}
               </div>

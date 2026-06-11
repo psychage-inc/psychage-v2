@@ -197,6 +197,166 @@
       "search_specialties": "Buscar especialidades"
     }
   },
+  "crisis": {
+    "_meta": {
+      "_translation_status": "PENDING — crisis namespace added 2026-06-10, EN-only stub. Translator: replace each value below."
+    },
+    "common": {
+      "call_now": "Call Now",
+      "find_a_helpline": "Find A Helpline",
+      "find_helpline_desc": "Search crisis helplines in any country worldwide",
+      "international": "International"
+    },
+    "banner": {
+      "dismiss_aria": "Dismiss crisis support notification",
+      "title": "24/7 Crisis Support",
+      "resources": "Resources"
+    },
+    "page": {
+      "seo_title": "Crisis Support | Psychage",
+      "seo_description": "If you're in crisis or need immediate support, you're not alone. Free, confidential help is available 24/7.",
+      "back_aria": "Go back to previous page",
+      "back": "Go Back",
+      "title": "You Are Not Alone",
+      "subtitle": "If you're experiencing a mental health crisis, help is available right now. Please reach out to one of these free, confidential resources.",
+      "emergency_line": "Emergency Line",
+      "emergency_services_country": "Emergency Services — {{country}}",
+      "tap_to_call": "Tap to call now",
+      "location_label": "Your Location",
+      "fallback_notice": "Using global directory — select your country below for local resources",
+      "emergency_prefix": "Emergency:",
+      "change_country_aria": "Change country",
+      "select_country": "Select country",
+      "search_countries_placeholder": "Search countries...",
+      "no_countries": "No countries found",
+      "section_heading": "Crisis Support — {{country}}",
+      "card_text": "Text",
+      "card_chat_now": "Chat now",
+      "card_visit": "Visit",
+      "card_verified": "Verified",
+      "safety_plan_title": "Create a Safety Plan",
+      "safety_plan_desc": "Prepare for difficult moments with coping strategies and contacts",
+      "safety_plan_note_bold": "Safety plans are most effective when created with the guidance of a mental health professional.",
+      "safety_plan_note_rest": "We recommend completing this with your clinician or counselor.",
+      "intl_resources": "International Resources",
+      "disclaimer_heading": "Important Information About These Resources",
+      "disclaimer_p1": "Psychage curates these crisis resources from verified directories to connect you with help when you need it most. All listed resources are free and confidential.",
+      "disclaimer_emergency_bold": "Psychage is not an emergency service.",
+      "disclaimer_emergency_rest": "If you are in immediate physical danger, call your local emergency number ({{emergency}}) or go to your nearest emergency room.",
+      "disclaimer_p3": "Contact information, availability, and services may change without notice. While we review this data regularly, Psychage cannot guarantee the accuracy of third-party resource details at any given time.",
+      "disclaimer_p4": "The resources listed are operated by independent organizations. Psychage does not control, endorse, or accept responsibility for the services they provide or the outcomes of any interactions.",
+      "contact_footer": "Resource data is sourced from verified crisis directories and reviewed regularly. If you notice outdated information, please contact us at <mail>info@psychage.com</mail> so we can update it."
+    },
+    "resourcesScreen": {
+      "seo_title": "Crisis Resources | Psychage",
+      "seo_description": "If you or someone you know is in crisis, help is available right now. Free, confidential support 24/7.",
+      "back_home": "Back to Home",
+      "title": "Crisis & Emergency Support",
+      "subtitle": "If you or someone you know is struggling, there is help available. You are not alone, and reaching out is a sign of strength.",
+      "emergency_footer": "In the event of a medical emergency or immediate danger, please dial 911 (US) or your local emergency number or proceed to the nearest emergency room."
+    },
+    "chatOverlay": {
+      "title": "You're Not Alone",
+      "subtitle": "If you or someone you know is in crisis, please reach out for help right now.",
+      "call_name": "Call {{name}}",
+      "available": "available 24/7",
+      "find_helpline_title": "Find a helpline in your country",
+      "find_helpline_desc": "International crisis support directory",
+      "return_to_chat": "Return to chat"
+    },
+    "supportModal": {
+      "grounding_title": "Grounding Exercise",
+      "grounding_intro": "Let's take a moment together. Follow along at your own pace.",
+      "step_aria": "Step {{n}}",
+      "step1": "Breathe in slowly for 4 seconds",
+      "step2": "Hold for 4 seconds",
+      "step3": "Breathe out slowly for 6 seconds",
+      "line_text": "Text",
+      "trusted_contact_title": "Trusted Contact",
+      "notify_trusted": "Notify a trusted person that you need support",
+      "consent_note": "We will only send a notification with your explicit permission. Nothing is sent automatically.",
+      "contact_placeholder": "Name or phone number",
+      "confirm_notify": "Confirm & Notify",
+      "cancel": "Cancel",
+      "watch_title": "We noticed something",
+      "watch_subtitle": "Your recent responses suggest you might be going through a tough time. That's okay — checking in is a sign of strength.",
+      "urgent_title": "You don't have to face this alone",
+      "urgent_subtitle": "We want to make sure you have the support you need right now. These resources are free, confidential, and available around the clock.",
+      "crisis_title": "Please reach out right now",
+      "crisis_subtitle": "You matter, and someone is ready to listen. Please contact one of these free, confidential services — they're here for you 24/7.",
+      "dialog_aria": "Crisis support — {{severity}} level",
+      "close_aria": "Close crisis support dialog",
+      "view_support_options": "View support options",
+      "support_resources": "Support Resources — {{name}} {{flag}}",
+      "all_resources": "All Resources — {{name}} {{flag}}",
+      "emergency_services": "Emergency Services",
+      "call_line": "Call {{num}}",
+      "download_safety_plan": "Download Safety Plan Template",
+      "disclaimer": "This is a wellness check-in, not a clinical assessment. All resources listed are free and confidential. In a medical emergency, call {{emergency}}."
+    },
+    "stickyBanner": {
+      "region_aria": "Crisis support resources",
+      "mobile_text": "Crisis? Call {{phone}}",
+      "tap_to_call": "Tap to call now",
+      "dismiss_aria": "Dismiss crisis banner",
+      "desktop_text": "In crisis? Call or text {{phone}} ({{country}})"
+    },
+    "navOverlay": {
+      "announce_acknowledge": "Please acknowledge to continue.",
+      "announce_shown": "Important Safety Information shown. Please consider reaching out to one of the resources provided.",
+      "close_aria": "Close safety information",
+      "title": "Important Safety Information",
+      "body": "Based on your responses, we noticed symptoms that may require immediate attention or support. <b>You don't have to go through this alone.</b> Please consider reaching out to one of the resources below.",
+      "available_support": "Available Support ({{region}})",
+      "acknowledge": "I understand, continue to results",
+      "disclaimer": "Psychage is not a crisis service and does not provide emergency support. The resources shown are operated by independent organizations. If you are in immediate danger, call your local emergency number. Information may not reflect the most current availability."
+    },
+    "resourceCard": {
+      "text_now": "Text Now",
+      "visit_website": "Visit Website",
+      "contact": "Contact",
+      "badge_247": "24/7"
+    },
+    "layoutResources": {
+      "title": "In Crisis? Help is Available.",
+      "subtitle": "If you or someone you know is struggling or in immediate danger, please reach out to these free, confidential support services available 24/7.",
+      "visit_website": "Visit website"
+    },
+    "articleBanner": {
+      "region_aria": "Crisis support resources",
+      "title": "You Are Not Alone",
+      "subtitle": "If you or someone you know is in crisis, help is available 24/7. You do not need to face this alone.",
+      "view_all": "View all crisis resources"
+    },
+    "clarityCallout": {
+      "heading": "If you are in crisis right now:",
+      "body": "Call or text <b>988</b> (US) or visit <helpline>findahelpline.com</helpline> for crisis resources worldwide. You can also visit <crisis>psychage.com/crisis</crisis>."
+    },
+    "clarityOverlay": {
+      "title": "You're Not Alone",
+      "close_aria": "Close crisis overlay",
+      "subtitle": "If you are in crisis or having thoughts of self-harm, please reach out. Help is available right now.",
+      "lifeline_name": "988 Suicide & Crisis Lifeline",
+      "call_text_988": "Call or text <b>988</b>",
+      "text_line_name": "Crisis Text Line",
+      "text_home": "Text <b>HOME</b> to <b>741741</b>",
+      "find_local": "Find local crisis resources",
+      "continue": "I've seen these resources — continue journaling"
+    },
+    "clarityBanner": {
+      "heading": "If you're in crisis right now, you don't have to be alone",
+      "body": "Your responses suggest you may need immediate support. Reaching out now — to a crisis line or a trusted person — is the single most effective thing you can do.",
+      "call_988": "Call 988",
+      "text_home": "Text HOME to 741741",
+      "more_resources": "More crisis resources",
+      "meta": "988 Suicide & Crisis Lifeline · Crisis Text Line · 24/7 · Free · Confidential",
+      "danger_911": "If you or someone else is in immediate danger, call <emergency>911</emergency>."
+    },
+    "sleepAlert": {
+      "body": "It sounds like you may be going through a difficult time. You are not alone, and help is available right now.",
+      "continue": "I understand, continue"
+    }
+  },
   "navigator": {
     "content_notice": "Algún contenido de síntomas y condiciones puede estar en inglés.",
     "steps": {

@@ -1464,7 +1464,7 @@ export const anxietyDisordersArticlesB: Article[] = [
               id: 'normalize',
               title: 'Normalize Anxiety',
               content: (
-                <p>Help your child understand that anxiety is a normal emotion everyone experiences. Use age-appropriate language: "Your brain is trying to protect you, but sometimes the alarm goes off when there's no real danger."</p>
+                <p>Help your child understand that anxiety is a common emotion everyone experiences. Use age-appropriate language: "Your brain is trying to protect you, but sometimes the alarm goes off when there's no real danger."</p>
               ),
             },
             {

@@ -62,7 +62,7 @@ const ScorePositionBar: React.FC<ScorePositionBarProps> = ({
             className="flex-1 text-center"
           >
             <span
-              className={`text-[10px] font-medium ${
+              className={`text-xs font-medium ${
                 zone.tier === tier
                   ? 'text-gray-900 dark:text-white font-bold'
                   : 'text-gray-400 dark:text-neutral-500'
@@ -99,7 +99,7 @@ const ScorePositionBar: React.FC<ScorePositionBarProps> = ({
         {zones.map((zone) => (
           <div key={zone.tier} className="flex-1 text-center">
             <span
-              className={`text-[10px] capitalize ${
+              className={`text-xs capitalize ${
                 zone.tier === tier
                   ? 'text-gray-700 dark:text-neutral-300 font-semibold'
                   : 'text-gray-300 dark:text-neutral-600'

@@ -269,7 +269,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
               title: 'What if my values changed during the relationship?',
               content: (
                 <p>
-                  That's normal and okay. Relationships shape us. The question isn't whether you've changed, but whether your current values feel authentic or adopted to keep peace. If a value still resonates when you sit with it alone, it's yours to keep.
+                  That's common and okay. Relationships shape us. The question isn't whether you've changed, but whether your current values feel authentic or adopted to keep peace. If a value still resonates when you sit with it alone, it's yours to keep.
                 </p>
               ),
             },
@@ -1580,7 +1580,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           The Fear of Starting Over
         </h2>
         <p className="mb-6">
-          After a breakup, especially a painful one, your brain builds walls to protect you from future hurt. This is normal. But unchecked, these defenses can keep you isolated long after you've healed <Citation id="5" index={5} source="Attachment & Human Development" year="2018" tier={1} />.
+          After a breakup, especially a painful one, your brain builds walls to protect you from future hurt. This is common. But unchecked, these defenses can keep you isolated long after you've healed <Citation id="5" index={5} source="Attachment & Human Development" year="2018" tier={1} />.
         </p>
 
         <ArticleAccordion
@@ -1770,7 +1770,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Managing Anxiety in New Connections
         </h2>
         <p className="mb-6">
-          It's normal to feel anxious when opening up again. Mindfulness practices can help you stay present instead of catastrophizing <Citation id="7" index={7} source="Mindfulness" year="2021" tier={1} />:
+          It's common to feel anxious when opening up again. Mindfulness practices can help you stay present instead of catastrophizing <Citation id="7" index={7} source="Mindfulness" year="2021" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Notice catastrophic thoughts</strong> --- "They didn't text back = they're losing interest = I'm unlovable = this will end badly"</li>

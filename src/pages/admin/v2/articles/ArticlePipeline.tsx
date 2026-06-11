@@ -54,15 +54,15 @@ function PipelineCard({
 
           <div className="flex items-center gap-2 mt-2 flex-wrap">
             {article.category && (
-              <span className="text-[11px] px-1.5 py-0.5 rounded bg-surface-hover text-text-secondary truncate max-w-[120px]">
+              <span className="text-xs px-1.5 py-0.5 rounded bg-surface-hover text-text-secondary truncate max-w-[120px]">
                 {article.category}
               </span>
             )}
-            <span className="text-[11px] text-text-tertiary">{daysInStage}</span>
+            <span className="text-xs text-text-tertiary">{daysInStage}</span>
           </div>
 
           {article.assigned_reviewer_name && (
-            <p className="text-[11px] text-text-tertiary mt-1.5 truncate">
+            <p className="text-xs text-text-tertiary mt-1.5 truncate">
               Reviewer: {article.assigned_reviewer_name}
             </p>
           )}
@@ -75,7 +75,7 @@ function PipelineCard({
                   <button
                     key={next}
                     onClick={() => onAdvance(article)}
-                    className="inline-flex items-center gap-1 text-[11px] font-medium text-primary hover:text-primary-hover transition-colors mr-3"
+                    className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary-hover transition-colors mr-3"
                   >
                     <ChevronRight size={12} />
                     {nextLabel}

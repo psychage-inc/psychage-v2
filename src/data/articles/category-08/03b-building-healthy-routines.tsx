@@ -153,7 +153,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
           </p>
         </ArticleCallout>
 
-        <h2 id="why-chaos-breaks-routines" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Why Chaos Breaks Routines (and Why That's Normal)</h2>
+        <h2 id="why-chaos-breaks-routines" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Why Chaos Breaks Routines (and Why That's Common)</h2>
 
         <p className="mb-6">
           Routines depend on <strong>stable environmental cues</strong>—the same bedroom, the same morning light, the same 30-minute window before work. Behavioral psychology research shows that habits are triggered by consistent context, not willpower <Citation id="5" index={5} source="Health Psychology Review" year="2021" tier={1} />. When life disrupts these anchors, the automaticity collapses. You're not weak. Your cues disappeared.
@@ -1641,7 +1641,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     ]}
                   />
                   <p className="mt-4 text-sm text-gray-600 dark:text-neutral-400">
-                    <em>Note:</em> This distinction requires interoceptive awareness---the ability to sense internal body states. If this is hard for you, that's normal (and can be developed over time).
+                    <em>Note:</em> This distinction requires interoceptive awareness---the ability to sense internal body states. If this is hard for you, that's common (and can be developed over time).
                   </p>
                 </>
               ),
@@ -1815,7 +1815,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         </p>
 
         <p className="mb-6">
-          Don't expect to master this immediately. David spent six months in Phase 1 (building consistency with his morning routine) before he felt secure enough to test flexibility in Phase 2. It took a full year before he reached Phase 3—trusting himself to skip when needed and return without fear. That's normal. Rushing to flexibility before consistency is established usually leads to routine collapse.
+          Don't expect to master this immediately. David spent six months in Phase 1 (building consistency with his morning routine) before he felt secure enough to test flexibility in Phase 2. It took a full year before he reached Phase 3—trusting himself to skip when needed and return without fear. That's common. Rushing to flexibility before consistency is established usually leads to routine collapse.
         </p>
 
         <ArticleTabs
@@ -1836,7 +1836,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     <li>Only skip for genuine illness, crisis, or travel</li>
                   </ul>
                   <p className="text-sm text-gray-600 dark:text-neutral-400">
-                    This phase feels rigid---that's normal. You're building automaticity. Flexibility comes later.
+                    This phase feels rigid---that's common. You're building automaticity. Flexibility comes later.
                   </p>
                 </>
               ),
@@ -2324,7 +2324,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
 
         <ArticleCallout variant="warning" title="When Seasonal Eating Becomes Problematic">
           <p>
-            If winter eating leads to significant weight gain, guilt spirals, or compensatory restriction in spring, this may signal disordered eating. Seasonal shifts in appetite are normal---but extreme swings or emotional distress around food warrant professional support.
+            If winter eating leads to significant weight gain, guilt spirals, or compensatory restriction in spring, this may signal disordered eating. Seasonal shifts in appetite are common---but extreme swings or emotional distress around food warrant professional support.
           </p>
         </ArticleCallout>
 
@@ -2373,7 +2373,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
           <ul className="list-disc list-inside space-y-2">
             <li><strong>Shift gradually:</strong> Move sleep/wake time by 15 minutes per day for 4 days before the change</li>
             <li><strong>Use light strategically:</strong> In spring (losing an hour), get morning light immediately. In fall (gaining an hour), delay morning light slightly.</li>
-            <li><strong>Expect adjustment period:</strong> 3--7 days of grogginess is normal---don't overcommit that week</li>
+            <li><strong>Expect adjustment period:</strong> 3--7 days of grogginess is common---don't overcommit that week</li>
             <li><strong>Maintain consistency:</strong> Even if timing shifts, keep routines in the same order (breakfast → shower → work, etc.)</li>
           </ul>
         </ArticleCallout>
@@ -2381,7 +2381,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         <h2 id="professional-support" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When to Seek Professional Support</h2>
 
         <p className="mb-6">
-          Seasonal mood shifts exist on a spectrum. Mild changes (a bit less energy, slightly lower mood) are normal and manageable with the strategies in this article <Citation id="1" index={1} source="Depression and Anxiety" year="2020" tier={1} />. Full seasonal affective disorder—where symptoms significantly impair daily functioning—requires professional treatment. The line between the two isn't always clear, but severity and duration matter.
+          Seasonal mood shifts exist on a spectrum. Mild changes (a bit less energy, slightly lower mood) are common and manageable with the strategies in this article <Citation id="1" index={1} source="Depression and Anxiety" year="2020" tier={1} />. Full seasonal affective disorder—where symptoms significantly impair daily functioning—requires professional treatment. The line between the two isn't always clear, but severity and duration matter.
         </p>
 
         <p className="mb-6">

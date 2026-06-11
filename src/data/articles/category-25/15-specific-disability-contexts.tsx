@@ -259,7 +259,7 @@ export const specificDisabilityContextsArticles: Article[] = [
         { title: 'Ask for psychological support early.', description: 'If you have had or are facing an amputation, request referral to a psychologist or counselor experienced in limb loss adjustment. Early intervention makes a significant difference. You do not need to wait until you are struggling.' },
         { title: 'Take phantom pain seriously.', description: 'If you experience phantom limb pain, pursue treatment actively. Mirror therapy, medications, and psychological approaches can provide meaningful relief. Do not accept the message that phantom pain is "just something you live with."' },
         { title: 'Connect with peers.', description: 'The Amputee Coalition (amputee-coalition.org) offers peer support, a helpline, and community events. Connecting with someone who has been where you are can provide validation and practical guidance that professional support alone cannot.' },
-        { title: 'Give yourself time with body image.', description: 'Your relationship with your changed body will evolve. It is normal to feel distress, grief, and alienation. It is also normal for these feelings to soften as you develop a new relationship with your body—on your own timeline, not anyone else\'s.' },
+        { title: 'Give yourself time with body image.', description: 'Your relationship with your changed body will evolve. It is common to feel distress, grief, and alienation. It is also common for these feelings to soften as you develop a new relationship with your body—on your own timeline, not anyone else\'s.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Reflect in the Mood Journal',

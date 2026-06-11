@@ -94,7 +94,7 @@ const MoodCheckInSection: React.FC<MoodCheckInSectionProps> = ({ onSave, existin
           placeholder="Anything on your mind..."
           rows={2}
           maxLength={500}
-          className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
+          className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-base text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
         />
         <p className="text-xs text-charcoal-600 dark:text-neutral-500 mt-1 text-right">{note.length}/500</p>
       </div>

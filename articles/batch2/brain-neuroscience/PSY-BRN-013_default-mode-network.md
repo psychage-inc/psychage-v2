@@ -64,7 +64,7 @@ Problems arise when this balance is disrupted. If the DMN doesn't deactivate dur
 
 Most people spend about **30-50% of their waking hours mind-wandering**—thinking about something other than what they're currently doing (Killingsworth & Gilbert, 2010, *Science*). Your attention drifts from the present moment to memories, plans, worries, fantasies, and counterfactuals ("what if I had…").
 
-This isn't pathological—it's normal. Mind-wandering serves several functions:
+This isn't pathological—it's common. Mind-wandering serves several functions:
 
 - **Autobiographical planning**: Simulating future scenarios, solving problems, setting goals.
 - **Creativity**: Making novel connections between ideas, generating insights.
@@ -137,7 +137,7 @@ The key is *flexibility*: being able to engage and disengage the DMN as needed. 
 
 ## Spark Moment
 
-Your brain's default is wandering—remembering, imagining, worrying, dreaming. This is normal, even adaptive. But when the wandering becomes rumination, when the daydreaming becomes dread, the default mode network has tipped from tool to trap. The good news: you can change it. Meditation, therapy, and focused attention train your brain to shift out of default mode when it's not serving you. You're not stuck in your thoughts. You're just learning how to change the channel.
+Your brain's default is wandering—remembering, imagining, worrying, dreaming. This is common, even adaptive. But when the wandering becomes rumination, when the daydreaming becomes dread, the default mode network has tipped from tool to trap. The good news: you can change it. Meditation, therapy, and focused attention train your brain to shift out of default mode when it's not serving you. You're not stuck in your thoughts. You're just learning how to change the channel.
 
 ---
 

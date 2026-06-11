@@ -764,7 +764,7 @@ export const anxietyInRelationshipsWorkDailyLifeArticlesA: Article[] = [
               <ul className="list-disc pl-5 space-y-2">
                 <li>"They're busy right now. Not hearing from them doesn't mean they don't care. I'll reach out if I need to, but I don't need constant contact to know we're okay."</li>
                 <li>"I'm worthy of love even when I make mistakes. Secure relationships can handle imperfection."</li>
-                <li>"Conflict is normal and can actually strengthen relationships when handled well. Disagreement doesn't equal abandonment."</li>
+                <li>"Conflict is common and can actually strengthen relationships when handled well. Disagreement doesn't equal abandonment."</li>
                 <li>"Having independent social lives is healthy. Their enjoyment of time apart doesn't diminish their desire to be with me."</li>
               </ul>
             ),
@@ -1271,7 +1271,7 @@ export const anxietyInRelationshipsWorkDailyLifeArticlesA: Article[] = [
               <ul className="list-disc pl-5 space-y-2">
                 <li>"My manager hasn't responded yet. They're likely busy. I'll follow up tomorrow if needed. Non-response doesn't equal disappointment."</li>
                 <li>"I briefly stumbled but continued. Most people probably didn't notice, and if they did, one small mistake doesn't define my competence. The content was solid."</li>
-                <li>"Mistakes are normal. If I make one, I'll address it, learn from it, and move forward. One mistake does not equal job loss—that's catastrophizing."</li>
+                <li>"Mistakes are common. If I make one, I'll address it, learn from it, and move forward. One mistake does not equal job loss—that's catastrophizing."</li>
               </ul>
             ),
           }}
@@ -1563,7 +1563,7 @@ export const anxietyInRelationshipsWorkDailyLifeArticlesA: Article[] = [
                         transition-all duration-150
                         align-super
                         focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
-                    " aria-label="Citation 7 — click to view reference" data-state="closed">7</button>:</p><ul className="list-disc pl-6 mb-6 space-y-2"><li>Instead of "Be careful! You'll fall!" → "You've got this. Take your time."</li><li>Instead of "Don't talk to strangers—something bad could happen" → "Most people are kind, and you know to come get me if someone makes you uncomfortable."</li><li>Instead of "Are you scared? It's okay to skip it" → "Feeling nervous is normal. Do you want to try anyway?"</li><li>Instead of "That's too dangerous" → "That's a big challenge. What's your plan to stay safe?"</li></ul><p className="mb-6">Notice the shift: Fear-focused language emphasizes threat. Courage-focused language acknowledges feelings while emphasizing capability and problem-solving.</p><div className="
+                    " aria-label="Citation 7 — click to view reference" data-state="closed">7</button>:</p><ul className="list-disc pl-6 mb-6 space-y-2"><li>Instead of "Be careful! You'll fall!" → "You've got this. Take your time."</li><li>Instead of "Don't talk to strangers—something bad could happen" → "Most people are kind, and you know to come get me if someone makes you uncomfortable."</li><li>Instead of "Are you scared? It's okay to skip it" → "Feeling nervous is common. Do you want to try anyway?"</li><li>Instead of "That's too dangerous" → "That's a big challenge. What's your plan to stay safe?"</li></ul><p className="mb-6">Notice the shift: Fear-focused language emphasizes threat. Courage-focused language acknowledges feelings while emphasizing capability and problem-solving.</p><div className="
                 not-prose my-8 rounded-xl border-l-4 border-l-emerald-400
                 bg-emerald-50 dark:bg-emerald-950/20
                 overflow-hidden

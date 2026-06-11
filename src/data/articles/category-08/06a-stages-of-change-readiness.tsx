@@ -36,7 +36,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
     summary: 'The Stages of Change Model reveals that lasting behavior change unfolds through five predictable stages—from not yet seeing a problem to maintaining new habits long-term. Understanding which stage you\'re in allows you to choose strategies that match your readiness, dramatically increasing your chances of success and replacing frustration with compassion.',
     keyFacts: [
       { text: 'The Transtheoretical Model was developed by studying people who successfully quit smoking without formal treatment, revealing that change is a process, not a single event.', citationIndex: 1 },
-      { text: 'Most people cycle through the stages multiple times before achieving lasting change—relapse to earlier stages is normal and can actually deepen learning.', citationIndex: 2 },
+      { text: 'Most people cycle through the stages multiple times before achieving lasting change—relapse to earlier stages is common and can actually deepen learning.', citationIndex: 2 },
       { text: 'Interventions matched to a person\'s current stage are significantly more effective than generic one-size-fits-all approaches.', citationIndex: 3 },
       { text: 'People often overestimate their readiness, believing they\'re in preparation when still in contemplation, which leads to premature action and failure.', citationIndex: 6 },
       { text: 'The action stage, though most visible, typically lasts only 1-6 months—maintenance is where the real work of sustaining change happens.', citationIndex: 7 },
@@ -160,7 +160,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         <p className="mb-6">
           The model identifies five distinct stages, each with different thoughts, emotions, and
           readiness levels. Most people don't progress linearly—movement back and forth between
-          stages is normal <Citation id="3" index={4} source="Journal of Substance Abuse" year="1992" tier={1} />. Understanding these stages helps you meet yourself where you are, rather than where you think you "should" be.
+          stages is common <Citation id="3" index={4} source="Journal of Substance Abuse" year="1992" tier={1} />. Understanding these stages helps you meet yourself where you are, rather than where you think you "should" be.
         </p>
         <p className="mb-6">
           Each stage represents not just different behaviors, but fundamentally different
@@ -2481,7 +2481,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           How to Handle Setbacks Without Spiraling
         </h2>
         <p className="mb-6">
-          A lapse --- a single slip or missed day --- is normal and expected. A relapse --- returning
+          A lapse --- a single slip or missed day --- is common and expected. A relapse --- returning
           fully to the old behavior --- is not inevitable. The difference comes down to how you
           interpret and respond to setbacks.
         </p>
@@ -2624,7 +2624,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
               friction (days 22-45), critical window (days 46-66), and consolidation (days 67-90).
             </li>
             <li>
-              Motivation fades predictably around week three—this is normal, not failure. What
+              Motivation fades predictably around week three—this is common, not failure. What
               sustains you is systems (tracking, if-then plans, environment) and volitional control,
               not feeling like it.
             </li>
@@ -2633,7 +2633,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
               but context (time, mood, obstacles) to identify patterns.
             </li>
             <li>
-              A single lapse is normal; two consecutive misses can begin relapse. The "never miss
+              A single lapse is common; two consecutive misses can begin relapse. The "never miss
               twice" rule and self-compassionate thinking protect against shame spirals.
             </li>
             <li>

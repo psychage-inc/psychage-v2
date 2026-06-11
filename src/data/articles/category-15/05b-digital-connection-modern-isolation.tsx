@@ -779,7 +779,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
             content: (
               <ol className="list-decimal pl-5 space-y-2">
                 <li>Acknowledge loneliness without judgment</li>
-                <li>Recognize it as normal, not failure</li>
+                <li>Recognize it as common, not failure</li>
                 <li>Reach out despite discomfort</li>
                 <li>Share vulnerability with trusted others</li>
                 <li>Connection begins</li>
@@ -1108,7 +1108,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
                 <ul className="list-disc pl-5 space-y-2">
                   <li>Schedule social time when energy is higher</li>
                   <li>Prepare 3 conversation starters</li>
-                  <li>Remind self: rejection is normal, keep trying</li>
+                  <li>Remind self: rejection is common, keep trying</li>
                   <li>Put it in calendar NOW, not "someday"</li>
                 </ul>
               ),

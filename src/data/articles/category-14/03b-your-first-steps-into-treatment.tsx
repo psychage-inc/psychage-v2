@@ -71,7 +71,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-neutral-300 mb-8 leading-relaxed">
-            You've never been to therapy. You don't know what to expect, what to say, or how to act. You have questions you're too embarrassed to google. That's normal. Most people starting therapy feel this way <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />.
+            You've never been to therapy. You don't know what to expect, what to say, or how to act. You have questions you're too embarrassed to google. That's common. Most people starting therapy feel this way <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
             Here are the honest answers to the questions first-time therapy clients wonder but rarely ask out loud.
@@ -162,7 +162,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
               id: 'bring-tissues',
               title: 'Should I bring my own tissues?',
               content: (
-                <p>No need --- therapists always have tissues. It's part of the job. Crying is normal and expected.</p>
+                <p>No need --- therapists always have tissues. It's part of the job. Crying is common and expected.</p>
               ),
             },
           ]}

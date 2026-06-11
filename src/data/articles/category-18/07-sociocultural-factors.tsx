@@ -743,7 +743,7 @@ export const articles: Article[] = [
         <p className="mb-6">
           The cultural script that mothers should feel only joy and gratitude makes it nearly impossible to acknowledge
           negative feelings without shame. Women report feeling like "bad mothers" for experiencing frustration, boredom,
-          exhaustion, or resentment—normal human responses to difficult circumstances. <Citation id="8" index={8}
+          exhaustion, or resentment—common human responses to difficult circumstances. <Citation id="8" index={8}
           source="Archives of Women's Mental Health" year="2023" tier={1} /> Creating space for the full spectrum of maternal
           emotions is essential for mental health.
         </p>

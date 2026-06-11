@@ -652,7 +652,7 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
           <li><strong>Skipping the breath:</strong> Many people rush straight from "stop" to "observe" without actually breathing. The breath is not optional --- it is the physiological bridge that shifts your nervous system from fight-or-flight to a calmer state. Without it, you are trying to think clearly while your body is still in crisis mode.</li>
           <li><strong>Confusing observation with judgment:</strong> The "observe" step asks you to notice what you are feeling, not to evaluate whether the feeling is reasonable or fair. Saying "I notice I am angry" is observation. Saying "I should not be angry about this" is judgment, and it adds a layer of self-criticism that makes regulation harder.</li>
           <li><strong>Using STOP to suppress:</strong> Proceeding mindfully does not mean swallowing your emotions and pretending everything is fine. It means choosing an intentional response. Sometimes that response is saying "I am hurt by what you said" or "I need to take a break from this conversation." The goal is conscious action, not emotional avoidance.</li>
-          <li><strong>Expecting perfection immediately:</strong> You will forget to use STOP many times before it becomes reflexive. That is normal. The technique builds through repetition, not willpower. Each time you remember to use it --- even after the fact --- you strengthen the neural pathway <Citation id="4" index={4} source="Mindfulness" year="2016" tier={1} />.</li>
+          <li><strong>Expecting perfection immediately:</strong> You will forget to use STOP many times before it becomes reflexive. That is common. The technique builds through repetition, not willpower. Each time you remember to use it --- even after the fact --- you strengthen the neural pathway <Citation id="4" index={4} source="Mindfulness" year="2016" tier={1} />.</li>
         </ul>
 
         {/* Getting Started */}
@@ -964,7 +964,7 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Forcing the breath:</strong> Controlled breathing should feel comfortable, not strained. If you are gasping at the end of a hold or feeling dizzy, reduce the count lengths. Start with shorter intervals and build up gradually over days.</li>
           <li><strong>Breathing from the chest:</strong> Many people breathe shallowly from their upper chest, which actually increases tension. Place a hand on your belly and ensure it rises and falls with each breath. Diaphragmatic (belly) breathing is the foundation of every technique listed here <Citation id="5" index={5} source="Frontiers in Psychology" year="2017" tier={1} />.</li>
-          <li><strong>Expecting instant mastery:</strong> Some techniques, especially 4-7-8 breathing and coherent breathing, take a few sessions to feel natural. The counting can feel awkward at first. This is normal. The technique becomes automatic within a week of daily practice.</li>
+          <li><strong>Expecting instant mastery:</strong> Some techniques, especially 4-7-8 breathing and coherent breathing, take a few sessions to feel natural. The counting can feel awkward at first. This is common. The technique becomes automatic within a week of daily practice.</li>
           <li><strong>Only practicing during crises:</strong> The most effective use of breathing exercises is preventive, not reactive. Daily practice builds vagal tone and reduces baseline stress, making emotional overwhelm less likely in the first place <Citation id="8" index={8} source="International Journal of Yoga" year="2013" tier={1} />.</li>
         </ul>
 
@@ -1627,7 +1627,7 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
           When Reappraisal Feels Impossible
         </h2>
         <p className="mb-6">
-          Reappraisal is a cognitive strategy, which means it requires your thinking brain to be online. During high-intensity emotional moments --- when your heart is racing, your body is flooded with adrenaline, and your amygdala has fully hijacked your brain --- reappraisal may not be accessible. This is normal, not a failure.
+          Reappraisal is a cognitive strategy, which means it requires your thinking brain to be online. During high-intensity emotional moments --- when your heart is racing, your body is flooded with adrenaline, and your amygdala has fully hijacked your brain --- reappraisal may not be accessible. This is common, not a failure.
         </p>
         <p className="mb-6">
           In those moments, use a body-based technique first (deep breathing, cold water, or physical movement) to bring your emotional intensity down below a 5 or 6 out of 10. Once your physiological arousal has decreased, your prefrontal cortex comes back online and reappraisal becomes possible again. Think of it as a sequence: calm the body first, then reframe the thought <Citation id="6" index={6} source="Emotion" year="2017" tier={1} />.

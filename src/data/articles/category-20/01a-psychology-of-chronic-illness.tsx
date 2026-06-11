@@ -26,7 +26,7 @@ export const psychologyOfChronicIllnessArticlesA: Article[] = [
     slug: 'the-emotional-stages-of-a-chronic-illness-diagnosis',
     title: 'The Emotional Stages of a Chronic Illness Diagnosis',
     description:
-      'Explore the emotional stages people commonly experience after receiving a chronic illness diagnosis. Learn why grief, anger, and acceptance are normal parts of the process and how to navigate each phase with self-compassion.',
+      'Explore the emotional stages people commonly experience after receiving a chronic illness diagnosis. Learn why grief, anger, and acceptance are common parts of the process and how to navigate each phase with self-compassion.',
     image: '/images/articles/cat20/cover-001.svg',
     category: CATEGORY_CHRONIC_ILLNESS_PAIN,
     readTime: 12,
@@ -146,7 +146,7 @@ export const psychologyOfChronicIllnessArticlesA: Article[] = [
           <p>
             Unlike bereavement, chronic illness grief does not have a defined endpoint. You may move
             from acceptance back to anger when a new symptom appears, or feel denial resurface years
-            after diagnosis. This is not regression --- it is the normal rhythm of living with an
+            after diagnosis. This is not regression --- it is the common rhythm of living with an
             ongoing condition. The goal is not to reach a final stage but to develop the capacity
             to move through each one with less suffering.
           </p>
@@ -166,7 +166,7 @@ export const psychologyOfChronicIllnessArticlesA: Article[] = [
         <p className="mb-6">
           During this phase, you may leave the doctor's office and realize you remember almost nothing
           that was said. You may go through your day as if nothing happened. You may feel strangely calm
-          while those around you are distressed. All of this is normal. The shock phase serves a purpose:
+          while those around you are distressed. All of this is common. The shock phase serves a purpose:
           it gives your psyche time to absorb the information gradually rather than all at once.
         </p>
         <p className="mb-6">
@@ -1394,7 +1394,7 @@ export const psychologyOfChronicIllnessArticlesA: Article[] = [
           comparison with healthy peers.
         </p>
         <p className="mb-6">
-          Understanding chronic sorrow as a normal response --- not a sign of inadequate coping ---
+          Understanding chronic sorrow as a common response --- not a sign of inadequate coping ---
           is itself therapeutic. George Bonanno's research on loss and resilience demonstrates that
           human beings have a remarkable capacity to carry grief alongside meaning, purpose, and
           even joy <Citation id="7" index={7} source="American Psychologist" year="2004" tier={1} />.

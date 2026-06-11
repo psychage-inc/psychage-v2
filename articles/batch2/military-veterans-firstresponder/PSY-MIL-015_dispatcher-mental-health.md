@@ -87,7 +87,7 @@ Addressing dispatcher mental health requires both individual-level interventions
 
 ## What You Can Try
 
-- **If you are a dispatcher experiencing psychological distress**, your symptoms are a normal response to an extraordinary workload. Contact your agency's peer support team, the 911 Wellness Foundation, or a mental health provider who understands first responder trauma.
+- **If you are a dispatcher experiencing psychological distress**, your symptoms are a common response to an extraordinary workload. Contact your agency's peer support team, the 911 Wellness Foundation, or a mental health provider who understands first responder trauma.
 
 - **Advocate for first responder classification.** Support legislative efforts in your state to classify dispatchers as first responders with access to the mental health benefits and protections that classification provides.
 

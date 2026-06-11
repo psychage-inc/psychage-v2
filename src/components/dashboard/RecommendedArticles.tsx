@@ -144,7 +144,7 @@ const RecommendedArticles: React.FC<RecommendedArticlesProps> = ({
                                     {article.title}
                                 </p>
                                 {article.readTime && (
-                                    <p className="flex items-center gap-1 text-[10px] text-gray-400 dark:text-neutral-500 mt-1">
+                                    <p className="flex items-center gap-1 text-xs text-gray-400 dark:text-neutral-500 mt-1">
                                         <Clock size={10} />
                                         {article.readTime} min
                                     </p>

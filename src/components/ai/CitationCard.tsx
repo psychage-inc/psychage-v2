@@ -76,7 +76,7 @@ const CitationCard: React.FC<CitationCardProps> = ({ citation }) => {
 
           {/* Type badge */}
           <div className="flex items-center gap-2 mt-2">
-            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-semibold uppercase tracking-wider bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300`}>
+            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-xs font-semibold uppercase tracking-wider bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300`}>
               <Icon size={10} />
               Article
             </span>

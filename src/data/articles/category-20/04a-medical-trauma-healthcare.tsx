@@ -1294,7 +1294,7 @@ export const medicalTraumaHealthcareArticlesA: Article[] = [
             title: 'With Psychological Preparation',
             points: [
               'Anxiety acknowledged and managed with practiced techniques',
-              'Post-operative mood changes recognized as normal and treatable',
+              'Post-operative mood changes recognized as common and treatable',
               'Realistic expectations supporting patient coping',
               'Social support mobilized before surgery day',
               'Body image concerns addressed proactively with therapeutic support',
@@ -1317,7 +1317,7 @@ export const medicalTraumaHealthcareArticlesA: Article[] = [
           phase, many patients experience a mix of relief that the procedure is over and frustration at their physical
           limitations. Around days five through fourteen, as the acute pain begins to subside, the emotional impact of
           the experience often intensifies. This is the period when patients most commonly report feeling tearful, anxious,
-          or low in mood. Understanding that this emotional dip is a normal and expected part of recovery --- not a sign
+          or low in mood. Understanding that this emotional dip is a common and expected part of recovery --- not a sign
           of something going wrong --- helps patients ride it out without panicking or interpreting transient distress as
           a harbinger of lasting psychological harm.
         </p>

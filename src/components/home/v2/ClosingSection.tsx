@@ -142,7 +142,7 @@ const ClosingSection: React.FC = () => {
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Your email address"
                       required
-                      className="w-full sm:flex-1 rounded-xl border border-[var(--color-border)] bg-white dark:bg-[var(--color-surface)] py-3 px-4 text-sm text-[var(--color-text-primary)] placeholder-[var(--color-text-tertiary)] focus:outline-none focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/30 transition-all"
+                      className="w-full sm:flex-1 rounded-xl border border-[var(--color-border)] bg-white dark:bg-[var(--color-surface)] py-3 px-4 text-base text-[var(--color-text-primary)] placeholder-[var(--color-text-tertiary)] focus:outline-none focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/30 transition-all"
                     />
                     <button
                       type="submit"

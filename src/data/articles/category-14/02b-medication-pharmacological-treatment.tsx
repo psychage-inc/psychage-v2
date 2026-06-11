@@ -449,7 +449,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
             <li>Whether the duration of action is long enough</li>
             <li>How you feel emotionally on the medication</li>
           </ul>
-          <p className="mt-4">Adjustments are normal. Most people don't get the perfect medication and dose on the first try.</p>
+          <p className="mt-4">Adjustments are common. Most people don't get the perfect medication and dose on the first try.</p>
         </ArticleCallout>
 
         <p className="mb-6 mt-6">
@@ -1296,7 +1296,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
             {
               title: 'Expect an Adjustment Period',
               description: (
-                <p>The first 2 weeks often involve side effects (nausea, jitteriness, sleep changes) without symptom relief. This is normal --- your brain is adapting. Most early side effects fade by week 3-4.</p>
+                <p>The first 2 weeks often involve side effects (nausea, jitteriness, sleep changes) without symptom relief. This is common --- your brain is adapting. Most early side effects fade by week 3-4.</p>
               ),
             },
             {

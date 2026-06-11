@@ -76,7 +76,7 @@ const SleepLogSection: React.FC<SleepLogSectionProps> = ({ date, onSave, existin
             type="time"
             value={bedtime}
             onChange={e => setBedtime(e.target.value)}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
           />
         </div>
         <div>
@@ -85,7 +85,7 @@ const SleepLogSection: React.FC<SleepLogSectionProps> = ({ date, onSave, existin
             type="time"
             value={wakeTime}
             onChange={e => setWakeTime(e.target.value)}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
           />
         </div>
       </div>
@@ -109,7 +109,7 @@ const SleepLogSection: React.FC<SleepLogSectionProps> = ({ date, onSave, existin
             value={minutesToSleep}
             onChange={e => setMinutesToSleep(e.target.value)}
             placeholder="e.g., 20"
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
           />
         </div>
         <div>
@@ -123,7 +123,7 @@ const SleepLogSection: React.FC<SleepLogSectionProps> = ({ date, onSave, existin
             value={wakings}
             onChange={e => setWakings(e.target.value)}
             placeholder="e.g., 2"
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
           />
         </div>
       </div>
@@ -159,7 +159,7 @@ const SleepLogSection: React.FC<SleepLogSectionProps> = ({ date, onSave, existin
           value={note}
           onChange={e => setNote(e.target.value)}
           placeholder="e.g., Vivid dreams, woke up early..."
-          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
         />
       </div>
 

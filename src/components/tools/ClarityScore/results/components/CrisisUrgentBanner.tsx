@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AlertTriangle, Phone, MessageSquare, ArrowRight } from 'lucide-react';
+import { useTranslation, Trans } from 'react-i18next';
 
 const CrisisUrgentBanner: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div
       role="alert"
@@ -15,12 +17,10 @@ const CrisisUrgentBanner: React.FC = () => {
         </div>
         <div className="min-w-0 flex-1">
           <h3 className="font-display font-bold text-red-900 dark:text-red-200 text-lg md:text-xl leading-tight">
-            If you're in crisis right now, you don't have to be alone
+            {t('crisis.clarityBanner.heading')}
           </h3>
           <p className="mt-2 text-sm md:text-[15px] text-red-900/80 dark:text-red-200/80 leading-relaxed">
-            Your responses suggest you may need immediate support. Reaching out now
-            — to a crisis line or a trusted person — is the single most effective
-            thing you can do.
+            {t('crisis.clarityBanner.body')}
           </p>
 
           <div className="mt-4 flex flex-col sm:flex-row flex-wrap gap-2">
@@ -29,29 +29,32 @@ const CrisisUrgentBanner: React.FC = () => {
               className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-sm font-semibold transition-colors"
             >
               <Phone size={16} aria-hidden="true" />
-              Call 988
+              {t('crisis.clarityBanner.call_988')}
             </a>
             <a
               href="sms:741741?body=HOME"
               className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-red-950/60 border border-red-300 dark:border-red-800 hover:bg-red-100 dark:hover:bg-red-900/40 text-red-700 dark:text-red-200 text-sm font-semibold transition-colors"
             >
               <MessageSquare size={16} aria-hidden="true" />
-              Text HOME to 741741
+              {t('crisis.clarityBanner.text_home')}
             </a>
             <Link
               to="/crisis"
               className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-red-700 dark:text-red-300 hover:bg-red-100 dark:hover:bg-red-900/30 text-sm font-semibold transition-colors"
             >
-              More crisis resources
+              {t('crisis.clarityBanner.more_resources')}
               <ArrowRight size={14} aria-hidden="true" />
             </Link>
           </div>
 
           <p className="mt-3 text-xs text-red-800/70 dark:text-red-300/70">
-            988 Suicide &amp; Crisis Lifeline · Crisis Text Line · 24/7 · Free · Confidential
+            {t('crisis.clarityBanner.meta')}
           </p>
           <p className="mt-1 text-xs text-red-800/70 dark:text-red-300/70">
-            If you or someone else is in immediate danger, call <a href="tel:911" className="underline font-semibold">911</a>.
+            <Trans
+              i18nKey="crisis.clarityBanner.danger_911"
+              components={{ emergency: <a href="tel:911" className="underline font-semibold" /> }}
+            />
           </p>
         </div>
       </div>

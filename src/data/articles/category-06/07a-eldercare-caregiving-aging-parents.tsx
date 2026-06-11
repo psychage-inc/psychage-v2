@@ -556,7 +556,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
           <li><strong>Guilt for considering placement:</strong> "I promised I'd never put them in a home"</li>
         </ul>
         <p className="mb-6">
-          Reality check: These feelings are normal, not moral failures. Guilt often signals unsustainable expectations, not inadequate caregiving. Working with a therapist can help separate realistic responsibility from guilt-driven over-functioning.
+          Reality check: These feelings are common, not moral failures. Guilt often signals unsustainable expectations, not inadequate caregiving. Working with a therapist can help separate realistic responsibility from guilt-driven over-functioning.
         </p>
 
         <ArticleCallout variant="clinical-note" title="The Compassion Fatigue Cycle">
@@ -1113,7 +1113,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
             {
               id: 'guilt',
               title: 'Guilt',
-              content: <p>"I shouldn't be grieving while they're alive.", "I'm angry at them for having dementia.", "I wish this would end." All are normal, complicated feelings.</p>,
+              content: <p>"I shouldn't be grieving while they're alive.", "I'm angry at them for having dementia.", "I wish this would end." All are common, complicated feelings.</p>,
             },
             {
               id: 'exhaustion',
@@ -1252,7 +1252,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          These feelings are normal and common. Therapy can help process complicated grief when the relationship itself was complicated. You're allowed to mourn both the parent you had and the parent you wish you'd had.
+          These feelings are common. Therapy can help process complicated grief when the relationship itself was complicated. You're allowed to mourn both the parent you had and the parent you wish you'd had.
         </p>
 
         <h2 id="stages-of-decline" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1548,7 +1548,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
 
         <ArticleCallout variant="tip">
           <p>
-            Guilt about placement is normal. Reframe: "I'm ensuring they get expert care I can't provide alone' not "I'm abandoning them." You can still be involved while professionals handle the hardest parts.
+            Guilt about placement is common. Reframe: "I'm ensuring they get expert care I can't provide alone' not "I'm abandoning them." You can still be involved while professionals handle the hardest parts.
           </p>
         </ArticleCallout>
 

@@ -50,7 +50,7 @@ const SleepEntryCard: React.FC<SleepEntryCardProps> = ({
             <div className="text-sm font-bold text-gray-900 dark:text-white">
               {dayLabel}
             </div>
-            <div className="text-[10px] text-gray-400 dark:text-neutral-500">
+            <div className="text-xs text-gray-400 dark:text-neutral-500">
               {entry.bedtime} → {entry.wake_time}
             </div>
           </div>
@@ -81,7 +81,7 @@ const SleepEntryCard: React.FC<SleepEntryCardProps> = ({
           <div className="text-xs font-bold text-gray-900 dark:text-white">
             {formatDuration(metrics.total_sleep_minutes)}
           </div>
-          <div className="text-[10px] text-gray-400 dark:text-neutral-500">Sleep</div>
+          <div className="text-xs text-gray-400 dark:text-neutral-500">Sleep</div>
         </div>
         <div className="text-center">
           <Zap size={14} className="text-sky-500 mx-auto mb-0.5" />
@@ -93,7 +93,7 @@ const SleepEntryCard: React.FC<SleepEntryCardProps> = ({
           >
             {Math.round(metrics.sleep_efficiency)}%
           </div>
-          <div className="text-[10px] text-gray-400 dark:text-neutral-500">
+          <div className="text-xs text-gray-400 dark:text-neutral-500">
             Efficiency
           </div>
         </div>
@@ -102,7 +102,7 @@ const SleepEntryCard: React.FC<SleepEntryCardProps> = ({
           <div className="text-xs font-bold text-gray-900 dark:text-white">
             {entry.sleep_onset_minutes}m
           </div>
-          <div className="text-[10px] text-gray-400 dark:text-neutral-500">
+          <div className="text-xs text-gray-400 dark:text-neutral-500">
             Onset
           </div>
         </div>
@@ -115,22 +115,22 @@ const SleepEntryCard: React.FC<SleepEntryCardProps> = ({
         entry.substances.medication_sleep_aid) && (
         <div className="flex flex-wrap gap-1 mt-2">
           {entry.substances.caffeine_last_time && (
-            <span className="text-[10px] font-medium bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 px-1.5 py-0.5 rounded-full">
+            <span className="text-xs font-medium bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 px-1.5 py-0.5 rounded-full">
               Caffeine {entry.substances.caffeine_last_time}
             </span>
           )}
           {entry.substances.alcohol && (
-            <span className="text-[10px] font-medium bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 px-1.5 py-0.5 rounded-full">
+            <span className="text-xs font-medium bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 px-1.5 py-0.5 rounded-full">
               Alcohol
             </span>
           )}
           {entry.substances.exercise && (
-            <span className="text-[10px] font-medium bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 px-1.5 py-0.5 rounded-full">
+            <span className="text-xs font-medium bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 px-1.5 py-0.5 rounded-full">
               Exercise
             </span>
           )}
           {entry.substances.medication_sleep_aid && (
-            <span className="text-[10px] font-medium bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 px-1.5 py-0.5 rounded-full">
+            <span className="text-xs font-medium bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 px-1.5 py-0.5 rounded-full">
               Sleep aid
             </span>
           )}

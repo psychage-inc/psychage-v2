@@ -210,7 +210,7 @@ export const mensPhysicalMentalHealthArticlesB: Article[] = [
         <p className="mb-6">
           What makes these dimensions clinically meaningful is their combination. Many dedicated
           athletes will recognize one or two of these features in themselves --- and that is
-          normal. The diagnostic threshold is met when multiple dimensions are present
+          common. The diagnostic threshold is met when multiple dimensions are present
           simultaneously and the behavior is causing measurable harm to health, relationships,
           or occupational function. A competitive athlete who trains intensely but can take
           planned rest without distress is not addicted. A recreational exerciser who cannot
@@ -948,7 +948,7 @@ export const mensPhysicalMentalHealthArticlesB: Article[] = [
             millions of men, it is the cycle that defines their emotional life.
           </p>
           <p className="mb-6">
-            Anger is a normal, neurologically hardwired emotion. It evolved to signal threat,
+            Anger is a common, neurologically hardwired emotion. It evolved to signal threat,
             injustice, or boundary violation, and to mobilize the physiological resources needed
             to respond. The problem is not anger itself --- it is what happens when anger becomes
             the default emotional response, the only acceptable channel for a wide range of
@@ -1713,7 +1713,7 @@ export const mensPhysicalMentalHealthArticlesB: Article[] = [
         { title: 'Audit your current life against your values', description: 'Write down your five most important values (e.g., family, health, creativity, adventure, meaning). Then rate, on a 1-10 scale, how well your current daily life reflects each value. The gap between importance and expression reveals where dissatisfaction lives.' },
         { title: 'Distinguish regret from aspiration', description: 'List three things you regret not doing. For each, ask: "Is this something I still want, or something I\'m mourning?" If it is still alive as a desire, it is an aspiration that can be acted on. If it is truly past, it requires grief, not pursuit.' },
         { title: 'Identify one meaningful change', description: 'Based on your values audit, choose one specific, actionable change that would bring your life closer to your values. Not a dramatic reinvention --- a targeted adjustment. Start a creative project. Schedule time with your children. Book a health checkup you have been avoiding.' },
-        { title: 'Talk to someone who understands', description: 'Share your reflections with a trusted friend, partner, or therapist. Midlife questioning is universal and normal --- it is not weakness, it is not crisis, and it does not need to be navigated alone. The men who emerge from midlife with clarity are the ones who engaged honestly with the questions.' },
+        { title: 'Talk to someone who understands', description: 'Share your reflections with a trusted friend, partner, or therapist. Midlife questioning is universal and common --- it is not weakness, it is not crisis, and it does not need to be navigated alone. The men who emerge from midlife with clarity are the ones who engaged honestly with the questions.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Reflect on values and wellbeing',
@@ -2056,7 +2056,7 @@ export const mensPhysicalMentalHealthArticlesB: Article[] = [
             'Avoiding existential questions by staying perpetually busy',
           ] }}
           after={{ title: 'Navigating Midlife Well', items: [
-            'Acknowledging the transition as normal and engaging with it honestly',
+            'Acknowledging the transition as common and engaging with it honestly',
             'Investing in relationships that provide genuine emotional support',
             'Pursuing generativity --- mentoring, creating, contributing',
             'Addressing physical health proactively',

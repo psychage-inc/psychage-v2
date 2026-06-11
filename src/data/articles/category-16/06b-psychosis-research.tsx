@@ -1416,7 +1416,7 @@ export const psychosisResearchArticlesB: Article[] = [
             {
               title: 'What If I Find Exercises Frustrating?',
               content:
-                'Difficulty is normal--cognitive deficits make these tasks hard. Good CRT programs start at your level and increase difficulty gradually. Intrinsic motivation (linking exercises to personal goals) reduces frustration. If an exercise feels pointless, ask your therapist to connect it to something you care about.',
+                'Difficulty is common--cognitive deficits make these tasks hard. Good CRT programs start at your level and increase difficulty gradually. Intrinsic motivation (linking exercises to personal goals) reduces frustration. If an exercise feels pointless, ask your therapist to connect it to something you care about.',
             },
           ]}
         />

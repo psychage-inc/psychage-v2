@@ -284,7 +284,7 @@ You don't become creative by waiting for permission, achieving a certain level, 
 
 ## What You Can Try
 
-**Practice claiming creative identity this week**: Introduce yourself to someone as "a writer" or "an artist" or "someone who creates [thing]." Notice how it feels. The discomfort is normal—keep practicing.
+**Practice claiming creative identity this week**: Introduce yourself to someone as "a writer" or "an artist" or "someone who creates [thing]." Notice how it feels. The discomfort is common—keep practicing.
 
 **Rewrite your self-narrative**: Write your creative story. When did you first create something? What have you made? What do you want to make? Write it as the story of a creative person—because that's what it is.
 

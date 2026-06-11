@@ -1136,7 +1136,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               title: `Barrier: "It hurts/I'm out of shape`,
               content: (
                 <div>
-                  <p className="mb-3"><strong>Important distinction:</strong> Discomfort from exertion is normal. Pain (joint, muscle, chest) is not---stop and consult a doctor if you experience pain.</p>
+                  <p className="mb-3"><strong>Important distinction:</strong> Discomfort from exertion is common. Pain (joint, muscle, chest) is not---stop and consult a doctor if you experience pain.</p>
                   <p><strong>Solution:</strong> Start at embarrassingly low intensity. Walk slowly. Do 5 squats. Stretch for 3 minutes. You're building tolerance and habit first, fitness later. Being "out of shape" means you need to start gently, not that you can't start.</p>
                 </div>
               ),

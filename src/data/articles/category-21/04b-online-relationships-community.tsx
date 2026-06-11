@@ -61,7 +61,7 @@ export const onlineRelationshipsCommunityArticlesB: Article[] = [
     practicalExercise: {
       title: 'Vulnerability Self-Check and Digital Literacy Audit',
       steps: [
-        { title: 'Assess your current emotional state honestly', description: 'Write down how you have been feeling over the past two weeks. Are you experiencing persistent loneliness, anger at perceived injustice, or a sense that your life lacks meaning? These are normal human experiences, but recognizing them is the first step in understanding your own vulnerability to exploitative messaging.' },
+        { title: 'Assess your current emotional state honestly', description: 'Write down how you have been feeling over the past two weeks. Are you experiencing persistent loneliness, anger at perceived injustice, or a sense that your life lacks meaning? These are common human experiences, but recognizing them is the first step in understanding your own vulnerability to exploitative messaging.' },
         { title: 'Audit your content diet', description: 'Review the last 20 videos, posts, or articles recommended to you by algorithms. Note any pattern of increasingly extreme or anger-provoking content. Pay attention to whether you are being shown content that frames complex problems as having simple villains or easy solutions.' },
         { title: 'Identify your need beneath the content', description: 'For any content that provokes a strong emotional response --- especially anger, righteous certainty, or a sense of belonging to an in-group --- ask: what need is this content meeting for me? Is it community? Purpose? Validation? Then consider healthier ways to meet that same need.' },
         { title: 'Diversify your information sources', description: 'Deliberately follow three credible sources that challenge your existing views. Practice sitting with the discomfort of disagreement without immediately dismissing the source. This builds cognitive flexibility, which is one of the strongest protective factors against radicalization.' },
@@ -1079,7 +1079,7 @@ export const onlineRelationshipsCommunityArticlesB: Article[] = [
     ],
 
     summary:
-      'Most people present a curated version of themselves online --- a digital identity that may differ substantially from how they experience themselves in daily life. While some degree of self-presentation is normal and adaptive, research shows that large discrepancies between the online persona and the felt self are associated with decreased psychological wellbeing, identity confusion, reduced self-esteem, and symptoms of depression and anxiety. This article examines the psychology of digital identity formation, how the feedback loops of social media shape self-concept over time, the particular risks for adolescents and young adults, and practical strategies for cultivating a digital presence that supports rather than undermines mental health.',
+      'Most people present a curated version of themselves online --- a digital identity that may differ substantially from how they experience themselves in daily life. While some degree of self-presentation is common and adaptive, research shows that large discrepancies between the online persona and the felt self are associated with decreased psychological wellbeing, identity confusion, reduced self-esteem, and symptoms of depression and anxiety. This article examines the psychology of digital identity formation, how the feedback loops of social media shape self-concept over time, the particular risks for adolescents and young adults, and practical strategies for cultivating a digital presence that supports rather than undermines mental health.',
 
     keyFacts: [
       { text: 'People who report a significant gap between their online persona and real self score higher on measures of depression and anxiety', citationIndex: 1 },
@@ -1099,7 +1099,7 @@ export const onlineRelationshipsCommunityArticlesB: Article[] = [
       steps: [
         { title: 'Describe your online self', description: 'Open your most-used social media profile and write a paragraph describing the person it portrays. What does this person value? What do they do? How do they seem to feel most of the time? What impression would a stranger form? Be as honest as possible about the image you present.' },
         { title: 'Describe your offline self', description: 'Now close the app and write a paragraph describing yourself as you actually experience your life today. Include your real mood, your current struggles, what you actually spend time doing, and how you genuinely feel about yourself. Do not write what you wish were true --- write what is.' },
-        { title: 'Compare the two descriptions', description: 'Place the paragraphs side by side and notice where they align and where they diverge. Small differences are normal and healthy. Large divergences --- where your online self is consistently happier, more successful, or more confident than your actual experience --- indicate an identity gap that may be affecting your wellbeing.' },
+        { title: 'Compare the two descriptions', description: 'Place the paragraphs side by side and notice where they align and where they diverge. Small differences are common and healthy. Large divergences --- where your online self is consistently happier, more successful, or more confident than your actual experience --- indicate an identity gap that may be affecting your wellbeing.' },
         { title: 'Choose one area to realign', description: 'Pick one area where the gap feels most uncomfortable. Commit to presenting that area more authentically for the next two weeks. This does not mean sharing your deepest struggles publicly. It means allowing more of your genuine experience to be visible --- posting about an ordinary day instead of only highlights, or being honest about a challenge rather than only sharing achievements.' },
       ],
       toolLink: '/tools/mood-journal',
@@ -1216,7 +1216,7 @@ export const onlineRelationshipsCommunityArticlesB: Article[] = [
             again, perhaps with even more curation. Over time, the gap between your presented
             self and your experienced self widens. Maintaining the gap requires increasing effort.
             And the moments when reality does not match the presentation --- which is most of
-            life --- begin to feel like personal failures rather than normal human
+            life --- begin to feel like personal failures rather than common human
             experience<Citation id="2" index={2} />.
           </p>
         </ArticleCallout>
@@ -1227,7 +1227,7 @@ export const onlineRelationshipsCommunityArticlesB: Article[] = [
         <p className="mb-6">
           Researchers use the term &quot;identity gap&quot; to describe the discrepancy between
           the self a person presents to others and the self they privately experience. A small
-          identity gap is normal and even functional --- we all adjust our behavior for different
+          identity gap is common and even functional --- we all adjust our behavior for different
           social contexts. But when the gap becomes large and chronic, it begins to erode
           psychological wellbeing in measurable ways<Citation id="1" index={1} />.
         </p>
@@ -1292,7 +1292,7 @@ export const onlineRelationshipsCommunityArticlesB: Article[] = [
           process<Citation id="3" index={3} />.
         </p>
         <p className="mb-6">
-          Young people now engage in identity experimentation --- a normal and healthy developmental
+          Young people now engage in identity experimentation --- a common and healthy developmental
           process --- with an audience of hundreds or thousands of peers who respond in real time
           with quantified approval or disapproval. A teenager trying out a new interest, style,
           or viewpoint is not just testing it privately or with a few friends; they are publishing
@@ -1399,7 +1399,7 @@ export const onlineRelationshipsCommunityArticlesB: Article[] = [
           professional Twitter presence, does this produce mild awkwardness or genuine panic?
           The degree of anxiety a person experiences when their separate digital audiences
           intersect often reflects the degree to which those identities are performative rather
-          than authentic. Mild discomfort with context collapse is normal --- most people behave
+          than authentic. Mild discomfort with context collapse is common --- most people behave
           somewhat differently with close friends than with professional contacts, and having
           those worlds mix can feel awkward. But intense fear of being seen across contexts
           typically signals that at least one of those digital identities is substantially
@@ -2017,7 +2017,7 @@ export const onlineRelationshipsCommunityArticlesB: Article[] = [
           schedule. Some victims experience acute distress that resolves within several months
           of appropriate support. Others find that the trust disruption and grief persist for
           years, particularly when the scam involved extended periods of emotional investment
-          or significant financial loss. Both timelines are normal, and neither indicates
+          or significant financial loss. Both timelines are common, and neither indicates
           something wrong with the person experiencing them. The depth and duration of the
           attachment, the degree of isolation from support networks during the scam, the
           financial consequences, and the person&apos;s history of prior trauma all influence

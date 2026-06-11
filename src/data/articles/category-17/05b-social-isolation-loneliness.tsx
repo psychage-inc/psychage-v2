@@ -553,7 +553,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
           <strong>Reduced ageism:</strong> Youth who participate in intergenerational programs develop more positive attitudes toward aging and older adults. They see seniors as individuals with unique stories, not monolithic "old people." This reduces stereotyping and fear of aging. <Citation id="9" index={9} source="Educational Gerontology" year="2004" tier={1} />
         </p>
         <p className="mb-6">
-          <strong>Emotional support and wisdom:</strong> Teens often find it easier to confide in non-parental adults. Senior mentors provide perspective without the emotional reactivity of parents. They have "seen it all"---relationship struggles, career uncertainty, family conflict---and can offer reassurance that challenges are normal and survivable.
+          <strong>Emotional support and wisdom:</strong> Teens often find it easier to confide in non-parental adults. Senior mentors provide perspective without the emotional reactivity of parents. They have "seen it all"---relationship struggles, career uncertainty, family conflict---and can offer reassurance that challenges are common and survivable.
         </p>
         <p className="mb-6">
           <strong>Practical skills:</strong> Seniors teach skills that schools do not: how to write a resume, how to interview for jobs, how to budget, how to cook, how to maintain a car. These practical life skills often come from grandparent-aged mentors rather than peers or teachers.
@@ -1302,7 +1302,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
           Overcoming Fear of Rejection
         </h2>
         <p className="mb-6">
-          Many seniors avoid pursuing friendship because they fear rejection: "What if they say no to coffee? What if they don't like me?" This fear is normal but often exaggerated.
+          Many seniors avoid pursuing friendship because they fear rejection: "What if they say no to coffee? What if they don't like me?" This fear is common but often exaggerated.
         </p>
         <p className="mb-6">
           <strong>Reality check:</strong> Most people say yes to casual invitations (coffee, lunch). If they say no, it is usually logistical ("I have plans"), not personal rejection. If someone consistently declines, they are not interested in friendship with anyone (not just you)---move on to someone else.
@@ -1335,7 +1335,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
             <li>Show up consistently (every week, not sporadically), take initiative (invite people to coffee), and practice vulnerability (share real struggles, not just small talk)</li>
             <li>Ask for help to build connection---people bond with those they assist</li>
             <li>Expect months of interaction before casual friendship solidifies---do not give up after a few weeks</li>
-            <li>Fear of rejection is normal but exaggerated---most people say yes to casual invitations, and "no" is usually logistical, not personal</li>
+            <li>Fear of rejection is common but exaggerated---most people say yes to casual invitations, and "no" is usually logistical, not personal</li>
           </ul>
         </ArticleCallout>
       </>
@@ -1600,7 +1600,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Validation:</strong> Other group members understand cumulative grief firsthand. They do not minimize your loss or rush you to "move on."</li>
-          <li><strong>Normalization:</strong> Hearing others describe similar grief experiences (numbness, guilt, anger, relief) reassures you that your reactions are normal.</li>
+          <li><strong>Normalization:</strong> Hearing others describe similar grief experiences (numbness, guilt, anger, relief) reassures you that your reactions are common.</li>
           <li><strong>Practical advice:</strong> Group members share strategies for navigating loneliness, managing finances, handling holidays, coping with insensitive comments from others.</li>
           <li><strong>New social connections:</strong> Many bereaved adults form lasting friendships through grief groups---connections built on shared loss and mutual understanding.</li>
         </ul>

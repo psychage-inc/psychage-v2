@@ -251,7 +251,7 @@ const SignUpPage = () => {
                                         id="country"
                                         value={formData.country}
                                         onChange={handleChange}
-                                        className="flex h-12 w-full rounded-lg border border-border bg-surface pl-11 pr-3 py-2 text-sm ring-offset-background placeholder:text-text-tertiary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 appearance-none cursor-pointer"
+                                        className="flex h-12 w-full rounded-lg border border-border bg-surface pl-11 pr-3 py-2 text-base ring-offset-background placeholder:text-text-tertiary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 appearance-none cursor-pointer"
                                     >
                                         <option value="">Select country</option>
                                         <option value="US">United States</option>
@@ -297,7 +297,7 @@ const SignUpPage = () => {
                                         id="referralSource"
                                         value={formData.referralSource}
                                         onChange={handleChange}
-                                        className="flex h-12 w-full rounded-lg border border-border bg-surface pl-11 pr-3 py-2 text-sm ring-offset-background placeholder:text-text-tertiary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 appearance-none cursor-pointer"
+                                        className="flex h-12 w-full rounded-lg border border-border bg-surface pl-11 pr-3 py-2 text-base ring-offset-background placeholder:text-text-tertiary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 appearance-none cursor-pointer"
                                     >
                                         <option value="">Select an option</option>
                                         <option value="search_engine">Search Engine</option>

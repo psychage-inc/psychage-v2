@@ -102,7 +102,7 @@ const DurationChart: React.FC<DurationChartProps> = ({
           />
         </BarChart>
       </ResponsiveContainer>
-      <div className="flex items-center justify-center gap-4 mt-2 text-[10px] text-gray-400 dark:text-neutral-500">
+      <div className="flex items-center justify-center gap-4 mt-2 text-xs text-gray-400 dark:text-neutral-500">
         <div className="flex items-center gap-1.5">
           <div className="w-3 h-2 rounded-sm bg-indigo-200" />
           Time in Bed

@@ -1846,7 +1846,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          If you've tried positive affirmations and felt worse, you're not doing it wrong. The research shows you're having a normal psychological response. Try the evidence-based alternatives instead --- they're designed to actually work.
+          If you've tried positive affirmations and felt worse, you're not doing it wrong. The research shows you're having a common psychological response. Try the evidence-based alternatives instead --- they're designed to actually work.
         </p>
       </>
     ),

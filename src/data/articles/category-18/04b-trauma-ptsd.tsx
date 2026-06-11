@@ -284,7 +284,7 @@ export const articles: Article[] = [
 
         <ArticleCallout variant="warning" title="When to Pause or Modify Treatment">
           <p>
-            While temporary distress is normal, trauma therapy should not leave you consistently overwhelmed, unable to
+            While temporary distress is common, trauma therapy should not leave you consistently overwhelmed, unable to
             function, or experiencing suicidal thoughts. If this occurs, talk with your therapist immediately. Treatment
             can be modified---processing trauma more gradually, spending more time on stabilization, or even switching
             approaches. The goal is meaningful improvement, not enduring overwhelming distress. A skilled trauma
@@ -540,7 +540,7 @@ export const articles: Article[] = [
           The experience of EMDR varies considerably among individuals. Some people find it deeply emotional, with tears,
           anger, or other strong feelings arising during processing. Others have a more cognitive experience, making new
           connections and insights without intense emotion. Some experience vivid imagery and sensations, while others
-          process more abstractly. All of these are normal variations in how EMDR works.
+          process more abstractly. All of these are common variations in how EMDR works.
         </p>
 
         <ArticleCallout variant="insight" title="The Accelerated Information Processing">
@@ -557,7 +557,7 @@ export const articles: Article[] = [
 
         <p>
           Between sessions, you may notice continued processing---dreams about trauma, memories surfacing, or shifts in
-          how you think and feel about experiences. This is normal and indicates that the brain continues integrating
+          how you think and feel about experiences. This is common and indicates that the brain continues integrating
           material after sessions end. Some people experience temporary increases in trauma memories or distress between
           early sessions as the processing work "shakes loose" material that has been avoided. This typically resolves as
           treatment progresses.
@@ -1446,7 +1446,7 @@ export const articles: Article[] = [
             they learned their body exists for others' use, and persistent shame about normal sexuality. The cognitive
             dissonance of being told "sex is shameful, wait until marriage when it will be beautiful" creates lasting
             confusion. Healing requires consciously rejecting harmful teachings, reclaiming bodily autonomy, and
-            learning that sexuality itself is neither shameful nor sacred---it's a normal human experience that each
+            learning that sexuality itself is neither shameful nor sacred---it's a common human experience that each
             person gets to navigate according to their own values.
           </p>
         </ArticleCallout>

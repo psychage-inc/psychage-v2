@@ -34,4 +34,13 @@ i18n
         },
     });
 
+// Keep <html lang> in sync with the active language for screen readers and SEO.
+// Guarded for non-browser contexts (SSR / test environments without a document).
+if (typeof document !== 'undefined') {
+    document.documentElement.lang = i18n.language || 'en';
+    i18n.on('languageChanged', (lng) => {
+        document.documentElement.lang = lng;
+    });
+}
+
 export default i18n;

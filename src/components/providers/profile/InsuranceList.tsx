@@ -62,7 +62,7 @@ export const InsuranceList: React.FC<InsuranceListProps> = ({ provider }) => {
         </button>
       )}
 
-      <p className="mt-4 text-[11px] text-slate-400 dark:text-neutral-500 leading-relaxed">
+      <p className="mt-4 text-xs text-slate-400 dark:text-neutral-500 leading-relaxed">
         Insurance information is provided by the provider and may not reflect current network
         status. Please verify coverage directly with the provider or your insurance company.
       </p>

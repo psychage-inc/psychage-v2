@@ -73,7 +73,7 @@ const RecentActivityCard: React.FC<RecentActivityCardProps> = ({ activity }) => 
                                         <div className="absolute left-[7px] top-1.5 w-[9px] h-[9px] rounded-full bg-gray-300 dark:bg-neutral-600 border-2 border-white dark:border-neutral-900 z-10" />
                                         <div className="flex-grow min-w-0">
                                             <p className="text-sm text-gray-700 dark:text-neutral-300 font-medium truncate">{item.title}</p>
-                                            <p className="text-[11px] text-gray-400 dark:text-neutral-500">{timeLabel}</p>
+                                            <p className="text-xs text-gray-400 dark:text-neutral-500">{timeLabel}</p>
                                         </div>
                                     </motion.div>
                                 );

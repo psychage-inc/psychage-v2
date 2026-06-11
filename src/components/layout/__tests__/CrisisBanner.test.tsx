@@ -2,21 +2,26 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 import CrisisBanner from '../CrisisBanner';
 
+// AnimatePresence/motion are not relevant to behavior here — render children plainly.
 vi.mock('framer-motion', () => {
     const { forwardRef } = require('react');
     return {
         motion: {
+            div: forwardRef(({ children, ...props }: any, ref: any) => (
+                <div ref={ref} {...props}>{children}</div>
+            )),
             button: forwardRef(({ children, ...props }: any, ref: any) => (
                 <button ref={ref} {...props}>{children}</button>
             )),
         },
+        AnimatePresence: ({ children }: any) => <>{children}</>,
     };
 });
 
-// Mock crisis module to return known US resources
+// Resolve to deterministic US resources so the rendered phone/label are known.
 vi.mock('@/lib/crisis', () => ({
     resolveCountry: () => 'US',
     getResourcesForCountry: () => ({
@@ -30,60 +35,52 @@ vi.mock('@/lib/crisis', () => ({
                 verification_status: 'verified',
                 source_priority: 1,
             },
-            {
-                name: 'Crisis Text Line',
-                type: 'text',
-                text_instruction: 'Text HOME to 741741',
-                verification_status: 'verified',
-                source_priority: 1,
-            },
         ],
     }),
 }));
 
+const renderBanner = () =>
+    render(
+        <MemoryRouter>
+            <CrisisBanner />
+        </MemoryRouter>
+    );
+
+// i18n is initialized in src/tests/setup.ts; useTranslation resolves to EN here.
 describe('CrisisBanner', () => {
-    it('should render 24/7 support label', () => {
-        render(<MemoryRouter><CrisisBanner /></MemoryRouter>);
-        expect(screen.getByText('24/7 Support')).toBeInTheDocument();
+    beforeEach(() => {
+        try {
+            sessionStorage.clear();
+        } catch {
+            /* sessionStorage unavailable */
+        }
     });
 
-    it('should display 988 number', () => {
-        render(<MemoryRouter><CrisisBanner /></MemoryRouter>);
-        expect(screen.getByText('988')).toBeInTheDocument();
+    it('renders the localized 24/7 crisis support title', () => {
+        renderBanner();
+        expect(screen.getByText('24/7 Crisis Support')).toBeInTheDocument();
     });
 
-    it('should display crisis hotline label', () => {
-        render(<MemoryRouter><CrisisBanner /></MemoryRouter>);
-        expect(screen.getByText(/988 Suicide & Crisis Lifeline/)).toBeInTheDocument();
+    it('shows the resolved primary phone and label', () => {
+        renderBanner();
+        expect(screen.getByText(/988 \(988 Suicide & Crisis Lifeline\)/)).toBeInTheDocument();
     });
 
-    it('should render Call Now button', () => {
-        render(<MemoryRouter><CrisisBanner /></MemoryRouter>);
-        expect(screen.getByText('Call Now')).toBeInTheDocument();
+    it('renders a Call Now action linking to tel: the primary phone', () => {
+        renderBanner();
+        const call = screen.getByText('Call Now').closest('a');
+        expect(call).toHaveAttribute('href', 'tel:988');
     });
 
-    it('should render text action button', () => {
-        render(<MemoryRouter><CrisisBanner /></MemoryRouter>);
-        expect(screen.getByText('Text HOME to 741741')).toBeInTheDocument();
+    it('renders a Resources link to the /crisis page', () => {
+        renderBanner();
+        const resources = screen.getByText('Resources').closest('a');
+        expect(resources).toHaveAttribute('href', '/crisis');
     });
 
-    it('should open tel:988 on Call Now click', () => {
-        const openSpy = vi.spyOn(window, 'open').mockImplementation(() => null);
-        render(<MemoryRouter><CrisisBanner /></MemoryRouter>);
-
-        fireEvent.click(screen.getByText('Call Now'));
-        expect(openSpy).toHaveBeenCalledWith('tel:988');
-
-        openSpy.mockRestore();
-    });
-
-    it('should open sms:741741 on text button click', () => {
-        const openSpy = vi.spyOn(window, 'open').mockImplementation(() => null);
-        render(<MemoryRouter><CrisisBanner /></MemoryRouter>);
-
-        fireEvent.click(screen.getByText('Text HOME to 741741'));
-        expect(openSpy).toHaveBeenCalledWith('sms:741741');
-
-        openSpy.mockRestore();
+    it('dismisses the banner when the dismiss control is clicked', () => {
+        renderBanner();
+        fireEvent.click(screen.getByLabelText('Dismiss crisis support notification'));
+        expect(screen.queryByText('24/7 Crisis Support')).not.toBeInTheDocument();
     });
 });

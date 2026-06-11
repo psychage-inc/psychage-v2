@@ -663,7 +663,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
           responsibilities that exceed what is developmentally appropriate. Research shows that
           parental chronic illness is associated with increased caregiving roles for children,
           particularly older daughters<Citation id="2" index={2} />. A certain degree of helping
-          is normal and even beneficial --- children who contribute to family functioning develop
+          is common and even beneficial --- children who contribute to family functioning develop
           empathy and competence. But when a child becomes a primary caregiver, managing medications,
           providing emotional support to a parent, or consistently prioritizing the parent's needs
           over their own, the developmental cost can be significant<Citation id="10" index={10} />.
@@ -1033,7 +1033,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
           new loss reopens the grief process and can feel like starting over, even though the person has
           already demonstrated remarkable capacity for adaptation. Clinicians who work with this
           population must understand that returning to grief is not a failure of coping --- it is a
-          normal response to genuinely new losses that deserve their own period of acknowledgment and
+          common response to genuinely new losses that deserve their own period of acknowledgment and
           processing. The goal is not to grieve once and be done, but to develop a relationship with
           grief that allows it to coexist with continued engagement in life.
         </p>
@@ -1355,7 +1355,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
           },
           {
             title: 'Grief and emotional turbulence',
-            description: 'As the reality of the situation becomes clearer, grief responses emerge --- sadness about lost abilities, anger at the circumstances, anxiety about the future, and sometimes guilt or self-blame. These are normal, adaptive responses to real losses, not symptoms to be suppressed or rushed through.',
+            description: 'As the reality of the situation becomes clearer, grief responses emerge --- sadness about lost abilities, anger at the circumstances, anxiety about the future, and sometimes guilt or self-blame. These are common, adaptive responses to real losses, not symptoms to be suppressed or rushed through.',
           },
           {
             title: 'Effortful engagement',
@@ -1392,7 +1392,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
           calibrate their expectations and responses. Well-meaning family members sometimes pressure
           patients to "stay positive" or to move through emotional responses more quickly than is
           natural, inadvertently adding shame to an already difficult emotional landscape. When families
-          understand that grief, anger, and frustration are normal and necessary parts of adaptation ---
+          understand that grief, anger, and frustration are common and necessary parts of adaptation ---
           not obstacles to recovery --- they can provide the kind of support that genuinely helps:
           presence without pressure, validation without minimization, and patience with a process
           that unfolds on its own timeline.

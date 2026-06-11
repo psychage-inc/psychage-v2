@@ -47,7 +47,7 @@ The expectation that two people in a long-term relationship will consistently wa
 
 Desire discrepancy is not pathological—it is mathematical. Any two individuals will differ in their baseline level of sexual desire, their responsiveness to contextual factors (stress, fatigue, relationship satisfaction), their hormonal cycles, and the rate at which their desire fluctuates over time. The probability that two people will be perfectly matched in all these dimensions at all times across a multi-decade relationship approaches zero. The question is not whether couples will experience desire discrepancy but how they will navigate it.
 
-The cultural narrative that compounds the challenge assigns meaning to frequency. If a partner declines sex, the other partner may interpret the refusal as rejection ("they don't find me attractive"), evidence of relationship decline ("the passion is dying"), or personal failure ("I can't satisfy my partner"). The lower-desire partner may interpret their own lower desire as evidence of dysfunction ("something is wrong with me"), betrayal of their partner ("I'm failing them"), or relationship dissatisfaction ("I must not love them enough"). These interpretations transform a normal variation in desire into a crisis of identity, attraction, and relationship viability.
+The cultural narrative that compounds the challenge assigns meaning to frequency. If a partner declines sex, the other partner may interpret the refusal as rejection ("they don't find me attractive"), evidence of relationship decline ("the passion is dying"), or personal failure ("I can't satisfy my partner"). The lower-desire partner may interpret their own lower desire as evidence of dysfunction ("something is wrong with me"), betrayal of their partner ("I'm failing them"), or relationship dissatisfaction ("I must not love them enough"). These interpretations transform a common variation in desire into a crisis of identity, attraction, and relationship viability.
 
 ### Spontaneous vs. Responsive Desire
 
@@ -73,7 +73,7 @@ Metz and McCarthy (2007) proposed the "good-enough sex" model as an alternative 
 
 **Sexual satisfaction is about pleasure, not performance.** The cultural emphasis on sexual performance—achieving erection, reaching orgasm, lasting a specific duration—creates pressure that undermines the pleasure that sex is supposed to provide. When sexual encounters are evaluated against performance standards, the inevitable variability in sexual experience produces disappointment rather than enjoyment.
 
-**Not every sexual encounter will be equally satisfying.** In long-term relationships, the quality of sex follows a distribution: some encounters are deeply connecting and intensely pleasurable; most are pleasant and satisfying; some are unremarkable; and a few are disappointing. This variability is normal—not evidence that something is wrong. Couples who accept this variability report greater long-term satisfaction than those who expect every encounter to be extraordinary.
+**Not every sexual encounter will be equally satisfying.** In long-term relationships, the quality of sex follows a distribution: some encounters are deeply connecting and intensely pleasurable; most are pleasant and satisfying; some are unremarkable; and a few are disappointing. This variability is common—not evidence that something is wrong. Couples who accept this variability report greater long-term satisfaction than those who expect every encounter to be extraordinary.
 
 **Emotional connection matters more than technique.** The research consistently shows that sexual satisfaction correlates more strongly with emotional intimacy, feeling desired, and communication quality than with frequency, duration, or specific sexual activities. Couples who maintain emotional connection and communicate openly about sex are more satisfied regardless of frequency.
 
@@ -85,7 +85,7 @@ Metz and McCarthy (2007) proposed the "good-enough sex" model as an alternative 
 
 - **Depersonalize the discrepancy.** Your partner's lower (or higher) desire is not about you—it reflects their individual desire profile, which is shaped by biology, psychology, and context. It is not a measure of your attractiveness or their love.
 
-- **Learn about responsive desire.** If your partner rarely initiates but enjoys sex once engaged, they likely experience responsive rather than spontaneous desire. This is a normal pattern—not low desire.
+- **Learn about responsive desire.** If your partner rarely initiates but enjoys sex once engaged, they likely experience responsive rather than spontaneous desire. This is a common pattern—not low desire.
 
 - **Break the demand-withdrawal cycle.** If you are the higher-desire partner, practice initiating without pressure. If you are the lower-desire partner, practice communicating honestly without guilt. Both of you practice receiving the other's response without catastrophizing.
 

@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShieldAlert, X, Globe, ExternalLink } from 'lucide-react';
+import { useTranslation, Trans } from 'react-i18next';
 import { useNavigator } from '../../context/NavigatorContext';
 import { CrisisResourceCard } from './CrisisResourceCard';
 import { useFocusTrap } from '../../hooks/useFocusTrap';
@@ -9,6 +10,7 @@ import { useFocusTrap } from '../../hooks/useFocusTrap';
 const CLOSE_DELAY_MS = 4000;
 
 export const CrisisOverlay: React.FC = () => {
+    const { t } = useTranslation();
     const { state, dispatch, announceAssertive } = useNavigator();
 
     const { crisisTriggered, crisisAcknowledged, detectedRegion, knowledgeBase } = state;
@@ -28,7 +30,7 @@ export const CrisisOverlay: React.FC = () => {
     const handleEscapeKey = () => {
         if (acknowledgeButtonRef.current) {
             acknowledgeButtonRef.current.focus();
-            announceAssertive("Please acknowledge to continue.");
+            announceAssertive(t('crisis.navOverlay.announce_acknowledge'));
         }
     };
 
@@ -40,7 +42,7 @@ export const CrisisOverlay: React.FC = () => {
         // Prevent body scrolling when overlay is active
         if (isVisible) {
             document.body.style.overflow = 'hidden';
-            announceAssertive("Important Safety Information shown. Please consider reaching out to one of the resources provided.");
+            announceAssertive(t('crisis.navOverlay.announce_shown'));
 
             // Enable close button after delay
             const timer = setTimeout(() => setCloseEnabled(true), CLOSE_DELAY_MS);
@@ -56,7 +58,7 @@ export const CrisisOverlay: React.FC = () => {
         return () => {
             document.body.style.overflow = 'unset';
         };
-    }, [isVisible, announceAssertive]);
+    }, [isVisible, announceAssertive, t]);
 
     // Resolve crisis resources for the detected region, falling back to the KB's
     // international DEFAULT set (never an empty list). The KB keys UK resources under
@@ -108,7 +110,7 @@ export const CrisisOverlay: React.FC = () => {
                                             type="button"
                                             onClick={handleAcknowledge}
                                             className="absolute top-4 right-4 z-10 p-1.5 rounded-full text-white/30 hover:text-white/60 transition-colors"
-                                            aria-label="Close safety information"
+                                            aria-label={t('crisis.navOverlay.close_aria')}
                                         >
                                             <X size={18} />
                                         </motion.button>
@@ -131,11 +133,14 @@ export const CrisisOverlay: React.FC = () => {
                                                 id="crisis-modal-title"
                                                 tabIndex={-1}
                                             >
-                                                Important Safety Information
+                                                {t('crisis.navOverlay.title')}
                                             </h3>
                                             <div className="mt-3">
                                                 <p id="crisis-modal-desc" className="text-base text-text-secondary leading-relaxed">
-                                                    Based on your responses, we noticed symptoms that may require immediate attention or support. <strong className="font-semibold text-text-primary">You don't have to go through this alone.</strong> Please consider reaching out to one of the resources below.
+                                                    <Trans
+                                                        i18nKey="crisis.navOverlay.body"
+                                                        components={{ b: <strong className="font-semibold text-text-primary" /> }}
+                                                    />
                                                 </p>
                                             </div>
                                         </div>
@@ -144,7 +149,7 @@ export const CrisisOverlay: React.FC = () => {
                                     {/* Crisis Resources List */}
                                     <div className="mt-8 space-y-4">
                                         <h4 className="text-sm font-semibold uppercase tracking-wider text-text-secondary mb-2">
-                                            Available Support ({detectedRegion || 'International'})
+                                            {t('crisis.navOverlay.available_support', { region: detectedRegion || t('crisis.common.international') })}
                                         </h4>
                                         {resources.map((resource) => (
                                             <CrisisResourceCard key={resource.id} resource={resource} />
@@ -162,10 +167,10 @@ export const CrisisOverlay: React.FC = () => {
                                             </div>
                                             <div className="flex-1 text-left">
                                                 <p className="text-sm font-semibold text-text-primary">
-                                                    Find A Helpline
+                                                    {t('crisis.common.find_a_helpline')}
                                                 </p>
                                                 <p className="text-xs text-text-secondary">
-                                                    Search crisis helplines in any country worldwide
+                                                    {t('crisis.common.find_helpline_desc')}
                                                 </p>
                                             </div>
                                             <ExternalLink size={14} className="text-text-secondary group-hover:text-teal-400 transition-colors shrink-0" />
@@ -179,17 +184,14 @@ export const CrisisOverlay: React.FC = () => {
                                             className="w-full inline-flex justify-center rounded-lg border border-white/20 px-6 py-3 bg-white/10 text-base font-medium text-white shadow-sm hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-teal-500 sm:w-auto sm:text-sm transition-colors backdrop-blur-md"
                                             onClick={handleAcknowledge}
                                         >
-                                            I understand, continue to results
+                                            {t('crisis.navOverlay.acknowledge')}
                                         </button>
                                     </div>
 
                                     {/* Disclaimer */}
                                     <div className="mt-6 pt-4 border-t border-white/10">
                                         <p className="text-xs text-text-secondary/60 leading-relaxed">
-                                            Psychage is not a crisis service and does not provide emergency support.
-                                            The resources shown are operated by independent organizations.
-                                            If you are in immediate danger, call your local emergency number.
-                                            Information may not reflect the most current availability.
+                                            {t('crisis.navOverlay.disclaimer')}
                                         </p>
                                     </div>
                                 </div>

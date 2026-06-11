@@ -396,7 +396,7 @@ export const toxicDynamicsArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          These health impacts are not signs of weakness or failure. They are normal physiological and psychological responses to chronic threat and invalidation. With appropriate support and distance from the toxic dynamic, most of these symptoms improve significantly over time. Healing is possible, though it often requires professional help to process the trauma and rebuild self-trust.
+          These health impacts are not signs of weakness or failure. They are common physiological and psychological responses to chronic threat and invalidation. With appropriate support and distance from the toxic dynamic, most of these symptoms improve significantly over time. Healing is possible, though it often requires professional help to process the trauma and rebuild self-trust.
         </p>
 
         <h2 id="first-steps" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -797,12 +797,12 @@ export const toxicDynamicsArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          These are not character flaws. They are normal responses to abnormal manipulation <Citation id="5" index={5} source="Clinical Psychology Review" year="2019" tier={1} />. Recognizing these barriers is part of building the strength to overcome them.
+          These are not character flaws. They are common responses to abnormal manipulation <Citation id="5" index={5} source="Clinical Psychology Review" year="2019" tier={1} />. Recognizing these barriers is part of building the strength to overcome them.
         </p>
 
         <ArticleCallout variant="clinical-note">
           <p>
-            <strong>Important</strong>: On average, people experiencing manipulation or abuse leave 7-11 times before leaving permanently. Each attempt is not failure—it's information gathering, strength building, and resource planning. If you've gone back, you're following a statistically normal pattern, not demonstrating weakness.
+            <strong>Important</strong>: On average, people experiencing manipulation or abuse leave 7-11 times before leaving permanently. Each attempt is not failure—it's information gathering, strength building, and resource planning. If you've gone back, you're following a statistically common pattern, not demonstrating weakness.
           </p>
         </ArticleCallout>
 
@@ -926,7 +926,7 @@ export const toxicDynamicsArticlesA: Article[] = [
         </ol>
 
         <p className="mb-6">
-          Healing from manipulation is not linear. You may have moments of clarity followed by doubt, strength followed by missing them, determination followed by exhaustion. All of this is normal. The trajectory, over time, is toward freedom.
+          Healing from manipulation is not linear. You may have moments of clarity followed by doubt, strength followed by missing them, determination followed by exhaustion. All of this is common. The trajectory, over time, is toward freedom.
         </p>
 
         <h2 id="resources" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -975,7 +975,7 @@ export const toxicDynamicsArticlesA: Article[] = [
       steps: [
         { title: 'Identify One Small Boundary', description: 'Choose something low-stakes where you typically override your needs for others. Examples: not answering texts immediately, saying no to a favor you don\'t have time for, declining an invitation you don\'t want to attend.' },
         { title: 'Set the Boundary', description: 'Communicate it clearly and kindly. "I can\'t help with that this week," "I need some alone time tonight," "I\'m not available to talk right now." Notice the urge to over-explain or apologize—resist it.' },
-        { title: 'Tolerate the Discomfort', description: 'You will likely feel guilt, anxiety, or fear of disappointing them. This is normal. The discomfort is not evidence you did something wrong; it\'s evidence you\'re breaking an old pattern.' },
+        { title: 'Tolerate the Discomfort', description: 'You will likely feel guilt, anxiety, or fear of disappointing them. This is common. The discomfort is not evidence you did something wrong; it\'s evidence you\'re breaking an old pattern.' },
         { title: 'Reflect on the Outcome', description: 'What happened? Did the relationship end? (It likely didn\'t.) Did you survive the guilt? (You did.) Use this as data that boundaries are safe and necessary.' },
       ],
       toolLink: '/tools/mood-journal',
@@ -1703,7 +1703,7 @@ export const toxicDynamicsArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
-            <strong>You're not crazy</strong>: The confusion, self-doubt, and difficulty leaving are normal responses to abnormal, abusive behavior. Narcissistic abuse is designed to make you feel crazy---that's how it maintains control.
+            <strong>You're not crazy</strong>: The confusion, self-doubt, and difficulty leaving are common responses to abnormal, abusive behavior. Narcissistic abuse is designed to make you feel crazy---that's how it maintains control.
           </p>
         </ArticleCallout>
 
@@ -1785,7 +1785,7 @@ export const toxicDynamicsArticlesA: Article[] = [
             <strong>Lost sense of self</strong>: Who were you before this relationship? What do you actually like, want, or believe? Narcissistic abuse systematically dismantles your identity, replacing it with their version of who you should be. Survivors often describe feeling hollow, like they've lost themselves entirely.
           </li>
           <li>
-            <strong>Emotional numbness or dysregulation</strong>: Some survivors go numb—dissociating from pain because it's too overwhelming. Others experience emotional storms—crying uncontrollably, rage, terror—as their nervous system tries to process ongoing trauma. Both are normal responses to abnormal cruelty.
+            <strong>Emotional numbness or dysregulation</strong>: Some survivors go numb—dissociating from pain because it's too overwhelming. Others experience emotional storms—crying uncontrollably, rage, terror—as their nervous system tries to process ongoing trauma. Both are common responses to abnormal cruelty.
           </li>
           <li>
             <strong>C-PTSD symptoms</strong>: Flashbacks, nightmares, intrusive thoughts about the abuse, avoidance of anything that reminds you of them, difficulty trusting others, feeling permanently damaged. These aren't signs of weakness—they're evidence of the brain trying to make sense of prolonged psychological assault.
@@ -1793,7 +1793,7 @@ export const toxicDynamicsArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          These impacts are measurable and documented in research. Survivors of narcissistic abuse show brain changes similar to those seen in war veterans and severe trauma survivors. This is not "just a bad breakup." This is psychological warfare, and your symptoms are a normal response to sustained emotional terrorism.
+          These impacts are measurable and documented in research. Survivors of narcissistic abuse show brain changes similar to those seen in war veterans and severe trauma survivors. This is not "just a bad breakup." This is psychological warfare, and your symptoms are a common response to sustained emotional terrorism.
         </p>
 
         <BeforeAfter
@@ -1862,7 +1862,7 @@ export const toxicDynamicsArticlesA: Article[] = [
           <li><strong>Rebuild your identity</strong>: Rediscover who you are outside the relationship---your interests, values, friendships.</li>
           <li><strong>Grieve</strong>: Mourn the person you thought they were, even though that person never truly existed.</li>
           <li><strong>Join support groups</strong>: Connecting with other survivors validates your experience and reduces isolation.</li>
-          <li><strong>Expect setbacks</strong>: Healing isn't linear. Hoovering attempts, trauma anniversaries, or seeing them with new supply can trigger you---that's normal.</li>
+          <li><strong>Expect setbacks</strong>: Healing isn't linear. Hoovering attempts, trauma anniversaries, or seeing them with new supply can trigger you---that's common.</li>
         </ol>
 
         <ArticleCallout variant="warning">
@@ -2308,7 +2308,7 @@ export const toxicDynamicsArticlesA: Article[] = [
               title: '4. Expect Withdrawal',
               description: (
                 <p>
-                  Breaking a trauma bond feels like quitting an addiction. You'll crave contact, romanticize the past, feel intense grief. This is normal and temporary. Ride it out without acting on it.
+                  Breaking a trauma bond feels like quitting an addiction. You'll crave contact, romanticize the past, feel intense grief. This is common and temporary. Ride it out without acting on it.
                 </p>
               ),
             },

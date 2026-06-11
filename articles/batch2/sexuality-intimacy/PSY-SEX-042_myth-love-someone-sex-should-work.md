@@ -89,7 +89,7 @@ Every element on this list requires deliberate cultivation. None of them happen 
 
 ## Why This Myth Matters
 
-The love-equals-good-sex myth creates a specific pattern of harm. When couples believe that sexual fulfillment should be effortless, they interpret the normal challenges of sexual relationships—desire discrepancy, changing preferences, performance concerns, mismatched arousal timing—as evidence of fundamental incompatibility rather than solvable problems. This interpretation discourages help-seeking: if the problem is that you don't love each other enough, no amount of therapy or communication can fix it.
+The love-equals-good-sex myth creates a specific pattern of harm. When couples believe that sexual fulfillment should be effortless, they interpret the common challenges of sexual relationships—desire discrepancy, changing preferences, performance concerns, mismatched arousal timing—as evidence of fundamental incompatibility rather than solvable problems. This interpretation discourages help-seeking: if the problem is that you don't love each other enough, no amount of therapy or communication can fix it.
 
 The myth disproportionately harms couples in long-term relationships, where the novelty-driven chemistry of early romance has given way to familiarity. These couples may have deeply loving, committed partnerships and simultaneously unfulfilling sexual lives—not because they lack love, but because they lack the communication skills, sexual vocabulary, and cultural permission to address sexual difficulties directly.
 

@@ -105,7 +105,7 @@ The person who can construct a narrative that makes sense of the transition—"I
 
 ## What You Can Try
 
-- **Honor the ending.** Before rushing into the next thing, acknowledge what you have lost—the routines, the relationships, the competence, the identity. Grief about career loss is normal and necessary.
+- **Honor the ending.** Before rushing into the next thing, acknowledge what you have lost—the routines, the relationships, the competence, the identity. Grief about career loss is common and necessary.
 
 - **Experiment with possible selves.** Rather than trying to figure out your next career through analysis, try small experiments: volunteer, take a class, shadow someone, start a side project. Direct experience reveals what analysis cannot.
 

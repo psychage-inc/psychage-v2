@@ -1870,7 +1870,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
               title: 'Name and validate your full range of feelings',
               content: (
                 <p>
-                  You can love your parent and resent the caregiving burden. You can feel guilty about wanting a break and still deserve that break. Ambivalence is normal. Anger at someone with dementia is normal. Grief while they're still alive is normal. Your feelings aren't moral failings---they're human responses to impossible situations.
+                  You can love your parent and resent the caregiving burden. You can feel guilty about wanting a break and still deserve that break. Ambivalence is common. Anger at someone with dementia is common. Grief while they're still alive is common. Your feelings aren't moral failings---they're human responses to impossible situations.
                 </p>
               ),
             },

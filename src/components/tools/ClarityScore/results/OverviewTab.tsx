@@ -54,7 +54,7 @@ const OverviewTab: React.FC<OverviewTabProps> = ({
           {/* Supplementary info */}
           <div className="mt-6 w-full grid grid-cols-2 gap-4 border-t border-gray-100 dark:border-neutral-800 pt-5">
             <div className="text-center">
-              <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 dark:text-neutral-500 mb-0.5">
+              <p className="text-xs font-medium uppercase tracking-wider text-gray-400 dark:text-neutral-500 mb-0.5">
                 Score Range
               </p>
               <p className="text-sm font-semibold text-gray-900 dark:text-white">
@@ -62,7 +62,7 @@ const OverviewTab: React.FC<OverviewTabProps> = ({
               </p>
             </div>
             <div className="text-center">
-              <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 dark:text-neutral-500 mb-0.5">
+              <p className="text-xs font-medium uppercase tracking-wider text-gray-400 dark:text-neutral-500 mb-0.5">
                 Strongest Area
               </p>
               <p className="text-sm font-semibold text-gray-900 dark:text-white">
@@ -70,7 +70,7 @@ const OverviewTab: React.FC<OverviewTabProps> = ({
               </p>
             </div>
             <div className="text-center">
-              <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 dark:text-neutral-500 mb-0.5">
+              <p className="text-xs font-medium uppercase tracking-wider text-gray-400 dark:text-neutral-500 mb-0.5">
                 Needs Attention
               </p>
               <p className="text-sm font-semibold text-gray-900 dark:text-white">
@@ -79,7 +79,7 @@ const OverviewTab: React.FC<OverviewTabProps> = ({
             </div>
             {results.structuredFlags && results.structuredFlags.length > 0 && (
               <div className="text-center">
-                <p className="text-[11px] font-medium uppercase tracking-wider text-gray-400 dark:text-neutral-500 mb-0.5">
+                <p className="text-xs font-medium uppercase tracking-wider text-gray-400 dark:text-neutral-500 mb-0.5">
                   Clinical Flags
                 </p>
                 <p className="text-sm font-semibold text-amber-600 dark:text-amber-400">

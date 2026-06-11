@@ -5,6 +5,7 @@
 
 import { describe, it, expect, vi } from 'vitest';
 import { render } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import { SymptomToggle } from '../../components/navigator/SymptomToggle';
 import { ProviderQuestions } from '../../components/navigator/ProviderQuestions';
@@ -99,7 +100,7 @@ describe('Navigator Component Accessibility', () => {
             ];
 
             const { container } = render(
-                <ProviderQuestions questions={questions} />
+                <MemoryRouter><ProviderQuestions questions={questions} /></MemoryRouter>
             );
 
             const results = await axe(container);
@@ -108,7 +109,7 @@ describe('Navigator Component Accessibility', () => {
 
         it('should not have violations when empty', async () => {
             const { container } = render(
-                <ProviderQuestions questions={[]} />
+                <MemoryRouter><ProviderQuestions questions={[]} /></MemoryRouter>
             );
 
             const results = await axe(container);

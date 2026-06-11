@@ -65,7 +65,7 @@ export const ScienceSection: React.FC<ScienceSectionProps> = ({ patterns }) => {
               ))}
 
               <div className="pt-2">
-                <p className="text-[11px] text-text-tertiary text-center leading-relaxed">
+                <p className="text-xs text-text-tertiary text-center leading-relaxed">
                   This assessment draws on {Object.keys(FRAMEWORKS).length} validated clinical
                   frameworks spanning 40+ years of longitudinal research and data from 11,000+
                   couples. It is designed for educational insight, not clinical diagnosis.
@@ -85,7 +85,7 @@ function FrameworkCard({ framework }: { framework: FrameworkInfo }) {
       <div className="flex items-start justify-between mb-2">
         <div>
           <h4 className="font-semibold text-sm text-text-primary">{framework.name}</h4>
-          <p className="text-[11px] text-text-tertiary">
+          <p className="text-xs text-text-tertiary">
             {framework.authors} ({framework.year})
           </p>
         </div>
@@ -94,11 +94,11 @@ function FrameworkCard({ framework }: { framework: FrameworkInfo }) {
         {framework.description}
       </p>
       <div className="bg-surface rounded-lg p-2.5 border border-border">
-        <p className="text-[11px] text-text-secondary leading-relaxed">
+        <p className="text-xs text-text-secondary leading-relaxed">
           <strong>Key insight:</strong> {framework.keyInsight}
         </p>
       </div>
-      <p className="text-[10px] text-text-tertiary mt-2 italic">{framework.citation}</p>
+      <p className="text-xs text-text-tertiary mt-2 italic">{framework.citation}</p>
     </div>
   );
 }

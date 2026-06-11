@@ -68,7 +68,7 @@ const SaveDataPrompt: React.FC<SaveDataPromptProps> = ({
             the dashboard.
           </p>
 
-          <div className="flex flex-wrap gap-3 mb-4 text-[10px] text-gray-500 dark:text-neutral-400">
+          <div className="flex flex-wrap gap-3 mb-4 text-xs text-gray-500 dark:text-neutral-400">
             <div className="flex items-center gap-1">
               <Shield size={12} className="text-indigo-400" />
               Encrypted & private

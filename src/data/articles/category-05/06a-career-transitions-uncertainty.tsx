@@ -259,7 +259,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Values clarity</strong> --- know what matters most to you and use it to evaluate opportunities</li>
           <li><strong>Self-awareness</strong> --- understand your strengths, interests, and developmental edges</li>
-          <li><strong>Adaptability</strong> --- see change as normal rather than threatening</li>
+          <li><strong>Adaptability</strong> --- see change as common rather than threatening</li>
           <li><strong>Learning orientation</strong> --- prioritize growth over proving competence</li>
           <li><strong>Internal success metrics</strong> --- measure progress against your standards, not others" expectations</li>
         </ul>
@@ -277,7 +277,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
           <li><strong>Seek identity mirrors</strong> --- talk with people who know you well and can reflect back your enduring qualities</li>
           <li><strong>Maintain rituals</strong> --- keep routines unrelated to work (morning coffee, exercise, hobbies) that anchor identity</li>
           <li><strong>Experiment actively</strong> --- try new activities, roles, and connections to discover unexpressed aspects of self</li>
-          <li><strong>Practice self-compassion</strong> --- identity confusion during transitions is normal, not failure</li>
+          <li><strong>Practice self-compassion</strong> --- identity confusion during transitions is common, not failure</li>
         </ul>
 
         <h2 id="integration" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -556,7 +556,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
             {
               id: 'rejection',
               title: 'Handling Rejection',
-              content: <p>Most applications get no response; most interviews end in rejection. This is normal, not personal. Track applications as numbers game---rejection is expected part of process, not commentary on worth.</p>,
+              content: <p>Most applications get no response; most interviews end in rejection. This is common, not personal. Track applications as numbers game---rejection is expected part of process, not commentary on worth.</p>,
             },
             {
               id: 'urgency',
@@ -566,7 +566,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
             {
               id: 'gap',
               title: 'Addressing Employment Gaps',
-              content: <p>Be honest: 'My position was eliminated in organizational restructuring." Follow with what you've done during gap (skill development, volunteering, freelancing). Gaps are increasingly normal and understood.</p>,
+              content: <p>Be honest: 'My position was eliminated in organizational restructuring." Follow with what you've done during gap (skill development, volunteering, freelancing). Gaps are increasingly common and understood.</p>,
             },
           ]}
         />
@@ -1221,7 +1221,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
             You've spent 15 years building your career. You've achieved what you once thought would bring satisfaction: promotions, salary increases, expertise, respect. Yet instead of fulfillment, you feel hollow. The path that once excited you now feels like someone else's life. This is mid-career crisis---the unsettling realization that success as you defined it doesn't deliver the meaning you need.
           </p>
           <p className="mb-6">
-            Research demonstrates that career satisfaction follows a U-shaped curve, with satisfaction lowest in the 40s and early 50s <Citation id="2" index={2} source="Economic Journal" year="2008" tier={1} />. Mid-career questioning is normal, not failure. Understanding this transition helps you navigate it toward growth rather than stagnation.
+            Research demonstrates that career satisfaction follows a U-shaped curve, with satisfaction lowest in the 40s and early 50s <Citation id="2" index={2} source="Economic Journal" year="2008" tier={1} />. Mid-career questioning is common, not failure. Understanding this transition helps you navigate it toward growth rather than stagnation.
           </p>
         </div>
 

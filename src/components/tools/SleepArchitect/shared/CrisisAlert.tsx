@@ -5,6 +5,7 @@
 
 import { motion } from 'framer-motion';
 import { Phone, MessageSquare, ExternalLink } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
 import { CRISIS_RESOURCES } from '@/lib/sleep/constants';
 
@@ -14,6 +15,7 @@ interface CrisisAlertProps {
 }
 
 const CrisisAlert: React.FC<CrisisAlertProps> = ({ className, onDismiss }) => {
+  const { t } = useTranslation();
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
@@ -29,8 +31,7 @@ const CrisisAlert: React.FC<CrisisAlertProps> = ({ className, onDismiss }) => {
         {CRISIS_RESOURCES.title}
       </h3>
       <p className="text-sm text-red-700 dark:text-red-300 mb-4">
-        It sounds like you may be going through a difficult time. You are not
-        alone, and help is available right now.
+        {t('crisis.sleepAlert.body')}
       </p>
 
       <div className="space-y-3">
@@ -71,7 +72,7 @@ const CrisisAlert: React.FC<CrisisAlertProps> = ({ className, onDismiss }) => {
           onClick={onDismiss}
           className="mt-4 text-xs text-red-600 dark:text-red-400 hover:underline"
         >
-          I understand, continue
+          {t('crisis.sleepAlert.continue')}
         </button>
       )}
     </motion.div>

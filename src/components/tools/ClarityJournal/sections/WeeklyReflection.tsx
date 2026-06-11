@@ -47,7 +47,7 @@ const WeeklyReflection: React.FC = () => {
     setSaved(true);
   };
 
-  const textAreaClass = "w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-neutral-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none min-h-[80px]";
+  const textAreaClass = "w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-neutral-700 text-base focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none min-h-[80px]";
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-neutral-900 pt-24 pb-12 px-6">
@@ -113,7 +113,7 @@ const WeeklyReflection: React.FC = () => {
                 value={clarityScore ?? ''}
                 onChange={e => setClarityScore(e.target.value ? Number(e.target.value) : undefined)}
                 placeholder="Enter your Clarity Score if you took the assessment"
-                className="w-full sm:w-48 px-4 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full sm:w-48 px-4 py-2 rounded-xl border border-slate-200 dark:border-neutral-700 text-base focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 

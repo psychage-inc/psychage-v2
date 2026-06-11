@@ -405,7 +405,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="warning" title="When Confidentiality Feels Scary">
-          <p>It's normal to feel anxious about not knowing what your teen discusses in therapy. But consider: would you want your teen to censor their struggles because they're afraid of your reaction? Trust the therapist to keep your teen safe while giving them space to be honest <Citation id="3" index={3} source="Journal of Youth and Adolescence" year="2023" tier={1} />.</p>
+          <p>It's common to feel anxious about not knowing what your teen discusses in therapy. But consider: would you want your teen to censor their struggles because they're afraid of your reaction? Trust the therapist to keep your teen safe while giving them space to be honest <Citation id="3" index={3} source="Journal of Youth and Adolescence" year="2023" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="managing-your-emotions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

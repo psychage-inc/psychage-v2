@@ -578,7 +578,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
             {
               title: 'Expect resistance',
               description: (
-                <p>Your family will likely try to pull you back into the old role because it destabilizes the system. This is normal, not personal.</p>
+                <p>Your family will likely try to pull you back into the old role because it destabilizes the system. This is common, not personal.</p>
               ),
             },
             {
@@ -1529,7 +1529,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
               title: 'Process the discovery',
               description: (
                 <p>
-                  If you've recently learned a family secret, allow yourself time to integrate this information. Shock, anger, grief, and confusion are all normal responses. Therapy can provide crucial support during this process.
+                  If you've recently learned a family secret, allow yourself time to integrate this information. Shock, anger, grief, and confusion are all common responses. Therapy can provide crucial support during this process.
                 </p>
               ),
             },

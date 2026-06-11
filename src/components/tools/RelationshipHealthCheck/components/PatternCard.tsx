@@ -54,7 +54,7 @@ export const PatternCard: React.FC<PatternCardProps> = ({ pattern, index = 0 }) 
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1.5">
             <h4 className="font-semibold text-sm text-text-primary">{pattern.title}</h4>
-            <span className={`text-[10px] font-semibold px-2.5 py-0.5 rounded-full ${config.badgeColor}`}>
+            <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${config.badgeColor}`}>
               {config.label}
             </span>
           </div>
@@ -62,11 +62,11 @@ export const PatternCard: React.FC<PatternCardProps> = ({ pattern, index = 0 }) 
             {pattern.description}
           </p>
           <div className="bg-surface-hover dark:bg-surface-active rounded-lg p-2.5 border border-border">
-            <p className="text-[11px] text-text-tertiary leading-relaxed italic">
+            <p className="text-xs text-text-tertiary leading-relaxed italic">
               {pattern.scienceNote}
             </p>
             {framework && (
-              <p className="text-[10px] text-text-tertiary mt-1">
+              <p className="text-xs text-text-tertiary mt-1">
                 -- {framework.shortName} ({framework.authors}, {framework.year})
               </p>
             )}

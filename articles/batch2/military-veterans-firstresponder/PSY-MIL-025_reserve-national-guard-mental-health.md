@@ -89,7 +89,7 @@ Addressing Reserve and Guard mental health requires interventions tailored to th
 
 ## What You Can Try
 
-- **If you are a Reserve or Guard member experiencing post-deployment difficulties**, know that you are eligible for VA healthcare and that your symptoms are normal responses to combat. Contact the VA at 1-800-827-1000 or your local Vet Center.
+- **If you are a Reserve or Guard member experiencing post-deployment difficulties**, know that you are eligible for VA healthcare and that your symptoms are common responses to combat. Contact the VA at 1-800-827-1000 or your local Vet Center.
 
 - **Maintain unit connections after demobilization.** Stay in contact with the colleagues who shared your deployment. These relationships are your primary support network—do not let geographic distance dissolve them.
 

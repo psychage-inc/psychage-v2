@@ -857,7 +857,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
                     <li>High energy and ambition</li>
                     <li>Desire to exceed expectations</li>
                   </ul>
-                  <p className="mt-2 text-sm italic">Intervention: This stage is normal and healthy unless it becomes compulsive or you begin sacrificing self-care to prove yourself.</p>
+                  <p className="mt-2 text-sm italic">Intervention: This stage is common and healthy unless it becomes compulsive or you begin sacrificing self-care to prove yourself.</p>
                 </div>
               ),
             },

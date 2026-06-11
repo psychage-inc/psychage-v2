@@ -178,7 +178,7 @@ const MorningCheckIn: React.FC<MorningCheckInProps> = ({
                       onChange={(e) => setBedtime(e.target.value)}
                       className="w-full p-3 rounded-xl border border-gray-200 dark:border-neutral-600 bg-white dark:bg-neutral-700 text-gray-900 dark:text-white focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 outline-none font-display font-bold text-lg"
                     />
-                    <p className="text-[10px] text-gray-400 dark:text-neutral-500 mt-1">
+                    <p className="text-xs text-gray-400 dark:text-neutral-500 mt-1">
                       When you got into bed
                     </p>
                   </div>
@@ -192,7 +192,7 @@ const MorningCheckIn: React.FC<MorningCheckInProps> = ({
                       onChange={(e) => setLightsOut(e.target.value)}
                       className="w-full p-3 rounded-xl border border-gray-200 dark:border-neutral-600 bg-white dark:bg-neutral-700 text-gray-900 dark:text-white focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 outline-none font-display font-bold text-lg"
                     />
-                    <p className="text-[10px] text-gray-400 dark:text-neutral-500 mt-1">
+                    <p className="text-xs text-gray-400 dark:text-neutral-500 mt-1">
                       When you tried to sleep
                     </p>
                   </div>
@@ -208,7 +208,7 @@ const MorningCheckIn: React.FC<MorningCheckInProps> = ({
                       onChange={(e) => setWakeTime(e.target.value)}
                       className="w-full p-3 rounded-xl border border-gray-200 dark:border-neutral-600 bg-white dark:bg-neutral-700 text-gray-900 dark:text-white focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 outline-none font-display font-bold text-lg"
                     />
-                    <p className="text-[10px] text-gray-400 dark:text-neutral-500 mt-1">
+                    <p className="text-xs text-gray-400 dark:text-neutral-500 mt-1">
                       First woke up
                     </p>
                   </div>
@@ -222,7 +222,7 @@ const MorningCheckIn: React.FC<MorningCheckInProps> = ({
                       onChange={(e) => setOutOfBed(e.target.value)}
                       className="w-full p-3 rounded-xl border border-gray-200 dark:border-neutral-600 bg-white dark:bg-neutral-700 text-gray-900 dark:text-white focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 outline-none font-display font-bold text-lg"
                     />
-                    <p className="text-[10px] text-gray-400 dark:text-neutral-500 mt-1">
+                    <p className="text-xs text-gray-400 dark:text-neutral-500 mt-1">
                       Actually got up
                     </p>
                   </div>
@@ -247,7 +247,7 @@ const MorningCheckIn: React.FC<MorningCheckInProps> = ({
                     aria-label={`Time to fall asleep: ${onsetMinutes} minutes`}
                     className="w-full accent-indigo-600 dark:accent-indigo-400"
                   />
-                  <div className="flex justify-between text-[10px] text-gray-400 dark:text-neutral-500 mt-1">
+                  <div className="flex justify-between text-xs text-gray-400 dark:text-neutral-500 mt-1">
                     <span>0 min</span>
                     <span className="font-bold text-indigo-600 dark:text-indigo-400 text-xs">
                       {onsetMinutes} min
@@ -396,7 +396,7 @@ const MorningCheckIn: React.FC<MorningCheckInProps> = ({
                 />
                 {caffeine && (
                   <div className="ml-9">
-                    <label className="text-[10px] text-gray-500 dark:text-neutral-400 block mb-1">
+                    <label className="text-xs text-gray-500 dark:text-neutral-400 block mb-1">
                       Last caffeine at
                     </label>
                     <input
@@ -440,7 +440,7 @@ const MorningCheckIn: React.FC<MorningCheckInProps> = ({
                     aria-label={`Screen time before bed: ${screens} minutes`}
                     className="w-full accent-indigo-600 dark:accent-indigo-400"
                   />
-                  <div className="flex justify-between text-[10px] text-gray-400 dark:text-neutral-500 mt-0.5">
+                  <div className="flex justify-between text-xs text-gray-400 dark:text-neutral-500 mt-0.5">
                     <span>None</span>
                     <span className="font-bold text-indigo-600 dark:text-indigo-400 text-xs">
                       {screens} min

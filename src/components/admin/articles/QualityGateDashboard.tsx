@@ -89,7 +89,7 @@ const CheckRow: React.FC<{ check: QualityCheck }> = ({ check }) => {
         <div className="flex items-center gap-2">
           <span className="text-sm font-medium text-text-primary">{check.label}</span>
           {check.blocking && check.status === 'fail' && (
-            <span className="text-[10px] font-semibold uppercase px-1.5 py-0.5 rounded bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400">
+            <span className="text-xs font-semibold uppercase px-1.5 py-0.5 rounded bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400">
               Blocking
             </span>
           )}

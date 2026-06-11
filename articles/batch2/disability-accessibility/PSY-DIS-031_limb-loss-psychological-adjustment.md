@@ -89,7 +89,7 @@ Amputee peer support programs, such as the Amputee Coalition's peer visitor prog
 
 - **Connect with peers.** The Amputee Coalition (amputee-coalition.org) offers peer support, a helpline, and community events. Connecting with someone who has been where you are can provide validation and practical guidance that professional support alone cannot.
 
-- **Give yourself time with body image.** Your relationship with your changed body will evolve. It is normal to feel distress, grief, and alienation. It is also normal for these feelings to soften as you develop a new relationship with your body—on your own timeline, not anyone else's.
+- **Give yourself time with body image.** Your relationship with your changed body will evolve. It is common to feel distress, grief, and alienation. It is also common for these feelings to soften as you develop a new relationship with your body—on your own timeline, not anyone else's.
 
 - **Explore adaptive activities.** Adaptive sports, dance, and fitness programs provide opportunities to experience your body's capabilities rather than its limitations. The discovery of what your body can do now is a powerful counter to the grief of what it can no longer do.
 

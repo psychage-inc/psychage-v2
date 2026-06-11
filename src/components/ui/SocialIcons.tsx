@@ -53,7 +53,7 @@ const SocialIcons: React.FC<SocialIconsProps> = ({ links, className = '', iconSi
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="text-text-tertiary hover:text-text-primary transition-colors duration-300 inline-flex"
+              className="text-text-tertiary hover:text-text-primary transition-colors duration-300 inline-flex min-w-[44px] min-h-[44px] items-center justify-center -m-[13px]"
             >
               <Icon size={iconSize} />
             </a>

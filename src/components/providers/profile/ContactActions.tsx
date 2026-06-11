@@ -67,7 +67,7 @@ export const ContactActions: React.FC<ContactActionsProps> = ({ provider, sticky
   return (
     <section className={cn(
       'flex flex-wrap gap-3',
-      sticky && 'sm:static fixed bottom-0 left-0 right-0 z-30 bg-surface border-t border-border p-4 sm:p-0 sm:border-0 sm:bg-transparent sm:z-auto',
+      sticky && 'sm:static fixed bottom-0 left-0 right-0 z-30 bg-surface border-t border-border p-4 pb-[calc(1rem+env(safe-area-inset-bottom))] sm:p-0 sm:border-0 sm:bg-transparent sm:z-auto',
     )}>
       {actions.map((action, index) => {
         const isPrimary = index === 0;

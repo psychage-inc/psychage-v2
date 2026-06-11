@@ -29,7 +29,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
     tags: ['Grief', 'Children', 'Loss', 'Bereavement'],
     summary: 'Children process grief differently than adults, cycling between sadness and play, asking repetitive questions, and expressing loss through behavior rather than words. Understanding developmental differences in grief helps parents provide age-appropriate support and recognize when professional intervention is needed.',
     keyFacts: [
-      { text: 'Children often engage in "puddle jumping" — moving between grief and play in short bursts to avoid emotional overwhelm, which is developmentally normal.', citationIndex: 2 },
+      { text: 'Children often engage in "puddle jumping" — moving between grief and play in short bursts to avoid emotional overwhelm, which is developmentally common.', citationIndex: 2 },
       { text: 'Preschoolers may view death as temporary due to magical thinking, believing "if I\'m good, they\'ll come back."', citationIndex: 1 },
       { text: 'School-age children begin grasping death\'s permanence and often express anxiety about their own death or other loved ones dying.', citationIndex: 1 },
       { text: 'Adolescents understand death like adults but may struggle with existential questions while simultaneously withdrawing or engaging in risk-taking behaviors.', citationIndex: 6 },
@@ -84,7 +84,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
           How Children Grieve Differently
         </h2>
         <p className="mb-6">
-          Adult grief is often sustained and consuming. Children's grief comes in waves --- they may be sad one moment, playing the next <Citation id="2" index={2} source="Journal of Child Psychology and Psychiatry" year="2021" tier={1} />. This "puddle jumping" is normal, not callousness. A child might cry about their grandmother's death at breakfast, then laugh during recess an hour later. This doesn't mean they've forgotten or don't care — it means their developing brain is protecting them from overwhelming emotional pain by dosing it in manageable increments.
+          Adult grief is often sustained and consuming. Children's grief comes in waves --- they may be sad one moment, playing the next <Citation id="2" index={2} source="Journal of Child Psychology and Psychiatry" year="2021" tier={1} />. This "puddle jumping" is common, not callousness. A child might cry about their grandmother's death at breakfast, then laugh during recess an hour later. This doesn't mean they've forgotten or don't care — it means their developing brain is protecting them from overwhelming emotional pain by dosing it in manageable increments.
           </p>
         <p className="mb-6">
           Young children lack the cognitive and emotional tools to sustain prolonged sadness the way adults do. They process grief in shorter bursts, then return to play and normalcy to recharge. This back-and-forth continues over months or even years as they developmentally revisit the loss at different ages with new understanding.
@@ -297,7 +297,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
           <li><strong>Continuing bonds:</strong> Memories, rituals, photos, and stories keep healthy connection to the deceased person alive</li>
         </ul>
         <p className="mb-6">
-          Grief doesn't have a finish line. Your child may revisit this loss at different developmental stages — at elementary school graduation, their wedding, the birth of their own child. Each milestone may bring new grief as they experience what the deceased person will miss. This is normal. Grief evolves; it doesn't end.
+          Grief doesn't have a finish line. Your child may revisit this loss at different developmental stages — at elementary school graduation, their wedding, the birth of their own child. Each milestone may bring new grief as they experience what the deceased person will miss. This is common. Grief evolves; it doesn't end.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Remember">
@@ -1097,7 +1097,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
             },
             {
               title: 'Participate When Asked',
-              description: <p>Therapist may request parent sessions. This is normal and helps treatment.</p>,
+              description: <p>Therapist may request parent sessions. This is common and helps treatment.</p>,
             },
             {
               title: 'Respect Confidentiality',
@@ -1124,7 +1124,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
           <li><strong>No clear treatment plan or goals:</strong> You should know what therapy is working toward and how progress will be measured</li>
           <li><strong>Therapy going on for months with no progress:</strong> Some issues take time, but you should see gradual improvement or clearer understanding</li>
           <li><strong>Therapist won't communicate with you at all:</strong> While respecting child's privacy, therapist should involve you appropriately</li>
-          <li><strong>Child consistently distressed after sessions:</strong> Some discomfort is normal when processing difficult topics, but persistent distress after every session isn't</li>
+          <li><strong>Child consistently distressed after sessions:</strong> Some discomfort is common when processing difficult topics, but persistent distress after every session isn't</li>
           <li><strong>Therapist dismisses your concerns:</strong> Your input as a parent should be valued and incorporated</li>
           <li><strong>Inappropriate boundaries:</strong> Gifts, oversharing personal details, contact outside sessions — these violate professional ethics</li>
         </ul>

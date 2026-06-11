@@ -78,7 +78,7 @@ export const TrustBadge: React.FC<TrustBadgeProps> = ({
 
   const badgeClasses = cn(
     'inline-flex items-center gap-1 whitespace-nowrap rounded-full leading-none font-semibold transition-colors',
-    size === 'sm' ? 'text-[10px] px-2 py-1' : 'text-xs px-2.5 py-1',
+    size === 'sm' ? 'text-xs px-2 py-1' : 'text-xs px-2.5 py-1',
     config.lightClasses,
     config.darkClasses,
     interactive &&

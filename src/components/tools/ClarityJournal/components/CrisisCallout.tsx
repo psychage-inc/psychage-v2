@@ -1,22 +1,31 @@
 import React from 'react';
 import { Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation, Trans } from 'react-i18next';
 
 const CrisisCallout: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="bg-red-50 border border-red-200 rounded-2xl p-4 mb-6 flex items-start gap-3">
       <Phone className="w-5 h-5 text-red-600 mt-0.5 shrink-0" />
       <div className="text-sm text-red-800">
-        <p className="font-semibold mb-1">If you are in crisis right now:</p>
+        <p className="font-semibold mb-1">{t('crisis.clarityCallout.heading')}</p>
         <p>
-          Call or text <strong>988</strong> (US) or visit{' '}
-          <a href="https://findahelpline.com" target="_blank" rel="noopener noreferrer" className="underline font-medium">
-            findahelpline.com
-          </a>{' '}
-          for crisis resources worldwide. You can also visit{' '}
-          <Link to="/crisis" className="underline font-medium">
-            psychage.com/crisis
-          </Link>.
+          <Trans
+            i18nKey="crisis.clarityCallout.body"
+            components={{
+              b: <strong />,
+              helpline: (
+                <a
+                  href="https://findahelpline.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline font-medium"
+                />
+              ),
+              crisis: <Link to="/crisis" className="underline font-medium" />,
+            }}
+          />
         </p>
       </div>
     </div>

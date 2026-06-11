@@ -372,7 +372,7 @@ export const seasonalPatternsArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Anniversary reactions can happen even years or decades after the event. They don't mean you haven't 'moved on' or healed properly. They're a normal part of how memory and emotion intersect.
+            Anniversary reactions can happen even years or decades after the event. They don't mean you haven't 'moved on' or healed properly. They're a common part of how memory and emotion intersect.
           </p>
         </ArticleCallout>
 

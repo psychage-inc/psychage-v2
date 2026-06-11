@@ -608,7 +608,7 @@ export const communicationSkillsArticlesA: Article[] = [
           <li><strong>Start with yourself:</strong> Practice identifying your own observations, feelings, and needs in a journal</li>
           <li><strong>Low-stakes conversations:</strong> Use NVC for minor issues before trying it in heated conflicts</li>
           <li><strong>Translate:</strong> When you catch yourself blaming, pause and rephrase using NVC</li>
-          <li><strong>Be patient:</strong> It feels awkward and formal at first. That's normal.</li>
+          <li><strong>Be patient:</strong> It feels awkward and formal at first. That's common.</li>
         </ol>
 
         <QuoteBlock
@@ -1215,7 +1215,7 @@ export const communicationSkillsArticlesA: Article[] = [
           3. Normalize It
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>"That's a totally normal reaction."</li>
+          <li>"That's a common reaction."</li>
           <li>"Anyone in your situation would feel that way."</li>
           <li>"I'd be upset too if that happened to me."</li>
         </ul>

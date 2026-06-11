@@ -522,7 +522,7 @@ const MindMate: React.FC = () => {
 
                                         {msg.providers && msg.providers.length > 0 && (
                                             <div className="mt-3 space-y-1.5">
-                                                <p className="text-[11px] font-bold text-text-tertiary uppercase tracking-wider mb-2">
+                                                <p className="text-xs font-bold text-text-tertiary uppercase tracking-wider mb-2">
                                                     Suggested Providers
                                                 </p>
                                                 {msg.providers.slice(0, 5).map(p => (
@@ -540,7 +540,7 @@ const MindMate: React.FC = () => {
                                                             <div className="text-xs font-medium text-text-primary truncate">
                                                                 {p.name}{p.credentials ? `, ${p.credentials}` : ''}
                                                             </div>
-                                                            <div className="text-[10px] text-text-tertiary truncate">
+                                                            <div className="text-xs text-text-tertiary truncate">
                                                                 {p.specialties.slice(0, 2).join(', ')}
                                                                 {p.city ? ` · ${p.city}${p.state ? `, ${p.state}` : ''}` : ''}
                                                             </div>

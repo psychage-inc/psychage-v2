@@ -24,7 +24,7 @@ export const SpecialtyTag: React.FC<SpecialtyTagProps> = ({ specialty, size = 'm
   const colorClass = CATEGORY_STYLES[specialty.category] || CATEGORY_STYLES.condition;
 
   const className = `inline-flex items-center rounded-full border font-medium ${colorClass} ${
-    size === 'sm' ? 'text-[11px] px-2 py-0.5' : 'text-xs px-2.5 py-1'
+    size === 'sm' ? 'text-xs px-2 py-0.5' : 'text-xs px-2.5 py-1'
   } ${clickable ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`;
 
   if (clickable) {

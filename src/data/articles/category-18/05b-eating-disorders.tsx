@@ -498,7 +498,7 @@ export const articles: Article[] = [
         <p>
           Contemplation involves acknowledging problem but feeling deeply ambivalent about giving it up. People in
           contemplation can describe both costs of disorder (health problems, relationship strain, life restriction) and
-          perceived benefits (sense of control, identity, coping mechanism, achievement). This ambivalence is normal and
+          perceived benefits (sense of control, identity, coping mechanism, achievement). This ambivalence is common and
           healthy---eating disorders serve functions, and recognizing these functions is important part of finding
           alternative ways to meet those needs.
         </p>
@@ -987,7 +987,7 @@ export const articles: Article[] = [
 
         <p>
           Take care of yourself. Watching loved one struggle with eating disorder is traumatic. You may experience
-          anxiety, fear, anger, guilt, helplessness, grief. These are normal responses to abnormal situation. Many
+          anxiety, fear, anger, guilt, helplessness, grief. These are common responses to abnormal situation. Many
           families benefit from their own support---therapy, support groups for caregivers, self-care practices. You can't
           pour from empty cup, and your wellbeing matters too.
         </p>

@@ -420,7 +420,7 @@ export const childhoodExperiencesAdultPatternsArticlesA: Article[] = [
         <ProgressSteps
           variant="vertical"
           steps={[
-            { title: 'Know your own ACE score', description: <p>Awareness is the first step. Take the ACE questionnaire honestly and notice your emotional response. A high score may bring grief, relief, anger, or validation — all are normal.</p> },
+            { title: 'Know your own ACE score', description: <p>Awareness is the first step. Take the ACE questionnaire honestly and notice your emotional response. A high score may bring grief, relief, anger, or validation — all are common.</p> },
             { title: 'Reframe your narrative', description: <p>Instead of "what is wrong with me," ask "what happened to me." ACEs explain patterns — they do not define your worth or limit your potential.</p> },
             { title: 'Build resilience actively', description: <p>Engage in evidence-based practices: regular exercise, mindfulness meditation, therapy, social connection, and adequate sleep. Each of these directly counteracts the biological effects of toxic stress.</p> },
             { title: 'Seek ACE-informed care', description: <p>Look for healthcare providers and therapists who understand trauma. ACE-informed care shifts the question from "what is wrong with you" to "what happened to you and how can we help."</p> },

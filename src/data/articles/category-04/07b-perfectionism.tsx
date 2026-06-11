@@ -880,7 +880,7 @@ export const perfectionismArticlesB: Article[] = [
           title="Perfectionistic vs. Good-Enough Parenting"
           columns={['Aspect', 'Perfectionistic Parenting', 'Good-Enough Parenting']}
           items={[
-            { feature: 'Mistakes', values: ['Catastrophic, must prevent', 'Normal, learning opportunities'] },
+            { feature: 'Mistakes', values: ['Catastrophic, must prevent', 'Common, learning opportunities'] },
             { feature: 'Love', values: ['Conditional on performance', 'Unconditional, stable'] },
             { feature: 'Focus', values: ['Outcomes (grades, wins)', 'Effort and process'] },
             { feature: 'Parent role', values: ['Prevent all struggles', 'Support through struggles'] },
@@ -948,7 +948,7 @@ export const perfectionismArticlesB: Article[] = [
             When you make a parenting mistake, say out loud: "Oops, I handled that poorly. It's okay, I'm learning too. I'll try differently next time." This models:
           </p>
           <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li>Mistakes are normal</li>
+            <li>Mistakes are common</li>
             <li>Self-compassion after failure</li>
             <li>Growth mindset</li>
             <li>Accountability without self-flagellation</li>

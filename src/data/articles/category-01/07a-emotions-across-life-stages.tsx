@@ -171,7 +171,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Why Tantrums Happen">
-          <p className="mb-3">Toddlers have strong emotions but an underdeveloped prefrontal cortex (the brain's regulation center). They literally cannot control their reactions the way adults can. Tantrums are a normal part of development, not bad behavior.</p>
+          <p className="mb-3">Toddlers have strong emotions but an underdeveloped prefrontal cortex (the brain's regulation center). They literally cannot control their reactions the way adults can. Tantrums are a common part of development, not bad behavior.</p>
           <p>Think of it this way: a toddler's emotional experience is like driving a Ferrari (powerful emotions) with bicycle brakes (minimal regulation ability). The mismatch creates inevitable crashes that aren't the driver's fault---they simply don't have the equipment yet.</p>
         </ArticleCallout>
 
@@ -578,7 +578,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">Help teens understand their brain development. Knowing why emotions feel overwhelming reduces shame and increases self-compassion.</p>
-                  <p className="text-sm text-gray-600 dark:text-neutral-400">Explain: "Your brain's emotion center is running at full power while the regulation center is still building. That's why feelings hit so hard right now. It's temporary, and it's normal." This knowledge helps teens not pathologize their own experiences.</p>
+                  <p className="text-sm text-gray-600 dark:text-neutral-400">Explain: "Your brain's emotion center is running at full power while the regulation center is still building. That's why feelings hit so hard right now. It's temporary, and it's common." This knowledge helps teens not pathologize their own experiences.</p>
                 </div>
               ),
             },
@@ -662,7 +662,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          Intense emotions are normal, but some patterns need professional support <Citation id="8" index={8} source="American Academy of Pediatrics" year="2021" tier={3} />. The line between normal adolescent intensity and clinical concern can be hard to identify, but these signs warrant evaluation:
+          Intense emotions are common, but some patterns need professional support <Citation id="8" index={8} source="American Academy of Pediatrics" year="2021" tier={3} />. The line between normal adolescent intensity and clinical concern can be hard to identify, but these signs warrant evaluation:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -700,7 +700,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Young Adults', 'Identity', 'Life Transitions', 'Quarter-Life Crisis'],
-    summary: 'The twenties represent "emerging adulthood"---a distinct developmental period marked by identity exploration, instability, and possibility. Social comparison, uncertainty about life direction, and quarter-life crises are normal experiences during this stage, not signs of failure or being behind.',
+    summary: 'The twenties represent "emerging adulthood"---a distinct developmental period marked by identity exploration, instability, and possibility. Social comparison, uncertainty about life direction, and quarter-life crises are common experiences during this stage, not signs of failure or being behind.',
     keyFacts: [
       { text: 'The prefrontal cortex (responsible for long-term planning) doesn\'t finish developing until around age 25, meaning early-twenties brains are literally not equipped to make lifelong decisions', citationIndex: 4 },
       { text: '60% of young adults report feeling uncertain about their life direction, and 75% will experience a major life change in their twenties', citationIndex: 1 },
@@ -989,7 +989,7 @@ export const emotionsAcrossLifeStagesArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          Uncertainty is normal; clinical anxiety or depression require support <Citation id="6" index={6} source="Journal of Affective Disorders" year="2020" tier={1} />. The line between "normal twenties struggle" and "mental health concern requiring treatment" can be unclear, but these signs warrant professional evaluation:
+          Uncertainty is common; clinical anxiety or depression require support <Citation id="6" index={6} source="Journal of Affective Disorders" year="2020" tier={1} />. The line between "normal twenties struggle" and "mental health concern requiring treatment" can be unclear, but these signs warrant professional evaluation:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">

@@ -321,7 +321,7 @@ export const mentalHealthLaterLifeArticlesA: Article[] = [
         />
 
         <p>
-          These transitions are not pathological--they are normal life events. But
+          These transitions are not pathological--they are common life events. But
           when accumulated (retirement plus bereavement plus illness plus isolation),
           they can overwhelm coping resources and trigger mental illness.
         </p>

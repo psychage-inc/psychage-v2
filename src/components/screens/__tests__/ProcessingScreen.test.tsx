@@ -147,7 +147,9 @@ describe('ProcessingScreen Error States', () => {
                 mappings: [],
                 crisisResources: {}
             },
-            selectedSymptoms: new Map(),
+            // Non-empty selection so the component passes its "no symptoms" guard
+            // and renders the processing UI (engine is mocked below).
+            selectedSymptoms: new Map([['SYM_001', { symptomId: 'SYM_001', severity: 5 }]]),
             detectedRegion: 'US',
             kbLoadedAt: Date.now(),
             crisisTriggered: false,

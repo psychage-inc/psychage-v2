@@ -92,7 +92,7 @@ const ArticleTypeSelector: React.FC<ArticleTypeSelectorProps> = ({ value, onChan
               {selectedTemplate.requiredSections.map((section) => (
                 <span
                   key={section}
-                  className="text-[10px] px-1.5 py-0.5 rounded bg-surface-active text-text-secondary"
+                  className="text-xs px-1.5 py-0.5 rounded bg-surface-active text-text-secondary"
                 >
                   {section}
                 </span>

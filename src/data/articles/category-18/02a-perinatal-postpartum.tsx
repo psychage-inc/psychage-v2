@@ -676,7 +676,7 @@ export const articles: Article[] = [
         </p>
         <p className="mb-6">
           No treatment is required for baby blues---just support, rest (as much as possible with a
-          newborn), reassurance that feelings are temporary and normal, and practical help with
+          newborn), reassurance that feelings are temporary and common, and practical help with
           baby care and household tasks. If symptoms persist beyond two weeks or worsen rather
           than improve, this indicates postpartum depression rather than baby blues.
         </p>
@@ -1550,7 +1550,7 @@ export const articles: Article[] = [
           </p>
           <p className="mb-4">
             <strong>Disappointment</strong> involves grief for lost expectations, processing the gap
-            between the hoped-for experience and reality. It's normal and deserves validation, but
+            between the hoped-for experience and reality. It's common and deserves validation, but
             typically resolves with time and support.
           </p>
           <p>

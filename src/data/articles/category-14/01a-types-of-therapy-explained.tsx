@@ -832,7 +832,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
             {
               title: 'Phase 7: Closure',
               description: (
-                <p>At the end of each session, your therapist helps you return to a calm state using the relaxation techniques from Phase 2. You're reminded that processing can continue between sessions --- and that's normal.</p>
+                <p>At the end of each session, your therapist helps you return to a calm state using the relaxation techniques from Phase 2. You're reminded that processing can continue between sessions --- and that's common.</p>
               ),
             },
             {

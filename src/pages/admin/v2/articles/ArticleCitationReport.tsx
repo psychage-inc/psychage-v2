@@ -91,7 +91,7 @@ function TierBadges({ tiers }: { tiers: Record<number, number> }) {
         return (
           <span
             key={tier}
-            className="inline-flex items-center justify-center text-[10px] font-medium px-1.5 py-0.5 rounded text-white min-w-[20px]"
+            className="inline-flex items-center justify-center text-xs font-medium px-1.5 py-0.5 rounded text-white min-w-[20px]"
             style={{ backgroundColor: TIER_COLORS[tier - 1] }}
           >
             T{tier}:{count}

@@ -229,7 +229,7 @@ export const DomainCard: React.FC<DomainCardProps> = ({
                           transition={{ duration: 0.6, ease: 'easeOut' }}
                         />
                       </div>
-                      <p className="text-[11px] text-text-tertiary mt-0.5">{sub.description}</p>
+                      <p className="text-xs text-text-tertiary mt-0.5">{sub.description}</p>
                     </div>
                   );
                 })}
@@ -242,7 +242,7 @@ export const DomainCard: React.FC<DomainCardProps> = ({
                     <BookOpen size={14} className="text-text-tertiary mt-0.5 shrink-0" />
                     <div>
                       <p className="text-xs font-semibold text-text-secondary mb-1">Research basis</p>
-                      <p className="text-[11px] text-text-tertiary leading-relaxed">
+                      <p className="text-xs text-text-tertiary leading-relaxed">
                         {(() => {
                           const refs = [...new Set(domainSubDims.map((d) => d.frameworkRef))];
                           const names = refs.map((r) => FRAMEWORKS[r]?.shortName).filter(Boolean);

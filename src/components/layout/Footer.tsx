@@ -146,7 +146,7 @@ const Footer: React.FC = () => {
                   <li key={link.name}>
                     <Link
                       to={getPath(link.view, link.id)}
-                      className="group flex items-center gap-2 text-lg text-text-secondary hover:text-text-primary transition-colors duration-300"
+                      className="group flex items-center gap-2 text-lg text-text-secondary hover:text-text-primary transition-colors duration-300 min-h-[44px] -my-2"
                     >
                       <ArrowRight size={14} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
                       <span className="group-hover:translate-x-1 transition-transform">{link.name}</span>
@@ -166,16 +166,16 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-start md:items-end gap-4 text-xs text-text-tertiary font-medium tracking-wide text-left md:text-right">
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-2 text-text-primary hover:text-primary transition-colors mb-4 text-sm font-bold uppercase tracking-widest group"
+              className="flex items-center gap-2 text-text-primary hover:text-primary transition-colors mb-4 text-sm font-bold uppercase tracking-widest group min-h-[44px] -my-3"
             >
               Back to Top <ArrowUp size={16} className="group-hover:-translate-y-1 transition-transform" />
             </button>
             <div className="flex flex-wrap gap-x-6 gap-y-2 justify-end">
-              <Link to="/legal/privacy" className="hover:text-text-primary transition-colors">Privacy</Link>
-              <Link to="/legal/terms" className="hover:text-text-primary transition-colors">Terms</Link>
-              <Link to="/legal/privacy#cookies" className="hover:text-text-primary transition-colors">Cookies</Link>
-              <Link to="/legal/accessibility" className="hover:text-text-primary transition-colors">Accessibility</Link>
-              <Link to="/sitemap" className="hover:text-text-primary transition-colors">Sitemap</Link>
+              <Link to="/legal/privacy" className="inline-flex items-center min-h-[44px] px-2 -mx-2 -my-[14px] hover:text-text-primary transition-colors">Privacy</Link>
+              <Link to="/legal/terms" className="inline-flex items-center min-h-[44px] px-2 -mx-2 -my-[14px] hover:text-text-primary transition-colors">Terms</Link>
+              <Link to="/legal/privacy#cookies" className="inline-flex items-center min-h-[44px] px-2 -mx-2 -my-[14px] hover:text-text-primary transition-colors">Cookies</Link>
+              <Link to="/legal/accessibility" className="inline-flex items-center min-h-[44px] px-2 -mx-2 -my-[14px] hover:text-text-primary transition-colors">Accessibility</Link>
+              <Link to="/sitemap" className="inline-flex items-center min-h-[44px] px-2 -mx-2 -my-[14px] hover:text-text-primary transition-colors">Sitemap</Link>
             </div>
             <p className="max-w-xs md:max-w-md md:text-right text-text-tertiary">Psychage is an educational tool and does not provide medical advice, diagnosis, or treatment.</p>
             <p className="max-w-xs md:max-w-md md:text-right text-text-tertiary">Fully compliant with HIPAA and GDPR standards.</p>

@@ -741,13 +741,13 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Habit Formation', 'Research', 'Timeline', 'Behavior Change'],
-    summary: 'The 21-day habit myth is not only false but harmful. Research shows habit formation takes 18 to 254 days depending on complexity, with an average of 66 days. Understanding that habit formation follows an asymptotic curve with normal plateaus helps you persist through the difficult middle phase.',
+    summary: 'The 21-day habit myth is not only false but harmful. Research shows habit formation takes 18 to 254 days depending on complexity, with an average of 66 days. Understanding that habit formation follows an asymptotic curve with common plateaus helps you persist through the difficult middle phase.',
     keyFacts: [
       { text: 'The 21-day rule originated from a 1960 book about post-surgery adaptation, not scientific habit research', citationIndex: 2 },
       { text: 'Actual habit formation timelines range from 18 to 254 days with an average of 66 days', citationIndex: 1 },
       { text: 'Simple habits like drinking water automate in weeks while complex habits like gym routines take months', citationIndex: 1 },
       { text: 'Missing a single day has no measurable impact on the overall habit formation timeline', citationIndex: 1 },
-      { text: 'Habit formation follows an asymptotic curve: rapid early gains followed by a normal plateau phase', citationIndex: 1 },
+      { text: 'Habit formation follows an asymptotic curve: rapid early gains followed by a common plateau phase', citationIndex: 1 },
     ],
     sparkMoment: 'If you\'re told a habit should feel automatic in three weeks and you\'re on day 30 still struggling, you might conclude you\'re failing---when in reality, you might just be building a complex habit that naturally takes longer.',
     practicalExercise: {
@@ -756,7 +756,7 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
         { title: 'Assess Complexity', description: 'Rate your target habit: simple (one step, <5 min), moderate (2-3 steps, 10-20 min), or complex (multiple steps, 30+ min).' },
         { title: 'Estimate Your Timeline', description: 'Simple: 3-6 weeks. Moderate: 6-12 weeks. Complex: 12-30 weeks. Add time if you have ADHD, depression, or high stress.' },
         { title: 'Plan Check-ins', description: 'Mark quarter-points on your timeline to assess progress without premature judgment (e.g., week 4 of 16 for a complex habit).' },
-        { title: 'Trust the Plateau', description: 'When progress slows after the first few weeks, remind yourself this is normal neurological encoding, not failure.' },
+        { title: 'Trust the Plateau', description: 'When progress slows after the first few weeks, remind yourself this is common neurological encoding, not failure.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Track Your Progress',
@@ -944,7 +944,7 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
         />
 
         <h2 id="plateau-curve" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          The Habit Formation Curve: Plateaus Are Normal
+          The Habit Formation Curve: Plateaus Are Common
         </h2>
         <p className="mb-6">
           One of the most important findings from the Lally study is that habit formation doesn't follow a straight line---it follows an asymptotic curve <Citation id="1" index={1} source="European Journal of Social Psychology" year="2010" tier={1} />. You make rapid progress at first, then hit a plateau where improvement slows down.
@@ -967,7 +967,7 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Notice how the steepest gains happen in weeks 1-3, then the curve flattens. This plateau phase is where most people get frustrated and quit. They interpret the slowdown as failure, when in fact it's a normal part of the neurological encoding process.
+          Notice how the steepest gains happen in weeks 1-3, then the curve flattens. This plateau phase is where most people get frustrated and quit. They interpret the slowdown as failure, when in fact it's a common part of the neurological encoding process.
         </p>
 
         <ArticleCallout variant="tip">
@@ -1263,7 +1263,7 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>Track inputs, not outcomes:</strong> Instead of measuring weight loss, track "days you ate vegetables." You control inputs; outcomes lag.</li>
             <li><strong>Celebrate the process:</strong> Reward yourself for showing up, not for visible results. The showing up is what compounds.</li>
-            <li><strong>Reframe the timeline:</strong> Remind yourself that plateaus are normal. Progress is happening at the neurological level even when it's not visible.</li>
+            <li><strong>Reframe the timeline:</strong> Remind yourself that plateaus are common. Progress is happening at the neurological level even when it's not visible.</li>
           </ul>
         </ArticleCallout>
 

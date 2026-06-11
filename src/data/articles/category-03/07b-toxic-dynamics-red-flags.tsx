@@ -2455,7 +2455,7 @@ export const toxicDynamicsArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Grief</strong>: Even when leaving is right, you'll mourn the loss and the dreams you had</li>
-          <li><strong>Doubt</strong>: "Did I give up too soon?" is normal---hold firm through the wavering</li>
+          <li><strong>Doubt</strong>: "Did I give up too soon?" is common---hold firm through the wavering</li>
           <li><strong>Loneliness</strong>: Being alone feels scary after being in a relationship, even a bad one</li>
           <li><strong>Relief</strong>: Often coexisting with grief---freedom from the stress and dysfunction</li>
           <li><strong>Identity rebuilding</strong>: Rediscovering who you are outside the relationship</li>

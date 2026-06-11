@@ -14,6 +14,7 @@ import {
   FileText,
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation, Trans } from 'react-i18next';
 import SEO from '../SEO';
 import {
   resolveCountry,
@@ -43,6 +44,7 @@ function ResourceCard({
   prominent?: boolean;
   index?: number;
 }) {
+  const { t } = useTranslation();
   const color = prominent
     ? { bg: 'bg-rose-600 dark:bg-rose-700', hover: 'hover:bg-rose-700 dark:hover:bg-rose-800', icon: 'text-white/15' }
     : cardColors[index % cardColors.length];
@@ -95,25 +97,25 @@ function ResourceCard({
         {resource.text_instruction && (
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/15 text-white text-sm font-medium backdrop-blur-sm">
             <MessageSquare size={14} />
-            Text
+            {t('crisis.page.card_text')}
           </span>
         )}
         {!resource.phone && resource.chat_url && (
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/20 text-white text-sm font-bold backdrop-blur-sm">
             <Globe size={14} />
-            Chat now
+            {t('crisis.page.card_chat_now')}
           </span>
         )}
         {!resource.phone && !resource.chat_url && resource.web_url && (
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/20 text-white text-sm font-bold backdrop-blur-sm">
             <ExternalLink size={14} />
-            Visit
+            {t('crisis.page.card_visit')}
           </span>
         )}
         {resource.verification_status === 'verified' && (
           <span className="inline-flex items-center gap-1 text-xs text-white/60">
             <Shield size={10} />
-            Verified
+            {t('crisis.page.card_verified')}
           </span>
         )}
       </div>
@@ -129,6 +131,7 @@ function CountrySelector({
   currentIso2: string;
   onSelect: (iso2: string) => void;
 }) {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState('');
 
@@ -148,10 +151,10 @@ function CountrySelector({
       <button
         onClick={() => setOpen(!open)}
         className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-border bg-surface text-sm font-medium text-text-secondary hover:bg-surface-hover transition-colors"
-        aria-label="Change country"
+        aria-label={t('crisis.page.change_country_aria')}
       >
         <MapPin size={14} className="text-text-tertiary" />
-        <span>{currentCountry?.country_name ?? 'Select country'}</span>
+        <span>{currentCountry?.country_name ?? t('crisis.page.select_country')}</span>
         <ChevronDown size={14} className="text-text-tertiary" />
       </button>
 
@@ -173,7 +176,7 @@ function CountrySelector({
                   type="text"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
-                  placeholder="Search countries..."
+                  placeholder={t('crisis.page.search_countries_placeholder')}
                   className="w-full pl-8 pr-3 py-2 text-sm rounded-lg border border-border bg-surface-active text-text-primary focus:outline-none focus:ring-2 focus:ring-teal-500"
                   autoFocus
                 />
@@ -200,7 +203,7 @@ function CountrySelector({
               ))}
               {countries.length === 0 && (
                 <p className="px-4 py-3 text-sm text-text-tertiary text-center">
-                  No countries found
+                  {t('crisis.page.no_countries')}
                 </p>
               )}
             </div>
@@ -214,6 +217,7 @@ function CountrySelector({
 // ─── Main Crisis Page ──────────────────────────────────────────────────
 const CrisisPage: React.FC = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [countryCode, setCountryCode] = useState(() => resolveCountry());
   const [result, setResult] = useState<ResolvedCrisisResult | null>(null);
 
@@ -244,8 +248,8 @@ const CrisisPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-background pt-24 pb-20 relative">
       <SEO
-        title="Crisis Support | Psychage"
-        description="If you're in crisis or need immediate support, you're not alone. Free, confidential help is available 24/7."
+        title={t('crisis.page.seo_title')}
+        description={t('crisis.page.seo_description')}
       />
 
       <div className="container mx-auto max-w-5xl px-6 relative z-10">
@@ -253,10 +257,10 @@ const CrisisPage: React.FC = () => {
         <button
           onClick={() => navigate(-1)}
           className="flex items-center gap-2 text-text-secondary hover:text-text-primary mb-8 transition-colors"
-          aria-label="Go back to previous page"
+          aria-label={t('crisis.page.back_aria')}
         >
           <ArrowLeft size={20} aria-hidden="true" />
-          <span className="font-medium">Go Back</span>
+          <span className="font-medium">{t('crisis.page.back')}</span>
         </button>
 
         {/* Hero */}
@@ -266,12 +270,10 @@ const CrisisPage: React.FC = () => {
           className="text-center mb-10"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
-            You Are Not Alone
+            {t('crisis.page.title')}
           </h1>
           <p className="text-xl text-text-secondary max-w-2xl mx-auto">
-            If you're experiencing a mental health crisis, help is available
-            right now. Please reach out to one of these free, confidential
-            resources.
+            {t('crisis.page.subtitle')}
           </p>
         </motion.div>
 
@@ -290,16 +292,16 @@ const CrisisPage: React.FC = () => {
                 <Phone size={24} />
               </div>
               <span className="text-sm font-medium text-rose-100 uppercase tracking-wider">
-                Emergency Line
+                {t('crisis.page.emergency_line')}
               </span>
             </div>
             <p className="text-3xl md:text-4xl font-bold mb-2 group-hover:underline">
               {primary_resource?.phone || emergency_number}
             </p>
             <p className="text-rose-100 text-sm">
-              {primary_resource?.name || `Emergency Services — ${country.country_name}`}
+              {primary_resource?.name || t('crisis.page.emergency_services_country', { country: country.country_name })}
             </p>
-            <p className="text-rose-200/70 text-xs mt-2">Tap to call now</p>
+            <p className="text-rose-200/70 text-xs mt-2">{t('crisis.page.tap_to_call')}</p>
           </motion.a>
 
           {/* Country + location card */}
@@ -313,7 +315,7 @@ const CrisisPage: React.FC = () => {
               <div className="flex items-center gap-2 mb-3">
                 <MapPin size={16} className="text-white/80" />
                 <span className="text-sm font-medium text-white/70 uppercase tracking-wider">
-                  Your Location
+                  {t('crisis.page.location_label')}
                 </span>
               </div>
               <p className="text-2xl font-bold text-white mb-1">
@@ -321,11 +323,11 @@ const CrisisPage: React.FC = () => {
               </p>
               {fallback_used && (
                 <p className="text-xs text-teal-100/80 mb-2">
-                  Using global directory — select your country below for local resources
+                  {t('crisis.page.fallback_notice')}
                 </p>
               )}
               <p className="text-sm text-white/70">
-                Emergency: <strong className="text-white">{emergency_number}</strong>
+                {t('crisis.page.emergency_prefix')} <strong className="text-white">{emergency_number}</strong>
               </p>
             </div>
             <div className="mt-4">
@@ -347,7 +349,7 @@ const CrisisPage: React.FC = () => {
             className="mb-8"
           >
             <h2 className="text-sm font-semibold text-text-secondary uppercase tracking-wider mb-4">
-              Crisis Support — {country.country_name}
+              {t('crisis.page.section_heading', { country: country.country_name })}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {callableResources.map((resource, i) => (
@@ -375,7 +377,7 @@ const CrisisPage: React.FC = () => {
                 {emergency_number}
               </p>
               <p className="text-sm text-white/80">
-                Emergency Services — {country.country_name}
+                {t('crisis.page.emergency_services_country', { country: country.country_name })}
               </p>
             </div>
           </motion.a>
@@ -395,13 +397,13 @@ const CrisisPage: React.FC = () => {
             </div>
             <div>
               <p className="font-bold text-white">
-                Create a Safety Plan
+                {t('crisis.page.safety_plan_title')}
               </p>
               <p className="text-sm text-white/80">
-                Prepare for difficult moments with coping strategies and contacts
+                {t('crisis.page.safety_plan_desc')}
               </p>
               <p className="text-xs text-white/60 mt-1">
-                <strong>Safety plans are most effective when created with the guidance of a mental health professional.</strong> We recommend completing this with your clinician or counselor.
+                <strong>{t('crisis.page.safety_plan_note_bold')}</strong> {t('crisis.page.safety_plan_note_rest')}
               </p>
             </div>
           </motion.a>
@@ -421,7 +423,7 @@ const CrisisPage: React.FC = () => {
                 className="text-teal-500"
                 aria-hidden="true"
               />
-              International Resources
+              {t('crisis.page.intl_resources')}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {directoryResources.map((resource, i) => (
@@ -441,30 +443,28 @@ const CrisisPage: React.FC = () => {
           <div className="flex items-start gap-3 mb-4">
             <Shield size={20} className="text-text-tertiary shrink-0 mt-0.5" />
             <h3 className="font-bold text-text-secondary text-sm">
-              Important Information About These Resources
+              {t('crisis.page.disclaimer_heading')}
             </h3>
           </div>
           <div className="space-y-3 text-sm text-text-tertiary leading-relaxed">
             <p>
-              Psychage curates these crisis resources from verified directories to connect you with help when you need it most. All listed resources are free and confidential.
+              {t('crisis.page.disclaimer_p1')}
             </p>
             <p>
-              <strong className="text-text-secondary">Psychage is not an emergency service.</strong>{' '}
-              If you are in immediate physical danger, call your local emergency number ({emergency_number}) or go to your nearest emergency room.
+              <strong className="text-text-secondary">{t('crisis.page.disclaimer_emergency_bold')}</strong>{' '}
+              {t('crisis.page.disclaimer_emergency_rest', { emergency: emergency_number })}
             </p>
             <p>
-              Contact information, availability, and services may change without notice. While we review this data regularly, Psychage cannot guarantee the accuracy of third-party resource details at any given time.
+              {t('crisis.page.disclaimer_p3')}
             </p>
             <p>
-              The resources listed are operated by independent organizations. Psychage does not control, endorse, or accept responsibility for the services they provide or the outcomes of any interactions.
+              {t('crisis.page.disclaimer_p4')}
             </p>
             <p className="text-xs text-text-tertiary pt-2 border-t border-border">
-              Resource data is sourced from verified crisis directories and reviewed regularly.
-              If you notice outdated information, please contact us at{' '}
-              <a href="mailto:info@psychage.com" className="text-primary hover:underline">
-                info@psychage.com
-              </a>{' '}
-              so we can update it.
+              <Trans
+                i18nKey="crisis.page.contact_footer"
+                components={{ mail: <a href="mailto:info@psychage.com" className="text-primary hover:underline" /> }}
+              />
             </p>
           </div>
         </motion.div>

@@ -326,7 +326,7 @@ export const meaningPurposeGrowthArticles: Article[] = [
         </p>
         <p className="mb-6">
           The continuing bonds framework proposes that maintaining a transformed relationship with the
-          deceased is not only normal but often beneficial. People talk to their lost loved ones, carry
+          deceased is not only common but often beneficial. People talk to their lost loved ones, carry
           forward their values, make decisions by imagining what the person would advise, celebrate
           anniversaries, and find ways to honor the relationship within new life structures. These
           practices are not signs of pathological grief. They are vehicles for meaning.

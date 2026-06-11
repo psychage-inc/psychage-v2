@@ -841,7 +841,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         <p className="mb-6">
           Learning to decode anger is not a single breakthrough --- it is a practice. There
           will be times when anger moves too fast to catch, when old patterns reassert
-          themselves, when vulnerability feels too risky. That is normal. The practice is
+          themselves, when vulnerability feels too risky. That is common. The practice is
           not about perfection. It is about gradually expanding the window between feeling
           and reaction, and in that window, finding the courage to ask: what is really
           going on?

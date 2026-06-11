@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, MessageCircle, X, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation, Trans } from 'react-i18next';
 
 interface CrisisOverlayProps {
   isOpen: boolean;
@@ -8,6 +9,7 @@ interface CrisisOverlayProps {
 }
 
 const CrisisOverlay: React.FC<CrisisOverlayProps> = ({ isOpen, onClose }) => {
+  const { t } = useTranslation();
   if (!isOpen) return null;
 
   return (
@@ -16,17 +18,17 @@ const CrisisOverlay: React.FC<CrisisOverlayProps> = ({ isOpen, onClose }) => {
         {/* Header */}
         <div className="bg-red-50 dark:bg-red-900/20 px-6 py-4 border-b border-red-100 dark:border-red-900/30">
           <div className="flex items-center justify-between">
-            <h2 className="text-lg font-bold text-red-800 dark:text-red-200">You're Not Alone</h2>
+            <h2 className="text-lg font-bold text-red-800 dark:text-red-200">{t('crisis.clarityOverlay.title')}</h2>
             <button
               onClick={onClose}
               className="p-1 rounded-lg text-red-400 hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors"
-              aria-label="Close crisis overlay"
+              aria-label={t('crisis.clarityOverlay.close_aria')}
             >
               <X className="w-5 h-5" />
             </button>
           </div>
           <p className="text-sm text-red-700 dark:text-red-300 mt-1">
-            If you are in crisis or having thoughts of self-harm, please reach out. Help is available right now.
+            {t('crisis.clarityOverlay.subtitle')}
           </p>
         </div>
 
@@ -40,8 +42,8 @@ const CrisisOverlay: React.FC<CrisisOverlayProps> = ({ isOpen, onClose }) => {
               <Phone className="w-6 h-6 text-red-600 dark:text-red-400" />
             </div>
             <div>
-              <p className="font-semibold text-red-800 dark:text-red-200">988 Suicide & Crisis Lifeline</p>
-              <p className="text-sm text-red-600 dark:text-red-400">Call or text <strong>988</strong></p>
+              <p className="font-semibold text-red-800 dark:text-red-200">{t('crisis.clarityOverlay.lifeline_name')}</p>
+              <p className="text-sm text-red-600 dark:text-red-400"><Trans i18nKey="crisis.clarityOverlay.call_text_988" components={{ b: <strong /> }} /></p>
             </div>
           </a>
 
@@ -53,8 +55,8 @@ const CrisisOverlay: React.FC<CrisisOverlayProps> = ({ isOpen, onClose }) => {
               <MessageCircle className="w-6 h-6 text-blue-600 dark:text-blue-400" />
             </div>
             <div>
-              <p className="font-semibold text-blue-800 dark:text-blue-200">Crisis Text Line</p>
-              <p className="text-sm text-blue-600 dark:text-blue-400">Text <strong>HOME</strong> to <strong>741741</strong></p>
+              <p className="font-semibold text-blue-800 dark:text-blue-200">{t('crisis.clarityOverlay.text_line_name')}</p>
+              <p className="text-sm text-blue-600 dark:text-blue-400"><Trans i18nKey="crisis.clarityOverlay.text_home" components={{ b: <strong /> }} /></p>
             </div>
           </a>
 
@@ -63,7 +65,7 @@ const CrisisOverlay: React.FC<CrisisOverlayProps> = ({ isOpen, onClose }) => {
             className="flex items-center gap-3 p-3 rounded-xl text-sm font-medium text-slate-600 dark:text-neutral-400 hover:bg-slate-50 dark:hover:bg-neutral-800 transition-colors"
           >
             <ExternalLink className="w-4 h-4" />
-            Find local crisis resources
+            {t('crisis.clarityOverlay.find_local')}
           </Link>
         </div>
 
@@ -73,7 +75,7 @@ const CrisisOverlay: React.FC<CrisisOverlayProps> = ({ isOpen, onClose }) => {
             onClick={onClose}
             className="w-full py-3 rounded-xl text-sm font-medium text-slate-500 dark:text-neutral-400 bg-slate-100 dark:bg-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-700 transition-colors"
           >
-            I've seen these resources — continue journaling
+            {t('crisis.clarityOverlay.continue')}
           </button>
         </div>
       </div>

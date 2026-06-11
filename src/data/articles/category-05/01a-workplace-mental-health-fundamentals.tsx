@@ -2131,7 +2131,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          These effects are not signs of weakness. They are normal responses to abnormal
+          These effects are not signs of weakness. They are common responses to abnormal
           conditions. Recovery is possible, but it often requires intentional effort ---
           and sometimes professional support --- to rebuild what a toxic workplace
           dismantled.

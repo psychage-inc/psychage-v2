@@ -52,7 +52,7 @@ const BeforeAfter: React.FC<BeforeAfterProps> = ({
                 {/* Before panel */}
                 <div className="bg-red-50/50 dark:bg-red-950/10 p-6 border-b md:border-b-0 md:border-r border-border">
                     <div className="flex items-center gap-2 mb-4">
-                        <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400">
+                        <span className="px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400">
                             {before.title}
                         </span>
                     </div>
@@ -69,7 +69,7 @@ const BeforeAfter: React.FC<BeforeAfterProps> = ({
                 {/* After panel */}
                 <div className="bg-emerald-50/50 dark:bg-emerald-950/10 p-6">
                     <div className="flex items-center gap-2 mb-4">
-                        <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">
+                        <span className="px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">
                             {after.title}
                         </span>
                     </div>

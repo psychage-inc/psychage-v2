@@ -481,7 +481,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
           <li>Strong support system outside the ex-relationship</li>
         </ul>
         <p className="mb-6">
-          You may grieve the loss of the co-parenting relationship you hoped for. That's normal. Parallel parenting isn't the dream—but it's a functional reality that protects everyone from ongoing harm.
+          You may grieve the loss of the co-parenting relationship you hoped for. That's common. Parallel parenting isn't the dream—but it's a functional reality that protects everyone from ongoing harm.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaways">
@@ -914,7 +914,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Integration takes 5-7 years minimum, sometimes longer</li>
           <li>Stepchildren may never call you "mom" or "dad"—and that's okay</li>
-          <li>You may not "love" your stepkids the same way you love your biological children—that's normal</li>
+          <li>You may not "love" your stepkids the same way you love your biological children—that's common</li>
           <li>There will be loyalty conflicts, boundary testing, and resistance—it's part of the process</li>
           <li>Second marriages with children have higher divorce rates because stepfamily stress is real</li>
         </ul>
@@ -928,7 +928,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
             <li>Integration takes 7+ years—bonding cannot be rushed or forced</li>
             <li>Stepparents should progress slowly from "friendly adult" to "trusted adult" to "parental authority" over years</li>
             <li>Protect the couple relationship as the foundation of stepfamily stability</li>
-            <li>Set realistic expectations: loving a stepfamily differently than a first family is normal and okay</li>
+            <li>Set realistic expectations: loving a stepfamily differently than a first family is common and okay</li>
           </ul>
         </ArticleCallout>
       </>

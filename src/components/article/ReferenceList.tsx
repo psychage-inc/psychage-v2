@@ -73,7 +73,7 @@ const ReferenceList: React.FC<ReferenceListProps> = ({ citations: citationsProp,
                             <div className="flex items-center gap-2">
                                 {citation.tier && (
                                     <span
-                                        className={`inline-block text-[9px] font-semibold uppercase px-2 py-0.5 rounded-full ${TIER_BADGE_COLORS[citation.tier]}`}
+                                        className={`inline-block text-xs font-semibold uppercase px-2 py-0.5 rounded-full ${TIER_BADGE_COLORS[citation.tier]}`}
                                         title={SOURCE_TIERS[citation.tier]?.label}
                                     >
                                         T{citation.tier}

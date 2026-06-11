@@ -1633,7 +1633,7 @@ export const additionalConditionsArticles: Article[] = [
           What Is PTSD?
         </h2>
         <p className="mb-6">
-          PTSD is a psychiatric condition that can develop after exposure to traumatic events. While it is normal to have strong reactions after trauma — nightmares, difficulty sleeping, heightened anxiety — these responses typically resolve within weeks. PTSD is diagnosed when symptoms persist for more than one month and cause significant distress or impairment in functioning <Citation id="3" index={4} source="DSM-5-TR" year="2022" tier={4} />.
+          PTSD is a psychiatric condition that can develop after exposure to traumatic events. While it is common to have strong reactions after trauma — nightmares, difficulty sleeping, heightened anxiety — these responses typically resolve within weeks. PTSD is diagnosed when symptoms persist for more than one month and cause significant distress or impairment in functioning <Citation id="3" index={4} source="DSM-5-TR" year="2022" tier={4} />.
         </p>
         <p className="mb-6">
           Traumatic events that can lead to PTSD include combat exposure, physical or sexual assault, serious accidents, natural disasters, childhood abuse, witnessing violence, and other life-threatening situations. PTSD can also develop from learning about traumatic events that happened to a close family member or friend, or from repeated professional exposure to traumatic details (as experienced by first responders and forensic investigators).
@@ -1861,7 +1861,7 @@ export const additionalConditionsArticles: Article[] = [
             {
               title: 'Process the Trauma',
               description: (
-                <p>With professional guidance, work through the traumatic memories using an evidence-based protocol. This is the hardest part of treatment but also the most transformative. Symptoms typically worsen briefly before improving — this is expected and normal.</p>
+                <p>With professional guidance, work through the traumatic memories using an evidence-based protocol. This is the hardest part of treatment but also the most transformative. Symptoms typically worsen briefly before improving — this is expected and common.</p>
               ),
             },
             {

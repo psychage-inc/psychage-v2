@@ -36,7 +36,7 @@ export const settingBoundariesArticlesA: Article[] = [
       { text: 'People with healthy boundaries experience 68% better relationship quality and 73% reduced burnout', citationIndex: 2 },
       { text: 'Unlike walls that block everyone out, boundaries are permeable and allow safe connection with trustworthy people', citationIndex: 3 },
       { text: 'Boundary norms vary significantly across cultures—individualistic cultures emphasize personal limits while collectivistic cultures may prioritize community needs', citationIndex: 5 },
-      { text: 'Setting boundaries is a learnable skill, not an innate trait—discomfort when starting is normal growth, not evidence of doing something wrong', citationIndex: 7 },
+      { text: 'Setting boundaries is a learnable skill, not an innate trait—discomfort when starting is common growth, not evidence of doing something wrong', citationIndex: 7 },
     ],
     sparkMoment: 'Boundaries aren\'t about building walls or rejecting connection—they\'re the distance at which you can love both yourself and others simultaneously.',
     practicalExercise: {
@@ -45,7 +45,7 @@ export const settingBoundariesArticlesA: Article[] = [
         { title: 'Identify Your Resentments', description: 'Write down 3 situations where you feel drained, resentful, or taken advantage of. These are signs your boundaries need strengthening.' },
         { title: 'Name Your Limits', description: 'For each situation, ask: What would I need to feel comfortable here? What\'s the specific limit I need to communicate?' },
         { title: 'Practice a Low-Stakes Boundary', description: 'Choose the easiest scenario and practice saying no or setting a limit. Use simple language: "I\'m not able to do that" or "That doesn\'t work for me."' },
-        { title: 'Observe Without Judging', description: 'Notice how you feel after setting the boundary. Guilt is normal at first—it doesn\'t mean the boundary was wrong.' },
+        { title: 'Observe Without Judging', description: 'Notice how you feel after setting the boundary. Guilt is common at first—it doesn\'t mean the boundary was wrong.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Track Your Progress',
@@ -336,7 +336,7 @@ export const settingBoundariesArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="info">
-          <p>If you come from a collectivistic culture but live in an individualistic one (or vice versa), you may experience tension between cultural norms and personal needs. This is normal. You get to decide which values to prioritize in your own life.</p>
+          <p>If you come from a collectivistic culture but live in an individualistic one (or vice versa), you may experience tension between cultural norms and personal needs. This is common. You get to decide which values to prioritize in your own life.</p>
         </ArticleCallout>
 
         <h2 id="signs-of-poor-boundaries" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -475,7 +475,7 @@ export const settingBoundariesArticlesA: Article[] = [
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li><strong>Identify your limits:</strong> What makes you uncomfortable, resentful, or drained?</li>
           <li><strong>Start small:</strong> Practice saying no to low-stakes requests</li>
-          <li><strong>Notice guilt:</strong> Feeling guilty after setting a boundary is normal at first---it doesn't mean the boundary is wrong</li>
+          <li><strong>Notice guilt:</strong> Feeling guilty after setting a boundary is common at first---it doesn't mean the boundary is wrong</li>
           <li><strong>Communicate clearly:</strong> Use simple, direct language without over-explaining</li>
           <li><strong>Be consistent:</strong> Follow through on the boundaries you set</li>
           <li><strong>Prepare for pushback:</strong> Not everyone will like your boundaries. That's okay.</li>

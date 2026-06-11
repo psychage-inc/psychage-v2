@@ -91,7 +91,7 @@ Addressing EMS mental health requires interventions at both individual and organ
 
 ## What You Can Try
 
-- **If you are an EMS professional experiencing compassion fatigue or burnout**, recognize that your symptoms are a normal response to an abnormal workload. Contact your agency's peer support program, the Code Green Campaign, or a mental health professional who understands first responder culture.
+- **If you are an EMS professional experiencing compassion fatigue or burnout**, recognize that your symptoms are a common response to an abnormal workload. Contact your agency's peer support program, the Code Green Campaign, or a mental health professional who understands first responder culture.
 
 - **Monitor your empathic capacity.** When you notice yourself becoming emotionally numb to patients, treating calls as interruptions rather than opportunities to help, or losing the sense of meaning that drew you to EMS—these are signals of compassion fatigue, not character defects.
 

@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 import { describe, it, expect, vi } from 'vitest';
 import { render } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import { WelcomeScreen } from '../../components/screens/WelcomeScreen';
 import { ResultsScreen } from '../../components/screens/ResultsScreen';
@@ -69,9 +70,11 @@ describe('Navigator Screens - Accessibility', () => {
 
     it('ResultsScreen should have no accessibility violations when loaded', async () => {
         const { container } = render(
-            <NavigatorProvider>
-                <ResultsScreen />
-            </NavigatorProvider>
+            <MemoryRouter>
+                <NavigatorProvider>
+                    <ResultsScreen />
+                </NavigatorProvider>
+            </MemoryRouter>
         );
 
         // Wait for component to render (loading/error states are acceptable)

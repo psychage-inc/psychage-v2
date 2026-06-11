@@ -15,7 +15,6 @@ import { onboardingService } from '@/services/onboardingService';
 import { moodService, type MoodEntry, type MoodStats } from '@/services/moodService';
 import { sleepService, type SleepEntry, type SleepStats } from '@/services/sleepService';
 import { sleepDiaryService, type SleepV2DashboardStats } from '@/services/sleepDiaryService';
-import { bookmarkService } from '@/services/bookmarkService';
 import { supabase } from '@/lib/supabaseClient';
 import { AppError } from '@/utils/errorHandling';
 import { cn } from '@/lib/utils';
@@ -146,7 +145,6 @@ const UserDashboard: React.FC = () => {
     const [sleepHistory, setSleepHistory] = useState<SleepEntry[]>([]);
     const [navigatorCount, setNavigatorCount] = useState<number>(0);
     const [navigatorLastDate, setNavigatorLastDate] = useState<string | null>(null);
-    const [bookmarkCount, setBookmarkCount] = useState<number>(0);
     const [wellnessFocus, setWellnessFocus] = useState<string[] | null>(null);
     const [onboardingChecked, setOnboardingChecked] = useState(false);
     const wellnessProgress = useWellnessProgress();
@@ -204,7 +202,7 @@ const UserDashboard: React.FC = () => {
                 moodStatsRes, sleepStatsRes,
                 latestMoodRes, latestSleepRes,
                 moodRangeRes, sleepRangeRes,
-                navigatorRes, bookmarksRes
+                navigatorRes
             ] = await Promise.all([
                 clarityScoreService.getDashboardStats().catch(trackCore('clarity-stats', null)),
                 clarityScoreService.getRecentActivity().catch(trackCore('user-activity', [] as { type: 'assessment'; title: string; date: string }[])),
@@ -229,7 +227,6 @@ const UserDashboard: React.FC = () => {
                         return { count: 0, latest: null };
                     }
                 })(),
-                bookmarkService.getAll(user.id).then(b => b.length).catch(trackOptional(0)),
             ]);
 
             setPartialFailures(failures.length);
@@ -280,7 +277,6 @@ const UserDashboard: React.FC = () => {
                 setNavigatorLastDate(navigatorRes.latest);
             }
 
-            setBookmarkCount(bookmarksRes);
         } catch (err) {
             console.error('Failed to fetch dashboard data', err);
             setError('Unable to load dashboard data. Please check your connection and try again.');
@@ -414,7 +410,6 @@ const UserDashboard: React.FC = () => {
                                         todaySleep={todaySleep}
                                         lastClarityDate={stats?.lastAssessed || null}
                                         navigatorCount={navigatorCount}
-                                        bookmarkCount={bookmarkCount}
                                     />
                                 </motion.div>
 

@@ -1,50 +1,76 @@
- 
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { activityService } from '../activityService';
 
-const mockApi = vi.hoisted(() => ({
-    activity: {
-        getRecent: vi.fn(),
-        log: vi.fn(),
-        getByType: vi.fn(),
-        getStats: vi.fn(),
+// activityService talks to Supabase directly (supabase.from('user_activity')...),
+// so we mock the supabase client with a chainable query builder. The terminal
+// `await query` resolves whatever mockQueryResult() returns.
+const mockQueryResult = vi.fn();
+
+const buildChain = () => {
+    const chain: any = {};
+    const self = () => chain;
+    chain.select = vi.fn(self);
+    chain.insert = vi.fn(self);
+    chain.eq = vi.fn(self);
+    chain.order = vi.fn(self);
+    chain.limit = vi.fn(self);
+    chain.then = (resolve: any, reject: any) => mockQueryResult().then(resolve, reject);
+    return chain;
+};
+
+const chain = buildChain();
+const fromMock = vi.fn(() => chain);
+
+vi.mock('@/lib/supabaseClient', () => ({
+    supabase: {
+        from: (...args: unknown[]) => fromMock(...args),
     },
 }));
 
-vi.mock('@/lib/api', () => ({ default: mockApi }));
+function resetChain() {
+    const self = () => chain;
+    chain.select = vi.fn(self);
+    chain.insert = vi.fn(self);
+    chain.eq = vi.fn(self);
+    chain.order = vi.fn(self);
+    chain.limit = vi.fn(self);
+    chain.then = (resolve: any, reject: any) => mockQueryResult().then(resolve, reject);
+}
 
 describe('activityService', () => {
     beforeEach(() => {
         vi.clearAllMocks();
+        resetChain();
         vi.spyOn(console, 'error').mockImplementation(() => {});
     });
 
     describe('getRecentActivity', () => {
         it('should return activities on success', async () => {
             const activities = [{ id: '1', action_type: 'login' }];
-            mockApi.activity.getRecent.mockResolvedValue({ success: true, data: activities });
+            mockQueryResult.mockResolvedValue({ data: activities, error: null });
 
             const result = await activityService.getRecentActivity('user1', 5);
             expect(result).toEqual(activities);
-            expect(mockApi.activity.getRecent).toHaveBeenCalledWith(5);
+            expect(fromMock).toHaveBeenCalledWith('user_activity');
+            expect(chain.limit).toHaveBeenCalledWith(5);
         });
 
         it('should use default limit of 10', async () => {
-            mockApi.activity.getRecent.mockResolvedValue({ success: true, data: [] });
+            mockQueryResult.mockResolvedValue({ data: [], error: null });
 
             await activityService.getRecentActivity();
-            expect(mockApi.activity.getRecent).toHaveBeenCalledWith(10);
+            expect(chain.limit).toHaveBeenCalledWith(10);
         });
 
         it('should return empty array on unsuccessful response', async () => {
-            mockApi.activity.getRecent.mockResolvedValue({ success: false, data: null });
+            mockQueryResult.mockResolvedValue({ data: null, error: { message: 'err' } });
 
             const result = await activityService.getRecentActivity();
             expect(result).toEqual([]);
         });
 
         it('should return empty array on error', async () => {
-            mockApi.activity.getRecent.mockRejectedValue(new Error('network'));
+            mockQueryResult.mockRejectedValue(new Error('network'));
 
             const result = await activityService.getRecentActivity();
             expect(result).toEqual([]);
@@ -53,28 +79,33 @@ describe('activityService', () => {
 
     describe('logActivity', () => {
         it('should return true on successful log', async () => {
-            mockApi.activity.log.mockResolvedValue({ success: true });
+            mockQueryResult.mockResolvedValue({ error: null });
 
             const result = await activityService.logActivity('user1', 'login');
             expect(result).toBe(true);
         });
 
-        it('should pass all parameters to API', async () => {
-            mockApi.activity.log.mockResolvedValue({ success: true });
+        it('should pass all parameters to the insert', async () => {
+            mockQueryResult.mockResolvedValue({ error: null });
 
             await activityService.logActivity('user1', 'article_viewed', 'article', '42', { title: 'Test' });
-            expect(mockApi.activity.log).toHaveBeenCalledWith('article_viewed', 'article', '42', { title: 'Test' });
+            expect(chain.insert).toHaveBeenCalledWith({
+                action_type: 'article_viewed',
+                resource_type: 'article',
+                resource_id: '42',
+                metadata: { title: 'Test' },
+            });
         });
 
         it('should return false on failure', async () => {
-            mockApi.activity.log.mockResolvedValue({ success: false });
+            mockQueryResult.mockResolvedValue({ error: { message: 'err' } });
 
             const result = await activityService.logActivity('user1', 'login');
             expect(result).toBe(false);
         });
 
         it('should return false on error', async () => {
-            mockApi.activity.log.mockRejectedValue(new Error('fail'));
+            mockQueryResult.mockRejectedValue(new Error('fail'));
 
             const result = await activityService.logActivity('user1', 'login');
             expect(result).toBe(false);
@@ -84,14 +115,15 @@ describe('activityService', () => {
     describe('getActivityByType', () => {
         it('should return activities filtered by type', async () => {
             const activities = [{ id: '1', action_type: 'mood_logged' }];
-            mockApi.activity.getByType.mockResolvedValue({ success: true, data: activities });
+            mockQueryResult.mockResolvedValue({ data: activities, error: null });
 
             const result = await activityService.getActivityByType('user1', 'mood_logged', 5);
             expect(result).toEqual(activities);
+            expect(chain.eq).toHaveBeenCalledWith('action_type', 'mood_logged');
         });
 
-        it('should return empty array on failure', async () => {
-            mockApi.activity.getByType.mockRejectedValue(new Error('err'));
+        it('should return empty array on error', async () => {
+            mockQueryResult.mockRejectedValue(new Error('err'));
 
             const result = await activityService.getActivityByType('user1', 'login');
             expect(result).toEqual([]);
@@ -99,16 +131,29 @@ describe('activityService', () => {
     });
 
     describe('getActivityStats', () => {
-        it('should return stats on success', async () => {
-            const stats = { totalAssessments: 5, articlesRead: 10, videosWatched: 3, moodLogs: 7, sleepLogs: 4, daysActive: 14 };
-            mockApi.activity.getStats.mockResolvedValue({ success: true, data: stats });
+        it('should return computed stats on success', async () => {
+            const rows = [
+                { action_type: 'assessment_completed', created_at: '2026-03-01T10:00:00Z' },
+                { action_type: 'article_viewed', created_at: '2026-03-01T11:00:00Z' },
+                { action_type: 'video_watched', created_at: '2026-03-02T09:00:00Z' },
+                { action_type: 'mood_logged', created_at: '2026-03-02T12:00:00Z' },
+                { action_type: 'sleep_logged', created_at: '2026-03-03T08:00:00Z' },
+            ];
+            mockQueryResult.mockResolvedValue({ data: rows, error: null });
 
             const result = await activityService.getActivityStats();
-            expect(result).toEqual(stats);
+            expect(result).toEqual({
+                totalAssessments: 1,
+                articlesRead: 1,
+                videosWatched: 1,
+                moodLogs: 1,
+                sleepLogs: 1,
+                daysActive: 3,
+            });
         });
 
         it('should return zeroed stats on failure', async () => {
-            mockApi.activity.getStats.mockResolvedValue({ success: false, data: null });
+            mockQueryResult.mockResolvedValue({ data: null, error: { message: 'err' } });
 
             const result = await activityService.getActivityStats();
             expect(result).toEqual({
@@ -122,7 +167,7 @@ describe('activityService', () => {
         });
 
         it('should return zeroed stats on error', async () => {
-            mockApi.activity.getStats.mockRejectedValue(new Error('fail'));
+            mockQueryResult.mockRejectedValue(new Error('fail'));
 
             const result = await activityService.getActivityStats();
             expect(result.totalAssessments).toBe(0);

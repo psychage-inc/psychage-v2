@@ -59,14 +59,14 @@ const CBTICards: React.FC = () => {
                   >
                     <div className="px-4 pb-4 space-y-3">
                       <div className="bg-teal-50 dark:bg-teal-900/20 rounded-xl p-3 border border-teal-100 dark:border-teal-800">
-                        <div className="text-[10px] font-bold text-teal-600 dark:text-teal-400 uppercase tracking-wider mb-1">
+                        <div className="text-xs font-bold text-teal-600 dark:text-teal-400 uppercase tracking-wider mb-1">
                           Technique
                         </div>
                         <p className="text-xs text-gray-700 dark:text-neutral-300 leading-relaxed">
                           {card.technique}
                         </p>
                       </div>
-                      <div className="text-[10px] text-gray-400 dark:text-neutral-500">
+                      <div className="text-xs text-gray-400 dark:text-neutral-500">
                         Source: {card.source}
                       </div>
                     </div>

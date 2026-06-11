@@ -24,6 +24,7 @@ const Navigation: React.FC = () => {
     // Refs for hover management
     const searchInputRef = useRef<HTMLInputElement>(null);
     const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const hamburgerRef = useRef<HTMLButtonElement>(null);
 
     const navigate = useNavigate();
     const { user, isAuthenticated, logout } = useAuth();
@@ -246,7 +247,7 @@ const Navigation: React.FC = () => {
                         <button
                             onClick={() => navigate('/crisis')}
                             onMouseEnter={() => handleMouseEnter('')}
-                            className="flex items-center justify-center h-11 rounded-full text-sm font-bold text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors border border-red-100 dark:border-red-800/50 px-2.5 md:px-4"
+                            className="flex items-center justify-center h-11 min-w-[44px] rounded-full text-sm font-bold text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors border border-red-100 dark:border-red-800/50 px-2.5 md:px-4"
                             aria-label="Crisis support - get immediate help"
                         >
                             <Phone size={16} className="md:hidden" aria-hidden="true" />
@@ -343,6 +344,7 @@ const Navigation: React.FC = () => {
 
                         {/* Mobile Menu Button */}
                         <button
+                            ref={hamburgerRef}
                             className="md:hidden w-11 h-11 rounded-full flex items-center justify-center text-text-primary hover:bg-surface-hover"
                             onClick={() => setIsMobileMenuOpen(true)}
                             aria-label="Open navigation menu"
@@ -418,6 +420,7 @@ const Navigation: React.FC = () => {
             <MobileMenu
                 isOpen={isMobileMenuOpen}
                 onClose={() => setIsMobileMenuOpen(false)}
+                triggerRef={hamburgerRef}
                 onNavigateGeneric={(view) => {
                     if (view === 'home') navigate('/');
                     else navigate(view.startsWith('/') ? view : `/${view}`);

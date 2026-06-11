@@ -83,7 +83,7 @@ const FreeFormSection: React.FC<FreeFormSectionProps> = ({ onSave, onCrisisDetec
           onChange={e => handleContentChange(e.target.value)}
           placeholder="What's on your mind..."
           rows={6}
-          className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500 resize-y min-h-[120px]"
+          className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-base text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-teal-500 resize-y min-h-[120px]"
         />
         <p className="text-xs text-charcoal-600 dark:text-neutral-500 mt-1">{content.length} characters</p>
       </div>

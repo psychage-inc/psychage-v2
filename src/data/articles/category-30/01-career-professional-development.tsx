@@ -40,7 +40,7 @@ export const careerProfessionalDevelopmentArticles: Article[] = [
     practicalExercise: {
       title: 'Honor the ending.',
       steps: [
-        { title: 'Honor the ending.', description: 'Before rushing into the next thing, acknowledge what you have lost—the routines, the relationships, the competence, the identity. Grief about career loss is normal and necessary.' },
+        { title: 'Honor the ending.', description: 'Before rushing into the next thing, acknowledge what you have lost—the routines, the relationships, the competence, the identity. Grief about career loss is common and necessary.' },
         { title: 'Experiment with possible selves.', description: 'Rather than trying to figure out your next career through analysis, try small experiments: volunteer, take a class, shadow someone, start a side project. Direct experience reveals what analysis cannot.' },
         { title: 'Tolerate the neutral zone.', description: 'The period of uncertainty between old and new is uncomfortable but productive. Resist the urge to escape it by taking the first available option. The discomfort is doing important psychological work.' },
         { title: 'Construct a connecting narrative.', description: 'Write the story of how your past experience connects to your future direction. This narrative provides coherence and meaning that raw uncertainty cannot.' },

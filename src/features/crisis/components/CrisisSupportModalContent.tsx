@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import {
   Phone,
   MessageSquare,
@@ -16,11 +17,12 @@ import { getResourcesForRegion } from '../resources/regions';
 
 // ─── Grounding exercise shown for WATCH and URGENT ──────────────────────
 const GroundingExercise: React.FC = () => {
+  const { t } = useTranslation();
   const [step, setStep] = useState(0);
   const steps = [
-    { label: 'Breathe in slowly for 4 seconds', duration: 4 },
-    { label: 'Hold for 4 seconds', duration: 4 },
-    { label: 'Breathe out slowly for 6 seconds', duration: 6 },
+    { label: t('crisis.supportModal.step1'), duration: 4 },
+    { label: t('crisis.supportModal.step2'), duration: 4 },
+    { label: t('crisis.supportModal.step3'), duration: 6 },
   ];
 
   return (
@@ -28,11 +30,11 @@ const GroundingExercise: React.FC = () => {
       <div className="flex items-center gap-2 mb-3">
         <Wind size={18} className="text-teal-600 dark:text-teal-400" />
         <span className="font-semibold text-teal-800 dark:text-teal-200 text-sm">
-          Grounding Exercise
+          {t('crisis.supportModal.grounding_title')}
         </span>
       </div>
       <p className="text-sm text-teal-700 dark:text-teal-300 mb-4">
-        Let's take a moment together. Follow along at your own pace.
+        {t('crisis.supportModal.grounding_intro')}
       </p>
       <div className="text-center py-3">
         <motion.div
@@ -53,7 +55,7 @@ const GroundingExercise: React.FC = () => {
                   ? 'bg-teal-600 dark:bg-teal-400'
                   : 'bg-teal-200 dark:bg-teal-700'
               }`}
-              aria-label={`Step ${i + 1}`}
+              aria-label={t('crisis.supportModal.step_aria', { n: i + 1 })}
             />
           ))}
         </div>
@@ -66,7 +68,9 @@ const GroundingExercise: React.FC = () => {
 const ResourceLineCard: React.FC<{ line: CrisisLine; prominent?: boolean }> = ({
   line,
   prominent,
-}) => (
+}) => {
+  const { t } = useTranslation();
+  return (
   <div
     className={`rounded-xl p-4 border ${
       prominent
@@ -110,18 +114,20 @@ const ResourceLineCard: React.FC<{ line: CrisisLine; prominent?: boolean }> = ({
             className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium bg-surface-active text-text-primary hover:bg-gray-200 dark:hover:bg-neutral-700 transition-colors"
           >
             <MessageSquare size={14} />
-            Text
+            {t('crisis.supportModal.line_text')}
           </a>
         )}
       </div>
     </div>
   </div>
-);
+  );
+};
 
 // ─── Trusted contact consent flow ───────────────────────────────────────
 const TrustedContactSection: React.FC<{
   onNotify?: (contact: string) => void;
 }> = ({ onNotify }) => {
+  const { t } = useTranslation();
   const [showConfirm, setShowConfirm] = useState(false);
   const [contact, setContact] = useState('');
 
@@ -132,7 +138,7 @@ const TrustedContactSection: React.FC<{
       <div className="flex items-center gap-2 mb-2">
         <UserCheck size={16} className="text-amber-600 dark:text-amber-400" />
         <span className="font-semibold text-amber-800 dark:text-amber-200 text-sm">
-          Trusted Contact
+          {t('crisis.supportModal.trusted_contact_title')}
         </span>
       </div>
 
@@ -141,19 +147,18 @@ const TrustedContactSection: React.FC<{
           onClick={() => setShowConfirm(true)}
           className="text-sm text-amber-700 dark:text-amber-300 hover:text-amber-900 dark:hover:text-amber-100 underline underline-offset-2 transition-colors"
         >
-          Notify a trusted person that you need support
+          {t('crisis.supportModal.notify_trusted')}
         </button>
       ) : (
         <div className="space-y-3 mt-2">
           <p className="text-sm text-amber-700 dark:text-amber-300">
-            We will only send a notification with your explicit permission.
-            Nothing is sent automatically.
+            {t('crisis.supportModal.consent_note')}
           </p>
           <input
             type="text"
             value={contact}
             onChange={(e) => setContact(e.target.value)}
-            placeholder="Name or phone number"
+            placeholder={t('crisis.supportModal.contact_placeholder')}
             className="w-full px-3 py-2 rounded-lg border border-amber-300 dark:border-amber-700 bg-surface text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"
           />
           <div className="flex gap-2">
@@ -166,7 +171,7 @@ const TrustedContactSection: React.FC<{
               disabled={!contact.trim()}
               className="px-4 py-2 rounded-lg bg-amber-600 text-white text-sm font-semibold hover:bg-amber-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
-              Confirm & Notify
+              {t('crisis.supportModal.confirm_notify')}
             </button>
             <button
               onClick={() => {
@@ -175,7 +180,7 @@ const TrustedContactSection: React.FC<{
               }}
               className="px-4 py-2 rounded-lg bg-surface-active text-text-secondary text-sm font-medium hover:bg-gray-200 dark:hover:bg-neutral-700 transition-colors"
             >
-              Cancel
+              {t('crisis.supportModal.cancel')}
             </button>
           </div>
         </div>
@@ -189,8 +194,6 @@ const SEVERITY_CONFIG: Record<
   Severity,
   {
     icon: React.ReactNode;
-    title: string;
-    subtitle: string;
     accent: string;
     bg: string;
     border: string;
@@ -198,27 +201,18 @@ const SEVERITY_CONFIG: Record<
 > = {
   WATCH: {
     icon: <Heart size={28} className="text-amber-500" />,
-    title: 'We noticed something',
-    subtitle:
-      "Your recent responses suggest you might be going through a tough time. That's okay \u2014 checking in is a sign of strength.",
     accent: 'text-amber-600 dark:text-amber-400',
     bg: 'bg-amber-50 dark:bg-amber-950/20',
     border: 'border-amber-200 dark:border-amber-800',
   },
   URGENT: {
     icon: <AlertTriangle size={28} className="text-orange-500" />,
-    title: "You don't have to face this alone",
-    subtitle:
-      'We want to make sure you have the support you need right now. These resources are free, confidential, and available around the clock.',
     accent: 'text-orange-600 dark:text-orange-400',
     bg: 'bg-orange-50 dark:bg-orange-950/20',
     border: 'border-orange-200 dark:border-orange-800',
   },
   CRISIS: {
     icon: <ShieldAlert size={28} className="text-rose-500" />,
-    title: 'Please reach out right now',
-    subtitle:
-      "You matter, and someone is ready to listen. Please contact one of these free, confidential services \u2014 they're here for you 24/7.",
     accent: 'text-rose-600 dark:text-rose-400',
     bg: 'bg-rose-50 dark:bg-rose-950/20',
     border: 'border-rose-200 dark:border-rose-800',
@@ -233,6 +227,7 @@ const CrisisSupportModalContent: React.FC<CrisisSupportProps> = ({
   onNotifyTrustedContact,
   safetyPlanUrl,
 }) => {
+  const { t } = useTranslation();
   const config = SEVERITY_CONFIG[severity];
   const resources = getResourcesForRegion(region);
   const [showResources, setShowResources] = useState(severity !== 'WATCH');
@@ -256,7 +251,7 @@ const CrisisSupportModalContent: React.FC<CrisisSupportProps> = ({
         exit={{ opacity: 0, scale: 0.95, y: 10 }}
         role="dialog"
         aria-modal="true"
-        aria-label={`Crisis support \u2014 ${severity} level`}
+        aria-label={t('crisis.supportModal.dialog_aria', { severity })}
         className={`relative w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl border shadow-2xl ${config.bg} ${config.border} bg-surface`}
       >
         {/* Severity accent bar */}
@@ -274,7 +269,7 @@ const CrisisSupportModalContent: React.FC<CrisisSupportProps> = ({
         <button
           onClick={onClose}
           className="absolute top-4 right-4 p-1.5 rounded-full bg-surface-active text-text-tertiary hover:text-text-primary hover:bg-gray-200 dark:hover:bg-neutral-700 transition-colors"
-          aria-label="Close crisis support dialog"
+          aria-label={t('crisis.supportModal.close_aria')}
         >
           <X size={18} />
         </button>
@@ -286,10 +281,10 @@ const CrisisSupportModalContent: React.FC<CrisisSupportProps> = ({
             <h2
               className={`text-xl font-bold text-text-primary mb-2`}
             >
-              {config.title}
+              {t(`crisis.supportModal.${severity.toLowerCase()}_title`)}
             </h2>
             <p className="text-sm text-text-secondary max-w-sm mx-auto leading-relaxed">
-              {config.subtitle}
+              {t(`crisis.supportModal.${severity.toLowerCase()}_subtitle`)}
             </p>
           </div>
 
@@ -302,13 +297,12 @@ const CrisisSupportModalContent: React.FC<CrisisSupportProps> = ({
                   onClick={() => setShowResources(true)}
                   className="w-full py-2.5 rounded-lg border border-border text-sm font-medium text-text-secondary hover:bg-surface-hover transition-colors"
                 >
-                  View support options
+                  {t('crisis.supportModal.view_support_options')}
                 </button>
               ) : (
                 <div className="space-y-3">
                   <p className="text-xs font-semibold text-text-tertiary uppercase tracking-wide">
-                    Support Resources \u2014 {resources.name}{' '}
-                    {resources.flag}
+                    {t('crisis.supportModal.support_resources', { name: resources.name, flag: resources.flag })}
                   </p>
                   {resources.lines.map((line, i) => (
                     <ResourceLineCard key={i} line={line} />
@@ -324,8 +318,7 @@ const CrisisSupportModalContent: React.FC<CrisisSupportProps> = ({
               <GroundingExercise />
               <div className="space-y-3">
                 <p className="text-xs font-semibold text-text-tertiary uppercase tracking-wide">
-                  Support Resources \u2014 {resources.name}{' '}
-                  {resources.flag}
+                  {t('crisis.supportModal.support_resources', { name: resources.name, flag: resources.flag })}
                 </p>
                 {resources.lines.map((line, i) => (
                   <ResourceLineCard key={i} line={line} prominent={i === 0} />
@@ -345,14 +338,13 @@ const CrisisSupportModalContent: React.FC<CrisisSupportProps> = ({
                   className="flex items-center justify-center gap-3 w-full py-4 rounded-xl bg-rose-600 text-white text-lg font-bold shadow-lg shadow-rose-600/20 hover:bg-rose-700 transition-colors"
                 >
                   <Phone size={22} />
-                  Call {resources.lines[0].num}
+                  {t('crisis.supportModal.call_line', { num: resources.lines[0].num })}
                 </a>
               )}
 
               <div className="space-y-3">
                 <p className="text-xs font-semibold text-text-tertiary uppercase tracking-wide">
-                  All Resources \u2014 {resources.name}{' '}
-                  {resources.flag}
+                  {t('crisis.supportModal.all_resources', { name: resources.name, flag: resources.flag })}
                 </p>
                 {resources.lines.map((line, i) => (
                   <ResourceLineCard key={i} line={line} prominent={i === 0} />
@@ -363,7 +355,7 @@ const CrisisSupportModalContent: React.FC<CrisisSupportProps> = ({
                     {resources.emergency}
                   </span>
                   <span className="text-sm text-red-700 dark:text-red-300">
-                    Emergency Services
+                    {t('crisis.supportModal.emergency_services')}
                   </span>
                 </div>
               </div>
@@ -381,15 +373,13 @@ const CrisisSupportModalContent: React.FC<CrisisSupportProps> = ({
               className="flex items-center justify-center gap-2 text-sm text-text-tertiary hover:text-text-secondary transition-colors"
             >
               <ExternalLink size={14} />
-              Download Safety Plan Template
+              {t('crisis.supportModal.download_safety_plan')}
             </a>
           )}
 
           {/* Disclaimer */}
           <p className="text-xs text-center text-text-tertiary leading-relaxed">
-            This is a wellness check-in, not a clinical assessment. All
-            resources listed are free and confidential. In a medical emergency,
-            call {resources.emergency}.
+            {t('crisis.supportModal.disclaimer', { emergency: resources.emergency })}
           </p>
         </div>
       </motion.div>

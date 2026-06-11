@@ -4,6 +4,7 @@ import { CrisisResourceCard } from '../navigator/CrisisResourceCard';
 import { CrisisResource, CrisisResourceType } from '../../lib/navigator/types';
 import { resolveCountry, getResourcesForCountry, type CrisisResource as GeoCrisisResource } from '../../lib/crisis';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import SEO from '@/components/SEO';
 
 const FIND_A_HELPLINE_URL = 'https://findahelpline.com';
@@ -33,6 +34,7 @@ function toNavigatorResource(r: GeoCrisisResource, i: number): CrisisResource {
 }
 
 export const CrisisResourcesScreen: React.FC = () => {
+    const { t } = useTranslation();
     // lib/crisis is synchronous bundled data with a country -> regional -> global fallback
     // (cannot fail closed), so there is no async chunk to spin on. Resolve once for the
     // user's detected country; the global fallback already includes findahelpline.com.
@@ -46,11 +48,11 @@ export const CrisisResourcesScreen: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-charcoal-50 dark:bg-charcoal-900 pt-24 pb-12">
-            <SEO title="Crisis Resources | Psychage" description="If you or someone you know is in crisis, help is available right now. Free, confidential support 24/7." />
+            <SEO title={t('crisis.resourcesScreen.seo_title')} description={t('crisis.resourcesScreen.seo_description')} />
             <div className="max-w-3xl mx-auto px-4 sm:px-6">
                 <Link to="/" className="inline-flex items-center text-charcoal-500 hover:text-charcoal-900 dark:text-charcoal-400 dark:hover:text-white font-medium mb-8 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500/50 rounded transition-colors">
                     <ArrowLeft className="w-4 h-4 mr-2" />
-                    Back to Home
+                    {t('crisis.resourcesScreen.back_home')}
                 </Link>
 
                 <div className="bg-white dark:bg-charcoal-800 rounded-2xl p-8 sm:p-12 shadow-sm border border-charcoal-200 dark:border-charcoal-700 relative overflow-hidden">
@@ -61,10 +63,10 @@ export const CrisisResourcesScreen: React.FC = () => {
                             <ShieldAlert className="w-8 h-8 text-crisis-red" />
                         </div>
                         <h1 className="text-3xl sm:text-4xl font-display font-bold text-charcoal-900 dark:text-white mb-4">
-                            Crisis & Emergency Support
+                            {t('crisis.resourcesScreen.title')}
                         </h1>
                         <p className="text-lg text-charcoal-600 dark:text-charcoal-300 max-w-xl">
-                            If you or someone you know is struggling, there is help available. You are not alone, and reaching out is a sign of strength.
+                            {t('crisis.resourcesScreen.subtitle')}
                         </p>
                     </div>
 
@@ -86,8 +88,8 @@ export const CrisisResourcesScreen: React.FC = () => {
                                     <Globe className="w-5 h-5 text-teal-500" />
                                 </div>
                                 <div className="flex-1 text-left">
-                                    <p className="text-sm font-semibold text-charcoal-900 dark:text-white">Find A Helpline</p>
-                                    <p className="text-xs text-charcoal-500 dark:text-charcoal-400">Search crisis helplines in any country worldwide</p>
+                                    <p className="text-sm font-semibold text-charcoal-900 dark:text-white">{t('crisis.common.find_a_helpline')}</p>
+                                    <p className="text-xs text-charcoal-500 dark:text-charcoal-400">{t('crisis.common.find_helpline_desc')}</p>
                                 </div>
                                 <ExternalLink className="w-4 h-4 text-charcoal-400 group-hover:text-teal-500 transition-colors shrink-0" />
                             </a>
@@ -96,7 +98,7 @@ export const CrisisResourcesScreen: React.FC = () => {
 
                     <div className="mt-12 pt-8 border-t border-charcoal-200 dark:border-charcoal-700 text-center">
                         <p className="text-charcoal-500 dark:text-charcoal-400 text-sm">
-                            In the event of a medical emergency or immediate danger, please dial 911 (US) or your local emergency number or proceed to the nearest emergency room.
+                            {t('crisis.resourcesScreen.emergency_footer')}
                         </p>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Phone, Globe, ArrowLeft } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { resolveCountry, getResourcesForCountry } from '../../../lib/crisis';
 
 interface CrisisOverlayProps {
@@ -8,6 +9,7 @@ interface CrisisOverlayProps {
 }
 
 export default function CrisisOverlay({ isAutoTriggered, onClose }: CrisisOverlayProps) {
+  const { t } = useTranslation();
   // Resolve a region-correct crisis line instead of hardcoding US numbers.
   const crisis = getResourcesForCountry(resolveCountry());
   const hotline = crisis.all_resources.find((r) => r.phone);
@@ -23,11 +25,11 @@ export default function CrisisOverlay({ isAutoTriggered, onClose }: CrisisOverla
     >
       <div className="max-w-md w-full text-center">
         <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
-          You're Not Alone
+          {t('crisis.chatOverlay.title')}
         </h1>
 
         <p className="text-base text-slate-600 dark:text-neutral-400 mb-8 leading-relaxed">
-          If you or someone you know is in crisis, please reach out for help right now.
+          {t('crisis.chatOverlay.subtitle')}
         </p>
 
         <div className="space-y-3">
@@ -38,8 +40,8 @@ export default function CrisisOverlay({ isAutoTriggered, onClose }: CrisisOverla
           >
             <Phone size={20} />
             <div>
-              <p className="font-semibold text-sm">Call {callName}</p>
-              <p className="text-teal-100 text-xs mt-0.5">{callPhone} · available 24/7</p>
+              <p className="font-semibold text-sm">{t('crisis.chatOverlay.call_name', { name: callName })}</p>
+              <p className="text-teal-100 text-xs mt-0.5">{callPhone} · {t('crisis.chatOverlay.available')}</p>
             </div>
           </a>
 
@@ -52,9 +54,9 @@ export default function CrisisOverlay({ isAutoTriggered, onClose }: CrisisOverla
           >
             <Globe size={20} />
             <div>
-              <p className="font-semibold text-sm">Find a helpline in your country</p>
+              <p className="font-semibold text-sm">{t('crisis.chatOverlay.find_helpline_title')}</p>
               <p className="text-slate-500 dark:text-neutral-400 text-xs mt-0.5">
-                International crisis support directory
+                {t('crisis.chatOverlay.find_helpline_desc')}
               </p>
             </div>
           </a>
@@ -66,7 +68,7 @@ export default function CrisisOverlay({ isAutoTriggered, onClose }: CrisisOverla
           className="mt-8 inline-flex items-center gap-1.5 text-sm text-slate-400 dark:text-neutral-500 hover:text-slate-600 dark:hover:text-neutral-400 dark:hover:text-neutral-300 transition-colors"
         >
           <ArrowLeft size={14} />
-          Return to chat
+          {t('crisis.chatOverlay.return_to_chat')}
         </button>
       </div>
     </motion.div>

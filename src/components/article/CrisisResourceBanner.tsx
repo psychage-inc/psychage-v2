@@ -1,9 +1,11 @@
 import React, { useMemo } from 'react';
 import { Phone, MessageCircle, ExternalLink, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { getResourcesForCountry } from '@/lib/crisis/engine';
 
 const CrisisResourceBanner: React.FC = () => {
+    const { t } = useTranslation();
     const resources = useMemo(() => {
         // Always show US resources as primary (target audience is US-based)
         const result = getResourcesForCountry('US');
@@ -13,17 +15,17 @@ const CrisisResourceBanner: React.FC = () => {
     return (
         <div
             role="complementary"
-            aria-label="Crisis support resources"
+            aria-label={t('crisis.articleBanner.region_aria')}
             className="not-prose bg-red-600 dark:bg-red-700 border border-red-700 dark:border-red-600 rounded-2xl p-6 md:p-8 shadow-lg"
         >
             <div className="flex items-start gap-3 mb-5">
                 <Heart size={22} className="text-white shrink-0 mt-0.5" fill="currentColor" />
                 <div>
                     <h3 className="text-lg font-bold text-white">
-                        You Are Not Alone
+                        {t('crisis.articleBanner.title')}
                     </h3>
                     <p className="text-sm text-white/90 mt-1">
-                        If you or someone you know is in crisis, help is available 24/7. You do not need to face this alone.
+                        {t('crisis.articleBanner.subtitle')}
                     </p>
                 </div>
             </div>
@@ -70,7 +72,7 @@ const CrisisResourceBanner: React.FC = () => {
                 to="/crisis"
                 className="inline-flex items-center gap-2 text-sm font-medium text-white/90 hover:text-white underline underline-offset-2 transition-colors"
             >
-                View all crisis resources
+                {t('crisis.articleBanner.view_all')}
                 <ExternalLink size={14} />
             </Link>
         </div>

@@ -1,9 +1,11 @@
 import React, { useState, useMemo } from 'react';
 import { Phone, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { resolveCountry, getResourcesForCountry } from '@/lib/crisis';
 
 export const CrisisStickyBanner: React.FC = () => {
+    const { t } = useTranslation();
     const [isDismissed, setIsDismissed] = useState(false);
 
     const crisisInfo = useMemo(() => {
@@ -32,7 +34,7 @@ export const CrisisStickyBanner: React.FC = () => {
                     className="fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-md border-t border-crisis-red/30 z-40 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]"
                     style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
                     role="region"
-                    aria-label="Crisis support resources"
+                    aria-label={t('crisis.stickyBanner.region_aria')}
                 >
                     {/* Mobile Layout */}
                     <div className="sm:hidden px-4 py-3 flex items-center justify-between gap-3">
@@ -40,13 +42,13 @@ export const CrisisStickyBanner: React.FC = () => {
                             <Phone className="w-5 h-5 text-crisis-red flex-shrink-0 drop-shadow-[0_0_5px_rgba(239,68,68,0.8)]" />
                             <div className="flex-1 min-w-0">
                                 <div className="text-sm font-semibold text-white truncate">
-                                    Crisis? Call {crisisInfo.phone}
+                                    {t('crisis.stickyBanner.mobile_text', { phone: crisisInfo.phone })}
                                 </div>
                                 <a
                                     href={telHref}
                                     className="text-xs text-crisis-red hover:text-red-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-crisis-red focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded"
                                 >
-                                    Tap to call now
+                                    {t('crisis.stickyBanner.tap_to_call')}
                                 </a>
                             </div>
                         </div>
@@ -54,7 +56,7 @@ export const CrisisStickyBanner: React.FC = () => {
                             type="button"
                             onClick={() => setIsDismissed(true)}
                             className="flex-shrink-0 w-11 h-11 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-                            aria-label="Dismiss crisis banner"
+                            aria-label={t('crisis.stickyBanner.dismiss_aria')}
                         >
                             <X className="w-4 h-4 text-text-secondary" />
                         </button>
@@ -66,7 +68,7 @@ export const CrisisStickyBanner: React.FC = () => {
                             <div className="flex items-center gap-2">
                                 <Phone className="w-4 h-4 text-crisis-red drop-shadow-[0_0_5px_rgba(239,68,68,0.8)]" />
                                 <span className="text-sm font-medium text-white tracking-wide">
-                                    In crisis? Call or text {crisisInfo.phone} ({crisisInfo.countryName})
+                                    {t('crisis.stickyBanner.desktop_text', { phone: crisisInfo.phone, country: crisisInfo.countryName })}
                                 </span>
                             </div>
 
@@ -75,13 +77,13 @@ export const CrisisStickyBanner: React.FC = () => {
                                     href={telHref}
                                     className="text-sm font-semibold text-crisis-red hover:text-red-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-crisis-red focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded px-2 py-1"
                                 >
-                                    Call Now
+                                    {t('crisis.common.call_now')}
                                 </a>
                                 <button
                                     type="button"
                                     onClick={() => setIsDismissed(true)}
                                     className="w-11 h-11 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-                                    aria-label="Dismiss crisis banner"
+                                    aria-label={t('crisis.stickyBanner.dismiss_aria')}
                                 >
                                     <X className="w-3 h-3 text-text-secondary" />
                                 </button>

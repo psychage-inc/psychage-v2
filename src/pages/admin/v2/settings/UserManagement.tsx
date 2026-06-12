@@ -11,30 +11,41 @@ import DataTable from '@/components/admin/DataTable';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
 import ConfirmDialog from '@/components/admin/ConfirmDialog';
 
+// admin_list_roles() joins auth.users, so each row carries the email.
+type AdminRoleListRow = AdminRoleRecord & { email: string | null };
+
+// admin_roles mutations run through SECURITY DEFINER RPCs; their RAISE
+// messages (e.g. the last-super_admin refusal) arrive as a PostgrestError.
+const rpcErrorMessage = (err: unknown): string => {
+  if (err && typeof err === 'object' && 'message' in err) {
+    return String((err as { message: unknown }).message);
+  }
+  return String(err);
+};
+
 const AdminUserManagementV2: React.FC = () => {
-  const { adminUser } = useAdminAuth(['super_admin']);
+  // Any admin may view the role list (read gate is inside admin_list_roles);
+  // mutation affordances below are gated on isSuperAdmin.
+  const { adminUser } = useAdminAuth();
   const queryClient = useQueryClient();
   const [inviteEmail, setInviteEmail] = useState('');
   const [inviteRole, setInviteRole] = useState<AdminRole>('viewer');
   const [showInvite, setShowInvite] = useState(false);
-  const [removeTarget, setRemoveTarget] = useState<AdminRoleRecord | null>(null);
-  const [roleChangeTarget, setRoleChangeTarget] = useState<{ record: AdminRoleRecord; newRole: AdminRole } | null>(null);
+  const [removeTarget, setRemoveTarget] = useState<AdminRoleListRow | null>(null);
+  const [roleChangeTarget, setRoleChangeTarget] = useState<{ record: AdminRoleListRow; newRole: AdminRole } | null>(null);
 
   const { data: adminUsers, isLoading } = useQuery({
     queryKey: ['admin', 'admin-users'],
     queryFn: async () => {
-      const { data, error } = await supabase
-        .from('admin_roles')
-        .select('*')
-        .order('created_at', { ascending: true });
+      const { data, error } = await supabase.rpc('admin_list_roles');
       if (error) throw error;
-      return (data || []) as AdminRoleRecord[];
+      return (data || []) as AdminRoleListRow[];
     },
   });
 
   const changeRoleMutation = useMutation({
-    mutationFn: async ({ id, newRole, previousRole }: { id: string; newRole: AdminRole; previousRole: AdminRole }) => {
-      const { error } = await supabase.from('admin_roles').update({ role: newRole }).eq('id', id);
+    mutationFn: async ({ userId, id, newRole, previousRole }: { userId: string; id: string; newRole: AdminRole; previousRole: AdminRole }) => {
+      const { error } = await supabase.rpc('admin_upsert_role', { target_user_id: userId, new_role: newRole });
       if (error) throw error;
       await logAdminAction({
         action: 'update',
@@ -51,8 +62,8 @@ const AdminUserManagementV2: React.FC = () => {
   });
 
   const removeMutation = useMutation({
-    mutationFn: async (id: string) => {
-      const { error } = await supabase.from('admin_roles').delete().eq('id', id);
+    mutationFn: async ({ userId, id }: { userId: string; id: string }) => {
+      const { error } = await supabase.rpc('admin_remove_role', { target_user_id: userId });
       if (error) throw error;
       await logAdminAction({ action: 'delete', resourceType: 'admin_role', resourceId: id });
     },
@@ -64,16 +75,12 @@ const AdminUserManagementV2: React.FC = () => {
 
   const inviteMutation = useMutation({
     mutationFn: async () => {
-      // In a real implementation, this would use Supabase Auth admin invite
-      // For now, we create the role entry (the user must already exist)
+      // The user must already exist; resolve their id from the admin-gated
+      // get_user_by_email RPC, then grant the role via admin_upsert_role.
       const { data: users } = await supabase.rpc('get_user_by_email', { email_input: inviteEmail });
       if (!users || users.length === 0) throw new Error('User not found. They must sign up first.');
       const userId = users[0].id;
-      const { error } = await supabase.from('admin_roles').insert({
-        user_id: userId,
-        role: inviteRole,
-        granted_by: adminUser?.id,
-      });
+      const { error } = await supabase.rpc('admin_upsert_role', { target_user_id: userId, new_role: inviteRole });
       if (error) throw error;
       await logAdminAction({ action: 'create', resourceType: 'admin_role', newValue: { email: inviteEmail, role: inviteRole } });
     },
@@ -85,13 +92,17 @@ const AdminUserManagementV2: React.FC = () => {
   });
 
   const isSuperAdmin = adminUser?.role === 'super_admin';
+  const mutationError = changeRoleMutation.error ?? removeMutation.error;
 
-  const columns: ColumnDef<AdminRoleRecord, unknown>[] = [
+  const columns: ColumnDef<AdminRoleListRow, unknown>[] = [
     {
-      accessorKey: 'user_id',
-      header: 'User ID',
+      accessorKey: 'email',
+      header: 'User',
       cell: ({ row }) => (
-        <code className="text-xs font-mono text-text-secondary">{row.original.user_id.slice(0, 8)}...</code>
+        <div className="flex flex-col">
+          <span className="text-sm text-text-primary">{row.original.email ?? '—'}</span>
+          <code className="text-xs font-mono text-text-tertiary">{row.original.user_id.slice(0, 8)}...</code>
+        </div>
       ),
     },
     {
@@ -167,6 +178,12 @@ const AdminUserManagementV2: React.FC = () => {
         </div>
       )}
 
+      {mutationError && (
+        <div className="mb-4 px-4 py-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-sm text-red-700 dark:text-red-400">
+          {rpcErrorMessage(mutationError)}
+        </div>
+      )}
+
       <DataTable
         columns={columns}
         data={adminUsers || []}
@@ -204,7 +221,7 @@ const AdminUserManagementV2: React.FC = () => {
                 </select>
               </div>
               {inviteMutation.isError && (
-                <p className="text-sm text-red-500">{String(inviteMutation.error)}</p>
+                <p className="text-sm text-red-500">{rpcErrorMessage(inviteMutation.error)}</p>
               )}
               <div className="flex gap-2">
                 <button
@@ -233,7 +250,7 @@ const AdminUserManagementV2: React.FC = () => {
         description="Remove this user's admin access? They will no longer be able to access the admin panel."
         confirmLabel="Remove"
         destructive
-        onConfirm={() => removeTarget && removeMutation.mutate(removeTarget.id)}
+        onConfirm={() => removeTarget && removeMutation.mutate({ userId: removeTarget.user_id, id: removeTarget.id })}
       />
 
       <ConfirmDialog
@@ -258,6 +275,7 @@ const AdminUserManagementV2: React.FC = () => {
         onConfirm={() =>
           roleChangeTarget &&
           changeRoleMutation.mutate({
+            userId: roleChangeTarget.record.user_id,
             id: roleChangeTarget.record.id,
             newRole: roleChangeTarget.newRole,
             previousRole: roleChangeTarget.record.role,

@@ -72,7 +72,7 @@ The admin auth chain is: **LoginPage (variant=admin)** → `signInWithPassword` 
 | `/safety` , `/safety/keywords` | v2/safety/{SafetyDashboard,CrisisKeywords} | **Working** — keyword CRUD + test panel |
 | `/safety/conversations` | v2/safety/ConversationReview | **Stub-only** — static empty state, no data (P2-02) |
 | `/settings`, `/settings/audit-log` | v2/settings/{Settings,AuditLog} | **Working** |
-| `/settings/users` | v2/settings/UserManagement | **Partial** — role CRUD works; **invite is Broken** (P1-01) |
+| `/settings/users` | v2/settings/UserManagement | **Working (list/grant/revoke)** — *the original "role CRUD works" claim was wrong*: `admin_roles_modify` is `USING(false)`, so the page's direct `.from('admin_roles')` writes all errored. As of `20260612000001` the page routes through SECURITY DEFINER RPCs (`admin_list_roles` / `admin_upsert_role` / `admin_remove_role`); list = any-admin, mutations = super_admin-only, last-super_admin demote/remove refused. **Invite** still depends on `get_user_by_email` (see P1-01). |
 | `*` | → `/dashboard` | Working (redirect) |
 
 ---
@@ -102,6 +102,7 @@ The admin auth chain is: **LoginPage (variant=admin)** → `signInWithPassword` 
 - **Impact:** The only way to add a new admin from the UI is broken at runtime. Admins can only be created via the `create-demo-admin.ts`/`migrate-admin-roles.ts` scripts or raw SQL.
 - **Proposed fix:** Add the `get_user_by_email(email_input text)` SECURITY DEFINER RPC (service-role-guarded) or move invite to an Edge Function using `auth.admin`.
 - **Effort:** M
+- **Update (2026-06-12):** The role-grant half of invite now goes through `admin_upsert_role` (migration `20260612000001`), so invite no longer writes `admin_roles` directly. The email→user_id lookup still calls `get_user_by_email`, which remains **absent from committed migrations** — `grep get_user_by_email supabase/migrations` is still empty. Whether it exists in the live DB (applied out-of-band) is unverified in-repo and must be confirmed against prod; until it is in a committed migration, the invite lookup is not reproducible from `supabase db reset`/shadow.
 
 ### P2-01 — JWT staleness after role change (no forced refresh)
 - **Severity:** P2 · **Category:** auth · **Type:** `[CODE]`

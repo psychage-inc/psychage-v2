@@ -81,8 +81,6 @@ export default {
                 },
                 relevance: {
                     high: '#1A9B8C',
-                    moderate: '#6366F1',
-                    explore: '#8B5CF6',
                 }
             },
             fontFamily: {

@@ -7,10 +7,13 @@ interface RelevanceDotsProps {
     className?: string;
 }
 
-// Map levels to visual configurations based on prompt specs
-// ●●●○ Higher relevance — --relevance-high (teal)
-// ●●○○ Moderate relevance — --relevance-moderate (indigo)
-// ●○○○ Worth exploring — --relevance-explore (purple)
+// Map levels to visual configurations based on prompt specs.
+// Locked palette: teal for the highest level, descending stone greys below
+// (darker stone = more relevant, so the scale still reads as a gradient).
+// ●●●○ Higher relevance — relevance-high (teal #1A9B8C)
+// ●●○○ Moderate relevance — stone-700
+// ●○○○ Worth exploring — stone-600
+// ●○○○ Worth exploring — stone-500
 
 const RELEVANCE_CONFIG = {
     high: {
@@ -23,22 +26,22 @@ const RELEVANCE_CONFIG = {
     moderate: {
         filledDots: 2,
         totalDots: 4,
-        colorClass: 'text-relevance-moderate',
-        bgColorClass: 'bg-relevance-moderate',
+        colorClass: 'text-stone-700',
+        bgColorClass: 'bg-stone-700',
         label: 'Moderate relevance'
     },
     low: {
         filledDots: 1,
         totalDots: 4,
-        colorClass: 'text-relevance-explore',
-        bgColorClass: 'bg-relevance-explore',
+        colorClass: 'text-stone-600',
+        bgColorClass: 'bg-stone-600',
         label: 'Worth exploring'
     },
     minimal: {
         filledDots: 1,
         totalDots: 4,
-        colorClass: 'text-amber-500',
-        bgColorClass: 'bg-amber-500',
+        colorClass: 'text-stone-500',
+        bgColorClass: 'bg-stone-500',
         label: 'Worth exploring'
     }
 };

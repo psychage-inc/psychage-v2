@@ -54,7 +54,7 @@ const TOOL_REGISTRY: Record<
     description: 'Track medications, doses, and adherence',
   },
   mindmate: {
-    title: 'MindMate AI',
+    title: 'Psychage AI',
     path: '/tools/mindmate',
     iconName: 'BrainCircuit',
     color: 'teal',

@@ -58,7 +58,7 @@ export default function ChatMain({
             <Menu size={20} />
           </button>
           <span className="text-sm font-semibold text-slate-700 dark:text-neutral-300">
-            Psyche AI
+            Psychage AI
           </span>
           <button
             onClick={onNewChat}

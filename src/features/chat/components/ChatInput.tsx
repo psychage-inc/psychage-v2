@@ -99,7 +99,7 @@ export default function ChatInput({ onSend, onStop, isStreaming, onCrisisClick }
 
         {/* Disclaimer */}
         <p className="text-xs text-center text-slate-400 dark:text-neutral-500 mt-2 mb-1">
-          Psyche AI provides educational information only — not a diagnosis or substitute for professional care.{' '}
+          Psychage AI provides educational information only — not a diagnosis or substitute for professional care.{' '}
           {onCrisisClick && (
             <button
               onClick={onCrisisClick}

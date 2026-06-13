@@ -216,7 +216,7 @@ export const navigationConfig: NavigationConfig = {
                         },
                         {
                             id: 'mindmate',
-                            label: 'MindMate AI',
+                            label: 'Psychage AI',
                             description: 'AI mental health companion',
                             href: '/tools/mindmate',
                             icon: 'brain',
@@ -253,7 +253,7 @@ export const navigationConfig: NavigationConfig = {
                     href: '/tools/symptom-navigator'
                 },
                 {
-                    label: 'MindMate AI',
+                    label: 'Psychage AI',
                     href: '/tools/mindmate',
                     requiredFeatureFlag: 'VITE_ENABLE_AI_CHAT'
                 },

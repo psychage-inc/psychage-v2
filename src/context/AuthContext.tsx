@@ -5,6 +5,7 @@ import { AuthContext, AuthState, AuthContextType } from './AuthContextDefinition
 import { supabase } from '../lib/supabaseClient';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
 import { logAuthEvent, classifyAuthError } from '../lib/auth/authTelemetry';
+import { getAdminTier, isAdminRole } from '../lib/adminRole';
 
 // AUTH-010: signup extraMetadata is restricted to a known allowlist.
 // Anything outside this set is dropped (with a console.warn) before the
@@ -34,13 +35,20 @@ const ALLOWED_EXTRA_KEYS = [
 //
 // Note on the 'admin' branch: post-AUTH-006 cleanup, profiles.role is
 // constrained to 'patient' | 'provider'. Admin recognition flows from
-// app_metadata.role, populated by the B-3 sync trigger from admin_roles.
+// app_metadata.role, populated by the B-3 sync trigger from admin_roles —
+// which writes the GRANULAR role (super_admin | clinical_admin | viewer).
+// src/lib/adminRole.ts is the single decision point: isAdminRole recognizes
+// those values (plus the legacy coarse 'admin') as admin, `role` is coarsened
+// to 'admin' for binary gating, and getAdminTier preserves the granular tier
+// on `adminRole`.
 function mapSupabaseUser(supabaseUser: SupabaseUser | null) {
   if (!supabaseUser) return null;
 
   const appRole = (supabaseUser.app_metadata as { role?: unknown } | undefined)?.role;
-  const role: 'patient' | 'provider' | 'admin' =
-    appRole === 'admin' || appRole === 'provider' || appRole === 'patient'
+  const adminTier = getAdminTier(appRole);
+  const role: 'patient' | 'provider' | 'admin' = isAdminRole(appRole)
+    ? 'admin'
+    : appRole === 'provider' || appRole === 'patient'
       ? appRole
       : 'patient';
 
@@ -48,6 +56,7 @@ function mapSupabaseUser(supabaseUser: SupabaseUser | null) {
     id: supabaseUser.id,
     email: supabaseUser.email || '',
     role,
+    adminRole: adminTier,
     display_name: supabaseUser.user_metadata?.display_name || supabaseUser.user_metadata?.full_name || '',
     avatar_url: supabaseUser.user_metadata?.avatar_url || '',
   };
@@ -58,6 +67,7 @@ function usersEqual(a: ReturnType<typeof mapSupabaseUser>, b: ReturnType<typeof 
   if (a === b) return true;
   if (!a || !b) return false;
   return a.id === b.id && a.email === b.email && a.role === b.role
+    && a.adminRole === b.adminRole
     && a.display_name === b.display_name && a.avatar_url === b.avatar_url;
 }
 
@@ -140,14 +150,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const login = useCallback(async (email: string, password: string) => {
     try {
       const { error } = await supabase.auth.signInWithPassword({
-        email,
+        email: email.trim().toLowerCase(),
         password,
       });
 
       if (error) {
         const outcome = classifyAuthError(error);
-        logAuthEvent('login', outcome, { code: (error as { code?: string }).code });
-        return { success: false, error: error.message };
+        const code = (error as { code?: string }).code;
+        logAuthEvent('login', outcome, { code });
+        return { success: false, error: error.message, code };
       }
 
       logAuthEvent('login', 'success');
@@ -181,9 +192,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
 
       const { data, error } = await supabase.auth.signUp({
-        email,
+        email: email.trim().toLowerCase(),
         password,
         options: {
+          // Confirmation links land on the auth-callback route, which
+          // exchanges the session. Origin-relative so it works across
+          // psychage.com, *.vercel.app, and localhost (each origin must
+          // be in the Supabase Redirect-URLs allowlist).
+          emailRedirectTo: `${window.location.origin}/auth/callback`,
           data: {
             display_name: displayName,
             full_name: displayName,
@@ -196,17 +212,37 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         },
       });
 
+      // Branch on the real signUp outcome — a returned user is NOT proof of
+      // success. Order matters.
       if (error) {
         const outcome = classifyAuthError(error);
-        logAuthEvent('signup', outcome, { code: (error as { code?: string }).code });
-        return { success: false, error: error.message };
+        const code = (error as { code?: string }).code;
+        logAuthEvent('signup', outcome, { code });
+        return { success: false, error: error.message, code };
       }
 
+      // Already-registered obfuscation: when Confirm-email is ON and the
+      // email already exists, GoTrue returns a fake user with an EMPTY
+      // identities array, no session, no error (anti-enumeration). This must
+      // never be reported as "account created".
+      const identities = data.user?.identities;
+      if (data.user && Array.isArray(identities) && identities.length === 0) {
+        logAuthEvent('signup', 'user_error', { reason: 'already_registered' });
+        return { success: false, status: 'already_registered' as const };
+      }
+
+      // Session issued → Confirm-email is OFF and this is a new account; the
+      // user is already logged in (onAuthStateChange propagates state).
+      if (data.session) {
+        logAuthEvent('signup', 'success', { status: 'active' });
+        return { success: true, status: 'active' as const };
+      }
+
+      // User, no session, non-empty identities → genuinely new account that
+      // must confirm its email before signing in (Confirm-email ON).
       if (data.user) {
-        // Supabase may require email confirmation before allowing sign in
-        // For now, we consider signup successful
-        logAuthEvent('signup', 'success');
-        return { success: true };
+        logAuthEvent('signup', 'success', { status: 'confirm_email' });
+        return { success: true, status: 'confirm_email' as const };
       }
 
       logAuthEvent('signup', 'platform_error', { reason: 'no_user_returned' });
@@ -260,7 +296,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const requestPasswordReset = useCallback(async (email: string, captchaToken?: string) => {
     try {
-      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      const { error } = await supabase.auth.resetPasswordForEmail(email.trim().toLowerCase(), {
         redirectTo: `${window.location.origin}/update-password`,
         // AUTH-029: forward Turnstile token. Supabase enforces only
         // when Captcha Protection is enabled in dashboard settings.
@@ -269,8 +305,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
       if (error) {
         const outcome = classifyAuthError(error);
-        logAuthEvent('resetPassword', outcome, { code: (error as { code?: string }).code });
-        return { success: false, error: error.message };
+        const code = (error as { code?: string }).code;
+        logAuthEvent('resetPassword', outcome, { code });
+        return { success: false, error: error.message, code };
       }
 
       logAuthEvent('resetPassword', 'success');

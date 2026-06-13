@@ -15,6 +15,7 @@ import { adminUrl, mainUrl } from '@/lib/urls';
 import { safeRedirectPath } from '@/lib/auth/validateRedirect';
 import { useAuthErrorFocus } from '@/lib/auth/useAuthErrorFocus';
 import { mapSupabaseAuthError } from '@/lib/auth/supabaseErrorMessages';
+import { isAdminRole } from '@/lib/adminRole';
 import SEO from '@/components/SEO';
 import { useTranslation } from 'react-i18next';
 
@@ -163,7 +164,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                 const { data: { user: authUser } } = await supabase.auth.getUser();
                 const role = (authUser?.app_metadata as { role?: string } | undefined)?.role;
 
-                if (role === 'admin') {
+                if (isAdminRole(role)) {
                     // Try to check onboarding status (fail-open if column doesn't exist)
                     let needsOnboarding = false;
                     try {
@@ -232,7 +233,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                 if (import.meta.env.DEV) {
                     console.warn('[Auth Debug] Supabase login error:', errorMessage);
                 }
-                const key = mapSupabaseAuthError(new Error(errorMessage));
+                const key = mapSupabaseAuthError({ code: result.code, message: errorMessage });
                 setError(t(key));
 
                 // AUTH-034: bump per-email failure count. Hit the hard

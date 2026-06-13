@@ -87,7 +87,12 @@ const SignUpPage = () => {
                 captchaToken,
             );
 
-            if (result.success) {
+            if (result.status === 'already_registered') {
+                // Email already exists (GoTrue empty-identities obfuscation).
+                // Never report success — point the user at login / reset.
+                setError(t('auth.errors.userAlreadyExists'));
+                resetCaptcha();
+            } else if (result.success) {
                 // Log consents to the audit trail
                 await consentService.logBulkConsent([
                     { type: 'terms_of_service', granted: true },
@@ -97,19 +102,24 @@ const SignUpPage = () => {
                     { type: 'newsletter', granted: consent.newsletterOptIn },
                 ]);
 
-                navigate('/login', {
-                    state: {
-                        message: `Account created successfully! Please log in to continue.`,
-                        email: formData.email,
-                        userType,
-                    }
-                });
+                if (result.status === 'confirm_email') {
+                    navigate('/login', {
+                        state: {
+                            message: t('auth.signup.confirmEmailMessage'),
+                            email: formData.email,
+                            userType,
+                        }
+                    });
+                } else {
+                    // status === 'active' — session issued, already logged in.
+                    navigate('/dashboard', { replace: true });
+                }
             } else {
-                // AUTH-019: route signup error through the central mapper.
-                // user_already_exists IS surfaced to the user (signup
-                // expects this disclosure — they need to know).
+                // AUTH-019: route signup error through the central mapper
+                // (code-first). user_already_exists IS surfaced to the user
+                // (signup expects this disclosure — they need to know).
                 const errMsg = result.error || 'Signup failed';
-                const key = mapSupabaseAuthError(new Error(errMsg));
+                const key = mapSupabaseAuthError({ code: result.code, message: errMsg });
                 setError(t(key));
                 resetCaptcha();
             }

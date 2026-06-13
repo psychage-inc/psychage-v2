@@ -537,7 +537,19 @@
             "verifying": "Please wait while we verify your credentials.",
             "errorTitle": "Authentication Error",
             "errorRedirecting": "Redirecting to login...",
-            "errorGeneric": "Failed to complete authentication"
+            "errorGeneric": "Failed to complete authentication",
+            "confirmedTitle": "Email confirmed",
+            "confirmedBody": "You're all set. Taking you to your dashboard…"
+        },
+        "checkEmail": {
+            "title": "Check your email",
+            "bodyLead": "We sent a confirmation link to",
+            "bodyTail": "Tap it to finish setting up your account.",
+            "bodyGeneric": "We sent you a confirmation link. Tap it to finish setting up your account.",
+            "resendPrompt": "Didn't get it?",
+            "resendSuccess": "Confirmation email sent. Check your inbox.",
+            "resendError": "We couldn't resend the email. Please try again in a moment.",
+            "backToSignup": "Back to sign up"
         },
         "errors": {
             "invalidCredentials": "Email or password doesn't match. Try again, or reset your password.",

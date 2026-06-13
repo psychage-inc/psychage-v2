@@ -86,8 +86,8 @@ html.light,
 :root.light,
 :root:not(.dark) {
   /* Colors - Light Premium Palette */
-  --color-background: #F9F7F3;
-  --color-surface: #F9F7F3;
+  --color-background: #FBF9F4;
+  --color-surface: #FBF9F4;
   --color-surface-hover: #f5f5f4;
   --color-surface-active: #e7e5e4;
 
@@ -134,7 +134,7 @@ html.light,
   --color-primary-bg: #E6F5F3;
 
   /* Homepage redesign */
-  --color-homepage-bg: #F9F7F3;
+  --color-homepage-bg: #FBF9F4;
   --color-homepage-content: #F5F3EF;
   --color-homepage-closing: #F0F7F6;
   --color-homepage-provider: #0D5A52;
@@ -144,6 +144,7 @@ html.light,
 html.dark,
 :root.dark {
   /* Colors - Dark Premium Palette (true neutral, zero blue tint) */
+  /* Navy dark canvas intentionally NOT introduced here — kept neutral; deferred to S-1 dark-mode pass. */
   --color-background: #0F0F0F;
   /* True Dark */
   --color-surface: #171717;

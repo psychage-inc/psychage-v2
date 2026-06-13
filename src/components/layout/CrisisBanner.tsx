@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, X, HeartHandshake } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { resolveCountry, getResourcesForCountry } from '@/lib/crisis';
 
@@ -9,6 +9,17 @@ const SESSION_KEY = 'psychage_crisis_banner_dismissed';
 
 const CrisisBanner: React.FC = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+  // On the auth screens the form is a full-viewport centered card; the default
+  // fixed bottom-right overlay covers it. There, render the same card in-flow
+  // within the footer instead. Everywhere else the floating overlay is unchanged.
+  const isAuthRoute =
+    location.pathname === '/login' ||
+    location.pathname === '/signup' ||
+    location.pathname.startsWith('/auth/');
+  const positionClass = isAuthRoute
+    ? 'relative z-10 mx-auto my-4 max-w-sm w-[calc(100%-2rem)]'
+    : 'fixed bottom-6 right-6 z-[100] max-w-sm w-[calc(100%-3rem)] sm:w-auto';
   const [dismissed, setDismissed] = useState(() => {
     try {
       return sessionStorage.getItem(SESSION_KEY) === '1';
@@ -47,7 +58,7 @@ const CrisisBanner: React.FC = () => {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 50, scale: 0.95 }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
-          className="fixed bottom-6 right-6 z-[100] max-w-sm w-[calc(100%-3rem)] sm:w-auto"
+          className={positionClass}
         >
           <div className="bg-red-600 dark:bg-red-700 rounded-2xl shadow-2xl shadow-red-900/30 overflow-hidden">
             {/* Dismiss button */}

@@ -11,6 +11,10 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
+
+// ESM-compatible __dirname (repo is "type": "module").
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const PROHIBITED_PHRASES = [
   'you have',
@@ -45,22 +49,96 @@ const PROHIBITED_PHRASES = [
   'confirmed diagnosis',
 ];
 
-// Directories to scan
+// Directories to scan.
+// Covers user-facing interactive/UI surfaces (SR-3 prohibited-diagnostic-language
+// gate). src/lib is a superset of the original src/lib/navigator. The src/data
+// article corpus is deliberately excluded: it is long-form educational prose
+// (e.g. "diagnosed with cancer" in narrative case studies), not result/assessment
+// surfaces, and scanning it floods the gate with false positives.
 const SCAN_DIRS = [
-  'src/lib/navigator',
+  'src/components',
+  'src/features',
+  'src/pages',
+  'src/lib',
   'supabase/migrations',
 ];
 
 // File extensions to scan
 const SCAN_EXTENSIONS = ['.ts', '.tsx', '.js', '.jsx', '.sql'];
 
+/**
+ * Compile each prohibited phrase into a word-boundary-aware regex so that a
+ * phrase only matches as a whole word, not as a substring of a larger word.
+ * Without this, "certainty" matches "uncertainty", "you have" matches
+ * "you haven't", and "prescribe" matches "prescribed" — all false positives.
+ * Boundaries are only enforced on the alphanumeric edges of the phrase, so
+ * phrases ending in punctuation (e.g. "diagnosis:") still match correctly.
+ */
+function escapeRegex(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function compilePhrase(phrase: string): RegExp {
+  const body = escapeRegex(phrase);
+  const lead = /[A-Za-z0-9]/.test(phrase[0]) ? '(?<![A-Za-z0-9])' : '';
+  const tail = /[A-Za-z0-9]/.test(phrase[phrase.length - 1]) ? '(?![A-Za-z0-9])' : '';
+  return new RegExp(`${lead}${body}${tail}`, 'i');
+}
+
+const COMPILED_PHRASES: Array<{ phrase: string; regex: RegExp }> = PROHIBITED_PHRASES.map(
+  (phrase) => ({ phrase, regex: compilePhrase(phrase) })
+);
+
+// Documented false-positive allowlist. Each entry is an EXACT (case-insensitive)
+// substring of a known-benign line. This does NOT weaken PROHIBITED_PHRASES — the
+// policy list is untouched; these suppress specific confirmed false positives where
+// a prohibited phrase appears in benign prose/data the matcher cannot semantically
+// distinguish from a real diagnostic claim. Exact-string matching keeps it safe: if
+// the surrounding copy ever changes (e.g. to an actual "you have [condition]" claim),
+// the substring no longer matches and the gate flags it again.
+const FALSE_POSITIVE_ALLOWLIST: Array<{ match: string; reason: string }> = [
+  // User-facing UI: benign declarative "you have" / a feature label
+  { match: 'prescription refill', reason: 'messaging category label' },
+  { match: 'comfort you have access to', reason: 'gratitude journal prompt' },
+  { match: 'you have a solid foundation', reason: 'Clarity Score encouragement copy' },
+  { match: 'you have strengths in', reason: 'Relationship Health Check result copy' },
+  { match: 'you have meaningful connections', reason: 'Relationship Health Check result copy' },
+  { match: 'you have unsaved changes', reason: 'admin discard-changes confirm dialog' },
+  { match: 'you have 30 days to cancel', reason: 'account-deletion toast' },
+  // Navigator clinical seed data
+  { match: 'need for certainty', reason: 'OCD symptom description (clinical noun, not a tool claim)' },
+  { match: 'more items than you have space for', reason: 'hoarding screening question' },
+  // Provider taxonomy reference data
+  { match: 'can prescribe medication', reason: 'psychiatrist taxonomy description (factual)' },
+  // Article-metadata seeds: editorial titles, slugs, keyword tags, descriptions
+  { match: 'after a real diagnosis:', reason: 'editorial article title' },
+  { match: 'navigating a mental health diagnosis', reason: 'editorial article title' },
+  { match: 'identity after diagnosis', reason: 'editorial article title' },
+  { match: 'prescription medications', reason: 'article keyword tag' },
+  { match: 'prescription medication misuse', reason: 'article description (academic)' },
+  { match: 'prescription management', reason: 'article keyword tag' },
+  { match: 'prescription apps', reason: 'article keyword tag' },
+  { match: 'prescription digital therapeutics', reason: 'article description (academic)' },
+  { match: 'prescription drug misuse', reason: 'article description (academic)' },
+  { match: 'guaranteed meaning', reason: 'editorial article title (Camus)' },
+  { match: 'guaranteed-meaning', reason: 'editorial article slug (Camus)' },
+];
+
 // Patterns to ignore (these are the prohibited list definition itself, test files, etc.)
+// The SR-3 *enforcement* twins are also ignored: they define/check the same phrase
+// list at runtime (or map them to recommended phrasing), so they enumerate the
+// prohibited terms by design — exactly like validate-language.ts itself.
 const IGNORE_PATTERNS = [
   'validate-language.ts',
   'PROHIBITED_PHRASES',
   '.test.ts',
   '.test.tsx',
   '.spec.ts',
+  // SR-3 enforcement / language-policy definitions
+  'navigator/utils.ts', // runtime prohibited-phrase validator + disclaimer copy
+  'ai/safety.ts', // AI safety classifier phrase definitions
+  'ai/llm.ts', // AI system-prompt safety language
+  'article-framework/constants.ts', // sensitivity map whose suggestions are the recommended phrasing
 ];
 
 interface Violation {
@@ -90,10 +168,36 @@ function scanFile(filePath: string): Violation[] {
       continue;
     }
 
-    for (const phrase of PROHIBITED_PHRASES) {
-      if (lineLower.includes(phrase.toLowerCase())) {
+    // Skip SQL line comments (e.g. migration policy notes describing the gate).
+    if (line.trim().startsWith('--')) {
+      continue;
+    }
+
+    // Skip academic citation-title rows in SQL seeds: these insert peer-reviewed /
+    // government source titles (e.g. "Differential diagnosis: ..."), which are
+    // scholarly references, not user-facing diagnostic claims.
+    if (/'(peer_reviewed|government|professional_org|textbook|clinical_guideline|reference)'/.test(lineLower)) {
+      continue;
+    }
+
+    for (const { phrase, regex } of COMPILED_PHRASES) {
+      const match = regex.exec(line);
+      if (match) {
+        // Interrogative screening questions ("Do you have...?", "Did you have...?")
+        // are the correct, non-diagnostic way to ask about symptoms — not the
+        // declarative "You have [condition]" claim the policy targets.
+        const before = line.slice(0, match.index).toLowerCase();
+        if (phrase.toLowerCase().startsWith('you have') && /\b(do|did)\s+$/.test(before)) {
+          continue;
+        }
+
+        // Skip documented false positives.
+        if (FALSE_POSITIVE_ALLOWLIST.some((entry) => lineLower.includes(entry.match))) {
+          continue;
+        }
+
         // Check if it's inside a string literal (rough heuristic)
-        const inString = isInStringLiteral(line, lineLower.indexOf(phrase.toLowerCase()));
+        const inString = isInStringLiteral(line, match.index);
 
         if (inString) {
           violations.push({

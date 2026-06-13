@@ -7,6 +7,7 @@ import { CheckCircle2, Loader2 } from 'lucide-react';
 import { Display, Text } from '@/components/ui/Typography';
 import { useAuthErrorFocus } from '@/lib/auth/useAuthErrorFocus';
 import { mapSupabaseAuthError } from '@/lib/auth/supabaseErrorMessages';
+import { isAdminRole } from '@/lib/adminRole';
 import { useTranslation } from 'react-i18next';
 
 // How long the "Email confirmed" state stays on screen before the existing
@@ -63,8 +64,17 @@ const AuthCallback: React.FC = () => {
                     // email-confirmation callbacks.
                     const runRedirect = async () => {
                         if (isCancelled) return;
-                        // Determine where to redirect based on user metadata
-                        const userRole = data.session.user?.user_metadata?.role || 'patient';
+                        // Determine where to redirect. Role comes from app_metadata
+                        // (server-controlled) — NOT user_metadata, which is
+                        // user-writable and stripped of `role` by the AUTH-001
+                        // trigger. isAdminRole (src/lib/adminRole.ts) recognizes the
+                        // granular admin tiers; coarsen to 'admin' for routing.
+                        const appRole = (data.session.user?.app_metadata as { role?: unknown } | undefined)?.role;
+                        const userRole = isAdminRole(appRole)
+                            ? 'admin'
+                            : appRole === 'provider'
+                                ? 'provider'
+                                : 'patient';
                         const onAdminDomain = isAdminDomain();
 
                         if (userRole === 'provider') {

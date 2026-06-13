@@ -4,6 +4,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { GlobalLoading } from '../ui/Skeletons';
 import { adminUrl, mainUrl, isInAdminApp } from '@/lib/urls';
+import { isAdminRole } from '@/lib/adminRole';
 
 type UserRole = 'patient' | 'provider' | 'admin';
 
@@ -45,8 +46,10 @@ const RoleGuard: React.FC<RoleGuardProps> = ({ children, allowedRoles }) => {
 
     if (user && !allowedRoles.includes(user.role)) {
         // User is logged in but doesn't have the right role
-        // Redirect them to their appropriate dashboard (cross-domain if needed)
-        if (user.role === 'admin') {
+        // Redirect them to their appropriate dashboard (cross-domain if needed).
+        // Admin recognition goes through the single decision point (isAdminRole)
+        // rather than a bare 'admin' literal.
+        if (isAdminRole(user.role)) {
             if (onAdminDomain) {
                 return <Navigate to="/dashboard" replace />;
             }

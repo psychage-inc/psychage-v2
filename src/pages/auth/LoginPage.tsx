@@ -15,6 +15,7 @@ import { adminUrl, mainUrl } from '@/lib/urls';
 import { safeRedirectPath } from '@/lib/auth/validateRedirect';
 import { useAuthErrorFocus } from '@/lib/auth/useAuthErrorFocus';
 import { mapSupabaseAuthError } from '@/lib/auth/supabaseErrorMessages';
+import { isAdminRole } from '@/lib/adminRole';
 import SEO from '@/components/SEO';
 import { useTranslation } from 'react-i18next';
 
@@ -165,7 +166,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                 const { data: { user: authUser } } = await supabase.auth.getUser();
                 const role = (authUser?.app_metadata as { role?: string } | undefined)?.role;
 
-                if (role === 'admin') {
+                if (isAdminRole(role)) {
                     // Try to check onboarding status (fail-open if column doesn't exist)
                     let needsOnboarding = false;
                     try {
@@ -236,9 +237,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                 }
                 // AUTH-019: preserve the Supabase error code so the mapper's
                 // code-based branch runs (more reliable than substring matching).
-                const mappableError = new Error(errorMessage);
-                if (result.code) (mappableError as { code?: string }).code = result.code;
-                const key = mapSupabaseAuthError(mappableError);
+                const key = mapSupabaseAuthError({ code: result.code, message: errorMessage });
                 setError(t(key));
 
                 // AUTH-034: bump per-email failure count. Hit the hard

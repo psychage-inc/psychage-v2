@@ -8,6 +8,8 @@ import ConsentCheckboxes, { ConsentState, defaultConsentState, isConsentValid } 
 import { consentService } from '../../services/consentService';
 import { useTurnstile } from '../../lib/auth/useTurnstile';
 import { useAuthErrorFocus } from '../../lib/auth/useAuthErrorFocus';
+import { mapSupabaseAuthError } from '../../lib/auth/supabaseErrorMessages';
+import { useTranslation } from 'react-i18next';
 
 interface AuthModalProps {
     isOpen: boolean;
@@ -29,6 +31,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
     const [consent, setConsent] = useState<ConsentState>(defaultConsentState);
 
     const { login, signup, requestPasswordReset, signInWithGoogle, signInWithApple } = useAuth();
+    const { t } = useTranslation();
     // AUTH-029 carryover: gate signup on Turnstile token. The hook is a
     // no-op shape when VITE_TURNSTILE_SITE_KEY is unset (dev), returning
     // a non-null sentinel token so the button stays usable.
@@ -64,7 +67,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                     resetForm();
                     onClose();
                 } else {
-                    setError(result.error || 'Failed to sign in. Please check your credentials.');
+                    setError(t(mapSupabaseAuthError({ code: result.code, message: result.error || 'Login failed' })));
                 }
             } else if (view === 'signup') {
                 if (!isConsentValid(consent)) {
@@ -88,7 +91,12 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                     },
                     captchaToken,
                 );
-                if (result.success) {
+                if (result.status === 'already_registered') {
+                    // Email already exists (GoTrue empty-identities obfuscation).
+                    // Never report success — point the user at login.
+                    setError(t('auth.errors.userAlreadyExists'));
+                    resetCaptcha();
+                } else if (result.success) {
                     await consentService.logBulkConsent([
                         { type: 'terms_of_service', granted: true },
                         { type: 'privacy_policy', granted: true },
@@ -96,9 +104,15 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                         { type: 'age_verification', granted: consent.ageVerified },
                         { type: 'newsletter', granted: consent.newsletterOptIn },
                     ]);
-                    setSuccessMessage('Account created! Please check your email to verify your account.');
+                    if (result.status === 'confirm_email') {
+                        setSuccessMessage(t('auth.signup.confirmEmailMessage'));
+                    } else {
+                        // status === 'active' — session issued, already logged in.
+                        resetForm();
+                        onClose();
+                    }
                 } else {
-                    setError(result.error || 'Failed to create account. Please try again.');
+                    setError(t(mapSupabaseAuthError({ code: result.code, message: result.error || 'Signup failed' })));
                     resetCaptcha();
                 }
             } else if (view === 'forgot-password') {
@@ -106,7 +120,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                 if (result.success) {
                     setSuccessMessage('Password reset email sent! Check your inbox.');
                 } else {
-                    setError(result.error || 'Failed to send reset email. Please try again.');
+                    setError(t(mapSupabaseAuthError({ code: result.code, message: result.error || 'Failed to send reset email' })));
                 }
             }
         } catch {

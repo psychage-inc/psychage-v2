@@ -64,7 +64,7 @@ const CredentialsStep: React.FC<Props> = ({ formData, updateField, filters, filt
           id="license_state"
           value={formData.license_state}
           onChange={(e) => updateField('license_state', e.target.value)}
-          className="flex h-11 w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 transition-all duration-200"
+          className="flex h-11 w-full rounded-lg border border-border bg-surface px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 transition-all duration-200"
         >
           <option value="">Select state...</option>
           {US_STATES.map(st => (
@@ -88,7 +88,7 @@ const CredentialsStep: React.FC<Props> = ({ formData, updateField, filters, filt
           id="provider_type_id"
           value={formData.provider_type_id}
           onChange={(e) => updateField('provider_type_id', e.target.value)}
-          className="flex h-11 w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 transition-all duration-200"
+          className="flex h-11 w-full rounded-lg border border-border bg-surface px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 transition-all duration-200"
           required
         >
           <option value="">Select provider type...</option>

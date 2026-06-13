@@ -19,6 +19,14 @@ dist-ssr
 .env.production
 .env.local
 .env.*.local
+.env.e2e
+
+# E2E auth artifacts (live session tokens / test-account state)
+e2e/.auth/
+# E2E ad-hoc verification screenshots + throwaway probe scripts
+verify-shots/
+/diag-*.mjs
+/mindmate-probe.mjs
 
 # Editor directories and files
 .vscode/*

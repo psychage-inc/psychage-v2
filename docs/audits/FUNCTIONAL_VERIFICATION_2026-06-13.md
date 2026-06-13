@@ -58,3 +58,7 @@
 - The collection failure that blocked e2e was a **committed dependency skew** (`@vitest/browser-playwright` pulls `playwright@1.57.0` while `@playwright/test` resolves to `1.58.2`). Worked around by invoking the matched 1.58.2 CLI. The local `node_modules` is additionally polluted by uncommitted WIP (`vite@8`), so all verification ran in an **isolated git worktree off clean `origin/main`** to protect the user's workspace.
 - Navigator deep-flow, clarity authed save→delete, and mood persistence were **not driven to completion** (multi-step UIs vs. budget); render + engine/service layers are verified.
 - Cleanup script (`scripts/e2e-cleanup.mjs`) has a few table names that don't match prod schema (`assessment_results`, `sleep_entries`, `bookmarks`); irrelevant here (the account wrote 0 rows) — flagged for a follow-up correction.
+
+## Update — Hard Stop 1 resolved (same session)
+
+The `get_user_by_email` gap was subsequently closed: migration `20260613000001_admin_get_user_by_email_rpc.sql` was authored (mirroring `20260612000001`, `is_admin()` read-gate, case-insensitive, `RETURNS TABLE (id uuid)`), shadow-battery tested (resolves email→id; non-admin gate → 0 rows), **applied to prod**, and merged via **PR #16** (the `migration-drift` gate confirmed local == remote). The admin **"Add Admin" invite** flow now has every server-side dependency. Admin item 11 is therefore **fully restored at the DB layer** (load + role change/remove + invite); the only remaining check is a UI spot-check with a super_admin session.

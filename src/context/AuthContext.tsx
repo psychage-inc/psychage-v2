@@ -146,8 +146,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
       if (error) {
         const outcome = classifyAuthError(error);
-        logAuthEvent('login', outcome, { code: (error as { code?: string }).code });
-        return { success: false, error: error.message };
+        const code = (error as { code?: string }).code;
+        logAuthEvent('login', outcome, { code });
+        // AUTH-019: forward the Supabase error code so the page-level mapper
+        // can use its reliable code-based branch instead of substring matching.
+        return { success: false, error: error.message, code };
       }
 
       logAuthEvent('login', 'success');
@@ -198,8 +201,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
       if (error) {
         const outcome = classifyAuthError(error);
-        logAuthEvent('signup', outcome, { code: (error as { code?: string }).code });
-        return { success: false, error: error.message };
+        const code = (error as { code?: string }).code;
+        logAuthEvent('signup', outcome, { code });
+        // AUTH-019: forward the Supabase error code so the page-level mapper
+        // can use its reliable code-based branch instead of substring matching.
+        return { success: false, error: error.message, code };
       }
 
       if (data.user) {

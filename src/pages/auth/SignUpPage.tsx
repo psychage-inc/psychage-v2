@@ -97,11 +97,11 @@ const SignUpPage = () => {
                     { type: 'newsletter', granted: consent.newsletterOptIn },
                 ]);
 
-                navigate('/login', {
+                // Email confirmation is required (mailer_autoconfirm: false), so route to
+                // the dedicated "Check your email" screen instead of straight to login.
+                navigate('/auth/check-email', {
                     state: {
-                        message: `Account created successfully! Please log in to continue.`,
                         email: formData.email,
-                        userType,
                     }
                 });
             } else {
@@ -109,7 +109,11 @@ const SignUpPage = () => {
                 // user_already_exists IS surfaced to the user (signup
                 // expects this disclosure — they need to know).
                 const errMsg = result.error || 'Signup failed';
-                const key = mapSupabaseAuthError(new Error(errMsg));
+                // AUTH-019: preserve the Supabase error code so the mapper's
+                // code-based branch runs (more reliable than substring matching).
+                const mappableError = new Error(errMsg);
+                if (result.code) (mappableError as { code?: string }).code = result.code;
+                const key = mapSupabaseAuthError(mappableError);
                 setError(t(key));
                 resetCaptcha();
             }
@@ -215,7 +219,7 @@ const SignUpPage = () => {
                                         required
                                         autoComplete="name"
                                         autoCapitalize="words"
-                                        className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
+                                        className="pl-11 bg-white/5 border-border focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                         value={formData.displayName}
                                         onChange={handleChange}
                                     />
@@ -234,7 +238,7 @@ const SignUpPage = () => {
                                         inputMode="email"
                                         autoCapitalize="off"
                                         spellCheck={false}
-                                        className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
+                                        className="pl-11 bg-white/5 border-border focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                         value={formData.email}
                                         onChange={handleChange}
                                     />
@@ -283,7 +287,7 @@ const SignUpPage = () => {
                                         min={13}
                                         max={120}
                                         placeholder="Age"
-                                        className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
+                                        className="pl-11 bg-white/5 border-border focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                         value={formData.age}
                                         onChange={handleChange}
                                     />
@@ -318,9 +322,10 @@ const SignUpPage = () => {
                                 <Input
                                     id="password"
                                     type="password"
+                                    placeholder="Create a password"
                                     required
                                     autoComplete="new-password"
-                                    className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
+                                    className="pl-11 bg-white/5 border-border focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={formData.password}
                                     onChange={handleChange}
                                     onFocus={() => setPasswordFocused(true)}
@@ -366,9 +371,10 @@ const SignUpPage = () => {
                                 <Input
                                     id="confirmPassword"
                                     type="password"
+                                    placeholder="Re-enter password"
                                     required
                                     autoComplete="new-password"
-                                    className="pl-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
+                                    className="pl-11 bg-white/5 border-border focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={formData.confirmPassword}
                                     onChange={handleChange}
                                 />

@@ -78,6 +78,7 @@ const SitemapPage = React.lazy(() => import('./pages/SitemapPage'));
 // Auth Pages
 const LoginPage = React.lazy(() => import('./pages/auth/LoginPage'));
 const SignUpPage = React.lazy(() => import('./pages/auth/SignUpPage'));
+const CheckEmailPage = React.lazy(() => import('./pages/auth/CheckEmailPage'));
 const ResetPasswordPage = React.lazy(() => import('./pages/auth/ResetPasswordPage'));
 const UpdatePasswordPage = React.lazy(() => import('./pages/auth/UpdatePasswordPage'));
 const AuthCallback = React.lazy(() => import('./pages/auth/AuthCallback'));
@@ -295,6 +296,7 @@ const App: React.FC = () => {
                                             {/* Auth Routes */}
                                             <Route path="/login" element={<PageTransition><LoginPage /></PageTransition>} />
                                             <Route path="/signup" element={<PageTransition><SignUpPage /></PageTransition>} />
+                                            <Route path="/auth/check-email" element={<PageTransition><CheckEmailPage /></PageTransition>} />
                                             <Route path="/reset-password" element={<PageTransition><ResetPasswordPage /></PageTransition>} />
                                             <Route path="/update-password" element={<PageTransition><UpdatePasswordPage /></PageTransition>} />
                                             <Route path="/auth/callback" element={<AuthCallback />} />

@@ -38,7 +38,9 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
     const [searchParams] = useSearchParams();
     const [oauthLoading, setOauthLoading] = useState<'google' | 'apple' | null>(null);
     const [infoMessage, setInfoMessage] = useState<string | null>(null);
-    const [signupRole, setSignupRole] = useState<'patient' | 'provider' | null>(null);
+    // Retained for the post-signup redirect side-effect (setSignupRole); the value
+    // is no longer rendered (login role chip removed).
+    const [_signupRole, setSignupRole] = useState<'patient' | 'provider' | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const isDev = import.meta.env.DEV;
     const { t } = useTranslation();
@@ -232,7 +234,11 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                 if (import.meta.env.DEV) {
                     console.warn('[Auth Debug] Supabase login error:', errorMessage);
                 }
-                const key = mapSupabaseAuthError(new Error(errorMessage));
+                // AUTH-019: preserve the Supabase error code so the mapper's
+                // code-based branch runs (more reliable than substring matching).
+                const mappableError = new Error(errorMessage);
+                if (result.code) (mappableError as { code?: string }).code = result.code;
+                const key = mapSupabaseAuthError(mappableError);
                 setError(t(key));
 
                 // AUTH-034: bump per-email failure count. Hit the hard
@@ -330,15 +336,6 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                                 <CheckCircle2 className="h-4 w-4" />
                                 <AlertDescription className="text-white font-medium">{infoMessage}</AlertDescription>
                             </Alert>
-                        )}
-
-                        {signupRole && (
-                            <div className="flex items-center justify-center">
-                                <span className="inline-flex items-center gap-2 rounded-full bg-teal-50 dark:bg-teal-500/15 text-teal-700 dark:text-teal-300 px-3 py-1 text-xs font-medium border border-teal-200 dark:border-teal-500/30">
-                                    <span className="h-1.5 w-1.5 rounded-full bg-teal-500" />
-                                    Signing in as {signupRole === 'patient' ? 'Patient' : 'Provider'}
-                                </span>
-                            </div>
                         )}
 
                         {error && (

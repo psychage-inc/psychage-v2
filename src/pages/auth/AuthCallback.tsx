@@ -1,15 +1,24 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { supabase } from '@/lib/supabaseClient';
 import { adminUrl, mainUrl, isAdminDomain } from '@/lib/urls';
-import { Loader2 } from 'lucide-react';
+import { CheckCircle2, Loader2 } from 'lucide-react';
+import { Display, Text } from '@/components/ui/Typography';
 import { useAuthErrorFocus } from '@/lib/auth/useAuthErrorFocus';
 import { mapSupabaseAuthError } from '@/lib/auth/supabaseErrorMessages';
 import { useTranslation } from 'react-i18next';
 
+// How long the "Email confirmed" state stays on screen before the existing
+// role-based redirect fires. Only shown for email-confirmation callbacks.
+const CONFIRMED_DISPLAY_MS = 1800;
+
 const AuthCallback: React.FC = () => {
     const navigate = useNavigate();
     const [error, setError] = useState<string | null>(null);
+    // Slice 5: shown briefly when the callback came from an email-confirmation
+    // link (type=signup/email), before the normal role-based redirect runs.
+    const [confirmed, setConfirmed] = useState(false);
     const errorAlertRef = useAuthErrorFocus<HTMLDivElement>(error);
     const { t } = useTranslation();
     // AUTH-018: collect every timer id we schedule so the cleanup can
@@ -27,6 +36,14 @@ const AuthCallback: React.FC = () => {
 
         const handleCallback = async () => {
             try {
+                // Detect whether this callback is an email-confirmation link
+                // (type=signup/email/email_change) vs. an OAuth/login redirect,
+                // before getSession() runs. Supabase encodes `type` in the hash
+                // (implicit flow) or query string.
+                const hashParams = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+                const authType = hashParams.get('type') || new URLSearchParams(window.location.search).get('type');
+                const isEmailConfirmation = authType === 'signup' || authType === 'email' || authType === 'email_change';
+
                 // Get the session from the URL hash
                 const { data, error } = await supabase.auth.getSession();
 
@@ -41,11 +58,16 @@ const AuthCallback: React.FC = () => {
                 }
 
                 if (data.session) {
-                    // Determine where to redirect based on user metadata
-                    const userRole = data.session.user?.user_metadata?.role || 'patient';
-                    const onAdminDomain = isAdminDomain();
+                    // The actual role-based redirect. Runs immediately for normal
+                    // logins; deferred behind the "Email confirmed" state for
+                    // email-confirmation callbacks.
+                    const runRedirect = async () => {
+                        if (isCancelled) return;
+                        // Determine where to redirect based on user metadata
+                        const userRole = data.session.user?.user_metadata?.role || 'patient';
+                        const onAdminDomain = isAdminDomain();
 
-                    if (userRole === 'provider') {
+                        if (userRole === 'provider') {
                         if (onAdminDomain) {
                             window.location.href = mainUrl('/provider');
                         } else {
@@ -99,6 +121,18 @@ const AuthCallback: React.FC = () => {
                         } else {
                             navigate(needsPatientOnboarding ? '/onboarding' : '/dashboard', { replace: true });
                         }
+                        }
+                    };
+
+                    if (isEmailConfirmation) {
+                        // Email-confirmation link: surface a brief "Email confirmed"
+                        // state, then run the role-based redirect via the existing
+                        // timer mechanism (so unmount cleanup can cancel it).
+                        setConfirmed(true);
+                        const id = setTimeout(() => { void runRedirect(); }, CONFIRMED_DISPLAY_MS);
+                        timersRef.current.push(id);
+                    } else {
+                        await runRedirect();
                     }
                 } else {
                     // No session, redirect to login
@@ -133,6 +167,19 @@ const AuthCallback: React.FC = () => {
                         <h2 className="text-xl font-bold text-text-primary">Authentication Error</h2>
                         <p className="text-text-secondary">{error}</p>
                         <p className="text-sm text-text-tertiary">Redirecting to login...</p>
+                    </div>
+                ) : confirmed ? (
+                    <div className="space-y-4" aria-live="polite">
+                        <motion.div
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ duration: 0.4, ease: 'easeOut' }}
+                            className="w-16 h-16 mx-auto rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center border border-emerald-500/20"
+                        >
+                            <CheckCircle2 className="w-8 h-8" />
+                        </motion.div>
+                        <Display className="text-2xl">{t('auth.callback.confirmedTitle')}</Display>
+                        <Text className="text-text-secondary">{t('auth.callback.confirmedBody')}</Text>
                     </div>
                 ) : (
                     <div className="space-y-4" aria-live="polite">

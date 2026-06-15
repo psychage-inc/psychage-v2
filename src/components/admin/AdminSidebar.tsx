@@ -19,6 +19,7 @@ import {
   BarChart3,
   BookOpen,
   List,
+  Compass,
 } from 'lucide-react';
 
 interface SubItem {
@@ -52,6 +53,7 @@ const sidebarItems: SidebarItem[] = [
   },
   { icon: Users, label: 'Providers', path: adminPath('/providers') },
   { icon: Brain, label: 'Symptom Navigator', path: adminPath('/symptom-navigator') },
+  { icon: Compass, label: 'Toolkits', path: adminPath('/toolkits') },
   { icon: Shield, label: 'Safety', path: adminPath('/safety') },
   { icon: Settings, label: 'Settings', path: adminPath('/settings') },
 ];

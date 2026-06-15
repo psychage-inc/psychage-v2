@@ -42,6 +42,7 @@ const AdminArticleQualityMap = React.lazy(() => import('./pages/admin/v2/article
 const AdminArticleCitationReport = React.lazy(() => import('./pages/admin/v2/articles/ArticleCitationReport'));
 const AdminArticleQualityDashboard = React.lazy(() => import('./pages/admin/v2/articles/ArticleQualityDashboard'));
 const AdminOnboarding = React.lazy(() => import('./pages/admin/AdminOnboarding'));
+const AdminToolkitReview = React.lazy(() => import('./pages/admin/v2/toolkits/ToolkitReview'));
 
 const AdminLoadingIndicator = () => (
   <div className="flex items-center justify-center min-h-screen bg-slate-50 dark:bg-neutral-950">
@@ -128,6 +129,8 @@ const AdminApp: React.FC = () => {
               <Route path="safety" element={<AdminSafetyDashboard />} />
               <Route path="safety/keywords" element={<AdminCrisisKeywords />} />
               <Route path="safety/conversations" element={<AdminConversationReview />} />
+              {/* Toolkits */}
+              <Route path="toolkits" element={<AdminToolkitReview />} />
               {/* Settings */}
               <Route path="settings" element={<AdminSettingsV2 />} />
               <Route path="settings/users" element={<AdminUserManagementV2 />} />

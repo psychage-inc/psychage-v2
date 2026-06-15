@@ -49,7 +49,7 @@ function hasRequiredRole(userRole: UserRole | undefined, allowedRoles?: UserRole
  */
 export function useNavPermissions() {
     const { user, isAuthenticated } = useAuth();
-    const userRole = user?.role;
+    const userRole = user?.role as UserRole | undefined;
 
     /**
      * Check if a single navigation item is accessible to the current user

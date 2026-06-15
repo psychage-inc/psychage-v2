@@ -44,7 +44,7 @@ const RoleGuard: React.FC<RoleGuardProps> = ({ children, allowedRoles }) => {
         return <Navigate to={`/login?redirectTo=${redirectTo}`} state={{ from: location }} replace />;
     }
 
-    if (user && !allowedRoles.includes(user.role)) {
+    if (user && !allowedRoles.includes(user.role as UserRole)) {
         // User is logged in but doesn't have the right role
         // Redirect them to their appropriate dashboard (cross-domain if needed).
         // Admin recognition goes through the single decision point (isAdminRole)

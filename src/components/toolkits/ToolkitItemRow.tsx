@@ -15,7 +15,7 @@ const KIND_META: Record<ToolkitItemKind, { label: string; Icon: typeof Compass }
  * Renders one toolkit item. Items whose target is not built yet (resolved via the
  * registry) render as a disabled "coming soon" entry — never a broken link.
  */
-const ToolkitItemRow: React.FC<{ item: ToolkitItem }> = ({ item }) => {
+const ToolkitItemRow: React.FC<{ item: ToolkitItem; onOpen?: () => void }> = ({ item, onOpen }) => {
     const { href, available } = resolveToolkitRef(item.ref_id);
     const meta = KIND_META[item.kind] ?? KIND_META.tool;
     const { Icon } = meta;
@@ -51,6 +51,7 @@ const ToolkitItemRow: React.FC<{ item: ToolkitItem }> = ({ item }) => {
     return (
         <Link
             to={href}
+            onClick={onOpen}
             className="group flex items-center gap-4 rounded-2xl border border-border bg-surface p-4 shadow-sm transition-all hover:border-teal-500/40 hover:shadow-md"
         >
             {inner}

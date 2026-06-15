@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { toolService } from '../../services/toolService';
 import { Tool } from '../../types/models';
-import { BrainCircuit, PenTool, Moon, Wind, Users, ShieldAlert, Lightbulb, NotebookPen, HeartHandshake, Pill, ArrowRight, Search, Filter, LucideIcon } from 'lucide-react';
+import { BrainCircuit, PenTool, Moon, Wind, Users, ShieldAlert, Lightbulb, NotebookPen, HeartHandshake, Pill, ArrowRight, Search, Filter, Compass, LucideIcon } from 'lucide-react';
 import Button from '../ui/Button';
 import SEO from '../SEO';
 import Breadcrumbs from '../ui/Breadcrumbs';
@@ -97,6 +97,25 @@ const ToolsPage: React.FC = () => {
                         A collection of clinically-validated tools and exercises to help you understand, manage, and improve your mental well-being.
                     </p>
                 </div>
+
+                {/* Toolkits entry point */}
+                <Link
+                    to="/toolkits"
+                    className="group mb-12 flex items-center gap-4 rounded-2xl border border-border bg-surface p-5 shadow-sm transition-all hover:shadow-md"
+                >
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-teal-100 text-teal-600 dark:bg-teal-900/30 dark:text-teal-400">
+                        <Compass size={24} />
+                    </span>
+                    <span className="min-w-0 flex-1">
+                        <span className="block font-display text-lg font-bold text-text-primary group-hover:text-teal-600">
+                            Explore Toolkits
+                        </span>
+                        <span className="block text-sm text-text-secondary">
+                            Guided collections of skills people use for common experiences.
+                        </span>
+                    </span>
+                    <ArrowRight size={20} className="shrink-0 text-text-tertiary transition-transform group-hover:translate-x-0.5 group-hover:text-teal-600" />
+                </Link>
 
                 {/* Filters & Search */}
                 <div className="bg-surface rounded-2xl p-4 shadow-sm border border-border mb-12 flex flex-col md:flex-row gap-4 items-center justify-between">

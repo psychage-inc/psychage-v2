@@ -71,6 +71,9 @@ const ClarityJournalDailyEntry = React.lazy(() => import('./components/tools/Cla
 const ClarityJournalReport = React.lazy(() => import('./components/tools/ClarityJournal/v2-report/ReportConfigScreen'));
 const CrisisResourcesScreen = React.lazy(() => import('./components/screens/CrisisResourcesScreen'));
 const MedicationTracker = React.lazy(() => import('./components/tools/MedicationTracker'));
+// Toolkits
+const ToolkitsIndexPage = React.lazy(() => import('./pages/toolkits/ToolkitsIndexPage'));
+const ToolkitDetailPage = React.lazy(() => import('./pages/toolkits/ToolkitDetailPage'));
 
 // Sitemap
 const SitemapPage = React.lazy(() => import('./pages/SitemapPage'));
@@ -249,6 +252,8 @@ const App: React.FC = () => {
                                             <Route path="/find-care" element={<Navigate to="/providers" replace />} />
                                             <Route path="/find-care/provider/:id" element={<LegacyProviderRedirect />} />
                                             <Route path="/tools" element={<PageTransition><RouteErrorBoundary><ToolsPage /></RouteErrorBoundary></PageTransition>} />
+                                            <Route path="/toolkits" element={<PageTransition><RouteErrorBoundary><ToolkitsIndexPage /></RouteErrorBoundary></PageTransition>} />
+                                            <Route path="/toolkits/:id" element={<PageTransition><RouteErrorBoundary><ToolkitDetailPage /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/tools/mood-journal" element={<PageTransition><MoodJournal /></PageTransition>} />
                                             <Route path="/tools/sleep-architect" element={<PageTransition><SleepArchitect /></PageTransition>} />
                                             <Route path="/tools/mindmate" element={

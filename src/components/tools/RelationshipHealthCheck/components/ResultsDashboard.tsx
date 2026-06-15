@@ -27,6 +27,7 @@ import { ActionPlanV2 } from './ActionPlanV2';
 import { ScienceSection } from './ScienceSection';
 import { NextStepsBlock } from './NextStepsBlock';
 import ToolRecommendation from '../../shared/ToolRecommendation';
+import { resolveCountry, getPrimaryCrisisLine } from '@/lib/crisis';
 
 interface ResultsDashboardProps {
   result: RelationshipHealthResult;
@@ -114,6 +115,10 @@ export const ResultsDashboard: React.FC<ResultsDashboardProps> = ({
     onSave();
     setSaved(true);
   };
+
+  const crisisLine = getPrimaryCrisisLine(resolveCountry());
+  const callHref = crisisLine?.phone ? `tel:${crisisLine.phone}` : 'tel:988';
+  const callLabel = crisisLine?.name || '988 Lifeline';
 
   const handleDismissDV = () => {
     setDvAlertVisible(false);
@@ -306,11 +311,11 @@ export const ResultsDashboard: React.FC<ResultsDashboardProps> = ({
                   </Button>
                 </Link>
                 <a
-                  href="tel:988"
+                  href={callHref}
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary-hover px-3 transition-colors"
                 >
                   <Phone size={14} />
-                  988 Lifeline
+                  {callLabel}
                 </a>
               </div>
             </div>

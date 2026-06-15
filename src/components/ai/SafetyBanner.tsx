@@ -12,6 +12,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, MessageSquare, Globe, X, AlertTriangle } from 'lucide-react';
+import { resolveCountry, getResourcesForCountry } from '@/lib/crisis';
 
 interface SafetyBannerProps {
   onDismiss: () => void;
@@ -22,6 +23,19 @@ const DISMISS_DELAY_MS = 10000; // 10 seconds
 const SafetyBanner: React.FC<SafetyBannerProps> = ({ onDismiss }) => {
   const [canDismiss, setCanDismiss] = useState(false);
   const [timeLeft, setTimeLeft] = useState(10);
+
+  const { all_resources } = getResourcesForCountry(resolveCountry());
+  const hotline = all_resources.find(r => r.type === 'hotline' && r.phone) || all_resources[0];
+  const textLine = all_resources.find(r => r.type === 'text' && r.phone) || all_resources.find(r => r.type === 'whatsapp');
+
+  const callHref = hotline?.phone ? `tel:${hotline.phone}` : 'tel:988';
+  const callName = hotline?.name || '988 Suicide & Crisis Lifeline';
+  const callDesc = hotline?.phone ? `Call ${hotline.phone} • Free, confidential` : 'Call or text 988 • Free, confidential, 24/7';
+  const callNumber = hotline?.phone || '988';
+
+  const smsHref = textLine?.phone ? `sms:${textLine.phone}` : 'sms:741741?body=HOME';
+  const smsName = textLine?.name || 'Crisis Text Line';
+  const smsDesc = textLine?.text_instruction || 'Text HOME to 741741 • Free, confidential, 24/7';
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -72,7 +86,7 @@ const SafetyBanner: React.FC<SafetyBannerProps> = ({ onDismiss }) => {
             <div className="space-y-3">
               {/* 988 Lifeline */}
               <a
-                href="tel:988"
+                href={callHref}
                 className="flex items-center gap-3 p-4 bg-white dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-lg hover:shadow-md transition-all group"
               >
                 <div className="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center shrink-0">
@@ -80,20 +94,20 @@ const SafetyBanner: React.FC<SafetyBannerProps> = ({ onDismiss }) => {
                 </div>
                 <div className="flex-1">
                   <div className="font-semibold text-amber-900 dark:text-amber-100 group-hover:text-amber-700 dark:group-hover:text-amber-300">
-                    988 Suicide & Crisis Lifeline
+                    {callName}
                   </div>
                   <div className="text-sm text-amber-700 dark:text-amber-300">
-                    Call or text 988 • Free, confidential, 24/7
+                    {callDesc}
                   </div>
                 </div>
                 <div className="text-2xl font-bold text-amber-600 dark:text-amber-400 shrink-0">
-                  988
+                  {callNumber}
                 </div>
               </a>
 
               {/* Crisis Text Line */}
               <a
-                href="sms:741741?body=HOME"
+                href={smsHref}
                 className="flex items-center gap-3 p-4 bg-white dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-lg hover:shadow-md transition-all group"
               >
                 <div className="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center shrink-0">
@@ -101,10 +115,10 @@ const SafetyBanner: React.FC<SafetyBannerProps> = ({ onDismiss }) => {
                 </div>
                 <div className="flex-1">
                   <div className="font-semibold text-amber-900 dark:text-amber-100 group-hover:text-amber-700 dark:group-hover:text-amber-300">
-                    Crisis Text Line
+                    {smsName}
                   </div>
                   <div className="text-sm text-amber-700 dark:text-amber-300">
-                    Text HOME to 741741 • Free, confidential, 24/7
+                    {smsDesc}
                   </div>
                 </div>
               </a>

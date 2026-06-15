@@ -3,6 +3,8 @@ import { Phone, MessageCircle, X, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation, Trans } from 'react-i18next';
 
+import { resolveCountry, getPrimaryCrisisLine } from '@/lib/crisis';
+
 interface CrisisOverlayProps {
   isOpen: boolean;
   onClose: () => void;
@@ -11,6 +13,14 @@ interface CrisisOverlayProps {
 const CrisisOverlay: React.FC<CrisisOverlayProps> = ({ isOpen, onClose }) => {
   const { t } = useTranslation();
   if (!isOpen) return null;
+
+  const crisisLine = getPrimaryCrisisLine(resolveCountry());
+  const callHref = crisisLine?.phone ? `tel:${crisisLine.phone}` : 'tel:988';
+  const smsHref = crisisLine?.phone ? `sms:${crisisLine.phone}` : 'sms:741741?body=HOME';
+  const callLabel = crisisLine?.name || t('crisis.clarityOverlay.lifeline_name');
+  const callSub = crisisLine?.phone ? `Call ${crisisLine.phone}` : t('crisis.clarityOverlay.call_text_988');
+  const smsLabel = crisisLine?.name ? `Text ${crisisLine.name}` : t('crisis.clarityOverlay.text_line_name');
+  const smsSub = crisisLine?.text_instruction || t('crisis.clarityOverlay.text_home');
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
@@ -35,28 +45,28 @@ const CrisisOverlay: React.FC<CrisisOverlayProps> = ({ isOpen, onClose }) => {
         {/* Resources */}
         <div className="p-6 space-y-4">
           <a
-            href="tel:988"
+            href={callHref}
             className="flex items-center gap-4 p-4 bg-red-50 dark:bg-red-900/10 rounded-xl border border-red-200 dark:border-red-800 hover:bg-red-100 dark:hover:bg-red-900/20 transition-colors group"
           >
             <div className="w-12 h-12 rounded-xl bg-red-100 dark:bg-red-900/30 flex items-center justify-center shrink-0">
               <Phone className="w-6 h-6 text-red-600 dark:text-red-400" />
             </div>
             <div>
-              <p className="font-semibold text-red-800 dark:text-red-200">{t('crisis.clarityOverlay.lifeline_name')}</p>
-              <p className="text-sm text-red-600 dark:text-red-400"><Trans i18nKey="crisis.clarityOverlay.call_text_988" components={{ b: <strong /> }} /></p>
+              <p className="font-semibold text-red-800 dark:text-red-200">{callLabel}</p>
+              <p className="text-sm text-red-600 dark:text-red-400"><strong>{callSub}</strong></p>
             </div>
           </a>
 
           <a
-            href="sms:741741?body=HOME"
+            href={smsHref}
             className="flex items-center gap-4 p-4 bg-blue-50 dark:bg-blue-900/10 rounded-xl border border-blue-200 dark:border-blue-800 hover:bg-blue-100 dark:hover:bg-blue-900/20 transition-colors group"
           >
             <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center shrink-0">
               <MessageCircle className="w-6 h-6 text-blue-600 dark:text-blue-400" />
             </div>
             <div>
-              <p className="font-semibold text-blue-800 dark:text-blue-200">{t('crisis.clarityOverlay.text_line_name')}</p>
-              <p className="text-sm text-blue-600 dark:text-blue-400"><Trans i18nKey="crisis.clarityOverlay.text_home" components={{ b: <strong /> }} /></p>
+              <p className="font-semibold text-blue-800 dark:text-blue-200">{smsLabel}</p>
+              <p className="text-sm text-blue-600 dark:text-blue-400"><strong>{smsSub}</strong></p>
             </div>
           </a>
 

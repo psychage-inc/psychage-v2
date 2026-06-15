@@ -44,13 +44,9 @@ const ALLOWED_EXTRA_KEYS = [
 function mapSupabaseUser(supabaseUser: SupabaseUser | null) {
   if (!supabaseUser) return null;
 
-  const appRole = (supabaseUser.app_metadata as { role?: unknown } | undefined)?.role;
+  const appRole = (supabaseUser.app_metadata as { role?: unknown } | undefined)?.role as string;
   const adminTier = getAdminTier(appRole);
-  const role: 'patient' | 'provider' | 'admin' = isAdminRole(appRole)
-    ? 'admin'
-    : appRole === 'provider' || appRole === 'patient'
-      ? appRole
-      : 'patient';
+  const role = appRole || 'patient';
 
   return {
     id: supabaseUser.id,

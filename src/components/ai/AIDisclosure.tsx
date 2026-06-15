@@ -11,11 +11,16 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Sparkles } from 'lucide-react';
+import { resolveCountry, getPrimaryCrisisLine } from '@/lib/crisis';
 
 const STORAGE_KEY = 'psychage_ai_disclosure_accepted';
 
 const AIDisclosure: React.FC = () => {
   const [show, setShow] = useState(false);
+
+  const crisisLine = getPrimaryCrisisLine(resolveCountry());
+  const callHref = crisisLine?.phone ? `tel:${crisisLine.phone}` : 'tel:988';
+  const callLabel = crisisLine?.name || '988 (Suicide & Crisis Lifeline)';
 
   useEffect(() => {
     const accepted = localStorage.getItem(STORAGE_KEY);
@@ -68,8 +73,8 @@ const AIDisclosure: React.FC = () => {
                 <div className="mt-3 p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
                   <p className="text-xs text-amber-900 dark:text-amber-100 font-semibold">
                     ⚠️ Crisis Support: If you're in crisis, please contact{' '}
-                    <a href="tel:988" className="underline hover:text-amber-700 dark:hover:text-amber-300 transition-colors">
-                      988 (Suicide & Crisis Lifeline)
+                    <a href={callHref} className="underline hover:text-amber-700 dark:hover:text-amber-300 transition-colors">
+                      {callLabel}
                     </a>{' '}
                     immediately.
                   </p>

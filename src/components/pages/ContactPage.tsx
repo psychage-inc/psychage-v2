@@ -2,10 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { Mail, MessageSquare, Send, Check } from 'lucide-react';
 import Button from '../ui/Button';
 import SEO from '../SEO';
+import { resolveCountry, getPrimaryCrisisLine } from '@/lib/crisis';
 
 const ContactPage: React.FC = () => {
     const [submitted, setSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+
+    const crisisLine = getPrimaryCrisisLine(resolveCountry());
+    const callHref = crisisLine?.phone ? `tel:${crisisLine.phone}` : 'tel:988';
+    const callLabel = crisisLine?.phone ? `Call ${crisisLine.phone} Now` : 'Call 988 Now';
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -72,8 +77,8 @@ const ContactPage: React.FC = () => {
                                 <p className="text-sm text-teal-100/80 mb-4">
                                     We do not provide emergency services through this form. If you are in crisis:
                                 </p>
-                                <a href="tel:988" className="inline-block px-4 py-2 bg-white dark:bg-neutral-900 text-teal-900 dark:text-teal-300 rounded-lg text-sm font-bold hover:bg-teal-50 dark:hover:bg-neutral-800 transition-colors">
-                                    Call 988 Now
+                                <a href={callHref} className="inline-block px-4 py-2 bg-white dark:bg-neutral-900 text-teal-900 dark:text-teal-300 rounded-lg text-sm font-bold hover:bg-teal-50 dark:hover:bg-neutral-800 transition-colors">
+                                    {callLabel}
                                 </a>
                             </div>
                         </div>

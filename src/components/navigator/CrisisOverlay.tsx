@@ -61,10 +61,9 @@ export const CrisisOverlay: React.FC = () => {
     }, [isVisible, announceAssertive, t]);
 
     // Resolve crisis resources for the detected region, falling back to the KB's
-    // international DEFAULT set (never an empty list). The KB keys UK resources under
-    // 'UK' while detectRegion() emits 'GB', so normalize that one boundary mismatch.
+    // international DEFAULT set (never an empty list).
     // If knowledgeBase is not available, use empty array (error state already handled in context).
-    const regionKey = detectedRegion === 'GB' ? 'UK' : detectedRegion;
+    const regionKey = detectedRegion;
     const resources =
         (regionKey && knowledgeBase?.crisisResources?.[regionKey])
         || knowledgeBase?.crisisResources?.['DEFAULT']

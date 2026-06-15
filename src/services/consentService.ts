@@ -15,7 +15,8 @@ export type ConsentType =
     | 'analytics_cookies'
     | 'ai_chat_history'
     | 'clarity_score_tracking'
-    | 'age_verification';
+    | 'age_verification'
+    | 'toolkit_progress_sync';
 
 export interface ConsentRecord {
     id: string;
@@ -194,6 +195,7 @@ export const consentService = {
             ai_chat_history: false,
             clarity_score_tracking: false,
             age_verification: false,
+            toolkit_progress_sync: false,
         };
 
         try {

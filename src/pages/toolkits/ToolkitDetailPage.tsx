@@ -5,6 +5,10 @@ import SEO from '@/components/SEO';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import ToolkitDisclaimer from '@/components/toolkits/ToolkitDisclaimer';
 import ToolkitItemRow from '@/components/toolkits/ToolkitItemRow';
+import ToolkitItemProgress from '@/components/toolkits/ToolkitItemProgress';
+import { useToolkitProgress } from '@/components/toolkits/useToolkitProgress';
+import { resolveToolkitRef } from '@/lib/toolkitRegistry';
+import { EMPTY_PROGRESS } from '@/services/toolkitProgressService';
 import { toolkitService, type ToolkitWithItems } from '@/services/toolkitService';
 
 /**
@@ -31,6 +35,10 @@ const ToolkitDetailPage: React.FC = () => {
             active = false;
         };
     }, [id]);
+
+    // Hook must run every render (before early returns); tolerates a null toolkit.
+    const { progress, markOpened, toggleDone, setRating, syncEnabled, signedIn, setSyncConsent } =
+        useToolkitProgress(toolkit?.id, toolkit?.items ?? []);
 
     if (isLoading) {
         return (
@@ -109,13 +117,57 @@ const ToolkitDetailPage: React.FC = () => {
                     <ToolkitDisclaimer />
                 </div>
 
+                {signedIn && (
+                    <div className="mb-6 flex items-center justify-between gap-4 rounded-2xl border border-border bg-surface px-4 py-3">
+                        <div className="min-w-0">
+                            <p className="text-sm font-bold text-text-primary">
+                                Save my progress to my account
+                            </p>
+                            <p className="text-xs text-text-secondary">
+                                Off by default. Your progress stays on this device until you turn
+                                this on.
+                            </p>
+                        </div>
+                        <button
+                            type="button"
+                            role="switch"
+                            aria-checked={syncEnabled}
+                            onClick={() => void setSyncConsent(!syncEnabled)}
+                            className={`relative inline-flex h-6 w-11 shrink-0 items-center rounded-full transition-colors ${
+                                syncEnabled ? 'bg-teal-600' : 'bg-border'
+                            }`}
+                        >
+                            <span
+                                className={`inline-block h-5 w-5 transform rounded-full bg-white transition-transform ${
+                                    syncEnabled ? 'translate-x-5' : 'translate-x-0.5'
+                                }`}
+                            />
+                        </button>
+                    </div>
+                )}
+
                 <h2 className="mb-4 font-display text-xl font-bold text-text-primary">
                     What&apos;s inside
                 </h2>
                 <div className="space-y-3">
-                    {toolkit.items.map((item) => (
-                        <ToolkitItemRow key={item.id} item={item} />
-                    ))}
+                    {toolkit.items.map((item) => {
+                        const available = resolveToolkitRef(item.ref_id).available;
+                        return (
+                            <div key={item.id}>
+                                <ToolkitItemRow
+                                    item={item}
+                                    onOpen={available ? () => markOpened(item.id) : undefined}
+                                />
+                                {available && (
+                                    <ToolkitItemProgress
+                                        progress={progress[item.id] ?? EMPTY_PROGRESS}
+                                        onToggleDone={() => toggleDone(item.id)}
+                                        onRate={(rating) => setRating(item.id, rating)}
+                                    />
+                                )}
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </div>

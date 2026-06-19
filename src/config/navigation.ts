@@ -9,7 +9,8 @@ import type { NavigationConfig, NavMegaMenu, NavLink } from '../types/navigation
 export const navigationConfig: NavigationConfig = {
     // PRIMARY NAVIGATION (Desktop navbar, top-level items)
     primary: [
-        // Learn mega menu - 4 sections: Browse + 3 groups of 5 categories
+        // Learn mega menu - 4 sections: Browse + 3 themed groups (6/6/7).
+        // Every category link points at a slug with published content (no dead links).
         {
             id: 'learn',
             label: 'Learn',
@@ -45,25 +46,32 @@ export const navigationConfig: NavigationConfig = {
                             icon: 'cloud'
                         },
                         {
-                            id: 'trauma-ptsd',
-                            label: 'Trauma & PTSD',
+                            id: 'trauma-healing',
+                            label: 'Trauma & Healing',
                             description: 'Processing difficult experiences',
-                            href: '/learn/trauma-ptsd',
+                            href: '/learn/trauma-healing',
                             icon: 'shield-check'
                         },
                         {
-                            id: 'neurodevelopmental',
-                            label: 'Neurodevelopmental',
-                            description: 'ADHD, Autism, and learning differences',
-                            href: '/learn/neurodevelopmental',
-                            icon: 'zap'
+                            id: 'mental-health-conditions',
+                            label: 'Mental Health Conditions',
+                            description: 'Understanding diagnoses and disorders',
+                            href: '/learn/mental-health-conditions',
+                            icon: 'clipboard-list'
                         },
                         {
-                            id: 'ocd-related',
-                            label: 'OCD & Related',
-                            description: 'OCD, impulse control, and BFRBs',
-                            href: '/learn/ocd-related',
-                            icon: 'refresh-cw'
+                            id: 'chronic-illness-pain',
+                            label: 'Chronic Illness & Pain',
+                            description: 'Mind-body and medical psychology',
+                            href: '/learn/chronic-illness-pain',
+                            icon: 'activity'
+                        },
+                        {
+                            id: 'aging-dementia-late-life',
+                            label: 'Aging & Late-Life',
+                            description: 'Mental health in later life',
+                            href: '/learn/aging-dementia-late-life',
+                            icon: 'sunset'
                         }
                     ]
                 },
@@ -71,25 +79,11 @@ export const navigationConfig: NavigationConfig = {
                     title: 'Behavior & Wellness',
                     items: [
                         {
-                            id: 'substance-addiction',
-                            label: 'Substance Use & Addiction',
-                            description: 'Recovery and harm reduction',
-                            href: '/learn/substance-addiction',
-                            icon: 'alert-triangle'
-                        },
-                        {
-                            id: 'eating-body',
-                            label: 'Eating & Body',
-                            description: 'Eating disorders and body image',
-                            href: '/learn/eating-body',
-                            icon: 'apple'
-                        },
-                        {
-                            id: 'sleep-circadian',
-                            label: 'Sleep & Circadian Health',
-                            description: 'Better sleep and circadian rhythms',
-                            href: '/learn/sleep-circadian',
-                            icon: 'moon'
+                            id: 'emotional-regulation',
+                            label: 'Emotional Regulation',
+                            description: 'Understanding and managing emotions',
+                            href: '/learn/emotional-regulation',
+                            icon: 'heart-pulse'
                         },
                         {
                             id: 'self-esteem-identity',
@@ -99,11 +93,32 @@ export const navigationConfig: NavigationConfig = {
                             icon: 'heart'
                         },
                         {
-                            id: 'therapy-treatment',
+                            id: 'habits-behavior-change',
+                            label: 'Habits & Behavior Change',
+                            description: 'Motivation and lasting change',
+                            href: '/learn/habits-behavior-change',
+                            icon: 'repeat'
+                        },
+                        {
+                            id: 'sleep-body-connection',
+                            label: 'Sleep & Mind-Body',
+                            description: 'Better sleep and mind-body health',
+                            href: '/learn/sleep-body-connection',
+                            icon: 'moon'
+                        },
+                        {
+                            id: 'therapy-navigation',
                             label: 'Therapy & Treatment',
                             description: 'Finding the right support',
-                            href: '/learn/therapy-treatment',
+                            href: '/learn/therapy-navigation',
                             icon: 'message-circle'
+                        },
+                        {
+                            id: 'spirituality-meaning',
+                            label: 'Spirituality & Meaning',
+                            description: 'Purpose, values, and existential wellbeing',
+                            href: '/learn/spirituality-meaning',
+                            icon: 'sparkles'
                         }
                     ]
                 },
@@ -125,25 +140,39 @@ export const navigationConfig: NavigationConfig = {
                             icon: 'briefcase'
                         },
                         {
-                            id: 'life-transitions',
-                            label: 'Life Transitions',
-                            description: 'Grief, change, and growth',
-                            href: '/learn/life-transitions',
-                            icon: 'compass'
+                            id: 'technology-digital-life',
+                            label: 'Technology & Mental Health',
+                            description: 'Tech, AI, and digital wellbeing',
+                            href: '/learn/technology-digital-life',
+                            icon: 'cpu'
                         },
                         {
-                            id: 'children-adolescents',
-                            label: 'Children & Adolescents',
-                            description: 'Youth mental health and parenting',
-                            href: '/learn/children-adolescents',
-                            icon: 'baby'
+                            id: 'mens-mental-health',
+                            label: "Men's Mental Health",
+                            description: 'Men-specific mental health',
+                            href: '/learn/mens-mental-health',
+                            icon: 'user'
                         },
                         {
-                            id: 'global-cultural',
+                            id: 'digital-life',
+                            label: 'Digital Life',
+                            description: 'Social media and modern stressors',
+                            href: '/learn/digital-life',
+                            icon: 'smartphone'
+                        },
+                        {
+                            id: 'cultural-global',
                             label: 'Global & Cultural MH',
                             description: 'Cross-cultural perspectives',
-                            href: '/learn/global-cultural',
+                            href: '/learn/cultural-global',
                             icon: 'globe'
+                        },
+                        {
+                            id: 'loneliness-connection',
+                            label: 'Loneliness & Connection',
+                            description: 'Belonging and social connection',
+                            href: '/learn/loneliness-connection',
+                            icon: 'heart-handshake'
                         }
                     ]
                 }

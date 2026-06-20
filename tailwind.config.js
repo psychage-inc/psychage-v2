@@ -136,6 +136,15 @@ export default {
                 'fluid-4xl': ['clamp(2.25rem, 1.8rem + 2vw, 3rem)', { lineHeight: '1.1' }],
                 'fluid-5xl': ['clamp(3rem, 2rem + 3vw, 4.5rem)', { lineHeight: '1.05' }],
             },
+            height: {
+                screen: '100dvh',
+            },
+            minHeight: {
+                screen: '100dvh',
+            },
+            maxHeight: {
+                screen: '100dvh',
+            },
         },
     },
     plugins: [

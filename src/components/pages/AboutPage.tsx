@@ -67,7 +67,7 @@ const AboutPage: React.FC = () => {
             {/* Stats Grid */}
             <div className="bg-surface border-y border-border py-16 mb-24">
                 <div className="container mx-auto px-6 max-w-dashboard">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
                         {stats.map((stat, idx) => (
                             <div key={idx} className="text-center">
                                 <div className="font-display font-bold text-4xl md:text-5xl text-text-primary mb-2">{stat.value}</div>

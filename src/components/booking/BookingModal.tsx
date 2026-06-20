@@ -158,13 +158,13 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, provider, 
 
                         {/* Month Navigation */}
                         <div className="flex items-center justify-between mb-4">
-                            <button onClick={prevMonth} className="p-2 hover:bg-surface-hover rounded-lg">
+                            <button onClick={prevMonth} className="h-11 w-11 flex items-center justify-center hover:bg-surface-hover rounded-lg">
                                 <ChevronLeft size={20} />
                             </button>
                             <h4 className="font-bold text-text-primary">
                                 {currentMonth.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
                             </h4>
-                            <button onClick={nextMonth} className="p-2 hover:bg-surface-hover rounded-lg">
+                            <button onClick={nextMonth} className="h-11 w-11 flex items-center justify-center hover:bg-surface-hover rounded-lg">
                                 <ChevronRight size={20} />
                             </button>
                         </div>
@@ -243,7 +243,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, provider, 
                         {/* Visit Type */}
                         <div className="space-y-2">
                             <label className="text-sm font-bold text-text-secondary">Visit Type</label>
-                            <div className="grid grid-cols-2 gap-3">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 <button
                                     onClick={() => setVisitType('video')}
                                     className={`p-4 rounded-xl border-2 transition-all flex items-center gap-3 ${

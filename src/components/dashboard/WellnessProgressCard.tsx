@@ -55,7 +55,7 @@ const WellnessProgressCard: React.FC = () => {
           </span>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 xs:grid-cols-2 gap-3">
           {stats.map((stat, i) => (
             <div key={stat.label} className="flex items-center gap-2.5">
               <div className={`w-8 h-8 rounded-lg ${stat.bg} flex items-center justify-center shrink-0`}>

@@ -65,7 +65,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, maxWidt
                                         )}
                                         <DialogPrimitive.Close asChild>
                                             <button
-                                                className="p-2 -mr-2 text-text-tertiary hover:text-text-primary hover:bg-surface-hover rounded-full transition-colors"
+                                                className="h-11 w-11 flex items-center justify-center -mr-2 text-text-tertiary hover:text-text-primary hover:bg-surface-hover rounded-full transition-colors"
                                                 aria-label="Close modal"
                                             >
                                                 <X size={20} />
@@ -74,7 +74,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, maxWidt
                                     </div>
 
                                     {/* Body */}
-                                    <div className="p-6 overflow-y-auto max-h-[80vh] custom-scrollbar">
+                                    <div className="p-6 overflow-y-auto max-h-[80dvh] custom-scrollbar">
                                         {children}
                                     </div>
                                 </div>

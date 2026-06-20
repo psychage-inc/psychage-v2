@@ -184,9 +184,10 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                             role="dialog"
                             aria-modal="true"
                             aria-label={view === 'login' ? 'Sign in to Psychage' : view === 'signup' ? 'Create Psychage account' : 'Reset your password'}
-                            className="bg-surface w-full max-w-md rounded-[2rem] shadow-2xl overflow-hidden pointer-events-auto border border-border relative"
+                            className="bg-surface w-full max-w-md rounded-[2rem] shadow-2xl overflow-hidden pointer-events-auto border border-border relative max-h-[85dvh] flex flex-col"
                         >
-                            {/* Decorative Elements */}
+                            <div className="overflow-y-auto flex-1">
+                                {/* Decorative Elements */}
                             <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-teal-500/10 to-transparent pointer-events-none" />
                             <div className="absolute -top-24 -right-24 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl pointer-events-none" />
 
@@ -200,7 +201,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                                     </div>
                                     <button
                                         onClick={onClose}
-                                        className="p-2 hover:bg-surface-hover rounded-full transition-colors text-text-tertiary"
+                                        className="h-11 w-11 flex items-center justify-center -mr-2 hover:bg-surface-hover rounded-full transition-colors text-text-tertiary"
                                         aria-label="Close modal"
                                     >
                                         <X size={20} />
@@ -341,7 +342,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                                             </div>
                                         </div>
 
-                                        <div className="grid grid-cols-2 gap-4">
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                             <button
                                                 onClick={handleGoogleSignIn}
                                                 disabled={isLoading}
@@ -390,6 +391,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                                         </button>
                                     )}
                                 </div>
+                            </div>
                             </div>
                         </motion.div>
                     </div>

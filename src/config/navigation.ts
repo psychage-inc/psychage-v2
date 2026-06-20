@@ -273,6 +273,14 @@ export const navigationConfig: NavigationConfig = {
             href: '/providers',
         } as NavLink,
 
+        // Conditions A–Z — standalone reference (separate from the Learn categories)
+        {
+            id: 'conditions',
+            label: 'Conditions',
+            type: 'link',
+            href: '/conditions',
+        } as NavLink,
+
     ],
 
     // SECONDARY NAVIGATION (Utility items in top-right)

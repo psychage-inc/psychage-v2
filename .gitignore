@@ -81,6 +81,9 @@ screenshots/
 # macOS Finder "foo 2.ext" duplicates (prior pattern had stray quotes and matched nothing)
 * 2.*
 
+# Article-draft batch generator checkpoint (runtime state, not source)
+src/scripts/.article-drafts-progress.json
+
 # Temporary scripts
 scripts/analyze-original-1000.ts
 scripts/article-content-066-070.txt

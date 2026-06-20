@@ -76,7 +76,8 @@ const CONCURRENCY = Math.max(1, concIdx >= 0 ? parseInt(argv[concIdx + 1], 10) :
 const MODEL = 'claude-opus-4-8'; // Opus 4.8
 const MAX_TOKENS = 8000;
 const MIN_WORDS = 1400;
-const TARGET_WORDS = '1400-1800';
+// Ask for a buffer above the 1400 floor so near-misses don't waste a regeneration.
+const TARGET_WORDS = '1500-1800';
 const MAX_ATTEMPTS = 3;
 const JUNK_TITLE = /^part\s*1:?\s*$/i;
 const PROGRESS_PATH = path.resolve(__dirname, '.article-drafts-progress.json');
@@ -122,16 +123,23 @@ const STYLE_SYSTEM_PROMPT = `You write educational mental-health articles for a 
 HARD RULES (a validator rejects violations and you will be asked to rewrite):
 
 WORD COUNT
-- ${TARGET_WORDS} words of real body text (excluding HTML tags). Never under 1400.
+- Write ${TARGET_WORDS} words of real body text (excluding HTML tags). Aim for at least 1500 so you are never under the 1400 floor. Add another full section rather than risk falling short.
 
 VOICE & READING LEVEL
 - Third-person, educational, warm but plain. Roughly an 8th-grade reading level: short sentences, common words, no jargon dumps.
 - NO diagnostic language. Never tell the reader they have a condition, never write "you have X", "this means you are…", "find out if you have this", and never instruct self-diagnosis. Frame everything as general education about a topic, not an assessment of the reader.
-- Use "common" or "typical", NEVER "normal", when describing people or experiences.
 
-FORBIDDEN WORDS (do not use any of these, in any form):
-streak, score, trend, best, great, normal, congrats, congratulations, badge(s), level(s), reward(s), and any emoji.
+FORBIDDEN WORDS — these are auto-rejected, so avoid them in EVERY form, including inside common phrases. Use the substitutions:
+- "best" → use "effective", "helpful", "well-suited", "most useful".
+- "great" → use "significant", "considerable", "meaningful", "strong".
+- "normal" / "normally" → use "common", "typical", "usual", "usually".
+- "level" / "levels" → use "amount", "degree", "extent" (e.g. "the amount of stress", not "stress levels"). For brain wording say "the brain's motivation system", not "reward levels".
+- "reward" / "rewards" → use "benefit", "positive effect", "sense of satisfaction".
+- "trend" / "trends" / "trending" → use "pattern", "shift", "common direction".
+- "score" / "scores" → use "result", "rating", "measure".
+- Also never use: streak(s), congrats, congratulations, badge(s), and any emoji.
 - No AI / machine-learning terminology of any kind.
+- Before finishing, re-read your draft and replace any of the above words you used by reflex.
 
 NO FABRICATION
 - Invent NOTHING. No citations, no studies, no statistics, no percentages, no years, no journal names, no author or expert names, no quotes, no "doi", no "et al". Do not add citation markers or reference links.

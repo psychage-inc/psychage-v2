@@ -97,6 +97,29 @@ function fail(msg: string): never {
   process.exit(1);
 }
 
+// Style gate applied to the body (when content is provided). Mirrors the house style spec
+// so a body with forbidden words / diagnostic language / inline markers / fabricated stats
+// is rejected here and the generating agent must fix it before it can be saved.
+const STRIP = (h: string) => h.replace(/<[^>]+>/g, ' ').replace(/&[a-z]+;/gi, ' ').replace(/\s+/g, ' ').trim();
+// eslint-disable-next-line no-misleading-character-class -- intentional broad emoji sweep
+const EMOJI_RE = /[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{2190}-\u{21FF}\u{2B00}-\u{2BFF}\u{FE00}-\u{FE0F}\u{1F1E6}-\u{1F1FF}]/u;
+const FORBIDDEN = ['streak', 'score', 'trend', 'best', 'great', 'normal', 'normally', 'congrats', 'congratulations', 'badge', 'badges', 'level', 'levels', 'reward', 'rewards'];
+const DIAG = [/this means you (are|have)\b/i, /find out if you (have|are)\b/i, /\byou (probably |likely |may )?have (this|a) (condition|disorder|diagnosis|illness)\b/i, /self-?diagnos/i, /diagnos(e|ing) yourself/i];
+const FAB = [/\(\s*(19|20)\d{2}\s*\)/, /\bet al\.?/i, /\b\d{1,3}(?:\.\d+)?\s?%/, /\bdoi\.org/i, /\bstudy (found|showed)\b/i];
+const INLINE = [/<sup\b/i, /\[\d+\]/];
+
+function bodyStyleProblems(html: string): string[] {
+  const text = STRIP(html);
+  const low = text.toLowerCase();
+  const out: string[] = [];
+  for (const w of FORBIDDEN) if (new RegExp(`\\b${w}\\b`, 'i').test(low)) out.push(`forbidden word "${w}"`);
+  if (EMOJI_RE.test(html)) out.push('emoji');
+  for (const p of DIAG) if (p.test(text)) out.push(`diagnostic language (${p.source})`);
+  for (const p of FAB) if (p.test(text)) out.push(`fabricated stat/citation in prose (${p.source})`);
+  for (const p of INLINE) if (p.test(html)) out.push('inline citation marker in body (use the citations list, not <sup>/[n])');
+  return [...new Set(out)];
+}
+
 async function main() {
   const raw = fs.readFileSync(FILE, 'utf-8');
   let payload: Payload;
@@ -134,6 +157,8 @@ async function main() {
   if (payload.content) {
     bodyWords = wordCount(payload.content);
     if (bodyWords < MIN_WORDS) fail(`body is ${bodyWords} words (< ${MIN_WORDS})`);
+    const styleProblems = bodyStyleProblems(payload.content);
+    if (styleProblems.length) fail(`body fails style gate — fix and resend: ${styleProblems.join('; ')}`);
   } else if (!row.content) {
     fail(`no content provided and row ${payload.id} has none — cannot leave an empty draft`);
   }

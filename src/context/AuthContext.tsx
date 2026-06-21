@@ -46,7 +46,13 @@ function mapSupabaseUser(supabaseUser: SupabaseUser | null) {
 
   const appRole = (supabaseUser.app_metadata as { role?: unknown } | undefined)?.role as string;
   const adminTier = getAdminTier(appRole);
-  const role = appRole || 'patient';
+  // Coarsen any admin tier (super_admin | clinical_admin | viewer) to the
+  // binary 'admin' that every client gate checks (RoleGuard allowedRoles,
+  // App route guards). The granular tier is preserved on `adminRole` for
+  // display/audit. Without this, an admin's user.role stayed 'super_admin',
+  // never matched allowedRoles:['admin'], and RoleGuard looped them on a blank
+  // /dashboard (or bounced non-admins to the consumer dashboard).
+  const role = isAdminRole(appRole) ? 'admin' : (appRole || 'patient');
 
   return {
     id: supabaseUser.id,

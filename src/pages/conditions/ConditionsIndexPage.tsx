@@ -241,17 +241,19 @@ const AlphabetRailWithSpy: React.FC<{
     );
 };
 
+// Genuine 0-row state. The full ICD-11 taxonomy is always available (server view, with a
+// draft-free local fallback), so this only appears if the list truly can't be loaded.
 const PublicEmptyState: React.FC = () => (
     <div className="rounded-2xl border border-dashed border-border bg-surface/60 px-6 py-16 text-center">
         <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-teal-50 text-primary dark:bg-teal-900/30">
             <Search size={22} aria-hidden="true" />
         </div>
         <h2 className="font-display text-xl font-semibold text-text-primary">
-            Conditions are being prepared
+            We couldn’t load the conditions list
         </h2>
         <p className="mx-auto mt-2 max-w-md text-text-secondary">
-            Our plain-language conditions reference is in clinical review. Each entry is
-            published only once it has been verified.
+            Something went wrong fetching the conditions reference. Please refresh the page
+            or try again shortly.
         </p>
     </div>
 );

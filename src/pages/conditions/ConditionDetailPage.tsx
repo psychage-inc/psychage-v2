@@ -5,8 +5,12 @@ import SEO from '@/components/SEO';
 import { useAsyncData } from '@/hooks/useAsyncData';
 import CrisisResourceBanner from '@/components/article/CrisisResourceBanner';
 import { getConditionBySlug } from '@/services/conditionsService';
+import { articleService } from '@/services/articleService';
 import type { Condition, DefinitionField } from '@/types/condition';
 import { hasDefinition } from '@/types/condition';
+import { TOP_GROUPS } from '@/config/taxonomy';
+import type { Article } from '@/types/models';
+import { getArticleUrl, getCategoryUrl } from '@/lib/articleUrl';
 import ConditionListenControl from '@/components/conditions/ConditionListenControl';
 import DisclaimerFooter from '@/components/conditions/DisclaimerFooter';
 
@@ -16,6 +20,10 @@ const SECTIONS: { key: DefinitionField; label: string }[] = [
     { key: 'how_it_differs', label: 'How it differs' },
     { key: 'when_more_than_everyday', label: "When it's more than everyday" },
 ];
+
+const TOP_GROUP_TITLES: Record<string, string> = Object.fromEntries(
+    TOP_GROUPS.map((g) => [g.id, g.title]),
+);
 
 /** Assemble plain-text narration from the filled sections, in reading order. */
 function buildReadingText(condition: Condition): string {
@@ -41,6 +49,14 @@ const ConditionDetailPage: React.FC = () => {
     const readingText = useMemo(
         () => (condition ? buildReadingText(condition) : ''),
         [condition],
+    );
+
+    // "Everything on X" hub link — renders only once a content editor has set
+    // related_category_slug. Empty by default, so nothing shows yet.
+    const relatedCategorySlug = condition?.related_category_slug ?? null;
+    const { data: relatedArticles } = useAsyncData<Article[]>(
+        () => (relatedCategorySlug ? articleService.getByCategory(relatedCategorySlug) : Promise.resolve([])),
+        [relatedCategorySlug],
     );
 
     if (loading) return <DetailSkeleton backHref={backHref} />;
@@ -82,6 +98,11 @@ const ConditionDetailPage: React.FC = () => {
                             <span className="text-sm font-medium uppercase tracking-wide text-brand-accessible dark:text-teal-400">
                                 {condition.icd11_grouping}
                             </span>
+                            {condition.taxonomy_group && (
+                                <span className="rounded-full border border-border px-2.5 py-0.5 text-xs font-medium text-text-tertiary">
+                                    {TOP_GROUP_TITLES[condition.taxonomy_group]}
+                                </span>
+                            )}
                         </div>
                         <h1 className="font-display text-3xl font-bold leading-tight tracking-tight text-text-primary sm:text-4xl">
                             {condition.name}
@@ -120,6 +141,11 @@ const ConditionDetailPage: React.FC = () => {
                         </p>
                     )}
 
+                    {/* "Everything on X" hub — real article links, shown only when wired */}
+                    {relatedCategorySlug && relatedArticles && relatedArticles.length > 0 && (
+                        <RelatedReading categorySlug={relatedCategorySlug} articles={relatedArticles} />
+                    )}
+
                     <DisclaimerFooter />
                 </article>
             </main>
@@ -140,6 +166,37 @@ const Section: React.FC<{ label: string; value: string | null }> = ({ label, val
                 This part of the definition is in review.
             </p>
         )}
+    </section>
+);
+
+/** "Everything on X" — links to the related Learn article category and its top reads. */
+const RelatedReading: React.FC<{ categorySlug: string; articles: Article[] }> = ({
+    categorySlug,
+    articles,
+}) => (
+    <section className="mt-12 border-t border-border pt-8">
+        <h2 className="font-display text-xl font-semibold text-text-primary">
+            Related reading
+        </h2>
+        <ul className="mt-4 space-y-3">
+            {articles.slice(0, 4).map((article) => (
+                <li key={article.id}>
+                    <Link
+                        to={getArticleUrl(article)}
+                        className="text-base font-medium text-text-secondary transition-colors hover:text-primary"
+                    >
+                        {article.title}
+                    </Link>
+                </li>
+            ))}
+        </ul>
+        <Link
+            to={getCategoryUrl(categorySlug)}
+            className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+        >
+            See all articles in this topic
+            <ArrowLeft size={14} aria-hidden="true" className="rotate-180" />
+        </Link>
     </section>
 );
 

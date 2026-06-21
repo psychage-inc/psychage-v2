@@ -1,5 +1,5 @@
 /**
- * Seed the ICD-11 Chapter 6 conditions corpus into Supabase `conditions`.
+ * Seed the ICD-11 Chapter 6 conditions corpus into Supabase `conditions_reference`.
  *
  * Loads src/data/conditions (the authored corpus) and inserts every row as
  * `verification_status = 'unverified'`, `crisis_flag = false`. This script NEVER marks
@@ -71,7 +71,7 @@ async function main() {
 
     // Insert-only upsert: existing slugs are left untouched (never clobber approved copy).
     const { error } = await supabase
-        .from('conditions')
+        .from('conditions_reference')
         .upsert(rows, { onConflict: 'slug', ignoreDuplicates: true });
     if (error) {
         console.error('❌ Conditions insert failed:', error.message);
@@ -80,10 +80,10 @@ async function main() {
 
     // Verify counts round-trip.
     const { count: total } = await supabase
-        .from('conditions')
+        .from('conditions_reference')
         .select('*', { count: 'exact', head: true });
     const { count: verified } = await supabase
-        .from('conditions')
+        .from('conditions_reference')
         .select('*', { count: 'exact', head: true })
         .eq('verification_status', 'verified');
 

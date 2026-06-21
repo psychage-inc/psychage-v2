@@ -8,6 +8,8 @@
  * surface renders verified rows only (gate enforced in conditionsService).
  */
 
+import type { TopGroupId } from '../config/taxonomy';
+
 export type VerificationStatus = 'unverified' | 'verified';
 
 /**
@@ -20,6 +22,16 @@ export interface Condition {
     name: string;
     icd11_code: string;
     icd11_grouping: string;
+    /**
+     * Top-level Learn taxonomy group, DERIVED from the ICD-11 family. This is IA
+     * categorization (which shelf the condition sits on), never clinical copy.
+     */
+    taxonomy_group?: TopGroupId;
+    /**
+     * Optional link to a Learn article category — the "everything on X" hub. Empty
+     * until a content editor sets it; carries no clinical/diagnostic copy.
+     */
+    related_category_slug?: string | null;
     /** "What it is" — one or two plain sentences. */
     short_definition: string | null;
     /** "What it feels like" — lived, third-person, non-diagnostic. */

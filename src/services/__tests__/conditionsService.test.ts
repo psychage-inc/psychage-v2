@@ -1,10 +1,11 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { listConditions, getConditionBySlug } from '../conditionsService';
-import { conditionsCorpus } from '@/data/conditions/icd11Chapter6';
+import { conditionsTaxonomy } from '@/data/conditions/taxonomy';
 import { hasDefinition } from '@/types/condition';
 
 const mockMaybeSingle = vi.fn();
 const mockQueryResult = vi.fn();
+const fromMock = vi.fn();
 
 /** A thenable Supabase query chain whose terminal awaits resolve to `mockQueryResult`. */
 interface MockChain {
@@ -30,78 +31,164 @@ resetChain();
 
 vi.mock('@/lib/supabaseClient', () => ({
     supabase: {
-        from: vi.fn(() => chain),
+        from: (table: string) => {
+            fromMock(table);
+            return chain;
+        },
     },
 }));
+
+/** A fully-populated (verified) row as the masking view returns it. */
+function verifiedRow(over: Partial<Record<string, unknown>> = {}) {
+    return {
+        id: 'id-1',
+        slug: 'schizophrenia',
+        name: 'Schizophrenia',
+        icd11_code: '6A20',
+        icd11_grouping: 'Schizophrenia or other primary psychotic disorders',
+        short_definition: 'A disorder of perception and thought.',
+        what_it_feels_like: 'Reality can feel altered.',
+        how_it_differs: 'Distinct from mood disorders.',
+        when_more_than_everyday: 'Persistent and impairing.',
+        crisis_flag: false,
+        provenance: 'ICD-11 6A20',
+        verification_status: 'verified',
+        reading_level: '8th grade',
+        ...over,
+    };
+}
+
+/** An unverified row as the masking view returns it — definition fields nulled. */
+function maskedRow(over: Partial<Record<string, unknown>> = {}) {
+    return verifiedRow({
+        id: 'id-2',
+        slug: 'autism-spectrum-disorder',
+        name: 'Autism spectrum disorder',
+        icd11_code: '6A02',
+        icd11_grouping: 'Neurodevelopmental disorders',
+        short_definition: null,
+        what_it_feels_like: null,
+        how_it_differs: null,
+        when_more_than_everyday: null,
+        verification_status: 'unverified',
+        ...over,
+    });
+}
 
 describe('conditionsService', () => {
     beforeEach(() => {
         vi.clearAllMocks();
         resetChain();
         vi.spyOn(console, 'error').mockImplementation(() => {});
-        // Empty Supabase result → service supplements entirely from the authored corpus.
+        // Default: DB returns nothing → service falls back to the draft-free taxonomy.
         mockQueryResult.mockResolvedValue({ data: [], error: null });
         mockMaybeSingle.mockResolvedValue({ data: null, error: null });
     });
 
-    describe('verification gate', () => {
-        it('hides all unverified rows on the public surface', async () => {
-            const result = await listConditions();
-            // The whole corpus is unverified, so the public surface is empty.
-            expect(result).toEqual([]);
+    describe('read path selection (field-level gate)', () => {
+        it('public list reads the conditions_reference_public masking view', async () => {
+            await listConditions();
+            expect(fromMock).toHaveBeenCalledWith('conditions_reference_public');
+            expect(fromMock).not.toHaveBeenCalledWith('conditions_reference');
         });
 
-        it('returns every row in preview mode, sorted by name', async () => {
-            const result = await listConditions({ includeUnverified: true });
-            expect(result).toHaveLength(conditionsCorpus.length);
-            const names = result.map((c) => c.name);
-            expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b)));
+        it('preview list reads the base conditions_reference table (RLS-gated)', async () => {
+            await listConditions({ includeUnverified: true });
+            expect(fromMock).toHaveBeenCalledWith('conditions_reference');
+            expect(fromMock).not.toHaveBeenCalledWith('conditions_reference_public');
+        });
+
+        it('public detail reads the view; preview detail reads the base table', async () => {
+            await getConditionBySlug('schizophrenia');
+            expect(fromMock).toHaveBeenCalledWith('conditions_reference_public');
+            fromMock.mockClear();
+            await getConditionBySlug('schizophrenia', { includeUnverified: true });
+            expect(fromMock).toHaveBeenCalledWith('conditions_reference');
         });
     });
 
-    describe('corpus integrity', () => {
-        it('has all four authored fields on every condition', async () => {
-            const result = await listConditions({ includeUnverified: true });
-            for (const c of result) {
-                expect(hasDefinition(c)).toBe(true);
-                expect(c.short_definition).toBeTruthy();
-                expect(c.what_it_feels_like).toBeTruthy();
-                expect(c.how_it_differs).toBeTruthy();
-                expect(c.when_more_than_everyday).toBeTruthy();
-                expect(c.provenance).toBeTruthy();
-            }
+    describe('returns server rows as-is (definitions already masked server-side)', () => {
+        it('keeps a verified row’s definitions and a masked row’s nulls', async () => {
+            mockQueryResult.mockResolvedValue({
+                data: [verifiedRow(), maskedRow()],
+                error: null,
+            });
+            const result = await listConditions();
+
+            // Sorted by name: "Autism…" before "Schizophrenia".
+            expect(result.map((c) => c.slug)).toEqual([
+                'autism-spectrum-disorder',
+                'schizophrenia',
+            ]);
+
+            const verified = result.find((c) => c.slug === 'schizophrenia')!;
+            expect(verified.verification_status).toBe('verified');
+            expect(hasDefinition(verified)).toBe(true);
+
+            const masked = result.find((c) => c.slug === 'autism-spectrum-disorder')!;
+            expect(masked.verification_status).toBe('unverified');
+            expect(hasDefinition(masked)).toBe(false);
+        });
+    });
+
+    describe('fallback is draft-free', () => {
+        it('falls back to the full taxonomy when the DB returns nothing', async () => {
+            const result = await listConditions();
+            expect(result).toHaveLength(conditionsTaxonomy.length);
+            const names = result.map((c) => c.name);
+            expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b)));
         });
 
-        it('leaves every row unverified and never sets crisis_flag (gate is absolute)', async () => {
-            const result = await listConditions({ includeUnverified: true });
+        it('falls back on a query error too', async () => {
+            mockQueryResult.mockResolvedValue({ data: null, error: { message: 'boom' } });
+            const result = await listConditions();
+            expect(result).toHaveLength(conditionsTaxonomy.length);
+        });
+
+        it('NEVER carries definition text in the fallback (drafts stay off the client)', async () => {
+            const result = await listConditions();
             expect(result.length).toBeGreaterThan(100);
             for (const c of result) {
+                expect(hasDefinition(c)).toBe(false);
+                expect(c.short_definition).toBeNull();
+                expect(c.what_it_feels_like).toBeNull();
+                expect(c.how_it_differs).toBeNull();
+                expect(c.when_more_than_everyday).toBeNull();
+                // Taxonomy stays factual + unverified.
                 expect(c.verification_status).toBe('unverified');
                 expect(c.crisis_flag).toBe(false);
+                expect(c.icd11_code).toBeTruthy();
+                expect(c.provenance).toBeTruthy();
             }
         });
     });
 
     describe('getConditionBySlug', () => {
-        it('resolves GAD with the four definition fields in preview mode', async () => {
-            const gad = await getConditionBySlug('generalized-anxiety-disorder', {
-                includeUnverified: true,
-            });
-            expect(gad).not.toBeNull();
-            expect(gad!.icd11_code).toBe('6B00');
-            expect(hasDefinition(gad!)).toBe(true);
-            expect(gad!.short_definition).toMatch(/excessive worry/i);
+        it('returns a verified condition with its definitions (view reveals them)', async () => {
+            mockMaybeSingle.mockResolvedValue({ data: verifiedRow(), error: null });
+            const cond = await getConditionBySlug('schizophrenia');
+            expect(cond).not.toBeNull();
+            expect(cond!.icd11_code).toBe('6A20');
+            expect(hasDefinition(cond!)).toBe(true);
         });
 
-        it('hides the unverified GAD page on the public surface', async () => {
-            const gad = await getConditionBySlug('generalized-anxiety-disorder');
-            expect(gad).toBeNull();
+        it('returns an unverified condition with masked (null) definitions', async () => {
+            mockMaybeSingle.mockResolvedValue({ data: maskedRow(), error: null });
+            const cond = await getConditionBySlug('autism-spectrum-disorder');
+            expect(cond).not.toBeNull();
+            expect(cond!.verification_status).toBe('unverified');
+            expect(hasDefinition(cond!)).toBe(false);
+        });
+
+        it('falls back to a draft-free taxonomy row when the DB is empty', async () => {
+            const cond = await getConditionBySlug('generalized-anxiety-disorder');
+            expect(cond).not.toBeNull();
+            expect(cond!.icd11_code).toBe('6B00');
+            expect(hasDefinition(cond!)).toBe(false);
         });
 
         it('returns null for an unknown slug', async () => {
-            const missing = await getConditionBySlug('not-a-real-condition', {
-                includeUnverified: true,
-            });
+            const missing = await getConditionBySlug('not-a-real-condition');
             expect(missing).toBeNull();
         });
     });

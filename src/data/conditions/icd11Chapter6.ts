@@ -13,6 +13,7 @@
 
 import type { Condition, ConditionSeed } from '@/types/condition';
 import { ICD11_GROUPINGS } from './groupings';
+import { icd11GroupingToTopGroup } from './taxonomyGroup';
 import { neuroPsychoticCatatoniaMood } from './families/01-neuro-psychotic-catatonia-mood';
 import { anxietyOcdStressDissociativeEating } from './families/02-anxiety-ocd-stress-dissociative-eating';
 import { eliminationBodilySubstance } from './families/03-elimination-bodily-substance';
@@ -38,6 +39,8 @@ export const icd11Conditions: ConditionSeed[] = [
 export function seedToCondition(seed: ConditionSeed): Condition {
     return {
         ...seed,
+        taxonomy_group: icd11GroupingToTopGroup(seed.icd11_grouping),
+        related_category_slug: null,
         crisis_flag: false,
         verification_status: 'unverified',
         reading_level: DEFAULT_READING_LEVEL,

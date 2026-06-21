@@ -19,7 +19,9 @@ import { consentService } from '../services/consentService';
 import FlatArticleCard from '../components/articles/FlatArticleCard';
 import FeaturedHeroCard from '../components/articles/FeaturedHeroCard';
 import TrendingListItem from '../components/articles/TrendingListItem';
+import CategoryCard from '../components/articles/CategoryCard';
 import { saveRecentlyRead, getRecentlyReadIds } from '../components/articles/recentlyRead';
+import { TOP_GROUPS, groupForSlug } from '../config/taxonomy';
 
 // ─── Priority ordering ──────────────────────────────────────────────
 const PRIORITY_CATEGORY_SLUGS = [
@@ -370,6 +372,20 @@ const LearnPage: React.FC = () => {
         return result;
     }, [categories, categoriesFromArticles, articlesByCategory]);
 
+    // Grouped category index (book table-of-contents): the three top-level
+    // taxonomy groups, each listing only its non-empty categories. Built from
+    // already-loaded data + the frozen taxonomy contract, so it mirrors
+    // categoryService.getGrouped() without a second fetch. Empty categories are
+    // already excluded by orderedCategories — never shown as broken "0 articles".
+    const groupedCategories = useMemo(() => {
+        return TOP_GROUPS
+            .map(group => ({
+                ...group,
+                categories: orderedCategories.filter(c => groupForSlug(c.slug) === group.id),
+            }))
+            .filter(group => group.categories.length > 0);
+    }, [orderedCategories]);
+
     // Featured articles: 7 picks (1 hero + 6 trending) from priority categories
     const featuredArticles = useMemo(() => {
         const picks: Article[] = [];
@@ -468,7 +484,7 @@ const LearnPage: React.FC = () => {
         if (orderedCategories.length > 0 && !activeTab) {
             setActiveTab(orderedCategories[0].slug);
         }
-    }, [orderedCategories, activeTab]);
+    }, [orderedCategories, activeTab, setActiveTab]);
 
     const hasNoResults = searchQuery.length > 0 && filteredArticles.length === 0;
     const isSearching = searchQuery.length > 0;
@@ -643,6 +659,46 @@ const LearnPage: React.FC = () => {
                     </div>
                 </div>
             </section>
+
+            {/* ── 2b. Browse by topic (grouped category index) ─────── */}
+            {!isSearching && groupedCategories.length > 0 && (
+                <section className="border-t border-border pt-12">
+                    <div className="container mx-auto max-w-content px-6">
+                        <div className="mb-8">
+                            <h2 className="text-2xl md:text-3xl font-display font-bold text-text-primary tracking-tight">
+                                Browse by topic
+                            </h2>
+                            <p className="text-base text-text-secondary mt-2 max-w-2xl leading-relaxed">
+                                Everything we cover, grouped into three areas. Pick a topic to read all its articles.
+                            </p>
+                        </div>
+
+                        <div className="space-y-12">
+                            {groupedCategories.map(group => (
+                                <div key={group.id}>
+                                    <div className="mb-5">
+                                        <h3 className="text-xl font-display font-bold text-text-primary tracking-tight">
+                                            {group.title}
+                                        </h3>
+                                        <p className="text-sm text-text-secondary mt-1 max-w-2xl leading-relaxed">
+                                            {group.description}
+                                        </p>
+                                    </div>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        {group.categories.map(category => (
+                                            <CategoryCard
+                                                key={category.slug}
+                                                category={category}
+                                                onClick={() => navigate(getCategoryUrl(category.slug))}
+                                            />
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
 
             {/* ── 3. My Reading Plan (authenticated only) ──────────── */}
             {isAuthenticated && (

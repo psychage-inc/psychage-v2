@@ -6,7 +6,7 @@
  * 2. Mock data (fallback - development)
  */
 
-import { Article, Category } from '../types/models';
+import { Article, Category, Citation } from '../types/models';
 import { supabase } from '../lib/supabaseClient';
 import { useMemo } from 'react';
 import { getCategoryTheme } from '../config/categoryThemes';
@@ -107,6 +107,22 @@ interface DBArticle {
     audio_url?: string;
     audio_status?: string;
     audio_duration_seconds?: number;
+    // Embedded structured citations (article_citations table, when the query requests them)
+    article_citations?: DBCitation[];
+}
+
+interface DBCitation {
+    id: string;
+    source_type?: string | null;
+    tier?: number | null;
+    title?: string | null;
+    authors?: string[] | null;
+    year?: number | null;
+    url?: string | null;
+    doi?: string | null;
+    journal_name?: string | null;
+    publisher?: string | null;
+    sort_order?: number | null;
 }
 
 export interface ArticleWithContent extends Article {
@@ -117,6 +133,43 @@ export interface ArticleWithContent extends Article {
 // ============================================================================
 // Mappers
 // ============================================================================
+
+function prettySourceType(t?: string | null): string {
+    if (!t) return 'Source';
+    return t
+        .replace(/_/g, ' ')
+        .replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+/**
+ * Map an article_citations row to the Citation shape ReferenceList renders.
+ * Note: ReferenceList builds the link as `https://doi.org/${citation.doi}`, so `doi` must be
+ * a BARE doi (10.xxx/…), never a full URL — otherwise the prefix doubles. We extract the bare
+ * doi from either column and fall back to `link` when there isn't one.
+ */
+function mapCitation(c: DBCitation): Citation {
+    const raw = String(c.doi || c.url || '');
+    const bareDoi = raw.match(/10\.\d{4,}\/[^\s"'<>]+/)?.[0];
+    return {
+        id: String(c.id),
+        title: c.title || '',
+        source: c.journal_name || c.publisher || prettySourceType(c.source_type),
+        year: c.year != null ? String(c.year) : undefined,
+        authors: Array.isArray(c.authors) ? c.authors : [],
+        journalName: c.journal_name || undefined,
+        tier: (c.tier ?? undefined) as Citation['tier'],
+        sourceType: (c.source_type ?? undefined) as Citation['sourceType'],
+        doi: bareDoi,
+        link: bareDoi ? undefined : c.url || c.doi || undefined,
+    };
+}
+
+function mapCitations(rows?: DBCitation[]): Citation[] {
+    if (!rows || rows.length === 0) return [];
+    return [...rows]
+        .sort((a, b) => (a.sort_order ?? 0) - (b.sort_order ?? 0))
+        .map(mapCitation);
+}
 
 /**
  * Map Supabase article to unified Article format
@@ -151,7 +204,7 @@ function mapSupabaseToArticle(data: DBArticle): ArticleWithContent {
             image: ''
         },
         relatedArticles: [],
-        citations: [],
+        citations: mapCitations(data.article_citations),
         // Media enrichment
         subtitle: data.subtitle || undefined,
         videoUrl: data.video_url || undefined,
@@ -273,7 +326,7 @@ export const articleService = {
         try {
             const { data, error } = await supabase
                 .from('articles')
-                .select('*, category:article_categories!category_id(*)')
+                .select('*, category:article_categories!category_id(*), article_citations(*)')
                 .eq('id', id)
                 .eq('status', 'published')
                 .single();
@@ -307,7 +360,7 @@ export const articleService = {
             try {
                 const { data, error } = await supabase
                     .from('articles')
-                    .select('*, category:article_categories!category_id(*)')
+                    .select('*, category:article_categories!category_id(*), article_citations(*)')
                     .eq('slug', slug)
                     .eq('status', 'published')
                     .single();
@@ -333,7 +386,7 @@ export const articleService = {
         try {
             const { data, error } = await supabase
                 .from('articles')
-                .select('*, category:article_categories!category_id(*)')
+                .select('*, category:article_categories!category_id(*), article_citations(*)')
                 .eq('slug', slug)
                 .eq('status', 'published')
                 .single();

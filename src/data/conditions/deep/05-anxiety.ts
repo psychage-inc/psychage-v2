@@ -1,0 +1,174 @@
+/**
+ * Deep content — Anxiety or fear-related disorders (ICD-11 6B00–6B06).
+ *
+ * Anxiety disorders are common and highly treatable; the copy normalises seeking help and
+ * stresses that avoidance feeds anxiety while gradual facing of fears eases it. Plain-language,
+ * non-diagnostic, no drug dosing. ICD-11 / DSM-5-TR framed.
+ */
+
+import type { ConditionDeepMap } from './types';
+import { WHO_ICD11 } from './types';
+
+const NIMH_ANX = {
+    label: 'National Institute of Mental Health (NIMH) — Anxiety Disorders',
+    url: 'https://www.nimh.nih.gov/health/topics/anxiety-disorders',
+};
+const NHS_GAD = { label: 'NHS — Generalised anxiety disorder (GAD)', url: 'https://www.nhs.uk/mental-health/conditions/generalised-anxiety-disorder/' };
+const NHS_SOCIAL = { label: 'NHS — Social anxiety (social phobia)', url: 'https://www.nhs.uk/mental-health/conditions/social-anxiety/' };
+const NHS_PHOBIAS = { label: 'NHS — Phobias', url: 'https://www.nhs.uk/mental-health/conditions/phobias/' };
+
+export const anxietyDeep: ConditionDeepMap = {
+    'generalized-anxiety-disorder': {
+        short_definition:
+            'Persistent, excessive worry about many everyday things — health, money, work, family — that is hard to switch off and lasts for months. The worry feels out of proportion to the situation, is difficult to control, and comes with physical tension that wears the body and mind down over time. It is common and responds well to treatment.',
+        what_it_feels_like:
+            'It is a steady hum of worry that jumps from one concern to the next, often with no clear reason and even when things are going well. The body keeps pace with the mind: restlessness, tiredness, trouble concentrating, irritability, tight muscles, and broken sleep are common. Many people describe always bracing for something to go wrong, and finding it exhausting to feel "on" all the time.',
+        how_it_differs:
+            'Unlike panic disorder, which strikes as sudden surges of intense fear, GAD is a constant background of worry. Unlike social anxiety, it is not tied to being watched or judged. And unlike the everyday stress everyone feels, it persists for months without a clear trigger, resists reassurance, and starts to interfere with daily life rather than passing once a problem is solved.',
+        when_more_than_everyday:
+            'Worry becomes something more when it is present most days for six months or more, feels impossible to control, and begins to affect work, relationships, or sleep. Feeling worried at times is part of being human — but when the worry runs the show and will not ease, it is worth talking to a professional.',
+        sections: [
+            { heading: 'Signs and symptoms', body: 'GAD has two sides — the mental and the physical. Mentally, there is ongoing, hard-to-control worry about a range of everyday matters, a tendency to expect the worst, and difficulty concentrating because attention keeps drifting back to what might go wrong.\n\nPhysically, the body stays braced: restlessness or feeling on edge, tiring easily, muscle tension, irritability, and disturbed sleep — trouble falling asleep, staying asleep, or waking unrefreshed. For a diagnosis these features are present most days and have lasted several months, not just during a stressful patch.' },
+            { heading: 'Who it affects', body: 'GAD is one of the most common anxiety disorders, affecting people of all ages and more often diagnosed in women. It often starts gradually, in adolescence or adulthood, and can wax and wane with life stress. Many people have lived with it for years before seeking help.' },
+            { heading: 'What causes it', body: 'There is rarely a single cause. Anxiety tends to grow from a mix of influences: a family history of anxiety, a naturally more sensitive or cautious temperament, and life experiences such as prolonged stress, adversity, or difficult early environments. Day to day, worry is often kept going by habits that feel protective but are not — avoiding feared situations, seeking constant reassurance, or trying to think through every possible outcome — which bring brief relief but teach the brain the worry was necessary.' },
+            { heading: 'How it’s recognised', body: 'GAD is identified through conversation, not a lab test. A clinician asks about the focus and duration of the worry, how controllable it feels, and the physical symptoms, and checks it has lasted around six months and interferes with life. They also rule out other explanations — thyroid problems, too much caffeine, certain medications, or another mental health condition. In ICD-11 it is coded 6B00.' },
+            { heading: 'Treatment and what helps', body: 'GAD responds well to treatment, and most people improve. Talking therapies are first-line — cognitive behavioural therapy in particular helps people relate to worry differently, face avoided situations gradually, and drop the habits that feed anxiety. Medication, such as certain antidepressants, can also help and is sometimes combined with therapy. Everyday foundations matter too: regular sleep, physical activity, limiting caffeine and alcohol, and skills like paced breathing or mindfulness.' },
+            { heading: 'Living with it', body: 'Living well with GAD is less about eliminating worry and more about loosening its grip. Many people find it helps to notice worry early, set aside a limited "worry time" rather than carrying it all day, and act on what is in their control while letting go of what is not. Worry can flare during stressful periods; knowing your warning signs and tools makes flare-ups shorter.' },
+            { heading: 'For family and friends', body: 'Reassurance helps for a moment but can feed the cycle if it becomes constant, so aim to support coping rather than answer every worry. Encourage treatment and healthy routines, be patient with avoidance, and gently support the person to face feared situations at their own pace. Listening without minimising ("just relax" rarely helps) goes a long way.' },
+            { heading: 'When to get help', body: 'It is worth reaching out when worry is present most days, feels uncontrollable, and affects sleep, work, relationships, or enjoyment of life — you do not need to wait until it feels unbearable. If anxiety ever comes with thoughts of suicide or self-harm, treat it as urgent and contact emergency services or a crisis line.' },
+        ],
+        sources: [WHO_ICD11, NIMH_ANX, NHS_GAD],
+    },
+
+    'panic-disorder': {
+        short_definition:
+            'A condition marked by recurrent, unexpected panic attacks — sudden surges of intense fear or discomfort that peak within minutes — together with ongoing worry about having more attacks or changing behaviour to avoid them. The attacks are frightening and feel physical, but they are not dangerous, and the condition is very treatable.',
+        what_it_feels_like:
+            'A panic attack can feel like a heart attack or a sense of impending doom: a pounding heart, shortness of breath, chest tightness, dizziness, shaking, sweating, and a feeling of losing control or being detached from reality. It comes on fast, peaks within minutes, and passes. Between attacks, people often live in fear of the next one — a "fear of fear" that can shrink their world.',
+        how_it_differs:
+            'Unlike generalised anxiety, panic disorder centres on discrete, intense attacks rather than constant background worry. Unlike a one-off panic attack (which many people have without a disorder), here attacks recur and drive ongoing worry or avoidance. And although attacks feel like a medical emergency, they are the body’s alarm system misfiring, not a sign of physical danger.',
+        when_more_than_everyday:
+            'When panic attacks recur, you worry about more of them, or you start avoiding places or situations in case one happens, it is worth seeking help. A first or severe attack should be checked medically to rule out physical causes; once that is done, the anxiety itself can be treated.',
+        sections: [
+            { heading: 'Signs and symptoms', body: 'A panic attack is a sudden episode of intense fear with physical symptoms: racing or pounding heart, shortness of breath, chest pain or tightness, dizziness or light-headedness, trembling, sweating, nausea, tingling, chills or hot flushes, and feelings of unreality or of losing control or "going mad". Symptoms peak within minutes. The disorder also includes persistent worry about further attacks and changes in behaviour to prevent them.' },
+            { heading: 'Who it affects', body: 'Panic disorder is common and usually begins in late adolescence or early adulthood. It is more often diagnosed in women. Panic attacks themselves are very common across the population; the disorder is when they recur and drive worry or avoidance.' },
+            { heading: 'What causes it', body: 'It develops from a mix of genetic vulnerability, a sensitive stress-response system, and life stress, often sparked during a stressful period. A key driver is the way the body’s normal alarm response gets misread as dangerous — for example, reading a racing heart as a heart attack — which fuels more fear and more attacks. Caffeine, stimulants, and poor sleep can make attacks more likely.' },
+            { heading: 'How it’s recognised', body: 'A clinician identifies recurrent unexpected panic attacks plus ongoing worry or avoidance, after ruling out physical causes (such as heart or thyroid conditions) and substances. In ICD-11 it is coded 6B01. It is common — and reasonable — to have physical checks first, because the symptoms feel so bodily.' },
+            { heading: 'Treatment and what helps', body: 'Panic disorder is highly treatable. Cognitive behavioural therapy is particularly effective: it helps people understand the attacks, stop reading bodily sensations as dangerous, and gradually face avoided situations. Medication (certain antidepressants) helps many people. Learning that an attack will peak and pass — and not fighting it — reduces its power. Reducing caffeine and improving sleep help too.' },
+            { heading: 'Riding out an attack', body: 'During an attack, it helps to remember it is not dangerous and will pass within minutes. Slow, steady breathing (especially a longer out-breath), grounding in the senses, and resisting the urge to flee all reduce the spike of fear. Avoiding the situation afterwards offers short-term relief but strengthens the fear, so gently returning to normal activities is part of recovery.' },
+            { heading: 'For family and friends', body: 'During an attack, stay calm, reassure the person it will pass, and help them slow their breathing rather than rushing them away. Between attacks, support them to keep facing situations rather than helping them avoid — avoidance shrinks life and feeds panic. Encourage treatment, which works well.' },
+            { heading: 'When to get help', body: 'See a GP if panic attacks recur or you are avoiding places for fear of them. Always seek medical assessment for a first or unusually severe attack to rule out physical causes. If panic comes with thoughts of suicide or self-harm, seek urgent help.' },
+        ],
+        sources: [WHO_ICD11, NIMH_ANX],
+    },
+
+    'agoraphobia': {
+        short_definition:
+            'A marked fear or anxiety about situations where escape might be difficult or help unavailable if something goes wrong — such as crowds, public transport, queues, open or enclosed spaces, or being far from home. People often avoid these situations or endure them with dread, which can severely limit daily life. It frequently develops alongside panic.',
+        what_it_feels_like:
+            'A person may feel trapped, panicky, or unsafe in places they cannot easily leave, and increasingly avoid them — sometimes to the point of struggling to leave home alone. The world can shrink as "safe" zones narrow. It is driven not by the place itself but by the fear of panicking, losing control, or being unable to get help.',
+        how_it_differs:
+            'Unlike a specific phobia (fear of one object or situation), agoraphobia is about a cluster of situations linked by the theme of escape and safety. Unlike social anxiety, the fear is not mainly about being judged but about being unable to get away or get help. It often, though not always, follows panic attacks.',
+        when_more_than_everyday:
+            'When fear of crowds, transport, open spaces, or being away from home leads you to avoid them, need a companion, or endure them with intense dread — and this limits your life — it is worth seeking help. The earlier avoidance is tackled, the easier it is to reverse.',
+        sections: [
+            { heading: 'Signs and symptoms', body: 'Agoraphobia involves marked fear of two or more situations such as using public transport, being in open spaces, being in enclosed spaces (shops, cinemas), standing in queues or crowds, or being outside the home alone. The person fears panic-like symptoms or being unable to escape or get help, and so avoids these situations, needs a trusted companion, or endures them with intense anxiety.' },
+            { heading: 'Who it affects', body: 'Agoraphobia is less common than some anxiety disorders but can be very disabling. It usually begins in early adulthood and is more often diagnosed in women. It frequently develops after panic attacks, as the person starts avoiding places where attacks have happened.' },
+            { heading: 'What causes it', body: 'It often grows out of panic: after frightening attacks, a person begins avoiding the places where they occurred, and avoidance spreads. Genetic vulnerability, a sensitive stress response, and stressful life events all contribute. Each act of avoidance brings relief but reinforces the fear, which is how the condition tightens over time.' },
+            { heading: 'How it’s recognised', body: 'A clinician identifies the pattern of fear and avoidance across escape-related situations and its impact on life, and checks for panic disorder and other causes. In ICD-11 it is coded 6B02. Describing exactly which situations are avoided, and why, helps guide treatment.' },
+            { heading: 'Treatment and what helps', body: 'Agoraphobia responds well to treatment, especially cognitive behavioural therapy with graded exposure — facing feared situations step by step, starting small, so the brain learns they are safe and that anxiety fades on its own. Medication (certain antidepressants) can help, particularly where panic is involved. Progress comes from gradually expanding, not avoiding, the world.' },
+            { heading: 'Reclaiming your world', body: 'Recovery is built on small, repeated steps: facing a slightly harder situation, staying long enough for anxiety to ease, and building from there. Setbacks are normal. Reducing "safety behaviours" (always needing a companion, sitting near exits) over time helps the brain relearn that the situations are safe. Each step widens the world again.' },
+            { heading: 'For family and friends', body: 'It is tempting to help by doing things for the person or always accompanying them, but long term this can reinforce the avoidance. Instead, encourage and support graded steps, celebrate small wins, and be patient with setbacks. Work with the person and their therapist on gradually reducing reliance on safety behaviours.' },
+            { heading: 'When to get help', body: 'Seek help when fear and avoidance of everyday situations are limiting your life — earlier is easier. If panic or distress brings thoughts of suicide or self-harm, seek urgent help. With treatment, most people regain freedom of movement.' },
+        ],
+        sources: [WHO_ICD11, NHS_PHOBIAS],
+    },
+
+    'specific-phobia': {
+        short_definition:
+            'An intense, persistent fear of a specific object or situation — such as heights, flying, needles, spiders, blood, or enclosed spaces — that is out of proportion to any real danger, and that the person avoids or endures with intense anxiety. Phobias are very common and, with the right approach, among the most treatable anxiety conditions.',
+        what_it_feels_like:
+            'Coming near the feared thing — or sometimes just thinking about it — triggers immediate, intense fear or even panic: racing heart, sweating, trembling, a strong urge to escape. The person usually knows the fear is out of proportion, but cannot reason it away, and so avoids the trigger, sometimes rearranging life around that avoidance.',
+        how_it_differs:
+            'Unlike everyday dislikes or sensible caution, a phobia causes intense fear out of proportion to the real risk and leads to avoidance that affects life. Unlike agoraphobia or social anxiety, the fear is focused on one specific thing. Some phobias (notably of blood, injuries, or injections) can cause fainting, which is a distinctive feature.',
+        when_more_than_everyday:
+            'A specific fear becomes a phobia worth treating when it is intense, persistent, and leads you to avoid things in ways that limit your life — for example avoiding medical care because of a needle phobia, or being unable to fly or use a lift. If avoidance is costing you, help is straightforward and effective.',
+        sections: [
+            { heading: 'Signs and symptoms', body: 'A specific phobia involves immediate, intense fear or anxiety on encountering (or anticipating) a particular trigger — common categories include animals (spiders, dogs), the natural environment (heights, storms), blood/injection/injury, and situations (flying, lifts, enclosed spaces). The person avoids the trigger or endures it with marked distress, and the fear is out of proportion to the actual danger. Blood- and injection-related phobias can uniquely cause a drop in blood pressure and fainting.' },
+            { heading: 'Who it affects', body: 'Specific phobias are among the most common anxiety conditions, often beginning in childhood. Many people have a mild phobia that does not trouble them; it becomes a clinical concern when avoidance limits life. They are more often diagnosed in women.' },
+            { heading: 'What causes it', body: 'Phobias can arise from a frightening experience, from learning (seeing others react fearfully, or being warned), or seemingly without a clear cause, on a background of a more anxious temperament. Some fears (of heights, snakes) may reflect an evolutionary readiness to learn fear quickly. Avoidance keeps the phobia alive by preventing the person from learning the trigger is safe.' },
+            { heading: 'How it’s recognised', body: 'A clinician identifies the focused fear, the avoidance, and the impact on life, distinguishing it from other anxiety conditions. In ICD-11 it is coded 6B03. Diagnosis is usually straightforward once the specific trigger and its effects are described.' },
+            { heading: 'Treatment and what helps', body: 'Specific phobias respond extremely well to exposure-based therapy — facing the feared object or situation gradually and safely, so the brain learns the fear is unnecessary and anxiety subsides. Often only a few sessions are needed; some structured programmes work in a single long session. For blood/injection phobias, a specific technique (tensing muscles to keep blood pressure up) helps prevent fainting. Medication is rarely the main treatment.' },
+            { heading: 'Facing the fear safely', body: 'The key to recovery is approaching the feared thing in small steps and staying with it until the anxiety naturally falls, rather than escaping at the peak. Done gradually and with support, this retrains the fear response. Avoidance, by contrast, keeps the phobia strong. Many people are surprised how quickly a long-standing fear can ease.' },
+            { heading: 'For family and friends', body: 'Avoid forcing someone into a feared situation suddenly, which can deepen the fear; equally, avoid arranging life entirely around their avoidance. Support gentle, graded steps and encourage professional help, which is brief and effective. For children, modelling calm around the feared thing helps.' },
+            { heading: 'When to get help', body: 'Seek help if a phobia is limiting your life or your health — for example avoiding necessary medical or dental care. Treatment is brief and highly effective, so there is rarely a reason to keep living around the fear.' },
+        ],
+        sources: [WHO_ICD11, NHS_PHOBIAS],
+    },
+
+    'social-anxiety-disorder': {
+        short_definition:
+            'A persistent, intense fear of social or performance situations in which a person worries about being watched, judged, embarrassed, or humiliated — such as speaking up, meeting new people, eating in front of others, or performing. The fear leads to avoidance or intense distress and can hold back relationships, study, and work. It is common and treatable.',
+        what_it_feels_like:
+            'Everyday social moments — a meeting, a party, a phone call, eating in public — can trigger dread, self-consciousness, and physical symptoms like blushing, sweating, a racing heart, or a shaky voice. People often replay interactions afterwards, convinced they were judged. The fear of looking anxious can itself make things worse, and many people quietly avoid situations or endure them with great effort.',
+        how_it_differs:
+            'Unlike ordinary shyness, social anxiety is intense, persistent, and limiting — it holds people back from things they want to do. Unlike panic disorder, the fear is specifically about being judged in social situations. Unlike agoraphobia, the concern is other people’s evaluation rather than escape or safety. Many people hide it well, so it is often invisible to others.',
+        when_more_than_everyday:
+            'When fear of being judged leads you to avoid social or performance situations, or to endure them with intense distress, and this holds back your relationships, study, work, or enjoyment, it is worth seeking help. Being introverted or shy is fine; social anxiety is when fear of judgement runs your choices.',
+        sections: [
+            { heading: 'Signs and symptoms', body: 'The core is a marked fear of one or more social situations where the person may be scrutinised — meeting people, conversations, being observed eating or drinking, or performing. They fear acting in a way, or showing anxiety symptoms, that will be humiliating. Situations bring intense anxiety with physical signs (blushing, sweating, trembling, racing heart) and are avoided or endured with distress. Anticipatory dread beforehand and self-critical replaying afterwards are common.' },
+            { heading: 'Who it affects', body: 'Social anxiety disorder is one of the most common anxiety conditions and usually begins in the teenage years. It affects all genders. Because many people hide it and push through, it is often unrecognised and untreated for years, even though it can significantly limit life.' },
+            { heading: 'What causes it', body: 'It develops from a mix of temperament (a tendency to be shy or easily embarrassed), genetics, and experiences such as bullying, criticism, or humiliating events. Patterns of thinking — assuming others are judging harshly and focusing on oneself in social settings — keep it going, as does avoidance, which prevents the person from discovering that feared outcomes rarely happen.' },
+            { heading: 'How it’s recognised', body: 'A clinician identifies the fear of social judgement, the situations affected, the avoidance or distress, and the impact on life, distinguishing it from shyness, panic disorder, and autism. In ICD-11 it is coded 6B04. Naming it often comes as a relief to people who thought they were simply "bad at people".' },
+            { heading: 'Treatment and what helps', body: 'Social anxiety responds well to treatment. Cognitive behavioural therapy is especially effective: it helps shift attention away from self-monitoring, test out feared predictions through gradual exposure, and reduce safety behaviours (over-rehearsing, avoiding eye contact). Medication (certain antidepressants) helps many people. Practising small social steps, and dropping the habit of replaying interactions, build confidence over time.' },
+            { heading: 'Building confidence', body: 'Recovery comes from gradually facing social situations rather than avoiding them, and learning that feared outcomes are unlikely and survivable. Shifting focus outward (onto the conversation rather than oneself), reducing safety behaviours, and being kinder to oneself about small slip-ups all help. Progress is built one manageable step at a time.' },
+            { heading: 'For family and friends', body: 'Avoid pushing someone into the spotlight unexpectedly, and avoid speaking for them in ways that reinforce avoidance. Instead, gently encourage small social steps, celebrate efforts (not just outcomes), and be patient. Reassure without taking over. Encourage professional help, which works well.' },
+            { heading: 'When to get help', body: 'See a GP or mental health service when fear of judgement is holding back your relationships, education, work, or enjoyment of life. If social anxiety comes with depression or thoughts of self-harm, seek help promptly.' },
+        ],
+        sources: [WHO_ICD11, NIMH_ANX, NHS_SOCIAL],
+    },
+
+    'separation-anxiety-disorder': {
+        short_definition:
+            'Excessive fear or anxiety about being separated from the people a person is most attached to — such as a parent, child, or partner — beyond what fits their age or stage of life. Although most associated with children, it also occurs in adults. The worry centres on harm coming to loved ones or to oneself when apart, and it can lead to avoidance of separation.',
+        what_it_feels_like:
+            'A child may be distressed at leaving a parent for school or sleep, fear something bad will happen to them, cling, or have physical complaints like tummy aches before separations. Adults may worry intensely when apart from a partner or child, need frequent contact, or struggle to be alone. The distress is real and disproportionate, not "attention-seeking".',
+        how_it_differs:
+            'Unlike normal separation distress (which is developmentally expected in young children), this is excessive for the person’s age, persistent, and impairing. Unlike general anxiety, the fear is specifically about separation from attachment figures. In adults it is sometimes mistaken for being "clingy" or controlling, when it is in fact an anxiety condition.',
+        when_more_than_everyday:
+            'It is worth seeking help when fear of separation is excessive for the person’s age, lasts, and interferes with school, work, relationships, or independence — for example a child unable to attend school, or an adult unable to be apart from a loved one without intense distress.',
+        sections: [
+            { heading: 'Signs and symptoms', body: 'Features include excessive distress when separation happens or is anticipated; persistent worry about losing attachment figures or about harm befalling them; reluctance or refusal to go out, to school or work, or to sleep away from attachment figures; nightmares about separation; and physical complaints (headaches, stomach aches) when separation looms. The pattern is more intense and lasting than is typical for the person’s age.' },
+            { heading: 'Who it affects', body: 'Separation anxiety is the most common anxiety disorder in younger children, and it also occurs in adolescents and adults — where it is increasingly recognised. Some degree of separation distress is normal in early childhood; it becomes a disorder when it is excessive and impairing for the person’s stage of life.' },
+            { heading: 'What causes it', body: 'It arises from a mix of temperament, genetics, attachment experiences, and stressful events such as loss, illness, family change, or moving. A frightening separation or a major life upheaval can trigger it. Over-accommodation — arranging life to avoid all separation — can unintentionally maintain it.' },
+            { heading: 'How it’s recognised', body: 'A clinician assesses the focus of the fear (separation from specific people), its intensity relative to the person’s age, and its impact, and distinguishes it from other anxiety conditions. In ICD-11 it is coded 6B05. Information from family and school is often part of assessment in children.' },
+            { heading: 'Treatment and what helps', body: 'Separation anxiety responds well to treatment, usually cognitive behavioural therapy adapted to the person’s age — gradually building tolerance for separation through small, planned steps, alongside support for parents to encourage independence without forcing it. For school refusal, a planned, graded return works better than either forcing or avoiding. Medication is sometimes used in more severe cases, guided by a specialist.' },
+            { heading: 'Building independence gently', body: 'Recovery comes from short, predictable separations that gradually lengthen, with warm reunions, so the person learns that separation is safe and survivable. Avoiding all separation feels kind but keeps the fear alive. Consistency, calm goodbyes, and praising brave steps all help.' },
+            { heading: 'For family and friends', body: 'Stay warm but consistent: keep goodbyes brief and confident, follow through on planned separations, and praise the person for managing them. Resist the urge to cancel or rescue at the first sign of distress, which teaches that separation is dangerous. Work with school or a therapist on a graded plan.' },
+            { heading: 'When to get help', body: 'Seek help when separation fears stop a child attending school or an adult living independently, or cause ongoing distress. Early support prevents the avoidance from becoming entrenched.' },
+        ],
+        sources: [WHO_ICD11, NIMH_ANX],
+    },
+
+    'selective-mutism': {
+        short_definition:
+            'A childhood anxiety condition in which a child consistently does not speak in certain social situations (such as school) where speaking is expected, even though they speak normally in others (such as at home). It is not refusal or rudeness — the child is, in effect, "frozen" by anxiety. It is treatable, and earlier help works best.',
+        what_it_feels_like:
+            'A child may chat freely and confidently at home yet become silent, still, or frozen at school or with less familiar people — unable to speak even when they want to. The silence is driven by intense anxiety, not stubbornness, and pressure to speak usually makes it worse. The child often feels distressed by their own inability to talk.',
+        how_it_differs:
+            'Unlike ordinary shyness, the lack of speech is consistent, situation-specific, and lasts (typically more than a month, beyond settling into a new setting), and it interferes with school or social life. Unlike a speech or language disorder, the child can speak normally — just not in particular situations. It is understood as an anxiety condition, closely related to social anxiety.',
+        when_more_than_everyday:
+            'It is worth seeking help when a child consistently does not speak in certain settings (like school) for more than a month, beyond the first weeks of settling in, and this affects their learning or friendships. Early support is important, as the pattern can become more entrenched over time.',
+        sections: [
+            { heading: 'Signs and characteristics', body: 'The hallmark is consistent failure to speak in specific social situations where speech is expected, despite speaking normally in others. A child may also appear frozen, avoid eye contact, or use gestures or whispers instead of speech in the difficult settings. It typically shows up when a child starts nursery or school and is most often about anxiety, not a wish to be defiant.' },
+            { heading: 'Who it affects', body: 'Selective mutism is uncommon and usually begins in early childhood, often becoming obvious when a child starts school. It is more often identified in girls and in children who are naturally shy or anxious, and it can run alongside other anxiety, especially social anxiety.' },
+            { heading: 'What causes it', body: 'It is understood as an anxiety condition, more common in children with an inhibited, anxious temperament and a family history of anxiety. It is not caused by trauma in most cases, nor by bad parenting, and it is not the child being deliberately difficult. Pressure to speak, however well-meaning, tends to increase the anxiety.' },
+            { heading: 'How it’s recognised', body: 'A clinician (often with input from family and school, and sometimes a speech and language therapist) identifies the consistent, situation-specific lack of speech lasting more than a month and affecting daily life, and rules out a language disorder or a brief settling-in period. In ICD-11 it is coded 6B06.' },
+            { heading: 'Treatment and what helps', body: 'Selective mutism responds well to early, anxiety-focused treatment. Behavioural approaches gradually and gently reduce the pressure and build up speaking in small, comfortable steps (for example, starting with a trusted person and slowly widening the circle and setting). Close work between family, school, and therapist is central. Forcing or bribing a child to speak does not help; reducing anxiety does.' },
+            { heading: 'How adults can help', body: 'The most helpful stance is to remove the spotlight: do not pressure the child to speak, allow non-verbal responses at first, and warmly accept any communication. Build speaking up gradually through games and low-pressure activities, praising brave steps. Consistency between home and school, and patience, make the biggest difference.' },
+            { heading: 'For family and friends', body: 'Avoid asking direct questions that demand speech in front of others, and never label the child as "shy" or push them to "just say hello". Instead, create relaxed, pressure-free chances to communicate, follow the child’s pace, and work closely with school. Celebrate small steps without making a big fuss that adds pressure.' },
+            { heading: 'When to get help', body: 'Seek help if a child consistently does not speak in certain settings for more than a month beyond settling in, especially once at school. Early support, before the pattern sets in, gives the best results.' },
+        ],
+        sources: [WHO_ICD11, NIMH_ANX],
+    },
+};

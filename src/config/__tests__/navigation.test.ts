@@ -66,7 +66,8 @@ describe('buildLearnSections', () => {
     it('links every category to /learn/:slug with a non-empty icon key', () => {
         for (const section of sections) {
             for (const item of section.items) {
-                if (item.id === 'browse-all') continue;
+                // Static Browse items are not categories and route off-pattern.
+                if (item.id === 'browse-all' || item.id === 'browse-by-topic') continue;
                 expect(item.href).toBe(`/learn/${item.id}`);
                 expect(item.icon).toBeTruthy();
             }
@@ -85,7 +86,8 @@ describe('Learn nav icons', () => {
     it('full static learnSections also routes every category to /learn/:slug', () => {
         for (const section of learnSections) {
             for (const item of section.items) {
-                if (item.id === 'browse-all') continue;
+                // Static Browse items are not categories and route off-pattern.
+                if (item.id === 'browse-all' || item.id === 'browse-by-topic') continue;
                 expect(item.href).toBe(`/learn/${item.id}`);
             }
         }

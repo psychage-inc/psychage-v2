@@ -6,7 +6,7 @@ import {
   Library, Cloud, ShieldCheck, Stethoscope, HeartPulse,
   Star, Target, Users, Home, UserPlus, Smartphone, Globe,
   // Additional category icons
-  RefreshCw, AlertTriangle, Apple, MessageCircle, Compass, Baby
+  RefreshCw, AlertTriangle, Apple, MessageCircle, Compass, Baby, LayoutGrid
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -31,6 +31,7 @@ const iconMap: Record<string, React.ElementType> = {
 
   // Learn category icons (semantic system)
   'library': Library,              // Browse All
+  'layout-grid': LayoutGrid,       // Browse by Topic
   'cloud': Cloud,                  // Depression & Mood
   'shield-check': ShieldCheck,     // Trauma & PTSD
   'stethoscope': Stethoscope,      // Mental Health Conditions

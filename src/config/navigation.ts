@@ -62,6 +62,13 @@ const browseSection: NavSection = {
             href: '/learn',
             icon: 'library',
         },
+        {
+            id: 'browse-by-topic',
+            label: 'Browse by Topic',
+            description: 'All topics, grouped by area',
+            href: '/learn/topics',
+            icon: 'layout-grid',
+        },
     ],
 };
 

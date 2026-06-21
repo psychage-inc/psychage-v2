@@ -27,6 +27,7 @@ import { ScrollManager } from './components/ui/ScrollManager';
 
 // --- LAZY LOADED ROUTES (Code Splitting) ---
 const LearnPage = React.lazy(() => import('./pages/LearnPage'));
+const BrowseByTopicPage = React.lazy(() => import('./pages/BrowseByTopicPage'));
 const ArticleCategoryPage = React.lazy(() => import('./pages/ArticleCategoryPage'));
 const ArticlePage = React.lazy(() => import('./pages/learn/ArticlePage'));
 const ArticleRedirect = React.lazy(() => import('./components/article/ArticleRedirect'));
@@ -236,6 +237,7 @@ const App: React.FC = () => {
 
                                             {/* Public Routes */}
                                             <Route path="/learn" element={<PageTransition><RouteErrorBoundary><LearnPage /></RouteErrorBoundary></PageTransition>} />
+                                            <Route path="/learn/topics" element={<PageTransition><RouteErrorBoundary><BrowseByTopicPage /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/learn/article/:id" element={<PageTransition><ArticleRedirect /></PageTransition>} />
                                             <Route path="/learn/:categorySlug/:articleSlug" element={<PageTransition><ArticlePage /></PageTransition>} />
                                             <Route path="/learn/:categorySlug" element={<PageTransition><ArticleCategoryPage /></PageTransition>} />

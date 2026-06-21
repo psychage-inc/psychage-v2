@@ -1,4 +1,5 @@
-import type { NavigationConfig, NavMegaMenu, NavLink } from '../types/navigation';
+import type { NavigationConfig, NavMegaMenu, NavLink, NavSection } from '../types/navigation';
+import { CANONICAL_CATEGORIES, TOP_GROUPS, type CategoryGroup } from './taxonomy';
 
 /**
  * Comprehensive Navigation Configuration
@@ -6,177 +7,117 @@ import type { NavigationConfig, NavMegaMenu, NavLink } from '../types/navigation
  * Single source of truth for all navigation items across the application.
  * Items are automatically filtered based on permissions, roles, and feature flags.
  */
+
+// ── Learn menu, generated from the taxonomy contract ────────────────────────
+// The Learn mega-menu (desktop + mobile hamburger) is built from
+// src/config/taxonomy.ts so it always exposes the FULL canonical category set
+// on the canonical slugs — never a stale, hardcoded subset on renamed slugs.
+
+/** Decorative icon per category slug (keys map to NavMenu's iconMap; unknown → default). */
+export const LEARN_NAV_ICONS: Record<string, string> = {
+    'anxiety-stress': 'brain',
+    'depression-grief': 'cloud',
+    'trauma-healing': 'shield-check',
+    'mental-health-conditions': 'stethoscope',
+    'psychosis-schizophrenia': 'brain',
+    'neurodivergence-adhd-autism': 'brain',
+    'eating-body': 'apple',
+    'chronic-illness-pain': 'heart-pulse',
+    'aging-dementia-late-life': 'compass',
+    'emotional-regulation': 'heart',
+    'habits-behavior-change': 'target',
+    'sleep-body-connection': 'moon',
+    'self-worth-identity': 'star',
+    'therapy-navigation': 'message-circle',
+    'brain-neuroscience': 'brain',
+    'creativity-therapeutic-arts': 'edit',
+    'life-skills-practical-psychology': 'target',
+    'sports-exercise-psychology': 'heart-pulse',
+    'relationships-communication': 'users',
+    'work-productivity': 'briefcase',
+    'family-parenting': 'home',
+    'loneliness-connection': 'user-plus',
+    'digital-life': 'smartphone',
+    'technology-digital-life': 'smartphone',
+    'cultural-global': 'globe',
+    'womens-mental-health': 'heart',
+    'mens-mental-health': 'shield-check',
+    'sexuality-intimacy': 'heart',
+    'disability-accessibility': 'users',
+    'forensic-legal-justice': 'shield-check',
+    'military-veterans-firstresponder': 'shield-check',
+    'environmental-eco-psychology': 'leaf',
+    'spirituality-meaning': 'compass',
+    'financial-wellness': 'briefcase',
+};
+
+/** Static "Browse" section, shared by the full and populated-only Learn menus. */
+const browseSection: NavSection = {
+    title: 'Browse',
+    items: [
+        {
+            id: 'browse-all',
+            label: 'Browse All Articles',
+            description: 'Explore our complete library',
+            href: '/learn',
+            icon: 'library',
+        },
+    ],
+};
+
+/**
+ * Full canonical Learn menu (all 31 categories). Used as the static default on the
+ * nav item and as the loading/error fallback for the data-driven populated menu.
+ */
+export const learnSections: NavSection[] = [
+    browseSection,
+    ...TOP_GROUPS.map((group) => ({
+        title: group.title,
+        items: CANONICAL_CATEGORIES.filter((c) => c.group === group.id).map((c) => ({
+            id: c.slug,
+            label: c.name,
+            href: `/learn/${c.slug}`,
+            icon: LEARN_NAV_ICONS[c.slug] ?? 'default',
+        })),
+    })),
+];
+
+/**
+ * Build Learn mega-menu sections from populated category groups (the
+ * `categoryService.getGrouped()` result). Keeps the "Browse" section verbatim,
+ * emits only categories with `articleCount > 0` (so the menu can never render a
+ * dead "0 articles" link), drops any section left empty, and reuses the same icon
+ * map + `default` fallback as the static menu so icons stay identical. Pure: no
+ * fetching, no article-status logic — it only reshapes an already-counted list.
+ */
+export function buildLearnSections(groups: CategoryGroup[]): NavSection[] {
+    return [
+        browseSection,
+        ...groups
+            .map((group) => ({
+                title: group.title,
+                items: group.categories
+                    .filter((c) => c.articleCount > 0)
+                    .map((c) => ({
+                        id: c.slug,
+                        label: c.name,
+                        href: `/learn/${c.slug}`,
+                        icon: LEARN_NAV_ICONS[c.slug] ?? 'default',
+                    })),
+            }))
+            .filter((section) => section.items.length > 0),
+    ];
+}
+
 export const navigationConfig: NavigationConfig = {
     // PRIMARY NAVIGATION (Desktop navbar, top-level items)
     primary: [
-        // Learn mega menu - 4 sections: Browse + 3 themed groups (6/6/7).
-        // Every category link points at a slug with published content (no dead links).
+        // Learn mega menu — Browse + the 3 taxonomy groups, full canonical set
         {
             id: 'learn',
             label: 'Learn',
             type: 'mega-menu',
-            sections: [
-                {
-                    title: 'Browse',
-                    items: [
-                        {
-                            id: 'browse-all',
-                            label: 'Browse All Articles',
-                            description: 'Explore our complete library',
-                            href: '/learn',
-                            icon: 'library'
-                        }
-                    ]
-                },
-                {
-                    title: 'Conditions & Disorders',
-                    items: [
-                        {
-                            id: 'anxiety-stress',
-                            label: 'Anxiety & Stress',
-                            description: 'Managing worry and overwhelm',
-                            href: '/learn/anxiety-stress',
-                            icon: 'brain'
-                        },
-                        {
-                            id: 'depression-mood',
-                            label: 'Depression & Mood',
-                            description: 'Navigating sadness and emotional lows',
-                            href: '/learn/depression-mood',
-                            icon: 'cloud'
-                        },
-                        {
-                            id: 'trauma-healing',
-                            label: 'Trauma & Healing',
-                            description: 'Processing difficult experiences',
-                            href: '/learn/trauma-healing',
-                            icon: 'shield-check'
-                        },
-                        {
-                            id: 'mental-health-conditions',
-                            label: 'Mental Health Conditions',
-                            description: 'Understanding diagnoses and disorders',
-                            href: '/learn/mental-health-conditions',
-                            icon: 'clipboard-list'
-                        },
-                        {
-                            id: 'chronic-illness-pain',
-                            label: 'Chronic Illness & Pain',
-                            description: 'Mind-body and medical psychology',
-                            href: '/learn/chronic-illness-pain',
-                            icon: 'activity'
-                        },
-                        {
-                            id: 'aging-dementia-late-life',
-                            label: 'Aging & Late-Life',
-                            description: 'Mental health in later life',
-                            href: '/learn/aging-dementia-late-life',
-                            icon: 'sunset'
-                        }
-                    ]
-                },
-                {
-                    title: 'Behavior & Wellness',
-                    items: [
-                        {
-                            id: 'emotional-regulation',
-                            label: 'Emotional Regulation',
-                            description: 'Understanding and managing emotions',
-                            href: '/learn/emotional-regulation',
-                            icon: 'heart-pulse'
-                        },
-                        {
-                            id: 'self-esteem-identity',
-                            label: 'Self-Esteem & Identity',
-                            description: 'Building self-worth and confidence',
-                            href: '/learn/self-esteem-identity',
-                            icon: 'heart'
-                        },
-                        {
-                            id: 'habits-behavior-change',
-                            label: 'Habits & Behavior Change',
-                            description: 'Motivation and lasting change',
-                            href: '/learn/habits-behavior-change',
-                            icon: 'repeat'
-                        },
-                        {
-                            id: 'sleep-body-connection',
-                            label: 'Sleep & Mind-Body',
-                            description: 'Better sleep and mind-body health',
-                            href: '/learn/sleep-body-connection',
-                            icon: 'moon'
-                        },
-                        {
-                            id: 'therapy-navigation',
-                            label: 'Therapy & Treatment',
-                            description: 'Finding the right support',
-                            href: '/learn/therapy-navigation',
-                            icon: 'message-circle'
-                        },
-                        {
-                            id: 'spirituality-meaning',
-                            label: 'Spirituality & Meaning',
-                            description: 'Purpose, values, and existential wellbeing',
-                            href: '/learn/spirituality-meaning',
-                            icon: 'sparkles'
-                        }
-                    ]
-                },
-                {
-                    title: 'Life & Society',
-                    items: [
-                        {
-                            id: 'relationships-social',
-                            label: 'Relationships & Social',
-                            description: 'Building healthy connections',
-                            href: '/learn/relationships-social',
-                            icon: 'users'
-                        },
-                        {
-                            id: 'workplace-academic',
-                            label: 'Workplace & Academic',
-                            description: 'Burnout, stress, and balance',
-                            href: '/learn/workplace-academic',
-                            icon: 'briefcase'
-                        },
-                        {
-                            id: 'technology-digital-life',
-                            label: 'Technology & Mental Health',
-                            description: 'Tech, AI, and digital wellbeing',
-                            href: '/learn/technology-digital-life',
-                            icon: 'cpu'
-                        },
-                        {
-                            id: 'mens-mental-health',
-                            label: "Men's Mental Health",
-                            description: 'Men-specific mental health',
-                            href: '/learn/mens-mental-health',
-                            icon: 'user'
-                        },
-                        {
-                            id: 'digital-life',
-                            label: 'Digital Life',
-                            description: 'Social media and modern stressors',
-                            href: '/learn/digital-life',
-                            icon: 'smartphone'
-                        },
-                        {
-                            id: 'cultural-global',
-                            label: 'Global & Cultural MH',
-                            description: 'Cross-cultural perspectives',
-                            href: '/learn/cultural-global',
-                            icon: 'globe'
-                        },
-                        {
-                            id: 'loneliness-connection',
-                            label: 'Loneliness & Connection',
-                            description: 'Belonging and social connection',
-                            href: '/learn/loneliness-connection',
-                            icon: 'heart-handshake'
-                        }
-                    ]
-                }
-            ],
+            sections: learnSections,
             quickActions: [
                 { label: 'Browse All Articles', href: '/learn' },
                 { label: 'Most Popular', href: '/learn?sort=popular' },

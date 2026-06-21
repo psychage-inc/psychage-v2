@@ -10,6 +10,7 @@ import { Logo } from '../ui/Logo';
 import { useAuth } from '../../context/AuthContext';
 import { navigationConfig } from '../../config/navigation';
 import { useNavPermissions } from '../../hooks/useNavPermissions';
+import { useLearnNavSections } from '../../hooks/useLearnNavSections';
 import type { NavItem } from '../../types/navigation';
 
 const Navigation: React.FC = () => {
@@ -31,12 +32,21 @@ const Navigation: React.FC = () => {
     const userMenuRef = useRef<HTMLDivElement>(null);
     const { filterNavItems, filterMegaMenu } = useNavPermissions();
 
-    // Filter navigation items based on permissions
+    // Learn mega-menu surfaces only populated categories (zero dead links).
+    const { sections: learnSections } = useLearnNavSections();
+
+    // Filter navigation items based on permissions, then point the Learn mega-menu
+    // at the populated-only category sections (icons/grouping/order unchanged).
     const primaryNavItems = useMemo(() => {
         return navigationConfig.primary
             .map(item => filterMegaMenu(item))
-            .filter((item): item is NavItem => item !== null);
-    }, [filterMegaMenu]);
+            .filter((item): item is NavItem => item !== null)
+            .map(item =>
+                item.id === 'learn' && item.type === 'mega-menu'
+                    ? { ...item, sections: learnSections }
+                    : item,
+            );
+    }, [filterMegaMenu, learnSections]);
 
     const authItems = useMemo(() =>
         filterNavItems(navigationConfig.auth),

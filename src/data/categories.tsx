@@ -1,6 +1,7 @@
 import React from 'react';
 import { Category } from '../types';
 import { getCategoryTheme } from '../config/categoryThemes';
+import { CANONICAL_CATEGORIES } from '../config/taxonomy';
 
 const themeIcon = (slug: string) => {
     const Icon = getCategoryTheme(slug).icon;
@@ -10,192 +11,85 @@ const themeIcon = (slug: string) => {
 const themeColor = (slug: string) => getCategoryTheme(slug).classes.bg;
 
 /**
- * 18 categories aligned with content-architecture slugs.
- * Used as fallback when Supabase is unavailable.
- * Only includes categories that have published articles.
+ * Plain-language descriptions, keyed by canonical slug. Sourced from the
+ * article `_shared.ts` definitions and the Supabase category seed — existing
+ * copy, not fabricated. A slug without an entry renders an empty description.
  */
-export const categories: Category[] = [
-    {
-        id: 'emotional-regulation',
-        name: 'Emotional Regulation & Self-Awareness',
-        slug: 'emotional-regulation',
-        description: 'Foundational emotional literacy — identifying, naming, and modulating emotions. The gateway skill for every other mental health topic.',
-        icon: themeIcon('emotional-regulation'),
-        color: themeColor('emotional-regulation'),
-        image: '/images/categories/emotional-regulation.svg',
-        subTopics: ['Understanding Your Emotions', 'Everyday Emotional Regulation Strategies', 'Self-Awareness & Reflection', 'Emotional Intelligence in Practice', 'Emotional Patterns & Habits', 'The Neuroscience of Emotions', 'Emotions Across Life Stages', 'Advanced: Emotional Complexity & Growth'],
-    },
-    {
-        id: 'anxiety-stress',
-        name: 'Anxiety, Stress & Overwhelm',
-        slug: 'anxiety-stress',
-        description: 'Understanding and managing various forms of anxiety, panic, and chronic stress — from everyday tension to clinical anxiety disorders.',
-        icon: themeIcon('anxiety-stress'),
-        color: themeColor('anxiety-stress'),
-        image: '/images/categories/anxiety.png',
-        subTopics: ['Understanding Anxiety', 'Panic & Physical Anxiety', 'Social Anxiety', 'Burnout & Emotional Exhaustion', 'Phobias & Specific Fears', 'Children & Adolescent Anxiety', 'Anxiety in Relationships & Work'],
-    },
-    {
-        id: 'relationships-communication',
-        name: 'Relationships & Communication',
-        slug: 'relationships-communication',
-        description: 'Building deeper connections, navigating conflict, setting boundaries, and strengthening communication skills across all relationships.',
-        icon: themeIcon('relationships-communication'),
-        color: themeColor('relationships-communication'),
-        image: '/images/categories/relationships.svg',
-        subTopics: ['Communication Skills', 'Healthy Boundaries', 'Couples & Partnership', 'Family Dynamics', 'Conflict Resolution', 'Attachment Styles', 'Toxic Dynamics & Red Flags', 'Friendships & Social Networks'],
-    },
-    {
-        id: 'self-worth-identity',
-        name: 'Self-Worth, Confidence & Identity',
-        slug: 'self-worth-identity',
-        description: 'Building self-worth from the inside out — confidence, body image, imposter syndrome, and authentic identity.',
-        icon: themeIcon('self-worth-identity'),
-        color: themeColor('self-worth-identity'),
-        image: '/images/categories/self_esteem.svg',
-        subTopics: ['Self-Worth Foundations', 'Confidence Building', 'Body Image & Self-Perception', 'Imposter Syndrome', 'Identity Exploration', 'People-Pleasing & Codependency', 'Self-Compassion & Inner Dialogue'],
-    },
-    {
-        id: 'work-productivity',
-        name: 'Work, Productivity & Burnout',
-        slug: 'work-productivity',
-        description: 'Navigating burnout, professional growth, work-life balance, and academic stress with practical strategies.',
-        icon: themeIcon('work-productivity'),
-        color: themeColor('work-productivity'),
-        image: '/images/categories/workplace.svg',
-        subTopics: ['Burnout Prevention & Recovery', 'Work-Life Balance', 'Academic Pressure', 'Leadership & Stress', 'Remote Work', 'Career Transitions', 'Productivity & Focus', 'Workplace Relationships'],
-    },
-    {
-        id: 'family-parenting',
-        name: 'Family, Parenting & Childhood Patterns',
-        slug: 'family-parenting',
-        description: 'Understanding family systems, parenting challenges, childhood influences, and breaking intergenerational patterns.',
-        icon: themeIcon('family-parenting'),
-        color: themeColor('family-parenting'),
-        image: '/images/categories/parenting.svg',
-        subTopics: ['Family Systems & Dynamics', 'Parenting Strategies', 'Childhood Patterns', 'Intergenerational Trauma', 'Sibling Relationships', 'Co-Parenting', 'Navigating Family Conflict', "Supporting Children's Mental Health"],
-    },
-    {
-        id: 'depression-grief',
-        name: 'Depression, Grief & Loss',
-        slug: 'depression-grief',
-        description: "Resources for depression, grief, bereavement, and emotional regulation during life's darkest seasons.",
-        icon: themeIcon('depression-grief'),
-        color: themeColor('depression-grief'),
-        image: '/images/categories/mood.png',
-        subTopics: ['Understanding Depression', 'Grief & Bereavement', 'Coping Strategies', 'Seasonal & Situational Depression', 'Supporting Loved Ones', 'Finding Professional Help', 'Recovery & Hope'],
-    },
-    {
-        id: 'habits-behavior-change',
-        name: 'Habits, Motivation & Behavior Change',
-        slug: 'habits-behavior-change',
-        description: 'The psychology of habits, motivation, and behavior change — building routines that support mental health.',
-        icon: themeIcon('habits-behavior-change'),
-        color: themeColor('habits-behavior-change'),
-        image: '/images/categories/habits.svg',
-        subTopics: ['Habit Formation', 'Motivation Science', 'Behavior Change Models', 'Breaking Bad Habits', 'Building Routines', 'Procrastination', 'Goal Setting'],
-    },
-    {
-        id: 'sleep-body-connection',
-        name: 'Sleep, Body & Mind-Body Connection',
-        slug: 'sleep-body-connection',
-        description: 'The mind-body connection — sleep science, exercise psychology, nutrition, and somatic awareness for mental wellness.',
-        icon: themeIcon('sleep-body-connection'),
-        color: themeColor('sleep-body-connection'),
-        image: '/images/categories/sleep.svg',
-        subTopics: ['Sleep Hygiene', 'Insomnia & Sleep Disorders', 'Exercise & Mental Health', 'Nutrition & Mood', 'Somatic Awareness', 'Circadian Rhythms', 'Relaxation Techniques'],
-    },
-    {
-        id: 'digital-life',
-        name: 'Digital Life, Social Media & Modern Stressors',
-        slug: 'digital-life',
-        description: 'Managing digital life, social media impact, screen time, and modern stressors for better mental health.',
-        icon: themeIcon('digital-life'),
-        color: themeColor('digital-life'),
-        image: '/images/categories/digital-life.svg',
-        subTopics: ['Social Media & Mental Health', 'Screen Time & Digital Boundaries', 'Cyberbullying', 'Digital Detox', 'Online Relationships'],
-    },
-    {
-        id: 'trauma-healing',
-        name: 'Trauma-Informed Education & Healing',
-        slug: 'trauma-healing',
-        description: 'Understanding trauma, its impact on the brain and body, and evidence-based paths to healing and recovery.',
-        icon: themeIcon('trauma-healing'),
-        color: themeColor('trauma-healing'),
-        image: '/images/categories/trauma.png',
-        subTopics: ['Understanding Trauma', 'PTSD & Complex PTSD', 'Trauma Recovery', 'Childhood Trauma', 'Somatic Experiencing', 'Trauma-Informed Care'],
-    },
-    {
-        id: 'cultural-global',
-        name: 'Cultural Perspectives, Inclusion & Global Wellness',
-        slug: 'cultural-global',
-        description: 'Cultural perspectives on mental health, reducing stigma, and building inclusive approaches to psychological wellness.',
-        icon: themeIcon('cultural-global'),
-        color: themeColor('cultural-global'),
-        image: '/images/categories/global.svg',
-        subTopics: ['Cultural Stigma', 'Indigenous Perspectives', 'LGBTQ+ Mental Health', 'Racial Trauma', 'Migration & Displacement', 'Collectivist vs Individualist'],
-    },
-    {
-        id: 'aging-dementia-late-life',
-        name: 'Aging, Dementia & Late-Life Mental Health',
-        slug: 'aging-dementia-late-life',
-        description: 'Comprehensive resources on mental health challenges unique to older adults, including dementia, cognitive decline, caregiving, and healthy aging.',
-        icon: themeIcon('aging-dementia-late-life'),
-        color: themeColor('aging-dementia-late-life'),
-        image: '/images/categories/aging.svg',
-        subTopics: ["Dementia & Alzheimer's", 'Late-Life Depression', 'Cognitive Decline', 'Caregiving', 'Healthy Aging', 'Retirement & Identity'],
-    },
-    {
-        id: 'womens-mental-health',
-        name: "Women's Mental Health",
-        slug: 'womens-mental-health',
-        description: "Comprehensive coverage of mental health issues affecting women across the lifespan, from reproductive health to gender-specific risk factors and treatment considerations.",
-        icon: themeIcon('womens-mental-health'),
-        color: themeColor('womens-mental-health'),
-        image: '/images/categories/womens-mental-health.svg',
-        subTopics: ['Reproductive Mental Health', 'Postpartum & Perinatal', 'Menopause & Hormones', 'Gender-Based Violence', 'Body Image & Eating', 'Work-Life Balance', 'Caregiving Burden'],
-    },
-    {
-        id: 'mens-mental-health',
-        name: "Men's Mental Health",
-        slug: 'mens-mental-health',
-        description: "Evidence-based education on men's mental health — exploring help-seeking barriers, masked depression, the gender paradox in suicide, and cultural norms impacting men's psychological wellbeing.",
-        icon: themeIcon('mens-mental-health'),
-        color: themeColor('mens-mental-health'),
-        image: '/images/categories/mens-mental-health.svg',
-        subTopics: ["Understanding Men's Mental Health", "Men's Relationships and Family", "Men's Physical and Mental Health", "Men in Specific Contexts", "Myths About Men's Mental Health", "Men's Health Interventions"],
-    },
-    {
-        id: 'chronic-illness-pain',
-        name: 'Chronic Illness, Pain & Medical Psychology',
-        slug: 'chronic-illness-pain',
-        description: 'Evidence-based education on the psychological dimensions of chronic illness — covering pain neuroscience, medical trauma, and resilience-building strategies.',
-        icon: themeIcon('chronic-illness-pain'),
-        color: themeColor('chronic-illness-pain'),
-        image: '/images/categories/chronic-illness-pain.svg',
-        subTopics: ['Psychology of Chronic Illness', 'Chronic Pain and the Mind', 'Specific Medical Conditions', 'Medical Trauma', 'Supporting Wellbeing', 'Psychological Resilience'],
-    },
-    {
-        id: 'technology-digital-life',
-        name: 'Technology, Digital Life & Mental Health',
-        slug: 'technology-digital-life',
-        description: 'Evidence-based education on the psychological impact of technology — from social media to emerging digital therapeutics.',
-        icon: themeIcon('technology-digital-life'),
-        color: themeColor('technology-digital-life'),
-        image: '/images/categories/technology-digital-life.svg',
-        subTopics: ['Social Media Impact', 'Digital Addiction', 'AI & Emerging Tech', 'Online Relationships', 'Healthy Digital Life', 'Digital Culture'],
-    },
-    {
-        id: 'spirituality-meaning',
-        name: 'Spirituality, Meaning & Existential Mental Health',
-        slug: 'spirituality-meaning',
-        description: 'Evidence-based exploration of existential psychology — confronting questions of meaning, mortality, freedom, and isolation.',
-        icon: themeIcon('spirituality-meaning'),
-        color: themeColor('spirituality-meaning'),
-        image: '/images/categories/spirituality-meaning.svg',
-        subTopics: ['Existential Psychology', 'Search for Meaning', 'Mortality and Death Anxiety', 'Existential Loneliness', 'Freedom and Choice'],
-    },
-];
+const CATEGORY_DESCRIPTIONS: Record<string, string> = {
+    'emotional-regulation': 'Foundational emotional literacy — identifying, naming, and modulating emotions. The gateway skill for every other mental health topic.',
+    'anxiety-stress': 'Understanding and managing various forms of anxiety, panic, and chronic stress — from everyday tension to clinical anxiety disorders.',
+    'relationships-communication': 'Building deeper connections, navigating conflict, setting boundaries, and strengthening communication skills across all relationships.',
+    'self-worth-identity': 'Building self-worth from the inside out — confidence, body image, imposter syndrome, and authentic identity.',
+    'work-productivity': 'Navigating burnout, professional growth, work-life balance, and academic stress with practical strategies.',
+    'family-parenting': 'Understanding family systems, parenting challenges, childhood influences, and breaking intergenerational patterns.',
+    'depression-grief': "Resources for depression, grief, bereavement, and emotional regulation during life's darkest seasons.",
+    'habits-behavior-change': 'The psychology of habits, motivation, and behavior change — building routines that support mental health.',
+    'sleep-body-connection': 'The mind-body connection — sleep science, exercise psychology, nutrition, and somatic awareness for mental wellness.',
+    'digital-life': 'Managing digital life, social media impact, screen time, and modern stressors for better mental health.',
+    'trauma-healing': 'Understanding trauma, its impact on the brain and body, and evidence-based paths to healing and recovery.',
+    'cultural-global': 'Cultural perspectives on mental health, reducing stigma, and building inclusive approaches to psychological wellness.',
+    'mental-health-conditions': 'Clear, research-based explanations of mental health conditions — symptoms, causes, diagnosis, and treatment.',
+    'therapy-navigation': 'Navigating the therapy landscape — types of therapy, medication, finding providers, and the mental health system.',
+    'loneliness-connection': 'Neuroscience of social connection, health impacts of isolation, building friendships, community belonging, and the paradox of digital connection.',
+    'psychosis-schizophrenia': 'Comprehensive education on psychotic disorders, schizophrenia spectrum conditions, and severe mental illness — from neuroscience to family support and recovery.',
+    'aging-dementia-late-life': 'Comprehensive resources on mental health challenges unique to older adults, including dementia, cognitive decline, caregiving, and healthy aging.',
+    'womens-mental-health': 'Comprehensive coverage of mental health issues affecting women across the lifespan, from reproductive health to gender-specific risk factors and treatment considerations.',
+    'mens-mental-health': "Evidence-based education on men's mental health — exploring help-seeking barriers, masked depression, the gender paradox in suicide, and cultural norms impacting men's psychological wellbeing.",
+    'chronic-illness-pain': 'Evidence-based education on the psychological dimensions of chronic illness — covering pain neuroscience, medical trauma, and resilience-building strategies.',
+    'technology-digital-life': 'Evidence-based education on the psychological impact of technology — from social media to emerging digital therapeutics.',
+    'brain-neuroscience': 'Biological foundations of mental health — neurotransmitters, brain structure, neuroplasticity, and the intersection of biology and psychology.',
+    'creativity-therapeutic-arts': 'Creative expression as a pathway to mental health — art, music, drama, writing therapy, and the psychology of the creative process.',
+    'disability-accessibility': 'Mental health at the intersection of disability — identity, access to care, neurodivergence, universal design, and inclusion.',
+    'forensic-legal-justice': 'Psychology within the legal and justice systems — criminal behavior, forensic assessment, incarceration mental health, and rehabilitation.',
+    'military-veterans-firstresponder': 'Mental health for those who serve — combat trauma, moral injury, first responder stress, military families, and transition.',
+    'sexuality-intimacy': 'Psychology of human sexuality — sexual health, intimacy, identity, dysfunction, trauma recovery, and sex therapy.',
+    'environmental-eco-psychology': 'Psychological dimensions of our relationship with the natural world — eco-anxiety, climate grief, nature-based therapy, and environmental justice.',
+    'life-skills-practical-psychology': 'Practical psychology for everyday life — decision-making, emotional intelligence, communication, productivity, habit formation, financial psychology.',
+    'spirituality-meaning': 'Evidence-based exploration of existential psychology — confronting questions of meaning, mortality, freedom, and isolation.',
+    'eating-body': 'Understanding eating disorders, body image, and building a healthier relationship with food.',
+};
+
+/**
+ * Existing cover-image slots, keyed by canonical slug. Categories without an
+ * entry render the card's clean empty state — no placeholder art is added
+ * (real assets are produced separately by the designer).
+ */
+const CATEGORY_IMAGES: Record<string, string> = {
+    'emotional-regulation': '/images/categories/emotional-regulation.svg',
+    'anxiety-stress': '/images/categories/anxiety.png',
+    'relationships-communication': '/images/categories/relationships.svg',
+    'self-worth-identity': '/images/categories/self_esteem.svg',
+    'work-productivity': '/images/categories/workplace.svg',
+    'family-parenting': '/images/categories/parenting.svg',
+    'depression-grief': '/images/categories/mood.png',
+    'habits-behavior-change': '/images/categories/habits.svg',
+    'sleep-body-connection': '/images/categories/sleep.svg',
+    'digital-life': '/images/categories/digital-life.svg',
+    'trauma-healing': '/images/categories/trauma.png',
+    'cultural-global': '/images/categories/global.svg',
+    'aging-dementia-late-life': '/images/categories/aging.svg',
+    'womens-mental-health': '/images/categories/womens-mental-health.svg',
+    'mens-mental-health': '/images/categories/mens-mental-health.svg',
+    'chronic-illness-pain': '/images/categories/chronic-illness-pain.svg',
+    'technology-digital-life': '/images/categories/technology-digital-life.svg',
+    'spirituality-meaning': '/images/categories/spirituality-meaning.svg',
+};
+
+/**
+ * Mock category list, DERIVED from the frozen taxonomy contract so it can
+ * never drift from the canonical slug set again. Used as the fallback when
+ * Supabase is unavailable. Order mirrors the contract (grouped).
+ */
+export const categories: Category[] = CANONICAL_CATEGORIES.map((c) => ({
+    id: c.slug,
+    name: c.name,
+    slug: c.slug,
+    description: CATEGORY_DESCRIPTIONS[c.slug] ?? '',
+    icon: themeIcon(c.slug),
+    color: themeColor(c.slug),
+    image: CATEGORY_IMAGES[c.slug],
+    subTopics: [],
+}));
 
 export const getCategoryById = (id: string): Category | undefined => {
     return categories.find(c => c.id === id);

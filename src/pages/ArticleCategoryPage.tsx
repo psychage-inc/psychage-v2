@@ -8,6 +8,7 @@ import { categoryService } from '../services/categoryService';
 import { Article, Category } from '../types/models';
 import ArticleCard from '../components/article/ArticleCard';
 import { getArticleUrl } from '../lib/articleUrl';
+import { resolveCanonicalSlug } from '../config/taxonomy';
 const ArticleCategoryPage: React.FC = () => {
     const { categorySlug } = useParams<{ categorySlug: string }>();
     const navigate = useNavigate();
@@ -17,6 +18,15 @@ const ArticleCategoryPage: React.FC = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
+        // Redirect a stale/renamed slug (old bookmark, external link) to its
+        // canonical URL so the page resolves instead of showing "not found".
+        if (categorySlug) {
+            const canonical = resolveCanonicalSlug(categorySlug);
+            if (canonical !== categorySlug) {
+                navigate(`/learn/${canonical}`, { replace: true });
+                return;
+            }
+        }
         const fetchData = async () => {
             if (!categorySlug) return;
             try {
@@ -33,7 +43,7 @@ const ArticleCategoryPage: React.FC = () => {
             }
         };
         fetchData();
-    }, [categorySlug]);
+    }, [categorySlug, navigate]);
 
     if (isLoading) return (
         <div className="min-h-screen bg-background flex items-center justify-center">

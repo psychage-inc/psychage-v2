@@ -231,17 +231,14 @@ export const articleService = {
     getAll: async (params?: { category?: string; featured?: boolean }): Promise<ArticleWithContent[]> => {
         let supabaseArticles: ArticleWithContent[] = [];
 
-        // Try Supabase first — OPTIMIZED: Only fetch fields needed for list view
-        try {
-            const listFields = 'id, slug, title, seo_description, hero_image_url, category_id, read_time, status, created_at, featured, tags';
-            const selectString = params?.category
-                ? `${listFields}, category:article_categories!category_id!inner(id, name, slug, description)`
-                : `${listFields}, category:article_categories!category_id(id, name, slug, description)`;
+        // Supabase list-view projection (only the fields the card needs).
+        const listFields = 'id, slug, title, seo_description, hero_image_url, category_id, read_time, status, created_at, featured, tags';
+        const selectString = params?.category
+            ? `${listFields}, category:article_categories!category_id!inner(id, name, slug, description)`
+            : `${listFields}, category:article_categories!category_id(id, name, slug, description)`;
 
-            // Supabase caps a single response at 1000 rows, so paginate to fetch the
-            // full renderable corpus. Exclude rows with no body — those would render an
-            // empty article page; they surface only via the "Articles Coming Soon"
-            // state and are never linked from the listing.
+        // One paginated pass over published rows (Supabase caps a response at 1000).
+        const fetchPublished = async (): Promise<DBArticle[]> => {
             const PAGE_SIZE = 1000;
             const MAX_PAGES = 6; // safety ceiling
             const rows: DBArticle[] = [];
@@ -253,54 +250,48 @@ export const articleService = {
                     .order('created_at', { ascending: false })
                     .order('id', { ascending: true }) // stable tiebreaker across pages
                     .range(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE - 1);
-
-                if (params?.featured) {
-                    query = query.eq('featured', true);
-                }
-                if (params?.category) {
-                    query = query.eq('category.slug', params.category);
-                }
+                if (params?.featured) query = query.eq('featured', true);
+                if (params?.category) query = query.eq('category.slug', params.category);
 
                 const { data, error } = await query;
-
                 if (error) throw error;
                 if (!data || data.length === 0) break;
                 rows.push(...(data as unknown as DBArticle[]));
                 if (data.length < PAGE_SIZE) break;
             }
+            return rows;
+        };
 
-            if (rows.length > 0) {
-                supabaseArticles = rows.map(mapSupabaseToArticle);
+        // Supabase is the source of truth. Retry transient failures BEFORE ever
+        // falling back to mock — a single flaky response must not blank a category
+        // or surface the stale, cover-less legacy mock corpus.
+        for (let attempt = 0; attempt < 3; attempt++) {
+            try {
+                const rows = await fetchPublished();
+                if (rows.length > 0) supabaseArticles = rows.map(mapSupabaseToArticle);
+                break;
+            } catch {
+                if (attempt < 2) await new Promise((r) => setTimeout(r, 300 * (attempt + 1)));
             }
-        } catch (error) {
-            // Supabase fetch failed — fall through to mock data
         }
 
-        // Build mock article set (filtered by params), resolve image URLs
+        // When Supabase has data it is authoritative — return it ALONE. The mock
+        // corpus is only an offline / empty-DB fallback; merging it would pad real
+        // categories with superseded, image-less cards.
+        if (supabaseArticles.length > 0) {
+            return supabaseArticles;
+        }
+
+        // Supabase returned nothing — fall back to the mock corpus.
         const publishedMock = await getMockArticles();
         let mockResult = publishedMock.map(a => ({
             ...a,
             image: resolveImageUrl(a.image),
             _source: 'mock' as const,
         }));
-        if (params?.category) {
-            mockResult = mockResult.filter(a => a.category.slug === params.category);
-        }
-        if (params?.featured) {
-            mockResult = mockResult.filter(a => a.featured);
-        }
-
-        // No Supabase data — return mock only
-        if (supabaseArticles.length === 0) {
-            return mockResult;
-        }
-
-        // Merge: Supabase wins for matching slugs, mock fills gaps
-        const supabaseSlugs = new Set(supabaseArticles.map(a => a.slug));
-        const supplementalMock = mockResult.filter(a => !supabaseSlugs.has(a.slug));
-        const merged = [...supabaseArticles, ...supplementalMock];
-
-        return merged;
+        if (params?.category) mockResult = mockResult.filter(a => a.category.slug === params.category);
+        if (params?.featured) mockResult = mockResult.filter(a => a.featured);
+        return mockResult;
     },
 
     /**

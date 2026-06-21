@@ -4,13 +4,18 @@ import AdminApp from './AdminApp';
 import ErrorBoundary from './components/error/ErrorBoundary';
 import { BrowserRouter } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './context/ThemeContext';
 import { AuthProvider } from './context/AuthContext';
 import { isAdminDomain } from './lib/urls';
+import './lib/i18n';
 import './styles/globals.css';
 
-// No i18n import — admin is English-only
-// No HelmetProvider — admin does not need SEO meta tags
+// HelmetProvider + i18n are required even though admin is English-only:
+// the reused auth pages (LoginPage/ResetPassword/UpdatePassword) and
+// AdminOnboarding render <SEO> (react-helmet-async) and call t(). Without
+// HelmetProvider, Helmet's dispatcher hits `context.add` on an undefined
+// context and the whole admin app crashes ("reading 'add'").
 
 // Handle direct access to /admin.html — redirect to /admin/ for correct routing
 if (!isAdminDomain() && window.location.pathname.startsWith('/admin.html')) {
@@ -44,11 +49,13 @@ const startApp = () => {
       <ErrorBoundary>
         <ThemeProvider>
           <QueryClientProvider client={queryClient}>
-            <BrowserRouter basename={basename}>
-              <AuthProvider>
-                <AdminApp />
-              </AuthProvider>
-            </BrowserRouter>
+            <HelmetProvider>
+              <BrowserRouter basename={basename}>
+                <AuthProvider>
+                  <AdminApp />
+                </AuthProvider>
+              </BrowserRouter>
+            </HelmetProvider>
           </QueryClientProvider>
         </ThemeProvider>
       </ErrorBoundary>

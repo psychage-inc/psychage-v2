@@ -54,6 +54,12 @@ function mapToCategory(data: DBCategory): Category {
     };
 }
 
+// In-memory cache for the grouped Learn taxonomy. getGrouped() pulls the whole
+// article corpus to count per category; without a cache it re-fetches on every nav
+// render, contending with the page's own queries and triggering mock fallbacks.
+let _groupedCache: { data: CategoryGroup[]; at: number } | null = null;
+const GROUPED_TTL_MS = 5 * 60 * 1000;
+
 export const categoryService = {
     getAll: async (): Promise<Category[]> =>
         queryWithFallback(
@@ -101,6 +107,9 @@ export const categoryService = {
      * are folded onto their canonical slug.
      */
     getGrouped: async (): Promise<CategoryGroup[]> => {
+        if (_groupedCache && Date.now() - _groupedCache.at < GROUPED_TTL_MS) {
+            return _groupedCache.data;
+        }
         const [cats, articles] = await Promise.all([
             categoryService.getAll(),
             articleService.getAllIndexable(),
@@ -116,7 +125,7 @@ export const categoryService = {
         const bySlug = new Map<string, Category>();
         for (const c of cats) bySlug.set(resolveCanonicalSlug(c.slug), c);
 
-        return TOP_GROUPS.map((group) => ({
+        const result: CategoryGroup[] = TOP_GROUPS.map((group) => ({
             id: group.id,
             title: group.title,
             description: group.description,
@@ -138,6 +147,8 @@ export const categoryService = {
                 })
                 .filter((c) => c.articleCount > 0),
         }));
+        _groupedCache = { data: result, at: Date.now() };
+        return result;
     },
 };
 

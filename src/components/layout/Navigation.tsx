@@ -386,9 +386,16 @@ const Navigation: React.FC = () => {
                                         aria-label="Search articles, tools, and videos"
                                         className="w-full pl-12 pr-4 py-4 bg-surface-hover border-none rounded-2xl text-lg font-medium text-text-primary placeholder-text-tertiary focus:ring-2 focus:ring-teal-500"
                                     />
-                                    <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-2">
-                                        <span className="text-xs font-bold text-text-tertiary border border-border px-2 py-1 rounded-md">ESC</span>
-                                    </div>
+                                    {searchQuery && (
+                                        <button
+                                            type="button"
+                                            onClick={() => { setSearchQuery(''); searchInputRef.current?.focus(); }}
+                                            aria-label="Clear search"
+                                            className="absolute right-4 top-1/2 -translate-y-1/2 text-text-tertiary hover:text-text-primary transition-colors"
+                                        >
+                                            <X size={18} aria-hidden="true" />
+                                        </button>
+                                    )}
                                 </form>
                             </div>
                         </motion.div>

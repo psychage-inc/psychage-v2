@@ -165,15 +165,27 @@ function scoreArticle(article: ArticleWithContent, tokens: string[], phrase: str
     const q = normalizeSlug(phrase);
     if (q && normalizeSlug(article.slug) === q) return SLUG_FAST_PATH_SCORE;
 
-    let score = 0;
-    if (q && article.title.toLowerCase() === q) score += 90;
-    score += tokenHits(article.title, tokens) * 40;
-    score += tokenHits(article.subtitle, tokens) * 20;
+    // Primary fields qualify an article. A query that only appears in a body /
+    // secondary field (summary, description, keyFacts) must NOT surface the
+    // article — otherwise "bipolar" returns every piece that mentions it in
+    // passing rather than the bipolar articles themselves.
+    let primary = 0;
+    if (q && article.title.toLowerCase() === q) primary += 90;
+    primary += tokenHits(article.title, tokens) * 40;
+    primary += tokenHits(article.subtitle, tokens) * 20;
     if (article.tags?.length) {
-        score += tokenHits(article.tags.join(' '), tokens) * 15;
+        primary += tokenHits(article.tags.join(' '), tokens) * 15;
     }
-    score += tokenHits(article.category?.slug, tokens) * 12;
-    score += tokenHits(article.category?.name, tokens) * 12;
+    primary += tokenHits(article.category?.slug, tokens) * 12;
+    primary += tokenHits(article.category?.name, tokens) * 12;
+    if (fullPhraseHit(article.title, phrase)) primary += 25;
+
+    if (primary === 0) return 0;
+
+    // Secondary fields only refine ranking once the article already qualifies.
+    // Their weights stay well below a single title-token hit (40) so a body
+    // mention can never outrank a title match.
+    let score = primary;
     if (article.keyFacts?.length) {
         const text = article.keyFacts.map(k => k.text).join(' ');
         score += tokenHits(text, tokens) * 8;
@@ -181,7 +193,6 @@ function scoreArticle(article: ArticleWithContent, tokens: string[], phrase: str
     score += tokenHits(article.summary, tokens) * 4;
     score += tokenHits(article.seo_description, tokens) * 4;
     score += tokenHits(article.description, tokens) * 4;
-    if (fullPhraseHit(article.title, phrase)) score += 25;
     return score;
 }
 

@@ -266,6 +266,10 @@ const LearnPage: React.FC = () => {
     const [showAuthModal, setShowAuthModal] = useState(false);
     const [recentSearches, setRecentSearches] = useState<string[]>([]);
     const [isSearchFocused, setIsSearchFocused] = useState(false);
+    // The text field binds to local state so its identity is stable across renders
+    // (no remount → focus is never dropped while typing). The URL/searchService stay
+    // the source of truth for filtering; typing syncs to them debounced, not per key.
+    const [inputValue, setInputValue] = useState(searchQuery);
     const articleService = useArticleService();
     const { isAuthenticated } = useAuth();
     const { bookmarks, toggleBookmark, isBookmarked } = useBookmarks();
@@ -303,6 +307,19 @@ const LearnPage: React.FC = () => {
             // ignore
         }
     }, []);
+
+    // Reflect external query changes (back/forward, category click, recent-search click)
+    // back into the field.
+    useEffect(() => {
+        setInputValue(searchQuery);
+    }, [searchQuery]);
+
+    // Push the typed value to the URL after a pause — debounce the query, not the input.
+    useEffect(() => {
+        if (inputValue === searchQuery) return;
+        const id = setTimeout(() => setSearchQuery(inputValue), 250);
+        return () => clearTimeout(id);
+    }, [inputValue, searchQuery, setSearchQuery]);
 
     // Filter articles by search query via shared searchService for parity with /search.
     const [filteredArticles, setFilteredArticles] = useState<Article[]>(articles);
@@ -511,7 +528,7 @@ const LearnPage: React.FC = () => {
 
     const handleSearchSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        const trimmed = searchQuery.trim();
+        const trimmed = inputValue.trim();
         if (!trimmed) return;
         searchService.saveLocalSearch(trimmed);
         navigate(`/search?q=${encodeURIComponent(trimmed)}`);
@@ -599,8 +616,8 @@ const LearnPage: React.FC = () => {
                                 <Search className="absolute left-0 text-text-tertiary" size={20} />
                                 <input
                                     type="text"
-                                    value={searchQuery}
-                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                    value={inputValue}
+                                    onChange={(e) => setInputValue(e.target.value)}
                                     onFocus={() => setIsSearchFocused(true)}
                                     onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
                                     placeholder="Search articles..."
@@ -611,7 +628,7 @@ const LearnPage: React.FC = () => {
                         </form>
 
                         {/* Recent searches */}
-                        {isSearchFocused && !searchQuery && recentSearches.length > 0 && (
+                        {isSearchFocused && !inputValue && recentSearches.length > 0 && (
                             <div className="mt-3 flex items-center gap-2 flex-wrap">
                                 <span className="text-xs text-text-tertiary font-medium">Recent:</span>
                                 {recentSearches.map((term) => (

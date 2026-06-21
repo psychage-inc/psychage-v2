@@ -48,11 +48,20 @@ async function main() {
   if (error) throw new Error(error.message);
   const ids = (drafts || []).map((d) => d.id);
 
-  // Count real citation rows per draft.
+  // Count real citation rows per draft. Page the WHOLE article_citations table — a chunked
+  // `.in(ids).select()` silently caps at 1000 rows per request and undercounts.
   const rc = new Map<string, number>();
-  for (let i = 0; i < ids.length; i += 200) {
-    const { data: cc } = await sb.from('article_citations').select('article_id').in('article_id', ids.slice(i, i + 200));
-    for (const r of cc || []) rc.set(r.article_id, (rc.get(r.article_id) || 0) + 1);
+  const idset = new Set(ids);
+  for (let from = 0; ; from += 1000) {
+    const { data: cc, error: ccErr } = await sb
+      .from('article_citations')
+      .select('article_id')
+      .order('article_id')
+      .range(from, from + 999);
+    if (ccErr) throw new Error(ccErr.message);
+    if (!cc || cc.length === 0) break;
+    for (const r of cc) if (idset.has(r.article_id)) rc.set(r.article_id, (rc.get(r.article_id) || 0) + 1);
+    if (cc.length < 1000) break;
   }
   const toPublish = (drafts || []).filter((d) => (rc.get(d.id) || 0) >= MIN);
 

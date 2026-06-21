@@ -5,18 +5,9 @@
     }
   },
   "redirects": [
-    {
-      "source": "/admin/:path*",
-      "destination": "https://admin.psychage.com/:path*",
-      "permanent": false,
-      "has": [{ "type": "host", "value": "psychage.com" }]
-    },
-    {
-      "source": "/admin",
-      "destination": "https://admin.psychage.com/",
-      "permanent": false,
-      "has": [{ "type": "host", "value": "psychage.com" }]
-    }
+    { "source": "/", "has": [{ "type": "host", "value": "admin.psychage.com" }], "destination": "/dashboard", "permanent": false },
+    { "source": "/admin", "has": [{ "type": "host", "value": "www.psychage.com" }], "destination": "https://admin.psychage.com/dashboard", "permanent": false },
+    { "source": "/admin/:path*", "has": [{ "type": "host", "value": "www.psychage.com" }], "destination": "https://admin.psychage.com/:path*", "permanent": false }
   ],
   "rewrites": [
     {

@@ -1,0 +1,204 @@
+import React, { useMemo } from 'react';
+import { Link, useParams, useSearchParams } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
+import SEO from '@/components/SEO';
+import { useAsyncData } from '@/hooks/useAsyncData';
+import CrisisResourceBanner from '@/components/article/CrisisResourceBanner';
+import { getConditionBySlug } from '@/services/conditionsService';
+import type { Condition, DefinitionField } from '@/types/condition';
+import { hasDefinition } from '@/types/condition';
+import ConditionListenControl from '@/components/conditions/ConditionListenControl';
+import DisclaimerFooter from '@/components/conditions/DisclaimerFooter';
+
+const SECTIONS: { key: DefinitionField; label: string }[] = [
+    { key: 'short_definition', label: 'In short' },
+    { key: 'what_it_feels_like', label: 'What it feels like' },
+    { key: 'how_it_differs', label: 'How it differs' },
+    { key: 'when_more_than_everyday', label: "When it's more than everyday" },
+];
+
+/** Assemble plain-text narration from the filled sections, in reading order. */
+function buildReadingText(condition: Condition): string {
+    const parts = [condition.name];
+    for (const { key, label } of SECTIONS) {
+        const value = condition[key];
+        if (value && value.trim()) parts.push(`${label}. ${value}`);
+    }
+    return parts.join('. ');
+}
+
+const ConditionDetailPage: React.FC = () => {
+    const { slug = '' } = useParams();
+    const [searchParams] = useSearchParams();
+    const preview = searchParams.get('preview') === '1';
+
+    const { data: condition, loading } = useAsyncData<Condition | null>(
+        () => getConditionBySlug(slug, { includeUnverified: preview }),
+        [slug, preview],
+    );
+
+    const backHref = `/conditions${preview ? '?preview=1' : ''}`;
+    const readingText = useMemo(
+        () => (condition ? buildReadingText(condition) : ''),
+        [condition],
+    );
+
+    if (loading) return <DetailSkeleton backHref={backHref} />;
+    if (!condition) return <NotAvailableState backHref={backHref} />;
+
+    const hasAnyDefinition = hasDefinition(condition);
+
+    return (
+        <>
+            <SEO
+                title={`${condition.name} | Conditions | Psychage`}
+                description={condition.short_definition ?? `${condition.name} — an ICD-11 ${condition.icd11_grouping} condition.`}
+                canonical={`https://psychage.com/conditions/${condition.slug}`}
+                robots={preview || condition.verification_status !== 'verified' ? 'noindex, nofollow' : undefined}
+            />
+
+            <main className="min-h-screen bg-background pb-24">
+                <article className="mx-auto max-w-2xl px-5 pt-10 sm:px-6 sm:pt-14">
+                    <Link
+                        to={backHref}
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-text-secondary transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md motion-reduce:transition-none"
+                    >
+                        <ArrowLeft size={16} aria-hidden="true" />
+                        All conditions
+                    </Link>
+
+                    {preview && condition.verification_status !== 'verified' && (
+                        <p className="mt-5 inline-flex items-center gap-2 rounded-full border border-amber-300/60 bg-amber-50 px-3 py-1 text-sm font-medium text-amber-800 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-300">
+                            Preview — unverified draft, not yet clinically reviewed
+                        </p>
+                    )}
+
+                    {/* Header */}
+                    <header className="mt-6">
+                        <div className="mb-4 flex flex-wrap items-center gap-2.5">
+                            <span className="rounded-md bg-teal-50 px-2.5 py-1 font-mono text-sm font-semibold text-teal-700 dark:bg-teal-900/30 dark:text-teal-400">
+                                {condition.icd11_code}
+                            </span>
+                            <span className="text-sm font-medium uppercase tracking-wide text-brand-accessible dark:text-teal-400">
+                                {condition.icd11_grouping}
+                            </span>
+                        </div>
+                        <h1 className="font-display text-3xl font-bold leading-tight tracking-tight text-text-primary sm:text-4xl">
+                            {condition.name}
+                        </h1>
+                    </header>
+
+                    {/* Crisis support — surfaced prominently where flagged */}
+                    {condition.crisis_flag && (
+                        <div className="mt-8">
+                            <CrisisResourceBanner />
+                        </div>
+                    )}
+
+                    {/* Listen — only when a definition exists */}
+                    {hasAnyDefinition && (
+                        <div className="mt-8 border-y border-border py-5">
+                            <ConditionListenControl title={condition.name} text={readingText} />
+                        </div>
+                    )}
+
+                    {/* Body */}
+                    {hasAnyDefinition ? (
+                        <div className="mt-10 space-y-10">
+                            {SECTIONS.map(({ key, label }) => (
+                                <Section key={key} label={label} value={condition[key]} />
+                            ))}
+                        </div>
+                    ) : (
+                        <InReviewState />
+                    )}
+
+                    {/* Provenance */}
+                    {condition.provenance && (
+                        <p className="mt-12 text-sm text-text-tertiary">
+                            Source: {condition.provenance}
+                        </p>
+                    )}
+
+                    <DisclaimerFooter />
+                </article>
+            </main>
+        </>
+    );
+};
+
+/** One labelled definition section — or a calm per-field in-review note when null. */
+const Section: React.FC<{ label: string; value: string | null }> = ({ label, value }) => (
+    <section>
+        <h2 className="font-display text-xl font-semibold text-text-primary sm:text-2xl">
+            {label}
+        </h2>
+        {value && value.trim() ? (
+            <p className="mt-3 text-lg leading-relaxed text-text-secondary">{value}</p>
+        ) : (
+            <p className="mt-3 text-base italic leading-relaxed text-text-tertiary">
+                This part of the definition is in review.
+            </p>
+        )}
+    </section>
+);
+
+/** Whole-page graceful state when no definition fields are present yet. */
+const InReviewState: React.FC = () => (
+    <div className="mt-10 rounded-2xl border border-dashed border-border bg-surface/60 px-6 py-12 text-center">
+        <h2 className="font-display text-xl font-semibold text-text-primary">
+            Definition in review
+        </h2>
+        <p className="mx-auto mt-2 max-w-md text-text-secondary">
+            A plain-language explanation of this condition is being prepared and clinically
+            reviewed. Please check back soon.
+        </p>
+    </div>
+);
+
+const NotAvailableState: React.FC<{ backHref: string }> = ({ backHref }) => (
+    <main className="min-h-screen bg-background">
+        <div className="mx-auto max-w-2xl px-5 py-24 text-center sm:px-6">
+            <h1 className="font-display text-2xl font-bold text-text-primary">
+                This condition isn’t available
+            </h1>
+            <p className="mx-auto mt-3 max-w-md text-text-secondary">
+                It may not exist, or its entry is still in clinical review and not yet
+                published.
+            </p>
+            <Link
+                to={backHref}
+                className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background motion-reduce:transition-none"
+            >
+                <ArrowLeft size={16} aria-hidden="true" />
+                Back to all conditions
+            </Link>
+        </div>
+    </main>
+);
+
+const DetailSkeleton: React.FC<{ backHref: string }> = ({ backHref }) => (
+    <main className="min-h-screen bg-background pb-24">
+        <div className="mx-auto max-w-2xl px-5 pt-10 sm:px-6 sm:pt-14" aria-hidden="true">
+            <Link to={backHref} className="inline-flex items-center gap-1.5 text-sm font-medium text-text-tertiary">
+                <ArrowLeft size={16} />
+                All conditions
+            </Link>
+            <div className="mt-6 space-y-4">
+                <div className="h-6 w-40 animate-pulse rounded-md bg-surface-hover motion-reduce:animate-none" />
+                <div className="h-10 w-3/4 animate-pulse rounded-md bg-surface-hover motion-reduce:animate-none" />
+            </div>
+            <div className="mt-10 space-y-10">
+                {Array.from({ length: 3 }).map((_, i) => (
+                    <div key={i} className="space-y-3">
+                        <div className="h-7 w-48 animate-pulse rounded-md bg-surface-hover motion-reduce:animate-none" />
+                        <div className="h-4 w-full animate-pulse rounded-md bg-surface-hover motion-reduce:animate-none" />
+                        <div className="h-4 w-5/6 animate-pulse rounded-md bg-surface-hover motion-reduce:animate-none" />
+                    </div>
+                ))}
+            </div>
+        </div>
+    </main>
+);
+
+export default ConditionDetailPage;

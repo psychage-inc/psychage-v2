@@ -45,7 +45,7 @@ export const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
                         initial="hidden"
                         animate="visible"
                         variants={scaleIn}
-                        className="bg-charcoal-900/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl max-w-md w-full p-6 relative overflow-hidden"
+                        className="bg-charcoal-900/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl max-w-md w-full p-6 relative overflow-y-auto max-h-[85dvh]"
                     >
                         {/* Gradient accent */}
                         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />

@@ -30,7 +30,7 @@ const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
     <AlertDialogPrimitive.Root open={open} onOpenChange={onOpenChange}>
       <AlertDialogPrimitive.Portal>
         <AlertDialogPrimitive.Overlay className="fixed inset-0 bg-black/40 z-50 animate-in fade-in" />
-        <AlertDialogPrimitive.Content className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-md bg-surface rounded-2xl shadow-xl p-6 animate-in fade-in zoom-in-95">
+        <AlertDialogPrimitive.Content className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-md bg-surface rounded-2xl shadow-xl p-6 animate-in fade-in zoom-in-95 max-h-[85dvh] overflow-y-auto">
           <AlertDialogPrimitive.Title className="text-lg font-semibold text-text-primary">
             {title}
           </AlertDialogPrimitive.Title>

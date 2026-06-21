@@ -122,7 +122,7 @@ function DataTable<TData>({
       {/* Table */}
       <div className="bg-surface border border-border rounded-2xl overflow-hidden">
         <div className="overflow-x-auto">
-          <table className="w-full text-left">
+          <table className="w-full text-left whitespace-nowrap">
             <thead className="bg-surface-hover border-b border-border">
               <tr>
                 {table.getHeaderGroups().map((headerGroup) =>
@@ -200,7 +200,7 @@ function DataTable<TData>({
                     : table.previousPage()
                 }
                 disabled={serverPagination ? serverPagination.pageIndex === 0 : !table.getCanPreviousPage()}
-                className="p-2 text-text-tertiary hover:text-text-primary disabled:opacity-40 disabled:cursor-not-allowed"
+                className="h-11 w-11 flex items-center justify-center text-text-tertiary hover:text-text-primary disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 <ChevronLeft size={16} />
               </button>
@@ -211,7 +211,7 @@ function DataTable<TData>({
                     : table.nextPage()
                 }
                 disabled={serverPagination ? currentPage >= totalPages : !table.getCanNextPage()}
-                className="p-2 text-text-tertiary hover:text-text-primary disabled:opacity-40 disabled:cursor-not-allowed"
+                className="h-11 w-11 flex items-center justify-center text-text-tertiary hover:text-text-primary disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 <ChevronRight size={16} />
               </button>

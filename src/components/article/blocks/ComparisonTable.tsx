@@ -186,7 +186,7 @@ const ComparisonTable: React.FC<ComparisonTableProps> = (props) => {
             ) : (
                 /* Desktop: standard table */
                 <div className="overflow-x-auto rounded-xl border border-border">
-                    <table className="w-full text-left">
+                    <table className="w-full text-left whitespace-nowrap">
                         <thead>
                             <tr>
                                 <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-text-tertiary bg-surface border-b border-border">

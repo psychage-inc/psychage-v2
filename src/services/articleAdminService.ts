@@ -54,7 +54,7 @@ export function getArticlesDataSource() {
 
 const PAGE_SIZE = 1000;
 
-async function fetchAllRows<T>(
+export async function fetchAllRows<T>(
   queryBuilder: () => ReturnType<ReturnType<typeof supabase.from>['select']>,
 ): Promise<T[]> {
   const all: T[] = [];
@@ -816,12 +816,14 @@ export async function getCategoryArticleDistribution(): Promise<CategoryArticleD
       .order('display_order', { ascending: true });
     if (catErr) throw catErr;
 
-    const { data: articles } = await supabase
-      .from('articles')
-      .select('category_id, status, review_stage');
+    const articles = await fetchAllRows<{
+      category_id: string | null;
+      status: string | null;
+      review_stage: string | null;
+    }>(() => supabase.from('articles').select('category_id, status, review_stage'));
 
     const distMap: Record<string, { total: number; published: number; byStage: Record<string, number> }> = {};
-    for (const a of articles || []) {
+    for (const a of articles) {
       if (!a.category_id) continue;
       if (!distMap[a.category_id]) {
         distMap[a.category_id] = { total: 0, published: 0, byStage: {} };
@@ -927,13 +929,11 @@ export async function getArticlesByReviewStage(): Promise<Record<ArticleReviewSt
   const result = Object.fromEntries(stages.map((s) => [s, []])) as Record<ArticleReviewStage, ArticleRecord[]>;
 
   try {
-    const { data, error } = await supabase
-      .from('articles')
-      .select('*')
-      .order('updated_at', { ascending: false });
-    if (error) throw error;
+    const data = await fetchAllRows<ArticleRecord>(
+      () => supabase.from('articles').select('*').order('updated_at', { ascending: false }),
+    );
 
-    for (const article of (data || []) as ArticleRecord[]) {
+    for (const article of data) {
       const stage = article.review_stage || 'planned';
       if (result[stage]) {
         result[stage].push(article);
@@ -1007,20 +1007,21 @@ export async function getArticlesWithTaxonomy(filters?: {
   is_cornerstone?: boolean;
 }): Promise<ArticleRecord[]> {
   try {
-    let query = supabase
-      .from('articles')
-      .select('*')
-      .order('updated_at', { ascending: false });
+    const data = await fetchAllRows<ArticleRecord>(() => {
+      let query = supabase
+        .from('articles')
+        .select('*')
+        .order('updated_at', { ascending: false });
 
-    if (filters?.category_id) query = query.eq('category_id', filters.category_id);
-    if (filters?.subcategory_id) query = query.eq('subcategory_id', filters.subcategory_id);
-    if (filters?.review_stage) query = query.eq('review_stage', filters.review_stage);
-    if (filters?.template_type) query = query.eq('template_type', filters.template_type);
-    if (filters?.is_cornerstone !== undefined) query = query.eq('is_cornerstone', filters.is_cornerstone);
+      if (filters?.category_id) query = query.eq('category_id', filters.category_id);
+      if (filters?.subcategory_id) query = query.eq('subcategory_id', filters.subcategory_id);
+      if (filters?.review_stage) query = query.eq('review_stage', filters.review_stage);
+      if (filters?.template_type) query = query.eq('template_type', filters.template_type);
+      if (filters?.is_cornerstone !== undefined) query = query.eq('is_cornerstone', filters.is_cornerstone);
 
-    const { data, error } = await query;
-    if (error) throw error;
-    return (data || []) as ArticleRecord[];
+      return query;
+    });
+    return data;
   } catch (err) {
     return [];
   }
@@ -1028,26 +1029,23 @@ export async function getArticlesWithTaxonomy(filters?: {
 
 export async function getCitationDiversityReport(): Promise<CitationDiversityEntry[]> {
   try {
-    const { data: articles, error: artErr } = await supabase
-      .from('articles')
-      .select('id, title')
-      .order('title', { ascending: true });
-    if (artErr) throw artErr;
+    const articles = await fetchAllRows<{ id: string; title: string }>(
+      () => supabase.from('articles').select('id, title').order('title', { ascending: true }),
+    );
 
-    const { data: citations, error: citErr } = await supabase
-      .from('article_citations')
-      .select('article_id, tier');
-    if (citErr) throw citErr;
+    const citations = await fetchAllRows<{ article_id: string; tier: number }>(
+      () => supabase.from('article_citations').select('article_id, tier'),
+    );
 
     // Group by article
     const citationMap: Record<string, { tiers: Record<number, number>; total: number }> = {};
-    for (const c of citations || []) {
+    for (const c of citations) {
       if (!citationMap[c.article_id]) citationMap[c.article_id] = { tiers: {}, total: 0 };
       citationMap[c.article_id].tiers[c.tier] = (citationMap[c.article_id].tiers[c.tier] || 0) + 1;
       citationMap[c.article_id].total++;
     }
 
-    return (articles || [])
+    return articles
       .filter((a) => citationMap[a.id])
       .map((a) => ({
         articleId: a.id,

@@ -5,6 +5,7 @@
  */
 
 import { supabase } from '@/lib/supabaseClient';
+import { fetchAllRows } from '@/services/articleAdminService';
 
 export interface RewriteStats {
     total: number;
@@ -42,12 +43,22 @@ export interface QualityArticleSummary {
  * Fetch quality stats for the dashboard overview.
  */
 export async function getQualityStats(): Promise<RewriteStats> {
-    const { data: articles, error } = await supabase
-        .from('articles')
-        .select('word_count, quality_score, video_status, audio_status, rewrite_needed, rewrite_status')
-        .neq('status', 'archived');
-
-    if (error || !articles) {
+    let articles: Array<{
+        word_count: number | null;
+        quality_score: number | null;
+        video_status: string | null;
+        audio_status: string | null;
+        rewrite_needed: boolean | null;
+        rewrite_status: string | null;
+    }>;
+    try {
+        articles = await fetchAllRows(
+            () => supabase
+                .from('articles')
+                .select('word_count, quality_score, video_status, audio_status, rewrite_needed, rewrite_status')
+                .neq('status', 'archived'),
+        );
+    } catch {
         return {
             total: 0, passing: 0, belowStandard: 0, failing: 0, critical: 0,
             avgQualityScore: 0, videoCount: 0, audioCount: 0, rewriteQueue: 0,
@@ -99,18 +110,23 @@ export async function getQualityStats(): Promise<RewriteStats> {
  * Fetch all articles sorted by quality score (worst first) for the quality table.
  */
 export async function getQualityArticles(): Promise<QualityArticleSummary[]> {
-    const { data, error } = await supabase
-        .from('articles')
-        .select(`
+    let data: Array<Record<string, unknown>>;
+    try {
+        data = await fetchAllRows<Record<string, unknown>>(
+            () => supabase
+                .from('articles')
+                .select(`
             id, title, slug, word_count, quality_score,
             video_status, audio_status, rewrite_needed, rewrite_status,
             published_at,
             article_categories ( name )
         `)
-        .neq('status', 'archived')
-        .order('quality_score', { ascending: true, nullsFirst: true });
-
-    if (error || !data) return [];
+                .neq('status', 'archived')
+                .order('quality_score', { ascending: true, nullsFirst: true }),
+        );
+    } catch {
+        return [];
+    }
 
     return data.map((row: Record<string, unknown>) => ({
         id: row.id as string,

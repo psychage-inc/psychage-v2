@@ -11,6 +11,7 @@ import {
     resolveCanonicalSlug,
     type CategoryGroup,
 } from '../config/taxonomy';
+import { CATEGORY_POSTERS } from '../config/categoryPosters';
 
 // Fallback to mock data if API fails or for development
 import { categories as mockCategories } from '../data/categories';
@@ -143,7 +144,14 @@ export const categoryService = {
                         color: null,
                     });
                     // Contract wins for slug + name so display never drifts.
-                    return { ...base, slug: c.slug, name: c.name, articleCount: counts.get(c.slug) ?? 0 };
+                    // Wayfinding pictogram poster (baked name) is the card visual.
+                    return {
+                        ...base,
+                        slug: c.slug,
+                        name: c.name,
+                        image: CATEGORY_POSTERS[c.slug] ?? base.image ?? '',
+                        articleCount: counts.get(c.slug) ?? 0,
+                    };
                 })
                 .filter((c) => c.articleCount > 0),
         }));

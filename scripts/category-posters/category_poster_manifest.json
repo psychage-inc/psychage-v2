@@ -1,0 +1,229 @@
+{
+  "updatedAt": "2026-06-22T05:02:52.333Z",
+  "entries": {
+    "anxiety-stress": {
+      "slug": "anxiety-stress",
+      "name": "Anxiety, Stress & Overwhelm",
+      "bakedName": "Anxiety & Stress",
+      "hue": "#2E9C8A",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/anxiety-stress.jpeg"
+    },
+    "depression-grief": {
+      "slug": "depression-grief",
+      "name": "Depression, Grief & Loss",
+      "bakedName": "Depression & Grief",
+      "hue": "#6A78D0",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/depression-grief.jpeg"
+    },
+    "trauma-healing": {
+      "slug": "trauma-healing",
+      "name": "Trauma-Informed Education & Healing",
+      "bakedName": "Trauma & Healing",
+      "hue": "#D45A4A",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/trauma-healing.jpeg"
+    },
+    "mental-health-conditions": {
+      "slug": "mental-health-conditions",
+      "name": "Understanding Mental Health Conditions",
+      "bakedName": "Mental Health Conditions",
+      "hue": "#7A5AC8",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/mental-health-conditions.jpeg"
+    },
+    "psychosis-schizophrenia": {
+      "slug": "psychosis-schizophrenia",
+      "name": "Psychosis, Schizophrenia & Severe Mental Illness",
+      "bakedName": "Psychosis & Schizophrenia",
+      "hue": "#5A8294",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/psychosis-schizophrenia.jpeg"
+    },
+    "neurodivergence-adhd-autism": {
+      "slug": "neurodivergence-adhd-autism",
+      "name": "Neurodivergence, ADHD & Autism Spectrum",
+      "bakedName": "Neurodivergence",
+      "hue": "#A65AD8",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/neurodivergence-adhd-autism.jpeg"
+    },
+    "eating-body": {
+      "slug": "eating-body",
+      "name": "Eating & Body",
+      "bakedName": "Eating & Body",
+      "hue": "#7AAE7E",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/eating-body.jpeg"
+    },
+    "chronic-illness-pain": {
+      "slug": "chronic-illness-pain",
+      "name": "Chronic Illness, Pain & Medical Psychology",
+      "bakedName": "Chronic Illness & Pain",
+      "hue": "#C06A3E",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/chronic-illness-pain.jpeg"
+    },
+    "aging-dementia-late-life": {
+      "slug": "aging-dementia-late-life",
+      "name": "Aging, Dementia & Late-Life Mental Health",
+      "bakedName": "Aging & Late-Life",
+      "hue": "#C9A24E",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/aging-dementia-late-life.jpeg"
+    },
+    "emotional-regulation": {
+      "slug": "emotional-regulation",
+      "name": "Emotional Regulation & Self-Awareness",
+      "bakedName": "Emotional Regulation",
+      "hue": "#D46A86",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/emotional-regulation.jpeg"
+    },
+    "habits-behavior-change": {
+      "slug": "habits-behavior-change",
+      "name": "Habits, Motivation & Behavior Change",
+      "bakedName": "Habits & Behavior",
+      "hue": "#4FA85E",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/habits-behavior-change.jpeg"
+    },
+    "sleep-body-connection": {
+      "slug": "sleep-body-connection",
+      "name": "Sleep, Body & Mind-Body Connection",
+      "bakedName": "Sleep & Body",
+      "hue": "#4A5AB0",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/sleep-body-connection.jpeg"
+    },
+    "self-worth-identity": {
+      "slug": "self-worth-identity",
+      "name": "Self-Worth, Confidence & Identity",
+      "bakedName": "Self-Worth & Identity",
+      "hue": "#E8B84A",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/self-worth-identity.jpeg"
+    },
+    "therapy-navigation": {
+      "slug": "therapy-navigation",
+      "name": "Therapy, Treatment & Mental Health Navigation",
+      "bakedName": "Therapy & Treatment",
+      "hue": "#2E8C7E",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/therapy-navigation.jpeg"
+    },
+    "creativity-therapeutic-arts": {
+      "slug": "creativity-therapeutic-arts",
+      "name": "Creativity, Therapeutic Arts & Expressive Healing",
+      "bakedName": "Creativity & Arts",
+      "hue": "#E8843E",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/creativity-therapeutic-arts.jpeg"
+    },
+    "life-skills-practical-psychology": {
+      "slug": "life-skills-practical-psychology",
+      "name": "Applied Life Skills, Self-Design & Practical Psychology",
+      "bakedName": "Applied Life Skills",
+      "hue": "#C77B52",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/life-skills-practical-psychology.jpeg"
+    },
+    "sports-exercise-psychology": {
+      "slug": "sports-exercise-psychology",
+      "name": "Sports, Exercise & Movement Psychology",
+      "bakedName": "Sports & Exercise",
+      "hue": "#F07A2E",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/sports-exercise-psychology.jpeg"
+    },
+    "relationships-communication": {
+      "slug": "relationships-communication",
+      "name": "Relationships & Communication",
+      "bakedName": "Relationships",
+      "hue": "#D4845A",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/relationships-communication.jpeg"
+    },
+    "work-productivity": {
+      "slug": "work-productivity",
+      "name": "Work, Productivity & Burnout",
+      "bakedName": "Work & Burnout",
+      "hue": "#B08A5A",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/work-productivity.jpeg"
+    },
+    "loneliness-connection": {
+      "slug": "loneliness-connection",
+      "name": "Loneliness, Social Connection & Belonging",
+      "bakedName": "Loneliness & Belonging",
+      "hue": "#8A65C0",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/loneliness-connection.jpeg"
+    },
+    "digital-life": {
+      "slug": "digital-life",
+      "name": "Digital Life, Social Media & Modern Stressors",
+      "bakedName": "Digital Life",
+      "hue": "#2E9CB8",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/digital-life.jpeg"
+    },
+    "technology-digital-life": {
+      "slug": "technology-digital-life",
+      "name": "Technology, Digital Life & Mental Health",
+      "bakedName": "Technology & Mind",
+      "hue": "#5A7AB0",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/technology-digital-life.jpeg"
+    },
+    "cultural-global": {
+      "slug": "cultural-global",
+      "name": "Cultural Perspectives, Inclusion & Global Wellness",
+      "bakedName": "Cultural Perspectives",
+      "hue": "#C8924A",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/cultural-global.jpeg"
+    },
+    "womens-mental-health": {
+      "slug": "womens-mental-health",
+      "name": "Women's Mental Health",
+      "bakedName": "Women's Mental Health",
+      "hue": "#C05A9C",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/womens-mental-health.jpeg"
+    },
+    "mens-mental-health": {
+      "slug": "mens-mental-health",
+      "name": "Men's Mental Health",
+      "bakedName": "Men's Mental Health",
+      "hue": "#4A6A9C",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/mens-mental-health.jpeg"
+    },
+    "environmental-eco-psychology": {
+      "slug": "environmental-eco-psychology",
+      "name": "Environmental, Eco-Psychology & Planetary Mental Health",
+      "bakedName": "Eco-Psychology",
+      "hue": "#3E9C7E",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/environmental-eco-psychology.jpeg"
+    },
+    "spirituality-meaning": {
+      "slug": "spirituality-meaning",
+      "name": "Spirituality, Meaning & Existential Mental Health",
+      "bakedName": "Spirituality & Meaning",
+      "hue": "#9A6AC8",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/spirituality-meaning.jpeg"
+    },
+    "financial-wellness": {
+      "slug": "financial-wellness",
+      "name": "Financial Wellness & Economic Mental Health",
+      "bakedName": "Financial Wellness",
+      "hue": "#8AA85E",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/financial-wellness.jpeg"
+    }
+  }
+}

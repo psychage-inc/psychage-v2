@@ -20,29 +20,44 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category, onClick }) => {
             <NoiseTexture opacity={0.03} />
 
             {/* Header / Visual Area */}
-            <div className={`h-32 ${category.color} relative overflow-hidden rounded-t-2xl`}>
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-black/10 dark:from-white/5 dark:to-black/40" />
+            {category.image ? (
+                // Clay wayfinding pictogram with the category name baked in. The
+                // 16:9 slot shows the whole poster uncropped; the baked name means
+                // we deliberately omit an HTML <h3> title to avoid duplicating it.
+                <div className={`aspect-video ${category.color} relative overflow-hidden rounded-t-2xl`}>
+                    <img
+                        src={category.image}
+                        alt={category.name}
+                        loading="lazy"
+                        className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-[1.03] transition-transform duration-700 ease-out"
+                    />
+                </div>
+            ) : (
+                // Fallback for any category without a poster: original icon + title band.
+                <div className={`h-32 ${category.color} relative overflow-hidden rounded-t-2xl`}>
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-black/10 dark:from-white/5 dark:to-black/40" />
 
-                {/* Large Vector Background */}
-                {category.icon && React.isValidElement(category.icon) && (
-                    <div className="absolute -bottom-6 -right-6 text-white opacity-20 transform rotate-12 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-700 ease-out">
-                        {React.cloneElement(category.icon, { size: 140, strokeWidth: 1.5 })}
-                    </div>
-                )}
-
-                {/* Content */}
-                <div className="absolute bottom-4 left-6 text-white z-10">
+                    {/* Large Vector Background */}
                     {category.icon && React.isValidElement(category.icon) && (
-                        <div className="p-2 bg-white/20 backdrop-blur-md rounded-xl inline-flex mb-2 shadow-sm border border-white/10">
-                            {React.cloneElement(category.icon, { size: 20, className: "text-white" })}
+                        <div className="absolute -bottom-6 -right-6 text-white opacity-20 transform rotate-12 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-700 ease-out">
+                            {React.cloneElement(category.icon, { size: 140, strokeWidth: 1.5 })}
                         </div>
                     )}
-                    <h3 className="font-display font-bold text-2xl tracking-tight text-white shadow-black/5 drop-shadow-sm">
-                        {category.name}
-                    </h3>
+
+                    {/* Content */}
+                    <div className="absolute bottom-4 left-6 text-white z-10">
+                        {category.icon && React.isValidElement(category.icon) && (
+                            <div className="p-2 bg-white/20 backdrop-blur-md rounded-xl inline-flex mb-2 shadow-sm border border-white/10">
+                                {React.cloneElement(category.icon, { size: 20, className: "text-white" })}
+                            </div>
+                        )}
+                        <h3 className="font-display font-bold text-2xl tracking-tight text-white shadow-black/5 drop-shadow-sm">
+                            {category.name}
+                        </h3>
+                    </div>
                 </div>
-            </div>
+            )}
 
             {/* Body */}
             <div className="p-6 flex flex-col flex-grow relative">

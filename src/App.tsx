@@ -24,10 +24,21 @@ import { plausibleProvider } from './lib/analytics/plausible';
 import Preloader from './components/Preloader';
 import PageTransition from './components/ui/PageTransition';
 import { ScrollManager } from './components/ui/ScrollManager';
+// Mobile (≤639px) foundation chrome — phone-only, desktop frozen.
+import MobileCrisisHeader from './components/mobile/MobileCrisisHeader';
+import MobileBottomNav from './components/mobile/MobileBottomNav';
+import ResponsiveRoute from './components/mobile/ResponsiveRoute';
+import { useMediaQuery, MOBILE_NARROW_QUERY } from './hooks/useMediaQuery';
 
 // --- LAZY LOADED ROUTES (Code Splitting) ---
 const LearnPage = React.lazy(() => import('./pages/LearnPage'));
 const BrowseByTopicPage = React.lazy(() => import('./pages/BrowseByTopicPage'));
+// Mobile (≤639px) screen stubs — rendered via ResponsiveRoute, filled in Wave 1.
+const MobileHome = React.lazy(() => import('./components/mobile/screens/MobileHome'));
+const MobileBrowse = React.lazy(() => import('./components/mobile/screens/MobileBrowse'));
+const MobileCategory = React.lazy(() => import('./components/mobile/screens/MobileCategory'));
+const MobileReader = React.lazy(() => import('./components/mobile/screens/MobileReader'));
+const MobileSearch = React.lazy(() => import('./components/mobile/screens/MobileSearch'));
 const ArticleCategoryPage = React.lazy(() => import('./pages/ArticleCategoryPage'));
 const ArticlePage = React.lazy(() => import('./pages/learn/ArticlePage'));
 const ArticleRedirect = React.lazy(() => import('./components/article/ArticleRedirect'));
@@ -175,6 +186,8 @@ const App: React.FC = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState(true);
+    // Phone breakpoint: swaps desktop chrome/screens for the mobile presentation.
+    const isPhone = useMediaQuery(MOBILE_NARROW_QUERY);
 
     // Register service worker + initialize analytics (once)
     useEffect(() => {
@@ -207,12 +220,13 @@ const App: React.FC = () => {
 
                     {/* App content always renders — Preloader is a fixed overlay (z-9999) that fades out */}
                     <div className="min-h-[100dvh] bg-background font-sans text-gray-900 overflow-x-hidden flex flex-col transition-colors duration-300">
-                            <Navigation />
+                            {!isPhone && <Navigation />}
+                            {isPhone && <MobileCrisisHeader />}
                             {/* AUTH-021: app-wide pending-deletion banner. Renders nothing
                                 when no deletion is scheduled. */}
                             <DeletionScheduledBanner />
 
-                            <main id="main-content" className={`flex-grow w-full outline-none min-h-[100dvh] ${location.pathname === '/tools/mindmate' ? '' : 'pb-24'} ${location.pathname !== '/' ? 'pt-20' : ''}`} tabIndex={-1}>
+                            <main id="main-content" className={`flex-grow w-full outline-none min-h-[100dvh] ${location.pathname === '/tools/mindmate' ? '' : 'pb-24'} max-sm:pt-14 ${location.pathname !== '/' ? 'sm:pt-20' : ''}`} tabIndex={-1}>
                                 <ErrorBoundary
                                     resetKeys={[location.pathname]}
                                     fallback={(error, reset) => (
@@ -232,16 +246,16 @@ const App: React.FC = () => {
                                         <Routes location={location}>
                                             <Route path="/" element={
                                                 <PageTransition>
-                                                    <HomePage />
+                                                    <ResponsiveRoute mobile={<MobileHome />} desktop={<HomePage />} />
                                                 </PageTransition>
                                             } />
 
                                             {/* Public Routes */}
-                                            <Route path="/learn" element={<PageTransition><RouteErrorBoundary><LearnPage /></RouteErrorBoundary></PageTransition>} />
+                                            <Route path="/learn" element={<PageTransition><RouteErrorBoundary><ResponsiveRoute mobile={<MobileBrowse />} desktop={<LearnPage />} /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/learn/topics" element={<PageTransition><RouteErrorBoundary><BrowseByTopicPage /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/learn/article/:id" element={<PageTransition><ArticleRedirect /></PageTransition>} />
-                                            <Route path="/learn/:categorySlug/:articleSlug" element={<PageTransition><ArticlePage /></PageTransition>} />
-                                            <Route path="/learn/:categorySlug" element={<PageTransition><ArticleCategoryPage /></PageTransition>} />
+                                            <Route path="/learn/:categorySlug/:articleSlug" element={<PageTransition><ResponsiveRoute mobile={<MobileReader />} desktop={<ArticlePage />} /></PageTransition>} />
+                                            <Route path="/learn/:categorySlug" element={<PageTransition><ResponsiveRoute mobile={<MobileCategory />} desktop={<ArticleCategoryPage />} /></PageTransition>} />
                                             {/* Conditions A–Z reference */}
                                             <Route path="/conditions" element={<PageTransition><RouteErrorBoundary><ConditionsIndexPage /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/conditions/:slug/articles" element={<PageTransition><RouteErrorBoundary><ConditionArticlesPage /></RouteErrorBoundary></PageTransition>} />
@@ -286,7 +300,7 @@ const App: React.FC = () => {
                                             <Route path="/tools/clarity-journal/entry" element={<PageTransition><ClarityJournalDailyEntry /></PageTransition>} />
                                             <Route path="/tools/clarity-journal/report" element={<PageTransition><ClarityJournalReport /></PageTransition>} />
                                             <Route path="/category/:category" element={<PageTransition><CategoryPage /></PageTransition>} />
-                                            <Route path="/search" element={<PageTransition><SearchResults /></PageTransition>} />
+                                            <Route path="/search" element={<PageTransition><ResponsiveRoute mobile={<MobileSearch />} desktop={<SearchResults />} /></PageTransition>} />
                                             <Route path="/clarity-score" element={<PageTransition><RouteErrorBoundary><ClarityScoreTool /></RouteErrorBoundary></PageTransition>} />
                                             {/* Legacy alias — older copy / breadcrumbs reference /tools/clarity-score */}
                                             <Route path="/tools/clarity-score" element={<Navigate to="/clarity-score" replace />} />
@@ -397,6 +411,8 @@ const App: React.FC = () => {
                                 </ErrorBoundary>
                             </main>
 
+                            {isPhone && <MobileBottomNav />}
+
                             {location.pathname !== '/tools/mindmate' && !location.pathname.startsWith('/dashboard') && !location.pathname.startsWith('/portal') && location.pathname !== '/onboarding' && <Footer />}
 
                             {location.pathname !== '/tools/mindmate' && !location.pathname.startsWith('/dashboard') && !location.pathname.startsWith('/portal') && location.pathname !== '/onboarding' && (
@@ -406,8 +422,8 @@ const App: React.FC = () => {
                             )}
                             <CookieConsent />
 
-                            {/* Persistent Mobile CTA (Homepage Only) */}
-                            {location.pathname === '/' && (
+                            {/* Persistent Mobile CTA (Homepage Only) — tablet only; phone uses the bottom nav. */}
+                            {location.pathname === '/' && !isPhone && (
                                 <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-surface/90 backdrop-blur-md border-t border-border z-[60] shadow-[0_-4px_12px_rgba(0,0,0,0.05)] pb-[calc(1rem+env(safe-area-inset-bottom))]">
                                     <button
                                         type="button"

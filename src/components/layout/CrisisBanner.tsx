@@ -4,12 +4,17 @@ import { Phone, X, HeartHandshake } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { resolveCountry, getResourcesForCountry } from '@/lib/crisis';
+import { useMediaQuery, MOBILE_NARROW_QUERY } from '@/hooks/useMediaQuery';
 
 const SESSION_KEY = 'psychage_crisis_banner_dismissed';
 
 const CrisisBanner: React.FC = () => {
   const { t } = useTranslation();
   const location = useLocation();
+  // At the phone breakpoint (≤639px) the persistent MobileCrisisHeader owns the
+  // crisis surface; this floating banner is suppressed there to avoid a doubled
+  // crisis affordance. Desktop/tablet (≥640px) render is unchanged.
+  const isPhone = useMediaQuery(MOBILE_NARROW_QUERY);
   // On the auth screens the form is a full-viewport centered card; the default
   // fixed bottom-right overlay covers it. There, render the same card in-flow
   // within the footer instead. Everywhere else the floating overlay is unchanged.
@@ -48,6 +53,8 @@ const CrisisBanner: React.FC = () => {
   };
 
   const callHref = `tel:${primaryPhone.replace(/[^0-9+]/g, '')}`;
+
+  if (isPhone) return null;
 
   return (
     <AnimatePresence>

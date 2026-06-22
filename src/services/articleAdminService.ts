@@ -191,6 +191,47 @@ export async function fetchArticlesForExport(params: ArticleSearchParams): Promi
   );
 }
 
+// ============================================================
+// Saved views — per-admin filter/search presets (admin_saved_views)
+// ============================================================
+
+export interface SavedView {
+  id: string;
+  user_id: string;
+  name: string;
+  filters: ArticleSearchParams;
+  created_at: string;
+}
+
+export async function listSavedViews(): Promise<SavedView[]> {
+  const { data, error } = await supabase
+    .from('admin_saved_views')
+    .select('*')
+    .order('created_at', { ascending: false });
+  if (error) throw error;
+  return (data || []) as SavedView[];
+}
+
+export async function createSavedView(name: string, filters: ArticleSearchParams): Promise<SavedView> {
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) throw new Error('Not signed in');
+  // user_id is required by the owner-scoped RLS WITH CHECK (auth.uid() = user_id).
+  const { data, error } = await supabase
+    .from('admin_saved_views')
+    .insert({ user_id: user.id, name, filters })
+    .select()
+    .single();
+  if (error) throw error;
+  return data as SavedView;
+}
+
+export async function deleteSavedView(id: string): Promise<void> {
+  const { error } = await supabase.from('admin_saved_views').delete().eq('id', id);
+  if (error) throw error;
+}
+
 export async function getArticleById(id: string): Promise<ArticleRecord | null> {
   try {
     const { data, error } = await supabase

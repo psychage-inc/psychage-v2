@@ -19,6 +19,8 @@ import {
   PencilRuler,
   Search,
   X,
+  Bookmark,
+  BookmarkPlus,
 } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
@@ -26,7 +28,7 @@ import PageHeader from '@/components/admin/PageHeader';
 import DataTable from '@/components/admin/DataTable';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
 import ConfirmDialog from '@/components/admin/ConfirmDialog';
-import { searchArticles, fetchArticlesForExport, getArticleStats, updateArticleStatus, updateArticle, getArticleCategories, type ArticleSearchParams } from '@/services/articleAdminService';
+import { searchArticles, fetchArticlesForExport, getArticleStats, updateArticleStatus, updateArticle, getArticleCategories, listSavedViews, createSavedView, deleteSavedView, type ArticleSearchParams, type SavedView } from '@/services/articleAdminService';
 import { flagForRewrite } from '@/services/articleRewriteService';
 import { logAdminAction } from '@/lib/admin/auditLogger';
 import { downloadCsv } from '@/lib/admin/csv';
@@ -216,6 +218,50 @@ const AdminArticleList: React.FC = () => {
 
   const categoryNameById = (id: string | null | undefined) =>
     (categories as ArticleCategoryRecord[] | undefined)?.find((c) => c.id === id)?.name;
+
+  // ── Saved views (per-admin presets) ───────────────────────
+  const [savingView, setSavingView] = useState(false);
+  const [viewName, setViewName] = useState('');
+
+  const { data: savedViews } = useQuery({
+    queryKey: ['admin', 'saved-views'],
+    queryFn: listSavedViews,
+  });
+
+  const saveViewMutation = useMutation({
+    mutationFn: () => createSavedView(viewName.trim(), params),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['admin', 'saved-views'] });
+      toast.success(`Saved view “${viewName.trim()}”`);
+      setViewName('');
+      setSavingView(false);
+    },
+    onError: (err: Error) => toast.error(`Save view failed: ${err.message}`),
+  });
+
+  const deleteViewMutation = useMutation({
+    mutationFn: (id: string) => deleteSavedView(id),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['admin', 'saved-views'] });
+      toast.success('View deleted');
+    },
+    onError: (err: Error) => toast.error(`Delete view failed: ${err.message}`),
+  });
+
+  const applyView = (v: SavedView) => {
+    const f = v.filters || {};
+    setSearchInput(f.q || '');
+    setQ(f.q || '');
+    setStatusFilter(f.status || 'all');
+    setStageFilter(f.reviewStage || 'all');
+    setCategoryFilter(f.categoryId || 'all');
+    setAuthorFilter(f.author || '');
+    setDateFrom(f.dateFrom || '');
+    setDateTo(f.dateTo || '');
+    setMinRating(f.minRating != null ? String(f.minRating) : '');
+    setHasCitations(!!f.hasCitations);
+    toast.success(`Applied “${v.name}”`);
+  };
 
   const archiveMutation = useMutation({
     mutationFn: async (id: string) => {
@@ -560,6 +606,78 @@ const AdminArticleList: React.FC = () => {
             >
               <X size={14} />
             </button>
+          )}
+        </div>
+
+        {/* Saved views */}
+        <div className="flex items-center gap-2 flex-wrap">
+          <span className="text-xs font-medium text-text-secondary w-14 inline-flex items-center gap-1">
+            <Bookmark size={12} /> Views
+          </span>
+          {(savedViews || []).length === 0 && !savingView && (
+            <span className="text-xs text-text-tertiary">No saved views yet</span>
+          )}
+          {(savedViews || []).map((v) => (
+            <span
+              key={v.id}
+              className="inline-flex items-center gap-1 pl-2.5 pr-1 py-1 rounded-full bg-surface-hover text-text-secondary text-xs font-medium border border-border"
+            >
+              <button onClick={() => applyView(v)} className="hover:text-primary" aria-label={`Apply view ${v.name}`}>
+                {v.name}
+              </button>
+              <button
+                onClick={() => deleteViewMutation.mutate(v.id)}
+                aria-label={`Delete view ${v.name}`}
+                className="h-5 w-5 inline-flex items-center justify-center rounded-full hover:bg-red-500/10 hover:text-red-500 transition-colors"
+              >
+                <X size={12} />
+              </button>
+            </span>
+          ))}
+          {savingView ? (
+            <span className="inline-flex items-center gap-1">
+              <input
+                type="text"
+                value={viewName}
+                onChange={(e) => setViewName(e.target.value)}
+                placeholder="View name…"
+                aria-label="Saved view name"
+                autoFocus
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' && viewName.trim()) saveViewMutation.mutate();
+                  if (e.key === 'Escape') {
+                    setSavingView(false);
+                    setViewName('');
+                  }
+                }}
+                className="text-xs px-2.5 py-1.5 rounded-lg border border-border bg-surface text-text-primary w-36"
+              />
+              <button
+                onClick={() => saveViewMutation.mutate()}
+                disabled={!viewName.trim() || saveViewMutation.isPending}
+                className="text-xs font-medium px-2.5 py-1.5 rounded-lg bg-primary text-white disabled:opacity-50"
+              >
+                Save
+              </button>
+              <button
+                onClick={() => {
+                  setSavingView(false);
+                  setViewName('');
+                }}
+                className="text-xs text-text-tertiary hover:text-text-primary px-1"
+              >
+                Cancel
+              </button>
+            </span>
+          ) : (
+            hasActiveFilters && (
+              <button
+                onClick={() => setSavingView(true)}
+                className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary-hover"
+              >
+                <BookmarkPlus size={13} /> Save view
+              </button>
+            )
           )}
         </div>
 

@@ -14,6 +14,8 @@ import type { ArticleRecord } from '@/lib/admin/types';
 import { runQualityGate } from '@/lib/article-framework/quality-gate';
 import { ARTICLE_TEMPLATES, SOURCE_TIERS } from '@/lib/article-framework/constants';
 import type { SourceTier } from '@/lib/article-framework/types';
+import { toast } from 'sonner';
+import { updateArticleQualityScore } from '@/services/articleAdminService';
 
 // ---------------------------------------------------------------------------
 // Score Ring Component
@@ -202,7 +204,7 @@ const QualityGateDashboard: React.FC<QualityGateDashboardProps> = ({
     setRunning(true);
 
     // Small delay for visual feedback
-    setTimeout(() => {
+    setTimeout(async () => {
       const input: QualityGateInput = {
         content: articleContent,
         articleType: article.article_type!,
@@ -215,6 +217,25 @@ const QualityGateDashboard: React.FC<QualityGateDashboardProps> = ({
       const gateResult = runQualityGate(input);
       setResult(gateResult);
       setRunning(false);
+
+      // Persist the computed score so the review surface reflects it
+      const readabilityGrade =
+        gateResult.checks.find((c) => c.id === 'readability')?.value ?? null;
+      const tier1Pct = citations.length
+        ? (citations.filter((c) => c.tier === 1).length / citations.length) * 100
+        : null;
+      try {
+        await updateArticleQualityScore(
+          article.id,
+          gateResult,
+          readabilityGrade,
+          citations.length,
+          tier1Pct,
+        );
+        toast.success('Quality score saved');
+      } catch (e) {
+        toast.error(`Failed to save quality score: ${(e as Error).message}`);
+      }
     }, 300);
   }, [article, citations, articleContent]);
 

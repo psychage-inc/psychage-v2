@@ -9,6 +9,7 @@ import {
   ChevronUp,
   BookOpen,
 } from 'lucide-react';
+import { toast } from 'sonner';
 import type { EnhancedCitation, ExpandedSourceType, SourceTier } from '@/lib/article-framework/types';
 import {
   EXPANDED_SOURCE_TYPES,
@@ -16,6 +17,7 @@ import {
   SOURCE_TIERS,
   BLOCKED_SOURCE_DOMAINS,
 } from '@/lib/article-framework/constants';
+import { saveArticleCitation, deleteArticleCitation } from '@/services/articleAdminService';
 
 // ---------------------------------------------------------------------------
 // Citation Form
@@ -332,7 +334,7 @@ const CitationManager: React.FC<CitationManagerProps> = ({ citations, onChange, 
   const [editingIndex, setEditingIndex] = useState<number | null>(null);
   const [expanded, setExpanded] = useState(true);
 
-  const handleAdd = (data: CitationFormData) => {
+  const handleAdd = async (data: CitationFormData) => {
     const tier = SOURCE_TYPE_TO_TIER[data.sourceType];
     const newCitation: EnhancedCitation = {
       id: crypto.randomUUID(),
@@ -353,15 +355,20 @@ const CitationManager: React.FC<CitationManagerProps> = ({ citations, onChange, 
       createdAt: new Date().toISOString(),
     };
 
-    onChange([...citations, newCitation]);
-    setShowForm(false);
+    try {
+      await saveArticleCitation(newCitation);
+      onChange([...citations, newCitation]);
+      setShowForm(false);
+      toast.success('Citation added');
+    } catch (e) {
+      toast.error(`Failed to save citation: ${(e as Error).message}`);
+    }
   };
 
-  const handleEdit = (index: number, data: CitationFormData) => {
-    const updated = [...citations];
+  const handleEdit = async (index: number, data: CitationFormData) => {
     const tier = SOURCE_TYPE_TO_TIER[data.sourceType];
-    updated[index] = {
-      ...updated[index],
+    const updatedCitation: EnhancedCitation = {
+      ...citations[index],
       sourceType: data.sourceType,
       tier,
       title: data.title.trim(),
@@ -375,12 +382,28 @@ const CitationManager: React.FC<CitationManagerProps> = ({ citations, onChange, 
       journalName: data.journalName.trim() || undefined,
       publisher: data.publisher.trim() || undefined,
     };
-    onChange(updated);
-    setEditingIndex(null);
+
+    try {
+      await saveArticleCitation(updatedCitation);
+      const updated = [...citations];
+      updated[index] = updatedCitation;
+      onChange(updated);
+      setEditingIndex(null);
+      toast.success('Citation updated');
+    } catch (e) {
+      toast.error(`Failed to save citation: ${(e as Error).message}`);
+    }
   };
 
-  const handleDelete = (index: number) => {
-    onChange(citations.filter((_, i) => i !== index));
+  const handleDelete = async (index: number) => {
+    const citation = citations[index];
+    try {
+      await deleteArticleCitation(citation.id, articleId);
+      onChange(citations.filter((_, i) => i !== index));
+      toast.success('Citation deleted');
+    } catch (e) {
+      toast.error(`Failed to delete citation: ${(e as Error).message}`);
+    }
   };
 
   // Tier summary

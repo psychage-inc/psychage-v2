@@ -52,6 +52,7 @@ import {
   updateArticleRatings,
   updateArticleStatus,
   updateArticle,
+  getArticleCitations,
 } from '@/services/articleAdminService';
 import type {
   ArticleRecord,
@@ -85,6 +86,12 @@ const AdminArticleDetail: React.FC = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState<TabId>('content');
   const [citations, setCitations] = useState<EnhancedCitation[]>([]);
+
+  // Load existing citations from the DB so the Quality tab reflects what's stored
+  useEffect(() => {
+    if (!id) return;
+    getArticleCitations(id).then(setCitations);
+  }, [id]);
 
   const { data: article, isLoading } = useQuery({
     queryKey: ['admin', 'article', id],
@@ -168,7 +175,7 @@ const AdminArticleDetail: React.FC = () => {
       {activeTab === 'performance' && <PerformanceTab article={article} />}
       {activeTab === 'quality' && (
         <div className="space-y-8">
-          <QualityGateDashboard article={article} citations={citations} />
+          <QualityGateDashboard article={article} citations={citations} articleContent={article.content ?? ''} />
           <CitationManager citations={citations} onChange={setCitations} articleId={article.id} />
         </div>
       )}
@@ -242,11 +249,19 @@ function ContentTab({ article }: { article: ArticleRecord }) {
   const [editContent, setEditContent] = useState(article.content || '');
   const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
 
-  const handleArticleTypeChange = useCallback(
-    (_type: ArticleType) => {
-      toast.success(`Article type set to ${_type.replace(/_/g, ' ')}`);
+  const typeMutation = useMutation({
+    mutationFn: (type: ArticleType) => updateArticle(article.id, { article_type: type }),
+    onSuccess: (_d, type) => {
+      queryClient.invalidateQueries({ queryKey: ['admin', 'article', article.id] });
+      queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
+      toast.success(`Article type set to ${type.replace(/_/g, ' ')}`);
     },
-    [],
+    onError: (err: Error) => toast.error(`Failed to set type: ${err.message}`),
+  });
+
+  const handleArticleTypeChange = useCallback(
+    (type: ArticleType) => typeMutation.mutate(type),
+    [typeMutation],
   );
 
   const saveMutation = useMutation({

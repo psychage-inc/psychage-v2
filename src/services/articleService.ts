@@ -418,6 +418,35 @@ export const articleService = {
     },
 
     /**
+     * Fetch published articles linked to a clinical condition via the stored
+     * `linked_condition_ids` array (condition UUID from conditions_reference).
+     * Ordered cornerstone-first, then cluster order, then newest. Supabase-only —
+     * the mapping uses real condition UUIDs, so there is no meaningful mock fallback.
+     */
+    getByConditionId: async (conditionId: string): Promise<ArticleWithContent[]> => {
+        if (!conditionId) return [];
+        const listFields = 'id, slug, title, seo_description, hero_image_url, category_id, read_time, status, created_at, featured, tags';
+        const selectString = `${listFields}, category:article_categories!category_id(id, name, slug, description)`;
+        try {
+            const { data, error } = await supabase
+                .from('articles')
+                .select(selectString)
+                .eq('status', 'published')
+                .not('content', 'is', null)
+                .neq('content', '')
+                .contains('linked_condition_ids', [conditionId])
+                .order('is_cornerstone', { ascending: false })
+                .order('cluster_order', { ascending: true })
+                .order('created_at', { ascending: false });
+            if (error) throw error;
+            return ((data ?? []) as unknown as DBArticle[]).map(mapSupabaseToArticle);
+        } catch (error) {
+            console.error('Failed to fetch articles by condition:', error);
+            return [];
+        }
+    },
+
+    /**
      * Toggle bookmark for an article
      */
     toggleBookmark: async (articleId: string | number, userId: string): Promise<{ bookmarked: boolean }> => {

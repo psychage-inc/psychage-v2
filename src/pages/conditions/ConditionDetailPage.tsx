@@ -67,6 +67,15 @@ const ConditionDetailPage: React.FC = () => {
         [relatedCategorySlug],
     );
 
+    // "Related articles" — the real clinical join: published articles carrying this
+    // condition's id in linked_condition_ids, cornerstone-first. Only fetchable once we
+    // have a DB-backed condition (the taxonomy fallback has no id).
+    const conditionId = condition?.id ?? null;
+    const { data: linkedArticles, loading: linkedLoading } = useAsyncData<Article[]>(
+        () => (conditionId ? articleService.getByConditionId(conditionId) : Promise.resolve([])),
+        [conditionId],
+    );
+
     if (loading) return <DetailSkeleton backHref={backHref} />;
     if (!condition) return <NotAvailableState backHref={backHref} />;
 
@@ -162,6 +171,11 @@ const ConditionDetailPage: React.FC = () => {
                     {/* "Everything on X" hub — real article links, shown only when wired */}
                     {relatedCategorySlug && relatedArticles && relatedArticles.length > 0 && (
                         <RelatedReading categorySlug={relatedCategorySlug} articles={relatedArticles} />
+                    )}
+
+                    {/* Related articles — the clinical condition↔article join. */}
+                    {conditionId && !linkedLoading && (
+                        <ConditionRelatedArticles slug={condition.slug} articles={linkedArticles ?? []} />
                     )}
 
                     <DisclaimerFooter />
@@ -278,6 +292,44 @@ const RelatedReading: React.FC<{ categorySlug: string; articles: Article[] }> = 
             See all articles in this topic
             <ArrowLeft size={14} aria-hidden="true" className="rotate-180" />
         </Link>
+    </section>
+);
+
+/**
+ * "Related articles" — published articles linked to this condition via the stored
+ * linked_condition_ids join, cornerstone-first. Shows the top reads with a "See all"
+ * link to the full condition-filtered list, and a calm empty state when none.
+ */
+const ConditionRelatedArticles: React.FC<{ slug: string; articles: Article[] }> = ({ slug, articles }) => (
+    <section className="mt-12 border-t border-border pt-8">
+        <h2 className="font-display text-xl font-semibold text-text-primary">Related articles</h2>
+        {articles.length === 0 ? (
+            <p className="mt-3 text-text-secondary">No related articles yet.</p>
+        ) : (
+            <>
+                <ul className="mt-4 space-y-3">
+                    {articles.slice(0, 6).map((article) => (
+                        <li key={article.id}>
+                            <Link
+                                to={getArticleUrl(article)}
+                                className="text-base font-medium text-text-secondary transition-colors hover:text-primary"
+                            >
+                                {article.title}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+                {articles.length > 6 && (
+                    <Link
+                        to={`/conditions/${slug}/articles`}
+                        className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+                    >
+                        See all {articles.length} articles
+                        <ArrowLeft size={14} aria-hidden="true" className="rotate-180" />
+                    </Link>
+                )}
+            </>
+        )}
     </section>
 );
 

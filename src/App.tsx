@@ -33,6 +33,7 @@ const ArticlePage = React.lazy(() => import('./pages/learn/ArticlePage'));
 const ArticleRedirect = React.lazy(() => import('./components/article/ArticleRedirect'));
 const ConditionsIndexPage = React.lazy(() => import('./pages/conditions/ConditionsIndexPage'));
 const ConditionDetailPage = React.lazy(() => import('./pages/conditions/ConditionDetailPage'));
+const ConditionArticlesPage = React.lazy(() => import('./pages/conditions/ConditionArticlesPage'));
 const VideoDetail = React.lazy(() => import('./components/pages/VideoDetail'));
 // Provider Directory V2
 const ProvidersLandingPage = React.lazy(() => import('./pages/providers/ProvidersLandingPage'));
@@ -243,6 +244,7 @@ const App: React.FC = () => {
                                             <Route path="/learn/:categorySlug" element={<PageTransition><ArticleCategoryPage /></PageTransition>} />
                                             {/* Conditions A–Z reference */}
                                             <Route path="/conditions" element={<PageTransition><RouteErrorBoundary><ConditionsIndexPage /></RouteErrorBoundary></PageTransition>} />
+                                            <Route path="/conditions/:slug/articles" element={<PageTransition><RouteErrorBoundary><ConditionArticlesPage /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/conditions/:slug" element={<PageTransition><RouteErrorBoundary><ConditionDetailPage /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/watch/:id" element={<PageTransition><VideoDetail /></PageTransition>} />
                                             {/* Provider Directory V2 */}

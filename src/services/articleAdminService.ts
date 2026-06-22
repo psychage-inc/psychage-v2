@@ -98,6 +98,25 @@ export async function getArticles(): Promise<ArticleRecord[]> {
   }
 }
 
+/**
+ * Review Queue — articles awaiting editorial review.
+ *
+ * Scoped to status='in_review' because that is the only status from which the
+ * queue's actions (Approve → 'approved', Request changes → 'draft') are valid
+ * transitions under ARTICLE_STATUS_TRANSITIONS. Ordered oldest-first so the
+ * longest-waiting items surface at the top. Server-side filter; the in-review
+ * set is small (well under the 1000-row page limit), so no pagination needed.
+ */
+export async function getReviewQueue(): Promise<ArticleRecord[]> {
+  const { data, error } = await supabase
+    .from('articles')
+    .select('*')
+    .eq('status', 'in_review')
+    .order('updated_at', { ascending: true });
+  if (error) throw error;
+  return (data || []) as ArticleRecord[];
+}
+
 export async function getArticleById(id: string): Promise<ArticleRecord | null> {
   try {
     const { data, error } = await supabase

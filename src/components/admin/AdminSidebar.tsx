@@ -20,6 +20,7 @@ import {
   BookOpen,
   List,
   Compass,
+  ClipboardCheck,
 } from 'lucide-react';
 
 interface SubItem {
@@ -44,6 +45,7 @@ const sidebarItems: SidebarItem[] = [
     path: adminPath('/articles'),
     subItems: [
       { icon: List, label: 'All Articles', path: adminPath('/articles') },
+      { icon: ClipboardCheck, label: 'Review Queue', path: adminPath('/articles/review-queue') },
       { icon: FolderKanban, label: 'Categories', path: adminPath('/articles/categories') },
       { icon: GitBranch, label: 'Pipeline', path: adminPath('/articles/pipeline') },
       { icon: Network, label: 'Content Tree', path: adminPath('/articles/tree') },

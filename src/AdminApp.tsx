@@ -31,6 +31,7 @@ const AdminSettingsV2 = React.lazy(() => import('./pages/admin/v2/settings/Setti
 const AdminUserManagementV2 = React.lazy(() => import('./pages/admin/v2/settings/UserManagement'));
 const AdminAuditLogV2 = React.lazy(() => import('./pages/admin/v2/settings/AuditLog'));
 const AdminArticleList = React.lazy(() => import('./pages/admin/v2/articles/ArticleList'));
+const AdminReviewQueue = React.lazy(() => import('./pages/admin/v2/articles/ReviewQueue'));
 const AdminArticleCreator = React.lazy(() => import('./pages/admin/v2/articles/ArticleCreator'));
 const AdminArticleDetail = React.lazy(() => import('./pages/admin/v2/articles/ArticleDetail'));
 const AdminArticleBreakdown = React.lazy(() => import('./pages/admin/v2/articles/ArticleBreakdown'));
@@ -99,6 +100,7 @@ const AdminApp: React.FC = () => {
               <Route path="dashboard" element={<AdminDashboardV2 />} />
               {/* Articles (Command Center) */}
               <Route path="articles" element={<AdminArticleList />} />
+              <Route path="articles/review-queue" element={<AdminReviewQueue />} />
               <Route path="articles/new" element={<AdminArticleCreator />} />
               <Route path="articles/categories" element={<AdminArticleCategories />} />
               <Route path="articles/pipeline" element={<AdminArticlePipeline />} />

@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import type { Article } from '@/types/models';
 
 /**
- * Shared mobile article-row card — horizontal thumbnail + title + meta.
+ * Shared mobile article card — full-width 16:9 cover on top, title + meta below.
  * Consumed by Browse, Category, Search, and Home. Authored once here so
  * branches consume rather than duplicate it. Links to the canonical reader
  * route `/learn/<categorySlug>/<articleSlug>`.
@@ -32,12 +32,12 @@ export const ArticleRowCard: React.FC<ArticleRowCardProps> = ({
         <Link
             to={href}
             className={cn(
-                'group flex min-h-[44px] items-center gap-3 rounded-xl p-2',
+                'group flex min-h-[44px] flex-col gap-2 rounded-xl p-2',
                 'transition-colors duration-200 hover:bg-surface-hover active:bg-surface-hover',
                 className,
             )}
         >
-            <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-surface-hover">
+            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg bg-surface-hover">
                 {article.image ? (
                     <img
                         src={article.image}
@@ -58,9 +58,9 @@ export const ArticleRowCard: React.FC<ArticleRowCardProps> = ({
 };
 
 export const ArticleRowCardSkeleton: React.FC<{ className?: string }> = ({ className }) => (
-    <div className={cn('flex items-center gap-3 rounded-xl p-2', className)} aria-hidden>
-        <div className="h-16 w-16 shrink-0 animate-pulse rounded-lg bg-surface-hover" />
-        <div className="flex min-w-0 flex-1 flex-col gap-2">
+    <div className={cn('flex flex-col gap-2 rounded-xl p-2', className)} aria-hidden>
+        <div className="aspect-[16/9] w-full animate-pulse rounded-lg bg-surface-hover" />
+        <div className="flex min-w-0 flex-col gap-2">
             <div className="h-4 w-5/6 animate-pulse rounded bg-surface-hover" />
             <div className="h-3 w-1/2 animate-pulse rounded bg-surface-hover" />
         </div>

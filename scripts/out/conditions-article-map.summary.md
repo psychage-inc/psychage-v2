@@ -1,8 +1,8 @@
 # Condition ↔ Article map — review summary
 
-Generated: 2026-06-21T22:20:31.067Z
+Generated: 2026-06-22T06:15:38.140Z
 Method: deterministic term + subcategory retrieve/adjudicate (no LLM).
-Published articles: **1961** · Mapped to ≥1 condition: **397** (**20.2%** coverage)
+Published articles: **1961** · Mapped to ≥1 condition: **399** (**20.3%** coverage)
 
 Confidence: **high** = term in title · **med** = term in tags, or family subcategory + term ×≥3 in body · **low** = scattered body mention(s) (NOT stored; review only).
 Cap: 5 conditions/article. Stored set = high + med.
@@ -64,9 +64,9 @@ Cap: 5 conditions/article. Stored set = high + med.
 - **1** — Oppositional defiant disorder `oppositional-defiant-disorder`
 
 ### Dissociative disorders
-- **1** — Depersonalization-derealization disorder `depersonalization-derealization-disorder`
-- **0** — Dissociative amnesia `dissociative-amnesia`
-- **0** — Dissociative identity disorder `dissociative-identity-disorder`
+- **2** — Depersonalization-derealization disorder `depersonalization-derealization-disorder`
+- **2** — Dissociative identity disorder `dissociative-identity-disorder`
+- **1** — Dissociative amnesia `dissociative-amnesia`
 - **0** — Dissociative neurological symptom disorder `dissociative-neurological-symptom-disorder`
 - **0** — Partial dissociative identity disorder `partial-dissociative-identity-disorder`
 - **0** — Possession trance disorder `possession-trance-disorder`
@@ -85,8 +85,8 @@ Cap: 5 conditions/article. Stored set = high + med.
 - **10** — Bulimia nervosa `bulimia-nervosa`
 - **7** — Binge eating disorder `binge-eating-disorder`
 - **3** — Avoidant-restrictive food intake disorder `avoidant-restrictive-food-intake-disorder`
+- **1** — Pica `pica`
 - **1** — Rumination-regurgitation disorder `rumination-regurgitation-disorder`
-- **0** — Pica `pica`
 
 ### Impulse control disorders
 - **1** — Compulsive sexual behaviour disorder `compulsive-sexual-behaviour-disorder`
@@ -254,9 +254,10 @@ Cap: 5 conditions/article. Stored set = high + med.
     - ARFID: When Picky Eating Becomes a Clinical Concern
     - Eating Disorders and Autism: Overlapping Sensory and Rigidity Patterns
     - Eating Disorders in Children: Warning Signs Before Adolescence
+- **Pica** (1):
+    - Pica and Rumination Disorder: Less Common but Equally Serious
 - **Rumination-regurgitation disorder** (1):
     - Pica and Rumination Disorder: Less Common but Equally Serious
-- Pica: _none_
 
 ### Paraphilic disorders
 - Coercive sexual sadism disorder: _none_
@@ -306,7 +307,7 @@ Cap: 5 conditions/article. Stored set = high + med.
     - Delusional Disorder: When Fixed Beliefs Don't Match Reality
 - Schizotypal disorder: _none_
 
-## Zero-article conditions (56)
+## Zero-article conditions (53)
 
 - Amnestic disorder (amnestic-disorder)
 - Body integrity dysphoria (body-integrity-dysphoria)
@@ -330,8 +331,6 @@ Cap: 5 conditions/article. Stored set = high + med.
 - Disorders due to use of unknown or unspecified psychoactive substances (disorders-due-to-use-of-unknown-or-unspecified-psychoactive-substances)
 - Disorders due to use of volatile inhalants (disorders-due-to-use-of-volatile-inhalants)
 - Disorders of intellectual development (disorders-of-intellectual-development)
-- Dissociative amnesia (dissociative-amnesia)
-- Dissociative identity disorder (dissociative-identity-disorder)
 - Dissociative neurological symptom disorder (dissociative-neurological-symptom-disorder)
 - Encopresis (encopresis)
 - Enuresis (enuresis)
@@ -347,7 +346,6 @@ Cap: 5 conditions/article. Stored set = high + med.
 - Paraphilic disorder involving solitary behaviour or consenting individuals (paraphilic-disorder-involving-solitary-behaviour-or-consenting-individuals)
 - Partial dissociative identity disorder (partial-dissociative-identity-disorder)
 - Pedophilic disorder (pedophilic-disorder)
-- Pica (pica)
 - Possession trance disorder (possession-trance-disorder)
 - Pyromania (pyromania)
 - Schizotypal disorder (schizotypal-disorder)

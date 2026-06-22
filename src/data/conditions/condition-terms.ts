@@ -338,21 +338,21 @@ export const CONDITION_TERMS: Record<string, ConditionTermEntry> = {
         name: 'Depersonalization-derealization disorder',
         icd11_code: '6B66',
         icd11_grouping: 'Dissociative disorders',
-        terms: ['depersonalization', 'depersonalisation', 'derealization', 'derealisation', 'feeling unreal', 'feeling detached'],
+        terms: ['depersonalization', 'depersonalisation', 'derealization', 'derealisation', 'feeling unreal', 'feeling detached', 'dissociative disorders'],
         subcategoryHints: ['Trauma & Dissociative Disorders'],
     },
     'dissociative-amnesia': {
         name: 'Dissociative amnesia',
         icd11_code: '6B61',
         icd11_grouping: 'Dissociative disorders',
-        terms: ['dissociative amnesia', 'psychogenic amnesia'],
+        terms: ['dissociative amnesia', 'psychogenic amnesia', 'dissociative disorders'],
         subcategoryHints: ['Trauma & Dissociative Disorders'],
     },
     'dissociative-identity-disorder': {
         name: 'Dissociative identity disorder',
         icd11_code: '6B64',
         icd11_grouping: 'Dissociative disorders',
-        terms: ['dissociative identity disorder', 'multiple personality', 'did diagnosis', 'split personality'],
+        terms: ['dissociative identity disorder', 'multiple personality', 'did diagnosis', 'split personality', 'dissociative disorders'],
         subcategoryHints: ['Trauma & Dissociative Disorders'],
     },
     'dissociative-neurological-symptom-disorder': {
@@ -449,7 +449,7 @@ export const CONDITION_TERMS: Record<string, ConditionTermEntry> = {
         name: 'Pica',
         icd11_code: '6B84',
         icd11_grouping: 'Feeding or eating disorders',
-        terms: ['pica disorder', 'eating non-food'],
+        terms: ['pica disorder', 'eating non-food', 'pica'],
         subcategoryHints: ['Understanding Eating Disorders'],
     },
     'rumination-regurgitation-disorder': {

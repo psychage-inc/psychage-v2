@@ -28,6 +28,7 @@ import type {
   CitationDiversityEntry,
   CommentSeverity,
   ImagePurpose,
+  ArticleRevisionRecord,
 } from '@/lib/admin/types';
 import {
   getMockArticles,
@@ -727,6 +728,20 @@ export async function deleteArticleCitation(citationId: string, articleId: strin
     resourceId: citationId,
     metadata: { articleId },
   });
+}
+
+// ============================================================
+// Revision history (Phase 2 — server-side captured)
+// ============================================================
+
+export async function getArticleRevisions(articleId: string): Promise<ArticleRevisionRecord[]> {
+  const { data, error } = await supabase
+    .from('article_revisions')
+    .select('*')
+    .eq('article_id', articleId)
+    .order('seq', { ascending: false });
+  if (error) throw error;
+  return (data ?? []) as ArticleRevisionRecord[];
 }
 
 export async function updateArticleQualityScore(

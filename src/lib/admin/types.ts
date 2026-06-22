@@ -340,6 +340,19 @@ export type ArticleTemplateType = 'educational' | 'myth_buster' | 'how_to' | 're
 export type DerivativeType = 'supporting_article' | 'spark_micro_content' | 'key_facts_card' | 'social_media_post' | 'email_newsletter_block' | 'video_script' | 'faq_entry' | 'pull_quote';
 export type DerivativeStatus = 'planned' | 'drafted' | 'reviewed' | 'published';
 
+export interface ArticleRevisionRecord {
+  id: string;
+  seq: number;
+  article_id: string;
+  title: string | null;
+  content: string | null;
+  content_format: string | null;
+  word_count: number | null;
+  editor_id: string | null;
+  editor_email: string | null;
+  created_at: string;
+}
+
 export interface ArticleCategoryRecord {
   id: string;
   name: string;

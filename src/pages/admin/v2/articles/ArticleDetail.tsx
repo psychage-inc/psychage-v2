@@ -29,6 +29,7 @@ import {
   Headphones,
   ExternalLink,
   ImagePlus,
+  History,
 } from 'lucide-react';
 import { formatDistanceToNow, format } from 'date-fns';
 import { toast } from 'sonner';
@@ -56,6 +57,7 @@ import {
   updateArticle,
   getArticleCitations,
   getArticleCategories,
+  getArticleRevisions,
 } from '@/services/articleAdminService';
 import type {
   ArticleRecord,
@@ -64,6 +66,7 @@ import type {
   ArticleStatus,
   CommentSeverity,
   ImagePurpose,
+  ArticleRevisionRecord,
 } from '@/lib/admin/types';
 import type { ArticleType, EnhancedCitation } from '@/lib/article-framework/types';
 import { ARTICLE_STATUS_TRANSITIONS, COMMENT_SEVERITIES, IMAGE_PURPOSES, RATING_DIMENSIONS } from '@/lib/admin/constants';
@@ -71,7 +74,7 @@ import { adminPath } from '@/hooks/useAdminNavigate';
 import { mainUrl } from '@/lib/urls';
 import { useDebounce } from '@/hooks/useDebounce';
 
-type TabId = 'content' | 'review' | 'media' | 'workflow' | 'performance' | 'quality';
+type TabId = 'content' | 'review' | 'media' | 'workflow' | 'performance' | 'quality' | 'history';
 
 const TABS: { id: TabId; label: string; icon: React.ElementType }[] = [
   { id: 'content', label: 'Content', icon: FileText },
@@ -80,6 +83,7 @@ const TABS: { id: TabId; label: string; icon: React.ElementType }[] = [
   { id: 'workflow', label: 'Workflow', icon: GitBranch },
   { id: 'performance', label: 'Performance', icon: BarChart3 },
   { id: 'quality', label: 'Quality', icon: ShieldCheck },
+  { id: 'history', label: 'History', icon: History },
 ];
 
 // ============================================================
@@ -187,6 +191,7 @@ const AdminArticleDetail: React.FC = () => {
           <CitationManager citations={citations} onChange={setCitations} articleId={article.id} />
         </div>
       )}
+      {activeTab === 'history' && <HistoryTab article={article} />}
     </div>
   );
 };
@@ -429,6 +434,101 @@ function ArticleSettingsCard({ article }: { article: ArticleRecord }) {
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+// ============================================================
+// Tab: History — server-side revision capture + restore
+// ============================================================
+
+function HistoryTab({ article }: { article: ArticleRecord }) {
+  const queryClient = useQueryClient();
+  const [restoreTarget, setRestoreTarget] = useState<ArticleRevisionRecord | null>(null);
+
+  const { data: revisions = [], isLoading } = useQuery({
+    queryKey: ['admin', 'article-revisions', article.id],
+    queryFn: () => getArticleRevisions(article.id),
+  });
+
+  const restoreMutation = useMutation({
+    mutationFn: (rev: ArticleRevisionRecord) =>
+      updateArticle(article.id, {
+        title: rev.title ?? article.title,
+        content: rev.content ?? '',
+        content_format: (rev.content_format as 'html' | 'markdown') ?? 'html',
+        word_count: rev.word_count ?? 0,
+      }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['admin', 'article', article.id] });
+      queryClient.invalidateQueries({ queryKey: ['admin', 'article-revisions', article.id] });
+      queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
+      setRestoreTarget(null);
+      toast.success('Revision restored');
+    },
+    onError: (err: Error) => toast.error(`Restore failed: ${err.message}`),
+  });
+
+  const preview = (html: string | null) =>
+    (html || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 160);
+
+  return (
+    <div className="space-y-4">
+      <div className="bg-surface rounded-2xl border border-border p-5">
+        <h3 className="text-sm font-semibold text-text-primary mb-1">Revision history</h3>
+        <p className="text-sm text-text-secondary">
+          Every change to the title or body is captured automatically. Restore any version to roll the article back.
+        </p>
+      </div>
+
+      {isLoading ? (
+        <div className="h-24 bg-surface-hover rounded-2xl animate-pulse" />
+      ) : revisions.length === 0 ? (
+        <div className="text-center py-10 text-text-secondary bg-surface rounded-2xl border border-border">
+          <History size={28} className="mx-auto mb-2 opacity-40" />
+          <p className="text-sm">No revisions yet. Edits to this article will appear here.</p>
+        </div>
+      ) : (
+        <ul className="space-y-3">
+          {revisions.map((rev, idx) => (
+            <li key={rev.id} className="bg-surface rounded-2xl border border-border p-4">
+              <div className="flex items-start justify-between gap-4">
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="font-medium text-text-primary">
+                      {idx === 0 ? 'Most recent prior version' : `Version ${revisions.length - idx}`}
+                    </span>
+                    <span className="text-text-tertiary">·</span>
+                    <span className="text-text-secondary">
+                      {rev.created_at ? formatDistanceToNow(new Date(rev.created_at), { addSuffix: true }) : '—'}
+                    </span>
+                  </div>
+                  <p className="text-xs text-text-tertiary mt-0.5">
+                    {rev.editor_email ? `by ${rev.editor_email}` : 'by an automated process'}
+                    {typeof rev.word_count === 'number' ? ` · ${rev.word_count.toLocaleString()} words` : ''}
+                  </p>
+                  <p className="text-sm text-text-secondary mt-2 line-clamp-2">{preview(rev.content) || '(empty)'}</p>
+                </div>
+                <button
+                  onClick={() => setRestoreTarget(rev)}
+                  className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg border border-border text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-colors shrink-0"
+                >
+                  <RotateCcw size={14} /> Restore
+                </button>
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <ConfirmDialog
+        open={!!restoreTarget}
+        onOpenChange={(open) => !open && setRestoreTarget(null)}
+        title="Restore this version"
+        description="The article's current title and body will be replaced with this saved version. The current version is captured as a new revision first, so nothing is lost."
+        confirmLabel="Restore"
+        onConfirm={() => restoreTarget && restoreMutation.mutate(restoreTarget)}
+      />
     </div>
   );
 }

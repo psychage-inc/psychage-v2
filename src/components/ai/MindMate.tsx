@@ -398,7 +398,7 @@ const MindMate: React.FC = () => {
                         whileTap={{ scale: 0.9 }}
                         onClick={() => setIsOpen(true)}
                         data-floating="mindmate-fab"
-                        className="fixed bottom-6 right-6 z-[100] group"
+                        className="fixed bottom-[calc(5rem+env(safe-area-inset-bottom))] right-6 z-[100] group sm:bottom-6"
                         aria-label="Open Psychage AI chat"
                     >
                         <div className="absolute inset-0 bg-teal-500 rounded-full animate-ping opacity-20 group-hover:opacity-40" />

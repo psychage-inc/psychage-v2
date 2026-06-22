@@ -232,6 +232,85 @@ export async function deleteSavedView(id: string): Promise<void> {
   if (error) throw error;
 }
 
+// ============================================================
+// Dashboard chart data (real, from existing tables only)
+// ============================================================
+
+export interface MonthCount {
+  month: string; // YYYY-MM
+  count: number;
+}
+
+/** Articles published per month, from articles.published_at (real timestamps). */
+export async function getPublishingByMonth(): Promise<MonthCount[]> {
+  const rows = await fetchAllRows<{ published_at: string | null }>(() =>
+    supabase.from('articles').select('published_at').not('published_at', 'is', null),
+  );
+  const byMonth = new Map<string, number>();
+  for (const r of rows) {
+    if (!r.published_at) continue;
+    const m = r.published_at.slice(0, 7);
+    byMonth.set(m, (byMonth.get(m) || 0) + 1);
+  }
+  return Array.from(byMonth.entries())
+    .map(([month, count]) => ({ month, count }))
+    .sort((a, b) => a.month.localeCompare(b.month));
+}
+
+export interface NamedCount {
+  name: string;
+  count: number;
+}
+
+/** Article counts per category (real category_id → name). */
+export async function getArticlesByCategory(): Promise<NamedCount[]> {
+  const [rows, cats] = await Promise.all([
+    fetchAllRows<{ category_id: string | null }>(() => supabase.from('articles').select('category_id')),
+    getArticleCategories(),
+  ]);
+  const nameById = new Map(cats.map((c) => [c.id, c.name]));
+  const byCat = new Map<string, number>();
+  for (const r of rows) {
+    const name = (r.category_id && nameById.get(r.category_id)) || 'Uncategorized';
+    byCat.set(name, (byCat.get(name) || 0) + 1);
+  }
+  return Array.from(byCat.entries())
+    .map(([name, count]) => ({ name, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export interface WeekCount {
+  week: string; // ISO date of the week's Monday (YYYY-MM-DD)
+  count: number;
+}
+
+/**
+ * Review throughput — status changes per week from article_status_history.
+ * This table is only populated by in-app status transitions, so it may be
+ * sparse/empty (bulk publishes bypass it); the UI renders an honest
+ * not-connected state when there is no history.
+ */
+export async function getReviewThroughput(): Promise<WeekCount[]> {
+  const { data, error } = await supabase
+    .from('article_status_history')
+    .select('created_at')
+    .order('created_at', { ascending: true });
+  if (error) throw error;
+  const byWeek = new Map<string, number>();
+  for (const r of data || []) {
+    if (!r.created_at) continue;
+    const d = new Date(r.created_at);
+    // Snap to the Monday of that week (UTC).
+    const day = (d.getUTCDay() + 6) % 7; // 0 = Monday
+    const monday = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate() - day));
+    const key = monday.toISOString().slice(0, 10);
+    byWeek.set(key, (byWeek.get(key) || 0) + 1);
+  }
+  return Array.from(byWeek.entries())
+    .map(([week, count]) => ({ week, count }))
+    .sort((a, b) => a.week.localeCompare(b.week));
+}
+
 export async function getArticleById(id: string): Promise<ArticleRecord | null> {
   try {
     const { data, error } = await supabase

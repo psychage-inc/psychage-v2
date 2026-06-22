@@ -7,12 +7,18 @@ import {
   AlertCircle, Clock,
 } from 'lucide-react';
 import {
-  ResponsiveContainer, AreaChart, Area,
+  ResponsiveContainer, AreaChart, Area, BarChart, Bar, LineChart, Line, Cell,
   XAxis, YAxis, CartesianGrid, Tooltip,
 } from 'recharts';
 import { formatDistanceToNow } from 'date-fns';
 import { supabase } from '@/lib/supabaseClient';
-import { getArticleStats, getArticlesNeedingAttention } from '@/services/articleAdminService';
+import {
+  getArticleStats,
+  getArticlesNeedingAttention,
+  getPublishingByMonth,
+  getArticlesByCategory,
+  getReviewThroughput,
+} from '@/services/articleAdminService';
 import PageHeader from '@/components/admin/PageHeader';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
 import { adminPath } from '@/hooks/useAdminNavigate';
@@ -27,9 +33,12 @@ interface MetricCardProps {
   value: number | string | null;
   trend?: number;
   loading?: boolean;
+  // Shown instead of a value when the metric has no data source yet \u2014 keeps the
+  // card honest rather than fabricating a number.
+  note?: string;
 }
 
-const MetricCard: React.FC<MetricCardProps> = ({ icon: Icon, label, value, trend, loading }) => (
+const MetricCard: React.FC<MetricCardProps> = ({ icon: Icon, label, value, trend, loading, note }) => (
   <div className="bg-surface border border-border rounded-2xl p-5">
     <div className="flex items-center justify-between mb-3">
       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -45,6 +54,8 @@ const MetricCard: React.FC<MetricCardProps> = ({ icon: Icon, label, value, trend
     <p className="text-sm text-text-secondary">{label}</p>
     {loading ? (
       <div className="h-8 w-20 bg-surface-hover rounded animate-pulse mt-1" />
+    ) : value == null && note ? (
+      <p className="text-xs text-text-tertiary mt-1.5 leading-snug">{note}</p>
     ) : (
       <p className="text-2xl font-bold text-text-primary mt-1">
         {value ?? '\u2014'}
@@ -152,6 +163,158 @@ const UserGrowthChart: React.FC<{ data: { date: string; count: number }[] }> = (
     )}
   </div>
 );
+
+// ============================================================
+// Article charts (real data from existing tables)
+// ============================================================
+
+const ChartCard: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
+  <div className="bg-surface border border-border rounded-2xl p-5">
+    <h3 className="text-sm font-semibold text-text-primary mb-4">{title}</h3>
+    {children}
+  </div>
+);
+
+const ChartSkeleton = () => <div className="h-[240px] bg-surface-hover rounded animate-pulse" />;
+
+const ChartEmpty: React.FC<{ text: string }> = ({ text }) => (
+  <p className="text-sm text-text-tertiary py-16 text-center">{text}</p>
+);
+
+// Publishing over time — from articles.published_at (real timestamps).
+const PublishingChart: React.FC = () => {
+  const { data, isLoading } = useQuery({
+    queryKey: ['admin', 'chart-publishing'],
+    queryFn: getPublishingByMonth,
+  });
+  return (
+    <ChartCard title="Articles Published Over Time">
+      {isLoading ? (
+        <ChartSkeleton />
+      ) : !data || data.length === 0 ? (
+        <ChartEmpty text="No published articles yet" />
+      ) : (
+        <ResponsiveContainer width="100%" height={240}>
+          <BarChart data={data}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+            <XAxis dataKey="month" tick={{ fontSize: 11 }} />
+            <YAxis tick={{ fontSize: 11 }} allowDecimals={false} />
+            <Tooltip />
+            <Bar dataKey="count" name="Published" fill="#1A9B8C" radius={[4, 4, 0, 0]} />
+          </BarChart>
+        </ResponsiveContainer>
+      )}
+    </ChartCard>
+  );
+};
+
+// Pipeline by status — from getArticleStats counts.
+const PipelineStatusChart: React.FC = () => {
+  const { data: stats, isLoading } = useQuery({
+    queryKey: ['admin', 'article-stats'],
+    queryFn: getArticleStats,
+  });
+  const data = stats
+    ? [
+        { name: 'Draft', count: stats.draft },
+        { name: 'In Review', count: stats.in_review },
+        { name: 'Approved', count: stats.approved },
+        { name: 'Published', count: stats.published },
+        { name: 'Rejected', count: stats.rejected },
+        { name: 'Paused', count: stats.paused },
+        { name: 'Archived', count: stats.archived },
+      ].filter((d) => d.count > 0)
+    : [];
+  return (
+    <ChartCard title="Pipeline by Status">
+      {isLoading ? (
+        <ChartSkeleton />
+      ) : data.length === 0 ? (
+        <ChartEmpty text="No articles yet" />
+      ) : (
+        <ResponsiveContainer width="100%" height={240}>
+          <BarChart data={data}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+            <XAxis dataKey="name" tick={{ fontSize: 11 }} />
+            <YAxis tick={{ fontSize: 11 }} allowDecimals={false} />
+            <Tooltip />
+            <Bar dataKey="count" name="Articles" radius={[4, 4, 0, 0]}>
+              {data.map((_, i) => (
+                <Cell key={i} fill={_CHART_COLORS[i % _CHART_COLORS.length]} />
+              ))}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      )}
+    </ChartCard>
+  );
+};
+
+// Articles by category — top categories by count.
+const CategoryChart: React.FC = () => {
+  const { data, isLoading } = useQuery({
+    queryKey: ['admin', 'chart-categories'],
+    queryFn: getArticlesByCategory,
+  });
+  const top = (data || []).slice(0, 10);
+  return (
+    <ChartCard title="Articles by Category (top 10)">
+      {isLoading ? (
+        <ChartSkeleton />
+      ) : top.length === 0 ? (
+        <ChartEmpty text="No categorized articles yet" />
+      ) : (
+        <ResponsiveContainer width="100%" height={240}>
+          <BarChart data={top} layout="vertical" margin={{ left: 8 }}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+            <XAxis type="number" tick={{ fontSize: 11 }} allowDecimals={false} />
+            <YAxis type="category" dataKey="name" width={130} tick={{ fontSize: 10 }} />
+            <Tooltip />
+            <Bar dataKey="count" name="Articles" fill="#1A9B8C" radius={[0, 4, 4, 0]} />
+          </BarChart>
+        </ResponsiveContainer>
+      )}
+    </ChartCard>
+  );
+};
+
+// Review throughput — status changes per week from article_status_history.
+// Honest not-connected state when the history table is empty.
+const ReviewThroughputChart: React.FC = () => {
+  const { data, isLoading } = useQuery({
+    queryKey: ['admin', 'chart-throughput'],
+    queryFn: getReviewThroughput,
+  });
+  const totalEvents = (data || []).reduce((s, d) => s + d.count, 0);
+  // Below a handful of events a line chart is misleading, so we show an honest
+  // not-connected note instead of fabricating a meaningful series.
+  const tooSparse = !data || totalEvents < 5;
+  return (
+    <ChartCard title="Review Throughput (per week)">
+      {isLoading ? (
+        <ChartSkeleton />
+      ) : tooSparse ? (
+        <ChartEmpty
+          text={
+            totalEvents === 0
+              ? 'Not connected yet — populates as articles move through in-app review'
+              : `Minimal activity so far (${totalEvents} status change${totalEvents === 1 ? '' : 's'} recorded) — populates as articles move through in-app review`
+          }
+        />
+      ) : (
+        <ResponsiveContainer width="100%" height={240}>
+          <LineChart data={data}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+            <XAxis dataKey="week" tick={{ fontSize: 11 }} />
+            <YAxis tick={{ fontSize: 11 }} allowDecimals={false} />
+            <Tooltip />
+            <Line type="monotone" dataKey="count" name="Status changes" stroke="#1A9B8C" strokeWidth={2} dot={{ r: 3 }} />
+          </LineChart>
+        </ResponsiveContainer>
+      )}
+    </ChartCard>
+  );
+};
 
 // ============================================================
 // Activity Feed
@@ -334,28 +497,23 @@ const AdminDashboardV2: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
         <MetricCard icon={Users} label="Total Users" value={metrics?.totalUsers ?? null} loading={metricsLoading} />
         <MetricCard icon={ClipboardCheck} label="Clarity Completions" value={metrics?.clarityCompletions ?? null} loading={metricsLoading} />
-        <MetricCard icon={MessageSquare} label="AI Conversations (24h)" value={null} loading={metricsLoading} />
-        <MetricCard icon={ShieldAlert} label="Safety Flags (7d)" value={null} loading={metricsLoading} />
+        <MetricCard icon={MessageSquare} label="AI Conversations (24h)" value={null} note="Not connected yet — needs analytics integration" />
+        <MetricCard icon={ShieldAlert} label="Safety Flags (7d)" value={null} note="Not connected yet — needs analytics integration" />
         <MetricCard icon={UserCheck} label="Pending Applications" value={metrics?.pendingApplications ?? null} loading={metricsLoading} />
         <MetricCard icon={FileText} label="Published Content" value={metrics?.publishedContent ?? null} loading={metricsLoading} />
       </div>
 
-      {/* Charts */}
+      {/* Charts — all real data from existing tables, honest empty states otherwise */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
         {chartsLoading ? (
-          <>
-            <div className="bg-surface border border-border rounded-2xl p-5 h-[300px] animate-pulse" />
-            <div className="bg-surface border border-border rounded-2xl p-5 h-[300px] animate-pulse" />
-          </>
+          <div className="bg-surface border border-border rounded-2xl p-5 h-[300px] animate-pulse" />
         ) : (
-          <>
-            <UserGrowthChart data={chartData?.userGrowth || []} />
-            <div className="bg-surface border border-border rounded-2xl p-5">
-              <h3 className="text-sm font-semibold text-text-primary mb-4">Safety Flags by Week</h3>
-              <p className="text-sm text-text-tertiary py-8 text-center">Data available after Phase 6</p>
-            </div>
-          </>
+          <UserGrowthChart data={chartData?.userGrowth || []} />
         )}
+        <PublishingChart />
+        <PipelineStatusChart />
+        <CategoryChart />
+        <ReviewThroughputChart />
       </div>
 
       {/* Article pipeline + Activity Feed */}

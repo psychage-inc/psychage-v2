@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { type ColumnDef } from '@tanstack/react-table';
-import { Pencil, Plus, Shield, UserX, Wifi, WifiOff } from 'lucide-react';
+import { Pencil, Plus, Shield, UserX, Wifi, WifiOff, Download } from 'lucide-react';
+import { toast } from 'sonner';
 import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';
+import { downloadCsv } from '@/lib/admin/csv';
 import PageHeader from '@/components/admin/PageHeader';
 import DataTable from '@/components/admin/DataTable';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
@@ -187,6 +189,25 @@ const AdminProviderList: React.FC = () => {
     },
   ];
 
+  // F5: CSV export of the current (tab-filtered) provider set
+  const exportCsv = () => {
+    const rows = filteredProviders.map((p) => [
+      p.display_name,
+      p.credentials_suffix || '',
+      p.verification_tier || 'unverified',
+      [p.primary_city, p.primary_state].filter(Boolean).join(', '),
+      p.telehealth_available ? 'yes' : 'no',
+      p.is_suspended ? 'suspended' : 'active',
+      p.verified_at || '',
+    ]);
+    downloadCsv(
+      `providers-${tab}-${new Date().toISOString().slice(0, 10)}.csv`,
+      ['Name', 'Credentials', 'Verification', 'Location', 'Telehealth', 'Status', 'Verified At'],
+      rows,
+    );
+    toast.success(`Exported ${rows.length} provider(s)`);
+  };
+
   const tabs: { key: TabKey; label: string; count?: number }[] = [
     { key: 'all', label: 'All Providers' },
     { key: 'pending', label: 'Pending Applications', count: pendingApps || 0 },
@@ -200,6 +221,13 @@ const AdminProviderList: React.FC = () => {
         description="Manage provider directory and applications"
         actions={
           <div className="flex items-center gap-2">
+            <button
+              onClick={exportCsv}
+              className="flex items-center gap-2 px-3 py-2 border border-border-hover text-text-secondary text-sm font-medium rounded-lg hover:bg-surface-hover transition-colors"
+            >
+              <Download size={16} />
+              Export CSV
+            </button>
             <button
               onClick={() => navigate(adminPath('/providers/import'))}
               className="flex items-center gap-2 px-3 py-2 border border-border-hover text-text-secondary text-sm font-medium rounded-lg hover:bg-surface-hover transition-colors"

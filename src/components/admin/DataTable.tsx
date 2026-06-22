@@ -26,6 +26,7 @@ interface DataTableProps<TData> {
   enableRowSelection?: boolean;
   rowSelection?: RowSelectionState;
   onRowSelectionChange?: OnChangeFn<RowSelectionState>;
+  getRowId?: (originalRow: TData, index: number) => string;
   bulkActions?: React.ReactNode;
   totalCount?: number;
   serverPagination?: {
@@ -48,6 +49,7 @@ function DataTable<TData>({
   enableRowSelection = false,
   rowSelection,
   onRowSelectionChange,
+  getRowId,
   bulkActions,
   totalCount,
   serverPagination,
@@ -71,6 +73,7 @@ function DataTable<TData>({
     onGlobalFilterChange: setGlobalFilter,
     onRowSelectionChange: enableRowSelection ? effectiveOnRowSelectionChange : undefined,
     enableRowSelection,
+    ...(getRowId ? { getRowId } : {}),
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getFilteredRowModel: getFilteredRowModel(),

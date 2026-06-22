@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { type ColumnDef } from '@tanstack/react-table';
+import { type ColumnDef, type RowSelectionState } from '@tanstack/react-table';
 import {
   Plus,
   Eye,
@@ -12,6 +12,11 @@ import {
   CheckCircle,
   AlertCircle,
   FolderKanban,
+  Download,
+  Send,
+  EyeOff,
+  Tag,
+  PencilRuler,
 } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
@@ -19,7 +24,10 @@ import PageHeader from '@/components/admin/PageHeader';
 import DataTable from '@/components/admin/DataTable';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
 import ConfirmDialog from '@/components/admin/ConfirmDialog';
-import { getArticles, getArticleStats, updateArticleStatus, getArticleCategories, getArticlesDataSource } from '@/services/articleAdminService';
+import { getArticles, getArticleStats, updateArticleStatus, updateArticle, getArticleCategories, getArticlesDataSource } from '@/services/articleAdminService';
+import { flagForRewrite } from '@/services/articleRewriteService';
+import { logAdminAction } from '@/lib/admin/auditLogger';
+import { downloadCsv } from '@/lib/admin/csv';
 import type { ArticleRecord, ArticleCategoryRecord } from '@/lib/admin/types';
 import { ARTICLE_STATUSES, ARTICLE_REVIEW_STAGES } from '@/lib/admin/constants';
 import { adminPath } from '@/hooks/useAdminNavigate';
@@ -143,7 +151,138 @@ const AdminArticleList: React.FC = () => {
     },
   });
 
+  // ── F4: bulk actions ──────────────────────────────────────
+  const [rowSelection, setRowSelection] = useState<RowSelectionState>({});
+  const [bulkCategoryId, setBulkCategoryId] = useState('');
+  const [bulkRunning, setBulkRunning] = useState(false);
+  const [pendingBulk, setPendingBulk] = useState<{
+    title: string;
+    description: string;
+    confirmLabel: string;
+    run: () => Promise<void>;
+  } | null>(null);
+
+  const selectedArticles = (filteredArticles || []).filter((a) => rowSelection[a.id]);
+
+  // Runs an action per selected row, catching per-item so a disallowed
+  // status transition is skipped (reported), never forced. Each underlying
+  // service call writes its own admin_audit_log entry.
+  const runBulk = async (label: string, fn: (a: ArticleRecord) => Promise<unknown>) => {
+    setBulkRunning(true);
+    let ok = 0;
+    const skipped: string[] = [];
+    for (const a of selectedArticles) {
+      try {
+        await fn(a);
+        ok++;
+      } catch {
+        skipped.push(a.title);
+      }
+    }
+    queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
+    queryClient.invalidateQueries({ queryKey: ['admin', 'article-stats'] });
+    setRowSelection({});
+    setPendingBulk(null);
+    setBulkRunning(false);
+    if (skipped.length === 0) toast.success(`${label}: ${ok} updated`);
+    else toast(`${label}: ${ok} updated, ${skipped.length} skipped (transition not allowed)`);
+  };
+
+  const askPublish = () =>
+    setPendingBulk({
+      title: 'Publish articles',
+      description: `Publish ${selectedArticles.length} selected article(s)? Any whose current status does not allow publishing will be skipped.`,
+      confirmLabel: 'Publish',
+      run: () => runBulk('Publish', (a) => updateArticleStatus(a.id, 'published', 'Bulk publish from article list')),
+    });
+
+  const askUnpublish = () =>
+    setPendingBulk({
+      title: 'Unpublish articles',
+      description: `Pause ${selectedArticles.length} selected article(s) so they are hidden from the public site? Any not currently published will be skipped.`,
+      confirmLabel: 'Unpublish',
+      run: () => runBulk('Unpublish', (a) => updateArticleStatus(a.id, 'paused', 'Bulk unpublish from article list')),
+    });
+
+  const askRecategorize = () => {
+    if (!bulkCategoryId) {
+      toast.error('Choose a target category first');
+      return;
+    }
+    const catName =
+      (categories as ArticleCategoryRecord[] | undefined)?.find((c) => c.id === bulkCategoryId)?.name ?? 'category';
+    setPendingBulk({
+      title: 'Recategorize articles',
+      description: `Move ${selectedArticles.length} selected article(s) to "${catName}"?`,
+      confirmLabel: 'Recategorize',
+      run: () => runBulk('Recategorize', (a) => updateArticle(a.id, { category_id: bulkCategoryId })),
+    });
+  };
+
+  const askFlagRewrite = () =>
+    setPendingBulk({
+      title: 'Flag for rewrite',
+      description: `Flag ${selectedArticles.length} selected article(s) for rewrite?`,
+      confirmLabel: 'Flag',
+      run: () =>
+        runBulk('Flag for rewrite', async (a) => {
+          await flagForRewrite(a.id);
+          await logAdminAction({
+            action: 'flag_rewrite',
+            resourceType: 'article',
+            resourceId: a.id,
+            newValue: { rewrite_status: 'flagged' },
+          });
+        }),
+    });
+
+  // ── F5: CSV export of the current filtered set ────────────
+  const exportCsv = () => {
+    const rows = (filteredArticles || []).map((a) => [
+      a.article_production_id || '',
+      a.title,
+      a.status,
+      a.review_stage || '',
+      (categories as ArticleCategoryRecord[] | undefined)?.find((c) => c.id === a.category_id)?.name || '',
+      a.word_count ?? 0,
+      a.rating_overall ?? '',
+      a.author_name || '',
+      a.updated_at,
+    ]);
+    downloadCsv(
+      `articles-${new Date().toISOString().slice(0, 10)}.csv`,
+      ['ID', 'Title', 'Status', 'Stage', 'Category', 'Words', 'Rating', 'Author', 'Updated'],
+      rows,
+    );
+    toast.success(`Exported ${rows.length} article(s)`);
+  };
+
   const columns: ColumnDef<ArticleRecord, unknown>[] = [
+    {
+      id: 'select',
+      enableSorting: false,
+      header: ({ table }) => (
+        <input
+          type="checkbox"
+          className="h-4 w-4 rounded border-border accent-primary cursor-pointer"
+          checked={table.getIsAllPageRowsSelected()}
+          ref={(el) => {
+            if (el) el.indeterminate = table.getIsSomePageRowsSelected() && !table.getIsAllPageRowsSelected();
+          }}
+          onChange={table.getToggleAllPageRowsSelectedHandler()}
+          aria-label="Select all articles on this page"
+        />
+      ),
+      cell: ({ row }) => (
+        <input
+          type="checkbox"
+          className="h-4 w-4 rounded border-border accent-primary cursor-pointer"
+          checked={row.getIsSelected()}
+          onChange={row.getToggleSelectedHandler()}
+          aria-label={`Select ${row.original.title}`}
+        />
+      ),
+    },
     {
       accessorKey: 'article_production_id',
       header: 'ID',
@@ -281,6 +420,13 @@ const AdminArticleList: React.FC = () => {
         actions={
           <div className="flex items-center gap-2">
             <button
+              onClick={exportCsv}
+              className="flex items-center gap-2 px-3 py-2 border border-border-hover text-text-secondary text-sm font-medium rounded-lg hover:bg-surface-hover transition-colors"
+            >
+              <Download size={16} />
+              Export CSV
+            </button>
+            <button
               onClick={() => navigate(adminPath('/articles/clusters'))}
               className="flex items-center gap-2 px-3 py-2 border border-border-hover text-text-secondary text-sm font-medium rounded-lg hover:bg-surface-hover transition-colors"
             >
@@ -400,6 +546,55 @@ const AdminArticleList: React.FC = () => {
         emptyMessage="No articles found. Create articles via the admin panel or seed migration."
         searchPlaceholder="Search articles..."
         totalCount={filteredArticles?.length}
+        enableRowSelection
+        rowSelection={rowSelection}
+        onRowSelectionChange={setRowSelection}
+        getRowId={(a) => a.id}
+        bulkActions={
+          <div className="flex flex-wrap items-center gap-2">
+            <button
+              onClick={askPublish}
+              disabled={bulkRunning}
+              className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium rounded-lg bg-surface text-text-secondary hover:text-text-primary border border-border disabled:opacity-50"
+            >
+              <Send size={14} /> Publish
+            </button>
+            <button
+              onClick={askUnpublish}
+              disabled={bulkRunning}
+              className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium rounded-lg bg-surface text-text-secondary hover:text-text-primary border border-border disabled:opacity-50"
+            >
+              <EyeOff size={14} /> Unpublish
+            </button>
+            <button
+              onClick={askFlagRewrite}
+              disabled={bulkRunning}
+              className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium rounded-lg bg-surface text-text-secondary hover:text-text-primary border border-border disabled:opacity-50"
+            >
+              <PencilRuler size={14} /> Flag for rewrite
+            </button>
+            <div className="flex items-center gap-1">
+              <select
+                value={bulkCategoryId}
+                onChange={(e) => setBulkCategoryId(e.target.value)}
+                aria-label="Bulk recategorize target"
+                className="text-xs px-2 py-1.5 rounded-lg border border-border bg-surface text-text-secondary"
+              >
+                <option value="">Move to…</option>
+                {(categories as ArticleCategoryRecord[] | undefined)?.map((cat) => (
+                  <option key={cat.id} value={cat.id}>{cat.name}</option>
+                ))}
+              </select>
+              <button
+                onClick={askRecategorize}
+                disabled={bulkRunning || !bulkCategoryId}
+                className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium rounded-lg bg-surface text-text-secondary hover:text-text-primary border border-border disabled:opacity-50"
+              >
+                <Tag size={14} /> Apply
+              </button>
+            </div>
+          </div>
+        }
       />
 
       {dataSource.source && (
@@ -425,6 +620,15 @@ const AdminArticleList: React.FC = () => {
         confirmLabel="Archive"
         destructive
         onConfirm={() => deleteTarget && archiveMutation.mutate(deleteTarget.id)}
+      />
+
+      <ConfirmDialog
+        open={!!pendingBulk}
+        onOpenChange={(open) => !open && setPendingBulk(null)}
+        title={pendingBulk?.title ?? ''}
+        description={pendingBulk?.description ?? ''}
+        confirmLabel={pendingBulk?.confirmLabel ?? 'Confirm'}
+        onConfirm={() => pendingBulk?.run()}
       />
     </div>
   );

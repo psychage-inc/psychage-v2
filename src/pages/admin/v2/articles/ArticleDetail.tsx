@@ -27,6 +27,8 @@ import {
   Save,
   Film,
   Headphones,
+  ExternalLink,
+  ImagePlus,
 } from 'lucide-react';
 import { formatDistanceToNow, format } from 'date-fns';
 import { toast } from 'sonner';
@@ -53,6 +55,7 @@ import {
   updateArticleStatus,
   updateArticle,
   getArticleCitations,
+  getArticleCategories,
 } from '@/services/articleAdminService';
 import type {
   ArticleRecord,
@@ -65,6 +68,8 @@ import type {
 import type { ArticleType, EnhancedCitation } from '@/lib/article-framework/types';
 import { ARTICLE_STATUS_TRANSITIONS, COMMENT_SEVERITIES, IMAGE_PURPOSES, RATING_DIMENSIONS } from '@/lib/admin/constants';
 import { adminPath } from '@/hooks/useAdminNavigate';
+import { mainUrl } from '@/lib/urls';
+import { useDebounce } from '@/hooks/useDebounce';
 
 type TabId = 'content' | 'review' | 'media' | 'workflow' | 'performance' | 'quality';
 
@@ -137,13 +142,16 @@ const AdminArticleDetail: React.FC = () => {
           </div>
         }
         actions={
-          <button
-            onClick={() => navigate(adminPath('/articles'))}
-            className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:text-text-primary transition-colors"
-          >
-            <ArrowLeft size={16} />
-            Back
-          </button>
+          <div className="flex items-center gap-2">
+            <ViewOnSiteButton article={article} />
+            <button
+              onClick={() => navigate(adminPath('/articles'))}
+              className="flex items-center gap-2 px-3 py-2 text-sm text-text-secondary hover:text-text-primary transition-colors"
+            >
+              <ArrowLeft size={16} />
+              Back
+            </button>
+          </div>
         }
       />
 
@@ -239,6 +247,193 @@ function ArticleHtmlRenderer({ html, className }: { html: string; className?: st
 }
 
 // ============================================================
+// View on site (public preview) — published articles only
+// ============================================================
+
+function ViewOnSiteButton({ article }: { article: ArticleRecord }) {
+  const { data: categories = [] } = useQuery({
+    queryKey: ['admin', 'article-categories'],
+    queryFn: getArticleCategories,
+  });
+  const categorySlug =
+    article.category_record?.slug || categories.find((c) => c.id === article.category_id)?.slug;
+
+  if (article.status !== 'published' || !article.slug || !categorySlug) return null;
+
+  const href = mainUrl(`/learn/${categorySlug}/${article.slug}`);
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-primary hover:bg-surface-hover rounded-lg transition-colors"
+      title="Open the published page on the public site"
+    >
+      <ExternalLink size={16} />
+      View on site
+    </a>
+  );
+}
+
+// ============================================================
+// Article settings — edit tags / category / hero image post-creation
+// ============================================================
+
+function ArticleSettingsCard({ article }: { article: ArticleRecord }) {
+  const queryClient = useQueryClient();
+  const { data: categories = [] } = useQuery({
+    queryKey: ['admin', 'article-categories'],
+    queryFn: getArticleCategories,
+  });
+  const { data: images = [] } = useQuery({
+    queryKey: ['admin', 'article-images', article.id],
+    queryFn: () => getArticleImages(article.id),
+  });
+
+  const [tags, setTags] = useState((article.tags || []).join(', '));
+  const [categoryId, setCategoryId] = useState(article.category_id || '');
+  const [heroUrl, setHeroUrl] = useState(article.hero_image_url || '');
+  const [heroAlt, setHeroAlt] = useState(article.hero_image_alt || '');
+
+  const normalizedTags = tags.split(',').map((t) => t.trim()).filter(Boolean);
+  const dirty =
+    normalizedTags.join('|') !== (article.tags || []).join('|') ||
+    (categoryId || '') !== (article.category_id || '') ||
+    (heroUrl || '') !== (article.hero_image_url || '') ||
+    (heroAlt || '') !== (article.hero_image_alt || '');
+
+  const saveMutation = useMutation({
+    mutationFn: () =>
+      updateArticle(article.id, {
+        tags: normalizedTags,
+        category_id: categoryId || null,
+        hero_image_url: heroUrl || null,
+        hero_image_alt: heroAlt || null,
+      }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['admin', 'article', article.id] });
+      queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
+      toast.success('Article settings saved');
+    },
+    onError: (err: Error) => toast.error(`Save failed: ${err.message}`),
+  });
+
+  return (
+    <div className="bg-surface rounded-2xl border border-border p-5 space-y-5">
+      <div className="flex items-center justify-between">
+        <h3 className="text-sm font-semibold text-text-primary">Article settings</h3>
+        <button
+          onClick={() => saveMutation.mutate()}
+          disabled={!dirty || saveMutation.isPending}
+          className="flex items-center gap-2 px-3 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
+        >
+          <Save size={15} />
+          {saveMutation.isPending ? 'Saving...' : 'Save settings'}
+        </button>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Category */}
+        <div>
+          <label htmlFor="article-category" className="block text-sm font-medium text-text-secondary mb-1">
+            Category
+          </label>
+          <select
+            id="article-category"
+            value={categoryId}
+            onChange={(e) => setCategoryId(e.target.value)}
+            className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface text-text-primary outline-none focus:ring-2 focus:ring-primary"
+          >
+            <option value="">Uncategorized</option>
+            {categories.map((cat) => (
+              <option key={cat.id} value={cat.id}>
+                {cat.name}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Tags */}
+        <div>
+          <label htmlFor="article-tags" className="block text-sm font-medium text-text-secondary mb-1">
+            Tags
+          </label>
+          <input
+            id="article-tags"
+            value={tags}
+            onChange={(e) => setTags(e.target.value)}
+            placeholder="Comma-separated tags"
+            className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface text-text-primary outline-none focus:ring-2 focus:ring-primary"
+          />
+          <p className="text-xs text-text-tertiary mt-1">e.g., anxiety, coping-strategies, mindfulness</p>
+        </div>
+      </div>
+
+      {/* Hero image */}
+      <div>
+        <label className="block text-sm font-medium text-text-secondary mb-2">Hero image</label>
+        <div className="flex items-start gap-4">
+          <div className="w-40 shrink-0">
+            {heroUrl ? (
+              <img
+                src={heroUrl}
+                alt={heroAlt || 'Hero preview'}
+                className="w-40 h-24 object-cover rounded-lg border border-border"
+              />
+            ) : (
+              <div className="w-40 h-24 flex items-center justify-center rounded-lg border border-dashed border-border-hover text-text-tertiary">
+                <ImagePlus size={20} />
+              </div>
+            )}
+          </div>
+          <div className="flex-1 space-y-2">
+            <input
+              value={heroAlt}
+              onChange={(e) => setHeroAlt(e.target.value)}
+              placeholder="Hero image alt text"
+              aria-label="Hero image alt text"
+              className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface text-text-primary outline-none focus:ring-2 focus:ring-primary"
+            />
+            {images.length > 0 ? (
+              <div className="flex flex-wrap items-center gap-2">
+                {images.map((img) => (
+                  <button
+                    key={img.id}
+                    type="button"
+                    onClick={() => {
+                      setHeroUrl(img.public_url);
+                      setHeroAlt((prev) => prev || img.alt_text || '');
+                    }}
+                    className={`w-14 h-14 rounded-md overflow-hidden border-2 transition-colors ${
+                      heroUrl === img.public_url ? 'border-primary' : 'border-transparent hover:border-border-hover'
+                    }`}
+                    title={img.original_filename}
+                    aria-label={`Use ${img.original_filename} as hero image`}
+                  >
+                    <img src={img.public_url} alt={img.alt_text || ''} className="w-full h-full object-cover" />
+                  </button>
+                ))}
+                {heroUrl && (
+                  <button
+                    type="button"
+                    onClick={() => setHeroUrl('')}
+                    className="px-2 h-14 text-xs text-text-secondary hover:text-text-primary"
+                  >
+                    Clear
+                  </button>
+                )}
+              </div>
+            ) : (
+              <p className="text-xs text-text-tertiary">Upload images in the Media tab to pick a hero.</p>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ============================================================
 // Tab 1: Content
 // ============================================================
 
@@ -248,6 +443,33 @@ function ContentTab({ article }: { article: ArticleRecord }) {
   const [isEditing, setIsEditing] = useState(false);
   const [editContent, setEditContent] = useState(article.content || '');
   const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
+
+  // F3 — Autosave for DRAFT articles only. Never touches status, never publishes.
+  const isDraft = article.status === 'draft';
+  const [autosaveState, setAutosaveState] = useState<'idle' | 'saving' | 'saved'>('idle');
+
+  const autosaveMutation = useMutation({
+    mutationFn: (html: string) => {
+      const wordCount = html.replace(/<[^>]*>/g, ' ').split(/\s+/).filter(Boolean).length;
+      // Content-only payload: status is intentionally never included here.
+      return updateArticle(article.id, { content: html, content_format: 'html', word_count: wordCount });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
+      setHasUnsavedChanges(false);
+      setAutosaveState('saved');
+    },
+    onError: () => setAutosaveState('idle'),
+  });
+
+  const runAutosave = useCallback(
+    (html: string) => {
+      setAutosaveState('saving');
+      autosaveMutation.mutate(html);
+    },
+    [autosaveMutation],
+  );
+  const debouncedAutosave = useDebounce(runAutosave, 2500);
 
   const typeMutation = useMutation({
     mutationFn: (type: ArticleType) => updateArticle(article.id, { article_type: type }),
@@ -297,6 +519,9 @@ function ContentTab({ article }: { article: ArticleRecord }) {
   const handleContentChange = (html: string) => {
     setEditContent(html);
     setHasUnsavedChanges(true);
+    if (isDraft) {
+      debouncedAutosave(html);
+    }
   };
 
   const liveWordCount = isEditing
@@ -314,6 +539,9 @@ function ContentTab({ article }: { article: ArticleRecord }) {
           onChange={handleArticleTypeChange}
         />
       </div>
+
+      {/* Tags / Category / Hero image */}
+      <ArticleSettingsCard key={article.id} article={article} />
 
       {/* Meta info cards */}
       <div className="grid grid-cols-3 gap-4">
@@ -362,7 +590,25 @@ function ContentTab({ article }: { article: ArticleRecord }) {
             {saveMutation.isPending ? 'Saving...' : 'Save Content'}
           </button>
         )}
-        {isEditing && hasUnsavedChanges && (
+        {isEditing && isDraft && (
+          <span
+            className="flex items-center gap-1.5 text-xs font-medium text-text-tertiary"
+            aria-live="polite"
+          >
+            {autosaveState === 'saving' ? (
+              <>
+                <Clock size={13} className="animate-pulse" /> Saving…
+              </>
+            ) : autosaveState === 'saved' && !hasUnsavedChanges ? (
+              <>
+                <CheckCircle size={13} className="text-emerald-600" /> Saved
+              </>
+            ) : (
+              <>Autosaves drafts</>
+            )}
+          </span>
+        )}
+        {isEditing && !isDraft && hasUnsavedChanges && (
           <span className="text-xs text-amber-600 dark:text-amber-400 font-medium">Unsaved changes</span>
         )}
         <button

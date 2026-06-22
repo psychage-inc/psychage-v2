@@ -392,16 +392,18 @@ const AdminArticleList: React.FC = () => {
           <div className="flex items-center gap-1">
             <button
               onClick={() => navigate(adminPath(`/articles/${article.id}`))}
-              className="p-1.5 text-text-tertiary hover:text-primary transition-colors"
-              title="View Details"
+              className="h-9 w-9 inline-flex items-center justify-center text-text-tertiary hover:text-primary transition-colors"
+              title="View details"
+              aria-label={`View details for ${article.title}`}
             >
               <Eye size={15} />
             </button>
             {article.status !== 'archived' && (
               <button
                 onClick={() => setDeleteTarget(article)}
-                className="p-1.5 text-text-tertiary hover:text-red-500 transition-colors"
+                className="h-9 w-9 inline-flex items-center justify-center text-text-tertiary hover:text-red-500 transition-colors"
                 title="Archive"
+                aria-label={`Archive ${article.title}`}
               >
                 <Trash2 size={15} />
               </button>

@@ -203,6 +203,7 @@ function DataTable<TData>({
                     : table.previousPage()
                 }
                 disabled={serverPagination ? serverPagination.pageIndex === 0 : !table.getCanPreviousPage()}
+                aria-label="Previous page"
                 className="h-11 w-11 flex items-center justify-center text-text-tertiary hover:text-text-primary disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 <ChevronLeft size={16} />
@@ -214,6 +215,7 @@ function DataTable<TData>({
                     : table.nextPage()
                 }
                 disabled={serverPagination ? currentPage >= totalPages : !table.getCanNextPage()}
+                aria-label="Next page"
                 className="h-11 w-11 flex items-center justify-center text-text-tertiary hover:text-text-primary disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 <ChevronRight size={16} />

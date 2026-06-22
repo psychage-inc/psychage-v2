@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { useQuery, useMutation, useQueryClient, keepPreviousData } from '@tanstack/react-query';
 import { type ColumnDef, type RowSelectionState } from '@tanstack/react-table';
 import {
   Plus,
@@ -17,6 +17,8 @@ import {
   EyeOff,
   Tag,
   PencilRuler,
+  Search,
+  X,
 } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
@@ -24,7 +26,7 @@ import PageHeader from '@/components/admin/PageHeader';
 import DataTable from '@/components/admin/DataTable';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
 import ConfirmDialog from '@/components/admin/ConfirmDialog';
-import { getArticles, getArticleStats, updateArticleStatus, updateArticle, getArticleCategories, getArticlesDataSource } from '@/services/articleAdminService';
+import { searchArticles, fetchArticlesForExport, getArticleStats, updateArticleStatus, updateArticle, getArticleCategories, type ArticleSearchParams } from '@/services/articleAdminService';
 import { flagForRewrite } from '@/services/articleRewriteService';
 import { logAdminAction } from '@/lib/admin/auditLogger';
 import { downloadCsv } from '@/lib/admin/csv';
@@ -106,6 +108,25 @@ function StarRating({ rating }: { rating: number | null }) {
 }
 
 // ============================================================
+// Removable filter chip
+// ============================================================
+
+function FilterChip({ label, onRemove }: { label: string; onRemove: () => void }) {
+  return (
+    <span className="inline-flex items-center gap-1 pl-2.5 pr-1 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">
+      {label}
+      <button
+        onClick={onRemove}
+        aria-label={`Remove filter: ${label}`}
+        className="h-5 w-5 inline-flex items-center justify-center rounded-full hover:bg-primary/20 transition-colors"
+      >
+        <X size={12} />
+      </button>
+    </span>
+  );
+}
+
+// ============================================================
 // Article List Page
 // ============================================================
 
@@ -113,35 +134,95 @@ const AdminArticleList: React.FC = () => {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
   const [deleteTarget, setDeleteTarget] = useState<ArticleRecord | null>(null);
+
+  // ── Server-side search + filters ──────────────────────────
+  const PAGE_SIZE = 25;
+  const [searchInput, setSearchInput] = useState('');
+  const [q, setQ] = useState(''); // debounced term sent to the server
   const [statusFilter, setStatusFilter] = useState<string>('all');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [stageFilter, setStageFilter] = useState<string>('all');
+  const [authorFilter, setAuthorFilter] = useState('');
+  const [dateFrom, setDateFrom] = useState('');
+  const [dateTo, setDateTo] = useState('');
+  const [minRating, setMinRating] = useState('');
+  const [hasCitations, setHasCitations] = useState(false);
+  const [page, setPage] = useState(0);
 
-  const { data: articles, isLoading } = useQuery({
-    queryKey: ['admin', 'articles'],
-    queryFn: getArticles,
+  // Debounce the free-text box so the server is queried ~once per pause.
+  useEffect(() => {
+    const t = setTimeout(() => setQ(searchInput.trim()), 350);
+    return () => clearTimeout(t);
+  }, [searchInput]);
+
+  const params: ArticleSearchParams = useMemo(
+    () => ({
+      q,
+      status: statusFilter,
+      reviewStage: stageFilter,
+      categoryId: categoryFilter,
+      author: authorFilter.trim() || undefined,
+      dateFrom: dateFrom || undefined,
+      dateTo: dateTo || undefined,
+      minRating: minRating ? Number(minRating) : undefined,
+      hasCitations: hasCitations || undefined,
+    }),
+    [q, statusFilter, stageFilter, categoryFilter, authorFilter, dateFrom, dateTo, minRating, hasCitations],
+  );
+
+  // Any filter change returns to the first page.
+  useEffect(() => {
+    setPage(0);
+  }, [params]);
+
+  const { data: searchData, isLoading, error } = useQuery({
+    queryKey: ['admin', 'articles-search', params, page],
+    queryFn: () => searchArticles(params, page, PAGE_SIZE),
+    placeholderData: keepPreviousData,
   });
 
-  const dataSource = articles ? getArticlesDataSource() : { source: null, error: null };
+  const rows = searchData?.rows ?? [];
+  const total = searchData?.total ?? 0;
+  const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+
+  const hasActiveFilters =
+    q !== '' ||
+    statusFilter !== 'all' ||
+    stageFilter !== 'all' ||
+    categoryFilter !== 'all' ||
+    authorFilter.trim() !== '' ||
+    dateFrom !== '' ||
+    dateTo !== '' ||
+    minRating !== '' ||
+    hasCitations;
+
+  const clearFilters = () => {
+    setSearchInput('');
+    setQ('');
+    setStatusFilter('all');
+    setStageFilter('all');
+    setCategoryFilter('all');
+    setAuthorFilter('');
+    setDateFrom('');
+    setDateTo('');
+    setMinRating('');
+    setHasCitations(false);
+  };
 
   const { data: categories } = useQuery({
     queryKey: ['admin', 'article-categories'],
     queryFn: getArticleCategories,
   });
 
-  const filteredArticles = articles?.filter((a) => {
-    if (statusFilter !== 'all' && a.status !== statusFilter) return false;
-    if (categoryFilter !== 'all' && a.category_id !== categoryFilter) return false;
-    if (stageFilter !== 'all' && (a.review_stage || 'planned') !== stageFilter) return false;
-    return true;
-  });
+  const categoryNameById = (id: string | null | undefined) =>
+    (categories as ArticleCategoryRecord[] | undefined)?.find((c) => c.id === id)?.name;
 
   const archiveMutation = useMutation({
     mutationFn: async (id: string) => {
       await updateArticleStatus(id, 'archived', 'Archived from article list');
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
+      queryClient.invalidateQueries({ queryKey: ['admin', 'articles-search'] });
       queryClient.invalidateQueries({ queryKey: ['admin', 'article-stats'] });
       toast.success('Article archived');
       setDeleteTarget(null);
@@ -162,7 +243,7 @@ const AdminArticleList: React.FC = () => {
     run: () => Promise<void>;
   } | null>(null);
 
-  const selectedArticles = (filteredArticles || []).filter((a) => rowSelection[a.id]);
+  const selectedArticles = rows.filter((a) => rowSelection[a.id]);
 
   // Runs an action per selected row, catching per-item so a disallowed
   // status transition is skipped (reported), never forced. Each underlying
@@ -179,7 +260,7 @@ const AdminArticleList: React.FC = () => {
         skipped.push(a.title);
       }
     }
-    queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
+    queryClient.invalidateQueries({ queryKey: ['admin', 'articles-search'] });
     queryClient.invalidateQueries({ queryKey: ['admin', 'article-stats'] });
     setRowSelection({});
     setPendingBulk(null);
@@ -236,25 +317,34 @@ const AdminArticleList: React.FC = () => {
         }),
     });
 
-  // ── F5: CSV export of the current filtered set ────────────
-  const exportCsv = () => {
-    const rows = (filteredArticles || []).map((a) => [
-      a.article_production_id || '',
-      a.title,
-      a.status,
-      a.review_stage || '',
-      (categories as ArticleCategoryRecord[] | undefined)?.find((c) => c.id === a.category_id)?.name || '',
-      a.word_count ?? 0,
-      a.rating_overall ?? '',
-      a.author_name || '',
-      a.updated_at,
-    ]);
-    downloadCsv(
-      `articles-${new Date().toISOString().slice(0, 10)}.csv`,
-      ['ID', 'Title', 'Status', 'Stage', 'Category', 'Words', 'Rating', 'Author', 'Updated'],
-      rows,
-    );
-    toast.success(`Exported ${rows.length} article(s)`);
+  // ── F5: CSV export of the full filtered catalog (server-side) ──
+  const [exporting, setExporting] = useState(false);
+  const exportCsv = async () => {
+    setExporting(true);
+    try {
+      const all = await fetchArticlesForExport(params);
+      const csvRows = all.map((a) => [
+        a.article_production_id || '',
+        a.title,
+        a.status,
+        a.review_stage || '',
+        categoryNameById(a.category_id) || '',
+        a.word_count ?? 0,
+        a.rating_overall ?? '',
+        a.author_name || '',
+        a.updated_at,
+      ]);
+      downloadCsv(
+        `articles-${new Date().toISOString().slice(0, 10)}.csv`,
+        ['ID', 'Title', 'Status', 'Stage', 'Category', 'Words', 'Rating', 'Author', 'Updated'],
+        csvRows,
+      );
+      toast.success(`Exported ${csvRows.length} article(s)`);
+    } catch (err) {
+      toast.error(`Export failed: ${(err as Error).message}`);
+    } finally {
+      setExporting(false);
+    }
   };
 
   const columns: ColumnDef<ArticleRecord, unknown>[] = [
@@ -423,10 +513,11 @@ const AdminArticleList: React.FC = () => {
           <div className="flex items-center gap-2">
             <button
               onClick={exportCsv}
-              className="flex items-center gap-2 px-3 py-2 border border-border-hover text-text-secondary text-sm font-medium rounded-lg hover:bg-surface-hover transition-colors"
+              disabled={exporting}
+              className="flex items-center gap-2 px-3 py-2 border border-border-hover text-text-secondary text-sm font-medium rounded-lg hover:bg-surface-hover transition-colors disabled:opacity-50"
             >
               <Download size={16} />
-              Export CSV
+              {exporting ? 'Exporting…' : 'Export CSV'}
             </button>
             <button
               onClick={() => navigate(adminPath('/articles/clusters'))}
@@ -450,6 +541,28 @@ const AdminArticleList: React.FC = () => {
 
       {/* Filters */}
       <div className="space-y-3 mb-4">
+        {/* Search (server-side, over title + body) */}
+        <div className="relative max-w-md">
+          <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-tertiary" />
+          <input
+            type="text"
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
+            placeholder="Search title or body across the full catalog…"
+            aria-label="Search articles"
+            className="w-full pl-9 pr-9 py-2.5 text-sm border border-border rounded-lg bg-surface text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary outline-none"
+          />
+          {searchInput && (
+            <button
+              onClick={() => setSearchInput('')}
+              aria-label="Clear search"
+              className="absolute right-2 top-1/2 -translate-y-1/2 h-7 w-7 inline-flex items-center justify-center text-text-tertiary hover:text-text-primary"
+            >
+              <X size={14} />
+            </button>
+          )}
+        </div>
+
         {/* Status filter */}
         <div className="flex items-center gap-2 flex-wrap">
           <span className="text-xs font-medium text-text-secondary w-14">Status</span>
@@ -520,22 +633,101 @@ const AdminArticleList: React.FC = () => {
             ))}
           </select>
         </div>
+
+        {/* Advanced filters: author, date range, rating, citations */}
+        <div className="flex items-center gap-2 flex-wrap">
+          <span className="text-xs font-medium text-text-secondary w-14">More</span>
+          <input
+            type="text"
+            value={authorFilter}
+            onChange={(e) => setAuthorFilter(e.target.value)}
+            placeholder="Author…"
+            aria-label="Filter by author"
+            className="text-xs px-3 py-1.5 rounded-lg border border-border bg-surface text-text-secondary w-36"
+          />
+          <label className="flex items-center gap-1 text-xs text-text-secondary">
+            From
+            <input
+              type="date"
+              value={dateFrom}
+              onChange={(e) => setDateFrom(e.target.value)}
+              aria-label="Updated from date"
+              className="text-xs px-2 py-1.5 rounded-lg border border-border bg-surface text-text-secondary"
+            />
+          </label>
+          <label className="flex items-center gap-1 text-xs text-text-secondary">
+            To
+            <input
+              type="date"
+              value={dateTo}
+              onChange={(e) => setDateTo(e.target.value)}
+              aria-label="Updated to date"
+              className="text-xs px-2 py-1.5 rounded-lg border border-border bg-surface text-text-secondary"
+            />
+          </label>
+          <select
+            value={minRating}
+            onChange={(e) => setMinRating(e.target.value)}
+            aria-label="Minimum rating"
+            className="text-xs px-3 py-1.5 rounded-lg border border-border bg-surface text-text-secondary"
+          >
+            <option value="">Any rating</option>
+            <option value="3">Rating ≥ 3</option>
+            <option value="4">Rating ≥ 4</option>
+            <option value="4.5">Rating ≥ 4.5</option>
+          </select>
+          <label className="flex items-center gap-1.5 text-xs text-text-secondary cursor-pointer min-h-[44px]">
+            <input
+              type="checkbox"
+              checked={hasCitations}
+              onChange={(e) => setHasCitations(e.target.checked)}
+              className="h-4 w-4 rounded border-border accent-primary"
+            />
+            Has citations
+          </label>
+        </div>
+
+        {/* Active filter chips */}
+        {hasActiveFilters && (
+          <div className="flex items-center gap-2 flex-wrap pt-1">
+            <span className="text-xs font-medium text-text-tertiary">Active:</span>
+            {q && <FilterChip label={`Search: ${q}`} onRemove={() => { setSearchInput(''); setQ(''); }} />}
+            {statusFilter !== 'all' && (
+              <FilterChip label={`Status: ${statusFilter}`} onRemove={() => setStatusFilter('all')} />
+            )}
+            {stageFilter !== 'all' && (
+              <FilterChip label={`Stage: ${stageFilter}`} onRemove={() => setStageFilter('all')} />
+            )}
+            {categoryFilter !== 'all' && (
+              <FilterChip
+                label={`Category: ${categoryNameById(categoryFilter) || categoryFilter}`}
+                onRemove={() => setCategoryFilter('all')}
+              />
+            )}
+            {authorFilter.trim() && (
+              <FilterChip label={`Author: ${authorFilter.trim()}`} onRemove={() => setAuthorFilter('')} />
+            )}
+            {dateFrom && <FilterChip label={`From ${dateFrom}`} onRemove={() => setDateFrom('')} />}
+            {dateTo && <FilterChip label={`To ${dateTo}`} onRemove={() => setDateTo('')} />}
+            {minRating && <FilterChip label={`Rating ≥ ${minRating}`} onRemove={() => setMinRating('')} />}
+            {hasCitations && <FilterChip label="Has citations" onRemove={() => setHasCitations(false)} />}
+            <button
+              onClick={clearFilters}
+              className="text-xs font-medium text-primary hover:text-primary-hover ml-1"
+            >
+              Clear filters
+            </button>
+          </div>
+        )}
       </div>
 
-      {dataSource.source === 'mock' && (
-        <div className="mb-4 rounded-lg border border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-900/20 p-4">
+      {error && (
+        <div className="mb-4 rounded-lg border border-red-300 dark:border-red-700 bg-red-50 dark:bg-red-900/20 p-4">
           <div className="flex items-start gap-3">
-            <AlertCircle className="h-5 w-5 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
+            <AlertCircle className="h-5 w-5 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
             <div>
-              <p className="font-medium text-amber-800 dark:text-amber-300">
-                Showing demo data — Supabase query failed
-              </p>
-              <p className="text-sm text-amber-700 dark:text-amber-400 mt-1">
-                {dataSource.error || 'Unknown error'}
-              </p>
-              <p className="text-xs text-amber-600 dark:text-amber-500 mt-2">
-                Check browser console for "[articleAdminService]" error details.
-              </p>
+              <p className="font-medium text-red-800 dark:text-red-300">Could not load articles</p>
+              <p className="text-sm text-red-700 dark:text-red-400 mt-1">{(error as Error).message}</p>
             </div>
           </div>
         </div>
@@ -543,11 +735,17 @@ const AdminArticleList: React.FC = () => {
 
       <DataTable
         columns={columns}
-        data={filteredArticles || []}
+        data={rows}
         isLoading={isLoading}
-        emptyMessage="No articles found. Create articles via the admin panel or seed migration."
-        searchPlaceholder="Search articles..."
-        totalCount={filteredArticles?.length}
+        emptyMessage={hasActiveFilters ? 'No articles match these filters.' : 'No articles found.'}
+        enableSearch={false}
+        totalCount={total}
+        serverPagination={{
+          pageIndex: page,
+          pageSize: PAGE_SIZE,
+          onPageChange: setPage,
+          totalPages,
+        }}
         enableRowSelection
         rowSelection={rowSelection}
         onRowSelectionChange={setRowSelection}
@@ -598,21 +796,6 @@ const AdminArticleList: React.FC = () => {
           </div>
         }
       />
-
-      {dataSource.source && (
-        <div className="mt-4 flex justify-end">
-          <span className={`inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full ${
-            dataSource.source === 'supabase'
-              ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-900/20 dark:text-emerald-400'
-              : 'bg-amber-50 text-amber-700 dark:bg-amber-900/20 dark:text-amber-400'
-          }`}>
-            <span className={`w-1.5 h-1.5 rounded-full ${
-              dataSource.source === 'supabase' ? 'bg-emerald-500' : 'bg-amber-500'
-            }`} />
-            {dataSource.source === 'supabase' ? 'Live data' : 'Demo data'}
-          </span>
-        </div>
-      )}
 
       <ConfirmDialog
         open={!!deleteTarget}

@@ -117,6 +117,80 @@ export async function getReviewQueue(): Promise<ArticleRecord[]> {
   return (data || []) as ArticleRecord[];
 }
 
+// ============================================================
+// Server-side search + filters (full-catalog, paginated)
+// ============================================================
+
+export interface ArticleSearchParams {
+  q?: string;
+  status?: string; // 'all' or an ArticleStatus
+  reviewStage?: string; // 'all' or an ArticleReviewStage
+  categoryId?: string; // 'all' or a category id
+  author?: string; // substring match on author_name
+  dateFrom?: string; // YYYY-MM-DD, inclusive, against updated_at
+  dateTo?: string; // YYYY-MM-DD, inclusive, against updated_at
+  minRating?: number; // rating_overall >=
+  hasCitations?: boolean; // citation_count > 0
+}
+
+// Strip PostgREST `or()`/ilike reserved characters so user input cannot break
+// the filter expression or inject extra conditions.
+function sanitizeTerm(s: string): string {
+  return s.replace(/[(),*]/g, ' ').replace(/%/g, '').trim();
+}
+
+type ArticleQuery = ReturnType<ReturnType<typeof supabase.from>['select']>;
+
+function applyArticleFilters(query: ArticleQuery, p: ArticleSearchParams): ArticleQuery {
+  let q = query;
+  const term = p.q ? sanitizeTerm(p.q) : '';
+  if (term) {
+    // Free-text over title + body (content). ilike is case-insensitive.
+    q = q.or(`title.ilike.%${term}%,content.ilike.%${term}%`);
+  }
+  if (p.status && p.status !== 'all') q = q.eq('status', p.status);
+  if (p.reviewStage && p.reviewStage !== 'all') q = q.eq('review_stage', p.reviewStage);
+  if (p.categoryId && p.categoryId !== 'all') q = q.eq('category_id', p.categoryId);
+  if (p.author && p.author.trim()) q = q.ilike('author_name', `%${p.author.trim()}%`);
+  if (p.dateFrom) q = q.gte('updated_at', p.dateFrom);
+  if (p.dateTo) q = q.lte('updated_at', `${p.dateTo}T23:59:59.999Z`);
+  if (p.minRating != null) q = q.gte('rating_overall', p.minRating);
+  if (p.hasCitations) q = q.gt('citation_count', 0);
+  return q;
+}
+
+/**
+ * Server-side article search. Filters and free-text run in the database, and
+ * results are paged via a ranged query with an exact total count — so a match
+ * is found regardless of where it sits in the full catalog (no 1000-row cap).
+ */
+export async function searchArticles(
+  params: ArticleSearchParams,
+  page = 0,
+  pageSize = 25,
+): Promise<{ rows: ArticleRecord[]; total: number }> {
+  const from = page * pageSize;
+  const to = from + pageSize - 1;
+  const query = applyArticleFilters(
+    supabase.from('articles').select('*', { count: 'exact' }),
+    params,
+  )
+    .order('updated_at', { ascending: false })
+    .range(from, to);
+  const { data, error, count } = await query;
+  if (error) throw error;
+  return { rows: (data || []) as ArticleRecord[], total: count ?? 0 };
+}
+
+/** All rows matching the same filters (paginated internally) — for CSV export. */
+export async function fetchArticlesForExport(params: ArticleSearchParams): Promise<ArticleRecord[]> {
+  return fetchAllRows<ArticleRecord>(() =>
+    applyArticleFilters(supabase.from('articles').select('*'), params).order('updated_at', {
+      ascending: false,
+    }),
+  );
+}
+
 export async function getArticleById(id: string): Promise<ArticleRecord | null> {
   try {
     const { data, error } = await supabase

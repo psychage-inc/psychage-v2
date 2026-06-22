@@ -413,7 +413,7 @@ const App: React.FC = () => {
 
                             {isPhone && <MobileBottomNav />}
 
-                            {location.pathname !== '/tools/mindmate' && !location.pathname.startsWith('/dashboard') && !location.pathname.startsWith('/portal') && location.pathname !== '/onboarding' && <Footer />}
+                            {!isPhone && location.pathname !== '/tools/mindmate' && !location.pathname.startsWith('/dashboard') && !location.pathname.startsWith('/portal') && location.pathname !== '/onboarding' && <Footer />}
 
                             {location.pathname !== '/tools/mindmate' && !location.pathname.startsWith('/dashboard') && !location.pathname.startsWith('/portal') && location.pathname !== '/onboarding' && (
                                 <Suspense fallback={null}>

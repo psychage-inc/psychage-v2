@@ -126,7 +126,7 @@ describe('System Prompt Quality', () => {
   });
 
   it('should establish identity', () => {
-    expect(SYSTEM_PROMPT).toContain('MindMate');
+    expect(SYSTEM_PROMPT).toContain('Psychage AI');
     expect(SYSTEM_PROMPT).toContain('mental health education');
     expect(SYSTEM_PROMPT).toContain('psychage.com');
   });

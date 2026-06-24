@@ -238,7 +238,7 @@ const ArticleAudioPlayer: React.FC<ArticleAudioPlayerProps> = ({
             {!isTTS && (
                 <button
                     onClick={() => skipAudio(-15)}
-                    className="p-1 text-text-tertiary hover:text-primary transition-colors"
+                    className="flex h-11 w-11 shrink-0 items-center justify-center text-text-tertiary hover:text-primary transition-colors"
                     aria-label="Skip back 15 seconds"
                 >
                     <SkipBack size={14} />
@@ -248,7 +248,7 @@ const ArticleAudioPlayer: React.FC<ArticleAudioPlayerProps> = ({
             {/* Play/Pause */}
             <button
                 onClick={handleToggle}
-                className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors shrink-0"
+                className="h-11 w-11 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors shrink-0"
                 aria-label={isPlaying ? 'Pause' : 'Play'}
             >
                 {isPlaying ? <Pause size={14} /> : <Play size={14} className="ml-0.5" />}
@@ -258,7 +258,7 @@ const ArticleAudioPlayer: React.FC<ArticleAudioPlayerProps> = ({
             {!isTTS && (
                 <button
                     onClick={() => skipAudio(15)}
-                    className="p-1 text-text-tertiary hover:text-primary transition-colors"
+                    className="flex h-11 w-11 shrink-0 items-center justify-center text-text-tertiary hover:text-primary transition-colors"
                     aria-label="Skip forward 15 seconds"
                 >
                     <SkipForward size={14} />
@@ -284,7 +284,7 @@ const ArticleAudioPlayer: React.FC<ArticleAudioPlayerProps> = ({
             {/* Speed */}
             <button
                 onClick={cycleSpeed}
-                className="px-2 py-0.5 text-xs font-bold text-primary bg-primary/10 rounded-full hover:bg-primary/20 transition-colors whitespace-nowrap"
+                className="inline-flex min-h-[44px] shrink-0 items-center px-3 text-xs font-bold text-primary bg-primary/10 rounded-full hover:bg-primary/20 transition-colors whitespace-nowrap"
                 aria-label={`Playback speed: ${speed}x`}
             >
                 {speed}x

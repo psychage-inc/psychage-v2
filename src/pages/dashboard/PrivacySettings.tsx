@@ -318,7 +318,7 @@ const PrivacySettings: React.FC = () => {
                                         <ConsentToggle
                                             icon={<MessageSquare size={16} />}
                                             label="AI Chat History"
-                                            description="Store your MindMate conversations in the cloud so they persist across sessions and devices."
+                                            description="Store your Psychage AI conversations in the cloud so they persist across sessions and devices."
                                             checked={consents.ai_chat_history}
                                             onChange={(v) => handleConsentToggle('ai_chat_history', v)}
                                         />

@@ -25,7 +25,7 @@ export default function MindMateUnavailableCard({
         </div>
         <div className="min-w-0 flex-1">
           <h3 className="font-display font-semibold text-sm text-amber-900 dark:text-amber-100">
-            MindMate is temporarily unavailable
+            Psychage AI is temporarily unavailable
           </h3>
           <p className="mt-1.5 text-sm leading-relaxed text-amber-900/80 dark:text-amber-100/80">
             Our chat assistant is having trouble right now. We&apos;ve been

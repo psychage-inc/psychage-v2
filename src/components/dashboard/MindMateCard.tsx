@@ -60,7 +60,7 @@ const MindMateCard: React.FC = () => {
                     <Sparkles size={16} className="text-teal-500" />
                 </div>
                 <div>
-                    <h3 className="font-semibold text-sm text-gray-900 dark:text-white">MindMate</h3>
+                    <h3 className="font-semibold text-sm text-gray-900 dark:text-white">Psychage AI</h3>
                     <p className="text-xs text-gray-500 dark:text-neutral-400">Your AI wellness companion</p>
                 </div>
             </div>

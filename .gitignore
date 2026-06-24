@@ -68,6 +68,7 @@ data-pipeline/venv/
 !tsconfig.json
 !vercel.json
 !article-rewrite-manifest.json
+!src/data/crisis-helplines-seed.json
 *.txt
 !requirements.txt
 *.html

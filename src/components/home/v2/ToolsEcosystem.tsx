@@ -58,7 +58,7 @@ const compact: CompactTool[] = [
     icon: Gauge,
   },
   {
-    name: 'MindMate AI',
+    name: 'Psychage AI',
     description: 'An AI companion for when you need to talk things through.',
     image: SCENES.companion,
     alt: SCENE_ALT.companion,

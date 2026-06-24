@@ -176,7 +176,7 @@ export const SCENE_ALT = {
 
 export const TOOL_VIGNETTES = [
   { image: SCENES.score, alt: SCENE_ALT.score, name: 'Clarity Score', href: '/clarity-score' },
-  { image: SCENES.companion, alt: SCENE_ALT.companion, name: 'MindMate', href: '/tools/mindmate' },
+  { image: SCENES.companion, alt: SCENE_ALT.companion, name: 'Psychage AI', href: '/tools/mindmate' },
   { image: SCENES.rhythm, alt: SCENE_ALT.rhythm, name: 'Mood Journal', href: '/tools/mood-journal' },
   { image: SCENES.architecture, alt: SCENE_ALT.architecture, name: 'Sleep', href: '/tools/sleep-architect' },
   { image: SCENES.map, alt: SCENE_ALT.map, name: 'Providers', href: '/providers' },

@@ -262,3 +262,13 @@ body:has([data-floating='cookie-consent']) [data-floating='mindmate-fab'] {
 body:has([data-floating='crisis-card']) [data-floating='mindmate-fab'] {
     bottom: calc(var(--space-6) + 142px + var(--space-2));
 }
+
+/* Citation markers — guarantee a ≥24px tap target (WCAG 2.5.8) on every
+   article source at once: the <Citation> component, inline article markup, and
+   DB-rendered HTML all share the `citation-ref-` id prefix. A min-size floor
+   here lifts the historical 18px badge without editing article content or the
+   visual badge style (the badge keeps its look; only the hit box grows). */
+[id^='citation-ref-'] {
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+}

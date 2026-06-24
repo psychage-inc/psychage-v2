@@ -10,7 +10,10 @@ import { useAuth } from '@/context/AuthContext';
 import { useCategoryData } from '@/hooks/useCategoryData';
 import { useHomepageArticles } from '@/hooks/useHomepageArticles';
 import { articleService } from '@/services/articleService';
-import type { Article } from '@/types/models';
+import { toolService } from '@/services/toolService';
+import { MobileToolCard } from '@/components/mobile/cards/MobileToolCard';
+import { isComingSoon } from '@/components/mobile/cards/toolLinks';
+import type { Article, Tool } from '@/types/models';
 
 /**
  * Mobile Home (route `/`). The navigational center of the site: scroll it
@@ -38,6 +41,27 @@ const MobileHome: React.FC = () => {
     const { hero, rest, isLoading: articlesLoading } = useHomepageArticles(EDITORS_PICK_LIMIT);
     // Poster-backed topic collections.
     const { categories, isLoading: categoriesLoading } = useCategoryData();
+
+    // Tools preview (#85) — first few launchable tools; full hub one tap away.
+    const [toolsPreview, setToolsPreview] = useState<Tool[]>([]);
+    const [toolsLoading, setToolsLoading] = useState(true);
+    useEffect(() => {
+        let cancelled = false;
+        toolService
+            .getAll()
+            .then((data) => {
+                if (!cancelled) setToolsPreview(data.filter((t) => !isComingSoon(t.id)).slice(0, 4));
+            })
+            .catch((err) => {
+                console.warn('[MobileHome] Failed to fetch tools:', err);
+            })
+            .finally(() => {
+                if (!cancelled) setToolsLoading(false);
+            });
+        return () => {
+            cancelled = true;
+        };
+    }, []);
 
     // Separate pool for Continue Reading — resolve recently-read IDs locally.
     const [pool, setPool] = useState<Article[]>([]);
@@ -142,25 +166,36 @@ const MobileHome: React.FC = () => {
                 <ArrowRight className="h-5 w-5 shrink-0 text-text-tertiary" aria-hidden />
             </button>
 
-            {/* Tools — make the tools hub reachable by scrolling Home */}
-            <button
-                type="button"
-                onClick={() => navigate('/tools')}
-                className="mt-3 flex min-h-[44px] w-full items-center gap-3 rounded-2xl border border-border bg-surface px-4 py-4 text-left transition-colors duration-200 hover:bg-surface-hover active:bg-surface-hover"
-            >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-hover text-text-secondary">
-                    <Wrench className="h-5 w-5" aria-hidden />
-                </span>
-                <span className="flex min-w-0 flex-1 flex-col">
-                    <span className="font-display text-base font-semibold leading-snug text-text-primary">
+            {/* Tools — 2-col preview grid (#85); full hub one tap away via "See all" */}
+            <section className="mt-6">
+                <div className="mb-3 flex items-center justify-between">
+                    <h2 className="flex items-center gap-2 text-xs font-medium uppercase tracking-wide text-text-tertiary">
+                        <Wrench className="h-4 w-4" aria-hidden />
                         Tools
-                    </span>
-                    <span className="text-xs text-text-secondary">
-                        Mood journal, sleep, and more.
-                    </span>
-                </span>
-                <ArrowRight className="h-5 w-5 shrink-0 text-text-tertiary" aria-hidden />
-            </button>
+                    </h2>
+                    <button
+                        type="button"
+                        onClick={() => navigate('/tools')}
+                        className="inline-flex min-h-touch items-center gap-1 text-sm font-semibold text-primary"
+                    >
+                        See all
+                        <ArrowRight className="h-4 w-4" aria-hidden />
+                    </button>
+                </div>
+                {toolsLoading ? (
+                    <div className="grid grid-cols-2 gap-3" aria-hidden>
+                        {Array.from({ length: 4 }).map((_, i) => (
+                            <div key={i} className="h-40 animate-pulse rounded-3xl bg-surface-hover" />
+                        ))}
+                    </div>
+                ) : toolsPreview.length > 0 ? (
+                    <div className="grid grid-cols-2 gap-3">
+                        {toolsPreview.map((tool) => (
+                            <MobileToolCard key={tool.id} tool={tool} />
+                        ))}
+                    </div>
+                ) : null}
+            </section>
 
             {/* Find Care — make the provider directory reachable by scrolling Home */}
             <button

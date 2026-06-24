@@ -41,6 +41,7 @@ const MobileCategory = React.lazy(() => import('./components/mobile/screens/Mobi
 const MobileReader = React.lazy(() => import('./components/mobile/screens/MobileReader'));
 const MobileSearch = React.lazy(() => import('./components/mobile/screens/MobileSearch'));
 const MobileTools = React.lazy(() => import('./components/mobile/screens/MobileTools'));
+const MobileProviders = React.lazy(() => import('./components/mobile/screens/MobileProviders'));
 const ArticleCategoryPage = React.lazy(() => import('./pages/ArticleCategoryPage'));
 const ArticlePage = React.lazy(() => import('./pages/learn/ArticlePage'));
 const ArticleRedirect = React.lazy(() => import('./components/article/ArticleRedirect'));
@@ -264,7 +265,7 @@ const App: React.FC = () => {
                                             <Route path="/conditions/:slug" element={<PageTransition><RouteErrorBoundary><ConditionDetailPage /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/watch/:id" element={<PageTransition><VideoDetail /></PageTransition>} />
                                             {/* Provider Directory V2 */}
-                                            <Route path="/providers" element={<PageTransition><ProvidersLandingPage /></PageTransition>} />
+                                            <Route path="/providers" element={<PageTransition><RouteErrorBoundary><ResponsiveRoute mobile={<MobileProviders />} desktop={<ProvidersLandingPage />} /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/providers/search" element={<PageTransition><RouteErrorBoundary><ProviderSearchPage /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/providers/:id" element={<PageTransition><ProviderProfilePage /></PageTransition>} />
                                             <Route path="/how-we-verify" element={<PageTransition><HowWeVerifyPage /></PageTransition>} />

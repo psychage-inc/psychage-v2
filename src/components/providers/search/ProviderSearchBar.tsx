@@ -64,13 +64,13 @@ export const ProviderSearchBar: React.FC<ProviderSearchBarProps> = ({
             onChange={e => setLocation(e.target.value)}
             placeholder={t('providers.searchbar.location_placeholder')}
             aria-label={t('providers.searchbar.location_aria')}
-            className="w-full pl-11 pr-10 py-3.5 bg-surface border border-border rounded-xl text-base font-medium text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+            className="w-full pl-11 pr-12 py-3.5 bg-surface border border-border rounded-xl text-base font-medium text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
           />
           <button
             type="button"
             onClick={handleUseLocation}
             disabled={geoLoading}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-text-tertiary hover:text-primary transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
+            className="absolute right-1.5 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center text-text-tertiary hover:text-primary transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-lg"
             title={t('providers.searchbar.use_location')}
             aria-label={t('providers.searchbar.use_location')}
           >

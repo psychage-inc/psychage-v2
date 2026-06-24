@@ -4,6 +4,7 @@ import { Search } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { useAsyncData } from '@/hooks/useAsyncData';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useMediaQuery, MOBILE_NARROW_QUERY } from '@/hooks/useMediaQuery';
 import { listConditions } from '@/services/conditionsService';
 import type { Condition } from '@/types/condition';
 import { CONDITION_DISCLAIMER } from '@/types/condition';
@@ -33,6 +34,8 @@ const ConditionsIndexPage: React.FC = () => {
     );
     const [query, setQuery] = useState('');
     const [activeFamily, setActiveFamily] = useState<string | null>(null);
+    const isPhone = useMediaQuery(MOBILE_NARROW_QUERY);
+    const [selectedLetter, setSelectedLetter] = useState<string | null>(null);
 
     // Defer the filter input so typing stays smooth (sub-300ms perceived).
     const deferredQuery = useDeferredValue(query);
@@ -71,6 +74,18 @@ const ConditionsIndexPage: React.FC = () => {
     }, [filtered]);
 
     const enabledLetters = useMemo(() => new Set(groups.map((g) => g.letter)), [groups]);
+
+    // On phone, the full unfiltered A–Z is huge (~400 conditions / ~67k px) — render
+    // one letter bucket at a time, driven by the alphabet rail. When a search term or
+    // family filter is active the result set is already small, so show it whole.
+    const paginateOnMobile = isPhone && !deferredQuery.trim() && !activeFamily;
+    const activeLetter =
+        selectedLetter && enabledLetters.has(selectedLetter)
+            ? selectedLetter
+            : (groups[0]?.letter ?? null);
+    const visibleGroups = paginateOnMobile
+        ? groups.filter((g) => g.letter === activeLetter)
+        : groups;
 
     const handleJump = (letter: string) => {
         const el = document.getElementById(`cond-letter-${letter}`);
@@ -137,8 +152,8 @@ const ConditionsIndexPage: React.FC = () => {
                             <AlphabetRail
                                 letters={ALPHABET}
                                 enabled={enabledLetters}
-                                active={null}
-                                onJump={handleJump}
+                                active={paginateOnMobile ? activeLetter : null}
+                                onJump={paginateOnMobile ? setSelectedLetter : handleJump}
                                 orientation="horizontal"
                             />
                         </div>
@@ -161,7 +176,7 @@ const ConditionsIndexPage: React.FC = () => {
                             )}
 
                             {!loading && groups.length > 0 && (
-                                <LetterGroups groups={groups} preview={preview} />
+                                <LetterGroups groups={visibleGroups} preview={preview} />
                             )}
                         </div>
 

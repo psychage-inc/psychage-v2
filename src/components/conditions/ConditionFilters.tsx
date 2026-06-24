@@ -97,7 +97,7 @@ const FilterChip: React.FC<{ label: string; active: boolean; onClick: () => void
         onClick={onClick}
         aria-pressed={active}
         className={cn(
-            'rounded-full border px-3.5 py-1.5 text-sm font-medium',
+            'inline-flex min-h-[44px] items-center rounded-full border px-3.5 py-1.5 text-sm font-medium',
             'transition-colors duration-150 motion-reduce:transition-none',
             'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 focus-visible:ring-offset-background',
             active

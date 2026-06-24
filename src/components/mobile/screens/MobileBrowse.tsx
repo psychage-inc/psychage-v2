@@ -9,6 +9,7 @@ import {
 } from '@/components/mobile/cards/CategoryCard';
 import MobileBrowseAllArticles from '@/components/mobile/screens/MobileBrowseAllArticles';
 import MobileBrowseInterestSheet from '@/components/mobile/screens/MobileBrowseInterestSheet';
+import MobileBrowseConditions from '@/components/mobile/screens/MobileBrowseConditions';
 
 /**
  * Mobile Browse — the canonical reference directory (route `/learn`). Two views
@@ -149,6 +150,10 @@ const MobileBrowse: React.FC = () => {
                     ))}
                 </Tabs.Root>
             )}
+
+            {/* Conditions index — part of the Topics view, after the category
+                grid. Hidden in the All-articles view. */}
+            {tab === 'topics' && <MobileBrowseConditions />}
 
             <MobileBrowseInterestSheet
                 open={finderOpen}

@@ -375,14 +375,13 @@ const AdminArticleList: React.FC = () => {
         a.status,
         a.review_stage || '',
         categoryNameById(a.category_id) || '',
-        a.word_count ?? 0,
         a.rating_overall ?? '',
         a.author_name || '',
         a.updated_at,
       ]);
       downloadCsv(
         `articles-${new Date().toISOString().slice(0, 10)}.csv`,
-        ['ID', 'Title', 'Status', 'Stage', 'Category', 'Words', 'Rating', 'Author', 'Updated'],
+        ['ID', 'Title', 'Status', 'Stage', 'Category', 'Rating', 'Author', 'Updated'],
         csvRows,
       );
       toast.success(`Exported ${csvRows.length} article(s)`);
@@ -476,21 +475,6 @@ const AdminArticleList: React.FC = () => {
             style={{ backgroundColor: `${cat.color}20`, color: cat.color || '#6B7280' }}
           >
             {cat.name}
-          </span>
-        );
-      },
-    },
-    {
-      accessorKey: 'word_count',
-      header: 'Words',
-      cell: ({ row }) => {
-        const wc = row.original.word_count || 0;
-        const color = wc >= 1500 ? 'text-emerald-600 dark:text-emerald-400'
-          : wc >= 800 ? 'text-text-secondary'
-          : 'text-amber-600 dark:text-amber-400';
-        return (
-          <span className={`text-xs font-mono ${color}`}>
-            {wc > 0 ? wc.toLocaleString() : '—'}
           </span>
         );
       },

@@ -20,6 +20,8 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import PageHeader from '@/components/admin/PageHeader';
+import AdminErrorBanner from '@/pages/admin/components/AdminErrorBanner';
+import { formatQueryError } from '@/components/admin/DataTable';
 import {
   getArticleCategories,
   getArticlesWithTaxonomy,
@@ -115,17 +117,18 @@ function CategoryRow({
 // ============================================================
 
 const AdminArticleQualityMap: React.FC = () => {
-  const { data: categories, isLoading: catLoading } = useQuery({
+  const { data: categories, isLoading: catLoading, error: catError } = useQuery({
     queryKey: ['admin', 'article-categories'],
     queryFn: getArticleCategories,
   });
 
-  const { data: articles, isLoading: artLoading } = useQuery({
+  const { data: articles, isLoading: artLoading, error: artError, refetch } = useQuery({
     queryKey: ['admin', 'articles-with-taxonomy'],
     queryFn: () => getArticlesWithTaxonomy(),
   });
 
   const isLoading = catLoading || artLoading;
+  const error = artError || catError;
 
   // Group articles by category
   const articlesByCategory: Record<string, ArticleRecord[]> = {};
@@ -184,7 +187,9 @@ const AdminArticleQualityMap: React.FC = () => {
       </div>
 
       {/* Heatmap */}
-      {isLoading ? (
+      {error ? (
+        <AdminErrorBanner message={formatQueryError(error)} onRetry={() => refetch()} />
+      ) : isLoading ? (
         <div className="space-y-4">
           {Array.from({ length: 8 }).map((_, i) => (
             <div key={i} className="h-12 bg-surface-hover rounded-lg animate-pulse" />

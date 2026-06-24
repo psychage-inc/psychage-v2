@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import { BookOpen, AlertTriangle, FileWarning } from 'lucide-react';
 import PageHeader from '@/components/admin/PageHeader';
+import AdminErrorBanner from '@/pages/admin/components/AdminErrorBanner';
+import { formatQueryError } from '@/components/admin/DataTable';
 import { getCitationDiversityReport } from '@/services/articleAdminService';
 import type { CitationDiversityEntry } from '@/lib/admin/types';
 import { adminPath } from '@/hooks/useAdminNavigate';
@@ -156,7 +158,7 @@ function FlaggedTable({
 // ============================================================
 
 const AdminArticleCitationReport: React.FC = () => {
-  const { data: report, isLoading } = useQuery({
+  const { data: report, isLoading, error, refetch } = useQuery({
     queryKey: ['admin', 'citation-diversity'],
     queryFn: getCitationDiversityReport,
   });
@@ -176,7 +178,9 @@ const AdminArticleCitationReport: React.FC = () => {
         description="Source tier distribution and citation quality analysis"
       />
 
-      {isLoading ? (
+      {error ? (
+        <AdminErrorBanner message={formatQueryError(error)} onRetry={() => refetch()} />
+      ) : isLoading ? (
         <div className="space-y-4">
           <div className="h-52 bg-surface-hover rounded-2xl animate-pulse" />
           <div className="h-64 bg-surface-hover rounded-2xl animate-pulse" />

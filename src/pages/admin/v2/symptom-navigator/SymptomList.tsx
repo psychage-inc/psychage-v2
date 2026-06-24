@@ -5,15 +5,34 @@ import { Plus, Pencil, X } from 'lucide-react';
 import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';
 import { SYMPTOM_DOMAINS } from '@/lib/admin/constants';
-import type { SymptomRecord, SymptomDomain } from '@/lib/admin/types';
+import type { SymptomDomain } from '@/lib/admin/types';
 import PageHeader from '@/components/admin/PageHeader';
 import DataTable from '@/components/admin/DataTable';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
 import { cn } from '@/lib/utils';
 
+/**
+ * Real `public.symptoms` catalog row (the rows the public Symptom Navigator
+ * reads). Defined locally — the shared `SymptomRecord` type in lib/admin/types
+ * describes a different, never-deployed schema (symptom_id/clinical_name/
+ * display_names) and is used by the clinical mapping screens, so it is left
+ * untouched. Ordering/selecting by those phantom columns is exactly what made
+ * this page fail with `column symptoms.symptom_id does not exist` (42703).
+ */
+interface SymptomCatalogRow {
+  id: string;
+  name: string;
+  category: string | null;
+  domain: SymptomDomain | null;
+  description: string | null;
+  is_crisis: boolean;
+  sort_order: number | null;
+  is_active: boolean;
+}
+
 interface SymptomFormState {
   open: boolean;
-  editing: SymptomRecord | null;
+  editing: SymptomCatalogRow | null;
 }
 
 const AdminSymptomList: React.FC = () => {
@@ -21,46 +40,49 @@ const AdminSymptomList: React.FC = () => {
   const [form, setForm] = useState<SymptomFormState>({ open: false, editing: null });
   const [filterDomain, setFilterDomain] = useState<string>('');
 
-  // Form fields
+  // Form fields (real catalog columns)
   const [symptomId, setSymptomId] = useState('');
-  const [domain, setDomain] = useState<SymptomDomain>('physical');
+  const [name, setName] = useState('');
   const [category, setCategory] = useState('');
-  const [clinicalName, setClinicalName] = useState('');
-  const [displayNameEn, setDisplayNameEn] = useState('');
+  const [domain, setDomain] = useState<SymptomDomain | ''>('');
+  const [isCrisis, setIsCrisis] = useState(false);
   const [isActive, setIsActive] = useState(true);
 
-  const { data: symptoms, isLoading } = useQuery({
+  const {
+    data: symptoms,
+    isLoading,
+    error,
+    refetch,
+  } = useQuery({
     queryKey: ['admin', 'symptoms'],
     queryFn: async () => {
       const { data, error } = await supabase
         .from('symptoms')
-        .select('*')
-        .order('domain')
-        .order('category')
-        .order('symptom_id');
+        .select('id, name, category, domain, description, is_crisis, sort_order, is_active')
+        .order('category', { ascending: true, nullsFirst: false })
+        .order('sort_order', { ascending: true, nullsFirst: false })
+        .order('name', { ascending: true });
       if (error) throw error;
-      return (data || []) as SymptomRecord[];
+      return (data || []) as SymptomCatalogRow[];
     },
   });
 
   const saveMutation = useMutation({
     mutationFn: async () => {
       const payload = {
-        symptom_id: symptomId,
-        domain,
-        category,
-        clinical_name: clinicalName,
-        display_names: { en: displayNameEn },
+        name,
+        category: category || null,
+        domain: domain || null,
+        is_crisis: isCrisis,
         is_active: isActive,
-        updated_at: new Date().toISOString(),
       };
 
       if (form.editing) {
         const { error } = await supabase.from('symptoms').update(payload).eq('id', form.editing.id);
         if (error) throw error;
-        await logAdminAction({ action: 'update', resourceType: 'symptom', resourceId: symptomId });
+        await logAdminAction({ action: 'update', resourceType: 'symptom', resourceId: form.editing.id });
       } else {
-        const { error } = await supabase.from('symptoms').insert(payload);
+        const { error } = await supabase.from('symptoms').insert({ id: symptomId, ...payload });
         if (error) throw error;
         await logAdminAction({ action: 'create', resourceType: 'symptom', resourceId: symptomId });
       }
@@ -72,31 +94,31 @@ const AdminSymptomList: React.FC = () => {
   });
 
   const toggleActive = useMutation({
-    mutationFn: async (s: SymptomRecord) => {
+    mutationFn: async (s: SymptomCatalogRow) => {
       const { error } = await supabase
         .from('symptoms')
-        .update({ is_active: !s.is_active, updated_at: new Date().toISOString() })
+        .update({ is_active: !s.is_active })
         .eq('id', s.id);
       if (error) throw error;
-      await logAdminAction({ action: 'update', resourceType: 'symptom', resourceId: s.symptom_id, newValue: { is_active: !s.is_active } });
+      await logAdminAction({ action: 'update', resourceType: 'symptom', resourceId: s.id, newValue: { is_active: !s.is_active } });
     },
     onSuccess: () => queryClient.invalidateQueries({ queryKey: ['admin', 'symptoms'] }),
   });
 
-  const openForm = (editing?: SymptomRecord) => {
+  const openForm = (editing?: SymptomCatalogRow) => {
     if (editing) {
-      setSymptomId(editing.symptom_id);
-      setDomain(editing.domain);
-      setCategory(editing.category);
-      setClinicalName(editing.clinical_name);
-      setDisplayNameEn(editing.display_names?.en || '');
+      setSymptomId(editing.id);
+      setName(editing.name);
+      setCategory(editing.category || '');
+      setDomain(editing.domain || '');
+      setIsCrisis(editing.is_crisis);
       setIsActive(editing.is_active);
     } else {
       setSymptomId('');
-      setDomain('physical');
+      setName('');
       setCategory('');
-      setClinicalName('');
-      setDisplayNameEn('');
+      setDomain('');
+      setIsCrisis(false);
       setIsActive(true);
     }
     setForm({ open: true, editing: editing || null });
@@ -110,27 +132,34 @@ const AdminSymptomList: React.FC = () => {
     (s) => !filterDomain || s.domain === filterDomain
   );
 
-  const columns: ColumnDef<SymptomRecord, unknown>[] = [
+  const columns: ColumnDef<SymptomCatalogRow, unknown>[] = [
     {
-      accessorKey: 'symptom_id',
+      accessorKey: 'id',
       header: 'ID',
-      cell: ({ row }) => <code className="text-xs font-mono text-text-secondary">{row.original.symptom_id}</code>,
+      cell: ({ row }) => <code className="text-xs font-mono text-text-secondary">{row.original.id}</code>,
     },
-    { accessorKey: 'clinical_name', header: 'Clinical Name' },
+    { accessorKey: 'name', header: 'Name' },
     {
-      id: 'display_name',
-      header: 'Display Name',
-      cell: ({ row }) => <span>{row.original.display_names?.en || '\u2014'}</span>,
+      accessorKey: 'category',
+      header: 'Category',
+      cell: ({ row }) => <span>{row.original.category || '—'}</span>,
     },
     {
       accessorKey: 'domain',
       header: 'Domain',
       cell: ({ row }) => {
+        if (!row.original.domain) return <span className="text-text-tertiary">—</span>;
         const d = SYMPTOM_DOMAINS.find((sd) => sd.value === row.original.domain);
         return <AdminStatusBadge status={d?.label || row.original.domain} variant="info" />;
       },
     },
-    { accessorKey: 'category', header: 'Category' },
+    {
+      accessorKey: 'is_crisis',
+      header: 'Crisis',
+      cell: ({ row }) => row.original.is_crisis
+        ? <AdminStatusBadge status="Crisis" variant="danger" />
+        : <span className="text-text-tertiary">—</span>,
+    },
     {
       accessorKey: 'is_active',
       header: 'Active',
@@ -165,7 +194,7 @@ const AdminSymptomList: React.FC = () => {
     <div>
       <PageHeader
         title="Symptoms"
-        description={`${symptoms?.length || 0} symptoms across 4 domains`}
+        description={`${symptoms?.length || 0} symptoms in the Navigator catalog`}
         actions={
           <button onClick={() => openForm()} className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-hover text-white text-sm font-medium rounded-lg transition-colors">
             <Plus size={16} /> Add Symptom
@@ -201,6 +230,8 @@ const AdminSymptomList: React.FC = () => {
         columns={columns}
         data={filtered}
         isLoading={isLoading}
+        error={error}
+        onRetry={() => refetch()}
         emptyMessage="No symptoms found."
         searchPlaceholder="Search symptoms..."
         totalCount={filtered.length}
@@ -221,33 +252,45 @@ const AdminSymptomList: React.FC = () => {
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-text-secondary mb-1">Symptom ID</label>
-                <input value={symptomId} onChange={(e) => setSymptomId(e.target.value)} placeholder="e.g. SLP_001" className="w-full px-3 py-2 text-sm font-mono border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary" />
+                <input
+                  value={symptomId}
+                  onChange={(e) => setSymptomId(e.target.value)}
+                  disabled={!!form.editing}
+                  placeholder="e.g. anxiety-general"
+                  className="w-full px-3 py-2 text-sm font-mono border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary disabled:opacity-60"
+                />
               </div>
               <div>
-                <label className="block text-sm font-medium text-text-secondary mb-1">Domain</label>
-                <select value={domain} onChange={(e) => setDomain(e.target.value as SymptomDomain)} className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary">
-                  {SYMPTOM_DOMAINS.map((d) => <option key={d.value} value={d.value}>{d.label}</option>)}
-                </select>
+                <label className="block text-sm font-medium text-text-secondary mb-1">Name</label>
+                <input value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g. Feeling anxious or worried" className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-text-secondary mb-1">Category</label>
-                <input value={category} onChange={(e) => setCategory(e.target.value)} placeholder="e.g. sleep, mood, appetite" className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary" />
+                <input value={category} onChange={(e) => setCategory(e.target.value)} placeholder="e.g. Anxiety, Mood, Sleep" className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-text-secondary mb-1">Clinical Name</label>
-                <input value={clinicalName} onChange={(e) => setClinicalName(e.target.value)} className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary" />
+                <label className="block text-sm font-medium text-text-secondary mb-1">Domain</label>
+                <select value={domain} onChange={(e) => setDomain(e.target.value as SymptomDomain | '')} className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary">
+                  <option value="">— None —</option>
+                  {SYMPTOM_DOMAINS.map((d) => <option key={d.value} value={d.value}>{d.label}</option>)}
+                </select>
               </div>
-              <div>
-                <label className="block text-sm font-medium text-text-secondary mb-1">Display Name (English)</label>
-                <input value={displayNameEn} onChange={(e) => setDisplayNameEn(e.target.value)} className="w-full px-3 py-2 text-sm border border-border rounded-lg bg-surface outline-none focus:ring-2 focus:ring-primary" />
-              </div>
+              <label className="flex items-center gap-2 text-sm text-text-secondary">
+                <input type="checkbox" checked={isCrisis} onChange={(e) => setIsCrisis(e.target.checked)} className="rounded border-border-hover text-primary" />
+                Crisis symptom
+              </label>
               <label className="flex items-center gap-2 text-sm text-text-secondary">
                 <input type="checkbox" checked={isActive} onChange={(e) => setIsActive(e.target.checked)} className="rounded border-border-hover text-primary" />
                 Active
               </label>
+              {saveMutation.isError && (
+                <p className="text-xs text-red-600 dark:text-red-400">
+                  {(saveMutation.error as { message?: string })?.message || 'Save failed'}
+                </p>
+              )}
               <button
                 onClick={() => saveMutation.mutate()}
-                disabled={saveMutation.isPending || !symptomId || !clinicalName}
+                disabled={saveMutation.isPending || !symptomId || !name}
                 className="w-full py-2.5 bg-primary hover:bg-primary-hover text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
               >
                 {saveMutation.isPending ? 'Saving...' : form.editing ? 'Save Changes' : 'Add Symptom'}

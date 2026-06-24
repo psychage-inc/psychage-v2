@@ -55,6 +55,11 @@ export function getArticlesDataSource() {
 
 const PAGE_SIZE = 1000;
 
+// Metadata-only column set for catalog-wide dashboards (Quality Heatmap, Tree).
+// Deliberately excludes the heavy `content` body so full-catalog reads stay light.
+const TAXONOMY_COLUMNS =
+  'id,title,slug,status,category_id,subcategory_id,review_stage,template_type,is_cornerstone,quality_score,rating_overall,readability_grade,citation_count,word_count,author_name,updated_at,created_at,published_at,parent_article_id,article_type,article_production_id,tags';
+
 export async function fetchAllRows<T>(
   queryBuilder: () => ReturnType<ReturnType<typeof supabase.from>['select']>,
 ): Promise<T[]> {
@@ -1238,7 +1243,12 @@ export async function getArticlesWithTaxonomy(filters?: {
     const data = await fetchAllRows<ArticleRecord>(() => {
       let query = supabase
         .from('articles')
-        .select('*')
+        // Taxonomy/quality dashboards only need metadata, never the article body.
+        // Selecting '*' pulled the full `content` HTML for every row (~50 MB /
+        // ~10 s over the full catalog), which timed out / OOM'd and the catch
+        // below silently returned [] → an empty Quality Heatmap. The light
+        // column set is ~0.8 MB / ~2 s and renders reliably at full volume.
+        .select(TAXONOMY_COLUMNS)
         .order('updated_at', { ascending: false });
 
       if (filters?.category_id) query = query.eq('category_id', filters.category_id);
@@ -1251,7 +1261,9 @@ export async function getArticlesWithTaxonomy(filters?: {
     });
     return data;
   } catch (err) {
-    return [];
+    // Surface the real failure instead of masquerading as an empty catalog.
+    console.error('[articleAdminService] getArticlesWithTaxonomy FAILED:', err);
+    throw err;
   }
 }
 
@@ -1283,7 +1295,8 @@ export async function getCitationDiversityReport(): Promise<CitationDiversityEnt
         tierCount: Object.keys(citationMap[a.id].tiers).length,
       }));
   } catch (err) {
-    return [];
+    console.error('[articleAdminService] getCitationDiversityReport FAILED:', err);
+    throw err;
   }
 }
 

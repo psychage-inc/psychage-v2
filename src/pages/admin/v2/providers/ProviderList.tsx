@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { type ColumnDef } from '@tanstack/react-table';
-import { Pencil, Plus, Shield, UserX, Wifi, WifiOff, Download } from 'lucide-react';
+import { Pencil, Plus, Shield, UserX, Wifi, WifiOff, Download, Search } from 'lucide-react';
 import { toast } from 'sonner';
 import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';
@@ -22,79 +22,94 @@ interface ProviderRow {
   telehealth_available: boolean;
   is_suspended: boolean;
   verified_at: string | null;
-  // Joined from provider_locations
   primary_city: string | null;
   primary_state: string | null;
-  // Joined from provider_specialties → specialties
-  specialty_labels: string[];
 }
 
 type TabKey = 'all' | 'pending' | 'suspended';
+
+// The directory holds ~420k seeded providers; an unbounded ordered join over the
+// whole table times out (PostgREST 57014). Page the read server-side instead.
+const PAGE_SIZE = 50;
+
+// Strip PostgREST ilike reserved characters so search input can't break the filter.
+const sanitizeTerm = (s: string) => s.replace(/[%,()*]/g, ' ').trim();
 
 const AdminProviderList: React.FC = () => {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
   const [tab, setTab] = useState<TabKey>('all');
+  const [pageIndex, setPageIndex] = useState(0);
+  const [search, setSearch] = useState('');
+  const [debouncedSearch, setDebouncedSearch] = useState('');
   const [suspendTarget, setSuspendTarget] = useState<ProviderRow | null>(null);
 
-  const { data: providers, isLoading } = useQuery({
-    queryKey: ['admin', 'providers'],
-    queryFn: async () => {
-      // Fetch providers with primary location
-      const { data: providerData, error } = await supabase
-        .from('providers')
-        .select(`
-          id,
-          display_name,
-          credentials_suffix,
-          verification_tier,
-          telehealth_available,
-          is_suspended,
-          verified_at,
-          provider_locations!inner (city, state_province, is_primary)
-        `)
-        .order('display_name');
+  // Debounce search; reset to first page when the term changes.
+  useEffect(() => {
+    const t = setTimeout(() => {
+      setDebouncedSearch(search);
+      setPageIndex(0);
+    }, 300);
+    return () => clearTimeout(t);
+  }, [search]);
 
-      if (error) {
-        // Fallback: query without join if provider_locations join fails
-        const { data: fallbackData, error: fbErr } = await supabase
-          .from('providers')
-          .select('id, display_name, credentials_suffix, verification_tier, telehealth_available, is_suspended, verified_at')
-          .order('display_name')
-          .limit(200);
-        if (fbErr) throw fbErr;
-        return (fallbackData || []).map((p: Record<string, unknown>) => ({
-          id: p.id as string,
-          display_name: (p.display_name as string) || '',
-          credentials_suffix: (p.credentials_suffix as string) || '',
-          verification_tier: (p.verification_tier as string) || 'unverified',
-          telehealth_available: (p.telehealth_available as boolean) ?? false,
-          is_suspended: (p.is_suspended as boolean) ?? false,
-          verified_at: p.verified_at as string | null,
-          primary_city: null,
-          primary_state: null,
-          specialty_labels: [],
-        })) as ProviderRow[];
+  const suspendedFilter = tab === 'suspended';
+
+  const { data, isLoading, error, refetch } = useQuery({
+    queryKey: ['admin', 'providers', tab, pageIndex, debouncedSearch],
+    queryFn: async () => {
+      const from = pageIndex * PAGE_SIZE;
+      let query = supabase
+        .from('providers')
+        .select(
+          'id, display_name, credentials_suffix, verification_tier, telehealth_available, is_suspended, verified_at',
+          { count: 'exact' },
+        )
+        .eq('is_suspended', suspendedFilter);
+
+      const term = sanitizeTerm(debouncedSearch);
+      if (term) query = query.ilike('display_name', `%${term}%`);
+
+      const { data: providerData, count, error } = await query
+        .order('display_name')
+        .range(from, from + PAGE_SIZE - 1);
+      if (error) throw error;
+
+      // Fetch primary location only for the rows on this page (cheap, by id).
+      const ids = (providerData || []).map((p: { id: string }) => p.id);
+      const locMap: Record<string, { city: string | null; state_province: string | null }> = {};
+      if (ids.length) {
+        const { data: locs } = await supabase
+          .from('provider_locations')
+          .select('provider_id, city, state_province, is_primary')
+          .in('provider_id', ids);
+        for (const l of (locs || []) as Array<Record<string, unknown>>) {
+          const pid = l.provider_id as string;
+          if (!locMap[pid] || l.is_primary) {
+            locMap[pid] = { city: (l.city as string) || null, state_province: (l.state_province as string) || null };
+          }
+        }
       }
 
-      return (providerData || []).map((p: Record<string, unknown>) => {
-        const locs = (p.provider_locations as Record<string, unknown>[]) || [];
-        const primary = locs.find((l) => l.is_primary) || locs[0] || {};
-        return {
-          id: p.id as string,
-          display_name: (p.display_name as string) || '',
-          credentials_suffix: (p.credentials_suffix as string) || '',
-          verification_tier: (p.verification_tier as string) || 'unverified',
-          telehealth_available: (p.telehealth_available as boolean) ?? false,
-          is_suspended: (p.is_suspended as boolean) ?? false,
-          verified_at: p.verified_at as string | null,
-          primary_city: (primary.city as string) || null,
-          primary_state: (primary.state_province as string) || null,
-          specialty_labels: [],
-        };
-      }) as ProviderRow[];
+      const rows = (providerData || []).map((p: Record<string, unknown>) => ({
+        id: p.id as string,
+        display_name: (p.display_name as string) || '',
+        credentials_suffix: (p.credentials_suffix as string) || '',
+        verification_tier: (p.verification_tier as string) || 'unverified',
+        telehealth_available: (p.telehealth_available as boolean) ?? false,
+        is_suspended: (p.is_suspended as boolean) ?? false,
+        verified_at: p.verified_at as string | null,
+        primary_city: locMap[p.id as string]?.city ?? null,
+        primary_state: locMap[p.id as string]?.state_province ?? null,
+      })) as ProviderRow[];
+
+      return { rows, count: count ?? 0 };
     },
   });
+
+  const providers = data?.rows ?? [];
+  const totalCount = data?.count ?? 0;
+  const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE));
 
   const { data: pendingApps } = useQuery({
     queryKey: ['admin', 'provider-applications', 'pending-count'],
@@ -127,11 +142,6 @@ const AdminProviderList: React.FC = () => {
     },
   });
 
-  const filteredProviders = (providers || []).filter((p) => {
-    if (tab === 'suspended') return p.is_suspended;
-    return !p.is_suspended;
-  });
-
   const columns: ColumnDef<ProviderRow, unknown>[] = [
     {
       accessorKey: 'display_name',
@@ -146,7 +156,7 @@ const AdminProviderList: React.FC = () => {
       accessorKey: 'credentials_suffix',
       header: 'Credentials',
       cell: ({ row }) => (
-        <span className="text-sm text-text-secondary">{row.original.credentials_suffix || '\u2014'}</span>
+        <span className="text-sm text-text-secondary">{row.original.credentials_suffix || '—'}</span>
       ),
     },
     {
@@ -159,7 +169,7 @@ const AdminProviderList: React.FC = () => {
       header: 'Location',
       cell: ({ row }) => (
         <span className="text-sm text-text-secondary">
-          {[row.original.primary_city, row.original.primary_state].filter(Boolean).join(', ') || '\u2014'}
+          {[row.original.primary_city, row.original.primary_state].filter(Boolean).join(', ') || '—'}
         </span>
       ),
     },
@@ -189,9 +199,10 @@ const AdminProviderList: React.FC = () => {
     },
   ];
 
-  // F5: CSV export of the current (tab-filtered) provider set
+  // CSV export of the current (visible) page. Exporting all ~420k rows client-side
+  // is not feasible; the export reflects the loaded page + active filter.
   const exportCsv = () => {
-    const rows = filteredProviders.map((p) => [
+    const rows = providers.map((p) => [
       p.display_name,
       p.credentials_suffix || '',
       p.verification_tier || 'unverified',
@@ -201,11 +212,11 @@ const AdminProviderList: React.FC = () => {
       p.verified_at || '',
     ]);
     downloadCsv(
-      `providers-${tab}-${new Date().toISOString().slice(0, 10)}.csv`,
+      `providers-${tab}-page${pageIndex + 1}-${new Date().toISOString().slice(0, 10)}.csv`,
       ['Name', 'Credentials', 'Verification', 'Location', 'Telehealth', 'Status', 'Verified At'],
       rows,
     );
-    toast.success(`Exported ${rows.length} provider(s)`);
+    toast.success(`Exported ${rows.length} provider(s) from this page`);
   };
 
   const tabs: { key: TabKey; label: string; count?: number }[] = [
@@ -256,6 +267,7 @@ const AdminProviderList: React.FC = () => {
                 navigate(adminPath('/providers/applications'));
               } else {
                 setTab(t.key);
+                setPageIndex(0);
               }
             }}
             className={cn(
@@ -273,13 +285,33 @@ const AdminProviderList: React.FC = () => {
         ))}
       </div>
 
+      {/* Server-side name search (the directory is too large for client-side search) */}
+      <div className="relative max-w-sm mb-4">
+        <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-tertiary" />
+        <input
+          type="text"
+          placeholder="Search by name..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="w-full pl-9 pr-4 py-2 text-sm border border-border rounded-lg bg-surface text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary outline-none"
+        />
+      </div>
+
       <DataTable
         columns={columns}
-        data={filteredProviders}
+        data={providers}
         isLoading={isLoading}
-        emptyMessage="No providers found."
-        searchPlaceholder="Search providers..."
-        totalCount={filteredProviders.length}
+        error={error}
+        onRetry={() => refetch()}
+        enableSearch={false}
+        emptyMessage={debouncedSearch ? 'No providers match your search.' : 'No providers found.'}
+        totalCount={totalCount}
+        serverPagination={{
+          pageIndex,
+          pageSize: PAGE_SIZE,
+          onPageChange: setPageIndex,
+          totalPages,
+        }}
       />
 
       <ConfirmDialog

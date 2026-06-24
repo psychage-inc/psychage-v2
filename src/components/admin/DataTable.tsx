@@ -11,8 +11,20 @@ import {
   type RowSelectionState,
   type OnChangeFn,
 } from '@tanstack/react-table';
-import { ArrowUpDown, Search, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowUpDown, Search, ChevronLeft, ChevronRight, AlertTriangle, RefreshCw } from 'lucide-react';
 import { cn } from '@/lib/utils';
+
+/** Normalize an unknown thrown value into a human-readable, PostgREST-aware message. */
+export function formatQueryError(error: unknown): string {
+  if (!error) return 'Unknown error';
+  if (typeof error === 'string') return error;
+  const e = error as { message?: string; details?: string; hint?: string; code?: string };
+  const parts = [e.message || String(error)];
+  if (e.code) parts.push(`code ${e.code}`);
+  if (e.details) parts.push(e.details);
+  if (e.hint) parts.push(`hint: ${e.hint}`);
+  return parts.filter(Boolean).join(' · ');
+}
 
 interface DataTableProps<TData> {
   columns: ColumnDef<TData, unknown>[];
@@ -21,6 +33,14 @@ interface DataTableProps<TData> {
   isLoading?: boolean;
   loadingRows?: number;
   emptyMessage?: string;
+  /**
+   * Real failure of the underlying query. When set (and not loading), the table
+   * shows the actual error instead of a misleading empty state, so a failed read
+   * is never mistaken for "0 results". Pass the `error` from react-query/useQuery.
+   */
+  error?: unknown;
+  /** Optional retry handler shown alongside the error (e.g. refetch). */
+  onRetry?: () => void;
   searchPlaceholder?: string;
   enableSearch?: boolean;
   enableRowSelection?: boolean;
@@ -53,6 +73,8 @@ function DataTable<TData>({
   bulkActions,
   totalCount,
   serverPagination,
+  error,
+  onRetry,
 }: DataTableProps<TData>) {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [globalFilter, setGlobalFilter] = useState('');
@@ -105,7 +127,7 @@ function DataTable<TData>({
             />
           </div>
         )}
-        {totalCount !== undefined && (
+        {totalCount !== undefined && !error && (
           <span className="text-sm text-text-secondary flex-shrink-0">
             {totalCount.toLocaleString()} total
           </span>
@@ -162,6 +184,28 @@ function DataTable<TData>({
                     ))}
                   </tr>
                 ))
+              ) : error ? (
+                <tr>
+                  <td colSpan={columns.length} className="px-4 py-10">
+                    <div className="mx-auto max-w-2xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-400 px-5 py-4 rounded-xl flex items-start gap-3">
+                      <AlertTriangle size={20} className="shrink-0 mt-0.5" />
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-semibold">Couldn’t load data</p>
+                        <p className="text-xs font-mono break-words mt-1 text-red-600 dark:text-red-300">
+                          {formatQueryError(error)}
+                        </p>
+                      </div>
+                      {onRetry && (
+                        <button
+                          onClick={onRetry}
+                          className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg text-red-700 dark:text-red-300 hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors"
+                        >
+                          <RefreshCw size={13} /> Retry
+                        </button>
+                      )}
+                    </div>
+                  </td>
+                </tr>
               ) : table.getRowModel().rows.length === 0 ? (
                 <tr>
                   <td colSpan={columns.length} className="px-4 py-12 text-center text-sm text-text-secondary">

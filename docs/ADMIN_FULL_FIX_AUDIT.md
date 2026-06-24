@@ -14,7 +14,7 @@ Autonomous fix-and-verify session. Every claim below is backed by a live-DB quer
 | 2 | **Citation Diversity Report** (`/articles/citations`) | Blank/at-risk | Renders; honest error banner on failure | Live DB: 14,834 citations paginate ~5.5 s. Deployed code grep. **Authed UI: human eyeball pending.** |
 | 3 | **Providers** (`/providers`) | "0 total" (timeout) | Loads paginated real data + honest total (~423,404) + server-side name search | Live DB: page 50 rows @ ~3.3 s, count 423,404 @ ~0.5 s. Deployed `ProviderList` chunk grep. **Authed UI: human eyeball pending.** |
 | 4 | **Symptoms** (`/symptom-navigator/symptoms`) | "0 found" (`42703`) | Renders the 12 real catalog rows | Live DB: realigned query returns 12. Deployed `SymptomList` chunk grep. **Authed UI: human eyeball pending.** |
-| 5 | **Article chart** (public reader + admin preview) | Blank husk box | Renders real chart (SVG) | **Headless prod render verified** on 2 live articles (SVG present, 0 husks, 0 JS errors). |
+| 5 | **Article chart** (public reader + admin preview) | Blank husk box | Renders real chart (SVG) | **Headless prod render verified** on 3 live articles, both reader paths (recharts SVG present, 0 husks, 0 JS errors). |
 | 6 | **No WORDS column** (article list) | Words column present | Column + CSV field removed; `word_count` data intact | Deployed `ArticleList` chunk grep; build green. **Authed UI: human eyeball pending.** |
 | 7 | **Systemic error surfacing** | Silent skeleton/"0 total" | Failed read → real error (code+message), not a fake empty | `DataTable` `error` prop + page banners; deployed. |
 | 8 | **Categories = 30** (`/articles/categories`) | 48 | **Still 48 — GATED STOP** (no canonical-30 in code; blast radius 818≫37) | See Phase 5. Proposal emitted for editorial review. |
@@ -65,12 +65,17 @@ True row counts (service-role): **providers 423,404** (all `status='seeded'`, `t
 - **Applied:** 269 ok / 0 failed. Post-apply DB: 269 articles carry `data-chart-block`, 14 still carry an (unmatched) empty husk.
 - **No sanitizer change.** `data-chart-block`/`data-chart` are already in `ArticleHtmlRenderer`'s DOMPurify `ADD_ATTR`; the value is HTML-attribute-escaped exactly like Tiptap output. No script execution; data-only.
 
-**Live render proof (production public reader, headless Chromium):**
-- `how-depression-and-social-isolation-reinforce-each-other` → 1 `data-chart-block`, **1 recharts SVG**, 0 husks, 0 JS errors.
-- `mental-health-stigma-in-the-workplace-and-its-hidden-costs` → 1 block, **1 SVG**, 0 husks, 0 errors.
-- `blood-sugar-inflammation-mood-connections` → DB is correctly migrated, but the public reader briefly served a **pre-migration cached copy** (Supabase edge cache); it will reflect the chart once the cache TTL expires. **No data issue** — the DB row is correct and the admin preview (which reads Supabase directly via `articleAdminService`) renders the new block via the same hydrator.
+**Two public-reader paths (clarified after live testing):** `articleService.getBySlug` *prefers the corpus JSX content* (`src/data/articles/**.tsx`) when an article exists there with rich `<ArticleChart>` content, using Supabase only for metadata; otherwise it renders the Supabase string `content`. So:
+- **Corpus articles** render their chart via the real `<ArticleChart>` React component (and always did) — the husk was never on their public page; it lived only in their Supabase `content` (seen in the admin preview, which reads Supabase).
+- **Supabase-path articles** render via my migrated `data-chart-block` hydration.
+The admin preview (`ArticleDetail` → `ArticleHtmlRenderer`) always reads Supabase `content`, so the migration is what fixes the husks there.
 
-**Acceptance:** chart renders on the live reader with real data; public reader unaffected (0 JS errors); no XSS/sanitizer weakening. ✔ (with the noted edge-cache propagation caveat for a subset of articles)
+**Live render proof (production public reader, headless Chromium, scroll-triggered):**
+- `how-depression-and-social-isolation-reinforce-each-other` (Supabase path) → 1 `data-chart-block`, **1 recharts SVG**, 0 husks, 0 JS errors.
+- `mental-health-stigma-in-the-workplace-and-its-hidden-costs` (Supabase path) → 1 block, **1 SVG**, 0 husks, 0 errors.
+- `blood-sugar-inflammation-mood-connections` (corpus path) → **1 recharts SVG** via `<ArticleChart>`, 0 empty husks. (An earlier check scoped only to `[data-chart-block]` and missed this — corrected. There is **no** edge-cache/staleness issue.)
+
+**Acceptance:** chart renders on the live reader with real data on both paths; public reader unaffected (0 JS errors); no XSS/sanitizer weakening. ✔
 
 ---
 
@@ -104,8 +109,7 @@ Per the session gate ("if no canonical-30, STOP; do not blind-guess clinical con
 
 **Still open / honest caveats:**
 - **Authed admin UI** (surfaces 1–4, 6) verified by data + deployed code, **not** by clicking the logged-in admin — a human admin should eyeball.
-- **14 articles** retain an empty chart husk (no recoverable source data — not fabricated). Optional follow-up: a CSS rule to collapse any empty `recharts-responsive-container`.
-- **Edge-cache propagation:** a subset of public reader pages may briefly show pre-migration content until Supabase's cache TTL expires; DB is correct.
+- **14 articles** retain an empty chart husk in their Supabase `content` (no recoverable source data — not fabricated). Collapsed in the renderer so no blank box shows (PR #82): `ArticleHtmlRenderer` hides any empty `.recharts-responsive-container` not inside a hydrated `data-chart-block`.
 - **Categories = 30 not done** (gated STOP); proposal awaiting editorial decision.
 
 ## Rollback handles

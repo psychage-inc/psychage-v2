@@ -40,6 +40,7 @@ const MobileBrowse = React.lazy(() => import('./components/mobile/screens/Mobile
 const MobileCategory = React.lazy(() => import('./components/mobile/screens/MobileCategory'));
 const MobileReader = React.lazy(() => import('./components/mobile/screens/MobileReader'));
 const MobileSearch = React.lazy(() => import('./components/mobile/screens/MobileSearch'));
+const MobileTools = React.lazy(() => import('./components/mobile/screens/MobileTools'));
 const ArticleCategoryPage = React.lazy(() => import('./pages/ArticleCategoryPage'));
 const ArticlePage = React.lazy(() => import('./pages/learn/ArticlePage'));
 const ArticleRedirect = React.lazy(() => import('./components/article/ArticleRedirect'));
@@ -274,7 +275,7 @@ const App: React.FC = () => {
                                             {/* Legacy provider redirects */}
                                             <Route path="/find-care" element={<Navigate to="/providers" replace />} />
                                             <Route path="/find-care/provider/:id" element={<LegacyProviderRedirect />} />
-                                            <Route path="/tools" element={<PageTransition><RouteErrorBoundary><ToolsPage /></RouteErrorBoundary></PageTransition>} />
+                                            <Route path="/tools" element={<PageTransition><RouteErrorBoundary><ResponsiveRoute mobile={<MobileTools />} desktop={<ToolsPage />} /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/toolkits" element={<PageTransition><RouteErrorBoundary><ToolkitsIndexPage /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/toolkits/:id" element={<PageTransition><RouteErrorBoundary><ToolkitDetailPage /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/tools/mood-journal" element={<PageTransition><MoodJournal /></PageTransition>} />

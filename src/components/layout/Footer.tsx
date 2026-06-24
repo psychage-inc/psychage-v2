@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
 
 
   return (
-    <footer ref={footerRef} className="bg-background text-text-primary relative font-sans overflow-hidden flex flex-col border-t border-border transition-colors duration-500">
+    <footer ref={footerRef} className="bg-background text-text-primary relative font-sans overflow-hidden flex flex-col border-t border-border transition-colors duration-500 max-sm:pb-24">
       {/* Crisis Banner floats on top */}
       <div className="relative z-30 border-b border-border">
         <CrisisBanner />

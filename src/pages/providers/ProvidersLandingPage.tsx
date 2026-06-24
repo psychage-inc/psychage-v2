@@ -162,8 +162,7 @@ const ProvidersLandingPage: React.FC = () => {
               <motion.div
                 key={item.step}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: item.step * 0.15 }}
                 className="relative"
               >

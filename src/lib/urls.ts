@@ -77,7 +77,8 @@ const TOOL_ROUTE_BY_NAME: Record<string, string> = {
   'Provider Finder': '/providers/search',
   'Crisis Support': '/crisis',
   'Symptom Navigator': '/tools/symptom-navigator',
-  'MindMate AI': '/tools/mindmate',
+  'Psychage AI': '/tools/mindmate',
+  'MindMate AI': '/tools/mindmate', // back-compat alias for any legacy tool name
   'Clarity Journal': '/tools/clarity-journal',
   'Relationship Health Check': '/tools/relationship-health',
   'Medication Tracker': '/tools/medication-tracker',

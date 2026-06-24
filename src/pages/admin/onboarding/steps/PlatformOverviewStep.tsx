@@ -30,7 +30,7 @@ const FEATURES = [
   },
   {
     icon: Bot,
-    title: 'MindMate AI',
+    title: 'Psychage AI',
     description: 'AI-powered chatbot providing evidence-based mental health guidance and coping strategies.',
     color: 'from-purple-500 to-violet-600',
     spotlight: 'rgba(139, 92, 246, 0.1)',

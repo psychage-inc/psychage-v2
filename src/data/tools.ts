@@ -74,7 +74,7 @@ export const tools: Tool[] = [
   },
   {
     id: 8,
-    name: "MindMate AI",
+    name: "Psychage AI",
     description: "AI-powered mental health companion for personalized guidance, coping strategies, and emotional support.",
     iconName: "BrainCircuit",
     category: "AI Support",

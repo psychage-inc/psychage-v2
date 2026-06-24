@@ -510,7 +510,7 @@ const ArticlePage: React.FC = () => {
                             { name: 'Clarity Score', icon: BrainCircuit, href: '/clarity-score', color: 'text-teal-600 dark:text-teal-400', bg: 'bg-teal-100 dark:bg-teal-900/40' },
                             { name: 'Mood Journal', icon: PenTool, href: '/tools/mood-journal', color: 'text-amber-600 dark:text-amber-400', bg: 'bg-amber-100 dark:bg-amber-900/40' },
                             { name: 'Symptom Navigator', icon: Compass, href: '/tools/symptom-navigator', color: 'text-indigo-600 dark:text-indigo-400', bg: 'bg-indigo-100 dark:bg-indigo-900/40' },
-                            { name: 'MindMate AI', icon: Sparkles, href: '/tools/mindmate', color: 'text-violet-600 dark:text-violet-400', bg: 'bg-violet-100 dark:bg-violet-900/40' },
+                            { name: 'Psychage AI', icon: Sparkles, href: '/tools/mindmate', color: 'text-violet-600 dark:text-violet-400', bg: 'bg-violet-100 dark:bg-violet-900/40' },
                         ].map((tool) => (
                             <Link
                                 key={tool.name}

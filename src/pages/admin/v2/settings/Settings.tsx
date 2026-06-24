@@ -34,7 +34,7 @@ const AVAILABLE_LANGUAGES: { code: string; label: string }[] = [
 
 const SETTING_FIELDS: SettingField[] = [
   { key: 'maintenance_mode', label: 'Maintenance Mode', type: 'boolean', critical: true, description: 'Displays maintenance banner and restricts user access' },
-  { key: 'ai_chat_enabled', label: 'AI Chat Enabled', type: 'boolean', critical: true, description: 'Enable or disable the MindMate AI chatbot' },
+  { key: 'ai_chat_enabled', label: 'AI Chat Enabled', type: 'boolean', critical: true, description: 'Enable or disable the Psychage AI chatbot' },
   { key: 'max_ai_messages_anon', label: 'Max AI Messages (Anonymous)', type: 'number', description: 'Maximum AI messages for anonymous users' },
   { key: 'max_ai_messages_auth', label: 'Max AI Messages (Authenticated)', type: 'number', description: 'Maximum AI messages for logged-in users' },
   { key: 'clarity_score_retake_days', label: 'Clarity Score Retake Days', type: 'number', description: 'Minimum days between Clarity Score assessments' },

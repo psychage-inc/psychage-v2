@@ -505,7 +505,6 @@ function HistoryTab({ article }: { article: ArticleRecord }) {
                   </div>
                   <p className="text-xs text-text-tertiary mt-0.5">
                     {rev.editor_email ? `by ${rev.editor_email}` : 'by an automated process'}
-                    {typeof rev.word_count === 'number' ? ` · ${rev.word_count.toLocaleString()} words` : ''}
                   </p>
                   <p className="text-sm text-text-secondary mt-2 line-clamp-2">{preview(rev.content) || '(empty)'}</p>
                 </div>
@@ -644,13 +643,7 @@ function ContentTab({ article }: { article: ArticleRecord }) {
       <ArticleSettingsCard key={article.id} article={article} />
 
       {/* Meta info cards */}
-      <div className="grid grid-cols-3 gap-4">
-        <div className="bg-surface rounded-2xl border border-border p-4 text-center">
-          <div className="text-2xl font-semibold text-text-primary">
-            {liveWordCount.toLocaleString()}
-          </div>
-          <div className="text-sm text-text-secondary">Words{isEditing && hasUnsavedChanges ? ' (editing)' : ''}</div>
-        </div>
+      <div className="grid grid-cols-2 gap-4">
         <div className="bg-surface rounded-2xl border border-border p-4 text-center">
           <div className="text-2xl font-semibold text-text-primary">
             {liveWordCount > 0 ? `${Math.ceil(liveWordCount / 200)} min` : '—'}
@@ -1621,12 +1614,11 @@ function PerformanceTab({ article }: { article: ArticleRecord }) {
         : '—',
       icon: Clock,
     },
-    { label: 'Word Count', value: article.word_count.toLocaleString(), icon: FileText },
   ];
 
   return (
     <div className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {metrics.map((m) => (
           <div
             key={m.label}

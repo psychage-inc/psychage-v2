@@ -281,11 +281,7 @@ const QualityGateDashboard: React.FC<QualityGateDashboardProps> = ({
             <BookOpen size={14} />
             {template.label} Requirements
           </h4>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
-            <div>
-              <p className="text-text-secondary">Min Words</p>
-              <p className="font-semibold text-text-primary">{template.minWordCount.toLocaleString()}</p>
-            </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
             <div>
               <p className="text-text-secondary">Min Citations</p>
               <p className="font-semibold text-text-primary">{template.minCitations}</p>

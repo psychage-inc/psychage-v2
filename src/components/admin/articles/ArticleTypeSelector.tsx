@@ -76,7 +76,6 @@ const ArticleTypeSelector: React.FC<ArticleTypeSelectorProps> = ({ value, onChan
             Template Requirements
           </p>
           <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-text-secondary">
-            <span>Min {selectedTemplate.minWordCount.toLocaleString()} words</span>
             <span>Min {selectedTemplate.minCitations} citations</span>
             <span>{selectedTemplate.requiredSections.length} sections</span>
             {selectedTemplate.requiresClinicalReview && (

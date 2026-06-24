@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import {
     BarChart3,
-    AlertTriangle,
-    CheckCircle,
-    Clock,
     Film,
     Headphones,
     Flag,
@@ -54,20 +51,6 @@ function StatCard({
 }
 
 // ============================================================
-// Word Count Status Badge
-// ============================================================
-
-function WordCountBadge({ wordCount }: { wordCount: number }) {
-    if (wordCount >= 2000)
-        return <span className="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-medium">Passing</span>;
-    if (wordCount >= 1500)
-        return <span className="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 text-xs font-medium">Below Standard</span>;
-    if (wordCount >= 500)
-        return <span className="px-2 py-0.5 rounded-full bg-orange-100 text-orange-700 text-xs font-medium">Failing</span>;
-    return <span className="px-2 py-0.5 rounded-full bg-red-100 text-red-700 text-xs font-medium">Critical</span>;
-}
-
-// ============================================================
 // Quality Score Badge
 // ============================================================
 
@@ -84,7 +67,6 @@ function QualityBadge({ score }: { score: number | null }) {
 const ArticleQualityDashboard: React.FC = () => {
     const navigate = useNavigate();
     const queryClient = useQueryClient();
-    const [filter, setFilter] = useState<'all' | 'critical' | 'failing' | 'below' | 'passing'>('all');
 
     const { data: stats, isLoading: statsLoading } = useQuery<RewriteStats>({
         queryKey: ['quality-stats'],
@@ -104,16 +86,6 @@ const ArticleQualityDashboard: React.FC = () => {
         },
     });
 
-    const filteredArticles = articles.filter((a) => {
-        if (filter === 'all') return true;
-        const wc = a.word_count || 0;
-        if (filter === 'critical') return wc < 500;
-        if (filter === 'failing') return wc >= 500 && wc < 1500;
-        if (filter === 'below') return wc >= 1500 && wc < 2000;
-        if (filter === 'passing') return wc >= 2000;
-        return true;
-    });
-
     const isLoading = statsLoading || articlesLoading;
 
     return (
@@ -125,22 +97,8 @@ const ArticleQualityDashboard: React.FC = () => {
 
             {/* Stats Grid */}
             {stats && (
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     <StatCard label="Total Articles" value={stats.total} icon={BarChart3} />
-                    <StatCard
-                        label="Passing (2000+)"
-                        value={stats.passing}
-                        icon={CheckCircle}
-                        color="text-emerald-600"
-                        bgColor="bg-emerald-100"
-                    />
-                    <StatCard
-                        label="Failing (<1500)"
-                        value={stats.failing + stats.critical}
-                        icon={AlertTriangle}
-                        color="text-red-600"
-                        bgColor="bg-red-100"
-                    />
                     <StatCard
                         label="Avg Quality"
                         value={`${stats.avgQualityScore}/100`}
@@ -160,7 +118,7 @@ const ArticleQualityDashboard: React.FC = () => {
 
             {/* Media Coverage */}
             {stats && (
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 gap-4">
                     <StatCard
                         label="With Video"
                         value={`${stats.videoCount} (${stats.total > 0 ? Math.round((stats.videoCount / stats.total) * 100) : 0}%)`}
@@ -174,20 +132,6 @@ const ArticleQualityDashboard: React.FC = () => {
                         icon={Headphones}
                         color="text-violet-600"
                         bgColor="bg-violet-100"
-                    />
-                    <StatCard
-                        label="Below Standard"
-                        value={stats.belowStandard}
-                        icon={Clock}
-                        color="text-amber-600"
-                        bgColor="bg-amber-100"
-                    />
-                    <StatCard
-                        label="Critical (<500)"
-                        value={stats.critical}
-                        icon={AlertTriangle}
-                        color="text-red-600"
-                        bgColor="bg-red-100"
                     />
                 </div>
             )}
@@ -213,30 +157,6 @@ const ArticleQualityDashboard: React.FC = () => {
                 </div>
             )}
 
-            {/* Filter Tabs */}
-            <div className="flex gap-2 border-b border-border pb-1">
-                {[
-                    { key: 'all' as const, label: 'All' },
-                    { key: 'critical' as const, label: 'Critical' },
-                    { key: 'failing' as const, label: 'Failing' },
-                    { key: 'below' as const, label: 'Below Standard' },
-                    { key: 'passing' as const, label: 'Passing' },
-                ].map((tab) => (
-                    <button
-                        key={tab.key}
-                        onClick={() => setFilter(tab.key)}
-                        className={cn(
-                            'px-3 py-2 text-sm font-medium rounded-t transition-colors',
-                            filter === tab.key
-                                ? 'text-primary border-b-2 border-primary'
-                                : 'text-text-tertiary hover:text-text-primary',
-                        )}
-                    >
-                        {tab.label}
-                    </button>
-                ))}
-            </div>
-
             {/* Article Table */}
             <div className="bg-surface border border-border rounded-xl overflow-hidden">
                 <div className="overflow-x-auto">
@@ -245,7 +165,6 @@ const ArticleQualityDashboard: React.FC = () => {
                             <tr className="bg-surface-hover text-text-tertiary text-xs uppercase tracking-wider">
                                 <th className="text-left px-4 py-3 font-medium">Title</th>
                                 <th className="text-left px-4 py-3 font-medium">Category</th>
-                                <th className="text-center px-4 py-3 font-medium">Words</th>
                                 <th className="text-center px-4 py-3 font-medium">Quality</th>
                                 <th className="text-center px-4 py-3 font-medium">Status</th>
                                 <th className="text-center px-4 py-3 font-medium">Video</th>
@@ -256,18 +175,18 @@ const ArticleQualityDashboard: React.FC = () => {
                         <tbody className="divide-y divide-border">
                             {isLoading ? (
                                 <tr>
-                                    <td colSpan={8} className="px-4 py-12 text-center text-text-tertiary">
+                                    <td colSpan={7} className="px-4 py-12 text-center text-text-tertiary">
                                         Loading...
                                     </td>
                                 </tr>
-                            ) : filteredArticles.length === 0 ? (
+                            ) : articles.length === 0 ? (
                                 <tr>
-                                    <td colSpan={8} className="px-4 py-12 text-center text-text-tertiary">
-                                        No articles match this filter.
+                                    <td colSpan={7} className="px-4 py-12 text-center text-text-tertiary">
+                                        No articles found.
                                     </td>
                                 </tr>
                             ) : (
-                                filteredArticles.map((article) => (
+                                articles.map((article) => (
                                     <tr key={article.id} className="hover:bg-surface-hover/50 transition-colors">
                                         <td className="px-4 py-3">
                                             <button
@@ -278,9 +197,6 @@ const ArticleQualityDashboard: React.FC = () => {
                                             </button>
                                         </td>
                                         <td className="px-4 py-3 text-text-tertiary text-xs">{article.category_name}</td>
-                                        <td className="px-4 py-3 text-center">
-                                            <WordCountBadge wordCount={article.word_count} />
-                                        </td>
                                         <td className="px-4 py-3 text-center">
                                             <QualityBadge score={article.quality_score} />
                                         </td>

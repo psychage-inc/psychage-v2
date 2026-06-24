@@ -117,7 +117,6 @@ const AdminArticleBreakdown: React.FC = () => {
           <div className="bg-surface rounded-2xl border border-border p-5">
             <h4 className="text-lg font-medium text-text-primary mb-2">{article.title}</h4>
             <div className="flex items-center gap-3 text-sm text-text-secondary mb-4">
-              <span>{article.word_count.toLocaleString()} words</span>
               <span>{Math.ceil(article.word_count / 200)} min read</span>
             </div>
             {article.seo_description ? (

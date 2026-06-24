@@ -8,7 +8,6 @@ import {
   ExternalLink,
   User,
   FolderKanban,
-  FileText,
   Clock,
   Inbox,
   RefreshCw,
@@ -191,10 +190,6 @@ const AdminReviewQueue: React.FC = () => {
                 <span className="inline-flex items-center gap-1.5">
                   <FolderKanban size={14} className="text-text-tertiary" />
                   {categoryName(current)}
-                </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <FileText size={14} className="text-text-tertiary" />
-                  {(current.word_count ?? 0).toLocaleString()} words
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                   <Clock size={14} className="text-text-tertiary" />

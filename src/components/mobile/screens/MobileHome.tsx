@@ -1,9 +1,10 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, Compass, Search, Sparkles } from 'lucide-react';
+import { ArrowRight, Compass, Search, Sparkles, Stethoscope, Wrench } from 'lucide-react';
 import { ArticleRowCard, ArticleRowCardSkeleton } from '@/components/mobile/cards/ArticleRowCard';
 import { CategoryCard, CategoryCardSkeleton } from '@/components/mobile/cards/CategoryCard';
 import { MobileHomeHero, MobileHomeHeroSkeleton } from '@/components/mobile/screens/MobileHomeHero';
+import { MobileHomeStartHere } from '@/components/mobile/screens/MobileHomeStartHere';
 import { getRecentlyReadIds } from '@/components/articles/recentlyRead';
 import { useAuth } from '@/context/AuthContext';
 import { useCategoryData } from '@/hooks/useCategoryData';
@@ -12,10 +13,12 @@ import { articleService } from '@/services/articleService';
 import type { Article } from '@/types/models';
 
 /**
- * Mobile Home (route `/`). Directory-first but designed: a warm greeting, a
- * curated Featured hero (the richness element), then a prominent "Browse all
- * topics" entry — intent before feed — followed by a Symptom Navigator CTA,
- * poster-backed topic collections, and editorial rails.
+ * Mobile Home (route `/`). The navigational center of the site: scroll it
+ * top-to-bottom and you can reach every major area. A first-run "Start here"
+ * orientation (which subsumes the old welcome band) leads, then a curated
+ * Featured hero (the richness element), the primary hub entries — Browse the
+ * library, Search, Symptom Navigator, Tools, Find Care — and finally
+ * poster-backed topic collections and editorial rails.
  *
  * Foundation wraps this screen in the crisis header + bottom nav, so we render
  * only the scroll body and own the `px-4 py-6` padding. Cards + skeletons, the
@@ -82,11 +85,9 @@ const MobileHome: React.FC = () => {
 
     return (
         <div className="px-4 py-6">
-            {/* Greeting */}
-            <h1 className="font-display text-2xl font-semibold text-text-primary">{greeting}</h1>
-            <p className="mt-1 text-sm text-text-secondary">
-                Find calm, clear mental health information.
-            </p>
+            {/* First-run "Start here" — the single welcome element (subsumes the
+                old greeting band). Collapses to a slim entry once seen. */}
+            <MobileHomeStartHere greeting={greeting} />
 
             {/* Featured hero — the primary richness element */}
             {articlesLoading ? (
@@ -136,6 +137,46 @@ const MobileHome: React.FC = () => {
                     </span>
                     <span className="text-xs text-text-secondary">
                         Explore what you&rsquo;re feeling with the Symptom Navigator.
+                    </span>
+                </span>
+                <ArrowRight className="h-5 w-5 shrink-0 text-text-tertiary" aria-hidden />
+            </button>
+
+            {/* Tools — make the tools hub reachable by scrolling Home */}
+            <button
+                type="button"
+                onClick={() => navigate('/tools')}
+                className="mt-3 flex min-h-[44px] w-full items-center gap-3 rounded-2xl border border-border bg-surface px-4 py-4 text-left transition-colors duration-200 hover:bg-surface-hover active:bg-surface-hover"
+            >
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-hover text-text-secondary">
+                    <Wrench className="h-5 w-5" aria-hidden />
+                </span>
+                <span className="flex min-w-0 flex-1 flex-col">
+                    <span className="font-display text-base font-semibold leading-snug text-text-primary">
+                        Tools
+                    </span>
+                    <span className="text-xs text-text-secondary">
+                        Mood journal, sleep, and more.
+                    </span>
+                </span>
+                <ArrowRight className="h-5 w-5 shrink-0 text-text-tertiary" aria-hidden />
+            </button>
+
+            {/* Find Care — make the provider directory reachable by scrolling Home */}
+            <button
+                type="button"
+                onClick={() => navigate('/providers')}
+                className="mt-3 flex min-h-[44px] w-full items-center gap-3 rounded-2xl border border-border bg-surface px-4 py-4 text-left transition-colors duration-200 hover:bg-surface-hover active:bg-surface-hover"
+            >
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-hover text-text-secondary">
+                    <Stethoscope className="h-5 w-5" aria-hidden />
+                </span>
+                <span className="flex min-w-0 flex-1 flex-col">
+                    <span className="font-display text-base font-semibold leading-snug text-text-primary">
+                        Find Care
+                    </span>
+                    <span className="text-xs text-text-secondary">
+                        Browse mental health providers.
                     </span>
                 </span>
                 <ArrowRight className="h-5 w-5 shrink-0 text-text-tertiary" aria-hidden />

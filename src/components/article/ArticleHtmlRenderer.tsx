@@ -27,6 +27,19 @@ function ArticleHtmlRenderer({ html, className }: { html: string; className?: st
     // Lazy-load inline images
     const images = containerRef.current.querySelectorAll('img:not([loading])');
     images.forEach((img) => img.setAttribute('loading', 'lazy'));
+
+    // Collapse dead chart husks: empty `.recharts-responsive-container` shells left
+    // in the stored HTML by older static-render seeding, for which no chart data was
+    // ever authored (so they can't be hydrated and would otherwise show a blank box).
+    // A hydrated chart's container lives INSIDE a [data-chart-block] mount, so it is
+    // excluded — this only hides genuinely-orphaned husks, never a live chart.
+    const huskContainers = containerRef.current.querySelectorAll<HTMLElement>('.recharts-responsive-container:empty');
+    huskContainers.forEach((el) => {
+      if (el.closest('[data-chart-block]')) return; // live chart mount — leave it
+      // Hide the fixed-height wrapper so no empty rectangle remains; the chart
+      // card's heading + source caption (real text) stay visible.
+      (el.parentElement ?? el).style.display = 'none';
+    });
   }, [html]);
 
   // Hydrate chart blocks embedded as data attributes

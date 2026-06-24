@@ -27,6 +27,7 @@ import { ScrollManager } from './components/ui/ScrollManager';
 // Mobile (≤639px) foundation chrome — phone-only, desktop frozen.
 import MobileCrisisHeader from './components/mobile/MobileCrisisHeader';
 import MobileBottomNav from './components/mobile/MobileBottomNav';
+import MobileFooter from './components/mobile/MobileFooter';
 import ResponsiveRoute from './components/mobile/ResponsiveRoute';
 import { useMediaQuery, MOBILE_NARROW_QUERY } from './hooks/useMediaQuery';
 
@@ -410,6 +411,8 @@ const App: React.FC = () => {
                                     </Suspense>
                                 </ErrorBoundary>
                             </main>
+
+                            {isPhone && location.pathname !== '/tools/mindmate' && !location.pathname.startsWith('/dashboard') && !location.pathname.startsWith('/portal') && location.pathname !== '/onboarding' && <MobileFooter />}
 
                             {isPhone && <MobileBottomNav />}
 

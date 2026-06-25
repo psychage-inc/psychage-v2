@@ -94,9 +94,11 @@ export const VerificationExplainer: React.FC = () => {
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="overflow-hidden mt-3"
+              className="overflow-hidden"
             >
-              {content}
+              {/* pt clears the protruding "Recommended" badge; px/pb give the
+                  ring + shadow room so the cards aren't clipped when open. */}
+              <div className="mt-3 px-0.5 pt-3 pb-1">{content}</div>
             </motion.div>
           )}
         </AnimatePresence>

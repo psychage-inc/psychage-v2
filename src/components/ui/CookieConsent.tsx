@@ -137,7 +137,10 @@ const CookieConsent: React.FC = () => {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: 100, opacity: 0 }}
                     transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                    className="fixed bottom-0 left-0 right-0 z-[70] px-4 pt-4 sm:px-6 sm:pt-6 pb-[calc(1rem+env(safe-area-inset-bottom))]"
+                    /* On phones the fixed MobileBottomNav (h-16, z-90) sits at
+                       bottom-0 and would clip this banner — lift it above the nav
+                       (+ safe area) on mobile; flush to the bottom on sm+. */
+                    className="fixed bottom-[calc(4rem+env(safe-area-inset-bottom))] sm:bottom-0 left-0 right-0 z-[70] px-4 pt-4 sm:px-6 sm:pt-6 pb-4 sm:pb-[calc(1rem+env(safe-area-inset-bottom))]"
                     role="dialog"
                     aria-label="Cookie consent"
                     aria-describedby="cookie-consent-description"

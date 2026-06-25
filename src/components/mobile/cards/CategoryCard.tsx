@@ -12,9 +12,14 @@ import type { CategoryWithCount } from '@/config/taxonomy';
 export interface CategoryCardProps {
     category: CategoryWithCount;
     className?: string;
+    /**
+     * Conditions browse: the posters already bake the title into the image, so
+     * suppress the redundant text title and show just the poster + article count.
+     */
+    hideTitle?: boolean;
 }
 
-export const CategoryCard: React.FC<CategoryCardProps> = ({ category, className }) => {
+export const CategoryCard: React.FC<CategoryCardProps> = ({ category, className, hideTitle }) => {
     const { name, slug, image, articleCount } = category;
     return (
         <Link
@@ -31,9 +36,11 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({ category, className 
                 ) : null}
             </div>
             <div className="flex flex-col gap-1 p-3">
-                <h3 className="font-display text-base font-semibold leading-tight text-text-primary line-clamp-2">
-                    {name}
-                </h3>
+                {!hideTitle && (
+                    <h3 className="font-display text-base font-semibold leading-tight text-text-primary line-clamp-2">
+                        {name}
+                    </h3>
+                )}
                 <p className="text-xs text-text-tertiary">
                     {articleCount} {articleCount === 1 ? 'article' : 'articles'}
                 </p>

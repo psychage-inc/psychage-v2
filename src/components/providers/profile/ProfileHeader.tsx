@@ -62,7 +62,9 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({ provider }) => {
           <Badge variant="teal">{provider.provider_type.label}</Badge>
           {(() => {
             const badgeType = getTrustBadgeType(provider);
-            return badgeType ? <TrustBadge type={badgeType} /> : null;
+            // 'unclaimed' is already explained by the seeded banner below — the
+            // pill here reads as an odd stray label, so suppress it on the profile.
+            return badgeType && badgeType !== 'unclaimed' ? <TrustBadge type={badgeType} /> : null;
           })()}
           {shouldShowFeaturedBadge(provider) && <TrustBadge type="featured" />}
         </div>

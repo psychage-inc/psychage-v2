@@ -168,7 +168,7 @@ const SignUpPage = () => {
                         <Display className="text-3xl mb-3 font-bold bg-clip-text text-transparent bg-gradient-to-r from-text-primary to-text-secondary">
                             Create your account
                         </Display>
-                        <Text className="text-text-secondary text-lg">Join Psychage to start your mental health journey</Text>
+                        <Text className="text-text-secondary text-lg mx-auto block max-w-[18rem] text-balance">Join Psychage to start your mental health journey</Text>
                     </motion.div>
                 </div>
 

@@ -4,6 +4,8 @@ import { ArrowRight, Compass, Search, Sparkles } from 'lucide-react';
 import { ArticleRowCard, ArticleRowCardSkeleton } from '@/components/mobile/cards/ArticleRowCard';
 import { CategoryCard, CategoryCardSkeleton } from '@/components/mobile/cards/CategoryCard';
 import { MobileHomeHero, MobileHomeHeroSkeleton } from '@/components/mobile/screens/MobileHomeHero';
+import { MobileToolsSection } from '@/components/mobile/screens/MobileToolsSection';
+import { MobileFooter } from '@/components/mobile/MobileFooter';
 import { getRecentlyReadIds } from '@/components/articles/recentlyRead';
 import { useAuth } from '@/context/AuthContext';
 import { useCategoryData } from '@/hooks/useCategoryData';
@@ -85,7 +87,7 @@ const MobileHome: React.FC = () => {
             {/* Greeting */}
             <h1 className="font-display text-2xl font-semibold text-text-primary">{greeting}</h1>
             <p className="mt-1 text-sm text-text-secondary">
-                Find calm, clear mental health information.
+                Clear, calm, free mental health education.
             </p>
 
             {/* Featured hero — the primary richness element */}
@@ -147,9 +149,9 @@ const MobileHome: React.FC = () => {
                     <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-text-tertiary">
                         Topic collections
                     </h2>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="-mx-4 flex gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                         {Array.from({ length: COLLECTIONS_LIMIT }).map((_, i) => (
-                            <CategoryCardSkeleton key={i} />
+                            <CategoryCardSkeleton key={i} className="w-40 shrink-0" />
                         ))}
                     </div>
                 </section>
@@ -158,13 +160,20 @@ const MobileHome: React.FC = () => {
                     <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-text-tertiary">
                         Topic collections
                     </h2>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                         {collections.map((category) => (
-                            <CategoryCard key={category.slug} category={category} />
+                            <CategoryCard
+                                key={category.slug}
+                                category={category}
+                                className="w-40 shrink-0 snap-start"
+                            />
                         ))}
                     </div>
                 </section>
             ) : null}
+
+            {/* Tools — designed entry into the tool suite */}
+            <MobileToolsSection />
 
             {/* Continue Reading — personalized, shown only when there's history */}
             {continueReading.length > 0 && (
@@ -198,12 +207,16 @@ const MobileHome: React.FC = () => {
                         Editor&rsquo;s Pick
                     </h2>
                     <div className="flex flex-col gap-1">
-                        {rest.map((article) => (
+                        {/* Condensed to 3 — a tight, scannable rail rather than a long list. */}
+                        {rest.slice(0, 3).map((article) => (
                             <ArticleRowCard key={article.id} article={article} />
                         ))}
                     </div>
                 </section>
             ) : null}
+
+            {/* Footer — logo, link groups, legal */}
+            <MobileFooter className="mt-10" />
         </div>
     );
 };

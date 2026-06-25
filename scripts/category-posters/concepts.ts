@@ -360,6 +360,19 @@ export const CONCEPTS: Concept[] = [
     atmosphere: 'Calm and stable; a steady, unanxious relationship with money.',
     sensitive: false,
   },
+  {
+    slug: 'family-parenting',
+    name: 'Family, Parenting & Childhood Patterns',
+    bakedName: 'Family & Parenting',
+    hue: '#10B981',
+    figureLine:
+      'A larger clay figure stands at center with a gentle protective posture, one arm curved warmly around a smaller clay figure tucked close against its side, while a second even smaller clay figure stands sheltered just in front — a little family grouped together as one.',
+    sceneLine:
+      'A soft rounded clay arc curves gently above the group like a sheltering canopy, with a faint warm glow gathered beneath it, suggesting home, belonging, and care passed down across generations.',
+    atmosphere:
+      'Tender and protective; the warmth of family and the gentle passing-down of patterns across generations, never idealized.',
+    sensitive: true,
+  },
 ];
 
 export function conceptBySlug(slug: string): Concept | undefined {

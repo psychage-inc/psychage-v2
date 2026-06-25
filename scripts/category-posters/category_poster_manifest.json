@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-22T05:02:52.333Z",
+  "updatedAt": "2026-06-25T22:43:51.120Z",
   "entries": {
     "anxiety-stress": {
       "slug": "anxiety-stress",
@@ -224,6 +224,14 @@
       "hue": "#8AA85E",
       "state": "wired",
       "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/financial-wellness.jpeg"
+    },
+    "family-parenting": {
+      "slug": "family-parenting",
+      "name": "Family, Parenting & Childhood Patterns",
+      "bakedName": "Family & Parenting",
+      "hue": "#10B981",
+      "state": "wired",
+      "publicUrl": "https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/family-parenting.jpeg"
     }
   }
 }

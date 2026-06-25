@@ -24,7 +24,7 @@ export const StepValence: React.FC<StepProps> = ({ data, updateData, onNext }) =
 
     return (
         <div className="flex flex-col items-center w-full">
-            <h2 className="font-display text-3xl md:text-4xl font-semibold text-text-primary text-center mb-2 mt-4">How are you feeling right now?</h2>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold text-text-primary text-center mb-2 mt-1">How are you feeling right now?</h2>
             <p className="text-xl text-text-tertiary mb-4">{getValenceLabel(Math.round(data.valence))}</p>
 
             <div className="transform scale-90 md:scale-100 ease-in-out duration-300 -my-4 md:my-0">
@@ -56,18 +56,18 @@ export const StepValence: React.FC<StepProps> = ({ data, updateData, onNext }) =
                         <div className="w-3 h-3 rounded-full bg-teal-600 shadow-[0_0_6px_rgba(13,148,136,0.4)]" />
                     </motion.div>
 
-                    {/* Hidden Native Input */}
+                    {/* Hidden Native Input — 44px tall hit area centered over the 40px track (track/thumb visuals unchanged) */}
                     <input
                         type="range"
                         min="1" max="10" step="0.01"
                         value={data.valence}
                         onChange={(e) => updateData({ valence: parseFloat(e.target.value) })}
-                        className="peer absolute inset-0 w-full h-full opacity-0 cursor-grab active:cursor-grabbing m-0 appearance-none touch-none [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-8 [&::-webkit-slider-thumb]:h-8 [&::-moz-range-thumb]:w-8 [&::-moz-range-thumb]:h-8 [&::-moz-range-thumb]:border-0 z-20"
+                        className="peer absolute inset-x-0 top-1/2 -translate-y-1/2 w-full h-11 opacity-0 cursor-grab active:cursor-grabbing m-0 appearance-none touch-none [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-8 [&::-webkit-slider-thumb]:h-8 [&::-moz-range-thumb]:w-8 [&::-moz-range-thumb]:h-8 [&::-moz-range-thumb]:border-0 z-20"
                         aria-label="Valence slider"
                     />
                 </div>
 
-                <div className="flex justify-between text-xs text-text-tertiary font-bold mt-3 px-2 uppercase tracking-widest opacity-80">
+                <div className="flex justify-between text-sm text-text-secondary font-bold mt-3 px-2 uppercase tracking-wider">
                     <span>Unpleasant</span>
                     <span>Pleasant</span>
                 </div>

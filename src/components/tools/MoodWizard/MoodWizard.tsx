@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ProgressDots } from './ProgressDots';
+import { Link } from 'react-router-dom';
 import { StepValence } from './StepValence';
 import { StepEmotions } from './StepEmotions';
 import { StepImpact } from './StepImpact';
 import { StepReview } from './StepReview';
-import { ArrowLeft, X } from 'lucide-react';
+import { ArrowLeft, X, LifeBuoy } from 'lucide-react';
 import { saveMoodEntry } from './storage';
 
 export type WizardState = {
@@ -68,23 +68,47 @@ export const MoodWizard: React.FC<MoodWizardProps> = ({ onComplete, onCancel }) 
 
     return (
         <div className={`fixed inset-0 z-[200] flex flex-col bg-gradient-to-b ${getBgClass()} transition-colors duration-1000 overflow-hidden`}>
-            {/* Header */}
-            <div className="flex justify-between items-center p-6">
+            {/* Header: [back/spacer] · step indicator · [crisis][close] */}
+            <div
+                className="flex items-center justify-between gap-2 px-6 pb-4"
+                style={{ paddingTop: 'calc(1.5rem + env(safe-area-inset-top))' }}
+            >
                 {step > 0 ? (
-                    <button onClick={handleBack} className="p-2 text-text-tertiary hover:bg-black/5 rounded-full transition-colors" aria-label="Go back">
+                    <button onClick={handleBack} className="flex min-h-[44px] min-w-[44px] items-center justify-center text-text-tertiary hover:bg-black/5 rounded-full transition-colors" aria-label="Go back">
                         <ArrowLeft size={24} />
                     </button>
                 ) : (
-                    <div className="w-10" />
+                    <div className="min-w-[44px]" aria-hidden />
                 )}
-                <button onClick={handleCancel} className="p-2 text-text-tertiary hover:bg-black/5 rounded-full transition-colors" aria-label="Cancel">
-                    <X size={24} />
-                </button>
+
+                {/* Quiet step indicator */}
+                <p className="text-sm font-medium text-text-tertiary tabular-nums" aria-live="polite">
+                    Step {step + 1} of {steps.length}
+                </p>
+
+                <div className="flex items-center gap-1">
+                    {/* SR-2: crisis stays one tap away while the wizard covers the app chrome */}
+                    <Link
+                        to="/crisis"
+                        aria-label="Crisis support — get immediate help"
+                        className="flex h-11 items-center gap-1.5 rounded-full bg-crisis-red px-3.5 text-sm font-semibold text-white transition-opacity active:opacity-90"
+                    >
+                        <LifeBuoy size={16} aria-hidden />
+                        <span>Crisis</span>
+                    </Link>
+                    <button onClick={handleCancel} className="flex min-h-[44px] min-w-[44px] items-center justify-center text-text-tertiary hover:bg-black/5 rounded-full transition-colors" aria-label="Cancel">
+                        <X size={24} />
+                    </button>
+                </div>
             </div>
 
-            {/* Content Area */}
-            <div className="flex-1 overflow-y-auto px-6 pb-8 flex flex-col">
-                <div className="max-w-xl w-full mx-auto my-auto flex flex-col">
+            {/* Content Area — min-h-full + justify-center centers when there is room
+                and keeps the top scroll-reachable when content overflows (no clipped heading). */}
+            <div
+                className="flex-1 overflow-y-auto px-6"
+                style={{ paddingBottom: 'calc(2rem + env(safe-area-inset-bottom))' }}
+            >
+                <div className="min-h-full max-w-xl w-full mx-auto flex flex-col justify-center">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={step}
@@ -98,11 +122,6 @@ export const MoodWizard: React.FC<MoodWizardProps> = ({ onComplete, onCancel }) 
                         </motion.div>
                     </AnimatePresence>
                 </div>
-            </div>
-
-            {/* Footer */}
-            <div className="pb-8 pt-4 flex justify-center bg-transparent">
-                <ProgressDots total={4} current={step} />
             </div>
 
             {/* Cancel confirmation */}

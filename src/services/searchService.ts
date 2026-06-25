@@ -26,6 +26,7 @@ import {
 } from '@/lib/crisis';
 import { CONTENT_CATEGORIES, type ContentCategory } from '@/lib/article-framework/content-architecture';
 import { api } from '../lib/api';
+import Fuse from 'fuse.js';
 
 // ============================================================================
 // Public Types
@@ -158,43 +159,48 @@ function normalizeSlug(s: string | undefined | null): string {
 const SLUG_FAST_PATH_SCORE = 10_000;
 
 // ============================================================================
-// Per-type scoring
+// Weighted fuzzy relevance (Fuse.js) — articles + conditions
+// ----------------------------------------------------------------------------
+// Replaces the prior unweighted substring scorer for the two surfaces where
+// "bipolar → autism" manifested. Matching is restricted to high-signal fields
+// (title/tags/name) plus a couple of low-weight metadata fields; article body
+// and free-text description/seo fields are intentionally NOT keyed, so an
+// off-topic article that merely *mentions* the query in prose no longer
+// surfaces. threshold keeps weak, body-only matches below the cut.
 // ============================================================================
 
-function scoreArticle(article: ArticleWithContent, tokens: string[], phrase: string): number {
-    const q = normalizeSlug(phrase);
-    if (q && normalizeSlug(article.slug) === q) return SLUG_FAST_PATH_SCORE;
-
-    // Primary fields qualify an article. A query that only appears in a body /
-    // secondary field (summary, description, keyFacts) must NOT surface the
-    // article — otherwise "bipolar" returns every piece that mentions it in
-    // passing rather than the bipolar articles themselves.
-    let primary = 0;
-    if (q && article.title.toLowerCase() === q) primary += 90;
-    primary += tokenHits(article.title, tokens) * 40;
-    primary += tokenHits(article.subtitle, tokens) * 20;
-    if (article.tags?.length) {
-        primary += tokenHits(article.tags.join(' '), tokens) * 15;
-    }
-    primary += tokenHits(article.category?.slug, tokens) * 12;
-    primary += tokenHits(article.category?.name, tokens) * 12;
-    if (fullPhraseHit(article.title, phrase)) primary += 25;
-
-    if (primary === 0) return 0;
-
-    // Secondary fields only refine ranking once the article already qualifies.
-    // Their weights stay well below a single title-token hit (40) so a body
-    // mention can never outrank a title match.
-    let score = primary;
-    if (article.keyFacts?.length) {
-        const text = article.keyFacts.map(k => k.text).join(' ');
-        score += tokenHits(text, tokens) * 8;
-    }
-    score += tokenHits(article.summary, tokens) * 4;
-    score += tokenHits(article.seo_description, tokens) * 4;
-    score += tokenHits(article.description, tokens) * 4;
-    return score;
+/** Shared Fuse factory — weighted keys, body-agnostic, threshold-gated. */
+function buildFuse<T>(pool: T[], keys: { name: string; weight: number }[]): Fuse<T> {
+    return new Fuse(pool, {
+        includeScore: true,
+        ignoreLocation: true,
+        threshold: 0.3,
+        minMatchCharLength: 2,
+        keys,
+    });
 }
+
+const ARTICLE_FUSE_KEYS = [
+    { name: 'title', weight: 0.7 },
+    { name: 'tags', weight: 0.2 },
+    { name: 'subtitle', weight: 0.1 },
+    { name: 'summary', weight: 0.1 },
+    { name: 'category.name', weight: 0.1 },
+];
+
+// Match the curated condition set on canonical fields only. The free-text
+// `description_for_user` is deliberately NOT keyed: prose like "often confused
+// with bipolar disorder" on the Autism entry is exactly what made "bipolar"
+// surface autism. Names are short and canonical, so precision wins here.
+const CONDITION_FUSE_KEYS = [
+    { name: 'name', weight: 0.6 },
+    { name: 'full_name', weight: 0.3 },
+    { name: 'category', weight: 0.1 },
+];
+
+// ============================================================================
+// Per-type scoring
+// ============================================================================
 
 function scoreTool(tool: Tool, tokens: string[], phrase: string): number {
     const q = normalizeSlug(phrase);
@@ -207,19 +213,6 @@ function scoreTool(tool: Tool, tokens: string[], phrase: string): number {
     }
     score += tokenHits(tool.description, tokens) * 4;
     if (fullPhraseHit(tool.name, phrase)) score += 20;
-    return score;
-}
-
-function scoreCondition(c: Condition, tokens: string[], phrase: string): number {
-    const q = normalizeSlug(phrase);
-    if (q && c.id.toLowerCase() === q) return SLUG_FAST_PATH_SCORE;
-    let score = 0;
-    if (q && c.name.toLowerCase() === q) score += 90;
-    score += tokenHits(c.name, tokens) * 40;
-    score += tokenHits(c.full_name, tokens) * 30;
-    score += tokenHits(c.category, tokens) * 12;
-    score += tokenHits(c.description_for_user, tokens) * 4;
-    if (fullPhraseHit(c.name, phrase) || fullPhraseHit(c.full_name, phrase)) score += 20;
     return score;
 }
 
@@ -273,6 +266,7 @@ function scoreCrisis(country: CountryEntry, resource: CrisisResource, tokens: st
 
 let _articleIndexCache: ArticleWithContent[] | null = null;
 let _articleIndexPromise: Promise<ArticleWithContent[]> | null = null;
+let _articleFuse: Fuse<ArticleWithContent> | null = null;
 
 async function getArticleIndex(): Promise<ArticleWithContent[]> {
     if (_articleIndexCache) return _articleIndexCache;
@@ -285,9 +279,18 @@ async function getArticleIndex(): Promise<ArticleWithContent[]> {
     return _articleIndexPromise;
 }
 
+/** Lazily build (and memoize) the article Fuse index over the cached pool. */
+async function getArticleFuse(): Promise<Fuse<ArticleWithContent>> {
+    if (_articleFuse) return _articleFuse;
+    const pool = await getArticleIndex();
+    _articleFuse = buildFuse(pool, ARTICLE_FUSE_KEYS);
+    return _articleFuse;
+}
+
 function invalidateArticleIndex(): void {
     _articleIndexCache = null;
     _articleIndexPromise = null;
+    _articleFuse = null;
 }
 
 async function searchArticles(
@@ -295,22 +298,29 @@ async function searchArticles(
     filters: ArticleSearchFilters = {},
     limit?: number,
 ): Promise<SearchTypeResult<ArticleWithContent>> {
-    const tokens = tokenize(query);
-    if (!query.trim() || tokens.length === 0) return { items: [], totalAvailable: 0 };
     const phrase = query.trim();
+    if (!phrase) return { items: [], totalAvailable: 0 };
+    const q = normalizeSlug(phrase);
 
-    let pool = await getArticleIndex();
-    if (filters.categorySlug) {
-        pool = pool.filter(a => a.category?.slug === filters.categorySlug);
-    }
+    const pool = await getArticleIndex();
+    const fuse = await getArticleFuse();
 
-    const scored: { article: ArticleWithContent; score: number }[] = [];
-    for (const article of pool) {
-        const s = scoreArticle(article, tokens, phrase);
-        if (s > 0) scored.push({ article, score: s });
-    }
-    scored.sort((a, b) => b.score - a.score);
-    const items = scored.map(s => s.article);
+    // Rank by weighted fuzzy relevance, then prepend an exact slug match so
+    // deep-link/slug queries still pin their article to the top.
+    const ordered: ArticleWithContent[] = [];
+    const seen = new Set<string | number>();
+    const push = (a: ArticleWithContent) => {
+        if (seen.has(a.id)) return;
+        seen.add(a.id);
+        ordered.push(a);
+    };
+    const exact = q ? pool.find(a => normalizeSlug(a.slug) === q) : undefined;
+    if (exact) push(exact);
+    for (const r of fuse.search(phrase)) push(r.item);
+
+    const items = filters.categorySlug
+        ? ordered.filter(a => a.category?.slug === filters.categorySlug)
+        : ordered;
     return {
         items: limit ? items.slice(0, limit) : items,
         totalAvailable: items.length,
@@ -356,27 +366,48 @@ async function searchTools(query: string, limit?: number): Promise<SearchTypeRes
 // Condition indexer (client-side over mockKnowledgeBase)
 // ============================================================================
 
+let _conditionFuse: Fuse<Condition> | null = null;
+
+/** Build (and memoize) the condition Fuse index over the active pool. */
+function getConditionFuse(): Fuse<Condition> {
+    if (_conditionFuse) return _conditionFuse;
+    const pool = mockKnowledgeBase.conditions.filter(c => c.is_active);
+    _conditionFuse = buildFuse(pool, CONDITION_FUSE_KEYS);
+    return _conditionFuse;
+}
+
 function searchConditions(
     query: string,
     filters: ConditionSearchFilters = {},
     limit?: number,
 ): SearchTypeResult<Condition> {
-    const tokens = tokenize(query);
-    if (!query.trim() || tokens.length === 0) return { items: [], totalAvailable: 0 };
     const phrase = query.trim();
+    if (!phrase) return { items: [], totalAvailable: 0 };
+    const q = normalizeSlug(phrase);
 
-    let pool = mockKnowledgeBase.conditions.filter(c => c.is_active);
-    if (filters.category) {
-        pool = pool.filter(c => c.category === filters.category);
-    }
-    const scored = pool
-        .map(c => ({ c, score: scoreCondition(c, tokens, phrase) }))
-        .filter(s => s.score > 0)
-        .sort((a, b) => b.score - a.score)
-        .map(s => s.c);
+    const activePool = mockKnowledgeBase.conditions.filter(c => c.is_active);
+    const ranked = getConditionFuse().search(phrase).map(r => r.item);
+
+    // Exact id/name match pins to the top (e.g. "BIP" or "bipolar disorder").
+    const ordered: Condition[] = [];
+    const seen = new Set<string>();
+    const push = (c: Condition) => {
+        if (seen.has(c.id)) return;
+        seen.add(c.id);
+        ordered.push(c);
+    };
+    const exact = q
+        ? activePool.find(c => c.id.toLowerCase() === q || c.name.toLowerCase() === q)
+        : undefined;
+    if (exact) push(exact);
+    ranked.forEach(push);
+
+    const items = filters.category
+        ? ordered.filter(c => c.category === filters.category)
+        : ordered;
     return {
-        items: limit ? scored.slice(0, limit) : scored,
-        totalAvailable: scored.length,
+        items: limit ? items.slice(0, limit) : items,
+        totalAvailable: items.length,
     };
 }
 

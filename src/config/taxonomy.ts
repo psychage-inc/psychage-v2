@@ -74,6 +74,8 @@ export const CANONICAL_CATEGORIES: CanonicalCategory[] = [
     { slug: 'eating-body', name: 'Eating & Body', group: 'conditions-disorders' },
     { slug: 'chronic-illness-pain', name: 'Chronic Illness, Pain & Medical Psychology', group: 'conditions-disorders' },
     { slug: 'aging-dementia-late-life', name: 'Aging, Dementia & Late-Life Mental Health', group: 'conditions-disorders' },
+    { slug: 'ocd-related', name: 'OCD & Related', group: 'conditions-disorders' },
+    { slug: 'substance-addiction', name: 'Substance Use & Addiction', group: 'conditions-disorders' },
 
     // ── Behavior & Wellness ─────────────────────────────────────────────────
     { slug: 'emotional-regulation', name: 'Emotional Regulation & Self-Awareness', group: 'behavior-wellness' },
@@ -89,6 +91,7 @@ export const CANONICAL_CATEGORIES: CanonicalCategory[] = [
     // ── Life & Society ──────────────────────────────────────────────────────
     { slug: 'relationships-communication', name: 'Relationships & Communication', group: 'life-society' },
     { slug: 'work-productivity', name: 'Work, Productivity & Burnout', group: 'life-society' },
+    { slug: 'life-transitions', name: 'Life Transitions & Crises', group: 'life-society' },
     { slug: 'family-parenting', name: 'Family, Parenting & Childhood Patterns', group: 'life-society' },
     { slug: 'loneliness-connection', name: 'Loneliness, Social Connection & Belonging', group: 'life-society' },
     { slug: 'digital-life', name: 'Digital Life, Social Media & Modern Stressors', group: 'life-society' },
@@ -123,6 +126,10 @@ export const LEGACY_SLUG_ALIASES: Record<string, string> = {
     'therapy-treatment': 'therapy-navigation',
     // Near-duplicate of chronic-illness-pain; merged (articles re-tagged in the reconcile migration).
     'chronic-illness-disability': 'chronic-illness-pain',
+    // Orphan DB categories folded onto their closest canonical home so their
+    // articles surface (were tagged but linked nowhere).
+    'neurodevelopmental': 'neurodivergence-adhd-autism',
+    'children-adolescents': 'family-parenting',
 };
 
 // ── Derived lookups + frozen runtime shapes ─────────────────────────────────

@@ -8,6 +8,8 @@
  *   npx tsx src/scripts/seed-article-content.ts                    # All articles
  *   npx tsx src/scripts/seed-article-content.ts --category 8       # Single category
  *   npx tsx src/scripts/seed-article-content.ts --force             # Overwrite existing
+ *   npx tsx src/scripts/seed-article-content.ts --slugs a,b,c       # Only these slugs
+ *   npx tsx src/scripts/seed-article-content.ts --slugs @file.txt   # Slugs from file (one per line, or comma-separated)
  */
 
 import React from 'react';
@@ -56,10 +58,62 @@ const catFlagIdx = args.indexOf('--category');
 const targetCategory = catFlagIdx >= 0 ? parseInt(args[catFlagIdx + 1], 10) : null;
 const forceOverwrite = args.includes('--force');
 
+// --slugs <comma-separated | @file>: restrict seeding to an explicit allowlist of
+// slugs. Used to re-seed ONLY a known set of articles (e.g. the broken-HTML targets)
+// without touching unrelated rows. When omitted, all matched articles are processed.
+const slugsFlagIdx = args.indexOf('--slugs');
+const slugFilter: Set<string> | null = (() => {
+  if (slugsFlagIdx < 0) return null;
+  const raw = args[slugsFlagIdx + 1];
+  if (!raw) {
+    console.error('❌ --slugs requires a value (comma-separated list or @file)');
+    process.exit(1);
+  }
+  let text = raw;
+  if (raw.startsWith('@')) {
+    const filePath = path.resolve(process.cwd(), raw.slice(1));
+    if (!fs.existsSync(filePath)) {
+      console.error(`❌ --slugs file not found: ${filePath}`);
+      process.exit(1);
+    }
+    text = fs.readFileSync(filePath, 'utf-8');
+  }
+  const set = new Set(
+    text
+      .split(/[\s,]+/)
+      .map((s) => s.trim())
+      .filter(Boolean)
+  );
+  if (set.size === 0) {
+    console.error('❌ --slugs resolved to an empty list');
+    process.exit(1);
+  }
+  return set;
+})();
+
 // ---------------------------------------------------------------------------
 // Category metadata
 // ---------------------------------------------------------------------------
-const ALL_CATEGORIES = Array.from({ length: 22 }, (_, i) => i + 1);
+// Discover every category-NN directory that exists on disk, so an explicit
+// --slugs allowlist can reach targets in higher-numbered categories. Falls back
+// to the historical 1..22 window if discovery turns up nothing.
+function discoverCategories(): number[] {
+  const dir = path.join(__dirname, '..', 'data', 'articles');
+  try {
+    const nums = fs
+      .readdirSync(dir)
+      .map((name) => name.match(/^category-(\d+)$/)?.[1])
+      .filter((n): n is string => Boolean(n))
+      .map((n) => parseInt(n, 10))
+      .sort((a, b) => a - b);
+    if (nums.length) return nums;
+  } catch {
+    /* fall through */
+  }
+  return Array.from({ length: 22 }, (_, i) => i + 1);
+}
+
+const ALL_CATEGORIES = discoverCategories();
 const categoriesToProcess = targetCategory ? [targetCategory] : ALL_CATEGORIES;
 
 // ---------------------------------------------------------------------------
@@ -69,12 +123,16 @@ async function main() {
   console.log('🚀 Article Content Seeder');
   console.log(`   Categories: ${categoriesToProcess.join(', ')}`);
   console.log(`   Force overwrite: ${forceOverwrite}`);
+  if (slugFilter) console.log(`   Slug allowlist: ${slugFilter.size} slug(s)`);
   console.log('');
 
   let totalProcessed = 0;
   let totalUpdated = 0;
   let totalSkipped = 0;
   let totalFailed = 0;
+  // Track which allowlisted slugs we actually matched against a JSX article, so we
+  // can warn about any requested slug that has no JSX source in the processed categories.
+  const matchedSlugs = new Set<string>();
 
   for (const catNum of categoriesToProcess) {
     const catPad = String(catNum).padStart(2, '0');
@@ -110,6 +168,13 @@ async function main() {
         totalSkipped++;
         continue;
       }
+
+      // When a --slugs allowlist is provided, only process those exact slugs.
+      if (slugFilter && !slugFilter.has(slug)) {
+        totalSkipped++;
+        continue;
+      }
+      if (slugFilter) matchedSlugs.add(slug);
 
       // Check if article exists in DB and whether content is already set
       const { data: existing, error: fetchErr } = await supabase
@@ -216,6 +281,16 @@ async function main() {
   console.log(`   Updated:   ${totalUpdated}`);
   console.log(`   Skipped:   ${totalSkipped}`);
   console.log(`   Failed:    ${totalFailed}`);
+
+  if (slugFilter) {
+    const unmatched = [...slugFilter].filter((s) => !matchedSlugs.has(s));
+    console.log(`   Slug allowlist matched: ${matchedSlugs.size}/${slugFilter.size}`);
+    if (unmatched.length) {
+      console.warn(`   ⚠️  ${unmatched.length} requested slug(s) had no JSX source in processed categories:`);
+      for (const s of unmatched.slice(0, 20)) console.warn(`        - ${s}`);
+      if (unmatched.length > 20) console.warn(`        … and ${unmatched.length - 20} more`);
+    }
+  }
 }
 
 function escapeHtml(str: string): string {

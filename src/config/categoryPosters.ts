@@ -35,4 +35,8 @@ export const CATEGORY_POSTERS: Record<string, string> = {
   'environmental-eco-psychology': 'https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/environmental-eco-psychology.jpeg',
   'spirituality-meaning': 'https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/spirituality-meaning.jpeg',
   'financial-wellness': 'https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/financial-wellness.jpeg',
+  // Covers for the 3 newly-homed categories (clay style, generated to match).
+  'life-transitions': 'https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/life-transitions.jpeg',
+  'ocd-related': 'https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/ocd-related.jpeg',
+  'substance-addiction': 'https://ozourhqyqtpppvpbhphw.supabase.co/storage/v1/object/public/article-images/category-covers/substance-addiction.jpeg',
 };

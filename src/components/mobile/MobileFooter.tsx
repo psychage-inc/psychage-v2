@@ -89,6 +89,16 @@ const MobileFooter: React.FC = () => {
         ))}
         <p className="text-xs text-text-tertiary">© {currentYear} Psychage, Inc.</p>
       </div>
+
+      {/* Footer Watermark - decorative brand anchor (parity with desktop Footer) */}
+      <div
+        className="mt-6 flex w-full select-none items-end justify-center pointer-events-none"
+        aria-hidden="true"
+      >
+        <span className="font-display font-black text-[clamp(2.5rem,15vw,6rem)] leading-none text-border dark:text-border tracking-tighter whitespace-nowrap">
+          psychage
+        </span>
+      </div>
     </footer>
   );
 };

@@ -132,7 +132,7 @@ export const MobileHomeStartHere: React.FC<MobileHomeStartHereProps> = ({ greeti
                         Welcome to Psychage.
                     </h1>
                     <p className="mt-1 text-sm leading-relaxed text-text-secondary">
-                        Clear, calm mental health education — free, and no account needed.
+                        Clear, calm, free mental health education.
                     </p>
                 </div>
             </div>

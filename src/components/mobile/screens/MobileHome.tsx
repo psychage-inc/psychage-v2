@@ -223,9 +223,9 @@ const MobileHome: React.FC = () => {
                     <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-text-tertiary">
                         Topic collections
                     </h2>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="-mx-4 flex gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                         {Array.from({ length: COLLECTIONS_LIMIT }).map((_, i) => (
-                            <CategoryCardSkeleton key={i} />
+                            <CategoryCardSkeleton key={i} className="w-40 shrink-0" />
                         ))}
                     </div>
                 </section>
@@ -234,9 +234,13 @@ const MobileHome: React.FC = () => {
                     <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-text-tertiary">
                         Topic collections
                     </h2>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                         {collections.map((category) => (
-                            <CategoryCard key={category.slug} category={category} />
+                            <CategoryCard
+                                key={category.slug}
+                                category={category}
+                                className="w-40 shrink-0 snap-start"
+                            />
                         ))}
                     </div>
                 </section>

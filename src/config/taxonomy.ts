@@ -141,6 +141,21 @@ export function resolveCanonicalSlug(slug: string): string {
     return LEGACY_SLUG_ALIASES[slug] ?? slug;
 }
 
+/**
+ * Every slug that resolves to `canonical` — the canonical itself plus any legacy
+ * aliases folding onto it. Use when querying a store that still tags rows with
+ * legacy category slugs (Supabase does), so a canonical category page isn't
+ * missing the articles filed under its old slug (e.g. trauma-healing must also
+ * match the 73 rows still tagged trauma-ptsd).
+ */
+export function slugsForCanonical(canonical: string): string[] {
+    const target = resolveCanonicalSlug(canonical);
+    const legacies = Object.entries(LEGACY_SLUG_ALIASES)
+        .filter(([, c]) => c === target)
+        .map(([legacy]) => legacy);
+    return [target, ...legacies];
+}
+
 /** The top-level group a category belongs to, or undefined if not canonical. */
 export function groupForSlug(slug: string): TopGroupId | undefined {
     return SLUG_TO_GROUP.get(resolveCanonicalSlug(slug));

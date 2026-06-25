@@ -10,6 +10,7 @@ import { Article, Category, Citation } from '../types/models';
 import { supabase } from '../lib/supabaseClient';
 import { useMemo } from 'react';
 import { getCategoryTheme } from '../config/categoryThemes';
+import { resolveCanonicalSlug, slugsForCanonical } from '../config/taxonomy';
 
 // Lazy-loaded mock articles — only fetched when Supabase fails or JSX content is needed.
 // This avoids pulling ~30MB of article TSX into the main bundle at load time.
@@ -251,7 +252,16 @@ export const articleService = {
                     .order('id', { ascending: true }) // stable tiebreaker across pages
                     .range(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE - 1);
                 if (params?.featured) query = query.eq('featured', true);
-                if (params?.category) query = query.eq('category.slug', params.category);
+                if (params?.category) {
+                    // DB rows are tagged with legacy category slugs (e.g.
+                    // 'trauma-ptsd') while routes use canonical slugs
+                    // ('trauma-healing'). Match every slug that folds onto the
+                    // canonical so the page isn't missing content.
+                    const slugs = slugsForCanonical(params.category);
+                    query = slugs.length > 1
+                        ? query.in('category.slug', slugs)
+                        : query.eq('category.slug', params.category);
+                }
 
                 const { data, error } = await query;
                 if (error) throw error;
@@ -289,7 +299,10 @@ export const articleService = {
             image: resolveImageUrl(a.image),
             _source: 'mock' as const,
         }));
-        if (params?.category) mockResult = mockResult.filter(a => a.category.slug === params.category);
+        if (params?.category) {
+            const canonical = resolveCanonicalSlug(params.category);
+            mockResult = mockResult.filter(a => resolveCanonicalSlug(a.category.slug) === canonical);
+        }
         if (params?.featured) mockResult = mockResult.filter(a => a.featured);
         return mockResult;
     },
@@ -339,7 +352,14 @@ export const articleService = {
                 .order('id', { ascending: true }) // stable tiebreaker across pages
                 .range(page * limit, page * limit + limit);
             if (params?.featured) query = query.eq('featured', true);
-            if (params?.category) query = query.eq('category.slug', params.category);
+            if (params?.category) {
+                // Match legacy + canonical slugs so a canonical category page
+                // isn't missing rows still tagged with the old slug.
+                const slugs = slugsForCanonical(params.category);
+                query = slugs.length > 1
+                    ? query.in('category.slug', slugs)
+                    : query.eq('category.slug', params.category);
+            }
             const { data, error } = await query;
             if (error) throw error;
             return (data ?? []) as unknown as DBArticle[];
@@ -374,7 +394,10 @@ export const articleService = {
             image: resolveImageUrl(a.image),
             _source: 'mock' as const,
         }));
-        if (params?.category) mockAll = mockAll.filter(a => a.category.slug === params.category);
+        if (params?.category) {
+            const canonical = resolveCanonicalSlug(params.category);
+            mockAll = mockAll.filter(a => resolveCanonicalSlug(a.category.slug) === canonical);
+        }
         if (params?.featured) mockAll = mockAll.filter(a => a.featured);
         const start = page * limit;
         return { articles: mockAll.slice(start, start + limit), page, hasMore: start + limit < mockAll.length };

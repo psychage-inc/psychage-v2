@@ -40,6 +40,18 @@ function ArticleHtmlRenderer({ html, className }: { html: string; className?: st
       // card's heading + source caption (real text) stay visible.
       (el.parentElement ?? el).style.display = 'none';
     });
+
+    // Reveal scroll-animation wrappers: stored article HTML bakes a Framer-Motion-style
+    // reveal INITIAL state (opacity:0 + translateX/Y) into block wrappers. The static reader
+    // renders raw HTML with no reveal driver, so these would stay invisible — tables/cards/
+    // charts show as blank gaps. Clear the inline opacity/transform so the blocks are visible.
+    const revealWrappers = containerRef.current.querySelectorAll<HTMLElement>('[style*="opacity"]');
+    revealWrappers.forEach((el) => {
+      if (parseFloat(el.style.opacity) === 0) {
+        el.style.opacity = '';
+        el.style.transform = '';
+      }
+    });
   }, [html]);
 
   // Hydrate chart blocks embedded as data attributes

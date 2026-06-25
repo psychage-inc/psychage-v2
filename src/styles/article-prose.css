@@ -259,6 +259,16 @@
   min-height: 200px;
 }
 
+/* Reveal wrappers: stored HTML bakes an opacity:0 scroll-reveal initial state that the
+   static reader has no driver to animate. Force visible (the renderer also clears these
+   in JS; this prevents a first-paint flash). Scoped to elements that have the baked state —
+   the trailing `;` keeps the match precise so it never hits `opacity:0.5;`. */
+.article-prose [style*="opacity:0;"],
+.article-prose [style*="opacity: 0;"] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 /* not-prose blocks: ensure text visibility inside prose wrapper */
 .article-prose .not-prose,
 .article-prose .not-prose * {

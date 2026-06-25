@@ -664,8 +664,16 @@ export async function getProviderByNPI(npi: string): Promise<ProviderWithDetails
 // LOOKUP TABLE FETCHERS
 // =============================================================================
 
-const HIDDEN_PROVIDER_TYPE_IDS: ReadonlySet<string> = new Set([
-  'e3e49ec2-4ab6-45e0-87f5-40bc9f3931fe', // Crisis Service — surfaced via /crisis, not in directory browse
+// Only the individual-clinician types backed by an NPI/NPPES mental-health
+// taxonomy (see TAXONOMY_TO_PROVIDER_TYPE in npiMappers.ts) are browsable as
+// provider-type cards. clinic / support_group / crisis_service aren't individual
+// NPPES taxonomies, so they're excluded (crisis is surfaced via /crisis).
+const NPI_PROVIDER_TYPE_SLUGS: ReadonlySet<string> = new Set([
+  'therapist',
+  'psychologist',
+  'psychiatrist',
+  'counselor',
+  'social_worker',
 ]);
 
 export async function getProviderTypes(): Promise<ProviderType[]> {
@@ -678,7 +686,7 @@ export async function getProviderTypes(): Promise<ProviderType[]> {
     console.error('Error fetching provider types:', error);
     return [];
   }
-  return (data || []).filter(t => !HIDDEN_PROVIDER_TYPE_IDS.has(t.id));
+  return (data || []).filter(t => NPI_PROVIDER_TYPE_SLUGS.has(t.slug));
 }
 
 export async function getSpecialties(): Promise<Specialty[]> {

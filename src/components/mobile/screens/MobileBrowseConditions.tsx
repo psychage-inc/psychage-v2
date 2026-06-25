@@ -99,12 +99,12 @@ const MobileBrowseConditions: React.FC = () => {
                                     />
                                 </span>
                             </summary>
-                            <ul className="pb-2">
+                            <ul className="divide-y divide-border pb-2">
                                 {conditions.map((condition) => (
                                     <li key={condition.slug}>
                                         <Link
                                             to={`/conditions/${condition.slug}`}
-                                            className="flex min-h-[44px] items-center justify-between gap-3 rounded-lg px-2 text-sm transition-colors hover:bg-surface-hover active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                                            className="flex min-h-[44px] items-center justify-between gap-3 px-2 text-sm transition-colors hover:bg-surface-hover active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                                         >
                                             <span className="text-text-primary">
                                                 {condition.name}

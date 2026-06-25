@@ -71,11 +71,11 @@ const MobileProviders: React.FC = () => {
             </div>
 
             {/* Trust chips */}
-            <ul className="mt-5 flex flex-wrap gap-2">
+            <ul className="mt-5 grid grid-cols-2 gap-2">
                 {TRUST.map(({ icon: Icon, label }) => (
                     <li
                         key={label}
-                        className="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-1.5 text-xs text-text-secondary"
+                        className="flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-2 text-xs text-text-secondary"
                     >
                         <Icon size={14} className="text-teal-600 dark:text-teal-400" aria-hidden />
                         {label}

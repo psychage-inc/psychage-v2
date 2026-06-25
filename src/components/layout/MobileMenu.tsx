@@ -11,7 +11,6 @@ import { useNavigation } from '../../hooks/useNavigation';
 import { useNavPermissions } from '../../hooks/useNavPermissions';
 import { useLearnNavSections } from '../../hooks/useLearnNavSections';
 import type { NavItem } from '../../types/navigation';
-import LanguageSwitcher from '../ui/LanguageSwitcher';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -231,9 +230,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, triggerRef }) 
 
             {/* Footer / CTA */}
             <div className="p-6 border-t border-border bg-surface-hover space-y-3">
-              <div className="flex justify-center mb-3">
-                <LanguageSwitcher direction="up" />
-              </div>
               {isAuthenticated ? (
                 <>
                   <button

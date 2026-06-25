@@ -150,7 +150,12 @@ const ToolsPage: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredTools.map((tool, index) => {
                         const Icon = iconMap[tool.iconName] || BrainCircuit;
-                        const comingSoon = isComingSoon(tool.id);
+                        const link = getToolLink(tool.id);
+                        // A tool is only navigable when it has a real destination.
+                        // Guard against `'#'` (no route) so we never render a
+                        // `<Link to="#">`, which pushes a junk `/tools#` history
+                        // entry and breaks the browser Back button.
+                        const navigable = !isComingSoon(tool.id) && link !== '#';
 
                         return (
                             <motion.div
@@ -158,7 +163,7 @@ const ToolsPage: React.FC = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
-                                className={`bg-surface rounded-3xl p-8 border border-border shadow-sm hover:shadow-xl transition-all group relative overflow-hidden ${comingSoon ? 'opacity-75' : ''} `}
+                                className={`bg-surface rounded-3xl p-8 border border-border shadow-sm hover:shadow-xl transition-all group relative overflow-hidden ${!navigable ? 'opacity-75' : ''} `}
                             >
                                 <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-colors ${colorVariants[tool.color] || colorVariants.teal} `}>
                                     <Icon size={28} />
@@ -186,16 +191,16 @@ const ToolsPage: React.FC = () => {
                                     ))}
                                 </div>
 
-                                {comingSoon ? (
-                                    <div className="w-full py-3 rounded-xl bg-surface-hover text-text-tertiary font-bold text-center text-sm cursor-not-allowed">
-                                        Coming Soon
-                                    </div>
-                                ) : (
-                                    <Link to={getToolLink(tool.id)}>
+                                {navigable ? (
+                                    <Link to={link}>
                                         <Button className="w-full group-hover:bg-teal-600 group-hover:border-teal-600" rightIcon={<ArrowRight size={18} />}>
                                             Open Tool
                                         </Button>
                                     </Link>
+                                ) : (
+                                    <div className="w-full py-3 rounded-xl bg-surface-hover text-text-tertiary font-bold text-center text-sm cursor-not-allowed">
+                                        Coming Soon
+                                    </div>
                                 )}
                             </motion.div>
                         );

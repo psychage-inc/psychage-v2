@@ -6,8 +6,8 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from './lib/queryClient';
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
-const MindMateWidget = React.lazy(() => import('./components/ai/MindMate'));
-const HomePage = React.lazy(() => import('./pages/home/HomePage'));
+const MindMateWidget = lazyWithRetry(() => import('./components/ai/MindMate'));
+const HomePage = lazyWithRetry(() => import('./pages/home/HomePage'));
 import CookieConsent from './components/ui/CookieConsent';
 import NotFoundPage from './components/pages/NotFoundPage';
 import ErrorBoundary from './components/error/ErrorBoundary';
@@ -18,6 +18,7 @@ import ProtectedRoute from './components/auth/ProtectedRoute';
 import RoleGuard from './components/auth/RoleGuard';
 import DeletionScheduledBanner from './components/account/DeletionScheduledBanner';
 import { adminUrl } from './lib/urls';
+import { lazyWithRetry } from './lib/lazyWithRetry';
 import { notificationService } from './lib/notifications/notificationService';
 import { analytics } from './lib/analytics';
 import { plausibleProvider } from './lib/analytics/plausible';
@@ -32,84 +33,84 @@ import ResponsiveRoute from './components/mobile/ResponsiveRoute';
 import { useMediaQuery, MOBILE_NARROW_QUERY } from './hooks/useMediaQuery';
 
 // --- LAZY LOADED ROUTES (Code Splitting) ---
-const LearnPage = React.lazy(() => import('./pages/LearnPage'));
-const BrowseByTopicPage = React.lazy(() => import('./pages/BrowseByTopicPage'));
+const LearnPage = lazyWithRetry(() => import('./pages/LearnPage'));
+const BrowseByTopicPage = lazyWithRetry(() => import('./pages/BrowseByTopicPage'));
 // Mobile (≤639px) screen stubs — rendered via ResponsiveRoute, filled in Wave 1.
-const MobileHome = React.lazy(() => import('./components/mobile/screens/MobileHome'));
-const MobileBrowse = React.lazy(() => import('./components/mobile/screens/MobileBrowse'));
-const MobileCategory = React.lazy(() => import('./components/mobile/screens/MobileCategory'));
-const MobileReader = React.lazy(() => import('./components/mobile/screens/MobileReader'));
-const MobileSearch = React.lazy(() => import('./components/mobile/screens/MobileSearch'));
-const MobileTools = React.lazy(() => import('./components/mobile/screens/MobileTools'));
-const MobileProviders = React.lazy(() => import('./components/mobile/screens/MobileProviders'));
-const ArticleCategoryPage = React.lazy(() => import('./pages/ArticleCategoryPage'));
-const ArticlePage = React.lazy(() => import('./pages/learn/ArticlePage'));
-const ArticleRedirect = React.lazy(() => import('./components/article/ArticleRedirect'));
-const ConditionsIndexPage = React.lazy(() => import('./pages/conditions/ConditionsIndexPage'));
-const ConditionDetailPage = React.lazy(() => import('./pages/conditions/ConditionDetailPage'));
-const ConditionArticlesPage = React.lazy(() => import('./pages/conditions/ConditionArticlesPage'));
-const VideoDetail = React.lazy(() => import('./components/pages/VideoDetail'));
+const MobileHome = lazyWithRetry(() => import('./components/mobile/screens/MobileHome'));
+const MobileBrowse = lazyWithRetry(() => import('./components/mobile/screens/MobileBrowse'));
+const MobileCategory = lazyWithRetry(() => import('./components/mobile/screens/MobileCategory'));
+const MobileReader = lazyWithRetry(() => import('./components/mobile/screens/MobileReader'));
+const MobileSearch = lazyWithRetry(() => import('./components/mobile/screens/MobileSearch'));
+const MobileTools = lazyWithRetry(() => import('./components/mobile/screens/MobileTools'));
+const MobileProviders = lazyWithRetry(() => import('./components/mobile/screens/MobileProviders'));
+const ArticleCategoryPage = lazyWithRetry(() => import('./pages/ArticleCategoryPage'));
+const ArticlePage = lazyWithRetry(() => import('./pages/learn/ArticlePage'));
+const ArticleRedirect = lazyWithRetry(() => import('./components/article/ArticleRedirect'));
+const ConditionsIndexPage = lazyWithRetry(() => import('./pages/conditions/ConditionsIndexPage'));
+const ConditionDetailPage = lazyWithRetry(() => import('./pages/conditions/ConditionDetailPage'));
+const ConditionArticlesPage = lazyWithRetry(() => import('./pages/conditions/ConditionArticlesPage'));
+const VideoDetail = lazyWithRetry(() => import('./components/pages/VideoDetail'));
 // Provider Directory V2
-const ProvidersLandingPage = React.lazy(() => import('./pages/providers/ProvidersLandingPage'));
-const ProviderSearchPage = React.lazy(() => import('./pages/providers/ProviderSearchPage'));
-const ProviderProfilePage = React.lazy(() => import('./pages/providers/ProviderProfilePage'));
-const ForProvidersLandingPage = React.lazy(() => import('./pages/providers/ForProvidersLandingPage'));
-const HowWeVerifyPage = React.lazy(() => import('./pages/providers/HowWeVerifyPage'));
-const ProviderApplyPage = React.lazy(() => import('./pages/providers/ProviderApplyPage'));
-const ProviderClaimPage = React.lazy(() => import('./pages/providers/ProviderClaimPage'));
-const ToolsPage = React.lazy(() => import('./components/pages/ToolsPage'));
-const MoodJournal = React.lazy(() => import('./components/tools/MoodJournal'));
-const SleepArchitect = React.lazy(() => import('./components/tools/SleepArchitect'));
-const PsychageAIPage = React.lazy(() => import('./pages/tools/MindMate'));
-const CategoryPage = React.lazy(() => import('./components/pages/CategoryPage'));
-const SearchResults = React.lazy(() => import('./components/pages/SearchResults'));
-const ClarityScoreTool = React.lazy(() => import('./components/pages/ClarityScoreTool'));
-const AboutPage = React.lazy(() => import('./components/pages/AboutPage'));
-const ContactPage = React.lazy(() => import('./pages/core/ContactPage'));
-const ContentStandardsPage = React.lazy(() => import('./pages/core/ContentStandardsPage'));
-const AdvisoryBoardPage = React.lazy(() => import('./pages/core/AdvisoryBoardPage'));
-const AuthorProfilePage = React.lazy(() => import('./pages/core/AuthorProfilePage'));
-const LegalPage = React.lazy(() => import('./components/pages/LegalPages'));
-const CrisisPage = React.lazy(() => import('./components/pages/CrisisPage'));
-const NavigatorPage = React.lazy(() => import('./components/pages/NavigatorPage'));
-const RelationshipHealthCheck = React.lazy(() => import('./components/tools/RelationshipHealthCheck'));
-const ClarityJournal = React.lazy(() => import('./components/tools/ClarityJournal'));
-const ClarityJournalDailyCheckIn = React.lazy(() => import('./components/tools/ClarityJournal/sections/DailyCheckIn'));
-const ClarityJournalWeeklyScreening = React.lazy(() => import('./components/tools/ClarityJournal/sections/WeeklyScreening'));
-const ClarityJournalThoughtRecord = React.lazy(() => import('./components/tools/ClarityJournal/sections/ThoughtRecord'));
-const ClarityJournalBehavioralActivation = React.lazy(() => import('./components/tools/ClarityJournal/sections/BehavioralActivation'));
-const ClarityJournalTriggerLog = React.lazy(() => import('./components/tools/ClarityJournal/sections/TriggerLog'));
-const ClarityJournalWellnessToolbox = React.lazy(() => import('./components/tools/ClarityJournal/sections/WellnessToolbox'));
-const ClarityJournalWeeklyReflection = React.lazy(() => import('./components/tools/ClarityJournal/sections/WeeklyReflection'));
-const ClarityJournalHistory = React.lazy(() => import('./components/tools/ClarityJournal/sections/JournalHistory'));
-const ClarityJournalInsights = React.lazy(() => import('./components/tools/ClarityJournal/sections/JournalInsights'));
+const ProvidersLandingPage = lazyWithRetry(() => import('./pages/providers/ProvidersLandingPage'));
+const ProviderSearchPage = lazyWithRetry(() => import('./pages/providers/ProviderSearchPage'));
+const ProviderProfilePage = lazyWithRetry(() => import('./pages/providers/ProviderProfilePage'));
+const ForProvidersLandingPage = lazyWithRetry(() => import('./pages/providers/ForProvidersLandingPage'));
+const HowWeVerifyPage = lazyWithRetry(() => import('./pages/providers/HowWeVerifyPage'));
+const ProviderApplyPage = lazyWithRetry(() => import('./pages/providers/ProviderApplyPage'));
+const ProviderClaimPage = lazyWithRetry(() => import('./pages/providers/ProviderClaimPage'));
+const ToolsPage = lazyWithRetry(() => import('./components/pages/ToolsPage'));
+const MoodJournal = lazyWithRetry(() => import('./components/tools/MoodJournal'));
+const SleepArchitect = lazyWithRetry(() => import('./components/tools/SleepArchitect'));
+const PsychageAIPage = lazyWithRetry(() => import('./pages/tools/MindMate'));
+const CategoryPage = lazyWithRetry(() => import('./components/pages/CategoryPage'));
+const SearchResults = lazyWithRetry(() => import('./components/pages/SearchResults'));
+const ClarityScoreTool = lazyWithRetry(() => import('./components/pages/ClarityScoreTool'));
+const AboutPage = lazyWithRetry(() => import('./components/pages/AboutPage'));
+const ContactPage = lazyWithRetry(() => import('./pages/core/ContactPage'));
+const ContentStandardsPage = lazyWithRetry(() => import('./pages/core/ContentStandardsPage'));
+const AdvisoryBoardPage = lazyWithRetry(() => import('./pages/core/AdvisoryBoardPage'));
+const AuthorProfilePage = lazyWithRetry(() => import('./pages/core/AuthorProfilePage'));
+const LegalPage = lazyWithRetry(() => import('./components/pages/LegalPages'));
+const CrisisPage = lazyWithRetry(() => import('./components/pages/CrisisPage'));
+const NavigatorPage = lazyWithRetry(() => import('./components/pages/NavigatorPage'));
+const RelationshipHealthCheck = lazyWithRetry(() => import('./components/tools/RelationshipHealthCheck'));
+const ClarityJournal = lazyWithRetry(() => import('./components/tools/ClarityJournal'));
+const ClarityJournalDailyCheckIn = lazyWithRetry(() => import('./components/tools/ClarityJournal/sections/DailyCheckIn'));
+const ClarityJournalWeeklyScreening = lazyWithRetry(() => import('./components/tools/ClarityJournal/sections/WeeklyScreening'));
+const ClarityJournalThoughtRecord = lazyWithRetry(() => import('./components/tools/ClarityJournal/sections/ThoughtRecord'));
+const ClarityJournalBehavioralActivation = lazyWithRetry(() => import('./components/tools/ClarityJournal/sections/BehavioralActivation'));
+const ClarityJournalTriggerLog = lazyWithRetry(() => import('./components/tools/ClarityJournal/sections/TriggerLog'));
+const ClarityJournalWellnessToolbox = lazyWithRetry(() => import('./components/tools/ClarityJournal/sections/WellnessToolbox'));
+const ClarityJournalWeeklyReflection = lazyWithRetry(() => import('./components/tools/ClarityJournal/sections/WeeklyReflection'));
+const ClarityJournalHistory = lazyWithRetry(() => import('./components/tools/ClarityJournal/sections/JournalHistory'));
+const ClarityJournalInsights = lazyWithRetry(() => import('./components/tools/ClarityJournal/sections/JournalInsights'));
 // Clarity Journal V2
-const ClarityJournalDailyEntry = React.lazy(() => import('./components/tools/ClarityJournal/v2-sections/DailyEntryV2'));
-const ClarityJournalReport = React.lazy(() => import('./components/tools/ClarityJournal/v2-report/ReportConfigScreen'));
-const CrisisResourcesScreen = React.lazy(() => import('./components/screens/CrisisResourcesScreen'));
-const MedicationTracker = React.lazy(() => import('./components/tools/MedicationTracker'));
+const ClarityJournalDailyEntry = lazyWithRetry(() => import('./components/tools/ClarityJournal/v2-sections/DailyEntryV2'));
+const ClarityJournalReport = lazyWithRetry(() => import('./components/tools/ClarityJournal/v2-report/ReportConfigScreen'));
+const CrisisResourcesScreen = lazyWithRetry(() => import('./components/screens/CrisisResourcesScreen'));
+const MedicationTracker = lazyWithRetry(() => import('./components/tools/MedicationTracker'));
 // Toolkits
-const ToolkitsIndexPage = React.lazy(() => import('./pages/toolkits/ToolkitsIndexPage'));
-const ToolkitDetailPage = React.lazy(() => import('./pages/toolkits/ToolkitDetailPage'));
+const ToolkitsIndexPage = lazyWithRetry(() => import('./pages/toolkits/ToolkitsIndexPage'));
+const ToolkitDetailPage = lazyWithRetry(() => import('./pages/toolkits/ToolkitDetailPage'));
 
 // Sitemap
-const SitemapPage = React.lazy(() => import('./pages/SitemapPage'));
+const SitemapPage = lazyWithRetry(() => import('./pages/SitemapPage'));
 
 // Auth Pages
-const LoginPage = React.lazy(() => import('./pages/auth/LoginPage'));
-const SignUpPage = React.lazy(() => import('./pages/auth/SignUpPage'));
-const CheckEmailPage = React.lazy(() => import('./pages/auth/CheckEmailPage'));
-const ResetPasswordPage = React.lazy(() => import('./pages/auth/ResetPasswordPage'));
-const UpdatePasswordPage = React.lazy(() => import('./pages/auth/UpdatePasswordPage'));
-const AuthCallback = React.lazy(() => import('./pages/auth/AuthCallback'));
+const LoginPage = lazyWithRetry(() => import('./pages/auth/LoginPage'));
+const SignUpPage = lazyWithRetry(() => import('./pages/auth/SignUpPage'));
+const CheckEmailPage = lazyWithRetry(() => import('./pages/auth/CheckEmailPage'));
+const ResetPasswordPage = lazyWithRetry(() => import('./pages/auth/ResetPasswordPage'));
+const UpdatePasswordPage = lazyWithRetry(() => import('./pages/auth/UpdatePasswordPage'));
+const AuthCallback = lazyWithRetry(() => import('./pages/auth/AuthCallback'));
 
 // User Dashboard
-const UserDashboard = React.lazy(() => import('./pages/dashboard/UserDashboard'));
-const AccountSettings = React.lazy(() => import('./pages/dashboard/AccountSettings'));
-const PrivacySettings = React.lazy(() => import('./pages/dashboard/PrivacySettings'));
-const BookmarksPage = React.lazy(() => import('./pages/dashboard/BookmarksPage'));
-const AssessmentHistory = React.lazy(() => import('./pages/dashboard/AssessmentHistory'));
-const OnboardingPage = React.lazy(() => import('./pages/OnboardingPage'));
+const UserDashboard = lazyWithRetry(() => import('./pages/dashboard/UserDashboard'));
+const AccountSettings = lazyWithRetry(() => import('./pages/dashboard/AccountSettings'));
+const PrivacySettings = lazyWithRetry(() => import('./pages/dashboard/PrivacySettings'));
+const BookmarksPage = lazyWithRetry(() => import('./pages/dashboard/BookmarksPage'));
+const AssessmentHistory = lazyWithRetry(() => import('./pages/dashboard/AssessmentHistory'));
+const OnboardingPage = lazyWithRetry(() => import('./pages/OnboardingPage'));
 
 // Admin redirect — admin panel lives on a separate domain (admin.psychage.com)
 // In local dev (no VITE_ADMIN_URL), redirects to /admin.html entry point
@@ -121,14 +122,14 @@ const LegacyProviderRedirect: React.FC = () => {
 };
 
 // Provider Portal V2
-const PortalLayout = React.lazy(() => import('./components/portal/PortalLayout'));
-const PortalDashboard = React.lazy(() => import('./pages/portal/PortalDashboard'));
-const PortalProfile = React.lazy(() => import('./pages/portal/PortalProfile'));
-const PortalReviews = React.lazy(() => import('./pages/portal/PortalReviews'));
-const PortalVerification = React.lazy(() => import('./pages/portal/PortalVerification'));
-const PortalSubscription = React.lazy(() => import('./pages/portal/PortalSubscription'));
-const PortalAnalytics = React.lazy(() => import('./pages/portal/PortalAnalytics'));
-const PortalSettings = React.lazy(() => import('./pages/portal/PortalSettings'));
+const PortalLayout = lazyWithRetry(() => import('./components/portal/PortalLayout'));
+const PortalDashboard = lazyWithRetry(() => import('./pages/portal/PortalDashboard'));
+const PortalProfile = lazyWithRetry(() => import('./pages/portal/PortalProfile'));
+const PortalReviews = lazyWithRetry(() => import('./pages/portal/PortalReviews'));
+const PortalVerification = lazyWithRetry(() => import('./pages/portal/PortalVerification'));
+const PortalSubscription = lazyWithRetry(() => import('./pages/portal/PortalSubscription'));
+const PortalAnalytics = lazyWithRetry(() => import('./pages/portal/PortalAnalytics'));
+const PortalSettings = lazyWithRetry(() => import('./pages/portal/PortalSettings'));
 
 // Provider Registration (legacy — kept for admin reference only)
 

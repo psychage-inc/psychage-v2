@@ -1,0 +1,387 @@
+{
+  "CAT01-060": {
+    "headline": "Emotions Across the Lifespan",
+    "subtitle": "How feelings change from childhood to old age",
+    "figureLine": "A single standing clay figure leans slightly forward with one open palm extended, posture curious and unhurried, conveying a steady passage through the changing seasons of a life.",
+    "sceneLine": "A long row of soft blue-indigo rounded forms recedes gently beside the figure, each subtly different in size, suggesting one continuous emotional arc from small beginnings to quiet maturity.",
+    "sensitive": false
+  },
+  "CAT01-066": {
+    "headline": "Major Life Transitions",
+    "subtitle": "How big changes reshape the emotional landscape",
+    "figureLine": "A single standing clay figure pauses at the edge of an unseen threshold, one foot lifted to step, posture poised between hesitation and resolve.",
+    "sceneLine": "A wide blue-indigo accent landform gently shifts and re-forms into new contours around the figure's feet, the soft light blue-indigo terrain rearranging itself into fresh ground to walk on.",
+    "sensitive": false
+  },
+  "CAT02-046": {
+    "headline": "Parental Burnout",
+    "subtitle": "When raising children depletes everything",
+    "figureLine": "A single seated clay figure rests with shoulders rounded and hands loose in its lap, posture emptied and weary, conveying a depletion that asks gently for rest.",
+    "sceneLine": "A soft light blue-indigo vessel beside the figure tips low and nearly drained, while a faint pale blue-indigo trace of refill begins to pool at its base, suggesting capacity that can slowly return.",
+    "sensitive": false
+  },
+  "CAT03-076": {
+    "headline": "Rebuilding Identity",
+    "subtitle": "After a long-term relationship ends",
+    "figureLine": "A single standing clay figure gathers itself upright again, one hand pressed to its own chest, posture tentative but newly self-contained.",
+    "sceneLine": "Scattered soft light blue-indigo fragments draw slowly back together beside the figure into one whole pale blue-indigo form, suggesting a self being patiently reassembled.",
+    "sensitive": false
+  },
+  "CAT05-051": {
+    "headline": "Career Change",
+    "subtitle": "The identity crisis of losing a job title",
+    "figureLine": "A single standing clay figure stands with arms slightly open and empty, posture unmoored yet steady, conveying a self searching for new footing.",
+    "sceneLine": "A blue-indigo accent badge-like form dissolves softly from the figure's chest while a faint pale blue-indigo outline of a new shape begins to take form, suggesting identity remade beyond a title.",
+    "sensitive": false
+  },
+  "CAT05-056": {
+    "headline": "Retirement Anxiety",
+    "subtitle": "Preparing mental health for life after work",
+    "figureLine": "A single standing clay figure looks toward open space ahead with hands folded calmly at its waist, posture uncertain but composed.",
+    "sceneLine": "A structured blue-indigo accent lattice gently loosens into an open, soft light blue-indigo expanse beside the figure, suggesting a tightly held routine giving way to unscripted time.",
+    "sensitive": false
+  },
+  "CAT06-024": {
+    "headline": "Single Parenting",
+    "subtitle": "Stress, resilience, and support for one parent",
+    "figureLine": "A single standing clay figure holds itself steady and upright while one protective arm curves around a small empty space at its side, posture resolute and capable.",
+    "sceneLine": "A single firm blue-indigo accent pillar rises beside the figure, its base widened by soft light blue-indigo supports, suggesting one person carrying weight while quietly held up from below.",
+    "sensitive": false
+  },
+  "CAT06-027": {
+    "headline": "Intensive Parenting Pressure",
+    "subtitle": "Why modern parenting feels exhausting",
+    "figureLine": "A single standing clay figure leans under a felt weight on its shoulders, posture stretched thin yet still standing, conveying relentless expectation.",
+    "sceneLine": "A dense stack of soft light blue-indigo blocks looms above the figure, while a few pale blue-indigo pieces lift gently away, suggesting impossible demands that can begin to be set down.",
+    "sensitive": false
+  },
+  "CAT06-029": {
+    "headline": "Stay-at-Home Parenting",
+    "subtitle": "Identity, isolation, and invisible labor",
+    "figureLine": "A single seated clay figure works quietly with both hands at low, repetitive tasks, posture absorbed and unseen, conveying steady labor that goes unwitnessed.",
+    "sceneLine": "A faint pale blue-indigo glow gathers softly around the figure's working hands, suggesting unseen effort gently made visible and honored.",
+    "sensitive": false
+  },
+  "CAT06-061": {
+    "headline": "Caught in the Middle",
+    "subtitle": "Caring for children and aging parents at once",
+    "figureLine": "A single standing clay figure stands centered with both arms gently extended to either side, posture balanced and giving, conveying care pulled in two directions.",
+    "sceneLine": "Two soft light blue-indigo forms rest on either side of the figure, one smaller and one larger, held in steady blue-indigo accent balance, suggesting care held in both hands at once.",
+    "sensitive": false
+  },
+  "CAT06-062": {
+    "headline": "Caregiver Burnout",
+    "subtitle": "When caring for an aging parent depletes you",
+    "figureLine": "A single seated clay figure sits with head bowed low and hands resting open and tired, posture spent from long giving.",
+    "sceneLine": "A soft light blue-indigo lantern beside the figure glows faintly low, while a quiet pale blue-indigo current drifts back toward it, suggesting depleted warmth slowly being restored.",
+    "sensitive": false
+  },
+  "CAT06-063": {
+    "headline": "Hard Conversations",
+    "subtitle": "Talking with aging parents about driving and finances",
+    "figureLine": "Two clay figures sit turned toward each other at a respectful, gentle distance, postures attentive and careful, conveying a tender, difficult exchange held with care.",
+    "sceneLine": "A slender blue-indigo accent thread passes softly between the two figures across the space between them, suggesting a delicate conversation carried with steadiness and respect.",
+    "sensitive": false
+  },
+  "CAT06-064": {
+    "headline": "Grieving a Declining Parent",
+    "subtitle": "Anticipatory grief as a parent fades",
+    "figureLine": "A single standing clay figure turns gently toward an empty space beside it, one hand reaching softly into the quiet, posture tender and bracing.",
+    "sceneLine": "A soft light blue-indigo form beside the figure fades very gradually toward pale blue-indigo at its edges, held within a protective blue-indigo glow, suggesting a presence cherished while it slowly grows faint.",
+    "sensitive": true
+  },
+  "CAT06-065": {
+    "headline": "Caring for Someone With Dementia",
+    "subtitle": "The mental health impact on family",
+    "figureLine": "A single standing clay figure stands close and steady beside an empty space, one hand held gently open in patient reassurance, posture grounded and devoted.",
+    "sceneLine": "A soft light blue-indigo pattern beside the figure drifts and rearranges quietly, while a steady pale blue-indigo thread stays whole through it, suggesting constancy of care amid shifting memory.",
+    "sensitive": true
+  },
+  "CAT06-067": {
+    "headline": "Coping With Caregiver Guilt",
+    "subtitle": "After placing a loved one in a care facility",
+    "figureLine": "A single seated clay figure sits with both hands pressed softly together near its chest, posture heavy with self-doubt yet seeking peace.",
+    "sceneLine": "A soft light blue-indigo weight rests on the figure's shoulders while a warm pale blue-indigo glow rises gently to meet it, suggesting guilt slowly easing into self-compassion.",
+    "sensitive": true
+  },
+  "CAT06-068": {
+    "headline": "The Financial Stress of Eldercare",
+    "subtitle": "And its impact on mental health",
+    "figureLine": "A single standing clay figure stands beneath a felt pressure, both hands clasped tightly at its waist, posture braced and burdened.",
+    "sceneLine": "A heavy soft light blue-indigo mass hovers above the figure while slender pale blue-indigo supports rise beneath it, suggesting a weight made bearable when shared and supported.",
+    "sensitive": false
+  },
+  "CAT06-070": {
+    "headline": "Self-Care for Caregivers",
+    "subtitle": "Preventing burnout while caring for others",
+    "figureLine": "A single seated clay figure pauses to rest one hand gently over its own heart, posture finally turning care inward.",
+    "sceneLine": "A soft light blue-indigo vessel beside the figure is refilled slowly by a quiet pale blue-indigo stream, suggesting the caregiver pausing to replenish their own reserves.",
+    "sensitive": false
+  },
+  "CAT07-023": {
+    "headline": "Dual Process Model of Grief",
+    "subtitle": "Moving between loss and restoration",
+    "figureLine": "A single standing clay figure shifts its weight gently between two footings, posture swaying softly back and forth, conveying a natural movement through mourning.",
+    "sceneLine": "Two soft light blue-indigo tides rise and recede in gentle alternation on either side of the figure, suggesting an honest oscillation between sorrow and renewal.",
+    "sensitive": true
+  },
+  "CAT07-024": {
+    "headline": "Prolonged Grief Disorder",
+    "subtitle": "When grief does not ease over time",
+    "figureLine": "A single seated clay figure stays low and still, arms wrapped softly around itself, posture held long in sorrow yet quietly attended.",
+    "sceneLine": "A soft light blue-indigo weight settles close around the figure while a faint pale blue-indigo thread of light waits steadily at its edge, suggesting grief that lingers and care that stays near.",
+    "sensitive": true
+  },
+  "CAT07-025": {
+    "headline": "Anticipatory Grief",
+    "subtitle": "Mourning a loss before it arrives",
+    "figureLine": "A single standing clay figure stands quietly with one hand resting over its chest, gaze turned toward what has not yet gone, posture tender and waiting.",
+    "sceneLine": "A soft light blue-indigo form rests near the figure beneath a protective blue-indigo glow, its edges only beginning to soften toward pale blue-indigo, suggesting love held close while loss approaches.",
+    "sensitive": true
+  },
+  "CAT07-026": {
+    "headline": "Disenfranchised Grief",
+    "subtitle": "When losses go unacknowledged",
+    "figureLine": "A single seated clay figure holds a small sorrow cupped in its hands, set slightly apart from the world, posture quiet and unseen.",
+    "sceneLine": "A small pale blue-indigo light glows in the figure's cupped hands while the wider space stays dim, suggesting a real grief that deserves to be witnessed and named.",
+    "sensitive": true
+  },
+  "CAT08-026": {
+    "headline": "Adapting Routines",
+    "subtitle": "When life becomes chaotic",
+    "figureLine": "A single standing clay figure steadies itself amid motion, one foot planted firmly while the other adjusts, posture finding balance in disorder.",
+    "sceneLine": "Scattered soft light blue-indigo forms swirl loosely around the figure, while a few settle into a calm pale blue-indigo line at its feet, suggesting order gently re-emerging from chaos.",
+    "sensitive": false
+  },
+  "CAT12-038": {
+    "headline": "Reverse Culture Shock",
+    "subtitle": "The hidden struggle of coming home",
+    "figureLine": "A single standing clay figure stands in a once-familiar place, posture slightly turned and unsettled, conveying a homecoming that no longer feels like home.",
+    "sceneLine": "A soft light blue-indigo doorway frame stands before the figure, its interior shimmering faintly different in pale blue-indigo, suggesting a return to a place quietly changed.",
+    "sensitive": false
+  },
+  "CAT14-045": {
+    "headline": "Recovering From Caregiver Fatigue",
+    "subtitle": "Recognizing and replenishing your reserves",
+    "figureLine": "A single seated clay figure leans back to rest at last, hands unclenching and shoulders loosening, posture softening into recovery.",
+    "sceneLine": "A soft light blue-indigo glow gathers slowly back around the resting figure, brightening gently toward pale blue-indigo, suggesting depleted energy quietly returning.",
+    "sensitive": false
+  },
+  "CAT15-012": {
+    "headline": "Why College Can Feel Lonely",
+    "subtitle": "Profound isolation amid a crowd",
+    "figureLine": "A single standing clay figure stands apart in open space, arms held close, posture quietly separate within a crowd it cannot quite reach.",
+    "sceneLine": "Several soft light blue-indigo forms cluster at a distance from the figure while one faint pale blue-indigo thread reaches tentatively across the gap, suggesting connection still within reach.",
+    "sensitive": false
+  },
+  "CAT15-014": {
+    "headline": "Loneliness in New Parents",
+    "subtitle": "The isolation nobody talks about",
+    "figureLine": "A single seated clay figure cradles a small empty space against its chest, posture tender yet quietly isolated in the long hours.",
+    "sceneLine": "A soft light blue-indigo glow surrounds the figure in a close, quiet circle while a faint pale blue-indigo path opens outward, suggesting isolation that can gently open to others.",
+    "sensitive": false
+  },
+  "CAT15-016": {
+    "headline": "Loneliness in Older Adults",
+    "subtitle": "A health crisis hidden in plain sight",
+    "figureLine": "A single seated clay figure rests alone in a wide, still space, hands folded patiently, posture quiet and waiting to be seen.",
+    "sceneLine": "A single soft light blue-indigo light glows beside the seated figure within a vast dim expanse, while a pale blue-indigo thread reaches toward it, suggesting a quiet loneliness ready to be answered.",
+    "sensitive": false
+  },
+  "CAT15-017": {
+    "headline": "Loneliness After Retirement",
+    "subtitle": "Losing identity and social connection",
+    "figureLine": "A single standing clay figure stands in newly emptied space with arms loose at its sides, posture adrift after a long-held role has fallen quiet.",
+    "sceneLine": "A blue-indigo accent web of connections thins around the figure while a few soft light blue-indigo strands hold firm, suggesting bonds that can be rebuilt after work recedes.",
+    "sensitive": false
+  },
+  "CAT15-018": {
+    "headline": "Loneliness After Loss",
+    "subtitle": "When grief removes your person",
+    "figureLine": "A single seated clay figure rests beside an empty space once filled, one hand resting gently where another presence used to be, posture tender and bereft.",
+    "sceneLine": "A soft light blue-indigo glow lingers warmly in the empty space beside the figure beneath a protective pale blue-indigo light, suggesting a cherished presence remembered with care.",
+    "sensitive": true
+  },
+  "CAT17-001": {
+    "headline": "Mental Health in Later Life",
+    "subtitle": "What changes and what stays stable",
+    "figureLine": "A single standing clay figure stands grounded and composed, one hand resting calmly at its side, posture settled into a steady later chapter.",
+    "sceneLine": "Some soft light blue-indigo forms shift and renew around the figure while a firm pale blue-indigo core holds constant at its center, suggesting change and steadiness held together.",
+    "sensitive": false
+  },
+  "CAT17-002": {
+    "headline": "Normal Aging vs. Mental Illness",
+    "subtitle": "How to tell the difference",
+    "figureLine": "A single standing clay figure looks attentively at two gentle forms before it, posture thoughtful and discerning.",
+    "sceneLine": "Two soft light blue-indigo forms rest side by side before the figure, one in smooth pale blue-indigo and one subtly clouded, suggesting the careful task of telling ordinary change from real concern.",
+    "sensitive": false
+  },
+  "CAT17-005": {
+    "headline": "Isolation in Older Adults",
+    "subtitle": "Social isolation and loneliness in later life",
+    "figureLine": "A single seated clay figure sits within a wide quiet space, hands resting in its lap, posture still and gently waiting for company.",
+    "sceneLine": "A soft light blue-indigo halo encircles the seated figure while distant pale blue-indigo lights begin to drift nearer, suggesting separation easing toward connection.",
+    "sensitive": false
+  },
+  "CAT17-009": {
+    "headline": "Bereavement in Later Life",
+    "subtitle": "Loss, mourning, and moving forward",
+    "figureLine": "A single standing clay figure stands quietly with one hand over its heart, gaze lowered in mourning yet feet ready to move on, posture tender and resilient.",
+    "sceneLine": "A soft light blue-indigo memory glows warmly beside the figure while a gentle pale blue-indigo path opens ahead, suggesting loss carried with care into the days that follow.",
+    "sensitive": true
+  },
+  "CAT17-010": {
+    "headline": "Suicide Prevention in Older Adults",
+    "subtitle": "A silent crisis that deserves attention",
+    "figureLine": "A single seated clay figure is held gently within a warm, encircling space, posture low yet surrounded and supported, conveying a person not left alone.",
+    "sceneLine": "A protective soft light blue-indigo circle gathers closely around the figure while a steady pale blue-indigo light reaches in from beyond it, suggesting reaching out and being safely held.",
+    "sensitive": true
+  },
+  "CAT17-020": {
+    "headline": "Family Caregiving",
+    "subtitle": "Understanding burnout, depression, and burden",
+    "figureLine": "A single standing clay figure stands bearing a felt weight on its shoulders, posture giving and tired yet still upright.",
+    "sceneLine": "A soft light blue-indigo load rests on the figure while widening pale blue-indigo supports rise beneath it, suggesting a heavy role made steadier through understanding and help.",
+    "sensitive": false
+  },
+  "CAT17-021": {
+    "headline": "Professional Support Services",
+    "subtitle": "Help for family caregivers",
+    "figureLine": "A single standing clay figure reaches one open hand outward to meet support, posture relieved to no longer carry everything alone.",
+    "sceneLine": "Several steady blue-indigo accent supports move in to brace beside the figure, their pale blue-indigo edges interlocking gently, suggesting professional help arriving to share the load.",
+    "sensitive": false
+  },
+  "CAT17-022": {
+    "headline": "Long-Distance Caregiving",
+    "subtitle": "Supporting aging parents remotely",
+    "figureLine": "A single standing clay figure reaches one hand gently across a wide open space toward a distant point, posture devoted across the miles.",
+    "sceneLine": "A long soft light blue-indigo thread stretches across the space from the figure toward a faint pale blue-indigo glow far away, suggesting care sustained over great distance.",
+    "sensitive": false
+  },
+  "CAT17-023": {
+    "headline": "Advance Directives",
+    "subtitle": "End-of-life care decisions",
+    "figureLine": "A single seated clay figure sits calmly with hands folded in quiet resolve, posture thoughtful and at peace with a difficult choice.",
+    "sceneLine": "A soft light blue-indigo path ahead of the figure resolves gently into a clear, settled pale blue-indigo line, suggesting a difficult decision met with calm and clarity.",
+    "sensitive": true
+  },
+  "CAT17-024": {
+    "headline": "Evaluating Care Facilities",
+    "subtitle": "How to assess nursing homes and assisted living",
+    "figureLine": "A single standing clay figure looks attentively across several gentle forms before it, posture considered and discerning.",
+    "sceneLine": "A row of soft light blue-indigo dwellings of varied form rests before the figure, each lit to a different warmth of pale blue-indigo, suggesting a careful comparison of places of care.",
+    "sensitive": false
+  },
+  "CAT17-028": {
+    "headline": "The Sandwich Generation",
+    "subtitle": "Caring for parents and children at the same time",
+    "figureLine": "A single standing clay figure stands centered with arms extended evenly to both sides, posture stretched yet balanced, conveying care divided between two generations.",
+    "sceneLine": "A larger and a smaller soft light blue-indigo form rest on either side of the figure in careful pale blue-indigo equilibrium, suggesting the steady balancing of care for old and young.",
+    "sensitive": false
+  },
+  "CAT17-029": {
+    "headline": "Grief After Caregiving",
+    "subtitle": "Transitioning from caregiver to bereaved",
+    "figureLine": "A single standing clay figure stands with hands suddenly empty and open, posture quiet and unanchored after a long-held purpose has ended.",
+    "sceneLine": "A soft light blue-indigo glow that once gathered at the figure's hands now drifts gently outward, while a faint pale blue-indigo path opens ahead, suggesting an identity gently released and a way forward found.",
+    "sensitive": true
+  },
+  "CAT17-030": {
+    "headline": "Recognizing Elder Abuse",
+    "subtitle": "Warning signs and how to report",
+    "figureLine": "A single seated clay figure is drawn gently into a sheltering, protective space, posture vulnerable yet safely watched over.",
+    "sceneLine": "A firm soft light blue-indigo shield-like form curves protectively around the figure while a steady pale blue-indigo light keeps watch beside it, suggesting vigilance and safety restored.",
+    "sensitive": true
+  },
+  "CAT17-034": {
+    "headline": "Senior Centers",
+    "subtitle": "Social connection for older adults",
+    "figureLine": "A single standing clay figure steps warmly toward a gathered, welcoming space, posture opening into belonging.",
+    "sceneLine": "Soft light blue-indigo forms gather in a warm circle ahead of the figure, joined by gentle pale blue-indigo threads, suggesting a welcoming community drawing the figure in.",
+    "sensitive": false
+  },
+  "CAT17-035": {
+    "headline": "Volunteering in Retirement",
+    "subtitle": "A source of purpose and mental health",
+    "figureLine": "A single standing clay figure extends both hands outward in willing offering, posture renewed by being useful again.",
+    "sceneLine": "A warm pale blue-indigo glow flows outward from the figure's hands toward soft light blue-indigo forms nearby, suggesting purpose rediscovered through giving.",
+    "sensitive": false
+  },
+  "CAT17-038": {
+    "headline": "Overcoming Barriers to Socializing",
+    "subtitle": "Reconnecting in older adulthood",
+    "figureLine": "A single standing clay figure steps gently through a narrow opening toward others, posture tentative but determined.",
+    "sceneLine": "A soft light blue-indigo wall before the figure parts into a clear pale blue-indigo gateway, suggesting obstacles to connection gradually giving way.",
+    "sensitive": false
+  },
+  "CAT17-039": {
+    "headline": "Making Friends After 65",
+    "subtitle": "Strategies for social connection",
+    "figureLine": "Two clay figures turn warmly toward each other with open postures, conveying a new bond beginning to form.",
+    "sceneLine": "A gentle soft light blue-indigo thread links the two figures and brightens into pale blue-indigo where they meet, suggesting friendship forming later in life.",
+    "sensitive": false
+  },
+  "CAT17-040": {
+    "headline": "Outliving Friends and Spouse",
+    "subtitle": "Grief and isolation in later life",
+    "figureLine": "A single seated clay figure rests amid several empty spaces once occupied, one hand resting gently in the quiet, posture tender and bearing accumulated absence.",
+    "sceneLine": "Several soft light blue-indigo lights glow warmly in the empty spaces around the figure beneath a protective pale blue-indigo arc, suggesting cherished presences remembered with care.",
+    "sensitive": true
+  },
+  "CAT17-041": {
+    "headline": "Senior Living Communities",
+    "subtitle": "The trade-off between independence and connection",
+    "figureLine": "A single standing clay figure stands thoughtfully between two gentle pulls, posture weighing freedom against belonging.",
+    "sceneLine": "A soft light blue-indigo open expanse and a warm pale blue-indigo gathering rest on either side of the figure in quiet balance, suggesting a choice between independence and community.",
+    "sensitive": false
+  },
+  "CAT17-044": {
+    "headline": "Lasting Impact on Senior Isolation",
+    "subtitle": "How the pandemic deepened older-adult loneliness",
+    "figureLine": "A single seated clay figure sits within a wide separated space, posture quietly cut off yet slowly turning back toward others.",
+    "sceneLine": "A soft light blue-indigo distance that once held the figure apart begins to close as pale blue-indigo threads reach gently back in, suggesting enforced isolation slowly reconnecting.",
+    "sensitive": false
+  },
+  "CAT17-045": {
+    "headline": "Rebuilding a Support Network",
+    "subtitle": "Reconnecting socially in later life",
+    "figureLine": "A single standing clay figure reaches outward with both hands as new connections begin to form around it, posture hopeful and open.",
+    "sceneLine": "A sparse blue-indigo accent web around the figure fills in gradually with new soft light blue-indigo strands, suggesting a support network being patiently rewoven.",
+    "sensitive": false
+  },
+  "CAT17-046": {
+    "headline": "Cumulative Loss in Older Adults",
+    "subtitle": "Grief that gathers over the years",
+    "figureLine": "A single seated clay figure sits bearing a quiet, layered weight, posture tender and resilient under accumulated sorrows.",
+    "sceneLine": "Several soft light blue-indigo memory-lights gather softly around the figure beneath a protective pale blue-indigo glow, suggesting many losses held with care over time.",
+    "sensitive": true
+  },
+  "CAT17-047": {
+    "headline": "Losing a Spouse",
+    "subtitle": "Grief and rebuilding identity in later life",
+    "figureLine": "A single standing clay figure gathers itself upright beside an empty space once shared, one hand on its own chest, posture grieving yet beginning to stand on its own.",
+    "sceneLine": "A soft light blue-indigo glow lingers warmly in the empty space beside the figure while scattered pale blue-indigo fragments draw together into a new whole, suggesting a self rebuilt after profound loss.",
+    "sensitive": true
+  },
+  "CAT17-048": {
+    "headline": "Retirement and Mental Health",
+    "subtitle": "Identity and purpose after work",
+    "figureLine": "A single standing clay figure stands in newly open space with hands resting calmly, posture settling into a self beyond a working role.",
+    "sceneLine": "A structured blue-indigo accent form gently dissolves into an open soft light blue-indigo field, where a fresh pale blue-indigo shape begins to grow, suggesting purpose remade after work.",
+    "sensitive": false
+  },
+  "CAT17-049": {
+    "headline": "Moving and Downsizing",
+    "subtitle": "The psychological impact of leaving a home",
+    "figureLine": "A single standing clay figure pauses at the threshold of a smaller space, one hand resting on the frame, posture wistful yet ready.",
+    "sceneLine": "A larger soft light blue-indigo dwelling-form softens behind the figure as a smaller, warmer pale blue-indigo one takes shape ahead, suggesting a home let go and a new one settled into.",
+    "sensitive": false
+  },
+  "CAT19-009": {
+    "headline": "Retirement and Identity in Men",
+    "subtitle": "Rebuilding a sense of self after work",
+    "figureLine": "A single standing clay figure stands with arms slightly open and unanchored, posture searching for a self beyond a long-held working role.",
+    "sceneLine": "A firm blue-indigo accent form fades from the figure's center while a steadier pale blue-indigo shape begins to form in its place, suggesting identity rebuilt beyond the job.",
+    "sensitive": false
+  }
+}

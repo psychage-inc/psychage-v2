@@ -1,0 +1,65 @@
+{
+  "CAT17-043": {
+    "headline": "Ageism and Social Exclusion",
+    "subtitle": "The mental health impact",
+    "figureLine": "A single elder-postured clay figure stands slightly apart at the edge, shoulders drawn inward and turned away, conveying the quiet ache of being overlooked.",
+    "sceneLine": "A wide ring of soft light teal forms encircles a clearing while one pale teal seat sits empty just outside it, suggesting a person gently left beyond the circle.",
+    "sensitive": false
+  },
+  "CAT19-033": {
+    "headline": "Incarcerated Men's Mental Health",
+    "subtitle": "Inside the prison system",
+    "figureLine": "A single seated clay figure sits low with knees gathered and head bowed, posture contained and still, conveying confinement carried quietly within.",
+    "sceneLine": "A series of evenly spaced upright pale teal lines stands before the figure with one soft light teal gap opening between them, suggesting walls that still leave room for breath.",
+    "sensitive": true
+  },
+  "CAT19-034": {
+    "headline": "LGBTQ+ Men and Minority Stress",
+    "subtitle": "Mental health disparities and resilience",
+    "figureLine": "A single standing clay figure holds itself upright with one hand pressed steady to its own chest, posture composed under unseen weight, conveying quiet endurance.",
+    "sceneLine": "A faint lattice of soft light teal lines presses inward around the figure while a brighter teal accent thread holds firm down its center, suggesting steadiness amid constant pressure.",
+    "sensitive": true
+  },
+  "CAT19-035": {
+    "headline": "Men of Color and Mental Health",
+    "subtitle": "Intersecting stigmas and care",
+    "figureLine": "A single standing clay figure stands tall with both arms folded protectively, posture guarded yet rooted, conveying dignity held against layered burdens.",
+    "sceneLine": "Two overlapping rings of teal accent and soft light teal cross over the figure, their shared shadow deepest where they meet, suggesting stigmas that compound where they intersect.",
+    "sensitive": false
+  },
+  "CAT19-036": {
+    "headline": "Rural Men's Mental Health",
+    "subtitle": "The crisis of geographic isolation",
+    "figureLine": "A single standing clay figure stands alone in open space, arms at its sides and gaze fixed at a distant point, conveying the long quiet of being far from anyone.",
+    "sceneLine": "A vast flat plain stretches outward in pale teal with one faint soft light teal path threading toward a far horizon, suggesting distance between a person and the help they need.",
+    "sensitive": true
+  },
+  "CAT19-039": {
+    "headline": "Blue-Collar Men's Mental Health",
+    "subtitle": "The culture of silence",
+    "figureLine": "A single standing clay figure stands solid with one hand half-raised toward its mouth then stilled, posture strong but holding something back, conveying words swallowed before spoken.",
+    "sceneLine": "A heavy pale teal weight rests on the figure's shoulders while a single soft light teal thread loosens at its collar, suggesting silence beginning to give way.",
+    "sensitive": false
+  },
+  "CAT19-048": {
+    "headline": "Barbershop Mental Health Outreach",
+    "subtitle": "Reaching men where they are",
+    "figureLine": "Two clay figures sit side by side at ease, one leaning slightly toward the other in unhurried conversation, conveying trust built in an everyday gathering place.",
+    "sceneLine": "A warm circle of soft light teal light pools around two simple seats with a pale teal arc curving above, suggesting an ordinary room turned into a place of care.",
+    "sensitive": false
+  },
+  "CAT19-049": {
+    "headline": "Sports-Based Mental Health Programs",
+    "subtitle": "Supporting boys and men through play",
+    "figureLine": "Three clay figures stand close in a loose half-circle, shoulders nearly touching and bodies leaning inward, conveying belonging found in shared effort.",
+    "sceneLine": "A single soft light teal sphere rests at the center of the figures' circle with pale teal arcs radiating outward, suggesting connection formed through play and team.",
+    "sensitive": false
+  },
+  "CAT20-045": {
+    "headline": "The Spoonie Community",
+    "subtitle": "Chronic illness peer support",
+    "figureLine": "Two clay figures sit close, one resting its head against the other's steady shoulder, postures tired yet held, conveying strength shared when energy is scarce.",
+    "sceneLine": "A small cluster of soft light teal forms passes gently from one figure toward the other, with a pale teal glow held carefully between their hands, suggesting limited reserves shared with care.",
+    "sensitive": true
+  }
+}

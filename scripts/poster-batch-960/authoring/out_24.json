@@ -1,0 +1,93 @@
+{
+  "CAT07-042": {
+    "headline": "Light Therapy",
+    "subtitle": "Evidence and how to use it for seasonal affective disorder",
+    "figureLine": "A single seated clay figure leans gently toward an unseen warmth on one side, posture softening and opening, conveying a quiet thaw after a long dim stretch.",
+    "sceneLine": "A wide, soft pool of pale violet light spills across the ground toward the figure, edged in soft light violet, suggesting steady brightness returning to lift a darkened mood.",
+    "sensitive": false
+  },
+  "CAT07-044": {
+    "headline": "Seasons And Mood",
+    "subtitle": "How seasons affect mood even without diagnosis",
+    "figureLine": "A single standing clay figure turns slowly in place, weight shifting from one foot to the other, posture attuned and unhurried, conveying mood drifting with the turning year.",
+    "sceneLine": "A slow circular band of violet accent forms cycles around the figure, fading from soft light violet to pale violet and back, suggesting the gentle seasonal tide that moves the inner weather.",
+    "sensitive": false
+  },
+  "CAT07-045": {
+    "headline": "Circadian Rhythms",
+    "subtitle": "How they shape mood and mental health",
+    "figureLine": "A single reclining clay figure rests in a calm, rhythmic curve, one arm rising and settling, posture steady and cyclic, conveying the body's daily inner clock keeping time.",
+    "sceneLine": "A smooth violet accent wave arcs across the scene above the figure, cresting in soft light violet and dipping into pale violet, suggesting the steady daily rhythm that orders mood and mind.",
+    "sensitive": false
+  },
+  "CAT08-021": {
+    "headline": "Morning Routines",
+    "subtitle": "What the research actually says",
+    "figureLine": "A single standing clay figure rises and stretches upward with both arms, posture awake and grounded, conveying a calm, deliberate start to the day.",
+    "sceneLine": "A low violet accent glow gathers at the figure's feet and rises gently into soft light violet overhead, suggesting the slow, honest brightening of an unhurried morning.",
+    "sensitive": false
+  },
+  "CAT08-022": {
+    "headline": "Evening Wind-Down",
+    "subtitle": "Routines that prepare the brain for sleep",
+    "figureLine": "A single seated clay figure folds slowly inward, shoulders lowering and hands resting in the lap, posture loosening, conveying the day's tension being set down before rest.",
+    "sceneLine": "A soft violet accent haze dims gradually around the figure into pale violet at the edges, suggesting the gentle dimming that eases the mind toward sleep.",
+    "sensitive": false
+  },
+  "CAT08-027": {
+    "headline": "Midday Reset",
+    "subtitle": "A routine to prevent the afternoon crash",
+    "figureLine": "A single standing clay figure pauses mid-stride and draws one slow breath, chest lifting, posture re-centering, conveying a brief restorative pause in the middle of the day.",
+    "sceneLine": "A small, bright violet accent orb hovers level at the figure's center, soft light violet rippling outward, suggesting renewed steady energy gathered for the rest of the day.",
+    "sensitive": false
+  },
+  "CAT08-028": {
+    "headline": "Weekend Vs Weekday",
+    "subtitle": "Finding the right balance in routines",
+    "figureLine": "A single standing clay figure holds its arms in a calm, even balance, weight settled equally on both feet, posture poised, conveying steadiness held between two rhythms.",
+    "sceneLine": "Two gentle violet accent forms rest on either side of the figure, one soft light violet and one pale violet, level and equal, suggesting weekday and weekend held in honest balance.",
+    "sensitive": false
+  },
+  "CAT08-030": {
+    "headline": "Adapting Routines",
+    "subtitle": "Adjusting to seasonal changes in light and energy",
+    "figureLine": "A single standing clay figure adjusts its stance gradually, one shoulder dipping and the other lifting, posture flexible and responsive, conveying gentle adaptation to changing days.",
+    "sceneLine": "A long violet accent gradient shifts across the scene beside the figure, fading from soft light violet into pale violet, suggesting the slow seasonal change in light the figure bends to meet.",
+    "sensitive": false
+  },
+  "CAT08-037": {
+    "headline": "Bedtime Procrastination",
+    "subtitle": "Revenge bedtime procrastination and sleep loss",
+    "figureLine": "A single clay figure sits up at the edge of rest, one hand reaching back toward a soft glow while the body leans the other way, posture caught between holding on and letting go.",
+    "sceneLine": "A small pool of violet accent light lingers within reach of the figure as the surrounding pale violet deepens, suggesting late hours quietly borrowed from sleep.",
+    "sensitive": false
+  },
+  "CAT08-046": {
+    "headline": "Sleep And Willpower",
+    "subtitle": "How sleep deprivation undermines self-control",
+    "figureLine": "A single standing clay figure sways slightly, one hand pressed to its center as if steadying itself, posture worn but upright, conveying resolve thinning under tiredness.",
+    "sceneLine": "A frayed violet accent thread loosens at the figure's hands, its soft light violet strands slackening toward pale violet, suggesting self-control quietly weakening when rest runs short.",
+    "sensitive": false
+  },
+  "CAT10-016": {
+    "headline": "Nighttime Screen Use",
+    "subtitle": "How nighttime screen use disrupts sleep",
+    "figureLine": "A single reclining clay figure stays half-turned and alert in the dark, one hand raised toward a small cold glow, posture restless and held awake, conveying rest interrupted.",
+    "sceneLine": "A single hard, cool violet accent shard of light cuts across the settling pale violet dark near the figure, suggesting an unnatural late glow holding sleep at bay.",
+    "sensitive": false
+  },
+  "CAT19-027": {
+    "headline": "Men And Sleep",
+    "subtitle": "How sleep problems affect men differently",
+    "figureLine": "A single seated clay figure sits heavily with elbows on knees and head bowed, posture quietly burdened, conveying restless nights carried inward and unspoken.",
+    "sceneLine": "A dense violet accent weight settles low around the figure's shoulders, its soft light violet thinning into pale violet above, suggesting a particular tiredness held privately.",
+    "sensitive": false
+  },
+  "CAT20-020": {
+    "headline": "Chronic Pain And Sleep",
+    "subtitle": "Breaking the vicious cycle",
+    "figureLine": "A single reclining clay figure rests in a slow, easing curve, one hand laid softly over its center, posture protected and gradually settling, conveying steadiness returning after a hard stretch.",
+    "sceneLine": "A tightly looped violet accent ring loosens gently beside the figure, its soft light violet coils opening toward pale violet, suggesting a self-feeding cycle quietly easing its grip.",
+    "sensitive": true
+  }
+}

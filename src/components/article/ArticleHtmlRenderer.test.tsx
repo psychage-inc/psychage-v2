@@ -63,3 +63,42 @@ describe('ArticleHtmlRenderer — embed visibility regression guard', () => {
     expect(container.innerHTML).not.toContain('onerror');
   });
 });
+
+/**
+ * Dead accordion/tab husks: lossy SSR seeding baked Radix accordion/tab blocks
+ * whose panel bodies were unmounted, leaving empty `role="region"` panels. A
+ * block whose panels are ALL empty is hidden so no broken interactive box shows;
+ * a block with any surviving panel content is kept.
+ */
+const huskHtml = `
+  <p>intro</p>
+  <div class="not-prose my-8" style="opacity:0;transform:translateY(16px)">
+    <div dir="ltr" data-orientation="horizontal">
+      <div role="tablist"><h3>Section A</h3><h3>Section B</h3></div>
+      <div role="region" aria-labelledby="a"></div>
+      <div role="region" aria-labelledby="b"></div>
+    </div>
+  </div>
+  <div class="not-prose live-tabs" style="opacity:0">
+    <div data-orientation="horizontal">
+      <div role="tablist"><h3>Live</h3></div>
+      <div role="region"><p>real content</p></div>
+    </div>
+  </div>
+`;
+
+describe('ArticleHtmlRenderer — dead accordion/tab husk collapse', () => {
+  it('hides a block whose panels are all empty, keeps one with content', () => {
+    const { container } = render(<ArticleHtmlRenderer html={huskHtml} />);
+
+    const wrappers = container.querySelectorAll<HTMLElement>('.not-prose');
+    expect(wrappers.length).toBe(2); // both wrappers preserved in the DOM
+    expect(wrappers[0].style.display).toBe('none'); // all-empty husk hidden
+    expect(wrappers[1].style.display).not.toBe('none'); // surviving content kept
+  });
+
+  it('does not drop surviving panel content', () => {
+    const { container } = render(<ArticleHtmlRenderer html={huskHtml} />);
+    expect(container.textContent).toContain('real content');
+  });
+});

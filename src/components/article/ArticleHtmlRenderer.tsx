@@ -53,6 +53,26 @@ function ArticleHtmlRenderer({ html, className }: { html: string; className?: st
       }
     });
 
+    // Collapse dead accordion/tab husks: older static-render seeding baked Radix
+    // accordion/tab blocks (a `[data-orientation]` root with `role="region"`/
+    // `role="tabpanel"` panels) whose panel bodies were unmounted during SSR, leaving
+    // them empty. With no content to show, the interactive shell renders as a dead/blank
+    // widget. If EVERY panel in a block is empty, hide the whole block so no broken box
+    // remains; a block with any surviving panel content is left untouched.
+    const accordionRoots = containerRef.current.querySelectorAll<HTMLElement>('[data-orientation]');
+    const hiddenHusks = new Set<HTMLElement>();
+    accordionRoots.forEach((root) => {
+      const wrapper = (root.closest('.not-prose') as HTMLElement | null) ?? root;
+      if (hiddenHusks.has(wrapper)) return;
+      const panels = wrapper.querySelectorAll('[role="region"], [role="tabpanel"]');
+      if (panels.length === 0) return;
+      const allEmpty = Array.from(panels).every((p) => p.innerHTML.trim() === '');
+      if (allEmpty) {
+        wrapper.style.display = 'none';
+        hiddenHusks.add(wrapper);
+      }
+    });
+
     // Guarantee every table can scroll horizontally on narrow screens. Seeded ComparisonTable
     // markup already ships an `.overflow-x-auto` wrapper, but raw/markdown `<table>`s (and any
     // other authoring path) may not — and with `.article-prose td/th { min-width: 80px }` a

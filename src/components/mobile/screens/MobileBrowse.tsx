@@ -1,24 +1,65 @@
-import React from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import * as Tabs from '@radix-ui/react-tabs';
-import { Search } from 'lucide-react';
+import { Search, ArrowRight } from 'lucide-react';
 import { useCategoryData } from '@/hooks/useCategoryData';
 import {
-    CategoryCard,
-    CategoryCardSkeleton,
-} from '@/components/mobile/cards/CategoryCard';
+    ArticleRowCard,
+    ArticleRowCardSkeleton,
+} from '@/components/mobile/cards/ArticleRowCard';
+import { articleService } from '@/services/articleService';
+import { resolveCanonicalSlug } from '@/config/taxonomy';
+import type { Article } from '@/types/models';
 
 /**
- * Mobile Browse — the canonical topic index (route `/learn`). Lists every
- * populated category, grouped by the three top-level groups, behind a
- * persistent segmented switcher so any topic is reachable in two taps.
- *
- * Consumes the foundation's `useCategoryData` (single source of truth — already
- * drops zero-article categories) and the shared `CategoryCard`; it never
- * re-fetches or re-authors them. Editorial rails live on Home, not here.
+ * Mobile Browse — the "All Articles" index (route `/learn`). Each populated
+ * category is its own section: the category title, then a horizontal rail of
+ * that category's articles, repeated down the page and organised under the
+ * three top-level groups. A "See all" link on each title opens the full
+ * category. Consumes `useCategoryData` (drops empty categories) and the shared
+ * `ArticleRowCard`; never re-authors them.
  */
+
+const RAIL_LIMIT = 10;
+
 const MobileBrowse: React.FC = () => {
-    const { groups, isLoading, error } = useCategoryData();
+    const { groups, isLoading: categoriesLoading, error } = useCategoryData();
+    const [articles, setArticles] = useState<Article[]>([]);
+    const [articlesLoading, setArticlesLoading] = useState(true);
+
+    useEffect(() => {
+        let cancelled = false;
+        articleService
+            .getAll()
+            .then((all) => {
+                if (!cancelled) setArticles(all);
+            })
+            .catch((err) => {
+                console.warn('[MobileBrowse] Failed to fetch articles:', err);
+            })
+            .finally(() => {
+                if (!cancelled) setArticlesLoading(false);
+            });
+        return () => {
+            cancelled = true;
+        };
+    }, []);
+
+    // Articles bucketed by category slug, newest order preserved.
+    const byCategory = useMemo(() => {
+        const map = new Map<string, Article[]>();
+        for (const a of articles) {
+            // Fold legacy slugs (e.g. 'trauma-ptsd') onto canonical so rows bucket
+            // under the canonical category the rail is keyed by.
+            const slug = a.category?.slug ? resolveCanonicalSlug(a.category.slug) : undefined;
+            if (!slug) continue;
+            const bucket = map.get(slug);
+            if (bucket) bucket.push(a);
+            else map.set(slug, [a]);
+        }
+        return map;
+    }, [articles]);
+
+    const loading = categoriesLoading || articlesLoading;
 
     return (
         <div className="px-4 py-6">
@@ -27,7 +68,7 @@ const MobileBrowse: React.FC = () => {
                     Learn
                 </p>
                 <h1 className="mt-1 font-display text-2xl font-semibold text-text-primary">
-                    Browse
+                    All Articles
                 </h1>
                 <p className="mt-2 text-sm text-text-secondary">
                     Find any topic across mental health.
@@ -43,10 +84,17 @@ const MobileBrowse: React.FC = () => {
                 <span>Search topics…</span>
             </Link>
 
-            {isLoading ? (
-                <div className="mt-6 grid grid-cols-2 gap-4">
-                    {Array.from({ length: 6 }).map((_, i) => (
-                        <CategoryCardSkeleton key={i} />
+            {loading ? (
+                <div className="mt-8 space-y-8">
+                    {Array.from({ length: 3 }).map((_, i) => (
+                        <section key={i}>
+                            <div className="h-5 w-44 animate-pulse rounded bg-surface-hover" />
+                            <div className="-mx-4 mt-3 flex gap-3 overflow-hidden px-4">
+                                {Array.from({ length: 3 }).map((_, j) => (
+                                    <ArticleRowCardSkeleton key={j} className="w-64 shrink-0" />
+                                ))}
+                            </div>
+                        </section>
                     ))}
                 </div>
             ) : error ? (
@@ -54,36 +102,57 @@ const MobileBrowse: React.FC = () => {
                     We couldn’t load topics right now. Please try again in a moment.
                 </p>
             ) : (
-                <Tabs.Root defaultValue={groups[0]?.id} className="mt-6">
-                    <Tabs.List
-                        aria-label="Topic groups"
-                        className="flex items-stretch gap-1 rounded-2xl bg-surface-hover p-1"
-                    >
-                        {groups.map((group) => (
-                            <Tabs.Trigger
-                                key={group.id}
-                                value={group.id}
-                                className="flex flex-1 items-center justify-center rounded-xl px-2 py-2 text-center text-xs font-medium leading-tight text-text-tertiary transition-colors min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary data-[state=active]:bg-background data-[state=active]:text-text-primary data-[state=active]:shadow-sm"
-                            >
-                                {group.title}
-                            </Tabs.Trigger>
-                        ))}
-                    </Tabs.List>
-
-                    {groups.map((group) => (
-                        <Tabs.Content
-                            key={group.id}
-                            value={group.id}
-                            className="pt-5 focus:outline-none"
-                        >
-                            <div className="grid grid-cols-2 gap-4">
-                                {group.categories.map((category) => (
-                                    <CategoryCard key={category.id} category={category} />
-                                ))}
+                <div className="mt-8 space-y-10">
+                    {groups.map((group) => {
+                        // Only categories that actually have articles loaded.
+                        const populated = group.categories.filter(
+                            (cat) => (byCategory.get(cat.slug)?.length ?? 0) > 0,
+                        );
+                        if (populated.length === 0) return null;
+                        return (
+                            <div key={group.id} className="space-y-8">
+                                <h2 className="text-xs font-medium uppercase tracking-wide text-text-tertiary">
+                                    {group.title}
+                                </h2>
+                                {populated.map((cat) => {
+                                    const items = (byCategory.get(cat.slug) ?? []).slice(
+                                        0,
+                                        RAIL_LIMIT,
+                                    );
+                                    return (
+                                        <section key={cat.slug}>
+                                            <div className="flex items-baseline justify-between gap-3">
+                                                <Link
+                                                    to={`/learn/${cat.slug}`}
+                                                    className="font-display text-lg font-semibold leading-tight text-text-primary line-clamp-1"
+                                                >
+                                                    {cat.name}
+                                                </Link>
+                                                <Link
+                                                    to={`/learn/${cat.slug}`}
+                                                    className="flex shrink-0 items-center gap-0.5 text-xs font-medium text-primary"
+                                                >
+                                                    See all
+                                                    <ArrowRight size={12} aria-hidden />
+                                                </Link>
+                                            </div>
+                                            <div className="-mx-4 mt-3 flex snap-x gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                                                {items.map((a) => (
+                                                    <ArticleRowCard
+                                                        key={a.id}
+                                                        article={a}
+                                                        showCategory={false}
+                                                        className="w-64 shrink-0 snap-start"
+                                                    />
+                                                ))}
+                                            </div>
+                                        </section>
+                                    );
+                                })}
                             </div>
-                        </Tabs.Content>
-                    ))}
-                </Tabs.Root>
+                        );
+                    })}
+                </div>
             )}
         </div>
     );

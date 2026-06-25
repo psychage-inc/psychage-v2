@@ -84,7 +84,8 @@ const ProviderCardComponent: React.FC<ProviderCardProps> = ({ provider }) => {
         </Link>
 
         <div className="min-w-0 flex-1">
-          <Link to={`/providers/${provider.id}`} className="hover:underline decoration-teal-500 decoration-2 underline-offset-2">
+          <div className="flex items-start min-w-0">
+          <Link to={`/providers/${provider.id}`} className="min-w-0 hover:underline decoration-teal-500 decoration-2 underline-offset-2">
             <h3 className="font-display font-bold text-lg text-text-primary leading-tight">
               {provider.display_name}
               {provider.credentials_suffix && (
@@ -129,6 +130,7 @@ const ProviderCardComponent: React.FC<ProviderCardProps> = ({ provider }) => {
               </TooltipPrimitive.Root>
             </TooltipPrimitive.Provider>
           )}
+          </div>
           <p className="text-sm text-text-tertiary mt-0.5">
             {provider.provider_type_label || t('providers.card.provider')}
           </p>

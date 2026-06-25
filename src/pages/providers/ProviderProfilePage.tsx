@@ -133,6 +133,26 @@ const ProviderProfilePage: React.FC = () => {
             </div>
           )}
 
+          {/* Claim CTA — surfaced right under the unclaimed notice so claiming is
+              the first action, not buried beneath the dense profile detail. */}
+          {provider.status === 'seeded' && provider.npi_number && (
+            <div className="bg-surface border-2 border-dashed border-teal-300 dark:border-teal-700 rounded-2xl p-6 text-center">
+              <h3 className="font-display font-bold text-lg text-text-primary mb-2">
+                {t('providers.profile.claim_title')}
+              </h3>
+              <p className="text-sm text-text-secondary mb-4 max-w-md mx-auto">
+                {t('providers.profile.claim_desc')}
+              </p>
+              <Link
+                to={`/for-providers/claim?npi=${encodeURIComponent(provider.npi_number)}`}
+                className="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white font-bold text-sm px-6 py-2.5 rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
+              >
+                {t('providers.profile.claim_button')}
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+          )}
+
           <ContactActions provider={provider} sticky />
           {provider.bio && <AboutSection provider={provider} />}
           <SpecialtiesGrid provider={provider} />
@@ -145,25 +165,6 @@ const ProviderProfilePage: React.FC = () => {
             <CulturalBadges provider={provider} />
           )}
         </motion.div>
-
-        {/* Claim CTA for seeded profiles */}
-        {provider.status === 'seeded' && provider.npi_number && (
-          <div className="bg-surface border-2 border-dashed border-teal-300 dark:border-teal-700 rounded-2xl p-6 text-center mt-8">
-            <h3 className="font-display font-bold text-lg text-text-primary mb-2">
-              {t('providers.profile.claim_title')}
-            </h3>
-            <p className="text-sm text-text-secondary mb-4 max-w-md mx-auto">
-              {t('providers.profile.claim_desc')}
-            </p>
-            <Link
-              to={`/for-providers/claim?npi=${encodeURIComponent(provider.npi_number)}`}
-              className="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white font-bold text-sm px-6 py-2.5 rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
-            >
-              {t('providers.profile.claim_button')}
-              <ArrowRight size={16} />
-            </Link>
-          </div>
-        )}
 
         {/* Find Similar Providers */}
         {topSpecialty && (

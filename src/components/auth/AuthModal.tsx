@@ -178,8 +178,8 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                             <div className="absolute -top-24 -right-24 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl pointer-events-none" />
 
                             <div className="p-8 relative z-10">
-                                <div className="flex items-center justify-between mb-8">
-                                    <div className="flex items-center gap-2">
+                                <div className="flex items-start justify-between mb-8">
+                                    <div className="flex flex-col items-start gap-2">
                                         <Logo className="h-10 w-auto text-[#1A1A1A] dark:text-white" />
                                         <h2 className="text-2xl font-display font-bold text-text-primary">
                                             {view === 'login' ? 'Welcome back' : view === 'signup' ? 'Join the Journey' : 'Reset password'}

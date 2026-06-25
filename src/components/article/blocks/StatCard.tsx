@@ -35,7 +35,10 @@ interface StatCardProps {
 }
 
 function useCountUp(end: number, isActive: boolean, shouldAnimate: boolean, duration = 1500) {
-    const [count, setCount] = useState(0);
+    // SSR (renderToStaticMarkup, used by the article seeder) has no effects and no window,
+    // so a `useState(0)` would bake a literal "0" into the stored HTML and lose the real value.
+    // Start at the final value on the server; the client still animates 0 → end as before.
+    const [count, setCount] = useState(() => (typeof window === 'undefined' ? end : 0));
 
     useEffect(() => {
         if (!isActive) return;

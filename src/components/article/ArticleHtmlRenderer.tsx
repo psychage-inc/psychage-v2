@@ -52,6 +52,20 @@ function ArticleHtmlRenderer({ html, className }: { html: string; className?: st
         el.style.transform = '';
       }
     });
+
+    // Guarantee every table can scroll horizontally on narrow screens. Seeded ComparisonTable
+    // markup already ships an `.overflow-x-auto` wrapper, but raw/markdown `<table>`s (and any
+    // other authoring path) may not — and with `.article-prose td/th { min-width: 80px }` a
+    // multi-column table easily exceeds 375px and would clip its rightmost columns. Wrap any
+    // table that isn't already inside a scroll container; no-op when one is already present.
+    const tables = containerRef.current.querySelectorAll<HTMLTableElement>('table');
+    tables.forEach((table) => {
+      if (table.closest('.overflow-x-auto')) return; // already scrollable
+      const wrapper = document.createElement('div');
+      wrapper.className = 'overflow-x-auto';
+      table.parentElement?.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+    });
   }, [html]);
 
   // Hydrate chart blocks embedded as data attributes

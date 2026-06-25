@@ -102,3 +102,48 @@ describe('ArticleHtmlRenderer — dead accordion/tab husk collapse', () => {
     expect(container.textContent).toContain('real content');
   });
 });
+
+/**
+ * Dead stat-card husks: StatCard's count-up starts at 0 and never animates under
+ * static render, so numeric stats bake to "0". A card whose numbers are ALL baked
+ * zeros is hidden (a false "0%" is misleading); a card with any real value, and a
+ * non-StatCard `tabular-nums` (e.g. a table), are left untouched.
+ */
+const statNumber = (v: string) =>
+  `<div class="text-4xl md:text-5xl font-bold text-text-primary tabular-nums">${v}</div><p class="mt-2 text-sm text-text-tertiary max-w-[200px]">A real statistic</p>`;
+const statHtml = `
+  <div class="not-prose my-8 rounded-2xl stat-zero">
+    <div class="grid grid-cols-2 divide-x divide-border">
+      <div class="flex flex-col items-center p-6">${statNumber('0%')}</div>
+      <div class="flex flex-col items-center p-6">${statNumber('0M')}</div>
+    </div>
+  </div>
+  <div class="not-prose my-8 rounded-2xl stat-real">
+    <div class="grid grid-cols-1">
+      <div class="flex flex-col items-center p-6">${statNumber('30%')}</div>
+    </div>
+  </div>
+  <table><thead><tr><th class="tabular-nums">0</th></tr></thead><tbody><tr><td>row</td></tr></tbody></table>
+`;
+
+describe('ArticleHtmlRenderer — dead stat-card husk collapse', () => {
+  it('hides a stat card whose numbers are all baked zeros', () => {
+    const { container } = render(<ArticleHtmlRenderer html={statHtml} />);
+    const zeroCard = container.querySelector<HTMLElement>('.stat-zero');
+    expect(zeroCard?.style.display).toBe('none');
+  });
+
+  it('keeps a stat card that has a real value', () => {
+    const { container } = render(<ArticleHtmlRenderer html={statHtml} />);
+    const realCard = container.querySelector<HTMLElement>('.stat-real');
+    expect(realCard?.style.display).not.toBe('none');
+    expect(container.textContent).toContain('30%');
+  });
+
+  it('leaves a non-StatCard table untouched (selector guard)', () => {
+    const { container } = render(<ArticleHtmlRenderer html={statHtml} />);
+    const table = container.querySelector('table');
+    expect(table).not.toBeNull();
+    expect((table as HTMLElement).style.display).not.toBe('none');
+  });
+});

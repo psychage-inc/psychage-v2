@@ -73,6 +73,31 @@ function ArticleHtmlRenderer({ html, className }: { html: string; className?: st
       }
     });
 
+    // Collapse dead stat-card husks: StatCard's count-up animation starts at 0 and never
+    // runs under static render, so numeric stats baked to "0" (only the suffix + label
+    // survived). A card showing "0%" for a real statistic is misleading — especially on a
+    // mental-health page — and the true value is unrecoverable from the stored HTML. If
+    // EVERY number in a stat card is a baked zero, hide the card; a card with any real
+    // value is left untouched. The big-number node is StatCard-specific (`.tabular-nums`
+    // + `text-4xl`); other `tabular-nums` (e.g. audio timecodes) use a smaller size.
+    const statNumbers = Array.from(
+      containerRef.current.querySelectorAll<HTMLElement>('.tabular-nums'),
+    ).filter((n) => n.className.includes('text-4xl'));
+    const statCards = new Set<HTMLElement>();
+    statNumbers.forEach((n) => {
+      const card = n.closest('.not-prose') as HTMLElement | null;
+      if (card) statCards.add(card);
+    });
+    statCards.forEach((card) => {
+      const nums = Array.from(card.querySelectorAll<HTMLElement>('.tabular-nums')).filter((n) =>
+        n.className.includes('text-4xl'),
+      );
+      if (nums.length === 0) return;
+      // A baked zero has `0` as its only digit: "0", "0%", "$0", "0M" — but not "30%"/"100%".
+      const allZero = nums.every((n) => /^[^\d]*0[^\d]*$/.test((n.textContent || '').trim()));
+      if (allZero) card.style.display = 'none';
+    });
+
     // Guarantee every table can scroll horizontally on narrow screens. Seeded ComparisonTable
     // markup already ships an `.overflow-x-auto` wrapper, but raw/markdown `<table>`s (and any
     // other authoring path) may not — and with `.article-prose td/th { min-width: 80px }` a

@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, Compass, Search, Sparkles, Stethoscope, Wrench } from 'lucide-react';
-import { ArticleRowCard, ArticleRowCardSkeleton } from '@/components/mobile/cards/ArticleRowCard';
+import { ArticleRowCard } from '@/components/mobile/cards/ArticleRowCard';
 import { CategoryCard, CategoryCardSkeleton } from '@/components/mobile/cards/CategoryCard';
 import { MobileHomeHero, MobileHomeHeroSkeleton } from '@/components/mobile/screens/MobileHomeHero';
 import { MobileHomeStartHere } from '@/components/mobile/screens/MobileHomeStartHere';
@@ -260,15 +260,19 @@ const MobileHome: React.FC = () => {
                 </section>
             )}
 
-            {/* Editor's Pick — category-diversified rail */}
+            {/* Editor's Pick — category-diversified rail, compact 2-col image-only grid */}
             {articlesLoading ? (
                 <section className="mt-8">
                     <h2 className="mb-2 text-xs font-medium uppercase tracking-wide text-text-tertiary">
                         Editor&rsquo;s Pick
                     </h2>
-                    <div className="flex flex-col gap-1">
-                        {Array.from({ length: 4 }).map((_, i) => (
-                            <ArticleRowCardSkeleton key={i} />
+                    <div className="grid grid-cols-2 gap-3">
+                        {Array.from({ length: EDITORS_PICK_LIMIT }).map((_, i) => (
+                            <div
+                                key={i}
+                                className="aspect-[16/9] animate-pulse rounded-xl bg-surface-hover"
+                                aria-hidden
+                            />
                         ))}
                     </div>
                 </section>
@@ -277,9 +281,23 @@ const MobileHome: React.FC = () => {
                     <h2 className="mb-2 text-xs font-medium uppercase tracking-wide text-text-tertiary">
                         Editor&rsquo;s Pick
                     </h2>
-                    <div className="flex flex-col gap-1">
-                        {rest.map((article) => (
-                            <ArticleRowCard key={article.id} article={article} />
+                    <div className="grid grid-cols-2 gap-3">
+                        {rest.slice(0, EDITORS_PICK_LIMIT).map((article) => (
+                            <Link
+                                key={article.id}
+                                to={`/learn/${article.category.slug}/${article.slug}`}
+                                aria-label={article.title}
+                                className="group relative block aspect-[16/9] overflow-hidden rounded-xl bg-surface-hover transition-opacity duration-200 hover:opacity-90 active:opacity-90"
+                            >
+                                {article.image ? (
+                                    <img
+                                        src={article.image}
+                                        alt=""
+                                        loading="lazy"
+                                        className="h-full w-full object-cover"
+                                    />
+                                ) : null}
+                            </Link>
                         ))}
                     </div>
                 </section>

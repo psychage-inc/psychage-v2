@@ -5,10 +5,11 @@ import type { Article } from '@/types/models';
 
 /**
  * Co-located Featured hero for MobileHome (route `/`) — the screen's primary
- * richness element. One curated article shown large, with its poster image and a
- * Fraunces (`font-display`) title overlay. Screen-prefixed and NOT shared: lives
- * only with MobileHome. Tapping invokes `onClick` (the screen navigates to the
- * canonical reader). Degrades calmly to a paper card when no poster exists.
+ * richness element. One curated article shown large as its clean poster image
+ * (the poster carries its own baked-in title, so no app overlay is drawn over it).
+ * Screen-prefixed and NOT shared: lives only with MobileHome. Tapping invokes
+ * `onClick` (the screen navigates to the canonical reader). Degrades calmly to a
+ * paper card with a Fraunces (`font-display`) title when no poster exists.
  */
 export interface MobileHomeHeroProps {
     article: Article;
@@ -35,24 +36,6 @@ export const MobileHomeHero: React.FC<MobileHomeHeroProps> = ({ article, onClick
             {poster ? (
                 <div className="relative aspect-[3/2] w-full overflow-hidden bg-surface-hover">
                     <img src={poster} alt="" className="h-full w-full object-cover" />
-                    {/* Bottom scrim so the title stays legible over any poster. */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                    <div className="absolute inset-x-0 bottom-0 flex flex-col gap-1.5 p-4">
-                        {category ? (
-                            <span className="text-xs font-medium uppercase tracking-wide text-white/80">
-                                {category}
-                            </span>
-                        ) : null}
-                        <h2 className="font-display text-2xl font-semibold leading-tight text-white line-clamp-3">
-                            {article.title}
-                        </h2>
-                        {hasReadTime ? (
-                            <span className="flex items-center gap-1.5 text-xs text-white/80">
-                                <Clock className="h-3.5 w-3.5" aria-hidden />
-                                {article.readTime} min read
-                            </span>
-                        ) : null}
-                    </div>
                 </div>
             ) : (
                 // Calm degradation — paper/surface card, no broken <img>.

@@ -30,7 +30,14 @@ const META: Record<Platform, { label: string; Icon: LucideIcon }> = {
   youtube: { label: 'YouTube', Icon: Youtube },
 };
 
+// Hidden for now — our social profiles aren't all live yet (annotation 195ac4d9).
+// Flip to `true` to restore the row once every link is real. Typed `boolean`
+// (not the literal `false`) so the rest of the component stays reachable for tsc.
+const SOCIAL_ENABLED: boolean = false;
+
 const SocialIcons: React.FC<SocialIconsProps> = ({ links, className = '', iconSize = 18 }) => {
+  if (!SOCIAL_ENABLED) return null;
+
   const platforms: Platform[] = ['twitter', 'instagram', 'linkedin', 'youtube'];
 
   const resolved = platforms

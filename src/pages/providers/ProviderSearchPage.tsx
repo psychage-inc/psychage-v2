@@ -150,8 +150,8 @@ const ProviderSearchPage: React.FC = () => {
         )}
 
         {/* Results Header */}
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center gap-4">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-6">
+          <div className="min-w-0">
             <div>
               <p className="text-sm text-text-tertiary" aria-live="polite" aria-atomic="true">
                 {isLoading ? t('providers.search.searching') : (
@@ -177,24 +177,26 @@ const ProviderSearchPage: React.FC = () => {
                 </p>
               )}
             </div>
-
-            <button
-                onClick={() => setMobileFiltersOpen(true)}
-                className="lg:hidden flex items-center gap-2 px-3 py-2 text-sm font-medium text-text-secondary bg-surface border border-border rounded-lg hover:bg-surface-hover"
-              >
-                <SlidersHorizontal size={16} />
-                {t('providers.search.filters')}
-                {hasActiveFilters && (
-                  <span className="w-2 h-2 rounded-full bg-primary" />
-                )}
-              </button>
           </div>
 
-          <ProviderSortDropdown
-            value={params.sort_by || 'relevance'}
-            onChange={(sort) => setParams({ sort_by: sort })}
-            showDistance={params.latitude != null}
-          />
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setMobileFiltersOpen(true)}
+              className="lg:hidden flex items-center gap-2 px-3 py-2 text-sm font-medium text-text-secondary bg-surface border border-border rounded-lg hover:bg-surface-hover"
+            >
+              <SlidersHorizontal size={16} />
+              {t('providers.search.filters')}
+              {hasActiveFilters && (
+                <span className="w-2 h-2 rounded-full bg-primary" />
+              )}
+            </button>
+
+            <ProviderSortDropdown
+              value={params.sort_by || 'relevance'}
+              onChange={(sort) => setParams({ sort_by: sort })}
+              showDistance={params.latitude != null}
+            />
+          </div>
         </div>
 
         {/* Main Layout */}

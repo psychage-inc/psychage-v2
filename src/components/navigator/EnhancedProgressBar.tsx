@@ -30,7 +30,6 @@ export const EnhancedProgressBar: React.FC<EnhancedProgressBarProps> = ({
             if (!prevCompletedRef.current.has(step)) fresh.add(step);
         });
         if (fresh.size > 0) {
-            // eslint-disable-next-line react-hooks/set-state-in-effect
             setNewlyCompleted(fresh);
             const timer = setTimeout(() => setNewlyCompleted(new Set()), 700);
             return () => clearTimeout(timer);

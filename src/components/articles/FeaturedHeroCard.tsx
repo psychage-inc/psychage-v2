@@ -22,7 +22,6 @@ const FeaturedHeroCard: React.FC<FeaturedHeroCardProps> = ({ article, onClick })
     // render rather than show a broken card.
     if (!article.slug || !article.category?.slug) {
         if (import.meta.env.DEV) {
-            // eslint-disable-next-line no-console
             console.warn('[FeaturedHeroCard] skipping article with missing slug', {
                 id: article.id,
                 title: article.title,

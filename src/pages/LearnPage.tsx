@@ -20,6 +20,8 @@ import FlatArticleCard from '../components/articles/FlatArticleCard';
 import FeaturedHeroCard from '../components/articles/FeaturedHeroCard';
 import TrendingListItem from '../components/articles/TrendingListItem';
 import { saveRecentlyRead, getRecentlyReadIds } from '../components/articles/recentlyRead';
+import { CATEGORY_POSTERS } from '../config/categoryPosters';
+import { resolveCanonicalSlug } from '../config/taxonomy';
 
 // ─── Priority ordering ──────────────────────────────────────────────
 const PRIORITY_CATEGORY_SLUGS = [
@@ -387,6 +389,47 @@ const LearnPage: React.FC = () => {
         return result;
     }, [categories, categoriesFromArticles, articlesByCategory]);
 
+    // Poster tiles for the horizontal browse row. Built from the FULL article
+    // corpus (not search-filtered) so the row shows every category and stays
+    // stable while a search is active. Each tile carries its wayfinding poster.
+    const categoryTiles = useMemo(() => {
+        const counts = new Map<string, number>();
+        for (const a of articles) {
+            const slug = a.category.slug;
+            counts.set(slug, (counts.get(slug) ?? 0) + 1);
+        }
+
+        const allSlugs = new Set([
+            ...categories.map(c => c.slug),
+            ...Array.from(categoriesFromArticles.keys()),
+        ]);
+
+        const catMap = new Map<string, Category>();
+        for (const slug of allSlugs) {
+            const cat = categoriesFromArticles.get(slug) || categories.find(c => c.slug === slug);
+            if (cat && (counts.get(slug) ?? 0) > 0) {
+                catMap.set(slug, cat);
+            }
+        }
+
+        const ordered: Category[] = [];
+        for (const slug of PRIORITY_CATEGORY_SLUGS) {
+            const cat = catMap.get(slug);
+            if (cat) {
+                ordered.push(cat);
+                catMap.delete(slug);
+            }
+        }
+        for (const cat of catMap.values()) {
+            ordered.push(cat);
+        }
+
+        return ordered.map(cat => ({
+            ...cat,
+            image: CATEGORY_POSTERS[resolveCanonicalSlug(cat.slug)] ?? CATEGORY_POSTERS[cat.slug] ?? '',
+        }));
+    }, [articles, categories, categoriesFromArticles]);
+
     // Featured articles: 7 picks (1 hero + 6 trending) from priority categories
     const featuredArticles = useMemo(() => {
         const picks: Article[] = [];
@@ -635,28 +678,42 @@ const LearnPage: React.FC = () => {
                         )}
                     </div>
 
-                    <div className="flex flex-wrap gap-2.5 mt-6">
-                        {orderedCategories.map(cat => (
-                            <button
-                                key={cat.slug}
-                                onClick={() => {
-                                    setSearchQuery('');
-                                    setActiveTab(cat.slug);
-                                    requestAnimationFrame(() => {
-                                        const target = document.getElementById(`cat-section-${cat.slug}`);
-                                        target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                    });
-                                }}
-                                aria-pressed={activeTab === cat.slug}
-                                className={`rounded-full px-4 py-1.5 border text-sm transition-colors ${
-                                    activeTab === cat.slug
-                                        ? 'border-primary bg-primary/5 text-primary font-semibold'
-                                        : 'border-border text-text-secondary hover:bg-surface-hover hover:text-text-primary'
-                                }`}
-                            >
-                                {cat.name}
-                            </button>
-                        ))}
+                    {/* Browse by category — horizontal poster row (desktop) */}
+                    <p className="text-xs text-text-tertiary font-semibold uppercase tracking-wider mt-8 mb-3">
+                        Browse by category
+                    </p>
+                    <div
+                        className="flex gap-4 overflow-x-auto pb-2 -mx-6 px-6"
+                        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' } as React.CSSProperties}
+                    >
+                        {categoryTiles.map(cat => {
+                            const theme = getCategoryTheme(cat.slug);
+                            return (
+                                <button
+                                    key={cat.slug}
+                                    onClick={() => navigate(getCategoryUrl(cat.slug))}
+                                    aria-label={`Browse ${cat.name}`}
+                                    className="group flex-shrink-0 w-48"
+                                >
+                                    <div className="aspect-video w-full overflow-hidden rounded-xl border border-border/50 bg-surface">
+                                        {cat.image ? (
+                                            <img
+                                                src={cat.image}
+                                                alt={cat.name}
+                                                loading="lazy"
+                                                className="w-full h-full object-cover transform group-hover:scale-[1.03] transition-transform duration-500 ease-out"
+                                            />
+                                        ) : (
+                                            <div className={`w-full h-full flex items-end p-3 ${theme.classes.bg}`}>
+                                                <span className="font-display font-bold text-sm text-white leading-snug line-clamp-3 drop-shadow-sm">
+                                                    {cat.name}
+                                                </span>
+                                            </div>
+                                        )}
+                                    </div>
+                                </button>
+                            );
+                        })}
                     </div>
                 </div>
             </section>

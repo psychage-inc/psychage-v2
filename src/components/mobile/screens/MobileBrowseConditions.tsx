@@ -7,19 +7,22 @@ import { ICD11_GROUPINGS } from '@/data/conditions/groupings';
 import type { Condition } from '@/types/condition';
 
 /**
- * "Learn about conditions" — the conditions index that sits AFTER the category grid
- * on the mobile Learn tab (`/learn` → MobileBrowse). A plain-language, navigational
- * way into all ICD-11 Chapter 6 conditions, grouped by family in `<details>` accordions.
+ * "Learn about conditions" — the conditions index rendered as the "Conditions" segment
+ * of the mobile Learn tab (`/learn` → MobileBrowse). A plain-language, navigational way
+ * into all ICD-11 Chapter 6 conditions, grouped by family in `<details>` accordions.
  *
  * Self-contained (own fetch + grouping + UI) so MobileBrowse stays thin. Reuses the
- * shared `listConditions()` reader — it never re-authors or re-fetches anything else.
+ * shared `listConditions()` reader + the `ICD11_GROUPINGS` order — the SAME source the
+ * web `/conditions` index reads, so the two surfaces can't drift. It never re-authors or
+ * re-fetches anything else.
  *
- * Clinical gate: `listConditions()` reads the anon-safe public masking view, and we
- * additionally surface ONLY `verification_status === 'verified'` rows. So no unreviewed
- * clinical definition is ever linked, and a row that is later un-verified simply drops
- * out — the section never renders a dead husk. If nothing is verified (or the DB is
- * unreachable and the draft-free taxonomy comes back unverified), the section renders
- * nothing at all rather than an empty shell.
+ * Parity with web: families are derived from EVERY condition present (not just verified),
+ * exactly like `ConditionsIndexPage`, so the list is complete down to the last ICD-11
+ * family. The clinical gate is field-level and server-authoritative: condition NAME +
+ * ICD-11 code + family are factual WHO reference and always public, while the four
+ * definition fields are masked by the public view until verified. Linking a row only
+ * exposes its name + code here; the detail page gates the definition itself. If the list
+ * truly can't load (no rows at all), the section renders nothing rather than an empty shell.
  */
 const MobileBrowseConditions: React.FC = () => {
     const { data, isLoading } = useQuery({
@@ -29,9 +32,11 @@ const MobileBrowseConditions: React.FC = () => {
     });
 
     const families = useMemo<{ grouping: string; conditions: Condition[] }[]>(() => {
-        const verified = (data ?? []).filter((c) => c.verification_status === 'verified');
+        // Group EVERY condition present, mirroring the web `/conditions` index — taxonomy
+        // (name/code/family) is always public, definitions are masked server-side until
+        // verified. No verification filter here, so the family list stays complete.
         const byFamily = new Map<string, Condition[]>();
-        for (const condition of verified) {
+        for (const condition of data ?? []) {
             const bucket = byFamily.get(condition.icd11_grouping);
             if (bucket) bucket.push(condition);
             else byFamily.set(condition.icd11_grouping, [condition]);

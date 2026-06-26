@@ -34,8 +34,10 @@ export const MobileHomeHero: React.FC<MobileHomeHeroProps> = ({ article, onClick
             )}
         >
             {poster ? (
-                <div className="relative aspect-[3/2] w-full overflow-hidden bg-surface-hover">
-                    <img src={poster} alt="" className="h-full w-full object-cover" />
+                // h-auto lets the poster set its own height so the box matches the
+                // image's natural aspect ratio — no object-cover crop, no letterbox.
+                <div className="relative w-full overflow-hidden bg-surface-hover">
+                    <img src={poster} alt="" className="block h-auto w-full" />
                 </div>
             ) : (
                 // Calm degradation — paper/surface card, no broken <img>.
@@ -70,7 +72,7 @@ export const MobileHomeHeroSkeleton: React.FC<{ className?: string }> = ({ class
         className={cn('overflow-hidden rounded-2xl border border-border bg-surface', className)}
         aria-hidden
     >
-        <div className="aspect-[3/2] w-full animate-pulse bg-surface-hover" />
+        <div className="aspect-video w-full animate-pulse bg-surface-hover" />
     </div>
 );
 

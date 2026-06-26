@@ -7,7 +7,6 @@ import {
     CategoryCard,
     CategoryCardSkeleton,
 } from '@/components/mobile/cards/CategoryCard';
-import MobileBrowseAllArticles from '@/components/mobile/screens/MobileBrowseAllArticles';
 import MobileBrowseInterestSheet from '@/components/mobile/screens/MobileBrowseInterestSheet';
 import MobileBrowseConditions from '@/components/mobile/screens/MobileBrowseConditions';
 
@@ -16,8 +15,9 @@ import MobileBrowseConditions from '@/components/mobile/screens/MobileBrowseCond
  * behind a segmented toggle:
  *  - "Topics": every populated category, grouped by the three top-level groups,
  *    behind a persistent switcher so any topic is reachable in two taps.
- *  - "All articles": the flat, paginated listing of every published article
- *    (`MobileBrowseAllArticles`, server-paged — never the whole corpus at once).
+ *  - "Conditions": the complete ICD-11 condition taxonomy, every family in
+ *    chapter order with a count and an expand chevron (`MobileBrowseConditions`,
+ *    same shared source as the web `/conditions` index — they can't drift).
  * Plus an interest-finder entry that opens a navigational-only chip sheet.
  *
  * Consumes the foundation's `useCategoryData` (single source of truth — already
@@ -26,7 +26,7 @@ import MobileBrowseConditions from '@/components/mobile/screens/MobileBrowseCond
  * reading) live on Home, not here.
  */
 
-type BrowseTab = 'topics' | 'all';
+type BrowseTab = 'topics' | 'conditions';
 
 const segmentBase =
     'flex flex-1 items-center justify-center rounded-xl px-2 py-2 text-center text-sm font-medium leading-tight transition-colors min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary';
@@ -80,7 +80,7 @@ const MobileBrowse: React.FC = () => {
                 <span>Search topics…</span>
             </Link>
 
-            {/* Topics / All articles toggle. */}
+            {/* Topics / Conditions toggle. */}
             <div
                 role="tablist"
                 aria-label="Browse view"
@@ -98,16 +98,16 @@ const MobileBrowse: React.FC = () => {
                 <button
                     type="button"
                     role="tab"
-                    aria-selected={tab === 'all'}
-                    onClick={() => setTab('all')}
-                    className={`${segmentBase} ${tab === 'all' ? segmentActive : segmentInactive}`}
+                    aria-selected={tab === 'conditions'}
+                    onClick={() => setTab('conditions')}
+                    className={`${segmentBase} ${tab === 'conditions' ? segmentActive : segmentInactive}`}
                 >
-                    All articles
+                    Conditions
                 </button>
             </div>
 
-            {tab === 'all' ? (
-                <MobileBrowseAllArticles />
+            {tab === 'conditions' ? (
+                <MobileBrowseConditions />
             ) : isLoading ? (
                 <div className="mt-6 grid grid-cols-2 gap-4">
                     {Array.from({ length: 6 }).map((_, i) => (
@@ -150,10 +150,6 @@ const MobileBrowse: React.FC = () => {
                     ))}
                 </Tabs.Root>
             )}
-
-            {/* Conditions index — part of the Topics view, after the category
-                grid. Hidden in the All-articles view. */}
-            {tab === 'topics' && <MobileBrowseConditions />}
 
             <MobileBrowseInterestSheet
                 open={finderOpen}

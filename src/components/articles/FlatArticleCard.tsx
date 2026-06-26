@@ -45,17 +45,19 @@ const FlatArticleCard: React.FC<FlatArticleCardProps> = ({
             role="button"
             aria-label={`Read article: ${article.title}`}
         >
-            <div className="aspect-[16/9] w-full overflow-hidden rounded-lg border border-border/50 bg-surface">
+            <div className="relative w-full overflow-hidden rounded-lg border border-border/50 bg-surface">
                 {article.image && !imgError ? (
+                    // h-auto lets the poster set its own height so the box matches the
+                    // image's natural aspect ratio — no object-cover crop, no letterbox.
                     <img
                         src={article.image}
                         alt={article.title}
-                        className="w-full h-full object-cover"
+                        className="block w-full h-auto"
                         loading="lazy"
                         onError={() => setImgError(true)}
                     />
                 ) : (
-                    <div className="w-full h-full flex items-center justify-center">
+                    <div className="aspect-[16/9] w-full flex items-center justify-center">
                         <FallbackIcon size={40} className="text-text-tertiary opacity-25" />
                     </div>
                 )}

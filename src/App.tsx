@@ -62,7 +62,6 @@ const ToolsPage = lazyWithRetry(() => import('./components/pages/ToolsPage'));
 const MoodJournal = lazyWithRetry(() => import('./components/tools/MoodJournal'));
 const SleepArchitect = lazyWithRetry(() => import('./components/tools/SleepArchitect'));
 const PsychageAIPage = lazyWithRetry(() => import('./pages/tools/MindMate'));
-const CategoryPage = lazyWithRetry(() => import('./components/pages/CategoryPage'));
 const SearchResults = lazyWithRetry(() => import('./components/pages/SearchResults'));
 const ClarityScoreTool = lazyWithRetry(() => import('./components/pages/ClarityScoreTool'));
 const AboutPage = lazyWithRetry(() => import('./components/pages/AboutPage'));
@@ -119,6 +118,14 @@ const OnboardingPage = lazyWithRetry(() => import('./pages/OnboardingPage'));
 const LegacyProviderRedirect: React.FC = () => {
   const { id } = useParams();
   return <Navigate to={`/providers/${id}`} replace />;
+};
+
+/** Legacy `/category/:category` → canonical `/learn/:category` (which resolves
+ *  legacy slugs via resolveCanonicalSlug). The old CategoryPage used a separate,
+ *  taxonomy-unaware data path; this folds it into the single Learn pipeline. */
+const CategoryRedirect: React.FC = () => {
+  const { category } = useParams();
+  return <Navigate to={category ? `/learn/${category}` : '/learn'} replace />;
 };
 
 // Provider Portal V2
@@ -303,7 +310,7 @@ const App: React.FC = () => {
                                             <Route path="/tools/clarity-journal/insights" element={<PageTransition><ClarityJournalInsights /></PageTransition>} />
                                             <Route path="/tools/clarity-journal/entry" element={<PageTransition><ClarityJournalDailyEntry /></PageTransition>} />
                                             <Route path="/tools/clarity-journal/report" element={<PageTransition><ClarityJournalReport /></PageTransition>} />
-                                            <Route path="/category/:category" element={<PageTransition><CategoryPage /></PageTransition>} />
+                                            <Route path="/category/:category" element={<CategoryRedirect />} />
                                             <Route path="/search" element={<PageTransition><ResponsiveRoute mobile={<MobileSearch />} desktop={<SearchResults />} /></PageTransition>} />
                                             <Route path="/clarity-score" element={<PageTransition><RouteErrorBoundary><ClarityScoreTool /></RouteErrorBoundary></PageTransition>} />
                                             {/* Legacy alias — older copy / breadcrumbs reference /tools/clarity-score */}

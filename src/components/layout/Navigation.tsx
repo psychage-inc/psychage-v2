@@ -420,7 +420,7 @@ const Navigation: React.FC = () => {
                                     activeMenuItem={primaryNavItems.find(item => item.label === activeTab) || null}
                                     onMouseLeave={() => { }} // Handled by wrapper
                                     onCategorySelect={(category) => {
-                                        navigate(`/category/${category}`);
+                                        navigate(`/learn/${category}`);
                                         setActiveTab(null);
                                     }}
                                     onNavigateGeneric={(view) => {

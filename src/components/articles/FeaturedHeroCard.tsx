@@ -38,17 +38,19 @@ const FeaturedHeroCard: React.FC<FeaturedHeroCardProps> = ({ article, onClick })
 
     return (
         <button onClick={onClick} className="group text-left w-full">
-            <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-border">
+            <div className="relative w-full overflow-hidden rounded-xl border border-border">
                 {article.image && !imgError ? (
+                    // h-auto lets the poster set its own height so the box matches the
+                    // image's natural aspect ratio — no object-cover crop, no letterbox.
                     <img
                         src={article.image}
                         alt={article.title}
-                        className="w-full h-full object-cover"
+                        className="block w-full h-auto"
                         loading="lazy"
                         onError={() => setImgError(true)}
                     />
                 ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-surface">
+                    <div className="aspect-video w-full flex items-center justify-center bg-surface">
                         <FallbackIcon size={64} className="text-text-tertiary opacity-30" />
                     </div>
                 )}

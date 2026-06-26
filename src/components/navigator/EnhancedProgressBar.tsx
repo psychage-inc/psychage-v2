@@ -79,7 +79,7 @@ export const EnhancedProgressBar: React.FC<EnhancedProgressBarProps> = ({
     return (
         <>
             <div
-                className="fixed top-0 left-0 right-0 bg-background/90 backdrop-blur-md border-b border-border z-50"
+                className="fixed top-14 sm:top-20 left-0 right-0 bg-background/90 backdrop-blur-md border-b border-border z-40"
                 role="navigation"
                 aria-label="Navigator progress"
             >

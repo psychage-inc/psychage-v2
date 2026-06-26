@@ -135,7 +135,7 @@ export const NavigatorFlow: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-background text-text-primary transition-colors pt-16 lg:pt-24 relative pb-20 sm:pb-0 overflow-x-hidden">
+        <div className="min-h-screen bg-background text-text-primary transition-colors pt-24 relative pb-20 sm:pb-0 overflow-x-hidden">
             <LiveRegion politeMessage={politeMsg} assertiveMessage={assertiveMsg} />
 
             {/* Immersive Background */}

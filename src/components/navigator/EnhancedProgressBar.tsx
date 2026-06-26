@@ -30,7 +30,6 @@ export const EnhancedProgressBar: React.FC<EnhancedProgressBarProps> = ({
             if (!prevCompletedRef.current.has(step)) fresh.add(step);
         });
         if (fresh.size > 0) {
-            // eslint-disable-next-line react-hooks/set-state-in-effect
             setNewlyCompleted(fresh);
             const timer = setTimeout(() => setNewlyCompleted(new Set()), 700);
             return () => clearTimeout(timer);
@@ -79,7 +78,7 @@ export const EnhancedProgressBar: React.FC<EnhancedProgressBarProps> = ({
     return (
         <>
             <div
-                className="fixed top-0 left-0 right-0 bg-background/90 backdrop-blur-md border-b border-border z-50"
+                className="fixed top-14 sm:top-20 left-0 right-0 bg-background/90 backdrop-blur-md border-b border-border z-40"
                 role="navigation"
                 aria-label="Navigator progress"
             >

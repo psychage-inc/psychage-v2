@@ -63,3 +63,32 @@ predicate runs on both raw `app_metadata.role` claims and the app's own coarse `
    `VITE_ADMIN_URL` is unset) — confirms the fix without waiting on DNS.
 4. Separately, for prod on `admin.psychage.com`: attach the subdomain in Vercel, add the
    DNS CNAME, set `VITE_ADMIN_URL`. This host-rewrite path is independent of the login fix.
+
+## Provisioning / resetting a REAL admin (when a person's password or email "won't work")
+
+The login *code* is correct; "password/email not working" is almost always an
+account-data problem in the live DB, not a UI bug. The hard-coded
+`create-demo-admin.ts` / `seed-admin.mjs` only handle the demo/test emails.
+Use `scripts/provision-admin.mjs` for any real account — it is idempotent and
+safe to run against production:
+
+```bash
+# Point your shell at PRODUCTION first:
+export VITE_SUPABASE_URL=https://<project>.supabase.co
+export SUPABASE_SERVICE_ROLE_KEY=<prod service-role key>   # never commit this
+
+# Create-or-repair the account (resets password, confirms email, grants role,
+# and verifies the synced app_metadata.role claim):
+node scripts/provision-admin.mjs --email lena@psychage.com --password 'NewStrongPass123!'
+
+# Non-super-admin tiers:
+node scripts/provision-admin.mjs --email lena@psychage.com --password '...' --role clinical_admin
+```
+
+It handles all three failure modes behind "can't log in":
+- **wrong/never-set password or unconfirmed email** → resets password + `email_confirm`;
+- **no `admin_roles` row** (panel rejects with "does not have admin access") → upserts it;
+- **stale JWT claim** → the `admin_roles` trigger re-syncs `app_metadata.role`, and the
+  script reads the user back to confirm the claim landed.
+
+After running, have the person **log out and back in** so their JWT refreshes.

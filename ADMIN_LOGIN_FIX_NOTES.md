@@ -73,17 +73,28 @@ Use `scripts/provision-admin.mjs` for any real account — it is idempotent and
 safe to run against production:
 
 ```bash
-# Point your shell at PRODUCTION first:
+# Point your shell at PRODUCTION first. VITE_SUPABASE_URL MUST be the same
+# project the live admin site talks to (Vercel → Settings → Env Vars):
 export VITE_SUPABASE_URL=https://<project>.supabase.co
 export SUPABASE_SERVICE_ROLE_KEY=<prod service-role key>   # never commit this
+export VITE_SUPABASE_ANON_KEY=<prod anon key>              # enables the real login test
 
 # Create-or-repair the account (resets password, confirms email, grants role,
-# and verifies the synced app_metadata.role claim):
+# verifies the synced app_metadata.role claim, and then actually SIGNS IN to
+# prove the credentials work — look for "LOGIN TEST PASSED"):
 node scripts/provision-admin.mjs --email lena@psychage.com --password 'NewStrongPass123!'
 
 # Non-super-admin tiers:
 node scripts/provision-admin.mjs --email lena@psychage.com --password '...' --role clinical_admin
 ```
+
+**If the live site still rejects the password after the script reports
+success**, you ran it against the wrong Supabase project. The script's
+service-role steps will happily succeed on a dev/local project while prod is
+untouched. Confirm `VITE_SUPABASE_URL` above is byte-for-byte the value baked
+into the deployed app, then re-run. The built-in `LOGIN TEST` (enabled by the
+anon key) is the decisive proof — if it prints `LOGIN TEST PASSED`, those exact
+credentials will work in the browser against that project.
 
 It handles all three failure modes behind "can't log in":
 - **wrong/never-set password or unconfirmed email** → resets password + `email_confirm`;

@@ -27,6 +27,10 @@
  *     The AFTER trigger from 20260423000004 mirrors it into app_metadata.
  *   - Reads the user back and verifies app_metadata.role is set, so you
  *     know the JWT claim is correct before the person tries to log in.
+ *   - If the anon key is available, performs a REAL signInWithPassword
+ *     against the same project the app uses — proving the exact credentials
+ *     authenticate end-to-end ("LOGIN TEST PASSED"). This catches the #1
+ *     real-world failure: running the script against the wrong project.
  *
  * Credentials are read from the environment / .env — NEVER hard-coded and
  * NEVER printed (the password you pass is echoed back only as a masked
@@ -42,6 +46,11 @@
  * ── Required env (from .env or the shell) ───────────────────────────────
  *   VITE_SUPABASE_URL (or SUPABASE_URL)   — the project URL
  *   SUPABASE_SERVICE_ROLE_KEY             — service-role key (NEVER commit)
+ *   VITE_SUPABASE_ANON_KEY (recommended)  — enables the real login test
+ *
+ * CRITICAL: VITE_SUPABASE_URL must be the SAME project the live admin site
+ * talks to. If the site rejects the password after this script reports
+ * success, you almost certainly pointed it at the wrong project.
  *
  * Point these at PRODUCTION to fix a production login. The service-role key
  * bypasses RLS and email rate limits; treat it accordingly.
@@ -111,6 +120,7 @@ Options:
 
 Required environment:
   VITE_SUPABASE_URL (or SUPABASE_URL), SUPABASE_SERVICE_ROLE_KEY
+  VITE_SUPABASE_ANON_KEY (recommended — enables the real login test)
 `);
 }
 
@@ -281,6 +291,44 @@ async function main() {
                     'Apply the admin-role migrations, then re-run this script.',
             );
         }
+    }
+
+    // ── 4. PROVE login works — real sign-in with the anon key ───────────
+    // This is the decisive check. The service-role steps above can all
+    // succeed while the live site STILL rejects the password if the script
+    // was pointed at the wrong project. Doing an actual signInWithPassword
+    // against the SAME url the app uses removes all doubt: if this passes,
+    // the exact credentials you typed will work in the browser.
+    const anonKey = process.env.VITE_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY;
+    if (!anonKey) {
+        console.log(
+            '\n⚠ Skipping the real login test — set VITE_SUPABASE_ANON_KEY (or ' +
+                'SUPABASE_ANON_KEY) to have this script actually sign in and confirm ' +
+                'the credentials work end-to-end.',
+        );
+    } else {
+        const anonClient = createClient(supabaseUrl, anonKey, {
+            auth: { autoRefreshToken: false, persistSession: false },
+        });
+        const { data: signInData, error: signInError } =
+            await anonClient.auth.signInWithPassword({ email, password });
+        if (signInError) {
+            console.error(
+                `\n✗ LOGIN TEST FAILED: ${signInError.message}\n` +
+                    '  The same email + password were just rejected by THIS Supabase\n' +
+                    `  project (${supabaseUrl}). The most common cause is that this is\n` +
+                    '  NOT the project the live admin site talks to — double-check that\n' +
+                    '  VITE_SUPABASE_URL here matches the URL baked into the deployed app\n' +
+                    '  (Vercel → Project → Settings → Environment Variables).',
+            );
+            process.exit(1);
+        }
+        const signedInRole = signInData?.user?.app_metadata?.role;
+        await anonClient.auth.signOut();
+        console.log(
+            `\n✓ LOGIN TEST PASSED — signed in as ${email} ` +
+                `(app_metadata.role = '${signedInRole ?? '(unset)'}').`,
+        );
     }
 
     console.log('\n──────────────────────────────────────────────');

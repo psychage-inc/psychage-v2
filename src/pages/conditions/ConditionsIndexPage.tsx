@@ -1,10 +1,10 @@
-import React, { useDeferredValue, useMemo, useState } from 'react';
+import React, { useDeferredValue, useMemo, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { useAsyncData } from '@/hooks/useAsyncData';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
-import { useMediaQuery, MOBILE_NARROW_QUERY } from '@/hooks/useMediaQuery';
+import { useMediaQuery, MOBILE_NARROW_QUERY, BELOW_DESKTOP_QUERY } from '@/hooks/useMediaQuery';
 import { listConditions } from '@/services/conditionsService';
 import type { Condition } from '@/types/condition';
 import { CONDITION_DISCLAIMER } from '@/types/condition';
@@ -35,7 +35,9 @@ const ConditionsIndexPage: React.FC = () => {
     const [query, setQuery] = useState('');
     const [activeFamily, setActiveFamily] = useState<string | null>(null);
     const isPhone = useMediaQuery(MOBILE_NARROW_QUERY);
+    const belowDesktop = useMediaQuery(BELOW_DESKTOP_QUERY);
     const [selectedLetter, setSelectedLetter] = useState<string | null>(null);
+    const resultsRef = useRef<HTMLDivElement>(null);
 
     // Defer the filter input so typing stays smooth (sub-300ms perceived).
     const deferredQuery = useDeferredValue(query);
@@ -86,6 +88,18 @@ const ConditionsIndexPage: React.FC = () => {
     const visibleGroups = paginateOnMobile
         ? groups.filter((g) => g.letter === activeLetter)
         : groups;
+
+    // On mobile/tablet the tall chip block pushes results off-screen, so re-anchor the
+    // viewport to the results when a family filter changes. Desktop keeps its side rail.
+    const handleFamilyChange = (family: string | null) => {
+        setActiveFamily(family);
+        if (belowDesktop) {
+            resultsRef.current?.scrollIntoView({
+                behavior: reducedMotion ? 'auto' : 'smooth',
+                block: 'start',
+            });
+        }
+    };
 
     const handleJump = (letter: string) => {
         const el = document.getElementById(`cond-letter-${letter}`);
@@ -140,7 +154,7 @@ const ConditionsIndexPage: React.FC = () => {
                                 onQueryChange={setQuery}
                                 families={families}
                                 activeFamily={activeFamily}
-                                onFamilyChange={setActiveFamily}
+                                onFamilyChange={handleFamilyChange}
                                 resultCount={filtered.length}
                             />
                         )}
@@ -160,7 +174,10 @@ const ConditionsIndexPage: React.FC = () => {
                     )}
 
                     {/* Body: content + desktop rail */}
-                    <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_2.25rem]">
+                    <div
+                        ref={resultsRef}
+                        className="mt-8 grid scroll-mt-32 grid-cols-1 gap-8 lg:grid-cols-[1fr_2.25rem]"
+                    >
                         <div className="min-w-0">
                             {loading && <ConditionSkeleton />}
 

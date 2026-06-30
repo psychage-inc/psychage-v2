@@ -92,14 +92,13 @@ const ConditionsIndexPage: React.FC = () => {
         ? groups.filter((g) => g.letter === activeLetter)
         : groups;
 
-    // On mobile/tablet the tall chip block pushes results off-screen, so re-anchor the
-    // viewport to the results when a family filter changes. Desktop keeps its side rail.
-    // We flag the intent here but defer the actual scroll to the effect below — the list
-    // height changes per family (and the phone view switches from a single paginated
-    // bucket to the full filtered set), so scrolling synchronously would target the old,
-    // shorter layout and get clamped, landing short of the list top.
+    // Re-anchor the viewport to the results whenever a family filter changes, on every
+    // breakpoint. We flag the intent here but defer the actual scroll to the effect below
+    // — the list height changes per family (and the phone view switches from a single
+    // paginated bucket to the full filtered set), so scrolling synchronously would target
+    // the old, shorter layout and get clamped, landing short of the list top.
     const handleFamilyChange = (family: string | null) => {
-        if (belowDesktop) pendingScrollRef.current = true;
+        pendingScrollRef.current = true;
         setActiveFamily(family);
     };
 
@@ -107,19 +106,21 @@ const ConditionsIndexPage: React.FC = () => {
     // one frame so layout is final, then we scroll to an explicit pixel target with
     // window.scrollTo — more reliable across mobile browsers (notably iOS Safari) than
     // scrollIntoView({ behavior: 'smooth' }), which can silently no-op when layout
-    // shifts at the same moment. SCROLL_OFFSET clears the sticky header + alphabet rail.
+    // shifts at the same moment. The offset clears the sticky chrome above the list:
+    // mobile/tablet also has the sticky alphabet rail (~64) on top of the header (~64),
+    // desktop has only the header.
     useEffect(() => {
         if (!pendingScrollRef.current) return;
         pendingScrollRef.current = false;
         const el = resultsRef.current;
         if (!el) return;
-        const SCROLL_OFFSET = 128; // matches scroll-mt-32: sticky header (~64) + rail (~64)
+        const scrollOffset = belowDesktop ? 128 : 96; // header (+ alphabet rail on mobile)
         const raf = requestAnimationFrame(() => {
-            const top = el.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET;
+            const top = el.getBoundingClientRect().top + window.scrollY - scrollOffset;
             window.scrollTo({ top: Math.max(0, top), behavior: reducedMotion ? 'auto' : 'smooth' });
         });
         return () => cancelAnimationFrame(raf);
-    }, [activeFamily, reducedMotion]);
+    }, [activeFamily, reducedMotion, belowDesktop]);
 
     const handleJump = (letter: string) => {
         const el = document.getElementById(`cond-letter-${letter}`);

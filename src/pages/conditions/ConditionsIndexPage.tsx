@@ -1,4 +1,4 @@
-import React, { useDeferredValue, useMemo, useRef, useState } from 'react';
+import React, { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import SEO from '@/components/SEO';
@@ -38,6 +38,9 @@ const ConditionsIndexPage: React.FC = () => {
     const belowDesktop = useMediaQuery(BELOW_DESKTOP_QUERY);
     const [selectedLetter, setSelectedLetter] = useState<string | null>(null);
     const resultsRef = useRef<HTMLDivElement>(null);
+    // Set when a family chip is tapped below desktop; consumed by the scroll effect
+    // once the filtered list has re-rendered (see handleFamilyChange).
+    const pendingScrollRef = useRef(false);
 
     // Defer the filter input so typing stays smooth (sub-300ms perceived).
     const deferredQuery = useDeferredValue(query);
@@ -91,15 +94,32 @@ const ConditionsIndexPage: React.FC = () => {
 
     // On mobile/tablet the tall chip block pushes results off-screen, so re-anchor the
     // viewport to the results when a family filter changes. Desktop keeps its side rail.
+    // We flag the intent here but defer the actual scroll to the effect below — the list
+    // height changes per family (and the phone view switches from a single paginated
+    // bucket to the full filtered set), so scrolling synchronously would target the old,
+    // shorter layout and get clamped, landing short of the list top.
     const handleFamilyChange = (family: string | null) => {
+        if (belowDesktop) pendingScrollRef.current = true;
         setActiveFamily(family);
-        if (belowDesktop) {
-            resultsRef.current?.scrollIntoView({
-                behavior: reducedMotion ? 'auto' : 'smooth',
-                block: 'start',
-            });
-        }
     };
+
+    // Runs after the filtered list has rendered for the new family. The extra rAF waits
+    // one frame so layout is final, then we scroll to an explicit pixel target with
+    // window.scrollTo — more reliable across mobile browsers (notably iOS Safari) than
+    // scrollIntoView({ behavior: 'smooth' }), which can silently no-op when layout
+    // shifts at the same moment. SCROLL_OFFSET clears the sticky header + alphabet rail.
+    useEffect(() => {
+        if (!pendingScrollRef.current) return;
+        pendingScrollRef.current = false;
+        const el = resultsRef.current;
+        if (!el) return;
+        const SCROLL_OFFSET = 128; // matches scroll-mt-32: sticky header (~64) + rail (~64)
+        const raf = requestAnimationFrame(() => {
+            const top = el.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET;
+            window.scrollTo({ top: Math.max(0, top), behavior: reducedMotion ? 'auto' : 'smooth' });
+        });
+        return () => cancelAnimationFrame(raf);
+    }, [activeFamily, reducedMotion]);
 
     const handleJump = (letter: string) => {
         const el = document.getElementById(`cond-letter-${letter}`);

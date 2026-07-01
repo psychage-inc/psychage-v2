@@ -727,63 +727,64 @@ const LearnPage: React.FC = () => {
                     <p className="text-xs text-text-tertiary font-semibold uppercase tracking-wider mt-8 mb-3">
                         Browse by category
                     </p>
-                    <div className="relative">
-                        {canScrollLeft && (
+                    <div
+                        ref={categoryScrollRef}
+                        className="flex gap-4 overflow-x-auto pb-2 -mx-6 px-6 touch-pan-x"
+                        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' } as React.CSSProperties}
+                        {...categoryDragGuard}
+                    >
+                        {categoryTiles.map(cat => {
+                            const theme = getCategoryTheme(cat.slug);
+                            return (
+                                <button
+                                    key={cat.slug}
+                                    onClick={() => navigate(getCategoryUrl(cat.slug))}
+                                    aria-label={`Browse ${cat.name}`}
+                                    className="group flex-shrink-0 w-48"
+                                >
+                                    <div className="aspect-video w-full overflow-hidden rounded-xl border border-border/50 bg-surface">
+                                        {cat.image ? (
+                                            <img
+                                                src={cat.image}
+                                                alt={cat.name}
+                                                loading="lazy"
+                                                className="w-full h-full object-cover transform group-hover:scale-[1.03] transition-transform duration-500 ease-out"
+                                            />
+                                        ) : (
+                                            <div className={`w-full h-full flex items-end p-3 ${theme.classes.bg}`}>
+                                                <span className="font-display font-bold text-sm text-white leading-snug line-clamp-3 drop-shadow-sm">
+                                                    {cat.name}
+                                                </span>
+                                            </div>
+                                        )}
+                                    </div>
+                                </button>
+                            );
+                        })}
+                    </div>
+                    {/* Scroll controls sit UNDER the row, right-aligned; disabled at each end. */}
+                    {(canScrollLeft || canScrollRight) && (
+                        <div className="mt-3 flex justify-end gap-2">
                             <button
                                 type="button"
                                 onClick={() => scrollCategories(-1)}
+                                disabled={!canScrollLeft}
                                 aria-label="Previous categories"
-                                className="absolute left-0 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-surface text-text-primary shadow-sm transition-colors hover:bg-surface-hover"
+                                className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-surface text-text-primary shadow-sm transition-colors hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-surface"
                             >
                                 <ChevronLeft size={20} />
                             </button>
-                        )}
-                        {canScrollRight && (
                             <button
                                 type="button"
                                 onClick={() => scrollCategories(1)}
+                                disabled={!canScrollRight}
                                 aria-label="Next categories"
-                                className="absolute right-0 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-surface text-text-primary shadow-sm transition-colors hover:bg-surface-hover"
+                                className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-surface text-text-primary shadow-sm transition-colors hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-surface"
                             >
                                 <ChevronRight size={20} />
                             </button>
-                        )}
-                        <div
-                            ref={categoryScrollRef}
-                            className="flex gap-4 overflow-x-auto pb-2 -mx-6 px-6 touch-pan-x"
-                            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' } as React.CSSProperties}
-                            {...categoryDragGuard}
-                        >
-                            {categoryTiles.map(cat => {
-                                const theme = getCategoryTheme(cat.slug);
-                                return (
-                                    <button
-                                        key={cat.slug}
-                                        onClick={() => navigate(getCategoryUrl(cat.slug))}
-                                        aria-label={`Browse ${cat.name}`}
-                                        className="group flex-shrink-0 w-48"
-                                    >
-                                        <div className="aspect-video w-full overflow-hidden rounded-xl border border-border/50 bg-surface">
-                                            {cat.image ? (
-                                                <img
-                                                    src={cat.image}
-                                                    alt={cat.name}
-                                                    loading="lazy"
-                                                    className="w-full h-full object-cover transform group-hover:scale-[1.03] transition-transform duration-500 ease-out"
-                                                />
-                                            ) : (
-                                                <div className={`w-full h-full flex items-end p-3 ${theme.classes.bg}`}>
-                                                    <span className="font-display font-bold text-sm text-white leading-snug line-clamp-3 drop-shadow-sm">
-                                                        {cat.name}
-                                                    </span>
-                                                </div>
-                                            )}
-                                        </div>
-                                    </button>
-                                );
-                            })}
                         </div>
-                    </div>
+                    )}
                 </div>
             </section>
 

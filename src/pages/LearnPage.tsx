@@ -1,7 +1,9 @@
-import React, { useEffect, useState, useMemo, useCallback } from 'react';
+import React, { useEffect, useState, useMemo, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useUrlFilterState } from '@/hooks/useUrlFilterState';
-import { Search, BookOpen, ArrowRight, Clock, Bookmark, Mail, Loader2, CheckCircle, X } from 'lucide-react';
+import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useDragScrollGuard } from '@/hooks/useDragScrollGuard';
+import { Search, BookOpen, ArrowRight, Clock, Bookmark, Mail, Loader2, CheckCircle, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import SEO from '../components/SEO';
 import { useArticleService } from '../services/articleService';
 import { categoryService } from '../services/categoryService';
@@ -430,6 +432,49 @@ const LearnPage: React.FC = () => {
         }));
     }, [articles, categories, categoriesFromArticles]);
 
+    // ── Desktop "Browse by category" row: scroll affordance + drag guard ──
+    // The poster row hides its scrollbar, so mouse/hybrid users get ← → arrows
+    // whose visibility tracks scroll position (they vanish at each end). The
+    // drag guard keeps a sideways drag from opening a category poster.
+    const categoryScrollRef = useRef<HTMLDivElement>(null);
+    const [canScrollLeft, setCanScrollLeft] = useState(false);
+    const [canScrollRight, setCanScrollRight] = useState(false);
+    const prefersReducedMotion = useReducedMotion();
+    const categoryDragGuard = useDragScrollGuard();
+
+    const updateCategoryScroll = useCallback(() => {
+        const el = categoryScrollRef.current;
+        if (!el) return;
+        const { scrollLeft, scrollWidth, clientWidth } = el;
+        setCanScrollLeft(scrollLeft > 1);
+        setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
+    }, []);
+
+    useEffect(() => {
+        const el = categoryScrollRef.current;
+        if (!el) return;
+        updateCategoryScroll();
+        el.addEventListener('scroll', updateCategoryScroll, { passive: true });
+        const ro = new ResizeObserver(updateCategoryScroll);
+        ro.observe(el);
+        return () => {
+            el.removeEventListener('scroll', updateCategoryScroll);
+            ro.disconnect();
+        };
+    }, [updateCategoryScroll, categoryTiles]);
+
+    const scrollCategories = useCallback(
+        (direction: -1 | 1) => {
+            const el = categoryScrollRef.current;
+            if (!el) return;
+            el.scrollBy({
+                left: direction * el.clientWidth * 0.8,
+                behavior: prefersReducedMotion ? 'auto' : 'smooth',
+            });
+        },
+        [prefersReducedMotion]
+    );
+
     // Featured articles: 7 picks (1 hero + 6 trending) from priority categories
     const featuredArticles = useMemo(() => {
         const picks: Article[] = [];
@@ -682,38 +727,62 @@ const LearnPage: React.FC = () => {
                     <p className="text-xs text-text-tertiary font-semibold uppercase tracking-wider mt-8 mb-3">
                         Browse by category
                     </p>
-                    <div
-                        className="flex gap-4 overflow-x-auto pb-2 -mx-6 px-6"
-                        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' } as React.CSSProperties}
-                    >
-                        {categoryTiles.map(cat => {
-                            const theme = getCategoryTheme(cat.slug);
-                            return (
-                                <button
-                                    key={cat.slug}
-                                    onClick={() => navigate(getCategoryUrl(cat.slug))}
-                                    aria-label={`Browse ${cat.name}`}
-                                    className="group flex-shrink-0 w-48"
-                                >
-                                    <div className="aspect-video w-full overflow-hidden rounded-xl border border-border/50 bg-surface">
-                                        {cat.image ? (
-                                            <img
-                                                src={cat.image}
-                                                alt={cat.name}
-                                                loading="lazy"
-                                                className="w-full h-full object-cover transform group-hover:scale-[1.03] transition-transform duration-500 ease-out"
-                                            />
-                                        ) : (
-                                            <div className={`w-full h-full flex items-end p-3 ${theme.classes.bg}`}>
-                                                <span className="font-display font-bold text-sm text-white leading-snug line-clamp-3 drop-shadow-sm">
-                                                    {cat.name}
-                                                </span>
-                                            </div>
-                                        )}
-                                    </div>
-                                </button>
-                            );
-                        })}
+                    <div className="relative">
+                        {canScrollLeft && (
+                            <button
+                                type="button"
+                                onClick={() => scrollCategories(-1)}
+                                aria-label="Previous categories"
+                                className="absolute left-0 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-surface text-text-primary shadow-sm transition-colors hover:bg-surface-hover"
+                            >
+                                <ChevronLeft size={20} />
+                            </button>
+                        )}
+                        {canScrollRight && (
+                            <button
+                                type="button"
+                                onClick={() => scrollCategories(1)}
+                                aria-label="Next categories"
+                                className="absolute right-0 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-surface text-text-primary shadow-sm transition-colors hover:bg-surface-hover"
+                            >
+                                <ChevronRight size={20} />
+                            </button>
+                        )}
+                        <div
+                            ref={categoryScrollRef}
+                            className="flex gap-4 overflow-x-auto pb-2 -mx-6 px-6 touch-pan-x"
+                            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' } as React.CSSProperties}
+                            {...categoryDragGuard}
+                        >
+                            {categoryTiles.map(cat => {
+                                const theme = getCategoryTheme(cat.slug);
+                                return (
+                                    <button
+                                        key={cat.slug}
+                                        onClick={() => navigate(getCategoryUrl(cat.slug))}
+                                        aria-label={`Browse ${cat.name}`}
+                                        className="group flex-shrink-0 w-48"
+                                    >
+                                        <div className="aspect-video w-full overflow-hidden rounded-xl border border-border/50 bg-surface">
+                                            {cat.image ? (
+                                                <img
+                                                    src={cat.image}
+                                                    alt={cat.name}
+                                                    loading="lazy"
+                                                    className="w-full h-full object-cover transform group-hover:scale-[1.03] transition-transform duration-500 ease-out"
+                                                />
+                                            ) : (
+                                                <div className={`w-full h-full flex items-end p-3 ${theme.classes.bg}`}>
+                                                    <span className="font-display font-bold text-sm text-white leading-snug line-clamp-3 drop-shadow-sm">
+                                                        {cat.name}
+                                                    </span>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </button>
+                                );
+                            })}
+                        </div>
                     </div>
                 </div>
             </section>

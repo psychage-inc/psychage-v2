@@ -120,10 +120,14 @@ function ArticleHtmlRenderer({ html, className }: { html: string; className?: st
     if (chartNodes.length === 0) return;
 
     const roots: Array<{ unmount: () => void }> = [];
+    let cancelled = false;
 
     const renderCharts = async () => {
       const { createRoot } = await import('react-dom/client');
       const { default: ReadOnlyChart } = await import('@/components/admin/editor/ReadOnlyChart');
+      // If the effect was cleaned up while the chunks were loading, don't mount
+      // roots into now-detached nodes (they'd never be unmounted).
+      if (cancelled) return;
 
       chartNodes.forEach((node) => {
         const raw = node.getAttribute('data-chart');
@@ -144,6 +148,7 @@ function ArticleHtmlRenderer({ html, className }: { html: string; className?: st
     renderCharts();
 
     return () => {
+      cancelled = true;
       roots.forEach((root) => root.unmount());
     };
   }, [html]);

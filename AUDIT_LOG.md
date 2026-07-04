@@ -178,3 +178,25 @@ Legend: [F]=fixed this branch · [D]=documented decision / degrade · [L]=logged
 ### 2.3 Strict-tsc inventory (D-04)
 
 32 errors under `--strict`. Buckets: 16×TS2322 (assignability, mostly Postgrest builder variance in articleAdminService/articleRewriteService + Fuse<Condition> variance in searchService), 7×TS2339 (KeyFacts union access — guarded), 3×TS7006 (implicit-any setState updater params in ClarityScoreTool), plus TS2345/2769/2589/2538/2352 singletons. All have runtime guards or are generic-plumbing. Decision: keep `strict:false` — every genuine null risk already has a guard, and satisfying the checker on the Supabase-generic errors would require adding `as` casts, violating remediation rule 5 (no new casts). Full list captured in scratchpad.
+
+---
+
+## PHASE 3 — REMEDIATION (what was actually done)
+
+20 commits on branch, one logical fix each (finding ID + summary). Fixed: SEC-001, C-1, C-2, C-25, C-19, F-3, chat.ts-1, api-1/api-2, RTE-BND, BC-1, BC-2, B-1, B-3, B-4, C-18, searchService-1, F-11, F-13, geo-1 + tests.
+
+**Disposition reconciliation (supersedes §2.2 table where they differ):**
+- **F-6 (img CLS) → OBSERVATION, NOT changed.** Both cards use `w-full h-auto` with an explicit code comment that natural-aspect (no crop/letterbox) is intentional. Forcing dimensions would alter deliberate, consistent design → left untouched per "broken ≠ ugly."
+- **B-5 (medication index keys) → documented, NOT fixed.** Clean fix needs an id-per-row state-shape change rippling to the Medication model + save mapping; LOW severity (middle-row focus quirk) < refactor risk.
+- **F-1/F-2/F-4, C-21, embed-1, llm-1, rate-limit, svc-swallow family → documented.** Either load-bearing/cached (F-1), backend/infra (rate-limit, embed-1), or a systemic service-contract change (svc-swallow) rather than a point fix. See FINAL_REPORT §3.
+- **strict-tsc → kept `strict:false`** (D-04); 32 errors are type-plumbing with runtime guards; fixing would add casts (violates no-new-cast). Side config removed after inventory.
+
+## PHASE 4 — SELF-VERIFICATION
+
+- `tsc --noEmit`: **clean**.
+- Production build (full chain): **green (exit 0)** after all fixes.
+- New tests: `MoodWizard/moodScale.test.ts` (6) + `lib/api.test.ts` (4) → **10/10 pass**. Touched-area existing tests (moodService, withFallback, error boundaries) → **47/47 pass**.
+- Lint (changed files): clean; the one flagged `any` (MindMate.tsx:318) is pre-existing on `main`, not introduced here (lint is not a CI gate). BC-2 rewrite's dropped react-compiler disable directive was restored (`7b2015a`).
+- Viewport render-check (playwright chromium lib, driven directly per D-09, vs `vite preview`) at 360/768/1024/1440 on home, /learn, /providers/search, /tools: **16/16 clean** — zero horizontal overflow, zero page errors, chrome renders correctly. Content regions empty (no backend in preview) → RESIDUAL_RISK. Auth-gated modified routes (BookmarksPage, admin ReportDetailPage) → VIEWPORT_UNVERIFIED.
+- Phase-2A flow re-trace against fixed code: article read, bookmark toggle, mood save, provider search, MindMate error path — consistent.
+- Adversarial second-pass review of full diff: see FINAL_REPORT §6.

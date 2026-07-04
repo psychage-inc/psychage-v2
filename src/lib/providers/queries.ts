@@ -786,45 +786,60 @@ export async function submitProviderApplication(
 
   const providerId = provider.id;
 
-  // Insert location
-  if (application.location.city || application.location.address_line1) {
-    await supabase.from('provider_locations').insert({
-      provider_id: providerId,
-      address_line1: application.location.address_line1 || null,
-      address_line2: application.location.address_line2 || null,
-      city: application.location.city || null,
-      state_province: application.location.state_province || null,
-      postal_code: application.location.postal_code || null,
-      is_primary: true,
-    });
-  }
+  // Child-table inserts. PostgREST has no cross-table transaction, so a failure
+  // here previously left a provider row with no location/specialties, invisible
+  // to admins and search. Check each error; on failure, roll back the provider
+  // row (best-effort) and report the failure instead of a false success.
+  const childError = await (async (): Promise<string | null> => {
+    if (application.location.city || application.location.address_line1) {
+      const { error } = await supabase.from('provider_locations').insert({
+        provider_id: providerId,
+        address_line1: application.location.address_line1 || null,
+        address_line2: application.location.address_line2 || null,
+        city: application.location.city || null,
+        state_province: application.location.state_province || null,
+        postal_code: application.location.postal_code || null,
+        is_primary: true,
+      });
+      if (error) return error.message;
+    }
 
-  // Insert specialties
-  if (application.specialty_ids.length > 0) {
-    await supabase.from('provider_specialties').insert(
-      application.specialty_ids.map(sid => ({ provider_id: providerId, specialty_id: sid }))
-    );
-  }
+    if (application.specialty_ids.length > 0) {
+      const { error } = await supabase.from('provider_specialties').insert(
+        application.specialty_ids.map(sid => ({ provider_id: providerId, specialty_id: sid }))
+      );
+      if (error) return error.message;
+    }
 
-  // Insert languages
-  if (application.language_ids.length > 0) {
-    await supabase.from('provider_languages').insert(
-      application.language_ids.map(lid => ({ provider_id: providerId, language_id: lid }))
-    );
-  }
+    if (application.language_ids.length > 0) {
+      const { error } = await supabase.from('provider_languages').insert(
+        application.language_ids.map(lid => ({ provider_id: providerId, language_id: lid }))
+      );
+      if (error) return error.message;
+    }
 
-  // Insert cultural competencies
-  if (application.competency_ids?.length) {
-    await supabase.from('provider_cultural_competencies').insert(
-      application.competency_ids.map(cid => ({ provider_id: providerId, competency_id: cid }))
-    );
-  }
+    if (application.competency_ids?.length) {
+      const { error } = await supabase.from('provider_cultural_competencies').insert(
+        application.competency_ids.map(cid => ({ provider_id: providerId, competency_id: cid }))
+      );
+      if (error) return error.message;
+    }
 
-  // Insert insurance plans
-  if (application.insurance_plan_ids?.length) {
-    await supabase.from('provider_insurance').insert(
-      application.insurance_plan_ids.map(iid => ({ provider_id: providerId, insurance_plan_id: iid }))
-    );
+    if (application.insurance_plan_ids?.length) {
+      const { error } = await supabase.from('provider_insurance').insert(
+        application.insurance_plan_ids.map(iid => ({ provider_id: providerId, insurance_plan_id: iid }))
+      );
+      if (error) return error.message;
+    }
+
+    return null;
+  })();
+
+  if (childError) {
+    // Compensating rollback so a retry starts clean (no orphaned provider).
+    await supabase.from('providers').delete().eq('id', providerId);
+    console.error('Error saving provider application details:', childError);
+    return { error: `Failed to save application details: ${childError}` };
   }
 
   return { id: providerId };
@@ -871,14 +886,19 @@ export async function claimProvider(
     return { success: false, error: updateError.message };
   }
 
-  // Record verification
-  await supabase.from('provider_verifications').insert({
+  // Record verification — surface a failure so a claim isn't reported as
+  // verified when the verification row was never written.
+  const { error: verificationError } = await supabase.from('provider_verifications').insert({
     provider_id: providerId,
     verification_type: 'npi_check',
     status: 'passed',
     details: { npi_number: npiNumber, claimed_by: userId },
     verified_at: new Date().toISOString(),
   });
+
+  if (verificationError) {
+    return { success: false, error: `Claim recorded but verification failed: ${verificationError.message}` };
+  }
 
   return { success: true };
 }

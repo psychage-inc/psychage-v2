@@ -200,3 +200,9 @@ Legend: [F]=fixed this branch · [D]=documented decision / degrade · [L]=logged
 - Viewport render-check (playwright chromium lib, driven directly per D-09, vs `vite preview`) at 360/768/1024/1440 on home, /learn, /providers/search, /tools: **16/16 clean** — zero horizontal overflow, zero page errors, chrome renders correctly. Content regions empty (no backend in preview) → RESIDUAL_RISK. Auth-gated modified routes (BookmarksPage, admin ReportDetailPage) → VIEWPORT_UNVERIFIED.
 - Phase-2A flow re-trace against fixed code: article read, bookmark toggle, mood save, provider search, MindMate error path — consistent.
 - Adversarial second-pass review of full diff: see FINAL_REPORT §6.
+
+---
+
+## PHASE 6 — FOLLOW-UP REMEDIATION (systemic write-swallowing + MED/LOW)
+
+Per user request after the audit, the systemic write-error swallowing (§2.1) and the remaining client-fixable MED/LOW findings were completed on this branch. New helper `src/lib/supabaseError.ts` (`throwOnError`); write methods across bookmark/newsletter/feedback/profile/provider-application/articleAdmin/waitlist/providerService now throw or return truthfully, activating callers' existing catch/rollback/onError (only FeedbackWidget needed a new error state). MED/LOW: C-20/C-21 (ProviderEditor invalidations + throws), searchService-2 (latest-request guards ×4), B-5 (medication stable keys), F-2 (parallel recommendations), embed-1 (validate-before-delete), llm-1 (reader cleanup). 9 new tests + updated newsletter/waitlist tests; tsc/build green; only pre-existing taxonomy.contract fails locally (green in CI). See FINAL_REPORT §7.

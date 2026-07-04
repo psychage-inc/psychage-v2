@@ -122,3 +122,41 @@ Confirmed-correct by the review (not exhaustive): api.ts defensive parse (no reg
 One accepted LOW cosmetic note from the review: the valence↔score compression is lossy for authed users (valence 9 stores as 5, reloads as 10) and legacy authed rows written before C-2 shift their displayed value — inherent to a 10→5 column mapping, no crash, documented here.
 
 **Net after review:** all fixes verified correct; the two issues the review found were fixed and re-verified (tsc clean, lint clean under `--max-warnings 0`, build green).
+
+---
+
+## 7. Follow-up remediation — systemic write-swallowing + remaining MED/LOW
+
+After the initial audit, the systemic service-layer defect from §3 and the client-fixable MED/LOW findings were completed on this branch (19 more commits, one logical fix each).
+
+### Systemic write-truthfulness (root cause §3)
+
+New helper `src/lib/supabaseError.ts` (`throwOnError`). Write methods now stop discarding `supabase.error` and throw/return truthfully, activating the callers' existing try-catch / rollback / React Query `onError` (only `FeedbackWidget` needed a new catch + error state):
+
+| Fix | Service | Effect |
+|-----|---------|--------|
+| svc-truthful-1 | bookmarkService add/remove/toggle | throw on DB error (was fabricating a fake `local_*` row); BookmarkContext + BookmarksPage rollbacks now live |
+| svc-truthful-2 | newsletterService.subscribe | throw on reactivate/email-refresh/lookup/insert errors (was collapsing to a `{success:false}` callers ignored) |
+| svc-truthful-3 | feedbackService + FeedbackWidget | throw + widget shows "Couldn't save"; dead `psychage_feedback_queue` removed |
+| svc-truthful-4 | userProfileService.updateProfile | surface failed auth-metadata + `user_profiles` upsert (returns null → AccountSettings shows failure) |
+| svc-truthful-5 | lib/providers/queries | submitProviderApplication checks each child insert + rolls back the provider; claimProvider checks verification insert |
+| svc-truthful-6 | articleAdminService | 4 unguarded writes (storage delete, is_parent update, review-stage history, production-id fallback) now throw |
+| svc-truthful-7 | provider-analytics | in-flight guard (fixes double-insert race) + safe flush scheduling |
+| svc-truthful-8 | waitlist + providerService.toggleFavorite | truthful `{success:false}` / throw instead of fake success |
+
+### Remaining MED/LOW findings
+
+- **C-20/C-21** ProviderEditor: save now invalidates the detail + 5 relation query keys (re-open shows saved values); junction inserts throw on failure.
+- **searchService-2**: monotonic latest-request-id guard on `useSearch`, `useSearchSuggestions`, `SearchResults.performSearch`, `SearchAutocomplete` — a stale response can't overwrite a newer one.
+- **B-5**: MedicationForm time rows keyed by stable id (`{id,time}[]` internally, `string[]` model unchanged).
+- **F-2**: RecommendedArticles fetches ranked categories in parallel (was N sequential round-trips).
+- **embed-1**: reingestion generates+validates all embeddings before deleting the old index; throws on delete/insert error.
+- **llm-1**: both providers' `streamCompletion` wrap the read loop in try/finally with `reader.cancel()` — no upstream stream leak on early exit.
+
+### Verification (follow-up)
+
+`tsc` clean; production build green; **9 new tests** (bookmark toggle throws ×4, feedback throws ×2, provider-application child-failure/rollback ×3) + updated newsletter/waitlist tests — all touched suites pass (**199/200**, the one failure is the pre-existing `taxonomy.contract` local-only baseline, green in CI). Lint on changed files added **zero** new problems (net −2 vs main from removing dead catch blocks). Full-repo lint is not a CI gate and its pre-existing count is unchanged.
+
+### Still documented, not fixed (backend/infra)
+
+`lib/admin/auditLogger.ts` (fire-and-forget telemetry, self-catches — should route to Sentry); `chatPersistenceService.saveMessage` message-count read-modify-write (needs an atomic RPC); `generateArticleProductionId` allocation race (needs a DB sequence — only the guaranteed-duplicate fallback was fixed). The rate-limiter, CSP-enforcement, and admin mock-dashboard items from §5 remain as originally documented.

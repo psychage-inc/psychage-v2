@@ -147,6 +147,10 @@ const AdminContentEditor: React.FC = () => {
         topic_tags: data.topic_tags || [],
         sources: data.sources || [],
         is_published: isPublished,
+        // content_documents.url_path is NOT NULL and is used as the citation
+        // href in MindMate (CitationCard). Derive a stable path from type+slug
+        // so creation never fails the not-null constraint. See DECISION_MADE_UNVERIFIED.
+        url_path: `/${data.type}/${data.slug}`,
         updated_at: new Date().toISOString(),
       };
 

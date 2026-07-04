@@ -6,11 +6,12 @@ import type { ContentType, ContentStatus, ContentLanguage, CrisisSeverity, Crisi
 
 export const CONTENT_TYPES: { label: string; value: ContentType }[] = [
   { label: 'Article', value: 'article' },
-  { label: 'Guide', value: 'guide' },
-  { label: 'FAQ', value: 'faq' },
-  { label: 'Glossary', value: 'glossary' },
+  { label: 'Condition Guide', value: 'condition_guide' },
+  { label: 'Coping Strategy', value: 'coping_strategy' },
   { label: 'Video Transcript', value: 'video_transcript' },
-  { label: 'Infographic', value: 'infographic' },
+  { label: 'FAQ', value: 'faq' },
+  { label: 'Tool Description', value: 'tool_description' },
+  { label: 'Crisis Resource', value: 'crisis_resource' },
 ];
 
 export const CONTENT_STATUSES: { label: string; value: ContentStatus }[] = [

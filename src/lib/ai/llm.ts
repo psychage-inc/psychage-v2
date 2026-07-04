@@ -183,51 +183,57 @@ export class AnthropicProvider implements LLMProvider {
     let buffer = '';
     this._lastStreamUsage = null;
 
-    while (true) {
-      const { done, value } = await reader.read();
-      if (done) break;
+    // finally cancels the reader so an early return/break (safety violation,
+    // [DONE], consumer abort) closes the upstream stream instead of leaking it.
+    try {
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
 
-      buffer += decoder.decode(value, { stream: true });
-      const lines = buffer.split('\n');
-      buffer = lines.pop() ?? '';
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split('\n');
+        buffer = lines.pop() ?? '';
 
-      for (const line of lines) {
-        if (line.startsWith('data: ')) {
-          const data = line.slice(6);
-          if (data === '[DONE]') {
-            yield { content: '', done: true };
-            return;
-          }
-
-          try {
-            const parsed = JSON.parse(data);
-            if (parsed.type === 'content_block_delta' && parsed.delta?.text) {
-              yield { content: parsed.delta.text, done: false };
-            }
-            if (parsed.type === 'message_start' && parsed.message?.usage) {
-              this._lastStreamUsage = {
-                prompt: parsed.message.usage.input_tokens ?? 0,
-                completion: 0,
-              };
-            }
-            if (parsed.type === 'message_delta' && parsed.usage) {
-              this._lastStreamUsage = {
-                prompt: this._lastStreamUsage?.prompt ?? 0,
-                completion: parsed.usage.output_tokens ?? 0,
-              };
-            }
-            if (parsed.type === 'message_stop') {
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            const data = line.slice(6);
+            if (data === '[DONE]') {
               yield { content: '', done: true };
               return;
             }
-          } catch {
-            // Skip unparseable lines
+
+            try {
+              const parsed = JSON.parse(data);
+              if (parsed.type === 'content_block_delta' && parsed.delta?.text) {
+                yield { content: parsed.delta.text, done: false };
+              }
+              if (parsed.type === 'message_start' && parsed.message?.usage) {
+                this._lastStreamUsage = {
+                  prompt: parsed.message.usage.input_tokens ?? 0,
+                  completion: 0,
+                };
+              }
+              if (parsed.type === 'message_delta' && parsed.usage) {
+                this._lastStreamUsage = {
+                  prompt: this._lastStreamUsage?.prompt ?? 0,
+                  completion: parsed.usage.output_tokens ?? 0,
+                };
+              }
+              if (parsed.type === 'message_stop') {
+                yield { content: '', done: true };
+                return;
+              }
+            } catch {
+              // Skip unparseable lines
+            }
           }
         }
       }
-    }
 
-    yield { content: '', done: true };
+      yield { content: '', done: true };
+    } finally {
+      await reader.cancel().catch(() => {});
+    }
   }
 
   async generateEmbedding(_text: string): Promise<number[]> {
@@ -343,46 +349,52 @@ export class OpenAIProvider implements LLMProvider {
     let buffer = '';
     this._lastStreamUsage = null;
 
-    while (true) {
-      const { done, value } = await reader.read();
-      if (done) break;
+    // finally cancels the reader so an early return/break (finish_reason,
+    // [DONE], consumer abort) closes the upstream stream instead of leaking it.
+    try {
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
 
-      buffer += decoder.decode(value, { stream: true });
-      const lines = buffer.split('\n');
-      buffer = lines.pop() ?? '';
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split('\n');
+        buffer = lines.pop() ?? '';
 
-      for (const line of lines) {
-        if (line.startsWith('data: ')) {
-          const data = line.slice(6).trim();
-          if (data === '[DONE]') {
-            yield { content: '', done: true };
-            return;
-          }
-
-          try {
-            const parsed = JSON.parse(data);
-            const delta = parsed.choices?.[0]?.delta?.content;
-            if (delta) {
-              yield { content: delta, done: false };
-            }
-            if (parsed.usage) {
-              this._lastStreamUsage = {
-                prompt: parsed.usage.prompt_tokens ?? 0,
-                completion: parsed.usage.completion_tokens ?? 0,
-              };
-            }
-            if (parsed.choices?.[0]?.finish_reason) {
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            const data = line.slice(6).trim();
+            if (data === '[DONE]') {
               yield { content: '', done: true };
               return;
             }
-          } catch {
-            // Skip unparseable lines
+
+            try {
+              const parsed = JSON.parse(data);
+              const delta = parsed.choices?.[0]?.delta?.content;
+              if (delta) {
+                yield { content: delta, done: false };
+              }
+              if (parsed.usage) {
+                this._lastStreamUsage = {
+                  prompt: parsed.usage.prompt_tokens ?? 0,
+                  completion: parsed.usage.completion_tokens ?? 0,
+                };
+              }
+              if (parsed.choices?.[0]?.finish_reason) {
+                yield { content: '', done: true };
+                return;
+              }
+            } catch {
+              // Skip unparseable lines
+            }
           }
         }
       }
-    }
 
-    yield { content: '', done: true };
+      yield { content: '', done: true };
+    } finally {
+      await reader.cancel().catch(() => {});
+    }
   }
 
   async generateEmbedding(text: string): Promise<number[]> {

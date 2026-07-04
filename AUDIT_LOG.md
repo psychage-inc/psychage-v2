@@ -120,3 +120,61 @@ React 18.3.1, Router 7.13.1, TS 5.5.3, Vite 8.0.16, Vitest 4.0.15, Playwright 1.
 ## PHASE 2 — DEFECT AUDIT
 
 (Findings recorded below as they are verified. ID scheme: TS-/REACT-/API-/SEC-/UX-/PERF-. Severity: CRITICAL/HIGH/MEDIUM/LOW.)
+
+### 2.0 Method
+
+Phase 2 ran 5 category auditors (async/effect, React patterns, data/API boundary, security, perf/completeness) plus a strict-`tsc` inventory, over the worktree at HEAD. Each candidate was verified against source before listing. ~55 real findings; severities below reflect production user-impact, not lint pedantry.
+
+### 2.1 SYSTEMIC PATTERN (root cause behind ~20 findings)
+
+**supabase-js does not throw on DB errors** — it resolves `{ data, error }`. Across the services layer the `error` object is discarded and a success-shaped value is returned, so **failed writes are reported to the UI as success** and every component-level `.catch(rollback)` is dead code. This one contract mistake is the root of: bookmarkService-1, feedbackService-1, newsletterService-1, userProfileService-1, provider-analytics-1/2, auditLogger-1, queries-1/2, articleAdminService-1..6, providerService-1, privacyService-1, chatPersistenceService-1, waitlistService-1, and the dead-rollback consumers BookmarkContext-2, C-3, C-4, C-6, C-14, C-16, C-17. Remediation targets the highest user-impact instances; the rest are logged with the shared fix contract.
+
+### 2.2 FINDINGS LEDGER
+
+Legend: [F]=fixed this branch · [D]=documented decision / degrade · [L]=logged latent (no live caller) · [O]=observation.
+
+| ID | Sev | File | Defect | Disposition |
+|----|-----|------|--------|-------------|
+| SEC-001 | CRITICAL | docs/SEPARATE_FRONTEND_INTEGRATION.md | Live Supabase service-role + Sanity + Gemini secrets committed (2 full-value blocks), in history since eea3cd4 | [F] redacted HEAD; **rotation + history purge = manual** |
+| C-1 | HIGH | pages/dashboard/BookmarksPage.tsx:26 | Bookmarks page reads dead legacy REST `/api/articles/bookmarks` (route doesn't exist), not Supabase `bookmarkService`; empty catch | [F] |
+| C-2 | HIGH | services/moodService.ts:78 + tools/MoodJournal | Valence slider emits 1–10 but `createEntry` returns null for value>5 → pleasant moods silently discarded for all signed-in users | [F] |
+| C-25 | HIGH | components/ai/MindMate.tsx:303 | SSE error handler only covers SAFETY_VIOLATION; LLM_ERROR/TIMEOUT silently dropped → empty/truncated bubble, no retry | [F] |
+| C-19 | HIGH | pages/admin/v2/articles/* (10 sites) | Mutations invalidate `['admin','articles']` but list registers `['admin','articles-search',...]` → invalidations are no-ops, stale admin list | [F] |
+| F-3 | HIGH | pages/admin/ReportDetailPage.tsx:26/81/105 | Report detail + status actions run on MOCK_REPORTS though real `api.admin.getReport/updateReportStatus` exist and are used by the list | [F] wire to real API |
+| chat.ts-1 | HIGH | api/ai/chat.ts:291 | Disconnect guard listens on `req` 'close' (never fires on Node≥16 SSE abort) → full LLM gen streamed to dead socket every abort | [F] listen on `res` |
+| api-1 | MED | lib/api.ts:150 | `response.json()` before `response.ok` → non-JSON 502/204 erases real status, skips 401-refresh | [F] |
+| api-2 | MED | lib/api.ts:315 | `uploadAvatar` never checks `response.ok` → JSON error body shown as "avatar updated" | [F] |
+| RTE-BND | MED | App.tsx | 69 of 87 routes lack a per-route error boundary (rely on global) | [F] wrap remaining routes |
+| BC-1 | MED | context/BookmarkContext.tsx:27 | Hydration fetch has no cancel guard → after logout/user-switch, User A's bookmarks restore for User B; `hydrated` sticks (privacy leak) | [F] |
+| BC-2/C-6 | MED | context/BookmarkContext.tsx:59-78 | Server toggle inside setState updater (StrictMode double-fire) + dead rollback (`toggle` never rejects) | [F] move side-effect out of updater; surface failure |
+| B-1 | MED | pages/learn/ArticlePage.tsx:86 | Article fetch effect has no stale-response guard (mobile twin has one) → article A renders under B's URL | [F] |
+| B-2 | MED | pages/learn/CategoryPage.tsx:22 | Same stale race + `isLoading` not reset on slug change | [D] CategoryPage is unrouted dead code (C: "dead code — unrouted"); logged, low value |
+| B-3 | MED | components/providers/search/ProviderSearchBar.tsx:21 | Input state copied from URL props at mount, never re-synced → stale search box after chip clear / back-forward | [F] |
+| C-20 | MED | pages/admin/v2/providers/ProviderEditor.tsx:629 | Save invalidates only list key, not detail/relation keys → re-open shows pre-save cache, re-save reverts | [F] |
+| C-21 | MED | pages/admin/v2/providers/ProviderEditor.tsx:605 | Relation delete-then-insert swallows insert error, still toasts success → wipes relations silently | [D] shares supabase-swallow contract; documented (admin, non-transactional needs RPC) |
+| B-4 | LOW | components/article/ArticleHtmlRenderer.tsx:117 | Chart hydration createRoots in un-cancelled async closure → orphaned roots on fast nav | [F] |
+| B-5 | LOW | components/tools/MedicationTracker/components/MedicationForm.tsx:192 | index-as-key on removable time rows with focusable inputs → focus sticks to wrong row | [F] |
+| F-6 | MED | components/articles/FlatArticleCard.tsx, FeaturedHeroCard.tsx | Loaded `<img>` has no width/height/aspect → CLS on /learn LCP + up to 40 cards | [F] |
+| F-11 | MED | components/Preloader.tsx:3 | `lottie_light` statically imported by eager Preloader → ~45KB gz in entry/critical path | [F] dynamic import |
+| F-12 | MED | pages/learn/CategoryPage.tsx:120 | Sort `<select>` has no value/onChange (dead control) | [D] CategoryPage unrouted dead code; logged |
+| F-13 | MED | components/article/CompanionVideo.tsx:99 | "Notify Me" button no-op onClick on coming-soon placeholder | [F] degrade: remove dead button / show static note |
+| geo-1 | MED | api/geo-detect/index.ts:44 | Declares `runtime:'edge'` but uses Node (req,res) → `res.setHeader` throws every call; no live caller | [D] no live caller (crisis reads meta tag); fix trivial but latent → documented |
+| embed-1 | MED | api/ai/embed.ts:132 | Non-atomic delete-then-reinsert of embeddings; partial on timeout/429 | [D] backend/ingestion robustness; degrade doc |
+| llm-1 | MED | src/lib/ai/llm.ts:179 | `streamCompletion` no AbortSignal/try-finally → upstream stream leaks on early break | [D] paired w/ chat.ts-1; documented (token-spend, not user-facing) |
+| C-18 | MED | lib/providers/queries.ts:52 + ProfileHeader.tsx:62 | `provider_type` cast without null guard, rendered unguarded → TypeError on null join | [F] guard render |
+| searchService-1/C-8 | MED | services/searchService.ts:271 | Rejected index promise memoized forever → search permanently broken after one offline blip | [F] clear promise on reject |
+| searchService-2/C-19b | MED | services/searchService.ts:753 + SearchResults/Autocomplete | No request-ordering guard → stale results overwrite newer | [D] documented; guard pattern noted (multiple call sites, higher risk) |
+| svc-swallow-user | MED | bookmarkService, feedbackService, newsletterService, userProfileService | User-facing writes mask failure as success (dead-letter queues never drained) | [D] documented under §2.1 contract; BookmarkContext path fixed via BC-2 |
+| F-1/C-7 | HIGH→D | services/articleService.ts:356 | `getBySlug` awaits full mock corpus (~31 chunks) before Supabase; cached but blocks 1st article view + turns a chunk-import failure into false 404 | [D] cached+load-bearing for rich JSX (tied to known SSR issue); per-category-lazy load recommended, not rearchitected here |
+| F-2 | HIGH→D | components/dashboard/RecommendedArticles.tsx:58 | Sequential per-category awaits, each falls to full corpus on empty | [D] documented; parallelize recommended |
+| F-4 | HIGH→D | pages/admin/data/adminMockData.ts | Admin dashboard health/stats/charts 100% mock | [D] partial real endpoints; large scope, documented |
+| F-10 | MED | components/tools/MoodJournal.tsx:46 | `getEntries` unlimited + unpaginated render → grows unbounded | [D] service supports limit; documented (grows slowly) |
+| rate-limit | LOW→D | api/ai/chat.ts:24 | In-memory limiter per-instance, no eviction | [D] needs Redis/Upstash — backend infra; documented |
+| chat-history-priv | LOW | components/ai/PsychageAI.tsx:108 | Persists chat history to localStorage without the consent gate MindMate uses | [D] privacy inconsistency; documented for review |
+| CSP-report-only | MED→O | vercel.json | CSP is Report-Only (no enforcement); sanitizer allows iframe | [O] enforcing risks breakage; staged rollout = residual risk |
+| strict-tsc (32) | LOW→D | see §2.3 | 32 strict-mode errors, all with runtime guards / type-plumbing | [D] keep `strict:false`; flipping forces casts on Supabase generics (violates no-new-cast) |
+| latent-* | LOW | waitlistService, providerService.toggleFavorite, TierGuard, analytics.ts, context.ts, ingestion.ts, NavigatorContext-1, useAsyncData-1, useNPIVerification-1, seed-bulk/cities pagination | No live callers or dev-tooling only | [L] logged, not fixed (no reachable user impact) |
+
+### 2.3 Strict-tsc inventory (D-04)
+
+32 errors under `--strict`. Buckets: 16×TS2322 (assignability, mostly Postgrest builder variance in articleAdminService/articleRewriteService + Fuse<Condition> variance in searchService), 7×TS2339 (KeyFacts union access — guarded), 3×TS7006 (implicit-any setState updater params in ClarityScoreTool), plus TS2345/2769/2589/2538/2352 singletons. All have runtime guards or are generic-plumbing. Decision: keep `strict:false` — every genuine null risk already has a guard, and satisfying the checker on the Supabase-generic errors would require adding `as` casts, violating remediation rule 5 (no new casts). Full list captured in scratchpad.

@@ -6,6 +6,7 @@ import { logAdminAction } from '@/lib/admin/auditLogger';
 import { CONFIDENCE_CAP } from '@/lib/admin/constants';
 import type { SymptomRecord, ConditionRecord, MappingRecord } from '@/lib/admin/types';
 import PageHeader from '@/components/admin/PageHeader';
+import NotWiredNotice from '@/components/admin/NotWiredNotice';
 import DataTable from '@/components/admin/DataTable';
 import { type ColumnDef } from '@tanstack/react-table';
 import { cn } from '@/lib/utils';
@@ -187,6 +188,7 @@ const AdminMappingMatrix: React.FC = () => {
 
   return (
     <div>
+      <NotWiredNotice variant="unavailable">This section is temporarily unavailable — it targets a database schema that isn’t deployed (audit finding FS-01). The symptom↔condition matrix will not load until the backend migration lands. See BACKEND_REQUIRED.md.</NotWiredNotice>
       <PageHeader
         title="Mapping Matrix"
         description={`${stats.mappings} mappings across ${stats.conditions} conditions and ${stats.symptoms} symptoms`}

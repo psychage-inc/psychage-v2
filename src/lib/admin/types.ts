@@ -38,7 +38,19 @@ export interface PlatformSetting {
 }
 
 // Content management
-export type ContentType = 'article' | 'guide' | 'faq' | 'glossary' | 'video_transcript' | 'infographic';
+// Must match the live content_documents.type CHECK constraint
+// (supabase/migrations/20250220000006_ai_tables.sql). A later migration
+// (20260310000002) redefined this set to guide/glossary/infographic but never
+// applied to prod (CREATE TABLE IF NOT EXISTS on an existing table). Aligning
+// to the values the DB actually accepts. See BACKEND_REQUIRED FC-01.
+export type ContentType =
+  | 'article'
+  | 'condition_guide'
+  | 'coping_strategy'
+  | 'video_transcript'
+  | 'faq'
+  | 'tool_description'
+  | 'crisis_resource';
 export type ContentStatus = 'draft' | 'in_review' | 'published';
 export type ContentLanguage = 'en' | 'es' | 'fr' | 'ar' | 'zh';
 

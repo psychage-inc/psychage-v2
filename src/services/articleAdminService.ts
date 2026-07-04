@@ -668,8 +668,11 @@ export async function updateArticleImage(
 }
 
 export async function deleteArticleImage(imageId: string, storagePath: string, articleId: string): Promise<void> {
-  // Delete from Storage
-  await supabase.storage.from('article-images').remove([storagePath]);
+  // FA-02: check the Storage removal. Previously its error was ignored and the
+  // DB row was deleted regardless, orphaning the file in the bucket (and hiding
+  // the failure from the admin). Remove the file first and surface any error.
+  const { error: storageError } = await supabase.storage.from('article-images').remove([storagePath]);
+  if (storageError) throw storageError;
 
   // Delete record
   const { error } = await supabase

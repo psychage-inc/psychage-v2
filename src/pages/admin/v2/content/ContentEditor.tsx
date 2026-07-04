@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { ArrowLeft, Save, Send, Globe as GlobeIcon, Clock } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
+import { toast } from 'sonner';
 import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';
 import { CONTENT_TYPES, CONTENT_STATUSES, SUPPORTED_LANGUAGES } from '@/lib/admin/constants';
@@ -201,6 +202,9 @@ const AdminContentEditor: React.FC = () => {
         navigate(adminPath(`/content/${docId}/edit`), { replace: true });
       }
     },
+    // ONERR: surface save failures (manual + autosave) instead of leaving the
+    // form dirty with no feedback.
+    onError: (err: Error) => toast.error(`Save failed: ${err.message}`),
   });
 
   const onSave = useCallback(

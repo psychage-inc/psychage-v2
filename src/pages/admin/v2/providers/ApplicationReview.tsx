@@ -3,6 +3,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { type ColumnDef } from '@tanstack/react-table';
 import { Check, X } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
+import { toast } from 'sonner';
 import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';
 import type { ProviderApplication } from '@/lib/admin/types';
@@ -52,6 +53,7 @@ const AdminApplicationReview: React.FC = () => {
       setSelectedApp(null);
       setRejectDialog(null);
     },
+    onError: (err: Error) => toast.error(`Update failed: ${err.message}`),
   });
 
   const columns: ColumnDef<ProviderApplication, unknown>[] = [

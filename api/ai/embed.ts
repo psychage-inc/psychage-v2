@@ -128,23 +128,27 @@ export default async function handler(
     // Chunk the content
     const chunks = chunkText(contentText);
 
-    // Delete existing embeddings for this content
+    // Generate ALL embeddings first. If a chunk's embedding fails (OpenAI
+    // timeout/429), this throws before we touch the existing index — the old
+    // rows stay intact instead of being deleted with only a partial replacement.
+    const embeddings: number[][] = [];
+    for (const chunk of chunks) {
+      embeddings.push(await generateEmbedding(chunk));
+    }
+
+    // Every embedding succeeded — now swap the index.
     const { error: deleteError } = await supabase
       .from('psychage_embeddings')
       .delete()
       .eq('content_id', document._id);
 
     if (deleteError) {
-      console.error('Error deleting old embeddings:', deleteError);
+      throw new Error(`Failed to delete old embeddings: ${deleteError.message}`);
     }
 
-    // Generate embeddings and insert
     let chunksCreated = 0;
-
     for (let i = 0; i < chunks.length; i++) {
       const chunk = chunks[i];
-      const embedding = await generateEmbedding(chunk);
-
       const url = `https://psychage.com/learn/${document._type === 'video' ? 'videos' : 'articles'}/${document.slug.current}`;
 
       const { error: insertError } = await supabase
@@ -154,7 +158,7 @@ export default async function handler(
           content_type: document._type,
           chunk_index: i,
           chunk_text: chunk,
-          embedding,
+          embedding: embeddings[i],
           title: document.title,
           url,
           thumbnail: document.mainImage?.asset?.url,
@@ -165,10 +169,9 @@ export default async function handler(
         });
 
       if (insertError) {
-        console.error(`Error inserting chunk ${i}:`, insertError);
-      } else {
-        chunksCreated++;
+        throw new Error(`Failed to insert chunk ${i}: ${insertError.message}`);
       }
+      chunksCreated++;
     }
 
     return res.status(200).json({

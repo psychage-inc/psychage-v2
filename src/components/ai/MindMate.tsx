@@ -308,6 +308,13 @@ const MindMate: React.FC = () => {
                                     m.id === assistantMsgId ? { ...m, text: fullText } : m
                                 ),
                             );
+                        } else {
+                            // LLM_ERROR / TIMEOUT / other mid-stream failures: propagate
+                            // to the catch block so the user gets an error message and a
+                            // retry, instead of an empty or silently-truncated bubble.
+                            throw new Error(
+                                event.message || 'The assistant ran into a problem. Please try again.'
+                            );
                         }
                         break;
 

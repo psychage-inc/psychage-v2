@@ -95,13 +95,11 @@ describe('newsletterService', () => {
             expect(chain.eq).toHaveBeenCalledWith('email', 'upper@email.com');
         });
 
-        it('returns failure on insert error (non-23505)', async () => {
+        it('throws on insert error (non-23505) so the caller surfaces a failure', async () => {
             mockMaybeSingle.mockResolvedValue({ data: null, error: null });
             mockInsert.mockResolvedValue({ error: { code: '00000', message: 'db error' } });
 
-            const result = await newsletterService.subscribe('test@email.com');
-            expect(result.success).toBe(false);
-            expect(result.message).toContain('Subscription failed');
+            await expect(newsletterService.subscribe('test@email.com')).rejects.toThrow('db error');
         });
 
         it('treats 23505 unique-violation as idempotent success', async () => {
@@ -147,6 +145,7 @@ describe('newsletterService', () => {
 
         it('refreshes email on Apple Private Relay rotation when already-active user re-subscribes (V-2b)', async () => {
             // Existing active subscription with old relay address
+            mockUpdateAwait.mockResolvedValue({ error: null });
             mockMaybeSingle.mockResolvedValue({
                 data: {
                     id: 'sub-1',

@@ -565,7 +565,7 @@ const AdminProviderEditor: React.FC = () => {
             is_primary: l.is_primary,
           }))
         );
-        if (locErr) console.error('Location insert error:', locErr);
+        if (locErr) throw locErr;
       }
 
       // ── Save specialties ──
@@ -576,7 +576,7 @@ const AdminProviderEditor: React.FC = () => {
         const { error: specErr } = await supabase.from('provider_specialties').insert(
           selectedSpecialtyIds.map((sid) => ({ provider_id: providerId, specialty_id: sid }))
         );
-        if (specErr) console.error('Specialty insert error:', specErr);
+        if (specErr) throw specErr;
       }
 
       // ── Save languages ──
@@ -591,7 +591,7 @@ const AdminProviderEditor: React.FC = () => {
             proficiency: l.proficiency,
           }))
         );
-        if (langErr) console.error('Language insert error:', langErr);
+        if (langErr) throw langErr;
       }
 
       // ── Save insurance ──
@@ -602,7 +602,7 @@ const AdminProviderEditor: React.FC = () => {
         const { error: insErr } = await supabase.from('provider_insurance').insert(
           selectedInsuranceIds.map((iid) => ({ provider_id: providerId, insurance_plan_id: iid }))
         );
-        if (insErr) console.error('Insurance insert error:', insErr);
+        if (insErr) throw insErr;
       }
 
       // ── Save cultural competencies ──
@@ -613,7 +613,7 @@ const AdminProviderEditor: React.FC = () => {
         const { error: compErr } = await supabase.from('provider_cultural_competencies').insert(
           selectedCompetencyIds.map((cid) => ({ provider_id: providerId, competency_id: cid }))
         );
-        if (compErr) console.error('Competency insert error:', compErr);
+        if (compErr) throw compErr;
       }
 
       // Log admin action
@@ -628,6 +628,14 @@ const AdminProviderEditor: React.FC = () => {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'providers'] });
+      // Also invalidate the detail + relation queries that seed this editor, so
+      // re-opening the same provider shows the saved values, not pre-save cache.
+      if (id) {
+        queryClient.invalidateQueries({ queryKey: ['admin', 'provider', id] });
+        for (const rel of ['provider-locations', 'provider-specialties', 'provider-languages', 'provider-insurance', 'provider-competencies']) {
+          queryClient.invalidateQueries({ queryKey: ['admin', rel, id] });
+        }
+      }
       toast.success(isNew ? 'Provider created' : 'Changes saved');
       navigate(adminPath('/providers'));
     },

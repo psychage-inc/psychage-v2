@@ -11,7 +11,6 @@ const HomePage = lazyWithRetry(() => import('./pages/home/HomePage'));
 import CookieConsent from './components/ui/CookieConsent';
 import NotFoundPage from './components/pages/NotFoundPage';
 import ErrorBoundary from './components/error/ErrorBoundary';
-import RouteErrorBoundary from './components/error/RouteErrorBoundary';
 import { BookmarkProvider } from './context/BookmarkContext';
 import { ProviderLookupsProvider } from './context/ProviderLookupsContext';
 import SkipLink from './components/ui/SkipLink';
@@ -237,19 +236,19 @@ const App: React.FC = () => {
                                             } />
 
                                             {/* Public Routes */}
-                                            <Route path="/learn" element={<PageTransition><RouteErrorBoundary><ResponsiveRoute mobile={<MobileBrowse />} desktop={<LearnPage />} /></RouteErrorBoundary></PageTransition>} />
-                                            <Route path="/learn/topics" element={<PageTransition><RouteErrorBoundary><BrowseByTopicPage /></RouteErrorBoundary></PageTransition>} />
+                                            <Route path="/learn" element={<PageTransition><ResponsiveRoute mobile={<MobileBrowse />} desktop={<LearnPage />} /></PageTransition>} />
+                                            <Route path="/learn/topics" element={<PageTransition><BrowseByTopicPage /></PageTransition>} />
                                             <Route path="/learn/article/:id" element={<PageTransition><ArticleRedirect /></PageTransition>} />
                                             <Route path="/learn/:categorySlug/:articleSlug" element={<PageTransition><ResponsiveRoute mobile={<MobileReader />} desktop={<ArticlePage />} /></PageTransition>} />
                                             <Route path="/learn/:categorySlug" element={<PageTransition><ResponsiveRoute mobile={<MobileCategory />} desktop={<ArticleCategoryPage />} /></PageTransition>} />
                                             {/* Conditions A–Z reference */}
-                                            <Route path="/conditions" element={<PageTransition><RouteErrorBoundary><ConditionsIndexPage /></RouteErrorBoundary></PageTransition>} />
-                                            <Route path="/conditions/:slug/articles" element={<PageTransition><RouteErrorBoundary><ConditionArticlesPage /></RouteErrorBoundary></PageTransition>} />
-                                            <Route path="/conditions/:slug" element={<PageTransition><RouteErrorBoundary><ConditionDetailPage /></RouteErrorBoundary></PageTransition>} />
+                                            <Route path="/conditions" element={<PageTransition><ConditionsIndexPage /></PageTransition>} />
+                                            <Route path="/conditions/:slug/articles" element={<PageTransition><ConditionArticlesPage /></PageTransition>} />
+                                            <Route path="/conditions/:slug" element={<PageTransition><ConditionDetailPage /></PageTransition>} />
                                             <Route path="/watch/:id" element={<PageTransition><VideoDetail /></PageTransition>} />
                                             {/* Provider Directory V2 */}
-                                            <Route path="/providers" element={<PageTransition><RouteErrorBoundary><ResponsiveRoute mobile={<MobileProviders />} desktop={<ProvidersLandingPage />} /></RouteErrorBoundary></PageTransition>} />
-                                            <Route path="/providers/search" element={<PageTransition><RouteErrorBoundary><ProviderSearchPage /></RouteErrorBoundary></PageTransition>} />
+                                            <Route path="/providers" element={<PageTransition><ResponsiveRoute mobile={<MobileProviders />} desktop={<ProvidersLandingPage />} /></PageTransition>} />
+                                            <Route path="/providers/search" element={<PageTransition><ProviderSearchPage /></PageTransition>} />
                                             <Route path="/providers/:id" element={<PageTransition><ProviderProfilePage /></PageTransition>} />
                                             <Route path="/how-we-verify" element={<PageTransition><HowWeVerifyPage /></PageTransition>} />
                                             <Route path="/for-providers" element={<PageTransition><ForProvidersLandingPage /></PageTransition>} />
@@ -259,9 +258,9 @@ const App: React.FC = () => {
                                             {/* Legacy provider redirects */}
                                             <Route path="/find-care" element={<Navigate to="/providers" replace />} />
                                             <Route path="/find-care/provider/:id" element={<LegacyProviderRedirect />} />
-                                            <Route path="/tools" element={<PageTransition><RouteErrorBoundary><ResponsiveRoute mobile={<MobileTools />} desktop={<ToolsPage />} /></RouteErrorBoundary></PageTransition>} />
-                                            <Route path="/toolkits" element={<PageTransition><RouteErrorBoundary><ToolkitsIndexPage /></RouteErrorBoundary></PageTransition>} />
-                                            <Route path="/toolkits/:id" element={<PageTransition><RouteErrorBoundary><ToolkitDetailPage /></RouteErrorBoundary></PageTransition>} />
+                                            <Route path="/tools" element={<PageTransition><ResponsiveRoute mobile={<MobileTools />} desktop={<ToolsPage />} /></PageTransition>} />
+                                            <Route path="/toolkits" element={<PageTransition><ToolkitsIndexPage /></PageTransition>} />
+                                            <Route path="/toolkits/:id" element={<PageTransition><ToolkitDetailPage /></PageTransition>} />
                                             <Route path="/tools/mood-journal" element={<PageTransition><MoodJournal /></PageTransition>} />
                                             <Route path="/tools/sleep-architect" element={<PageTransition><SleepArchitect /></PageTransition>} />
                                             <Route path="/tools/mindmate" element={
@@ -287,7 +286,7 @@ const App: React.FC = () => {
                                             <Route path="/tools/clarity-journal/report" element={<PageTransition><ClarityJournalReport /></PageTransition>} />
                                             <Route path="/category/:category" element={<CategoryRedirect />} />
                                             <Route path="/search" element={<PageTransition><ResponsiveRoute mobile={<MobileSearch />} desktop={<SearchResults />} /></PageTransition>} />
-                                            <Route path="/clarity-score" element={<PageTransition><RouteErrorBoundary><ClarityScoreTool /></RouteErrorBoundary></PageTransition>} />
+                                            <Route path="/clarity-score" element={<PageTransition><ClarityScoreTool /></PageTransition>} />
                                             {/* Legacy alias — older copy / breadcrumbs reference /tools/clarity-score */}
                                             <Route path="/tools/clarity-score" element={<Navigate to="/clarity-score" replace />} />
                                             <Route path="/tools/clarity-score/*" element={<Navigate to="/clarity-score" replace />} />
@@ -317,7 +316,7 @@ const App: React.FC = () => {
                                             {/* Onboarding (auth-only, no role guard) */}
                                             <Route path="/onboarding" element={
                                                 <ProtectedRoute>
-                                                    <PageTransition><RouteErrorBoundary><OnboardingPage /></RouteErrorBoundary></PageTransition>
+                                                    <PageTransition><OnboardingPage /></PageTransition>
                                                 </ProtectedRoute>
                                             } />
 
@@ -325,7 +324,7 @@ const App: React.FC = () => {
                                             <Route path="/dashboard" element={
                                                 <ProtectedRoute>
                                                     <RoleGuard allowedRoles={['patient', 'admin']}>
-                                                        <PageTransition><RouteErrorBoundary><UserDashboard /></RouteErrorBoundary></PageTransition>
+                                                        <PageTransition><UserDashboard /></PageTransition>
                                                     </RoleGuard>
                                                 </ProtectedRoute>
                                             } />
@@ -333,7 +332,7 @@ const App: React.FC = () => {
                                             <Route path="/dashboard/settings" element={
                                                 <ProtectedRoute>
                                                     <RoleGuard allowedRoles={['patient', 'admin']}>
-                                                        <PageTransition><RouteErrorBoundary><AccountSettings /></RouteErrorBoundary></PageTransition>
+                                                        <PageTransition><AccountSettings /></PageTransition>
                                                     </RoleGuard>
                                                 </ProtectedRoute>
                                             } />
@@ -367,7 +366,7 @@ const App: React.FC = () => {
                                             <Route path="/portal" element={
                                                 <ProtectedRoute>
                                                     <RoleGuard allowedRoles={['provider', 'admin']}>
-                                                        <PageTransition><RouteErrorBoundary><PortalLayout /></RouteErrorBoundary></PageTransition>
+                                                        <PageTransition><PortalLayout /></PageTransition>
                                                     </RoleGuard>
                                                 </ProtectedRoute>
                                             }>

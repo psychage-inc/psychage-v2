@@ -160,3 +160,17 @@ New helper `src/lib/supabaseError.ts` (`throwOnError`). Write methods now stop d
 ### Still documented, not fixed (backend/infra)
 
 `lib/admin/auditLogger.ts` (fire-and-forget telemetry, self-catches — should route to Sentry); `chatPersistenceService.saveMessage` message-count read-modify-write (needs an atomic RPC); `generateArticleProductionId` allocation race (needs a DB sequence — only the guaranteed-duplicate fallback was fixed). The rate-limiter, CSP-enforcement, and admin mock-dashboard items from §5 remain as originally documented.
+
+---
+
+## 8. Follow-up 2 — the three backend-dependent items (now completed)
+
+The items §7 left as "backend/infra, documented" are now fixed (3 commits + 2 DB migrations). Migrations ship in `supabase/migrations/`; the code calls each RPC with a graceful fallback so frontend and DB can deploy independently.
+
+- **auditLogger → Sentry** (`373e263`, client-only): `logAdminAction` now checks the insert `error` (supabase-js doesn't throw, so the catch never fired for RLS/DB denials) and reports both the error path and any exception to Sentry (tagged `admin-audit`), while staying non-throwing for its 40+ fire-and-forget callers.
+- **chat message-count race** (`94836ef` + migration `20260704000001`): new SECURITY INVOKER RPC `increment_conversation_message_count` does the count + `last_message_at` bump in one atomic `UPDATE` (row lock serializes MindMate's concurrent user/assistant saves). `saveMessage` calls it, falling back to the old inline read-modify-write only if the RPC is absent (PGRST202).
+- **production-id race** (`8ed6bea` + migration `20260704000002`): new `article_production_id_counters` table + SECURITY DEFINER, `is_admin()`-gated RPC `next_article_production_id` allocates via an atomic `UPDATE ... RETURNING` (counter seeded from the current max on first use), so concurrent creates can't mint the same id. `generateArticleProductionId` calls it with an inline fallback.
+
+**Deploy note:** the two RPCs must be applied to Supabase (they ship as tracked migrations; the fallbacks keep the app working during any window before they apply). After §5's key rotation this leaves no known code-level items from the audit outstanding — remaining RESIDUAL_RISK is environmental only (real backend/data/devices, rate-limiter multi-instance, CSP enforcement, e2e CI gap).
+
+Verification: `tsc` clean; build green; auditLogger + chatPersistenceService lint clean; migrations follow the repo's SECURITY DEFINER/INVOKER + grant conventions and gate on the existing `is_admin()`.

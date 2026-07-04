@@ -6,6 +6,7 @@
 
 import { Provider } from '../types/models';
 import { supabase } from '../lib/supabaseClient';
+import { throwOnError } from '../lib/supabaseError';
 
 // Fallback to mock data if DB query fails
 import { providers as mockProviders } from '../data/providers';
@@ -314,25 +315,29 @@ export const providerService = {
 
             if (existing) {
                 // Remove favorite
-                await supabase
+                const { error } = await supabase
                     .from('provider_favorites')
                     .delete()
                     .eq('id', existing.id);
+                throwOnError(error, 'Remove favorite');
                 return { favorited: false };
             } else {
                 // Add favorite
-                await supabase
+                const { error } = await supabase
                     .from('provider_favorites')
                     .insert({
                         user_id: user.id,
                         provider_id: providerId,
                         created_at: new Date().toISOString(),
                     });
+                throwOnError(error, 'Add favorite');
                 return { favorited: true };
             }
         } catch (error) {
+            // Re-throw so the caller can distinguish a real failure from a
+            // legitimate "removed" result, instead of masking it as favorited:false.
             console.error('Failed to toggle favorite:', error);
-            return { favorited: false };
+            throw error;
         }
     },
 

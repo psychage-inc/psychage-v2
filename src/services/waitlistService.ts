@@ -37,28 +37,11 @@ export const waitlistService = {
 
             return { success: true };
         } catch (error) {
+            // Report the failure truthfully. The previous localStorage fallback
+            // wrote to a queue nothing ever drained and still returned success,
+            // so the signup was silently lost while the user was told they joined.
             console.error('Failed to join waitlist:', error);
-
-            // Fallback: Store in localStorage if Supabase fails
-            try {
-                const existingWaitlist = JSON.parse(localStorage.getItem('psychage_waitlist') || '[]');
-                const alreadyExists = existingWaitlist.some(
-                    (entry: WaitlistEntry) => entry.email === email.toLowerCase() && entry.feature === feature
-                );
-
-                if (!alreadyExists) {
-                    existingWaitlist.push({
-                        email: email.toLowerCase().trim(),
-                        feature,
-                        created_at: new Date().toISOString()
-                    });
-                    localStorage.setItem('psychage_waitlist', JSON.stringify(existingWaitlist));
-                }
-
-                return { success: true };
-            } catch {
-                return { success: false, error: 'Failed to join waitlist. Please try again.' };
-            }
+            return { success: false, error: 'Failed to join waitlist. Please try again.' };
         }
     },
 

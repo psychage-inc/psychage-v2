@@ -149,4 +149,24 @@ Sev: C/H/M/L. Disp: FIX=in-repo; DEC=needs product/schema decision → BACKEND_R
 
 ## 5. Fix log (Phase 4)
 
-_one entry per commit; finding ID = commit subject_
+One commit per finding (each with a test where testable). All verified: 12/12
+admin tests pass, `tsc --noEmit` clean, production build succeeds.
+
+| Commit | Finding | Fix | Test |
+|--------|---------|-----|------|
+| 3582616 | FC-01 | ContentEditor: add `url_path`; align `ContentType`/`CONTENT_TYPES` to live CHECK. Create now works (live-verified). | ContentEditor.create.test.tsx |
+| 9c6a72e | FP-02 | BulkImport: real provider columns + taxonomy→provider_type map; city/state→provider_locations; maybeSingle. Live-verified. | BulkImport.test.tsx |
+| a684588 | FA-01 | articleAdminService: comments/history/images/stats propagate errors instead of mock. | articleAdminService.errorPropagation.test.ts |
+| 7613bb5 | FP-01 | ProviderEditor: check+throw every child delete/insert (no silent partial save). | chain-trace (render test deferred — see RESIDUAL_RISK) |
+| 2534a2b | FA-02 | deleteArticleImage: check storage.remove() error (no orphaned files). | chain-trace |
+| 4d8f861 | FC-02 | ContentEditor: check content_versions insert. | chain-trace |
+| 3c96edc | FSYM-CAT + ONERR | SymptomList: require category (NOT NULL); onError on save+toggle. | chain-trace |
+| 6a08973 | ONERR | onError toasts added to CrisisKeywords, ContentList, ContentEditor, ApplicationReview, ProviderList, ArticleQualityDashboard mutations. | chain-trace |
+| 81699ae | FSA-03 | SafetyDashboard: propagate error; show `—` instead of fabricated 0. | chain-trace |
+| 652b2e1 | FS-01/FS-06/FSA-01/FSA-04/FC-04/FP-04 + residuals | Documented in BACKEND_REQUIRED.md (architecture gaps, can't fix in frontend). | n/a |
+
+**Not changed (verified PASS on inspection):** FA-04 (runBulk correctly skips
+the audit log for failed items and reports an honest "X updated, Y skipped" —
+not a bug). FS-02/FS-03/FS-04 live in ConditionEditor/MappingMatrix, which do
+not load against the live schema (subsumed by FS-01). FSA-04 subsumed by FSA-01
+(preview can't match production until the classifier reads the DB).

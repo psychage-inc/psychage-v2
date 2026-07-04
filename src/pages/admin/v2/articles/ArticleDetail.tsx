@@ -317,7 +317,7 @@ function ArticleSettingsCard({ article }: { article: ArticleRecord }) {
       }),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'article', article.id] });
-      queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
+      queryClient.invalidateQueries({ queryKey: ['admin', 'articles-search'] });
       toast.success('Article settings saved');
     },
     onError: (err: Error) => toast.error(`Save failed: ${err.message}`),
@@ -462,7 +462,7 @@ function HistoryTab({ article }: { article: ArticleRecord }) {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'article', article.id] });
       queryClient.invalidateQueries({ queryKey: ['admin', 'article-revisions', article.id] });
-      queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
+      queryClient.invalidateQueries({ queryKey: ['admin', 'articles-search'] });
       setRestoreTarget(null);
       toast.success('Revision restored');
     },
@@ -554,7 +554,7 @@ function ContentTab({ article }: { article: ArticleRecord }) {
       return updateArticle(article.id, { content: html, content_format: 'html', word_count: wordCount });
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
+      queryClient.invalidateQueries({ queryKey: ['admin', 'articles-search'] });
       setHasUnsavedChanges(false);
       setAutosaveState('saved');
     },
@@ -574,7 +574,7 @@ function ContentTab({ article }: { article: ArticleRecord }) {
     mutationFn: (type: ArticleType) => updateArticle(article.id, { article_type: type }),
     onSuccess: (_d, type) => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'article', article.id] });
-      queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
+      queryClient.invalidateQueries({ queryKey: ['admin', 'articles-search'] });
       toast.success(`Article type set to ${type.replace(/_/g, ' ')}`);
     },
     onError: (err: Error) => toast.error(`Failed to set type: ${err.message}`),
@@ -596,7 +596,7 @@ function ContentTab({ article }: { article: ArticleRecord }) {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'article', article.id] });
-      queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
+      queryClient.invalidateQueries({ queryKey: ['admin', 'articles-search'] });
       setHasUnsavedChanges(false);
       toast.success('Content saved');
     },
@@ -1405,7 +1405,7 @@ function WorkflowTab({ article }: { article: ArticleRecord }) {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'article', article.id] });
       queryClient.invalidateQueries({ queryKey: ['admin', 'article-status-history', article.id] });
-      queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
+      queryClient.invalidateQueries({ queryKey: ['admin', 'articles-search'] });
       queryClient.invalidateQueries({ queryKey: ['admin', 'article-stats'] });
       toast.success('Status updated');
       setConfirmAction(null);

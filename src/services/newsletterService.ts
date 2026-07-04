@@ -1,4 +1,5 @@
 import { supabase } from '../lib/supabaseClient';
+import { throwOnError } from '../lib/supabaseError';
 import { useMemo } from 'react';
 
 export interface NewsletterSubscribeResponse {
@@ -16,81 +17,52 @@ export interface NewsletterSubscribeResponse {
  */
 export const newsletterService = {
     subscribe: async (email: string): Promise<NewsletterSubscribeResponse> => {
-        try {
-            const normalized = email.toLowerCase().trim();
-            const { data: { user } } = await supabase.auth.getUser();
-            const userId = user?.id ?? null;
+        // Genuine DB errors throw so the caller's catch surfaces a failure —
+        // previously they were discarded (updates) or collapsed to a
+        // {success:false} that callers ignore, so failures rendered as success.
+        const normalized = email.toLowerCase().trim();
+        const { data: { user } } = await supabase.auth.getUser();
+        const userId = user?.id ?? null;
 
-            if (userId) {
-                // Authenticated path — dedup on user_id.
-                const { data: existing } = await supabase
-                    .from('newsletter_subscribers')
-                    .select('id, status, email')
-                    .eq('user_id', userId)
-                    .maybeSingle();
-
-                if (existing) {
-                    const existingRow = existing as { id: string; status?: string; email?: string };
-                    // Re-activate if previously unsubscribed.
-                    if (existingRow.status !== 'active') {
-                        await supabase
-                            .from('newsletter_subscribers')
-                            .update({
-                                status: 'active',
-                                email: normalized,
-                                subscribed_at: new Date().toISOString(),
-                                unsubscribed_at: null,
-                            })
-                            .eq('id', existingRow.id);
-                        return { success: true, message: 'Welcome back!' };
-                    }
-                    // AUTH-032 (V-2b follow-up): even on idempotent
-                    // re-subscribe of an already-active user, refresh
-                    // the email if the caller passed a different one.
-                    // This is the Apple Private Relay rotation path —
-                    // the user re-subscribes from a new relay address
-                    // and the previous one is now defunct, so future
-                    // sends MUST target the new address.
-                    if (existingRow.email !== normalized) {
-                        await supabase
-                            .from('newsletter_subscribers')
-                            .update({ email: normalized })
-                            .eq('id', existingRow.id);
-                    }
-                    return { success: true, message: 'You are already subscribed!' };
-                }
-
-                const { error } = await supabase
-                    .from('newsletter_subscribers')
-                    .insert({
-                        email: normalized,
-                        user_id: userId,
-                        subscribed_at: new Date().toISOString(),
-                        status: 'active',
-                    });
-
-                if (error) {
-                    if (error.code === '23505') {
-                        // Race: subscription was created between the SELECT
-                        // and INSERT. Treat as success.
-                        return { success: true, message: 'You are already subscribed!' };
-                    }
-                    console.error('Newsletter subscription failed:', error);
-                    return { success: false, message: 'Subscription failed. Please try again later.' };
-                }
-
-                return { success: true, message: 'Successfully subscribed!' };
-            }
-
-            // Anonymous path — dedup on email.
-            const { data: existing } = await supabase
+        if (userId) {
+            // Authenticated path — dedup on user_id.
+            const { data: existing, error: selectError } = await supabase
                 .from('newsletter_subscribers')
-                .select('id')
-                .is('user_id', null)
-                .eq('email', normalized)
+                .select('id, status, email')
+                .eq('user_id', userId)
                 .maybeSingle();
+            throwOnError(selectError, 'Newsletter lookup');
 
             if (existing) {
+                const existingRow = existing as { id: string; status?: string; email?: string };
+                // Re-activate if previously unsubscribed.
+                if (existingRow.status !== 'active') {
+                    const { error } = await supabase
+                        .from('newsletter_subscribers')
+                        .update({
+                            status: 'active',
+                            email: normalized,
+                            subscribed_at: new Date().toISOString(),
+                            unsubscribed_at: null,
+                        })
+                        .eq('id', existingRow.id);
+                    throwOnError(error, 'Newsletter reactivate');
+                    return { success: true, message: 'Welcome back!' };
+                }
+                // AUTH-032 (V-2b follow-up): even on idempotent
+                // re-subscribe of an already-active user, refresh
+                // the email if the caller passed a different one.
+                // This is the Apple Private Relay rotation path —
+                // the user re-subscribes from a new relay address
+                // and the previous one is now defunct, so future
+                // sends MUST target the new address.
+                if (existingRow.email !== normalized) {
+                    const { error } = await supabase
+                        .from('newsletter_subscribers')
+                        .update({ email: normalized })
+                        .eq('id', existingRow.id);
+                    throwOnError(error, 'Newsletter email refresh');
+                }
                 return { success: true, message: 'You are already subscribed!' };
             }
 
@@ -98,23 +70,52 @@ export const newsletterService = {
                 .from('newsletter_subscribers')
                 .insert({
                     email: normalized,
+                    user_id: userId,
                     subscribed_at: new Date().toISOString(),
                     status: 'active',
                 });
 
             if (error) {
                 if (error.code === '23505') {
+                    // Race: subscription was created between the SELECT
+                    // and INSERT. Treat as success.
                     return { success: true, message: 'You are already subscribed!' };
                 }
-                console.error('Newsletter subscription failed:', error);
-                return { success: false, message: 'Subscription failed. Please try again later.' };
+                throwOnError(error, 'Newsletter subscribe');
             }
 
             return { success: true, message: 'Successfully subscribed!' };
-        } catch (error) {
-            console.error('Newsletter subscription failed:', error);
-            return { success: false, message: 'Subscription failed. Please try again later.' };
         }
+
+        // Anonymous path — dedup on email.
+        const { data: existing, error: selectError } = await supabase
+            .from('newsletter_subscribers')
+            .select('id')
+            .is('user_id', null)
+            .eq('email', normalized)
+            .maybeSingle();
+        throwOnError(selectError, 'Newsletter lookup');
+
+        if (existing) {
+            return { success: true, message: 'You are already subscribed!' };
+        }
+
+        const { error } = await supabase
+            .from('newsletter_subscribers')
+            .insert({
+                email: normalized,
+                subscribed_at: new Date().toISOString(),
+                status: 'active',
+            });
+
+        if (error) {
+            if (error.code === '23505') {
+                return { success: true, message: 'You are already subscribed!' };
+            }
+            throwOnError(error, 'Newsletter subscribe');
+        }
+
+        return { success: true, message: 'Successfully subscribed!' };
     },
 
     unsubscribe: async (email: string): Promise<NewsletterSubscribeResponse> => {

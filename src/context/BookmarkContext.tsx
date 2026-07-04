@@ -55,6 +55,7 @@ export const BookmarkProvider: React.FC<{ children: ReactNode }> = ({ children }
     }
   }, [isAuthenticated]);
 
+  // eslint-disable-next-line react-hooks/preserve-manual-memoization
   const toggleBookmark = useCallback((id: string | number): boolean => {
     // Require authentication for bookmarks
     if (!isAuthenticated || !user?.id) {

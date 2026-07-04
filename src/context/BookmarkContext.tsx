@@ -24,19 +24,25 @@ export const BookmarkProvider: React.FC<{ children: ReactNode }> = ({ children }
   useEffect(() => {
     if (!isAuthenticated || !user?.id || hydrated.current) return;
 
+    let cancelled = false;
     const hydrateFromSupabase = async () => {
       try {
         const serverBookmarks = await bookmarkService.getAll(user.id);
+        // Guard against a late resolution after logout / user switch, which
+        // would otherwise restore the previous user's bookmarks and set
+        // hydrated=true, blocking the next user's hydration.
+        if (cancelled) return;
         const serverIds = serverBookmarks.map((b: Bookmark) => b.resource_id);
         setBookmarks(serverIds);
         persistToLocalStorage(serverIds);
         hydrated.current = true;
       } catch (error) {
-        console.error('Failed to hydrate bookmarks from Supabase:', error);
+        if (!cancelled) console.error('Failed to hydrate bookmarks from Supabase:', error);
       }
     };
 
     hydrateFromSupabase();
+    return () => { cancelled = true; };
   }, [isAuthenticated, user?.id]);
 
   // Clear bookmarks and reset hydration on logout
@@ -49,39 +55,37 @@ export const BookmarkProvider: React.FC<{ children: ReactNode }> = ({ children }
     }
   }, [isAuthenticated]);
 
-  // eslint-disable-next-line react-hooks/preserve-manual-memoization
   const toggleBookmark = useCallback((id: string | number): boolean => {
     // Require authentication for bookmarks
     if (!isAuthenticated || !user?.id) {
       return false;
     }
 
-    setBookmarks(prev => {
-      const exists = prev.includes(id);
-      const newBookmarks = exists
-        ? prev.filter(b => b !== id)
-        : [...prev, id];
+    const exists = bookmarks.includes(id);
+    const newBookmarks = exists
+      ? bookmarks.filter(b => b !== id)
+      : [...bookmarks, id];
 
-      persistToLocalStorage(newBookmarks);
+    // Optimistic update. The server call runs outside the state updater so it
+    // fires exactly once (a side-effect inside the updater is double-invoked
+    // under StrictMode, which would toggle the server row twice).
+    setBookmarks(newBookmarks);
+    persistToLocalStorage(newBookmarks);
 
-      // Optimistic update with rollback on server failure
-      bookmarkService.toggle(user.id, 'article', String(id)).catch(err => {
-        console.error('Failed to sync bookmark to Supabase:', err);
-        // Rollback: re-toggle using updater to avoid stale closure
-        setBookmarks(current => {
-          const rollback = exists
-            ? [...current, id]   // was removed, add back
-            : current.filter(b => b !== id); // was added, remove
-          persistToLocalStorage(rollback);
-          return rollback;
-        });
+    bookmarkService.toggle(user.id, 'article', String(id)).catch(err => {
+      console.error('Failed to sync bookmark to Supabase:', err);
+      // Rollback via updater to avoid clobbering concurrent toggles
+      setBookmarks(current => {
+        const rollback = exists
+          ? [...current, id]   // was removed, add back
+          : current.filter(b => b !== id); // was added, remove
+        persistToLocalStorage(rollback);
+        return rollback;
       });
-
-      return newBookmarks;
     });
 
     return true;
-  }, [isAuthenticated, user?.id]);
+  }, [isAuthenticated, user?.id, bookmarks]);
 
   const isBookmarked = useCallback((id: string | number) => bookmarks.includes(id), [bookmarks]);
 

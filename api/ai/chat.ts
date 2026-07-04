@@ -287,9 +287,13 @@ export default async function handler(
         'X-Accel-Buffering': 'no',
       });
 
-      // Track client disconnect to stop LLM generation
+      // Track client disconnect to stop LLM generation. On Node >= 16 an aborted
+      // SSE fetch emits 'close' on the response socket, not the request, so listen
+      // on `res` (and keep `req` as a fallback for other runtimes).
       let clientDisconnected = false;
-      req.on('close', () => { clientDisconnected = true; });
+      const markDisconnected = () => { clientDisconnected = true; };
+      res.on('close', markDisconnected);
+      req.on('close', markDisconnected);
 
       // Send metadata immediately
       res.write(encodeSSE({ type: 'metadata', sessionId }));

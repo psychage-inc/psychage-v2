@@ -274,6 +274,12 @@ async function getArticleIndex(): Promise<ArticleWithContent[]> {
         _articleIndexPromise = articleService.getAllIndexable().then(list => {
             _articleIndexCache = list;
             return list;
+        }).catch(err => {
+            // Don't memoize a rejection — a transient failure would otherwise
+            // leave search permanently broken until a full reload. Clear it so
+            // the next call retries.
+            _articleIndexPromise = null;
+            throw err;
         });
     }
     return _articleIndexPromise;

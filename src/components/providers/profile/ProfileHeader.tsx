@@ -59,7 +59,7 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({ provider }) => {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-2 sm:justify-start">
-          <Badge variant="teal">{provider.provider_type.label}</Badge>
+          {provider.provider_type?.label && <Badge variant="teal">{provider.provider_type.label}</Badge>}
           {(() => {
             const badgeType = getTrustBadgeType(provider);
             // 'unclaimed' is already explained by the seeded banner below — the

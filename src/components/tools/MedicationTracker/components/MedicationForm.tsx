@@ -23,8 +23,11 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
   const [frequency, setFrequency] = useState<MedicationFrequency>(
     initial?.frequency ?? 'once-daily'
   );
-  const [timesOfDay, setTimesOfDay] = useState<string[]>(
-    initial?.timesOfDay ?? DEFAULT_TIMES['once-daily']
+  // Store times as {id, time} so removable rows keep stable keys — index keys
+  // made a native time-picker's focus stick to the wrong row after a middle
+  // removal. The Medication model stays string[]; we convert on submit.
+  const [timeSlots, setTimeSlots] = useState<{ id: string; time: string }[]>(
+    () => (initial?.timesOfDay ?? DEFAULT_TIMES['once-daily']).map((time) => ({ id: crypto.randomUUID(), time }))
   );
   const [startDate, setStartDate] = useState(
     initial?.startDate ?? new Date().toISOString().slice(0, 10)
@@ -46,7 +49,7 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
   useEffect(() => {
     if (!initial) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
-      setTimesOfDay(DEFAULT_TIMES[frequency]);
+      setTimeSlots(DEFAULT_TIMES[frequency].map((time) => ({ id: crypto.randomUUID(), time })));
     }
   }, [frequency, initial]);
 
@@ -54,7 +57,7 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
     const errs: Record<string, string> = {};
     if (!name.trim()) errs.name = 'Medication name is required';
     if (!dosage.trim()) errs.dosage = 'Dosage is required';
-    if (frequency !== 'as-needed' && timesOfDay.length === 0) {
+    if (frequency !== 'as-needed' && timeSlots.length === 0) {
       errs.times = 'At least one time of day is required';
     }
     setErrors(errs);
@@ -69,7 +72,7 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
       dosage: dosage.trim(),
       unit,
       frequency,
-      timesOfDay: frequency === 'as-needed' ? [] : timesOfDay,
+      timesOfDay: frequency === 'as-needed' ? [] : timeSlots.map((t) => t.time),
       startDate,
       endDate: endDate || undefined,
       prescriber: prescriber.trim() || undefined,
@@ -82,13 +85,13 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
     });
   };
 
-  const updateTime = (index: number, value: string) => {
-    setTimesOfDay((prev) => prev.map((t, i) => (i === index ? value : t)));
+  const updateTime = (id: string, value: string) => {
+    setTimeSlots((prev) => prev.map((t) => (t.id === id ? { ...t, time: value } : t)));
   };
 
-  const addTime = () => setTimesOfDay((prev) => [...prev, '12:00']);
-  const removeTime = (index: number) =>
-    setTimesOfDay((prev) => prev.filter((_, i) => i !== index));
+  const addTime = () => setTimeSlots((prev) => [...prev, { id: crypto.randomUUID(), time: '12:00' }]);
+  const removeTime = (id: string) =>
+    setTimeSlots((prev) => prev.filter((t) => t.id !== id));
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
@@ -189,18 +192,18 @@ export const MedicationForm: React.FC<Props> = ({ initial, onSave, onCancel }) =
                 Times of Day
               </label>
               <div className="space-y-2">
-                {timesOfDay.map((time, idx) => (
-                  <div key={idx} className="flex items-center gap-2">
+                {timeSlots.map((slot) => (
+                  <div key={slot.id} className="flex items-center gap-2">
                     <input
                       type="time"
-                      value={time}
-                      onChange={(e) => updateTime(idx, e.target.value)}
+                      value={slot.time}
+                      onChange={(e) => updateTime(slot.id, e.target.value)}
                       className="flex-1 px-3 py-2 rounded-lg border border-slate-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
                     />
-                    {timesOfDay.length > 1 && (
+                    {timeSlots.length > 1 && (
                       <button
                         type="button"
-                        onClick={() => removeTime(idx)}
+                        onClick={() => removeTime(slot.id)}
                         className="p-2 text-slate-400 dark:text-neutral-500 hover:text-red-500 transition-colors"
                         aria-label="Remove time"
                       >

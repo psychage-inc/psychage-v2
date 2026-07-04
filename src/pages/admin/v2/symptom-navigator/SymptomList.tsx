@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { type ColumnDef } from '@tanstack/react-table';
 import { Plus, Pencil, X } from 'lucide-react';
+import { toast } from 'sonner';
 import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';
 import { SYMPTOM_DOMAINS } from '@/lib/admin/constants';
@@ -69,9 +70,12 @@ const AdminSymptomList: React.FC = () => {
 
   const saveMutation = useMutation({
     mutationFn: async () => {
+      // FSYM-CAT: symptoms.category is NOT NULL. Require it client-side so the
+      // insert cannot fail on the constraint with a cryptic DB error.
+      if (!category) throw new Error('Category is required');
       const payload = {
         name,
-        category: category || null,
+        category,
         domain: domain || null,
         is_crisis: isCrisis,
         is_active: isActive,
@@ -91,6 +95,7 @@ const AdminSymptomList: React.FC = () => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'symptoms'] });
       closeForm();
     },
+    onError: (err: Error) => toast.error(`Save failed: ${err.message}`),
   });
 
   const toggleActive = useMutation({
@@ -103,6 +108,7 @@ const AdminSymptomList: React.FC = () => {
       await logAdminAction({ action: 'update', resourceType: 'symptom', resourceId: s.id, newValue: { is_active: !s.is_active } });
     },
     onSuccess: () => queryClient.invalidateQueries({ queryKey: ['admin', 'symptoms'] }),
+    onError: (err: Error) => toast.error(`Update failed: ${err.message}`),
   });
 
   const openForm = (editing?: SymptomCatalogRow) => {

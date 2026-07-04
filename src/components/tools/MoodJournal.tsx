@@ -5,6 +5,7 @@ import Button from '../ui/Button';
 import Breadcrumbs from '../ui/Breadcrumbs';
 import { useNavigate } from 'react-router-dom';
 import { moodService, MoodEntry as ServiceMoodEntry } from '../../services/moodService';
+import { valenceToScore, scoreToValence } from './MoodWizard/moodScale';
 import { useAuth } from '../../context/AuthContext';
 import { MoodWizard, WizardState } from './MoodWizard/MoodWizard';
 import { LightweightInsights } from './LightweightInsights';
@@ -18,16 +19,6 @@ interface MoodEntry {
     emotions: string[];
     note: string;
 }
-
-// The wizard works on a 1–10 valence scale, but mood_entries.value is the
-// canonical 1–5 scale shared with QuickMoodCheckIn / the dashboard. Convert at
-// the service boundary so pleasant moods (valence > 5) are no longer rejected
-// and stored moods still display on this tool's 1–10 scale.
-const valenceToScore = (valence: number): number =>
-    Math.min(5, Math.max(1, Math.round(((valence - 1) / 9) * 4) + 1));
-
-const scoreToValence = (score: number): number =>
-    Math.min(10, Math.max(1, Math.round(((score - 1) / 4) * 9) + 1));
 
 // Convert service entry to component entry
 const fromServiceEntry = (entry: ServiceMoodEntry): MoodEntry => ({

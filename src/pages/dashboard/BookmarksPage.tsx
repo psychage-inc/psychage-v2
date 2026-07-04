@@ -5,13 +5,17 @@ import Button from '@/components/ui/Button';
 import { BookMarked, ArrowRight, GraduationCap, MapPin, Layout, UserSquare2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
-import { api } from '@/lib/api';
+import { articleService } from '@/services/articleService';
+import { providerService } from '@/services/providerService';
+import { bookmarkService } from '@/services/bookmarkService';
+import { useAuth } from '@/context/AuthContext';
 import { Article, Provider } from '@/types/models';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { getArticleUrl } from '@/lib/articleUrl';
 
 const BookmarksPage: React.FC = () => {
+    const { user } = useAuth();
     const [activeTab, setActiveTab] = useState<'articles' | 'providers'>('articles');
     const [bookmarks, setBookmarks] = useState<Article[]>([]);
     const [favorites, setFavorites] = useState<Provider[]>([]);
@@ -20,22 +24,25 @@ const BookmarksPage: React.FC = () => {
     useEffect(() => {
         let isCancelled = false;
         const fetchData = async () => {
+            if (!user?.id) {
+                setBookmarks([]);
+                setFavorites([]);
+                setIsLoading(false);
+                return;
+            }
             setIsLoading(true);
             try {
-                const [articlesRes, providersRes] = await Promise.all([
-                    api.articles.getBookmarks(),
-                    api.providers.getFavorites()
+                // Read from Supabase (the source BookmarkContext writes to), not the
+                // retired REST endpoints that returned nothing.
+                const [savedArticles, favoriteProviders] = await Promise.all([
+                    articleService.getBookmarks(user.id),
+                    providerService.getFavorites()
                 ]);
 
                 if (isCancelled) return;
 
-                if (articlesRes.success && articlesRes.data) {
-                    setBookmarks(articlesRes.data as unknown as Article[]);
-                }
-
-                if (providersRes.success && providersRes.data) {
-                    setFavorites(providersRes.data as unknown as Provider[]);
-                }
+                setBookmarks(savedArticles);
+                setFavorites(favoriteProviders);
             } catch {
                 // Failed to fetch bookmarks — show empty state
             } finally {
@@ -45,25 +52,29 @@ const BookmarksPage: React.FC = () => {
 
         fetchData();
         return () => { isCancelled = true; };
-    }, []);
+    }, [user?.id]);
 
     const removeBookmark = async (id: string) => {
+        if (!user?.id) return;
+        const previous = bookmarks;
         // Optimistic update
-        setBookmarks(prev => prev.filter(b => b.id !== id));
+        setBookmarks(prev => prev.filter(b => String(b.id) !== id));
         try {
-            await api.articles.bookmark(id); // Toggle off
+            await bookmarkService.toggle(user.id, 'article', id);
         } catch {
-            // Revert on error would go here if strict
+            // Revert on failure so the list reflects the persisted state
+            setBookmarks(previous);
         }
     };
 
     const removeFavorite = async (id: string) => {
+        const previous = favorites;
         // Optimistic update
-        setFavorites(prev => prev.filter(f => f.id !== id));
+        setFavorites(prev => prev.filter(f => String(f.id) !== id));
         try {
-            await api.providers.toggleFavorite(id);
+            await providerService.toggleFavorite(id);
         } catch {
-            // Failed to remove favorite
+            setFavorites(previous);
         }
     };
 

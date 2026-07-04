@@ -31,6 +31,12 @@ export const ProviderSearchBar: React.FC<ProviderSearchBarProps> = ({
     requestLocation();
   };
 
+  // Re-sync the inputs when the URL-derived props change (chip clear, "Clear
+  // all", back/forward). Without this the box keeps showing stale text and a
+  // submit silently re-applies the removed query/location.
+  React.useEffect(() => { setQuery(initialQuery); }, [initialQuery]);
+  React.useEffect(() => { setLocation(initialLocation); }, [initialLocation]);
+
   // When geolocation resolves, notify parent
   React.useEffect(() => {
     if (latitude != null && longitude != null && onUseLocation) {

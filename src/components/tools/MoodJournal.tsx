@@ -19,11 +19,21 @@ interface MoodEntry {
     note: string;
 }
 
+// The wizard works on a 1–10 valence scale, but mood_entries.value is the
+// canonical 1–5 scale shared with QuickMoodCheckIn / the dashboard. Convert at
+// the service boundary so pleasant moods (valence > 5) are no longer rejected
+// and stored moods still display on this tool's 1–10 scale.
+const valenceToScore = (valence: number): number =>
+    Math.min(5, Math.max(1, Math.round(((valence - 1) / 9) * 4) + 1));
+
+const scoreToValence = (score: number): number =>
+    Math.min(10, Math.max(1, Math.round(((score - 1) / 4) * 9) + 1));
+
 // Convert service entry to component entry
 const fromServiceEntry = (entry: ServiceMoodEntry): MoodEntry => ({
     id: entry.id,
     date: entry.created_at,
-    mood: entry.value,
+    mood: scoreToValence(entry.value),
     emotions: entry.tags || [],
     note: entry.notes || ''
 });
@@ -71,7 +81,7 @@ const MoodJournal: React.FC = () => {
             if (user?.id) {
                 const serviceEntry = await moodService.createEntry(
                     user.id,
-                    data.valence,
+                    valenceToScore(data.valence),
                     noteToSave || undefined,
                     combinedTags
                 );

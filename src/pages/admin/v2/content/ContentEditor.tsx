@@ -175,12 +175,15 @@ const AdminContentEditor: React.FC = () => {
       // Create version
       if (docId) {
         const nextVersion = (versions?.[0]?.version_number ?? 0) + 1;
-        await supabase.from('content_versions').insert({
+        // FC-02: check the version insert. It was previously unchecked, so a
+        // failed version write silently diverged the history from the document.
+        const { error: versionError } = await supabase.from('content_versions').insert({
           document_id: docId,
           version_number: nextVersion,
           content_snapshot: payload,
           change_summary: isNew ? 'Initial creation' : `Saved as ${status}`,
         });
+        if (versionError) throw versionError;
       }
 
       await logAdminAction({

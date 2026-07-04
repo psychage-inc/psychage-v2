@@ -129,22 +129,25 @@ update pending" note (frontend can add once the endpoint is specified).
 
 ---
 
-## FP-04 — Approving a provider application creates no provider (MEDIUM, decision)
+## FP-04 — Approving a provider application creates no provider — RESOLVED (frontend)
 
-**Symptom.** `/providers/applications` "Approve" sets
-`provider_applications.status = 'approved'` but does not create/activate a
-`providers` row, so an approved applicant never appears in the directory.
+**Was:** "Approve" only set `provider_applications.status = 'approved'`; no
+`providers` row was created, so an approved applicant never entered the directory.
 
-**Evidence.** `ApplicationReview.tsx` updateStatus only writes the application row.
-Schema has `providers.application_id` (migration 20260310000003) but no
-trigger/RPC promotes an approved application into a provider.
+**Fixed in `ApplicationReview.tsx`** (DECISION_MADE_UNVERIFIED — standard admin
+convention chosen): approve now creates an ACTIVE, `psychage_verified` provider
+linked via `application_id`, with a primary location from `practice_address`,
+*before* flipping the application status (so a failed creation leaves it pending).
+Idempotent via the `application_id` link. Live-verified + unit test.
 
-**Required (decision).** Either add an RPC/trigger `approve_provider_application(app_id)`
-that inserts a `providers` row (display_name, provider_type_id, contact fields,
-`verification_tier`, `status='active'`, `application_id`) inside the same
-transaction as the status change, or confirm approval is intentionally advisory and
-relabel the UI ("Accept application — create the provider separately"). The frontend
-can wire either once chosen.
+**Remaining (LOW, optional):** the application's `specialties[]`/`languages[]`
+(free text) are not written to `provider_specialties`/`provider_languages` on
+approve — same text→id mapping gap as bulk import (see FP-02 residual). Provide a
+crosswalk to populate them.
+
+**Optional hardening:** for transactional atomicity (provider + application in one
+commit) an `approve_provider_application(app_id)` SECURITY DEFINER RPC could replace
+the two client-side writes. Not required — the current order is safe.
 
 ---
 

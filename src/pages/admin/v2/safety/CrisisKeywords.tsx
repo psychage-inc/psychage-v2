@@ -8,6 +8,7 @@ import { logAdminAction } from '@/lib/admin/auditLogger';
 import { SEVERITY_LEVELS, CRISIS_CATEGORIES, SUPPORTED_LANGUAGES } from '@/lib/admin/constants';
 import type { CrisisKeyword, CrisisSeverity, CrisisCategory } from '@/lib/admin/types';
 import PageHeader from '@/components/admin/PageHeader';
+import NotWiredNotice from '@/components/admin/NotWiredNotice';
 import DataTable from '@/components/admin/DataTable';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
 import { cn } from '@/lib/utils';
@@ -140,6 +141,7 @@ const AdminCrisisKeywords: React.FC = () => {
 
   return (
     <div>
+      <NotWiredNotice variant="not-reflected">Keyword changes are saved, but crisis detection currently uses a fixed built-in list, so edits here are not yet enforced (audit finding FSA-01).</NotWiredNotice>
       <PageHeader
         title="Crisis Keywords"
         description="Manage crisis detection keywords by severity and category"

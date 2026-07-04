@@ -7,6 +7,7 @@ import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';
 import type { ConditionRecord, SymptomRecord, MappingRecord } from '@/lib/admin/types';
 import PageHeader from '@/components/admin/PageHeader';
+import NotWiredNotice from '@/components/admin/NotWiredNotice';
 import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
 import { adminPath } from '@/hooks/useAdminNavigate';
@@ -309,6 +310,7 @@ const AdminConditionEditor: React.FC = () => {
 
   return (
     <div>
+      <NotWiredNotice variant="unavailable">This editor is temporarily unavailable — it writes columns that don’t exist on the live schema (audit finding FS-01). Saving will fail until the backend migration lands. See BACKEND_REQUIRED.md.</NotWiredNotice>
       <PageHeader
         title={isNew ? 'Add Condition' : 'Edit Condition'}
         description={isNew ? 'Create a new condition profile' : (nameEn || conditionId)}

@@ -8,6 +8,7 @@ import { logAdminAction } from '@/lib/admin/auditLogger';
 import { SYMPTOM_DOMAINS } from '@/lib/admin/constants';
 import type { SymptomDomain } from '@/lib/admin/types';
 import PageHeader from '@/components/admin/PageHeader';
+import NotWiredNotice from '@/components/admin/NotWiredNotice';
 import DataTable from '@/components/admin/DataTable';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
 import { cn } from '@/lib/utils';
@@ -198,6 +199,7 @@ const AdminSymptomList: React.FC = () => {
 
   return (
     <div>
+      <NotWiredNotice variant="not-reflected">Symptom edits are saved to the database, but the public Symptom Navigator currently reads bundled data, so changes won’t reach users yet (audit finding FS-06).</NotWiredNotice>
       <PageHeader
         title="Symptoms"
         description={`${symptoms?.length || 0} symptoms in the Navigator catalog`}

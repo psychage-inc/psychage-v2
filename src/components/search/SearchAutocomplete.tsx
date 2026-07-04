@@ -24,6 +24,8 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
     const wrapperRef = useRef<HTMLDivElement>(null);
     const navigate = useNavigate();
     const debounceTimerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+    // Latest-request guard: discard a suggestion response that isn't the newest.
+    const requestIdRef = useRef(0);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -41,17 +43,20 @@ const SearchAutocomplete: React.FC<SearchAutocompleteProps> = ({
             setIsOpen(false);
             return;
         }
+        const requestId = ++requestIdRef.current;
         setLoading(true);
         try {
             const result = await searchService.getGroupedSuggestions(searchQuery, 3);
+            if (requestId !== requestIdRef.current) return;
             setGroups(result);
             setIsOpen(result.total > 0);
         } catch (error) {
+            if (requestId !== requestIdRef.current) return;
             console.error('Failed to fetch search suggestions:', error);
             setGroups(null);
             setIsOpen(false);
         } finally {
-            setLoading(false);
+            if (requestId === requestIdRef.current) setLoading(false);
         }
     }, []);
 

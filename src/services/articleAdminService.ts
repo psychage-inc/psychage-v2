@@ -1314,11 +1314,25 @@ export async function generateArticleProductionId(categorySlug: string): Promise
   const prefix = CATEGORY_PREFIXES[categorySlug];
   if (!prefix) throw new Error(`Unknown category slug: ${categorySlug}`);
 
+  // Allocate atomically server-side so concurrent creates can't mint the same
+  // id. Falls back to the (racy) inline read when the RPC isn't deployed yet.
+  const { data, error } = await supabase.rpc('next_article_production_id', { prefix_input: prefix });
+  if (error) {
+    if (error.code === 'PGRST202') {
+      return generateArticleProductionIdInline(prefix);
+    }
+    throw error;
+  }
+  return data as string;
+}
+
+// Fallback for environments without the next_article_production_id RPC. Racy
+// (read-max-then-add-1) but preserves the prior behavior during that window.
+async function generateArticleProductionIdInline(prefix: string): Promise<string> {
   const fullPrefix = `PSY-${prefix}-`;
 
   // Don't swallow a query failure into `${fullPrefix}001` — that is guaranteed
-  // to collide once any article with this prefix exists. Let it throw so the
-  // caller's mutation surfaces the failure instead of persisting a duplicate.
+  // to collide once any article with this prefix exists.
   const { data, error } = await supabase
     .from('articles')
     .select('article_production_id')

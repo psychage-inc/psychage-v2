@@ -664,8 +664,10 @@ export async function updateArticleImage(
 }
 
 export async function deleteArticleImage(imageId: string, storagePath: string, articleId: string): Promise<void> {
-  // Delete from Storage
-  await supabase.storage.from('article-images').remove([storagePath]);
+  // Delete from Storage — surface a failure instead of deleting the DB record
+  // anyway and leaving an orphaned object still served at its public URL.
+  const { error: storageError } = await supabase.storage.from('article-images').remove([storagePath]);
+  if (storageError) throw storageError;
 
   // Delete record
   const { error } = await supabase
@@ -734,8 +736,10 @@ export async function createBreakdownArticles(
   parentId: string,
   sections: { title: string; slug: string; sanity_id?: string }[]
 ): Promise<ArticleRecord[]> {
-  // Mark parent
-  await supabase.from('articles').update({ is_parent: true }).eq('id', parentId);
+  // Mark parent — a failed update must not proceed to create children under a
+  // parent that was never flagged (they'd be unreachable in the clusters UI).
+  const { error: parentErr } = await supabase.from('articles').update({ is_parent: true }).eq('id', parentId);
+  if (parentErr) throw parentErr;
 
   const { data: { user } } = await supabase.auth.getUser();
 
@@ -1205,9 +1209,10 @@ export async function updateReviewStage(
     .single();
   if (updateErr) throw updateErr;
 
-  // Log in status history
+  // Log in status history — surface a failure so the stage audit trail can't
+  // silently miss transitions while the stage change reports success.
   const { data: { user } } = await supabase.auth.getUser();
-  await supabase.from('article_status_history').insert({
+  const { error: histErr } = await supabase.from('article_status_history').insert({
     article_id: articleId,
     from_status: oldStage,
     to_status: newStage,
@@ -1215,6 +1220,7 @@ export async function updateReviewStage(
     changed_by_name: user?.email || null,
     notes: notes || `Review stage: ${oldStage} → ${newStage}`,
   });
+  if (histErr) throw histErr;
 
   logAdminAction({
     action: 'review_stage_change',
@@ -1310,26 +1316,25 @@ export async function generateArticleProductionId(categorySlug: string): Promise
 
   const fullPrefix = `PSY-${prefix}-`;
 
-  try {
-    const { data, error } = await supabase
-      .from('articles')
-      .select('article_production_id')
-      .like('article_production_id', `${fullPrefix}%`)
-      .order('article_production_id', { ascending: false })
-      .limit(1);
-    if (error) throw error;
+  // Don't swallow a query failure into `${fullPrefix}001` — that is guaranteed
+  // to collide once any article with this prefix exists. Let it throw so the
+  // caller's mutation surfaces the failure instead of persisting a duplicate.
+  const { data, error } = await supabase
+    .from('articles')
+    .select('article_production_id')
+    .like('article_production_id', `${fullPrefix}%`)
+    .order('article_production_id', { ascending: false })
+    .limit(1);
+  if (error) throw error;
 
-    let nextNum = 1;
-    if (data && data.length > 0 && data[0].article_production_id) {
-      const parts = data[0].article_production_id.split('-');
-      const lastNum = parseInt(parts[2], 10);
-      if (!isNaN(lastNum)) nextNum = lastNum + 1;
-    }
-
-    return `${fullPrefix}${String(nextNum).padStart(3, '0')}`;
-  } catch (err) {
-    return `${fullPrefix}001`;
+  let nextNum = 1;
+  if (data && data.length > 0 && data[0].article_production_id) {
+    const parts = data[0].article_production_id.split('-');
+    const lastNum = parseInt(parts[2], 10);
+    if (!isNaN(lastNum)) nextNum = lastNum + 1;
   }
+
+  return `${fullPrefix}${String(nextNum).padStart(3, '0')}`;
 }
 
 // ============================================================

@@ -1,0 +1,50 @@
+# Citation tiers + ratios.
+# PROVISIONAL tier DEFINITIONS: build plan §3 states the tier definitions live in the v1 design
+# doc, not v2, and v1 is unavailable. Adopting the build plan §3 working definitions and flagging
+# provisional per its instruction. RATIOS are stated in build plan §3/§9.5 (not provisional).
+provisional_definitions: true
+source_definitions: build-plan-§3 (working defs; v1 table unavailable)
+source_ratios: build-plan-§3/§9.5
+
+tiers:
+  T1:
+    label: meta-analysis / systematic review / RCT / large cohort / GWAS
+    load_bearing_ok: true
+  T2:
+    label: primary observational or mechanistic study
+    load_bearing_ok: true
+  T3:
+    label: clinical guideline (NICE, APA, SIGN)
+    load_bearing_ok: framing+placement
+  T4:
+    label: authoritative review or textbook
+    load_bearing_ok: framing
+  T5:
+    label: institutional fact sheet (WHO, NIMH, Mayo, NHS)
+    load_bearing_ok: false      # may set framing; NEVER sole support for a number/effect-size/the_risk
+
+per_part:
+  citations_floor: 7
+  citations_target_min: 9
+  citations_target_max: 12
+
+ratios:                          # computed across each part's citation set
+  T1_min_pct: 40
+  T1_plus_T2_min_pct: 60
+  T5_max_pct: 20
+  recency_min_pct: 70           # share published within 10 years
+  recency_cutoff_year: 2016     # today = 2026-07 → "within ten years" = year >= 2016
+
+condition_totals:
+  sources_min: 45
+  sources_target_max: 55
+  halt_below: 40                # < 40 live-resolved sources → HALT the run
+
+resolution:
+  api: europepmc
+  endpoint: https://www.ebi.ac.uk/europepmc/webservices/rest/search
+  rule: every PMID/DOI hit live; resolved:false => source does not enter the dossier; a load-bearing claim whose only support fails to resolve is DROPPED, never softened to an unsourced sentence.
+
+quote_rule:                     # HAZARD 1 — build plan §3
+  applies_to: [P2, P5]
+  rule: every QuoteBlock is a verbatim, cited, PUBLISHED first-person account (Schizophrenia Bulletin First Person Account series is canonical). No composite, no illustrative, no paraphrase-as-quote. Unresolvable => block does not ship, SCENE renders as third-person body copy.

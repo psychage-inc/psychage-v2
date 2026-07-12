@@ -1,0 +1,40 @@
+# The 8 invariants — the floor every part must clear.
+# PROVISIONAL: the authoritative list lives in PSYCHAGE_CONDITIONS_CONTENT_DESIGN_v2.md,
+# which is NOT available to this run. Reconstructed from the build plan's restatements
+# + standard editorial/clinical practice. Every one is flagged in RUN_REPORT.md for Lena/Ryan.
+provisional: true
+source: reconstructed-from-build-plan
+
+invariants:
+  - id: INV1
+    name: crisis-callout-present
+    rule: Every part of a crisis_flag condition carries a crisis-variant ArticleCallout with real crisis resources.
+    gate: L1 deterministic
+  - id: INV2
+    name: person-first-language
+    rule: Person-first throughout. Banned — "schizophrenics", "suffers from", "afflicted with", "high-functioning" and the full banned.txt list.
+    gate: L1 deterministic (banned scan)
+  - id: INV3
+    name: reviewer-credit-verbatim
+    rule: Exact string "Reviewed by Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology." present, never abbreviated or ellipsized.
+    gate: L1 deterministic
+  - id: INV4
+    name: one-onward-path
+    rule: Exactly one SIGNPOST / onward path per part (one RelatedToolsBlock or explicit next-part link).
+    gate: L1 deterministic
+  - id: INV5
+    name: every-number-resolves
+    rule: Every number, effect size, and first-person quote resolves to a live PMID/DOI in the frozen dossier. No fact-sheet (WHO/NIMH/Mayo/NHS) is the sole support for a number/effect-size/risk.
+    gate: L1 (live resolution) + citations.yaml tiers
+  - id: INV6
+    name: charts-degrade
+    rule: Every chart/diagram carries an a11y_summary text alternative; readable at mobile width.
+    gate: L1 (a11y_summary present) + L3 render check
+  - id: INV7
+    name: mascot-absent-body-not-teal
+    rule: Mascot absent from every condition surface. Body copy renders stone (via .article-prose), never teal.
+    gate: L1 (render token check) + manual
+  - id: INV8
+    name: accessibility-floor
+    rule: Measure 60–75ch, 8pt grid, 44×44px targets, prefers-reduced-motion respected.
+    gate: render surface (reuses .article-prose + real components which satisfy this)

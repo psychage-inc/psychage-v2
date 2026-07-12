@@ -1,0 +1,70 @@
+# Condition config — schizophrenia. FROZEN at phase 1.
+# Source of truth for gate + render. Values NOT provisional here are from the build plan.
+condition:
+  slug: schizophrenia
+  name: Schizophrenia
+  kind: CHRONIC            # build plan §5 — recovery language permitted+required in P5 only
+  crisis_flag: true
+  language_policy: person-first
+  practicalExercise: absent # CHRONIC carries none (build plan §8)
+  reviewer_credit_line: "Reviewed by Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology."  # exact string; never abbreviated
+  review_mode: 5-full       # build plan §5 — all five parts to full clinician review
+
+parts:
+  - id: 1
+    slug: understanding-schizophrenia
+    title: Understanding Schizophrenia
+    form: F-BOUNDARY
+    word_floor: 1300
+    word_ceiling: 1500
+    claims_min: 9
+    carries_summary_in_article: true   # the ONLY part that does (build plan §8/§12)
+    scene: false
+    peak_risk: self-diagnosis (SR-3); DSM criteria as clinician-view only, never a checklist
+  - id: 2
+    slug: signs-and-experiences
+    title: Signs and Experiences
+    form: F-PORTRAIT
+    word_floor: 1300
+    word_ceiling: 1500
+    claims_min: 9
+    carries_summary_in_article: false
+    scene: true                        # QuoteBlock — verbatim published first-person or third-person fallback
+  - id: 3
+    slug: why-it-happens
+    title: Why It Happens
+    form: F-CAUSAL
+    word_floor: 1300
+    word_ceiling: 1600
+    claims_min: 10
+    carries_summary_in_article: false
+    scene: false                       # omits SCENE — P2 carries it
+    heaviest_citation_load: 12
+    published_thesis: "The 'split mind' folk-model is the exact inverse of the mechanism — this is a failure of integration, not a multiplication of selves."  # calibration bar for the other four
+  - id: 4
+    slug: what-helps
+    title: What Helps
+    form: F-PRACTICE
+    word_floor: 1300
+    word_ceiling: 1500
+    claims_min: 9
+    carries_summary_in_article: false
+    scene: false
+    peak_risk: prescription drift (SR-3, Apple 1.4.1) — "clinicians often use…" only; never a dose, never a drug recommendation, never a 2nd-person treatment imperative. Gate scans this part hardest.
+  - id: 5
+    slug: living-with-it
+    title: Living With It
+    form: F-LIFE
+    word_floor: 1300
+    word_ceiling: 1500
+    claims_min: 9
+    carries_summary_in_article: false
+    scene: true                        # QuoteBlock — verbatim published first-person or third-person fallback
+    recovery_language: permitted-and-required   # NEURODIVERGENT-only ban does NOT apply to CHRONIC
+    contested_claims: long-term outcome + recovery-rate figures are actively contested; article states a position, does not pick the comforting number
+
+hub:
+  one_line_promise_source: part-1.thesis.claim   # NOT its summary (build plan §12)
+  rail: editorial-series-index                    # shape not completion; NO progress/checkmarks/streaks
+  stat_cards: 3                                   # inherited from parts
+  prose_of_its_own: none

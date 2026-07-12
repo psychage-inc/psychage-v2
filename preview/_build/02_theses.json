@@ -1,0 +1,111 @@
+{
+  "condition": "schizophrenia",
+  "note": "Phase 3. Authored once, all five parts together, against the frozen 01_dossier.json. FROZEN after reject tests pass. Calibration bar = P3 published thesis (build plan §14).",
+  "theses": [
+    {
+      "part_id": 1,
+      "form": "F-BOUNDARY",
+      "opener_register": "reader-implicating epidemiology — opens on how common anomalous experience is, not on the diagnosis",
+      "claim": "Schizophrenia is not marked off from ordinary life by the presence of hallucinations or strange beliefs — those are common — but by their persistence, conviction, and cost; the diagnostic line is real, yet it is a threshold on a continuum, not a wall.",
+      "why_this_claim": "The general-population epidemiology (psychotic experiences at 5.8-7.2%, vastly above the ~0.7% morbid risk) forces a continuum reading. Naming that openly is more honest than the safe 'distinct brain disease unlike anything you experience', and it reframes every differential as a question of degree and duration, which is what the diagnostic-stability data actually show.",
+      "moves": ["BOUNDARY-opener", "DIFFERENTIALS (ComparisonTable)", "WEIGHT (incidence/prevalence/onset)", "MythVsFact (split-personality)", "GROUND (glossary)"],
+      "moves_omitted": [
+        {"move": "SCENE", "reason": "Part 2 carries the first-person account; repeating is the standalone tax paid twice."},
+        {"move": "MECHANISM", "reason": "Part 3 owns causation."},
+        {"move": "PRACTICE", "reason": "Part 4 owns treatment; Part 1 must not drift toward what-to-do."}
+      ],
+      "the_risk": "Stating the continuum openly — that the reader may already have had an experience on the same dimension — on the one condition where a reader most wants to self-diagnose, while rendering the criteria strictly as what clinicians weigh and refusing to hand over a checklist.",
+      "supports": ["P1-pe-prevalence-linscott", "P1-pe-prevalence-mcgrath", "P1-dx-reliability-dsm5", "P1-schizotypal-prevalence", "P1-dx-stability-fusarpoli", "P1-sip-conversion-starzer", "P1-sip-conversion-niemi", "P1-schizoaffective-shift", "P1-incidence-mcgrath", "P1-prevalence-saha", "P1-onset-sexdiff-eranti", "P1-onset-age-solmi", "P1-bleuler-term"]
+    },
+    {
+      "part_id": 2,
+      "form": "F-PORTRAIT",
+      "opener_register": "intimate first-person SCENE — a published verbatim account of psychosis from the inside",
+      "claim": "The symptoms that define schizophrenia in the public mind — voices and delusions — are the ones that matter least for how a life actually goes; the negative and cognitive symptoms nobody pictures are what predict whether someone works, studies, and connects.",
+      "why_this_claim": "Green 1996 found positive symptoms unassociated with functional outcome in every study reviewed; cognition sits ~1 SD below controls and negative symptoms out-predict all other domains for functioning (Rabinowitz/CATIE). The public picture and even the treatment conversation are aimed at the wrong symptoms.",
+      "moves": ["SCENE (QuoteBlock)", "CONTRAST (ArticleTabs/BeforeAfter)", "TENSION (HighlightBox)", "MythVsFact x2", "GROUND (accordion)"],
+      "moves_omitted": [
+        {"move": "WEIGHT", "reason": "Epidemiological weight is Part 1's; Part 2 is portrait, not counts."},
+        {"move": "MECHANISM", "reason": "Part 3."},
+        {"move": "split-personality MythVsFact", "reason": "Owned by Part 1; Part 2's two myths are auditory-only and insight-absent."}
+      ],
+      "the_risk": "Asserting the asymmetry as fact and unhedged — that positive symptoms, which own the public image and most of the treatment conversation, are the weakest predictor of the outcomes people care about — where a cautious writer would soften it into 'all symptoms matter'.",
+      "supports": ["P2-kean-silencing-self-fpa", "P2-payne-nights-end-fpa", "P2-coltheart-delusion-second-factor", "P2-woods-hearing-voices-phenomenology", "P2-marder-negative-symptom-domains", "P2-schaefer-global-cognitive-impairment", "P2-heinrichs-zakzanis-neurocog-review", "P2-dickinson-digit-symbol-coding", "P2-green-1996-functional-consequences", "P2-rabinowitz-catie-neg-gt-pos", "P2-salazardepablo-chr-transition", "P2-olbert-polythetic-heterogeneity", "P2-lim-hallucination-modalities", "P2-dickerson-insight-prevalence"]
+    },
+    {
+      "part_id": 3,
+      "form": "F-CAUSAL",
+      "opener_register": "interrogative / mechanistic — opens on a question (why late adolescence, almost never childhood?)",
+      "claim": "The 'split mind' folk-model is the exact inverse of the mechanism — this is a failure of integration, not a multiplication of selves.",
+      "why_this_claim": "This is the published calibration thesis (build plan §14). The convergent picture — protracted adolescent synaptic pruning, complement C4, 287 polygenic loci with no single gene, presynaptic dopamine that D2 drugs miss, NMDA hypofunction — is a story of a system failing to integrate, which is the precise opposite of the popular image of a mind split into personalities.",
+      "moves": ["OPENER-QUESTION", "PROGRESS (ProgressSteps: pruning->dopamine->glutamate->environment)", "DIAGRAM (pathway)", "HONEST-LIMIT (HighlightBox)", "MythVsFact x2"],
+      "moves_omitted": [
+        {"move": "SCENE", "reason": "Part 2 carries it; omitting is deliberate (build plan)."},
+        {"move": "Hazard-2 factor-weighting ArticleChart", "reason": "No honest single chart exists (incommensurable effect sizes); reallocated to a second DiagramBlock at the data pass — logged."},
+        {"move": "split-personality MythVsFact", "reason": "The integration-vs-multiplication point IS this part's thesis, carried in prose/HighlightBox; the folk 'split personality = DID' correction is owned by Part 1."}
+      ],
+      "the_risk": "Saying plainly that the dopamine hypothesis, taught as THE mechanism, is alone insufficient — D2 blockade barely touches negative and cognitive symptoms and glutamate/NMDA hypofunction is co-equal — and that there is no biomarker, no single gene, no one chain: a set of converging partial accounts, which is more interesting than a tidy hedge.",
+      "supports": ["P3-onset-solmi-2022", "P3-neurodev-weinberger-1987", "P3-neurodev-birnbaum-2017", "P3-c4-sekar-2016", "P3-pruning-petanjek-2011", "P3-heritability-sullivan-2003", "P3-heritability-hilker-2018", "P3-gwas-trubetskoy-2022", "P3-dopamine-howes-kapur-2009", "P3-dopamine-howes-2012", "P3-dopamine-mccutcheon-2019", "P3-glutamate-moghaddam-javitt-2012", "P3-ketamine-krystal-1994", "P3-adversity-varese-2012", "P3-cannabis-marconi-2016", "P3-urbanicity-vassos-2012", "P3-migration-cantorgraae-2005", "P3-gxe-caspi-2005", "P3-biomarker-kapur-2012", "P3-myth-hartwell-1996"]
+    },
+    {
+      "part_id": 4,
+      "form": "F-PRACTICE",
+      "opener_register": "counter-expectation clinical finding — opens on a number that overturns what the reader expected (untreated time predicts outcome)",
+      "claim": "The most powerful things that help in schizophrenia are the least-discussed — coordinated care and family support rival medication for preventing relapse — and 'non-adherence' is usually a rational response to real side-effect burden, not a failure of will.",
+      "why_this_claim": "Antipsychotics genuinely more than halve one-year relapse (27% vs 64%), but family intervention (relapse RR 0.55) and coordinated specialty care (superior on all 13 outcomes) carry some of the largest, least-known effects, and non-adherence (44-56%) tracks a real, describable side-effect burden (TD ~25%, weight, EPS) — reframing it as rational, not moral.",
+      "moves": ["OPENER-FINDING (StatCard/Chart: DUP)", "COMPARISON (antipsychotic efficacy/side-effects)", "PROGRESS (care pathway)", "CONTRAST (BeforeAfter: coordinated vs usual care)", "SIGNPOST"],
+      "moves_omitted": [
+        {"move": "SCENE", "reason": "Part 2/5 carry first-person; Part 4 is practice."},
+        {"move": "MECHANISM", "reason": "Part 3."},
+        {"move": "MythVsFact", "reason": "F-PRACTICE canonical order carries none; the ECT/institutionalisation correction is prose, not a myth block."}
+      ],
+      "the_risk": "Taking two positions in the part with the most regulatory exposure: that under-discussed psychosocial care rivals medication for relapse, and that non-adherence is a rational response rather than a patient failing — both stated and cited — while never once naming a dose, a drug recommendation, or a second-person treatment instruction.",
+      "supports": ["P4-dup-outcome-penttila-2014", "P4-antipsychotic-nma-huhn-2019", "P4-antipsychotic-mtm-leucht-2013", "P4-relapse-prevention-leucht-2012", "P4-cbt-psychosis-jauhar-2014", "P4-family-intervention-pharoah-2010", "P4-raise-etp-kane-2016", "P4-early-intervention-correll-2018", "P4-next-step-ect-furukawa-2026", "P4-nonadherence-osugo-howes-2026", "P4-tardive-dyskinesia-carbon-2017", "P4-effect-size-framing-correll-2025"]
+    },
+    {
+      "part_id": 5,
+      "form": "F-LIFE",
+      "opener_register": "myth-correcting sociological — opens on a statistic that contradicts the reader's assumption about danger/outcome",
+      "claim": "Living well with schizophrenia is governed less by the illness itself than by things the word 'support' usually ignores — a body that dies about fifteen years early of preventable heart disease, a world that treats the victim as the threat, and a recovery rate real enough to matter and contested enough that no single number is honest.",
+      "why_this_claim": "The largest life-shortening force is preventable CVD (14.5-year gap; CVD the leading cause, accidents killing twice as many as suicide), the public fear is inverted (victimisation 20-34% vs perpetration 2-13%; ~5% population-attributable violence), and recovery is genuinely contested (13.5% strict/chronic vs 38% first-episode) — so 'support' must be redirected and the comforting number must be refused.",
+      "moves": ["SCENE (QuoteBlock)", "WEIGHT (outcome/mortality/violence stats)", "PRACTICE (carer support, not treatment)", "GROUND (FAQ accordion)", "SIGNPOST"],
+      "moves_omitted": [
+        {"move": "MECHANISM", "reason": "Part 3."},
+        {"move": "DIFFERENTIALS", "reason": "Part 1."},
+        {"move": "practicalExercise", "reason": "CHRONIC carries none (build plan §8)."}
+      ],
+      "the_risk": "Stating the mortality gap and the violence-victimisation inversion plainly, and — hardest — refusing to resolve the recovery-rate contest by picking the comforting figure: giving the reader the real spread and the reason it is disputed, on the highest-stigma condition in the library.",
+      "supports": ["P5-first-person-recovery-chadwick", "P5-first-person-jail-gardiner", "P5-recovery-jaaskelainen-2013", "P5-recovery-contest-lally-2017", "P5-ips-modini-2016", "P5-ips-eqolise-burns-2007", "P5-violence-paf-fazel-2006", "P5-victimization-choe-2008", "P5-mortality-ypll-hjorthoj-2017", "P5-cvd-correll-2017", "P5-mortality-cause-olfson-2015", "P5-social-determinants-kirkbride-2024", "P5-carer-burden-rahmani-2022", "P5-carer-burden-meta-peng-2022"]
+    }
+  ],
+  "omission_matrix": {
+    "SCENE": {"carried_by": [2, 5], "omitted_by": [1, 3, 4], "rule": "First-person account lives in the two portrait/life parts; the other three omit to avoid the standalone tax."},
+    "split-personality-MythVsFact": {"carried_by": [1], "omitted_by": [3], "rule": "P1 owns the folk 'split personality = DID' correction; P3's integration-vs-multiplication is its thesis, in prose."},
+    "MECHANISM": {"carried_by": [3], "omitted_by": [1, 2, 4, 5]},
+    "WEIGHT-epidemiology": {"carried_by": [1], "omitted_by": [2], "rule": "Incidence/prevalence/onset counts are P1's; P2 is portrait."},
+    "practicalExercise": {"carried_by": [], "omitted_by": [1, 2, 3, 4, 5], "rule": "CHRONIC carries none."}
+  },
+  "no_overlap_ledger": {
+    "rule": "Every statistic, study, MythVsFact, and image is claimed by exactly one part. Cross-part collisions in the raw research were resolved here.",
+    "resolved_collisions": [
+      {"item": "Solmi 2022 onset (20.5y / 3% before 14)", "appeared_in_raw": [1, 3], "assigned_to": 1, "note": "P1 owns onset epidemiology (WEIGHT). P3's opener references the timing qualitatively and grounds WHY in Petanjek pruning + Weinberger, without re-citing Solmi's numbers."},
+      {"item": "split-personality / split-mind myth", "appeared_in_raw": [1, 3], "assigned_to": 1, "note": "P3 replaces its second MythVsFact with single-gene/purely-genetic (Trubetskoy + Caspi) to avoid duplicating P1."}
+    ],
+    "study_ownership": {
+      "P1": ["Linscott2013", "McGrath2015-PE", "Regier2013", "Pulay2009", "Fusar-Poli2016", "Starzer2018", "Niemi-Pynttari2013", "Santelmann2016", "McGrath2004-incidence", "Saha2005", "Eranti2013", "Solmi2022", "Ashok2012-Bleuler"],
+      "P2": ["Kean2009-FPA", "Payne2012-FPA-backup", "Coltheart2021", "Woods2015", "Marder2017", "Schaefer2013", "Heinrichs1998", "Dickinson2007", "Green1996", "Rabinowitz2012", "SalazarDePablo2021", "Olbert2014", "Lim2016", "Dickerson1997"],
+      "P3": ["Weinberger1987", "Birnbaum2017", "Sekar2016", "Petanjek2011", "Sullivan2003", "Hilker2018", "Trubetskoy2022", "Howes-Kapur2009", "Howes2012", "McCutcheon2019", "Moghaddam2012", "Krystal1994", "Varese2012", "Marconi2016", "Vassos2012", "Cantor-Graae2005", "Caspi2005", "Kapur2012", "Hartwell1996"],
+      "P4": ["Penttila2014", "Huhn2019", "Leucht2013", "Leucht2012", "Jauhar2014", "Pharoah2010", "Kane2016", "Correll2018-EIS", "Furukawa2026", "Osugo2026", "Carbon2017", "Correll2025-framing"],
+      "P5": ["Chadwick2007-FPA", "Gardiner2021-FPA-alt", "Jaaskelainen2013", "Lally2017", "Modini2016", "Burns2007", "Fazel2006", "Choe2008", "Hjorthoj2017", "Correll2017-CVD", "Olfson2015", "Kirkbride2024", "Rahmani2022", "Peng2022"]
+    },
+    "mythvsfact_ownership": {
+      "P1": ["schizophrenia is not split/multiple personality (that is DID); Bleuler's schizo- = split among psychic functions"],
+      "P2": ["hallucinations are not always auditory (Lim: 60-80% auditory, 53% multimodal)", "insight is variable/fluctuating, not simply absent (Dickerson: ~half moderate, 25% severe)"],
+      "P3": ["the schizophrenogenic mother (Hartwell: real theory, refuted)", "there is no single 'schizophrenia gene' / it is not purely genetic (Trubetskoy 287 loci; Caspi G x E)"]
+    },
+    "quote_ownership": {
+      "P2": ["Kean 2009 'Silencing the self' (primary)", "Payne 2012 'Night's end' (backup)"],
+      "P5": ["Chadwick 2007 peer-professional account (primary)", "Gardiner 2021 jail account (alt)"]
+    }
+  }
+}

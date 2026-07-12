@@ -1,0 +1,16 @@
+{
+  "phase": 3,
+  "gate": "five reject tests (generic / summary / support / risk / kind)",
+  "model": "haiku (separate, cheaper, adversarial call per build plan)",
+  "calibration_bar": "P3 published thesis",
+  "result": "5/5 PASS — no HALT",
+  "per_part": {
+    "P1": "PASS all five",
+    "P2": "PASS all five",
+    "P3": "PASS all five (calibration bar)",
+    "P4": "PASS all five",
+    "P5": "PASS all five (recovery language permitted, KIND ok)"
+  },
+  "regenerations_used": 0,
+  "dead_letters": []
+}

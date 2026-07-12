@@ -1,0 +1,106 @@
+# What Helps
+
+*Part 4 of 5 · F-PRACTICE · 1373 words (declared) · 12 citations*
+
+**Thesis:** The most powerful things that help in schizophrenia are the least-discussed — coordinated care and family support rival medication for preventing relapse — and 'non-adherence' is usually a rational response to real side-effect burden, not a failure of will.
+
+**The risk:** Psychosocial care — family intervention (relapse RR 0.55) and coordinated specialty care (better on all 13 outcomes) — rivals medication for preventing relapse, and the 44–56% called 'non-adherent' are usually making a rational response to real side-effect burden and impaired insight, not a moral failure.
+
+---
+
+Ask what helps in schizophrenia and most people picture a pill. The evidence tells a stranger story, and it begins with a clock. Across 33 samples, the longer psychosis goes untreated before care starts, the worse the long-term outcome tends to be — a small but stubbornly consistent link, with pooled correlations of 0.13 to 0.18 across symptoms, remission, and social functioning [1]. Those numbers are modest on purpose; time is only one thread among many, and it never tells the whole story. But the direction almost never reverses. It suggests that some of what looks like the illness itself getting worse is really care arriving late. What helps, in other words, may turn on when and how as much as on which. The map of what helps is wider than a prescription, and the parts that matter most are often the parts left off it.
+
+**Stats: The clock, before treatment begins**
+
+- **0.13-0.18** — pooled correlation between longer untreated psychosis and poorer long-term outcome (Penttila 2014 [1])
+
+- **74 wks** — median time psychosis went untreated before first-episode care in a US trial (Kane 2016 (RAISE) [2])
+
+### What the medications do, and do not, do
+
+Start with the drugs, because that is where the public conversation stays. Antipsychotics are the class clinicians most often reach for first, and the evidence for them is real. The largest network meta-analysis pooled 402 trials and 32 oral antipsychotics: every agent beat placebo for reducing acute symptoms, with standardised effects ranging from -0.89 for the strongest down to -0.03 for the weakest [3]. An earlier multiple-treatments analysis of 15 drugs found the same shape — all beat placebo, from 0.88 down to 0.33 [4]. Read closely, two facts sit side by side. The average benefit is small-to-medium — reviewers put the typical acute effect near 0.4 versus placebo [3][5] — and the differences from one agent to the next are gradual, not dramatic. These medicines lower the intensity of hallucinations and delusions for many people. They do not cure, and they do not touch every symptom equally. There is a limit worth stating plainly: these effects fall mainly on the positive symptoms — the voices and the fixed beliefs — while the negative and cognitive difficulties that most shape whether a person works, studies, and connects are barely moved by any drug in the class. The evidence describes a class that works, modestly and unevenly; it does not crown a winner, and it does not reach the symptoms that matter most for a life.
+
+### The strongest case: staying well
+
+The most powerful argument for medication is not about feeling better today but about not relapsing tomorrow. Pooling 65 trials and 6,493 people, one analysis found that over a year 27% of those kept on an antipsychotic relapsed, against 64% of those switched to placebo — a risk ratio of 0.40, and roughly one relapse prevented for every three people treated [6]. Hospital readmission fell in step, from 26% to 10% [6]. This is one of the larger, more reliable effects in the whole field. It is also, deliberately, a statement about what the trials found, not a direction to any reader — the maintenance question is one a person and their clinician weigh together, because that protection comes at a real cost. And it describes groups, not individuals: a risk ratio is a population average, and no average can tell one person how their own body will answer.
+
+**Table: What it can do / what it can cost**
+
+| What antipsychotics can do | What they can cost |
+
+|---|---|
+
+| Cut acute symptoms across every agent studied, a small-to-medium effect near 0.4 versus placebo [3][5] | Metabolic weight gain of up to about 3.2 kg versus placebo, depending on the agent [3] |
+
+| Lower one-year relapse from 64% to 27% when maintained [6] | Movement (extrapyramidal) side-effects, with odds up to 4.76 times placebo for some agents [4] |
+
+| Reduce hospital readmission from 26% to 10% [6] | Tardive dyskinesia — an often lasting movement disorder — at a pooled prevalence near 25%, lower on second-generation drugs (20.7%) than first-generation (30.0%) [7] |
+
+*Described, not prescribed — which is why the trade-off is a clinician conversation.*
+
+**1. CBT for psychosis** — Talking therapy adapted for psychosis is where guidelines place a modest adjunct. Across 34 studies its pooled effect on overall symptoms was small, -0.33, and it shrank to -0.15 in the trials that blinded their raters — a reminder that expectation can inflate a result [8]. What it targets is less the presence of symptoms than the distress around them — the grip a voice holds, the certainty of a belief, the isolation that follows. Real and useful, but not a headline act.
+
+**2. Family intervention & psychoeducation** — Here is the asymmetry almost no one hears. A Cochrane review of dozens of trials found that working with families cut relapse with a risk ratio of 0.55 — about one relapse prevented for every seven families helped — and improved medication adherence too (RR 0.60) [9]. That rivals maintenance medication for keeping people well, yet it remains among the least-offered and least-discussed interventions in the field. Why so rare? It asks for trained clinicians, several sessions, and a willingness to treat the household as part of the care — none of it as quick to deliver as writing a prescription.
+
+**Before — Treatment as usual:** Care that arrives piecemeal: a prescription here, an appointment there, little coordination between the people meant to help, and long waits before anyone connects the parts.
+
+**After — Coordinated specialty / early intervention:** Team-based early care that folds therapy, family work, supported work or school, and medication management into one service. A meta-analysis of 10 trials and 2,176 people found these programmes beat usual care on all 13 outcomes measured — fewer hospitalisations (RR 0.74), lower symptoms (SMD -0.32), and more people in work or school [10]. In the US RAISE trial of 404 people in first-episode care, those in the coordinated NAVIGATE programme gained more in quality of life, symptoms, and involvement in work or school than those in ordinary community care [2]. Timing sharpened the effect: the gains were larger for those whose psychosis had gone untreated for a shorter time before the programme began [2].
+
+### What modern care is not
+
+It is worth naming what standard care is not. The asylum image — locked wards, lifelong institutionalisation — belongs to a receding past, not to treatment today. Electroconvulsive therapy still exists, but its evidenced role is narrow. A network meta-analysis of 59 trials in people whose psychosis had not responded to antipsychotics found that ECT added on top might help, with an effect of -0.51, yet the certainty was very low and the authors urged it be considered only with substantial caution [11]. It is a limited next step for a specific, difficult situation — not the dramatic centrepiece the culture keeps imagining. Most of the real work happens in clinics and living rooms, in conversations and coordination, not in the machinery the movies fixate on.
+
+### The word we use most and understand least
+
+Which brings us to 'non-adherence.' Between 44% and 56% of people prescribed antipsychotics do not take them as directed [12]. The reflex is to read this as denial or lack of will. The evidence reads differently. When a class of drugs can bring weight gain, movement disorders, and tardive dyskinesia at a pooled prevalence near 25% [7], choosing to stop is often a rational weighing of costs a person is actually paying against benefits they may not feel. Add impaired insight — a symptom of the illness itself, not a character flaw — and 'non-adherence' looks less like a moral failure than a signal: that the trade-off has tipped, that it was never fully explained, or that it was never really the person's to negotiate. The stakes are not small; inadequate treatment is linked with markedly higher risk of relapse (RR up to 2.70) and mortality (RR up to 1.83) [12]. But the direction the evidence points is toward better conversations and better-tolerated care — not blame. Reframed this way, the clinical task shifts. The question stops being how to make a person comply and becomes why the bargain feels unliveable, and what would make it liveable. That is a harder question, and a more honest one.
+
+**[CRISIS] In crisis right now?** — If you or someone you know is in immediate danger, call your local emergency number. In the US, call or text 988 for the Suicide & Crisis Lifeline. Psychage's crisis resources are always one tap away.
+
+**→ Continue: Living With It** (/preview/conditions/schizophrenia/living-with-it) — Life, outcomes, and what 'support' should really mean.
+
+
+---
+**Spark:** The two things that rival medication for keeping people well — family support and coordinated care — are the two things almost no one talks about.
+
+
+**Key facts:**
+
+- Working with families cut relapse by nearly half (RR 0.55) — rivalling maintenance medication, yet it is among the least-offered interventions there is. [9]
+
+- Coordinated early-care teams beat treatment-as-usual on all 13 outcomes measured across 10 trials and 2,176 people. [10]
+
+- Maintenance antipsychotics cut one-year relapse from 64% to 27%, roughly one relapse prevented for every three people treated. [6]
+
+- Between 44% and 56% of people prescribed antipsychotics do not take them as directed — often a rational answer to real side-effect burden, not a failure of will. [12]
+
+- Tardive dyskinesia, an often lasting movement disorder, has a pooled prevalence near 25% across studies. [7]
+
+
+**References:**
+
+1. (T1) Penttilä M, et al. Duration of untreated psychosis as predictor of long-term outcome in schizophrenia: systematic review and meta-analysis. Br J Psychiatry. 2014;205(2):88-94. PMID:25252316 DOI:10.1192/bjp.bp.113.127753
+
+2. (T1) Kane JM, et al. Comprehensive versus usual community care for first-episode psychosis: 2-year outcomes from the NIMH RAISE Early Treatment Program. Am J Psychiatry. 2016;173(4):362-372. PMID:26481174 DOI:10.1176/appi.ajp.2015.15050632
+
+3. (T1) Huhn M, et al. Comparative efficacy and tolerability of 32 oral antipsychotics for the acute treatment of adults with multi-episode schizophrenia: a systematic review and network meta-analysis. Lancet. 2019;394(10202):939-951. PMID:31303314 DOI:10.1016/s0140-6736(19)31135-3
+
+4. (T1) Leucht S, et al. Comparative efficacy and tolerability of 15 antipsychotic drugs in schizophrenia: a multiple-treatments meta-analysis. Lancet. 2013;382(9896):951-962. PMID:23810019 DOI:10.1016/s0140-6736(13)60733-3
+
+5. (T3) Correll CU. Do antipsychotics work in people with schizophrenia? A review of outcomes and effect sizes. CNS Spectr. 2025. PMID:40739868 DOI:10.1017/s1092852925100461
+
+6. (T1) Leucht S, et al. Antipsychotic drugs versus placebo for relapse prevention in schizophrenia: a systematic review and meta-analysis. Lancet. 2012;379(9831):2063-2071. PMID:22560607 DOI:10.1016/s0140-6736(12)60239-6
+
+7. (T1) Carbon M, et al. Tardive dyskinesia prevalence in the period of second-generation antipsychotic use: a meta-analysis. J Clin Psychiatry. 2017;78(3):e264-e278. PMID:28146614 DOI:10.4088/jcp.16r10832
+
+8. (T1) Jauhar S, et al. Cognitive-behavioural therapy for the symptoms of schizophrenia: systematic review and meta-analysis with examination of potential bias. Br J Psychiatry. 2014;204(1):20-29. PMID:24385461 DOI:10.1192/bjp.bp.112.116285
+
+9. (T1) Pharoah F, et al. Family intervention for schizophrenia. Cochrane Database Syst Rev. 2010;(12):CD000088. PMID:21154340 DOI:10.1002/14651858.cd000088.pub2
+
+10. (T1) Correll CU, et al. Comparison of early intervention services vs treatment as usual for early-phase psychosis: a systematic review, meta-analysis, and meta-regression. JAMA Psychiatry. 2018;75(6):555-565. PMID:29800949 DOI:10.1001/jamapsychiatry.2018.0623
+
+11. (T1) Furukawa TA, et al. Next-step treatment for schizophrenia non-responsive to antipsychotics: a systematic review and network meta-analysis. EClinicalMedicine. 2026. PMID:42232685 DOI:10.1016/j.eclinm.2026.103988
+
+12. (T2) Osugo M, Howes OD, et al. What is minimally adequate treatment of psychosis and should duration of inadequate treatment be a clinical and research target? A perspective and state-of-the-art review. Schizophr Bull. 2026. PMID:41863365 DOI:10.1093/schbul/sbag017
+
+
+*Reviewed by Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology.*

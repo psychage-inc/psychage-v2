@@ -24,8 +24,8 @@ Parts with hard failures: **0/5**
 - (i) near-equal-length sentence triples: 1 [advisory]
 
 ## Part 2 — PASS
-- [x] word floor >=1300 (got 1401)
-- [x] word ceiling <=1500 (got 1401)
+- [x] word floor >=1300 (got 1426)
+- [x] word ceiling <=1500 (got 1426)
 - [x] claim_count >= 9 (declared 11)
 - [x] citations 7-12 (got 12)
 - [x] T1+T2 >= 60% (got 75%)
@@ -65,8 +65,8 @@ Parts with hard failures: **0/5**
 - (i) near-equal-length sentence triples: 0 [advisory]
 
 ## Part 4 — PASS
-- [x] word floor >=1300 (got 1424)
-- [x] word ceiling <=1500 (got 1424)
+- [x] word floor >=1300 (got 1405)
+- [x] word ceiling <=1500 (got 1405)
 - [x] claim_count >= 9 (declared 9)
 - [x] citations 7-12 (got 12)
 - [x] T1 >= 40% (got 83%)
@@ -86,8 +86,8 @@ Parts with hard failures: **0/5**
 - (i) near-equal-length sentence triples: 0 [advisory]
 
 ## Part 5 — PASS
-- [x] word floor >=1300 (got 1314)
-- [x] word ceiling <=1500 (got 1314)
+- [x] word floor >=1300 (got 1316)
+- [x] word ceiling <=1500 (got 1316)
 - [x] claim_count >= 9 (declared 11)
 - [x] citations 7-12 (got 12)
 - [x] T1 >= 40% (got 83%)

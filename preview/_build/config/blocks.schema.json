@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "psychage-preview/blocks.schema.json",
+  "title": "Psychage preview PEAF block union",
+  "description": "Source-of-truth block shape for 05_final/part{n}.json. Each block is {type, ...props} and maps 1:1 onto an existing component in src/components/article/blocks. PreviewBlockRenderer is the projection. FROZEN at phase 1.",
+  "definitions": {
+    "citationRef": {
+      "type": "object",
+      "description": "Binds a claim/number to a dossier source id.",
+      "required": ["dossier_id"],
+      "properties": {
+        "dossier_id": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    }
+  },
+  "type": "object",
+  "required": ["part_id", "form", "meta", "body"],
+  "properties": {
+    "part_id": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "slug": { "type": "string" },
+    "title": { "type": "string" },
+    "form": { "enum": ["F-BOUNDARY", "F-PORTRAIT", "F-CAUSAL", "F-PRACTICE", "F-LIFE"] },
+    "meta": {
+      "type": "object",
+      "required": ["thesis_claim", "the_risk", "reviewer_credit"],
+      "properties": {
+        "thesis_claim": { "type": "string" },
+        "the_risk": { "type": "string", "minLength": 1 },
+        "reviewer_credit": { "const": "Reviewed by Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology." },
+        "word_count": { "type": "integer" },
+        "claim_count": { "type": "integer" }
+      }
+    },
+    "enrich": {
+      "type": "object",
+      "properties": {
+        "summary": { "type": ["string", "null"], "description": "P1 only; null elsewhere" },
+        "keyFacts": {
+          "type": "array", "minItems": 3, "maxItems": 7,
+          "items": { "type": "object", "required": ["text"], "properties": { "text": {"type":"string"}, "citationIndex": {"type":"integer"} } }
+        },
+        "sparkMoment": { "type": "string" },
+        "practicalExercise": { "const": null, "description": "CHRONIC carries none" }
+      }
+    },
+    "citations": {
+      "type": "array",
+      "description": "Ordered citation list rendered as numbered references; each is a resolved dossier source.",
+      "items": {
+        "type": "object",
+        "required": ["n", "dossier_id", "tier", "year", "citation_text"],
+        "properties": {
+          "n": { "type": "integer" },
+          "dossier_id": { "type": "string" },
+          "tier": { "enum": ["T1","T2","T3","T4","T5"] },
+          "year": { "type": "integer" },
+          "pmid": { "type": ["string","null"] },
+          "doi": { "type": ["string","null"] },
+          "citation_text": { "type": "string" }
+        }
+      }
+    },
+    "body": {
+      "type": "array",
+      "description": "Ordered content blocks. type=prose is body copy (markdown-lite). Every other type maps to a blocks/ component.",
+      "items": {
+        "oneOf": [
+          { "type": "object", "required": ["type","text"], "properties": { "type": {"const":"prose"}, "text": {"type":"string"}, "id": {"type":"string"}, "heading": {"type":"string"} } },
+          { "type": "object", "required": ["type"], "properties": { "type": {"const":"ComparisonTable"} }, "additionalProperties": true },
+          { "type": "object", "required": ["type","variant"], "properties": { "type": {"const":"ArticleCallout"}, "variant": {"type":"string"} }, "additionalProperties": true },
+          { "type": "object", "required": ["type","chartType","data","a11y_summary"], "properties": { "type": {"const":"ArticleChart"}, "chartType": {"enum":["bar","line","pie","area","radar","donut"]}, "a11y_summary": {"type":"string","description":"REQUIRED — chart degradation text"}, "source": {"type":"string"} }, "additionalProperties": true },
+          { "type": "object", "required": ["type","stats"], "properties": { "type": {"const":"StatCard"} }, "additionalProperties": true },
+          { "type": "object", "required": ["type","myth","fact","source"], "properties": { "type": {"const":"MythVsFactBlock"} }, "additionalProperties": true },
+          { "type": "object", "required": ["type","items"], "properties": { "type": {"const":"ArticleAccordion"} }, "additionalProperties": true },
+          { "type": "object", "required": ["type","tools"], "properties": { "type": {"const":"RelatedToolsBlock"} }, "additionalProperties": true },
+          { "type": "object", "required": ["type","quote","source"], "properties": { "type": {"const":"QuoteBlock"}, "source": {"type":"string","description":"REQUIRED — verbatim published cited account or block does not ship"} }, "additionalProperties": true },
+          { "type": "object", "required": ["type","tabs"], "properties": { "type": {"const":"ArticleTabs"} }, "additionalProperties": true },
+          { "type": "object", "required": ["type","before","after"], "properties": { "type": {"const":"BeforeAfter"} }, "additionalProperties": true },
+          { "type": "object", "required": ["type","children"], "properties": { "type": {"const":"HighlightBox"} }, "additionalProperties": true },
+          { "type": "object", "required": ["type","steps"], "properties": { "type": {"const":"ProgressSteps"} }, "additionalProperties": true },
+          { "type": "object", "required": ["type","title"], "properties": { "type": {"const":"DiagramBlock"}, "a11y_summary": {"type":"string"} }, "additionalProperties": true }
+        ]
+      }
+    }
+  }
+}

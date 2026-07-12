@@ -1,0 +1,3081 @@
+{
+  "condition": "schizophrenia",
+  "generated_by": "resolve_dossier.py",
+  "unique_sources": 72,
+  "resolved_live": 72,
+  "sources": [
+    {
+      "suggested_id": "P3-heritability-sullivan-2003",
+      "part": 3,
+      "territory": [
+        "4a-heritability"
+      ],
+      "tier": "T1",
+      "year": 2003,
+      "title": "Schizophrenia as a complex trait: evidence from a meta-analysis of twin studies",
+      "first_author": "Sullivan",
+      "journal": "Archives of General Psychiatry",
+      "pmid": "14662550",
+      "doi": "10.1001/archpsyc.60.12.1187",
+      "finding_one_line": "Meta-analysis of 12 twin studies: heritability of liability 81% (95% CI 73-90%), shared-environment 11%.",
+      "numbers_it_licenses": [
+        {
+          "number": "81% (95% CI 73%-90%)",
+          "what_it_is": "heritability of liability to schizophrenia",
+          "abstract_sentence": "the point estimate of heritability in liability to schizophrenia was 81% (95% confidence interval, 73%-90%)."
+        },
+        {
+          "number": "11%",
+          "what_it_is": "shared/common environmental contribution",
+          "abstract_sentence": "consistent evidence across these studies for common or shared environmental influences on liability to schizophrenia-joint estimate, 11% (95% confidence interval, 3%-19%)."
+        }
+      ],
+      "claims_it_can_support": [
+        "Heritability roughly 80%",
+        "Genes and shared environment both contribute"
+      ],
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "14662550",
+        "pmcid": null,
+        "doi": "10.1001/archpsyc.60.12.1187",
+        "pubYear": "2003",
+        "title": "Schizophrenia as a complex trait: evidence from a meta-analysis of twin studies.",
+        "isOpenAccess": "N",
+        "authorString": "Sullivan PF, Kendler KS, Neale MC.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P1-incidence-mcgrath",
+      "part": 1,
+      "territory": [
+        7
+      ],
+      "tier": "T1",
+      "year": 2004,
+      "title": "A systematic review of the incidence of schizophrenia: the distribution of rates and the influence of sex, urbanicity, migrant status and methodology.",
+      "first_author": "McGrath",
+      "journal": "BMC Medicine",
+      "pmid": "15115547",
+      "doi": "10.1186/1741-7015-2-13",
+      "finding_one_line": "Systematic review (1,458 rates, 33 countries): median schizophrenia incidence 15.2 per 100,000, male excess (M/F 1.40), migrant excess (4.6).",
+      "numbers_it_licenses": [
+        {
+          "number": "15.2 per 100,000",
+          "what_it_is": "median incidence of schizophrenia",
+          "abstract_sentence": "the distribution of rates was asymmetric and had a median value (10%-90% quantile) of 15.2 (7.7-43.0) per 100,000."
+        },
+        {
+          "number": "1.40",
+          "what_it_is": "male/female incidence rate ratio",
+          "abstract_sentence": "the male/female rate ratio median (10%-90% quantile) was 1.40 (0.9-2.4)."
+        }
+      ],
+      "claims_it_can_support": [
+        7
+      ],
+      "resolved": true,
+      "parts": [
+        1
+      ],
+      "europepmc": {
+        "pmid": "15115547",
+        "pmcid": "PMC421751",
+        "doi": "10.1186/1741-7015-2-13",
+        "pubYear": "2004",
+        "title": "A systematic review of the incidence of schizophrenia: the distribution of rates and the influence of sex, urbanicity, migrant status and methodology.",
+        "isOpenAccess": "Y",
+        "authorString": "McGrath J, Saha S, Welham J, El Saadi O, MacCauley C, Chant D.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P3-migration-cantorgraae-2005",
+      "part": 3,
+      "territory": [
+        "7d-migration"
+      ],
+      "tier": "T1",
+      "year": 2005,
+      "title": "Schizophrenia and migration: a meta-analysis and review",
+      "first_author": "Cantor-Graae",
+      "journal": "American Journal of Psychiatry",
+      "pmid": "15625195",
+      "doi": "10.1176/appi.ajp.162.1.12",
+      "finding_one_line": "Meta-analysis: first-generation migrants have a mean weighted relative risk of 2.7 (95% CI 2.3-3.2).",
+      "numbers_it_licenses": [
+        {
+          "number": "RR 2.7 (95% CI 2.3-3.2)",
+          "what_it_is": "relative risk among first-generation migrants",
+          "abstract_sentence": "The mean weighted relative risk for developing schizophrenia among first-generation migrants (40 effect sizes) was 2.7 (95% CI=2.3-3.2)."
+        }
+      ],
+      "claims_it_can_support": [
+        "Migration/minority status raises risk (~2.7x)"
+      ],
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "15625195",
+        "pmcid": null,
+        "doi": "10.1176/appi.ajp.162.1.12",
+        "pubYear": "2005",
+        "title": "Schizophrenia and migration: a meta-analysis and review.",
+        "isOpenAccess": "N",
+        "authorString": "Cantor-Graae E, Selten JP.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P3-gxe-caspi-2005",
+      "part": 3,
+      "territory": [
+        "8-gene-environment"
+      ],
+      "tier": "T2",
+      "year": 2005,
+      "title": "Moderation of the effect of adolescent-onset cannabis use on adult psychosis by a functional polymorphism in the catechol-O-methyltransferase gene: longitudinal evidence of a gene X environment interaction",
+      "first_author": "Caspi",
+      "journal": "Biological Psychiatry",
+      "pmid": "15866551",
+      "doi": "10.1016/j.biopsych.2005.01.026",
+      "finding_one_line": "Dunedin cohort G\u00d7E: COMT Val158 carriers most likely to develop psychotic symptoms after adolescent cannabis use, whereas Met/Met were unaffected \u2014 genotype moderates the environmental risk.",
+      "numbers_it_licenses": [
+        {
+          "number": "n/a",
+          "what_it_is": "COMT genotype moderates cannabis effect",
+          "abstract_sentence": "Carriers of the COMT valine158 allele were most likely to exhibit psychotic symptoms and to develop schizophreniform disorder if they used cannabis."
+        }
+      ],
+      "claims_it_can_support": [
+        "Concrete G\u00d7E (COMT x cannabis); neither gene nor environment alone sufficient"
+      ],
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "15866551",
+        "pmcid": null,
+        "doi": "10.1016/j.biopsych.2005.01.026",
+        "pubYear": "2005",
+        "title": "Moderation of the effect of adolescent-onset cannabis use on adult psychosis by a functional polymorphism in the catechol-O-methyltransferase gene: longitudinal evidence of a gene X environment interaction.",
+        "isOpenAccess": "N",
+        "authorString": "Caspi A, Moffitt TE, Cannon M, McClay J, Murray R, Harrington H, Taylor A, Arseneault L, Williams B, Braithwaite A, Poul",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P1-prevalence-saha",
+      "part": 1,
+      "territory": [
+        7
+      ],
+      "tier": "T1",
+      "year": 2005,
+      "title": "A systematic review of the prevalence of schizophrenia.",
+      "first_author": "Saha",
+      "journal": "PLoS Medicine",
+      "pmid": "15916472",
+      "doi": "10.1371/journal.pmed.0020141",
+      "finding_one_line": "Systematic review of 188 studies from 46 countries: lifetime prevalence ~4.0 per 1,000, lifetime morbid risk ~7.2 per 1,000 (well under 1%).",
+      "numbers_it_licenses": [
+        {
+          "number": "4.0 per 1,000",
+          "what_it_is": "median lifetime prevalence of schizophrenia",
+          "abstract_sentence": "The median values per 1,000 persons (10%-90% quantiles) for ... lifetime, and lifetime morbid risk were ... 4.0 (1.6-12.1), and 7.2 (3.1-27.1), respectively."
+        },
+        {
+          "number": "7.2 per 1,000",
+          "what_it_is": "median lifetime morbid risk (~0.7%)",
+          "abstract_sentence": "The median values per 1,000 persons ... lifetime morbid risk were ... 7.2 (3.1-27.1), respectively."
+        }
+      ],
+      "claims_it_can_support": [
+        7
+      ],
+      "resolved": true,
+      "parts": [
+        1
+      ],
+      "europepmc": {
+        "pmid": "15916472",
+        "pmcid": "PMC1140952",
+        "doi": "10.1371/journal.pmed.0020141",
+        "pubYear": "2005",
+        "title": "A systematic review of the prevalence of schizophrenia.",
+        "isOpenAccess": "Y",
+        "authorString": "Saha S, Chant D, Welham J, McGrath J.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P5-violence-paf-fazel-2006",
+      "part": 5,
+      "territory": [
+        "violence-correction",
+        "stigma"
+      ],
+      "tier": "T1",
+      "year": 2006,
+      "title": "The population impact of severe mental illness on violent crime.",
+      "first_author": "Fazel",
+      "journal": "The American Journal of Psychiatry",
+      "pmid": "16877653",
+      "doi": "10.1176/ajp.2006.163.8.1397",
+      "finding_one_line": "Swedish national registers: only ~5% of violent crime is attributable to severe mental illness \u2014 patients commit roughly 1 in 20 violent crimes.",
+      "numbers_it_licenses": [
+        {
+          "number": "5.2% (~1 in 20)",
+          "what_it_is": "population-attributable risk fraction of SMI for violent crime",
+          "abstract_sentence": "Overall, the population-attributable risk fraction of patients was 5%, suggesting that patients with severe mental illness commit one in 20 violent crimes."
+        }
+      ],
+      "claims_it_can_support": [
+        "~95% of violent crime NOT attributable to severe mental illness",
+        "Corrects the 'dangerous' stereotype with population data"
+      ],
+      "contested_note": "Anti-stigma correction. Absolute risk small even where relative risk elevated; most risk concentrated with substance misuse.",
+      "resolved": true,
+      "parts": [
+        5
+      ],
+      "europepmc": {
+        "pmid": "16877653",
+        "pmcid": null,
+        "doi": "10.1176/ajp.2006.163.8.1397",
+        "pubYear": "2006",
+        "title": "The population impact of severe mental illness on violent crime.",
+        "isOpenAccess": "N",
+        "authorString": "Fazel S, Grann M.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P5-first-person-recovery-chadwick",
+      "part": 5,
+      "territory": [
+        "first-person-account"
+      ],
+      "tier": "T5",
+      "year": 2007,
+      "title": "Peer-professional first-person account: schizophrenia from the inside--phenomenology and the integration of causes and meanings.",
+      "first_author": "Chadwick",
+      "journal": "Schizophrenia Bulletin",
+      "pmid": "16973785",
+      "doi": "10.1093/schbul/sbl034",
+      "pmcid": "PMC2632294",
+      "finding_one_line": "A psychologist who himself became psychotic narrates his own recovery and the integration of medication, insight therapy and a changed social world.",
+      "verbatim_quote": "I stepped off that vehicle later in West London with a radically different and, as far as I am concerned, 'corrected' brain from the one I had when I stepped on it.",
+      "abstract_sentence_recovery": "qualities of experiential life were not merely causally impotent responses to brain processes but themselves inducing of critical decisions and of outlook on life that played a large part in the eventuation of, and recovery from, the psychotic state.",
+      "numbers_it_licenses": [],
+      "claims_it_can_support": [
+        "A published, citable first-person voice on living with and recovering from schizophrenia",
+        "Recovery is possible and can be narrated by someone who experienced psychosis"
+      ],
+      "transcription_note": "Body quote from open-access PMC full text (PMC2632294); verify against source PDF before print. abstract_sentence_recovery is verbatim from Europe PMC core.",
+      "resolved": true,
+      "parts": [
+        5
+      ],
+      "europepmc": {
+        "pmid": "16973785",
+        "pmcid": "PMC2632294",
+        "doi": "10.1093/schbul/sbl034",
+        "pubYear": "2007",
+        "title": "Peer-professional first-person account: schizophrenia from the inside--phenomenology and the integration of causes and meanings.",
+        "isOpenAccess": "N",
+        "authorString": "Chadwick PK.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P2-dickinson-digit-symbol-coding",
+      "part": 2,
+      "territory": [
+        4
+      ],
+      "tier": "T1",
+      "year": 2007,
+      "title": "Overlooking the obvious: a meta-analytic comparison of digit symbol coding tasks and other cognitive measures in schizophrenia",
+      "first_author": "Dickinson",
+      "journal": "Archives of General Psychiatry",
+      "pmid": "17485605",
+      "doi": "10.1001/archpsyc.64.5.532",
+      "finding_one_line": "Meta-analysis (37 studies, 1961 patients): the single largest cognitive impairment is processing-speed/coding, g=-1.57.",
+      "numbers_it_licenses": [
+        {
+          "number": "g = -1.57",
+          "what_it_is": "effect size for digit symbol coding (processing-speed) deficit",
+          "abstract_sentence": "The weighted mean effect for digit symbol coding was g = -1.57 (95% confidence interval, -1.66 to -1.48), significantly larger than effects for episodic memory, executive functioning, and working memory."
+        }
+      ],
+      "claims_it_can_support": [
+        "Processing-speed deficit is the largest single neurocognitive impairment (~1.5 SD)"
+      ],
+      "resolved": true,
+      "parts": [
+        2
+      ],
+      "europepmc": {
+        "pmid": "17485605",
+        "pmcid": null,
+        "doi": "10.1001/archpsyc.64.5.532",
+        "pubYear": "2007",
+        "title": "Overlooking the obvious: a meta-analytic comparison of digit symbol coding tasks and other cognitive measures in schizophrenia.",
+        "isOpenAccess": "N",
+        "authorString": "Dickinson D, Ramsey ME, Gold JM.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P5-ips-eqolise-burns-2007",
+      "part": 5,
+      "territory": [
+        "employment",
+        "supported-employment-IPS"
+      ],
+      "tier": "T1",
+      "year": 2007,
+      "title": "The effectiveness of supported employment for people with severe mental illness: a randomised controlled trial.",
+      "first_author": "Burns",
+      "journal": "The Lancet",
+      "pmid": "17905167",
+      "doi": "10.1016/S0140-6736(07)61516-5",
+      "finding_one_line": "EQOLISE RCT (6 European centres, n=312): 55% of IPS patients worked at least one day vs 28% with standard vocational services.",
+      "numbers_it_licenses": [
+        {
+          "number": "55% vs 28%",
+          "what_it_is": "proportion working at least 1 day: IPS vs traditional vocational services",
+          "abstract_sentence": "85 (55%) patients assigned to IPS working for at least 1 day compared with 43 (28%) patients assigned to vocational services (difference 26.9%, 95% CI 16.4-37.4)."
+        }
+      ],
+      "claims_it_can_support": [
+        "Absolute employment rates for IPS vs usual care (~55% vs ~28%)"
+      ],
+      "resolved": true,
+      "parts": [
+        5
+      ],
+      "europepmc": {
+        "pmid": "17905167",
+        "pmcid": null,
+        "doi": "10.1016/s0140-6736(07)61516-5",
+        "pubYear": "2007",
+        "title": "The effectiveness of supported employment for people with severe mental illness: a randomised controlled trial.",
+        "isOpenAccess": "N",
+        "authorString": "Burns T, Catty J, Becker T, Drake RE, Fioritti A, Knapp M, Lauber C, R\u00f6ssler W, Tomov T, van Busschbach J, White S, Wier",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P5-victimization-choe-2008",
+      "part": 5,
+      "territory": [
+        "violence-correction",
+        "victimisation",
+        "stigma"
+      ],
+      "tier": "T2",
+      "year": 2008,
+      "title": "Perpetration of violence, violent victimization, and severe mental illness: balancing public health concerns.",
+      "first_author": "Choe",
+      "journal": "Psychiatric Services",
+      "pmid": "18245157",
+      "doi": "10.1176/ps.2008.59.2.153",
+      "pmcid": "PMC3756896",
+      "finding_one_line": "People with severe mental illness are more often victims of violence than perpetrators; victimization is the greater public-health concern.",
+      "numbers_it_licenses": [
+        {
+          "number": "perpetration 2-13% vs victimization 20-34%",
+          "what_it_is": "prevalence of perpetrating vs being violently victimized (outpatients)",
+          "abstract_sentence": "Among outpatients, 2% to 13% had perpetrated violence in the past six months to three years, compared with 20% to 34% who had been violently victimized."
+        }
+      ],
+      "claims_it_can_support": [
+        "Victimisation rates far exceed perpetration rates for people with SMI"
+      ],
+      "resolved": true,
+      "parts": [
+        5
+      ],
+      "europepmc": {
+        "pmid": "18245157",
+        "pmcid": "PMC3756896",
+        "doi": "10.1176/ps.2008.59.2.153",
+        "pubYear": "2008",
+        "title": "Perpetration of violence, violent victimization, and severe mental illness: balancing public health concerns.",
+        "isOpenAccess": "N",
+        "authorString": "Choe JY, Teplin LA, Abram KM.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P3-dopamine-howes-kapur-2009",
+      "part": 3,
+      "territory": [
+        "5-dopamine"
+      ],
+      "tier": "T1",
+      "year": 2009,
+      "title": "The dopamine hypothesis of schizophrenia: version III--the final common pathway",
+      "first_author": "Howes",
+      "journal": "Schizophrenia Bulletin",
+      "pmid": "19325164",
+      "doi": "10.1093/schbul/sbp006",
+      "finding_one_line": "Dopamine hypothesis version III: diverse risk factors converge on increased presynaptic striatal dopamine, driving psychosis via aberrant salience; antipsychotics act downstream.",
+      "numbers_it_licenses": [],
+      "claims_it_can_support": [
+        "Dopamine version III / final common pathway",
+        "Presynaptic striatal dysregulation is the core lesion",
+        "Aberrant salience",
+        "Antipsychotics act downstream"
+      ],
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "19325164",
+        "pmcid": "PMC2669582",
+        "doi": "10.1093/schbul/sbp006",
+        "pubYear": "2009",
+        "title": "The dopamine hypothesis of schizophrenia: version III--the final common pathway.",
+        "isOpenAccess": "N",
+        "authorString": "Howes OD, Kapur S.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P2-kean-silencing-self-fpa",
+      "part": 2,
+      "territory": [
+        1
+      ],
+      "tier": "T5",
+      "year": 2009,
+      "title": "Silencing the self: schizophrenia as a self-disturbance",
+      "first_author": "Kean",
+      "journal": "Schizophrenia Bulletin",
+      "pmid": "19478239",
+      "doi": "10.1093/schbul/sbp043",
+      "pmcid": "PMC2762621",
+      "finding_one_line": "Published Schizophrenia Bulletin first-person account describing psychosis as disintegration of the self and loss of ownership of one's own thoughts, emotions and actions (distinct from Chadwick 2007 / Gardiner 2021).",
+      "verbatim_quote": "I was simply sectioned again, detached from my real self, observing what was being done to me in a third-person perspective. ... My thoughts, my emotions, and my actions, none of them belong to me any more.",
+      "numbers_it_licenses": [],
+      "claims_it_can_support": [
+        "A real voice: what an acute psychotic episode feels like subjectively",
+        "Passivity / loss-of-self phenomena are a core lived experience"
+      ],
+      "resolved": true,
+      "parts": [
+        2
+      ],
+      "europepmc": {
+        "pmid": "19478239",
+        "pmcid": "PMC2762621",
+        "doi": "10.1093/schbul/sbp043",
+        "pubYear": "2009",
+        "title": "Silencing the self: schizophrenia as a self-disturbance.",
+        "isOpenAccess": "N",
+        "authorString": "Kean C.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P1-schizotypal-prevalence",
+      "part": 1,
+      "territory": [
+        3
+      ],
+      "tier": "T2",
+      "year": 2009,
+      "title": "Prevalence, correlates, disability, and comorbidity of DSM-IV schizotypal personality disorder: results from the wave 2 national epidemiologic survey on alcohol and related conditions.",
+      "first_author": "Pulay",
+      "journal": "Primary Care Companion to the Journal of Clinical Psychiatry",
+      "pmid": "19617934",
+      "doi": "10.4088/pcc.08m00679",
+      "finding_one_line": "NESARC survey: schizotypal personality disorder is prevalent (~3.9%), stable, highly disabling trait condition on the schizophrenia spectrum \u2014 a persistent personality pattern, not a discrete psychotic episode.",
+      "numbers_it_licenses": [
+        {
+          "number": "3.9%",
+          "what_it_is": "lifetime prevalence of schizotypal personality disorder in US adults",
+          "abstract_sentence": "Lifetime prevalence of SPD was 3.9%, with significantly greater rates among men (4.2%) than women (3.7%) (p < .01)."
+        }
+      ],
+      "claims_it_can_support": [
+        3
+      ],
+      "resolved": true,
+      "parts": [
+        1
+      ],
+      "europepmc": {
+        "pmid": "19617934",
+        "pmcid": "PMC2707116",
+        "doi": "10.4088/pcc.08m00679",
+        "pubYear": "2009",
+        "title": "Prevalence, correlates, disability, and comorbidity of DSM-IV schizotypal personality disorder: results from the wave 2 national epidemiologic survey on alcohol and related conditions.",
+        "isOpenAccess": "N",
+        "authorString": "Pulay AJ, Stinson FS, Dawson DA, Goldstein RB, Chou SP, Huang B, Saha TD, Smith SM, Pickering RP, Ruan WJ, Hasin DS, Gra",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P4-family-intervention-pharoah-2010",
+      "part": 4,
+      "territory": [
+        6
+      ],
+      "tier": "T1",
+      "year": 2010,
+      "title": "Family intervention for schizophrenia.",
+      "first_author": "Pharoah",
+      "journal": "Cochrane Database of Systematic Reviews",
+      "pmid": "21154340",
+      "doi": "10.1002/14651858.cd000088.pub2",
+      "finding_one_line": "Cochrane review of 53 RCTs: family intervention reduces relapse (RR 0.55, NNT 7), hospital admission (RR 0.78, NNT 8), improves medication adherence (RR 0.60, NNT 6).",
+      "numbers_it_licenses": [
+        {
+          "number": "relapse RR 0.55, NNT 7",
+          "what_it_is": "relapse reduction with family intervention vs standard care",
+          "abstract_sentence": "Family intervention may decrease the frequency of relapse (n = 2981, 32 RCTs, RR 0.55 CI 0.5 to 0.6, NNT 7 CI 6 to 8)."
+        },
+        {
+          "number": "medication compliance RR 0.60, NNT 6",
+          "what_it_is": "improved adherence with family intervention",
+          "abstract_sentence": "encourage compliance with medication (n = 695, 10 RCTs, RR 0.60 CI 0.5 to 0.7, NNT 6 CI 5 to 9)."
+        }
+      ],
+      "claims_it_can_support": [
+        "Family intervention reduces relapse and hospitalisation",
+        "High expressed emotion predicts relapse",
+        "A large, under-recognised relapse-prevention lever"
+      ],
+      "resolved": true,
+      "parts": [
+        4
+      ],
+      "europepmc": {
+        "pmid": "21154340",
+        "pmcid": "PMC4204509",
+        "doi": "10.1002/14651858.cd000088.pub2",
+        "pubYear": "2010",
+        "title": "Family intervention for schizophrenia.",
+        "isOpenAccess": "N",
+        "authorString": "Pharoah F, Mari J, Rathbone J, Wong W.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P3-pruning-petanjek-2011",
+      "part": 3,
+      "territory": [
+        "3-synaptic-pruning-C4"
+      ],
+      "tier": "T2",
+      "year": 2011,
+      "title": "Extraordinary neoteny of synaptic spines in the human prefrontal cortex",
+      "first_author": "Petanjek",
+      "journal": "Proceedings of the National Academy of Sciences of the USA",
+      "pmid": "21788513",
+      "doi": "10.1073/pnas.1105108108",
+      "finding_one_line": "Human prefrontal spine overproduction and pruning continue into the third decade before stabilizing \u2014 synaptic elimination is protracted through the window when schizophrenia emerges.",
+      "numbers_it_licenses": [
+        {
+          "number": "third decade of life",
+          "what_it_is": "period over which prefrontal pruning continues before adult level",
+          "abstract_sentence": "overproduction and developmental remodeling...continues beyond adolescence and throughout the third decade of life before stabilizing at the adult level."
+        }
+      ],
+      "claims_it_can_support": [
+        "Pruning window overlaps age of schizophrenia onset"
+      ],
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "21788513",
+        "pmcid": "PMC3156171",
+        "doi": "10.1073/pnas.1105108108",
+        "pubYear": "2011",
+        "title": "Extraordinary neoteny of synaptic spines in the human prefrontal cortex.",
+        "isOpenAccess": "N",
+        "authorString": "Petanjek Z, Juda\u0161 M, \u0160imic G, Rasin MR, Uylings HB, Rakic P, Kostovic I.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P3-glutamate-moghaddam-javitt-2012",
+      "part": 3,
+      "territory": [
+        "6-glutamate-tension"
+      ],
+      "tier": "T1",
+      "year": 2012,
+      "title": "From revolution to evolution: the glutamate hypothesis of schizophrenia and its implication for treatment",
+      "first_author": "Moghaddam",
+      "journal": "Neuropsychopharmacology",
+      "pmid": "21956446",
+      "doi": "10.1038/npp.2011.181",
+      "finding_one_line": "Glutamate/NMDA-hypofunction account: NMDAR antagonists reproduce schizophrenia-like symptoms; a co-equal, non-dopaminergic mechanism affecting positive AND negative symptoms.",
+      "numbers_it_licenses": [],
+      "claims_it_can_support": [
+        "Glutamate/NMDA hypofunction as a co-equal mechanistic account",
+        "NMDAR antagonists induce schizophrenia-like symptoms"
+      ],
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "21956446",
+        "pmcid": "PMC3238069",
+        "doi": "10.1038/npp.2011.181",
+        "pubYear": "2012",
+        "title": "From revolution to evolution: the glutamate hypothesis of schizophrenia and its implication for treatment.",
+        "isOpenAccess": "N",
+        "authorString": "Moghaddam B, Javitt D.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P2-rabinowitz-catie-neg-gt-pos",
+      "part": 2,
+      "territory": [
+        5
+      ],
+      "tier": "T2",
+      "year": 2012,
+      "title": "Negative symptoms have greater impact on functioning than positive symptoms in schizophrenia: analysis of CATIE data",
+      "first_author": "Rabinowitz",
+      "journal": "Schizophrenia Research",
+      "pmid": "22316568",
+      "doi": "10.1016/j.schres.2012.01.015",
+      "finding_one_line": "CATIE analysis (n=1447): functioning was more strongly related to negative symptoms than any other domain, including positive \u2014 with honest caveat that overall variance explained was small.",
+      "numbers_it_licenses": [
+        {
+          "number": "n=1447",
+          "what_it_is": "CATIE sample; negative symptoms most related to functioning",
+          "abstract_sentence": "Baseline functioning and change in functioning were more strongly related to PANSS negative factor than any of the other symptoms - though the amount of variance explained by symptom changes in general was small."
+        }
+      ],
+      "claims_it_can_support": [
+        "Negative symptoms outweigh positive symptoms as predictors of functional outcome"
+      ],
+      "resolved": true,
+      "parts": [
+        2
+      ],
+      "europepmc": {
+        "pmid": "22316568",
+        "pmcid": null,
+        "doi": "10.1016/j.schres.2012.01.015",
+        "pubYear": "2012",
+        "title": "Negative symptoms have greater impact on functioning than positive symptoms in schizophrenia: analysis of CATIE data.",
+        "isOpenAccess": "N",
+        "authorString": "Rabinowitz J, Levine SZ, Garibaldi G, Bugarski-Kirola D, Berardo CG, Kapur S.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P2-payne-nights-end-fpa",
+      "part": 2,
+      "territory": [
+        1,
+        "8a"
+      ],
+      "tier": "T5",
+      "year": 2012,
+      "title": "Night's end",
+      "first_author": "Payne",
+      "journal": "Schizophrenia Bulletin",
+      "pmid": "22461482",
+      "doi": "10.1093/schbul/sbs051",
+      "pmcid": "PMC3446218",
+      "finding_one_line": "Second real Schizophrenia Bulletin first-person account (Roberta Payne) with quotable auditory-hallucination descriptions; backup FPA.",
+      "verbatim_quote": "My brain created disc jockeys in the air vents of the hospital room playing Beatles' songs. ... I experienced extraordinarily loud fighter jets landing and taking off in my hospital room!",
+      "numbers_it_licenses": [],
+      "claims_it_can_support": [
+        "First-person illustration of auditory hallucinations experienced as fully real, external perceptions"
+      ],
+      "resolved": true,
+      "parts": [
+        2
+      ],
+      "europepmc": {
+        "pmid": "22461482",
+        "pmcid": "PMC3446218",
+        "doi": "10.1093/schbul/sbs051",
+        "pubYear": "2012",
+        "title": "Night's end.",
+        "isOpenAccess": "N",
+        "authorString": "Payne R.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P3-adversity-varese-2012",
+      "part": 3,
+      "territory": [
+        "7a-childhood-adversity"
+      ],
+      "tier": "T1",
+      "year": 2012,
+      "title": "Childhood adversities increase the risk of psychosis: a meta-analysis of patient-control, prospective- and cross-sectional cohort studies",
+      "first_author": "Varese",
+      "journal": "Schizophrenia Bulletin",
+      "pmid": "22461484",
+      "doi": "10.1093/schbul/sbs050",
+      "finding_one_line": "Meta-analysis (36 studies): childhood adversity roughly triples psychosis risk (OR 2.78, 95% CI 2.34-3.31), ~33% population attributable risk.",
+      "numbers_it_licenses": [
+        {
+          "number": "OR 2.78 (95% CI 2.34-3.31)",
+          "what_it_is": "odds ratio linking childhood adversity to psychosis",
+          "abstract_sentence": "with an overall effect of OR = 2.78 (95% CI = 2.34-3.31)."
+        },
+        {
+          "number": "33% (16%-47%)",
+          "what_it_is": "population attributable risk from childhood adversity",
+          "abstract_sentence": "The estimated population attributable risk was 33% (16%-47%)."
+        }
+      ],
+      "claims_it_can_support": [
+        "Childhood adversity roughly triples psychosis risk (OR ~2.8)"
+      ],
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "22461484",
+        "pmcid": "PMC3406538",
+        "doi": "10.1093/schbul/sbs050",
+        "pubYear": "2012",
+        "title": "Childhood adversities increase the risk of psychosis: a meta-analysis of patient-control, prospective- and cross-sectional cohort studies.",
+        "isOpenAccess": "Y",
+        "authorString": "Varese F, Smeets F, Drukker M, Lieverse R, Lataster T, Viechtbauer W, Read J, van Os J, Bentall RP.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P3-dopamine-howes-2012",
+      "part": 3,
+      "territory": [
+        "5-dopamine",
+        "6-glutamate-tension"
+      ],
+      "tier": "T1",
+      "year": 2012,
+      "title": "The nature of dopamine dysfunction in schizophrenia and what this means for treatment",
+      "first_author": "Howes",
+      "journal": "Archives of General Psychiatry",
+      "pmid": "22474070",
+      "doi": "10.1001/archgenpsychiatry.2012.169",
+      "finding_one_line": "Meta-analysis of 44 imaging studies (618 patients): largest dopaminergic abnormality is presynaptic (Cohen d=0.79), only minor D2/3 elevation (d=0.26, absent in drug-naive) \u2014 D2-blocking drugs miss the presynaptic lesion.",
+      "numbers_it_licenses": [
+        {
+          "number": "Cohen d = 0.79",
+          "what_it_is": "effect size for elevated presynaptic striatal dopaminergic function",
+          "abstract_sentence": "There was a highly significant elevation (P.<001) in presynaptic dopaminergic function in schizophrenia with a large effect size (Cohen d=0.79)."
+        },
+        {
+          "number": "Cohen d = 0.26",
+          "what_it_is": "small D2/3 receptor availability elevation (not in drug-naive)",
+          "abstract_sentence": "There was a small elevation in D(2/3) receptor availability (Cohen d=0.26), but this was not evident in drug-naive patients."
+        }
+      ],
+      "claims_it_can_support": [
+        "Large-effect presynaptic dopamine elevation",
+        "Abnormality is presynaptic not receptor-level",
+        "D2-blocking drugs miss the real target (tension setup)"
+      ],
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "22474070",
+        "pmcid": "PMC3730746",
+        "doi": "10.1001/archgenpsychiatry.2012.169",
+        "pubYear": "2012",
+        "title": "The nature of dopamine dysfunction in schizophrenia and what this means for treatment.",
+        "isOpenAccess": "N",
+        "authorString": "Howes OD, Kambeitz J, Kim E, Stahl D, Slifstein M, Abi-Dargham A, Kapur S.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P1-bleuler-term",
+      "part": 1,
+      "territory": [
+        8
+      ],
+      "tier": "T4",
+      "year": 2012,
+      "title": "Paul Eugen Bleuler and the origin of the term schizophrenia (SCHIZOPRENIEGRUPPE).",
+      "first_author": "Ashok",
+      "journal": "Indian Journal of Psychiatry",
+      "pmid": "22556451",
+      "doi": "10.4103/0019-5545.94660",
+      "finding_one_line": "Historical/terminological source: Eugen Bleuler coined 'schizophrenia' (a splitting among psychic functions, not a split of personality); Europe PMC record carries NO abstractText so licenses no number.",
+      "numbers_it_licenses": [],
+      "claims_it_can_support": [
+        8
+      ],
+      "resolved": true,
+      "parts": [
+        1
+      ],
+      "europepmc": {
+        "pmid": "22556451",
+        "pmcid": "PMC3339235",
+        "doi": "10.4103/0019-5545.94660",
+        "pubYear": "2012",
+        "title": "Paul Eugen Bleuler and the origin of the term schizophrenia (SCHIZOPRENIEGRUPPE).",
+        "isOpenAccess": "Y",
+        "authorString": "Ashok AH, Baugh J, Yeragani VK.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P4-relapse-prevention-leucht-2012",
+      "part": 4,
+      "territory": [
+        3,
+        4
+      ],
+      "tier": "T1",
+      "year": 2012,
+      "title": "Antipsychotic drugs versus placebo for relapse prevention in schizophrenia: a systematic review and meta-analysis.",
+      "first_author": "Leucht",
+      "journal": "The Lancet",
+      "pmid": "22560607",
+      "doi": "10.1016/s0140-6736(12)60239-6",
+      "finding_one_line": "65 trials (6493 patients): maintenance antipsychotics cut 1-year relapse from 64% (placebo) to 27% (RR 0.40, NNT 3) and readmission from 26% to 10%, at cost of more weight gain, movement disorders, sedation.",
+      "numbers_it_licenses": [
+        {
+          "number": "27% vs 64%; RR 0.40; NNTB 3",
+          "what_it_is": "1-year relapse on antipsychotic vs placebo, RR and NNT",
+          "abstract_sentence": "Antipsychotic drugs significantly reduced relapse rates at 1 year (drugs 27%vs placebo 64%; risk ratio [RR] 0.40, 95% CI 0.33-0.49; number needed to treat to benefit [NNTB] 3, 95% CI 2-3)."
+        },
+        {
+          "number": "10% vs 26%",
+          "what_it_is": "hospital readmission on antipsychotic vs placebo",
+          "abstract_sentence": "Fewer patients given antipsychotic drugs than placebo were readmitted (10%vs 26%; RR 0.38, 95% CI 0.27-0.55; NNTB 5, 4-9)."
+        }
+      ],
+      "claims_it_can_support": [
+        "Maintenance more than halves 1-year relapse",
+        "~3 patients treated to prevent one relapse",
+        "Benefit weighed against weight gain, movement disorders, sedation"
+      ],
+      "resolved": true,
+      "parts": [
+        4
+      ],
+      "europepmc": {
+        "pmid": "22560607",
+        "pmcid": null,
+        "doi": "10.1016/s0140-6736(12)60239-6",
+        "pubYear": "2012",
+        "title": "Antipsychotic drugs versus placebo for relapse prevention in schizophrenia: a systematic review and meta-analysis.",
+        "isOpenAccess": "N",
+        "authorString": "Leucht S, Tardy M, Komossa K, Heres S, Kissling W, Salanti G, Davis JM.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P1-onset-sexdiff-eranti",
+      "part": 1,
+      "territory": [
+        7
+      ],
+      "tier": "T1",
+      "year": 2013,
+      "title": "Gender difference in age at onset of schizophrenia: a meta-analysis.",
+      "first_author": "Eranti",
+      "journal": "Psychological Medicine",
+      "pmid": "22564907",
+      "doi": "10.1017/s003329171200089x",
+      "finding_one_line": "Meta-analysis (48,620 patients): men develop schizophrenia only ~1.07 years earlier than women \u2014 a real but smaller sex gap than classic teaching, and absent in ICD-based studies.",
+      "numbers_it_licenses": [
+        {
+          "number": "1.07 years",
+          "what_it_is": "pooled male-earlier gender difference in age at first admission",
+          "abstract_sentence": "A random-effects model gave a pooled estimate of the gender difference of 1.07 years (95% confidence interval 0.21-1.93) for age at first admission of schizophrenia, with males having earlier onset."
+        }
+      ],
+      "claims_it_can_support": [
+        7
+      ],
+      "resolved": true,
+      "parts": [
+        1
+      ],
+      "europepmc": {
+        "pmid": "22564907",
+        "pmcid": null,
+        "doi": "10.1017/s003329171200089x",
+        "pubYear": "2013",
+        "title": "Gender difference in age at onset of schizophrenia: a meta-analysis.",
+        "isOpenAccess": "N",
+        "authorString": "Eranti SV, MacCabe JH, Bundy H, Murray RM.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P1-pe-prevalence-linscott",
+      "part": 1,
+      "territory": [
+        1,
+        4
+      ],
+      "tier": "T1",
+      "year": 2013,
+      "title": "An updated and conservative systematic review and meta-analysis of epidemiological evidence on psychotic experiences in children and adults: on the pathway from proneness to persistence to dimensional expression across mental disorders.",
+      "first_author": "Linscott",
+      "journal": "Psychological Medicine",
+      "pmid": "22850401",
+      "doi": "10.1017/s0033291712001626",
+      "finding_one_line": "Meta-analysis of 61 cohorts: psychotic experiences occur in ~7.2% of the general population (annual incidence 2.5%), far above the schizophrenia diagnosis rate; only 7.4% of people with baseline PE develop a psychotic disorder.",
+      "numbers_it_licenses": [
+        {
+          "number": "7.2%",
+          "what_it_is": "median prevalence of psychotic experiences in the general population",
+          "abstract_sentence": "Estimates of the incidence and prevalence of PE obtained from 61 cohorts revealed a median annual incidence of 2.5% and a prevalence of 7.2%."
+        },
+        {
+          "number": "2.5%",
+          "what_it_is": "median annual incidence of psychotic experiences",
+          "abstract_sentence": "Estimates of the incidence and prevalence of PE obtained from 61 cohorts revealed a median annual incidence of 2.5% and a prevalence of 7.2%."
+        },
+        {
+          "number": "7.4%",
+          "what_it_is": "proportion with baseline PE who develop a psychotic disorder",
+          "abstract_sentence": "Of those with baseline PE, 7.4% develop a psychotic disorder outcome."
+        }
+      ],
+      "claims_it_can_support": [
+        1,
+        4
+      ],
+      "resolved": true,
+      "parts": [
+        1
+      ],
+      "europepmc": {
+        "pmid": "22850401",
+        "pmcid": null,
+        "doi": "10.1017/s0033291712001626",
+        "pubYear": "2013",
+        "title": "An updated and conservative systematic review and meta-analysis of epidemiological evidence on psychotic experiences in children and adults: on the pathway from proneness to persistence to dimensional expression across mental disorders.",
+        "isOpenAccess": "N",
+        "authorString": "Linscott RJ, van Os J.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P3-biomarker-kapur-2012",
+      "part": 3,
+      "territory": [
+        "9-no-biomarker"
+      ],
+      "tier": "T2",
+      "year": 2012,
+      "title": "Why has it taken so long for biological psychiatry to develop clinical tests and what to do about it?",
+      "first_author": "Kapur",
+      "journal": "Molecular Psychiatry",
+      "pmid": "22869033",
+      "doi": "10.1038/mp.2012.105",
+      "finding_one_line": "Authoritative admission: patients show many biological abnormalities but few yield any test with clinical utility \u2014 no validated diagnostic biomarker for schizophrenia.",
+      "numbers_it_licenses": [
+        {
+          "number": "n/a",
+          "what_it_is": "no validated diagnostic biomarker; diagnosis remains clinical",
+          "abstract_sentence": "Patients with mental disorders show many biological abnormalities which distinguish them from normal volunteers; however, few of these have led to tests with clinical utility."
+        }
+      ],
+      "claims_it_can_support": [
+        "No validated diagnostic biomarker or blood/imaging test"
+      ],
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "22869033",
+        "pmcid": null,
+        "doi": "10.1038/mp.2012.105",
+        "pubYear": "2012",
+        "title": "Why has it taken so long for biological psychiatry to develop clinical tests and what to do about it?",
+        "isOpenAccess": "N",
+        "authorString": "Kapur S, Phillips AG, Insel TR.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P3-urbanicity-vassos-2012",
+      "part": 3,
+      "territory": [
+        "7c-urbanicity"
+      ],
+      "tier": "T1",
+      "year": 2012,
+      "title": "Meta-analysis of the association of urbanicity with schizophrenia",
+      "first_author": "Vassos",
+      "journal": "Schizophrenia Bulletin",
+      "pmid": "23015685",
+      "doi": "10.1093/schbul/sbs096",
+      "finding_one_line": "Meta-analysis: linear urbanicity gradient \u2014 risk in most urban environment is 2.37 times higher than most rural.",
+      "numbers_it_licenses": [
+        {
+          "number": "2.37 times",
+          "what_it_is": "relative risk most-urban vs most-rural",
+          "abstract_sentence": "The risk for schizophrenia at the most urban environment was estimated to be 2.37 times higher than in the most rural environment."
+        }
+      ],
+      "claims_it_can_support": [
+        "Urban upbringing raises risk (~2.4x)"
+      ],
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "23015685",
+        "pmcid": "PMC3494055",
+        "doi": "10.1093/schbul/sbs096",
+        "pubYear": "2012",
+        "title": "Meta-analysis of the association of urbanicity with schizophrenia.",
+        "isOpenAccess": "N",
+        "authorString": "Vassos E, Pedersen CB, Murray RM, Collier DA, Lewis CM.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P1-dx-reliability-dsm5",
+      "part": 1,
+      "territory": [
+        2
+      ],
+      "tier": "T3",
+      "year": 2013,
+      "title": "DSM-5 field trials in the United States and Canada, Part II: test-retest reliability of selected categorical diagnoses.",
+      "first_author": "Regier",
+      "journal": "The American Journal of Psychiatry",
+      "pmid": "23111466",
+      "doi": "10.1176/appi.ajp.2012.12070999",
+      "finding_one_line": "DSM-5 field trials framing for how reliably clinicians draw diagnostic lines; schizophrenia's specific kappa is NOT in the abstract, so no schizophrenia-specific number is licensed.",
+      "numbers_it_licenses": [
+        {
+          "number": "kappa 0.40-0.59",
+          "what_it_is": "the 'good' reliability band; nine tested DSM-5 diagnoses fell here",
+          "abstract_sentence": "Overall, five diagnoses were in the very good range(kappa=0.60-0.79), nine in the good range(kappa=0.40-0.59), six in the questionable range (kappa = 0.20-0.39), and three in the unacceptable range (kappa values,0.20)."
+        }
+      ],
+      "claims_it_can_support": [
+        2
+      ],
+      "resolved": true,
+      "parts": [
+        1
+      ],
+      "europepmc": {
+        "pmid": "23111466",
+        "pmcid": null,
+        "doi": "10.1176/appi.ajp.2012.12070999",
+        "pubYear": "2013",
+        "title": "DSM-5 field trials in the United States and Canada, Part II: test-retest reliability of selected categorical diagnoses.",
+        "isOpenAccess": "N",
+        "authorString": "Regier DA, Narrow WE, Clarke DE, Kraemer HC, Kuramoto SJ, Kuhl EA, Kupfer DJ.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P5-recovery-jaaskelainen-2013",
+      "part": 5,
+      "territory": [
+        "long-term-outcome",
+        "recovery-rate"
+      ],
+      "tier": "T1",
+      "year": 2013,
+      "title": "A systematic review and meta-analysis of recovery in schizophrenia.",
+      "first_author": "Jaaskelainen",
+      "journal": "Schizophrenia Bulletin",
+      "pmid": "23172003",
+      "doi": "10.1093/schbul/sbs130",
+      "pmcid": "PMC3796077",
+      "finding_one_line": "Pooling 50 studies, ~1 in 7 (13.5%) met a combined clinical+social recovery criterion sustained >=2 years \u2014 and the rate has not improved over decades. CONTESTED (see Lally 2017).",
+      "numbers_it_licenses": [
+        {
+          "number": "13.5% (8.1%-20.0%)",
+          "what_it_is": "median proportion meeting combined clinical+social recovery criteria",
+          "abstract_sentence": "The median proportion (25%-75% quantiles) who met our recovery criteria was 13.5% (8.1%-20.0%)."
+        },
+        {
+          "number": "1 in 7",
+          "what_it_is": "plain-language recovery proportion",
+          "abstract_sentence": "Based on the best available data, approximately, 1 in 7 individuals with schizophrenia met our criteria for recovery."
+        },
+        {
+          "number": "not increased",
+          "what_it_is": "temporal stability despite treatment advances",
+          "abstract_sentence": "Despite major changes in treatment options in recent decades, the proportion of recovered cases has not increased."
+        }
+      ],
+      "claims_it_can_support": [
+        "Headline recovery ~13.5% (1 in 7) for chronic/mixed samples",
+        "Recovery rates flat over decades"
+      ],
+      "contested_note": "CONTESTED \u2014 strict criterion, chronic samples; first-episode cohorts report higher. Report the range.",
+      "resolved": true,
+      "parts": [
+        5
+      ],
+      "europepmc": {
+        "pmid": "23172003",
+        "pmcid": "PMC3796077",
+        "doi": "10.1093/schbul/sbs130",
+        "pubYear": "2013",
+        "title": "A systematic review and meta-analysis of recovery in schizophrenia.",
+        "isOpenAccess": "N",
+        "authorString": "J\u00e4\u00e4skel\u00e4inen E, Juola P, Hirvonen N, McGrath JJ, Saha S, Isohanni M, Veijola J, Miettunen J.",
+        "author_match": false,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P1-sip-conversion-niemi",
+      "part": 1,
+      "territory": [
+        5
+      ],
+      "tier": "T1",
+      "year": 2013,
+      "title": "Substance-induced psychoses converting into schizophrenia: a register-based study of 18,478 Finnish inpatient cases.",
+      "first_author": "Niemi-Pynttari",
+      "journal": "The Journal of Clinical Psychiatry",
+      "pmid": "23419236",
+      "doi": "10.4088/jcp.12m07822",
+      "finding_one_line": "Finnish register cohort (N=18,478): 8-year cumulative conversion to schizophrenia-spectrum was 46% after cannabis-induced psychosis, 30% after amphetamine-induced, 5.0% after alcohol-induced.",
+      "numbers_it_licenses": [
+        {
+          "number": "46%",
+          "what_it_is": "8-year cumulative risk of schizophrenia-spectrum after cannabis-induced psychosis",
+          "abstract_sentence": "Eight-year cumulative risk to receive a schizophrenia spectrum diagnosis was 46% (95% CI, 35%-57%) for persons with a diagnosis of cannabis-induced psychosis and 30% (95% CI, 14%-46%) for those with an amphetamine-induced psychosis."
+        },
+        {
+          "number": "5.0%",
+          "what_it_is": "8-year cumulative risk after alcohol-induced psychosis",
+          "abstract_sentence": "8-year cumulative risk for subsequent schizophrenia spectrum diagnosis was only 5.0% (95% CI, 4.6%-5.5%)."
+        }
+      ],
+      "claims_it_can_support": [
+        5
+      ],
+      "resolved": true,
+      "parts": [
+        1
+      ],
+      "europepmc": {
+        "pmid": "23419236",
+        "pmcid": null,
+        "doi": "10.4088/jcp.12m07822",
+        "pubYear": "2013",
+        "title": "Substance-induced psychoses converting into schizophrenia: a register-based study of 18,478 Finnish inpatient cases.",
+        "isOpenAccess": "N",
+        "authorString": "Niemi-Pyntt\u00e4ri JA, Sund R, Putkonen H, Vorma H, Wahlbeck K, Pirkola SP.",
+        "author_match": false,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P4-antipsychotic-mtm-leucht-2013",
+      "part": 4,
+      "territory": [
+        2,
+        4
+      ],
+      "tier": "T1",
+      "year": 2013,
+      "title": "Comparative efficacy and tolerability of 15 antipsychotic drugs in schizophrenia: a multiple-treatments meta-analysis.",
+      "first_author": "Leucht",
+      "journal": "The Lancet",
+      "pmid": "23810019",
+      "doi": "10.1016/s0140-6736(13)60733-3",
+      "finding_one_line": "Multiple-treatments meta-analysis of 212 trials (43,049): all 15 antipsychotics beat placebo (SMD 0.88 clozapine to 0.33 iloperidone); substantial side-effect differences (EPS OR 0.30-4.76).",
+      "numbers_it_licenses": [
+        {
+          "number": "SMD 0.88 (clozapine) to 0.33 (iloperidone)",
+          "what_it_is": "efficacy vs placebo across 15 antipsychotics",
+          "abstract_sentence": "The standardised mean differences with 95% credible intervals were: clozapine 0.88, 0.73-1.03; ... lurasidone 0.33, 0.21-0.45; and iloperidone 0.33, 0.22-0.43."
+        },
+        {
+          "number": "EPS OR 0.30-4.76",
+          "what_it_is": "range of odds ratios vs placebo for extrapyramidal side-effects",
+          "abstract_sentence": "for extrapyramidal side-effects 0.30 (clozapine) to 4.76 (haloperidol)."
+        }
+      ],
+      "claims_it_can_support": [
+        "All 15 antipsychotics significantly more effective than placebo",
+        "Efficacy differences small but robust; side-effect differences substantial"
+      ],
+      "resolved": true,
+      "parts": [
+        4
+      ],
+      "europepmc": {
+        "pmid": "23810019",
+        "pmcid": null,
+        "doi": "10.1016/s0140-6736(13)60733-3",
+        "pubYear": "2013",
+        "title": "Comparative efficacy and tolerability of 15 antipsychotic drugs in schizophrenia: a multiple-treatments meta-analysis.",
+        "isOpenAccess": "N",
+        "authorString": "Leucht S, Cipriani A, Spineli L, Mavridis D, Orey D, Richter F, Samara M, Barbui C, Engel RR, Geddes JR, Kissling W, Sta",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P2-schaefer-global-cognitive-impairment",
+      "part": 2,
+      "territory": [
+        4
+      ],
+      "tier": "T1",
+      "year": 2013,
+      "title": "The global cognitive impairment in schizophrenia: consistent over decades and around the world",
+      "first_author": "Schaefer",
+      "journal": "Schizophrenia Research",
+      "pmid": "23911259",
+      "doi": "10.1016/j.schres.2013.07.009",
+      "finding_one_line": "Meta-analysis (100 studies): generalized cognitive impairment of ~1 SD (grand mean g=-1.03), largest in processing speed and episodic memory; stable across decades and geography.",
+      "numbers_it_licenses": [
+        {
+          "number": "g = -1.03",
+          "what_it_is": "overall neurocognitive impairment vs healthy controls (~1 SD)",
+          "abstract_sentence": "patients with schizophrenia scored significantly lower than controls across all cognitive tests and domains, grand mean effect size, g=-1.03."
+        },
+        {
+          "number": "g = -1.25 / -1.23",
+          "what_it_is": "processing speed / episodic memory (largest impairments)",
+          "abstract_sentence": "Patients showed somewhat larger impairments in the domains of processing speed (g=-1.25) and episodic memory (g=-1.23)."
+        }
+      ],
+      "claims_it_can_support": [
+        "Neurocognitive deficit averages ~1 SD below controls",
+        "Processing speed and memory hit hardest"
+      ],
+      "resolved": true,
+      "parts": [
+        2
+      ],
+      "europepmc": {
+        "pmid": "23911259",
+        "pmcid": "PMC4196267",
+        "doi": "10.1016/j.schres.2013.07.009",
+        "pubYear": "2013",
+        "title": "The global cognitive impairment in schizophrenia: consistent over decades and around the world.",
+        "isOpenAccess": "N",
+        "authorString": "Schaefer J, Giangrande E, Weinberger DR, Dickinson D.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P4-cbt-psychosis-jauhar-2014",
+      "part": 4,
+      "territory": [
+        5
+      ],
+      "tier": "T1",
+      "year": 2014,
+      "title": "Cognitive-behavioural therapy for the symptoms of schizophrenia: systematic review and meta-analysis with examination of potential bias.",
+      "first_author": "Jauhar",
+      "journal": "The British Journal of Psychiatry",
+      "pmid": "24385461",
+      "doi": "10.1192/bjp.bp.112.116285",
+      "finding_one_line": "CBT for schizophrenia symptoms has a small pooled effect (overall -0.33) that shrinks to -0.15 in blinded/masked trials.",
+      "numbers_it_licenses": [
+        {
+          "number": "-0.33 overall",
+          "what_it_is": "pooled effect size CBT vs comparator, overall symptoms",
+          "abstract_sentence": "Pooled effect sizes were -0.33 (95% CI -0.47 to -0.19) in 34 studies of overall symptoms, -0.25 (95% CI -0.37 to -0.13) in 33 studies of positive symptoms and -0.13 (95% CI -0.25 to -0.01) in 34 studies of negative symptoms."
+        },
+        {
+          "number": "-0.62 (unmasked) vs -0.15 (masked)",
+          "what_it_is": "effect for overall symptoms when unblinded vs blinded \u2014 bias inflates estimate",
+          "abstract_sentence": "Masking significantly moderated effect size in the meta-analyses of overall symptoms (effect sizes -0.62 (95% CI -0.88 to -0.35) v. -0.15 (95% CI -0.27 to -0.03), P = 0.001)."
+        }
+      ],
+      "claims_it_can_support": [
+        "CBT effect on symptoms is 'small'",
+        "Apparent effect shrinks when bias controlled",
+        "CBT is adjunct, not replacement"
+      ],
+      "resolved": true,
+      "parts": [
+        4
+      ],
+      "europepmc": {
+        "pmid": "24385461",
+        "pmcid": null,
+        "doi": "10.1192/bjp.bp.112.116285",
+        "pubYear": "2014",
+        "title": "Cognitive-behavioural therapy for the symptoms of schizophrenia: systematic review and meta-analysis with examination of potential bias.",
+        "isOpenAccess": "N",
+        "authorString": "Jauhar S, McKenna PJ, Radua J, Fung E, Salvador R, Laws KR.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P2-olbert-polythetic-heterogeneity",
+      "part": 2,
+      "territory": [
+        7
+      ],
+      "tier": "T2",
+      "year": 2014,
+      "title": "Quantifying heterogeneity attributable to polythetic diagnostic criteria: theoretical framework and empirical application",
+      "first_author": "Olbert",
+      "journal": "Journal of Abnormal Psychology",
+      "pmid": "24886017",
+      "doi": "10.1037/a0036068",
+      "finding_one_line": "Combinatorial + empirical analysis: two people with the same diagnosis can share no symptoms; any two symptom combinations share on average less than half their symptoms.",
+      "numbers_it_licenses": [
+        {
+          "number": "< half",
+          "what_it_is": "symptom overlap between two patients with the same diagnosis under polythetic criteria",
+          "abstract_sentence": "in most categories, 2 individuals with the same diagnosis may share no symptoms in common, and that any 2 theoretically possible symptom combinations will share on average less than half their symptoms."
+        }
+      ],
+      "claims_it_can_support": [
+        "The diagnosis is polythetic; two diagnosed people may share almost no symptoms"
+      ],
+      "resolved": true,
+      "parts": [
+        2
+      ],
+      "europepmc": {
+        "pmid": "24886017",
+        "pmcid": null,
+        "doi": "10.1037/a0036068",
+        "pubYear": "2014",
+        "title": "Quantifying heterogeneity attributable to polythetic diagnostic criteria: theoretical framework and empirical application.",
+        "isOpenAccess": "N",
+        "authorString": "Olbert CM, Gala GJ, Tupler LA.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P4-dup-outcome-penttila-2014",
+      "part": 4,
+      "territory": [
+        1
+      ],
+      "tier": "T1",
+      "year": 2014,
+      "title": "Duration of untreated psychosis as predictor of long-term outcome in schizophrenia: systematic review and meta-analysis.",
+      "first_author": "Penttila",
+      "journal": "The British Journal of Psychiatry",
+      "pmid": "25252316",
+      "doi": "10.1192/bjp.bp.113.127753",
+      "finding_one_line": "Across 33 samples, longer DUP shows small but consistent correlations (0.13-0.18) with poorer long-term symptomatic, functional and remission outcomes.",
+      "numbers_it_licenses": [
+        {
+          "number": "0.13-0.18",
+          "what_it_is": "pooled correlations between long DUP and poor outcomes",
+          "abstract_sentence": "Long DUP correlated statistically significantly with poor general symptomatic outcome, more severe positive and negative symptoms, lesser likelihood of remission and poor social functioning and global outcome (correlations 0.13-0.18)."
+        }
+      ],
+      "claims_it_can_support": [
+        "DUP is a modifiable predictor of outcome",
+        "Longer DUP associated with worse outcomes (small, consistent)"
+      ],
+      "resolved": true,
+      "parts": [
+        4
+      ],
+      "europepmc": {
+        "pmid": "25252316",
+        "pmcid": null,
+        "doi": "10.1192/bjp.bp.113.127753",
+        "pubYear": "2014",
+        "title": "Duration of untreated psychosis as predictor of long-term outcome in schizophrenia: systematic review and meta-analysis.",
+        "isOpenAccess": "N",
+        "authorString": "Penttil\u00e4 M, J\u00e4\u00e4skel\u00e4inen E, Hirvonen N, Isohanni M, Miettunen J.",
+        "author_match": false,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P1-pe-prevalence-mcgrath",
+      "part": 1,
+      "territory": [
+        1
+      ],
+      "tier": "T1",
+      "year": 2015,
+      "title": "Psychotic Experiences in the General Population: A Cross-National Analysis Based on 31,261 Respondents From 18 Countries.",
+      "first_author": "McGrath",
+      "journal": "JAMA Psychiatry",
+      "pmid": "26018466",
+      "doi": "10.1001/jamapsychiatry.2015.0575",
+      "finding_one_line": "WHO World Mental Health cross-national survey of 31,261 adults across 18 countries: 5.8% report a lifetime psychotic experience; hallucinations far more common than delusions.",
+      "numbers_it_licenses": [
+        {
+          "number": "5.8%",
+          "what_it_is": "mean lifetime prevalence of any psychotic experience across 18 countries",
+          "abstract_sentence": "mean lifetime prevalence (SE) of ever having a PE was 5.8% (0.2%), with hallucinatory experiences (5.2% [0.2%]) much more common than delusional experiences (1.3% [0.1%])."
+        },
+        {
+          "number": "5.2%",
+          "what_it_is": "lifetime prevalence of hallucinatory experiences",
+          "abstract_sentence": "mean lifetime prevalence (SE) of ever having a PE was 5.8% (0.2%), with hallucinatory experiences (5.2% [0.2%]) much more common than delusional experiences (1.3% [0.1%])."
+        },
+        {
+          "number": "1.3%",
+          "what_it_is": "lifetime prevalence of delusional experiences",
+          "abstract_sentence": "mean lifetime prevalence (SE) of ever having a PE was 5.8% (0.2%), with hallucinatory experiences (5.2% [0.2%]) much more common than delusional experiences (1.3% [0.1%])."
+        }
+      ],
+      "claims_it_can_support": [
+        1
+      ],
+      "resolved": true,
+      "parts": [
+        1
+      ],
+      "europepmc": {
+        "pmid": "26018466",
+        "pmcid": "PMC5120396",
+        "doi": "10.1001/jamapsychiatry.2015.0575",
+        "pubYear": "2015",
+        "title": "Psychotic Experiences in the General Population: A Cross-National Analysis Based on 31,261 Respondents From 18 Countries.",
+        "isOpenAccess": "N",
+        "authorString": "McGrath JJ, Saha S, Al-Hamzawi A, Alonso J, Bromet EJ, Bruffaerts R, Caldas-de-Almeida JM, Chiu WT, de Jonge P, Fayyad J",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P2-woods-hearing-voices-phenomenology",
+      "part": 2,
+      "territory": [
+        2,
+        "8a"
+      ],
+      "tier": "T2",
+      "year": 2015,
+      "title": "Experiences of hearing voices: analysis of a novel phenomenological survey",
+      "first_author": "Woods",
+      "journal": "The Lancet Psychiatry",
+      "pmid": "26360085",
+      "doi": "10.1016/S2215-0366(15)00006-1",
+      "pmcid": "PMC4580735",
+      "finding_one_line": "Largest phenomenological survey of voice-hearing (n=153): voices are perceptual, heterogeneous, and frequently NOT literally auditory. Sample mixed diagnoses incl. non-clinical \u2014 phenomenology, not schizophrenia-only prevalence.",
+      "numbers_it_licenses": [
+        {
+          "number": "46% (70/153)",
+          "what_it_is": "proportion reporting thought-like or mixed (not literally auditory) voices",
+          "abstract_sentence": "Less than half of the participants reported hearing literally auditory voices--70 (46%) individuals reported either thought-like or mixed experiences."
+        }
+      ],
+      "claims_it_can_support": [
+        "Hallucinated voices are perceptual, not 'imagination'",
+        "'Hearing voices' is heterogeneous; nearly half thought-like/mixed"
+      ],
+      "resolved": true,
+      "parts": [
+        2
+      ],
+      "europepmc": {
+        "pmid": "26360085",
+        "pmcid": "PMC4580735",
+        "doi": "10.1016/s2215-0366(15)00006-1",
+        "pubYear": "2015",
+        "title": "Experiences of hearing voices: analysis of a novel phenomenological survey.",
+        "isOpenAccess": "Y",
+        "authorString": "Woods A, Jones N, Alderson-Day B, Callard F, Fernyhough C.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P4-raise-etp-kane-2016",
+      "part": 4,
+      "territory": [
+        7
+      ],
+      "tier": "T1",
+      "year": 2016,
+      "title": "Comprehensive Versus Usual Community Care for First-Episode Psychosis: 2-Year Outcomes From the NIMH RAISE Early Treatment Program.",
+      "first_author": "Kane",
+      "journal": "The American Journal of Psychiatry",
+      "pmid": "26481174",
+      "doi": "10.1176/appi.ajp.2015.15050632",
+      "finding_one_line": "RAISE-ETP RCT (34 clinics, N=404): coordinated specialty care (NAVIGATE) improved quality of life, psychopathology and work/school vs usual care over 2 years, larger gains when DUP shorter (<74-week median).",
+      "numbers_it_licenses": [
+        {
+          "number": "N=404 (223 NAVIGATE vs 181 usual)",
+          "what_it_is": "coordinated specialty care improved outcomes vs usual community care",
+          "abstract_sentence": "The 223 recipients of NAVIGATE remained in treatment longer, experienced greater improvement in quality of life and psychopathology, and experienced greater involvement in work and school compared with 181 participants in community care."
+        },
+        {
+          "number": "median DUP 74 weeks",
+          "what_it_is": "median duration of untreated psychosis; moderator threshold",
+          "abstract_sentence": "The median duration of untreated psychosis was 74 weeks."
+        }
+      ],
+      "claims_it_can_support": [
+        "Coordinated specialty care improves outcomes vs usual care",
+        "Benefit larger when DUP shorter"
+      ],
+      "resolved": true,
+      "parts": [
+        4
+      ],
+      "europepmc": {
+        "pmid": "26481174",
+        "pmcid": "PMC4981493",
+        "doi": "10.1176/appi.ajp.2015.15050632",
+        "pubYear": "2016",
+        "title": "Comprehensive Versus Usual Community Care for First-Episode Psychosis: 2-Year Outcomes From the NIMH RAISE Early Treatment Program.",
+        "isOpenAccess": "N",
+        "authorString": "Kane JM, Robinson DG, Schooler NR, Mueser KT, Penn DL, Rosenheck RA, Addington J, Brunette MF, Correll CU, Estroff SE, M",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P5-mortality-cause-olfson-2015",
+      "part": 5,
+      "territory": [
+        "mortality-gap",
+        "cause-of-death"
+      ],
+      "tier": "T1",
+      "year": 2015,
+      "title": "Premature Mortality Among Adults With Schizophrenia in the United States.",
+      "first_author": "Olfson",
+      "journal": "JAMA Psychiatry",
+      "pmid": "26509694",
+      "doi": "10.1001/jamapsychiatry.2015.1737",
+      "finding_one_line": "US cohort (N=1,138,853): schizophrenia carries 3.7x all-cause mortality; CVD is the single leading cause; accidents kill more than twice as many as suicide.",
+      "numbers_it_licenses": [
+        {
+          "number": "all-cause SMR 3.7",
+          "what_it_is": "standardized mortality ratio vs general population",
+          "abstract_sentence": "Adults with schizophrenia were more than 3.5 times (all-cause SMR, 3.7; 95% CI, 3.7-3.7) as likely to die in the follow-up period as were adults in the general population."
+        },
+        {
+          "number": "accidents 119.7 vs suicide 52.0 per 100,000 PY",
+          "what_it_is": "accidental deaths outnumber suicide >2:1",
+          "abstract_sentence": "Accidental deaths (119.7 per 100,000 person-years) accounted for more than twice as many deaths as suicide (52.0 per 100,000 person-years)."
+        }
+      ],
+      "claims_it_can_support": [
+        "Mortality gap driven mainly by physical disease (CVD), not suicide alone",
+        "CVD single largest cause; suicide a minority of excess deaths"
+      ],
+      "contested_note": "Corrects assumption that suicide is the main killer.",
+      "resolved": true,
+      "parts": [
+        5
+      ],
+      "europepmc": {
+        "pmid": "26509694",
+        "pmcid": null,
+        "doi": "10.1001/jamapsychiatry.2015.1737",
+        "pubYear": "2015",
+        "title": "Premature Mortality Among Adults With Schizophrenia in the United States.",
+        "isOpenAccess": "N",
+        "authorString": "Olfson M, Gerhard T, Huang C, Crystal S, Stroup TS.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P3-c4-sekar-2016",
+      "part": 3,
+      "territory": [
+        "3-synaptic-pruning-C4"
+      ],
+      "tier": "T1",
+      "year": 2016,
+      "title": "Schizophrenia risk from complex variation of complement component 4",
+      "first_author": "Sekar",
+      "journal": "Nature",
+      "pmid": "26814963",
+      "doi": "10.1038/nature16549",
+      "finding_one_line": "The strongest population-level genetic association (MHC) arises partly from C4 alleles; higher C4A expression tracks higher risk, and C4 mediates synapse elimination in mice \u2014 excessive complement-driven pruning.",
+      "numbers_it_licenses": [],
+      "claims_it_can_support": [
+        "Complement C4 increases risk",
+        "C4 mediates synaptic pruning",
+        "Links strongest GWAS signal to excessive pruning"
+      ],
+      "notes": "abstract has no numeric effect size; supports mechanism narrative, not a number.",
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "26814963",
+        "pmcid": "PMC4752392",
+        "doi": "10.1038/nature16549",
+        "pubYear": "2016",
+        "title": "Schizophrenia risk from complex variation of complement component 4.",
+        "isOpenAccess": "Y",
+        "authorString": "Sekar A, Bialas AR, de Rivera H, Davis A, Hammond TR, Kamitaki N, Tooley K, Presumey J, Baum M, Van Doren V, Genovese G,",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P3-cannabis-marconi-2016",
+      "part": 3,
+      "territory": [
+        "7b-cannabis"
+      ],
+      "tier": "T1",
+      "year": 2016,
+      "title": "Meta-analysis of the Association Between the Level of Cannabis Use and Risk of Psychosis",
+      "first_author": "Marconi",
+      "journal": "Schizophrenia Bulletin",
+      "pmid": "26884547",
+      "doi": "10.1093/schbul/sbw003",
+      "finding_one_line": "Meta-analysis (66,816 individuals): dose-response \u2014 heaviest cannabis users have ~4-fold increased odds of psychosis (OR 3.90, 95% CI 2.84-5.34).",
+      "numbers_it_licenses": [
+        {
+          "number": "OR 3.90 (95% CI 2.84-5.34)",
+          "what_it_is": "odds of psychosis for heaviest cannabis users vs nonusers",
+          "abstract_sentence": "A logistic regression model gave an OR of 3.90 (95% CI 2.84 to 5.34) for the risk of schizophrenia and other psychosis-related outcomes among the heaviest cannabis users compared to the nonusers."
+        }
+      ],
+      "claims_it_can_support": [
+        "Cannabis-psychosis link is dose-dependent; heaviest use ~quadruples odds"
+      ],
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "26884547",
+        "pmcid": "PMC4988731",
+        "doi": "10.1093/schbul/sbw003",
+        "pubYear": "2016",
+        "title": "Meta-analysis of the Association Between the Level of Cannabis Use and Risk of Psychosis.",
+        "isOpenAccess": "N",
+        "authorString": "Marconi A, Di Forti M, Lewis CM, Murray RM, Vassos E.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P1-dx-stability-fusarpoli",
+      "part": 1,
+      "territory": [
+        4,
+        6
+      ],
+      "tier": "T1",
+      "year": 2016,
+      "title": "Diagnostic Stability of ICD/DSM First Episode Psychosis Diagnoses: Meta-analysis.",
+      "first_author": "Fusar-Poli",
+      "journal": "Schizophrenia Bulletin",
+      "pmid": "26980142",
+      "doi": "10.1093/schbul/sbw020",
+      "finding_one_line": "Meta-analysis of 14,484 first-episode patients: schizophrenia is a highly stable diagnosis (0.90) whereas brief/acute-transient (0.56) and schizophreniform (0.29) are unstable and mostly re-diagnosed as schizophrenia; schizoaffective 0.72.",
+      "numbers_it_licenses": [
+        {
+          "number": "0.90",
+          "what_it_is": "prospective diagnostic stability of schizophrenia",
+          "abstract_sentence": "Prospective diagnostic stability ranked: schizophrenia 0.90 (95% CI 0.85-0.95) ... schizoaffective disorder 0.72 (95% CI 0.61-0.73) ... acute and transient psychotic disorder/brief psychotic disorder 0.56 ... schizophreniform disorder 0.29 (95% CI 0.22-0.38)."
+        },
+        {
+          "number": "0.29",
+          "what_it_is": "diagnostic stability of schizophreniform disorder (lowest)",
+          "abstract_sentence": "schizophreniform disorder 0.29 (95% CI 0.22-0.38)."
+        }
+      ],
+      "claims_it_can_support": [
+        4,
+        6
+      ],
+      "resolved": true,
+      "parts": [
+        1
+      ],
+      "europepmc": {
+        "pmid": "26980142",
+        "pmcid": "PMC5049518",
+        "doi": "10.1093/schbul/sbw020",
+        "pubYear": "2016",
+        "title": "Diagnostic Stability of ICD/DSM First Episode Psychosis Diagnoses: Meta-analysis.",
+        "isOpenAccess": "Y",
+        "authorString": "Fusar-Poli P, Cappucciati M, Rutigliano G, Heslin M, Stahl D, Brittenden Z, Caverzasi E, McGuire P, Carpenter WT.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P5-ips-modini-2016",
+      "part": 5,
+      "territory": [
+        "employment",
+        "supported-employment-IPS"
+      ],
+      "tier": "T1",
+      "year": 2016,
+      "title": "Supported employment for people with severe mental illness: systematic review and meta-analysis of the international evidence.",
+      "first_author": "Modini",
+      "journal": "The British Journal of Psychiatry",
+      "pmid": "27103678",
+      "doi": "10.1192/bjp.bp.115.165092",
+      "finding_one_line": "IPS supported employment more than doubles competitive-employment rates vs traditional vocational rehabilitation, regardless of local economy.",
+      "numbers_it_licenses": [
+        {
+          "number": "risk ratio 2.40 (95% CI 1.99-2.90)",
+          "what_it_is": "pooled RR for competitive employment, IPS vs traditional vocational rehab",
+          "abstract_sentence": "The overall pooled risk ratio for competitive employment using IPS compared with traditional vocational rehabilitation was 2.40 (95% CI 1.99-2.90)."
+        }
+      ],
+      "claims_it_can_support": [
+        "IPS roughly doubles competitive employment vs usual services"
+      ],
+      "resolved": true,
+      "parts": [
+        5
+      ],
+      "europepmc": {
+        "pmid": "27103678",
+        "pmcid": null,
+        "doi": "10.1192/bjp.bp.115.165092",
+        "pubYear": "2016",
+        "title": "Supported employment for people with severe mental illness: systematic review and meta-analysis of the international evidence.",
+        "isOpenAccess": "N",
+        "authorString": "Modini M, Tan L, Brinchmann B, Wang MJ, Killackey E, Glozier N, Mykletun A, Harvey SB.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P1-schizoaffective-shift",
+      "part": 1,
+      "territory": [
+        6
+      ],
+      "tier": "T1",
+      "year": 2016,
+      "title": "Diagnostic shift in patients diagnosed with schizoaffective disorder: a systematic review and meta-analysis of rediagnosis studies.",
+      "first_author": "Santelmann",
+      "journal": "Bipolar Disorders",
+      "pmid": "27226263",
+      "doi": "10.1111/bdi.12388",
+      "finding_one_line": "Meta-analysis of 31 rediagnosis studies: schizoaffective disorder is diagnostically unstable \u2014 36% later re-diagnosed (19% to schizophrenia, 14% to affective), underscoring mood burden as the shifting discriminator.",
+      "numbers_it_licenses": [
+        {
+          "number": "36%",
+          "what_it_is": "proportion of schizoaffective patients whose diagnosis later shifts",
+          "abstract_sentence": "A total of 36% of patients with a diagnosis of SAD at first assessment switch, many to schizophrenia (19%), 14% to affective disorders, and 6% to other disorders."
+        }
+      ],
+      "claims_it_can_support": [
+        6
+      ],
+      "resolved": true,
+      "parts": [
+        1
+      ],
+      "europepmc": {
+        "pmid": "27226263",
+        "pmcid": null,
+        "doi": "10.1111/bdi.12388",
+        "pubYear": "2016",
+        "title": "Diagnostic shift in patients diagnosed with schizoaffective disorder: a systematic review and meta-analysis of rediagnosis studies.",
+        "isOpenAccess": "N",
+        "authorString": "Santelmann H, Franklin J, Bu\u00dfhoff J, Baethge C.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P2-lim-hallucination-modalities",
+      "part": 2,
+      "territory": [
+        "8a"
+      ],
+      "tier": "T2",
+      "year": 2016,
+      "title": "Prevalence and classification of hallucinations in multiple sensory modalities in schizophrenia spectrum disorders",
+      "first_author": "Lim",
+      "journal": "Schizophrenia Research",
+      "pmid": "27349814",
+      "doi": "10.1016/j.schres.2016.06.010",
+      "finding_one_line": "GROUP-cohort study: auditory hallucinations occur in 60-80% of patients, but hallucinations are frequently multimodal (53%) rather than auditory-only (27% unimodal).",
+      "numbers_it_licenses": [
+        {
+          "number": "60-80% auditory",
+          "what_it_is": "proportion of schizophrenia-spectrum patients with auditory hallucinations",
+          "abstract_sentence": "Auditory hallucinations are experienced by 60-80% of all patients diagnosed with a schizophrenia spectrum disorder."
+        },
+        {
+          "number": "53% multimodal vs 27% unimodal",
+          "what_it_is": "hallucinations in multiple modalities vs single",
+          "abstract_sentence": "27% of the participants reported unimodal hallucinations and 53% MMHs."
+        }
+      ],
+      "claims_it_can_support": [
+        "Auditory is most common (~60-80%) but hallucinations NOT always auditory"
+      ],
+      "resolved": true,
+      "parts": [
+        2
+      ],
+      "europepmc": {
+        "pmid": "27349814",
+        "pmcid": null,
+        "doi": "10.1016/j.schres.2016.06.010",
+        "pubYear": "2016",
+        "title": "Prevalence and classification of hallucinations in multiple sensory modalities in schizophrenia spectrum disorders.",
+        "isOpenAccess": "N",
+        "authorString": "Lim A, Hoek HW, Deen ML, Blom JD, GROUP Investigators.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P2-marder-negative-symptom-domains",
+      "part": 2,
+      "territory": [
+        3
+      ],
+      "tier": "T3",
+      "year": 2017,
+      "title": "The current conceptualization of negative symptoms in schizophrenia",
+      "first_author": "Marder",
+      "journal": "World Psychiatry",
+      "pmid": "28127915",
+      "doi": "10.1002/wps.20385",
+      "finding_one_line": "Consensus source defining five negative-symptom domains (blunted affect, alogia, anhedonia, asociality, avolition), their two-factor structure, and key role in functional outcome.",
+      "numbers_it_licenses": [
+        {
+          "number": "5 domains / 2 factors",
+          "what_it_is": "consensus structure of negative symptoms",
+          "abstract_sentence": "a) five constructs should be considered as negative symptoms, i.e. blunted affect, alogia, anhedonia, asociality and avolition; ... c) the five constructs cluster in two factors, one including blunted affect and alogia and the other consisting of anhedonia, avolition and asociality."
+        }
+      ],
+      "claims_it_can_support": [
+        "Negative symptoms = avolition, anhedonia, alogia, blunted affect, asociality",
+        "They play a key role in functional outcome"
+      ],
+      "resolved": true,
+      "parts": [
+        2
+      ],
+      "europepmc": {
+        "pmid": "28127915",
+        "pmcid": "PMC5269507",
+        "doi": "10.1002/wps.20385",
+        "pubYear": "2017",
+        "title": "The current conceptualization of negative symptoms in schizophrenia.",
+        "isOpenAccess": "N",
+        "authorString": "Marder SR, Galderisi S.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P4-tardive-dyskinesia-carbon-2017",
+      "part": 4,
+      "territory": [
+        4
+      ],
+      "tier": "T1",
+      "year": 2017,
+      "title": "Tardive Dyskinesia Prevalence in the Period of Second-Generation Antipsychotic Use: A Meta-Analysis.",
+      "first_author": "Carbon",
+      "journal": "The Journal of Clinical Psychiatry",
+      "pmid": "28146614",
+      "doi": "10.4088/jcp.16r10832",
+      "finding_one_line": "Meta-analysis of 41 studies (11,493 patients): global tardive dyskinesia prevalence 25.3%, lower with second-generation (20.7%) than first-generation (30.0%).",
+      "numbers_it_licenses": [
+        {
+          "number": "TD prevalence 25.3%",
+          "what_it_is": "global mean tardive dyskinesia prevalence",
+          "abstract_sentence": "The global mean TD prevalence was 25.3% (95% CI = 22.7%-28.1%) across all 41 studies (N = 11,493...)."
+        },
+        {
+          "number": "SGA 20.7% vs FGA 30.0%",
+          "what_it_is": "TD prevalence during second-generation vs first-generation treatment",
+          "abstract_sentence": "Rates were lower with current SGA treatment (20.7%...) vs current FGA treatment (30.0%...)."
+        }
+      ],
+      "claims_it_can_support": [
+        "TD affects roughly a quarter of treated patients",
+        "Less frequent with second-generation but not eliminated"
+      ],
+      "resolved": true,
+      "parts": [
+        4
+      ],
+      "europepmc": {
+        "pmid": "28146614",
+        "pmcid": null,
+        "doi": "10.4088/jcp.16r10832",
+        "pubYear": "2017",
+        "title": "Tardive Dyskinesia Prevalence in the Period of Second-Generation Antipsychotic Use: A Meta-Analysis.",
+        "isOpenAccess": "N",
+        "authorString": "Carbon M, Hsieh CH, Kane JM, Correll CU.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P5-mortality-ypll-hjorthoj-2017",
+      "part": 5,
+      "territory": [
+        "mortality-gap",
+        "life-expectancy"
+      ],
+      "tier": "T1",
+      "year": 2017,
+      "title": "Years of potential life lost and life expectancy in schizophrenia: a systematic review and meta-analysis.",
+      "first_author": "Hjorthoj",
+      "journal": "The Lancet Psychiatry",
+      "pmid": "28237639",
+      "doi": "10.1016/S2215-0366(17)30078-0",
+      "finding_one_line": "Schizophrenia associated with ~14.5 years of potential life lost and life expectancy ~64.7 years; the gap has not narrowed over time.",
+      "numbers_it_licenses": [
+        {
+          "number": "14.5 years",
+          "what_it_is": "weighted-average years of potential life lost",
+          "abstract_sentence": "Schizophrenia was associated with a weighted average of 14.5 years of potential life lost (95% CI 11.2-17.8), and was higher for men than women."
+        },
+        {
+          "number": "64.7 years",
+          "what_it_is": "overall weighted-average life expectancy",
+          "abstract_sentence": "The overall weighted average life expectancy was 64.7 years (95% CI 61.1-71.3), and was lower for men than women."
+        }
+      ],
+      "claims_it_can_support": [
+        "~14.5-year life-expectancy/YPLL deficit",
+        "Mortality gap substantial, not narrowing"
+      ],
+      "resolved": true,
+      "parts": [
+        5
+      ],
+      "europepmc": {
+        "pmid": "28237639",
+        "pmcid": null,
+        "doi": "10.1016/s2215-0366(17)30078-0",
+        "pubYear": "2017",
+        "title": "Years of potential life lost and life expectancy in schizophrenia: a systematic review and meta-analysis.",
+        "isOpenAccess": "N",
+        "authorString": "Hjorth\u00f8j C, St\u00fcrup AE, McGrath JJ, Nordentoft M.",
+        "author_match": false,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P5-cvd-correll-2017",
+      "part": 5,
+      "territory": [
+        "mortality-gap",
+        "cardiovascular"
+      ],
+      "tier": "T1",
+      "year": 2017,
+      "title": "Prevalence, incidence and mortality from cardiovascular disease in patients with pooled and specific severe mental illness: a large-scale meta-analysis of 3,211,768 patients and 113,383,368 controls.",
+      "first_author": "Correll",
+      "journal": "World Psychiatry",
+      "pmid": "28498599",
+      "doi": "10.1002/wps.20420",
+      "pmcid": "PMC5428179",
+      "finding_one_line": "Severe mental illness carries ~10% CVD prevalence and substantially raised hazard of CVD death (HR 1.85), driven partly by antipsychotic use and obesity.",
+      "numbers_it_licenses": [
+        {
+          "number": "HR 1.85 (95% CI 1.53-2.24)",
+          "what_it_is": "hazard ratio for CVD-related death, SMI vs controls",
+          "abstract_sentence": "The incidence was also higher for ... CVD-related death (HR=1.85, 95% CI: 1.53-2.24)."
+        },
+        {
+          "number": "9.9%",
+          "what_it_is": "pooled CVD prevalence in SMI patients",
+          "abstract_sentence": "The pooled CVD prevalence in SMI patients (mean age 50 years) was 9.9% (95% CI: 7.4-13.3)."
+        }
+      ],
+      "claims_it_can_support": [
+        "CVD is a major driver of the mortality gap",
+        "Antipsychotic use and elevated BMI are modifiable contributors"
+      ],
+      "resolved": true,
+      "parts": [
+        5
+      ],
+      "europepmc": {
+        "pmid": "28498599",
+        "pmcid": "PMC5428179",
+        "doi": "10.1002/wps.20420",
+        "pubYear": "2017",
+        "title": "Prevalence, incidence and mortality from cardiovascular disease in patients with pooled and specific severe mental illness: a large-scale meta-analysis of 3,211,768 patients and 113,383,368 controls.",
+        "isOpenAccess": "N",
+        "authorString": "Correll CU, Solmi M, Veronese N, Bortolato B, Rosson S, Santonastaso P, Thapa-Chhetri N, Fornaro M, Gallicchio D, Collan",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P5-recovery-contest-lally-2017",
+      "part": 5,
+      "territory": [
+        "long-term-outcome",
+        "recovery-rate",
+        "CONTESTED"
+      ],
+      "tier": "T1",
+      "year": 2017,
+      "title": "Remission and recovery from first-episode psychosis in adults: systematic review and meta-analysis of long-term outcome studies.",
+      "first_author": "Lally",
+      "journal": "The British Journal of Psychiatry",
+      "pmid": "28982659",
+      "doi": "10.1192/bjp.bp.117.201475",
+      "finding_one_line": "In first-episode psychosis cohorts, pooled remission was 58% and recovery 38% \u2014 far higher than chronic-sample estimates \u2014 and outcomes did not progressively deteriorate.",
+      "numbers_it_licenses": [
+        {
+          "number": "58%",
+          "what_it_is": "pooled remission rate in first-episode psychosis",
+          "abstract_sentence": "The pooled rate of remission among 12301 individuals with FEP was 58% (60 studies, mean follow-up 5.5 years)."
+        },
+        {
+          "number": "38%",
+          "what_it_is": "pooled recovery prevalence in first-episode psychosis",
+          "abstract_sentence": "The pooled prevalence of recovery among 9642 individuals with FEP was 38% (35 studies, mean follow-up 7.2 years)."
+        }
+      ],
+      "claims_it_can_support": [
+        "Recovery figure is definition/sample-dependent (chronic ~13.5% vs first-episode ~38%)",
+        "Progressive-deterioration model not typical"
+      ],
+      "contested_note": "This IS the contest source. Pair explicitly with Jaaskelainen 2013.",
+      "resolved": true,
+      "parts": [
+        5
+      ],
+      "europepmc": {
+        "pmid": "28982659",
+        "pmcid": null,
+        "doi": "10.1192/bjp.bp.117.201475",
+        "pubYear": "2017",
+        "title": "Remission and recovery from first-episode psychosis in adults: systematic review and meta-analysis of long-term outcome studies.",
+        "isOpenAccess": "N",
+        "authorString": "Lally J, Ajnakina O, Stubbs B, Cullinane M, Murphy KC, Gaughran F, Murray RM.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P3-heritability-hilker-2018",
+      "part": 3,
+      "territory": [
+        "4a-heritability"
+      ],
+      "tier": "T1",
+      "year": 2018,
+      "title": "Heritability of Schizophrenia and Schizophrenia Spectrum Based on the Nationwide Danish Twin Register",
+      "first_author": "Hilker",
+      "journal": "Biological Psychiatry",
+      "pmid": "28987712",
+      "doi": "10.1016/j.biopsych.2017.08.017",
+      "finding_one_line": "Nationwide Danish twin register (31,524 pairs): heritability 79%; MZ concordance only 33% vs 7% DZ \u2014 genes dominate but do not fully determine illness.",
+      "numbers_it_licenses": [
+        {
+          "number": "79%",
+          "what_it_is": "heritability of schizophrenia (Danish cohort)",
+          "abstract_sentence": "We estimated the heritability of SZ to be 79%."
+        },
+        {
+          "number": "33% MZ / 7% DZ",
+          "what_it_is": "probandwise concordance monozygotic vs dizygotic",
+          "abstract_sentence": "The probandwise concordance rate of SZ is 33% in monozygotic twins and 7% in dizygotic twins."
+        }
+      ],
+      "claims_it_can_support": [
+        "Heritability ~79%",
+        "Identical-twin concordance only ~33% \u2014 genes not destiny"
+      ],
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "28987712",
+        "pmcid": null,
+        "doi": "10.1016/j.biopsych.2017.08.017",
+        "pubYear": "2018",
+        "title": "Heritability of Schizophrenia and Schizophrenia Spectrum Based on the Nationwide Danish Twin Register.",
+        "isOpenAccess": "N",
+        "authorString": "Hilker R, Helenius D, Fagerlund B, Skytthe A, Christensen K, Werge TM, Nordentoft M, Glenth\u00f8j B.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P3-neurodev-birnbaum-2017",
+      "part": 3,
+      "territory": [
+        "2-neurodevelopmental"
+      ],
+      "tier": "T1",
+      "year": 2017,
+      "title": "Genetic insights into the neurodevelopmental origins of schizophrenia",
+      "first_author": "Birnbaum",
+      "journal": "Nature Reviews Neuroscience",
+      "pmid": "29070826",
+      "doi": "10.1038/nrn.2017.125",
+      "finding_one_line": "Modern genetics-era revisit: gene-expression/epigenetic analyses of post-mortem cortex indicate early brain development mediates genetic risk.",
+      "numbers_it_licenses": [],
+      "claims_it_can_support": [
+        "Neurodevelopmental hypothesis supported by modern molecular evidence"
+      ],
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "29070826",
+        "pmcid": null,
+        "doi": "10.1038/nrn.2017.125",
+        "pubYear": "2017",
+        "title": "Genetic insights into the neurodevelopmental origins of schizophrenia.",
+        "isOpenAccess": "N",
+        "authorString": "Birnbaum R, Weinberger DR.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P1-sip-conversion-starzer",
+      "part": 1,
+      "territory": [
+        5
+      ],
+      "tier": "T1",
+      "year": 2018,
+      "title": "Rates and Predictors of Conversion to Schizophrenia or Bipolar Disorder Following Substance-Induced Psychosis.",
+      "first_author": "Starzer",
+      "journal": "The American Journal of Psychiatry",
+      "pmid": "29179576",
+      "doi": "10.1176/appi.ajp.2017.17020223",
+      "finding_one_line": "Danish registry cohort (N=6,788): 32.2% of substance-induced psychoses convert to schizophrenia or bipolar, rising to 47.4% for cannabis-induced psychosis; median ~3.1 years to schizophrenia.",
+      "numbers_it_licenses": [
+        {
+          "number": "32.2%",
+          "what_it_is": "overall conversion rate from substance-induced psychosis",
+          "abstract_sentence": "Overall, 32.2% (95% CI=29.7-34.9) of patients with a substance-induced psychosis converted to either bipolar or schizophrenia-spectrum disorders."
+        },
+        {
+          "number": "47.4%",
+          "what_it_is": "conversion rate for cannabis-induced psychosis (highest)",
+          "abstract_sentence": "The highest conversion rate was found for cannabis-induced psychosis, with 47.4% (95% CI=42.7-52.3) converting to either schizophrenia or bipolar disorder."
+        }
+      ],
+      "claims_it_can_support": [
+        5
+      ],
+      "resolved": true,
+      "parts": [
+        1
+      ],
+      "europepmc": {
+        "pmid": "29179576",
+        "pmcid": null,
+        "doi": "10.1176/appi.ajp.2017.17020223",
+        "pubYear": "2018",
+        "title": "Rates and Predictors of Conversion to Schizophrenia or Bipolar Disorder Following Substance-Induced Psychosis.",
+        "isOpenAccess": "N",
+        "authorString": "Starzer MSK, Nordentoft M, Hjorth\u00f8j C.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P4-early-intervention-correll-2018",
+      "part": 4,
+      "territory": [
+        7
+      ],
+      "tier": "T1",
+      "year": 2018,
+      "title": "Comparison of Early Intervention Services vs Treatment as Usual for Early-Phase Psychosis: A Systematic Review, Meta-analysis, and Meta-regression.",
+      "first_author": "Correll",
+      "journal": "JAMA Psychiatry",
+      "pmid": "29800949",
+      "doi": "10.1001/jamapsychiatry.2018.0623",
+      "finding_one_line": "Meta-analysis of 10 RCTs (2176 patients): early intervention services beat treatment-as-usual on all 13 outcomes \u2014 fewer discontinuations (RR 0.70), fewer hospitalisations (RR 0.74), more school/work (RR 1.13), lower symptoms (SMD -0.32).",
+      "numbers_it_licenses": [
+        {
+          "number": "10 RCTs / 2176 patients; all 13 outcomes",
+          "what_it_is": "overall superiority of EIS vs TAU",
+          "abstract_sentence": "Across 10 randomized clinical trials ... among 2176 patients ... EIS was associated with better outcomes than TAU at the end of treatment for all 13 meta-analyzable outcomes."
+        },
+        {
+          "number": "hospitalisation RR 0.74; symptoms SMD -0.32",
+          "what_it_is": "key effect sizes EIS vs TAU",
+          "abstract_sentence": "at least 1 psychiatric hospitalization (RR, 0.74; 95% CI, 0.61-0.90; P = .003) ... total symptom severity (standardized mean difference [SMD], -0.32; 95% CI, -0.47 to -0.17; P < .001)."
+        }
+      ],
+      "claims_it_can_support": [
+        "Early intervention superior to usual care across every measured outcome"
+      ],
+      "resolved": true,
+      "parts": [
+        4
+      ],
+      "europepmc": {
+        "pmid": "29800949",
+        "pmcid": "PMC6137532",
+        "doi": "10.1001/jamapsychiatry.2018.0623",
+        "pubYear": "2018",
+        "title": "Comparison of Early Intervention Services vs Treatment as Usual for Early-Phase Psychosis: A Systematic Review, Meta-analysis, and Meta-regression.",
+        "isOpenAccess": "N",
+        "authorString": "Correll CU, Galling B, Pawar A, Krivko A, Bonetto C, Ruggeri M, Craig TJ, Nordentoft M, Srihari VH, Guloksuz S, Hui CLM,",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P3-dopamine-mccutcheon-2019",
+      "part": 3,
+      "territory": [
+        "5-dopamine"
+      ],
+      "tier": "T1",
+      "year": 2019,
+      "title": "Schizophrenia, Dopamine and the Striatum: From Biology to Symptoms",
+      "first_author": "McCutcheon",
+      "journal": "Trends in Neurosciences",
+      "pmid": "30621912",
+      "doi": "10.1016/j.tins.2018.12.004",
+      "finding_one_line": "Updated review: greatest dopaminergic dysfunction is in nigrostriatal pathways implicating the dorsal (not mesolimbic) striatum.",
+      "numbers_it_licenses": [],
+      "claims_it_can_support": [
+        "Modern dopamine account centered on dorsal/associative striatum"
+      ],
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "30621912",
+        "pmcid": "PMC6401206",
+        "doi": "10.1016/j.tins.2018.12.004",
+        "pubYear": "2019",
+        "title": "Schizophrenia, Dopamine and the Striatum: From Biology to Symptoms.",
+        "isOpenAccess": "Y",
+        "authorString": "McCutcheon RA, Abi-Dargham A, Howes OD.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P4-antipsychotic-nma-huhn-2019",
+      "part": 4,
+      "territory": [
+        2,
+        4
+      ],
+      "tier": "T1",
+      "year": 2019,
+      "title": "Comparative efficacy and tolerability of 32 oral antipsychotics for the acute treatment of adults with multi-episode schizophrenia: a systematic review and network meta-analysis.",
+      "first_author": "Huhn",
+      "journal": "The Lancet",
+      "pmid": "31303314",
+      "doi": "10.1016/s0140-6736(19)31135-3",
+      "finding_one_line": "Network meta-analysis of 402 trials (53,463 participants), 32 antipsychotics: all beat placebo (SMD -0.89 clozapine to -0.03 levomepromazine); efficacy differences gradual, side-effect differences marked.",
+      "numbers_it_licenses": [
+        {
+          "number": "SMD -0.89 to -0.03 vs placebo",
+          "what_it_is": "range of overall symptom reduction across 32 antipsychotics",
+          "abstract_sentence": "standardised mean differences ranging from -0.89 (95% CrI -1.08 to -0.71) for clozapine to -0.03 (-0.59 to 0.52) for levomepromazine (40 815 participants)."
+        },
+        {
+          "number": "weight gain -0.16 to 3.21 kg",
+          "what_it_is": "range of mean weight gain vs placebo (metabolic burden)",
+          "abstract_sentence": "Mean differences compared to placebo for weight gain (28 317 participants) ranged from -0.16 kg (-0.73 to 0.40; ziprasidone) to 3.21 kg (2.10 to 4.31; zotepine)."
+        }
+      ],
+      "claims_it_can_support": [
+        "All antipsychotics more effective than placebo",
+        "Efficacy differences gradual; side-effect differences marked",
+        "Agents vary in weight gain, prolactin, QTc"
+      ],
+      "resolved": true,
+      "parts": [
+        4
+      ],
+      "europepmc": {
+        "pmid": "31303314",
+        "pmcid": "PMC6891890",
+        "doi": "10.1016/s0140-6736(19)31135-3",
+        "pubYear": "2019",
+        "title": "Comparative efficacy and tolerability of 32 oral antipsychotics for the acute treatment of adults with multi-episode schizophrenia: a systematic review and network meta-analysis.",
+        "isOpenAccess": "Y",
+        "authorString": "Huhn M, Nikolakopoulou A, Schneider-Thoma J, Krause M, Samara M, Peter N, Arndt T, B\u00e4ckers L, Rothe P, Cipriani A, Davis",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P5-first-person-jail-gardiner",
+      "part": 5,
+      "territory": [
+        "first-person-account-alt"
+      ],
+      "tier": "T5",
+      "year": 2021,
+      "title": "First Person Account From a Person in Jail With Schizoaffective Disorder.",
+      "first_author": "Gardiner",
+      "journal": "Schizophrenia Bulletin",
+      "pmid": "33174600",
+      "doi": "10.1093/schbul/sbaa140",
+      "pmcid": "PMC8084429",
+      "finding_one_line": "First-person narrative of living with schizoaffective disorder while incarcerated \u2014 fear, voices, daily exhaustion. Alternate/backup FPA for P5.",
+      "verbatim_quote": "It is exhausting to live like that and always be looking around and be prepared.",
+      "numbers_it_licenses": [],
+      "claims_it_can_support": [
+        "Alternate first-person voice on daily lived experience",
+        "Intersection of SMI with social disadvantage"
+      ],
+      "transcription_note": "Body quote from open-access PMC full text (PMC8084429); verify against source PDF before print.",
+      "resolved": true,
+      "parts": [
+        5
+      ],
+      "europepmc": {
+        "pmid": "33174600",
+        "pmcid": "PMC8084429",
+        "doi": "10.1093/schbul/sbaa140",
+        "pubYear": "2021",
+        "title": "First Person Account From a Person in Jail With Schizoaffective Disorder.",
+        "isOpenAccess": "N",
+        "authorString": "Gardiner J.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P2-coltheart-delusion-second-factor",
+      "part": 2,
+      "territory": [
+        2
+      ],
+      "tier": "T3",
+      "year": 2021,
+      "title": "Failure of hypothesis evaluation as a factor in delusional belief",
+      "first_author": "Coltheart",
+      "journal": "Cognitive Neuropsychiatry",
+      "pmid": "33874847",
+      "doi": "10.1080/13546805.2021.1914016",
+      "finding_one_line": "Mechanistic definition source: a delusion is characterized by maintenance of a belief despite disconfirming evidence (two-factor theory 'second factor').",
+      "numbers_it_licenses": [
+        {
+          "number": "n/a",
+          "what_it_is": "definition of the defining feature of a delusion (survives counter-evidence)",
+          "abstract_sentence": "In the two-factor theory of delusional belief, the second factor consists of a failure to reject hypotheses in the face of disconfirmatory evidence."
+        }
+      ],
+      "claims_it_can_support": [
+        "A delusion is a fixed belief that persists despite evidence to the contrary"
+      ],
+      "resolved": true,
+      "parts": [
+        2
+      ],
+      "europepmc": {
+        "pmid": "33874847",
+        "pmcid": null,
+        "doi": "10.1080/13546805.2021.1914016",
+        "pubYear": "2021",
+        "title": "Failure of hypothesis evaluation as a factor in delusional belief.",
+        "isOpenAccess": "N",
+        "authorString": "Coltheart M, Davies M.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P1-onset-age-solmi",
+      "part": 1,
+      "territory": [
+        7
+      ],
+      "tier": "T1",
+      "year": 2022,
+      "title": "Age at onset of mental disorders worldwide: large-scale meta-analysis of 192 epidemiological studies.",
+      "first_author": "Solmi",
+      "journal": "Molecular Psychiatry",
+      "pmid": "34079068",
+      "doi": "10.1038/s41380-021-01161-7",
+      "finding_one_line": "Meta-analysis of 192 studies (n=708,561): schizophrenia-spectrum onset peaks at 20.5 years (median 25), ~48% before age 25, and no significant sex difference.",
+      "numbers_it_licenses": [
+        {
+          "number": "20.5 years",
+          "what_it_is": "peak age at onset for schizophrenia-spectrum disorders",
+          "abstract_sentence": "schizophrenia-spectrum disorders/primary psychotic states: 3%, 12.3%, 47.8%, 20.5 years (k = 36, median = 25, IQR = 20-34)"
+        },
+        {
+          "number": "no significant sex difference",
+          "what_it_is": "age at onset did not differ significantly by sex",
+          "abstract_sentence": "No significant difference emerged by sex, or definition of age of onset."
+        }
+      ],
+      "claims_it_can_support": [
+        7
+      ],
+      "resolved": true,
+      "parts": [
+        1,
+        3
+      ],
+      "europepmc": {
+        "pmid": "34079068",
+        "pmcid": "PMC8960395",
+        "doi": "10.1038/s41380-021-01161-7",
+        "pubYear": "2022",
+        "title": "Age at onset of mental disorders worldwide: large-scale meta-analysis of\u00a0192 epidemiological studies.",
+        "isOpenAccess": "Y",
+        "authorString": "Solmi M, Radua J, Olivola M, Croce E, Soardo L, Salazar de Pablo G, Il Shin J, Kirkbride JB, Jones P, Kim JH, Kim JY, Ca",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P2-salazardepablo-chr-transition",
+      "part": 2,
+      "territory": [
+        6
+      ],
+      "tier": "T1",
+      "year": 2021,
+      "title": "Probability of Transition to Psychosis in Individuals at Clinical High Risk: An Updated Meta-analysis",
+      "first_author": "Salazar de Pablo",
+      "journal": "JAMA Psychiatry",
+      "pmid": "34259821",
+      "doi": "10.1001/jamapsychiatry.2021.0830",
+      "pmcid": "PMC8281006",
+      "finding_one_line": "Updated meta-analysis: ~19% of clinical-high-risk individuals transition to psychosis by 2 years and ~25% by 3 years \u2014 the prodrome/at-risk state.",
+      "numbers_it_licenses": [
+        {
+          "number": "25% at 3 years",
+          "what_it_is": "cumulative transition-to-psychosis risk in CHR-P at 3 years",
+          "abstract_sentence": "In this meta-analysis, 25% of individuals at CHR-P developed psychosis within 3 years."
+        }
+      ],
+      "claims_it_can_support": [
+        "The clinical-high-risk/prodromal state carries substantial but not certain risk (~1 in 4 by 3 years)"
+      ],
+      "resolved": true,
+      "parts": [
+        2
+      ],
+      "europepmc": {
+        "pmid": "34259821",
+        "pmcid": "PMC8281006",
+        "doi": "10.1001/jamapsychiatry.2021.0830",
+        "pubYear": "2021",
+        "title": "Probability of Transition to Psychosis in Individuals at Clinical High Risk: An Updated Meta-analysis.",
+        "isOpenAccess": "N",
+        "authorString": "Salazar de Pablo G, Radua J, Pereira J, Bonoldi I, Arienti V, Besana F, Soardo L, Cabras A, Fortea L, Catalan A, Vaqueri",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P5-carer-burden-meta-peng-2022",
+      "part": 5,
+      "territory": [
+        "carer-role",
+        "carer-burden"
+      ],
+      "tier": "T1",
+      "year": 2022,
+      "title": "Disease-Related Risk Factors for Caregiver Burden among Family Caregivers of Persons with Schizophrenia: A Systematic Review and Meta-Analysis.",
+      "first_author": "Peng",
+      "journal": "International Journal of Environmental Research and Public Health",
+      "pmid": "35162886",
+      "doi": "10.3390/ijerph19031862",
+      "pmcid": "PMC8835439",
+      "finding_one_line": "Meta-analysis of 34 studies: heavier caregiver burden is significantly associated with more severe symptoms, greater psychopathology, worse functioning and longer illness duration.",
+      "numbers_it_licenses": [
+        {
+          "number": "qualitative (meta-analytic)",
+          "what_it_is": "disease-related predictors of caregiver burden",
+          "abstract_sentence": "a significant association between a heavier burden and disease-related risk factors, including more severe symptoms, greater general psychopathology, greater severity of functional impairment, and longer duration of illness."
+        }
+      ],
+      "claims_it_can_support": [
+        "Carer burden rises with symptom severity, functional impairment, illness duration",
+        "T1 backbone; pair with Rahmani 2022"
+      ],
+      "resolved": true,
+      "parts": [
+        5
+      ],
+      "europepmc": {
+        "pmid": "35162886",
+        "pmcid": "PMC8835439",
+        "doi": "10.3390/ijerph19031862",
+        "pubYear": "2022",
+        "title": "Disease-Related Risk Factors for Caregiver Burden among Family Caregivers of Persons with Schizophrenia: A Systematic Review and Meta-Analysis.",
+        "isOpenAccess": "Y",
+        "authorString": "Peng MM, Xing J, Tang X, Wu Q, Wei D, Ran MS.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P5-carer-burden-rahmani-2022",
+      "part": 5,
+      "territory": [
+        "carer-role",
+        "carer-burden"
+      ],
+      "tier": "T3",
+      "year": 2022,
+      "title": "Caregiver burden and the associated factors in the family caregivers of patients with schizophrenia.",
+      "first_author": "Rahmani",
+      "journal": "Nursing Open",
+      "pmid": "35347867",
+      "doi": "10.1002/nop2.1205",
+      "pmcid": "PMC9190687",
+      "finding_one_line": "Among 215 family caregivers, 38.2% perceived severe burden, predicted by income, job loss from caregiving, illness duration and caregiving frequency.",
+      "numbers_it_licenses": [
+        {
+          "number": "38.2%",
+          "what_it_is": "proportion of family caregivers perceiving severe burden (Zarit)",
+          "abstract_sentence": "Family caregivers of patients with schizophrenia reported a high level of caregiving burden, with 38.2% of the caregivers perceiving severe burden relating to their role."
+        }
+      ],
+      "claims_it_can_support": [
+        "A substantial minority (~38%) of carers experience severe burden (one 215-carer sample)"
+      ],
+      "contested_note": "Single-country cross-sectional; illustrative, not global prevalence. Pair with Peng 2022.",
+      "resolved": true,
+      "parts": [
+        5
+      ],
+      "europepmc": {
+        "pmid": "35347867",
+        "pmcid": "PMC9190687",
+        "doi": "10.1002/nop2.1205",
+        "pubYear": "2022",
+        "title": "Caregiver burden and the associated factors in the family caregivers of patients with schizophrenia.",
+        "isOpenAccess": "Y",
+        "authorString": "Rahmani F, Roshangar F, Gholizadeh L, Asghari E.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P3-gwas-trubetskoy-2022",
+      "part": 3,
+      "territory": [
+        "4b-polygenic-gwas"
+      ],
+      "tier": "T1",
+      "year": 2022,
+      "title": "Mapping genomic loci implicates genes and synaptic biology in schizophrenia",
+      "first_author": "Trubetskoy",
+      "journal": "Nature",
+      "pmid": "35396580",
+      "doi": "10.1038/s41586-022-04434-5",
+      "finding_one_line": "PGC3 GWAS (~76,755 cases, 243,649 controls): common-variant associations at 287 distinct loci, 120 genes prioritized \u2014 highly polygenic, no single causal gene.",
+      "numbers_it_licenses": [
+        {
+          "number": "287 distinct genomic loci",
+          "what_it_is": "genome-wide-significant common-variant loci",
+          "abstract_sentence": "we report common variant associations at 287 distinct genomic loci."
+        },
+        {
+          "number": "120 genes",
+          "what_it_is": "genes prioritized as likely underpinning associations",
+          "abstract_sentence": "we identify 120 genes (106 protein-coding) that are likely to underpin associations at some of these loci."
+        }
+      ],
+      "claims_it_can_support": [
+        "Highly polygenic (287 loci)",
+        "No single 'schizophrenia gene'"
+      ],
+      "notes": "Trubetskoy abstractText truncated in Europe PMC JSON by ~7000-author authorString; identifiers confirmed via Europe PMC REST, abstract sentences from NCBI efetch for PMID 35396580.",
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "35396580",
+        "pmcid": "PMC9392466",
+        "doi": "10.1038/s41586-022-04434-5",
+        "pubYear": "2022",
+        "title": "Mapping genomic loci implicates genes and synaptic biology in schizophrenia.",
+        "isOpenAccess": "N",
+        "authorString": "Trubetskoy V, Pardi\u00f1as AF, Qi T, Panagiotaropoulou G, Awasthi S, Bigdeli TB, Bryois J, Chen CY, Dennison CA, Hall LS, La",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P3-neurodev-weinberger-1987",
+      "part": 3,
+      "territory": [
+        "2-neurodevelopmental"
+      ],
+      "tier": "T2",
+      "year": 1987,
+      "title": "Implications of normal brain development for the pathogenesis of schizophrenia",
+      "first_author": "Weinberger",
+      "journal": "Archives of General Psychiatry",
+      "pmid": "3606332",
+      "doi": "10.1001/archpsyc.1987.01800190080012",
+      "finding_one_line": "Foundational neurodevelopmental model: an early fixed lesion interacts silently with normal later maturation, so symptoms appear only when affected regions mature in adolescence/early adulthood.",
+      "numbers_it_licenses": [],
+      "claims_it_can_support": [
+        "Neurodevelopmental hypothesis: early insult, late clinical expression"
+      ],
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "3606332",
+        "pmcid": null,
+        "doi": "10.1001/archpsyc.1987.01800190080012",
+        "pubYear": "1987",
+        "title": "Implications of normal brain development for the pathogenesis of schizophrenia.",
+        "isOpenAccess": "N",
+        "authorString": "Weinberger DR.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P5-social-determinants-kirkbride-2024",
+      "part": 5,
+      "territory": [
+        "social-determinants"
+      ],
+      "tier": "T1",
+      "year": 2024,
+      "title": "The social determinants of mental health and disorder: evidence, prevention and recommendations.",
+      "first_author": "Kirkbride",
+      "journal": "World Psychiatry",
+      "pmid": "38214615",
+      "doi": "10.1002/wps.21160",
+      "pmcid": "PMC10786006",
+      "finding_one_line": "World Psychiatry review mapping causal evidence that structural social determinants (poverty, marginalization, disadvantage) shape mental-health outcomes and recovery.",
+      "numbers_it_licenses": [
+        {
+          "number": "n/a (qualitative)",
+          "what_it_is": "causal link between social determinants and outcomes",
+          "abstract_sentence": "we first map out the literature that supports a causal link between social determinants and later mental health outcomes."
+        }
+      ],
+      "claims_it_can_support": [
+        "Housing, income, poverty causally track outcome and recovery (framing only)"
+      ],
+      "contested_note": "Framing source only \u2014 qualitative claim, not a numeric statistic.",
+      "resolved": true,
+      "parts": [
+        5
+      ],
+      "europepmc": {
+        "pmid": "38214615",
+        "pmcid": "PMC10786006",
+        "doi": "10.1002/wps.21160",
+        "pubYear": "2024",
+        "title": "The social determinants of mental health and disorder: evidence, prevention and recommendations.",
+        "isOpenAccess": "N",
+        "authorString": "Kirkbride JB, Anglin DM, Colman I, Dykxhoorn J, Jones PB, Patalay P, Pitman A, Soneson E, Steare T, Wright T, Griffiths ",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P4-effect-size-framing-correll-2025",
+      "part": 4,
+      "territory": [
+        2,
+        3
+      ],
+      "tier": "T3",
+      "year": 2025,
+      "title": "Do antipsychotics work in people with schizophrenia? A review of outcomes and effect sizes.",
+      "first_author": "Correll",
+      "journal": "CNS Spectrums",
+      "pmid": "40739868",
+      "doi": "10.1017/s1092852925100461",
+      "finding_one_line": "Narrative review framing effect sizes: antipsychotics improve symptoms with a small-medium effect (~0.4 vs placebo) rising to ~0.9 for relapse prevention (NNT ~3). Framing/corroboration only.",
+      "numbers_it_licenses": [
+        {
+          "number": "~0.4 vs placebo",
+          "what_it_is": "typical acute-treatment effect size (framing, corroborates Huhn/Leucht)",
+          "abstract_sentence": "positive psychotic symptoms and global psychopathology improve with a small-medium effect size of about 0.4 versus placebo."
+        }
+      ],
+      "claims_it_can_support": [
+        "Antipsychotics have a small-medium effect comparable to many general-medicine drugs (framing only)"
+      ],
+      "notes": "2025 pub; T3 framing \u2014 not sole support for a primary number.",
+      "resolved": true,
+      "parts": [
+        4
+      ],
+      "europepmc": {
+        "pmid": "40739868",
+        "pmcid": "PMC13064719",
+        "doi": "10.1017/s1092852925100461",
+        "pubYear": "2025",
+        "title": "Do antipsychotics work in people with schizophrenia? A review of outcomes and effect sizes.",
+        "isOpenAccess": "Y",
+        "authorString": "Correll CU.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P4-nonadherence-osugo-howes-2026",
+      "part": 4,
+      "territory": [
+        9
+      ],
+      "tier": "T2",
+      "year": 2026,
+      "title": "What is Minimally Adequate Treatment of Psychosis and Should Duration of Inadequate Treatment be a Clinical and Research Target? A Perspective and State-of-the-Art Review.",
+      "first_author": "Osugo",
+      "journal": "Schizophrenia Bulletin",
+      "pmid": "41863365",
+      "doi": "10.1093/schbul/sbag017",
+      "finding_one_line": "State-of-the-art review: antipsychotic non-adherence is common (44-56%) and repeatedly linked to worse outcomes (relapse RR up to 2.70, mortality RR up to 1.83) \u2014 reframing inadequate treatment as widespread, not a moral failing.",
+      "numbers_it_licenses": [
+        {
+          "number": "non-adherence 44%-56%",
+          "what_it_is": "rates of antipsychotic non-adherence",
+          "abstract_sentence": "Inadequate antipsychotic treatment is common (non-adherence rates = 44%-56%), and repeatedly associated with poorer outcomes across several key patient-centered outcomes, including increased risk of relapse (relative risk (RR) up to 2.70...) and higher mortality (RR up to 1.83, n = 272 030)."
+        }
+      ],
+      "claims_it_can_support": [
+        "Non-adherence affects ~half of patients; a common, not exceptional, occurrence",
+        "Inadequate treatment associated with higher relapse and mortality"
+      ],
+      "notes": "2026 pub; verify resolution carefully.",
+      "resolved": true,
+      "parts": [
+        4
+      ],
+      "europepmc": {
+        "pmid": "41863365",
+        "pmcid": "PMC13005115",
+        "doi": "10.1093/schbul/sbag017",
+        "pubYear": "2026",
+        "title": "What is Minimally Adequate Treatment of Psychosis and Should Duration of Inadequate Treatment be a Clinical and Research Target? A Perspective and State-of-the-Art Review.",
+        "isOpenAccess": "Y",
+        "authorString": "Osugo M, Howes OD.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P4-next-step-ect-furukawa-2026",
+      "part": 4,
+      "territory": [
+        8
+      ],
+      "tier": "T1",
+      "year": 2026,
+      "title": "Next-step treatment for schizophrenia non-responsive to antipsychotics: a systematic review and network meta-analysis.",
+      "first_author": "Furukawa",
+      "journal": "EClinicalMedicine",
+      "pmid": "42232685",
+      "doi": "10.1016/j.eclinm.2026.103988",
+      "finding_one_line": "Network meta-analysis of 59 RCTs on antipsychotic non-response: ECT augmentation (SMD -0.51) and combination (SMD -0.25) show very-weak, cautiously-considered benefit \u2014 ECT a narrow next-step, not first-line.",
+      "numbers_it_licenses": [
+        {
+          "number": "ECT augmentation SMD -0.51",
+          "what_it_is": "effect of ECT added to antipsychotic vs continuing same in non-responders",
+          "abstract_sentence": "electroconvulsive therapy (ECT; k = 5; n = 97; SMD -0.51, -0.96 to -0.06; very low) might be more efficacious than continuing the same antipsychotic."
+        },
+        {
+          "number": "very weak / substantial caution",
+          "what_it_is": "certainty framing for ECT and combination augmentation",
+          "abstract_sentence": "Very weak evidence suggested efficacy of antipsychotic combination and ECT augmentation and they might be considered, but with substantial caution."
+        }
+      ],
+      "claims_it_can_support": [
+        "ECT has a narrow, cautious role in antipsychotic-non-responsive cases, not routine"
+      ],
+      "notes": "2026 pub; verify resolution carefully.",
+      "resolved": true,
+      "parts": [
+        4
+      ],
+      "europepmc": {
+        "pmid": "42232685",
+        "pmcid": "PMC13223997",
+        "doi": "10.1016/j.eclinm.2026.103988",
+        "pubYear": "2026",
+        "title": "Next-step treatment for schizophrenia non-responsive to antipsychotics: a systematic review and network meta-analysis.",
+        "isOpenAccess": "Y",
+        "authorString": "Furukawa Y, Salahuddin NH, Wei Y, Pinioti E, Kim DD, Milosavlijevi\u0107 F, Siafis S, Schneider-Thoma J, Samara M, Bighelli I",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P3-ketamine-krystal-1994",
+      "part": 3,
+      "territory": [
+        "6-glutamate-tension"
+      ],
+      "tier": "T2",
+      "year": 1994,
+      "title": "Subanesthetic effects of the noncompetitive NMDA antagonist, ketamine, in humans. Psychotomimetic, perceptual, cognitive, and neuroendocrine responses",
+      "first_author": "Krystal",
+      "journal": "Archives of General Psychiatry",
+      "pmid": "8122957",
+      "doi": "10.1001/archpsyc.1994.03950030035004",
+      "finding_one_line": "Landmark human challenge: subanesthetic ketamine (NMDA antagonist) produced BOTH positive and negative schizophrenia-like symptoms plus perceptual/cognitive impairments.",
+      "numbers_it_licenses": [
+        {
+          "number": "n/a",
+          "what_it_is": "ketamine reproduces positive AND negative symptoms",
+          "abstract_sentence": "Ketamine (1) produced behaviors similar to the positive and negative symptoms of schizophrenia; (2) elicited alterations in perception; (3) impaired performance on tests of vigilance, verbal fluency, and the Wisconsin Card Sorting Test."
+        }
+      ],
+      "claims_it_can_support": [
+        "NMDA antagonism reproduces full symptom spectrum incl. negative/cognitive",
+        "Dopamine-only accounts insufficient"
+      ],
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "8122957",
+        "pmcid": null,
+        "doi": "10.1001/archpsyc.1994.03950030035004",
+        "pubYear": "1994",
+        "title": "Subanesthetic effects of the noncompetitive NMDA antagonist, ketamine, in humans. Psychotomimetic, perceptual, cognitive, and neuroendocrine responses.",
+        "isOpenAccess": "N",
+        "authorString": "Krystal JH, Karper LP, Seibyl JP, Freeman GK, Delaney R, Bremner JD, Heninger GR, Bowers MB, Charney DS.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P2-green-1996-functional-consequences",
+      "part": 2,
+      "territory": [
+        5
+      ],
+      "tier": "T3",
+      "year": 1996,
+      "title": "What are the functional consequences of neurocognitive deficits in schizophrenia?",
+      "first_author": "Green",
+      "journal": "The American Journal of Psychiatry",
+      "pmid": "8610818",
+      "doi": "10.1176/ajp.153.3.321",
+      "finding_one_line": "Landmark review: neurocognition (esp. verbal memory, vigilance) predicts real-world outcome, whereas positive symptoms did NOT predict outcome in any study reviewed \u2014 the load-bearing tension.",
+      "numbers_it_licenses": [
+        {
+          "number": "n/a",
+          "what_it_is": "positive symptoms do not predict functional outcome; cognition does",
+          "abstract_sentence": "psychotic symptoms were not significantly associated with outcome measures in any of the studies reviewed."
+        }
+      ],
+      "claims_it_can_support": [
+        "Positive symptoms poor predictors of functioning; cognition strongest predictor"
+      ],
+      "resolved": true,
+      "parts": [
+        2
+      ],
+      "europepmc": {
+        "pmid": "8610818",
+        "pmcid": null,
+        "doi": "10.1176/ajp.153.3.321",
+        "pubYear": "1996",
+        "title": "What are the functional consequences of neurocognitive deficits in schizophrenia?",
+        "isOpenAccess": "N",
+        "authorString": "Green MF.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P3-myth-hartwell-1996",
+      "part": 3,
+      "territory": [
+        "10-schizophrenogenic-mother"
+      ],
+      "tier": "T3",
+      "year": 1996,
+      "title": "The schizophrenogenic mother concept in American psychiatry",
+      "first_author": "Hartwell",
+      "journal": "Psychiatry",
+      "pmid": "8912946",
+      "doi": "10.1080/00332747.1996.11024768",
+      "finding_one_line": "Historical analysis: the 'schizophrenogenic mother' etiology was downgraded by its own former promulgators from a 'half truth' to a psychiatric 'myth' \u2014 the theory existed and was refuted.",
+      "numbers_it_licenses": [
+        {
+          "number": "n/a",
+          "what_it_is": "the theory existed and was later labeled a myth",
+          "abstract_sentence": "Though former promulgators have gone from calling the schizophrenogenic mother a \"half truth\" to a psychiatric \"myth,\" this psychiatric concept remains a puzzle."
+        }
+      ],
+      "claims_it_can_support": [
+        "MythVsFact: 'schizophrenogenic mother' was real historical concept, discredited"
+      ],
+      "resolved": true,
+      "parts": [
+        3
+      ],
+      "europepmc": {
+        "pmid": "8912946",
+        "pmcid": null,
+        "doi": "10.1080/00332747.1996.11024768",
+        "pubYear": "1996",
+        "title": "The schizophrenogenic mother concept in American psychiatry.",
+        "isOpenAccess": "N",
+        "authorString": "Hartwell CE.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P2-dickerson-insight-prevalence",
+      "part": 2,
+      "territory": [
+        "8b"
+      ],
+      "tier": "T2",
+      "year": 1997,
+      "title": "Lack of insight among outpatients with schizophrenia",
+      "first_author": "Dickerson",
+      "journal": "Psychiatric Services",
+      "pmid": "9021849",
+      "doi": "10.1176/ps.48.2.195",
+      "finding_one_line": "Outpatient study (n=87): ~half (49.5%) had at least moderately impaired insight and 25% severe deficits \u2014 insight is variably impaired along a spectrum, not simply absent.",
+      "numbers_it_licenses": [
+        {
+          "number": "49.5%",
+          "what_it_is": "proportion of stable outpatients with at least moderately impaired insight",
+          "abstract_sentence": "The illness insight of 43 subjects, or 49.5 percent, was at least moderately impaired."
+        },
+        {
+          "number": "25%",
+          "what_it_is": "proportion with severe insight deficits",
+          "abstract_sentence": "Twenty-one subjects, or 25 percent, had severe insight deficits."
+        }
+      ],
+      "claims_it_can_support": [
+        "Impaired insight is common but graded/variable, not all-or-nothing"
+      ],
+      "resolved": true,
+      "parts": [
+        2
+      ],
+      "europepmc": {
+        "pmid": "9021849",
+        "pmcid": null,
+        "doi": "10.1176/ps.48.2.195",
+        "pubYear": "1997",
+        "title": "Lack of insight among outpatients with schizophrenia.",
+        "isOpenAccess": "N",
+        "authorString": "Dickerson FB, Boronow JJ, Ringel N, Parente F.",
+        "author_match": true,
+        "year_match": true
+      }
+    },
+    {
+      "suggested_id": "P2-heinrichs-zakzanis-neurocog-review",
+      "part": 2,
+      "territory": [
+        4
+      ],
+      "tier": "T1",
+      "year": 1998,
+      "title": "Neurocognitive deficit in schizophrenia: a quantitative review of the evidence",
+      "first_author": "Heinrichs",
+      "journal": "Neuropsychology",
+      "pmid": "9673998",
+      "doi": "10.1037/0894-4105.12.3.426",
+      "finding_one_line": "Landmark meta-analysis (204 studies, 22 test variables): moderate-to-large deficits (d>.60) across every cognitive domain measured.",
+      "numbers_it_licenses": [
+        {
+          "number": "d > .60",
+          "what_it_is": "effect sizes across all 22 neurocognitive test variables",
+          "abstract_sentence": "Moderate to large raw effect sizes (d > .60) were obtained for all 22 neurocognitive test variables, and none of the associated confidence intervals included zero."
+        }
+      ],
+      "claims_it_can_support": [
+        "Cognitive impairment spans every domain",
+        "Broadly based cognitive impairment"
+      ],
+      "resolved": true,
+      "parts": [
+        2
+      ],
+      "europepmc": {
+        "pmid": "9673998",
+        "pmcid": null,
+        "doi": "10.1037//0894-4105.12.3.426",
+        "pubYear": "1998",
+        "title": "Neurocognitive deficit in schizophrenia: a quantitative review of the evidence.",
+        "isOpenAccess": "N",
+        "authorString": "Heinrichs RW, Zakzanis KK.",
+        "author_match": true,
+        "year_match": true
+      }
+    }
+  ]
+}

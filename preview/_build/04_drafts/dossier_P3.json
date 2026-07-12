@@ -1,0 +1,399 @@
+{
+  "part_id": 3,
+  "sibling_claims": {
+    "P1": "Schizophrenia is not marked off from ordinary life by the presence of hallucinations or strange beliefs \u2014 those are common \u2014 but by their persistence, conviction, and cost; the diagnostic line is real, yet it is a threshold on a continuum, not a wall.",
+    "P2": "The symptoms that define schizophrenia in the public mind \u2014 voices and delusions \u2014 are the ones that matter least for how a life actually goes; the negative and cognitive symptoms nobody pictures are what predict whether someone works, studies, and connects.",
+    "P4": "The most powerful things that help in schizophrenia are the least-discussed \u2014 coordinated care and family support rival medication for preventing relapse \u2014 and 'non-adherence' is usually a rational response to real side-effect burden, not a failure of will.",
+    "P5": "Living well with schizophrenia is governed less by the illness itself than by things the word 'support' usually ignores \u2014 a body that dies about fifteen years early of preventable heart disease, a world that treats the victim as the threat, and a recovery rate real enough to matter and contested enough that no single number is honest."
+  },
+  "sources": [
+    {
+      "id": "P3-neurodev-weinberger-1987",
+      "tier": "T2",
+      "year": 1987,
+      "pmid": "3606332",
+      "doi": "10.1001/archpsyc.1987.01800190080012",
+      "pmcid": null,
+      "first_author": "Weinberger",
+      "title": "Implications of normal brain development for the pathogenesis of schizophrenia.",
+      "journal": "Archives of General Psychiatry",
+      "finding": "Foundational neurodevelopmental model: an early fixed lesion interacts silently with normal later maturation, so symptoms appear only when affected regions mature in adolescence/early adulthood.",
+      "numbers": [],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P3-neurodev-birnbaum-2017",
+      "tier": "T1",
+      "year": 2017,
+      "pmid": "29070826",
+      "doi": "10.1038/nrn.2017.125",
+      "pmcid": null,
+      "first_author": "Birnbaum",
+      "title": "Genetic insights into the neurodevelopmental origins of schizophrenia.",
+      "journal": "Nature Reviews Neuroscience",
+      "finding": "Modern genetics-era revisit: gene-expression/epigenetic analyses of post-mortem cortex indicate early brain development mediates genetic risk.",
+      "numbers": [],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P3-c4-sekar-2016",
+      "tier": "T1",
+      "year": 2016,
+      "pmid": "26814963",
+      "doi": "10.1038/nature16549",
+      "pmcid": "PMC4752392",
+      "first_author": "Sekar",
+      "title": "Schizophrenia risk from complex variation of complement component 4.",
+      "journal": "Nature",
+      "finding": "The strongest population-level genetic association (MHC) arises partly from C4 alleles; higher C4A expression tracks higher risk, and C4 mediates synapse elimination in mice \u2014 excessive complement-driven pruning.",
+      "numbers": [],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P3-pruning-petanjek-2011",
+      "tier": "T2",
+      "year": 2011,
+      "pmid": "21788513",
+      "doi": "10.1073/pnas.1105108108",
+      "pmcid": "PMC3156171",
+      "first_author": "Petanjek",
+      "title": "Extraordinary neoteny of synaptic spines in the human prefrontal cortex.",
+      "journal": "Proceedings of the National Academy of Sciences of the USA",
+      "finding": "Human prefrontal spine overproduction and pruning continue into the third decade before stabilizing \u2014 synaptic elimination is protracted through the window when schizophrenia emerges.",
+      "numbers": [
+        {
+          "number": "third decade of life",
+          "what_it_is": "period over which prefrontal pruning continues before adult level",
+          "abstract_sentence": "overproduction and developmental remodeling...continues beyond adolescence and throughout the third decade of life before stabilizing at the adult level."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P3-heritability-sullivan-2003",
+      "tier": "T1",
+      "year": 2003,
+      "pmid": "14662550",
+      "doi": "10.1001/archpsyc.60.12.1187",
+      "pmcid": null,
+      "first_author": "Sullivan",
+      "title": "Schizophrenia as a complex trait: evidence from a meta-analysis of twin studies.",
+      "journal": "Archives of General Psychiatry",
+      "finding": "Meta-analysis of 12 twin studies: heritability of liability 81% (95% CI 73-90%), shared-environment 11%.",
+      "numbers": [
+        {
+          "number": "81% (95% CI 73%-90%)",
+          "what_it_is": "heritability of liability to schizophrenia",
+          "abstract_sentence": "the point estimate of heritability in liability to schizophrenia was 81% (95% confidence interval, 73%-90%)."
+        },
+        {
+          "number": "11%",
+          "what_it_is": "shared/common environmental contribution",
+          "abstract_sentence": "consistent evidence across these studies for common or shared environmental influences on liability to schizophrenia-joint estimate, 11% (95% confidence interval, 3%-19%)."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P3-heritability-hilker-2018",
+      "tier": "T1",
+      "year": 2018,
+      "pmid": "28987712",
+      "doi": "10.1016/j.biopsych.2017.08.017",
+      "pmcid": null,
+      "first_author": "Hilker",
+      "title": "Heritability of Schizophrenia and Schizophrenia Spectrum Based on the Nationwide Danish Twin Register.",
+      "journal": "Biological Psychiatry",
+      "finding": "Nationwide Danish twin register (31,524 pairs): heritability 79%; MZ concordance only 33% vs 7% DZ \u2014 genes dominate but do not fully determine illness.",
+      "numbers": [
+        {
+          "number": "79%",
+          "what_it_is": "heritability of schizophrenia (Danish cohort)",
+          "abstract_sentence": "We estimated the heritability of SZ to be 79%."
+        },
+        {
+          "number": "33% MZ / 7% DZ",
+          "what_it_is": "probandwise concordance monozygotic vs dizygotic",
+          "abstract_sentence": "The probandwise concordance rate of SZ is 33% in monozygotic twins and 7% in dizygotic twins."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P3-gwas-trubetskoy-2022",
+      "tier": "T1",
+      "year": 2022,
+      "pmid": "35396580",
+      "doi": "10.1038/s41586-022-04434-5",
+      "pmcid": "PMC9392466",
+      "first_author": "Trubetskoy",
+      "title": "Mapping genomic loci implicates genes and synaptic biology in schizophrenia.",
+      "journal": "Nature",
+      "finding": "PGC3 GWAS (~76,755 cases, 243,649 controls): common-variant associations at 287 distinct loci, 120 genes prioritized \u2014 highly polygenic, no single causal gene.",
+      "numbers": [
+        {
+          "number": "287 distinct genomic loci",
+          "what_it_is": "genome-wide-significant common-variant loci",
+          "abstract_sentence": "we report common variant associations at 287 distinct genomic loci."
+        },
+        {
+          "number": "120 genes",
+          "what_it_is": "genes prioritized as likely underpinning associations",
+          "abstract_sentence": "we identify 120 genes (106 protein-coding) that are likely to underpin associations at some of these loci."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P3-dopamine-howes-kapur-2009",
+      "tier": "T1",
+      "year": 2009,
+      "pmid": "19325164",
+      "doi": "10.1093/schbul/sbp006",
+      "pmcid": "PMC2669582",
+      "first_author": "Howes",
+      "title": "The dopamine hypothesis of schizophrenia: version III--the final common pathway.",
+      "journal": "Schizophrenia Bulletin",
+      "finding": "Dopamine hypothesis version III: diverse risk factors converge on increased presynaptic striatal dopamine, driving psychosis via aberrant salience; antipsychotics act downstream.",
+      "numbers": [],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P3-dopamine-howes-2012",
+      "tier": "T1",
+      "year": 2012,
+      "pmid": "22474070",
+      "doi": "10.1001/archgenpsychiatry.2012.169",
+      "pmcid": "PMC3730746",
+      "first_author": "Howes",
+      "title": "The nature of dopamine dysfunction in schizophrenia and what this means for treatment.",
+      "journal": "Archives of General Psychiatry",
+      "finding": "Meta-analysis of 44 imaging studies (618 patients): largest dopaminergic abnormality is presynaptic (Cohen d=0.79), only minor D2/3 elevation (d=0.26, absent in drug-naive) \u2014 D2-blocking drugs miss the presynaptic lesion.",
+      "numbers": [
+        {
+          "number": "Cohen d = 0.79",
+          "what_it_is": "effect size for elevated presynaptic striatal dopaminergic function",
+          "abstract_sentence": "There was a highly significant elevation (P.<001) in presynaptic dopaminergic function in schizophrenia with a large effect size (Cohen d=0.79)."
+        },
+        {
+          "number": "Cohen d = 0.26",
+          "what_it_is": "small D2/3 receptor availability elevation (not in drug-naive)",
+          "abstract_sentence": "There was a small elevation in D(2/3) receptor availability (Cohen d=0.26), but this was not evident in drug-naive patients."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P3-dopamine-mccutcheon-2019",
+      "tier": "T1",
+      "year": 2019,
+      "pmid": "30621912",
+      "doi": "10.1016/j.tins.2018.12.004",
+      "pmcid": "PMC6401206",
+      "first_author": "McCutcheon",
+      "title": "Schizophrenia, Dopamine and the Striatum: From Biology to Symptoms.",
+      "journal": "Trends in Neurosciences",
+      "finding": "Updated review: greatest dopaminergic dysfunction is in nigrostriatal pathways implicating the dorsal (not mesolimbic) striatum.",
+      "numbers": [],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P3-glutamate-moghaddam-javitt-2012",
+      "tier": "T1",
+      "year": 2012,
+      "pmid": "21956446",
+      "doi": "10.1038/npp.2011.181",
+      "pmcid": "PMC3238069",
+      "first_author": "Moghaddam",
+      "title": "From revolution to evolution: the glutamate hypothesis of schizophrenia and its implication for treatment.",
+      "journal": "Neuropsychopharmacology",
+      "finding": "Glutamate/NMDA-hypofunction account: NMDAR antagonists reproduce schizophrenia-like symptoms; a co-equal, non-dopaminergic mechanism affecting positive AND negative symptoms.",
+      "numbers": [],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P3-ketamine-krystal-1994",
+      "tier": "T2",
+      "year": 1994,
+      "pmid": "8122957",
+      "doi": "10.1001/archpsyc.1994.03950030035004",
+      "pmcid": null,
+      "first_author": "Krystal",
+      "title": "Subanesthetic effects of the noncompetitive NMDA antagonist, ketamine, in humans. Psychotomimetic, perceptual, cognitive, and neuroendocrine responses.",
+      "journal": "Archives of General Psychiatry",
+      "finding": "Landmark human challenge: subanesthetic ketamine (NMDA antagonist) produced BOTH positive and negative schizophrenia-like symptoms plus perceptual/cognitive impairments.",
+      "numbers": [
+        {
+          "number": "n/a",
+          "what_it_is": "ketamine reproduces positive AND negative symptoms",
+          "abstract_sentence": "Ketamine (1) produced behaviors similar to the positive and negative symptoms of schizophrenia; (2) elicited alterations in perception; (3) impaired performance on tests of vigilance, verbal fluency, and the Wisconsin Card Sorting Test."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P3-adversity-varese-2012",
+      "tier": "T1",
+      "year": 2012,
+      "pmid": "22461484",
+      "doi": "10.1093/schbul/sbs050",
+      "pmcid": "PMC3406538",
+      "first_author": "Varese",
+      "title": "Childhood adversities increase the risk of psychosis: a meta-analysis of patient-control, prospective- and cross-sectional cohort studies.",
+      "journal": "Schizophrenia Bulletin",
+      "finding": "Meta-analysis (36 studies): childhood adversity roughly triples psychosis risk (OR 2.78, 95% CI 2.34-3.31), ~33% population attributable risk.",
+      "numbers": [
+        {
+          "number": "OR 2.78 (95% CI 2.34-3.31)",
+          "what_it_is": "odds ratio linking childhood adversity to psychosis",
+          "abstract_sentence": "with an overall effect of OR = 2.78 (95% CI = 2.34-3.31)."
+        },
+        {
+          "number": "33% (16%-47%)",
+          "what_it_is": "population attributable risk from childhood adversity",
+          "abstract_sentence": "The estimated population attributable risk was 33% (16%-47%)."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P3-cannabis-marconi-2016",
+      "tier": "T1",
+      "year": 2016,
+      "pmid": "26884547",
+      "doi": "10.1093/schbul/sbw003",
+      "pmcid": "PMC4988731",
+      "first_author": "Marconi",
+      "title": "Meta-analysis of the Association Between the Level of Cannabis Use and Risk of Psychosis.",
+      "journal": "Schizophrenia Bulletin",
+      "finding": "Meta-analysis (66,816 individuals): dose-response \u2014 heaviest cannabis users have ~4-fold increased odds of psychosis (OR 3.90, 95% CI 2.84-5.34).",
+      "numbers": [
+        {
+          "number": "OR 3.90 (95% CI 2.84-5.34)",
+          "what_it_is": "odds of psychosis for heaviest cannabis users vs nonusers",
+          "abstract_sentence": "A logistic regression model gave an OR of 3.90 (95% CI 2.84 to 5.34) for the risk of schizophrenia and other psychosis-related outcomes among the heaviest cannabis users compared to the nonusers."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P3-urbanicity-vassos-2012",
+      "tier": "T1",
+      "year": 2012,
+      "pmid": "23015685",
+      "doi": "10.1093/schbul/sbs096",
+      "pmcid": "PMC3494055",
+      "first_author": "Vassos",
+      "title": "Meta-analysis of the association of urbanicity with schizophrenia.",
+      "journal": "Schizophrenia Bulletin",
+      "finding": "Meta-analysis: linear urbanicity gradient \u2014 risk in most urban environment is 2.37 times higher than most rural.",
+      "numbers": [
+        {
+          "number": "2.37 times",
+          "what_it_is": "relative risk most-urban vs most-rural",
+          "abstract_sentence": "The risk for schizophrenia at the most urban environment was estimated to be 2.37 times higher than in the most rural environment."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P3-migration-cantorgraae-2005",
+      "tier": "T1",
+      "year": 2005,
+      "pmid": "15625195",
+      "doi": "10.1176/appi.ajp.162.1.12",
+      "pmcid": null,
+      "first_author": "Cantor-Graae",
+      "title": "Schizophrenia and migration: a meta-analysis and review.",
+      "journal": "American Journal of Psychiatry",
+      "finding": "Meta-analysis: first-generation migrants have a mean weighted relative risk of 2.7 (95% CI 2.3-3.2).",
+      "numbers": [
+        {
+          "number": "RR 2.7 (95% CI 2.3-3.2)",
+          "what_it_is": "relative risk among first-generation migrants",
+          "abstract_sentence": "The mean weighted relative risk for developing schizophrenia among first-generation migrants (40 effect sizes) was 2.7 (95% CI=2.3-3.2)."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P3-gxe-caspi-2005",
+      "tier": "T2",
+      "year": 2005,
+      "pmid": "15866551",
+      "doi": "10.1016/j.biopsych.2005.01.026",
+      "pmcid": null,
+      "first_author": "Caspi",
+      "title": "Moderation of the effect of adolescent-onset cannabis use on adult psychosis by a functional polymorphism in the catechol-O-methyltransferase gene: longitudinal evidence of a gene X environment interaction.",
+      "journal": "Biological Psychiatry",
+      "finding": "Dunedin cohort G\u00d7E: COMT Val158 carriers most likely to develop psychotic symptoms after adolescent cannabis use, whereas Met/Met were unaffected \u2014 genotype moderates the environmental risk.",
+      "numbers": [
+        {
+          "number": "n/a",
+          "what_it_is": "COMT genotype moderates cannabis effect",
+          "abstract_sentence": "Carriers of the COMT valine158 allele were most likely to exhibit psychotic symptoms and to develop schizophreniform disorder if they used cannabis."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P3-biomarker-kapur-2012",
+      "tier": "T2",
+      "year": 2012,
+      "pmid": "22869033",
+      "doi": "10.1038/mp.2012.105",
+      "pmcid": null,
+      "first_author": "Kapur",
+      "title": "Why has it taken so long for biological psychiatry to develop clinical tests and what to do about it?",
+      "journal": "Molecular Psychiatry",
+      "finding": "Authoritative admission: patients show many biological abnormalities but few yield any test with clinical utility \u2014 no validated diagnostic biomarker for schizophrenia.",
+      "numbers": [
+        {
+          "number": "n/a",
+          "what_it_is": "no validated diagnostic biomarker; diagnosis remains clinical",
+          "abstract_sentence": "Patients with mental disorders show many biological abnormalities which distinguish them from normal volunteers; however, few of these have led to tests with clinical utility."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P3-myth-hartwell-1996",
+      "tier": "T3",
+      "year": 1996,
+      "pmid": "8912946",
+      "doi": "10.1080/00332747.1996.11024768",
+      "pmcid": null,
+      "first_author": "Hartwell",
+      "title": "The schizophrenogenic mother concept in American psychiatry.",
+      "journal": "Psychiatry",
+      "finding": "Historical analysis: the 'schizophrenogenic mother' etiology was downgraded by its own former promulgators from a 'half truth' to a psychiatric 'myth' \u2014 the theory existed and was refuted.",
+      "numbers": [
+        {
+          "number": "n/a",
+          "what_it_is": "the theory existed and was later labeled a myth",
+          "abstract_sentence": "Though former promulgators have gone from calling the schizophrenogenic mother a \"half truth\" to a psychiatric \"myth,\" this psychiatric concept remains a puzzle."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    }
+  ]
+}

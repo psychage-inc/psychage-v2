@@ -1,0 +1,308 @@
+{
+  "part_id": 4,
+  "sibling_claims": {
+    "P1": "Schizophrenia is not marked off from ordinary life by the presence of hallucinations or strange beliefs \u2014 those are common \u2014 but by their persistence, conviction, and cost; the diagnostic line is real, yet it is a threshold on a continuum, not a wall.",
+    "P2": "The symptoms that define schizophrenia in the public mind \u2014 voices and delusions \u2014 are the ones that matter least for how a life actually goes; the negative and cognitive symptoms nobody pictures are what predict whether someone works, studies, and connects.",
+    "P3": "The 'split mind' folk-model is the exact inverse of the mechanism \u2014 this is a failure of integration, not a multiplication of selves.",
+    "P5": "Living well with schizophrenia is governed less by the illness itself than by things the word 'support' usually ignores \u2014 a body that dies about fifteen years early of preventable heart disease, a world that treats the victim as the threat, and a recovery rate real enough to matter and contested enough that no single number is honest."
+  },
+  "sources": [
+    {
+      "id": "P4-dup-outcome-penttila-2014",
+      "tier": "T1",
+      "year": 2014,
+      "pmid": "25252316",
+      "doi": "10.1192/bjp.bp.113.127753",
+      "pmcid": null,
+      "first_author": "Penttila",
+      "title": "Duration of untreated psychosis as predictor of long-term outcome in schizophrenia: systematic review and meta-analysis.",
+      "journal": "The British Journal of Psychiatry",
+      "finding": "Across 33 samples, longer DUP shows small but consistent correlations (0.13-0.18) with poorer long-term symptomatic, functional and remission outcomes.",
+      "numbers": [
+        {
+          "number": "0.13-0.18",
+          "what_it_is": "pooled correlations between long DUP and poor outcomes",
+          "abstract_sentence": "Long DUP correlated statistically significantly with poor general symptomatic outcome, more severe positive and negative symptoms, lesser likelihood of remission and poor social functioning and global outcome (correlations 0.13-0.18)."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P4-antipsychotic-nma-huhn-2019",
+      "tier": "T1",
+      "year": 2019,
+      "pmid": "31303314",
+      "doi": "10.1016/s0140-6736(19)31135-3",
+      "pmcid": "PMC6891890",
+      "first_author": "Huhn",
+      "title": "Comparative efficacy and tolerability of 32 oral antipsychotics for the acute treatment of adults with multi-episode schizophrenia: a systematic review and network meta-analysis.",
+      "journal": "The Lancet",
+      "finding": "Network meta-analysis of 402 trials (53,463 participants), 32 antipsychotics: all beat placebo (SMD -0.89 clozapine to -0.03 levomepromazine); efficacy differences gradual, side-effect differences marked.",
+      "numbers": [
+        {
+          "number": "SMD -0.89 to -0.03 vs placebo",
+          "what_it_is": "range of overall symptom reduction across 32 antipsychotics",
+          "abstract_sentence": "standardised mean differences ranging from -0.89 (95% CrI -1.08 to -0.71) for clozapine to -0.03 (-0.59 to 0.52) for levomepromazine (40 815 participants)."
+        },
+        {
+          "number": "weight gain -0.16 to 3.21 kg",
+          "what_it_is": "range of mean weight gain vs placebo (metabolic burden)",
+          "abstract_sentence": "Mean differences compared to placebo for weight gain (28 317 participants) ranged from -0.16 kg (-0.73 to 0.40; ziprasidone) to 3.21 kg (2.10 to 4.31; zotepine)."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P4-antipsychotic-mtm-leucht-2013",
+      "tier": "T1",
+      "year": 2013,
+      "pmid": "23810019",
+      "doi": "10.1016/s0140-6736(13)60733-3",
+      "pmcid": null,
+      "first_author": "Leucht",
+      "title": "Comparative efficacy and tolerability of 15 antipsychotic drugs in schizophrenia: a multiple-treatments meta-analysis.",
+      "journal": "The Lancet",
+      "finding": "Multiple-treatments meta-analysis of 212 trials (43,049): all 15 antipsychotics beat placebo (SMD 0.88 clozapine to 0.33 iloperidone); substantial side-effect differences (EPS OR 0.30-4.76).",
+      "numbers": [
+        {
+          "number": "SMD 0.88 (clozapine) to 0.33 (iloperidone)",
+          "what_it_is": "efficacy vs placebo across 15 antipsychotics",
+          "abstract_sentence": "The standardised mean differences with 95% credible intervals were: clozapine 0.88, 0.73-1.03; ... lurasidone 0.33, 0.21-0.45; and iloperidone 0.33, 0.22-0.43."
+        },
+        {
+          "number": "EPS OR 0.30-4.76",
+          "what_it_is": "range of odds ratios vs placebo for extrapyramidal side-effects",
+          "abstract_sentence": "for extrapyramidal side-effects 0.30 (clozapine) to 4.76 (haloperidol)."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P4-relapse-prevention-leucht-2012",
+      "tier": "T1",
+      "year": 2012,
+      "pmid": "22560607",
+      "doi": "10.1016/s0140-6736(12)60239-6",
+      "pmcid": null,
+      "first_author": "Leucht",
+      "title": "Antipsychotic drugs versus placebo for relapse prevention in schizophrenia: a systematic review and meta-analysis.",
+      "journal": "The Lancet",
+      "finding": "65 trials (6493 patients): maintenance antipsychotics cut 1-year relapse from 64% (placebo) to 27% (RR 0.40, NNT 3) and readmission from 26% to 10%, at cost of more weight gain, movement disorders, sedation.",
+      "numbers": [
+        {
+          "number": "27% vs 64%; RR 0.40; NNTB 3",
+          "what_it_is": "1-year relapse on antipsychotic vs placebo, RR and NNT",
+          "abstract_sentence": "Antipsychotic drugs significantly reduced relapse rates at 1 year (drugs 27%vs placebo 64%; risk ratio [RR] 0.40, 95% CI 0.33-0.49; number needed to treat to benefit [NNTB] 3, 95% CI 2-3)."
+        },
+        {
+          "number": "10% vs 26%",
+          "what_it_is": "hospital readmission on antipsychotic vs placebo",
+          "abstract_sentence": "Fewer patients given antipsychotic drugs than placebo were readmitted (10%vs 26%; RR 0.38, 95% CI 0.27-0.55; NNTB 5, 4-9)."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P4-cbt-psychosis-jauhar-2014",
+      "tier": "T1",
+      "year": 2014,
+      "pmid": "24385461",
+      "doi": "10.1192/bjp.bp.112.116285",
+      "pmcid": null,
+      "first_author": "Jauhar",
+      "title": "Cognitive-behavioural therapy for the symptoms of schizophrenia: systematic review and meta-analysis with examination of potential bias.",
+      "journal": "The British Journal of Psychiatry",
+      "finding": "CBT for schizophrenia symptoms has a small pooled effect (overall -0.33) that shrinks to -0.15 in blinded/masked trials.",
+      "numbers": [
+        {
+          "number": "-0.33 overall",
+          "what_it_is": "pooled effect size CBT vs comparator, overall symptoms",
+          "abstract_sentence": "Pooled effect sizes were -0.33 (95% CI -0.47 to -0.19) in 34 studies of overall symptoms, -0.25 (95% CI -0.37 to -0.13) in 33 studies of positive symptoms and -0.13 (95% CI -0.25 to -0.01) in 34 studies of negative symptoms."
+        },
+        {
+          "number": "-0.62 (unmasked) vs -0.15 (masked)",
+          "what_it_is": "effect for overall symptoms when unblinded vs blinded \u2014 bias inflates estimate",
+          "abstract_sentence": "Masking significantly moderated effect size in the meta-analyses of overall symptoms (effect sizes -0.62 (95% CI -0.88 to -0.35) v. -0.15 (95% CI -0.27 to -0.03), P = 0.001)."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P4-family-intervention-pharoah-2010",
+      "tier": "T1",
+      "year": 2010,
+      "pmid": "21154340",
+      "doi": "10.1002/14651858.cd000088.pub2",
+      "pmcid": "PMC4204509",
+      "first_author": "Pharoah",
+      "title": "Family intervention for schizophrenia.",
+      "journal": "Cochrane Database of Systematic Reviews",
+      "finding": "Cochrane review of 53 RCTs: family intervention reduces relapse (RR 0.55, NNT 7), hospital admission (RR 0.78, NNT 8), improves medication adherence (RR 0.60, NNT 6).",
+      "numbers": [
+        {
+          "number": "relapse RR 0.55, NNT 7",
+          "what_it_is": "relapse reduction with family intervention vs standard care",
+          "abstract_sentence": "Family intervention may decrease the frequency of relapse (n = 2981, 32 RCTs, RR 0.55 CI 0.5 to 0.6, NNT 7 CI 6 to 8)."
+        },
+        {
+          "number": "medication compliance RR 0.60, NNT 6",
+          "what_it_is": "improved adherence with family intervention",
+          "abstract_sentence": "encourage compliance with medication (n = 695, 10 RCTs, RR 0.60 CI 0.5 to 0.7, NNT 6 CI 5 to 9)."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P4-raise-etp-kane-2016",
+      "tier": "T1",
+      "year": 2016,
+      "pmid": "26481174",
+      "doi": "10.1176/appi.ajp.2015.15050632",
+      "pmcid": "PMC4981493",
+      "first_author": "Kane",
+      "title": "Comprehensive Versus Usual Community Care for First-Episode Psychosis: 2-Year Outcomes From the NIMH RAISE Early Treatment Program.",
+      "journal": "The American Journal of Psychiatry",
+      "finding": "RAISE-ETP RCT (34 clinics, N=404): coordinated specialty care (NAVIGATE) improved quality of life, psychopathology and work/school vs usual care over 2 years, larger gains when DUP shorter (<74-week median).",
+      "numbers": [
+        {
+          "number": "N=404 (223 NAVIGATE vs 181 usual)",
+          "what_it_is": "coordinated specialty care improved outcomes vs usual community care",
+          "abstract_sentence": "The 223 recipients of NAVIGATE remained in treatment longer, experienced greater improvement in quality of life and psychopathology, and experienced greater involvement in work and school compared with 181 participants in community care."
+        },
+        {
+          "number": "median DUP 74 weeks",
+          "what_it_is": "median duration of untreated psychosis; moderator threshold",
+          "abstract_sentence": "The median duration of untreated psychosis was 74 weeks."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P4-early-intervention-correll-2018",
+      "tier": "T1",
+      "year": 2018,
+      "pmid": "29800949",
+      "doi": "10.1001/jamapsychiatry.2018.0623",
+      "pmcid": "PMC6137532",
+      "first_author": "Correll",
+      "title": "Comparison of Early Intervention Services vs Treatment as Usual for Early-Phase Psychosis: A Systematic Review, Meta-analysis, and Meta-regression.",
+      "journal": "JAMA Psychiatry",
+      "finding": "Meta-analysis of 10 RCTs (2176 patients): early intervention services beat treatment-as-usual on all 13 outcomes \u2014 fewer discontinuations (RR 0.70), fewer hospitalisations (RR 0.74), more school/work (RR 1.13), lower symptoms (SMD -0.32).",
+      "numbers": [
+        {
+          "number": "10 RCTs / 2176 patients; all 13 outcomes",
+          "what_it_is": "overall superiority of EIS vs TAU",
+          "abstract_sentence": "Across 10 randomized clinical trials ... among 2176 patients ... EIS was associated with better outcomes than TAU at the end of treatment for all 13 meta-analyzable outcomes."
+        },
+        {
+          "number": "hospitalisation RR 0.74; symptoms SMD -0.32",
+          "what_it_is": "key effect sizes EIS vs TAU",
+          "abstract_sentence": "at least 1 psychiatric hospitalization (RR, 0.74; 95% CI, 0.61-0.90; P = .003) ... total symptom severity (standardized mean difference [SMD], -0.32; 95% CI, -0.47 to -0.17; P < .001)."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P4-next-step-ect-furukawa-2026",
+      "tier": "T1",
+      "year": 2026,
+      "pmid": "42232685",
+      "doi": "10.1016/j.eclinm.2026.103988",
+      "pmcid": "PMC13223997",
+      "first_author": "Furukawa",
+      "title": "Next-step treatment for schizophrenia non-responsive to antipsychotics: a systematic review and network meta-analysis.",
+      "journal": "EClinicalMedicine",
+      "finding": "Network meta-analysis of 59 RCTs on antipsychotic non-response: ECT augmentation (SMD -0.51) and combination (SMD -0.25) show very-weak, cautiously-considered benefit \u2014 ECT a narrow next-step, not first-line.",
+      "numbers": [
+        {
+          "number": "ECT augmentation SMD -0.51",
+          "what_it_is": "effect of ECT added to antipsychotic vs continuing same in non-responders",
+          "abstract_sentence": "electroconvulsive therapy (ECT; k = 5; n = 97; SMD -0.51, -0.96 to -0.06; very low) might be more efficacious than continuing the same antipsychotic."
+        },
+        {
+          "number": "very weak / substantial caution",
+          "what_it_is": "certainty framing for ECT and combination augmentation",
+          "abstract_sentence": "Very weak evidence suggested efficacy of antipsychotic combination and ECT augmentation and they might be considered, but with substantial caution."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P4-nonadherence-osugo-howes-2026",
+      "tier": "T2",
+      "year": 2026,
+      "pmid": "41863365",
+      "doi": "10.1093/schbul/sbag017",
+      "pmcid": "PMC13005115",
+      "first_author": "Osugo",
+      "title": "What is Minimally Adequate Treatment of Psychosis and Should Duration of Inadequate Treatment be a Clinical and Research Target? A Perspective and State-of-the-Art Review.",
+      "journal": "Schizophrenia Bulletin",
+      "finding": "State-of-the-art review: antipsychotic non-adherence is common (44-56%) and repeatedly linked to worse outcomes (relapse RR up to 2.70, mortality RR up to 1.83) \u2014 reframing inadequate treatment as widespread, not a moral failing.",
+      "numbers": [
+        {
+          "number": "non-adherence 44%-56%",
+          "what_it_is": "rates of antipsychotic non-adherence",
+          "abstract_sentence": "Inadequate antipsychotic treatment is common (non-adherence rates = 44%-56%), and repeatedly associated with poorer outcomes across several key patient-centered outcomes, including increased risk of relapse (relative risk (RR) up to 2.70...) and higher mortality (RR up to 1.83, n = 272 030)."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P4-tardive-dyskinesia-carbon-2017",
+      "tier": "T1",
+      "year": 2017,
+      "pmid": "28146614",
+      "doi": "10.4088/jcp.16r10832",
+      "pmcid": null,
+      "first_author": "Carbon",
+      "title": "Tardive Dyskinesia Prevalence in the Period of Second-Generation Antipsychotic Use: A Meta-Analysis.",
+      "journal": "The Journal of Clinical Psychiatry",
+      "finding": "Meta-analysis of 41 studies (11,493 patients): global tardive dyskinesia prevalence 25.3%, lower with second-generation (20.7%) than first-generation (30.0%).",
+      "numbers": [
+        {
+          "number": "TD prevalence 25.3%",
+          "what_it_is": "global mean tardive dyskinesia prevalence",
+          "abstract_sentence": "The global mean TD prevalence was 25.3% (95% CI = 22.7%-28.1%) across all 41 studies (N = 11,493...)."
+        },
+        {
+          "number": "SGA 20.7% vs FGA 30.0%",
+          "what_it_is": "TD prevalence during second-generation vs first-generation treatment",
+          "abstract_sentence": "Rates were lower with current SGA treatment (20.7%...) vs current FGA treatment (30.0%...)."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P4-effect-size-framing-correll-2025",
+      "tier": "T3",
+      "year": 2025,
+      "pmid": "40739868",
+      "doi": "10.1017/s1092852925100461",
+      "pmcid": "PMC13064719",
+      "first_author": "Correll",
+      "title": "Do antipsychotics work in people with schizophrenia? A review of outcomes and effect sizes.",
+      "journal": "CNS Spectrums",
+      "finding": "Narrative review framing effect sizes: antipsychotics improve symptoms with a small-medium effect (~0.4 vs placebo) rising to ~0.9 for relapse prevention (NNT ~3). Framing/corroboration only.",
+      "numbers": [
+        {
+          "number": "~0.4 vs placebo",
+          "what_it_is": "typical acute-treatment effect size (framing, corroborates Huhn/Leucht)",
+          "abstract_sentence": "positive psychotic symptoms and global psychopathology improve with a small-medium effect size of about 0.4 versus placebo."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    }
+  ]
+}

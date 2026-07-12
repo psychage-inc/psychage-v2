@@ -1,0 +1,308 @@
+{
+  "part_id": 2,
+  "sibling_claims": {
+    "P1": "Schizophrenia is not marked off from ordinary life by the presence of hallucinations or strange beliefs \u2014 those are common \u2014 but by their persistence, conviction, and cost; the diagnostic line is real, yet it is a threshold on a continuum, not a wall.",
+    "P3": "The 'split mind' folk-model is the exact inverse of the mechanism \u2014 this is a failure of integration, not a multiplication of selves.",
+    "P4": "The most powerful things that help in schizophrenia are the least-discussed \u2014 coordinated care and family support rival medication for preventing relapse \u2014 and 'non-adherence' is usually a rational response to real side-effect burden, not a failure of will.",
+    "P5": "Living well with schizophrenia is governed less by the illness itself than by things the word 'support' usually ignores \u2014 a body that dies about fifteen years early of preventable heart disease, a world that treats the victim as the threat, and a recovery rate real enough to matter and contested enough that no single number is honest."
+  },
+  "sources": [
+    {
+      "id": "P2-kean-silencing-self-fpa",
+      "tier": "T5",
+      "year": 2009,
+      "pmid": "19478239",
+      "doi": "10.1093/schbul/sbp043",
+      "pmcid": "PMC2762621",
+      "first_author": "Kean",
+      "title": "Silencing the self: schizophrenia as a self-disturbance.",
+      "journal": "Schizophrenia Bulletin",
+      "finding": "Published Schizophrenia Bulletin first-person account describing psychosis as disintegration of the self and loss of ownership of one's own thoughts, emotions and actions (distinct from Chadwick 2007 / Gardiner 2021).",
+      "numbers": [],
+      "verbatim_quote": "I was simply sectioned again, detached from my real self, observing what was being done to me in a third-person perspective. ... My thoughts, my emotions, and my actions, none of them belong to me any more.",
+      "contested_note": null
+    },
+    {
+      "id": "P2-payne-nights-end-fpa",
+      "tier": "T5",
+      "year": 2012,
+      "pmid": "22461482",
+      "doi": "10.1093/schbul/sbs051",
+      "pmcid": "PMC3446218",
+      "first_author": "Payne",
+      "title": "Night's end.",
+      "journal": "Schizophrenia Bulletin",
+      "finding": "Second real Schizophrenia Bulletin first-person account (Roberta Payne) with quotable auditory-hallucination descriptions; backup FPA.",
+      "numbers": [],
+      "verbatim_quote": "My brain created disc jockeys in the air vents of the hospital room playing Beatles' songs. ... I experienced extraordinarily loud fighter jets landing and taking off in my hospital room!",
+      "contested_note": null
+    },
+    {
+      "id": "P2-coltheart-delusion-second-factor",
+      "tier": "T3",
+      "year": 2021,
+      "pmid": "33874847",
+      "doi": "10.1080/13546805.2021.1914016",
+      "pmcid": null,
+      "first_author": "Coltheart",
+      "title": "Failure of hypothesis evaluation as a factor in delusional belief.",
+      "journal": "Cognitive Neuropsychiatry",
+      "finding": "Mechanistic definition source: a delusion is characterized by maintenance of a belief despite disconfirming evidence (two-factor theory 'second factor').",
+      "numbers": [
+        {
+          "number": "n/a",
+          "what_it_is": "definition of the defining feature of a delusion (survives counter-evidence)",
+          "abstract_sentence": "In the two-factor theory of delusional belief, the second factor consists of a failure to reject hypotheses in the face of disconfirmatory evidence."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P2-woods-hearing-voices-phenomenology",
+      "tier": "T2",
+      "year": 2015,
+      "pmid": "26360085",
+      "doi": "10.1016/s2215-0366(15)00006-1",
+      "pmcid": "PMC4580735",
+      "first_author": "Woods",
+      "title": "Experiences of hearing voices: analysis of a novel phenomenological survey.",
+      "journal": "The Lancet Psychiatry",
+      "finding": "Largest phenomenological survey of voice-hearing (n=153): voices are perceptual, heterogeneous, and frequently NOT literally auditory. Sample mixed diagnoses incl. non-clinical \u2014 phenomenology, not schizophrenia-only prevalence.",
+      "numbers": [
+        {
+          "number": "46% (70/153)",
+          "what_it_is": "proportion reporting thought-like or mixed (not literally auditory) voices",
+          "abstract_sentence": "Less than half of the participants reported hearing literally auditory voices--70 (46%) individuals reported either thought-like or mixed experiences."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P2-marder-negative-symptom-domains",
+      "tier": "T3",
+      "year": 2017,
+      "pmid": "28127915",
+      "doi": "10.1002/wps.20385",
+      "pmcid": "PMC5269507",
+      "first_author": "Marder",
+      "title": "The current conceptualization of negative symptoms in schizophrenia.",
+      "journal": "World Psychiatry",
+      "finding": "Consensus source defining five negative-symptom domains (blunted affect, alogia, anhedonia, asociality, avolition), their two-factor structure, and key role in functional outcome.",
+      "numbers": [
+        {
+          "number": "5 domains / 2 factors",
+          "what_it_is": "consensus structure of negative symptoms",
+          "abstract_sentence": "a) five constructs should be considered as negative symptoms, i.e. blunted affect, alogia, anhedonia, asociality and avolition; ... c) the five constructs cluster in two factors, one including blunted affect and alogia and the other consisting of anhedonia, avolition and asociality."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P2-schaefer-global-cognitive-impairment",
+      "tier": "T1",
+      "year": 2013,
+      "pmid": "23911259",
+      "doi": "10.1016/j.schres.2013.07.009",
+      "pmcid": "PMC4196267",
+      "first_author": "Schaefer",
+      "title": "The global cognitive impairment in schizophrenia: consistent over decades and around the world.",
+      "journal": "Schizophrenia Research",
+      "finding": "Meta-analysis (100 studies): generalized cognitive impairment of ~1 SD (grand mean g=-1.03), largest in processing speed and episodic memory; stable across decades and geography.",
+      "numbers": [
+        {
+          "number": "g = -1.03",
+          "what_it_is": "overall neurocognitive impairment vs healthy controls (~1 SD)",
+          "abstract_sentence": "patients with schizophrenia scored significantly lower than controls across all cognitive tests and domains, grand mean effect size, g=-1.03."
+        },
+        {
+          "number": "g = -1.25 / -1.23",
+          "what_it_is": "processing speed / episodic memory (largest impairments)",
+          "abstract_sentence": "Patients showed somewhat larger impairments in the domains of processing speed (g=-1.25) and episodic memory (g=-1.23)."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P2-heinrichs-zakzanis-neurocog-review",
+      "tier": "T1",
+      "year": 1998,
+      "pmid": "9673998",
+      "doi": "10.1037//0894-4105.12.3.426",
+      "pmcid": null,
+      "first_author": "Heinrichs",
+      "title": "Neurocognitive deficit in schizophrenia: a quantitative review of the evidence.",
+      "journal": "Neuropsychology",
+      "finding": "Landmark meta-analysis (204 studies, 22 test variables): moderate-to-large deficits (d>.60) across every cognitive domain measured.",
+      "numbers": [
+        {
+          "number": "d > .60",
+          "what_it_is": "effect sizes across all 22 neurocognitive test variables",
+          "abstract_sentence": "Moderate to large raw effect sizes (d > .60) were obtained for all 22 neurocognitive test variables, and none of the associated confidence intervals included zero."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P2-dickinson-digit-symbol-coding",
+      "tier": "T1",
+      "year": 2007,
+      "pmid": "17485605",
+      "doi": "10.1001/archpsyc.64.5.532",
+      "pmcid": null,
+      "first_author": "Dickinson",
+      "title": "Overlooking the obvious: a meta-analytic comparison of digit symbol coding tasks and other cognitive measures in schizophrenia.",
+      "journal": "Archives of General Psychiatry",
+      "finding": "Meta-analysis (37 studies, 1961 patients): the single largest cognitive impairment is processing-speed/coding, g=-1.57.",
+      "numbers": [
+        {
+          "number": "g = -1.57",
+          "what_it_is": "effect size for digit symbol coding (processing-speed) deficit",
+          "abstract_sentence": "The weighted mean effect for digit symbol coding was g = -1.57 (95% confidence interval, -1.66 to -1.48), significantly larger than effects for episodic memory, executive functioning, and working memory."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P2-green-1996-functional-consequences",
+      "tier": "T3",
+      "year": 1996,
+      "pmid": "8610818",
+      "doi": "10.1176/ajp.153.3.321",
+      "pmcid": null,
+      "first_author": "Green",
+      "title": "What are the functional consequences of neurocognitive deficits in schizophrenia?",
+      "journal": "The American Journal of Psychiatry",
+      "finding": "Landmark review: neurocognition (esp. verbal memory, vigilance) predicts real-world outcome, whereas positive symptoms did NOT predict outcome in any study reviewed \u2014 the load-bearing tension.",
+      "numbers": [
+        {
+          "number": "n/a",
+          "what_it_is": "positive symptoms do not predict functional outcome; cognition does",
+          "abstract_sentence": "psychotic symptoms were not significantly associated with outcome measures in any of the studies reviewed."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P2-rabinowitz-catie-neg-gt-pos",
+      "tier": "T2",
+      "year": 2012,
+      "pmid": "22316568",
+      "doi": "10.1016/j.schres.2012.01.015",
+      "pmcid": null,
+      "first_author": "Rabinowitz",
+      "title": "Negative symptoms have greater impact on functioning than positive symptoms in schizophrenia: analysis of CATIE data.",
+      "journal": "Schizophrenia Research",
+      "finding": "CATIE analysis (n=1447): functioning was more strongly related to negative symptoms than any other domain, including positive \u2014 with honest caveat that overall variance explained was small.",
+      "numbers": [
+        {
+          "number": "n=1447",
+          "what_it_is": "CATIE sample; negative symptoms most related to functioning",
+          "abstract_sentence": "Baseline functioning and change in functioning were more strongly related to PANSS negative factor than any of the other symptoms - though the amount of variance explained by symptom changes in general was small."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P2-salazardepablo-chr-transition",
+      "tier": "T1",
+      "year": 2021,
+      "pmid": "34259821",
+      "doi": "10.1001/jamapsychiatry.2021.0830",
+      "pmcid": "PMC8281006",
+      "first_author": "Salazar de Pablo",
+      "title": "Probability of Transition to Psychosis in Individuals at Clinical High Risk: An Updated Meta-analysis.",
+      "journal": "JAMA Psychiatry",
+      "finding": "Updated meta-analysis: ~19% of clinical-high-risk individuals transition to psychosis by 2 years and ~25% by 3 years \u2014 the prodrome/at-risk state.",
+      "numbers": [
+        {
+          "number": "25% at 3 years",
+          "what_it_is": "cumulative transition-to-psychosis risk in CHR-P at 3 years",
+          "abstract_sentence": "In this meta-analysis, 25% of individuals at CHR-P developed psychosis within 3 years."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P2-olbert-polythetic-heterogeneity",
+      "tier": "T2",
+      "year": 2014,
+      "pmid": "24886017",
+      "doi": "10.1037/a0036068",
+      "pmcid": null,
+      "first_author": "Olbert",
+      "title": "Quantifying heterogeneity attributable to polythetic diagnostic criteria: theoretical framework and empirical application.",
+      "journal": "Journal of Abnormal Psychology",
+      "finding": "Combinatorial + empirical analysis: two people with the same diagnosis can share no symptoms; any two symptom combinations share on average less than half their symptoms.",
+      "numbers": [
+        {
+          "number": "< half",
+          "what_it_is": "symptom overlap between two patients with the same diagnosis under polythetic criteria",
+          "abstract_sentence": "in most categories, 2 individuals with the same diagnosis may share no symptoms in common, and that any 2 theoretically possible symptom combinations will share on average less than half their symptoms."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P2-lim-hallucination-modalities",
+      "tier": "T2",
+      "year": 2016,
+      "pmid": "27349814",
+      "doi": "10.1016/j.schres.2016.06.010",
+      "pmcid": null,
+      "first_author": "Lim",
+      "title": "Prevalence and classification of hallucinations in multiple sensory modalities in schizophrenia spectrum disorders.",
+      "journal": "Schizophrenia Research",
+      "finding": "GROUP-cohort study: auditory hallucinations occur in 60-80% of patients, but hallucinations are frequently multimodal (53%) rather than auditory-only (27% unimodal).",
+      "numbers": [
+        {
+          "number": "60-80% auditory",
+          "what_it_is": "proportion of schizophrenia-spectrum patients with auditory hallucinations",
+          "abstract_sentence": "Auditory hallucinations are experienced by 60-80% of all patients diagnosed with a schizophrenia spectrum disorder."
+        },
+        {
+          "number": "53% multimodal vs 27% unimodal",
+          "what_it_is": "hallucinations in multiple modalities vs single",
+          "abstract_sentence": "27% of the participants reported unimodal hallucinations and 53% MMHs."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    },
+    {
+      "id": "P2-dickerson-insight-prevalence",
+      "tier": "T2",
+      "year": 1997,
+      "pmid": "9021849",
+      "doi": "10.1176/ps.48.2.195",
+      "pmcid": null,
+      "first_author": "Dickerson",
+      "title": "Lack of insight among outpatients with schizophrenia.",
+      "journal": "Psychiatric Services",
+      "finding": "Outpatient study (n=87): ~half (49.5%) had at least moderately impaired insight and 25% severe deficits \u2014 insight is variably impaired along a spectrum, not simply absent.",
+      "numbers": [
+        {
+          "number": "49.5%",
+          "what_it_is": "proportion of stable outpatients with at least moderately impaired insight",
+          "abstract_sentence": "The illness insight of 43 subjects, or 49.5 percent, was at least moderately impaired."
+        },
+        {
+          "number": "25%",
+          "what_it_is": "proportion with severe insight deficits",
+          "abstract_sentence": "Twenty-one subjects, or 25 percent, had severe insight deficits."
+        }
+      ],
+      "verbatim_quote": null,
+      "contested_note": null
+    }
+  ]
+}

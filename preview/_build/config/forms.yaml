@@ -23,6 +23,8 @@ forms:
       - MythVsFactBlock           # ×2 (auditory-only myth; insight-absent myth)
       - MythVsFactBlock
       - ArticleAccordion
+      - ArticleCallout:crisis     # INV1 — crisis help on every part of a crisis_flag condition (added vs build-plan §2)
+      - RelatedToolsBlock
   F-CAUSAL:     # P3
     order:
       - ProgressSteps             # pruning → dopamine → glutamate → environment
@@ -32,6 +34,8 @@ forms:
       - MythVsFactBlock           # ×2 (split-mind; schizophrenogenic mother)
       - MythVsFactBlock
       - ArticleAccordion
+      - ArticleCallout:crisis     # INV1 — crisis help on every part (added vs build-plan §2)
+      - RelatedToolsBlock
   F-PRACTICE:   # P4
     order:
       - StatCard|ArticleChart     # DUP predicts outcome (1)

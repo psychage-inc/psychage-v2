@@ -59,12 +59,12 @@ export default function ConditionPartPage() {
                 <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-text-tertiary mb-8">
                     <Link to={PREVIEW_BASE} className="hover:text-primary transition-colors">Schizophrenia</Link>
                     <ChevronRight size={14} />
-                    <span className="text-text-secondary font-medium">Part {part.part_id} of {PARTS.length}</span>
+                    <span className="text-text-secondary font-medium">{part.title}</span>
                 </nav>
 
                 <article className="mx-auto min-w-0 max-w-[720px]">
                     <p className="font-display text-sm uppercase tracking-wide text-primary mb-3">
-                        Part {part.part_id} · Schizophrenia
+                        Schizophrenia · A guide
                     </p>
                     <h1 className="font-display font-bold text-4xl md:text-5xl text-text-primary leading-[1.12] mb-6">
                         {part.title}
@@ -169,7 +169,7 @@ export default function ConditionPartPage() {
 
                     <div className="mt-6 text-center">
                         <Link to={PREVIEW_BASE} className="inline-flex items-center gap-2 text-sm text-text-tertiary hover:text-primary transition-colors">
-                            <LayoutGrid size={14} /> All five parts
+                            <LayoutGrid size={14} /> The full guide
                         </Link>
                     </div>
                 </article>

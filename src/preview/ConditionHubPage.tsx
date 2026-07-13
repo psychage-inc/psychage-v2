@@ -32,7 +32,7 @@ export default function ConditionHubPage() {
                 />
                 <div className="container mx-auto max-w-content px-6 pt-20 pb-12">
                     <p className="font-display text-sm uppercase tracking-[0.2em] text-primary mb-4">
-                        Conditions · A five-part guide
+                        Conditions · An in-depth guide
                     </p>
                     <h1 className="font-display font-bold text-4xl md:text-6xl text-text-primary leading-[1.05] mb-6 max-w-3xl">
                         {CONDITION.name}
@@ -50,39 +50,37 @@ export default function ConditionHubPage() {
                     <PreviewStatGrid stats={CONDITION.hubStats as never} />
                 </div>
 
-                {/* The five-part rail, shape, not completion */}
-                <h2 className="font-display text-2xl text-text-primary mb-8">The five parts</h2>
+                {/* Guide sections, presented as an editorial index, order implies sequence, no enumeration */}
+                <h2 className="font-display text-2xl text-text-primary mb-8">What this guide covers</h2>
                 <ol className="grid gap-4 md:grid-cols-2">
                     {PARTS.map((p) => (
                         <li key={p.slug}>
                             <Link
                                 to={partPath(p.slug)}
-                                className="group block h-full rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-primary/50"
+                                className="group flex h-full flex-col rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-primary/50"
                             >
-                                <div className="flex items-baseline gap-3 mb-3">
-                                    <span className="font-display text-sm text-primary">
-                                        Part {p.part_id}
-                                    </span>
-                                    <span className="font-display text-lg text-text-primary group-hover:text-primary transition-colors">
-                                        {p.title}
-                                    </span>
-                                </div>
-                                {/* promise = this part's thesis.claim (five different promises) */}
-                                <p className="text-sm text-text-secondary leading-relaxed">
+                                <span className="font-display text-xl text-text-primary group-hover:text-primary transition-colors mb-3">
+                                    {p.title}
+                                </span>
+                                {/* one-line promise for the section */}
+                                <p className="text-[0.95rem] text-text-secondary leading-relaxed">
                                     {p.meta.thesis_claim}
                                 </p>
+                                <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                                    Read <ArrowRight size={14} />
+                                </span>
                             </Link>
                         </li>
                     ))}
                 </ol>
 
-                {/* One onward path */}
+                {/* Begin reading */}
                 <div className="mt-12">
                     <Link
                         to={partPath(PARTS[0].slug)}
                         className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-medium text-white hover:bg-primary-hover transition-colors"
                     >
-                        Start with Part 1 <ArrowRight size={16} />
+                        Start reading <ArrowRight size={16} />
                     </Link>
                 </div>
             </main>

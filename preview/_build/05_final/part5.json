@@ -275,7 +275,7 @@
     {
       "type": "Mermaid",
       "title": "The same condition, two divergent paths",
-      "diagram": "flowchart LR\n  H[Stable housing] --> R[Recovery odds rise]\n  I[Livable income] --> R\n  W[Paid work] --> R\n  C[Social connection] --> R\n  P[Poverty] --> D[Recovery odds fall]\n  S[Discrimination] --> D\n  L[Isolation] --> D",
+      "diagram": "flowchart LR\n  H[Stable housing] --> R[Recovery rises]\n  I[Livable income] --> R\n  W[Paid work] --> R\n  C[Connection] --> R\n  P[Poverty] --> Dn[Recovery falls]\n  S[Discrimination] --> Dn\n  L[Isolation] --> Dn",
       "a11y_summary": "A flow diagram: stable housing, a livable income, paid work, and social connection point toward rising recovery odds, while poverty, discrimination, and isolation point toward falling recovery odds.",
       "caption": "Structural conditions, not symptoms alone, tilt the long-term outcome."
     },

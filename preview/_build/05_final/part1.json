@@ -202,7 +202,7 @@
     {
       "type": "Mermaid",
       "title": "Where the line gets drawn",
-      "diagram": "flowchart TD\n A[Unusual experience] --> B{Persistent, distressing, impairing?}\n B -->|No| C[Common; not a disorder]\n B -->|Yes| D{Duration and mood?}\n D --> E[Clinician assessment over time]",
+      "diagram": "flowchart TD\n  A[Unusual experience] --> B{Persistent and impairing?}\n  B -->|No| C[Common, not a disorder]\n  B -->|Yes| D{Duration and mood?}\n  D --> E[Clinician assessment]",
       "a11y_summary": "A decision flow: an unusual experience is only a disorder if it is persistent, distressing, and impairing; duration and mood then guide a clinician's diagnosis made over time.",
       "caption": "A clinician's reasoning, not a self-test."
     },
@@ -307,7 +307,7 @@
     {
       "type": "prose",
       "id": "words",
-      "text": "A handful of words will keep recurring through this series. It is worth fixing their meaning now, because the everyday sense of these words and the clinical one rarely match."
+      "text": "A handful of words will keep recurring through these pages. It is worth fixing their meaning now, because the everyday sense of these words and the clinical one rarely match."
     },
     {
       "type": "ArticleAccordion",

@@ -207,7 +207,7 @@
     {
       "type": "Mermaid",
       "title": "One pathway, many pushes",
-      "diagram": "flowchart TD\n A[Early genetic and developmental risk] --> B[Adolescent synaptic pruning and C4]\n B --> C[Presynaptic dopamine excess]\n C --> D[Aberrant salience]\n D --> E[Psychosis]\n Env[Environment] --> B\n Env --> C",
+      "diagram": "flowchart TD\n  A[Inherited risk] --> B[Synaptic pruning + C4]\n  B --> C[Dopamine excess]\n  C --> D[Aberrant salience]\n  D --> E[Psychosis]\n  Env[Environment] --> B\n  Env --> C",
       "a11y_summary": "Pathway: inherited and developmental risk leads to excessive adolescent pruning involving complement C4, then presynaptic dopamine excess, then aberrant salience, then psychosis; environment pushes at multiple stages.",
       "caption": "A convergent account, not a single chain."
     },
@@ -250,7 +250,7 @@
     {
       "type": "Mermaid",
       "title": "How the accounts converge",
-      "diagram": "flowchart LR\n G[Genetic and polygenic] --> O[Failure of integration]\n D[Developmental and pruning] --> O\n N[Neurochemical dopamine and glutamate] --> O\n E[Environmental] --> O",
+      "diagram": "flowchart LR\n  G[Genetic] --> O[Failure of integration]\n  D[Developmental] --> O\n  N[Neurochemical] --> O\n  E[Environmental] --> O",
       "a11y_summary": "Four independent lines of evidence, genetic, developmental, neurochemical, environmental, converge on one outcome: a failure of the brain to integrate.",
       "caption": "Different study designs; effect sizes not directly comparable."
     },

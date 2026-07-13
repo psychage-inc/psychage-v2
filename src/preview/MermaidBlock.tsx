@@ -13,26 +13,27 @@ function loadMermaid() {
                 startOnLoad: false,
                 securityLevel: 'strict',
                 theme: 'base',
-                // System font is available immediately, so node-width measurement is correct.
-                // (Using an unloaded webfont here is what caused labels to clip.)
-                fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif',
+                // Satoshi (the brand body font) is safe here because we await document.fonts.ready
+                // before rendering, so node-width measurement uses the real, loaded font. Labels
+                // are kept short (single line) so boxes always contain their text.
+                fontFamily: 'Satoshi, system-ui, -apple-system, sans-serif',
                 themeVariables: {
-                    primaryColor: '#E6F5F3',
-                    primaryBorderColor: '#158A7D',
+                    primaryColor: '#EAF6F3',
+                    primaryBorderColor: '#0E7C6F',
                     primaryTextColor: '#141018',
-                    secondaryColor: '#FBF9F4',
-                    tertiaryColor: '#F0FDFA',
-                    lineColor: '#57534e',
-                    fontSize: '16px',
+                    secondaryColor: '#F4F1EA',
+                    tertiaryColor: '#EAF6F3',
+                    lineColor: '#9A948C',
+                    fontSize: '15px',
+                    fontFamily: 'Satoshi, system-ui, sans-serif',
                 },
                 flowchart: {
                     htmlLabels: true,
                     curve: 'basis',
                     useMaxWidth: true,
-                    padding: 16,
-                    nodeSpacing: 55,
-                    rankSpacing: 55,
-                    wrappingWidth: 220,
+                    padding: 18,
+                    nodeSpacing: 62,
+                    rankSpacing: 62,
                 },
             });
             return mermaid;

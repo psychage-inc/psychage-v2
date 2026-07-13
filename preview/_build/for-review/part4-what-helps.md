@@ -12,9 +12,9 @@ Ask what helps in schizophrenia and most people picture a pill. The evidence tel
 
 **Stats: The clock, before treatment begins**
 
-- **0.13-0.18** — pooled correlation between longer untreated psychosis and poorer long-term outcome (Penttila 2014 [1])
+- **0.13-0.18**, pooled correlation between longer untreated psychosis and poorer long-term outcome (Penttila 2014 [1])
 
-- **74 wks** — median time psychosis went untreated before first-episode care in a US trial (Kane 2016 (RAISE) [2])
+- **74 wks**, median time psychosis went untreated before first-episode care in a US trial (Kane 2016 (RAISE) [2])
 
 ### What the medications do, and do not, do
 
@@ -38,13 +38,13 @@ The most powerful argument for medication is not about feeling better today but 
 
 *Described, not prescribed, which is why the trade-off is a clinician conversation.*
 
-**1. CBT for psychosis** — Talking therapy adapted for psychosis is where guidelines place a modest adjunct. Across 34 studies its pooled effect on overall symptoms was small, -0.33, and it shrank to -0.15 in the trials that blinded their raters, a reminder that expectation can inflate a result [8]. What it targets is less the presence of symptoms than the distress around them, the grip a voice holds, the certainty of a belief, the isolation that follows. Real and useful, but not a headline act.
+**1. CBT for psychosis**, Talking therapy adapted for psychosis is where guidelines place a modest adjunct. Across 34 studies its pooled effect on overall symptoms was small, -0.33, and it shrank to -0.15 in the trials that blinded their raters, a reminder that expectation can inflate a result [8]. What it targets is less the presence of symptoms than the distress around them, the grip a voice holds, the certainty of a belief, the isolation that follows. Real and useful, but not a headline act.
 
-**2. Family intervention & psychoeducation** — Here is the asymmetry almost no one hears. A Cochrane review of dozens of trials found that working with families cut relapse with a risk ratio of 0.55, about one relapse prevented for every seven families helped, and improved medication adherence too (RR 0.60) [9]. That rivals maintenance medication for keeping people well, yet it remains among the least-offered and least-discussed interventions in the field. Why so rare? It asks for trained clinicians, several sessions, and a willingness to treat the household as part of the care, none of it as quick to deliver as writing a prescription.
+**2. Family intervention & psychoeducation**, Here is the asymmetry almost no one hears. A Cochrane review of dozens of trials found that working with families cut relapse with a risk ratio of 0.55, about one relapse prevented for every seven families helped, and improved medication adherence too (RR 0.60) [9]. That rivals maintenance medication for keeping people well, yet it remains among the least-offered and least-discussed interventions in the field. Why so rare? It asks for trained clinicians, several sessions, and a willingness to treat the household as part of the care, none of it as quick to deliver as writing a prescription.
 
-**Before — Treatment as usual:** Care that arrives piecemeal: a prescription here, an appointment there, little coordination between the people meant to help, and long waits before anyone connects the parts.
+**Before, Treatment as usual:** Care that arrives piecemeal: a prescription here, an appointment there, little coordination between the people meant to help, and long waits before anyone connects the parts.
 
-**After — Coordinated specialty / early intervention:** Team-based early care that folds therapy, family work, supported work or school, and medication management into one service. A meta-analysis of 10 trials and 2,176 people found these programmes beat usual care on all 13 outcomes measured, fewer hospitalisations (RR 0.74), lower symptoms (SMD -0.32), and more people in work or school [10]. In the US RAISE trial of 404 people in first-episode care, those in the coordinated NAVIGATE programme gained more in quality of life, symptoms, and involvement in work or school than those in ordinary community care [2]. Timing sharpened the effect: the gains were larger for those whose psychosis had gone untreated for a shorter time before the programme began [2].
+**After, Coordinated specialty / early intervention:** Team-based early care that folds therapy, family work, supported work or school, and medication management into one service. A meta-analysis of 10 trials and 2,176 people found these programmes beat usual care on all 13 outcomes measured, fewer hospitalisations (RR 0.74), lower symptoms (SMD -0.32), and more people in work or school [10]. In the US RAISE trial of 404 people in first-episode care, those in the coordinated NAVIGATE programme gained more in quality of life, symptoms, and involvement in work or school than those in ordinary community care [2]. Timing sharpened the effect: the gains were larger for those whose psychosis had gone untreated for a shorter time before the programme began [2].
 
 ### What modern care is not
 
@@ -54,9 +54,9 @@ It is worth naming what standard care is not. The asylum image, locked wards, li
 
 Which brings us to 'non-adherence.' Between 44% and 56% of people prescribed antipsychotics do not take them as directed [12]. The reflex is to read this as denial or lack of will. The evidence reads differently. When a class of drugs can bring weight gain, movement disorders, and tardive dyskinesia at a pooled prevalence near 25% [7], choosing to stop is often a rational weighing of costs a person is actually paying against benefits they may not feel. Add impaired insight, a symptom of the illness itself, not a character flaw, and 'non-adherence' looks less like a moral failure than a signal: that the trade-off has tipped, that it was never fully explained, or that it was never really the person's to negotiate. The stakes are not small; inadequate treatment is linked with markedly higher risk of relapse (RR up to 2.70) and mortality (RR up to 1.83) [12]. But the direction the evidence points is toward better conversations and better-tolerated care, not blame. Reframed this way, the clinical task shifts. The question stops being how to make a person comply and becomes why the bargain feels unliveable, and what would make it liveable. That is a harder question, and a more honest one.
 
-**[CRISIS] In crisis right now?** — If you or someone you know is in immediate danger, call your local emergency number. In the US, call or text 988 for the Suicide & Crisis Lifeline. Psychage's crisis resources are always one tap away.
+**[CRISIS] In crisis right now?**, If you or someone you know is in immediate danger, call your local emergency number. In the US, call or text 988 for the Suicide & Crisis Lifeline. Psychage's crisis resources are always one tap away.
 
-**→ Continue: Living With It** (/preview/conditions/schizophrenia/living-with-it) — Life, outcomes, and what 'support' should really mean.
+**→ Continue: Living With It** (/preview/conditions/schizophrenia/living-with-it), Life, outcomes, and what 'support' should really mean.
 
 
 ---

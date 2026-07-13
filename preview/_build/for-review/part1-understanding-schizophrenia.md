@@ -43,19 +43,19 @@ The line also has neighbors. Several conditions live close enough to schizophren
 
 The third row deserves a moment, because it shows how porous these borders really are. A psychosis that begins with a drug is not always a detour that ends when the drug leaves the body. When it follows cannabis, nearly half of these episodes, 47.4%, later resolve into schizophrenia or bipolar disorder [6]. Often the substance did not cause a separate, temporary condition so much as it pulled forward something that was already gathering. The label 'substance-induced' can turn out to be the first name given to a story that has not finished telling itself.
 
-**[CLINICAL-NOTE] Why none of this is a self-test** — Every distinction in the table above is a clinician's judgment, built across repeated visits and often rewritten as the picture sharpens. Diagnoses on the psychosis spectrum move: the same person may carry three different labels in three years before one holds [5][7]. That movement is not carelessness, it is the honest signature of conditions that disclose themselves slowly. If you recognize something of yourself in these pages, the sound next step is a conversation with a professional, not a private verdict reached alone.
+**[CLINICAL-NOTE] Why none of this is a self-test**, Every distinction in the table above is a clinician's judgment, built across repeated visits and often rewritten as the picture sharpens. Diagnoses on the psychosis spectrum move: the same person may carry three different labels in three years before one holds [5][7]. That movement is not carelessness, it is the honest signature of conditions that disclose themselves slowly. If you recognize something of yourself in these pages, the sound next step is a conversation with a professional, not a private verdict reached alone.
 
 It helps, against all of this, to hold the actual size of the thing in view, how often it truly appears, and when it tends to arrive.
 
 **Stats: Schizophrenia by the numbers**
 
-- **15.2 / 100,000** — Median annual incidence, new diagnoses per year (McGrath 2004 [8])
+- **15.2 / 100,000**, Median annual incidence, new diagnoses per year (McGrath 2004 [8])
 
-- **~0.7%** — Lifetime morbid risk, the chance of ever developing it (Saha 2005 [9])
+- **~0.7%**, Lifetime morbid risk, the chance of ever developing it (Saha 2005 [9])
 
-- **20.5 yrs** — Peak age at onset (Solmi 2022 [10])
+- **20.5 yrs**, Peak age at onset (Solmi 2022 [10])
 
-- **1.40** — Male-to-female incidence rate ratio (McGrath 2004 [8])
+- **1.40**, Male-to-female incidence rate ratio (McGrath 2004 [8])
 
 Read those figures together. New diagnoses arrive at roughly 15.2 per 100,000 people each year [8], and the lifetime chance of ever crossing the threshold sits near 0.7% [9], real, and far below the 7.2% who merely have an experience [1]. The disorder also tends to arrive young. Onset peaks around 20.5 years of age, squarely inside the stretch of life we spend becoming who we will be [10], which is part of why it can be so disorienting: it interrupts a story mid-sentence. Men are diagnosed somewhat more often than women, at a ratio near 1.40 to 1 [8]. But the old teaching that men fall ill years earlier turns out to be overstated, the pooled sex difference in onset age is only about 1.07 years [11], and the largest recent meta-analysis found no significant difference at all [10].
 
@@ -68,21 +68,21 @@ A handful of words will keep recurring through this series. It is worth fixing t
 
 **FAQ / glossary:**
 
-- **psychosis** — A state in which the mind loses part of its grip on shared reality, perceiving what others don't, or believing what the evidence won't support. Psychosis is a feature that appears across many conditions; it is not a diagnosis on its own.
+- **psychosis**, A state in which the mind loses part of its grip on shared reality, perceiving what others don't, or believing what the evidence won't support. Psychosis is a feature that appears across many conditions; it is not a diagnosis on its own.
 
-- **delusion** — A belief held with such conviction that contrary evidence cannot move it, and that falls outside what a person's own culture would endorse. The conviction, not the strangeness of the content, is what marks it.
+- **delusion**, A belief held with such conviction that contrary evidence cannot move it, and that falls outside what a person's own culture would endorse. The conviction, not the strangeness of the content, is what marks it.
 
-- **hallucination** — A perception with no source in the world, a voice, an image, a smell that isn't there. Hallucinatory experiences are far more common in the general population than delusional ones, about 5.2% versus 1.3% over a lifetime [2].
+- **hallucination**, A perception with no source in the world, a voice, an image, a smell that isn't there. Hallucinatory experiences are far more common in the general population than delusional ones, about 5.2% versus 1.3% over a lifetime [2].
 
-- **prodrome** — The quiet phase that can precede a first episode, subtle shifts in mood, thinking, and social withdrawal that make sense mainly in hindsight. It may last months, sometimes years.
+- **prodrome**, The quiet phase that can precede a first episode, subtle shifts in mood, thinking, and social withdrawal that make sense mainly in hindsight. It may last months, sometimes years.
 
-- **first-episode** — The first time psychosis crosses into clinical territory. How quickly it is met with care shapes a great deal of what follows.
+- **first-episode**, The first time psychosis crosses into clinical territory. How quickly it is met with care shapes a great deal of what follows.
 
-- **insight** — The degree to which a person recognizes their experiences as part of an illness. Insight rises and falls, and its absence is itself a symptom, not stubbornness or denial.
+- **insight**, The degree to which a person recognizes their experiences as part of an illness. Insight rises and falls, and its absence is itself a symptom, not stubbornness or denial.
 
-**[CRISIS] In crisis right now?** — If you or someone you know is in immediate danger, call your local emergency number. In the US, call or text 988 for the Suicide & Crisis Lifeline. Psychage's crisis resources are always one tap away.
+**[CRISIS] In crisis right now?**, If you or someone you know is in immediate danger, call your local emergency number. In the US, call or text 988 for the Suicide & Crisis Lifeline. Psychage's crisis resources are always one tap away.
 
-**→ Continue: Signs and Experiences** (/preview/conditions/schizophrenia/signs-and-experiences) — What the symptoms are, from the inside.
+**→ Continue: Signs and Experiences** (/preview/conditions/schizophrenia/signs-and-experiences), What the symptoms are, from the inside.
 
 
 ---

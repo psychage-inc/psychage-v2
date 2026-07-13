@@ -10,7 +10,7 @@
 
 > I stepped off that vehicle later in West London with a radically different and, as far as I am concerned, 'corrected' brain from the one I had when I stepped on it.
 >
-> — Chadwick PK, 2007 (Chadwick PK. Peer-professional first-person account: schizophrenia from the inside - phenomenology and the integration of causes and meanings. Schizophrenia Bulletin. 2007. [1])
+>, Chadwick PK, 2007 (Chadwick PK. Peer-professional first-person account: schizophrenia from the inside - phenomenology and the integration of causes and meanings. Schizophrenia Bulletin. 2007. [1])
 
 ### How often do people recover? It depends who you count
 
@@ -18,15 +18,15 @@ Recovery is real. That is not a slogan; it is a finding, and it is where the hon
 
 **Stats: What actually shortens and endangers a life**
 
-- **14.5 years** — of potential life lost on average; life expectancy near 64.7 years, and the gap has not narrowed (Hjorthoj 2017 [4])
+- **14.5 years**, of potential life lost on average; life expectancy near 64.7 years, and the gap has not narrowed (Hjorthoj 2017 [4])
 
-- **1.85x** — the hazard of cardiovascular death, the single leading cause, not suicide (Correll 2017 [5])
+- **1.85x**, the hazard of cardiovascular death, the single leading cause, not suicide (Correll 2017 [5])
 
-- **2x** — as many deaths from accidents as from suicide (119.7 vs 52.0 per 100,000 person-years) (Olfson 2015 [6])
+- **2x**, as many deaths from accidents as from suicide (119.7 vs 52.0 per 100,000 person-years) (Olfson 2015 [6])
 
-- **1 in 20** — violent crimes involve severe mental illness, about 5% of the total (Fazel 2006 [7])
+- **1 in 20**, violent crimes involve severe mental illness, about 5% of the total (Fazel 2006 [7])
 
-- **20-34%** — are violently victimised, versus 2-13% who perpetrate, far more often the victim than the threat (Choe 2008 [8])
+- **20-34%**, are violently victimised, versus 2-13% who perpetrate, far more often the victim than the threat (Choe 2008 [8])
 
 ### Work is possible, and support decides whether it happens
 
@@ -36,25 +36,25 @@ Most people with schizophrenia want to work, and many can. The barrier is usuall
 
 Here is what clinical charts routinely miss. Whether a life with schizophrenia goes well is decided as much by circumstance as by symptoms. Stable housing, an income you can live on, a social network that has not frayed to nothing, a broad review of the evidence maps a causal path from these structural conditions to later mental-health outcomes, not a mere coincidence between them [11]. Poverty, discrimination, and isolation do not simply keep company with poor outcomes; they help manufacture them. The implication is blunt and often ignored. Treating the illness while a person is unhoused, jobless, and friendless is treating one variable and shrugging at three. It also reframes what 'treatment' means. Recovery, where it happens, is usually assembled out of unglamorous, concrete things, a room with a lock, a wage that clears the rent, one person who reliably calls back, at least as much as it is out of any prescription. A system that funds only the prescription is quietly deciding the outcome in advance.
 
-**1. Learn the early-warning signs** — Relapse rarely arrives without notice. Sleep slipping, withdrawal, growing suspicion, or the return of unusual beliefs often precede a crisis by days or weeks. Learn that particular person's own early pattern, and agree in advance what to do when it appears, a plan made calm buys time that no medication can add later.
+**1. Learn the early-warning signs**, Relapse rarely arrives without notice. Sleep slipping, withdrawal, growing suspicion, or the return of unusual beliefs often precede a crisis by days or weeks. Learn that particular person's own early pattern, and agree in advance what to do when it appears, a plan made calm buys time that no medication can add later.
 
-**2. Communicate without policing medication** — Hovering over doses turns a relationship into surveillance and rarely improves anything. Side effects are real, and they are often the honest reason someone stops. Ask about them; stay curious rather than corrective; and bring worries to the clinical team together, as allies, instead of enforcing a regimen across the kitchen table.
+**2. Communicate without policing medication**, Hovering over doses turns a relationship into surveillance and rarely improves anything. Side effects are real, and they are often the honest reason someone stops. Ask about them; stay curious rather than corrective; and bring worries to the clinical team together, as allies, instead of enforcing a regimen across the kitchen table.
 
-**3. Recognise carer burden, and treat it as real** — Caring is heavy, and the weight is measurable: a meta-analysis of 34 studies finds caregiver burden grows significantly heavier as symptoms, general distress, and illness duration increase [12]. Burnout in the carer is a risk to the person cared for, too. Respite, peer support, and the carer's own care are not luxuries; they are part of keeping the whole system standing.
+**3. Recognise carer burden, and treat it as real**, Caring is heavy, and the weight is measurable: a meta-analysis of 34 studies finds caregiver burden grows significantly heavier as symptoms, general distress, and illness duration increase [12]. Burnout in the carer is a risk to the person cared for, too. Respite, peer support, and the carer's own care are not luxuries; they are part of keeping the whole system standing.
 
 **FAQ / glossary:**
 
-- **Can someone with schizophrenia work?** — Often, yes. The strongest evidence backs supported employment, which more than doubles competitive-employment rates, a pooled risk ratio of 2.40, and helped 55% of participants work at least one day, against 28% in standard services [9][10]. The useful question is rarely whether a person can work, but with what support, and how soon they are allowed to start.
+- **Can someone with schizophrenia work?**, Often, yes. The strongest evidence backs supported employment, which more than doubles competitive-employment rates, a pooled risk ratio of 2.40, and helped 55% of participants work at least one day, against 28% in standard services [9][10]. The useful question is rarely whether a person can work, but with what support, and how soon they are allowed to start.
 
-- **Can they live independently?** — Many do. Independent living is one of the strands inside the strict recovery definition, met by roughly 1 in 7 in long-standing samples and by considerably more among those followed from a first episode [2][3]. Whether it works out is often decided by housing, income, and social connection at least as much as by symptoms themselves [11].
+- **Can they live independently?**, Many do. Independent living is one of the strands inside the strict recovery definition, met by roughly 1 in 7 in long-standing samples and by considerably more among those followed from a first episode [2][3]. Whether it works out is often decided by housing, income, and social connection at least as much as by symptoms themselves [11].
 
-- **Will it always get worse over time?** — No, the old assumption of relentless decline is not supported. Pooled long-term data show outcomes do not reliably deteriorate, and a meaningful share of people improve [3]. The real long-term threat is physical: schizophrenia is linked to about 14.5 years of life lost, driven mostly by preventable cardiovascular disease [4][5]. That is the part that demands active screening, not resignation.
+- **Will it always get worse over time?**, No, the old assumption of relentless decline is not supported. Pooled long-term data show outcomes do not reliably deteriorate, and a meaningful share of people improve [3]. The real long-term threat is physical: schizophrenia is linked to about 14.5 years of life lost, driven mostly by preventable cardiovascular disease [4][5]. That is the part that demands active screening, not resignation.
 
-- **Does everyone need medication forever?** — Not necessarily, and it is a decision to make with a clinician, never alone. Some people maintain recovery on low doses, a minority sustain it off medication, and others relapse quickly without it. Because symptoms fade for most and long-term outcomes are not fixed [3], the aim is the lowest effective plan for that individual, reviewed over time, and never treated as a test of willpower.
+- **Does everyone need medication forever?**, Not necessarily, and it is a decision to make with a clinician, never alone. Some people maintain recovery on low doses, a minority sustain it off medication, and others relapse quickly without it. Because symptoms fade for most and long-term outcomes are not fixed [3], the aim is the lowest effective plan for that individual, reviewed over time, and never treated as a test of willpower.
 
-**[CRISIS] In crisis right now?** — If you or someone you know is in immediate danger, call your local emergency number. In the US, call or text 988 for the Suicide & Crisis Lifeline. Psychage's crisis resources are always one tap away.
+**[CRISIS] In crisis right now?**, If you or someone you know is in immediate danger, call your local emergency number. In the US, call or text 988 for the Suicide & Crisis Lifeline. Psychage's crisis resources are always one tap away.
 
-**→ Back to the schizophrenia guide** (/preview/conditions/schizophrenia) — The five-part guide in one place.
+**→ Back to the schizophrenia guide** (/preview/conditions/schizophrenia), The five-part guide in one place.
 
 
 ---

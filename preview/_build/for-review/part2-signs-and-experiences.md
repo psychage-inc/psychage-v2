@@ -10,7 +10,7 @@
 
 > I was simply sectioned again, detached from my real self, observing what was being done to me in a third-person perspective. ... My thoughts, my emotions, and my actions, none of them belong to me any more.
 >
-> — Kean C, 2009 (Kean C. Silencing the self: schizophrenia as a self-disturbance. Schizophrenia Bulletin. 2009. [1])
+>, Kean C, 2009 (Kean C. Silencing the self: schizophrenia as a self-disturbance. Schizophrenia Bulletin. 2009. [1])
 
 ### The symptoms you already know
 
@@ -50,17 +50,17 @@ One more thing the single word 'schizophrenia' hides: the people it names may ha
 
 **FAQ / glossary:**
 
-- **Positive, negative, cognitive, what do those words mean?** — Positive symptoms are experiences added on: hallucinations and delusions. Negative symptoms are capacities taken away: drive, emotional expression, pleasure, speech, and sociability. Cognitive symptoms are changes in the mental machinery, memory, processing speed, and planning. All three belong to the condition; only the first tends to reach the screen.
+- **Positive, negative, cognitive, what do those words mean?**, Positive symptoms are experiences added on: hallucinations and delusions. Negative symptoms are capacities taken away: drive, emotional expression, pleasure, speech, and sociability. Cognitive symptoms are changes in the mental machinery, memory, processing speed, and planning. All three belong to the condition; only the first tends to reach the screen.
 
-- **If the voices aren't the worst part, why is so much attention on them?** — Because they are the most visible, and the most alarming to people watching from outside, they dominate the public story and much of the clinical conversation. But visibility is not the same as importance. The negative and cognitive symptoms that shape daily life draw far less attention, even though they predict how a life goes more strongly [7].
+- **If the voices aren't the worst part, why is so much attention on them?**, Because they are the most visible, and the most alarming to people watching from outside, they dominate the public story and much of the clinical conversation. But visibility is not the same as importance. The negative and cognitive symptoms that shape daily life draw far less attention, even though they predict how a life goes more strongly [7].
 
-- **Does everyone with schizophrenia hear voices?** — No. Auditory hallucinations are common, roughly 60-80%, but not universal, and many people who hallucinate experience more than one sense at once [11]. Some people carry the diagnosis with delusions or disorganized thinking and few voices, or none.
+- **Does everyone with schizophrenia hear voices?**, No. Auditory hallucinations are common, roughly 60-80%, but not universal, and many people who hallucinate experience more than one sense at once [11]. Some people carry the diagnosis with delusions or disorganized thinking and few voices, or none.
 
-- **Can you see it coming?** — Sometimes, but usually only in hindsight. The prodrome, the gradual change before a first episode, is real, and clinicians can identify an at-risk state. Even so, only about a quarter of those flagged go on to psychosis within three years, so the signs are meaningful without being a verdict [9].
+- **Can you see it coming?**, Sometimes, but usually only in hindsight. The prodrome, the gradual change before a first episode, is real, and clinicians can identify an at-risk state. Even so, only about a quarter of those flagged go on to psychosis within three years, so the signs are meaningful without being a verdict [9].
 
-**[CRISIS] In crisis right now?** — If you or someone you know is in immediate danger, call your local emergency number. In the US, call or text 988 for the Suicide & Crisis Lifeline. Psychage's crisis resources are always one tap away.
+**[CRISIS] In crisis right now?**, If you or someone you know is in immediate danger, call your local emergency number. In the US, call or text 988 for the Suicide & Crisis Lifeline. Psychage's crisis resources are always one tap away.
 
-**→ Continue: Why It Happens** (/preview/conditions/schizophrenia/why-it-happens) — The mechanism, and why the folk model has it backwards.
+**→ Continue: Why It Happens** (/preview/conditions/schizophrenia/why-it-happens), The mechanism, and why the folk model has it backwards.
 
 
 ---

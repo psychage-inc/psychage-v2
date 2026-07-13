@@ -33,6 +33,14 @@ import ResponsiveRoute from './components/mobile/ResponsiveRoute';
 import { useMediaQuery, MOBILE_NARROW_QUERY } from './hooks/useMediaQuery';
 
 // --- LAZY LOADED ROUTES (Code Splitting) ---
+// Preview surface (conditions v2 · schizophrenia). Registered ONLY when VITE_PREVIEW_MODE is
+// 'true'. Because import.meta.env.VITE_PREVIEW_MODE is statically replaced at build time, this
+// ternary's import() lives in a dead branch in production → the whole preview tree is tree-shaken
+// out of the prod bundle and its routes do not exist. Additive and inert when the flag is off.
+const PreviewConditionRoutes =
+    import.meta.env.VITE_PREVIEW_MODE === 'true'
+        ? lazyWithRetry(() => import('./preview/previewRoutes'))
+        : null;
 const LearnPage = lazyWithRetry(() => import('./pages/LearnPage'));
 const BrowseByTopicPage = lazyWithRetry(() => import('./pages/BrowseByTopicPage'));
 // Mobile (≤639px) screen stubs — rendered via ResponsiveRoute, filled in Wave 1.
@@ -271,6 +279,10 @@ const App: React.FC = () => {
                                             <Route path="/conditions" element={<PageTransition><RouteErrorBoundary><ConditionsIndexPage /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/conditions/:slug/articles" element={<PageTransition><RouteErrorBoundary><ConditionArticlesPage /></RouteErrorBoundary></PageTransition>} />
                                             <Route path="/conditions/:slug" element={<PageTransition><RouteErrorBoundary><ConditionDetailPage /></RouteErrorBoundary></PageTransition>} />
+                                            {/* Preview surface — env-gated, token-gated, noindex. Absent from production builds. */}
+                                            {PreviewConditionRoutes && (
+                                                <Route path="/preview/conditions/schizophrenia/*" element={<PageTransition><RouteErrorBoundary><PreviewConditionRoutes /></RouteErrorBoundary></PageTransition>} />
+                                            )}
                                             <Route path="/watch/:id" element={<PageTransition><VideoDetail /></PageTransition>} />
                                             {/* Provider Directory V2 */}
                                             <Route path="/providers" element={<PageTransition><RouteErrorBoundary><ResponsiveRoute mobile={<MobileProviders />} desktop={<ProvidersLandingPage />} /></RouteErrorBoundary></PageTransition>} />

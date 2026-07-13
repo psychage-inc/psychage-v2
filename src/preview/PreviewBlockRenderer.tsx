@@ -4,7 +4,6 @@ import React from 'react';
 import {
     ArticleCallout,
     ComparisonTable,
-    StatCard,
     ArticleAccordion,
     ArticleTabs,
     QuoteBlock,
@@ -12,9 +11,11 @@ import {
     ProgressSteps,
     BeforeAfter,
     MythVsFactBlock,
-    RelatedToolsBlock,
+    ArticleChart,
     DiagramBlock,
 } from '@/components/article/blocks';
+import { PreviewStatGrid } from './PreviewStatGrid';
+import { MermaidBlock } from './MermaidBlock';
 import type { PreviewBlock } from './previewContent';
 
 /** Render inline [n] citation markers as superscript links to the reference list. */
@@ -82,7 +83,14 @@ export function PreviewBlockRenderer({ block }: { block: PreviewBlock }) {
             );
 
         case 'StatCard':
-            return <StatCard title={block.title as string} stats={block.stats as never} />;
+        case 'Stats':
+            return (
+                <PreviewStatGrid
+                    title={block.title as string}
+                    stats={block.stats as never}
+                    source={block.source as string}
+                />
+            );
 
         case 'MythVsFactBlock':
             return (
@@ -113,12 +121,13 @@ export function PreviewBlockRenderer({ block }: { block: PreviewBlock }) {
         case 'ArticleTabs':
             return <ArticleTabs tabs={block.tabs as never} />;
 
-        case 'HighlightBox':
-            return (
-                <HighlightBox variant={(block.variant as never) || 'emphasis'}>
-                    {withCitations((block.children as string) || '')}
-                </HighlightBox>
-            );
+        case 'HighlightBox': {
+            // Coerce to a valid HighlightBox variant; anything else (e.g. "default") would crash it.
+            const hv = ['stat', 'quote', 'emphasis'].includes(block.variant as string)
+                ? (block.variant as never)
+                : ('emphasis' as never);
+            return <HighlightBox variant={hv}>{withCitations((block.children as string) || '')}</HighlightBox>;
+        }
 
         case 'ProgressSteps':
             return <ProgressSteps steps={block.steps as never} />;
@@ -146,9 +155,39 @@ export function PreviewBlockRenderer({ block }: { block: PreviewBlock }) {
                 </figure>
             );
 
-        case 'RelatedToolsBlock':
-            return <RelatedToolsBlock tools={block.tools as never} />;
+        case 'Chart':
+        case 'ArticleChart':
+            return (
+                <figure className="not-prose my-9">
+                    <ArticleChart
+                        type={(block.chartType as never) || 'bar'}
+                        title={block.title as string}
+                        description={block.description as string}
+                        data={block.data as never}
+                        source={block.source as string}
+                    />
+                    {block.a11y_summary ? (
+                        <figcaption className="sr-only">{block.a11y_summary as string}</figcaption>
+                    ) : null}
+                    {block.caption ? (
+                        <figcaption className="mt-2 text-sm italic text-text-tertiary text-center">
+                            {block.caption as string}
+                        </figcaption>
+                    ) : null}
+                </figure>
+            );
 
+        case 'Mermaid':
+            return (
+                <MermaidBlock
+                    diagram={block.diagram as string}
+                    a11y_summary={block.a11y_summary as string}
+                    caption={block.caption as string}
+                    title={block.title as string}
+                />
+            );
+
+        // RelatedToolsBlock intentionally dropped in iteration 2 (replaced by Prev/Next page nav).
         default:
             // Unknown block type, render nothing rather than crash.
             return null;

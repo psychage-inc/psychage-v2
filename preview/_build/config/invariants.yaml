@@ -15,9 +15,9 @@ invariants:
     rule: Person-first throughout. Banned, "schizophrenics", "suffers from", "afflicted with", "high-functioning" and the full banned.txt list.
     gate: L1 deterministic (banned scan)
   - id: INV3
-    name: reviewer-credit-verbatim
-    rule: Exact string "Reviewed by Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology." present, never abbreviated or ellipsized.
-    gate: L1 deterministic
+    name: reviewer-credit-removed
+    rule: "ITERATION 2 (user directive): the reviewer credit line is REMOVED everywhere. The gate now asserts the string 'Dr. Lena Dobson' is ABSENT from every part."
+    gate: L1 deterministic (absence check)
   - id: INV4
     name: one-onward-path
     rule: Exactly one SIGNPOST / onward path per part (one RelatedToolsBlock or explicit next-part link).

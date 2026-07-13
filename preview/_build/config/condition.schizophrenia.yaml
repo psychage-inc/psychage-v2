@@ -7,7 +7,7 @@ condition:
   crisis_flag: true
   language_policy: person-first
   practicalExercise: absent # CHRONIC carries none (build plan §8)
-  reviewer_credit_line: "Reviewed by Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology."  # exact string; never abbreviated
+  reviewer_credit_line: ""  # ITERATION 2: reviewer credit line REMOVED everywhere (user directive)
   review_mode: 5-full       # build plan §5, all five parts to full clinician review
 
 parts:
@@ -15,8 +15,8 @@ parts:
     slug: understanding-schizophrenia
     title: Understanding Schizophrenia
     form: F-BOUNDARY
-    word_floor: 1300
-    word_ceiling: 1500
+    word_floor: 2000
+    word_ceiling: 2900
     claims_min: 9
     carries_summary_in_article: true   # the ONLY part that does (build plan §8/§12)
     scene: false
@@ -25,8 +25,8 @@ parts:
     slug: signs-and-experiences
     title: Signs and Experiences
     form: F-PORTRAIT
-    word_floor: 1300
-    word_ceiling: 1500
+    word_floor: 2000
+    word_ceiling: 2900
     claims_min: 9
     carries_summary_in_article: false
     scene: true                        # QuoteBlock, verbatim published first-person or third-person fallback
@@ -34,8 +34,8 @@ parts:
     slug: why-it-happens
     title: Why It Happens
     form: F-CAUSAL
-    word_floor: 1300
-    word_ceiling: 1600
+    word_floor: 2000
+    word_ceiling: 2900
     claims_min: 10
     carries_summary_in_article: false
     scene: false                       # omits SCENE, P2 carries it
@@ -45,8 +45,8 @@ parts:
     slug: what-helps
     title: What Helps
     form: F-PRACTICE
-    word_floor: 1300
-    word_ceiling: 1500
+    word_floor: 2000
+    word_ceiling: 2900
     claims_min: 9
     carries_summary_in_article: false
     scene: false
@@ -55,8 +55,8 @@ parts:
     slug: living-with-it
     title: Living With It
     form: F-LIFE
-    word_floor: 1300
-    word_ceiling: 1500
+    word_floor: 2000
+    word_ceiling: 2900
     claims_min: 9
     carries_summary_in_article: false
     scene: true                        # QuoteBlock, verbatim published first-person or third-person fallback

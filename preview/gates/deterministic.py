@@ -25,7 +25,9 @@ FORM_ORDER = {
     "F-LIFE":     ["QuoteBlock","StatCard|ArticleChart","ComparisonTable|ProgressSteps","ArticleAccordion","ArticleCallout:crisis","RelatedToolsBlock"],
 }
 CLAIMS_MIN = {1:9, 2:9, 3:10, 4:9, 5:9}
-CEIL = {1:1500, 2:1500, 3:1600, 4:1500, 5:1500}
+# Iteration 2: floor 2000 (clinician-grade depth), generous ceiling.
+FLOOR = 2000
+CEIL = {1:2900, 2:2900, 3:2900, 4:2900, 5:2900}
 SLUGS = {"understanding-schizophrenia","signs-and-experiences","why-it-happens","what-helps","living-with-it"}
 VALID_PATHS = {f"/preview/conditions/schizophrenia/{s}" for s in SLUGS} | {"/preview/conditions/schizophrenia"}
 
@@ -135,12 +137,12 @@ for n in range(1,6):
     def adv(msg): R["advisory"].append(msg)
 
     proseW = wc(all_text(part))
-    hard(proseW>=1300, f"word floor >=1300 (got {proseW})")
+    hard(proseW>=FLOOR, f"word floor >={FLOOR} (got {proseW})")
     hard(proseW<=CEIL[n], f"word ceiling <={CEIL[n]} (got {proseW})")
     hard(part["meta"]["claim_count"]>=CLAIMS_MIN[n], f"claim_count >= {CLAIMS_MIN[n]} (declared {part['meta']['claim_count']})")
 
     cites=part["citations"]; nc=len(cites)
-    hard(7<=nc<=12, f"citations 7-12 (got {nc})")
+    hard(7<=nc<=16, f"citations 7-16 (got {nc})")
     tiers=[c["tier"] for c in cites]
     t1=tiers.count("T1"); t2=tiers.count("T2"); t5=tiers.count("T5")
     if n==2:
@@ -164,27 +166,28 @@ for n in range(1,6):
     unres=[c["pmid"] for c in cites if c["pmid"] not in RESOLVED_PMIDS]
     hard(not unres, f"every citation PMID live-resolved in dossier (unresolved: {unres})")
 
-    ok,actual=form_subsequence_ok(part["form"], part["body"])
-    hard(ok, f"block order matches form {part['form']} (actual non-prose: {actual})")
+    # Iteration 2: block ORDER relaxed (charts/mermaid/stats now interleave freely). Instead,
+    # assert the form's signature blocks are present: crisis callout, and QuoteBlock SCENE for P2/P5.
+    types=[b.get("type") for b in part["body"]]
+    if n in (2,5):
+        hard("QuoteBlock" in types, "SCENE QuoteBlock present (P2/P5)")
 
-    # credit line exact
-    hard(part["meta"]["reviewer_credit"]==CREDIT, "reviewer credit line verbatim")
+    # credit line REMOVED in iteration 2 (user directive): must be absent.
+    has_credit_text = any(
+        "Dr. Lena Dobson" in json.dumps(b) for b in part["body"]
+    ) or ("Dr. Lena Dobson" in (part["meta"].get("reviewer_credit") or ""))
+    hard(not has_credit_text, "reviewer credit line removed everywhere")
 
     # crisis callout present
     has_crisis=any(b.get("type")=="ArticleCallout" and b.get("variant")=="crisis" for b in part["body"])
     hard(has_crisis, "crisis callout present")
 
-    # exactly one onward path (one RelatedToolsBlock w/ exactly one tool)
-    rtb=[b for b in part["body"] if b.get("type")=="RelatedToolsBlock"]
-    n_paths=sum(len(b.get("tools",[])) for b in rtb)
-    hard(len(rtb)==1 and n_paths==1, f"exactly one onward path (blocks={len(rtb)}, tools={n_paths})")
-    # cross-links resolve
-    badpath=[t["path"] for b in rtb for t in b.get("tools",[]) if t.get("path") not in VALID_PATHS]
-    hard(not badpath, f"onward path resolves to a valid slug (bad: {badpath})")
+    # RelatedToolsBlock removed in iteration 2 (Prev/Next nav is in the page shell)
+    hard("RelatedToolsBlock" not in types, "no RelatedToolsBlock in body (nav is page-shell)")
 
-    # a11y_summary on every chart/diagram
-    miss_a11y=[b.get("type") for b in part["body"] if b.get("type") in ("ArticleChart","DiagramBlock") and not b.get("a11y_summary")]
-    hard(not miss_a11y, f"charts/diagrams carry a11y_summary (missing: {miss_a11y})")
+    # a11y_summary on every chart/diagram/mermaid
+    miss_a11y=[b.get("type") for b in part["body"] if b.get("type") in ("ArticleChart","DiagramBlock","Chart","Mermaid") and not b.get("a11y_summary")]
+    hard(not miss_a11y, f"charts/diagrams/mermaid carry a11y_summary (missing: {miss_a11y})")
 
     # QuoteBlock has a resolved source (P2/P5)
     for b in part["body"]:

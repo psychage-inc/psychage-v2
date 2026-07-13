@@ -1,0 +1,79 @@
+// Preview-only Mermaid diagram block. Dynamic-imports `mermaid` (so it is tree-shaken out of the
+// production bundle along with the rest of the preview tree). Auto-layout fixes the cramped,
+// text-overflowing fixed-size SVG DiagramBlock. CSP-safe: mermaid runs inline JS/CSS, no external
+// fetch. a11y_summary rendered sr-only; caption visible. Falls back to the a11y text on error.
+import React, { useEffect, useRef, useState } from 'react';
+
+let mermaidReady: Promise<typeof import('mermaid').default> | null = null;
+function loadMermaid() {
+    if (!mermaidReady) {
+        mermaidReady = import('mermaid').then((m) => {
+            const mermaid = m.default;
+            mermaid.initialize({
+                startOnLoad: false,
+                securityLevel: 'strict',
+                theme: 'base',
+                fontFamily: 'Satoshi, system-ui, sans-serif',
+                themeVariables: {
+                    primaryColor: '#E6F5F3',
+                    primaryBorderColor: '#158A7D',
+                    primaryTextColor: '#1b1922',
+                    lineColor: '#57534e',
+                    fontSize: '15px',
+                },
+                flowchart: { htmlLabels: true, curve: 'basis', useMaxWidth: true, padding: 12 },
+            });
+            return mermaid;
+        });
+    }
+    return mermaidReady;
+}
+
+let idCounter = 0;
+
+export function MermaidBlock({
+    diagram,
+    a11y_summary,
+    caption,
+    title,
+}: {
+    diagram: string;
+    a11y_summary?: string;
+    caption?: string;
+    title?: string;
+}) {
+    const ref = useRef<HTMLDivElement>(null);
+    const [error, setError] = useState(false);
+
+    useEffect(() => {
+        let cancelled = false;
+        idCounter += 1;
+        const id = `pv-mermaid-${idCounter}`;
+        loadMermaid()
+            .then((mermaid) => mermaid.render(id, diagram))
+            .then(({ svg }) => {
+                if (!cancelled && ref.current) ref.current.innerHTML = svg;
+            })
+            .catch(() => {
+                if (!cancelled) setError(true);
+            });
+        return () => {
+            cancelled = true;
+        };
+    }, [diagram]);
+
+    return (
+        <figure className="not-prose my-9 rounded-2xl border border-border bg-surface p-6">
+            {title && <figcaption className="font-display text-base font-semibold text-text-primary mb-4">{title}</figcaption>}
+            <div className="pv-scroll-x flex justify-center">
+                {error ? (
+                    <p className="text-sm text-text-secondary">{a11y_summary || 'Diagram unavailable.'}</p>
+                ) : (
+                    <div ref={ref} className="mermaid-mount w-full" role="img" aria-label={a11y_summary || title || 'diagram'} />
+                )}
+            </div>
+            {a11y_summary && <figcaption className="sr-only">{a11y_summary}</figcaption>}
+            {caption && <figcaption className="mt-3 text-sm italic text-text-tertiary text-center">{caption}</figcaption>}
+        </figure>
+    );
+}

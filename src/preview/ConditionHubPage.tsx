@@ -7,12 +7,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import SEO from '@/components/SEO';
-import { StatCard } from '@/components/article/blocks';
+import { PreviewStatGrid } from './PreviewStatGrid';
 import { PARTS, CONDITION, partPath } from './previewContent';
+import './preview.css';
 
 export default function ConditionHubPage() {
     return (
-        <div className="min-h-screen bg-background transition-colors duration-300">
+        <div className="preview-surface min-h-screen bg-background transition-colors duration-300">
             <SEO
                 title="Schizophrenia (preview) | Psychage"
                 description={CONDITION.promise}
@@ -46,7 +47,7 @@ export default function ConditionHubPage() {
             <main className="container mx-auto max-w-content px-6 pb-24">
                 {/* Three inherited StatCards */}
                 <div className="mb-16">
-                    <StatCard stats={CONDITION.hubStats as never} />
+                    <PreviewStatGrid stats={CONDITION.hubStats as never} />
                 </div>
 
                 {/* The five-part rail, shape, not completion */}
@@ -84,11 +85,6 @@ export default function ConditionHubPage() {
                         Start with Part 1 <ArrowRight size={16} />
                     </Link>
                 </div>
-
-                {/* Full credit line */}
-                <p className="mt-16 text-sm italic text-text-tertiary border-t border-border pt-8">
-                    {CONDITION.reviewerCredit}
-                </p>
             </main>
         </div>
     );

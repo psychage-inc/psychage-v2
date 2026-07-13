@@ -5,6 +5,38 @@ Autonomous build. Branch `preview/conditions-v2-schizophrenia`. Never touched `m
 
 ---
 
+## ITERATION 2 — depth expansion + UI overhaul (latest)
+
+On live review the content read thin and the UI had bugs. This pass fixed both. All changes are preview-only; production untouched; still gated + isolated (flag-off build re-verified: no `/preview` route, content, `previewRoutes` chunk, or `mermaid` chunk in prod).
+
+**Content — every article expanded to ≥2000 words, real clinical depth (was 1316–1524):**
+
+| Part | words | claims | citations | T1 | T1+T2 | charts | mermaid |
+|---|---|---|---|---|---|---|---|
+| 1 Understanding | 2377 | 16 | 13 | 77% | 85% | 1 | 1 |
+| 2 Signs & Experiences | 2180 | 14 | 14 | 29%* | 64% | 1 | 1 |
+| 3 Why It Happens | 2393 | 17 | 14 | 64% | 100% | 1 | 2 |
+| 4 What Helps | 2142 | 15 | 12 | 83% | 92% | 1 | 1 |
+| 5 Living With It | 2566 | 28 | 14 | 71% | 79% | 2 | 1 |
+
+Expansion added only real, dossier-sourced material (more of the 72 live-resolved sources' licensed numbers + deeper mechanism/clinical exposition). No invented numbers. L1 + L2/L3 re-run and PASS; the L2 padding probe confirmed the added length is substance (17–28 cited claims/part), not filler. `*` P2 T1-alone stays the documented phenomenology exception (T1+T2 met).
+
+**Removed / changed per user directive:**
+- **Reviewer credit line removed everywhere** (rendered surface + data + gate now asserts "Dr. Lena Dobson" is ABSENT). The old verbatim-credit invariant is retired.
+- **RelatedTools removed**; replaced by **Prev / Next / Hub buttons** on every part (gate asserts no RelatedToolsBlock in body).
+
+**UI fixes (all preview-scoped, `src/preview/preview.css` under a `.preview-surface` wrapper):**
+- **StatCard bug fixed** — new `PreviewStatGrid` renders values verbatim, so `0.13-0.18` shows correctly (was `0`, a count-up rounding bug) and `15.2 / 100,000` no longer overflows.
+- **Cramped SVG flowchart replaced by Mermaid** (`mermaid` dep added, dynamic-imported → preview-only). Auto-layout; no clipped text.
+- **Real readable recharts charts** (continuum %, cognitive effect sizes, relapse 27/64, mortality causes, recovery 13.5/38, employment 55/28) — comparable data only; P3 environmental-OR chart carries the "different designs, not comparable" caption.
+- **Deeper-red, heavier, larger callouts**; **bigger body text (19.2px) + higher-contrast reading color** (`#26232b`, not teal).
+
+**Playwright UI verification (headless Chromium) — PASS:** all 5 parts + hub render; **zero real console/page errors**; **zero horizontal overflow**; charts + mermaid render on every part; Prev/Next nav present and navigates; credit line absent; body font 19.2px; Fraunces + Satoshi loaded; deep-red bold callouts. Screenshots captured. (One bug caught + fixed mid-verification: a `HighlightBox variant="default"` crashed P3; content fixed + renderer now coerces invalid variants.)
+
+---
+
+---
+
 ## 1. The one link (for Dr. Lena Dobson)
 
 - **Stable preview URL (branch alias, always the latest build of this branch):**

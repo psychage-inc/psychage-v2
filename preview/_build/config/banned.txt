@@ -1,0 +1,58 @@
+# Banned-word list. Case-insensitive whole-word match unless noted.
+# PROVISIONAL: the authoritative §10 list (incl. the full "platform list") lives in the v2 doc,
+# unavailable to this run. This is reconstructed from the build plan's explicit callouts +
+# standard clinical style. Flagged incomplete in RUN_REPORT.md.
+#
+# --- reading-gamification (build plan §6/§13, banned outright) ---
+streak
+streaks
+score
+scores
+progress bar
+badge
+badges
+level up
+levels
+reward
+rewards
+gamif
+leaderboard
+points
+unlock
+#
+# --- person-first violations (build plan §5 + INV2) ---
+schizophrenic
+schizophrenics
+suffers from
+suffering from
+afflicted with
+afflicted by
+victim of schizophrenia
+high-functioning
+low-functioning
+the mentally ill
+crazy
+insane
+psycho
+lunatic
+madman
+madwoman
+#
+# --- prescription-drift phrases (P4 zero-tolerance; also caught by regex) ---
+you should try
+you should take
+take this medication
+i recommend
+we recommend
+start taking
+#
+# --- platform list (PROVISIONAL / INCOMPLETE, v2 §10 list unavailable) ---
+# Clinical content must not name specific commercial consumer apps/platforms as advice.
+betterhelp
+talkspace
+cerebral
+headspace
+calm app
+#
+# --- marketing/hedge filler flagged in the design philosophy (soft; L2 padding probe is the real check) ---
+# (kept minimal, the padding probe, not a wordlist, is the anti-filler mechanism)

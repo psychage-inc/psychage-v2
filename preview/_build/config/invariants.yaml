@@ -1,4 +1,4 @@
-# The 8 invariants — the floor every part must clear.
+# The 8 invariants, the floor every part must clear.
 # PROVISIONAL: the authoritative list lives in PSYCHAGE_CONDITIONS_CONTENT_DESIGN_v2.md,
 # which is NOT available to this run. Reconstructed from the build plan's restatements
 # + standard editorial/clinical practice. Every one is flagged in RUN_REPORT.md for Lena/Ryan.
@@ -12,7 +12,7 @@ invariants:
     gate: L1 deterministic
   - id: INV2
     name: person-first-language
-    rule: Person-first throughout. Banned — "schizophrenics", "suffers from", "afflicted with", "high-functioning" and the full banned.txt list.
+    rule: Person-first throughout. Banned, "schizophrenics", "suffers from", "afflicted with", "high-functioning" and the full banned.txt list.
     gate: L1 deterministic (banned scan)
   - id: INV3
     name: reviewer-credit-verbatim
@@ -36,5 +36,5 @@ invariants:
     gate: L1 (render token check) + manual
   - id: INV8
     name: accessibility-floor
-    rule: Measure 60–75ch, 8pt grid, 44×44px targets, prefers-reduced-motion respected.
+    rule: Measure 60-75ch, 8pt grid, 44×44px targets, prefers-reduced-motion respected.
     gate: render surface (reuses .article-prose + real components which satisfy this)

@@ -58,12 +58,12 @@ export const CONDITION = {
     reviewerCredit: 'Reviewed by Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology.',
     // One-line promise beneath the name is pulled from Part 1's thesis.claim (build plan §12).
     promise: PARTS[0].meta.thesis_claim,
-    // Three inherited StatCards — echoes of the three most surprising claims across the guide.
+    // Three inherited StatCards, echoes of the three most surprising claims across the guide.
     // (Attributed to their source study + part; the hub holds no prose of its own.)
     hubStats: [
-        { value: '~0.7', suffix: '%', label: 'lifetime risk of ever developing schizophrenia — far below the ~6% who ever have a psychotic experience', source: 'Saha 2005 · Part 1' },
-        { value: '287', suffix: '', label: 'genomic loci carry risk — there is no single "schizophrenia gene"', source: 'Trubetskoy 2022 · Part 3' },
-        { value: '14.5', suffix: ' yrs', label: 'of life lost on average, driven mostly by preventable cardiovascular disease — not suicide alone', source: 'Hjorthøj 2017 · Part 5' },
+        { value: '~0.7', suffix: '%', label: 'lifetime risk of ever developing schizophrenia, far below the ~6% who ever have a psychotic experience', source: 'Saha 2005 · Part 1' },
+        { value: '287', suffix: '', label: 'genomic loci carry risk, there is no single "schizophrenia gene"', source: 'Trubetskoy 2022 · Part 3' },
+        { value: '14.5', suffix: ' yrs', label: 'of life lost on average, driven mostly by preventable cardiovascular disease, not suicide alone', source: 'Hjorthøj 2017 · Part 5' },
     ],
 };
 

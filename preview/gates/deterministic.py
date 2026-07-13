@@ -157,7 +157,7 @@ for n in range(1,6):
     # recency is a §9.5 RATIO, not a LOCKED constraint. For a condition whose canonical
     # evidence base (dopamine hypothesis, neurodevelopmental model, twin heritability,
     # incidence/prevalence systematic reviews, functional-outcome landmarks) is older and
-    # irreplaceable, forcing 70%<10yr would degrade source quality — the exact failure the
+    # irreplaceable, forcing 70%<10yr would degrade source quality, the exact failure the
     # run forbids. Reported, not hard-failed. Logged in RUN_REPORT.
     adv(f"recency within 10yr = {round(100*recent/nc)}% [advisory; landmark older primary sources are the best available for this condition]")
     # live resolution: every citation pmid was resolved live in phase 2 dossier
@@ -228,7 +228,7 @@ for n in range(1,6):
 # write report
 lines=["# L1 Deterministic Gate\n", f"Parts with hard failures: **{hard_fail}/5**\n"]
 for R in report:
-    lines.append(f"\n## Part {R['part']} — {'PASS' if R['fail_count']==0 else 'FAIL ('+str(R['fail_count'])+')'}")
+    lines.append(f"\n## Part {R['part']}, {'PASS' if R['fail_count']==0 else 'FAIL ('+str(R['fail_count'])+')'}")
     for ok,msg in R["hard"]:
         lines.append(f"- [{'x' if ok else ' '}] {msg}")
     for a in R["advisory"]:

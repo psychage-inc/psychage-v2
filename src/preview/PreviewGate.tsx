@@ -1,6 +1,6 @@
 // Layer-2 token gate for the preview surface. A visitor arriving with ?key=<token> matching
 // VITE_PREVIEW_ACCESS_TOKEN is granted access, and the token is stored in a session cookie so
-// the query string is not needed again. Without it, a bare access screen shows — no content,
+// the query string is not needed again. Without it, a bare access screen shows, no content,
 // no titles, no leakage of what is behind it. Constant-time compare.
 //
 // Honest caveat: a VITE_-exposed token is readable inside the preview bundle, so this is weak on

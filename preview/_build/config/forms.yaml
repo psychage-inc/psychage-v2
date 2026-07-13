@@ -8,46 +8,46 @@ source: build-plan-§2
 forms:
   F-BOUNDARY:   # P1
     order:
-      - ComparisonTable          # differentials 3–6
+      - ComparisonTable          # differentials 3-6
       - ArticleCallout:info
-      - ArticleChart|StatCard     # WEIGHT — incidence/prevalence/onset (7)
+      - ArticleChart|StatCard     # WEIGHT, incidence/prevalence/onset (7)
       - MythVsFactBlock           # split-personality correction (8)
       - ArticleAccordion          # glossary (9)
       - ArticleCallout:crisis
       - RelatedToolsBlock
   F-PORTRAIT:   # P2
     order:
-      - QuoteBlock                # SCENE — verbatim published first-person, or third-person body fallback
+      - QuoteBlock                # SCENE, verbatim published first-person, or third-person body fallback
       - ArticleTabs|BeforeAfter   # CONTRAST one afternoon two readings (5)
       - HighlightBox              # TENSION / the_risk (6)
       - MythVsFactBlock           # ×2 (auditory-only myth; insight-absent myth)
       - MythVsFactBlock
       - ArticleAccordion
-      - ArticleCallout:crisis     # INV1 — crisis help on every part of a crisis_flag condition (added vs build-plan §2)
+      - ArticleCallout:crisis     # INV1, crisis help on every part of a crisis_flag condition (added vs build-plan §2)
       - RelatedToolsBlock
   F-CAUSAL:     # P3
     order:
       - ProgressSteps             # pruning → dopamine → glutamate → environment
       - DiagramBlock              # pathway
-      - ArticleChart              # HAZARD 2 — factor-weighting; ships with axis-note OR reallocated to a 2nd DiagramBlock
+      - ArticleChart              # HAZARD 2, factor-weighting; ships with axis-note OR reallocated to a 2nd DiagramBlock
       - HighlightBox              # the honest limit (9)
       - MythVsFactBlock           # ×2 (split-mind; schizophrenogenic mother)
       - MythVsFactBlock
       - ArticleAccordion
-      - ArticleCallout:crisis     # INV1 — crisis help on every part (added vs build-plan §2)
+      - ArticleCallout:crisis     # INV1, crisis help on every part (added vs build-plan §2)
       - RelatedToolsBlock
   F-PRACTICE:   # P4
     order:
       - StatCard|ArticleChart     # DUP predicts outcome (1)
-      - ComparisonTable           # antipsychotic comparative efficacy (2–6)
-      - ProgressSteps             # care pathway (2–6)
+      - ComparisonTable           # antipsychotic comparative efficacy (2-6)
+      - ProgressSteps             # care pathway (2-6)
       - BeforeAfter               # coordinated specialty care vs TAU (7)
       - ArticleCallout:crisis
       - RelatedToolsBlock
   F-LIFE:       # P5
     order:
-      - QuoteBlock                # SCENE — verbatim published first-person, or third-person body fallback
-      - StatCard|ArticleChart     # outcome/employment/violence/mortality (2–5)
+      - QuoteBlock                # SCENE, verbatim published first-person, or third-person body fallback
+      - StatCard|ArticleChart     # outcome/employment/violence/mortality (2-5)
       - ComparisonTable|ProgressSteps  # what a carer can do (7)
       - ArticleAccordion          # FAQ (8)
       - ArticleCallout:crisis

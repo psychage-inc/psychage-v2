@@ -150,7 +150,7 @@ export function PreviewBlockRenderer({ block }: { block: PreviewBlock }) {
             return <RelatedToolsBlock tools={block.tools as never} />;
 
         default:
-            // Unknown block type — render nothing rather than crash.
+            // Unknown block type, render nothing rather than crash.
             return null;
     }
 }

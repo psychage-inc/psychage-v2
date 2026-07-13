@@ -2,28 +2,28 @@
 
 *Part 1 of 5 · F-BOUNDARY · 1407 words (declared) · 12 citations*
 
-**Thesis:** Schizophrenia is not marked off from ordinary life by the presence of hallucinations or strange beliefs — those are common — but by their persistence, conviction, and cost; the diagnostic line is real, yet it is a threshold on a continuum, not a wall.
+**Thesis:** Schizophrenia is not marked off from ordinary life by the presence of hallucinations or strange beliefs, those are common, but by their persistence, conviction, and cost; the diagnostic line is real, yet it is a threshold on a continuum, not a wall.
 
 **The risk:** On the condition where self-diagnosis is most tempting, the reader may read the criteria as a checklist to run against themselves; this part must state the continuum openly while rendering those criteria as a clinician's judgment formed over time, never a self-test, and without pretending the disorder is a wholly separate brain disease.
 
 ---
 
-**Summary:** Psychotic experiences — hearing or believing things other people don't — are surprisingly common, yet schizophrenia itself is not. This opening part draws the real line between the two: not the presence of an unusual experience, but its persistence, conviction, distress, and cost. It also clears away the most common confusion — schizophrenia is not a 'split personality' — and shows why the diagnosis is a clinician's judgment made over time, never something to run against yourself.
+**Summary:** Psychotic experiences, hearing or believing things other people don't, are surprisingly common, yet schizophrenia itself is not. This opening part draws the real line between the two: not the presence of an unusual experience, but its persistence, conviction, distress, and cost. It also clears away the most common confusion, schizophrenia is not a 'split personality', and shows why the diagnosis is a clinician's judgment made over time, never something to run against yourself.
 
 
 ### The line is not where you think
 
-Somewhere between opening this page and reaching the end of this paragraph, you may have already stood where you assumed only other people stand. Roughly 7.2% of the general population reports a psychotic experience — a voice with no speaker in the room, a sudden certainty that events have arranged themselves around you, a shape at the edge of vision that no one else can see. Each year, about 2.5% of people have one of these experiences for the first time [1]. Across eighteen countries and more than thirty-one thousand adults, 5.8% remembered at least one such moment in their lifetime, and hearing things — a lifetime rate of 5.2% — was far more common than believing them, at 1.3% [2]. This is not rare weather at the edge of the human mind. It is weather that moves through most minds and out again.
+Somewhere between opening this page and reaching the end of this paragraph, you may have already stood where you assumed only other people stand. Roughly 7.2% of the general population reports a psychotic experience, a voice with no speaker in the room, a sudden certainty that events have arranged themselves around you, a shape at the edge of vision that no one else can see. Each year, about 2.5% of people have one of these experiences for the first time [1]. Across eighteen countries and more than thirty-one thousand adults, 5.8% remembered at least one such moment in their lifetime, and hearing things, a lifetime rate of 5.2%, was far more common than believing them, at 1.3% [2]. This is not rare weather at the edge of the human mind. It is weather that moves through most minds and out again.
 
-Schizophrenia, the diagnosis, is not that weather. Fewer than one person in a hundred will ever meet its threshold, and of everyone who reports a psychotic experience, only about 7.4% goes on to develop a psychotic disorder of any kind [1]. Sit with that number for a moment. The experience itself is a weak predictor; the presence of a strange perception, on its own, tells you almost nothing about where a life is heading. Nearly everything the culture has taught you about this condition trains your eye on the symptom — the voice, the belief, the break. The epidemiology asks you to look somewhere else entirely.
+Schizophrenia, the diagnosis, is not that weather. Fewer than one person in a hundred will ever meet its threshold, and of everyone who reports a psychotic experience, only about 7.4% goes on to develop a psychotic disorder of any kind [1]. Sit with that number for a moment. The experience itself is a weak predictor; the presence of a strange perception, on its own, tells you almost nothing about where a life is heading. Nearly everything the culture has taught you about this condition trains your eye on the symptom, the voice, the belief, the break. The epidemiology asks you to look somewhere else entirely.
 
-Here is the truth those numbers point to, and it is worth saying plainly: schizophrenia is not a walled country sealed off from ordinary life. It sits at the far end of a continuum that runs straight through everyday experience — one you may already stand somewhere along. The difference between a passing voice and a diagnosis is not whether the voice happens. It is whether it stays, whether it convinces, whether it wounds, and whether it costs you the life you were building.
+Here is the truth those numbers point to, and it is worth saying plainly: schizophrenia is not a walled country sealed off from ordinary life. It sits at the far end of a continuum that runs straight through everyday experience, one you may already stand somewhere along. The difference between a passing voice and a diagnosis is not whether the voice happens. It is whether it stays, whether it convinces, whether it wounds, and whether it costs you the life you were building.
 
 ### Where clinicians actually draw the line
 
-So where is the line, if not in the symptom itself? Clinicians do not find it in any single sign, and they do not find it in a single sitting. They weigh four things, and they weigh them across time. There is duration — whether the experiences have lasted days or the better part of a year. There is conviction — how completely a belief has closed around someone, sealing itself off from any counter-evidence. There is distress — how much the experience actually hurts. And there is functional cost — how far it has reached into the ordinary machinery of a life: work, study, sleep, the ties to other people, the capacity to look after oneself. None of these is a box to tick. Each is a judgment, formed over weeks of watching and revised as more becomes known. The diagnostic manuals exist so that two clinicians examining the same person tend to arrive at the same place; their categories are built and tested for exactly that kind of agreement [3]. This is why a list you run against yourself at midnight is not a diagnosis. It is a single frame lifted from a film, and the real line is drawn in motion.
+So where is the line, if not in the symptom itself? Clinicians do not find it in any single sign, and they do not find it in a single sitting. They weigh four things, and they weigh them across time. There is duration, whether the experiences have lasted days or the better part of a year. There is conviction, how completely a belief has closed around someone, sealing itself off from any counter-evidence. There is distress, how much the experience actually hurts. And there is functional cost, how far it has reached into the ordinary machinery of a life: work, study, sleep, the ties to other people, the capacity to look after oneself. None of these is a box to tick. Each is a judgment, formed over weeks of watching and revised as more becomes known. The diagnostic manuals exist so that two clinicians examining the same person tend to arrive at the same place; their categories are built and tested for exactly that kind of agreement [3]. This is why a list you run against yourself at midnight is not a diagnosis. It is a single frame lifted from a film, and the real line is drawn in motion.
 
-The line also has neighbors. Several conditions live close enough to schizophrenia that only time, and a trained eye, reliably separate them — and the separation is anything but academic. Which name a person's experience is given changes what treatment follows and what the years ahead are likely to hold.
+The line also has neighbors. Several conditions live close enough to schizophrenia that only time, and a trained eye, reliably separate them, and the separation is anything but academic. Which name a person's experience is given changes what treatment follows and what the years ahead are likely to hold.
 
 **Table: The near neighbors of schizophrenia**
 
@@ -31,54 +31,54 @@ The line also has neighbors. Several conditions live close enough to schizophren
 
 |---|---|---|
 
-| Schizotypal personality disorder | A lifelong trait pattern — eccentric thinking, social unease — rather than a discrete episode that arrives and departs | Lifetime prevalence about 3.9%: a persistent way of being on the spectrum, not an illness with a beginning and an end [4] |
+| Schizotypal personality disorder | A lifelong trait pattern, eccentric thinking, social unease, rather than a discrete episode that arrives and departs | Lifetime prevalence about 3.9%: a persistent way of being on the spectrum, not an illness with a beginning and an end [4] |
 
-| Brief psychotic & schizophreniform disorder | Defined largely by how long symptoms last, not by what they are | The least stable of the psychosis diagnoses — schizophreniform holds in only 0.29 of cases versus 0.90 for schizophrenia, and most are later re-diagnosed as schizophrenia [5] |
+| Brief psychotic & schizophreniform disorder | Defined largely by how long symptoms last, not by what they are | The least stable of the psychosis diagnoses, schizophreniform holds in only 0.29 of cases versus 0.90 for schizophrenia, and most are later re-diagnosed as schizophrenia [5] |
 
-| Substance-induced psychosis | Set off by a drug — but not reliably temporary | 32.2% convert to schizophrenia or bipolar disorder over time, rising to 47.4% after cannabis-induced psychosis [6] |
+| Substance-induced psychosis | Set off by a drug, but not reliably temporary | 32.2% convert to schizophrenia or bipolar disorder over time, rising to 47.4% after cannabis-induced psychosis [6] |
 
-| Schizoaffective disorder & bipolar with psychosis | Sustained mood — deep depression or mania — is the discriminating feature | Diagnostically unstable: 36% are re-diagnosed at a later assessment as the mood picture clarifies [7] |
+| Schizoaffective disorder & bipolar with psychosis | Sustained mood, deep depression or mania, is the discriminating feature | Diagnostically unstable: 36% are re-diagnosed at a later assessment as the mood picture clarifies [7] |
 
 *Telling these apart is clinical work done over time, not a decision the reader can make alone.*
 
-The third row deserves a moment, because it shows how porous these borders really are. A psychosis that begins with a drug is not always a detour that ends when the drug leaves the body. When it follows cannabis, nearly half of these episodes — 47.4% — later resolve into schizophrenia or bipolar disorder [6]. Often the substance did not cause a separate, temporary condition so much as it pulled forward something that was already gathering. The label 'substance-induced' can turn out to be the first name given to a story that has not finished telling itself.
+The third row deserves a moment, because it shows how porous these borders really are. A psychosis that begins with a drug is not always a detour that ends when the drug leaves the body. When it follows cannabis, nearly half of these episodes, 47.4%, later resolve into schizophrenia or bipolar disorder [6]. Often the substance did not cause a separate, temporary condition so much as it pulled forward something that was already gathering. The label 'substance-induced' can turn out to be the first name given to a story that has not finished telling itself.
 
-**[CLINICAL-NOTE] Why none of this is a self-test** — Every distinction in the table above is a clinician's judgment, built across repeated visits and often rewritten as the picture sharpens. Diagnoses on the psychosis spectrum move: the same person may carry three different labels in three years before one holds [5][7]. That movement is not carelessness — it is the honest signature of conditions that disclose themselves slowly. If you recognize something of yourself in these pages, the sound next step is a conversation with a professional, not a private verdict reached alone.
+**[CLINICAL-NOTE] Why none of this is a self-test** — Every distinction in the table above is a clinician's judgment, built across repeated visits and often rewritten as the picture sharpens. Diagnoses on the psychosis spectrum move: the same person may carry three different labels in three years before one holds [5][7]. That movement is not carelessness, it is the honest signature of conditions that disclose themselves slowly. If you recognize something of yourself in these pages, the sound next step is a conversation with a professional, not a private verdict reached alone.
 
-It helps, against all of this, to hold the actual size of the thing in view — how often it truly appears, and when it tends to arrive.
+It helps, against all of this, to hold the actual size of the thing in view, how often it truly appears, and when it tends to arrive.
 
 **Stats: Schizophrenia by the numbers**
 
-- **15.2 / 100,000** — Median annual incidence — new diagnoses per year (McGrath 2004 [8])
+- **15.2 / 100,000** — Median annual incidence, new diagnoses per year (McGrath 2004 [8])
 
-- **~0.7%** — Lifetime morbid risk — the chance of ever developing it (Saha 2005 [9])
+- **~0.7%** — Lifetime morbid risk, the chance of ever developing it (Saha 2005 [9])
 
 - **20.5 yrs** — Peak age at onset (Solmi 2022 [10])
 
 - **1.40** — Male-to-female incidence rate ratio (McGrath 2004 [8])
 
-Read those figures together. New diagnoses arrive at roughly 15.2 per 100,000 people each year [8], and the lifetime chance of ever crossing the threshold sits near 0.7% [9] — real, and far below the 7.2% who merely have an experience [1]. The disorder also tends to arrive young. Onset peaks around 20.5 years of age, squarely inside the stretch of life we spend becoming who we will be [10], which is part of why it can be so disorienting: it interrupts a story mid-sentence. Men are diagnosed somewhat more often than women, at a ratio near 1.40 to 1 [8]. But the old teaching that men fall ill years earlier turns out to be overstated — the pooled sex difference in onset age is only about 1.07 years [11], and the largest recent meta-analysis found no significant difference at all [10].
+Read those figures together. New diagnoses arrive at roughly 15.2 per 100,000 people each year [8], and the lifetime chance of ever crossing the threshold sits near 0.7% [9], real, and far below the 7.2% who merely have an experience [1]. The disorder also tends to arrive young. Onset peaks around 20.5 years of age, squarely inside the stretch of life we spend becoming who we will be [10], which is part of why it can be so disorienting: it interrupts a story mid-sentence. Men are diagnosed somewhat more often than women, at a ratio near 1.40 to 1 [8]. But the old teaching that men fall ill years earlier turns out to be overstated, the pooled sex difference in onset age is only about 1.07 years [11], and the largest recent meta-analysis found no significant difference at all [10].
 
-**Myth:** Schizophrenia means a 'split personality' — two separate people living in one body.
+**Myth:** Schizophrenia means a 'split personality', two separate people living in one body.
 
-**Fact:** That description belongs to dissociative identity disorder, a different condition entirely. When Eugen Bleuler assembled the word 'schizophrenia' more than a century ago, the 'split' he meant was a split among mental functions — thought, feeling, and perception falling out of step with one another — never a split between persons [12].  
+**Fact:** That description belongs to dissociative identity disorder, a different condition entirely. When Eugen Bleuler assembled the word 'schizophrenia' more than a century ago, the 'split' he meant was a split among mental functions, thought, feeling, and perception falling out of step with one another, never a split between persons [12].  
 *(Ashok 2012)*
 
 A handful of words will keep recurring through this series. It is worth fixing their meaning now, because the everyday sense of these words and the clinical one rarely match.
 
 **FAQ / glossary:**
 
-- **psychosis** — A state in which the mind loses part of its grip on shared reality — perceiving what others don't, or believing what the evidence won't support. Psychosis is a feature that appears across many conditions; it is not a diagnosis on its own.
+- **psychosis** — A state in which the mind loses part of its grip on shared reality, perceiving what others don't, or believing what the evidence won't support. Psychosis is a feature that appears across many conditions; it is not a diagnosis on its own.
 
 - **delusion** — A belief held with such conviction that contrary evidence cannot move it, and that falls outside what a person's own culture would endorse. The conviction, not the strangeness of the content, is what marks it.
 
-- **hallucination** — A perception with no source in the world — a voice, an image, a smell that isn't there. Hallucinatory experiences are far more common in the general population than delusional ones, about 5.2% versus 1.3% over a lifetime [2].
+- **hallucination** — A perception with no source in the world, a voice, an image, a smell that isn't there. Hallucinatory experiences are far more common in the general population than delusional ones, about 5.2% versus 1.3% over a lifetime [2].
 
-- **prodrome** — The quiet phase that can precede a first episode — subtle shifts in mood, thinking, and social withdrawal that make sense mainly in hindsight. It may last months, sometimes years.
+- **prodrome** — The quiet phase that can precede a first episode, subtle shifts in mood, thinking, and social withdrawal that make sense mainly in hindsight. It may last months, sometimes years.
 
 - **first-episode** — The first time psychosis crosses into clinical territory. How quickly it is met with care shapes a great deal of what follows.
 
-- **insight** — The degree to which a person recognizes their experiences as part of an illness. Insight rises and falls, and its absence is itself a symptom — not stubbornness or denial.
+- **insight** — The degree to which a person recognizes their experiences as part of an illness. Insight rises and falls, and its absence is itself a symptom, not stubbornness or denial.
 
 **[CRISIS] In crisis right now?** — If you or someone you know is in immediate danger, call your local emergency number. In the US, call or text 988 for the Suicide & Crisis Lifeline. Psychage's crisis resources are always one tap away.
 
@@ -93,13 +93,13 @@ A handful of words will keep recurring through this series. It is worth fixing t
 
 - About 7.2% of the general population reports a psychotic experience, yet only around 7.4% of those people ever develop a psychotic disorder of any kind. [1]
 
-- Across 18 countries, 5.8% of adults recalled a lifetime psychotic experience — hallucinations (5.2%) far outnumbering delusions (1.3%). [2]
+- Across 18 countries, 5.8% of adults recalled a lifetime psychotic experience, hallucinations (5.2%) far outnumbering delusions (1.3%). [2]
 
 - Schizophrenia itself is uncommon: the lifetime risk of ever developing it sits near 0.7%. [9]
 
 - Onset peaks around 20.5 years of age, with no significant difference between men and women. [10]
 
-- Substance-induced psychosis is not always temporary — 32.2% convert to schizophrenia or bipolar disorder, rising to 47.4% after cannabis. [6]
+- Substance-induced psychosis is not always temporary, 32.2% convert to schizophrenia or bipolar disorder, rising to 47.4% after cannabis. [6]
 
 - 'Split personality' describes dissociative identity disorder, not schizophrenia; Bleuler's 'split' meant a split among mental functions, not persons. [12]
 

@@ -45,6 +45,6 @@ resolution:
   endpoint: https://www.ebi.ac.uk/europepmc/webservices/rest/search
   rule: every PMID/DOI hit live; resolved:false => source does not enter the dossier; a load-bearing claim whose only support fails to resolve is DROPPED, never softened to an unsourced sentence.
 
-quote_rule:                     # HAZARD 1 — build plan §3
+quote_rule:                     # HAZARD 1, build plan §3
   applies_to: [P2, P5]
   rule: every QuoteBlock is a verbatim, cited, PUBLISHED first-person account (Schizophrenia Bulletin First Person Account series is canonical). No composite, no illustrative, no paraphrase-as-quote. Unresolvable => block does not ship, SCENE renders as third-person body copy.

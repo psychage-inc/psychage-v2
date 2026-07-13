@@ -3,7 +3,7 @@
 Parts with hard failures: **0/5**
 
 
-## Part 1 — PASS
+## Part 1, PASS
 - [x] word floor >=1300 (got 1499)
 - [x] word ceiling <=1500 (got 1499)
 - [x] claim_count >= 9 (declared 10)
@@ -23,7 +23,7 @@ Parts with hard failures: **0/5**
 - (i) Flesch-Kincaid grade (prose) = 9.5 [advisory; clinical vocabulary raises this above the reconstructed <=8 target]
 - (i) near-equal-length sentence triples: 1 [advisory]
 
-## Part 2 — PASS
+## Part 2, PASS
 - [x] word floor >=1300 (got 1426)
 - [x] word ceiling <=1500 (got 1426)
 - [x] claim_count >= 9 (declared 11)
@@ -44,7 +44,7 @@ Parts with hard failures: **0/5**
 - (i) Flesch-Kincaid grade (prose) = 9.6 [advisory; clinical vocabulary raises this above the reconstructed <=8 target]
 - (i) near-equal-length sentence triples: 2 [advisory]
 
-## Part 3 — PASS
+## Part 3, PASS
 - [x] word floor >=1300 (got 1524)
 - [x] word ceiling <=1600 (got 1524)
 - [x] claim_count >= 10 (declared 13)
@@ -64,7 +64,7 @@ Parts with hard failures: **0/5**
 - (i) Flesch-Kincaid grade (prose) = 9.7 [advisory; clinical vocabulary raises this above the reconstructed <=8 target]
 - (i) near-equal-length sentence triples: 0 [advisory]
 
-## Part 4 — PASS
+## Part 4, PASS
 - [x] word floor >=1300 (got 1405)
 - [x] word ceiling <=1500 (got 1405)
 - [x] claim_count >= 9 (declared 9)
@@ -85,7 +85,7 @@ Parts with hard failures: **0/5**
 - (i) Flesch-Kincaid grade (prose) = 11.0 [advisory; clinical vocabulary raises this above the reconstructed <=8 target]
 - (i) near-equal-length sentence triples: 0 [advisory]
 
-## Part 5 — PASS
+## Part 5, PASS
 - [x] word floor >=1300 (got 1316)
 - [x] word ceiling <=1500 (got 1316)
 - [x] claim_count >= 9 (declared 11)

@@ -75,7 +75,7 @@ export default function ConditionPartPage() {
                         className="mb-8"
                     />
 
-                    {/* Summary — rendered in-article on Part 1 only */}
+                    {/* Summary, rendered in-article on Part 1 only */}
                     {part.enrich.summary && (
                         <p className="text-lg leading-relaxed text-text-secondary border-l-2 border-primary/40 pl-4 mb-8">
                             {part.enrich.summary}
@@ -108,7 +108,7 @@ export default function ConditionPartPage() {
                         </div>
                     )}
 
-                    {/* Body — real prose styling + real PEAF blocks */}
+                    {/* Body, real prose styling + real PEAF blocks */}
                     <div className="article-prose prose prose-lg max-w-none">
                         {part.body.map((block, i) => (
                             <PreviewBlockRenderer key={i} block={block} />

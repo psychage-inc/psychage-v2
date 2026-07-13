@@ -1,6 +1,6 @@
 // Preview-only condition HUB. Thin and composed: poster, name, one-line promise (from Part 1's
 // thesis.claim), three inherited StatCards, the five-part rail, one onward path, and the full
-// credit line. It holds NO prose of its own. The rail communicates SHAPE, not completion — five
+// credit line. It holds NO prose of its own. The rail communicates SHAPE, not completion, five
 // different promises, no progress/checkmarks/streaks (a long-form editorial series index, not a
 // course syllabus). noindex. Mascot absent.
 import React from 'react';
@@ -19,7 +19,7 @@ export default function ConditionHubPage() {
                 robots="noindex, nofollow"
             />
 
-            {/* Poster hero — CSS gradient, no external image (CSP), no mascot */}
+            {/* Poster hero, CSS gradient, no external image (CSP), no mascot */}
             <header className="relative overflow-hidden">
                 <div
                     className="absolute inset-0 -z-10 opacity-90"
@@ -36,7 +36,7 @@ export default function ConditionHubPage() {
                     <h1 className="font-display font-bold text-4xl md:text-6xl text-text-primary leading-[1.05] mb-6 max-w-3xl">
                         {CONDITION.name}
                     </h1>
-                    {/* one-line promise — pulled from Part 1's thesis.claim */}
+                    {/* one-line promise, pulled from Part 1's thesis.claim */}
                     <p className="text-lg md:text-xl text-text-secondary max-w-2xl leading-relaxed">
                         {CONDITION.promise}
                     </p>
@@ -49,7 +49,7 @@ export default function ConditionHubPage() {
                     <StatCard stats={CONDITION.hubStats as never} />
                 </div>
 
-                {/* The five-part rail — shape, not completion */}
+                {/* The five-part rail, shape, not completion */}
                 <h2 className="font-display text-2xl text-text-primary mb-8">The five parts</h2>
                 <ol className="grid gap-4 md:grid-cols-2">
                     {PARTS.map((p) => (

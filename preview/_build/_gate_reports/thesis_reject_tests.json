@@ -3,7 +3,7 @@
   "gate": "five reject tests (generic / summary / support / risk / kind)",
   "model": "haiku (separate, cheaper, adversarial call per build plan)",
   "calibration_bar": "P3 published thesis",
-  "result": "5/5 PASS — no HALT",
+  "result": "5/5 PASS, no HALT",
   "per_part": {
     "P1": "PASS all five",
     "P2": "PASS all five",

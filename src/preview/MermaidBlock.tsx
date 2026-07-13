@@ -13,15 +13,27 @@ function loadMermaid() {
                 startOnLoad: false,
                 securityLevel: 'strict',
                 theme: 'base',
-                fontFamily: 'Satoshi, system-ui, sans-serif',
+                // System font is available immediately, so node-width measurement is correct.
+                // (Using an unloaded webfont here is what caused labels to clip.)
+                fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif',
                 themeVariables: {
                     primaryColor: '#E6F5F3',
                     primaryBorderColor: '#158A7D',
-                    primaryTextColor: '#1b1922',
+                    primaryTextColor: '#141018',
+                    secondaryColor: '#FBF9F4',
+                    tertiaryColor: '#F0FDFA',
                     lineColor: '#57534e',
-                    fontSize: '15px',
+                    fontSize: '16px',
                 },
-                flowchart: { htmlLabels: true, curve: 'basis', useMaxWidth: true, padding: 12 },
+                flowchart: {
+                    htmlLabels: true,
+                    curve: 'basis',
+                    useMaxWidth: true,
+                    padding: 16,
+                    nodeSpacing: 55,
+                    rankSpacing: 55,
+                    wrappingWidth: 220,
+                },
             });
             return mermaid;
         });
@@ -47,16 +59,24 @@ export function MermaidBlock({
 
     useEffect(() => {
         let cancelled = false;
-        idCounter += 1;
-        const id = `pv-mermaid-${idCounter}`;
-        loadMermaid()
-            .then((mermaid) => mermaid.render(id, diagram))
-            .then(({ svg }) => {
+        async function run() {
+            const mermaid = await loadMermaid();
+            // Wait for fonts so text-width measurement (which sizes the node boxes) is correct.
+            try {
+                if (document.fonts?.ready) await document.fonts.ready;
+            } catch {
+                /* no-op */
+            }
+            if (cancelled) return;
+            idCounter += 1;
+            try {
+                const { svg } = await mermaid.render(`pv-mermaid-${idCounter}`, diagram);
                 if (!cancelled && ref.current) ref.current.innerHTML = svg;
-            })
-            .catch(() => {
+            } catch {
                 if (!cancelled) setError(true);
-            });
+            }
+        }
+        run();
         return () => {
             cancelled = true;
         };

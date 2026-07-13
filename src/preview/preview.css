@@ -66,6 +66,26 @@
     line-height: 1.7;
 }
 
+/* --- Mermaid: readable, no clipped labels --- */
+.preview-surface .mermaid-mount svg {
+    max-width: 100%;
+    height: auto;
+}
+/* let node labels wrap and never clip; keep text dark and legible */
+.preview-surface .mermaid-mount .nodeLabel,
+.preview-surface .mermaid-mount .edgeLabel,
+.preview-surface .mermaid-mount foreignObject div,
+.preview-surface .mermaid-mount span.nodeLabel {
+    white-space: normal !important;
+    overflow: visible !important;
+    color: #141018 !important;
+    font-size: 15px !important;
+    line-height: 1.3 !important;
+    font-weight: 500;
+}
+.preview-surface .mermaid-mount foreignObject { overflow: visible !important; }
+.preview-surface .mermaid-mount .edgeLabel { background: #FBF9F4 !important; padding: 1px 4px; }
+
 /* --- No horizontal overflow: any wide block scrolls inside its own box --- */
 .preview-surface .pv-scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .preview-surface table { display: block; overflow-x: auto; max-width: 100%; }

@@ -1,0 +1,333 @@
+{
+  "part_id": 2,
+  "slug": "signs-and-experiences",
+  "title": "Signs and Experiences",
+  "form": "F-PORTRAIT",
+  "meta": {
+    "thesis_claim": "The symptoms that define schizophrenia in the public mind, voices and delusions, are the ones that matter least for how a life actually goes; the negative and cognitive symptoms nobody pictures are what predict whether someone works, studies, and connects.",
+    "the_risk": "Positive symptoms own the public image but are the weakest predictor of functional outcome; the negative and cognitive symptoms nobody pictures carry the weight.",
+    "reviewer_credit": "",
+    "word_count": 2170,
+    "claim_count": 14
+  },
+  "enrich": {
+    "summary": null,
+    "keyFacts": [
+      {
+        "text": "In the largest phenomenological survey of voice-hearing, fewer than half of participants described their voices as straightforwardly heard aloud, and a similar share, 46%, described them as thought-like or mixed instead.",
+        "citationIndex": 2
+      },
+      {
+        "text": "Overall cognitive performance in schizophrenia sits about one standard deviation below healthy peers, a grand mean effect size of g = -1.03, consistent across decades and around the world.",
+        "citationIndex": 5
+      },
+      {
+        "text": "In a landmark review, positive symptoms were not significantly associated with functional outcome in a single one of the studies examined; cognition and negative symptoms carry that weight.",
+        "citationIndex": 7
+      },
+      {
+        "text": "Auditory hallucinations affect roughly 60-80% of people with a schizophrenia-spectrum diagnosis, but about 53% of those who hallucinate do so in more than one sense at once.",
+        "citationIndex": 11
+      },
+      {
+        "text": "Insight is variable rather than absent: in one outpatient sample about half had at least moderately impaired insight and a quarter had severe deficits.",
+        "citationIndex": 12
+      },
+      {
+        "text": "In CATIE, one of the largest schizophrenia trials ever run with 1,447 participants, day-to-day functioning tracked negative symptoms more closely than any other symptom domain.",
+        "citationIndex": 8
+      }
+    ],
+    "sparkMoment": "The symptoms that put schizophrenia in every movie are the ones that matter least for how a life turns out.",
+    "practicalExercise": null
+  },
+  "citations": [
+    {
+      "n": 1,
+      "dossier_id": "P2-kean-silencing-self-fpa",
+      "tier": "T5",
+      "year": 2009,
+      "pmid": "19478239",
+      "doi": "10.1093/schbul/sbp043",
+      "citation_text": "Kean C. Silencing the self: schizophrenia as a self-disturbance. Schizophrenia Bulletin. 2009."
+    },
+    {
+      "n": 2,
+      "dossier_id": "P2-woods-hearing-voices-phenomenology",
+      "tier": "T2",
+      "year": 2015,
+      "pmid": "26360085",
+      "doi": "10.1016/s2215-0366(15)00006-1",
+      "citation_text": "Woods A, et al. Experiences of hearing voices: analysis of a novel phenomenological survey. The Lancet Psychiatry. 2015."
+    },
+    {
+      "n": 3,
+      "dossier_id": "P2-coltheart-delusion-second-factor",
+      "tier": "T3",
+      "year": 2021,
+      "pmid": "33874847",
+      "doi": "10.1080/13546805.2021.1914016",
+      "citation_text": "Coltheart M, et al. Failure of hypothesis evaluation as a factor in delusional belief. Cognitive Neuropsychiatry. 2021."
+    },
+    {
+      "n": 4,
+      "dossier_id": "P2-marder-negative-symptom-domains",
+      "tier": "T3",
+      "year": 2017,
+      "pmid": "28127915",
+      "doi": "10.1002/wps.20385",
+      "citation_text": "Marder SR, et al. The current conceptualization of negative symptoms in schizophrenia. World Psychiatry. 2017."
+    },
+    {
+      "n": 5,
+      "dossier_id": "P2-schaefer-global-cognitive-impairment",
+      "tier": "T1",
+      "year": 2013,
+      "pmid": "23911259",
+      "doi": "10.1016/j.schres.2013.07.009",
+      "citation_text": "Schaefer J, et al. The global cognitive impairment in schizophrenia: consistent over decades and around the world. Schizophrenia Research. 2013."
+    },
+    {
+      "n": 6,
+      "dossier_id": "P2-dickinson-digit-symbol-coding",
+      "tier": "T1",
+      "year": 2007,
+      "pmid": "17485605",
+      "doi": "10.1001/archpsyc.64.5.532",
+      "citation_text": "Dickinson D, et al. Overlooking the obvious: a meta-analytic comparison of digit symbol coding tasks and other cognitive measures in schizophrenia. Archives of General Psychiatry. 2007."
+    },
+    {
+      "n": 7,
+      "dossier_id": "P2-green-1996-functional-consequences",
+      "tier": "T3",
+      "year": 1996,
+      "pmid": "8610818",
+      "doi": "10.1176/ajp.153.3.321",
+      "citation_text": "Green MF. What are the functional consequences of neurocognitive deficits in schizophrenia? The American Journal of Psychiatry. 1996."
+    },
+    {
+      "n": 8,
+      "dossier_id": "P2-rabinowitz-catie-neg-gt-pos",
+      "tier": "T2",
+      "year": 2012,
+      "pmid": "22316568",
+      "doi": "10.1016/j.schres.2012.01.015",
+      "citation_text": "Rabinowitz J, et al. Negative symptoms have greater impact on functioning than positive symptoms in schizophrenia: analysis of CATIE data. Schizophrenia Research. 2012."
+    },
+    {
+      "n": 9,
+      "dossier_id": "P2-salazardepablo-chr-transition",
+      "tier": "T1",
+      "year": 2021,
+      "pmid": "34259821",
+      "doi": "10.1001/jamapsychiatry.2021.0830",
+      "citation_text": "Salazar de Pablo G, et al. Probability of transition to psychosis in individuals at clinical high risk: an updated meta-analysis. JAMA Psychiatry. 2021."
+    },
+    {
+      "n": 10,
+      "dossier_id": "P2-olbert-polythetic-heterogeneity",
+      "tier": "T2",
+      "year": 2014,
+      "pmid": "24886017",
+      "doi": "10.1037/a0036068",
+      "citation_text": "Olbert CM, et al. Quantifying heterogeneity attributable to polythetic diagnostic criteria: theoretical framework and empirical application. Journal of Abnormal Psychology. 2014."
+    },
+    {
+      "n": 11,
+      "dossier_id": "P2-lim-hallucination-modalities",
+      "tier": "T2",
+      "year": 2016,
+      "pmid": "27349814",
+      "doi": "10.1016/j.schres.2016.06.010",
+      "citation_text": "Lim A, et al. Prevalence and classification of hallucinations in multiple sensory modalities in schizophrenia spectrum disorders. Schizophrenia Research. 2016."
+    },
+    {
+      "n": 12,
+      "dossier_id": "P2-dickerson-insight-prevalence",
+      "tier": "T2",
+      "year": 1997,
+      "pmid": "9021849",
+      "doi": "10.1176/ps.48.2.195",
+      "citation_text": "Dickerson FB, et al. Lack of insight among outpatients with schizophrenia. Psychiatric Services. 1997."
+    },
+    {
+      "n": 13,
+      "dossier_id": "P2-payne-nights-end-fpa",
+      "tier": "T5",
+      "year": 2012,
+      "pmid": "22461482",
+      "doi": "10.1093/schbul/sbs051",
+      "citation_text": "Payne R. Night's end. Schizophrenia Bulletin. 2012."
+    },
+    {
+      "n": 14,
+      "dossier_id": "P2-heinrichs-zakzanis-neurocog-review",
+      "tier": "T1",
+      "year": 1998,
+      "pmid": "9673998",
+      "doi": "10.1037//0894-4105.12.3.426",
+      "citation_text": "Heinrichs RW, Zakzanis KK. Neurocognitive deficit in schizophrenia: a quantitative review of the evidence. Neuropsychology. 1998."
+    }
+  ],
+  "body": [
+    {
+      "type": "QuoteBlock",
+      "quote": "I was simply sectioned again, detached from my real self, observing what was being done to me in a third-person perspective. ... My thoughts, my emotions, and my actions, none of them belong to me any more.",
+      "attribution": "Kean C, 2009",
+      "source": "Kean C. Silencing the self: schizophrenia as a self-disturbance. Schizophrenia Bulletin. 2009. [1]"
+    },
+    {
+      "type": "prose",
+      "heading": "The symptoms you already know",
+      "text": "Ask most people to describe schizophrenia and they name two things: hearing voices, and holding beliefs that are not true. These are the positive symptoms, 'positive' meaning added to experience, not good. From the outside they look like the whole condition. From the inside they are stranger, and more specific, than the cliche. A hallucination is a genuine perception, not an overactive imagination. The voice is heard the way a doorbell is heard; the brain delivers it with the full authority of the senses, which is exactly why it cannot be waved away by being told it is not real. Knowing a sound is not there does not make it stop sounding. And it is not always a voice, and not always literally heard. In the largest phenomenological survey of voice-hearing, of 153 people, fewer than half of participants described their voices as straightforwardly heard aloud, and a similar share, 46%, described them as thought-like or mixed instead [2]. Some heard characters with names and histories. Some felt a presence more than a sound. The single word 'voices' flattens a range that the people living inside it describe in very different ways. A delusion, in turn, is not defined by being false. Plenty of false beliefs are ordinary; most of us hold a few. What marks a delusion is not its content but its grip: it holds firm against evidence that should dismantle it. In two-factor accounts of delusional belief, this is the second factor, a failure to reject a hypothesis in the face of disconfirming evidence [3]. The belief has become immune to correction, which is why arguing someone out of a delusion so rarely works: the very machinery that would let contrary evidence in is the part that is not working."
+    },
+    {
+      "type": "QuoteBlock",
+      "quote": "My brain created disc jockeys in the air vents of the hospital room playing Beatles' songs. ... I experienced extraordinarily loud fighter jets landing and taking off in my hospital room!",
+      "attribution": "Payne R, 2012",
+      "source": "Payne R. Night's end. Schizophrenia Bulletin. 2012. [13]"
+    },
+    {
+      "type": "Mermaid",
+      "title": "Three domains, one diagnosis",
+      "diagram": "flowchart TD\n  S[Schizophrenia] --> P[Positive symptoms]\n  S --> N[Negative symptoms]\n  S --> C[Cognitive symptoms]\n  N --> O[Daily function]\n  C --> O",
+      "a11y_summary": "Map: schizophrenia spans positive, negative, and cognitive symptom domains; negative and cognitive domains most drive daily functioning.",
+      "caption": "The domains the public pictures least are the ones that most shape a life."
+    },
+    {
+      "type": "prose",
+      "heading": "The symptoms mistaken for character",
+      "text": "If positive symptoms are additions, negative symptoms are subtractions, and they are the ones that get read as personality. A consensus of researchers groups them into five domains: blunted affect (a face and voice that stop showing feeling), alogia (speech that thins to almost nothing), anhedonia (pleasure gone flat), asociality (withdrawal from other people), and avolition (the collapse of drive and initiative) [4]. Those five are not a random list. They cluster into two families: one of diminished expression, where the outward signal goes quiet, blunted affect and alogia; and one of diminished motivation, where the inward pull to do and want and connect runs down, anhedonia, avolition, and asociality [4]. The second family is the one that most shapes whether a person can assemble a day. Named this clinically, they sound like symptoms. Lived from the outside, they look like flaws. The person who stops calling reads as cold. The person who cannot start a task reads as lazy. The person whose face has gone still reads as rude, or simply absent. None of these readings is what is actually happening, and every one of them is what the world sees. That is the particular cruelty of negative symptoms: they are invisible as illness and legible as character, so a person gets blamed for the very thing being done to them."
+    },
+    {
+      "type": "ArticleTabs",
+      "tabs": [
+        {
+          "label": "What it looks like",
+          "content": "She said yes to dinner on Friday, then canceled an hour before, again. Last month she went quiet in the group chat and never came back. She seems checked out. Maybe rude. Maybe just not that invested in keeping you in her life. After a while you stop reaching out, because it starts to feel like you are the only one still trying."
+        },
+        {
+          "label": "What it is",
+          "content": "Getting to Friday dinner is not one decision; it is dozens of small ones, deciding to shower, tracking the time, holding the plan against the pull to stay still. Avolition flattens the drive to begin. The cognitive load makes the sequencing exhausting. Blunted affect means her face never shows the wanting that is still there underneath [4]. The withdrawal is not a verdict on you. It is the symptom, wearing the mask of a choice."
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "heading": "The symptoms nobody pictures",
+      "text": "There is a third domain that almost never makes the picture at all: cognition. This is not about intelligence, and not about insight into any single belief. It is the machinery underneath, working memory (holding information in mind long enough to use it), processing speed (how fast the brain takes in and acts on information), and executive function (planning, switching tasks, keeping a goal in view). The size of the gap is not subtle, and it is not new knowledge. A landmark 1998 review pooled 204 studies and found moderate-to-large deficits, effect sizes above d = 0.60, across every one of 22 cognitive measures tested, with not a single confidence interval touching zero [14]. Fifteen years later, a meta-analysis of about a hundred studies put the overall gap at a full standard deviation below healthy peers, a grand mean effect size of g = -1.03, and found it consistent across decades and around the world [5]. The impairment is not a quirk of one clinic or one era; it travels with the condition. Within that gap, the losses are uneven. The two largest are processing speed (g = -1.25) and episodic memory (g = -1.23) [5]. And when researchers isolate processing speed with the plainest possible task, digit-symbol coding, matching symbols to numbers against a clock, the deficit is larger still, reaching g = -1.57, bigger than the gaps in memory, executive function, or working memory [6]. A standard deviation is not a rounding error. It is the distance between keeping up and falling behind, and it is completely invisible in a waiting room."
+    },
+    {
+      "type": "Chart",
+      "chartType": "bar",
+      "title": "Where cognition takes the biggest hit",
+      "data": [
+        {
+          "label": "Processing speed (coding)",
+          "value": 1.57
+        },
+        {
+          "label": "Overall cognition",
+          "value": 1.03
+        }
+      ],
+      "source": "Dickinson 2007; Schaefer 2013",
+      "a11y_summary": "Bar chart of standardized deficit sizes: processing speed shows the largest impairment at about 1.57 standard deviations, overall cognition about 1.03.",
+      "caption": "Effect sizes (Cohen's d / Hedges' g) versus healthy controls; larger = bigger deficit."
+    },
+    {
+      "type": "Stats",
+      "title": "The asymmetry that matters",
+      "stats": [
+        {
+          "value": "0",
+          "suffix": " of studies",
+          "label": "where positive symptoms predicted functional outcome",
+          "source": "Green 1996",
+          "citation": "[7]"
+        },
+        {
+          "value": "~1",
+          "suffix": " SD",
+          "label": "overall cognitive deficit vs peers",
+          "source": "Schaefer 2013",
+          "citation": "[5]"
+        },
+        {
+          "value": "25",
+          "suffix": "%",
+          "label": "of clinical-high-risk convert to psychosis by 3 years",
+          "source": "Salazar de Pablo 2021",
+          "citation": "[9]"
+        }
+      ]
+    },
+    {
+      "type": "HighlightBox",
+      "variant": "emphasis",
+      "children": "Here is the part the public image gets exactly backwards. The voices and delusions that define schizophrenia in the popular mind are the weakest predictors of how a life actually goes. In a landmark review of the evidence, positive symptoms were not significantly associated with functional outcome in a single one of the studies examined [7]. And when researchers analyzed CATIE, one of the largest schizophrenia trials ever run, with 1,447 participants, day-to-day functioning tracked the negative symptoms more closely than any other domain, more than the positive symptoms that dominate both the stigma and the prescription pad [8]. The same analysis was honest about its own limits: symptoms of any kind explained only a small share of the variance in functioning, a reminder that a life is never reducible to a symptom score. But the direction is clear, and it is consistent. Negative and cognitive symptoms carry the weight. The symptoms nobody pictures are the ones that most shape whether a person works, studies, and stays connected."
+    },
+    {
+      "type": "prose",
+      "heading": "Before it has a name",
+      "text": "Almost none of this arrives on a single day. Before a first episode there is usually a prodrome, a slow slide of months or years in which sleep frays, grades slip, friends drift off, and thinking gets subtly harder to trust. It is a genuine at-risk state, and clinicians can identify it prospectively rather than only in hindsight. Among people meeting criteria for clinical high risk, about 25% go on to develop psychosis within three years [9]. That number cuts both ways. It means the early warning signs are real and worth taking seriously. It also means that roughly three out of four people flagged as high-risk do not transition on that timeline, which is why the prodrome is so often recognized backwards, obvious in retrospect and ambiguous while it is happening. Naming it too confidently in the moment risks turning an uncertain signal into a verdict."
+    },
+    {
+      "type": "prose",
+      "heading": "No two the same",
+      "text": "One more thing the single word 'schizophrenia' hides: the people it names may have almost nothing in common. The diagnosis is polythetic, built from a menu. You meet it by having some number of symptoms from a list, with no single feature required of everyone. Work through the combinations and the result is startling: two people carrying the identical diagnosis can share no symptoms at all, and any two theoretically possible symptom pictures overlap, on average, by less than half [10]. There is no single face of this condition. There is a family of very different presentations wearing one name, which is part of why a diagnosis, useful as it is for guiding treatment, tells you far less about a particular person than the word's certainty implies."
+    },
+    {
+      "type": "MythVsFactBlock",
+      "myth": "Hallucinations in schizophrenia are always voices.",
+      "fact": "Voices are the most common form, auditory hallucinations occur in roughly 60-80% of people with a schizophrenia-spectrum diagnosis, though that figure counts everyone classified as hearing voices, including the many who, as noted earlier, experience them as thought-like rather than literally heard. And they are rarely the whole story. More than half of those who hallucinate do so in more than one sense at once (about 53% report hallucinations in multiple modalities, while only 27% are confined to a single sense); sight, touch, smell, and taste can all be genuinely involved [11].",
+      "source": "Lim et al., 2016"
+    },
+    {
+      "type": "MythVsFactBlock",
+      "myth": "People with schizophrenia have no insight into their own condition.",
+      "fact": "Insight is not simply absent, it is variable, and it fluctuates. In one outpatient sample, about half (49.5%) had at least moderately impaired insight and a quarter (25%) had severe deficits, which means many retained partial or intact awareness, and that awareness itself shifts as symptoms rise and fall [12]. Treating insight as all-or-nothing misses how much of it is a moving target.",
+      "source": "Dickerson et al., 1997"
+    },
+    {
+      "type": "ArticleAccordion",
+      "accordionType": "multiple",
+      "items": [
+        {
+          "title": "Positive, negative, cognitive, what do those words mean?",
+          "content": "Positive symptoms are experiences added on: hallucinations and delusions. Negative symptoms are capacities taken away: drive, emotional expression, pleasure, speech, and sociability. Cognitive symptoms are changes in the mental machinery, memory, processing speed, and planning. All three belong to the condition; only the first tends to reach the screen."
+        },
+        {
+          "title": "What is the difference between a hallucination and a delusion?",
+          "content": "A hallucination is a perception without a source, hearing, seeing, feeling, or smelling something that is not there, delivered with the full force of the senses. A delusion is a belief that will not yield to contrary evidence; what defines it is not that it is false but that it survives disconfirmation [3]. One is a problem of perceiving; the other is a problem of concluding."
+        },
+        {
+          "title": "If the voices aren't the worst part, why is so much attention on them?",
+          "content": "Because they are the most visible, and the most alarming to people watching from outside, they dominate the public story and much of the clinical conversation. But visibility is not the same as importance. The negative and cognitive symptoms that shape daily life draw far less notice, even though they predict how a life goes more strongly [7]."
+        },
+        {
+          "title": "Does everyone with schizophrenia hear voices?",
+          "content": "No. Auditory hallucinations are common, roughly 60-80%, but not universal, and many people who hallucinate experience more than one sense at once [11]. Some people carry the diagnosis with delusions or disorganized thinking and few voices, or none at all."
+        },
+        {
+          "title": "Are negative symptoms just depression by another name?",
+          "content": "They overlap, and they are often mistaken for one another, but they are not the same. Depression centers on low mood and painful feeling; the motivational negative symptoms, avolition, anhedonia, and asociality, are more a flattening of drive and reward than a weather of sadness [4]. The distinction matters for treatment, because what lifts a depression does not reliably move a negative symptom."
+        },
+        {
+          "title": "Can you see it coming?",
+          "content": "Sometimes, but usually only in hindsight. The prodrome, the gradual change before a first episode, is real, and clinicians can identify an at-risk state. Even so, only about a quarter of those flagged go on to psychosis within three years, so the signs are meaningful without being a verdict [9]."
+        },
+        {
+          "title": "If two people can share no symptoms, is it still one condition?",
+          "content": "It is a fair question. Because the diagnosis is built from a menu of features with no single one required, two people who both meet criteria can, in principle, share nothing, and any two symptom pictures overlap on average by less than half [10]. The label is still useful for guiding treatment and research, but it names a family of presentations rather than a single uniform illness."
+        }
+      ]
+    },
+    {
+      "type": "ArticleCallout",
+      "variant": "crisis",
+      "title": "In crisis right now?",
+      "content": "If you or someone you know is in immediate danger, call your local emergency number. In the US, call or text 988 for the Suicide & Crisis Lifeline. Psychage's crisis resources are always one tap away."
+    }
+  ]
+}

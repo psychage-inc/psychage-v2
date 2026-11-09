@@ -4,10 +4,12 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { type ColumnDef } from '@tanstack/react-table';
 import { Plus, Eye, Pencil, Trash2, Globe } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
+import { toast } from 'sonner';
 import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';
 import type { ContentDocument } from '@/lib/admin/types';
 import PageHeader from '@/components/admin/PageHeader';
+import NotWiredNotice from '@/components/admin/NotWiredNotice';
 import DataTable from '@/components/admin/DataTable';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
 import ConfirmDialog from '@/components/admin/ConfirmDialog';
@@ -40,6 +42,7 @@ const AdminContentList: React.FC = () => {
       logAdminAction({ action: 'delete', resourceType: 'content', resourceId: id });
       setDeleteTarget(null);
     },
+    onError: (err: Error) => toast.error(`Delete failed: ${err.message}`),
   });
 
   const togglePublish = useMutation({
@@ -54,6 +57,7 @@ const AdminContentList: React.FC = () => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'content'] });
     },
+    onError: (err: Error) => toast.error(`Publish toggle failed: ${err.message}`),
   });
 
   const columns: ColumnDef<ContentDocument, unknown>[] = [
@@ -138,6 +142,7 @@ const AdminContentList: React.FC = () => {
 
   return (
     <div>
+      <NotWiredNotice variant="not-reflected">Content edits are saved, but the MindMate search index is not refreshed automatically yet, so AI answers may cite older text (audit finding FC-04).</NotWiredNotice>
       <PageHeader
         title="Content"
         description="Manage articles, guides, and educational content"

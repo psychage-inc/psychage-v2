@@ -1,0 +1,665 @@
+{
+  "runid": "mr6dn6uwc42d70",
+  "marker": "ZZAUDIT_mr6dn6uwc42d70",
+  "when": "2026-07-04T13:08:25.230Z",
+  "leftovers": 0,
+  "results": [
+    {
+      "probe": "C1-columns",
+      "table": "symptoms",
+      "op": "select(SymptomList read/write shape)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "symptoms",
+      "op": "select(ConditionEditor/MappingMatrix read shape)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": false,
+      "detail": "column symptoms.symptom_id does not exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "conditions",
+      "op": "select(ConditionEditor payload)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": false,
+      "detail": "column conditions.condition_id does not exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "symptom_condition_mappings",
+      "op": "select(MappingMatrix/ConditionEditor payload)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "crisis_keywords",
+      "op": "select(CrisisKeywords payload)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "content_documents",
+      "op": "select(ContentEditor payload)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "content_versions",
+      "op": "select(ContentEditor version insert)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "providers",
+      "op": "select(ProviderEditor payload)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "providers",
+      "op": "select(BulkImport payload (suspected schema mismatch))",
+      "actor": "service",
+      "expect": "allow",
+      "ok": false,
+      "detail": "column providers.name does not exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "provider_locations",
+      "op": "select(ProviderEditor locations)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "provider_specialties",
+      "op": "select(ProviderEditor specialties)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "provider_languages",
+      "op": "select(ProviderEditor languages)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "provider_insurance",
+      "op": "select(ProviderEditor insurance)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "provider_cultural_competencies",
+      "op": "select(ProviderEditor competencies)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "provider_applications",
+      "op": "select(ApplicationReview payload)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "platform_settings",
+      "op": "select(Settings upsert)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "articles",
+      "op": "select(article core write columns)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": false,
+      "detail": "column articles.author does not exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "article_status_history",
+      "op": "select(status history insert)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": false,
+      "detail": "column article_status_history.previous_status does not exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "article_comments",
+      "op": "select(comment insert)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": false,
+      "detail": "column article_comments.resolved does not exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "article_citations",
+      "op": "select(citation upsert (partial))",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "article_images",
+      "op": "select(image row insert (no storage probe))",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "article_derivatives",
+      "op": "select(derivative CRUD (partial))",
+      "actor": "service",
+      "expect": "allow",
+      "ok": false,
+      "detail": "column article_derivatives.article_id does not exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "article_revisions",
+      "op": "select(revision insert (partial))",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "admin_saved_views",
+      "op": "select(saved views)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "admin_audit_log",
+      "op": "select(audit logger insert)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "C1-columns",
+      "table": "toolkits",
+      "op": "select(toolkit publish update)",
+      "actor": "service",
+      "expect": "allow",
+      "ok": true,
+      "detail": "all columns exist"
+    },
+    {
+      "probe": "setup",
+      "table": "auth.users",
+      "op": "createUser(meta role=admin)",
+      "actor": "meta",
+      "expect": "n/a",
+      "ok": true,
+      "detail": "meta user creation blocked: Error: createUser meta: Database error creating new user — metadata-only privilege-escalation probes recorded as UNVERIFIED-LIVE (cannot mint the JWT). Note: signup metadata sanitization/trigger appears to reject role in user_metadata."
+    },
+    {
+      "probe": "C2",
+      "table": "symptoms",
+      "op": "insert",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": false,
+      "detail": "null value in column \"category\" of relation \"symptoms\" violates not-null constraint"
+    },
+    {
+      "probe": "C2",
+      "table": "symptoms",
+      "op": "update",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": false,
+      "detail": "0 rows affected (RLS filtered)"
+    },
+    {
+      "probe": "C2-read",
+      "table": "symptoms",
+      "op": "select inactive row",
+      "actor": "viewer",
+      "expect": "allow",
+      "ok": false,
+      "detail": "viewer CANNOT see inactive symptom (admin list broken for viewer tier)"
+    },
+    {
+      "probe": "C3",
+      "table": "symptoms",
+      "op": "update(neg)",
+      "actor": "viewer",
+      "expect": "deny",
+      "ok": true,
+      "detail": "0 rows affected (RLS filtered)"
+    },
+    {
+      "probe": "C3",
+      "table": "symptoms",
+      "op": "update(neg)",
+      "actor": "meta",
+      "expect": "deny",
+      "ok": true,
+      "detail": "UNVERIFIED-LIVE: meta user could not be created (see setup note)"
+    },
+    {
+      "probe": "C3",
+      "table": "symptoms",
+      "op": "update(neg)",
+      "actor": "anon",
+      "expect": "deny",
+      "ok": true,
+      "detail": "0 rows affected (RLS filtered)"
+    },
+    {
+      "probe": "C2",
+      "table": "conditions",
+      "op": "insert",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": false,
+      "detail": "Could not find the 'clinical_review_date' column of 'conditions' in the schema cache"
+    },
+    {
+      "probe": "C2",
+      "table": "symptom_condition_mappings",
+      "op": "insert",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": false,
+      "detail": "could not resolve symptom key column"
+    },
+    {
+      "probe": "C2",
+      "table": "crisis_keywords",
+      "op": "insert",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": false,
+      "detail": "null value in column \"category\" of relation \"crisis_keywords\" violates not-null constraint"
+    },
+    {
+      "probe": "C2",
+      "table": "content_documents",
+      "op": "insert",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": false,
+      "detail": "null value in column \"url_path\" of relation \"content_documents\" violates not-null constraint"
+    },
+    {
+      "probe": "C2",
+      "table": "providers",
+      "op": "insert",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "probe": "C2",
+      "table": "providers",
+      "op": "update",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "probe": "C3",
+      "table": "providers",
+      "op": "update(neg) PRIV-ESC",
+      "actor": "meta",
+      "expect": "deny",
+      "ok": true,
+      "detail": "UNVERIFIED-LIVE: meta user could not be created (see setup note)"
+    },
+    {
+      "probe": "C3",
+      "table": "providers",
+      "op": "update(neg)",
+      "actor": "viewer",
+      "expect": "deny",
+      "ok": true,
+      "detail": "0 rows affected (RLS filtered)"
+    },
+    {
+      "probe": "C3",
+      "table": "providers",
+      "op": "update(neg)",
+      "actor": "anon",
+      "expect": "deny",
+      "ok": true,
+      "detail": "0 rows affected (RLS filtered)"
+    },
+    {
+      "probe": "C2",
+      "table": "provider_locations",
+      "op": "insert",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "probe": "C2",
+      "table": "provider_locations",
+      "op": "delete",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "probe": "C2",
+      "table": "provider_specialties",
+      "op": "insert",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "probe": "C2",
+      "table": "provider_specialties",
+      "op": "delete",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "probe": "C2",
+      "table": "provider_languages",
+      "op": "insert",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "probe": "C2",
+      "table": "provider_languages",
+      "op": "delete",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "probe": "D-fixture",
+      "table": "provider_applications",
+      "op": "insert",
+      "actor": "service",
+      "expect": "allow",
+      "ok": false,
+      "detail": "fixture failed: Could not find the 'display_name' column of 'provider_applications' in the schema cache — UPDATE probe skipped (record as UNVERIFIED-LIVE)"
+    },
+    {
+      "probe": "C2",
+      "table": "platform_settings",
+      "op": "upsert",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "probe": "C3",
+      "table": "platform_settings",
+      "op": "upsert(neg)",
+      "actor": "viewer",
+      "expect": "deny",
+      "ok": true,
+      "detail": "new row violates row-level security policy for table \"platform_settings\""
+    },
+    {
+      "probe": "C2",
+      "table": "articles",
+      "op": "insert",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "probe": "C2",
+      "table": "articles",
+      "op": "update",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "probe": "C3",
+      "table": "articles",
+      "op": "update(neg)",
+      "actor": "viewer",
+      "expect": "deny",
+      "ok": true,
+      "detail": "0 rows affected (RLS filtered)"
+    },
+    {
+      "probe": "C3",
+      "table": "articles",
+      "op": "update(neg)",
+      "actor": "anon",
+      "expect": "deny",
+      "ok": true,
+      "detail": "0 rows affected (RLS filtered)"
+    },
+    {
+      "probe": "C2",
+      "table": "article_status_history",
+      "op": "insert",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": false,
+      "detail": "Could not find the 'new_status' column of 'article_status_history' in the schema cache"
+    },
+    {
+      "probe": "C2",
+      "table": "article_comments",
+      "op": "insert",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": false,
+      "detail": "null value in column \"author_id\" of relation \"article_comments\" violates not-null constraint"
+    },
+    {
+      "probe": "C2",
+      "table": "article_citations",
+      "op": "insert",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": false,
+      "detail": "null value in column \"source_type\" of relation \"article_citations\" violates not-null constraint"
+    },
+    {
+      "probe": "C2",
+      "table": "articles",
+      "op": "delete",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "probe": "C2",
+      "table": "admin_saved_views",
+      "op": "insert",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "probe": "C2",
+      "table": "admin_saved_views",
+      "op": "delete(own)",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "probe": "C2",
+      "table": "admin_audit_log",
+      "op": "insert",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "probe": "C3",
+      "table": "admin_audit_log",
+      "op": "insert(neg)",
+      "actor": "anon",
+      "expect": "deny",
+      "ok": true,
+      "detail": "new row violates row-level security policy for table \"admin_audit_log\""
+    },
+    {
+      "probe": "C2",
+      "table": "admin_audit_log",
+      "op": "insert",
+      "actor": "viewer",
+      "expect": "allow",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "probe": "D-fixture",
+      "table": "toolkits",
+      "op": "insert",
+      "actor": "service",
+      "expect": "allow",
+      "ok": false,
+      "detail": "fixture failed: null value in column \"theme_title\" of relation \"toolkits\" violates not-null constraint — UPDATE probe skipped"
+    },
+    {
+      "probe": "C2-rpc",
+      "table": "rpc:admin_list_roles",
+      "op": "call",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "probe": "C2-rpc",
+      "table": "rpc:get_user_by_email",
+      "op": "call",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": false,
+      "detail": "Could not find the function public.get_user_by_email(p_email) in the schema cache"
+    },
+    {
+      "probe": "C2-rpc",
+      "table": "rpc:admin_upsert_role",
+      "op": "call(ephemeral viewer→viewer)",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": false,
+      "detail": "Could not find the function public.admin_upsert_role(p_role, p_user_id) in the schema cache"
+    },
+    {
+      "probe": "C3-rpc",
+      "table": "rpc:admin_upsert_role",
+      "op": "call(neg self-escalate)",
+      "actor": "viewer",
+      "expect": "deny",
+      "ok": true,
+      "detail": "Could not find the function public.admin_upsert_role(p_role, p_user_id) in the schema cache"
+    },
+    {
+      "probe": "C3",
+      "table": "rpc:admin_upsert_role",
+      "op": "call(neg meta escalate)",
+      "actor": "meta",
+      "expect": "deny",
+      "ok": true,
+      "detail": "UNVERIFIED-LIVE: meta user could not be created (see setup note)"
+    },
+    {
+      "probe": "C2-rpc",
+      "table": "rpc:admin_remove_role",
+      "op": "call(ephemeral viewer)",
+      "actor": "admin",
+      "expect": "allow",
+      "ok": false,
+      "detail": "Could not find the function public.admin_remove_role(p_user_id) in the schema cache"
+    },
+    {
+      "probe": "C3",
+      "table": "symptoms",
+      "op": "insert(neg)",
+      "actor": "anon",
+      "expect": "deny",
+      "ok": true,
+      "detail": "new row violates row-level security policy for table \"symptoms\""
+    },
+    {
+      "probe": "C3",
+      "table": "crisis_keywords",
+      "op": "insert(neg)",
+      "actor": "meta",
+      "expect": "deny",
+      "ok": true,
+      "detail": "UNVERIFIED-LIVE: meta user could not be created (see setup note)"
+    }
+  ]
+}

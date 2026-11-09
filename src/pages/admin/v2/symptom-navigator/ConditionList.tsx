@@ -6,6 +6,7 @@ import { Plus, Pencil } from 'lucide-react';
 import { supabase } from '@/lib/supabaseClient';
 import type { ConditionRecord } from '@/lib/admin/types';
 import PageHeader from '@/components/admin/PageHeader';
+import NotWiredNotice from '@/components/admin/NotWiredNotice';
 import DataTable from '@/components/admin/DataTable';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
 import { cn } from '@/lib/utils';
@@ -141,6 +142,7 @@ const AdminConditionList: React.FC = () => {
 
   return (
     <div>
+      <NotWiredNotice variant="unavailable">This section is temporarily unavailable — it targets a database schema that isn’t deployed (audit finding FS-01). Listing and editing conditions will not work until the backend migration lands. See BACKEND_REQUIRED.md.</NotWiredNotice>
       <PageHeader
         title="Conditions"
         description={`${conditions?.length || 0} condition profiles`}

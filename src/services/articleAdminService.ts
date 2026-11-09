@@ -30,13 +30,10 @@ import type {
   ImagePurpose,
   ArticleRevisionRecord,
 } from '@/lib/admin/types';
-import {
-  getMockArticles,
-  getMockArticleComments,
-  getMockArticleImages,
-  getMockArticleStatusHistory,
-  getMockArticleStats,
-} from '@/pages/admin/data/articleMockData';
+// getMockArticles is still used by getArticles/getChildArticles/getParentArticles
+// (not reachable from routed v2 pages). The comment/image/history/stats mock
+// fallbacks were removed in FA-01 — those functions now propagate errors.
+import { getMockArticles } from '@/pages/admin/data/articleMockData';
 
 // ============================================================
 // Data source tracking — lets the UI detect mock fallback
@@ -496,7 +493,10 @@ export async function getArticleComments(articleId: string): Promise<ArticleComm
     if (error) throw error;
     return (data || []) as ArticleCommentRecord[];
   } catch (err) {
-    return getMockArticleComments(articleId);
+    // FA-01: never fabricate comments on error — a real article showing mock
+    // comments is a false success. Propagate so the UI shows an error state.
+    console.error('[articleAdminService] getArticleComments FAILED:', err);
+    throw err;
   }
 }
 
@@ -580,7 +580,9 @@ export async function getArticleStatusHistory(articleId: string): Promise<Articl
     if (error) throw error;
     return (data || []) as ArticleStatusHistoryRecord[];
   } catch (err) {
-    return getMockArticleStatusHistory(articleId);
+    // FA-01: propagate instead of returning a fabricated timeline.
+    console.error('[articleAdminService] getArticleStatusHistory FAILED:', err);
+    throw err;
   }
 }
 
@@ -598,7 +600,9 @@ export async function getArticleImages(articleId: string): Promise<ArticleImageR
     if (error) throw error;
     return (data || []) as ArticleImageRecord[];
   } catch (err) {
-    return getMockArticleImages(articleId);
+    // FA-01: propagate instead of returning fabricated image rows.
+    console.error('[articleAdminService] getArticleImages FAILED:', err);
+    throw err;
   }
 }
 
@@ -664,8 +668,11 @@ export async function updateArticleImage(
 }
 
 export async function deleteArticleImage(imageId: string, storagePath: string, articleId: string): Promise<void> {
-  // Delete from Storage
-  await supabase.storage.from('article-images').remove([storagePath]);
+  // FA-02: check the Storage removal. Previously its error was ignored and the
+  // DB row was deleted regardless, orphaning the file in the bucket (and hiding
+  // the failure from the admin). Remove the file first and surface any error.
+  const { error: storageError } = await supabase.storage.from('article-images').remove([storagePath]);
+  if (storageError) throw storageError;
 
   // Delete record
   const { error } = await supabase
@@ -795,7 +802,9 @@ export async function getArticleStats(): Promise<ArticleStats> {
     const message = e?.message || (err instanceof Error ? err.message : String(err));
     const details = e?.details ? ` | Details: ${e.details}` : '';
     console.error('[articleAdminService] getArticleStats FAILED:', `${message}${details}`);
-    return getMockArticleStats();
+    // FA-01: propagate instead of returning fabricated dashboard counts, so
+    // the metric cards show their loading/empty state rather than fake numbers.
+    throw err;
   }
 }
 

@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { type ColumnDef } from '@tanstack/react-table';
 import { Plus, Pencil, X, Search } from 'lucide-react';
+import { toast } from 'sonner';
 import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';
 import { SEVERITY_LEVELS, CRISIS_CATEGORIES, SUPPORTED_LANGUAGES } from '@/lib/admin/constants';
 import type { CrisisKeyword, CrisisSeverity, CrisisCategory } from '@/lib/admin/types';
 import PageHeader from '@/components/admin/PageHeader';
+import NotWiredNotice from '@/components/admin/NotWiredNotice';
 import DataTable from '@/components/admin/DataTable';
 import AdminStatusBadge from '@/components/admin/StatusBadge';
 import { cn } from '@/lib/utils';
@@ -50,6 +52,7 @@ const AdminCrisisKeywords: React.FC = () => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'crisis-keywords'] });
       closeDrawer();
     },
+    onError: (err: Error) => toast.error(`Save failed: ${err.message}`),
   });
 
   const toggleActive = useMutation({
@@ -58,6 +61,7 @@ const AdminCrisisKeywords: React.FC = () => {
       if (error) throw error;
     },
     onSuccess: () => queryClient.invalidateQueries({ queryKey: ['admin', 'crisis-keywords'] }),
+    onError: (err: Error) => toast.error(`Update failed: ${err.message}`),
   });
 
   const openDrawer = (editing?: CrisisKeyword) => {
@@ -137,6 +141,7 @@ const AdminCrisisKeywords: React.FC = () => {
 
   return (
     <div>
+      <NotWiredNotice variant="not-reflected">Keyword changes are saved, but crisis detection currently uses a fixed built-in list, so edits here are not yet enforced (audit finding FSA-01).</NotWiredNotice>
       <PageHeader
         title="Crisis Keywords"
         description="Manage crisis detection keywords by severity and category"

@@ -10,5 +10,6 @@ Disallow: /signup
 Disallow: /reset-password
 Disallow: /update-password
 Disallow: /onboarding
+Disallow: /preview/
 
 Sitemap: https://psychage.com/sitemap.xml

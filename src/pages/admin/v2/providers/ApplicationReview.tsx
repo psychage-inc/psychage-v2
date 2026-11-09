@@ -3,6 +3,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { type ColumnDef } from '@tanstack/react-table';
 import { Check, X } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
+import { toast } from 'sonner';
 import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';
 import type { ProviderApplication } from '@/lib/admin/types';
@@ -29,29 +30,106 @@ const AdminApplicationReview: React.FC = () => {
     },
   });
 
+  // FP-04: approving an application must actually create/activate a provider —
+  // previously it only flipped the application's status, so an approved
+  // applicant never appeared in the directory. Standard admin convention:
+  // approve == admit to the directory. (DECISION_MADE_UNVERIFIED: approve
+  // creates an ACTIVE, psychage_verified provider linked via application_id.)
+  const createProviderFromApplication = async (app: ProviderApplication): Promise<void> => {
+    // Idempotent: if a provider already links to this application, do nothing.
+    const { data: existing } = await supabase
+      .from('providers')
+      .select('id')
+      .eq('application_id', app.id)
+      .maybeSingle();
+    if (existing) return;
+
+    // provider_type_id is NOT NULL. Applications carry no structured type, so
+    // bucket from credentials + specialties, defaulting to therapist.
+    const { data: typeRows, error: typeErr } = await supabase.from('provider_types').select('id, slug');
+    if (typeErr || !typeRows?.length) throw typeErr || new Error('Could not load provider types');
+    const hay = `${app.credentials} ${(app.specialties || []).join(' ')}`.toLowerCase();
+    const slug =
+      /psychiatr/.test(hay) ? 'psychiatrist'
+      : /psycholog/.test(hay) ? 'psychologist'
+      : /social work/.test(hay) ? 'social_worker'
+      : /counsel/.test(hay) ? 'counselor'
+      : 'therapist';
+    const typeId = (typeRows.find((t) => t.slug === slug) ?? typeRows.find((t) => t.slug === 'therapist') ?? typeRows[0]).id;
+
+    const { data: { user } } = await supabase.auth.getUser();
+    const { data: inserted, error: provErr } = await supabase
+      .from('providers')
+      .insert({
+        display_name: app.provider_name,
+        credentials_suffix: app.credentials || null,
+        npi_number: app.npi_number || null,
+        provider_type_id: typeId,
+        practice_name: app.practice_name || null,
+        bio: app.bio || null,
+        website_url: app.website_url || null,
+        email: app.contact_email || null,
+        phone: app.contact_phone || null,
+        telehealth_available: !!app.telehealth_available,
+        verification_tier: 'psychage_verified',
+        verified_at: new Date().toISOString(),
+        verified_by: user?.id ?? null,
+        status: 'active',
+        // providers.source CHECK allows npi_registry|samhsa|hrsa_hc|manual|claim.
+        // An admin-approved application is a manual admission.
+        source: 'manual',
+        application_id: app.id,
+      })
+      .select('id')
+      .single();
+    if (provErr) throw provErr;
+
+    // Primary location from practice_address JSON, if present.
+    const addr = (app.practice_address ?? {}) as { city?: string; state?: string; state_province?: string };
+    if (addr.city || addr.state || addr.state_province) {
+      const { error: locErr } = await supabase.from('provider_locations').insert({
+        provider_id: inserted.id,
+        city: addr.city || null,
+        state_province: addr.state_province || addr.state || null,
+        is_primary: true,
+      });
+      if (locErr) throw locErr;
+    }
+  };
+
   const updateStatus = useMutation({
-    mutationFn: async ({ id, status, reason }: { id: string; status: string; reason?: string }) => {
+    mutationFn: async ({ app, status, reason }: { app: ProviderApplication; status: string; reason?: string }) => {
+      // Create the provider BEFORE flipping status, so a failed creation leaves
+      // the application pending (not falsely marked approved).
+      if (status === 'approved') {
+        await createProviderFromApplication(app);
+      }
+      const { data: { user } } = await supabase.auth.getUser();
       const { error } = await supabase
         .from('provider_applications')
         .update({
           status,
           reviewed_at: new Date().toISOString(),
+          reviewed_by: user?.id ?? null,
           rejection_reason: reason || null,
         })
-        .eq('id', id);
+        .eq('id', app.id);
       if (error) throw error;
       await logAdminAction({
         action: status === 'approved' ? 'approve' : 'reject',
         resourceType: 'provider_application',
-        resourceId: id,
+        resourceId: app.id,
         newValue: { status, reason },
       });
     },
-    onSuccess: () => {
+    onSuccess: (_data, vars) => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'provider-applications'] });
+      queryClient.invalidateQueries({ queryKey: ['admin', 'providers'] });
+      if (vars.status === 'approved') toast.success('Application approved — provider added to the directory');
       setSelectedApp(null);
       setRejectDialog(null);
     },
+    onError: (err: Error) => toast.error(`Update failed: ${err.message}`),
   });
 
   const columns: ColumnDef<ProviderApplication, unknown>[] = [
@@ -98,7 +176,7 @@ const AdminApplicationReview: React.FC = () => {
         return (
           <div className="flex items-center gap-1">
             <button
-              onClick={() => updateStatus.mutate({ id: app.id, status: 'approved' })}
+              onClick={() => updateStatus.mutate({ app, status: 'approved' })}
               className="p-1.5 text-text-tertiary hover:text-emerald-600 transition-colors"
               title="Approve"
             >
@@ -184,7 +262,7 @@ const AdminApplicationReview: React.FC = () => {
               {selectedApp.status === 'pending' && (
                 <div className="flex gap-2 pt-4 border-t border-border">
                   <button
-                    onClick={() => updateStatus.mutate({ id: selectedApp.id, status: 'approved' })}
+                    onClick={() => updateStatus.mutate({ app: selectedApp, status: 'approved' })}
                     disabled={updateStatus.isPending}
                     className="flex-1 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-50"
                   >
@@ -211,7 +289,7 @@ const AdminApplicationReview: React.FC = () => {
         description={`Reject the application from ${rejectDialog?.provider_name}?`}
         confirmLabel="Reject"
         destructive
-        onConfirm={() => rejectDialog && updateStatus.mutate({ id: rejectDialog.id, status: 'rejected', reason: rejectionReason })}
+        onConfirm={() => rejectDialog && updateStatus.mutate({ app: rejectDialog, status: 'rejected', reason: rejectionReason })}
       />
     </div>
   );

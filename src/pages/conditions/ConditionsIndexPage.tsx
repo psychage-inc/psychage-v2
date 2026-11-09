@@ -1,10 +1,10 @@
-import React, { useDeferredValue, useMemo, useState } from 'react';
+import React, { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { useAsyncData } from '@/hooks/useAsyncData';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
-import { useMediaQuery, MOBILE_NARROW_QUERY } from '@/hooks/useMediaQuery';
+import { useMediaQuery, MOBILE_NARROW_QUERY, BELOW_DESKTOP_QUERY } from '@/hooks/useMediaQuery';
 import { listConditions } from '@/services/conditionsService';
 import type { Condition } from '@/types/condition';
 import { CONDITION_DISCLAIMER } from '@/types/condition';
@@ -35,7 +35,12 @@ const ConditionsIndexPage: React.FC = () => {
     const [query, setQuery] = useState('');
     const [activeFamily, setActiveFamily] = useState<string | null>(null);
     const isPhone = useMediaQuery(MOBILE_NARROW_QUERY);
+    const belowDesktop = useMediaQuery(BELOW_DESKTOP_QUERY);
     const [selectedLetter, setSelectedLetter] = useState<string | null>(null);
+    const resultsRef = useRef<HTMLDivElement>(null);
+    // Set when a family chip is tapped below desktop; consumed by the scroll effect
+    // once the filtered list has re-rendered (see handleFamilyChange).
+    const pendingScrollRef = useRef(false);
 
     // Defer the filter input so typing stays smooth (sub-300ms perceived).
     const deferredQuery = useDeferredValue(query);
@@ -86,6 +91,36 @@ const ConditionsIndexPage: React.FC = () => {
     const visibleGroups = paginateOnMobile
         ? groups.filter((g) => g.letter === activeLetter)
         : groups;
+
+    // Re-anchor the viewport to the results whenever a family filter changes, on every
+    // breakpoint. We flag the intent here but defer the actual scroll to the effect below
+    // — the list height changes per family (and the phone view switches from a single
+    // paginated bucket to the full filtered set), so scrolling synchronously would target
+    // the old, shorter layout and get clamped, landing short of the list top.
+    const handleFamilyChange = (family: string | null) => {
+        pendingScrollRef.current = true;
+        setActiveFamily(family);
+    };
+
+    // Runs after the filtered list has rendered for the new family. The extra rAF waits
+    // one frame so layout is final, then we scroll to an explicit pixel target with
+    // window.scrollTo — more reliable across mobile browsers (notably iOS Safari) than
+    // scrollIntoView({ behavior: 'smooth' }), which can silently no-op when layout
+    // shifts at the same moment. The offset clears the sticky chrome above the list:
+    // mobile/tablet also has the sticky alphabet rail (~64) on top of the header (~64),
+    // desktop has only the header.
+    useEffect(() => {
+        if (!pendingScrollRef.current) return;
+        pendingScrollRef.current = false;
+        const el = resultsRef.current;
+        if (!el) return;
+        const scrollOffset = belowDesktop ? 128 : 96; // header (+ alphabet rail on mobile)
+        const raf = requestAnimationFrame(() => {
+            const top = el.getBoundingClientRect().top + window.scrollY - scrollOffset;
+            window.scrollTo({ top: Math.max(0, top), behavior: reducedMotion ? 'auto' : 'smooth' });
+        });
+        return () => cancelAnimationFrame(raf);
+    }, [activeFamily, reducedMotion, belowDesktop]);
 
     const handleJump = (letter: string) => {
         const el = document.getElementById(`cond-letter-${letter}`);
@@ -140,7 +175,7 @@ const ConditionsIndexPage: React.FC = () => {
                                 onQueryChange={setQuery}
                                 families={families}
                                 activeFamily={activeFamily}
-                                onFamilyChange={setActiveFamily}
+                                onFamilyChange={handleFamilyChange}
                                 resultCount={filtered.length}
                             />
                         )}
@@ -160,7 +195,10 @@ const ConditionsIndexPage: React.FC = () => {
                     )}
 
                     {/* Body: content + desktop rail */}
-                    <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_2.25rem]">
+                    <div
+                        ref={resultsRef}
+                        className="mt-8 grid scroll-mt-32 grid-cols-1 gap-8 lg:grid-cols-[1fr_2.25rem]"
+                    >
                         <div className="min-w-0">
                             {loading && <ConditionSkeleton />}
 

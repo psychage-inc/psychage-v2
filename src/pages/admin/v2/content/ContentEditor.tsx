@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { ArrowLeft, Save, Send, Globe as GlobeIcon, Clock } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
+import { toast } from 'sonner';
 import { supabase } from '@/lib/supabaseClient';
 import { logAdminAction } from '@/lib/admin/auditLogger';
 import { CONTENT_TYPES, CONTENT_STATUSES, SUPPORTED_LANGUAGES } from '@/lib/admin/constants';
@@ -147,6 +148,10 @@ const AdminContentEditor: React.FC = () => {
         topic_tags: data.topic_tags || [],
         sources: data.sources || [],
         is_published: isPublished,
+        // content_documents.url_path is NOT NULL and is used as the citation
+        // href in MindMate (CitationCard). Derive a stable path from type+slug
+        // so creation never fails the not-null constraint. See DECISION_MADE_UNVERIFIED.
+        url_path: `/${data.type}/${data.slug}`,
         updated_at: new Date().toISOString(),
       };
 
@@ -171,12 +176,15 @@ const AdminContentEditor: React.FC = () => {
       // Create version
       if (docId) {
         const nextVersion = (versions?.[0]?.version_number ?? 0) + 1;
-        await supabase.from('content_versions').insert({
+        // FC-02: check the version insert. It was previously unchecked, so a
+        // failed version write silently diverged the history from the document.
+        const { error: versionError } = await supabase.from('content_versions').insert({
           document_id: docId,
           version_number: nextVersion,
           content_snapshot: payload,
           change_summary: isNew ? 'Initial creation' : `Saved as ${status}`,
         });
+        if (versionError) throw versionError;
       }
 
       await logAdminAction({
@@ -194,6 +202,9 @@ const AdminContentEditor: React.FC = () => {
         navigate(adminPath(`/content/${docId}/edit`), { replace: true });
       }
     },
+    // ONERR: surface save failures (manual + autosave) instead of leaving the
+    // form dirty with no feedback.
+    onError: (err: Error) => toast.error(`Save failed: ${err.message}`),
   });
 
   const onSave = useCallback(

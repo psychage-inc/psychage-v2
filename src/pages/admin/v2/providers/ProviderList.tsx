@@ -140,6 +140,7 @@ const AdminProviderList: React.FC = () => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'providers'] });
       setSuspendTarget(null);
     },
+    onError: (err: Error) => toast.error(`Update failed: ${err.message}`),
   });
 
   const columns: ColumnDef<ProviderRow, unknown>[] = [

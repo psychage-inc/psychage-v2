@@ -7,11 +7,14 @@ import PageHeader from '@/components/admin/PageHeader';
 import { adminPath } from '@/hooks/useAdminNavigate';
 
 const AdminSafetyDashboard: React.FC = () => {
-  const { data: keywordCounts } = useQuery({
+  const { data: keywordCounts, isError } = useQuery({
     queryKey: ['admin', 'safety', 'keyword-counts'],
     queryFn: async () => {
       const { data, error } = await supabase.from('crisis_keywords').select('severity, is_active');
-      if (error) return { crisis: 0, urgent: 0, watch: 0, total: 0 };
+      // FSA-03: do not swallow the error into all-zeros — a failed query that
+      // renders "0 CRISIS keywords" reads as "safe" when the data is actually
+      // unavailable. Propagate so the cards show an unavailable state.
+      if (error) throw error;
       const active = (data || []).filter((k) => k.is_active);
       return {
         crisis: active.filter((k) => k.severity === 'CRISIS').length,
@@ -21,6 +24,8 @@ const AdminSafetyDashboard: React.FC = () => {
       };
     },
   });
+
+  const metric = (n: number | undefined) => (isError ? '—' : (n ?? 0));
 
   return (
     <div>
@@ -44,7 +49,7 @@ const AdminSafetyDashboard: React.FC = () => {
             </div>
           </div>
           <p className="text-sm text-text-secondary">CRISIS Keywords</p>
-          <p className="text-2xl font-bold text-text-primary">{keywordCounts?.crisis ?? 0}</p>
+          <p className="text-2xl font-bold text-text-primary">{metric(keywordCounts?.crisis)}</p>
         </div>
         <div className="bg-surface border border-border rounded-2xl p-5">
           <div className="flex items-center gap-3 mb-2">
@@ -53,7 +58,7 @@ const AdminSafetyDashboard: React.FC = () => {
             </div>
           </div>
           <p className="text-sm text-text-secondary">URGENT Keywords</p>
-          <p className="text-2xl font-bold text-text-primary">{keywordCounts?.urgent ?? 0}</p>
+          <p className="text-2xl font-bold text-text-primary">{metric(keywordCounts?.urgent)}</p>
         </div>
         <div className="bg-surface border border-border rounded-2xl p-5">
           <div className="flex items-center gap-3 mb-2">
@@ -62,7 +67,7 @@ const AdminSafetyDashboard: React.FC = () => {
             </div>
           </div>
           <p className="text-sm text-text-secondary">WATCH Keywords</p>
-          <p className="text-2xl font-bold text-text-primary">{keywordCounts?.watch ?? 0}</p>
+          <p className="text-2xl font-bold text-text-primary">{metric(keywordCounts?.watch)}</p>
         </div>
         <div className="bg-surface border border-border rounded-2xl p-5">
           <div className="flex items-center gap-3 mb-2">
@@ -71,7 +76,7 @@ const AdminSafetyDashboard: React.FC = () => {
             </div>
           </div>
           <p className="text-sm text-text-secondary">Total Active Keywords</p>
-          <p className="text-2xl font-bold text-text-primary">{keywordCounts?.total ?? 0}</p>
+          <p className="text-2xl font-bold text-text-primary">{metric(keywordCounts?.total)}</p>
         </div>
       </div>
 

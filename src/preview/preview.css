@@ -1,0 +1,114 @@
+/* Preview-surface-only styling. Every rule is scoped under `.preview-surface` so it can never
+   affect the live app. Addresses the iteration-2 UI notes: bigger + higher-contrast reading,
+   deeper-red heavier callouts, and no horizontal overflow on any block. */
+
+/* --- Reading: larger body, comfortable measure, high-contrast warm near-black (not teal) --- */
+.preview-surface .article-prose {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: #26232b;
+    letter-spacing: 0.003em;
+}
+.preview-surface .article-prose p,
+.preview-surface .article-prose li {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: #26232b;
+}
+.preview-surface .article-prose h2 {
+    font-size: 1.9rem;
+    line-height: 1.25;
+    margin-top: 2.4rem;
+    margin-bottom: 0.9rem;
+    color: #1b1922;
+}
+.preview-surface .article-prose h3 {
+    font-size: 1.4rem;
+    color: #1b1922;
+}
+.preview-surface .article-prose strong { color: #141018; }
+
+:root[data-theme='dark'] .preview-surface .article-prose,
+:root[data-theme='dark'] .preview-surface .article-prose p,
+:root[data-theme='dark'] .preview-surface .article-prose li,
+.dark .preview-surface .article-prose,
+.dark .preview-surface .article-prose p,
+.dark .preview-surface .article-prose li {
+    color: #e9e7ee;
+}
+.dark .preview-surface .article-prose h2,
+.dark .preview-surface .article-prose h3,
+.dark .preview-surface .article-prose strong { color: #f6f5fa; }
+
+/* --- Callouts: deeper red + heavier + larger text for the red (crisis / clinical / danger) family.
+   The shared ArticleCallout paints bg-rose-600 / bg-red-600 with white text at low contrast;
+   two-class specificity beats the single Tailwind class without !important. --- */
+.preview-surface [class*='bg-rose-6'],
+.preview-surface [class*='bg-rose-7'],
+.preview-surface [class*='bg-red-6'],
+.preview-surface [class*='bg-red-7'],
+.preview-surface [class*='bg-crimson'] {
+    background-color: #9f1239 !important; /* rose-800, deep, high contrast */
+    border-left-color: #7f0f2e !important;
+}
+.preview-surface [class*='bg-rose-6'] *,
+.preview-surface [class*='bg-rose-7'] *,
+.preview-surface [class*='bg-red-6'] *,
+.preview-surface [class*='bg-red-7'] * {
+    color: #ffffff !important;
+}
+.preview-surface [class*='bg-rose-6'] p,
+.preview-surface [class*='bg-red-6'] p,
+.preview-surface [class*='bg-rose-7'] p,
+.preview-surface [class*='bg-red-7'] p {
+    font-weight: 500;
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
+
+/* --- Mermaid: polished, readable, self-contained boxes --- */
+.preview-surface .mermaid-mount { width: 100%; }
+.preview-surface .mermaid-mount svg { max-width: 100%; height: auto; }
+/* rounded node boxes */
+.preview-surface .mermaid-mount .node rect,
+.preview-surface .mermaid-mount .node polygon {
+    rx: 14px;
+    ry: 14px;
+    stroke-width: 1.5px;
+}
+/* node label text: brand font, dark, medium weight, single line (labels are short).
+   overflow:visible + white-space:nowrap so the last character can never clip; the box's 18px
+   internal padding absorbs the few-px measurement gap, so text still sits well inside the border. */
+.preview-surface .mermaid-mount .nodeLabel,
+.preview-surface .mermaid-mount .nodeLabel *,
+.preview-surface .mermaid-mount foreignObject div,
+.preview-surface .mermaid-mount span.nodeLabel {
+    color: #141018 !important;
+    font-family: 'Satoshi', system-ui, sans-serif !important;
+    font-size: 15px !important;
+    line-height: 1.35 !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+}
+.preview-surface .mermaid-mount foreignObject {
+    overflow: visible !important;
+}
+.preview-surface .mermaid-mount .label > g,
+.preview-surface .mermaid-mount .nodeLabel { padding: 0 2px; }
+/* edge (arrow) labels: legible chip on the paper background */
+.preview-surface .mermaid-mount .edgeLabel,
+.preview-surface .mermaid-mount .edgeLabel * {
+    color: #57534e !important;
+    font-family: 'Satoshi', system-ui, sans-serif !important;
+    font-size: 13px !important;
+    background: #FBF9F4 !important;
+}
+.preview-surface .mermaid-mount .edgePaths path { stroke-width: 1.5px; }
+
+/* --- No horizontal overflow: any wide block scrolls inside its own box --- */
+.preview-surface .pv-scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.preview-surface table { display: block; overflow-x: auto; max-width: 100%; }
+.preview-surface figure svg,
+.preview-surface .recharts-responsive-container { max-width: 100%; }

@@ -8,6 +8,7 @@ import {
     ArrowRight,
     RefreshCw,
 } from 'lucide-react';
+import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
 import PageHeader from '@/components/admin/PageHeader';
 import { adminPath } from '@/hooks/useAdminNavigate';
@@ -84,6 +85,7 @@ const ArticleQualityDashboard: React.FC = () => {
             queryClient.invalidateQueries({ queryKey: ['quality-articles'] });
             queryClient.invalidateQueries({ queryKey: ['quality-stats'] });
         },
+        onError: (err: Error) => toast.error(`Flag failed: ${err.message}`),
     });
 
     const isLoading = statsLoading || articlesLoading;

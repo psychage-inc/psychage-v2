@@ -33,6 +33,14 @@ import ResponsiveRoute from './components/mobile/ResponsiveRoute';
 import { useMediaQuery, MOBILE_NARROW_QUERY } from './hooks/useMediaQuery';
 
 // --- LAZY LOADED ROUTES (Code Splitting) ---
+// Preview surface (conditions v2, schizophrenia). Registered ONLY when VITE_PREVIEW_MODE === 'true'
+// (set on the environments where the private preview link should work). The value is statically
+// replaced at build time, so where the flag is off the import() is dead code and the whole preview
+// tree is tree-shaken out. Additive and inert otherwise.
+const PreviewConditionRoutes =
+    import.meta.env.VITE_PREVIEW_MODE === 'true'
+        ? lazyWithRetry(() => import('./preview/previewRoutes'))
+        : null;
 const LearnPage = lazyWithRetry(() => import('./pages/LearnPage'));
 const BrowseByTopicPage = lazyWithRetry(() => import('./pages/BrowseByTopicPage'));
 // Mobile (≤639px) screen stubs — rendered via ResponsiveRoute, filled in Wave 1.
@@ -245,6 +253,10 @@ const App: React.FC = () => {
                                             <Route path="/conditions" element={<PageTransition><ConditionsIndexPage /></PageTransition>} />
                                             <Route path="/conditions/:slug/articles" element={<PageTransition><ConditionArticlesPage /></PageTransition>} />
                                             <Route path="/conditions/:slug" element={<PageTransition><ConditionDetailPage /></PageTransition>} />
+                                            {/* Private preview surface, token-gated + noindex, not linked from the site. */}
+                                            {PreviewConditionRoutes && (
+                                                <Route path="/preview/conditions/schizophrenia/*" element={<PageTransition><PreviewConditionRoutes /></PageTransition>} />
+                                            )}
                                             <Route path="/watch/:id" element={<PageTransition><VideoDetail /></PageTransition>} />
                                             {/* Provider Directory V2 */}
                                             <Route path="/providers" element={<PageTransition><ResponsiveRoute mobile={<MobileProviders />} desktop={<ProvidersLandingPage />} /></PageTransition>} />

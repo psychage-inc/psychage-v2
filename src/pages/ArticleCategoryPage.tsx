@@ -65,9 +65,14 @@ const ArticleCategoryPage: React.FC = () => {
         );
     }
 
-    // Articles are already filtered by category in the query
+    // The query (getAll) already aggregates legacy + canonical slugs via
+    // slugsForCanonical, so fold BOTH sides to the canonical slug here too.
+    // An exact-slug filter would drop the legacy-tagged rows the query correctly
+    // fetched (e.g. depression-mood rows under the canonical depression-grief),
+    // collapsing a 76-article category down to the handful tagged with the new slug.
+    const canonicalSlug = resolveCanonicalSlug(category.slug);
     const categoryArticles = articles.filter(
-        article => article.category.slug === category.slug
+        article => resolveCanonicalSlug(article.category.slug) === canonicalSlug
     );
 
     return (

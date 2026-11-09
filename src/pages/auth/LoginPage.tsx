@@ -356,6 +356,16 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                                     type={showPassword ? "text" : "password"}
                                     required
                                     autoComplete="current-password"
+                                    // AUTH-036: when "show password" flips type to
+                                    // text, the field loses the masked-input keyboards'
+                                    // implicit no-autocorrect behavior. Without these
+                                    // guards a mobile keyboard (esp. non-English layouts
+                                    // like sv-SE) can auto-capitalize or append a
+                                    // trailing space to the visible password — a value
+                                    // that looks correct but no longer matches the hash.
+                                    autoCapitalize="off"
+                                    autoCorrect="off"
+                                    spellCheck={false}
                                     className="pl-11 pr-11 bg-white/5 border-white/10 focus:border-primary/50 focus:bg-white/10 transition-all duration-300 h-12"
                                     value={password}
                                     placeholder="••••••••"

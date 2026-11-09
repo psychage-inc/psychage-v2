@@ -150,3 +150,8 @@ graphify-out/
 # Audit artifacts are heavy (~77MB of screenshots) — reports live at repo root;
 # only lightweight evidence is force-added (capture.mjs + raw/results.jsonl)
 audit-artifacts/
+
+# QA route-audit generated output (scripts/qa-audit.ts)
+qa/report.md
+qa/results.json
+qa/screenshots/

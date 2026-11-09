@@ -545,10 +545,16 @@ const AdminProviderEditor: React.FC = () => {
 
       if (!providerId) throw new Error('No provider ID');
 
+      // FP-01: child-table saves use delete-then-reinsert. Previously the
+      // deletes were unchecked and the inserts only console.error'd, so a
+      // failure left the provider row saved with wiped/partial children while
+      // the UI reported success. Check every delete and insert and throw, so
+      // onError surfaces the failure and the form keeps its state for retry.
+
       // ── Save locations ──
-      // Delete existing, re-insert
       if (!isNew) {
-        await supabase.from('provider_locations').delete().eq('provider_id', providerId);
+        const { error } = await supabase.from('provider_locations').delete().eq('provider_id', providerId);
+        if (error) throw error;
       }
       const validLocations = locations.filter(
         (l) => l.city || l.state_province || l.address_line1
@@ -565,23 +571,25 @@ const AdminProviderEditor: React.FC = () => {
             is_primary: l.is_primary,
           }))
         );
-        if (locErr) console.error('Location insert error:', locErr);
+        if (locErr) throw locErr;
       }
 
       // ── Save specialties ──
       if (!isNew) {
-        await supabase.from('provider_specialties').delete().eq('provider_id', providerId);
+        const { error } = await supabase.from('provider_specialties').delete().eq('provider_id', providerId);
+        if (error) throw error;
       }
       if (selectedSpecialtyIds.length > 0) {
         const { error: specErr } = await supabase.from('provider_specialties').insert(
           selectedSpecialtyIds.map((sid) => ({ provider_id: providerId, specialty_id: sid }))
         );
-        if (specErr) console.error('Specialty insert error:', specErr);
+        if (specErr) throw specErr;
       }
 
       // ── Save languages ──
       if (!isNew) {
-        await supabase.from('provider_languages').delete().eq('provider_id', providerId);
+        const { error } = await supabase.from('provider_languages').delete().eq('provider_id', providerId);
+        if (error) throw error;
       }
       if (selectedLanguages.length > 0) {
         const { error: langErr } = await supabase.from('provider_languages').insert(
@@ -591,29 +599,31 @@ const AdminProviderEditor: React.FC = () => {
             proficiency: l.proficiency,
           }))
         );
-        if (langErr) console.error('Language insert error:', langErr);
+        if (langErr) throw langErr;
       }
 
       // ── Save insurance ──
       if (!isNew) {
-        await supabase.from('provider_insurance').delete().eq('provider_id', providerId);
+        const { error } = await supabase.from('provider_insurance').delete().eq('provider_id', providerId);
+        if (error) throw error;
       }
       if (selectedInsuranceIds.length > 0) {
         const { error: insErr } = await supabase.from('provider_insurance').insert(
           selectedInsuranceIds.map((iid) => ({ provider_id: providerId, insurance_plan_id: iid }))
         );
-        if (insErr) console.error('Insurance insert error:', insErr);
+        if (insErr) throw insErr;
       }
 
       // ── Save cultural competencies ──
       if (!isNew) {
-        await supabase.from('provider_cultural_competencies').delete().eq('provider_id', providerId);
+        const { error } = await supabase.from('provider_cultural_competencies').delete().eq('provider_id', providerId);
+        if (error) throw error;
       }
       if (selectedCompetencyIds.length > 0) {
         const { error: compErr } = await supabase.from('provider_cultural_competencies').insert(
           selectedCompetencyIds.map((cid) => ({ provider_id: providerId, competency_id: cid }))
         );
-        if (compErr) console.error('Competency insert error:', compErr);
+        if (compErr) throw compErr;
       }
 
       // Log admin action

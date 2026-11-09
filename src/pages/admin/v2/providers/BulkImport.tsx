@@ -20,6 +20,21 @@ const AdminBulkImport: React.FC = () => {
   const [results, setResults] = useState<ImportResult[]>([]);
   const [progress, setProgress] = useState(0);
 
+  // Map an NPPES taxonomy description to one of our provider_types slugs.
+  // NPPES gives free-text taxonomy strings; we bucket them into the fixed set
+  // the directory understands. Individual (NPI-1) vs organization (NPI-2)
+  // decides the fallback.
+  const pickTypeSlug = (taxonomies: string[], isOrg: boolean): string => {
+    const hay = taxonomies.join(' ').toLowerCase();
+    if (/psychiatr/.test(hay)) return 'psychiatrist';
+    if (/psycholog/.test(hay)) return 'psychologist';
+    if (/social work/.test(hay)) return 'social_worker';
+    if (/counsel/.test(hay)) return 'counselor';
+    if (/therap|marriage|family/.test(hay)) return 'therapist';
+    if (/clinic|hospital|center|facility/.test(hay)) return 'clinic';
+    return isOrg ? 'clinic' : 'therapist';
+  };
+
   const handleImport = async () => {
     const npis = npiInput
       .split(/[\n,]/)
@@ -34,17 +49,29 @@ const AdminBulkImport: React.FC = () => {
 
     const importResults: ImportResult[] = [];
 
+    // provider_type_id is NOT NULL. Resolve the slug→id map once up front.
+    const { data: typeRows, error: typeErr } = await supabase
+      .from('provider_types')
+      .select('id, slug');
+    if (typeErr || !typeRows || typeRows.length === 0) {
+      setResults([{ npi: '—', status: 'failed', error: 'Could not load provider types; import aborted.' }]);
+      setImporting(false);
+      return;
+    }
+    const typeIdBySlug = new Map<string, string>(typeRows.map((t) => [t.slug as string, t.id as string]));
+    const fallbackTypeId = typeIdBySlug.get('therapist') ?? (typeRows[0].id as string);
+
     for (let i = 0; i < npis.length; i++) {
       const npi = npis[i];
       setProgress(Math.round(((i + 1) / npis.length) * 100));
 
       try {
-        // Check if provider with this NPI already exists
+        // Check if provider with this NPI already exists (0 or 1 row).
         const { data: existing } = await supabase
           .from('providers')
           .select('id')
           .eq('npi_number', npi)
-          .single();
+          .maybeSingle();
 
         if (existing) {
           importResults.push({ npi, status: 'exists' });
@@ -65,27 +92,55 @@ const AdminBulkImport: React.FC = () => {
         const result = data.results[0];
         const basic = result.basic || {};
         const address = result.addresses?.[0] || {};
-        const taxonomies = (result.taxonomies || []).map((t: { desc: string }) => t.desc);
+        const taxonomies: string[] = (result.taxonomies || [])
+          .map((t: { desc?: string }) => t.desc)
+          .filter(Boolean);
+        const isOrg = result.enumeration_type === 'NPI-2';
 
-        const name = `${basic.first_name || ''} ${basic.last_name || ''}`.trim();
+        // display_name: organization name for NPI-2, else person name.
+        const displayName = isOrg
+          ? (basic.organization_name || basic.name || '').trim()
+          : `${basic.first_name || ''} ${basic.last_name || ''}`.trim();
+        if (!displayName) {
+          importResults.push({ npi, status: 'failed', error: 'No name in NPPES record' });
+          continue;
+        }
 
-        const { error: insertError } = await supabase.from('providers').insert({
-          name,
-          credentials: basic.credential || '',
-          npi_number: npi,
-          city: address.city || '',
-          state: address.state || '',
-          specialties: taxonomies,
-          verification_tier: 'npi_verified',
-          verified_at: new Date().toISOString(),
-          status: 'active',
-        });
+        const typeId = typeIdBySlug.get(pickTypeSlug(taxonomies, isOrg)) ?? fallbackTypeId;
+
+        // Insert the provider row (real schema).
+        const { data: inserted, error: insertError } = await supabase
+          .from('providers')
+          .insert({
+            display_name: displayName,
+            credentials_suffix: basic.credential || null,
+            npi_number: npi,
+            provider_type_id: typeId,
+            verification_tier: 'npi_verified',
+            verified_at: new Date().toISOString(),
+            status: 'active',
+            source: 'npi_registry',
+          })
+          .select('id')
+          .single();
 
         if (insertError) throw insertError;
 
-        importResults.push({ npi, status: 'imported', name });
+        // City/state live in provider_locations, not on the provider row.
+        if (address.city || address.state) {
+          const { error: locErr } = await supabase.from('provider_locations').insert({
+            provider_id: inserted.id,
+            city: address.city || null,
+            state_province: address.state || null,
+            is_primary: true,
+          });
+          if (locErr) throw locErr;
+        }
+
+        importResults.push({ npi, status: 'imported', name: displayName });
       } catch (err) {
-        importResults.push({ npi, status: 'failed', error: String(err) });
+        const msg = err instanceof Error ? err.message : String(err);
+        importResults.push({ npi, status: 'failed', error: msg.slice(0, 140) });
       }
     }
 

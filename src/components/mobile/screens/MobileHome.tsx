@@ -8,6 +8,7 @@ import { MobileHomeStartHere } from '@/components/mobile/screens/MobileHomeStart
 import { getRecentlyReadIds } from '@/components/articles/recentlyRead';
 import { useAuth } from '@/context/AuthContext';
 import { useCategoryData } from '@/hooks/useCategoryData';
+import { useDragScrollGuard } from '@/hooks/useDragScrollGuard';
 import { useHomepageArticles } from '@/hooks/useHomepageArticles';
 import { articleService } from '@/services/articleService';
 import { toolService } from '@/services/toolService';
@@ -41,6 +42,8 @@ const MobileHome: React.FC = () => {
     const { hero, rest, isLoading: articlesLoading } = useHomepageArticles(EDITORS_PICK_LIMIT);
     // Poster-backed topic collections.
     const { categories, isLoading: categoriesLoading } = useCategoryData();
+    // Keep a horizontal drag from opening a category instead of scrolling the row.
+    const dragGuard = useDragScrollGuard();
 
     // Tools preview (#85) — first few launchable tools; full hub one tap away.
     const [toolsPreview, setToolsPreview] = useState<Tool[]>([]);
@@ -234,7 +237,10 @@ const MobileHome: React.FC = () => {
                     <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-text-tertiary">
                         Topic collections
                     </h2>
-                    <div className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                    <div
+                        className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 touch-pan-x [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                        {...dragGuard}
+                    >
                         {collections.map((category) => (
                             <CategoryCard
                                 key={category.slug}

@@ -3,7 +3,7 @@ import { AlertTriangle } from 'lucide-react';
 
 /**
  * Honest disclosure banner for admin sections whose downstream wiring is not
- * yet complete (tracked in BACKEND_REQUIRED.md). It does NOT hide or disable a
+ * yet complete. It does NOT hide or disable a
  * feature — it tells the admin exactly what will and won't happen, so client
  * testers don't mistake "saved" for "live". See the audit's "degrade gracefully
  * until it exists" rule.

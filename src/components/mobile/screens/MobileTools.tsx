@@ -7,7 +7,7 @@ import { MobileToolCard } from '@/components/mobile/cards/MobileToolCard';
 /**
  * Mobile Tools (route `/tools`). A phone-adapted bento grid over the full tool
  * registry — a 2-col layout with occasional full-width emphasis tiles, echoing
- * the desktop bento (`home/ToolsSection`) without porting it pixel-for-pixel.
+ * the desktop tools grid without porting it pixel-for-pixel.
  *
  * Foundation wraps this screen in the crisis header + bottom nav (the Tools tab
  * stays active on `/tools` exactly), so we render only the scroll body and own

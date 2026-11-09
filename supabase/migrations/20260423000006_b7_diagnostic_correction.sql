@@ -3,7 +3,6 @@
 -- ============================================================
 -- Date: 2026-04-23
 -- Severity: HIGH (live production regression — diagnostic precision)
--- Audit:    docs/audits/auth-hotfix-b7-incident.md
 --
 -- Background. The original B-7 prompt sketched the diagnostic against
 -- providers.claimed_by_user_id, but the actual column is
@@ -99,8 +98,7 @@ $$;
 COMMENT ON FUNCTION public.b7_provider_regression_diagnostic() IS
   'B-7 read-only enumeration of provider-role regression states post '
   '20260423000001 deploy. Service-role only. Refined in 20260423000006 '
-  'to add status <> ''seeded'' filter. See '
-  'docs/audits/auth-hotfix-b7-incident.md.';
+  'to add status <> ''seeded'' filter.';
 
 NOTIFY pgrst, 'reload schema';
 

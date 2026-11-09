@@ -42,7 +42,7 @@ export interface PlatformSetting {
 // (supabase/migrations/20250220000006_ai_tables.sql). A later migration
 // (20260310000002) redefined this set to guide/glossary/infographic but never
 // applied to prod (CREATE TABLE IF NOT EXISTS on an existing table). Aligning
-// to the values the DB actually accepts. See BACKEND_REQUIRED FC-01.
+// to the values the DB actually accepts.
 export type ContentType =
   | 'article'
   | 'condition_guide'

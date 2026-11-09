@@ -407,7 +407,7 @@
     },
     "auth": {
         "_meta": {
-            "_translation_status": "PENDING — auth namespace added 2026-04-25, EN-only stub. Translator: replace each value below. See docs/refactors/auth-ux-i18n-summary.md for context-notes."
+            "_translation_status": "PENDING — auth namespace added 2026-04-25, EN-only stub. Translator: replace each value below."
         },
         "login": {
             "title": "Welcome back",

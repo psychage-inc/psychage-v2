@@ -3,7 +3,6 @@
 -- ============================================================
 -- Date: 2026-06-07
 -- Severity: HIGH (admin login blocker remediation)
--- Audit:    ADMIN_AUDIT_FINDINGS.md (P0-01 / RC-3)
 --
 -- Context:
 --   The B-7 sync function and trigger

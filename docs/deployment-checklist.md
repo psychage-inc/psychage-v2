@@ -14,7 +14,6 @@ Pre-deployment verification checklist for Psychage V2.
 - [ ] `VITE_SANITY_PROJECT_ID` - Sanity project ID
 - [ ] `VITE_SANITY_DATASET` - Sanity dataset (production)
 - [ ] `VITE_SANITY_API_VERSION` - Sanity API version
-- [ ] `VITE_GEMINI_API_KEY` - Google Gemini API key (restrict in GCP console)
 - [ ] `VITE_DEBUG_MODE` - Set to `false`
 
 ### Build Verification
@@ -53,7 +52,6 @@ npm run preview
 - [ ] Supabase RLS policies configured
 - [ ] CORS configured on backend
 - [ ] Rate limiting enabled on API
-- [ ] Gemini API key restricted to specific domains
 
 ---
 
@@ -89,7 +87,6 @@ Add these in Project Settings > Environment Variables:
 | VITE_SANITY_PROJECT_ID | w1sh63w6 | All |
 | VITE_SANITY_DATASET | production | Production |
 | VITE_SANITY_API_VERSION | 2024-01-01 | All |
-| VITE_GEMINI_API_KEY | (your key) | All |
 | VITE_DEBUG_MODE | false | Production |
 
 ---

@@ -1,8 +1,7 @@
 /**
  * Shared helpers for the category-posters runner.
  * Env-loading + Supabase service-role client + manifest IO.
- * Mirrors scripts/poster-batch/lib.ts; the only differences are the storage
- * path (category-covers/{slug}.jpeg) and the manifest shape (keyed by slug).
+ * Uploads to category-covers/{slug}.jpeg; the manifest is keyed by slug.
  */
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join, dirname } from 'path';

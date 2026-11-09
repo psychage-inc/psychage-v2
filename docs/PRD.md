@@ -193,7 +193,7 @@ The business is **sustainably profitable**, allowing continued investment in con
 
 ### MVP - Minimum Viable Product
 
-**Launch Timeline**: Months 0-6 (Solo dev + Claude Code)
+**Launch Timeline**: Months 0-6 (Solo dev)
 **Goal**: Validate the core value proposition - "Clarity without overwhelming"
 
 #### 1. Learn (Educational Hub) - CORE MVP
@@ -476,7 +476,7 @@ The business is **sustainably profitable**, allowing continued investment in con
 
 1. **MVP Features Must**:
    - Prove the core value proposition ("clarity without overwhelming")
-   - Be buildable by solo dev + Claude Code in 6 months
+   - Be buildable by a solo dev in 6 months
    - Require no external dependencies (partnerships, integrations)
    - Have clear success metrics for validation
 
@@ -2456,7 +2456,7 @@ Requirements must be decomposed into **epics and bite-sized stories** (200k cont
 
 **Estimated Total Planning Time** (before first line of code): **8-12 hours** (AI-assisted, interactive)
 
-**Estimated MVP Development Time** (solo dev + Claude Code): **4-6 months** (based on 55 functional requirements, HIGH complexity)
+**Estimated MVP Development Time** (solo dev): **4-6 months** (based on 55 functional requirements, HIGH complexity)
 
 ---
 

@@ -1,10 +1,9 @@
 #!/usr/bin/env tsx
 /**
- * Assemble the Nano Banana Pro prompt for a category pictogram.
+ * Assemble the image prompt for a category pictogram.
  *   tsx build-prompt.ts <slug> [<slug> ...]   # prints prompt(s), delimited
  *   tsx build-prompt.ts --all                 # prints all 28
- * Generation itself is interactive (Higgsfield MCP generate_image,
- * model nano_banana_pro, aspect_ratio 16:9, resolution 2k, count 1).
+ * Generate each image with aspect ratio 16:9, resolution 2k, count 1.
  */
 import { CONCEPTS, conceptBySlug, type Concept } from './concepts.ts';
 import { derivePalette } from './palette.ts';

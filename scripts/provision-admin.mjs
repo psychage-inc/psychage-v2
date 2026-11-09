@@ -3,8 +3,7 @@
 /**
  * Provision (or repair) a REAL admin account by email.
  *
- * This is the operational counterpart to the login fix in
- * ADMIN_LOGIN_FIX_NOTES.md. The login UI is correct — it gates on
+ * This is the operational counterpart to the admin login fix. The login UI is correct — it gates on
  * `app_metadata.role`, which a DB trigger mirrors from `public.admin_roles`.
  * For anyone to log into the admin panel, three things must be true:
  *

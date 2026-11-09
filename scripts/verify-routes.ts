@@ -40,8 +40,7 @@ function verifyRoutes(): void {
     console.error('\n   Update ROUTE_MAP in:');
     console.error('   - scripts/verify-routes.ts');
     console.error('   - src/tests/routes.test.ts');
-    console.error('   - src/components/pages/ToolsPage.tsx (getToolLink)');
-    console.error('   - src/components/home/ToolsSection.tsx (getToolLink)\n');
+    console.error('   - src/components/pages/ToolsPage.tsx (getToolLink)\n');
   }
 
   // Check 2: All route mappings have corresponding tools

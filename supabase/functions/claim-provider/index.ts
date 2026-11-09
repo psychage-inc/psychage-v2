@@ -187,7 +187,6 @@ Deno.serve(async (req: Request) => {
     // reads via mapSupabaseUser. user_metadata.role is a write-side
     // trace only — kept for observability (signal that this user
     // went through the claim flow), never read for authorization.
-    // See docs/audits/auth-hotfix-b7-incident.md.
     await adminClient
       .from('profiles')
       .upsert(

@@ -14,7 +14,6 @@
  *   - SUPABASE_SERVICE_ROLE_KEY set in environment (NEVER commit)
  *   - The B-7 migrations 20260423000005..000008 all applied
  *   - A Supabase database backup taken within the last hour
- *   - Diagnostic captured in docs/audits/auth-hotfix-b7-incident.md §1
  *
  * WHAT THIS SCRIPT DOES:
  *   1. Calls public.b7_provider_regression_diagnostic() to enumerate
@@ -34,7 +33,7 @@
  *      P-D are now zero. Reports the post-backfill snapshot.
  *
  * WHAT THIS SCRIPT DOES NOT DO:
- *   - Send notification emails. See docs/audits/auth-hotfix-b7-comms-template.md.
+ *   - Send notification emails.
  *   - Touch user_metadata.role. The narrowed strip trigger (Phase C)
  *     no longer affects 'provider' values, so leaving the transient
  *     value in place is fine.
@@ -293,7 +292,7 @@ async function main(): Promise<void> {
 
     console.log('\nVerification passed. P-B / P-C / P-D all zero.');
     console.log(
-        'Next step: notify affected users using docs/audits/auth-hotfix-b7-comms-template.md.',
+        'Next step: notify affected users.',
     );
 }
 

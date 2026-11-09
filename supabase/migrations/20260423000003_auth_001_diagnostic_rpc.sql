@@ -3,7 +3,6 @@
 -- ============================================================
 -- Date: 2026-04-23
 -- Severity: HIGH (script correctness)
--- Audit: docs/audits/auth-audit-2026-04-23-addendum.md (§H.2)
 --
 -- Why this exists:
 --   scripts/migrate-admin-roles.ts calls supabase.rpc(

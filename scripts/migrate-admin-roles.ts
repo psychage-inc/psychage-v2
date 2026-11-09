@@ -47,8 +47,7 @@
  *   - Touch app_metadata directly. Post-fix is_admin() reads admin_roles,
  *     not app_metadata, so we don't need to populate app_metadata for
  *     authorization to work.
- *   - Send notifications. Manual follow-up for any demoted user is
- *     documented in docs/audits/auth-hotfix-followup-dashboard.md.
+ *   - Send notifications. Any demoted user needs manual follow-up.
  *   - Clean up orphaned admin_roles rows (separate cleanup task).
  *
  * DEPENDENCIES (must be deployed BEFORE running this script):

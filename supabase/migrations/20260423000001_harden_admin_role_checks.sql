@@ -3,8 +3,6 @@
 -- ============================================================
 -- Date: 2026-04-23
 -- Severity: CRITICAL
--- Audit: docs/audits/auth-audit-2026-04-23.md (AUTH-001),
---        docs/audits/auth-audit-2026-04-23-addendum.md (§H.1 / §H.2)
 --
 -- This migration:
 --   1. Replaces is_admin() and is_admin_writer() with recursion-safe

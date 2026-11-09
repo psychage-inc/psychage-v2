@@ -26,8 +26,6 @@
 --   (sync_user_role_to_app_metadata) prefers admin_roles over
 --   profiles.role and falls back to 'patient' if neither is set, so
 --   the narrowed CHECK is fully compatible with existing logic.
---
---   See docs/refactors/auth-data-layer-findings.md (D-03).
 -- =====================================================
 
 BEGIN;

@@ -39,10 +39,10 @@
     "verify:fallback": "tsx scripts/test-fallback-behavior.ts",
     "verify:deployment": "tsx scripts/verify-deployment.ts",
     "verify:routes": "tsx scripts/verify-routes.ts",
-    "seed:articles:generate": "tsx src/scripts/generate-article-seeds.ts",
-    "seed:articles:content": "tsx src/scripts/seed-article-content.ts",
-    "seed:articles:citations": "tsx src/scripts/seed-article-citations.ts",
-    "audit:articles": "tsx src/scripts/article-audit.ts"
+    "seed:articles:generate": "tsx scripts/content/generate-article-seeds.ts",
+    "seed:articles:content": "tsx scripts/content/seed-article-content.ts",
+    "seed:articles:citations": "tsx scripts/content/seed-article-citations.ts",
+    "audit:articles": "tsx scripts/content/article-audit.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",

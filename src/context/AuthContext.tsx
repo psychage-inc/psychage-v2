@@ -9,7 +9,7 @@ import { getAdminTier, isAdminRole } from '../lib/adminRole';
 
 // AUTH-010: signup extraMetadata is restricted to a known allowlist.
 // Anything outside this set is dropped (with a console.warn) before the
-// payload reaches Supabase. See docs/audits/auth-audit-2026-04-23.md.
+// payload reaches Supabase.
 export type SignupExtraMetadata = {
   age_verified?: boolean;
   consent_version?: string;
@@ -30,8 +30,7 @@ const ALLOWED_EXTRA_KEYS = [
 //
 // Role is resolved from app_metadata, not user_metadata. user_metadata is
 // user-writable via supabase.auth.updateUser({ data: ... }) — trusting it
-// for role resolution is the vulnerability fixed in AUTH-001. See
-// docs/audits/auth-audit-2026-04-23.md.
+// for role resolution is the vulnerability fixed in AUTH-001.
 //
 // Note on the 'admin' branch: post-AUTH-006 cleanup, profiles.role is
 // constrained to 'patient' | 'provider'. Admin recognition flows from

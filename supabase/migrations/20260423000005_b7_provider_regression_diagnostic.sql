@@ -3,7 +3,6 @@
 -- ============================================================
 -- Date: 2026-04-23
 -- Severity: HIGH (live production regression)
--- Audit:    docs/audits/auth-hotfix-b7-incident.md
 -- Source:   strip_user_metadata_role trigger (20260423000001) strips
 --           the entire 'role' key from raw_user_meta_data on every
 --           UPDATE. The claim-provider edge function only writes
@@ -87,8 +86,7 @@ REVOKE EXECUTE ON FUNCTION public.b7_provider_regression_diagnostic() FROM anon;
 
 COMMENT ON FUNCTION public.b7_provider_regression_diagnostic() IS
   'B-7 read-only enumeration of provider-role regression states post '
-  '20260423000001 deploy. Service-role only. See '
-  'docs/audits/auth-hotfix-b7-incident.md.';
+  '20260423000001 deploy. Service-role only.';
 
 COMMIT;
 

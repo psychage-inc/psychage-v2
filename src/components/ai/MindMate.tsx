@@ -490,7 +490,7 @@ const MindMate: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Messages — Claude-style centered */}
+                        {/* Messages — centered column */}
                         <div className="relative z-10 flex-grow overflow-y-auto px-5 py-5 space-y-5 scroll-smooth" role="log" aria-live="polite" aria-label="Chat messages">
                             {messages.map((msg) => (
                                 <motion.div

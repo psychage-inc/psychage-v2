@@ -2,8 +2,8 @@
 -- delete_account() — hard-immediate account + personal-data erasure
 -- ============================================================
 -- Date: 2026-06-15
--- Spec: rules/auth.md §7 (Account deletion — GDPR Art. 17 + App Store 5.1.1(v));
---       CLAUDE.md Procedure-B security checklist.
+-- Spec: Account deletion requirements (GDPR Art. 17 + App Store 5.1.1(v));
+--       security checklist.
 --
 -- Context:
 --   The mobile "delete my account" flow (app/settings/delete-confirm.tsx) wipes

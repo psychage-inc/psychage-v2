@@ -9,7 +9,7 @@ import { tools } from '@/data/tools';
  * This prevents production issues where tools appear but link to '#'.
  */
 
-// This should match the getToolLink function in ToolsPage.tsx and ToolsSection.tsx
+// This should match the getToolLink function in ToolsPage.tsx
 const ROUTE_MAP: Record<number, string> = {
   1: '/clarity-score',
   2: '/tools/mood-journal',
@@ -39,8 +39,7 @@ describe('Route Integrity', () => {
       throw new Error(
         `The following tools lack route mappings: ${toolNames}\n` +
         `Add them to ROUTE_MAP in src/tests/routes.test.ts and update getToolLink() in:\n` +
-        `- src/components/pages/ToolsPage.tsx\n` +
-        `- src/components/home/ToolsSection.tsx`
+        `- src/components/pages/ToolsPage.tsx`
       );
     }
 

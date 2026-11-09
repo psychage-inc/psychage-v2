@@ -2,8 +2,8 @@
 -- audit_events — append-only auth/security audit log
 -- ============================================================
 -- Date: 2026-06-14
--- Spec: Backend Slice 2 (platform JWT claim); CLAUDE.md Procedure-B security
---       checklist item 5 (audit_events row for the relevant auth event).
+-- Spec: Backend Slice 2 (platform JWT claim); security checklist item 5
+--       (audit_events row for the relevant auth event).
 --
 -- Context:
 --   Server-trusted, append-only record of successful auth events (sign_up,

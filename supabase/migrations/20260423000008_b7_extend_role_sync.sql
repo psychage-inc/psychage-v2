@@ -3,7 +3,6 @@
 -- ============================================================
 -- Date: 2026-04-23
 -- Severity: HIGH (live production regression)
--- Audit:    docs/audits/auth-hotfix-b7-incident.md
 --
 -- Architectural decision (per incident doc):
 --   effective_role =

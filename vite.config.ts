@@ -35,9 +35,6 @@ export default defineConfig(() => {
           changeOrigin: true,
         },
       },
-      watch: {
-        ignored: ['**/clarity-score/**'],
-      },
     },
     plugins: [adminFallbackPlugin(), react()],
     resolve: {
@@ -60,7 +57,6 @@ export default defineConfig(() => {
         '@tiptap/extension-table-row', '@tiptap/extension-table-cell',
         '@tiptap/extension-table-header',
       ],
-      exclude: ['clarity-score'],
       entries: ['src/**/*.{ts,tsx}'],
     },
     build: {

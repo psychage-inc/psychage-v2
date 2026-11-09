@@ -3,8 +3,6 @@
 -- ============================================================
 -- Date: 2026-04-23
 -- Severity: CRITICAL
--- Audit: docs/audits/auth-audit-2026-04-23.md (AUTH-002),
---        docs/audits/auth-audit-2026-04-23-addendum.md (§H.1)
 --
 -- 20260316000007_auth_user_article_rls.sql gave any authenticated user
 -- INSERT/UPDATE/DELETE access to articles, article_citations,

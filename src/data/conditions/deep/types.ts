@@ -4,7 +4,7 @@
  * so every condition's content is reviewable, diffable, and re-seedable.
  *
  * One `ConditionDeepEntry` per condition, keyed by slug. The seeder
- * (src/scripts/seedConditionDeep.ts) upserts these into conditions_reference: the
+ * (scripts/content/seedConditionDeep.ts) upserts these into conditions_reference: the
  * (fuller) core fields, the ordered deep_sections, and the sources list. Nothing here
  * flips verification_status — that is set separately.
  *

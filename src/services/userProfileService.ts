@@ -110,7 +110,7 @@ export const userProfileService = {
      *
      * `role` is intentionally excluded from the accepted update shape: roles
      * must be set server-side via admin tooling, never from a client-trusted
-     * call. See AUTH-001 in docs/audits/auth-audit-2026-04-23.md.
+     * call (AUTH-001).
      */
     updateProfile: async (updates: Partial<Omit<UserProfile, 'id' | 'email' | 'created_at' | 'role'>>): Promise<UserProfile | null> => {
         try {

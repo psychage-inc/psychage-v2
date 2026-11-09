@@ -3,7 +3,6 @@
 -- ============================================================
 -- Date: 2026-04-23
 -- Severity: HIGH (closes the live damage window)
--- Audit:    docs/audits/auth-hotfix-b7-incident.md
 --
 -- The strip trigger from 20260423000001 strips the entire 'role' key
 -- from raw_user_meta_data on every UPDATE, regardless of value. This
@@ -62,8 +61,7 @@ COMMENT ON FUNCTION public.strip_user_metadata_role() IS
   'AUTH-001 belt-and-braces, narrowed in B-7. Strips only role=admin '
   'from auth.users.raw_user_meta_data on UPDATE. Other role values '
   '(provider, patient) pass through. is_admin() reads admin_roles, '
-  'not user_metadata, so admin escalation is still blocked. See '
-  'docs/audits/auth-hotfix-b7-incident.md.';
+  'not user_metadata, so admin escalation is still blocked.';
 
 ALTER TABLE auth.users ENABLE TRIGGER strip_user_metadata_role_trg;
 

@@ -3,7 +3,6 @@
 -- ============================================================
 -- Date: 2026-06-07
 -- Severity: P1 (admin invite flow broken at runtime)
--- Audit:    ADMIN_AUDIT_FINDINGS.md (P1-01)
 --
 -- Context:
 --   The "Add Admin" flow in the admin panel calls

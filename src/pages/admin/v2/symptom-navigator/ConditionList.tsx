@@ -142,7 +142,7 @@ const AdminConditionList: React.FC = () => {
 
   return (
     <div>
-      <NotWiredNotice variant="unavailable">This section is temporarily unavailable — it targets a database schema that isn’t deployed (audit finding FS-01). Listing and editing conditions will not work until the backend migration lands. See BACKEND_REQUIRED.md.</NotWiredNotice>
+      <NotWiredNotice variant="unavailable">This section is temporarily unavailable — it targets a database schema that isn’t deployed (audit finding FS-01). Listing and editing conditions will not work until the backend migration lands.</NotWiredNotice>
       <PageHeader
         title="Conditions"
         description={`${conditions?.length || 0} condition profiles`}

@@ -3,7 +3,6 @@
 -- ============================================================
 -- Date: 2026-06-10
 -- Severity: CRITICAL (P0-4) + HIGH (D-1, D-2, B3-7)
--- Audit: AUDIT_FINDINGS.md (2026-06-10 full-platform audit)
 --
 -- Four defects, one migration. No existing migration is edited.
 --

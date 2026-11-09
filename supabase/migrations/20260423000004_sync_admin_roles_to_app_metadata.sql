@@ -3,7 +3,6 @@
 -- ============================================================
 -- Date: 2026-04-23
 -- Severity: HIGH (broken UX — post-AUTH-001 admins got patient dashboards)
--- Audit: docs/audits/auth-hotfix-summary.md, §H.2 of the addendum
 --
 -- Why this exists:
 --   After the AUTH-001 hotfix:
@@ -90,8 +89,7 @@ $$;
 
 COMMENT ON FUNCTION public.sync_admin_role_to_app_metadata() IS
   'AUTH-001 post-fix: keeps auth.users.raw_app_meta_data.role in sync '
-  'with admin_roles. Fires on every INSERT/UPDATE/DELETE of admin_roles. '
-  'See docs/audits/auth-hotfix-summary.md §8 B-3.';
+  'with admin_roles. Fires on every INSERT/UPDATE/DELETE of admin_roles.';
 
 DROP TRIGGER IF EXISTS sync_admin_role_to_app_metadata_trg ON public.admin_roles;
 CREATE TRIGGER sync_admin_role_to_app_metadata_trg

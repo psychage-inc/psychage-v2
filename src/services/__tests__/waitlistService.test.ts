@@ -65,28 +65,16 @@ describe('waitlistService', () => {
             expect(result.success).toBe(true);
         });
 
-        it('should fallback to localStorage on other errors', async () => {
+        it('reports failure on a real error instead of a false localStorage success', async () => {
             mockInsert.mockResolvedValue({ error: { code: '500', message: 'db down' } });
 
             const result = await waitlistService.join('test@example.com', 'community');
-            expect(result.success).toBe(true);
+            expect(result.success).toBe(false);
+            expect(result.error).toContain('Failed to join');
 
+            // The signup is NOT written to a dead localStorage queue.
             const stored = JSON.parse(localStorage.getItem('psychage_waitlist') || '[]');
-            expect(stored).toHaveLength(1);
-            expect(stored[0].email).toBe('test@example.com');
-            expect(stored[0].feature).toBe('community');
-        });
-
-        it('should not duplicate in localStorage fallback', async () => {
-            localStorage.setItem('psychage_waitlist', JSON.stringify([
-                { email: 'test@example.com', feature: 'spark' }
-            ]));
-            mockInsert.mockResolvedValue({ error: { code: '500', message: 'fail' } });
-
-            await waitlistService.join('test@example.com', 'spark');
-
-            const stored = JSON.parse(localStorage.getItem('psychage_waitlist') || '[]');
-            expect(stored).toHaveLength(1);
+            expect(stored).toHaveLength(0);
         });
 
         it('should lowercase email before insert', async () => {

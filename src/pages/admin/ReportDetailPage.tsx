@@ -9,61 +9,13 @@ import AdminErrorBanner from './components/AdminErrorBanner';
 import StatusBadge from './components/StatusBadge';
 import AdminConfirmModal from './components/AdminConfirmModal';
 import { useToast } from '@/context/ToastContext';
-
-interface ReportDetail {
-    id: string;
-    created_at: string;
-    type: 'content' | 'user' | 'system';
-    subject: string;
-    description: string;
-    status: 'pending' | 'investigating' | 'resolved';
-    reporter_id?: string;
-    reporter_email?: string;
-    resolution_notes?: string;
-    resolved_at?: string;
-}
-
-// TODO: Wire to api.admin.getReport(id) — using mock data for now
-const MOCK_REPORTS: Record<string, ReportDetail> = {
-    'rpt-001': {
-        id: 'rpt-001',
-        created_at: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString(),
-        type: 'content',
-        subject: 'Inappropriate content in article comments',
-        description: 'A user reported offensive language in the comments section of the "Managing Anxiety" article. The comment contains hate speech directed at a specific group. Screenshot attached to original report.',
-        status: 'pending',
-        reporter_id: 'usr-abc123',
-        reporter_email: 'reporter@example.com',
-    },
-    'rpt-002': {
-        id: 'rpt-002',
-        created_at: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(),
-        type: 'user',
-        subject: 'Provider profile appears fraudulent',
-        description: 'Multiple users have flagged a provider profile that appears to use stolen credentials. The NPI number listed does not match the provider name when verified through NPPES.',
-        status: 'investigating',
-        reporter_id: 'usr-def456',
-        reporter_email: 'concerned@example.com',
-    },
-    'rpt-003': {
-        id: 'rpt-003',
-        created_at: new Date(Date.now() - 14 * 24 * 60 * 60 * 1000).toISOString(),
-        type: 'system',
-        subject: 'MindMate AI providing medical advice',
-        description: 'AI chatbot was observed providing specific medication dosage recommendations to a user. This violates platform guidelines about not providing medical advice.',
-        status: 'resolved',
-        reporter_id: 'usr-ghi789',
-        reporter_email: 'admin@psychage.com',
-        resolution_notes: 'Updated AI system prompt to more strictly enforce no-medical-advice boundaries. Added additional guardrails for medication-related queries.',
-        resolved_at: new Date(Date.now() - 10 * 24 * 60 * 60 * 1000).toISOString(),
-    },
-};
+import { api, type AdminReport } from '@/lib/api';
 
 const ReportDetailPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
     const toast = useToast();
-    const [report, setReport] = useState<ReportDetail | null>(null);
+    const [report, setReport] = useState<AdminReport | null>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [isUpdating, setIsUpdating] = useState(false);
@@ -78,13 +30,11 @@ const ReportDetailPage: React.FC = () => {
         setIsLoading(true);
         setError(null);
         try {
-            // TODO: Wire to api.admin.getReport(id)
-            await new Promise(resolve => setTimeout(resolve, 300));
-            const mockReport = MOCK_REPORTS[id];
-            if (mockReport) {
-                setReport(mockReport);
+            const response = await api.admin.getReport(id);
+            if (response.success && response.data) {
+                setReport(response.data);
             } else {
-                setError('Report not found.');
+                setError(response.error || 'Report not found.');
             }
         } catch (err) {
             console.error("Failed to fetch report", err);
@@ -102,8 +52,10 @@ const ReportDetailPage: React.FC = () => {
         if (!id || !report) return;
         setIsUpdating(true);
         try {
-            // TODO: Wire to api.admin.updateReportStatus(id, modalState.action, notes)
-            await new Promise(resolve => setTimeout(resolve, 500));
+            const response = await api.admin.updateReportStatus(id, modalState.action, notes);
+            if (!response.success) {
+                throw new Error(response.error || 'Update failed');
+            }
             setReport(prev => prev ? {
                 ...prev,
                 status: modalState.action,
@@ -148,11 +100,6 @@ const ReportDetailPage: React.FC = () => {
 
     return (
         <AdminLayout title="Report Details" seoTitle={`Report: ${report.subject} | Admin`}>
-            {import.meta.env.DEV && (
-                <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-amber-800 text-sm font-medium mb-4">
-                    <strong>Dev Mode:</strong> This page uses mock data. Wire to <code className="bg-amber-100 px-1 rounded">api.admin.getReport(id)</code> before production.
-                </div>
-            )}
             <Button
                 variant="ghost"
                 size="sm"

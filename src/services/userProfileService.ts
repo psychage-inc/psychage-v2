@@ -6,6 +6,7 @@
 
 import { supabase } from '../lib/supabaseClient';
 import { isAdminRole } from '../lib/adminRole';
+import { throwOnError } from '../lib/supabaseError';
 
 export interface UserProfile {
     id: string;
@@ -131,30 +132,26 @@ export const userProfileService = {
                 data: metadataUpdates,
             });
 
-            if (updateError) {
-                console.error('Error updating auth user:', updateError);
-            }
+            // Surface a failed metadata write instead of logging and returning a
+            // stale "success" profile (the two stores would silently diverge).
+            throwOnError(updateError, 'Update auth profile');
 
-            // Try to update user_profiles table if it exists
-            try {
-                const profileUpdates: Record<string, unknown> = {
-                    updated_at: new Date().toISOString(),
-                };
-                if (updates.display_name !== undefined) profileUpdates.display_name = updates.display_name;
-                if (updates.full_name !== undefined) profileUpdates.full_name = updates.full_name;
-                if (updates.avatar_url !== undefined) profileUpdates.avatar_url = updates.avatar_url;
-                if (updates.location !== undefined) profileUpdates.location = updates.location;
+            const profileUpdates: Record<string, unknown> = {
+                updated_at: new Date().toISOString(),
+            };
+            if (updates.display_name !== undefined) profileUpdates.display_name = updates.display_name;
+            if (updates.full_name !== undefined) profileUpdates.full_name = updates.full_name;
+            if (updates.avatar_url !== undefined) profileUpdates.avatar_url = updates.avatar_url;
+            if (updates.location !== undefined) profileUpdates.location = updates.location;
 
-                // Upsert to user_profiles table
-                await supabase
-                    .from('user_profiles')
-                    .upsert({
-                        id: user.id,
-                        ...profileUpdates,
-                    });
-            } catch (_profileError) {
-                // user_profiles table might not exist, that's okay
-            }
+            // Upsert to user_profiles table; a failed write must not report success.
+            const { error: profileError } = await supabase
+                .from('user_profiles')
+                .upsert({
+                    id: user.id,
+                    ...profileUpdates,
+                });
+            throwOnError(profileError, 'Update profile');
 
             // Return updated profile
             return await userProfileService.getProfile();

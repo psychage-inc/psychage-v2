@@ -17,30 +17,41 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({
   const [comment, setComment] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [showComment, setShowComment] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleVote = async (helpful: boolean) => {
     const v = helpful ? 'up' : 'down';
     setVote(v);
     setShowComment(true);
-    await submitFeedback({
-      content_type: contentType,
-      content_id: contentId,
-      helpful,
-    });
+    setError(false);
+    try {
+      await submitFeedback({
+        content_type: contentType,
+        content_id: contentId,
+        helpful,
+      });
+    } catch {
+      setError(true);
+    }
   };
 
   const handleSubmitComment = async () => {
+    setError(false);
     if (!comment.trim()) {
       setSubmitted(true);
       return;
     }
-    await submitFeedback({
-      content_type: contentType,
-      content_id: contentId,
-      helpful: vote === 'up',
-      comment: comment.trim(),
-    });
-    setSubmitted(true);
+    try {
+      await submitFeedback({
+        content_type: contentType,
+        content_id: contentId,
+        helpful: vote === 'up',
+        comment: comment.trim(),
+      });
+      setSubmitted(true);
+    } catch {
+      setError(true);
+    }
   };
 
   if (submitted) {
@@ -87,6 +98,11 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({
                 : ''}
             </span>
           </div>
+          {error && (
+            <p className="text-xs text-red-600 dark:text-red-400" role="alert">
+              Couldn&apos;t save your feedback — please try again.
+            </p>
+          )}
           <div className="flex gap-2">
             <textarea
               value={comment}

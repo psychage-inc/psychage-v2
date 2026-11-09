@@ -1,5 +1,5 @@
 /**
- * GEO-DETECT API ROUTE (Vercel Edge Function)
+ * GEO-DETECT API ROUTE (Vercel Node Function)
  *
  * Resolves IP → country code using Vercel's geo headers.
  * NEVER logs IP addresses — only country code.
@@ -84,7 +84,3 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
   }
 }
-
-export const config = {
-  runtime: 'edge', // Use Vercel Edge for low latency
-};

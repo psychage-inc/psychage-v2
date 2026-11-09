@@ -638,6 +638,14 @@ const AdminProviderEditor: React.FC = () => {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'providers'] });
+      // Also invalidate the detail + relation queries that seed this editor, so
+      // re-opening the same provider shows the saved values, not pre-save cache.
+      if (id) {
+        queryClient.invalidateQueries({ queryKey: ['admin', 'provider', id] });
+        for (const rel of ['provider-locations', 'provider-specialties', 'provider-languages', 'provider-insurance', 'provider-competencies']) {
+          queryClient.invalidateQueries({ queryKey: ['admin', rel, id] });
+        }
+      }
       toast.success(isNew ? 'Provider created' : 'Changes saved');
       navigate(adminPath('/providers'));
     },

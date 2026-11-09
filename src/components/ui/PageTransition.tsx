@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
+import RouteErrorBoundary from '../error/RouteErrorBoundary';
 
 interface PageTransitionProps {
     children: ReactNode;
@@ -42,7 +43,11 @@ export const PageTransition = ({ children, className = "" }: PageTransitionProps
             exit="exit"
             className={className}
         >
-            {children}
+            {/* Every page route flows through PageTransition, so wrapping here gives
+                each route its own error boundary — a crash in one page shows a
+                localized fallback and resets on navigation instead of taking down
+                the whole app. */}
+            <RouteErrorBoundary>{children}</RouteErrorBoundary>
         </motion.div>
     );
 };

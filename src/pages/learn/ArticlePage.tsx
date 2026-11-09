@@ -84,11 +84,15 @@ const ArticlePage: React.FC = () => {
     const heroY = useTransform(scrollY, [0, 400], [0, 150]);
 
     useEffect(() => {
+        let cancelled = false;
         const fetchData = async () => {
             if (articleSlug) {
                 setLoading(true);
                 try {
                     const foundArticle = await articleService.getBySlug(articleSlug);
+                    // Guard against a slow response for a previous slug resolving
+                    // after the user has navigated to a different article.
+                    if (cancelled) return;
                     setArticle(foundArticle);
 
                     if (foundArticle) {
@@ -97,16 +101,18 @@ const ArticlePage: React.FC = () => {
                             foundArticle.category.slug,
                             foundArticle.tags
                         );
+                        if (cancelled) return;
                         setRelatedArticles(related);
                     }
                 } catch (error) {
-                    console.error("Failed to fetch article", error);
+                    if (!cancelled) console.error("Failed to fetch article", error);
                 } finally {
-                    setLoading(false);
+                    if (!cancelled) setLoading(false);
                 }
             }
         };
         fetchData();
+        return () => { cancelled = true; };
     }, [articleSlug, articleService]);
 
     useEffect(() => {

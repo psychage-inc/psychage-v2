@@ -668,9 +668,8 @@ export async function updateArticleImage(
 }
 
 export async function deleteArticleImage(imageId: string, storagePath: string, articleId: string): Promise<void> {
-  // FA-02: check the Storage removal. Previously its error was ignored and the
-  // DB row was deleted regardless, orphaning the file in the bucket (and hiding
-  // the failure from the admin). Remove the file first and surface any error.
+  // Delete from Storage — surface a failure instead of deleting the DB record
+  // anyway and leaving an orphaned object still served at its public URL.
   const { error: storageError } = await supabase.storage.from('article-images').remove([storagePath]);
   if (storageError) throw storageError;
 
@@ -741,8 +740,10 @@ export async function createBreakdownArticles(
   parentId: string,
   sections: { title: string; slug: string; sanity_id?: string }[]
 ): Promise<ArticleRecord[]> {
-  // Mark parent
-  await supabase.from('articles').update({ is_parent: true }).eq('id', parentId);
+  // Mark parent — a failed update must not proceed to create children under a
+  // parent that was never flagged (they'd be unreachable in the clusters UI).
+  const { error: parentErr } = await supabase.from('articles').update({ is_parent: true }).eq('id', parentId);
+  if (parentErr) throw parentErr;
 
   const { data: { user } } = await supabase.auth.getUser();
 
@@ -1214,9 +1215,10 @@ export async function updateReviewStage(
     .single();
   if (updateErr) throw updateErr;
 
-  // Log in status history
+  // Log in status history — surface a failure so the stage audit trail can't
+  // silently miss transitions while the stage change reports success.
   const { data: { user } } = await supabase.auth.getUser();
-  await supabase.from('article_status_history').insert({
+  const { error: histErr } = await supabase.from('article_status_history').insert({
     article_id: articleId,
     from_status: oldStage,
     to_status: newStage,
@@ -1224,6 +1226,7 @@ export async function updateReviewStage(
     changed_by_name: user?.email || null,
     notes: notes || `Review stage: ${oldStage} → ${newStage}`,
   });
+  if (histErr) throw histErr;
 
   logAdminAction({
     action: 'review_stage_change',
@@ -1317,28 +1320,41 @@ export async function generateArticleProductionId(categorySlug: string): Promise
   const prefix = CATEGORY_PREFIXES[categorySlug];
   if (!prefix) throw new Error(`Unknown category slug: ${categorySlug}`);
 
+  // Allocate atomically server-side so concurrent creates can't mint the same
+  // id. Falls back to the (racy) inline read when the RPC isn't deployed yet.
+  const { data, error } = await supabase.rpc('next_article_production_id', { prefix_input: prefix });
+  if (error) {
+    if (error.code === 'PGRST202') {
+      return generateArticleProductionIdInline(prefix);
+    }
+    throw error;
+  }
+  return data as string;
+}
+
+// Fallback for environments without the next_article_production_id RPC. Racy
+// (read-max-then-add-1) but preserves the prior behavior during that window.
+async function generateArticleProductionIdInline(prefix: string): Promise<string> {
   const fullPrefix = `PSY-${prefix}-`;
 
-  try {
-    const { data, error } = await supabase
-      .from('articles')
-      .select('article_production_id')
-      .like('article_production_id', `${fullPrefix}%`)
-      .order('article_production_id', { ascending: false })
-      .limit(1);
-    if (error) throw error;
+  // Don't swallow a query failure into `${fullPrefix}001` — that is guaranteed
+  // to collide once any article with this prefix exists.
+  const { data, error } = await supabase
+    .from('articles')
+    .select('article_production_id')
+    .like('article_production_id', `${fullPrefix}%`)
+    .order('article_production_id', { ascending: false })
+    .limit(1);
+  if (error) throw error;
 
-    let nextNum = 1;
-    if (data && data.length > 0 && data[0].article_production_id) {
-      const parts = data[0].article_production_id.split('-');
-      const lastNum = parseInt(parts[2], 10);
-      if (!isNaN(lastNum)) nextNum = lastNum + 1;
-    }
-
-    return `${fullPrefix}${String(nextNum).padStart(3, '0')}`;
-  } catch (err) {
-    return `${fullPrefix}001`;
+  let nextNum = 1;
+  if (data && data.length > 0 && data[0].article_production_id) {
+    const parts = data[0].article_production_id.split('-');
+    const lastNum = parseInt(parts[2], 10);
+    if (!isNaN(lastNum)) nextNum = lastNum + 1;
   }
+
+  return `${fullPrefix}${String(nextNum).padStart(3, '0')}`;
 }
 
 // ============================================================

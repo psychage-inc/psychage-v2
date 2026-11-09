@@ -1,6 +1,5 @@
  
 import { useEffect, useState, useRef } from 'react';
-import lottie from 'lottie-web/build/player/lottie_light';
 import type { AnimationItem } from 'lottie-web';
 
 const STORAGE_KEY = 'psychage_intro_shown';
@@ -46,22 +45,17 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
         return () => clearInterval(interval);
     }, [phase]);
 
-    // Initialize lottie-web directly.
+    // Initialize lottie-web. Loaded on demand so the ~45KB player stays out of
+    // the entry chunk (Preloader is eagerly imported by App).
     useEffect(() => {
         if (phase !== 'playing' || !containerRef.current) return;
 
+        const container = containerRef.current;
         // Clear any leftover content
-        containerRef.current.innerHTML = '';
+        container.innerHTML = '';
 
-        const anim = lottie.loadAnimation({
-            container: containerRef.current,
-            renderer: 'svg',
-            loop: false,
-            autoplay: true,
-            path: '/animations/preloader.json',
-        });
-
-        animationRef.current = anim;
+        let anim: AnimationItem | null = null;
+        let cancelled = false;
 
         const handleComplete = () => {
             if (hasCompleted.current) return;
@@ -77,10 +71,24 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
             }, 500);
         };
 
-        anim.addEventListener('complete', handleComplete);
+        import('lottie-web/build/player/lottie_light').then(({ default: lottie }) => {
+            if (cancelled) return;
+            anim = lottie.loadAnimation({
+                container,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: '/animations/preloader.json',
+            });
+            animationRef.current = anim;
+            anim.addEventListener('complete', handleComplete);
+        }).catch(() => {
+            // If the player fails to load, the 3s safety timeout still exits.
+        });
 
         return () => {
-            anim.destroy();
+            cancelled = true;
+            if (anim) anim.destroy();
             animationRef.current = null;
             if (exitTimeoutRef.current) clearTimeout(exitTimeoutRef.current);
         };

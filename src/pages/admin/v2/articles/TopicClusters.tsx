@@ -54,7 +54,7 @@ function ClusterCard({ parent }: { parent: ArticleRecord }) {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin', 'cluster-children', parent.id] });
-      queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
+      queryClient.invalidateQueries({ queryKey: ['admin', 'articles-search'] });
       toast.success('Approved articles published');
       setShowPublishConfirm(false);
     },

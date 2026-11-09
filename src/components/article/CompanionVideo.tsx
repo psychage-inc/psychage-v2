@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, ChevronDown, ChevronUp, Film, Bell } from 'lucide-react';
+import { Play, ChevronDown, ChevronUp, Film } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 
@@ -91,18 +91,9 @@ const ComingSoonPlaceholder: React.FC = () => (
         <p className="text-sm text-text-secondary mb-1 max-w-sm mx-auto">
             A companion video for this article is currently in production.
         </p>
-        <p className="text-xs text-text-tertiary mb-4">
+        <p className="text-xs text-text-tertiary">
             Narrated by Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology
         </p>
-        <button
-            className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-lg text-sm font-medium hover:bg-primary/20 transition-colors"
-            onClick={() => {
-                // Future: newsletter/notification signup
-            }}
-        >
-            <Bell size={14} />
-            Notify Me
-        </button>
     </div>
 );
 

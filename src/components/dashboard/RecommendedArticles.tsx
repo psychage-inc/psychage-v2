@@ -45,7 +45,7 @@ const RecommendedArticles: React.FC<RecommendedArticlesProps> = ({
                     readTime: a.readTime,
                 });
 
-                let fetched: ArticlePreview[] = [];
+                const fetched: ArticlePreview[] = [];
 
                 // Use recommender to get ranked category slugs
                 const rankedCategories = getRecommendedCategories({
@@ -54,15 +54,22 @@ const RecommendedArticles: React.FC<RecommendedArticlesProps> = ({
                     recentToolSlugs,
                 });
 
-                // Fetch from the top recommended category
-                for (const slug of rankedCategories) {
+                // Fetch the ranked categories in parallel (they're independent),
+                // then merge in rank order — the sequential await-in-loop made the
+                // dashboard wait on N round-trips one after another.
+                const perCategory = await Promise.all(
+                    rankedCategories.map((slug) => articleService.getByCategory(slug).catch(() => [])),
+                );
+                const seen = new Set<string>();
+                for (const catArticles of perCategory) {
+                    for (const a of catArticles) {
+                        if (fetched.length >= 4) break;
+                        const articleId = String(a.id);
+                        if (readIds.has(articleId) || seen.has(articleId)) continue;
+                        seen.add(articleId);
+                        fetched.push(toPreview(a));
+                    }
                     if (fetched.length >= 4) break;
-                    const catArticles = await articleService.getByCategory(slug);
-                    const newArticles = catArticles
-                        .filter((a) => !readIds.has(String(a.id)))
-                        .slice(0, 4 - fetched.length)
-                        .map(toPreview);
-                    fetched.push(...newArticles);
                 }
 
                 // Fallback to featured if not enough personalized results

@@ -97,30 +97,19 @@ export const chatPersistenceService = {
                 return null;
             }
 
-            // Update conversation metadata
-            const { error: updateErr } = await supabase
-                .from('ai_conversations')
-                .update({
-                    last_message_at: new Date().toISOString(),
-                })
-                .eq('id', conversationId);
-            if (updateErr) console.error('Failed to update conversation timestamp:', updateErr);
-
-            // Increment message count directly (no RPC needed)
-            try {
-                const { data: conv } = await supabase
-                    .from('ai_conversations')
-                    .select('message_count')
-                    .eq('id', conversationId)
-                    .single();
-                if (conv) {
-                    await supabase
-                        .from('ai_conversations')
-                        .update({ message_count: (conv.message_count || 0) + 1 })
-                        .eq('id', conversationId);
+            // Atomically bump message_count + last_message_at via RPC so
+            // concurrent user/assistant saves don't lose increments. Falls back
+            // to the previous (racy) inline path if the RPC isn't deployed yet.
+            const { error: rpcError } = await supabase.rpc('increment_conversation_message_count', {
+                conversation_id_input: conversationId,
+            });
+            if (rpcError) {
+                if (rpcError.code === 'PGRST202') {
+                    // Function not found (migration not applied) — degrade gracefully.
+                    await incrementConversationCountInline(conversationId);
+                } else {
+                    console.error('Failed to update conversation metadata:', rpcError);
                 }
-            } catch {
-                // Non-critical — message was already saved
             }
 
             return data as ChatMessage;
@@ -200,3 +189,29 @@ export const chatPersistenceService = {
         }
     },
 };
+
+// Fallback for environments where the atomic-increment RPC isn't deployed yet.
+// Racy (read-modify-write) but preserves the prior behavior during that window.
+async function incrementConversationCountInline(conversationId: string): Promise<void> {
+    try {
+        const { error: tsError } = await supabase
+            .from('ai_conversations')
+            .update({ last_message_at: new Date().toISOString() })
+            .eq('id', conversationId);
+        if (tsError) console.error('Failed to update conversation timestamp:', tsError);
+
+        const { data: conv } = await supabase
+            .from('ai_conversations')
+            .select('message_count')
+            .eq('id', conversationId)
+            .single();
+        if (conv) {
+            await supabase
+                .from('ai_conversations')
+                .update({ message_count: (conv.message_count || 0) + 1 })
+                .eq('id', conversationId);
+        }
+    } catch {
+        // Non-critical — the message was already saved.
+    }
+}

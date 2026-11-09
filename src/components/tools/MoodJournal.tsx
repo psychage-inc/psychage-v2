@@ -5,6 +5,7 @@ import Button from '../ui/Button';
 import Breadcrumbs from '../ui/Breadcrumbs';
 import { useNavigate } from 'react-router-dom';
 import { moodService, MoodEntry as ServiceMoodEntry } from '../../services/moodService';
+import { valenceToScore, scoreToValence } from './MoodWizard/moodScale';
 import { useAuth } from '../../context/AuthContext';
 import { MoodWizard, WizardState } from './MoodWizard/MoodWizard';
 import { LightweightInsights } from './LightweightInsights';
@@ -23,7 +24,7 @@ interface MoodEntry {
 const fromServiceEntry = (entry: ServiceMoodEntry): MoodEntry => ({
     id: entry.id,
     date: entry.created_at,
-    mood: entry.value,
+    mood: scoreToValence(entry.value),
     emotions: entry.tags || [],
     note: entry.notes || ''
 });
@@ -71,7 +72,7 @@ const MoodJournal: React.FC = () => {
             if (user?.id) {
                 const serviceEntry = await moodService.createEntry(
                     user.id,
-                    data.valence,
+                    valenceToScore(data.valence),
                     noteToSave || undefined,
                     combinedTags
                 );

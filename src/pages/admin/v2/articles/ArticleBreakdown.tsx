@@ -50,7 +50,7 @@ const AdminArticleBreakdown: React.FC = () => {
         sections.map((s) => ({ title: s.title, slug: s.slug }))
       ),
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
+      queryClient.invalidateQueries({ queryKey: ['admin', 'articles-search'] });
       queryClient.invalidateQueries({ queryKey: ['admin', 'article', id] });
       toast.success(`Created ${sections.length} sub-articles`);
       navigate(adminPath('/articles/clusters'));

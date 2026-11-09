@@ -147,7 +147,18 @@ async function fetchApi<T>(
       credentials: 'include',
     });
 
-    const data = await response.json();
+    // Parse the body defensively: a non-JSON error page (gateway 502/504) or an
+    // empty body (204 No Content) must not throw before the status is inspected,
+    // which would erase the real HTTP status and skip the 401 refresh path.
+    const rawBody = await response.text();
+    let data: unknown = null;
+    if (rawBody) {
+      try {
+        data = JSON.parse(rawBody);
+      } catch {
+        data = null;
+      }
+    }
 
     if (!response.ok) {
       // Handle 401 - try Supabase token refresh (only once to prevent infinite loop)
@@ -158,11 +169,13 @@ async function fetchApi<T>(
         }
       }
 
-      throw new ApiError(
-        data.error || 'An error occurred',
-        response.status,
-        data
-      );
+      const errorMessage =
+        data && typeof data === 'object' && 'error' in data &&
+        typeof (data as { error: unknown }).error === 'string'
+          ? (data as { error: string }).error
+          : `Request failed with status ${response.status}`;
+
+      throw new ApiError(errorMessage, response.status, data);
     }
 
     return data as ApiResponse<T>;
@@ -317,7 +330,27 @@ export const api = {
         headers,
         body: formData
       });
-      return response.json();
+
+      const rawBody = await response.text();
+      let data: unknown = null;
+      if (rawBody) {
+        try {
+          data = JSON.parse(rawBody);
+        } catch {
+          data = null;
+        }
+      }
+
+      if (!response.ok) {
+        const errorMessage =
+          data && typeof data === 'object' && 'error' in data &&
+          typeof (data as { error: unknown }).error === 'string'
+            ? (data as { error: string }).error
+            : `Avatar upload failed with status ${response.status}`;
+        throw new ApiError(errorMessage, response.status, data);
+      }
+
+      return data;
     }
   },
 

@@ -5,6 +5,7 @@
  */
 
 import { supabase } from '../lib/supabaseClient';
+import { throwOnError } from '../lib/supabaseError';
 
 export interface Bookmark {
     id: string;
@@ -90,72 +91,42 @@ export const bookmarkService = {
         userId: string,
         resourceType: Bookmark['resource_type'],
         resourceId: string
-    ): Promise<Bookmark | null> => {
-        try {
-            const { data, error } = await supabase
-                .from('bookmarks')
-                .insert({
-                    user_id: userId,
-                    resource_type: resourceType,
-                    resource_id: resourceId,
-                    created_at: new Date().toISOString(),
-                })
-                .select()
-                .single();
+    ): Promise<Bookmark> => {
+        // Throw on a real DB error instead of fabricating a fake local bookmark,
+        // so the caller can roll back its optimistic update.
+        const { data, error } = await supabase
+            .from('bookmarks')
+            .insert({
+                user_id: userId,
+                resource_type: resourceType,
+                resource_id: resourceId,
+                created_at: new Date().toISOString(),
+            })
+            .select()
+            .single();
 
-            if (error) {
-                console.error('Error adding bookmark:', error);
-                // Add to local cache as fallback
-                const localBookmark: Bookmark = {
-                    id: `local_${Date.now()}`,
-                    user_id: userId,
-                    resource_type: resourceType,
-                    resource_id: resourceId,
-                    created_at: new Date().toISOString(),
-                };
-                addToLocalCache(localBookmark);
-                return localBookmark;
-            }
+        throwOnError(error, 'Add bookmark');
 
-            const bookmark = data as Bookmark;
-
-            // Update local cache
-            addToLocalCache(bookmark);
-
-            return bookmark;
-        } catch (error) {
-            console.error('Failed to add bookmark:', error);
-            return null;
-        }
+        const bookmark = data as Bookmark;
+        addToLocalCache(bookmark);
+        return bookmark;
     },
 
     /**
      * Remove a bookmark
      */
     remove: async (userId: string, resourceType: Bookmark['resource_type'], resourceId: string): Promise<boolean> => {
-        try {
-            const { error } = await supabase
-                .from('bookmarks')
-                .delete()
-                .eq('user_id', userId)
-                .eq('resource_type', resourceType)
-                .eq('resource_id', resourceId);
+        const { error } = await supabase
+            .from('bookmarks')
+            .delete()
+            .eq('user_id', userId)
+            .eq('resource_type', resourceType)
+            .eq('resource_id', resourceId);
 
-            if (error) {
-                console.error('Error removing bookmark:', error);
-                // Remove from local cache anyway
-                removeFromLocalCache(resourceType, resourceId);
-                return false;
-            }
+        throwOnError(error, 'Remove bookmark');
 
-            // Remove from local cache
-            removeFromLocalCache(resourceType, resourceId);
-
-            return true;
-        } catch (error) {
-            console.error('Failed to remove bookmark:', error);
-            return false;
-        }
+        removeFromLocalCache(resourceType, resourceId);
+        return true;
     },
 
     /**
@@ -166,34 +137,25 @@ export const bookmarkService = {
         resourceType: Bookmark['resource_type'],
         resourceId: string
     ): Promise<{ bookmarked: boolean }> => {
-        try {
-            // Check if bookmark exists
-            const { data: existing, error: checkError } = await supabase
-                .from('bookmarks')
-                .select('id')
-                .eq('user_id', userId)
-                .eq('resource_type', resourceType)
-                .eq('resource_id', resourceId)
-                .maybeSingle();
+        // Check if bookmark exists
+        const { data: existing, error: checkError } = await supabase
+            .from('bookmarks')
+            .select('id')
+            .eq('user_id', userId)
+            .eq('resource_type', resourceType)
+            .eq('resource_id', resourceId)
+            .maybeSingle();
 
-            if (checkError) {
-                console.error('Error checking bookmark:', checkError);
-                return { bookmarked: false };
-            }
+        throwOnError(checkError, 'Check bookmark');
 
-            if (existing) {
-                // Bookmark exists, remove it
-                await bookmarkService.remove(userId, resourceType, resourceId);
-                return { bookmarked: false };
-            } else {
-                // Bookmark doesn't exist, add it
-                await bookmarkService.add(userId, resourceType, resourceId);
-                return { bookmarked: true };
-            }
-        } catch (error) {
-            console.error('Failed to toggle bookmark:', error);
+        if (existing) {
+            // Bookmark exists, remove it
+            await bookmarkService.remove(userId, resourceType, resourceId);
             return { bookmarked: false };
         }
+        // Bookmark doesn't exist, add it
+        await bookmarkService.add(userId, resourceType, resourceId);
+        return { bookmarked: true };
     },
 
     /**

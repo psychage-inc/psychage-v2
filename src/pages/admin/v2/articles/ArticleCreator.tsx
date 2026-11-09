@@ -144,7 +144,7 @@ const AdminArticleCreator: React.FC = () => {
       return createArticle(payload);
     },
     onSuccess: (article) => {
-      queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
+      queryClient.invalidateQueries({ queryKey: ['admin', 'articles-search'] });
       queryClient.invalidateQueries({ queryKey: ['admin', 'article-stats'] });
       toast.success('Article created');
       navigate(adminPath(`/articles/${article.id}`));

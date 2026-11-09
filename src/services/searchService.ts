@@ -9,7 +9,7 @@
  * exact matches use a fast-path that rank that item first within its type.
  */
 
-import { useMemo, useCallback, useState } from 'react';
+import { useMemo, useCallback, useState, useRef } from 'react';
 import { Article, Category, Tool } from '../types/models';
 import { articleService, ArticleWithContent } from './articleService';
 import { toolService } from './toolService';
@@ -274,6 +274,12 @@ async function getArticleIndex(): Promise<ArticleWithContent[]> {
         _articleIndexPromise = articleService.getAllIndexable().then(list => {
             _articleIndexCache = list;
             return list;
+        }).catch(err => {
+            // Don't memoize a rejection — a transient failure would otherwise
+            // leave search permanently broken until a full reload. Clear it so
+            // the next call retries.
+            _articleIndexPromise = null;
+            throw err;
         });
     }
     return _articleIndexPromise;
@@ -749,26 +755,32 @@ export function useSearch() {
     const [isSearching, setIsSearching] = useState(false);
     const [results, setResults] = useState<GroupedSearchResults | null>(null);
     const [error, setError] = useState<string | null>(null);
+    // Latest-request guard: discard a response that isn't from the most recent
+    // call, so a slow older query can't overwrite a newer one.
+    const requestIdRef = useRef(0);
 
     const run = useCallback(async (query: string, opts?: SearchOptions) => {
         if (!query.trim() && !(opts?.filters?.providers)) {
             setResults(null);
             return;
         }
+        const requestId = ++requestIdRef.current;
         setIsSearching(true);
         setError(null);
         try {
             const r = await searchService.search(query, opts);
+            if (requestId !== requestIdRef.current) return;
             setResults(r);
             if (query.trim()) {
                 searchService.saveLocalSearch(query);
                 searchService.saveSearchHistory(query);
             }
         } catch (err) {
+            if (requestId !== requestIdRef.current) return;
             setError(err instanceof Error ? err.message : 'Search failed');
             setResults(null);
         } finally {
-            setIsSearching(false);
+            if (requestId === requestIdRef.current) setIsSearching(false);
         }
     }, []);
 
@@ -783,19 +795,23 @@ export function useSearch() {
 export function useSearchSuggestions() {
     const [suggestions, setSuggestions] = useState<GroupedSuggestions | null>(null);
     const [isLoading, setIsLoading] = useState(false);
+    const requestIdRef = useRef(0);
 
     const fetchSuggestions = useCallback(async (query: string) => {
         if (!query || query.length < 2) {
             setSuggestions(null);
             return;
         }
+        const requestId = ++requestIdRef.current;
         setIsLoading(true);
         try {
-            setSuggestions(await searchService.getGroupedSuggestions(query));
+            const s = await searchService.getGroupedSuggestions(query);
+            if (requestId !== requestIdRef.current) return;
+            setSuggestions(s);
         } catch {
-            setSuggestions(null);
+            if (requestId === requestIdRef.current) setSuggestions(null);
         } finally {
-            setIsLoading(false);
+            if (requestId === requestIdRef.current) setIsLoading(false);
         }
     }, []);
 

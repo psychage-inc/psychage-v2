@@ -63,7 +63,7 @@ const AdminReviewQueue: React.FC = () => {
   const current: ArticleRecord | undefined = queue?.[index];
 
   const afterAct = () => {
-    queryClient.invalidateQueries({ queryKey: ['admin', 'articles'] });
+    queryClient.invalidateQueries({ queryKey: ['admin', 'articles-search'] });
     queryClient.invalidateQueries({ queryKey: ['admin', 'article-stats'] });
     setProcessed((n) => n + 1);
     setShowNote(false);

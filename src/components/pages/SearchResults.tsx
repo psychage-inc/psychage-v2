@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo, useCallback } from 'react';
+import React, { useEffect, useState, useMemo, useCallback, useRef } from 'react';
 import { motion } from 'framer-motion';
 import {
     ArrowLeft, Search, FileText, Loader2, AlertCircle, Compass, Users, Wrench,
@@ -56,12 +56,16 @@ const SearchResults: React.FC = () => {
         [searchParams, setSearchParams],
     );
 
+    // Latest-request guard: a slow response for an earlier query/filter must not
+    // overwrite the results for a newer one.
+    const requestIdRef = useRef(0);
     const performSearch = useCallback(async () => {
         if (!query.trim()) {
             setResults(null);
             setLoading(false);
             return;
         }
+        const requestId = ++requestIdRef.current;
         setLoading(true);
         setError(null);
         try {
@@ -72,15 +76,17 @@ const SearchResults: React.FC = () => {
                 },
                 perTypeLimit: 30,
             });
+            if (requestId !== requestIdRef.current) return;
             setResults(r);
             searchService.saveLocalSearch(query.trim());
             searchService.saveSearchHistory(query.trim());
         } catch (err) {
+            if (requestId !== requestIdRef.current) return;
             console.error('Search failed:', err);
             setError('Unable to complete search. Please try again.');
             setResults(null);
         } finally {
-            setLoading(false);
+            if (requestId === requestIdRef.current) setLoading(false);
         }
     }, [query, articleCategory, crisisCountry]);
 

@@ -52,6 +52,14 @@ const eventQueue: Array<{
 
 let flushTimeout: ReturnType<typeof setTimeout> | null = null;
 let consecutiveFailures = 0;
+let isFlushing = false;
+
+// setTimeout can't await; wrap so a rejected flush (e.g. sessionStorage blocked)
+// never becomes an unhandled rejection.
+function scheduleFlush(delay: number): void {
+  if (flushTimeout) clearTimeout(flushTimeout);
+  flushTimeout = setTimeout(() => { void flushEvents().catch(() => {}); }, delay);
+}
 const BASE_FLUSH_INTERVAL = 2000;
 const MAX_FLUSH_INTERVAL = 300_000; // 5 minutes
 
@@ -61,35 +69,40 @@ function getFlushInterval(): number {
 }
 
 async function flushEvents() {
-  if (eventQueue.length === 0) return;
+  // In-flight guard: a retry and a freshly-scheduled flush must not overlap, or
+  // both snapshot the same queued rows and double-insert them.
+  if (eventQueue.length === 0 || isFlushing) return;
+  isFlushing = true;
+  try {
+    const batchSize = eventQueue.length;
+    const visitorId = getVisitorId();
 
-  const batchSize = eventQueue.length;
-  const visitorId = getVisitorId();
+    // Copy the batch — do NOT splice yet
+    const rows = eventQueue.slice(0, batchSize).map(e => ({
+      provider_id: e.provider_id,
+      event_type: e.event_type,
+      source: e.source || null,
+      visitor_id: visitorId,
+      metadata: e.metadata || {},
+    }));
 
-  // Copy the batch — do NOT splice yet
-  const rows = eventQueue.slice(0, batchSize).map(e => ({
-    provider_id: e.provider_id,
-    event_type: e.event_type,
-    source: e.source || null,
-    visitor_id: visitorId,
-    metadata: e.metadata || {},
-  }));
+    const { error } = await supabase.from('provider_analytics_events').insert(rows);
 
-  const { error } = await supabase.from('provider_analytics_events').insert(rows);
-
-  if (error) {
-    consecutiveFailures++;
-    console.warn(
-      `[ProviderAnalytics] Flush failed (attempt ${consecutiveFailures}, ${batchSize} events kept in queue):`,
-      error.message
-    );
-    // Events remain in queue for next flush — schedule with backoff
-    if (flushTimeout) clearTimeout(flushTimeout);
-    flushTimeout = setTimeout(flushEvents, getFlushInterval());
-  } else {
-    // Success — remove the inserted events from the queue
-    eventQueue.splice(0, batchSize);
-    consecutiveFailures = 0;
+    if (error) {
+      consecutiveFailures++;
+      console.warn(
+        `[ProviderAnalytics] Flush failed (attempt ${consecutiveFailures}, ${batchSize} events kept in queue):`,
+        error.message
+      );
+      // Events remain in queue for next flush — schedule with backoff
+      scheduleFlush(getFlushInterval());
+    } else {
+      // Success — remove the inserted events from the queue
+      eventQueue.splice(0, batchSize);
+      consecutiveFailures = 0;
+    }
+  } finally {
+    isFlushing = false;
   }
 }
 
@@ -105,8 +118,7 @@ export function trackProviderEvent(
 ) {
   eventQueue.push({ provider_id: providerId, event_type: eventType, source, metadata });
 
-  if (flushTimeout) clearTimeout(flushTimeout);
-  flushTimeout = setTimeout(flushEvents, getFlushInterval());
+  scheduleFlush(getFlushInterval());
 }
 
 /**

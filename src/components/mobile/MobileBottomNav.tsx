@@ -12,6 +12,8 @@ function shouldHideBottomNav(pathname: string): boolean {
     if (/^\/learn\/[^/]+\/[^/]+/.test(pathname)) return true;
     // Inside a tool: /tools/<anything> (the /tools hub itself keeps the nav)
     if (/^\/tools\/.+/.test(pathname)) return true;
+    // The Clarity Score assessment is a tool too; its question card needs the full height.
+    if (pathname === '/clarity-score') return true;
     return false;
 }
 

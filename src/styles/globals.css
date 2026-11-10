@@ -255,6 +255,12 @@ body:has([data-floating='cookie-consent']) [data-floating='mindmate-fab'] {
     display: none;
 }
 
+/* While a Clarity Score question card is on screen, hide the FAB: the card is
+   sized to fit one viewport and the FAB would sit on its Next button. */
+body:has([data-clarity-question]) [data-floating='mindmate-fab'] {
+    display: none;
+}
+
 /* While the crisis card is visible, lift the FAB above it with an 8px
    (--space-2) gap so the two never overlap. Base is --space-6 (24px =
    bottom-6); the middle term is the crisis card's rendered height, measured at

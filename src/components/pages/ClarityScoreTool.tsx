@@ -12,6 +12,7 @@ import {
   Clock,
   ClipboardList,
   Target,
+  X,
 } from 'lucide-react';
 import Button from '../ui/Button';
 import { Link } from 'react-router-dom';
@@ -57,22 +58,13 @@ const ClarityScoreTool: React.FC = () => {
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
 
-  const [step, setStep] = useState<'intro' | 'questions' | 'calculating' | 'results'>(() => {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        if (parsed.step === 'questions') return 'questions';
-      }
-    } catch {
-      // Ignore
-    }
-    return 'intro';
-  });
+  // In-progress answers live in sessionStorage only (cleared when the tab closes).
+  // A returning visitor lands on the intro and chooses Resume or Start over.
+  const [step, setStep] = useState<'intro' | 'questions' | 'calculating' | 'results'>('intro');
 
   const [currentIndex, setCurrentIndex] = useState(() => {
     try {
-      const saved = localStorage.getItem(STORAGE_KEY);
+      const saved = sessionStorage.getItem(STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
         return parsed.currentIndex || 0;
@@ -85,7 +77,7 @@ const ClarityScoreTool: React.FC = () => {
 
   const [answers, setAnswers] = useState<Record<string, number>>(() => {
     try {
-      const saved = localStorage.getItem(STORAGE_KEY);
+      const saved = sessionStorage.getItem(STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
         return parsed.answers || {};
@@ -141,15 +133,30 @@ const ClarityScoreTool: React.FC = () => {
     }
   }, [results, saving, saved, addToast]);
 
-  // --- Persist progress ---
+  // --- Persist progress (session only) ---
   useEffect(() => {
     if (step === 'questions') {
-      localStorage.setItem(
-        STORAGE_KEY,
-        JSON.stringify({ step, currentIndex, answers })
-      );
+      try {
+        sessionStorage.setItem(STORAGE_KEY, JSON.stringify({ step, currentIndex, answers }));
+      } catch {
+        // sessionStorage unavailable
+      }
     }
   }, [step, currentIndex, answers]);
+
+  // Earlier builds kept progress in localStorage; drop it so it is session-only.
+  useEffect(() => {
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch {
+      // Ignore
+    }
+  }, []);
+
+  // --- Each question screen starts at the top ---
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [step, currentIndex]);
 
   // --- Crisis modal: block Escape, manage focus ---
   useEffect(() => {
@@ -217,7 +224,7 @@ const ClarityScoreTool: React.FC = () => {
   // --- Compute results ---
   const computeResults = (finalAnswers: Record<string, number>) => {
     setStep('calculating');
-    localStorage.removeItem(STORAGE_KEY);
+    sessionStorage.removeItem(STORAGE_KEY);
 
     setTimeout(() => {
       const result = calculateClarityScore(finalAnswers);
@@ -250,7 +257,17 @@ const ClarityScoreTool: React.FC = () => {
     setHasCrisisTriggered(false);
     setSaved(false);
     setSaving(false);
-    localStorage.removeItem(STORAGE_KEY);
+    sessionStorage.removeItem(STORAGE_KEY);
+  };
+
+  const hasProgress = currentIndex > 0 || Object.keys(answers).length > 0;
+
+  // --- Exit mid-assessment (progress stays in sessionStorage) ---
+  const exitAssessment = () => setStep('intro');
+
+  const startOver = () => {
+    resetAssessment();
+    setStep('questions');
   };
 
   // --- Domain color helpers ---
@@ -260,7 +277,7 @@ const ClarityScoreTool: React.FC = () => {
 
   // --- Render ---
   return (
-    <div className={`${step === 'intro' ? 'min-h-screen' : 'min-h-[60vh]'} bg-background pt-24 pb-12 px-6 transition-colors duration-300`}>
+    <div className={`${step === 'intro' ? 'min-h-screen' : 'min-h-[60vh]'} bg-background ${step === 'questions' ? 'pt-6 pb-6 px-4 sm:px-6' : 'pt-24 pb-12 px-6'} transition-colors duration-300`}>
       <SEO
         title="Clarity Score Assessment | Psychage"
         description="A 20-question wellness check-in built on validated psychological instruments. Get a snapshot of your mental wellbeing across five dimensions."
@@ -481,13 +498,28 @@ const ClarityScoreTool: React.FC = () => {
 
               {/* CTA */}
               <div className="text-center">
-                <Button
-                  onClick={() => setStep('questions')}
-                  size="lg"
-                  rightIcon={<ChevronRight size={20} />}
-                >
-                  Start Assessment
-                </Button>
+                {hasProgress ? (
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <Button
+                      onClick={() => setStep('questions')}
+                      size="lg"
+                      rightIcon={<ChevronRight size={20} />}
+                    >
+                      Resume (question {currentIndex + 1} of {QUESTIONS.length})
+                    </Button>
+                    <Button onClick={startOver} size="lg" variant="outline">
+                      Start over
+                    </Button>
+                  </div>
+                ) : (
+                  <Button
+                    onClick={() => setStep('questions')}
+                    size="lg"
+                    rightIcon={<ChevronRight size={20} />}
+                  >
+                    Start Assessment
+                  </Button>
+                )}
                 <p className="text-xs text-text-tertiary mt-4">
                   Your responses stay on your device unless you choose to save them.
                 </p>
@@ -505,25 +537,36 @@ const ClarityScoreTool: React.FC = () => {
             return (
               <motion.div
                 key={`question-${currentIndex}`}
+                data-clarity-question
                 initial={{ opacity: 0, x: directionRef.current === 'forward' ? 50 : -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: directionRef.current === 'forward' ? -50 : 50 }}
-                className="bg-surface rounded-3xl p-8 md:p-12 shadow-xl shadow-black/5 dark:shadow-none border border-border"
+                className="bg-surface rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl shadow-black/5 dark:shadow-none border border-border"
               >
                 {/* Progress header */}
-                <div className="mb-6 flex justify-between items-center text-sm font-medium text-text-tertiary">
+                <div className="mb-2 flex justify-between items-center gap-3 text-sm font-medium text-text-tertiary">
                   <span>
                     Question {currentIndex + 1} of {QUESTIONS.length}
                   </span>
-                  <span>
-                    {Math.round((currentIndex / QUESTIONS.length) * 100)}%
-                    Complete
+                  <span className="flex items-center gap-3">
+                    <span>
+                      {Math.round((currentIndex / QUESTIONS.length) * 100)}%
+                      Complete
+                    </span>
+                    <button
+                      type="button"
+                      onClick={exitAssessment}
+                      className="inline-flex items-center gap-1 min-h-[44px] px-2 -mr-2 rounded-lg text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-colors"
+                    >
+                      <X size={16} aria-hidden="true" />
+                      Exit
+                    </button>
                   </span>
                 </div>
 
                 {/* Progress bar */}
                 <div
-                  className="w-full h-2 bg-surface-active rounded-full mb-8 overflow-hidden"
+                  className="w-full h-2 bg-surface-active rounded-full mb-4 overflow-hidden"
                   role="progressbar"
                   aria-valuenow={currentIndex + 1}
                   aria-valuemin={1}
@@ -541,33 +584,34 @@ const ClarityScoreTool: React.FC = () => {
                 </div>
 
                 {/* Domain banner */}
-                <div className="flex items-center gap-3 mb-4 px-4 py-3 rounded-xl bg-surface-hover border border-border">
+                <div className="flex items-center gap-3 mb-3 px-3 py-2 rounded-xl bg-surface-hover border border-border">
                   <span
-                    className={`inline-flex items-center justify-center w-10 h-10 rounded-xl ${getDomainBarColor(currentQuestion.domainId)} text-white shrink-0`}
+                    className={`inline-flex items-center justify-center w-8 h-8 rounded-lg ${getDomainBarColor(currentQuestion.domainId)} text-white shrink-0`}
                   >
-                    <DomainIcon size={20} />
+                    <DomainIcon size={18} />
                   </span>
                   <div>
-                    <span className={`text-lg font-bold ${currentDomain.color}`}>
+                    <span className={`text-base font-bold ${currentDomain.color}`}>
                       {currentDomain.name}
                     </span>
-                    <span className="block text-xs text-text-tertiary">
+                    <span className="hidden sm:block text-xs text-text-tertiary">
                       {currentDomain.description}
                     </span>
                   </div>
                 </div>
 
-                {/* Question text with integrated time-period context */}
-                <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-10 leading-tight">
-                  <span className="inline-flex items-center gap-2 text-sm font-medium text-text-secondary mb-4 px-3.5 py-2 rounded-lg bg-surface-hover border border-border">
-                    <Calendar size={16} className="shrink-0 text-text-tertiary" />
+                {/* Question text with integrated time-period context.
+                    Lead-in shares the question's font family at ~67-70% of its size. */}
+                <h2 className="text-xl md:text-3xl font-bold text-text-primary mb-4 leading-tight">
+                  <span className="flex items-center gap-2 w-fit text-sm md:text-xl font-medium text-text-secondary mb-2 px-3 py-1 rounded-lg bg-surface-hover border border-border">
+                    <Calendar size={16} className="shrink-0 text-text-tertiary" aria-hidden="true" />
                     <span className="text-text-secondary">{currentDomain.citation}</span>
                   </span>
                   {currentQuestion.text}
                 </h2>
 
                 {/* Options */}
-                <div className="space-y-3">
+                <div className="grid grid-cols-2 gap-2">
                   {currentQuestion.options.map((option, idx) => {
                     const isSelected = answers[currentQuestion.id] === option.value;
                     return (
@@ -575,7 +619,7 @@ const ClarityScoreTool: React.FC = () => {
                         key={idx}
                         onClick={() => handleAnswer(option.value)}
                         aria-pressed={isSelected}
-                        className={`w-full text-left p-5 rounded-2xl border-2 transition-all font-medium text-lg ${
+                        className={`w-full text-left px-3 py-2.5 md:p-3.5 rounded-2xl border-2 transition-all font-medium text-sm md:text-base ${
                           isSelected
                             ? `${currentDomain.bgColor} text-white border-transparent shadow-md`
                             : 'border-border hover:border-border hover:bg-surface-hover text-text-secondary'
@@ -588,7 +632,7 @@ const ClarityScoreTool: React.FC = () => {
                 </div>
 
                 {/* Previous / Next navigation */}
-                <div className="flex items-center justify-between mt-10 pt-6 border-t border-border">
+                <div className="flex items-center justify-between mt-4 pt-3 border-t border-border">
                   {currentIndex > 0 ? (
                     <motion.button
                       type="button"

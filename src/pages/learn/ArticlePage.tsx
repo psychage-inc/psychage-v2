@@ -313,12 +313,7 @@ const ArticlePage: React.FC = () => {
                     {/* Left Sidebar — TOC + Share + Bookmark (desktop only) */}
                     <aside className="hidden lg:block">
                         <div className="sticky top-28 space-y-6 max-h-[calc(100vh-8rem)] overflow-y-auto overscroll-contain scrollbar-thin">
-                            <InteractiveCard className="p-5 bg-surface/30 backdrop-blur-sm border-white/5">
-                                <p className="font-bold text-text-primary mb-4 text-xs uppercase tracking-widest text-primary">On this page</p>
-                                <TableOfContents />
-                            </InteractiveCard>
-
-                            {/* Share + Bookmark */}
+                            {/* Share + Bookmark — first, so it is never pushed below the fold by a long TOC */}
                             <div className="space-y-2">
                                 <p className="text-xs font-bold uppercase tracking-widest text-text-tertiary pl-1">Share</p>
                                 <div className="flex flex-wrap items-center gap-2">
@@ -344,6 +339,10 @@ const ArticlePage: React.FC = () => {
                                 </div>
                             </div>
 
+                            <InteractiveCard className="p-5 bg-surface/30 backdrop-blur-sm border-white/5">
+                                <p className="font-bold text-text-primary mb-4 text-xs uppercase tracking-widest text-primary">On this page</p>
+                                <TableOfContents />
+                            </InteractiveCard>
                         </div>
                     </aside>
 

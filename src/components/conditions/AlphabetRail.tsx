@@ -78,9 +78,12 @@ const AlphabetRail: React.FC<AlphabetRailProps> = ({
                             refs.current[letter] = el;
                         }}
                         type="button"
-                        disabled={!isEnabled}
+                        // Not `disabled`: a disabled button swallows hover, so the tooltip
+                        // would never show. aria-disabled + a no-op click keeps it inert.
+                        aria-disabled={!isEnabled || undefined}
+                        title={isEnabled ? undefined : `No conditions under ${letter}`}
                         aria-current={isActive ? 'true' : undefined}
-                        aria-label={isEnabled ? `Jump to ${letter}` : `${letter}, no conditions`}
+                        aria-label={isEnabled ? `Jump to ${letter}` : `No conditions under ${letter}`}
                         tabIndex={letter === tabStop ? 0 : -1}
                         onClick={() => isEnabled && onJump(letter)}
                         onKeyDown={(e) => handleKeyDown(e, letter)}
@@ -90,7 +93,7 @@ const AlphabetRail: React.FC<AlphabetRailProps> = ({
                             'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 focus-visible:ring-offset-background',
                             isActive && 'bg-primary text-white shadow-sm',
                             !isActive && isEnabled && 'text-text-secondary hover:bg-primary/10 hover:text-primary',
-                            !isEnabled && 'cursor-default text-text-tertiary/35',
+                            !isEnabled && 'cursor-not-allowed text-text-tertiary opacity-40',
                         )}
                     >
                         {letter}

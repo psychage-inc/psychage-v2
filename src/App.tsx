@@ -213,7 +213,7 @@ const App: React.FC = () => {
                     <ScrollManager />
 
                     {/* App content always renders — Preloader is a fixed overlay (z-9999) that fades out */}
-                    <div className="min-h-[100dvh] bg-background font-sans text-gray-900 overflow-x-hidden flex flex-col transition-colors duration-300">
+                    <div className="min-h-[100dvh] bg-background font-sans text-gray-900 overflow-x-clip flex flex-col transition-colors duration-300">
                             {!isPhone && <Navigation />}
                             {isPhone && <MobileCrisisHeader />}
                             {/* AUTH-021: app-wide pending-deletion banner. Renders nothing

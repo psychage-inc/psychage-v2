@@ -20,7 +20,6 @@ interface FooterLink {
 
 const Footer: React.FC = () => {
   const footerRef = useRef<HTMLDivElement>(null);
-  const currentYear = new Date().getFullYear();
   const reduced = useReducedMotion();
 
   const scrollToTop = () => {
@@ -178,8 +177,6 @@ const Footer: React.FC = () => {
               <Link to="/sitemap" className="inline-flex items-center min-h-[44px] px-2 -mx-2 -my-[14px] hover:text-text-primary transition-colors">Sitemap</Link>
             </div>
             <p className="max-w-xs md:max-w-md md:text-right text-text-tertiary">Psychage is an educational tool and does not provide medical advice, diagnosis, or treatment.</p>
-            <p className="max-w-xs md:max-w-md md:text-right text-text-tertiary">Fully compliant with HIPAA and GDPR standards.</p>
-            <p>© {currentYear} Psychage, Inc.</p>
           </div>
         </div>
       </div>

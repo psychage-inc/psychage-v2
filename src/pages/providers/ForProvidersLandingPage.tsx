@@ -446,7 +446,7 @@ const ForProvidersLandingPage: React.FC = () => {
                     aria-hidden="true"
                   />
                   <span className="text-[13px] text-[var(--color-text-tertiary)] font-sans">
-                    NPI-verified. HIPAA-aware. Trusted in all 50 states.
+                    NPI-verified. Trusted in all 50 states.
                   </span>
                 </motion.div>
               </div>

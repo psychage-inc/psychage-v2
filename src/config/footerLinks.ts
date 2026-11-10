@@ -90,5 +90,4 @@ export const FOOTER_LEGAL_LINKS: { name: string; to: string }[] = [
 /** Non-diagnostic disclaimer (SR-3). */
 export const FOOTER_DISCLAIMER: string[] = [
   'Psychage is an educational tool and does not provide medical advice, diagnosis, or treatment.',
-  'Fully compliant with HIPAA and GDPR standards.',
 ];

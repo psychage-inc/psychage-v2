@@ -45,8 +45,6 @@ const LegalPage: React.FC<LegalPageProps> = ({ type }) => {
                 <div className="prose prose-lg prose-teal max-w-none text-text-secondary">
                     {type === 'privacy' && (
                         <>
-                            <p><strong>Fully compliant with HIPAA and GDPR standards.</strong></p>
-
                             <h3>1. Introduction</h3>
                             <p>
                                 At Psychage, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website including any other media form, media channel, mobile website, or mobile application related or connected thereto.

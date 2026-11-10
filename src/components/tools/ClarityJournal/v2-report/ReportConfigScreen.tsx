@@ -135,6 +135,7 @@ const ReportConfigScreen: React.FC = () => {
                 <button
                   key={p.days}
                   type="button"
+                  aria-pressed={!useCustom && periodDays === p.days}
                   onClick={() => { setPeriodDays(p.days); setUseCustom(false); }}
                   className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
                     !useCustom && periodDays === p.days

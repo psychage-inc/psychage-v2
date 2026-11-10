@@ -28,7 +28,7 @@ export const GLOBAL_FALLBACKS: CrisisResource[] = [
     phone: null,
     text_instruction: null,
     chat_url: null,
-    web_url: 'https://befrienders.org/find-support',
+    web_url: 'https://befrienders.org/find-support-now/',
     hours: '24/7',
     languages: ['English'],
     source_name: 'Befrienders Worldwide',

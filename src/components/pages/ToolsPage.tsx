@@ -123,6 +123,8 @@ const ToolsPage: React.FC = () => {
                         {categories.map(category => (
                             <button
                                 key={category}
+                                type="button"
+                                aria-pressed={selectedCategory === category}
                                 onClick={() => setSelectedCategory(category)}
                                 className={`px-4 py-2 rounded-full text-sm font-bold whitespace-nowrap transition-all ${selectedCategory === category
                                     ? 'bg-text-primary text-background'

@@ -26,8 +26,8 @@ export const PRIMARY_AUTHOR: Author = {
 
 export const CLINICAL_REVIEWER: Author = {
   id: 'dr-dobson',
-  name: 'Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology',
-  role: 'Clinical Neuropsychology',
+  name: 'Dr. Lena Dobson, Ph.D. in Clinical Psychology',
+  role: 'Clinical Psychology',
   image: '/images/authors/author-female-2.svg',
 };
 

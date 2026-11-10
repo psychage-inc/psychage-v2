@@ -56,7 +56,7 @@ const SEO: React.FC<SEOProps> = ({
             reviewedBy: {
                 '@type': 'Person',
                 name: article.reviewedByName,
-                jobTitle: article.reviewedByRole || 'Clinical Neuropsychology',
+                jobTitle: article.reviewedByRole || 'Clinical Psychology',
             },
         }),
         publisher: {

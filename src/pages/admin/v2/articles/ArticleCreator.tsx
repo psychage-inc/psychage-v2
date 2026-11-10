@@ -86,7 +86,7 @@ const AdminArticleCreator: React.FC = () => {
       category_id: null,
       subcategory_id: null,
       template_type: null,
-      author_name: 'Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology',
+      author_name: 'Dr. Lena Dobson, Ph.D. in Clinical Psychology',
       tags: '',
       linked_condition_ids: '',
       seo_description: '',

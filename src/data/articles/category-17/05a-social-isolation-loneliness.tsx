@@ -579,7 +579,7 @@ export const socialIsolationLonelinessArticlesA: Article[] = [
 
         <QuoteBlock
           quote="The loneliest people are not those who are alone. They are those who are surrounded by people who do not see them."
-          attribution="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          attribution="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaways">
@@ -1338,7 +1338,7 @@ export const socialIsolationLonelinessArticlesA: Article[] = [
             "Retirement is not the end of contribution---it is the beginning of contributing on your own terms. The work you do now is not for a paycheck, but for purpose. That is freedom."
           </p>
           <p className="text-sm italic">
-            — Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology
+            — Dr. Lena Dobson, Ph.D. in Clinical Psychology
           </p>
         </HighlightBox>
 

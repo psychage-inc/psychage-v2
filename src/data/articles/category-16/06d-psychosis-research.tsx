@@ -834,7 +834,7 @@ export const psychosisResearchArticlesD: Article[] = [
 
         <QuoteBlock
           quote="Treating sleep in schizophrenia is one of the highest-yield, lowest-risk interventions we have--yet it remains one of the most neglected. That must change."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -1229,7 +1229,7 @@ export const psychosisResearchArticlesD: Article[] = [
 
         <QuoteBlock
           quote="Oxytocin reminds us that the deepest human need--connection--is mediated by biology. When that biology is disrupted, restoring it can heal not just brains but lives."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -1643,7 +1643,7 @@ export const psychosisResearchArticlesD: Article[] = [
 
         <QuoteBlock
           quote="Digital mental health is not about replacing human care--it is about extending, enhancing, and personalizing it, making the right support available at the right moment."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),

@@ -299,7 +299,7 @@ export const dementiaAlzheimersArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Dementia is not aging poorly--it is disease. The brain in normal aging slows down; the brain in dementia breaks down."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -601,7 +601,7 @@ export const dementiaAlzheimersArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Alzheimer diagnosis is not an ending--it is information. Information allows you to fight, to plan, to live fully in the time you have."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -922,7 +922,7 @@ export const dementiaAlzheimersArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Alzheimer care is not a battle you win or lose--it is a journey you navigate with love, patience, and the best tools available."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -1238,7 +1238,7 @@ export const dementiaAlzheimersArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Frontotemporal dementia steals who you are before it steals what you remember. It is the cruelest reordering--the self dissolves while the mind still watches."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
 
         <h2>Mixed Dementia: Multiple Pathologies</h2>
@@ -1624,7 +1624,7 @@ export const dementiaAlzheimersArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Dementia prevention is not about living longer--it is about living better. Every step, every connection, every challenge you give your brain is an investment in the future version of yourself."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),

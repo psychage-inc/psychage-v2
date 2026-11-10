@@ -129,7 +129,7 @@ const AboutPage: React.FC = () => {
                                 />
                                 <div>
                                     <div className="font-bold text-text-primary">Dr. Lena Dobson</div>
-                                    <div className="text-text-primary">Ph.D. in Clinical Neuropsychology</div>
+                                    <div className="text-text-primary">Ph.D. in Clinical Psychology</div>
                                     <div className="text-sm text-text-secondary">Founder</div>
                                 </div>
                             </div>

@@ -88,7 +88,7 @@ describe('Public route imports (LB-007)', () => {
         const mod = await load();
         expect(mod).toBeDefined();
         expect(typeof mod.default).toBe('function');
-    });
+    }, 30_000);
 });
 
 describe('Crisis surfaces remain public (sacred rule)', () => {

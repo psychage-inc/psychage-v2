@@ -91,7 +91,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, triggerRef }) 
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[110] md:hidden"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[110] lg:hidden"
           />
 
           {/* Slide-out Menu */}
@@ -105,7 +105,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, triggerRef }) 
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-surface shadow-2xl z-[120] md:hidden flex flex-col border-l border-border"
+            className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-surface shadow-2xl z-[120] lg:hidden flex flex-col border-l border-border"
           >
             {/* Header */}
             <div className="p-6 flex items-center justify-between border-b border-border">

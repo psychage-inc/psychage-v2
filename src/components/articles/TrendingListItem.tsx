@@ -1,5 +1,6 @@
 import React from 'react';
 import { Article } from '../../types/models';
+import CategoryLabel from '@/components/articles/CategoryLabel';
 
 // ─── Trending List Item ─────────────────────────────────────────────
 // Numbered, text-only list item for the right column of the Editor's Picks
@@ -26,7 +27,7 @@ const TrendingListItem: React.FC<TrendingListItemProps> = ({ article, index, onC
                     {article.title}
                 </h3>
                 <div className="flex items-center gap-3 mt-2 text-xs text-text-tertiary">
-                    <span>{article.category.name}</span>
+                    <CategoryLabel name={article.category.name} />
                     <span className="w-1 h-1 rounded-full bg-text-tertiary inline-block" />
                     <span>{article.readTime ?? 5} min read</span>
                 </div>

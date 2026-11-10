@@ -2,6 +2,7 @@ import React from 'react';
 import { Clock, User } from 'lucide-react';
 import { Article } from '../../types/models';
 import { getCategoryTheme } from '../../config/categoryThemes';
+import CategoryLabel from '@/components/articles/CategoryLabel';
 
 // ─── Featured Hero Card ─────────────────────────────────────────────
 // The large "Editor's Pick" card. Big aspect-video image with a reading-time
@@ -80,9 +81,7 @@ const FeaturedHeroCard: React.FC<FeaturedHeroCardProps> = ({ article, onClick })
                     <Clock size={14} />
                     {article.readTime ?? 5} min read
                 </span>
-                <span className="text-xs text-text-tertiary font-semibold uppercase tracking-wider">
-                    {article.category.name}
-                </span>
+                <CategoryLabel name={article.category.name} />
             </div>
         </button>
     );

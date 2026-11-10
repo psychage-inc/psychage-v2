@@ -3,6 +3,7 @@ import { Clock, Bookmark } from 'lucide-react';
 import { Article } from '../../types/models';
 import { getCategoryTheme } from '../../config/categoryThemes';
 import { formatDate } from './formatDate';
+import CategoryLabel from '@/components/articles/CategoryLabel';
 
 // ─── Flat Article Card ──────────────────────────────────────────────
 // The editorial workhorse card used by the Learn page's "Recommended for You"
@@ -65,9 +66,7 @@ const FlatArticleCard: React.FC<FlatArticleCardProps> = ({
 
             <div className="pt-4">
                 <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs text-text-tertiary font-semibold uppercase tracking-wider">
-                        {article.category.name}
-                    </span>
+                    <CategoryLabel name={article.category.name} />
                     <button
                         onClick={onToggleBookmark}
                         className="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full hover:bg-surface-hover transition-colors"

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef, useMemo } from 'react';
-import { Bookmark, ChevronRight, ChevronDown, ChevronUp, Clock, Calendar, Search, ArrowRight, BrainCircuit, PenTool, Compass, Sparkles, Shield } from 'lucide-react';
+import { Bookmark, ChevronRight, ChevronDown, Clock, Calendar, Search, ArrowRight, BrainCircuit, PenTool, Compass, Sparkles, Shield } from 'lucide-react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useArticleService } from '@/services/articleService';
 import { Article } from '@/types/models';
@@ -24,7 +24,7 @@ import NotFoundPage from '@/components/pages/NotFoundPage';
 import SEO from '@/components/SEO';
 import Button from '@/components/ui/Button';
 import InteractiveCard from '@/components/ui/InteractiveCard';
-import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Badge from '@/components/ui/Badge';
 import { cn } from '@/lib/utils';
 import { useBookmarks } from '@/context/BookmarkContext';
@@ -135,14 +135,6 @@ const ArticlePage: React.FC = () => {
         });
         return () => cancelAnimationFrame(raf);
     }, [article?.content, loading]);
-
-    // Show back-to-top after scrolling past hero
-    const [showBackToTop, setShowBackToTop] = useState(false);
-    useEffect(() => {
-        const handleScroll = () => setShowBackToTop(window.scrollY > 1200);
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     // Read time: use article value or estimate from content
     const readTime = useMemo(() => {
@@ -539,21 +531,6 @@ const ArticlePage: React.FC = () => {
             {/* Mobile TOC — floating pill + bottom sheet */}
             <MobileTOC />
 
-            {/* Back to top */}
-            <AnimatePresence>
-                {showBackToTop && (
-                    <motion.button
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.8 }}
-                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                        className="fixed bottom-6 right-20 z-[100] w-10 h-10 rounded-full bg-surface border border-border shadow-lg shadow-black/10 flex items-center justify-center text-text-secondary hover:text-primary hover:border-primary/40 transition-colors"
-                        aria-label="Back to top"
-                    >
-                        <ChevronUp size={20} />
-                    </motion.button>
-                )}
-            </AnimatePresence>
 
             <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
         </div>

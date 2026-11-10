@@ -9,6 +9,7 @@ import Footer from './components/layout/Footer';
 const MindMateWidget = lazyWithRetry(() => import('./components/ai/MindMate'));
 const HomePage = lazyWithRetry(() => import('./pages/home/HomePage'));
 import CookieConsent from './components/ui/CookieConsent';
+import BackToTop from './components/ui/BackToTop';
 import NotFoundPage from './components/pages/NotFoundPage';
 import ErrorBoundary from './components/error/ErrorBoundary';
 import { BookmarkProvider } from './context/BookmarkContext';
@@ -420,6 +421,7 @@ const App: React.FC = () => {
                                 </Suspense>
                             )}
                             <CookieConsent />
+                            <BackToTop />
 
                             {/* Persistent Mobile CTA (Homepage Only) — tablet only; phone uses the bottom nav. */}
                             {location.pathname === '/' && !isPhone && (

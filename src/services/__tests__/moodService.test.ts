@@ -11,6 +11,7 @@ const buildChain = () => {
     const self = () => chain;
     chain.select = vi.fn(self);
     chain.insert = vi.fn(self);
+    chain.upsert = vi.fn(self);
     chain.update = vi.fn(self);
     chain.delete = vi.fn(self);
     chain.eq = vi.fn(self);
@@ -36,6 +37,7 @@ function resetChain() {
     const self = () => chain;
     chain.select = vi.fn(self);
     chain.insert = vi.fn(self);
+    chain.upsert = vi.fn(self);
     chain.update = vi.fn(self);
     chain.delete = vi.fn(self);
     chain.eq = vi.fn(self);
@@ -58,14 +60,14 @@ describe('moodService', () => {
     describe('getEntries', () => {
         it('should return mapped entries for a given userId', async () => {
             const dbEntries = [
-                { id: '1', user_id: 'u1', value: 4, notes: 'good', tags: ['happy'], created_at: '2026-01-01' },
+                { id: '1', user_id: 'u1', mood_rating: 4, notes: 'good', entry_date: '2026-01-01', created_at: '2026-01-01' },
             ];
             mockQueryResult.mockResolvedValue({ data: dbEntries, error: null });
 
             const result = await moodService.getEntries('u1', 10);
             expect(result).toHaveLength(1);
             expect(result[0].value).toBe(4);
-            expect(result[0].tags).toEqual(['happy']);
+            expect(result[0].tags).toEqual([]);
         });
 
         it('should get current user when userId not provided', async () => {
@@ -93,12 +95,20 @@ describe('moodService', () => {
 
     describe('createEntry', () => {
         it('should create and return a mood entry', async () => {
-            const created = { id: '1', user_id: 'u1', value: 3, notes: null, tags: [], created_at: '2026-01-01' };
+            const created = { id: '1', user_id: 'u1', mood_rating: 3, notes: null, entry_date: '2026-01-01', created_at: '2026-01-01' };
             mockSingle.mockResolvedValue({ data: created, error: null });
 
             const result = await moodService.createEntry('u1', 3);
             expect(result).not.toBeNull();
             expect(result!.value).toBe(3);
+        });
+
+        it('writes the live columns and upserts one entry per user per day', async () => {
+            mockSingle.mockResolvedValue({ data: { id: '1', user_id: 'u1', mood_rating: 4, notes: null, entry_date: '2026-01-01', created_at: '2026-01-01' }, error: null });
+            await moodService.createEntry('u1', 4, 'ok', ['tag']);
+            const [row, opts] = chain.upsert.mock.calls.at(-1);
+            expect(row).toEqual({ user_id: 'u1', mood_rating: 4, notes: 'ok', entry_date: expect.stringMatching(/^\d{4}-\d{2}-\d{2}$/) });
+            expect(opts).toEqual({ onConflict: 'user_id,entry_date' });
         });
 
         it('should reject mood rating below 1', async () => {
@@ -121,7 +131,7 @@ describe('moodService', () => {
 
     describe('updateEntry', () => {
         it('should update and return entry', async () => {
-            const updated = { id: '1', user_id: 'u1', value: 5, notes: 'great', tags: ['joy'], created_at: '2026-01-01' };
+            const updated = { id: '1', user_id: 'u1', mood_rating: 5, notes: 'great', entry_date: '2026-01-01', created_at: '2026-01-01' };
             mockSingle.mockResolvedValue({ data: updated, error: null });
 
             const result = await moodService.updateEntry('1', { value: 5, notes: 'great' });
@@ -180,8 +190,8 @@ describe('moodService', () => {
 
         it('should calculate average mood correctly', async () => {
             const entries = [
-                { mood_rating: 4, value: 4, created_at: '2026-03-06T10:00:00Z' },
-                { mood_rating: 2, value: 2, created_at: '2026-03-05T10:00:00Z' },
+                { mood_rating: 4, created_at: '2026-03-06T10:00:00Z' },
+                { mood_rating: 2, created_at: '2026-03-05T10:00:00Z' },
             ];
             mockQueryResult.mockResolvedValue({ data: entries, error: null });
 
@@ -192,12 +202,12 @@ describe('moodService', () => {
 
         it('should detect upward trend', async () => {
             const entries = [
-                { mood_rating: 5, value: 5, created_at: '2026-03-06' },
-                { mood_rating: 5, value: 5, created_at: '2026-03-05' },
-                { mood_rating: 5, value: 5, created_at: '2026-03-04' },
-                { mood_rating: 2, value: 2, created_at: '2026-03-03' },
-                { mood_rating: 2, value: 2, created_at: '2026-03-02' },
-                { mood_rating: 2, value: 2, created_at: '2026-03-01' },
+                { mood_rating: 5, created_at: '2026-03-06' },
+                { mood_rating: 5, created_at: '2026-03-05' },
+                { mood_rating: 5, created_at: '2026-03-04' },
+                { mood_rating: 2, created_at: '2026-03-03' },
+                { mood_rating: 2, created_at: '2026-03-02' },
+                { mood_rating: 2, created_at: '2026-03-01' },
             ];
             mockQueryResult.mockResolvedValue({ data: entries, error: null });
 
@@ -207,12 +217,12 @@ describe('moodService', () => {
 
         it('should detect downward trend', async () => {
             const entries = [
-                { mood_rating: 1, value: 1, created_at: '2026-03-06' },
-                { mood_rating: 1, value: 1, created_at: '2026-03-05' },
-                { mood_rating: 1, value: 1, created_at: '2026-03-04' },
-                { mood_rating: 4, value: 4, created_at: '2026-03-03' },
-                { mood_rating: 4, value: 4, created_at: '2026-03-02' },
-                { mood_rating: 4, value: 4, created_at: '2026-03-01' },
+                { mood_rating: 1, created_at: '2026-03-06' },
+                { mood_rating: 1, created_at: '2026-03-05' },
+                { mood_rating: 1, created_at: '2026-03-04' },
+                { mood_rating: 4, created_at: '2026-03-03' },
+                { mood_rating: 4, created_at: '2026-03-02' },
+                { mood_rating: 4, created_at: '2026-03-01' },
             ];
             mockQueryResult.mockResolvedValue({ data: entries, error: null });
 
@@ -224,7 +234,7 @@ describe('moodService', () => {
     describe('getEntriesByDateRange', () => {
         it('should return mapped entries within date range', async () => {
             const entries = [
-                { id: '1', user_id: 'u1', value: 3, notes: null, tags: [], created_at: '2026-03-03' },
+                { id: '1', user_id: 'u1', mood_rating: 3, notes: null, entry_date: '2026-03-03', created_at: '2026-03-03' },
             ];
             mockQueryResult.mockResolvedValue({ data: entries, error: null });
 

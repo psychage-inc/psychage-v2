@@ -67,6 +67,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onClick }) => {
         <motion.button
           whileTap={{ scale: 0.8 }}
           onClick={handleBookmark}
+          aria-label={bookmarked ? 'Remove bookmark' : 'Bookmark article'}
           className={`absolute top-4 right-4 z-20 w-11 h-11 rounded-full flex items-center justify-center backdrop-blur-md transition-all duration-300 ${bookmarked
             ? 'bg-primary text-white shadow-lg shadow-primary/40'
             : 'bg-black/30 text-white hover:bg-white dark:hover:bg-neutral-800 hover:text-primary'

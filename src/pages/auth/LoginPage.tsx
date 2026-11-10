@@ -270,7 +270,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                         transition={{ delay: 0.1, duration: 0.5 }}
                         className="flex justify-center mb-10"
                     >
-                        <Link to="/" className="inline-block py-2">
+                        <Link to="/" className="inline-block py-2" aria-label="Psychage home">
                             <LogoIcon className="h-28 w-auto drop-shadow-lg" />
                         </Link>
                     </motion.div>
@@ -376,7 +376,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                                 <button
                                     type="button"
                                     onClick={() => setShowPassword(!showPassword)}
-                                    className="absolute right-3.5 top-3.5 h-5 w-5 text-text-tertiary hover:text-text-primary transition-colors"
+                                    className="absolute right-3 top-3 h-6 w-6 flex items-center justify-center text-text-tertiary hover:text-text-primary transition-colors"
                                     aria-label={showPassword ? "Hide password" : "Show password"}
                                 >
                                     {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
@@ -453,6 +453,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ variant = 'main' }) => {
                                 variant="outline"
                                 className="px-8 bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20 text-text-primary transition-all duration-300"
                                 onClick={handleGoogleSignIn}
+                                aria-label="Continue with Google"
                                 disabled={isLoading || isSubmitting || oauthLoading !== null}
                                 isLoading={oauthLoading === 'google'}
                             >

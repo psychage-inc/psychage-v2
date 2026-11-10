@@ -257,7 +257,7 @@ const Navigation: React.FC = () => {
                         <button
                             onClick={() => navigate('/crisis')}
                             onMouseEnter={() => handleMouseEnter('')}
-                            className="flex items-center justify-center h-11 min-w-[44px] rounded-full text-sm font-bold text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors border border-red-100 dark:border-red-800/50 px-2.5 md:px-4"
+                            className="flex items-center justify-center h-11 min-w-[44px] rounded-full text-sm font-bold text-red-700 dark:text-red-400 bg-red-50 dark:bg-red-900/20 hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors border border-red-100 dark:border-red-800/50 px-2.5 md:px-4"
                             aria-label="Crisis support - get immediate help"
                         >
                             <Phone size={16} className="lg:hidden" aria-hidden="true" />

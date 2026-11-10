@@ -261,6 +261,15 @@ body:has([data-clarity-question]) [data-floating='mindmate-fab'] {
     display: none;
 }
 
+/* From 640px up the crisis card floats bottom-right over the cookie bar's row.
+   While both are shown, keep the cookie card out of the crisis card's column
+   (24px edge + max-w-sm card + 8px gap) so neither covers the other. */
+@media (min-width: 640px) {
+    body:has([data-floating='crisis-card']) [data-floating='cookie-consent'] {
+        padding-right: calc(var(--space-6) + 24rem + var(--space-2));
+    }
+}
+
 /* While the crisis card is visible, lift the FAB above it with an 8px
    (--space-2) gap so the two never overlap. Base is --space-6 (24px =
    bottom-6); the middle term is the crisis card's rendered height, measured at

@@ -101,7 +101,7 @@ const ContactPage: React.FC = () => {
                                     <Mail className="text-primary mt-1" size={20} />
                                     <div>
                                         <div className="font-bold mb-1">Email</div>
-                                        <a href="mailto:info@psychage.com" className="text-text-secondary hover:text-text-primary transition-colors">
+                                        <a href="mailto:info@psychage.com" className="text-text-secondary underline hover:text-text-primary transition-colors">
                                             info@psychage.com
                                         </a>
                                         <p className="text-sm text-text-tertiary mt-3">

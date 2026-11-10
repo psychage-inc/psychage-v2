@@ -67,7 +67,7 @@ const CheckEmailPage: React.FC = () => {
                         transition={{ delay: 0.1, duration: 0.5 }}
                         className="flex justify-center mb-10"
                     >
-                        <Link to="/" className="inline-block py-2">
+                        <Link to="/" className="inline-block py-2" aria-label="Psychage home">
                             <LogoIcon className="h-28 w-auto drop-shadow-lg" />
                         </Link>
                     </motion.div>

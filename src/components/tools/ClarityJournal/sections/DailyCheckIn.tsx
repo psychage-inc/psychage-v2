@@ -132,8 +132,9 @@ const DailyCheckIn: React.FC = () => {
           >
             {/* Date */}
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">Date</label>
+              <label htmlFor="checkin-date" className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">Date</label>
               <input
+                id="checkin-date"
                 type="date"
                 value={date}
                 max={getToday()}

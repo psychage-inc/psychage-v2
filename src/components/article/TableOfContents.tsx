@@ -168,6 +168,7 @@ const MobileTOC: React.FC<{ articleSelector?: string }> = ({ articleSelector = '
             {/* Floating pill — bottom of screen, above MindMate FAB */}
             <button
                 onClick={() => setOpen(true)}
+                data-floating="toc-pill"
                 className="lg:hidden fixed bottom-20 left-4 z-[100] flex items-center gap-2 px-4 py-2.5 rounded-full bg-surface border border-border shadow-lg shadow-black/10 text-sm font-medium text-text-primary hover:border-primary/40 transition-all"
                 aria-label="Open table of contents"
             >

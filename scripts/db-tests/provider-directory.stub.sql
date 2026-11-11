@@ -1,0 +1,10 @@
+create role anon; create role authenticated;
+create table provider_types(id uuid primary key default gen_random_uuid(), slug text, label text);
+create table providers(id uuid primary key default gen_random_uuid(), display_name text, credentials_suffix text, bio text, photo_url text, status text, tier text, practice_name text, phone text, email text, website_url text, appointment_url text, npi_number text, telehealth_available bool, in_person_available bool, is_accepting_patients bool default true, verified_at timestamptz, trust_score_cached numeric, provider_type_id uuid references provider_types(id), updated_at timestamptz default now());
+create function update_provider_updated_at() returns trigger language plpgsql as $$ begin new.updated_at = now(); return new; end $$;
+create trigger providers_updated_at before update on providers for each row execute function update_provider_updated_at();
+create table provider_locations(provider_id uuid, is_primary bool, city text, state_province text, latitude float8, longitude float8);
+create table specialties(id uuid, slug text, label text, category text); create table provider_specialties(provider_id uuid, specialty_id uuid);
+create table languages_lookup(id uuid, code text, label text, native_label text); create table provider_languages(provider_id uuid, language_id uuid);
+create table cultural_competencies(id uuid, slug text, label text); create table provider_cultural_competencies(provider_id uuid, competency_id uuid);
+create table insurance_plans(id uuid, name text, carrier text); create table provider_insurance(provider_id uuid, insurance_plan_id uuid);

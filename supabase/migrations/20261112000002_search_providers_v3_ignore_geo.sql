@@ -1,17 +1,17 @@
 -- =============================================================================
--- search_providers_v3 — remove coordinate ("Near me") search
--- Compliance item 0: directory search uses the State, City and Provider type
--- selection only. Drops p_latitude / p_longitude / p_radius_miles, the
--- bounding-box + haversine filter, and the distance-asc sort key. Every other
--- filter, the return shape, and the remaining sort keys are unchanged.
+-- search_providers_v3 — ignore coordinates and the accepting-patients filter
+-- Compliance item 0. Directory search uses the State, City and Provider type
+-- selection only.
+--
+-- The signature is UNCHANGED so app builds that still send p_latitude /
+-- p_longitude / p_radius_miles / p_accepting keep working. Those arguments are
+-- now ignored completely: no bounding box, no haversine filter, no distance
+-- sort, and nothing stores or logs them. p_accepting is ignored because
+-- is_accepting_patients is no longer populated (20261112000003).
+--
+-- Removing the parameters from the signature is held in
+-- supabase/migrations_held/ until the mobile app enforces a minimum version.
 -- =============================================================================
-
-DROP FUNCTION IF EXISTS public.search_providers_v3(
-  text, uuid[], text[], uuid[], uuid[], uuid[],
-  boolean, boolean, boolean,
-  text, text, text, text, int, int,
-  double precision, double precision, double precision
-);
 
 CREATE OR REPLACE FUNCTION public.search_providers_v3(
   p_query text DEFAULT NULL,
@@ -22,13 +22,16 @@ CREATE OR REPLACE FUNCTION public.search_providers_v3(
   p_insurance_plan_ids uuid[] DEFAULT NULL,
   p_telehealth boolean DEFAULT NULL,
   p_in_person boolean DEFAULT NULL,
-  p_accepting boolean DEFAULT NULL,
+  p_accepting boolean DEFAULT NULL,          -- ignored (accepting-patients data removed)
   p_state text DEFAULT NULL,
   p_city text DEFAULT NULL,
   p_verification_status text DEFAULT NULL,
   p_sort text DEFAULT 'relevance',
   p_limit int DEFAULT 20,
-  p_offset int DEFAULT 0
+  p_offset int DEFAULT 0,
+  p_latitude double precision DEFAULT NULL,   -- ignored: no coordinate search
+  p_longitude double precision DEFAULT NULL,  -- ignored: no coordinate search
+  p_radius_miles double precision DEFAULT NULL -- ignored: no coordinate search
 )
 RETURNS TABLE (
   id uuid,
@@ -77,7 +80,6 @@ BEGIN
     OR p_insurance_plan_ids IS NOT NULL
     OR p_telehealth IS NOT NULL
     OR p_in_person IS NOT NULL
-    OR p_accepting IS NOT NULL
     OR (p_state IS NOT NULL AND p_state != '')
     OR (p_city IS NOT NULL AND p_city != '')
     OR (p_verification_status IS NOT NULL AND p_verification_status != '')
@@ -197,7 +199,6 @@ BEGIN
       ))
       AND (p_telehealth IS NULL OR p.telehealth_available = p_telehealth)
       AND (p_in_person IS NULL OR p.in_person_available = p_in_person)
-      AND (p_accepting IS NULL OR p.is_accepting_patients = p_accepting)
       AND (p_state IS NULL OR p_state = '' OR pl.state_province = upper(p_state))
       AND (p_city IS NULL OR p_city = '' OR pl.city ILIKE '%' || p_city || '%')
       AND (p_verification_status IS NULL OR p_verification_status = '' OR
@@ -298,7 +299,6 @@ BEGIN
     ))
     AND (p_telehealth IS NULL OR p.telehealth_available = p_telehealth)
     AND (p_in_person IS NULL OR p.in_person_available = p_in_person)
-    AND (p_accepting IS NULL OR p.is_accepting_patients = p_accepting)
     AND (p_state IS NULL OR p_state = '' OR pl.state_province = upper(p_state))
     AND (p_city IS NULL OR p_city = '' OR pl.city ILIKE '%' || p_city || '%')
     AND (p_verification_status IS NULL OR p_verification_status = '' OR
@@ -321,5 +321,6 @@ $$;
 GRANT EXECUTE ON FUNCTION public.search_providers_v3(
   text, uuid[], text[], uuid[], uuid[], uuid[],
   boolean, boolean, boolean,
-  text, text, text, text, int, int
+  text, text, text, text, int, int,
+  double precision, double precision, double precision
 ) TO anon, authenticated;

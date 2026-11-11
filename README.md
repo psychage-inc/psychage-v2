@@ -50,7 +50,6 @@ Templates: `.env.example`, `.env.ai.example`, `.env.e2e.example`, `.env.producti
 
 ```
 api/            Vercel serverless functions
-cf-proxy/       Cloudflare Worker proxy
 data-pipeline/  Python data pipeline
 docs/           Product and deployment docs
 e2e/            Playwright tests

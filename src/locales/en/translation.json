@@ -77,8 +77,7 @@
             "query_placeholder": "Search by name, specialty, or condition...",
             "query_aria": "Search providers by name, specialty, or condition",
             "location_placeholder": "City, state, or zip...",
-            "location_aria": "Provider location — city, state, or zip code",
-            "use_location": "Use my location"
+            "location_aria": "Provider location — city, state, or zip code"
         },
         "filter": {
             "verification_status": "Verification Status",
@@ -108,7 +107,6 @@
         "sort": {
             "label": "Sort: {{current}}",
             "relevance": "Relevance",
-            "distance": "Distance",
             "name_az": "Name A-Z",
             "disclosure": "Default sort shows premium-subscription providers first. Switch to 'Name (A-Z)' to disable premium prioritization."
         },

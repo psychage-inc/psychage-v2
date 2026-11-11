@@ -1,5 +1,4 @@
 import { supabase } from '@/lib/supabaseClient';
-import * as Sentry from '@sentry/react';
 
 interface AuditLogParams {
   action: string;
@@ -12,10 +11,9 @@ interface AuditLogParams {
 
 export async function logAdminAction(params: AuditLogParams): Promise<void> {
   // Best-effort by design (40+ fire-and-forget call sites), so this never
-  // throws to the caller — but audit-trail gaps must not be invisible. Route
-  // failures to Sentry instead of only console.error, and check the insert
-  // error (supabase-js resolves { error } rather than throwing, so the catch
-  // alone never fired for RLS/DB denials).
+  // throws to the caller. Check the insert error too: supabase-js resolves
+  // { error } rather than throwing, so the catch alone never fired for
+  // RLS/DB denials.
   try {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return;
@@ -32,16 +30,8 @@ export async function logAdminAction(params: AuditLogParams): Promise<void> {
 
     if (error) {
       console.error('Failed to log admin action:', error);
-      Sentry.captureException(new Error(`Admin audit log insert failed: ${error.message}`), {
-        tags: { area: 'admin-audit' },
-        extra: { action: params.action, resourceType: params.resourceType, resourceId: params.resourceId },
-      });
     }
   } catch (err) {
     console.error('Failed to log admin action:', err);
-    Sentry.captureException(err, {
-      tags: { area: 'admin-audit' },
-      extra: { action: params.action, resourceType: params.resourceType, resourceId: params.resourceId },
-    });
   }
 }

@@ -89,10 +89,6 @@ const ProviderSearchPage: React.FC = () => {
     });
   };
 
-  const handleUseLocation = (lat: number, lng: number) => {
-    setParams({ latitude: lat, longitude: lng, radius_miles: 25 });
-  };
-
   return (
     <div className="min-h-screen bg-background pt-28 pb-20">
       <SEO
@@ -108,7 +104,6 @@ const ProviderSearchPage: React.FC = () => {
             initialQuery={params.query || ''}
             initialLocation={[params.city, params.state].filter(Boolean).join(', ')}
             onSearch={handleSearch}
-            onUseLocation={handleUseLocation}
           />
         </div>
 
@@ -194,7 +189,6 @@ const ProviderSearchPage: React.FC = () => {
             <ProviderSortDropdown
               value={params.sort_by || 'relevance'}
               onChange={(sort) => setParams({ sort_by: sort })}
-              showDistance={params.latitude != null}
             />
           </div>
         </div>

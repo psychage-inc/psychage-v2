@@ -58,8 +58,7 @@
       "query_placeholder": "Rechercher par nom, spécialité ou condition...",
       "query_aria": "Rechercher des praticiens par nom, spécialité ou condition",
       "location_placeholder": "Ville, état ou code postal...",
-      "location_aria": "Emplacement du praticien — ville, état ou code postal",
-      "use_location": "Utiliser ma position"
+      "location_aria": "Emplacement du praticien — ville, état ou code postal"
     },
     "filter": {
       "verification_status": "Statut de Vérification",
@@ -89,7 +88,6 @@
     "sort": {
       "label": "Trier : {{current}}",
       "relevance": "Pertinence",
-      "distance": "Distance",
       "name_az": "Nom A-Z",
       "disclosure": "Le tri par défaut affiche en premier les praticiens avec un abonnement premium. Passez à 'Nom (A-Z)' pour désactiver la priorisation premium."
     },

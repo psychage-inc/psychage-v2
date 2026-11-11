@@ -1,34 +1,26 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Search, MapPin, Crosshair } from 'lucide-react';
+import { Search, MapPin } from 'lucide-react';
 import Button from '@/components/ui/Button';
-import { useGeolocation } from '@/hooks/useGeolocation';
 
 interface ProviderSearchBarProps {
   initialQuery?: string;
   initialLocation?: string;
   onSearch: (query: string, location: string) => void;
-  onUseLocation?: (lat: number, lng: number) => void;
 }
 
 export const ProviderSearchBar: React.FC<ProviderSearchBarProps> = ({
   initialQuery = '',
   initialLocation = '',
   onSearch,
-  onUseLocation,
 }) => {
   const { t } = useTranslation();
   const [query, setQuery] = useState(initialQuery);
   const [location, setLocation] = useState(initialLocation);
-  const { requestLocation, isLoading: geoLoading, latitude, longitude } = useGeolocation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSearch(query, location);
-  };
-
-  const handleUseLocation = () => {
-    requestLocation();
   };
 
   // Re-sync the inputs when the URL-derived props change (chip clear, "Clear
@@ -36,14 +28,6 @@ export const ProviderSearchBar: React.FC<ProviderSearchBarProps> = ({
   // submit silently re-applies the removed query/location.
   React.useEffect(() => { setQuery(initialQuery); }, [initialQuery]);
   React.useEffect(() => { setLocation(initialLocation); }, [initialLocation]);
-
-  // When geolocation resolves, notify parent
-  React.useEffect(() => {
-    if (latitude != null && longitude != null && onUseLocation) {
-      onUseLocation(latitude, longitude);
-      setLocation('Near me');
-    }
-  }, [latitude, longitude]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <form onSubmit={handleSubmit} className="w-full">
@@ -70,18 +54,8 @@ export const ProviderSearchBar: React.FC<ProviderSearchBarProps> = ({
             onChange={e => setLocation(e.target.value)}
             placeholder={t('providers.searchbar.location_placeholder')}
             aria-label={t('providers.searchbar.location_aria')}
-            className="w-full pl-11 pr-12 py-3.5 bg-surface border border-border rounded-xl text-base font-medium text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+            className="w-full pl-11 pr-4 py-3.5 bg-surface border border-border rounded-xl text-base font-medium text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
           />
-          <button
-            type="button"
-            onClick={handleUseLocation}
-            disabled={geoLoading}
-            className="absolute right-1.5 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center text-text-tertiary hover:text-primary transition-colors disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-lg"
-            title={t('providers.searchbar.use_location')}
-            aria-label={t('providers.searchbar.use_location')}
-          >
-            <Crosshair size={16} className={geoLoading ? 'animate-spin' : ''} />
-          </button>
         </div>
 
         {/* Search button */}

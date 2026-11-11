@@ -58,8 +58,7 @@
             "query_placeholder": "Pesquisar por nome, especialidade ou condição...",
             "query_aria": "Pesquisar profissionais por nome, especialidade ou condição",
             "location_placeholder": "Cidade, estado ou CEP...",
-            "location_aria": "Localização do profissional — cidade, estado ou CEP",
-            "use_location": "Usar minha localização"
+            "location_aria": "Localização do profissional — cidade, estado ou CEP"
         },
         "filter": {
             "verification_status": "Status de Verificação",
@@ -89,7 +88,6 @@
         "sort": {
             "label": "Ordenar: {{current}}",
             "relevance": "Relevância",
-            "distance": "Distância",
             "name_az": "Nome A-Z",
             "disclosure": "A ordenação padrão mostra profissionais com assinatura premium primeiro. Mude para 'Nome (A-Z)' para desativar a priorização premium."
         },

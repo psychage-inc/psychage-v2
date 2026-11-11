@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/react';
 import { parseSSEStream } from '@/lib/ai/streaming';
 import { supabase } from '@/lib/supabaseClient';
 import type {
@@ -108,22 +107,6 @@ export async function* sendMessage(
       throw new Error(parsedError);
     }
 
-    Sentry.captureException(new Error('MindMate API non-JSON error response'), {
-      level: 'error',
-      tags: {
-        component: 'mindmate',
-        endpoint: '/api/ai/chat',
-        consumer: 'chatService',
-      },
-      extra: {
-        status: response.status,
-        statusText: response.statusText,
-        bodyPreview: bodyText.slice(0, 500),
-        sessionId,
-        requestId: response.headers.get('x-vercel-id'),
-        contentType: response.headers.get('content-type'),
-      },
-    });
 
     throw new MindMateUnavailableError(
       `MindMate unavailable (status ${response.status})`,

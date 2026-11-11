@@ -54,14 +54,14 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoUrl, videoType, title, c
             case 'youtube': {
                 const videoId = getYouTubeId(videoUrl);
                 if (videoId) {
-                    return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+                    return `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1`;
                 }
                 break;
             }
             case 'vimeo': {
                 const videoId = getVimeoId(videoUrl);
                 if (videoId) {
-                    return `https://player.vimeo.com/video/${videoId}?autoplay=1&title=0&byline=0&portrait=0`;
+                    return `https://player.vimeo.com/video/${videoId}?dnt=1&title=0&byline=0&portrait=0`;
                 }
                 break;
             }
@@ -85,7 +85,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoUrl, videoType, title, c
             <video
                 className={`w-full h-full object-cover ${className}`}
                 controls
-                autoPlay
                 title={title}
             >
                 <source src={embedUrl} type="video/mp4" />
@@ -101,7 +100,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoUrl, videoType, title, c
             src={embedUrl}
             title={title}
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
         />
     );

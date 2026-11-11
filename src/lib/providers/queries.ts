@@ -230,9 +230,6 @@ async function searchViaRPC(params: ProviderSearchParams, page: number, perPage:
     p_sort: params.sort_by === 'name' ? 'name' : 'relevance',
     p_limit: perPage,
     p_offset: offset,
-    p_latitude: params.latitude ?? null,
-    p_longitude: params.longitude ?? null,
-    p_radius_miles: params.radius_miles ?? null,
   });
 
   if (error) {
@@ -386,7 +383,7 @@ function searchViaMockData(params: ProviderSearchParams, page: number, perPage: 
 async function runSearchCascade(params: ProviderSearchParams): Promise<ProviderCardSearchResult> {
   const page = params.page || 1;
   const perPage = params.per_page || PAGE_SIZE;
-  const hasLocationIntent = !!(params.state || params.city || params.latitude);
+  const hasLocationIntent = !!(params.state || params.city);
 
   // Try 1: RPC
   try {
@@ -405,7 +402,7 @@ async function runSearchCascade(params: ProviderSearchParams): Promise<ProviderC
   }
 
   // Try 3: Mock data — but never silently widen when caller specified a location.
-  // Mock providers are a tiny hand-curated set; returning them for a state/city/geo
+  // Mock providers are a tiny hand-curated set; returning them for a state/city
   // query would surface providers from unrelated areas.
   if (hasLocationIntent) {
     return { providers: [], total_count: 0, page, per_page: perPage, has_more: false };
@@ -424,8 +421,7 @@ export async function searchProviders(params: ProviderSearchParams): Promise<Pro
   if (
     params.city &&
     params.state &&
-    result.total_count === 0 &&
-    params.latitude == null
+    result.total_count === 0
   ) {
     const retry = await runSearchCascade({ ...params, state: undefined });
     if (retry.total_count > 0) {

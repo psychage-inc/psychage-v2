@@ -4,7 +4,6 @@ import { useQueryClient } from '@tanstack/react-query';
 import { AuthContext, AuthState, AuthContextType } from './AuthContextDefinition';
 import { supabase } from '../lib/supabaseClient';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
-import { logAuthEvent, classifyAuthError } from '../lib/auth/authTelemetry';
 import { getAdminTier, isAdminRole } from '../lib/adminRole';
 
 // AUTH-010: signup extraMetadata is restricted to a known allowlist.
@@ -160,18 +159,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       });
 
       if (error) {
-        const outcome = classifyAuthError(error);
         const code = (error as { code?: string }).code;
-        logAuthEvent('login', outcome, { code });
         // AUTH-019: forward the Supabase error code so the page-level mapper
         // can use its reliable code-based branch instead of substring matching.
         return { success: false, error: error.message, code };
       }
 
-      logAuthEvent('login', 'success');
       return { success: true };
     } catch (error) {
-      logAuthEvent('login', 'platform_error', { thrown: true });
       const message = error instanceof Error
         ? error.message
         : 'An unexpected error occurred';
@@ -222,9 +217,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       // Branch on the real signUp outcome — a returned user is NOT proof of
       // success. Order matters.
       if (error) {
-        const outcome = classifyAuthError(error);
         const code = (error as { code?: string }).code;
-        logAuthEvent('signup', outcome, { code });
         // AUTH-019: forward the Supabase error code so the page-level mapper
         // can use its reliable code-based branch instead of substring matching.
         return { success: false, error: error.message, code };
@@ -236,28 +229,23 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       // never be reported as "account created".
       const identities = data.user?.identities;
       if (data.user && Array.isArray(identities) && identities.length === 0) {
-        logAuthEvent('signup', 'user_error', { reason: 'already_registered' });
         return { success: false, status: 'already_registered' as const };
       }
 
       // Session issued → Confirm-email is OFF and this is a new account; the
       // user is already logged in (onAuthStateChange propagates state).
       if (data.session) {
-        logAuthEvent('signup', 'success', { status: 'active' });
         return { success: true, status: 'active' as const };
       }
 
       // User, no session, non-empty identities → genuinely new account that
       // must confirm its email before signing in (Confirm-email ON).
       if (data.user) {
-        logAuthEvent('signup', 'success', { status: 'confirm_email' });
         return { success: true, status: 'confirm_email' as const };
       }
 
-      logAuthEvent('signup', 'platform_error', { reason: 'no_user_returned' });
       return { success: false, error: 'Signup failed' };
     } catch (error) {
-      logAuthEvent('signup', 'platform_error', { thrown: true });
       const message = error instanceof Error
         ? error.message
         : 'An unexpected error occurred';
@@ -277,10 +265,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     queryClient.clear();
     try {
       await supabase.auth.signOut();
-      logAuthEvent('logout', 'success');
     } catch (error) {
       console.error('Logout error:', error);
-      logAuthEvent('logout', 'platform_error', { thrown: true });
     }
     navigate(redirect, { replace: true });
   }, [queryClient, navigate]);
@@ -313,16 +299,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       });
 
       if (error) {
-        const outcome = classifyAuthError(error);
         const code = (error as { code?: string }).code;
-        logAuthEvent('resetPassword', outcome, { code });
         return { success: false, error: error.message, code };
       }
 
-      logAuthEvent('resetPassword', 'success');
       return { success: true };
     } catch (error) {
-      logAuthEvent('resetPassword', 'platform_error', { thrown: true });
       const message = error instanceof Error
         ? error.message
         : 'An unexpected error occurred';
@@ -339,14 +321,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         },
       });
       if (error) {
-        const outcome = classifyAuthError(error);
-        logAuthEvent('oauthGoogle', outcome, { code: (error as { code?: string }).code });
         return { success: false, error: error.message };
       }
-      logAuthEvent('oauthGoogle', 'success');
       return { success: true };
     } catch {
-      logAuthEvent('oauthGoogle', 'platform_error', { thrown: true });
       return { success: false, error: 'Failed to sign in with Google' };
     }
   }, []);
@@ -360,14 +338,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         },
       });
       if (error) {
-        const outcome = classifyAuthError(error);
-        logAuthEvent('oauthApple', outcome, { code: (error as { code?: string }).code });
         return { success: false, error: error.message };
       }
-      logAuthEvent('oauthApple', 'success');
       return { success: true };
     } catch {
-      logAuthEvent('oauthApple', 'platform_error', { thrown: true });
       return { success: false, error: 'Failed to sign in with Apple' };
     }
   }, []);

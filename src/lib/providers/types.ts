@@ -173,9 +173,6 @@ export interface ProviderCardSearchResult {
 
 export interface ProviderSearchParams {
   query?: string;
-  latitude?: number;
-  longitude?: number;
-  radius_miles?: number;
   provider_type_ids?: string[];
   specialty_ids?: string[];
   specialty_slugs?: string[];
@@ -188,7 +185,7 @@ export interface ProviderSearchParams {
   in_person?: boolean;
   accepting_patients?: boolean;
   verification_status?: 'verified' | 'listed';
-  sort_by?: 'relevance' | 'distance' | 'name';
+  sort_by?: 'relevance' | 'name';
   page?: number;
   per_page?: number;
 }

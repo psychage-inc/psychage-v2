@@ -58,8 +58,7 @@
       "query_placeholder": "Buscar por nombre, especialidad o condición...",
       "query_aria": "Buscar profesionales por nombre, especialidad o condición",
       "location_placeholder": "Ciudad, estado o código postal...",
-      "location_aria": "Ubicación del profesional — ciudad, estado o código postal",
-      "use_location": "Usar mi ubicación"
+      "location_aria": "Ubicación del profesional — ciudad, estado o código postal"
     },
     "filter": {
       "verification_status": "Estado de Verificación",
@@ -89,7 +88,6 @@
     "sort": {
       "label": "Ordenar: {{current}}",
       "relevance": "Relevancia",
-      "distance": "Distancia",
       "name_az": "Nombre A-Z",
       "disclosure": "El orden predeterminado muestra primero a los profesionales con suscripción premium. Cambie a 'Nombre (A-Z)' para desactivar la priorización premium."
     },

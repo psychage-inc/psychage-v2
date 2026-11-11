@@ -11,8 +11,6 @@ function throwingLLM(): LLMProvider {
   return {
     generateCompletion: vi.fn().mockRejectedValue(new Error('classifier timeout')),
     streamCompletion: vi.fn(),
-    generateEmbedding: vi.fn(),
-    generateEmbeddings: vi.fn(),
   };
 }
 

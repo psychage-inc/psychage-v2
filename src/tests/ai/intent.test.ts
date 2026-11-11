@@ -24,8 +24,6 @@ function createMockLLM(intent: string, confidence: number = 0.9): LLMProvider {
       finishReason: 'stop',
     }),
     streamCompletion: vi.fn(),
-    generateEmbedding: vi.fn(),
-    generateEmbeddings: vi.fn(),
   };
 }
 
@@ -258,8 +256,6 @@ describe('LLM Failure Fallback', () => {
     const failingLLM: LLMProvider = {
       generateCompletion: vi.fn().mockRejectedValue(new Error('API error')),
       streamCompletion: vi.fn(),
-      generateEmbedding: vi.fn(),
-      generateEmbeddings: vi.fn(),
     };
 
     const result = await classifyIntent('Hello', emptyHistory, failingLLM);
@@ -271,8 +267,6 @@ describe('LLM Failure Fallback', () => {
     const failingLLM: LLMProvider = {
       generateCompletion: vi.fn().mockRejectedValue(new Error('API error')),
       streamCompletion: vi.fn(),
-      generateEmbedding: vi.fn(),
-      generateEmbeddings: vi.fn(),
     };
 
     const result = await classifyIntent(

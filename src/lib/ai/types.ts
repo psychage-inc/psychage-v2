@@ -188,35 +188,6 @@ export interface IntentClassification {
 }
 
 // -----------------------------------------------------------------------------
-// Retrieval
-// -----------------------------------------------------------------------------
-
-export interface RetrievalOptions {
-  topK: number;
-  similarityThreshold: number;
-  contentTypes?: ContentType[];
-  conditionTags?: string[];
-  language?: string;
-  excludeDocumentIds?: string[];
-  boostRecent?: boolean;
-}
-
-export interface RetrievalResult {
-  chunkId: string;
-  documentId: string;
-  documentTitle: string;
-  documentUrlPath: string;
-  documentType: ContentType;
-  chunkText: string;
-  similarity: number;
-  metadata: {
-    sectionHeading?: string;
-    hasCitation: boolean;
-    sources?: ContentSource[];
-  };
-}
-
-// -----------------------------------------------------------------------------
 // LLM
 // -----------------------------------------------------------------------------
 
@@ -260,10 +231,6 @@ export interface LLMProvider {
     messages: LLMMessage[],
     options?: LLMOptions
   ): AsyncGenerator<LLMStreamChunk>;
-
-  generateEmbedding(text: string): Promise<number[]>;
-
-  generateEmbeddings(texts: string[]): Promise<number[][]>;
 }
 
 // -----------------------------------------------------------------------------
@@ -420,51 +387,6 @@ export interface AnalyticsEvent {
 }
 
 // -----------------------------------------------------------------------------
-// Ingestion
-// -----------------------------------------------------------------------------
-
-export interface IngestionSource {
-  type: 'file' | 'cms';
-  path?: string;
-  contentType: ContentType;
-}
-
-export interface IngestionResult {
-  documentsProcessed: number;
-  chunksCreated: number;
-  embeddingsGenerated: number;
-  errors: IngestionError[];
-  duration_ms: number;
-}
-
-export interface IngestionError {
-  documentTitle: string;
-  error: string;
-  stage: 'parse' | 'chunk' | 'embed' | 'upsert';
-}
-
-export interface ParsedDocument {
-  title: string;
-  slug: string;
-  url_path: string;
-  content_body: string;
-  summary: string;
-  type: ContentType;
-  condition_tags: string[];
-  topic_tags: string[];
-  language: string;
-  author: string | null;
-  sources: ContentSource[];
-}
-
-export interface TextChunk {
-  text: string;
-  index: number;
-  tokenCount: number;
-  metadata: ChunkMetadata;
-}
-
-// -----------------------------------------------------------------------------
 // API Request / Response
 // -----------------------------------------------------------------------------
 
@@ -540,19 +462,13 @@ export interface RateLimitResult {
 // Configuration
 // -----------------------------------------------------------------------------
 
-export type LLMProviderName = 'anthropic' | 'openai';
+export type LLMProviderName = 'anthropic';
 
 export interface AIConfig {
   llmProvider: LLMProviderName;
   primaryModel: string;
   safetyModel: string;
-  embeddingModel: string;
   summarizationModel: string;
-  retrieval: {
-    defaultTopK: number;
-    defaultSimilarityThreshold: number;
-    hybridSearchWeight: number;
-  };
   conversation: {
     maxTurns: number;
     maxHistoryForLLM: number;

@@ -26,7 +26,7 @@ Templates: `.env.example`, `.env.ai.example`, `.env.e2e.example`, `.env.producti
 | Core | `VITE_API_URL`, `VITE_APP_NAME`, `VITE_APP_VERSION`, `VITE_DEBUG_MODE` |
 | Supabase | `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY` |
 | Sanity | `VITE_SANITY_PROJECT_ID`, `VITE_SANITY_DATASET`, `VITE_SANITY_API_VERSION` |
-| MindMate | `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `LLM_PROVIDER` |
+| MindMate | `ANTHROPIC_API_KEY` |
 | Monitoring and abuse | `VITE_TURNSTILE_SITE_KEY` |
 | Feature flags | `VITE_ENABLE_AI_CHAT`, `VITE_ENABLE_PROVIDER_DIRECTORY`, `VITE_ENABLE_MOOD_JOURNAL`, `VITE_ENABLE_SLEEP_TRACKER`, `VITE_ENABLE_CLARITY_SCORE`, `VITE_ENABLE_MEDICATION_TRACKER`, `VITE_CRISIS_DETECTION_ENABLED`, `VITE_MOOD_TRACKING_ENABLED`, `VITE_SAFETY_PLAN_ENABLED`, `VITE_NAV_TIER1_ENABLED` through `VITE_NAV_TIER6_ENABLED`, `VITE_NAVIGATOR_AGE_GATE`, `VITE_NAVIGATOR_AGE_GATE_MIN_AGE` |
 | E2E | `PSYCHAGE_E2E_EMAIL`, `PSYCHAGE_E2E_PASSWORD`, `PLAYWRIGHT_BASE_URL` |
@@ -42,7 +42,6 @@ Templates: `.env.example`, `.env.ai.example`, `.env.e2e.example`, `.env.producti
 | `pnpm test:e2e`, `pnpm test:e2e:ui`, `pnpm test:e2e:headed` | End-to-end tests |
 | `pnpm test:smoke`, `pnpm test:smoke:prod` | Smoke test |
 | `pnpm storybook`, `pnpm build-storybook` | Component library |
-| `pnpm ai:ingest`, `pnpm ai:ingest:test`, `pnpm ai:ingest:dry`, `pnpm ai:test` | MindMate content ingestion and search checks |
 | `pnpm verify:routes`, `pnpm verify:backend`, `pnpm verify:fallback`, `pnpm verify:deployment` | Verification checks |
 | `pnpm seed:articles:generate`, `pnpm seed:articles:content`, `pnpm seed:articles:citations`, `pnpm audit:articles` | Article seed and audit tools |
 

@@ -89,7 +89,6 @@ export function useChat(): UseChatReturn {
               ? {
                   ...m,
                   isStreaming: false,
-                  sources: responseMeta?.citations ?? [],
                   safetyLevel: responseMeta?.safetyLevel,
                 }
               : m,

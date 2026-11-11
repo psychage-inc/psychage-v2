@@ -133,7 +133,7 @@ async function main() {
     if (sizeBytes > MAX_BYTES) {
       throw new Error(
         `[build-api] bundle ${rel} is ${kb} KB, exceeds ${MAX_BYTES / 1024 / 1024} MB limit. ` +
-          `Consider externalizing heavy deps (anthropic, supabase, openai) and using includeFiles.`,
+          `Consider externalizing heavy deps (anthropic, supabase) and using includeFiles.`,
       );
     }
   }

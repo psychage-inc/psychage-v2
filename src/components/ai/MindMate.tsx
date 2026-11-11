@@ -234,7 +234,6 @@ const MindMate: React.FC = () => {
                     throw new Error(parsedError);
                 }
 
-
                 throw new MindMateUnavailableError(
                     `MindMate unavailable (status ${res.status})`,
                     { cause: new Error(bodyText.slice(0, 200)) },

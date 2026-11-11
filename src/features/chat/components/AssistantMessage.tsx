@@ -4,7 +4,6 @@ import type { ChatMessage } from '../types/chat.types';
 import MarkdownRenderer from './MarkdownRenderer';
 import StreamingCursor from './StreamingCursor';
 import ThinkingBlock from './ThinkingBlock';
-import SourceCitations from './SourceCitations';
 import ActionCards from './ActionCard';
 import SuggestedFollowUps from './SuggestedFollowUps';
 import MessageActions from './MessageActions';
@@ -71,10 +70,6 @@ export default function AssistantMessage({
           {/* Post-stream extras */}
           {showExtras && (
             <>
-              {message.sources && message.sources.length > 0 && (
-                <SourceCitations sources={message.sources} />
-              )}
-
               {message.actionCards && message.actionCards.length > 0 && (
                 <ActionCards cards={message.actionCards} />
               )}

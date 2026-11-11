@@ -2,35 +2,18 @@
 // Psychage AI Help — Configuration
 // =============================================================================
 
-import type { AIConfig, LLMProviderName } from './types';
+import type { AIConfig } from './types';
 
 // =============================================================================
 // Default Configuration
 // =============================================================================
 
 export function getAIConfig(): AIConfig {
-  const provider = (getEnv('LLM_PROVIDER', 'anthropic') as LLMProviderName);
-
   return {
-    llmProvider: provider,
-    primaryModel:
-      provider === 'anthropic'
-        ? 'claude-sonnet-4-5-20250929'
-        : 'gpt-4o',
-    safetyModel:
-      provider === 'anthropic'
-        ? 'claude-haiku-4-5-20251001'
-        : 'gpt-4o-mini',
-    embeddingModel: 'text-embedding-3-small',
-    summarizationModel:
-      provider === 'anthropic'
-        ? 'claude-haiku-4-5-20251001'
-        : 'gpt-4o-mini',
-    retrieval: {
-      defaultTopK: 5,
-      defaultSimilarityThreshold: 0.72,
-      hybridSearchWeight: 0.3,
-    },
+    llmProvider: 'anthropic',
+    primaryModel: 'claude-sonnet-4-5-20250929',
+    safetyModel: 'claude-haiku-4-5-20251001',
+    summarizationModel: 'claude-haiku-4-5-20251001',
     conversation: {
       maxTurns: 50,
       maxHistoryForLLM: 10,

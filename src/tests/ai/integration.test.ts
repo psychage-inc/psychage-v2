@@ -4,14 +4,11 @@
 // =============================================================================
 
 import { describe, it, expect, vi } from 'vitest';
-import type {
-  LLMProvider,
-  RetrievalResult,
-} from '@/lib/ai/types';
+import type { LLMProvider } from '@/lib/ai/types';
 import { classifyInputSafety, validateOutputSafety } from '@/lib/ai/safety';
 import { classifyIntent } from '@/lib/ai/intent';
 import { getAIConfig } from '@/lib/ai/config';
-import { SYSTEM_PROMPT, assembleMessages } from '@/lib/ai/llm';
+import { SYSTEM_PROMPT } from '@/lib/ai/llm';
 import { handleSuggestedQuestions } from '@/lib/ai/suggested-questions';
 
 // =============================================================================
@@ -33,40 +30,6 @@ describe('End-to-End Pipeline Flow', () => {
     const intent = await classifyIntent(message, [], mockLLM);
     expect(intent.primary).toBe('educational');
     expect(intent.entities.conditions).toContain('depression');
-
-    // Step 3: Assembly (mock retrieval)
-    const mockRetrieved: RetrievalResult[] = [
-      {
-        chunkId: 'chunk-1',
-        documentId: 'doc-1',
-        documentTitle: 'Understanding Depression',
-        documentUrlPath: '/learn/conditions/depression',
-        documentType: 'condition_guide',
-        chunkText:
-          'Common symptoms of depression include persistent sadness, loss of interest in activities, fatigue, changes in appetite, sleep disturbances, and difficulty concentrating.',
-        similarity: 0.89,
-        metadata: {
-          sectionHeading: 'Symptoms',
-          hasCitation: true,
-        },
-      },
-    ];
-
-    const messages = assembleMessages(
-      message,
-      [],
-      mockRetrieved,
-      {
-        userLanguage: 'en',
-        safetyClassification: safety,
-        conversationTurnCount: 0,
-      }
-    );
-
-    // Verify message assembly
-    expect(messages[0].content).toContain(SYSTEM_PROMPT);
-    expect(messages.some((m) => m.content.includes('Understanding Depression'))).toBe(true);
-    expect(messages[messages.length - 1].content).toBe(message);
   });
 
   it('should bypass retrieval for crisis messages', async () => {
@@ -131,9 +94,15 @@ describe('System Prompt Quality', () => {
     expect(SYSTEM_PROMPT).toContain('psychage.com');
   });
 
-  it('should require citation', () => {
-    expect(SYSTEM_PROMPT).toContain('Ground ALL factual claims');
-    expect(SYSTEM_PROMPT).toContain('cite sources');
+  it('has no retrieval or citation scaffolding (RAG removed)', () => {
+    expect(SYSTEM_PROMPT).not.toContain('{retrieved_chunks}');
+    expect(SYSTEM_PROMPT).not.toContain('INTERNAL_CONTEXT');
+    expect(SYSTEM_PROMPT).not.toContain('[SOURCE:');
+  });
+
+  it('tells the model not to make things up', () => {
+    expect(SYSTEM_PROMPT).toContain('never make up information');
+    expect(SYSTEM_PROMPT).toContain('Never invent URLs');
   });
 });
 
@@ -145,8 +114,6 @@ describe('AI Configuration', () => {
   it('should load default config', () => {
     const config = getAIConfig();
 
-    expect(config.retrieval.defaultTopK).toBe(5);
-    expect(config.retrieval.defaultSimilarityThreshold).toBe(0.72);
     expect(config.conversation.maxTurns).toBe(50);
     expect(config.conversation.maxHistoryForLLM).toBe(10);
     expect(config.conversation.summarizeAfterTurns).toBe(10);
@@ -243,9 +210,5 @@ function createMockLLM(): LLMProvider {
       });
     }),
     streamCompletion: vi.fn(),
-    generateEmbedding: vi.fn().mockResolvedValue(new Array(1536).fill(0)),
-    generateEmbeddings: vi
-      .fn()
-      .mockResolvedValue([new Array(1536).fill(0)]),
   };
 }

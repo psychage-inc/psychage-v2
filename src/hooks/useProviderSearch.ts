@@ -12,6 +12,8 @@ interface UseProviderSearchReturn {
   isLoading: boolean;
   isLoadingMore: boolean;
   error: string | null;
+  /** Re-run the failed search with the same params. */
+  retry: () => void;
   hasSearched: boolean;
   params: ProviderSearchParams;
   setParams: (params: Partial<ProviderSearchParams>) => void;
@@ -71,7 +73,7 @@ export function useProviderSearch(): UseProviderSearchReturn {
     isFetching,
     isFetchingNextPage,
     isError,
-    error: queryError,
+    refetch,
   } = useInfiniteQuery({
     queryKey,
     queryFn: ({ pageParam }) =>
@@ -86,13 +88,15 @@ export function useProviderSearch(): UseProviderSearchReturn {
     placeholderData: keepPreviousData,
   });
 
-  // Flatten pages into a single provider array
+  // Flatten pages into a single provider array. On error show nothing:
+  // keepPreviousData would otherwise leave the previous search's results on
+  // screen next to the error.
   const providers = useMemo(
-    () => data?.pages.flatMap(p => p.providers) ?? [],
-    [data],
+    () => (isError ? [] : data?.pages.flatMap(p => p.providers) ?? []),
+    [data, isError],
   );
-  const totalCount = data?.pages[0]?.total_count ?? 0;
-  const droppedFilters = data?.pages[0]?.dropped_filters;
+  const totalCount = isError ? 0 : data?.pages[0]?.total_count ?? 0;
+  const droppedFilters = isError ? undefined : data?.pages[0]?.dropped_filters;
   const hasSearched = data !== undefined;
 
   // Update URL params (same logic as before)
@@ -172,7 +176,8 @@ export function useProviderSearch(): UseProviderSearchReturn {
     hasMore: hasNextPage ?? false,
     isLoading: isFetching && !isFetchingNextPage,
     isLoadingMore: isFetchingNextPage,
-    error: isError ? (queryError instanceof Error ? queryError.message : 'Failed to search providers. Please try again.') : null,
+    error: isError ? 'Provider search is unavailable right now. Please try again.' : null,
+    retry: () => { void refetch(); },
     hasSearched,
     params,
     setParams,

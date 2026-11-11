@@ -27,6 +27,7 @@ const ProviderSearchPage: React.FC = () => {
     isLoading,
     isLoadingMore,
     error,
+    retry,
     hasSearched,
     params,
     setParams,
@@ -124,7 +125,7 @@ const ProviderSearchPage: React.FC = () => {
             <AlertTriangle size={18} className="text-amber-600 dark:text-amber-400 flex-shrink-0" />
             <p className="text-sm text-amber-700 dark:text-amber-300 flex-1">{error}</p>
             <button
-              onClick={() => setParams({})}
+              onClick={retry}
               className="flex items-center gap-1.5 text-xs font-medium text-amber-700 dark:text-amber-300 hover:text-amber-800 dark:hover:text-amber-200 transition-colors"
             >
               <RefreshCw size={14} />

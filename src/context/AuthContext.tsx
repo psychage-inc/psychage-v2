@@ -12,6 +12,8 @@ import { getAdminTier, isAdminRole } from '../lib/adminRole';
 // payload reaches Supabase.
 export type SignupExtraMetadata = {
   age_verified?: boolean;
+  data_processing_accepted?: boolean;
+  newsletter_opt_in?: boolean;
   consent_version?: string;
   country?: string;
   age?: number;
@@ -20,6 +22,8 @@ export type SignupExtraMetadata = {
 
 const ALLOWED_EXTRA_KEYS = [
   'age_verified',
+  'data_processing_accepted',
+  'newsletter_opt_in',
   'consent_version',
   'country',
   'age',

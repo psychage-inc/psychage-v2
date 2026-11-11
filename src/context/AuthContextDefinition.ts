@@ -5,6 +5,8 @@ import { User } from '../lib/api';
 // Concrete type lives in AuthContext.tsx (SignupExtraMetadata).
 export type SignupExtraMetadataLike = {
     age_verified?: boolean;
+    data_processing_accepted?: boolean;
+    newsletter_opt_in?: boolean;
     consent_version?: string;
     country?: string;
     age?: number;

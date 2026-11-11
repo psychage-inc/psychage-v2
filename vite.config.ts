@@ -1,6 +1,7 @@
 import path from 'path';
 import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
+import { articleSlugIndexPlugin } from './vite-plugins/articleSlugIndex';
 
 /** Serve admin.html for /admin/* routes in dev (mimics Vercel hostname rewrite) */
 function adminFallbackPlugin(): Plugin {
@@ -36,7 +37,7 @@ export default defineConfig(() => {
         },
       },
     },
-    plugins: [adminFallbackPlugin(), react()],
+    plugins: [adminFallbackPlugin(), articleSlugIndexPlugin(), react()],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),

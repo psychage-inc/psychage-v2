@@ -8,13 +8,13 @@ test.describe('Authentication Flows', () => {
             await expect(page.getByRole('heading', { name: /welcome back/i })).toBeVisible();
             await expect(page.locator('input[type="email"]')).toBeVisible();
             await expect(page.locator('input[type="password"]')).toBeVisible();
-            await expect(page.getByRole('button', { name: /sign in/i })).toBeVisible();
+            await expect(page.locator('form').getByRole('button', { name: /sign in/i })).toBeVisible();
         });
 
         test('should show validation errors for empty form', async ({ page }) => {
             await page.goto('/login');
 
-            await page.getByRole('button', { name: /sign in/i }).click();
+            await page.locator('form').getByRole('button', { name: /sign in/i }).click();
 
             // HTML5 validation should prevent submission
             const emailInput = page.locator('input[type="email"]');
@@ -26,10 +26,10 @@ test.describe('Authentication Flows', () => {
 
             await page.locator('input[type="email"]').fill('invalid@test.com');
             await page.locator('input[type="password"]').fill('wrongpassword');
-            await page.getByRole('button', { name: /sign in/i }).click();
+            await page.locator('form').getByRole('button', { name: /sign in/i }).click();
 
             // Wait for error message to appear
-            await expect(page.getByText(/login failed|invalid|error/i)).toBeVisible({ timeout: 10000 });
+            await expect(page.getByText(/doesn't match|login failed|invalid/i)).toBeVisible({ timeout: 10000 });
         });
 
         test('should have link to signup page', async ({ page }) => {
@@ -62,13 +62,13 @@ test.describe('Authentication Flows', () => {
             await expect(page.locator('#email')).toBeVisible();
             await expect(page.locator('#password')).toBeVisible();
             await expect(page.locator('#confirmPassword')).toBeVisible();
-            await expect(page.locator('#terms')).toBeVisible();
+            await expect(page.locator('#consent-terms')).toBeVisible();
         });
 
         test('should allow switching between patient and provider', async ({ page }) => {
             await page.goto('/signup');
 
-            const patientButton = page.getByRole('button', { name: /i'm a patient/i });
+            const patientButton = page.getByRole('button', { name: /i am an individual/i });
             const providerButton = page.getByRole('button', { name: /i'm a provider/i });
 
             await expect(patientButton).toBeVisible();
@@ -106,7 +106,9 @@ test.describe('Authentication Flows', () => {
             await page.locator('#email').fill('test@example.com');
             await page.locator('#password').fill('password123');
             await page.locator('#confirmPassword').fill('differentpassword');
-            await page.locator('#terms').check();
+            await page.locator('#consent-terms').check();
+            await page.locator('#consent-data').check();
+            await page.locator('#consent-age').check();
 
             await page.getByRole('button', { name: /create account/i }).click();
 
@@ -120,11 +122,13 @@ test.describe('Authentication Flows', () => {
             await page.locator('#email').fill('test@example.com');
             await page.locator('#password').fill('password123');
             await page.locator('#confirmPassword').fill('password123');
-            // Don't check terms
+            // Don't check terms: the required checkbox blocks submission natively
 
             await page.getByRole('button', { name: /create account/i }).click();
 
-            await expect(page.getByText(/you must accept the terms/i)).toBeVisible();
+            await expect(page).toHaveURL(/\/signup/);
+            await expect(page.locator('#consent-terms')).toHaveAttribute('required', '');
+            expect(await page.locator('#consent-terms').evaluate((el: HTMLInputElement) => el.validity.valueMissing)).toBe(true);
         });
 
         test('should have link to login page', async ({ page }) => {
@@ -153,9 +157,7 @@ test.describe('Authentication Flows', () => {
             await page.getByRole('button', { name: /send|reset|submit/i }).click();
 
             // Should show success message or redirect
-            await expect(
-                page.getByText(/check your email|sent|success|instructions/i)
-            ).toBeVisible({ timeout: 10000 });
+            await expect(page.getByRole('heading', { name: /check your email/i })).toBeVisible({ timeout: 10000 });
         });
     });
 

@@ -461,7 +461,7 @@ export const mentalHealthLaterLifeArticlesA: Article[] = [
 
         <QuoteBlock
           quote="The landscape of mental health in later life is not uniform decline. It is a terrain of challenges met by resilience, losses balanced by wisdom, and illnesses that--when recognized--respond to treatment."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -803,7 +803,7 @@ export const mentalHealthLaterLifeArticlesA: Article[] = [
 
         <QuoteBlock
           quote="The question is not whether aging brings challenges--it does. The question is whether those challenges are the expected terrain of later life or signs of illness that treatment can relieve."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -1145,7 +1145,7 @@ export const mentalHealthLaterLifeArticlesA: Article[] = [
 
         <QuoteBlock
           quote="We do not fail to treat late-life mental illness because we lack knowledge or medications. We fail because we have accepted suffering in older adults as inevitable. It is not."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -1514,7 +1514,7 @@ export const mentalHealthLaterLifeArticlesA: Article[] = [
 
         <QuoteBlock
           quote="The aging brain loses neurons, but it gains wisdom. It slows in speed, but deepens in understanding. Decline is not destiny--it is one path among many."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -1900,7 +1900,7 @@ export const mentalHealthLaterLifeArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Loneliness is a hunger for connection, and no one should starve. We are social creatures at every age--disconnection is not aging, it is a failure of our communities."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),

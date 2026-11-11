@@ -383,7 +383,7 @@ export const caregivingFamilySupportArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Accepting help is not giving up--it is the opposite. It is choosing to sustain caregiving long-term rather than burning out and collapsing. Professional support is not Plan B; it is Plan A."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -641,7 +641,7 @@ export const caregivingFamilySupportArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Long-distance caregiving is the art of building systems that function when you are not there. You cannot be in two places at once--so you must multiply yourself through people, technology, and professional allies."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -908,7 +908,7 @@ export const caregivingFamilySupportArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Advance directives are acts of love. They say to your family: 'I have thought about this. I do not want you to bear the weight of guessing. Here is what I want--honor it, and be at peace.'"
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -1182,7 +1182,7 @@ export const caregivingFamilySupportArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Choosing a nursing home is not about finding perfection--it is about finding competence, compassion, and accountability. Trust your instincts. If something feels wrong during your visit, it probably is."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -1432,7 +1432,7 @@ export const caregivingFamilySupportArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Guilt whispers that you are not enough. Compassion--for yourself--whispers back: 'I am doing my best with the resources I have. That is enough.'"
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
 
         <h2>Self-Care Is Not Selfish</h2>
@@ -1449,7 +1449,7 @@ export const caregivingFamilySupportArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Boundaries are not walls--they are the architecture that makes long-term caregiving possible. Without them, you do not last."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),

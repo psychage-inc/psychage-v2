@@ -21,7 +21,6 @@ import {
  * the 64px nav + the device safe-area inset.
  */
 const MobileFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear();
 
   return (
     <footer
@@ -87,7 +86,6 @@ const MobileFooter: React.FC = () => {
             {line}
           </p>
         ))}
-        <p className="text-xs text-text-tertiary">© {currentYear} Psychage, Inc.</p>
       </div>
 
       {/* Footer Watermark - decorative brand anchor (parity with desktop Footer) */}

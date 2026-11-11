@@ -156,7 +156,7 @@ const SignUpPage = () => {
                         transition={{ delay: 0.1, duration: 0.5 }}
                         className="flex justify-center mb-6"
                     >
-                        <Link to="/">
+                        <Link to="/" aria-label="Psychage home">
                             <LogoIcon className="h-20 w-auto drop-shadow-lg" />
                         </Link>
                     </motion.div>

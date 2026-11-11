@@ -55,7 +55,7 @@ export const PARTS: PreviewPart[] = [
 export const CONDITION = {
     slug: 'schizophrenia',
     name: 'Schizophrenia',
-    reviewerCredit: 'Reviewed by Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology.',
+    reviewerCredit: 'Reviewed by Dr. Lena Dobson, Ph.D. in Clinical Psychology.',
     // One-line promise beneath the name is pulled from Part 1's thesis.claim (build plan §12).
     promise: PARTS[0].meta.thesis_claim,
     // Three inherited StatCards, echoes of the three most surprising claims across the guide.

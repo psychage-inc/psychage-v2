@@ -73,7 +73,7 @@ function ResourceCard({
         <h3 className="font-bold text-lg text-white leading-snug mb-1">
           {resource.name}
         </h3>
-        <p className="text-sm text-white/70 mb-1">
+        <p className="text-sm text-white/90 mb-1">
           {resource.hours}
         </p>
         {resource.languages.length > 0 && (
@@ -291,17 +291,17 @@ const CrisisPage: React.FC = () => {
               <div className="bg-white/20 p-3 rounded-full">
                 <Phone size={24} />
               </div>
-              <span className="text-sm font-medium text-rose-100 uppercase tracking-wider">
+              <span className="text-sm font-medium text-white uppercase tracking-wider">
                 {t('crisis.page.emergency_line')}
               </span>
             </div>
             <p className="text-3xl md:text-4xl font-bold mb-2 group-hover:underline">
               {primary_resource?.phone || emergency_number}
             </p>
-            <p className="text-rose-100 text-sm">
+            <p className="text-white text-sm">
               {primary_resource?.name || t('crisis.page.emergency_services_country', { country: country.country_name })}
             </p>
-            <p className="text-rose-200/70 text-xs mt-2">{t('crisis.page.tap_to_call')}</p>
+            <p className="text-white/90 text-xs mt-2">{t('crisis.page.tap_to_call')}</p>
           </motion.a>
 
           {/* Country + location card */}
@@ -314,7 +314,7 @@ const CrisisPage: React.FC = () => {
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <MapPin size={16} className="text-white/80" />
-                <span className="text-sm font-medium text-white/70 uppercase tracking-wider">
+                <span className="text-sm font-medium text-white/90 uppercase tracking-wider">
                   {t('crisis.page.location_label')}
                 </span>
               </div>
@@ -326,7 +326,7 @@ const CrisisPage: React.FC = () => {
                   {t('crisis.page.fallback_notice')}
                 </p>
               )}
-              <p className="text-sm text-white/70">
+              <p className="text-sm text-white/90">
                 {t('crisis.page.emergency_prefix')} <strong className="text-white">{emergency_number}</strong>
               </p>
             </div>
@@ -463,7 +463,7 @@ const CrisisPage: React.FC = () => {
             <p className="text-xs text-text-tertiary pt-2 border-t border-border">
               <Trans
                 i18nKey="crisis.page.contact_footer"
-                components={{ mail: <a href="mailto:info@psychage.com" className="text-primary hover:underline" /> }}
+                components={{ mail: <a href="mailto:info@psychage.com" className="text-primary underline" /> }}
               />
             </p>
           </div>

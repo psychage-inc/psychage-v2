@@ -80,28 +80,28 @@ const WeeklyReflection: React.FC = () => {
         ) : (
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="bg-white dark:bg-neutral-900 rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100 dark:border-neutral-800 space-y-6">
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">What went well this week?</label>
-              <textarea value={wentWell} onChange={e => setWentWell(e.target.value)} placeholder="Even small things count." className={textAreaClass} />
+              <label htmlFor="reflection-wentWell" className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">What went well this week?</label>
+              <textarea id="reflection-wentWell" value={wentWell} onChange={e => setWentWell(e.target.value)} placeholder="Even small things count." className={textAreaClass} />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">What was difficult this week?</label>
-              <textarea value={wasDifficult} onChange={e => setWasDifficult(e.target.value)} placeholder="No judgment — just noticing." className={textAreaClass} />
+              <label htmlFor="reflection-wasDifficult" className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">What was difficult this week?</label>
+              <textarea id="reflection-wasDifficult" value={wasDifficult} onChange={e => setWasDifficult(e.target.value)} placeholder="No judgment — just noticing." className={textAreaClass} />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">Did you notice any patterns in your mood, energy, or sleep?</label>
-              <textarea value={patterns} onChange={e => setPatterns(e.target.value)} placeholder="Any connections between how you felt and what happened?" className={textAreaClass} />
+              <label htmlFor="reflection-patterns" className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">Did you notice any patterns in your mood, energy, or sleep?</label>
+              <textarea id="reflection-patterns" value={patterns} onChange={e => setPatterns(e.target.value)} placeholder="Any connections between how you felt and what happened?" className={textAreaClass} />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">Is there one thing you want to do differently next week?</label>
-              <textarea value={doNext} onChange={e => setDoNext(e.target.value)} placeholder="One small change." className={textAreaClass} />
+              <label htmlFor="reflection-doNext" className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">Is there one thing you want to do differently next week?</label>
+              <textarea id="reflection-doNext" value={doNext} onChange={e => setDoNext(e.target.value)} placeholder="One small change." className={textAreaClass} />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">What is one thing you are grateful for, or one moment of clarity you experienced?</label>
-              <textarea value={gratitude} onChange={e => setGratitude(e.target.value)} placeholder="" className={textAreaClass} />
+              <label htmlFor="reflection-gratitude" className="block text-sm font-medium text-slate-700 dark:text-neutral-300 mb-2">What is one thing you are grateful for, or one moment of clarity you experienced?</label>
+              <textarea id="reflection-gratitude" value={gratitude} onChange={e => setGratitude(e.target.value)} placeholder="" className={textAreaClass} />
             </div>
 
             <div>

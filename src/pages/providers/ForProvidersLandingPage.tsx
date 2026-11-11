@@ -238,14 +238,12 @@ const TESTIMONIALS = [
       'The cultural competency badges helped me reach the Latino community in my area. My caseload grew 40% in the first three months.',
     name: 'Marcus Rivera',
     title: 'LCSW',
-    photo: '/images/providers/provider-marcus-rivera.jpg',
   },
   {
     quote:
       'Being NPI-verified on a trusted platform gives my patients confidence before they even walk through the door.',
     name: 'Dr. Amara Okeke',
     title: 'Psychiatrist',
-    photo: '/images/providers/provider-amara-okeke.jpg',
   },
 ];
 
@@ -446,7 +444,7 @@ const ForProvidersLandingPage: React.FC = () => {
                     aria-hidden="true"
                   />
                   <span className="text-[13px] text-[var(--color-text-tertiary)] font-sans">
-                    NPI-verified. HIPAA-aware. Trusted in all 50 states.
+                    NPI-verified. Trusted in all 50 states.
                   </span>
                 </motion.div>
               </div>
@@ -1054,12 +1052,22 @@ const ForProvidersLandingPage: React.FC = () => {
                   <div className="h-px bg-[var(--color-border)] my-4" />
 
                   <div className="flex items-center gap-3">
-                    <img
-                      src={testimonial.photo}
-                      alt={testimonial.name}
-                      className="w-10 h-10 rounded-full object-cover"
-                      loading="lazy"
-                    />
+                    {testimonial.photo ? (
+                      <img
+                        src={testimonial.photo}
+                        alt={testimonial.name}
+                        className="w-10 h-10 rounded-full object-cover"
+                        loading="lazy"
+                      />
+                    ) : (
+                      // No photo on file: show initials instead of a broken image.
+                      <span
+                        aria-hidden="true"
+                        className="w-10 h-10 shrink-0 rounded-full bg-surface-hover border border-border flex items-center justify-center text-sm font-semibold text-text-secondary"
+                      >
+                        {testimonial.name.replace(/^Dr\.\s+/, '').split(/\s+/).map((w) => w[0]).join('').slice(0, 2)}
+                      </span>
+                    )}
                     <div>
                       <p className="font-semibold text-sm text-[var(--color-text-primary)]">
                         {testimonial.name}

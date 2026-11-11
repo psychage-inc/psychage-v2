@@ -255,6 +255,34 @@ body:has([data-floating='cookie-consent']) [data-floating='mindmate-fab'] {
     display: none;
 }
 
+/* The article contents pill sits in the cookie card's button row below 1024px;
+   hide it for the same transient first-visit state. */
+body:has([data-floating='cookie-consent']) [data-floating='toc-pill'] {
+    display: none;
+}
+
+/* While a Clarity Score question card is on screen, hide the FAB: the card is
+   sized to fit one viewport and the FAB would sit on its Next button. */
+body:has([data-clarity-question]) [data-floating='mindmate-fab'] {
+    display: none;
+}
+
+/* From 640px up the crisis card floats bottom-right over the cookie bar's row.
+   While both are shown, keep them apart: below 1024px the row is too narrow to
+   share, so lift the cookie card above the crisis card (same height term as the
+   FAB rule below); from 1024px keep the cookie card out of the crisis card's
+   column (24px edge + max-w-sm card + 8px gap). */
+@media (min-width: 640px) and (max-width: 1023px) {
+    body:has([data-floating='crisis-card']) [data-floating='cookie-consent'] {
+        padding-bottom: calc(var(--space-6) + 142px + var(--space-2));
+    }
+}
+@media (min-width: 1024px) {
+    body:has([data-floating='crisis-card']) [data-floating='cookie-consent'] {
+        padding-right: calc(var(--space-6) + 24rem + var(--space-2));
+    }
+}
+
 /* While the crisis card is visible, lift the FAB above it with an 8px
    (--space-2) gap so the two never overlap. Base is --space-6 (24px =
    bottom-6); the middle term is the crisis card's rendered height, measured at

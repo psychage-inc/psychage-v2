@@ -12,6 +12,8 @@ function shouldHideBottomNav(pathname: string): boolean {
     if (/^\/learn\/[^/]+\/[^/]+/.test(pathname)) return true;
     // Inside a tool: /tools/<anything> (the /tools hub itself keeps the nav)
     if (/^\/tools\/.+/.test(pathname)) return true;
+    // The Clarity Score assessment is a tool too; its question card needs the full height.
+    if (pathname === '/clarity-score') return true;
     return false;
 }
 
@@ -32,6 +34,7 @@ const MobileBottomNav: React.FC = () => {
     return (
         <nav
             aria-label="Primary"
+            data-floating="bottom-nav"
             className="fixed inset-x-0 bottom-0 z-[90] border-t border-border bg-background/95 backdrop-blur-md"
             style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
         >

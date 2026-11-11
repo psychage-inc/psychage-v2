@@ -32,7 +32,7 @@ export const AUTHORS: AuthorProfile[] = [
     role: 'Founder & Chief Science Officer',
     image: '/images/authors/author-team.svg',
     bio: 'Dr. Lena Dobson is a clinical neuropsychologist with over 15 years of experience in cognitive assessment and mental health research. She founded Psychage to bridge the gap between clinical research and public understanding, believing that evidence-based mental health education should be freely accessible to everyone.',
-    credentials: 'Ph.D. in Clinical Neuropsychology',
+    credentials: 'Ph.D. in Clinical Psychology',
     specialties: ['Cognitive assessment', 'Neuropsychology', 'Mental health literacy'],
     affiliations: ['American Psychological Association', 'International Neuropsychological Society'],
     isAdvisoryBoard: true,

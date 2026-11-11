@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen } from 'lucide-react';
 import { Article } from '../../types/models';
 import { getCategoryClasses } from '../../config/categoryThemes';
+import CategoryLabel from '@/components/articles/CategoryLabel';
 
 interface RelatedContentProps {
     articles: Article[];
@@ -26,9 +27,10 @@ const RelatedContent: React.FC<RelatedContentProps> = ({ articles, title = "Rela
                         className="group bg-surface p-4 rounded-xl border border-border hover:border-teal-200 dark:hover:border-teal-700 hover:shadow-md transition-all flex flex-col justify-between"
                     >
                         <div>
-                            <span className={`text-xs font-bold uppercase tracking-wider mb-2 block ${getCategoryClasses(article.category.slug).text} ${getCategoryClasses(article.category.slug).textDark}`}>
-                                {article.category.name}
-                            </span>
+                            <CategoryLabel
+                                name={article.category.name}
+                                className={`mb-2 block ${getCategoryClasses(article.category.slug).text} ${getCategoryClasses(article.category.slug).textDark}`}
+                            />
                             <h4 className="font-bold text-text-primary group-hover:text-teal-700 dark:group-hover:text-teal-300 transition-colors mb-2 line-clamp-2">
                                 {article.title}
                             </h4>

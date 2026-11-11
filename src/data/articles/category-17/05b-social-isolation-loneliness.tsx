@@ -306,7 +306,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
 
         <QuoteBlock
           quote="A pet is not a cure for loneliness---but for someone living alone in silence, a creature that greets you at the door with joy is medicine."
-          attribution="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          attribution="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaways">
@@ -647,7 +647,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
 
         <QuoteBlock
           quote="Intergenerational programs are not charity---they are exchange. The old give wisdom; the young give energy. Both need what the other has."
-          attribution="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          attribution="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaways">
@@ -964,7 +964,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
 
         <QuoteBlock
           quote="Isolation is not always about willingness to connect. Sometimes it is about a staircase with no ramp, a conversation you cannot hear, or a ride you cannot get. Fixing these is justice, not charity."
-          attribution="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          attribution="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaways">
@@ -1325,7 +1325,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
 
         <QuoteBlock
           quote="Making friends at 70 requires what it did at 7: showing up, being brave enough to say hello, and risking rejection. The difference is now you know that rejection is not the end of the world."
-          attribution="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          attribution="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaways">
@@ -1641,7 +1641,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
 
         <QuoteBlock
           quote="You cannot avoid outliving people you love. But you can choose to keep connecting---to younger people, to new friends, to the world. Grief and connection are not opposites. They coexist."
-          attribution="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          attribution="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaways">

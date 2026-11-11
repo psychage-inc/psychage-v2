@@ -96,7 +96,7 @@ const AdminContentEditor: React.FC = () => {
       type: 'article',
       status: 'draft',
       language: 'en',
-      author: 'Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology',
+      author: 'Dr. Lena Dobson, Ph.D. in Clinical Psychology',
       summary: '',
       content_body: '',
       condition_tags: [],

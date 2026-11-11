@@ -370,7 +370,7 @@ export const mentalHealthLaterLifeArticlesB: Article[] = [
 
         <QuoteBlock
           quote="Late-life depression is not a character flaw, a normal part of aging, or untreatable. It is an illness--and illness responds to treatment, regardless of age."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -714,7 +714,7 @@ export const mentalHealthLaterLifeArticlesB: Article[] = [
 
         <QuoteBlock
           quote="Anxiety in later life is not a character flaw or sign of weakness. It is a treatable condition--and treatment works, regardless of how long you have suffered."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -1076,7 +1076,7 @@ export const mentalHealthLaterLifeArticlesB: Article[] = [
 
         <QuoteBlock
           quote="Substance use in later life is not moral failure. It is a health condition--often triggered by pain, loss, and isolation--and it responds to compassionate, evidence-based treatment."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -1450,7 +1450,7 @@ export const mentalHealthLaterLifeArticlesB: Article[] = [
 
         <QuoteBlock
           quote="Grief is not a disorder, a disease, or a sign of weakness. It is the price we pay for love--and that price, however steep, is worth it."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -1825,7 +1825,7 @@ export const mentalHealthLaterLifeArticlesB: Article[] = [
 
         <QuoteBlock
           quote="Suicide is not inevitable, even in the face of profound suffering. Treatment works, connection heals, and hope can be rekindled--at any age."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
 
         <ArticleCallout

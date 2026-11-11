@@ -366,7 +366,7 @@ export const depressionAnxietyOlderAdultsArticlesA: Article[] = [
 
         <QuoteBlock
           quote="The goal is not to take as many medications as possible--it is to take the minimum necessary to maximize health, function, and quality of life."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -701,7 +701,7 @@ export const depressionAnxietyOlderAdultsArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Therapy does not erase pain or loss--it teaches you to carry them differently, to find meaning despite suffering, and to build a life worth living even when circumstances are hard."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -1071,7 +1071,7 @@ export const depressionAnxietyOlderAdultsArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Treating depression in chronic illness is not optional--it is essential. Depression is not a side effect of illness; it is a complication that must be treated with the same rigor as any other medical problem."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -1443,7 +1443,7 @@ export const depressionAnxietyOlderAdultsArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Mental health is not just about neurons and neurotransmitters--it is about roofs over heads, food on tables, communities that care, and systems that are just."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),
@@ -1834,7 +1834,7 @@ export const depressionAnxietyOlderAdultsArticlesA: Article[] = [
 
         <QuoteBlock
           quote="Caregiving is love made visible. But love alone cannot sustain you--you need rest, support, and a society that values what you do."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          author="Dr. Lena Dobson, Ph.D. in Clinical Psychology"
         />
       </>
     ),

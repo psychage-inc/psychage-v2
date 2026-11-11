@@ -79,11 +79,11 @@ describe('Footer', () => {
         expect(screen.getByLabelText('YouTube')).toBeInTheDocument();
     });
 
-    it('should render copyright with current year', () => {
+    it('should render the educational disclaimer without copyright or compliance claims', () => {
         renderFooter();
-        const year = new Date().getFullYear();
-        expect(screen.getByText(`© ${year} Psychage, Inc.`)).toBeInTheDocument();
-        expect(screen.getByText(/Fully compliant with HIPAA and GDPR/i)).toBeInTheDocument();
+        expect(screen.getByText(/Psychage is an educational tool/i)).toBeInTheDocument();
+        expect(screen.queryByText(/©/)).not.toBeInTheDocument();
+        expect(screen.queryByText(/HIPAA|GDPR/i)).not.toBeInTheDocument();
     });
 
     it('should render legal links', () => {

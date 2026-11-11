@@ -15,6 +15,29 @@ export interface MoodEntry {
     created_at: string;
 }
 
+// Live mood_entries columns: mood_rating (1-5), entry_date (one row per user per
+// day, UNIQUE (user_id, entry_date)), notes. There is no tags column, so tags are
+// not persisted.
+interface MoodRow {
+    id: string;
+    user_id: string;
+    mood_rating: number;
+    notes?: string | null;
+    created_at: string;
+}
+
+const toEntry = (row: MoodRow): MoodEntry => ({
+    id: row.id,
+    user_id: row.user_id,
+    value: row.mood_rating,
+    notes: row.notes ?? undefined,
+    tags: [],
+    created_at: row.created_at,
+});
+
+// Local calendar day (YYYY-MM-DD) for entry_date.
+const localDate = (d: Date = new Date()): string => d.toLocaleDateString('en-CA');
+
 export interface MoodStats {
     averageMood: number;
     totalEntries: number;
@@ -55,14 +78,7 @@ export const moodService = {
                 return [];
             }
 
-            return (data || []).map(entry => ({
-                id: entry.id,
-                user_id: entry.user_id,
-                value: entry.value, // Support both column names
-                notes: entry.notes,
-                tags: entry.tags || [],
-                created_at: entry.created_at,
-            }));
+            return (data || []).map(toEntry);
         } catch (error) {
             console.error('Failed to fetch mood entries:', error);
             return [];
@@ -72,7 +88,7 @@ export const moodService = {
     /**
      * Create a new mood entry
      */
-    createEntry: async (userId: string, value: number, notes?: string, tags?: string[]): Promise<MoodEntry | null> => {
+    createEntry: async (userId: string, value: number, notes?: string, _tags?: string[]): Promise<MoodEntry | null> => {
         try {
             // Validate mood rating
             if (value < 1 || value > 5) {
@@ -82,13 +98,10 @@ export const moodService = {
 
             const { data, error } = await supabase
                 .from('mood_entries')
-                .insert({
-                    user_id: userId,
-                    value,
-                    notes,
-                    tags: tags || [],
-                    created_at: new Date().toISOString(),
-                })
+                .upsert(
+                    { user_id: userId, mood_rating: value, notes, entry_date: localDate() },
+                    { onConflict: 'user_id,entry_date' },
+                )
                 .select()
                 .single();
 
@@ -97,14 +110,7 @@ export const moodService = {
                 return null;
             }
 
-            return {
-                id: data.id,
-                user_id: data.user_id,
-                value: data.value,
-                notes: data.notes,
-                tags: data.tags || [],
-                created_at: data.created_at,
-            };
+            return toEntry(data);
         } catch (error) {
             console.error('Failed to create mood entry:', error);
             return null;
@@ -123,10 +129,9 @@ export const moodService = {
                     console.error('Mood rating must be between 1 and 5');
                     return null;
                 }
-                updateData.value = updates.value;
+                updateData.mood_rating = updates.value;
             }
             if (updates.notes !== undefined) updateData.notes = updates.notes;
-            if (updates.tags !== undefined) updateData.tags = updates.tags;
 
             const { data, error } = await supabase
                 .from('mood_entries')
@@ -140,14 +145,7 @@ export const moodService = {
                 return null;
             }
 
-            return {
-                id: data.id,
-                user_id: data.user_id,
-                value: data.value,
-                notes: data.notes,
-                tags: data.tags || [],
-                created_at: data.created_at,
-            };
+            return toEntry(data);
         } catch (error) {
             console.error('Failed to update mood entry:', error);
             return null;
@@ -194,7 +192,7 @@ export const moodService = {
             // Fetch all entries for the user
             const { data: entries, error } = await supabase
                 .from('mood_entries')
-                .select('value, created_at')
+                .select('mood_rating, created_at')
                 .eq('user_id', targetUserId)
                 .order('created_at', { ascending: false });
 
@@ -203,14 +201,14 @@ export const moodService = {
             }
 
             // Calculate average mood
-            const total = entries.reduce((sum, entry) => sum + (entry.value || 0), 0);
+            const total = entries.reduce((sum, entry) => sum + (entry.mood_rating || 0), 0);
             const averageMood = total / entries.length;
 
             // Calculate trend (compare recent vs older entries)
             let trend: 'up' | 'down' | 'stable' = 'stable';
             if (entries.length >= 6) {
-                const recentAvg = entries.slice(0, 3).reduce((sum, e) => sum + (e.value || 0), 0) / 3;
-                const olderAvg = entries.slice(3, 6).reduce((sum, e) => sum + (e.value || 0), 0) / 3;
+                const recentAvg = entries.slice(0, 3).reduce((sum, e) => sum + (e.mood_rating || 0), 0) / 3;
+                const olderAvg = entries.slice(3, 6).reduce((sum, e) => sum + (e.mood_rating || 0), 0) / 3;
                 const diff = recentAvg - olderAvg;
                 if (diff > 0.3) trend = 'up';
                 else if (diff < -0.3) trend = 'down';
@@ -259,14 +257,7 @@ export const moodService = {
                 return [];
             }
 
-            return (data || []).map(entry => ({
-                id: entry.id,
-                user_id: entry.user_id,
-                value: entry.value,
-                notes: entry.notes,
-                tags: entry.tags || [],
-                created_at: entry.created_at,
-            }));
+            return (data || []).map(toEntry);
         } catch (error) {
             console.error('Failed to fetch mood entries by date range:', error);
             return [];

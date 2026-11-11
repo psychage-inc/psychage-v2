@@ -92,7 +92,7 @@ const ComingSoonPlaceholder: React.FC = () => (
             A companion video for this article is currently in production.
         </p>
         <p className="text-xs text-text-tertiary">
-            Narrated by Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology
+            Narrated by Dr. Lena Dobson, Ph.D. in Clinical Psychology
         </p>
     </div>
 );

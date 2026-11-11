@@ -15,8 +15,8 @@ const sections: SitemapSection[] = [
             { label: 'Emotional Regulation', path: '/learn/emotional-regulation' },
             { label: 'Anxiety & Stress', path: '/learn/anxiety-stress' },
             { label: 'Depression & Mood', path: '/learn/depression-mood' },
-            { label: 'Relationships', path: '/learn/relationships' },
-            { label: 'Sleep & Recovery', path: '/learn/sleep-recovery' },
+            { label: 'Relationships', path: '/learn/relationships-communication' },
+            { label: 'Sleep & Recovery', path: '/learn/sleep-body-connection' },
         ],
     },
     {

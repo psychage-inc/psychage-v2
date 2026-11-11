@@ -172,7 +172,7 @@ const Navigation: React.FC = () => {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex items-center gap-1" role="navigation" aria-label="Main navigation">
+                    <nav className="hidden lg:flex items-center gap-1" role="navigation" aria-label="Main navigation">
                         <LayoutGroup>
                             {primaryNavItems.map((navItem) => (
                                 <div key={navItem.id} className="relative">
@@ -235,7 +235,7 @@ const Navigation: React.FC = () => {
                     {/* Right Actions */}
                     <div className="flex items-center gap-2">
                         {/* Theme Toggle */}
-                        <div className="hidden md:flex">
+                        <div className="hidden lg:flex">
                             <ThemeToggle />
                         </div>
 
@@ -257,11 +257,11 @@ const Navigation: React.FC = () => {
                         <button
                             onClick={() => navigate('/crisis')}
                             onMouseEnter={() => handleMouseEnter('')}
-                            className="flex items-center justify-center h-11 min-w-[44px] rounded-full text-sm font-bold text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors border border-red-100 dark:border-red-800/50 px-2.5 md:px-4"
+                            className="flex items-center justify-center h-11 min-w-[44px] rounded-full text-sm font-bold text-red-700 dark:text-red-400 bg-red-50 dark:bg-red-900/20 hover:bg-red-100 dark:hover:bg-red-900/30 transition-colors border border-red-100 dark:border-red-800/50 px-2.5 md:px-4"
                             aria-label="Crisis support - get immediate help"
                         >
-                            <Phone size={16} className="md:hidden" aria-hidden="true" />
-                            <span className="hidden md:inline">Crisis Support</span>
+                            <Phone size={16} className="lg:hidden" aria-hidden="true" />
+                            <span className="hidden lg:inline">Crisis Support</span>
                         </button>
 
                         {isAuthenticated ? (
@@ -270,7 +270,7 @@ const Navigation: React.FC = () => {
                                 <div className="relative" ref={userMenuRef}>
                                     <button
                                         onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-                                        className={`hidden md:flex w-10 h-10 rounded-full items-center justify-center transition-all ${isUserMenuOpen ? 'bg-surface-hover text-text-primary' : 'text-text-tertiary hover:bg-surface-hover hover:text-text-primary'}`}
+                                        className={`hidden lg:flex w-10 h-10 rounded-full items-center justify-center transition-all ${isUserMenuOpen ? 'bg-surface-hover text-text-primary' : 'text-text-tertiary hover:bg-surface-hover hover:text-text-primary'}`}
                                         aria-label="User menu"
                                         aria-expanded={isUserMenuOpen}
                                         aria-haspopup="menu"
@@ -332,7 +332,7 @@ const Navigation: React.FC = () => {
                                     return isGetStarted ? (
                                         <Button
                                             key={authItem.id}
-                                            className={`hidden md:flex rounded-full px-6 h-10 ${authItem.className || 'bg-primary hover:bg-primary-hover text-white'} shadow-lg shadow-primary/20 border-none font-bold text-sm ml-2`}
+                                            className={`hidden lg:flex rounded-full px-6 h-10 ${authItem.className || 'bg-primary hover:bg-primary-hover text-white'} shadow-lg shadow-primary/20 border-none font-bold text-sm ml-2`}
                                             onClick={() => navigate(authItem.href)}
                                             onMouseEnter={() => handleMouseEnter('')}
                                         >
@@ -343,7 +343,7 @@ const Navigation: React.FC = () => {
                                             key={authItem.id}
                                             onClick={() => navigate(authItem.href)}
                                             onMouseEnter={() => handleMouseEnter('')}
-                                            className="hidden md:flex px-4 py-3 rounded-full text-sm font-bold text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-all"
+                                            className="hidden lg:flex px-4 py-3 rounded-full text-sm font-bold text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-all"
                                         >
                                             {authItem.label}
                                         </button>
@@ -355,7 +355,7 @@ const Navigation: React.FC = () => {
                         {/* Mobile Menu Button */}
                         <button
                             ref={hamburgerRef}
-                            className="md:hidden w-11 h-11 rounded-full flex items-center justify-center text-text-primary hover:bg-surface-hover"
+                            className="lg:hidden w-11 h-11 rounded-full flex items-center justify-center text-text-primary hover:bg-surface-hover"
                             onClick={() => setIsMobileMenuOpen(true)}
                             aria-label="Open navigation menu"
                             aria-expanded={isMobileMenuOpen}

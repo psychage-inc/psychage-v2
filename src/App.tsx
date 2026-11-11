@@ -9,6 +9,7 @@ import Footer from './components/layout/Footer';
 const MindMateWidget = lazyWithRetry(() => import('./components/ai/MindMate'));
 const HomePage = lazyWithRetry(() => import('./pages/home/HomePage'));
 import CookieConsent from './components/ui/CookieConsent';
+import BackToTop from './components/ui/BackToTop';
 import NotFoundPage from './components/pages/NotFoundPage';
 import ErrorBoundary from './components/error/ErrorBoundary';
 import { BookmarkProvider } from './context/BookmarkContext';
@@ -212,7 +213,7 @@ const App: React.FC = () => {
                     <ScrollManager />
 
                     {/* App content always renders — Preloader is a fixed overlay (z-9999) that fades out */}
-                    <div className="min-h-[100dvh] bg-background font-sans text-gray-900 overflow-x-hidden flex flex-col transition-colors duration-300">
+                    <div className="min-h-[100dvh] bg-background font-sans text-text-primary overflow-x-clip flex flex-col transition-colors duration-300">
                             {!isPhone && <Navigation />}
                             {isPhone && <MobileCrisisHeader />}
                             {/* AUTH-021: app-wide pending-deletion banner. Renders nothing
@@ -420,6 +421,7 @@ const App: React.FC = () => {
                                 </Suspense>
                             )}
                             <CookieConsent />
+                            <BackToTop />
 
                             {/* Persistent Mobile CTA (Homepage Only) — tablet only; phone uses the bottom nav. */}
                             {location.pathname === '/' && !isPhone && (

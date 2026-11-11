@@ -204,7 +204,6 @@ class HRSAHealthCenterProcessor(BaseSource):
                 "display_name": name,
                 "phone": phone,
                 "website_url": website,
-                "is_accepting_patients": True,
                 "telehealth_available": False,
                 "in_person_available": True,
                 "facility_type": "Federally Qualified Health Center (FQHC)",

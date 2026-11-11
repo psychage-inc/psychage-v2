@@ -58,8 +58,7 @@
       "query_placeholder": "Rechercher par nom, spécialité ou condition...",
       "query_aria": "Rechercher des praticiens par nom, spécialité ou condition",
       "location_placeholder": "Ville, état ou code postal...",
-      "location_aria": "Emplacement du praticien — ville, état ou code postal",
-      "use_location": "Utiliser ma position"
+      "location_aria": "Emplacement du praticien — ville, état ou code postal"
     },
     "filter": {
       "verification_status": "Statut de Vérification",
@@ -73,7 +72,6 @@
       "session_format": "Format de Séance",
       "telehealth": "Télésanté disponible",
       "in_person": "En personne disponible",
-      "accepting": "Accepte de nouveaux patients",
       "more_filters": "Plus de filtres",
       "fewer_filters": "Moins de filtres",
       "specialty": "Spécialité",
@@ -89,7 +87,6 @@
     "sort": {
       "label": "Trier : {{current}}",
       "relevance": "Pertinence",
-      "distance": "Distance",
       "name_az": "Nom A-Z",
       "disclosure": "Le tri par défaut affiche en premier les praticiens avec un abonnement premium. Passez à 'Nom (A-Z)' pour désactiver la priorisation premium."
     },
@@ -110,8 +107,6 @@
     "card": {
       "specializes_in": "Spécialisé en",
       "contact_for_details": "Contactez pour les détails",
-      "accepting": "Accepte des patients",
-      "not_accepting": "N'accepte pas",
       "view_profile": "Voir le Profil Complet",
       "call": "Appeler",
       "call_aria": "Appeler {{name}}",
@@ -143,7 +138,6 @@
       "listed_only": "Listés publiquement uniquement",
       "telehealth": "Télésanté",
       "in_person": "En personne",
-      "accepting": "Accepte des patients",
       "remove_aria": "Supprimer le filtre {{label}}",
       "clear_all": "Tout effacer"
     },

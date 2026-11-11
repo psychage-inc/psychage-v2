@@ -107,14 +107,6 @@ export const ProviderFilterChips: React.FC<ProviderFilterChipsProps> = ({
     });
   }
 
-  // Accepting patients
-  if (params.accepting_patients) {
-    chips.push({
-      label: t('providers.chips.accepting'),
-      onRemove: () => onChange({ accepting_patients: undefined }),
-    });
-  }
-
   // State
   if (params.state) {
     chips.push({

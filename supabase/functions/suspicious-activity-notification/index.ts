@@ -17,9 +17,9 @@
  *       (b) per-email rate limit at 1 send / hour
  *       (c) cap the body payload size and reject malformed requests
  *
- * Email delivery uses Resend if RESEND_API_KEY is configured; otherwise
- * we log a warning. The user's auth flow does not depend on the email
- * arriving — this is a courtesy/security signal, not gating.
+ * Email delivery uses Resend (_shared/resend.ts), which throws when
+ * RESEND_API_KEY is missing. The user's auth flow does not depend on the
+ * email arriving — this is a courtesy/security signal, not gating.
  *
  * Rate limit storage is in-memory (per-instance). Under heavy scale-out
  * the same email could be notified more than 1×/hour; that's acceptable
@@ -30,6 +30,7 @@
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.3';
 import { handleCorsPreflightRequest, createCorsResponse } from '../_shared/cors.ts';
+import { sendEmail } from '../_shared/resend.ts';
 
 const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour per email
 const MAX_EMAIL_LENGTH = 254; // RFC 5321
@@ -141,32 +142,16 @@ serve(async (req) => {
 
         const timestamp = new Date().toISOString();
 
-        const resendApiKey = Deno.env.get('RESEND_API_KEY');
-        if (resendApiKey) {
-            const fromAddress = Deno.env.get('NOTIFICATION_FROM_EMAIL') ?? 'security@psychage.com';
-            const resp = await fetch('https://api.resend.com/emails', {
-                method: 'POST',
-                headers: {
-                    'Authorization': `Bearer ${resendApiKey}`,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    from: fromAddress,
-                    to: email,
-                    subject: 'Sign-in attempts on your Psychage account',
-                    html: renderEmail(email, timestamp),
-                }),
-            });
-            if (!resp.ok) {
-                const text = await resp.text();
-                console.error('suspicious-activity-notification: resend send failed', text);
-            }
-        } else {
-            console.warn(
-                'suspicious-activity-notification: no RESEND_API_KEY configured; ' +
-                'notification not delivered to ' + email,
-            );
-        }
+        // Throws when RESEND_API_KEY is missing; the catch below logs it and
+        // keeps the constant response.
+        await sendEmail(
+            {
+                to: email,
+                subject: 'Sign-in attempts on your Psychage account',
+                html: renderEmail(email, timestamp),
+            },
+            'suspicious-activity-notification',
+        );
 
         console.log(
             JSON.stringify({

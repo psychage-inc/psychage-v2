@@ -202,7 +202,7 @@ def print_import_instructions() -> None:
    ALTER TABLE provider_insurance DISABLE TRIGGER ALL;
    SQL
 
-   psql "$DATABASE_URL" -c "\\copy providers(id,npi_number,provider_type_id,status,tier,source,display_name,credentials_suffix,bio,photo_url,practice_name,practice_type,website_url,phone,email,appointment_url,is_accepting_patients,telehealth_available,in_person_available,taxonomy_code,taxonomy_description,facility_type,sliding_fee_scale,emergency_services,data_last_synced_at) FROM 'output_data/providers.csv' WITH CSV HEADER;"
+   psql "$DATABASE_URL" -c "\\copy providers(id,npi_number,provider_type_id,status,tier,source,display_name,credentials_suffix,bio,photo_url,practice_name,practice_type,website_url,phone,email,appointment_url,telehealth_available,in_person_available,taxonomy_code,taxonomy_description,facility_type,sliding_fee_scale,emergency_services,data_last_synced_at) FROM 'output_data/providers.csv' WITH CSV HEADER;"
 
    psql "$DATABASE_URL" -c "\\copy provider_locations(id,provider_id,address_line1,address_line2,city,state_province,postal_code,country_code,latitude,longitude,is_primary) FROM 'output_data/provider_locations.csv' WITH CSV HEADER;"
 

@@ -2,7 +2,7 @@
  * MindMate 2.0 - Chat API
  * POST /api/ai/chat
  *
- * Streaming chat endpoint with RAG, safety layers, and crisis detection
+ * Streaming chat endpoint with safety layers and crisis detection
  */
 
 import type { VercelRequest, VercelResponse } from '@vercel/node';
@@ -10,12 +10,11 @@ import { createClient } from '@supabase/supabase-js';
 import { classifyInputSafety, generateCrisisResponse, validateOutputSafety } from '../../src/lib/ai/safety';
 import { sanitizeClientMessages } from '../../src/lib/ai/sanitizeMessages';
 import { splitAtSentenceBoundary } from '../../src/lib/ai/streamSafety';
-import { retrieveRelevantContent } from '../../src/lib/ai/retrieval';
-import { AnthropicProvider, OpenAIProvider, SYSTEM_PROMPT } from '../../src/lib/ai/llm';
-import { getRequiredEnv, getOptionalEnv, getAIConfig } from '../../src/lib/ai/config';
+import { AnthropicProvider, SYSTEM_PROMPT } from '../../src/lib/ai/llm';
+import { getRequiredEnv, getAIConfig } from '../../src/lib/ai/config';
 import { encodeSSE } from '../../src/lib/ai/streaming';
 import { getCountryEntry } from '../../src/lib/crisis';
-import type { Message, SafetyLevel, Citation, RetrievalResult } from '../../src/lib/ai/types';
+import type { Message, SafetyLevel } from '../../src/lib/ai/types';
 
 // ============================================================================
 // Rate Limiting (in-memory - use Redis/Upstash for production)
@@ -53,39 +52,6 @@ function checkRateLimit(
 
 function generateSessionId(): string {
   return crypto.randomUUID();
-}
-
-// ============================================================================
-// Helper: Extract Citations from LLM Response
-// ============================================================================
-
-function extractCitations(content: string, searchResults: RetrievalResult[]): Citation[] {
-  const citations: Citation[] = [];
-  const seen = new Set<string>();
-  const citationRegex = /\[SOURCE:\s*([^|]+?)\s*\|\s*([^\]]+)\]/g;
-
-  let match;
-  while ((match = citationRegex.exec(content)) !== null) {
-    const [, rawTitle, rawUrl] = match;
-    const title = rawTitle.trim();
-    const url = rawUrl.trim();
-
-    // Only emit citations that map to actually-retrieved content — drop any
-    // [SOURCE: …] the model hallucinated so invented links never render (B3-9).
-    const source = searchResults.find(
-      (r) => r.documentTitle === title || r.documentUrlPath === url
-    );
-    if (!source || seen.has(source.documentId)) continue;
-    seen.add(source.documentId);
-
-    citations.push({
-      document_id: source.documentId,
-      title: source.documentTitle,
-      url_path: source.documentUrlPath,
-    });
-  }
-
-  return citations;
 }
 
 // ============================================================================
@@ -137,7 +103,7 @@ export default async function handler(
     // role to the model; the server prompt is the only system message (B3-1).
     const safeMessages = sanitizeClientMessages(messages);
 
-    // Initialize Supabase admin client (auth validation + RAG retrieval)
+    // Initialize Supabase admin client (auth validation)
     const supabase = createClient(
       getRequiredEnv('VITE_SUPABASE_URL'),
       getRequiredEnv('SUPABASE_SERVICE_ROLE_KEY')
@@ -201,7 +167,6 @@ export default async function handler(
 
       return res.status(200).json({
         message: crisisContent,
-        citations: [],
         sessionId,
         safetyLevel: 'CRISIS' as SafetyLevel,
         isCrisis: true,
@@ -215,7 +180,6 @@ export default async function handler(
     if (safetyCheck.level === 'HARMFUL_REQUEST') {
       return res.status(200).json({
         message: "I'm not able to help with that request. I'm here to provide mental health education and connect you with professional resources.",
-        citations: [],
         sessionId,
         safetyLevel: 'HARMFUL_REQUEST' as SafetyLevel,
         isCrisis: false,
@@ -223,45 +187,11 @@ export default async function handler(
     }
 
     // ========================================================================
-    // RAG: Search for relevant Psychage content
-    // ========================================================================
-
-    // Embeddings require OpenAI — gracefully skip RAG if unavailable
-    const openaiKey = getOptionalEnv('OPENAI_API_KEY');
-    let searchResults: Awaited<ReturnType<typeof retrieveRelevantContent>> = [];
-
-    if (openaiKey) {
-      const embeddingProvider = new OpenAIProvider(openaiKey);
-      searchResults = await retrieveRelevantContent(
-        userMessage.content,
-        {
-          topK: config.retrieval.defaultTopK,
-          similarityThreshold: config.retrieval.defaultSimilarityThreshold,
-        },
-        supabase,
-        embeddingProvider
-      );
-    }
-
-    // ========================================================================
-    // Build augmented prompt with retrieved context
-    // ========================================================================
-
-    const contextChunks = searchResults
-      .map((result, idx) => `[${idx + 1}] ${result.chunkText}\nSource: ${result.documentTitle} | ${result.documentUrlPath}`)
-      .join('\n\n');
-
-    const augmentedPrompt = SYSTEM_PROMPT.replace(
-      '{retrieved_chunks}',
-      contextChunks || 'No relevant content found in Psychage knowledge base.'
-    );
-
-    // ========================================================================
     // Build LLM messages
     // ========================================================================
 
     const llmMessages = [
-      { role: 'system' as const, content: augmentedPrompt },
+      { role: 'system' as const, content: SYSTEM_PROMPT },
       ...safeMessages.map(m => ({ role: m.role, content: m.content })),
     ];
 
@@ -347,12 +277,6 @@ export default async function handler(
           res.write(encodeSSE({ type: 'error', message: fullContent, code: 'SAFETY_VIOLATION' }));
         }
 
-        // Extract citations and send
-        const citations = extractCitations(fullContent, searchResults);
-        if (citations.length > 0) {
-          res.write(encodeSSE({ type: 'citations', citations }));
-        }
-
         // Done event with metrics
         const usage = llmProvider.lastStreamUsage;
         res.write(encodeSSE({
@@ -385,11 +309,8 @@ export default async function handler(
       finalContent = DIAGNOSTIC_FALLBACK;
     }
 
-    const citations = extractCitations(finalContent, searchResults);
-
     return res.status(200).json({
       message: finalContent,
-      citations,
       sessionId,
       safetyLevel: safetyCheck.level,
       isCrisis: false,

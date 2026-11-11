@@ -15,12 +15,8 @@ import type {
   ProviderSearchParams,
   ProviderApplication,
   ProviderLocation,
-  ProviderStatus,
   ProviderTier,
 } from './types';
-import { isProviderVerified } from '@/lib/providers/trust-badge';
-import { providers as mockProviders } from '@/data/providers';
-import type { Provider } from '@/types/models';
 
 // --- Joined select for provider queries ---
 const PROVIDER_SELECT = `
@@ -65,153 +61,20 @@ function mapProviderRow(row: Record<string, unknown>): ProviderWithDetails {
 }
 
 // =============================================================================
-// SEARCH HELPERS — mapping, filtering, fallback
+// SEARCH HELPERS — mapping
 // =============================================================================
 
-/**
- * Maps a ProviderWithDetails (from direct query) to ProviderCardData (for UI cards).
- */
-function mapToCardData(p: ProviderWithDetails): ProviderCardData {
-  const loc = p.locations.find(l => l.is_primary) || p.locations[0] || null;
-  return {
-    id: p.id,
-    display_name: cleanDisplayName(p.display_name) || p.display_name,
-    credentials_suffix: p.credentials_suffix,
-    bio: p.bio,
-    photo_url: p.photo_url,
-    status: p.status,
-    tier: p.tier,
-    practice_name: p.practice_name,
-    phone: p.phone,
-    email: p.email,
-    website_url: p.website_url,
-    appointment_url: p.appointment_url,
-    npi_number: p.npi_number,
-    telehealth_available: p.telehealth_available,
-    in_person_available: p.in_person_available,
-    is_accepting_patients: p.is_accepting_patients,
-    verified_at: p.verified_at,
-    trust_score_cached: p.trust_score_cached ?? null,
-    provider_type_slug: p.provider_type?.slug || '',
-    provider_type_label: p.provider_type?.label || '',
-    primary_city: loc?.city || null,
-    primary_state: loc?.state_province || null,
-    specialty_tags: (p.specialties || []).map(s => ({ slug: s.slug, label: s.label, category: s.category })),
-    language_tags: (p.languages || []).map(l => ({ code: l.code, label: l.label, native_label: l.native_label })),
-    competency_tags: (p.cultural_competencies || []).map(c => ({ slug: c.slug, label: c.label })),
-    insurance_tags: (p.insurance_plans || []).map(i => ({ name: i.name, carrier: i.carrier })),
-  };
-}
-
-/**
- * Maps legacy mock Provider to ProviderCardData.
- */
-function mapMockToCardData(p: Provider): ProviderCardData {
-  const locationParts = p.location.split('(')[0].trim().split(',').map(s => s.trim());
-  return {
-    id: String(p.id),
-    display_name: p.name,
-    credentials_suffix: p.role || null,
-    bio: p.bio || null,
-    photo_url: p.image || null,
-    status: 'active' as ProviderStatus,
-    tier: 'free' as ProviderTier,
-    practice_name: null,
-    phone: null,
-    email: null,
-    website_url: null,
-    appointment_url: null,
-    npi_number: null,
-    telehealth_available: p.isVideoVisit || false,
-    in_person_available: !p.isVideoVisit,
-    is_accepting_patients: p.availability !== 'Waitlist',
-    verified_at: p.verified ? new Date().toISOString() : null,
-    trust_score_cached: null,
-    provider_type_slug: '',
-    provider_type_label: p.role || '',
-    primary_city: locationParts[0] || null,
-    primary_state: locationParts[1] || null,
-    specialty_tags: p.specialties.map(s => ({ slug: s.toLowerCase().replace(/\s+/g, '_'), label: s, category: 'condition' })),
-    language_tags: p.languages.map(l => ({ code: l.toLowerCase().slice(0, 2), label: l, native_label: l })),
-    competency_tags: [],
-    insurance_tags: p.insurance.map(i => ({ name: i, carrier: i })),
-  };
-}
-
-/**
- * Client-side filter for ProviderCardData.
- * Case-insensitive, partial-match, null-safe.
- */
-function filterProviderCards(cards: ProviderCardData[], params: ProviderSearchParams): ProviderCardData[] {
-  return cards.filter(p => {
-    if (params.query) {
-      const q = params.query.toLowerCase();
-      const searchable = [
-        p.display_name, p.practice_name, p.bio, p.credentials_suffix,
-        p.provider_type_label, p.primary_city, p.primary_state,
-        ...p.specialty_tags.map(s => s.label),
-        ...p.language_tags.map(l => l.label),
-        ...p.insurance_tags.map(i => `${i.carrier} ${i.name}`),
-      ].filter(Boolean).map(s => s!.toLowerCase());
-      if (!searchable.some(s => s.includes(q))) return false;
-    }
-    if (params.specialty_slugs?.length) {
-      const slugs = p.specialty_tags.map(s => s.slug);
-      if (!params.specialty_slugs.some(s => slugs.includes(s))) return false;
-    }
-    if (params.state && p.primary_state?.toUpperCase() !== params.state.toUpperCase()) return false;
-    if (params.city && !p.primary_city?.toLowerCase().includes(params.city.toLowerCase())) return false;
-    if (params.telehealth && !p.telehealth_available) return false;
-    if (params.in_person && !p.in_person_available) return false;
-    if (params.accepting_patients && !p.is_accepting_patients) return false;
-
-    // Verification status filter — matches RPC logic
-    if (params.verification_status === 'verified') {
-      if (!isProviderVerified(p.status, p.verified_at)) return false;
-    }
-    if (params.verification_status === 'listed') {
-      if (p.status !== 'seeded' || p.verified_at != null) return false;
-    }
-
-    return true;
-  });
-}
-
-/**
- * Sort ProviderCardData by the requested sort mode.
- */
-function sortProviderCards(cards: ProviderCardData[], sortBy?: string): ProviderCardData[] {
-  const sorted = [...cards];
-  if (sortBy === 'name') {
-    sorted.sort((a, b) => a.display_name.localeCompare(b.display_name));
-  } else {
-    // Relevance: elite > pro > free, then verified, then alphabetical
-    const tierRank = (t: string) => t === 'elite' ? 0 : t === 'pro' ? 1 : 2;
-    sorted.sort((a, b) => {
-      const tierDiff = tierRank(a.tier) - tierRank(b.tier);
-      if (tierDiff !== 0) return tierDiff;
-
-      const aVerified = a.verified_at != null || a.status === 'verified' || a.status === 'active';
-      const bVerified = b.verified_at != null || b.status === 'verified' || b.status === 'active';
-      if (aVerified && !bVerified) return -1;
-      if (!aVerified && bVerified) return 1;
-
-      return a.display_name.localeCompare(b.display_name);
-    });
-  }
-  return sorted;
-}
-
 // =============================================================================
-// SEARCH PROVIDERS — cascading fallback: RPC → direct query → mock data
+// SEARCH PROVIDERS — database search (search_providers_v3) only
 // =============================================================================
 
 const PAGE_SIZE = 20;
 
 /**
- * Try 1: Supabase RPC (server-side filtered, paginated search).
+ * One page of results from the search_providers_v3 RPC. Throws on failure:
+ * the caller shows an error state, never substitute data.
  */
-async function searchViaRPC(params: ProviderSearchParams, page: number, perPage: number): Promise<ProviderCardSearchResult | null> {
+async function searchViaRPC(params: ProviderSearchParams, page: number, perPage: number): Promise<ProviderCardSearchResult> {
   const offset = (page - 1) * perPage;
 
   const { data, error } = await supabase.rpc('search_providers_v3', {
@@ -223,21 +86,16 @@ async function searchViaRPC(params: ProviderSearchParams, page: number, perPage:
     p_insurance_plan_ids: params.insurance_plan_ids?.length ? params.insurance_plan_ids : null,
     p_telehealth: params.telehealth ?? null,
     p_in_person: params.in_person ?? null,
-    p_accepting: params.accepting_patients ?? null,
     p_state: params.state || null,
     p_city: params.city || null,
     p_verification_status: params.verification_status || null,
     p_sort: params.sort_by === 'name' ? 'name' : 'relevance',
     p_limit: perPage,
     p_offset: offset,
-    p_latitude: params.latitude ?? null,
-    p_longitude: params.longitude ?? null,
-    p_radius_miles: params.radius_miles ?? null,
   });
 
   if (error) {
-    console.warn('RPC search_providers_v3 failed, will try fallback:', error.message);
-    return null;
+    throw new Error(`Provider search failed: ${error.message}`);
   }
 
   const rows = (data || []) as Array<ProviderCardData & { total_count: number }>;
@@ -259,7 +117,6 @@ async function searchViaRPC(params: ProviderSearchParams, page: number, perPage:
     npi_number: row.npi_number,
     telehealth_available: row.telehealth_available,
     in_person_available: row.in_person_available,
-    is_accepting_patients: row.is_accepting_patients,
     verified_at: row.verified_at,
     trust_score_cached: row.trust_score_cached ?? null,
     provider_type_slug: row.provider_type_slug,
@@ -282,152 +139,21 @@ async function searchViaRPC(params: ProviderSearchParams, page: number, perPage:
 }
 
 /**
- * Try 2: Direct Supabase query with server-side filters where possible,
- * then client-side filtering for the rest.
- */
-async function searchViaDirectQuery(params: ProviderSearchParams, page: number, perPage: number): Promise<ProviderCardSearchResult | null> {
-  // When state/city filters are active, pre-scope by provider_locations so the
-  // 1000-row cap on the providers query doesn't drop matches from a 423k-row table.
-  let providerIdScope: string[] | null = null;
-  if (params.state || params.city) {
-    let locQuery = supabase
-      .from('provider_locations')
-      .select('provider_id')
-      .eq('is_primary', true)
-      .limit(5000);
-    if (params.state) locQuery = locQuery.eq('state_province', params.state.toUpperCase());
-    if (params.city) locQuery = locQuery.ilike('city', `%${params.city}%`);
-
-    const { data: locs, error: locErr } = await locQuery;
-    if (locErr) {
-      console.warn('Location scope query failed:', locErr.message);
-      return null;
-    }
-    providerIdScope = (locs || []).map((l: { provider_id: string }) => l.provider_id);
-    if (providerIdScope.length === 0) {
-      return { providers: [], total_count: 0, page, per_page: perPage, has_more: false };
-    }
-  }
-
-  let query = supabase
-    .from('providers')
-    .select(PROVIDER_SELECT)
-    .in('status', ['active', 'seeded'])
-    .order('display_name')
-    .limit(1000);
-
-  if (providerIdScope) {
-    query = query.in('id', providerIdScope);
-  }
-
-  // Apply server-side filters where Supabase query builder supports them.
-  // Strip PostgREST wildcard/operator chars before interpolating into .or() so
-  // user input can't inject extra filter conditions (B3-8; matches the legacy
-  // sanitization in providerService.getAll).
-  if (params.query) {
-    const sanitized = params.query.replace(/[%_.*,()\\]/g, '');
-    if (sanitized) {
-      query = query.or(
-        `display_name.ilike.%${sanitized}%,practice_name.ilike.%${sanitized}%,credentials_suffix.ilike.%${sanitized}%`
-      );
-    }
-  }
-  if (params.telehealth) query = query.eq('telehealth_available', true);
-  if (params.in_person) query = query.eq('in_person_available', true);
-  if (params.accepting_patients) query = query.eq('is_accepting_patients', true);
-  if (params.provider_type_ids?.length === 1) {
-    query = query.eq('provider_type_id', params.provider_type_ids[0]);
-  }
-
-  const { data, error } = await query;
-
-  if (error || !data || data.length === 0) {
-    if (error) console.warn('Direct provider query failed, will try mock data:', error.message);
-    return null;
-  }
-
-  const allCards = data.map(row => mapToCardData(mapProviderRow(row)));
-  const filtered = filterProviderCards(allCards, params);
-  const sorted = sortProviderCards(filtered, params.sort_by);
-  const offset = (page - 1) * perPage;
-  const paged = sorted.slice(offset, offset + perPage);
-
-  return {
-    providers: paged,
-    total_count: filtered.length,
-    page,
-    per_page: perPage,
-    has_more: offset + perPage < filtered.length,
-  };
-}
-
-/**
- * Try 3: Mock data fallback with client-side filtering.
- */
-function searchViaMockData(params: ProviderSearchParams, page: number, perPage: number): ProviderCardSearchResult {
-  const allCards = mockProviders.map(mapMockToCardData);
-  const filtered = filterProviderCards(allCards, params);
-  const sorted = sortProviderCards(filtered, params.sort_by);
-  const offset = (page - 1) * perPage;
-  const paged = sorted.slice(offset, offset + perPage);
-
-  return {
-    providers: paged,
-    total_count: filtered.length,
-    page,
-    per_page: perPage,
-    has_more: offset + perPage < filtered.length,
-  };
-}
-
-/**
- * Run the cascade once: RPC → direct query → mock data.
- */
-async function runSearchCascade(params: ProviderSearchParams): Promise<ProviderCardSearchResult> {
-  const page = params.page || 1;
-  const perPage = params.per_page || PAGE_SIZE;
-  const hasLocationIntent = !!(params.state || params.city || params.latitude);
-
-  // Try 1: RPC
-  try {
-    const rpcResult = await searchViaRPC(params, page, perPage);
-    if (rpcResult) return rpcResult;
-  } catch (err) {
-    console.warn('RPC search threw:', err);
-  }
-
-  // Try 2: Direct query
-  try {
-    const directResult = await searchViaDirectQuery(params, page, perPage);
-    if (directResult) return directResult;
-  } catch (err) {
-    console.warn('Direct query threw:', err);
-  }
-
-  // Try 3: Mock data — but never silently widen when caller specified a location.
-  // Mock providers are a tiny hand-curated set; returning them for a state/city/geo
-  // query would surface providers from unrelated areas.
-  if (hasLocationIntent) {
-    return { providers: [], total_count: 0, page, per_page: perPage, has_more: false };
-  }
-  return searchViaMockData(params, page, perPage);
-}
-
-/**
- * Main search entry point. Always returns results (never silently fails).
+ * Main search entry point. Throws when the database search fails.
  * If city+state combo yields zero, auto-drops state and retries with city only —
  * surfaces `dropped_filters: ['state']` so UI can show the recovery.
  */
 export async function searchProviders(params: ProviderSearchParams): Promise<ProviderCardSearchResult> {
-  const result = await runSearchCascade(params);
+  const page = params.page || 1;
+  const perPage = params.per_page || PAGE_SIZE;
+  const result = await searchViaRPC(params, page, perPage);
 
   if (
     params.city &&
     params.state &&
-    result.total_count === 0 &&
-    params.latitude == null
+    result.total_count === 0
   ) {
-    const retry = await runSearchCascade({ ...params, state: undefined });
+    const retry = await searchViaRPC({ ...params, state: undefined }, page, perPage);
     if (retry.total_count > 0) {
       return { ...retry, dropped_filters: ['state'] };
     }
@@ -459,7 +185,6 @@ const FILTER_LABELS: Record<string, string> = {
   city: 'City',
   telehealth: 'Telehealth',
   in_person: 'In-person',
-  accepting_patients: 'Accepting patients',
   verification_status: 'Verification',
 };
 
@@ -569,15 +294,6 @@ export async function analyzeFilterBottlenecks(
         value: 'Yes',
         paramsWithout: { ...params, in_person: undefined },
         removeParams: { in_person: undefined },
-      });
-    }
-    if (params.accepting_patients) {
-      candidates.push({
-        key: 'accepting_patients',
-        label: FILTER_LABELS.accepting_patients,
-        value: 'Yes',
-        paramsWithout: { ...params, accepting_patients: undefined },
-        removeParams: { accepting_patients: undefined },
       });
     }
     if (params.verification_status) {
@@ -918,57 +634,4 @@ export async function getProviderCount(): Promise<number> {
     return 0;
   }
   return count ?? 0;
-}
-
-// =============================================================================
-// FEATURED PROVIDERS (for landing page)
-// =============================================================================
-
-/**
- * Fetches featured providers for the landing page.
- * Selection tiers: verified → claimed → pro/elite → high-completeness seeded.
- * Falls back to mock data if Supabase returns empty or errors.
- */
-export async function getFeaturedProviders(limit: number = 8): Promise<ProviderCardData[]> {
-  try {
-    const { data, error } = await supabase
-      .from('providers')
-      .select(PROVIDER_SELECT)
-      .in('status', ['active', 'verified', 'claimed', 'seeded'])
-      .not('bio', 'is', null)
-      .order('tier', { ascending: false })
-      .order('display_name')
-      .limit(limit * 2);
-
-    if (error || !data || data.length === 0) {
-      // Fallback: try without bio filter
-      const { data: fallbackData, error: fallbackError } = await supabase
-        .from('providers')
-        .select(PROVIDER_SELECT)
-        .in('status', ['active', 'verified', 'claimed', 'seeded'])
-        .order('tier', { ascending: false })
-        .order('display_name')
-        .limit(limit * 2);
-
-      if (fallbackError || !fallbackData || fallbackData.length === 0) {
-        // Last resort: mock data
-        return mockProviders.slice(0, limit).map(mapMockToCardData);
-      }
-
-      const cards = fallbackData.map(row => mapToCardData(mapProviderRow(row)));
-      return cards.slice(0, limit);
-    }
-
-    const cards = data.map(row => mapToCardData(mapProviderRow(row)));
-
-    // Prefer providers with photos, then fill remaining
-    const withPhoto = cards.filter(c => c.photo_url);
-    const withoutPhoto = cards.filter(c => !c.photo_url);
-    const combined = [...withPhoto, ...withoutPhoto];
-
-    return combined.slice(0, limit);
-  } catch (err) {
-    console.warn('getFeaturedProviders failed:', err);
-    return mockProviders.slice(0, limit).map(mapMockToCardData);
-  }
 }

@@ -59,10 +59,6 @@ export function generateProviderJsonLd(
     }));
   }
 
-  if (provider.is_accepting_patients != null) {
-    base.isAcceptingNewPatients = provider.is_accepting_patients;
-  }
-
   if (provider.npi_number) {
     base.identifier = {
       '@type': 'PropertyValue',

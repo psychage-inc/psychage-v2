@@ -58,8 +58,7 @@
       "query_placeholder": "Sök efter namn, specialitet eller tillstånd...",
       "query_aria": "Sök vårdgivare efter namn, specialitet eller tillstånd",
       "location_placeholder": "Stad, delstat eller postnummer...",
-      "location_aria": "Vårdgivarens plats — stad, delstat eller postnummer",
-      "use_location": "Använd min plats"
+      "location_aria": "Vårdgivarens plats — stad, delstat eller postnummer"
     },
     "filter": {
       "verification_status": "Verifieringsstatus",
@@ -73,7 +72,6 @@
       "session_format": "Sessionsformat",
       "telehealth": "Telemedicin tillgänglig",
       "in_person": "Personligt besök tillgängligt",
-      "accepting": "Accepterar nya patienter",
       "more_filters": "Fler filter",
       "fewer_filters": "Färre filter",
       "specialty": "Specialitet",
@@ -89,7 +87,6 @@
     "sort": {
       "label": "Sortera: {{current}}",
       "relevance": "Relevans",
-      "distance": "Avstånd",
       "name_az": "Namn A-Ö",
       "disclosure": "Standardsorteringen visar vårdgivare med premiumabonnemang först. Byt till 'Namn (A-Ö)' för att inaktivera premiumprioritering."
     },
@@ -110,8 +107,6 @@
     "card": {
       "specializes_in": "Specialiserar sig inom",
       "contact_for_details": "Kontakta för detaljer",
-      "accepting": "Accepterar patienter",
-      "not_accepting": "Accepterar ej",
       "view_profile": "Visa Fullständig Profil",
       "call": "Ring",
       "call_aria": "Ring {{name}}",
@@ -143,7 +138,6 @@
       "listed_only": "Endast offentligt listade",
       "telehealth": "Telemedicin",
       "in_person": "Personligt besök",
-      "accepting": "Accepterar patienter",
       "remove_aria": "Ta bort filter {{label}}",
       "clear_all": "Rensa alla"
     },

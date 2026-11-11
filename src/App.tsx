@@ -21,8 +21,6 @@ import DeletionScheduledBanner from './components/account/DeletionScheduledBanne
 import { adminUrl } from './lib/urls';
 import { lazyWithRetry } from './lib/lazyWithRetry';
 import { notificationService } from './lib/notifications/notificationService';
-import { analytics } from './lib/analytics';
-import { plausibleProvider } from './lib/analytics/plausible';
 import Preloader from './components/Preloader';
 import PageTransition from './components/ui/PageTransition';
 import { ScrollManager } from './components/ui/ScrollManager';
@@ -183,11 +181,9 @@ const App: React.FC = () => {
     // Phone breakpoint: swaps desktop chrome/screens for the mobile presentation.
     const isPhone = useMediaQuery(MOBILE_NARROW_QUERY);
 
-    // Register service worker + initialize analytics (once)
+    // Register service worker (once)
     useEffect(() => {
         notificationService.registerServiceWorker();
-        analytics.setProvider(plausibleProvider);
-        analytics.init();
     }, []);
 
     return (

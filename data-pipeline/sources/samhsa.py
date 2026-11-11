@@ -294,7 +294,6 @@ class SAMHSAProcessor(BaseSource):
                 "display_name": facility_name,
                 "phone": phone,
                 "website_url": website,
-                "is_accepting_patients": True,
                 "telehealth_available": False,
                 "in_person_available": True,
                 "facility_type": facility_type,

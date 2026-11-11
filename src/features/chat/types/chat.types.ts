@@ -11,7 +11,6 @@ export interface ChatMessage {
   content: string;
   timestamp: Date;
   isStreaming?: boolean;
-  sources?: CitationSource[];
   actionCards?: ChatActionCard[];
   suggestedFollowUps?: string[];
   safetyLevel?: 'SAFE' | 'WATCH' | 'URGENT' | 'CRISIS';
@@ -20,14 +19,6 @@ export interface ChatMessage {
    *  instead of the standard message body. Set by useChat's catch block when
    *  the API returns a non-JSON platform-level failure. */
   variant?: 'unavailable';
-}
-
-export interface CitationSource {
-  id: string;
-  title: string;
-  url: string;
-  snippet: string;
-  type: 'article' | 'guide' | 'tool' | 'video';
 }
 
 export interface Conversation {
@@ -48,7 +39,6 @@ export interface ConversationListItem {
 }
 
 export interface ChatResponseMeta {
-  citations: CitationSource[];
   safetyLevel: 'SAFE' | 'WATCH' | 'URGENT' | 'CRISIS';
   isCrisis: boolean;
   sessionId: string;

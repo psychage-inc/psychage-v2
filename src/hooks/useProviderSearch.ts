@@ -12,6 +12,8 @@ interface UseProviderSearchReturn {
   isLoading: boolean;
   isLoadingMore: boolean;
   error: string | null;
+  /** Re-run the failed search with the same params. */
+  retry: () => void;
   hasSearched: boolean;
   params: ProviderSearchParams;
   setParams: (params: Partial<ProviderSearchParams>) => void;
@@ -41,7 +43,6 @@ export function useProviderSearch(): UseProviderSearchReturn {
     city: searchParams.get('city') || undefined,
     telehealth: searchParams.get('telehealth') === 'true' ? true : undefined,
     in_person: searchParams.get('in_person') === 'true' ? true : undefined,
-    accepting_patients: searchParams.get('accepting') === 'true' ? true : undefined,
     verification_status: (searchParams.get('verified') as ProviderSearchParams['verification_status']) || undefined,
     sort_by: (searchParams.get('sort') as ProviderSearchParams['sort_by']) || 'relevance',
     per_page: DEFAULT_PER_PAGE,
@@ -59,7 +60,6 @@ export function useProviderSearch(): UseProviderSearchReturn {
     city: params.city,
     th: params.telehealth,
     ip: params.in_person,
-    acc: params.accepting_patients,
     ver: params.verification_status,
     sort: params.sort_by,
   }], [params]);
@@ -71,7 +71,7 @@ export function useProviderSearch(): UseProviderSearchReturn {
     isFetching,
     isFetchingNextPage,
     isError,
-    error: queryError,
+    refetch,
   } = useInfiniteQuery({
     queryKey,
     queryFn: ({ pageParam }) =>
@@ -86,13 +86,15 @@ export function useProviderSearch(): UseProviderSearchReturn {
     placeholderData: keepPreviousData,
   });
 
-  // Flatten pages into a single provider array
+  // Flatten pages into a single provider array. On error show nothing:
+  // keepPreviousData would otherwise leave the previous search's results on
+  // screen next to the error.
   const providers = useMemo(
-    () => data?.pages.flatMap(p => p.providers) ?? [],
-    [data],
+    () => (isError ? [] : data?.pages.flatMap(p => p.providers) ?? []),
+    [data, isError],
   );
-  const totalCount = data?.pages[0]?.total_count ?? 0;
-  const droppedFilters = data?.pages[0]?.dropped_filters;
+  const totalCount = isError ? 0 : data?.pages[0]?.total_count ?? 0;
+  const droppedFilters = isError ? undefined : data?.pages[0]?.dropped_filters;
   const hasSearched = data !== undefined;
 
   // Update URL params (same logic as before)
@@ -139,10 +141,6 @@ export function useProviderSearch(): UseProviderSearchReturn {
       if (newParams.in_person) next.set('in_person', 'true');
       else next.delete('in_person');
     }
-    if (newParams.accepting_patients !== undefined) {
-      if (newParams.accepting_patients) next.set('accepting', 'true');
-      else next.delete('accepting');
-    }
     if (newParams.verification_status !== undefined) {
       if (newParams.verification_status) next.set('verified', newParams.verification_status);
       else next.delete('verified');
@@ -172,7 +170,8 @@ export function useProviderSearch(): UseProviderSearchReturn {
     hasMore: hasNextPage ?? false,
     isLoading: isFetching && !isFetchingNextPage,
     isLoadingMore: isFetchingNextPage,
-    error: isError ? (queryError instanceof Error ? queryError.message : 'Failed to search providers. Please try again.') : null,
+    error: isError ? 'Provider search is unavailable right now. Please try again.' : null,
+    retry: () => { void refetch(); },
     hasSearched,
     params,
     setParams,

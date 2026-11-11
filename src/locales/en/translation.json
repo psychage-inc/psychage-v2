@@ -77,8 +77,7 @@
             "query_placeholder": "Search by name, specialty, or condition...",
             "query_aria": "Search providers by name, specialty, or condition",
             "location_placeholder": "City, state, or zip...",
-            "location_aria": "Provider location — city, state, or zip code",
-            "use_location": "Use my location"
+            "location_aria": "Provider location — city, state, or zip code"
         },
         "filter": {
             "verification_status": "Verification Status",
@@ -92,7 +91,6 @@
             "session_format": "Session Format",
             "telehealth": "Telehealth available",
             "in_person": "In-person available",
-            "accepting": "Accepting new patients",
             "more_filters": "More filters",
             "fewer_filters": "Fewer filters",
             "specialty": "Specialty",
@@ -108,7 +106,6 @@
         "sort": {
             "label": "Sort: {{current}}",
             "relevance": "Relevance",
-            "distance": "Distance",
             "name_az": "Name A-Z",
             "disclosure": "Default sort shows premium-subscription providers first. Switch to 'Name (A-Z)' to disable premium prioritization."
         },
@@ -129,8 +126,6 @@
         "card": {
             "specializes_in": "Specializes In",
             "contact_for_details": "Contact for details",
-            "accepting": "Accepting patients",
-            "not_accepting": "Not accepting",
             "view_profile": "View Full Profile",
             "call": "Call",
             "call_aria": "Call {{name}}",
@@ -162,7 +157,6 @@
             "listed_only": "Publicly Listed only",
             "telehealth": "Telehealth",
             "in_person": "In-person",
-            "accepting": "Accepting patients",
             "remove_aria": "Remove {{label}} filter",
             "clear_all": "Clear all"
         },

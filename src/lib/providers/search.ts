@@ -29,7 +29,6 @@ export function scoreProvider(
   // Profile completeness signals
   if (provider.photo_url) score += 0.5;
   if (provider.bio && provider.bio.length > 100) score += 0.5;
-  if (provider.is_accepting_patients) score += 0.5;
   if (provider.verified_at) score += 1;
 
   return score;

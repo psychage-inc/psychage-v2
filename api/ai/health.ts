@@ -31,10 +31,6 @@ export default async function handler(
       set: !!process.env.SUPABASE_SERVICE_ROLE_KEY,
       hint: 'Required for server-side database access',
     },
-    OPENAI_API_KEY: {
-      set: !!process.env.OPENAI_API_KEY,
-      hint: 'Optional — needed for RAG content retrieval (embeddings)',
-    },
   };
 
   const allRequired = checks.ANTHROPIC_API_KEY.set &&

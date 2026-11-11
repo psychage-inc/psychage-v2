@@ -307,7 +307,6 @@ class NPPESProcessor(BaseSource):
                     "display_name": display_name,
                     "credentials_suffix": credentials,
                     "phone": phone,
-                    "is_accepting_patients": True,
                     "telehealth_available": False,
                     "in_person_available": True,
                     "taxonomy_code": primary_tax,

@@ -1,9 +1,7 @@
-import * as Sentry from '@sentry/react';
 import { parseSSEStream } from '@/lib/ai/streaming';
 import { supabase } from '@/lib/supabaseClient';
 import type {
   ChatResponseMeta,
-  CitationSource,
   Conversation,
   ConversationListItem,
 } from '../types/chat.types';
@@ -24,15 +22,8 @@ interface ApiMessage {
   content: string;
 }
 
-interface ApiCitation {
-  document_id: string;
-  title: string;
-  url_path: string;
-}
-
 interface ApiResponse {
   message: string;
-  citations: ApiCitation[];
   sessionId: string;
   safetyLevel: string;
   isCrisis: boolean;
@@ -42,16 +33,6 @@ interface ApiResponse {
 // ============================================================
 // HELPERS
 // ============================================================
-
-function mapCitation(c: ApiCitation): CitationSource {
-  return {
-    id: c.document_id,
-    title: c.title,
-    url: c.url_path,
-    snippet: '',
-    type: 'article',
-  };
-}
 
 function normalizeSafetyLevel(
   level: string,
@@ -108,23 +89,6 @@ export async function* sendMessage(
       throw new Error(parsedError);
     }
 
-    Sentry.captureException(new Error('MindMate API non-JSON error response'), {
-      level: 'error',
-      tags: {
-        component: 'mindmate',
-        endpoint: '/api/ai/chat',
-        consumer: 'chatService',
-      },
-      extra: {
-        status: response.status,
-        statusText: response.statusText,
-        bodyPreview: bodyText.slice(0, 500),
-        sessionId,
-        requestId: response.headers.get('x-vercel-id'),
-        contentType: response.headers.get('content-type'),
-      },
-    });
-
     throw new MindMateUnavailableError(
       `MindMate unavailable (status ${response.status})`,
       { cause: new Error(bodyText.slice(0, 200)) },
@@ -138,7 +102,6 @@ export async function* sendMessage(
     const data: ApiResponse = await response.json();
 
     onMeta?.({
-      citations: (data.citations ?? []).map(mapCitation),
       safetyLevel: normalizeSafetyLevel(data.safetyLevel),
       isCrisis: data.isCrisis ?? false,
       sessionId: data.sessionId,
@@ -158,7 +121,6 @@ export async function* sendMessage(
 
   let safetyLevel: 'SAFE' | 'WATCH' | 'URGENT' | 'CRISIS' = 'SAFE';
   let receivedSessionId = sessionId ?? '';
-  const citations: CitationSource[] = [];
 
   for await (const event of parseSSEStream(response.body)) {
     switch (event.type) {
@@ -174,12 +136,6 @@ export async function* sendMessage(
         safetyLevel = normalizeSafetyLevel(event.level);
         break;
 
-      case 'citations':
-        for (const c of event.citations) {
-          citations.push(mapCitation(c));
-        }
-        break;
-
       case 'error':
         if (event.code === 'SAFETY_VIOLATION') {
           // Output was replaced by safety filter — throw so consumer can
@@ -192,7 +148,6 @@ export async function* sendMessage(
 
       case 'done':
         onMeta?.({
-          citations,
           safetyLevel,
           isCrisis: false,
           sessionId: receivedSessionId,

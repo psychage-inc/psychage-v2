@@ -58,8 +58,7 @@
       "query_placeholder": "Buscar por nombre, especialidad o condición...",
       "query_aria": "Buscar profesionales por nombre, especialidad o condición",
       "location_placeholder": "Ciudad, estado o código postal...",
-      "location_aria": "Ubicación del profesional — ciudad, estado o código postal",
-      "use_location": "Usar mi ubicación"
+      "location_aria": "Ubicación del profesional — ciudad, estado o código postal"
     },
     "filter": {
       "verification_status": "Estado de Verificación",
@@ -73,7 +72,6 @@
       "session_format": "Formato de Sesión",
       "telehealth": "Telesalud disponible",
       "in_person": "Presencial disponible",
-      "accepting": "Aceptando nuevos pacientes",
       "more_filters": "Más filtros",
       "fewer_filters": "Menos filtros",
       "specialty": "Especialidad",
@@ -89,7 +87,6 @@
     "sort": {
       "label": "Ordenar: {{current}}",
       "relevance": "Relevancia",
-      "distance": "Distancia",
       "name_az": "Nombre A-Z",
       "disclosure": "El orden predeterminado muestra primero a los profesionales con suscripción premium. Cambie a 'Nombre (A-Z)' para desactivar la priorización premium."
     },
@@ -110,8 +107,6 @@
     "card": {
       "specializes_in": "Especialidades",
       "contact_for_details": "Contacte para detalles",
-      "accepting": "Aceptando pacientes",
-      "not_accepting": "No aceptando",
       "view_profile": "Ver Perfil Completo",
       "call": "Llamar",
       "call_aria": "Llamar a {{name}}",
@@ -143,7 +138,6 @@
       "listed_only": "Solo Listados Públicamente",
       "telehealth": "Telesalud",
       "in_person": "Presencial",
-      "accepting": "Aceptando pacientes",
       "remove_aria": "Eliminar filtro {{label}}",
       "clear_all": "Borrar todos"
     },

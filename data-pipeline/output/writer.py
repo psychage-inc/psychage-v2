@@ -22,7 +22,7 @@ PROVIDERS_COLUMNS = [
     "id", "npi_number", "provider_type_id", "status", "tier", "source",
     "display_name", "credentials_suffix", "bio", "photo_url",
     "practice_name", "practice_type", "website_url", "phone", "email",
-    "appointment_url", "is_accepting_patients", "telehealth_available",
+    "appointment_url", "telehealth_available",
     "in_person_available", "taxonomy_code", "taxonomy_description",
     "facility_type", "sliding_fee_scale", "emergency_services",
     "data_last_synced_at",

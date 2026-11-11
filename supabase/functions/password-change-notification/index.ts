@@ -34,6 +34,7 @@
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.3';
 import { handleCorsPreflightRequest, createCorsResponse } from '../_shared/cors.ts';
+import { sendEmail } from '../_shared/resend.ts';
 
 const RATE_LIMIT_WINDOW_MS = 10_000;
 const lastInvocationByUser = new Map<string, number>();
@@ -115,37 +116,17 @@ serve(async (req) => {
 
         const timestamp = new Date().toISOString();
 
-        const resendApiKey = Deno.env.get('RESEND_API_KEY');
-        if (resendApiKey) {
-            const fromAddress = Deno.env.get('NOTIFICATION_FROM_EMAIL') ?? 'security@psychage.com';
-            const resp = await fetch('https://api.resend.com/emails', {
-                method: 'POST',
-                headers: {
-                    'Authorization': `Bearer ${resendApiKey}`,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    from: fromAddress,
-                    to: targetEmail,
-                    subject: 'Your Psychage password was just changed',
-                    html: renderEmail(targetEmail, timestamp),
-                }),
-            });
-            if (!resp.ok) {
-                const text = await resp.text();
-                console.error('password-change-notification: resend send failed', text);
-                // Do NOT return error to client — the password change
-                // has already succeeded. Log and return 200.
-            }
-        } else {
-            // No transactional provider configured. Fall back to
-            // logging only; the dashboard checklist covers wiring up
-            // SMTP/Resend before this is production-meaningful.
-            console.warn(
-                'password-change-notification: no RESEND_API_KEY configured; ' +
-                    'notification not delivered to ' + targetEmail,
-            );
-        }
+        // Throws when RESEND_API_KEY is missing (caught below → 500). A
+        // rejected send is logged by status only; the password change has
+        // already succeeded, so it does not fail the request.
+        await sendEmail(
+            {
+                to: targetEmail,
+                subject: 'Your Psychage password was just changed',
+                html: renderEmail(targetEmail, timestamp),
+            },
+            'password-change-notification',
+        );
 
         // Invocation breadcrumb for operational visibility. user_id
         // only — email is intentionally not logged (PII minimization

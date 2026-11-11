@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { X, Send, Sparkles, AlertTriangle, Phone, Trash2, LogIn, ChevronRight } from 'lucide-react';
-import * as Sentry from '@sentry/react';
 import { useAuth } from '@/context/AuthContext';
 import { supabase } from '@/lib/supabaseClient';
 import { chatPersistenceService } from '@/services/chatPersistenceService';
@@ -234,23 +233,6 @@ const MindMate: React.FC = () => {
                 if (parsedError) {
                     throw new Error(parsedError);
                 }
-
-                Sentry.captureException(new Error('MindMate API non-JSON error response'), {
-                    level: 'error',
-                    tags: {
-                        component: 'mindmate',
-                        endpoint: '/api/ai/chat',
-                        consumer: 'floatingWidget',
-                    },
-                    extra: {
-                        status: res.status,
-                        statusText: res.statusText,
-                        bodyPreview: bodyText.slice(0, 500),
-                        sessionId: getOrCreateSessionId(),
-                        requestId: res.headers.get('x-vercel-id'),
-                        contentType: res.headers.get('content-type'),
-                    },
-                });
 
                 throw new MindMateUnavailableError(
                     `MindMate unavailable (status ${res.status})`,

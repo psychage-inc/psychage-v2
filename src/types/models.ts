@@ -15,7 +15,6 @@ export interface Provider {
     image: string;
     specialties: string[];
     location: string;
-    availability: string;
     insurance: string[];
     verified: boolean;
     bio: string;

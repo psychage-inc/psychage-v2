@@ -31,3 +31,8 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
+
+declare module 'virtual:article-slug-index' {
+  const index: Record<string, string[]>;
+  export default index;
+}

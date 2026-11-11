@@ -45,3 +45,15 @@ export async function loadAllArticles(): Promise<Article[]> {
   _cached = articles;
   return articles;
 }
+
+/**
+ * Load only the given category folders (e.g. ['category-21']) — used to fetch a
+ * single article without downloading every category chunk.
+ */
+export async function loadArticlesFromFolders(folders: string[]): Promise<Article[]> {
+  const loaders = folders
+    .map((folder) => categoryLoaders[`./${folder}/index.ts`] ?? eatingBodyLoader[`./${folder}/index.ts`])
+    .filter(Boolean);
+  const modules = await Promise.all(loaders.map((load) => load()));
+  return modules.flatMap(flattenCategoryModule);
+}

@@ -43,6 +43,20 @@ async function getMockArticles(): Promise<Article[]> {
     return _cachedMockArticles;
 }
 
+/**
+ * Find one local article by slug, loading only the category chunk(s) that
+ * declare it. Same dedupe preference as getMockArticles (a shown version wins).
+ */
+async function getMockArticleBySlug(slug: string): Promise<Article | undefined> {
+    if (_cachedMockArticles) return _cachedMockArticles.find(a => a.slug === slug);
+    const { default: slugIndex } = await import('virtual:article-slug-index');
+    const folders = slugIndex[slug];
+    if (!folders?.length) return undefined;
+    const { loadArticlesFromFolders } = await import('../data/articles/all-articles');
+    const matches = (await loadArticlesFromFolders(folders)).filter(a => a.slug === slug);
+    return matches.find(isShownStatus) ?? matches[0];
+}
+
 // ============================================================================
 // Image URL Resolver
 // ============================================================================
@@ -353,8 +367,7 @@ export const articleService = {
      */
     getBySlug: async (slug: string): Promise<ArticleWithContent | undefined> => {
         // Check if mock data has rich JSX content for this slug
-        const publishedMock = await getMockArticles();
-        const mockArticle = publishedMock.find(a => a.slug === slug);
+        const mockArticle = await getMockArticleBySlug(slug);
         const hasRichMockContent = mockArticle && mockArticle.content && typeof mockArticle.content !== 'string';
 
         // If mock data has JSX content (charts, tables, accordions etc.), prefer it

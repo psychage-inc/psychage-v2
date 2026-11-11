@@ -5,7 +5,6 @@ import Button from '../ui/Button';
 import { useAuth } from '../../context/AuthContext';
 import { Logo } from '../ui/Logo';
 import ConsentCheckboxes, { ConsentState, defaultConsentState, isConsentValid } from '../privacy/ConsentCheckboxes';
-import { consentService } from '../../services/consentService';
 import { useTurnstile } from '../../lib/auth/useTurnstile';
 import { useAuthErrorFocus } from '../../lib/auth/useAuthErrorFocus';
 import { mapSupabaseAuthError } from '../../lib/auth/supabaseErrorMessages';
@@ -87,6 +86,8 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                     'patient',
                     {
                         age_verified: consent.ageVerified,
+                        data_processing_accepted: consent.dataProcessingAccepted,
+                        newsletter_opt_in: consent.newsletterOptIn,
                         consent_version: 'v1.0',
                     },
                     captchaToken,
@@ -97,13 +98,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                     setError(t('auth.errors.userAlreadyExists'));
                     resetCaptcha();
                 } else if (result.success) {
-                    await consentService.logBulkConsent([
-                        { type: 'terms_of_service', granted: true },
-                        { type: 'privacy_policy', granted: true },
-                        { type: 'data_processing', granted: consent.dataProcessingAccepted },
-                        { type: 'age_verification', granted: consent.ageVerified },
-                        { type: 'newsletter', granted: consent.newsletterOptIn },
-                    ]);
+                    // Signup consents are written by the on_auth_user_created_consent trigger.
                     if (result.status === 'confirm_email') {
                         setSuccessMessage(t('auth.signup.confirmEmailMessage'));
                     } else {

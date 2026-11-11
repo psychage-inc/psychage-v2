@@ -12,7 +12,6 @@ import { useAuth } from '../../context/AuthContext';
 import InteractiveCard from '@/components/ui/InteractiveCard';
 import { LogoIcon } from '@/components/ui/LogoIcon';
 import ConsentCheckboxes, { ConsentState, defaultConsentState, isConsentValid } from '@/components/privacy/ConsentCheckboxes';
-import { consentService } from '@/services/consentService';
 import SEO from '@/components/SEO';
 import { useTurnstile } from '@/lib/auth/useTurnstile';
 import { useAuthErrorFocus } from '@/lib/auth/useAuthErrorFocus';
@@ -79,6 +78,8 @@ const SignUpPage = () => {
                 userType,
                 {
                     age_verified: consent.ageVerified,
+                    data_processing_accepted: consent.dataProcessingAccepted,
+                    newsletter_opt_in: consent.newsletterOptIn,
                     consent_version: 'v1.0',
                     country: formData.country || undefined,
                     age: formData.age ? parseInt(formData.age, 10) : undefined,
@@ -93,15 +94,10 @@ const SignUpPage = () => {
                 setError(t('auth.errors.userAlreadyExists'));
                 resetCaptcha();
             } else if (result.success) {
-                // Log consents to the audit trail
-                await consentService.logBulkConsent([
-                    { type: 'terms_of_service', granted: true },
-                    { type: 'privacy_policy', granted: true },
-                    { type: 'data_processing', granted: consent.dataProcessingAccepted },
-                    { type: 'age_verification', granted: consent.ageVerified },
-                    { type: 'newsletter', granted: consent.newsletterOptIn },
-                ]);
-
+                // Signup consents are written to consent_log by the
+                // on_auth_user_created_consent trigger from the signup metadata,
+                // so each row is linked to the new user id even before the
+                // email is confirmed.
                 if (result.status === 'confirm_email') {
                     // Email confirmation is required (mailer_autoconfirm: false), so route
                     // to the dedicated "Check your email" screen instead of straight to login.

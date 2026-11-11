@@ -73,7 +73,6 @@ const providerSchema = z.object({
   bio: z.string(),
   telehealth_available: z.boolean(),
   in_person_available: z.boolean(),
-  is_accepting_patients: z.boolean(),
   verification_tier: z.string(),
   verification_notes: z.string(),
   is_suspended: z.boolean(),
@@ -350,7 +349,6 @@ const AdminProviderEditor: React.FC = () => {
       bio: '',
       telehealth_available: false,
       in_person_available: true,
-      is_accepting_patients: true,
       verification_tier: 'unverified',
       verification_notes: '',
       is_suspended: false,
@@ -376,7 +374,6 @@ const AdminProviderEditor: React.FC = () => {
       setValue('bio', provider.bio || '');
       setValue('telehealth_available', provider.telehealth_available ?? false);
       setValue('in_person_available', provider.in_person_available ?? true);
-      setValue('is_accepting_patients', provider.is_accepting_patients ?? true);
       setValue('verification_tier', provider.verification_tier || 'unverified');
       setValue('verification_notes', provider.verification_notes || '');
       setValue('is_suspended', provider.is_suspended ?? false);
@@ -497,7 +494,6 @@ const AdminProviderEditor: React.FC = () => {
         bio: data.bio || null,
         telehealth_available: data.telehealth_available,
         in_person_available: data.in_person_available,
-        is_accepting_patients: data.is_accepting_patients,
         verification_tier: data.verification_tier,
         verification_notes: data.verification_notes || null,
         is_suspended: data.is_suspended,
@@ -806,10 +802,6 @@ const AdminProviderEditor: React.FC = () => {
             <label className="flex items-center gap-2 text-sm text-text-secondary cursor-pointer">
               <input type="checkbox" {...register('in_person_available')} className="rounded border-border-hover text-primary focus:ring-primary" />
               In-person visits available
-            </label>
-            <label className="flex items-center gap-2 text-sm text-text-secondary cursor-pointer">
-              <input type="checkbox" {...register('is_accepting_patients')} className="rounded border-border-hover text-primary focus:ring-primary" />
-              Currently accepting new patients
             </label>
           </div>
         </FormSection>

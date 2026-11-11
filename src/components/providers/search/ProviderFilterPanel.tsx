@@ -123,11 +123,6 @@ export const ProviderFilterPanel: React.FC<ProviderFilterPanelProps> = ({
           checked={params.in_person === true}
           onChange={() => onChange({ in_person: params.in_person ? undefined : true })}
         />
-        <CheckboxItem
-          label={t('providers.filter.accepting')}
-          checked={params.accepting_patients === true}
-          onChange={() => onChange({ accepting_patients: params.accepting_patients ? undefined : true })}
-        />
       </FilterSection>
 
       {/* More Filters */}

@@ -72,7 +72,6 @@
             "session_format": "Formato da Sessão",
             "telehealth": "Telemedicina disponível",
             "in_person": "Presencial disponível",
-            "accepting": "Aceitando novos pacientes",
             "more_filters": "Mais filtros",
             "fewer_filters": "Menos filtros",
             "specialty": "Especialidade",
@@ -108,8 +107,6 @@
         "card": {
             "specializes_in": "Especialidades",
             "contact_for_details": "Contate para detalhes",
-            "accepting": "Aceitando pacientes",
-            "not_accepting": "Não aceitando",
             "view_profile": "Ver Perfil Completo",
             "call": "Ligar",
             "call_aria": "Ligar para {{name}}",
@@ -141,7 +138,6 @@
             "listed_only": "Apenas Listados Publicamente",
             "telehealth": "Telemedicina",
             "in_person": "Presencial",
-            "accepting": "Aceitando pacientes",
             "remove_aria": "Remover filtro {{label}}",
             "clear_all": "Limpar todos"
         },

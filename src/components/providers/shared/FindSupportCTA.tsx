@@ -34,7 +34,6 @@ export const FindSupportCTA: React.FC<FindSupportCTAProps> = ({
     searchProviders({
       specialty_slugs: [specialtySlug],
       per_page: 3,
-      accepting_patients: true,
     })
       .then(result => {
         if (!cancelled) setProviders(result.providers.slice(0, 3));

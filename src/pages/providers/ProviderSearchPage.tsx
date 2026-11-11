@@ -57,7 +57,6 @@ const ProviderSearchPage: React.FC = () => {
     params.insurance_plan_ids?.length ||
     params.telehealth ||
     params.in_person ||
-    params.accepting_patients ||
     params.state ||
     params.city ||
     params.verification_status

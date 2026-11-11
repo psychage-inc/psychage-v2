@@ -91,7 +91,6 @@
             "session_format": "Session Format",
             "telehealth": "Telehealth available",
             "in_person": "In-person available",
-            "accepting": "Accepting new patients",
             "more_filters": "More filters",
             "fewer_filters": "Fewer filters",
             "specialty": "Specialty",
@@ -127,8 +126,6 @@
         "card": {
             "specializes_in": "Specializes In",
             "contact_for_details": "Contact for details",
-            "accepting": "Accepting patients",
-            "not_accepting": "Not accepting",
             "view_profile": "View Full Profile",
             "call": "Call",
             "call_aria": "Call {{name}}",
@@ -160,7 +157,6 @@
             "listed_only": "Publicly Listed only",
             "telehealth": "Telehealth",
             "in_person": "In-person",
-            "accepting": "Accepting patients",
             "remove_aria": "Remove {{label}} filter",
             "clear_all": "Clear all"
         },

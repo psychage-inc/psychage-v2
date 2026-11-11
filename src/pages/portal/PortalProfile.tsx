@@ -166,7 +166,6 @@ const PracticeTab: React.FC<TabProps> = ({ provider, onSave, saveStatus }) => {
     appointment_url: provider.appointment_url || '',
     telehealth_available: provider.telehealth_available,
     in_person_available: provider.in_person_available,
-    is_accepting_patients: provider.is_accepting_patients,
   });
   const debounceRef = useRef<ReturnType<typeof setTimeout>>();
 
@@ -216,7 +215,6 @@ const PracticeTab: React.FC<TabProps> = ({ provider, onSave, saveStatus }) => {
         {/* Toggles */}
         <div className="space-y-3 pt-2">
           {[
-            { field: 'is_accepting_patients', label: 'Accepting New Patients', value: practice.is_accepting_patients },
             { field: 'telehealth_available', label: 'Telehealth Available', value: practice.telehealth_available },
             { field: 'in_person_available', label: 'In-Person Available', value: practice.in_person_available },
           ].map(toggle => (

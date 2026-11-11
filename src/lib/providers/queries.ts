@@ -86,7 +86,6 @@ async function searchViaRPC(params: ProviderSearchParams, page: number, perPage:
     p_insurance_plan_ids: params.insurance_plan_ids?.length ? params.insurance_plan_ids : null,
     p_telehealth: params.telehealth ?? null,
     p_in_person: params.in_person ?? null,
-    p_accepting: params.accepting_patients ?? null,
     p_state: params.state || null,
     p_city: params.city || null,
     p_verification_status: params.verification_status || null,
@@ -118,7 +117,6 @@ async function searchViaRPC(params: ProviderSearchParams, page: number, perPage:
     npi_number: row.npi_number,
     telehealth_available: row.telehealth_available,
     in_person_available: row.in_person_available,
-    is_accepting_patients: row.is_accepting_patients,
     verified_at: row.verified_at,
     trust_score_cached: row.trust_score_cached ?? null,
     provider_type_slug: row.provider_type_slug,
@@ -187,7 +185,6 @@ const FILTER_LABELS: Record<string, string> = {
   city: 'City',
   telehealth: 'Telehealth',
   in_person: 'In-person',
-  accepting_patients: 'Accepting patients',
   verification_status: 'Verification',
 };
 
@@ -297,15 +294,6 @@ export async function analyzeFilterBottlenecks(
         value: 'Yes',
         paramsWithout: { ...params, in_person: undefined },
         removeParams: { in_person: undefined },
-      });
-    }
-    if (params.accepting_patients) {
-      candidates.push({
-        key: 'accepting_patients',
-        label: FILTER_LABELS.accepting_patients,
-        value: 'Yes',
-        paramsWithout: { ...params, accepting_patients: undefined },
-        removeParams: { accepting_patients: undefined },
       });
     }
     if (params.verification_status) {

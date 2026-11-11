@@ -43,7 +43,6 @@ export function useProviderSearch(): UseProviderSearchReturn {
     city: searchParams.get('city') || undefined,
     telehealth: searchParams.get('telehealth') === 'true' ? true : undefined,
     in_person: searchParams.get('in_person') === 'true' ? true : undefined,
-    accepting_patients: searchParams.get('accepting') === 'true' ? true : undefined,
     verification_status: (searchParams.get('verified') as ProviderSearchParams['verification_status']) || undefined,
     sort_by: (searchParams.get('sort') as ProviderSearchParams['sort_by']) || 'relevance',
     per_page: DEFAULT_PER_PAGE,
@@ -61,7 +60,6 @@ export function useProviderSearch(): UseProviderSearchReturn {
     city: params.city,
     th: params.telehealth,
     ip: params.in_person,
-    acc: params.accepting_patients,
     ver: params.verification_status,
     sort: params.sort_by,
   }], [params]);
@@ -142,10 +140,6 @@ export function useProviderSearch(): UseProviderSearchReturn {
     if (newParams.in_person !== undefined) {
       if (newParams.in_person) next.set('in_person', 'true');
       else next.delete('in_person');
-    }
-    if (newParams.accepting_patients !== undefined) {
-      if (newParams.accepting_patients) next.set('accepting', 'true');
-      else next.delete('accepting');
     }
     if (newParams.verification_status !== undefined) {
       if (newParams.verification_status) next.set('verified', newParams.verification_status);

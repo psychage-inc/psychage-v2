@@ -16,7 +16,6 @@ interface DBProvider {
     specialties?: string[];
     practice_city?: string;
     practice_state?: string;
-    is_accepting_patients?: boolean;
     insurance?: string[];
     verification_status?: string;
     bio?: string;
@@ -35,7 +34,6 @@ function mapToProvider(data: DBProvider): Provider {
         image: data.profile_photo_url || '',
         specialties: data.specialties || [],
         location: `${data.practice_city || ''}, ${data.practice_state || ''}`.replace(/^, |, $/g, ''),
-        availability: data.is_accepting_patients ? 'Available' : 'Full',
         insurance: data.insurance || [],
         verified: data.verification_status === 'verified',
         bio: data.bio || '',

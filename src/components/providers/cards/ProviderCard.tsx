@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
-import { MapPin, Video, Users, Building2, Phone, Mail, Globe, MessageCircle, HelpCircle } from 'lucide-react';
+import { MapPin, Video, Building2, Phone, Mail, Globe, MessageCircle, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { hoverLift } from '@/lib/animations';
 import type { ProviderCardData } from '@/lib/providers/types';
@@ -185,19 +185,6 @@ const ProviderCardComponent: React.FC<ProviderCardProps> = ({ provider }) => {
           </div>
         )}
 
-        <div className="flex items-center gap-1.5">
-          {provider.is_accepting_patients ? (
-            <span className="flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400">
-              <Users size={13} />
-              {t('providers.card.accepting')}
-            </span>
-          ) : (
-            <span className="flex items-center gap-1 text-xs text-text-tertiary">
-              <Users size={13} />
-              {t('providers.card.not_accepting')}
-            </span>
-          )}
-        </div>
       </div>
 
       {/* Cultural Competencies */}
@@ -287,8 +274,7 @@ export const ProviderCard = React.memo(
     prev.provider.id === next.provider.id &&
     prev.provider.tier === next.provider.tier &&
     prev.provider.status === next.provider.status &&
-    prev.provider.verified_at === next.provider.verified_at &&
-    prev.provider.is_accepting_patients === next.provider.is_accepting_patients
+    prev.provider.verified_at === next.provider.verified_at
 );
 
 export default ProviderCard;

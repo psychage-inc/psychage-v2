@@ -173,7 +173,6 @@ export function mapNPIToProvider(
     source: 'npi_registry',
     display_name: `${result.basic.first_name} ${result.basic.last_name}`,
     credentials_suffix: result.basic.credential || null,
-    is_accepting_patients: true,
     telehealth_available: false,
     in_person_available: true,
   };

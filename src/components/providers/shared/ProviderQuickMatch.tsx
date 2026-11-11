@@ -48,7 +48,6 @@ export const ProviderQuickMatch: React.FC<ProviderQuickMatchProps> = ({
     searchProviders({
       specialty_slugs: specialtySlugs,
       per_page: maxProviders,
-      accepting_patients: true,
     })
       .then(result => {
         if (mountedRef.current) setProviders(result.providers.slice(0, maxProviders));

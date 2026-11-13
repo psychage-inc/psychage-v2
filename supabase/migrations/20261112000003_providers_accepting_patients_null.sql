@@ -8,7 +8,12 @@
 --
 -- The bulk update must not stamp a fake edit time on every row, so the
 -- updated_at trigger is disabled for this statement only.
+--
+-- The UPDATE touches ~423k rows and exceeds the role's 2-minute
+-- statement_timeout, so the limit is raised for this transaction only.
 -- =============================================================================
+
+SET LOCAL statement_timeout = '30min';
 
 ALTER TABLE public.providers ALTER COLUMN is_accepting_patients DROP DEFAULT;
 

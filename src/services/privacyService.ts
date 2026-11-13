@@ -30,8 +30,6 @@ export interface PrivacySettings {
         analytics: boolean;
         marketing: boolean;
     };
-    deletion_scheduled_at: string | null;
-    deleted_at: string | null;
 }
 
 export const privacyService = {
@@ -92,100 +90,6 @@ export const privacyService = {
     },
 
     /**
-     * Request account deletion with 30-day grace period.
-     * Sets soft-delete flags on the profile and creates a DSAR record.
-     */
-    requestAccountDeletion: async (): Promise<{ success: boolean; scheduledAt: string | null }> => {
-        try {
-            const { data: { user } } = await supabase.auth.getUser();
-            if (!user) return { success: false, scheduledAt: null };
-
-            const deletionDate = new Date();
-            deletionDate.setDate(deletionDate.getDate() + 30);
-            const scheduledAt = deletionDate.toISOString();
-
-            // Soft-delete the profile
-            const { error: profileError } = await supabase
-                .from('profiles')
-                .update({
-                    deleted_at: new Date().toISOString(),
-                    deletion_scheduled_at: scheduledAt,
-                })
-                .eq('id', user.id);
-
-            if (profileError) {
-                console.error('Error soft-deleting profile:', profileError);
-                return { success: false, scheduledAt: null };
-            }
-
-            // Create DSAR record
-            const { error: dsarError } = await supabase
-                .from('dsar_requests')
-                .insert({
-                    user_id: user.id,
-                    request_type: 'deletion',
-                    status: 'pending',
-                    requested_at: new Date().toISOString(),
-                    expires_at: scheduledAt,
-                    notes: '30-day grace period. User can cancel by logging in.',
-                });
-
-            if (dsarError) {
-                console.error('Error creating deletion DSAR:', dsarError);
-            }
-
-            return { success: true, scheduledAt };
-        } catch (error) {
-            console.error('Failed to request account deletion:', error);
-            return { success: false, scheduledAt: null };
-        }
-    },
-
-    /**
-     * Cancel a pending account deletion (within the 30-day grace period).
-     */
-    cancelDeletion: async (): Promise<boolean> => {
-        try {
-            const { data: { user } } = await supabase.auth.getUser();
-            if (!user) return false;
-
-            // Clear soft-delete flags
-            const { error: profileError } = await supabase
-                .from('profiles')
-                .update({
-                    deleted_at: null,
-                    deletion_scheduled_at: null,
-                })
-                .eq('id', user.id);
-
-            if (profileError) {
-                console.error('Error cancelling deletion:', profileError);
-                return false;
-            }
-
-            // Cancel the DSAR request
-            const { error: dsarError } = await supabase
-                .from('dsar_requests')
-                .update({
-                    status: 'cancelled',
-                    notes: 'Cancelled by user within grace period.',
-                })
-                .eq('user_id', user.id)
-                .eq('request_type', 'deletion')
-                .eq('status', 'pending');
-
-            if (dsarError) {
-                console.error('Error cancelling deletion DSAR:', dsarError);
-            }
-
-            return true;
-        } catch (error) {
-            console.error('Failed to cancel deletion:', error);
-            return false;
-        }
-    },
-
-    /**
      * Get all DSAR request history for the current user.
      */
     getDSARHistory: async (): Promise<DSARRequest[]> => {
@@ -221,7 +125,7 @@ export const privacyService = {
 
             const { data, error } = await supabase
                 .from('profiles')
-                .select('cookie_consent, deletion_scheduled_at, deleted_at')
+                .select('cookie_consent')
                 .eq('id', user.id)
                 .single();
 
@@ -232,8 +136,6 @@ export const privacyService = {
 
             return {
                 cookie_consent: data.cookie_consent ?? { essential: true, analytics: false, marketing: false },
-                deletion_scheduled_at: data.deletion_scheduled_at,
-                deleted_at: data.deleted_at,
             };
         } catch (error) {
             console.error('Failed to fetch privacy settings:', error);

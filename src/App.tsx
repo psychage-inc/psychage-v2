@@ -17,7 +17,6 @@ import { ProviderLookupsProvider } from './context/ProviderLookupsContext';
 import SkipLink from './components/ui/SkipLink';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import RoleGuard from './components/auth/RoleGuard';
-import DeletionScheduledBanner from './components/account/DeletionScheduledBanner';
 import { adminUrl } from './lib/urls';
 import { lazyWithRetry } from './lib/lazyWithRetry';
 import { notificationService } from './lib/notifications/notificationService';
@@ -212,10 +211,6 @@ const App: React.FC = () => {
                     <div className="min-h-[100dvh] bg-background font-sans text-text-primary overflow-x-clip flex flex-col transition-colors duration-300">
                             {!isPhone && <Navigation />}
                             {isPhone && <MobileCrisisHeader />}
-                            {/* AUTH-021: app-wide pending-deletion banner. Renders nothing
-                                when no deletion is scheduled. */}
-                            <DeletionScheduledBanner />
-
                             <main id="main-content" className={`flex-grow w-full outline-none min-h-[100dvh] ${location.pathname === '/tools/mindmate' ? '' : 'pb-24'} max-sm:pt-14 ${location.pathname !== '/' ? 'sm:pt-20' : ''}`} tabIndex={-1}>
                                 <ErrorBoundary
                                     resetKeys={[location.pathname]}

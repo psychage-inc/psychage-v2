@@ -97,7 +97,6 @@ export const adminSidebarItems = [
     { icon: BarChart3, label: 'Analytics', path: '/admin/analytics' },
     { icon: Users, label: 'Providers', path: '/admin/providers' },
     { icon: UserCircle, label: 'Users', path: '/admin/users' },
-    { icon: BookOpen, label: 'Content', path: '/admin/content' },
     { icon: FileText, label: 'Reports', path: '/admin/reports' },
     { icon: ShieldAlert, label: 'Audit Logs', path: '/admin/audit' },
     { icon: Settings, label: 'Settings', path: '/admin/settings' },

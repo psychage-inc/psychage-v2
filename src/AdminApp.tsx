@@ -14,8 +14,6 @@ const UpdatePasswordPage = React.lazy(() => import('./pages/auth/UpdatePasswordP
 // Admin layout + pages
 const AdminLayoutV2 = React.lazy(() => import('./components/admin/AdminLayout'));
 const AdminDashboardV2 = React.lazy(() => import('./pages/admin/v2/Dashboard'));
-const AdminContentList = React.lazy(() => import('./pages/admin/v2/content/ContentList'));
-const AdminContentEditor = React.lazy(() => import('./pages/admin/v2/content/ContentEditor'));
 const AdminProviderList = React.lazy(() => import('./pages/admin/v2/providers/ProviderList'));
 const AdminApplicationReview = React.lazy(() => import('./pages/admin/v2/providers/ApplicationReview'));
 const AdminProviderEditor = React.lazy(() => import('./pages/admin/v2/providers/ProviderEditor'));
@@ -111,10 +109,6 @@ const AdminApp: React.FC = () => {
               <Route path="articles/clusters" element={<AdminTopicClusters />} />
               <Route path="articles/:id" element={<AdminArticleDetail />} />
               <Route path="articles/:id/breakdown" element={<AdminArticleBreakdown />} />
-              {/* Content */}
-              <Route path="content" element={<AdminContentList />} />
-              <Route path="content/new" element={<AdminContentEditor />} />
-              <Route path="content/:id/edit" element={<AdminContentEditor />} />
               {/* Providers */}
               <Route path="providers" element={<AdminProviderList />} />
               <Route path="providers/new" element={<AdminProviderEditor />} />

@@ -152,10 +152,6 @@ export const breadcrumbConfig: Record<string, BreadcrumbItem[]> = {
         { label: 'Admin Dashboard', href: '/admin' },
         { label: 'Analytics' }
     ],
-    '/admin/content': [
-        { label: 'Admin Dashboard', href: '/admin' },
-        { label: 'Content' }
-    ],
     '/admin/settings': [
         { label: 'Admin Dashboard', href: '/admin' },
         { label: 'Settings' }

@@ -1,7 +1,8 @@
 -- =============================================================================
--- HELD — do not move into migrations/ until the mobile app enforces a minimum
--- version that no longer sends p_latitude, p_longitude, p_radius_miles or
--- p_accepting. See README.md.
+-- Was held in supabase/migrations_held/ until the mobile app enforced a
+-- minimum version that no longer sends p_latitude, p_longitude,
+-- p_radius_miles or p_accepting. Mobile 1.1.0 does, and 20261114000004
+-- makes 1.1.0 the minimum.
 --
 -- search_providers_v3 — remove the ignored parameters from the signature.
 -- 20261112000002 made them no-ops; this drops them. Behaviour is identical.

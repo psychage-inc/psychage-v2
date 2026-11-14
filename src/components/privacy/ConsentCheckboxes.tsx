@@ -5,7 +5,6 @@ export interface ConsentState {
     termsAccepted: boolean;
     privacyAccepted: boolean;
     dataProcessingAccepted: boolean;
-    ageVerified: boolean;
     newsletterOptIn: boolean;
 }
 
@@ -61,19 +60,6 @@ const ConsentCheckboxes: React.FC<ConsentCheckboxesProps> = ({ consent, onChange
                 </span>
             </ConsentCheckbox>
 
-            {/* Age verification — required */}
-            <ConsentCheckbox
-                id="consent-age"
-                checked={consent.ageVerified}
-                onChange={(v) => update('ageVerified', v)}
-                required
-                textSize={textSize}
-            >
-                <span className={labelSize}>
-                    I confirm that I am <strong>18 years of age or older</strong>.
-                </span>
-            </ConsentCheckbox>
-
             {/* Newsletter — optional, NOT pre-checked */}
             <ConsentCheckbox
                 id="consent-newsletter"
@@ -122,14 +108,13 @@ const ConsentCheckbox: React.FC<ConsentCheckboxProps> = ({
 );
 
 export const isConsentValid = (consent: ConsentState): boolean => {
-    return consent.termsAccepted && consent.dataProcessingAccepted && consent.ageVerified;
+    return consent.termsAccepted && consent.dataProcessingAccepted;
 };
 
 export const defaultConsentState: ConsentState = {
     termsAccepted: false,
     privacyAccepted: false,
     dataProcessingAccepted: false,
-    ageVerified: false,
     newsletterOptIn: false,
 };
 

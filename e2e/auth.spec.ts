@@ -1,4 +1,11 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, type Page } from '@playwright/test';
+
+// Compliance item 5: the signup form sits behind the birth-year age gate.
+async function gotoSignupPastAgeGate(page: Page) {
+    await page.goto('/signup');
+    await page.getByLabel('What year were you born?').selectOption('1990');
+    await page.getByRole('button', { name: 'Continue' }).click();
+}
 
 test.describe('Authentication Flows', () => {
     test.describe('Login Page', () => {
@@ -55,7 +62,7 @@ test.describe('Authentication Flows', () => {
 
     test.describe('Signup Page', () => {
         test('should display signup form', async ({ page }) => {
-            await page.goto('/signup');
+            await gotoSignupPastAgeGate(page);
 
             await expect(page.getByRole('heading', { name: /create your account/i })).toBeVisible();
             await expect(page.locator('#displayName')).toBeVisible();
@@ -66,7 +73,7 @@ test.describe('Authentication Flows', () => {
         });
 
         test('should allow switching between patient and provider', async ({ page }) => {
-            await page.goto('/signup');
+            await gotoSignupPastAgeGate(page);
 
             const patientButton = page.getByRole('button', { name: /i am an individual/i });
             const providerButton = page.getByRole('button', { name: /i'm a provider/i });
@@ -82,7 +89,7 @@ test.describe('Authentication Flows', () => {
         });
 
         test('should validate password requirements', async ({ page }) => {
-            await page.goto('/signup');
+            await gotoSignupPastAgeGate(page);
 
             const passwordInput = page.locator('#password');
 
@@ -100,7 +107,7 @@ test.describe('Authentication Flows', () => {
         });
 
         test('should show error when passwords do not match', async ({ page }) => {
-            await page.goto('/signup');
+            await gotoSignupPastAgeGate(page);
 
             await page.locator('#displayName').fill('Test User');
             await page.locator('#email').fill('test@example.com');
@@ -108,7 +115,6 @@ test.describe('Authentication Flows', () => {
             await page.locator('#confirmPassword').fill('differentpassword');
             await page.locator('#consent-terms').check();
             await page.locator('#consent-data').check();
-            await page.locator('#consent-age').check();
 
             await page.getByRole('button', { name: /create account/i }).click();
 
@@ -116,7 +122,7 @@ test.describe('Authentication Flows', () => {
         });
 
         test('should require terms acceptance', async ({ page }) => {
-            await page.goto('/signup');
+            await gotoSignupPastAgeGate(page);
 
             await page.locator('#displayName').fill('Test User');
             await page.locator('#email').fill('test@example.com');

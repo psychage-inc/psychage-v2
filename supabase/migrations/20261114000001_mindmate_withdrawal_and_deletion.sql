@@ -21,7 +21,8 @@
 --      navigator_saved_results, and writes an account_deletion_log row
 --      (sha-256 of the user id, timestamp, scope).
 --    - consent_log rows stay, unlinked (existing ON DELETE SET NULL), as the
---      record of what was agreed to.
+--      record of what was agreed to. Their ip_address and user_agent are set
+--      to null first; the rest of each row is kept.
 -- =============================================================================
 
 -- 1. consent_log: MindMate consent ------------------------------------------
@@ -138,6 +139,12 @@ BEGIN
   DELETE FROM public.check_ins               WHERE user_id = uid;
   DELETE FROM public.audit_events            WHERE user_id = uid;
 
+  -- Consent rows are kept as the record of what was agreed to, without the
+  -- IP address and user agent.
+  UPDATE public.consent_log
+  SET ip_address = NULL, user_agent = NULL
+  WHERE user_id = uid;
+
   INSERT INTO public.account_deletion_log (user_id_hash, scope)
   VALUES (
     encode(sha256(convert_to(uid::text, 'UTF8')), 'hex'),
@@ -145,7 +152,8 @@ BEGIN
       'auth_user', 'profile', 'mindmate_conversations', 'mindmate_messages',
       'navigator_history', 'navigator_saved_results', 'share_history',
       'therapist_links', 'journal_entries', 'check_ins', 'audit_events',
-      'all_cascading_user_data', 'consents_unlinked'
+      'all_cascading_user_data', 'consents_unlinked',
+      'consent_ip_address_and_user_agent_cleared'
     ]
   );
 

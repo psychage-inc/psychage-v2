@@ -23,9 +23,10 @@ async function seedUser(db: PGlite, uid: string) {
     insert into ai_messages(conversation_id, role, content)
       select id, 'user', 'I have been feeling low' from ai_conversations where user_id = '${uid}';
     ${USER_TABLES.map(t => `insert into ${t}(user_id) values ('${uid}');`).join('\n')}
-    insert into consent_log(user_id, consent_type, granted, version) values ('${uid}', 'terms_of_service', true, 'v1.0');
-    insert into consent_log(user_id, consent_type, granted, version, app_version)
-      values ('${uid}', 'mindmate', true, 'mm-consent-v1', 'web-test');
+    insert into consent_log(user_id, consent_type, granted, version, ip_address, user_agent)
+      values ('${uid}', 'terms_of_service', true, 'v1.0', '203.0.113.7', 'Mozilla/5.0 test');
+    insert into consent_log(user_id, consent_type, granted, version, app_version, ip_address, user_agent)
+      values ('${uid}', 'mindmate', true, 'mm-consent-v1', 'web-test', '203.0.113.7', 'Mozilla/5.0 test');
     insert into dsar_requests(user_id, request_type) values ('${uid}', 'export');
   `);
 }
@@ -125,6 +126,22 @@ describe('item 6: withdrawal and deletion', () => {
       expect(await count(db, `select count(*) from dsar_requests where user_id is null`)).toBe(1);
       expect(await count(db, `select count(*) from consent_log where user_id is null`)).toBe(2);
       expect(await count(db, `select count(*) from consent_log where user_id = '${ALICE}'`)).toBe(0);
+    });
+
+    it('clears ip_address and user_agent on the deleted user’s consent rows and keeps the rest', async () => {
+      await asUser(db, ALICE, 'select delete_account();');
+      const res = await db.query<{ consent_type: string; granted: boolean; version: string; ip_address: string | null; user_agent: string | null; granted_at: Date | null }>(
+        `select consent_type, granted, version, ip_address::text as ip_address, user_agent, granted_at from consent_log where user_id is null order by consent_type`,
+      );
+      expect(res.rows.map(r => [r.consent_type, r.granted, r.version, r.ip_address, r.user_agent])).toEqual([
+        ['mindmate', true, 'mm-consent-v1', null, null],
+        ['terms_of_service', true, 'v1.0', null, null],
+      ]);
+      expect(res.rows.every(r => r.granted_at !== null)).toBe(true);
+      // Bob's consent rows keep their IP address and user agent.
+      expect(await count(db, `select count(*) from consent_log where user_id = '${BOB}' and ip_address is not null and user_agent is not null`)).toBe(2);
+      const scope = await db.query<{ scope: string[] }>(`select scope from account_deletion_log`);
+      expect(scope.rows[0].scope).toContain('consent_ip_address_and_user_agent_cleared');
     });
 
     it('throws without a session and deletes nothing', async () => {

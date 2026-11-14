@@ -2,7 +2,7 @@ import { useState, useCallback, useRef } from 'react';
 import type { ChatMessage, ChatResponseMeta, StreamingState } from '../types/chat.types';
 import * as chatService from '../services/chatService';
 import { SafetyReplacementError } from '../services/chatService';
-import { MindMateUnavailableError } from '../services/errors';
+import { MindMateUnavailableError, isConsentRequiredError } from '../services/errors';
 
 interface UseChatReturn {
   messages: ChatMessage[];
@@ -17,7 +17,7 @@ interface UseChatReturn {
   stopStreaming: () => void;
 }
 
-export function useChat(): UseChatReturn {
+export function useChat(onConsentLost: () => void = () => {}): UseChatReturn {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [streamingState, setStreamingState] = useState<StreamingState>('idle');
   const [activeConversationId, setActiveConversationId] = useState<string | null>(null);
@@ -56,9 +56,10 @@ export function useChat(): UseChatReturn {
       abortRef.current = controller;
 
       try {
-        // Build full conversation history for the API
+        // Build full conversation history for the API. Crisis turns (the
+        // flagged user message and the crisis text) are never sent back.
         const chatHistory = messages
-          .filter((m) => m.content.trim())
+          .filter((m) => m.content.trim() && !m.flagged && m.safetyLevel !== 'CRISIS')
           .map((m) => ({ role: m.role, content: m.content }));
         chatHistory.push({ role: 'user' as const, content: content.trim() });
 
@@ -83,16 +84,15 @@ export function useChat(): UseChatReturn {
         }
 
         // Mark streaming complete with real metadata from the API
+        const meta = responseMeta as ChatResponseMeta | null;
         setMessages((prev) =>
-          prev.map((m) =>
-            m.id === assistantId
-              ? {
-                  ...m,
-                  isStreaming: false,
-                  safetyLevel: responseMeta?.safetyLevel,
-                }
-              : m,
-          ),
+          prev.map((m) => {
+            if (m.id === assistantId) {
+              return { ...m, isStreaming: false, safetyLevel: meta?.safetyLevel };
+            }
+            if (m.id === userMessage.id && meta?.isCrisis) return { ...m, flagged: true };
+            return m;
+          }),
         );
 
         setStreamingState('idle');
@@ -105,6 +105,14 @@ export function useChat(): UseChatReturn {
             ),
           );
           setStreamingState('idle');
+          return;
+        }
+
+        // No current consent: back to the consent screen; the message was not sent.
+        if (isConsentRequiredError(err)) {
+          setMessages((prev) => prev.filter((m) => m.id !== assistantId && m.id !== userMessage.id));
+          setStreamingState('idle');
+          onConsentLost();
           return;
         }
 
@@ -164,7 +172,7 @@ export function useChat(): UseChatReturn {
         );
       }
     },
-    [isStreaming, activeConversationId, messages],
+    [isStreaming, activeConversationId, messages, onConsentLost],
   );
 
   const retryLastMessage = useCallback(async () => {

@@ -70,7 +70,7 @@ const LegalPage: React.FC<LegalPageProps> = ({ type }) => {
                                 <li>Fulfill and manage purchases, orders, payments, and other transactions related to the Site.</li>
                             </ul>
 
-                            <h3>4. Health Data Privacy</h3>
+                            <h3 id="health-data">4. Health Data Privacy</h3>
                             <p>
                                 Any health-related data entered into tools like the &ldquo;Clarity Score&rdquo; or &ldquo;Mood Journal&rdquo; is stored locally on your device or encrypted with industry-standard protocols if an account is created. We do not sell your health data to third parties.
                             </p>

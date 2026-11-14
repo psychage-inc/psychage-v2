@@ -7,7 +7,7 @@
 
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { createClient } from '@supabase/supabase-js';
-import { classifyInputSafety, generateCrisisResponse, validateOutputSafety } from '../../src/lib/ai/safety';
+import { classifyInputSafety, generateCrisisResponse, matchesCrisisKeywords, validateOutputSafety } from '../../src/lib/ai/safety';
 import { sanitizeClientMessages } from '../../src/lib/ai/sanitizeMessages';
 import { splitAtSentenceBoundary } from '../../src/lib/ai/streamSafety';
 import { AnthropicProvider, SYSTEM_PROMPT } from '../../src/lib/ai/llm';
@@ -103,13 +103,44 @@ export default async function handler(
     // role to the model; the server prompt is the only system message (B3-1).
     const safeMessages = sanitizeClientMessages(messages);
 
-    // Initialize Supabase admin client (auth validation)
+    // Generate or use provided session ID
+    const sessionId = providedSessionId || generateSessionId();
+
+    // Crisis resources for the user's region: a validated client-supplied
+    // region wins, else the Vercel geo header, else the international set —
+    // never a silent US default (B3/C-2).
+    const crisisReply = () => {
+      const headerCountry = req.headers['x-vercel-ip-country'];
+      const crisisRegion =
+        [clientRegion, typeof headerCountry === 'string' ? headerCountry : undefined]
+          .map((c) => (typeof c === 'string' ? c.toUpperCase() : undefined))
+          .find((c) => c && getCountryEntry(c)) ?? 'XX';
+      return res.status(200).json({
+        message: generateCrisisResponse(crisisRegion, 'en'),
+        sessionId,
+        safetyLevel: 'CRISIS' as SafetyLevel,
+        isCrisis: true,
+      });
+    };
+
+    // ========================================================================
+    // 1. Keyword crisis check — no model call, before auth, so signed-out
+    //    and unconsented requests also get the crisis text.
+    // ========================================================================
+
+    if (matchesCrisisKeywords(userMessage.content)) {
+      return crisisReply();
+    }
+
+    // Initialize Supabase admin client (auth validation, consent gate)
     const supabase = createClient(
       getRequiredEnv('VITE_SUPABASE_URL'),
       getRequiredEnv('SUPABASE_SERVICE_ROLE_KEY')
     );
 
-    // Auth gate — require a valid Supabase JWT
+    // ========================================================================
+    // 2. Auth — require a valid Supabase JWT
+    // ========================================================================
     const authHeader = req.headers.authorization;
     const token = typeof authHeader === 'string' && authHeader.startsWith('Bearer ')
       ? authHeader.slice(7).trim()
@@ -125,8 +156,24 @@ export default async function handler(
     }
     const user = authData.user;
 
-    // Generate or use provided session ID
-    const sessionId = providedSessionId || generateSessionId();
+    // ========================================================================
+    // 3. Consent gate — no MindMate request without a granted, non-withdrawn
+    //    consent at the current text version (compliance item 5).
+    // ========================================================================
+
+    const { data: hasConsent, error: consentError } = await supabase.rpc(
+      'has_current_mindmate_consent',
+      { p_user_id: user.id },
+    );
+    if (consentError) {
+      throw new Error(`MindMate consent check failed: ${consentError.message}`);
+    }
+    if (hasConsent !== true) {
+      return res.status(403).json({
+        error: 'MindMate consent required',
+        code: 'CONSENT_REQUIRED',
+      });
+    }
 
     // Rate limit check (per-user)
     const rateLimit = checkRateLimit(user.id);
@@ -141,7 +188,7 @@ export default async function handler(
     const llmProvider = new AnthropicProvider(getRequiredEnv('ANTHROPIC_API_KEY'));
 
     // ========================================================================
-    // LAYER 1: Input Safety Check
+    // 4. Classifier (input safety check)
     // ========================================================================
 
     const safetyCheck = await classifyInputSafety(
@@ -155,22 +202,7 @@ export default async function handler(
     // ========================================================================
 
     if (safetyCheck.level === 'CRISIS') {
-      // Resolve the user's region for crisis resources: a validated client-supplied
-      // region wins, else the Vercel geo header, else the international set — never
-      // a silent US default (B3/C-2).
-      const headerCountry = req.headers['x-vercel-ip-country'];
-      const crisisRegion =
-        [clientRegion, typeof headerCountry === 'string' ? headerCountry : undefined]
-          .map((c) => (typeof c === 'string' ? c.toUpperCase() : undefined))
-          .find((c) => c && getCountryEntry(c)) ?? 'XX';
-      const crisisContent = generateCrisisResponse(crisisRegion, 'en');
-
-      return res.status(200).json({
-        message: crisisContent,
-        sessionId,
-        safetyLevel: 'CRISIS' as SafetyLevel,
-        isCrisis: true,
-      });
+      return crisisReply();
     }
 
     // ========================================================================

@@ -79,6 +79,16 @@ const HARMFUL_REQUEST_KEYWORDS: RegExp[] = [
   /\b(most\s*(effective|painless)\s*(way|method)\s*to\s*(die|end))\b/i,
 ];
 
+/**
+ * Keyword-only crisis check, no model call. api/ai/chat.ts runs it before
+ * authentication so a crisis message always gets the crisis text, even when
+ * signed out or without MindMate consent.
+ */
+export function matchesCrisisKeywords(message: string): boolean {
+  const normalized = message.toLowerCase().trim();
+  return CRISIS_KEYWORDS.some((pattern) => pattern.test(normalized));
+}
+
 function keywordPreCheck(message: string): SafetyLevel | null {
   const normalized = message.toLowerCase().trim();
 

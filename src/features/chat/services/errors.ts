@@ -29,3 +29,21 @@ export class SafetyReplacementError extends Error {
     this.replacementText = replacementText;
   }
 }
+
+/**
+ * `MindMateConsentRequiredError` — the server rejected the request because the
+ * user has no current MindMate consent (403 CONSENT_REQUIRED, compliance
+ * item 5). The chat surface goes back to the consent screen.
+ */
+export class MindMateConsentRequiredError extends Error {
+  constructor() {
+    super('MindMate consent required');
+    this.name = 'MindMateConsentRequiredError';
+  }
+}
+
+/** True when `err` is a MindMateConsentRequiredError (name check survives chunk splits). */
+export function isConsentRequiredError(err: unknown): boolean {
+  return err instanceof MindMateConsentRequiredError ||
+    (err instanceof Error && err.name === 'MindMateConsentRequiredError');
+}

@@ -14,7 +14,8 @@ const supabase = vi.hoisted(() => ({
         : { data: { user: null }, error: { message: 'invalid' } },
     ),
   },
-  rpc: vi.fn(),
+  // The consent gate is the only database call; it passes for this user.
+  rpc: vi.fn(async () => ({ data: true, error: null })),
   from: vi.fn(),
 }));
 vi.mock('@supabase/supabase-js', () => ({ createClient: () => supabase }));
@@ -60,7 +61,10 @@ describe('MindMate data flow', () => {
 
     await handler(req, res);
 
-    expect(supabase.rpc).not.toHaveBeenCalled();
+    // Only the consent gate, with the user id and nothing derived from the message.
+    expect(supabase.rpc.mock.calls).toEqual([
+      ['has_current_mindmate_consent', { p_user_id: '00000000-0000-0000-0000-000000000001' }],
+    ]);
     expect(supabase.from).not.toHaveBeenCalled();
   });
 

@@ -10,7 +10,9 @@ import { resolveCountry, getPrimaryCrisisLine } from '@/lib/crisis';
 import { parseSSEStream } from '@/lib/ai/streaming';
 import StreamingCursor from '@/features/chat/components/StreamingCursor';
 import MindMateUnavailableCard from '@/features/chat/components/MindMateUnavailableCard';
-import { MindMateUnavailableError } from '@/features/chat/services/errors';
+import { MindMateUnavailableError, MindMateConsentRequiredError, isConsentRequiredError } from '@/features/chat/services/errors';
+import { MindMateConsentGate, MindMateGreeting } from '@/components/ai/MindMateConsentGate';
+import { MINDMATE_SESSION_GREETING } from '@/lib/ai/mindmateConsent';
 import AuthModal from '@/components/auth/AuthModal';
 import { MINDMATE_HISTORY_KEY, MINDMATE_SESSION_KEY } from '@/services/mindmateDataService';
 import type { ProviderResult } from '@/lib/ai/types';
@@ -20,6 +22,8 @@ interface Message {
     sender: 'user' | 'ai';
     text: string;
     type?: 'text' | 'crisis' | 'suggestion' | 'unavailable';
+    /** A user message the server answered with crisis text. Never sent back to the model. */
+    flagged?: boolean;
     isStreaming?: boolean;
     suggestions?: { label: string; action: string }[];
     providers?: ProviderResult[];
@@ -37,10 +41,11 @@ function getOrCreateSessionId(): string {
     return sessionId;
 }
 
+// Start of every session (compliance item 5). Rendered by MindMateGreeting.
 const INIT_MESSAGE: Message = {
     id: 'init',
     sender: 'ai',
-    text: "Hi! I'm Psychage AI, your mental health education companion. How can I help you today?",
+    text: MINDMATE_SESSION_GREETING,
     type: 'text'
 };
 
@@ -68,8 +73,9 @@ const MindMate: React.FC = () => {
     const [messages, setMessages] = useState<Message[]>(() => {
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved) {
+            // Saved history never carries its own greeting: every session starts with the current one.
             // eslint-disable-next-line no-empty
-            try { return JSON.parse(saved); } catch { }
+            try { return [INIT_MESSAGE, ...(JSON.parse(saved) as Message[]).filter(m => m.id !== 'init')]; } catch { }
         }
         return [INIT_MESSAGE];
     });
@@ -78,6 +84,8 @@ const MindMate: React.FC = () => {
     const [lastFailedInput, setLastFailedInput] = useState<string | null>(null);
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const abortControllerRef = useRef<AbortController | null>(null);
+    // Set by MindMateConsentGate: re-checks consent after a CONSENT_REQUIRED rejection.
+    const consentLostRef = useRef<() => void>(() => {});
 
     // Check consent and hydrate from Supabase when authenticated
     useEffect(() => {
@@ -132,12 +140,8 @@ const MindMate: React.FC = () => {
     useEffect(() => scrollToBottom(), [messages, isOpen, isTyping]);
 
     const clearChat = async () => {
-        setMessages([{
-            id: Date.now().toString(),
-            sender: 'ai',
-            text: "Memory cleared. I'm ready for a fresh start.",
-            type: 'text'
-        }]);
+        // A cleared chat is a new session: it starts with the greeting.
+        setMessages([INIT_MESSAGE]);
         localStorage.removeItem(STORAGE_KEY);
 
         // Also deactivate the Supabase conversation
@@ -186,9 +190,10 @@ const MindMate: React.FC = () => {
         abortControllerRef.current = controller;
 
         try {
-            // Build message history for the server-side API
+            // Build message history for the server-side API. Crisis turns (the
+            // flagged user message and the crisis text) are never sent back.
             const chatHistory = messages
-                .filter(m => m.id !== 'init')
+                .filter(m => m.id !== 'init' && m.type !== 'crisis' && !m.flagged)
                 .map(m => ({
                     role: m.sender === 'user' ? 'user' as const : 'assistant' as const,
                     content: m.text,
@@ -231,6 +236,10 @@ const MindMate: React.FC = () => {
                     // Fall through to the typed platform-failure path.
                 }
 
+                if (res.status === 403 && /CONSENT_REQUIRED/.test(bodyText)) {
+                    throw new MindMateConsentRequiredError();
+                }
+
                 if (parsedError) {
                     throw new Error(parsedError);
                 }
@@ -246,11 +255,15 @@ const MindMate: React.FC = () => {
             // ── JSON response (crisis / harmful / fallback) ──
             if (contentType.includes('application/json')) {
                 const data = await res.json();
+                const isCrisis = Boolean(data.isCrisis || data.safetyLevel === 'CRISIS');
+                if (isCrisis) {
+                    setMessages(prev => prev.map(m => (m.id === userMsg.id ? { ...m, flagged: true } : m)));
+                }
                 const aiMsg: Message = {
                     id: assistantMsgId,
                     sender: 'ai',
                     text: data.message || "I'm here for you, but I didn't catch that.",
-                    type: data.isCrisis || data.safetyLevel === 'CRISIS' ? 'crisis' : 'text',
+                    type: isCrisis ? 'crisis' : 'text',
                     providers: data.providerSuggestion?.providers,
                 };
                 setMessages(prev => [...prev, aiMsg]);
@@ -334,6 +347,14 @@ const MindMate: React.FC = () => {
         } catch (error) {
             // Abort is not an error
             if (error instanceof DOMException && error.name === 'AbortError') return;
+
+            // No current consent: back to the consent screen; the message was not sent.
+            if (isConsentRequiredError(error)) {
+                setMessages(prev => prev.filter(m => m.id !== userMsg.id && m.id !== assistantMsgId));
+                setInputText(currentInput);
+                consentLostRef.current();
+                return;
+            }
 
             // Platform-level failure: swap in the graceful card instead of raw
             // error text. `name` fallback guards against bundler-level class
@@ -473,129 +494,140 @@ const MindMate: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Messages — centered column */}
-                        <div className="relative z-10 flex-grow overflow-y-auto px-5 py-5 space-y-5 scroll-smooth" role="log" aria-live="polite" aria-label="Chat messages">
-                            {messages.map((msg) => (
-                                <motion.div
-                                    initial={{ opacity: 0, y: 8 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    key={msg.id}
-                                    className={`flex gap-3 ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
-                                >
-                                    {msg.sender === 'ai' && msg.type !== 'unavailable' && (
-                                        <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
-                                            <Sparkles size={12} className="text-primary" />
+                        <MindMateConsentGate compact onDecline={() => setIsOpen(false)}>
+                            {(onConsentLost) => {
+                                consentLostRef.current = onConsentLost;
+                                return (
+                                    <>
+                                {/* Messages — centered column */}
+                                <div className="relative z-10 flex-grow overflow-y-auto px-5 py-5 space-y-5 scroll-smooth" role="log" aria-live="polite" aria-label="Chat messages">
+                                    {messages.map((msg) => (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 8 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            key={msg.id}
+                                            className={`flex gap-3 ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+                                        >
+                                            {msg.sender === 'ai' && msg.type !== 'unavailable' && (
+                                                <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                                                    <Sparkles size={12} className="text-primary" />
+                                                </div>
+                                            )}
+                                            {msg.id === 'init' ? (
+                                                <MindMateGreeting className="max-w-[80%] pt-0.5" />
+                                            ) : msg.type === 'unavailable' ? (
+                                                <MindMateUnavailableCard className="flex-1" />
+                                            ) : (
+                                            <div className={`max-w-[80%] text-sm leading-relaxed ${msg.sender === 'user'
+                                                    ? 'bg-surface-active text-text-primary px-4 py-3 rounded-2xl rounded-br-md'
+                                                    : msg.type === 'crisis'
+                                                        ? 'bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-200 border border-red-200 dark:border-red-800 px-4 py-3 rounded-2xl'
+                                                        : 'text-text-secondary pt-0.5'
+                                                }`}>
+                                                {msg.type === 'crisis' && (
+                                                    <div className="flex items-center gap-2 font-bold mb-2 text-red-600 dark:text-red-400">
+                                                        <AlertTriangle size={16} /> Crisis Support
+                                                    </div>
+                                                )}
+                                                {msg.text}
+                                                {msg.isStreaming && <StreamingCursor />}
+
+                                                {msg.type === 'crisis' && (
+                                                    <a href={`tel:${crisisLine.phone.replace(/[^0-9+]/g, '')}`} className="mt-3 flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg text-xs font-bold transition-colors w-full justify-center">
+                                                        <Phone size={14} /> Call {crisisLine.label} ({crisisLine.phone})
+                                                    </a>
+                                                )}
+
+                                                {msg.providers && msg.providers.length > 0 && (
+                                                    <div className="mt-3 space-y-1.5">
+                                                        <p className="text-xs font-bold text-text-tertiary uppercase tracking-wider mb-2">
+                                                            Suggested Providers
+                                                        </p>
+                                                        {msg.providers.slice(0, 5).map(p => (
+                                                            <Link
+                                                                key={p.id}
+                                                                to={`/providers/${p.id}`}
+                                                                className="flex items-center gap-3 px-3 py-2.5 bg-surface-hover hover:bg-surface-active rounded-xl transition-colors group"
+                                                            >
+                                                                <div className="w-8 h-8 rounded-lg bg-teal-500/10 flex items-center justify-center shrink-0">
+                                                                    <span className="text-xs font-bold text-teal-600 dark:text-teal-400">
+                                                                        {p.name.charAt(0)}
+                                                                    </span>
+                                                                </div>
+                                                                <div className="flex-1 min-w-0">
+                                                                    <div className="text-xs font-medium text-text-primary truncate">
+                                                                        {p.name}{p.credentials ? `, ${p.credentials}` : ''}
+                                                                    </div>
+                                                                    <div className="text-xs text-text-tertiary truncate">
+                                                                        {p.specialties.slice(0, 2).join(', ')}
+                                                                        {p.city ? ` · ${p.city}${p.state ? `, ${p.state}` : ''}` : ''}
+                                                                    </div>
+                                                                </div>
+                                                                <ChevronRight size={12} className="text-text-tertiary shrink-0 group-hover:text-teal-500 transition-colors" />
+                                                            </Link>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                            </div>
+                                            )}
+                                        </motion.div>
+                                    ))}
+                                    {isTyping && !messages.some(m => m.isStreaming && m.text) && (
+                                        <div className="flex gap-3">
+                                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                                                <Sparkles size={12} className="text-primary" />
+                                            </div>
+                                            <div className="flex gap-1.5 items-center pt-1 text-xs text-text-tertiary">
+                                                <span className="inline-flex gap-1">
+                                                    <span className="w-1.5 h-1.5 bg-teal-400 rounded-full animate-bounce" />
+                                                    <span className="w-1.5 h-1.5 bg-teal-400 rounded-full animate-bounce [animation-delay:150ms]" />
+                                                    <span className="w-1.5 h-1.5 bg-teal-400 rounded-full animate-bounce [animation-delay:300ms]" />
+                                                </span>
+                                            </div>
                                         </div>
                                     )}
-                                    {msg.type === 'unavailable' ? (
-                                        <MindMateUnavailableCard className="flex-1" />
-                                    ) : (
-                                    <div className={`max-w-[80%] text-sm leading-relaxed ${msg.sender === 'user'
-                                            ? 'bg-surface-active text-text-primary px-4 py-3 rounded-2xl rounded-br-md'
-                                            : msg.type === 'crisis'
-                                                ? 'bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-200 border border-red-200 dark:border-red-800 px-4 py-3 rounded-2xl'
-                                                : 'text-text-secondary pt-0.5'
-                                        }`}>
-                                        {msg.type === 'crisis' && (
-                                            <div className="flex items-center gap-2 font-bold mb-2 text-red-600 dark:text-red-400">
-                                                <AlertTriangle size={16} /> Crisis Support
-                                            </div>
-                                        )}
-                                        {msg.text}
-                                        {msg.isStreaming && <StreamingCursor />}
+                                    <div ref={messagesEndRef} />
+                                </div>
 
-                                        {msg.type === 'crisis' && (
-                                            <a href={`tel:${crisisLine.phone.replace(/[^0-9+]/g, '')}`} className="mt-3 flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg text-xs font-bold transition-colors w-full justify-center">
-                                                <Phone size={14} /> Call {crisisLine.label} ({crisisLine.phone})
-                                            </a>
-                                        )}
+                                {/* Retry bar */}
+                                {lastFailedInput && !isTyping && (
+                                    <div className="relative z-10 px-4 pt-2">
+                                        <button
+                                            onClick={handleRetry}
+                                            className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 text-amber-700 dark:text-amber-300 rounded-xl text-xs font-medium hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-colors"
+                                        >
+                                            <AlertTriangle size={12} />
+                                            Tap to retry your last message
+                                        </button>
+                                    </div>
+                                )}
 
-                                        {msg.providers && msg.providers.length > 0 && (
-                                            <div className="mt-3 space-y-1.5">
-                                                <p className="text-xs font-bold text-text-tertiary uppercase tracking-wider mb-2">
-                                                    Suggested Providers
-                                                </p>
-                                                {msg.providers.slice(0, 5).map(p => (
-                                                    <Link
-                                                        key={p.id}
-                                                        to={`/providers/${p.id}`}
-                                                        className="flex items-center gap-3 px-3 py-2.5 bg-surface-hover hover:bg-surface-active rounded-xl transition-colors group"
-                                                    >
-                                                        <div className="w-8 h-8 rounded-lg bg-teal-500/10 flex items-center justify-center shrink-0">
-                                                            <span className="text-xs font-bold text-teal-600 dark:text-teal-400">
-                                                                {p.name.charAt(0)}
-                                                            </span>
-                                                        </div>
-                                                        <div className="flex-1 min-w-0">
-                                                            <div className="text-xs font-medium text-text-primary truncate">
-                                                                {p.name}{p.credentials ? `, ${p.credentials}` : ''}
-                                                            </div>
-                                                            <div className="text-xs text-text-tertiary truncate">
-                                                                {p.specialties.slice(0, 2).join(', ')}
-                                                                {p.city ? ` · ${p.city}${p.state ? `, ${p.state}` : ''}` : ''}
-                                                            </div>
-                                                        </div>
-                                                        <ChevronRight size={12} className="text-text-tertiary shrink-0 group-hover:text-teal-500 transition-colors" />
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                        )}
-                                    </div>
-                                    )}
-                                </motion.div>
-                            ))}
-                            {isTyping && !messages.some(m => m.isStreaming && m.text) && (
-                                <div className="flex gap-3">
-                                    <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                                        <Sparkles size={12} className="text-primary" />
-                                    </div>
-                                    <div className="flex gap-1.5 items-center pt-1 text-xs text-text-tertiary">
-                                        <span className="inline-flex gap-1">
-                                            <span className="w-1.5 h-1.5 bg-teal-400 rounded-full animate-bounce" />
-                                            <span className="w-1.5 h-1.5 bg-teal-400 rounded-full animate-bounce [animation-delay:150ms]" />
-                                            <span className="w-1.5 h-1.5 bg-teal-400 rounded-full animate-bounce [animation-delay:300ms]" />
-                                        </span>
+                                {/* Input — clean border style */}
+                                <div className="relative z-10 px-4 pb-4 pt-2">
+                                    <div className="relative">
+                                        <input
+                                            type="text"
+                                            value={inputText}
+                                            onChange={(e) => setInputText(e.target.value)}
+                                            onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+                                            placeholder="Message Psychage AI..."
+                                            aria-label="Type a message to Psychage AI"
+                                            className="w-full pl-4 pr-12 py-3 bg-surface-hover border border-border rounded-2xl focus:ring-2 focus:ring-primary/30 focus:border-teal-400 outline-none text-sm transition-all dark:text-white placeholder:text-text-tertiary"
+                                        />
+                                        <button
+                                            onClick={handleSend}
+                                            disabled={!inputText.trim()}
+                                            aria-label="Send message"
+                                            className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-text-primary hover:bg-text-secondary text-surface rounded-xl disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                                        >
+                                            <Send size={14} />
+                                        </button>
                                     </div>
                                 </div>
-                            )}
-                            <div ref={messagesEndRef} />
-                        </div>
-
-                        {/* Retry bar */}
-                        {lastFailedInput && !isTyping && (
-                            <div className="relative z-10 px-4 pt-2">
-                                <button
-                                    onClick={handleRetry}
-                                    className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 text-amber-700 dark:text-amber-300 rounded-xl text-xs font-medium hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-colors"
-                                >
-                                    <AlertTriangle size={12} />
-                                    Tap to retry your last message
-                                </button>
-                            </div>
-                        )}
-
-                        {/* Input — clean border style */}
-                        <div className="relative z-10 px-4 pb-4 pt-2">
-                            <div className="relative">
-                                <input
-                                    type="text"
-                                    value={inputText}
-                                    onChange={(e) => setInputText(e.target.value)}
-                                    onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-                                    placeholder="Message Psychage AI..."
-                                    aria-label="Type a message to Psychage AI"
-                                    className="w-full pl-4 pr-12 py-3 bg-surface-hover border border-border rounded-2xl focus:ring-2 focus:ring-primary/30 focus:border-teal-400 outline-none text-sm transition-all dark:text-white placeholder:text-text-tertiary"
-                                />
-                                <button
-                                    onClick={handleSend}
-                                    disabled={!inputText.trim()}
-                                    aria-label="Send message"
-                                    className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-text-primary hover:bg-text-secondary text-surface rounded-xl disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
-                                >
-                                    <Send size={14} />
-                                </button>
-                            </div>
-                        </div>
+                                    </>
+                                );
+                            }}
+                        </MindMateConsentGate>
                     </motion.div>
                 )}
             </AnimatePresence>

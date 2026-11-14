@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { describe, it, expect, beforeAll, beforeEach, vi } from 'vitest';
 import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
@@ -49,6 +49,15 @@ vi.mock('../../../lib/auth/useTurnstile', () => ({
 
 import AuthModal from '../AuthModal';
 
+// Node >= 22 ships a global `localStorage` that shadows jsdom's and is
+// undefined without --localstorage-file. Point the global at jsdom's Storage.
+beforeAll(() => {
+    vi.stubGlobal('localStorage', (globalThis as unknown as { jsdom: { window: Window } }).jsdom.window.localStorage);
+});
+
+const UNDER_18_TEXT =
+    'Psychage accounts are for adults 18 and over. You can still read our free articles and watch our videos. If you need help now, call or text 988.';
+
 function renderModal() {
     return render(
         <MemoryRouter>
@@ -57,10 +66,20 @@ function renderModal() {
     );
 }
 
-function openModalInSignupView() {
-    renderModal();
+function switchToSignupView() {
     // The "Sign up" link at the bottom of the login view switches to signup.
     fireEvent.click(screen.getByRole('button', { name: 'Sign up' }));
+}
+
+function passAgeGate(birthYear = 1990) {
+    fireEvent.change(screen.getByLabelText('What year were you born?'), { target: { value: String(birthYear) } });
+    fireEvent.click(screen.getByRole('button', { name: 'Continue' }));
+}
+
+function openModalInSignupView() {
+    renderModal();
+    switchToSignupView();
+    passAgeGate();
 }
 
 function fillSignupForm() {
@@ -68,7 +87,7 @@ function fillSignupForm() {
     fireEvent.change(screen.getByLabelText('Email'), { target: { value: 'a@b.com' } });
     fireEvent.change(screen.getByLabelText('Password'), { target: { value: 'newpw1234' } });
     // Tick all required consent checkboxes (ToS, privacy, data
-    // processing, age verification). Newsletter is optional but is also
+    // processing). Newsletter is optional but is also
     // toggled — the assertion looks at the metadata payload, not the
     // newsletter flag.
     const checkboxes = screen.getAllByRole('checkbox');
@@ -88,6 +107,7 @@ describe('AuthModal — Turnstile (carryover)', () => {
         signInWithAppleMock.mockReset();
         turnstileState.token = null;
         turnstileState.resetSpy.mockReset();
+        localStorage.clear();
 
         signupMock.mockResolvedValue({ success: true });
     });
@@ -132,6 +152,7 @@ describe('AuthModal — Turnstile (carryover)', () => {
         expect(args[2]).toBe('Avery');             // displayName
         expect(args[3]).toBe('patient');           // role
         expect(args[4]).toMatchObject({ age_verified: true, consent_version: 'v1.0' });
+        expect(args[4]).not.toHaveProperty('age');
         expect(args[5]).toBe('tok-xyz');           // captchaToken
     });
 
@@ -161,5 +182,72 @@ describe('AuthModal — Turnstile (carryover)', () => {
         });
 
         await waitFor(() => expect(turnstileState.resetSpy).toHaveBeenCalledTimes(1));
+    });
+});
+
+describe('AuthModal — signup age gate (compliance item 5)', () => {
+    beforeEach(() => {
+        signupMock.mockReset();
+        signInWithGoogleMock.mockReset();
+        turnstileState.token = 'tok-gate';
+        localStorage.clear();
+        signupMock.mockResolvedValue({ success: true });
+    });
+
+    it('login view is not gated and keeps the Google button', () => {
+        renderModal();
+        expect(screen.queryByLabelText('What year were you born?')).not.toBeInTheDocument();
+        expect(screen.getByRole('button', { name: 'Google' })).toBeInTheDocument();
+    });
+
+    it('signup view shows only the age gate: no form, no Google signup, no age checkbox', () => {
+        renderModal();
+        switchToSignupView();
+
+        expect(screen.getByLabelText('What year were you born?')).toBeInTheDocument();
+        expect(screen.queryByLabelText('Full Name')).not.toBeInTheDocument();
+        expect(screen.queryByLabelText('Email')).not.toBeInTheDocument();
+        expect(screen.queryByRole('button', { name: /create account/i })).not.toBeInTheDocument();
+        expect(screen.queryByRole('button', { name: 'Google' })).not.toBeInTheDocument();
+        expect(screen.queryByText(/18 years of age/i)).not.toBeInTheDocument();
+    });
+
+    it('adult birth year reveals the signup form and Google button without an age checkbox', () => {
+        openModalInSignupView();
+
+        expect(screen.getByLabelText('Full Name')).toBeInTheDocument();
+        expect(screen.getByRole('button', { name: /create account/i })).toBeInTheDocument();
+        expect(screen.getByRole('button', { name: 'Google' })).toBeInTheDocument();
+        expect(screen.queryByText(/18 years of age/i)).not.toBeInTheDocument();
+        expect(document.getElementById('consent-age')).toBeNull();
+    });
+
+    it('under-18 birth year shows the exact notice, locks the device, and blocks signup', () => {
+        renderModal();
+        switchToSignupView();
+        passAgeGate(new Date().getFullYear() - 15);
+
+        expect(screen.getByText(UNDER_18_TEXT)).toBeInTheDocument();
+        expect(localStorage.getItem('psychage_age_gate_locked_until')).not.toBeNull();
+        expect(screen.queryByLabelText('Email')).not.toBeInTheDocument();
+        expect(screen.queryByRole('button', { name: 'Google' })).not.toBeInTheDocument();
+        expect(signupMock).not.toHaveBeenCalled();
+    });
+
+    it('while locked, reopening signup shows the notice instead of the gate', () => {
+        localStorage.setItem('psychage_age_gate_locked_until', String(Date.now() + 60_000));
+        renderModal();
+        switchToSignupView();
+
+        expect(screen.getByText(UNDER_18_TEXT)).toBeInTheDocument();
+        expect(screen.queryByLabelText('What year were you born?')).not.toBeInTheDocument();
+        expect(screen.queryByLabelText('Email')).not.toBeInTheDocument();
+    });
+
+    it('switching away from signup and back requires the gate again', () => {
+        openModalInSignupView();
+        fireEvent.click(screen.getByRole('button', { name: 'Log in' }));
+        switchToSignupView();
+        expect(screen.getByLabelText('What year were you born?')).toBeInTheDocument();
     });
 });

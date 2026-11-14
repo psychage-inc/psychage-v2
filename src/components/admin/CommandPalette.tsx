@@ -59,14 +59,6 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ open, onClose }) => {
         section: 'Navigation',
       },
       {
-        id: 'nav-content',
-        label: 'Go to Content',
-        icon: FileText,
-        action: () => navigate(adminPath('/content')),
-        keywords: ['pages', 'documents', 'guides'],
-        section: 'Navigation',
-      },
-      {
         id: 'nav-articles',
         label: 'Go to Articles',
         icon: Newspaper,
@@ -171,15 +163,6 @@ const CommandPalette: React.FC<CommandPaletteProps> = ({ open, onClose }) => {
         section: 'Navigation',
       },
       // Actions
-      {
-        id: 'action-new-content',
-        label: 'Create New Content',
-        description: 'Start a new article or page',
-        icon: Plus,
-        action: () => navigate(adminPath('/content/new')),
-        keywords: ['new', 'article', 'write', 'create'],
-        section: 'Actions',
-      },
       {
         id: 'action-applications',
         label: 'Review Applications',

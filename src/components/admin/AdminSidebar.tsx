@@ -38,7 +38,6 @@ interface SidebarItem {
 
 const sidebarItems: SidebarItem[] = [
   { icon: LayoutDashboard, label: 'Dashboard', path: adminPath('/dashboard') },
-  { icon: FileText, label: 'Content', path: adminPath('/content') },
   {
     icon: Newspaper,
     label: 'Articles',

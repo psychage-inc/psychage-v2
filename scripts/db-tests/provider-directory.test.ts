@@ -7,7 +7,7 @@ const STUB = 'scripts/db-tests/provider-directory.stub.sql';
 const V3 = 'supabase/migrations/20260429000001_search_providers_v3_geo_and_correctness.sql';
 const IGNORE_GEO = 'supabase/migrations/20261112000002_search_providers_v3_ignore_geo.sql';
 const ACCEPTING_NULL = 'supabase/migrations/20261112000003_providers_accepting_patients_null.sql';
-const HELD_DROP_PARAMS = 'supabase/migrations_held/search_providers_v3_drop_ignored_params.sql';
+const HELD_DROP_PARAMS = 'supabase/migrations/20261114000005_search_providers_v3_drop_ignored_params.sql';
 
 async function seed(db: PGlite) {
   await db.exec(`

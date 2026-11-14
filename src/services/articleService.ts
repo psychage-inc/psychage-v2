@@ -7,6 +7,7 @@
  */
 
 import { Article, Category, Citation } from '../types/models';
+import { CITATION_REPAIRED_SLUGS } from '@/data/articles/citationRepairedSlugs';
 import { supabase } from '../lib/supabaseClient';
 import { useMemo } from 'react';
 import { getCategoryTheme } from '../config/categoryThemes';
@@ -368,7 +369,9 @@ export const articleService = {
     getBySlug: async (slug: string): Promise<ArticleWithContent | undefined> => {
         // Check if mock data has rich JSX content for this slug
         const mockArticle = await getMockArticleBySlug(slug);
-        const hasRichMockContent = mockArticle && mockArticle.content && typeof mockArticle.content !== 'string';
+        // Citation-repaired articles: the database copy is authoritative.
+        const hasRichMockContent = mockArticle && mockArticle.content && typeof mockArticle.content !== 'string'
+            && !CITATION_REPAIRED_SLUGS.has(slug);
 
         // If mock data has JSX content (charts, tables, accordions etc.), prefer it
         // because Supabase only stores string content which loses all interactive components
@@ -421,8 +424,9 @@ export const articleService = {
             // Supabase getBySlug failed — fall through to mock
         }
 
-        // Final fallback to mock data
-        if (mockArticle) {
+        // Final fallback to mock data (never for citation-repaired articles:
+        // the bundled copy has the unrepaired citations).
+        if (mockArticle && !CITATION_REPAIRED_SLUGS.has(slug)) {
             return { ...mockArticle, image: resolveImageUrl(mockArticle.image), _source: 'mock' };
         }
 

@@ -1,6 +1,6 @@
 -- Minimal stand-in for the live schema touched by item 6 (constraint names and
 -- delete rules match production as of 2026-11-14).
-create role anon; create role authenticated;
+create role anon; create role authenticated; create role service_role;
 create schema auth;
 create table auth.users (id uuid primary key);
 -- auth.uid() reads the JWT subject the way Supabase does.

@@ -5,6 +5,7 @@ import WelcomeState from './components/WelcomeState';
 import MessageList from './components/MessageList';
 import ChatInput from './components/ChatInput';
 import CrisisOverlay from './components/CrisisOverlay';
+import { MindMateGreeting } from '@/components/ai/MindMateConsentGate';
 
 interface ChatMainProps {
   messages: ChatMessage[];
@@ -69,6 +70,11 @@ export default function ChatMain({
           </button>
         </div>
       )}
+
+      {/* Start of every session (compliance item 5) */}
+      <div className="px-4 pt-4 max-w-3xl w-full mx-auto">
+        <MindMateGreeting onHelpNow={() => setShowCrisis(true)} />
+      </div>
 
       {/* Content area */}
       {hasMessages ? (

@@ -14,6 +14,8 @@ export interface ChatMessage {
   actionCards?: ChatActionCard[];
   suggestedFollowUps?: string[];
   safetyLevel?: 'SAFE' | 'WATCH' | 'URGENT' | 'CRISIS';
+  /** A user message the server answered with crisis text. Never sent back to the model. */
+  flagged?: boolean;
   thinkingContent?: string;
   /** When set to 'unavailable', the assistant row renders MindMateUnavailableCard
    *  instead of the standard message body. Set by useChat's catch block when

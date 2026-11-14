@@ -6,6 +6,7 @@ import type {
   ConversationListItem,
 } from '../types/chat.types';
 import {
+  MindMateConsentRequiredError,
   MindMateUnavailableError,
   SafetyReplacementError,
 } from './errors';
@@ -83,6 +84,10 @@ export async function* sendMessage(
       }
     } catch {
       // Body wasn't JSON — fall through to the typed platform-failure path.
+    }
+
+    if (response.status === 403 && /CONSENT_REQUIRED/.test(bodyText)) {
+      throw new MindMateConsentRequiredError();
     }
 
     if (parsedError) {

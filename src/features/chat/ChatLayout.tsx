@@ -5,7 +5,12 @@ import { useChat } from './hooks/useChat';
 import ChatSidebar from './ChatSidebar';
 import ChatMain from './ChatMain';
 
-export default function ChatLayout() {
+interface ChatLayoutProps {
+  /** Re-check MindMate consent after the server rejects a request (CONSENT_REQUIRED). */
+  onConsentLost?: () => void;
+}
+
+export default function ChatLayout({ onConsentLost }: ChatLayoutProps = {}) {
   const {
     messages,
     isStreaming,
@@ -15,7 +20,7 @@ export default function ChatLayout() {
     startNewChat,
     loadConversation,
     stopStreaming,
-  } = useChat();
+  } = useChat(onConsentLost);
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const isDesktop = useMediaQuery('(min-width: 1024px)');

@@ -6,6 +6,11 @@
  * fallback path.
  */
 import { supabase } from '@/lib/supabaseClient';
+import {
+  MINDMATE_CONSENT_VERSION,
+  WEB_APP_VERSION,
+  type MindMateConsentStatus,
+} from '@/lib/ai/mindmateConsent';
 
 /** Browser copies of MindMate state. Cleared on deletion and sign-out. */
 export const MINDMATE_HISTORY_KEY = 'psychage_ai_chat_history';
@@ -16,16 +21,31 @@ export function clearMindMateLocalData(): void {
   sessionStorage.removeItem(MINDMATE_SESSION_KEY);
 }
 
-/** True when the signed-in user has a granted, non-withdrawn MindMate consent. */
-export async function hasActiveMindMateConsent(): Promise<boolean> {
-  const { count, error } = await supabase
-    .from('consent_log')
-    .select('id', { count: 'exact', head: true })
-    .eq('consent_type', 'mindmate')
-    .eq('granted', true)
-    .is('revoked_at', null);
+/**
+ * Which MindMate screen the signed-in user needs: 'current' (chat),
+ * 'outdated' (re-consent), 'none' (consent).
+ */
+export async function getMindMateConsentStatus(): Promise<MindMateConsentStatus> {
+  const { data, error } = await supabase.rpc('mindmate_consent_status');
   if (error) throw new Error(`Could not read MindMate consent: ${error.message}`);
-  return (count ?? 0) > 0;
+  if (data !== 'current' && data !== 'outdated' && data !== 'none') {
+    throw new Error(`Unexpected MindMate consent status: ${String(data)}`);
+  }
+  return data;
+}
+
+/** True when the signed-in user has a granted, non-withdrawn consent at the current version. */
+export async function hasActiveMindMateConsent(): Promise<boolean> {
+  return (await getMindMateConsentStatus()) === 'current';
+}
+
+/** Record the caller's consent to the MindMate text this build shows. */
+export async function grantMindMateConsent(): Promise<void> {
+  const { error } = await supabase.rpc('grant_mindmate_consent', {
+    p_version: MINDMATE_CONSENT_VERSION,
+    p_app_version: WEB_APP_VERSION,
+  });
+  if (error) throw new Error(`Could not turn on MindMate: ${error.message}`);
 }
 
 /** Stamp the withdrawal time on the caller's MindMate consent. */

@@ -4,6 +4,9 @@ const rpc = vi.fn();
 vi.mock('@/lib/supabaseClient', () => ({ supabase: { rpc: (...a: unknown[]) => rpc(...a) } }));
 
 import {
+  getMindMateConsentStatus,
+  hasActiveMindMateConsent,
+  grantMindMateConsent,
   withdrawMindMateConsent,
   deleteAllMindMateConversations,
   MINDMATE_HISTORY_KEY,
@@ -15,6 +18,42 @@ describe('mindmateDataService', () => {
     rpc.mockReset();
     localStorage.clear();
     sessionStorage.clear();
+  });
+
+  it('status reads mindmate_consent_status', async () => {
+    rpc.mockResolvedValue({ data: 'outdated', error: null });
+    await expect(getMindMateConsentStatus()).resolves.toBe('outdated');
+    expect(rpc).toHaveBeenCalledWith('mindmate_consent_status');
+  });
+
+  it('status throws on an error or an unexpected value', async () => {
+    rpc.mockResolvedValueOnce({ data: null, error: { message: 'nope' } });
+    await expect(getMindMateConsentStatus()).rejects.toThrow('nope');
+    rpc.mockResolvedValueOnce({ data: 'maybe', error: null });
+    await expect(getMindMateConsentStatus()).rejects.toThrow('Unexpected');
+  });
+
+  it('consent is active only at the current version', async () => {
+    rpc.mockResolvedValueOnce({ data: 'current', error: null });
+    await expect(hasActiveMindMateConsent()).resolves.toBe(true);
+    rpc.mockResolvedValueOnce({ data: 'outdated', error: null });
+    await expect(hasActiveMindMateConsent()).resolves.toBe(false);
+    rpc.mockResolvedValueOnce({ data: 'none', error: null });
+    await expect(hasActiveMindMateConsent()).resolves.toBe(false);
+  });
+
+  it('grant records the text version shown and the app version', async () => {
+    rpc.mockResolvedValue({ error: null });
+    await grantMindMateConsent();
+    expect(rpc).toHaveBeenCalledWith('grant_mindmate_consent', {
+      p_version: 'mm-consent-v1',
+      p_app_version: expect.stringMatching(/^web-\d+\.\d+\.\d+/),
+    });
+  });
+
+  it('grant throws when the server rejects it', async () => {
+    rpc.mockResolvedValue({ error: { message: 'not the current version' } });
+    await expect(grantMindMateConsent()).rejects.toThrow('not the current version');
   });
 
   it('withdraw calls withdraw_mindmate_consent', async () => {

@@ -90,7 +90,6 @@ const HowWeVerifyPage: React.FC = () => {
                 <li>A personal bio or description of their approach</li>
                 <li>Which insurance they currently accept</li>
                 <li>Their specific specialties or areas of focus</li>
-                <li>Whether they&rsquo;re currently accepting new patients</li>
               </ul>
             </div>
             <p>
@@ -282,10 +281,6 @@ const HowWeVerifyPage: React.FC = () => {
                 <strong>Clinical outcomes.</strong> Psychage does not evaluate or endorse
                 any provider&rsquo;s clinical methods, treatment effectiveness, or patient
                 outcomes.
-              </li>
-              <li>
-                <strong>Availability.</strong> Providers may stop accepting new patients
-                or change their practice hours without updating their Psychage profile.
               </li>
             </ul>
             <p>

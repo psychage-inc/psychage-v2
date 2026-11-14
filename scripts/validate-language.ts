@@ -104,7 +104,6 @@ const FALSE_POSITIVE_ALLOWLIST: Array<{ match: string; reason: string }> = [
   { match: 'you have strengths in', reason: 'Relationship Health Check result copy' },
   { match: 'you have meaningful connections', reason: 'Relationship Health Check result copy' },
   { match: 'you have unsaved changes', reason: 'admin discard-changes confirm dialog' },
-  { match: 'you have 30 days to cancel', reason: 'account-deletion toast' },
   // Navigator clinical seed data
   { match: 'need for certainty', reason: 'OCD symptom description (clinical noun, not a tool claim)' },
   { match: 'more items than you have space for', reason: 'hoarding screening question' },

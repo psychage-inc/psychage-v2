@@ -30,12 +30,14 @@ const getSessionMock = vi.fn();
 const onAuthStateChangeMock = vi.fn();
 const signInWithPasswordMock = vi.fn();
 const signOutMock = vi.fn();
+const rpcMock = vi.fn();
 
 // Captures the listener callback so tests can fire events synchronously.
 let listenerCallback: ((event: string, session: unknown) => void) | null = null;
 
 vi.mock('../../lib/supabaseClient', () => ({
     supabase: {
+        rpc: (...args: unknown[]) => rpcMock(...args),
         auth: {
             getSession: () => getSessionMock(),
             onAuthStateChange: (cb: (event: string, session: unknown) => void) => {
@@ -245,15 +247,11 @@ describe('AuthContext lifecycle — AUTH-011, AUTH-012, AUTH-022', () => {
         });
     });
 
-    describe('deleteAccount — same lifecycle contract', () => {
-        it('clears cache and navigates to /login on successful deletion', async () => {
-            // Mock the privacyService dynamic import.
-            vi.doMock('../../services/privacyService', () => ({
-                privacyService: {
-                    requestAccountDeletion: vi.fn().mockResolvedValue({ success: true }),
-                },
-            }));
+    describe('deleteAccount — immediate hard delete via delete_account()', () => {
+        it('calls the delete_account RPC, clears cache and local MindMate data, signs out locally', async () => {
+            rpcMock.mockResolvedValue({ error: null });
             signOutMock.mockResolvedValue({ error: null });
+            localStorage.setItem('psychage_ai_chat_history', '[{"role":"user","content":"hi"}]');
 
             const queryClient = new QueryClient({ defaultOptions: { queries: { retry: false } } });
             queryClient.setQueryData(['mood-entries'], [{ id: 1 }]);
@@ -264,8 +262,25 @@ describe('AuthContext lifecycle — AUTH-011, AUTH-012, AUTH-022', () => {
             const result = await act(async () => captured!.deleteAccount());
 
             expect(result).toEqual({ success: true });
+            expect(rpcMock).toHaveBeenCalledWith('delete_account');
             expect(queryClient.getQueryData(['mood-entries'])).toBeUndefined();
-            expect(navigateMock).toHaveBeenCalledWith('/login', { replace: true });
+            expect(localStorage.getItem('psychage_ai_chat_history')).toBeNull();
+            expect(signOutMock).toHaveBeenCalledWith({ scope: 'local' });
+            expect(navigateMock).toHaveBeenCalledWith('/', { replace: true });
+        });
+
+        it('reports the error and keeps the session when the RPC fails', async () => {
+            rpcMock.mockResolvedValue({ error: { message: 'boom' } });
+            signOutMock.mockClear();
+
+            const queryClient = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+            renderWithProviders(queryClient);
+            await waitFor(() => expect(captured).not.toBeNull());
+
+            const result = await act(async () => captured!.deleteAccount());
+
+            expect(result).toEqual({ success: false, error: 'boom' });
+            expect(signOutMock).not.toHaveBeenCalled();
         });
     });
 });

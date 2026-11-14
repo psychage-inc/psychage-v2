@@ -5,6 +5,7 @@ import { AuthContext, AuthState, AuthContextType } from './AuthContextDefinition
 import { supabase } from '../lib/supabaseClient';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
 import { getAdminTier, isAdminRole } from '../lib/adminRole';
+import { clearMindMateLocalData } from '../services/mindmateDataService';
 
 // AUTH-010: signup extraMetadata is restricted to a known allowlist.
 // Anything outside this set is dropped (with a console.warn) before the
@@ -127,7 +128,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         // Wipe the MindMate chat-history cache so the next user of a shared
         // device can't read the previous user's conversation (audit B3-6).
         // Covers same-tab logout() and cross-tab/expiry SIGNED_OUT alike.
-        localStorage.removeItem('psychage_ai_chat_history');
+        clearMindMateLocalData();
       }
 
       const mapped = mapSupabaseUser(session?.user ?? null);
@@ -346,27 +347,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  // AUTH-012 / AUTH-011: same architectural treatment as logout — clear
-  // cache, sign out, let the listener finalize state, navigate.
+  // Immediate, hard account deletion through the one server-side path
+  // (public.delete_account, shared with the mobile app). Then clear local
+  // state the same way logout does. The auth user no longer exists, so the
+  // sign-out is local only.
   const deleteAccount = useCallback(async () => {
-    try {
-      const { privacyService } = await import('../services/privacyService');
-      const result = await privacyService.requestAccountDeletion();
-      if (!result.success) {
-        return { success: false, error: 'Failed to schedule account deletion' };
-      }
-      queryClient.clear();
-      try {
-        await supabase.auth.signOut();
-      } catch (error) {
-        console.error('Sign-out after deletion error:', error);
-      }
-      navigate('/login', { replace: true });
-      return { success: true };
-    } catch (error) {
-      const message = error instanceof Error ? error.message : 'Failed to delete account';
-      return { success: false, error: message };
+    const { error } = await supabase.rpc('delete_account');
+    if (error) {
+      return { success: false, error: error.message };
     }
+    clearMindMateLocalData();
+    queryClient.clear();
+    await supabase.auth.signOut({ scope: 'local' });
+    navigate('/', { replace: true });
+    return { success: true };
   }, [queryClient, navigate]);
 
   const value = useMemo<AuthContextType>(() => ({

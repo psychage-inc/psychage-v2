@@ -13,6 +13,7 @@ import {
     AlertTriangle,
     CheckCircle,
     Clock,
+    Sparkles,
     XCircle,
     Loader2,
 } from 'lucide-react';
@@ -21,6 +22,11 @@ import { useAuth } from '@/context/AuthContext';
 import { useToast } from '@/context/ToastContext';
 import { consentService, type ConsentType } from '@/services/consentService';
 import { privacyService, type DSARRequest } from '@/services/privacyService';
+import {
+    hasActiveMindMateConsent,
+    withdrawMindMateConsent,
+    deleteAllMindMateConversations,
+} from '@/services/mindmateDataService';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // ─── Consent Toggle Item ──────────────────────────────────────────
@@ -92,7 +98,7 @@ const DSARStatusBadge: React.FC<{ status: string }> = ({ status }) => {
 // ─── Main Component ───────────────────────────────────────────────
 
 const PrivacySettings: React.FC = () => {
-    const { user, logout } = useAuth();
+    const { user, deleteAccount } = useAuth();
     const { addToast } = useToast();
 
     // Consent states
@@ -107,25 +113,26 @@ const PrivacySettings: React.FC = () => {
     // DSAR history
     const [dsarHistory, setDsarHistory] = useState<DSARRequest[]>([]);
 
-    // Privacy settings
-    const [deletionScheduled, setDeletionScheduled] = useState<string | null>(null);
+    // MindMate consent (item 6). null = not loaded yet.
+    const [mindmateOn, setMindmateOn] = useState<boolean | null>(null);
+    const [turningOff, setTurningOff] = useState(false);
+    const [deletingConversations, setDeletingConversations] = useState(false);
 
     // Loading / action states
     const [exporting, setExporting] = useState(false);
     const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
     const [deleteConfirmText, setDeleteConfirmText] = useState('');
     const [deleting, setDeleting] = useState(false);
-    const [cancellingDeletion, setCancellingDeletion] = useState(false);
 
     // Load initial data
     useEffect(() => {
         const load = async () => {
             setLoadingConsents(true);
             try {
-                const [activeConsents, privacy, dsars] = await Promise.all([
+                const [activeConsents, dsars, mindmate] = await Promise.all([
                     consentService.getActiveConsents(),
-                    privacyService.getPrivacySettings(),
                     privacyService.getDSARHistory(),
+                    hasActiveMindMateConsent(),
                 ]);
 
                 setConsents({
@@ -135,10 +142,7 @@ const PrivacySettings: React.FC = () => {
                     clarity_score_tracking: activeConsents.clarity_score_tracking,
                 });
 
-                if (privacy) {
-                    setDeletionScheduled(privacy.deletion_scheduled_at);
-                }
-
+                setMindmateOn(mindmate);
                 setDsarHistory(dsars);
             } catch (error) {
                 console.error('Failed to load privacy settings:', error);
@@ -186,46 +190,44 @@ const PrivacySettings: React.FC = () => {
         }
     }, [addToast]);
 
-    // Account deletion
+    // MindMate: turn off (withdraw consent)
+    const handleTurnOffMindMate = useCallback(async () => {
+        setTurningOff(true);
+        try {
+            await withdrawMindMateConsent();
+            setMindmateOn(false);
+            addToast('success', 'MindMate is off.');
+        } catch (error) {
+            addToast('error', error instanceof Error ? error.message : 'Could not turn off MindMate.');
+        } finally {
+            setTurningOff(false);
+        }
+    }, [addToast]);
+
+    // MindMate: delete all conversations
+    const handleDeleteConversations = useCallback(async () => {
+        if (!window.confirm('Delete all MindMate conversations? This cannot be undone.')) return;
+        setDeletingConversations(true);
+        try {
+            await deleteAllMindMateConversations();
+            addToast('success', 'All MindMate conversations were deleted.');
+        } catch (error) {
+            addToast('error', error instanceof Error ? error.message : 'Could not delete conversations.');
+        } finally {
+            setDeletingConversations(false);
+        }
+    }, [addToast]);
+
+    // Account deletion — immediate and permanent (one server-side path)
     const handleDeleteAccount = useCallback(async () => {
         if (deleteConfirmText !== 'DELETE') return;
         setDeleting(true);
-        try {
-            const result = await privacyService.requestAccountDeletion();
-            if (result.success) {
-                addToast('success', 'Account deletion scheduled. You have 30 days to cancel.');
-                setDeletionScheduled(result.scheduledAt);
-                setShowDeleteConfirm(false);
-                setDeleteConfirmText('');
-                // Sign out after scheduling deletion
-                setTimeout(() => logout(), 2000);
-            } else {
-                addToast('error', 'Failed to schedule account deletion.');
-            }
-        } catch {
-            addToast('error', 'Failed to schedule account deletion.');
-        } finally {
+        const result = await deleteAccount();
+        if (!result.success) {
+            addToast('error', result.error ?? 'Could not delete your account.');
             setDeleting(false);
         }
-    }, [deleteConfirmText, addToast, logout]);
-
-    // Cancel deletion
-    const handleCancelDeletion = useCallback(async () => {
-        setCancellingDeletion(true);
-        try {
-            const success = await privacyService.cancelDeletion();
-            if (success) {
-                addToast('success', 'Account deletion cancelled. Your data is safe.');
-                setDeletionScheduled(null);
-            } else {
-                addToast('error', 'Failed to cancel deletion.');
-            }
-        } catch {
-            addToast('error', 'Failed to cancel deletion.');
-        } finally {
-            setCancellingDeletion(false);
-        }
-    }, [addToast]);
+    }, [deleteConfirmText, addToast, deleteAccount]);
 
     return (
         <div className="min-h-screen bg-background relative pt-24 pb-20 px-6 transition-colors duration-300">
@@ -259,38 +261,6 @@ const PrivacySettings: React.FC = () => {
                     </motion.div>
 
                     <div className="lg:col-span-3 space-y-8">
-                        {/* Deletion Warning Banner */}
-                        {deletionScheduled && (
-                            <motion.div
-                                initial={{ opacity: 0, y: -10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                className="p-4 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800"
-                            >
-                                <div className="flex items-start gap-3">
-                                    <AlertTriangle className="text-red-600 dark:text-red-400 shrink-0 mt-0.5" size={20} />
-                                    <div className="flex-1">
-                                        <h3 className="font-bold text-red-800 dark:text-red-300">
-                                            Account Deletion Scheduled
-                                        </h3>
-                                        <p className="text-sm text-red-600 dark:text-red-400 mt-1">
-                                            Your account and all data will be permanently deleted on{' '}
-                                            <strong>{new Date(deletionScheduled).toLocaleDateString()}</strong>.
-                                            You can cancel this before the deadline.
-                                        </p>
-                                        <Button
-                                            size="sm"
-                                            variant="outline"
-                                            className="mt-3 border-red-300 text-red-700 hover:bg-red-100 dark:border-red-700 dark:text-red-300 dark:hover:bg-red-900/30"
-                                            onClick={handleCancelDeletion}
-                                            disabled={cancellingDeletion}
-                                        >
-                                            {cancellingDeletion ? 'Cancelling...' : 'Cancel Deletion'}
-                                        </Button>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        )}
-
                         {/* Consent Management */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -344,6 +314,78 @@ const PrivacySettings: React.FC = () => {
                                             onChange={(v) => handleConsentToggle('newsletter', v)}
                                         />
                                     </div>
+                                )}
+                            </InteractiveCard>
+                        </motion.div>
+
+                        {/* MindMate — Settings > Privacy > MindMate (compliance item 6) */}
+                        <motion.div
+                            id="mindmate"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.25 }}
+                        >
+                            <InteractiveCard className="p-8 bg-surface/50 backdrop-blur-md border-white/5">
+                                <h2 className="text-xl font-bold text-text-primary mb-4 flex items-center gap-2">
+                                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                                        <Sparkles size={18} />
+                                    </div>
+                                    MindMate
+                                </h2>
+
+                                {mindmateOn === null ? (
+                                    <div className="flex items-center py-4 text-text-tertiary">
+                                        <Loader2 size={20} className="animate-spin mr-2" />
+                                        Loading MindMate settings...
+                                    </div>
+                                ) : (
+                                    <>
+                                        <div className="flex items-center gap-3 mb-4">
+                                            <span className="font-bold text-text-primary text-sm" id="mindmate-consent-label">
+                                                MindMate consent:
+                                            </span>
+                                            <span className="text-sm text-text-secondary">{mindmateOn ? 'On' : 'Off'}</span>
+                                            <button
+                                                role="switch"
+                                                aria-checked={mindmateOn}
+                                                aria-labelledby="mindmate-consent-label"
+                                                disabled={!mindmateOn || turningOff}
+                                                onClick={handleTurnOffMindMate}
+                                                className={`relative shrink-0 w-11 h-6 rounded-full transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 outline-none ${
+                                                    mindmateOn ? 'bg-primary cursor-pointer' : 'bg-gray-300 dark:bg-neutral-600 cursor-not-allowed'
+                                                }`}
+                                            >
+                                                <span
+                                                    className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white dark:bg-neutral-200 shadow-sm transition-transform duration-200 ${
+                                                        mindmateOn ? 'translate-x-5' : 'translate-x-0'
+                                                    }`}
+                                                />
+                                            </button>
+                                        </div>
+
+                                        <p className="text-sm text-text-secondary leading-relaxed mb-6">
+                                            Turning this off stops MindMate from sending your messages to Anthropic. You can also delete all MindMate conversations. Deletion removes them from Psychage within 30 days, including backups. Anthropic deletes any copy automatically within 30 days.
+                                        </p>
+
+                                        <div className="flex flex-wrap gap-3">
+                                            <Button
+                                                variant="outline"
+                                                onClick={handleTurnOffMindMate}
+                                                disabled={!mindmateOn || turningOff}
+                                            >
+                                                {turningOff ? 'Turning off...' : 'Turn off MindMate'}
+                                            </Button>
+                                            <Button
+                                                variant="outline"
+                                                onClick={handleDeleteConversations}
+                                                disabled={deletingConversations}
+                                                className="gap-2 border-red-300 text-red-600 hover:bg-red-50 dark:border-red-800 dark:text-red-400 dark:hover:bg-red-900/20"
+                                            >
+                                                <Trash2 size={16} />
+                                                {deletingConversations ? 'Deleting...' : 'Delete all conversations'}
+                                            </Button>
+                                        </div>
+                                    </>
                                 )}
                             </InteractiveCard>
                         </motion.div>
@@ -439,8 +481,8 @@ const PrivacySettings: React.FC = () => {
                                     Delete Account
                                 </h2>
                                 <p className="text-sm text-text-tertiary mb-6">
-                                    Permanently delete your account and all associated data. This action has a 30-day grace period
-                                    during which you can log back in to cancel the deletion.
+                                    Permanently delete your account and all associated data, including MindMate
+                                    conversations and saved symptom summaries. Deletion happens immediately and cannot be undone.
                                 </p>
 
                                 {!showDeleteConfirm ? (
@@ -448,10 +490,9 @@ const PrivacySettings: React.FC = () => {
                                         onClick={() => setShowDeleteConfirm(true)}
                                         variant="outline"
                                         className="gap-2 border-red-300 text-red-600 hover:bg-red-50 dark:border-red-800 dark:text-red-400 dark:hover:bg-red-900/20"
-                                        disabled={!!deletionScheduled}
                                     >
                                         <Trash2 size={16} />
-                                        {deletionScheduled ? 'Deletion Already Scheduled' : 'Delete My Account'}
+                                        Delete My Account
                                     </Button>
                                 ) : (
                                     <AnimatePresence>
@@ -465,7 +506,7 @@ const PrivacySettings: React.FC = () => {
                                                 <AlertTriangle className="text-red-600 dark:text-red-400 shrink-0 mt-0.5" size={20} />
                                                 <div>
                                                     <h3 className="font-bold text-red-800 dark:text-red-300 text-sm">
-                                                        This cannot be undone after 30 days
+                                                        This cannot be undone
                                                     </h3>
                                                     <p className="text-xs text-red-600 dark:text-red-400 mt-1">
                                                         All your data including mood entries, sleep logs, clarity scores,
@@ -496,7 +537,7 @@ const PrivacySettings: React.FC = () => {
                                                     {deleting ? (
                                                         <>
                                                             <Loader2 size={16} className="animate-spin" />
-                                                            Scheduling...
+                                                            Deleting...
                                                         </>
                                                     ) : (
                                                         <>

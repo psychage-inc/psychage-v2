@@ -12,6 +12,7 @@ import StreamingCursor from '@/features/chat/components/StreamingCursor';
 import MindMateUnavailableCard from '@/features/chat/components/MindMateUnavailableCard';
 import { MindMateUnavailableError } from '@/features/chat/services/errors';
 import AuthModal from '@/components/auth/AuthModal';
+import { MINDMATE_HISTORY_KEY, MINDMATE_SESSION_KEY } from '@/services/mindmateDataService';
 import type { ProviderResult } from '@/lib/ai/types';
 
 interface Message {
@@ -24,8 +25,8 @@ interface Message {
     providers?: ProviderResult[];
 }
 
-const STORAGE_KEY = 'psychage_ai_chat_history';
-const SESSION_KEY = 'psychage_ai_session_id';
+const STORAGE_KEY = MINDMATE_HISTORY_KEY;
+const SESSION_KEY = MINDMATE_SESSION_KEY;
 
 function getOrCreateSessionId(): string {
     let sessionId = sessionStorage.getItem(SESSION_KEY);
